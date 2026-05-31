@@ -10,8 +10,9 @@ All generated data lives under `reference/` to keep the repo root clean:
 
 ```
 reference/
-  index.json      master catalog of every library and type
-  members.json    member name -> the types that define it
+  agentic_llm_primer.md  guide for AI agents (schema + grounding)
+  index.json             master catalog of every library and type
+  members.json           member name -> the types that define it
   <library>/
     md/     one .md per type   + _index.md
     json/   one .json per type + _index.json
@@ -65,7 +66,7 @@ Flags: `--no-enrich` (signatures only, skip Microsoft Learn text) and
 
 ## For AI agents
 
-See [agentic_llm_primer.md](agentic_llm_primer.md) for the JSON schema and
+See [agentic_llm_primer.md](reference/agentic_llm_primer.md) for the JSON schema and
 guidance on grounding VBA code against this reference.
 
 ## Python library
