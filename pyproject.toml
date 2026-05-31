@@ -1,0 +1,56 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vba-reference"
+version = "1.0.0"
+description = "Programmatic, typed reference of the VBA object models for common COM type libraries (Excel, Office, ADO, MSXML, and more)."
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["vba", "excel", "office", "com", "reference", "typelib", "macro"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = []
+
+[project.optional-dependencies]
+# Only needed to regenerate the data (Windows + Microsoft Office).
+generate = ["pywin32>=306"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+vba-ref = "vba_reference.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["vba_reference"]
+
+# Bundle the generated JSON (not the Markdown) inside the wheel so the package
+# is self-contained once installed. The repository root keeps the canonical
+# copy used in development.
+[tool.hatch.build.targets.wheel.force-include]
+"index.json" = "vba_reference/data/index.json"
+"members.json" = "vba_reference/data/members.json"
+"excel/json" = "vba_reference/data/excel/json"
+"office/json" = "vba_reference/data/office/json"
+"vba/json" = "vba_reference/data/vba/json"
+"stdole/json" = "vba_reference/data/stdole/json"
+"scripting/json" = "vba_reference/data/scripting/json"
+"msforms/json" = "vba_reference/data/msforms/json"
+"adodb/json" = "vba_reference/data/adodb/json"
+"vbide/json" = "vba_reference/data/vbide/json"
+"msxml/json" = "vba_reference/data/msxml/json"
+"winhttp/json" = "vba_reference/data/winhttp/json"
+
+[tool.hatch.build.targets.sdist]
+# The sdist ships the source + generator; data is rebuilt or pulled from the repo.
+include = [
+    "vba_reference",
+    "scrape_excel_object_model.py",
+    "mslearn_docs.py",
+    "tests",
+    "README.md",
+    "agentic_llm_primer.md",
+]
