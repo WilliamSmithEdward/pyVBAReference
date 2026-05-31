@@ -1,0 +1,23 @@
+# IMsoUpBars
+
+**Type:** Dispatch Interface  
+**Library:** Microsoft Office 16.0 Object Library  
+**GUID:** {000C172A-0000-0000-C000-000000000046}  
+
+## Properties (8)
+
+- `Name As String  (read-only)`
+- `Parent As Object  (read-only)`
+- `Border As IMsoBorder  (read-only)`
+- `Interior As IMsoInterior  (read-only)`
+- `Fill As ChartFillFormat  (read-only)`
+- `Format As IMsoChartFormat  (read-only)`
+- `Application As Object  (read-only)`
+- `Creator As Long  (read-only)`
+
+## Methods (4)
+
+- `Select() As Variant`
+- `Delete() As Variant`
+- `SetProperty(bstrId As String, Value As Variant)`
+- `GetProperty(bstrId As String) As Variant`

@@ -1,0 +1,212 @@
+# IRange
+
+**Type:** Interface  
+**Library:** Microsoft Excel 16.0 Object Library  
+**GUID:** {00020846-0001-0000-C000-000000000046}  
+
+## Properties (110)
+
+- `Application As HRESULT  (read-only)`
+- `Creator As HRESULT  (read-only)`
+- `Parent As HRESULT  (read-only)`
+- `AddIndent As HRESULT  (read/write)`
+- `Address As HRESULT  (read-only)`
+- `AddressLocal As HRESULT  (read-only)`
+- `Areas As HRESULT  (read-only)`
+- `Borders As HRESULT  (read-only)`
+- `Cells As HRESULT  (read-only)`
+- `Characters As HRESULT  (read-only)`
+- `Column As HRESULT  (read-only)`
+- `Columns As HRESULT  (read-only)`
+- `ColumnWidth As HRESULT  (read/write)`
+- `Count As HRESULT  (read-only)`
+- `CurrentArray As HRESULT  (read-only)`
+- `CurrentRegion As HRESULT  (read-only)`
+- `_Default As HRESULT  (read/write)`
+- `Dependents As HRESULT  (read-only)`
+- `DirectDependents As HRESULT  (read-only)`
+- `DirectPrecedents As HRESULT  (read-only)`
+- `End As HRESULT  (read-only)`
+- `EntireColumn As HRESULT  (read-only)`
+- `EntireRow As HRESULT  (read-only)`
+- `Font As HRESULT  (read-only)`
+- `Formula As HRESULT  (read/write)`
+- `FormulaArray As HRESULT  (read/write)`
+- `FormulaHidden As HRESULT  (read/write)`
+- `FormulaLocal As HRESULT  (read/write)`
+- `FormulaR1C1 As HRESULT  (read/write)`
+- `FormulaR1C1Local As HRESULT  (read/write)`
+- `HasArray As HRESULT  (read-only)`
+- `HasFormula As HRESULT  (read-only)`
+- `Height As HRESULT  (read-only)`
+- `Hidden As HRESULT  (read/write)`
+- `HorizontalAlignment As HRESULT  (read/write)`
+- `IndentLevel As HRESULT  (read/write)`
+- `Interior As HRESULT  (read-only)`
+- `Item As HRESULT  (read/write)`
+- `Left As HRESULT  (read-only)`
+- `ListHeaderRows As HRESULT  (read-only)`
+- `LocationInTable As HRESULT  (read-only)`
+- `Locked As HRESULT  (read/write)`
+- `MergeArea As HRESULT  (read-only)`
+- `MergeCells As HRESULT  (read/write)`
+- `Name As HRESULT  (read/write)`
+- `_NewEnum As HRESULT  (read-only)`
+- `Next As HRESULT  (read-only)`
+- `NumberFormat As HRESULT  (read/write)`
+- `NumberFormatLocal As HRESULT  (read/write)`
+- `Offset As HRESULT  (read-only)`
+- `Orientation As HRESULT  (read/write)`
+- `OutlineLevel As HRESULT  (read/write)`
+- `PageBreak As HRESULT  (read/write)`
+- `PivotField As HRESULT  (read-only)`
+- `PivotItem As HRESULT  (read-only)`
+- `PivotTable As HRESULT  (read-only)`
+- `Precedents As HRESULT  (read-only)`
+- `PrefixCharacter As HRESULT  (read-only)`
+- `Previous As HRESULT  (read-only)`
+- `QueryTable As HRESULT  (read-only)`
+- `Range As HRESULT  (read-only)`
+- `Resize As HRESULT  (read-only)`
+- `Row As HRESULT  (read-only)`
+- `RowHeight As HRESULT  (read/write)`
+- `Rows As HRESULT  (read-only)`
+- `ShowDetail As HRESULT  (read/write)`
+- `ShrinkToFit As HRESULT  (read/write)`
+- `SoundNote As HRESULT  (read-only)`
+- `Style As HRESULT  (read/write)`
+- `Summary As HRESULT  (read-only)`
+- `Text As HRESULT  (read-only)`
+- `Top As HRESULT  (read-only)`
+- `UseStandardHeight As HRESULT  (read/write)`
+- `UseStandardWidth As HRESULT  (read/write)`
+- `Validation As HRESULT  (read-only)`
+- `Value As HRESULT  (read/write)`
+- `Value2 As HRESULT  (read/write)`
+- `VerticalAlignment As HRESULT  (read/write)`
+- `Width As HRESULT  (read-only)`
+- `Worksheet As HRESULT  (read-only)`
+- `WrapText As HRESULT  (read/write)`
+- `Comment As HRESULT  (read-only)`
+- `Phonetic As HRESULT  (read-only)`
+- `FormatConditions As HRESULT  (read-only)`
+- `ReadingOrder As HRESULT  (read/write)`
+- `Hyperlinks As HRESULT  (read-only)`
+- `Phonetics As HRESULT  (read-only)`
+- `ID As HRESULT  (read/write)`
+- `PivotCell As HRESULT  (read-only)`
+- `Errors As HRESULT  (read-only)`
+- `AllowEdit As HRESULT  (read-only)`
+- `ListObject As HRESULT  (read-only)`
+- `XPath As HRESULT  (read-only)`
+- `ServerActions As HRESULT  (read-only)`
+- `MDX As HRESULT  (read-only)`
+- `CountLarge As HRESULT  (read-only)`
+- `SparklineGroups As HRESULT  (read-only)`
+- `DisplayFormat As HRESULT  (read-only)`
+- `HasRichDataType As HRESULT  (read-only)`
+- `CommentThreaded As HRESULT  (read-only)`
+- `LinkedDataTypeState As HRESULT  (read-only)`
+- `HasSpill As HRESULT  (read-only)`
+- `SpillingToRange As HRESULT  (read-only)`
+- `SpillParent As HRESULT  (read-only)`
+- `Formula2 As HRESULT  (read/write)`
+- `Formula2Local As HRESULT  (read/write)`
+- `Formula2R1C1 As HRESULT  (read/write)`
+- `Formula2R1C1Local As HRESULT  (read/write)`
+- `SavedAsArray As HRESULT  (read-only)`
+- `CellControl As HRESULT  (read-only)`
+
+## Methods (91)
+
+- `Activate(RHS As Variant)`
+- `AdvancedFilter(Action As XlFilterAction, [CriteriaRange As Variant], [CopyToRange As Variant], [Unique As Variant], RHS As Variant)`
+- `ApplyNames([Names As Variant], [IgnoreRelativeAbsolute As Variant], [UseRowColumnNames As Variant], [OmitColumn As Variant], [OmitRow As Variant], [Order As XlApplyNamesOrder], [AppendLast As Variant], RHS As Variant)`
+- `ApplyOutlineStyles(RHS As Variant)`
+- `AutoComplete(String As String, RHS As String)`
+- `AutoFill(Destination As Range, [Type As XlAutoFillType], RHS As Variant)`
+- `AutoFit(RHS As Variant)`
+- `AutoOutline(RHS As Variant)`
+- `Calculate(RHS As Variant)`
+- `CheckSpelling([CustomDictionary As Variant], [IgnoreUppercase As Variant], [AlwaysSuggest As Variant], [SpellLang As Variant], RHS As Variant)`
+- `Clear(RHS As Variant)`
+- `ClearFormats(RHS As Variant)`
+- `ClearNotes(RHS As Variant)`
+- `ClearOutline(RHS As Variant)`
+- `ColumnDifferences(Comparison As Variant, RHS As Range)`
+- `Consolidate([Sources As Variant], [Function As Variant], [TopRow As Variant], [LeftColumn As Variant], [CreateLinks As Variant], RHS As Variant)`
+- `Copy([Destination As Variant], RHS As Variant)`
+- `CopyFromRecordset(Data As IUnknown, [MaxRows As Variant], [MaxColumns As Variant], RHS As Long)`
+- `CopyPicture([Appearance As XlPictureAppearance], [Format As XlCopyPictureFormat], RHS As Variant)`
+- `CreateNames([Top As Variant], [Left As Variant], [Bottom As Variant], [Right As Variant], RHS As Variant)`
+- `Cut([Destination As Variant], RHS As Variant)`
+- `DataSeries([Rowcol As Variant], [Type As XlDataSeriesType], [Date As XlDataSeriesDate], [Step As Variant], [Stop As Variant], [Trend As Variant], RHS As Variant)`
+- `Delete([Shift As Variant], RHS As Variant)`
+- `DialogBox(RHS As Variant)`
+- `EditionOptions(Type As XlEditionType, Option As XlEditionOptionsOption, [Name As Variant], [Reference As Variant], [Appearance As XlPictureAppearance], [ChartSize As XlPictureAppearance], [Format As Variant], RHS As Variant)`
+- `FillDown(RHS As Variant)`
+- `FillLeft(RHS As Variant)`
+- `FillRight(RHS As Variant)`
+- `FillUp(RHS As Variant)`
+- `Find(What As Variant, [After As Variant], [LookIn As Variant], [LookAt As Variant], [SearchOrder As Variant], [SearchDirection As XlSearchDirection], [MatchCase As Variant], [MatchByte As Variant], [SearchFormat As Variant], RHS As Range)`
+- `FindNext([After As Variant], RHS As Range)`
+- `FindPrevious([After As Variant], RHS As Range)`
+- `FunctionWizard(RHS As Variant)`
+- `Group([Start As Variant], [End As Variant], [By As Variant], [Periods As Variant], RHS As Variant)`
+- `InsertIndent(InsertAmount As Long)`
+- `Insert([Shift As Variant], [CopyOrigin As Variant], RHS As Variant)`
+- `Justify(RHS As Variant)`
+- `ListNames(RHS As Variant)`
+- `Merge([Across As Variant])`
+- `UnMerge()`
+- `NavigateArrow([TowardPrecedent As Variant], [ArrowNumber As Variant], [LinkNumber As Variant], RHS As Variant)`
+- `NoteText([Text As Variant], [Start As Variant], [Length As Variant], RHS As String)`
+- `Parse([ParseLine As Variant], [Destination As Variant], RHS As Variant)`
+- `PrintPreview([EnableChanges As Variant], RHS As Variant)`
+- `RemoveSubtotal(RHS As Variant)`
+- `RowDifferences(Comparison As Variant, RHS As Range)`
+- `Run([Arg1 As Variant], [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Variant)`
+- `Select(RHS As Variant)`
+- `Show(RHS As Variant)`
+- `ShowDependents([Remove As Variant], RHS As Variant)`
+- `ShowErrors(RHS As Variant)`
+- `ShowPrecedents([Remove As Variant], RHS As Variant)`
+- `SortSpecial([SortMethod As XlSortMethod], [Key1 As Variant], [Order1 As XlSortOrder], [Type As Variant], [Key2 As Variant], [Order2 As XlSortOrder], [Key3 As Variant], [Order3 As XlSortOrder], [Header As XlYesNoGuess], [OrderCustom As Variant], [MatchCase As Variant], [Orientation As XlSortOrientation], [DataOption1 As XlSortDataOption], [DataOption2 As XlSortDataOption], [DataOption3 As XlSortDataOption], RHS As Variant)`
+- `SpecialCells(Type As XlCellType, [Value As Variant], RHS As Range)`
+- `SubscribeTo(Edition As String, [Format As XlSubscribeToFormat], RHS As Variant)`
+- `Subtotal(GroupBy As Long, Function As XlConsolidationFunction, TotalList As Variant, [Replace As Variant], [PageBreaks As Variant], [SummaryBelowData As XlSummaryRow], RHS As Variant)`
+- `Table([RowInput As Variant], [ColumnInput As Variant], RHS As Variant)`
+- `TextToColumns([Destination As Variant], [DataType As XlTextParsingType], [TextQualifier As XlTextQualifier], [ConsecutiveDelimiter As Variant], [Tab As Variant], [Semicolon As Variant], [Comma As Variant], [Space As Variant], [Other As Variant], [OtherChar As Variant], [FieldInfo As Variant], [DecimalSeparator As Variant], [ThousandsSeparator As Variant], [TrailingMinusNumbers As Variant], RHS As Variant)`
+- `Ungroup(RHS As Variant)`
+- `AddComment([Text As Variant], RHS As Comment)`
+- `ClearComments()`
+- `SetPhonetic()`
+- `Dirty()`
+- `Speak([SpeakDirection As Variant], [SpeakFormulas As Variant])`
+- `PasteSpecial([Paste As XlPasteType], [Operation As XlPasteSpecialOperation], [SkipBlanks As Variant], [Transpose As Variant], RHS As Variant)`
+- `RemoveDuplicates([Columns As Variant], [Header As XlYesNoGuess])`
+- `PrintOut([From As Variant], [To As Variant], [Copies As Variant], [Preview As Variant], [ActivePrinter As Variant], [PrintToFile As Variant], [Collate As Variant], [PrToFileName As Variant], RHS As Variant)`
+- `CalculateRowMajorOrder(RHS As Variant)`
+- `ClearHyperlinks()`
+- `BorderAround([LineStyle As Variant], [Weight As XlBorderWeight], [ColorIndex As XlColorIndex], [Color As Variant], [ThemeColor As Variant], RHS As Variant)`
+- `AllocateChanges()`
+- `DiscardChanges()`
+- `FlashFill()`
+- `ExportAsFixedFormat(Type As XlFixedFormatType, [Filename As Variant], [Quality As Variant], [IncludeDocProperties As Variant], [IgnorePrintAreas As Variant], [From As Variant], [To As Variant], [OpenAfterPublish As Variant], [FixedFormatExtClassPtr As Variant], [WorkIdentity As Variant])`
+- `ShowCard()`
+- `AddCommentThreaded(Text As String, RHS As CommentThreaded)`
+- `Sort([Key1 As Variant], [Order1 As XlSortOrder], [Key2 As Variant], [Type As Variant], [Order2 As XlSortOrder], [Key3 As Variant], [Order3 As XlSortOrder], [Header As XlYesNoGuess], [OrderCustom As Variant], [MatchCase As Variant], [Orientation As XlSortOrientation], [SortMethod As XlSortMethod], [DataOption1 As XlSortDataOption], [DataOption2 As XlSortDataOption], [DataOption3 As XlSortDataOption], [SubField1 As Variant], RHS As Variant)`
+- `AutoFilter([Field As Variant], [Criteria1 As Variant], [Operator As XlAutoFilterOperator], [Criteria2 As Variant], [VisibleDropDown As Variant], [SubField As Variant], RHS As Variant)`
+- `ConvertToLinkedDataType(ServiceID As Long, LanguageCulture As String)`
+- `SetCellDataTypeFromCell(SourceCell As Range)`
+- `DataTypeToText()`
+- `RefreshLinkedDataType([DomainID As Variant])`
+- `Replace(What As Variant, Replacement As Variant, [LookAt As Variant], [SearchOrder As Variant], [MatchCase As Variant], [MatchByte As Variant], [SearchFormat As Variant], [ReplaceFormat As Variant], [FormulaVersion As Variant], RHS As Boolean)`
+- `InsertPictureInCell(PictureURI As String)`
+- `PastePictureInCell()`
+- `PlacePictureOverCells([AsReference As Variant])`
+- `UpdatePictureInCellAlternativeText(AlternativeText As String)`
+- `ClearContents([RemoveControls As Variant], RHS As Variant)`
+- `ResetContents()`
+- `RemoveControls()`
+- `TogglePythonMarshalMode([MarshalMode As Variant])`

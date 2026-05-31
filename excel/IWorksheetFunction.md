@@ -1,0 +1,417 @@
+# IWorksheetFunction
+
+**Type:** Interface  
+**Library:** Microsoft Excel 16.0 Object Library  
+**GUID:** {00020845-0001-0000-C000-000000000046}  
+
+## Properties (3)
+
+- `Application As HRESULT  (read-only)`
+- `Creator As HRESULT  (read-only)`
+- `Parent As HRESULT  (read-only)`
+
+## Methods (403)
+
+- `Count(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `IsNA(Arg1 As Variant, RHS As Boolean)`
+- `IsError(Arg1 As Variant, RHS As Boolean)`
+- `Sum(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `Average(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `Min(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `Max(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `Npv(Arg1 As Double, Arg2 As Variant, [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `StDev(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `Dollar(Arg1 As Double, [Arg2 As Variant], RHS As String)`
+- `Fixed(Arg1 As Double, [Arg2 As Variant], [Arg3 As Variant], RHS As String)`
+- `Pi(RHS As Double)`
+- `Ln(Arg1 As Double, RHS As Double)`
+- `Log10(Arg1 As Double, RHS As Double)`
+- `Round(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `Lookup(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], RHS As Variant)`
+- `Index(Arg1 As Variant, Arg2 As Double, [Arg3 As Variant], [Arg4 As Variant], RHS As Variant)`
+- `Rept(Arg1 As String, Arg2 As Double, RHS As String)`
+- `And(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Boolean)`
+- `Or(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Boolean)`
+- `DCount(Arg1 As Range, Arg2 As Variant, Arg3 As Variant, RHS As Double)`
+- `DSum(Arg1 As Range, Arg2 As Variant, Arg3 As Variant, RHS As Double)`
+- `DAverage(Arg1 As Range, Arg2 As Variant, Arg3 As Variant, RHS As Double)`
+- `DMin(Arg1 As Range, Arg2 As Variant, Arg3 As Variant, RHS As Double)`
+- `DMax(Arg1 As Range, Arg2 As Variant, Arg3 As Variant, RHS As Double)`
+- `DStDev(Arg1 As Range, Arg2 As Variant, Arg3 As Variant, RHS As Double)`
+- `Var(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `DVar(Arg1 As Range, Arg2 As Variant, Arg3 As Variant, RHS As Double)`
+- `Text(Arg1 As Variant, Arg2 As String, RHS As String)`
+- `LinEst(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], RHS As Variant)`
+- `Trend(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], RHS As Variant)`
+- `LogEst(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], RHS As Variant)`
+- `Growth(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], RHS As Variant)`
+- `Pv(Arg1 As Double, Arg2 As Double, Arg3 As Double, [Arg4 As Variant], [Arg5 As Variant], RHS As Double)`
+- `Fv(Arg1 As Double, Arg2 As Double, Arg3 As Double, [Arg4 As Variant], [Arg5 As Variant], RHS As Double)`
+- `NPer(Arg1 As Double, Arg2 As Double, Arg3 As Double, [Arg4 As Variant], [Arg5 As Variant], RHS As Double)`
+- `Pmt(Arg1 As Double, Arg2 As Double, Arg3 As Double, [Arg4 As Variant], [Arg5 As Variant], RHS As Double)`
+- `Rate(Arg1 As Double, Arg2 As Double, Arg3 As Double, [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], RHS As Double)`
+- `MIrr(Arg1 As Variant, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `Irr(Arg1 As Variant, [Arg2 As Variant], RHS As Double)`
+- `Match(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], RHS As Double)`
+- `Weekday(Arg1 As Variant, [Arg2 As Variant], RHS As Double)`
+- `Search(Arg1 As String, Arg2 As String, [Arg3 As Variant], RHS As Double)`
+- `Transpose(Arg1 As Variant, RHS As Variant)`
+- `Atan2(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `Asin(Arg1 As Double, RHS As Double)`
+- `Acos(Arg1 As Double, RHS As Double)`
+- `Choose(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Variant)`
+- `HLookup(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, [Arg4 As Variant], RHS As Variant)`
+- `VLookup(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, [Arg4 As Variant], RHS As Variant)`
+- `Log(Arg1 As Double, [Arg2 As Variant], RHS As Double)`
+- `Proper(Arg1 As String, RHS As String)`
+- `Trim(Arg1 As String, RHS As String)`
+- `Replace(Arg1 As String, Arg2 As Double, Arg3 As Double, Arg4 As String, RHS As String)`
+- `Substitute(Arg1 As String, Arg2 As String, Arg3 As String, [Arg4 As Variant], RHS As String)`
+- `Find(Arg1 As String, Arg2 As String, [Arg3 As Variant], RHS As Double)`
+- `IsErr(Arg1 As Variant, RHS As Boolean)`
+- `IsText(Arg1 As Variant, RHS As Boolean)`
+- `IsNumber(Arg1 As Variant, RHS As Boolean)`
+- `Sln(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `Syd(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Double, RHS As Double)`
+- `Ddb(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Double, [Arg5 As Variant], RHS As Double)`
+- `Clean(Arg1 As String, RHS As String)`
+- `MDeterm(Arg1 As Variant, RHS As Double)`
+- `MInverse(Arg1 As Variant, RHS As Variant)`
+- `MMult(Arg1 As Variant, Arg2 As Variant, RHS As Variant)`
+- `Ipmt(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Double, [Arg5 As Variant], [Arg6 As Variant], RHS As Double)`
+- `Ppmt(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Double, [Arg5 As Variant], [Arg6 As Variant], RHS As Double)`
+- `CountA(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `Product(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `Fact(Arg1 As Double, RHS As Double)`
+- `DProduct(Arg1 As Range, Arg2 As Variant, Arg3 As Variant, RHS As Double)`
+- `IsNonText(Arg1 As Variant, RHS As Boolean)`
+- `StDevP(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `VarP(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `DStDevP(Arg1 As Range, Arg2 As Variant, Arg3 As Variant, RHS As Double)`
+- `DVarP(Arg1 As Range, Arg2 As Variant, Arg3 As Variant, RHS As Double)`
+- `IsLogical(Arg1 As Variant, RHS As Boolean)`
+- `DCountA(Arg1 As Range, Arg2 As Variant, Arg3 As Variant, RHS As Double)`
+- `USDollar(Arg1 As Double, Arg2 As Double, RHS As String)`
+- `FindB(Arg1 As String, Arg2 As String, [Arg3 As Variant], RHS As Double)`
+- `SearchB(Arg1 As String, Arg2 As String, [Arg3 As Variant], RHS As Double)`
+- `ReplaceB(Arg1 As String, Arg2 As Double, Arg3 As Double, Arg4 As String, RHS As String)`
+- `RoundUp(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `RoundDown(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `Rank(Arg1 As Double, Arg2 As Range, [Arg3 As Variant], RHS As Double)`
+- `Days360(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], RHS As Double)`
+- `Vdb(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Double, Arg5 As Double, [Arg6 As Variant], [Arg7 As Variant], RHS As Double)`
+- `Median(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `SumProduct(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `Sinh(Arg1 As Double, RHS As Double)`
+- `Cosh(Arg1 As Double, RHS As Double)`
+- `Tanh(Arg1 As Double, RHS As Double)`
+- `Asinh(Arg1 As Double, RHS As Double)`
+- `Acosh(Arg1 As Double, RHS As Double)`
+- `Atanh(Arg1 As Double, RHS As Double)`
+- `DGet(Arg1 As Range, Arg2 As Variant, Arg3 As Variant, RHS As Variant)`
+- `Db(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Double, [Arg5 As Variant], RHS As Double)`
+- `Frequency(Arg1 As Variant, Arg2 As Variant, RHS As Variant)`
+- `AveDev(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `BetaDist(Arg1 As Double, Arg2 As Double, Arg3 As Double, [Arg4 As Variant], [Arg5 As Variant], RHS As Double)`
+- `GammaLn(Arg1 As Double, RHS As Double)`
+- `BetaInv(Arg1 As Double, Arg2 As Double, Arg3 As Double, [Arg4 As Variant], [Arg5 As Variant], RHS As Double)`
+- `BinomDist(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Boolean, RHS As Double)`
+- `ChiDist(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `ChiInv(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `Combin(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `Confidence(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `CritBinom(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `Even(Arg1 As Double, RHS As Double)`
+- `ExponDist(Arg1 As Double, Arg2 As Double, Arg3 As Boolean, RHS As Double)`
+- `FDist(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `FInv(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `Fisher(Arg1 As Double, RHS As Double)`
+- `FisherInv(Arg1 As Double, RHS As Double)`
+- `Floor(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `GammaDist(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Boolean, RHS As Double)`
+- `GammaInv(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `Ceiling(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `HypGeomDist(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Double, RHS As Double)`
+- `LogNormDist(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `LogInv(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `NegBinomDist(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `NormDist(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Boolean, RHS As Double)`
+- `NormSDist(Arg1 As Double, RHS As Double)`
+- `NormInv(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `NormSInv(Arg1 As Double, RHS As Double)`
+- `Standardize(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `Odd(Arg1 As Double, RHS As Double)`
+- `Permut(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `Poisson(Arg1 As Double, Arg2 As Double, Arg3 As Boolean, RHS As Double)`
+- `TDist(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `Weibull(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Boolean, RHS As Double)`
+- `SumXMY2(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `SumX2MY2(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `SumX2PY2(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `ChiTest(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `Correl(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `Covar(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `FTest(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `Intercept(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `Pearson(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `RSq(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `StEyx(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `Slope(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `TTest(Arg1 As Variant, Arg2 As Variant, Arg3 As Double, Arg4 As Double, RHS As Double)`
+- `Prob(Arg1 As Variant, Arg2 As Variant, Arg3 As Double, [Arg4 As Variant], RHS As Double)`
+- `DevSq(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `GeoMean(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `HarMean(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `SumSq(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `Kurt(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `Skew(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `ZTest(Arg1 As Variant, Arg2 As Double, [Arg3 As Variant], RHS As Double)`
+- `Large(Arg1 As Variant, Arg2 As Double, RHS As Double)`
+- `Small(Arg1 As Variant, Arg2 As Double, RHS As Double)`
+- `Quartile(Arg1 As Variant, Arg2 As Double, RHS As Double)`
+- `Percentile(Arg1 As Variant, Arg2 As Double, RHS As Double)`
+- `PercentRank(Arg1 As Variant, Arg2 As Double, [Arg3 As Variant], RHS As Double)`
+- `Mode(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `TrimMean(Arg1 As Variant, Arg2 As Double, RHS As Double)`
+- `TInv(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `Power(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `Radians(Arg1 As Double, RHS As Double)`
+- `Degrees(Arg1 As Double, RHS As Double)`
+- `Subtotal(Arg1 As Double, Arg2 As Range, [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `SumIf(Arg1 As Range, Arg2 As Variant, [Arg3 As Variant], RHS As Double)`
+- `CountIf(Arg1 As Range, Arg2 As Variant, RHS As Double)`
+- `CountBlank(Arg1 As Range, RHS As Double)`
+- `Ispmt(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Double, RHS As Double)`
+- `Roman(Arg1 As Double, [Arg2 As Variant], RHS As String)`
+- `Asc(Arg1 As String, RHS As String)`
+- `Dbcs(Arg1 As String, RHS As String)`
+- `Phonetic(Arg1 As Range, RHS As String)`
+- `BahtText(Arg1 As Double, RHS As String)`
+- `RTD(progID As Variant, server As Variant, topic1 As Variant, [topic2 As Variant], [topic3 As Variant], [topic4 As Variant], [topic5 As Variant], [topic6 As Variant], [topic7 As Variant], [topic8 As Variant], [topic9 As Variant], [topic10 As Variant], [topic11 As Variant], [topic12 As Variant], [topic13 As Variant], [topic14 As Variant], [topic15 As Variant], [topic16 As Variant], [topic17 As Variant], [topic18 As Variant], [topic19 As Variant], [topic20 As Variant], [topic21 As Variant], [topic22 As Variant], [topic23 As Variant], [topic24 As Variant], [topic25 As Variant], [topic26 As Variant], [topic27 As Variant], [topic28 As Variant], RHS As Variant)`
+- `Hex2Bin(Arg1 As Variant, [Arg2 As Variant], RHS As String)`
+- `Hex2Dec(Arg1 As Variant, RHS As String)`
+- `Hex2Oct(Arg1 As Variant, [Arg2 As Variant], RHS As String)`
+- `Dec2Bin(Arg1 As Variant, [Arg2 As Variant], RHS As String)`
+- `Dec2Hex(Arg1 As Variant, [Arg2 As Variant], RHS As String)`
+- `Dec2Oct(Arg1 As Variant, [Arg2 As Variant], RHS As String)`
+- `Oct2Bin(Arg1 As Variant, [Arg2 As Variant], RHS As String)`
+- `Oct2Hex(Arg1 As Variant, [Arg2 As Variant], RHS As String)`
+- `Oct2Dec(Arg1 As Variant, RHS As String)`
+- `Bin2Dec(Arg1 As Variant, RHS As String)`
+- `Bin2Oct(Arg1 As Variant, [Arg2 As Variant], RHS As String)`
+- `Bin2Hex(Arg1 As Variant, [Arg2 As Variant], RHS As String)`
+- `ImSub(Arg1 As Variant, Arg2 As Variant, RHS As String)`
+- `ImDiv(Arg1 As Variant, Arg2 As Variant, RHS As String)`
+- `ImPower(Arg1 As Variant, Arg2 As Variant, RHS As String)`
+- `ImAbs(Arg1 As Variant, RHS As String)`
+- `ImSqrt(Arg1 As Variant, RHS As String)`
+- `ImLn(Arg1 As Variant, RHS As String)`
+- `ImLog2(Arg1 As Variant, RHS As String)`
+- `ImLog10(Arg1 As Variant, RHS As String)`
+- `ImSin(Arg1 As Variant, RHS As String)`
+- `ImCos(Arg1 As Variant, RHS As String)`
+- `ImExp(Arg1 As Variant, RHS As String)`
+- `ImArgument(Arg1 As Variant, RHS As String)`
+- `ImConjugate(Arg1 As Variant, RHS As String)`
+- `Imaginary(Arg1 As Variant, RHS As Double)`
+- `ImReal(Arg1 As Variant, RHS As Double)`
+- `Complex(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], RHS As String)`
+- `ImSum(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As String)`
+- `ImProduct(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As String)`
+- `SeriesSum(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, RHS As Double)`
+- `FactDouble(Arg1 As Variant, RHS As Double)`
+- `SqrtPi(Arg1 As Variant, RHS As Double)`
+- `Quotient(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `Delta(Arg1 As Variant, [Arg2 As Variant], RHS As Double)`
+- `GeStep(Arg1 As Variant, [Arg2 As Variant], RHS As Double)`
+- `IsEven(Arg1 As Variant, RHS As Boolean)`
+- `IsOdd(Arg1 As Variant, RHS As Boolean)`
+- `MRound(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `Erf(Arg1 As Variant, [Arg2 As Variant], RHS As Double)`
+- `ErfC(Arg1 As Variant, RHS As Double)`
+- `BesselJ(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `BesselK(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `BesselY(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `BesselI(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `Xirr(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], RHS As Double)`
+- `Xnpv(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `PriceMat(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, Arg5 As Variant, [Arg6 As Variant], RHS As Double)`
+- `YieldMat(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, Arg5 As Variant, [Arg6 As Variant], RHS As Double)`
+- `IntRate(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, [Arg5 As Variant], RHS As Double)`
+- `Received(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, [Arg5 As Variant], RHS As Double)`
+- `Disc(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, [Arg5 As Variant], RHS As Double)`
+- `PriceDisc(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, [Arg5 As Variant], RHS As Double)`
+- `YieldDisc(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, [Arg5 As Variant], RHS As Double)`
+- `TBillEq(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], RHS As Double)`
+- `TBillPrice(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], RHS As Double)`
+- `TBillYield(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], RHS As Double)`
+- `Price(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, Arg5 As Variant, Arg6 As Variant, [Arg7 As Variant], RHS As Double)`
+- `DollarDe(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `DollarFr(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `Nominal(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `Effect(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `CumPrinc(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, Arg5 As Variant, Arg6 As Variant, RHS As Double)`
+- `CumIPmt(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, Arg5 As Variant, Arg6 As Variant, RHS As Double)`
+- `EDate(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `EoMonth(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `YearFrac(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], RHS As Double)`
+- `CoupDayBs(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, [Arg4 As Variant], RHS As Double)`
+- `CoupDays(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, [Arg4 As Variant], RHS As Double)`
+- `CoupDaysNc(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, [Arg4 As Variant], RHS As Double)`
+- `CoupNcd(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, [Arg4 As Variant], RHS As Double)`
+- `CoupNum(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, [Arg4 As Variant], RHS As Double)`
+- `CoupPcd(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, [Arg4 As Variant], RHS As Double)`
+- `Duration(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, Arg5 As Variant, [Arg6 As Variant], RHS As Double)`
+- `MDuration(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, Arg5 As Variant, [Arg6 As Variant], RHS As Double)`
+- `OddLPrice(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, Arg5 As Variant, Arg6 As Variant, Arg7 As Variant, [Arg8 As Variant], RHS As Double)`
+- `OddLYield(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, Arg5 As Variant, Arg6 As Variant, Arg7 As Variant, [Arg8 As Variant], RHS As Double)`
+- `OddFPrice(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, Arg5 As Variant, Arg6 As Variant, Arg7 As Variant, Arg8 As Variant, [Arg9 As Variant], RHS As Double)`
+- `OddFYield(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, Arg5 As Variant, Arg6 As Variant, Arg7 As Variant, Arg8 As Variant, [Arg9 As Variant], RHS As Double)`
+- `RandBetween(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `WeekNum(Arg1 As Variant, [Arg2 As Variant], RHS As Double)`
+- `AmorDegrc(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, Arg5 As Variant, Arg6 As Variant, [Arg7 As Variant], RHS As Double)`
+- `AmorLinc(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, Arg5 As Variant, Arg6 As Variant, [Arg7 As Variant], RHS As Double)`
+- `Convert(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, RHS As Double)`
+- `AccrInt(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, Arg5 As Variant, Arg6 As Variant, [Arg7 As Variant], RHS As Double)`
+- `AccrIntM(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, Arg4 As Variant, [Arg5 As Variant], RHS As Double)`
+- `WorkDay(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], RHS As Double)`
+- `NetworkDays(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], RHS As Double)`
+- `Gcd(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `MultiNomial(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `Lcm(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `FVSchedule(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `SumIfs(Arg1 As Range, Arg2 As Range, Arg3 As Variant, [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], RHS As Double)`
+- `CountIfs(Arg1 As Range, Arg2 As Variant, [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `AverageIf(Arg1 As Range, Arg2 As Variant, [Arg3 As Variant], RHS As Double)`
+- `AverageIfs(Arg1 As Range, Arg2 As Range, Arg3 As Variant, [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], RHS As Double)`
+- `IfError(Arg1 As Variant, Arg2 As Variant, RHS As Variant)`
+- `Aggregate(Arg1 As Double, Arg2 As Double, Arg3 As Range, [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `Confidence_Norm(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `Confidence_T(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `ChiSq_Test(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `F_Test(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `Covariance_P(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `Covariance_S(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `Expon_Dist(Arg1 As Double, Arg2 As Double, Arg3 As Boolean, RHS As Double)`
+- `Gamma_Dist(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Boolean, RHS As Double)`
+- `Gamma_Inv(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `Mode_Mult(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Variant)`
+- `Mode_Sngl(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `Norm_Dist(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Boolean, RHS As Double)`
+- `Norm_Inv(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `Percentile_Exc(Arg1 As Variant, Arg2 As Double, RHS As Double)`
+- `Percentile_Inc(Arg1 As Variant, Arg2 As Double, RHS As Double)`
+- `PercentRank_Exc(Arg1 As Variant, Arg2 As Double, [Arg3 As Variant], RHS As Double)`
+- `PercentRank_Inc(Arg1 As Variant, Arg2 As Double, [Arg3 As Variant], RHS As Double)`
+- `Poisson_Dist(Arg1 As Double, Arg2 As Double, Arg3 As Boolean, RHS As Double)`
+- `Quartile_Exc(Arg1 As Variant, Arg2 As Double, RHS As Double)`
+- `Quartile_Inc(Arg1 As Variant, Arg2 As Double, RHS As Double)`
+- `Rank_Avg(Arg1 As Double, Arg2 As Range, [Arg3 As Variant], RHS As Double)`
+- `Rank_Eq(Arg1 As Double, Arg2 As Range, [Arg3 As Variant], RHS As Double)`
+- `StDev_S(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `StDev_P(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `T_Dist(Arg1 As Double, Arg2 As Double, Arg3 As Boolean, RHS As Double)`
+- `T_Dist_2T(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `T_Dist_RT(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `T_Inv(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `T_Inv_2T(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `Var_S(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `Var_P(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `Weibull_Dist(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Boolean, RHS As Double)`
+- `NetworkDays_Intl(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], [Arg4 As Variant], RHS As Double)`
+- `WorkDay_Intl(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], [Arg4 As Variant], RHS As Double)`
+- `ISO_Ceiling(Arg1 As Double, [Arg2 As Variant], RHS As Double)`
+- `Beta_Dist(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Boolean, [Arg5 As Variant], [Arg6 As Variant], RHS As Double)`
+- `Beta_Inv(Arg1 As Double, Arg2 As Double, Arg3 As Double, [Arg4 As Variant], [Arg5 As Variant], RHS As Double)`
+- `ChiSq_Dist(Arg1 As Double, Arg2 As Double, Arg3 As Boolean, RHS As Double)`
+- `ChiSq_Dist_RT(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `ChiSq_Inv(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `ChiSq_Inv_RT(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `F_Dist(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Boolean, RHS As Double)`
+- `F_Dist_RT(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `F_Inv(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `F_Inv_RT(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `HypGeom_Dist(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Double, Arg5 As Boolean, RHS As Double)`
+- `LogNorm_Dist(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Boolean, RHS As Double)`
+- `LogNorm_Inv(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `NegBinom_Dist(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Boolean, RHS As Double)`
+- `Norm_S_Dist(Arg1 As Double, Arg2 As Boolean, RHS As Double)`
+- `Norm_S_Inv(Arg1 As Double, RHS As Double)`
+- `T_Test(Arg1 As Variant, Arg2 As Variant, Arg3 As Double, Arg4 As Double, RHS As Double)`
+- `Z_Test(Arg1 As Variant, Arg2 As Double, [Arg3 As Variant], RHS As Double)`
+- `Binom_Dist(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Boolean, RHS As Double)`
+- `Binom_Inv(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `Erf_Precise(Arg1 As Variant, RHS As Double)`
+- `ErfC_Precise(Arg1 As Variant, RHS As Double)`
+- `GammaLn_Precise(Arg1 As Double, RHS As Double)`
+- `Ceiling_Precise(Arg1 As Double, [Arg2 As Variant], RHS As Double)`
+- `Floor_Precise(Arg1 As Double, [Arg2 As Variant], RHS As Double)`
+- `Acot(Arg1 As Double, RHS As Double)`
+- `Acoth(Arg1 As Double, RHS As Double)`
+- `Cot(Arg1 As Double, RHS As Double)`
+- `Coth(Arg1 As Double, RHS As Double)`
+- `Csc(Arg1 As Double, RHS As Double)`
+- `Csch(Arg1 As Double, RHS As Double)`
+- `Sec(Arg1 As Double, RHS As Double)`
+- `Sech(Arg1 As Double, RHS As Double)`
+- `ImCot(Arg1 As Variant, RHS As String)`
+- `ImTan(Arg1 As Variant, RHS As String)`
+- `ImCsc(Arg1 As Variant, RHS As String)`
+- `ImCsch(Arg1 As Variant, RHS As String)`
+- `ImSec(Arg1 As Variant, RHS As String)`
+- `ImSech(Arg1 As Variant, RHS As String)`
+- `Bitand(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `Bitor(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `Bitxor(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `Bitlshift(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `Bitrshift(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `Xor(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Boolean)`
+- `Combina(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `Permutationa(Arg1 As Double, Arg2 As Double, RHS As Double)`
+- `PDuration(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `Base(Arg1 As Double, Arg2 As Double, [Arg3 As Variant], RHS As String)`
+- `Decimal(Arg1 As String, Arg2 As Double, RHS As Double)`
+- `Days(Arg1 As Variant, Arg2 As Variant, RHS As Double)`
+- `Binom_Dist_Range(Arg1 As Double, Arg2 As Double, Arg3 As Double, [Arg4 As Variant], RHS As Double)`
+- `Gamma(Arg1 As Double, RHS As Double)`
+- `Gauss(Arg1 As Double, RHS As Double)`
+- `Phi(Arg1 As Double, RHS As Double)`
+- `Skew_p(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Double)`
+- `Rri(Arg1 As Double, Arg2 As Double, Arg3 As Double, RHS As Double)`
+- `Unichar(Arg1 As Double, RHS As String)`
+- `Unicode(Arg1 As String, RHS As Double)`
+- `Munit(Arg1 As Double, RHS As Variant)`
+- `Arabic(Arg1 As String, RHS As Double)`
+- `IsoWeekNum(Arg1 As Double, [Arg2 As Variant], RHS As Double)`
+- `NumberValue(Arg1 As String, Arg2 As String, Arg3 As String, RHS As Double)`
+- `IsFormula(Arg1 As Range, RHS As Boolean)`
+- `IfNa(Arg1 As Variant, Arg2 As Variant, RHS As Variant)`
+- `Ceiling_Math(Arg1 As Double, [Arg2 As Variant], [Arg3 As Variant], RHS As Double)`
+- `Floor_Math(Arg1 As Double, [Arg2 As Variant], [Arg3 As Variant], RHS As Double)`
+- `ImSinh(Arg1 As Variant, RHS As String)`
+- `ImCosh(Arg1 As Variant, RHS As String)`
+- `FilterXML(Arg1 As String, Arg2 As String, RHS As Variant)`
+- `WebService(Arg1 As String, RHS As Variant)`
+- `EncodeURL(Arg1 As String, RHS As Variant)`
+- `Forecast_ETS(Arg1 As Double, Arg2 As Variant, Arg3 As Variant, [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], RHS As Double)`
+- `Forecast_ETS_ConfInt(Arg1 As Double, Arg2 As Variant, Arg3 As Variant, [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], RHS As Double)`
+- `Forecast_ETS_Seasonality(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], [Arg4 As Variant], RHS As Double)`
+- `Forecast_Linear(Arg1 As Double, Arg2 As Variant, Arg3 As Variant, RHS As Double)`
+- `Forecast_ETS_STAT(Arg1 As Variant, Arg2 As Variant, Arg3 As Double, [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], RHS As Double)`
+- `MaxIfs(Arg1 As Range, Arg2 As Range, Arg3 As Variant, [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], RHS As Double)`
+- `MinIfs(Arg1 As Range, Arg2 As Range, Arg3 As Variant, [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], RHS As Double)`
+- `TextJoin(Arg1 As String, Arg2 As Boolean, Arg3 As String, [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], RHS As String)`
+- `Concat(Arg1 As String, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], RHS As String)`
+- `Sort(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], RHS As Variant)`
+- `Unique(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], RHS As Variant)`
+- `FieldValue(Arg1 As Variant, Arg2 As String, RHS As Variant)`
+- `Filter(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], RHS As Variant)`
+- `Sequence(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], RHS As Variant)`
+- `RandArray([Arg1 As Variant], [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], RHS As Variant)`
+- `Single(Arg1 As Variant, RHS As Variant)`
+- `SortBy(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant], RHS As Variant)`
+- `XMatch(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], [Arg4 As Variant], RHS As Double)`
+- `XLookup(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], RHS As Variant)`
+- `StockHistory(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], RHS As Variant)`
+- `ValueToText(Arg1 As Variant, [Arg2 As Variant], RHS As String)`
+- `ArrayToText(Arg1 As Variant, [Arg2 As Variant], RHS As String)`

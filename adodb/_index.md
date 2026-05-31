@@ -1,0 +1,114 @@
+# Microsoft ActiveX Data Objects 6.1 Library
+
+Scraped object model: 110 entries.
+
+- [ADCPROP_ASYNCTHREADPRIORITY_ENUM](ADCPROP_ASYNCTHREADPRIORITY_ENUM.md) - Enumeration
+- [ADCPROP_AUTORECALC_ENUM](ADCPROP_AUTORECALC_ENUM.md) - Enumeration
+- [ADCPROP_UPDATECRITERIA_ENUM](ADCPROP_UPDATECRITERIA_ENUM.md) - Enumeration
+- [ADCPROP_UPDATERESYNC_ENUM](ADCPROP_UPDATERESYNC_ENUM.md) - Enumeration
+- [ADO](ADO.md) - Dispatch Interface
+- [ADOCommandConstruction](ADOCommandConstruction.md) - Interface
+- [ADOConnectionConstruction15](ADOConnectionConstruction15.md) - Interface
+- [ADORecordConstruction](ADORecordConstruction.md) - Interface
+- [ADORecordsetConstruction](ADORecordsetConstruction.md) - Interface
+- [ADOStreamConstruction](ADOStreamConstruction.md) - Interface
+- [AffectEnum](AffectEnum.md) - Enumeration
+- [BookmarkEnum](BookmarkEnum.md) - Enumeration
+- [Collection](Collection.md) - Dispatch Interface
+- [Command](Command.md) - Class
+- [Command15](Command15.md) - Dispatch Interface
+- [Command15_Deprecated](Command15_Deprecated.md) - Dispatch Interface
+- [Command25](Command25.md) - Dispatch Interface
+- [Command25_Deprecated](Command25_Deprecated.md) - Dispatch Interface
+- [Command_Deprecated](Command_Deprecated.md) - Dispatch Interface
+- [CommandTypeEnum](CommandTypeEnum.md) - Enumeration
+- [CompareEnum](CompareEnum.md) - Enumeration
+- [Connection](Connection.md) - Class
+- [Connection15](Connection15.md) - Dispatch Interface
+- [Connection15_Deprecated](Connection15_Deprecated.md) - Dispatch Interface
+- [Connection_Deprecated](Connection_Deprecated.md) - Dispatch Interface
+- [ConnectionEvents](ConnectionEvents.md) - Dispatch Interface
+- [ConnectionEvents_Deprecated](ConnectionEvents_Deprecated.md) - Dispatch Interface
+- [ConnectionEventsVt](ConnectionEventsVt.md) - Interface
+- [ConnectionEventsVt_Deprecated](ConnectionEventsVt_Deprecated.md) - Interface
+- [ConnectModeEnum](ConnectModeEnum.md) - Enumeration
+- [ConnectOptionEnum](ConnectOptionEnum.md) - Enumeration
+- [ConnectPromptEnum](ConnectPromptEnum.md) - Enumeration
+- [CopyRecordOptionsEnum](CopyRecordOptionsEnum.md) - Enumeration
+- [CursorLocationEnum](CursorLocationEnum.md) - Enumeration
+- [CursorOptionEnum](CursorOptionEnum.md) - Enumeration
+- [CursorTypeEnum](CursorTypeEnum.md) - Enumeration
+- [DataTypeEnum](DataTypeEnum.md) - Enumeration
+- [DynaCollection](DynaCollection.md) - Dispatch Interface
+- [EditModeEnum](EditModeEnum.md) - Enumeration
+- [Error](Error.md) - Dispatch Interface
+- [Errors](Errors.md) - Dispatch Interface
+- [ErrorValueEnum](ErrorValueEnum.md) - Enumeration
+- [EventReasonEnum](EventReasonEnum.md) - Enumeration
+- [EventStatusEnum](EventStatusEnum.md) - Enumeration
+- [ExecuteOptionEnum](ExecuteOptionEnum.md) - Enumeration
+- [Field](Field.md) - Dispatch Interface
+- [Field15](Field15.md) - Dispatch Interface
+- [Field15_Deprecated](Field15_Deprecated.md) - Dispatch Interface
+- [Field20](Field20.md) - Dispatch Interface
+- [Field20_Deprecated](Field20_Deprecated.md) - Dispatch Interface
+- [Field_Deprecated](Field_Deprecated.md) - Dispatch Interface
+- [FieldAttributeEnum](FieldAttributeEnum.md) - Enumeration
+- [FieldEnum](FieldEnum.md) - Enumeration
+- [Fields](Fields.md) - Dispatch Interface
+- [Fields15](Fields15.md) - Dispatch Interface
+- [Fields15_Deprecated](Fields15_Deprecated.md) - Dispatch Interface
+- [Fields20](Fields20.md) - Dispatch Interface
+- [Fields20_Deprecated](Fields20_Deprecated.md) - Dispatch Interface
+- [Fields_Deprecated](Fields_Deprecated.md) - Dispatch Interface
+- [FieldStatusEnum](FieldStatusEnum.md) - Enumeration
+- [FilterGroupEnum](FilterGroupEnum.md) - Enumeration
+- [GetRowsOptionEnum](GetRowsOptionEnum.md) - Enumeration
+- [IsolationLevelEnum](IsolationLevelEnum.md) - Enumeration
+- [LineSeparatorEnum](LineSeparatorEnum.md) - Enumeration
+- [LockTypeEnum](LockTypeEnum.md) - Enumeration
+- [MarshalOptionsEnum](MarshalOptionsEnum.md) - Enumeration
+- [MoveRecordOptionsEnum](MoveRecordOptionsEnum.md) - Enumeration
+- [ObjectStateEnum](ObjectStateEnum.md) - Enumeration
+- [Parameter](Parameter.md) - Class
+- [Parameter_Deprecated](Parameter_Deprecated.md) - Dispatch Interface
+- [ParameterAttributesEnum](ParameterAttributesEnum.md) - Enumeration
+- [ParameterDirectionEnum](ParameterDirectionEnum.md) - Enumeration
+- [Parameters](Parameters.md) - Dispatch Interface
+- [Parameters_Deprecated](Parameters_Deprecated.md) - Dispatch Interface
+- [PersistFormatEnum](PersistFormatEnum.md) - Enumeration
+- [PositionEnum](PositionEnum.md) - Enumeration
+- [Properties](Properties.md) - Dispatch Interface
+- [Property](Property.md) - Dispatch Interface
+- [PropertyAttributesEnum](PropertyAttributesEnum.md) - Enumeration
+- [Record](Record.md) - Class
+- [Record_Deprecated](Record_Deprecated.md) - Dispatch Interface
+- [RecordCreateOptionsEnum](RecordCreateOptionsEnum.md) - Enumeration
+- [RecordOpenOptionsEnum](RecordOpenOptionsEnum.md) - Enumeration
+- [Recordset](Recordset.md) - Class
+- [Recordset15](Recordset15.md) - Dispatch Interface
+- [Recordset15_Deprecated](Recordset15_Deprecated.md) - Dispatch Interface
+- [Recordset20](Recordset20.md) - Dispatch Interface
+- [Recordset20_Deprecated](Recordset20_Deprecated.md) - Dispatch Interface
+- [Recordset21](Recordset21.md) - Dispatch Interface
+- [Recordset21_Deprecated](Recordset21_Deprecated.md) - Dispatch Interface
+- [Recordset_Deprecated](Recordset_Deprecated.md) - Dispatch Interface
+- [RecordsetEvents](RecordsetEvents.md) - Dispatch Interface
+- [RecordsetEvents_Deprecated](RecordsetEvents_Deprecated.md) - Dispatch Interface
+- [RecordsetEventsVt](RecordsetEventsVt.md) - Interface
+- [RecordsetEventsVt_Deprecated](RecordsetEventsVt_Deprecated.md) - Interface
+- [RecordStatusEnum](RecordStatusEnum.md) - Enumeration
+- [RecordTypeEnum](RecordTypeEnum.md) - Enumeration
+- [ResyncEnum](ResyncEnum.md) - Enumeration
+- [SaveOptionsEnum](SaveOptionsEnum.md) - Enumeration
+- [SchemaEnum](SchemaEnum.md) - Enumeration
+- [SearchDirectionEnum](SearchDirectionEnum.md) - Enumeration
+- [SeekEnum](SeekEnum.md) - Enumeration
+- [Stream](Stream.md) - Class
+- [Stream_Deprecated](Stream_Deprecated.md) - Dispatch Interface
+- [StreamOpenOptionsEnum](StreamOpenOptionsEnum.md) - Enumeration
+- [StreamReadEnum](StreamReadEnum.md) - Enumeration
+- [StreamTypeEnum](StreamTypeEnum.md) - Enumeration
+- [StreamWriteEnum](StreamWriteEnum.md) - Enumeration
+- [StringFormatEnum](StringFormatEnum.md) - Enumeration
+- [XactAttributeEnum](XactAttributeEnum.md) - Enumeration

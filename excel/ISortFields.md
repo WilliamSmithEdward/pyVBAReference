@@ -1,0 +1,21 @@
+# ISortFields
+
+**Type:** Interface  
+**Library:** Microsoft Excel 16.0 Object Library  
+**GUID:** {000244AA-0001-0000-C000-000000000046}  
+
+## Properties (7)
+
+- `Application As HRESULT  (read-only)`
+- `Creator As HRESULT  (read-only)`
+- `Parent As HRESULT  (read-only)`
+- `Item As HRESULT  (read-only)`
+- `Count As HRESULT  (read-only)`
+- `_Default As HRESULT  (read-only)`
+- `_NewEnum As HRESULT  (read-only)`
+
+## Methods (3)
+
+- `Add(Key As Range, [SortOn As Variant], [Order As Variant], [CustomOrder As Variant], [DataOption As Variant], RHS As SortField)`
+- `Clear()`
+- `Add2(Key As Range, [SortOn As Variant], [Order As Variant], [CustomOrder As Variant], [DataOption As Variant], [SubField As Variant], RHS As SortField)`

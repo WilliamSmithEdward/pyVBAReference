@@ -1,0 +1,242 @@
+# Workbook
+
+**Type:** Class  
+**Library:** Microsoft Excel 16.0 Object Library  
+**GUID:** {00020819-0000-0000-C000-000000000046}  
+
+## Properties (121)
+
+- `Application As Application  (read-only)`
+- `Creator As XlCreator  (read-only)`
+- `Parent As Object  (read-only)`
+- `ActiveChart As Chart  (read-only)`
+- `ActiveSheet As Object  (read-only)`
+- `AutoUpdateFrequency As Long  (read/write)`
+- `AutoUpdateSaveChanges As Boolean  (read/write)`
+- `ChangeHistoryDuration As Long  (read/write)`
+- `BuiltinDocumentProperties As Object  (read-only)`
+- `Charts As Sheets  (read-only)`
+- `CodeName As String  (read-only)`
+- `_CodeName As String  (read/write)`
+- `Colors As Variant  (read/write)`
+- `CommandBars As CommandBars  (read-only)`
+- `ConflictResolution As XlSaveConflictResolution  (read/write)`
+- `Container As Object  (read-only)`
+- `CreateBackup As Boolean  (read-only)`
+- `CustomDocumentProperties As Object  (read-only)`
+- `Date1904 As Boolean  (read/write)`
+- `DisplayDrawingObjects As XlDisplayDrawingObjects  (read/write)`
+- `FileFormat As XlFileFormat  (read-only)`
+- `FullName As String  (read-only)`
+- `HasPassword As Boolean  (read-only)`
+- `IsAddin As Boolean  (read/write)`
+- `Mailer As Mailer  (read-only)`
+- `MultiUserEditing As Boolean  (read-only)`
+- `Name As String  (read-only)`
+- `Names As Names  (read-only)`
+- `Path As String  (read-only)`
+- `PersonalViewListSettings As Boolean  (read/write)`
+- `PersonalViewPrintSettings As Boolean  (read/write)`
+- `PrecisionAsDisplayed As Boolean  (read/write)`
+- `ProtectStructure As Boolean  (read-only)`
+- `ProtectWindows As Boolean  (read-only)`
+- `ReadOnly As Boolean  (read-only)`
+- `RevisionNumber As Long  (read-only)`
+- `Saved As Boolean  (read/write)`
+- `SaveLinkValues As Boolean  (read/write)`
+- `Sheets As Sheets  (read-only)`
+- `ShowConflictHistory As Boolean  (read/write)`
+- `Styles As Styles  (read-only)`
+- `UpdateRemoteReferences As Boolean  (read/write)`
+- `UserStatus As Variant  (read-only)`
+- `CustomViews As CustomViews  (read-only)`
+- `Windows As Windows  (read-only)`
+- `Worksheets As Sheets  (read-only)`
+- `WriteReserved As Boolean  (read-only)`
+- `WriteReservedBy As String  (read-only)`
+- `Excel4IntlMacroSheets As Sheets  (read-only)`
+- `Excel4MacroSheets As Sheets  (read-only)`
+- `TemplateRemoveExtData As Boolean  (read/write)`
+- `HighlightChangesOnScreen As Boolean  (read/write)`
+- `KeepChangeHistory As Boolean  (read/write)`
+- `ListChangesOnNewSheet As Boolean  (read/write)`
+- `VBProject As VBProject  (read-only)`
+- `IsInplace As Boolean  (read-only)`
+- `PublishObjects As PublishObjects  (read-only)`
+- `WebOptions As WebOptions  (read-only)`
+- `EnvelopeVisible As Boolean  (read/write)`
+- `CalculationVersion As Long  (read-only)`
+- `VBASigned As Boolean  (read-only)`
+- `ShowPivotTableFieldList As Boolean  (read/write)`
+- `UpdateLinks As XlUpdateLinks  (read/write)`
+- `EnableAutoRecover As Boolean  (read/write)`
+- `RemovePersonalInformation As Boolean  (read/write)`
+- `FullNameURLEncoded As String  (read-only)`
+- `Password As String  (read/write)`
+- `WritePassword As String  (read/write)`
+- `PasswordEncryptionProvider As String  (read-only)`
+- `PasswordEncryptionAlgorithm As String  (read-only)`
+- `PasswordEncryptionKeyLength As Long  (read-only)`
+- `PasswordEncryptionFileProperties As Boolean  (read-only)`
+- `ReadOnlyRecommended As Boolean  (read/write)`
+- `Permission As Permission  (read-only)`
+- `SharedWorkspace As SharedWorkspace  (read-only)`
+- `Sync As Sync  (read-only)`
+- `XmlNamespaces As XmlNamespaces  (read-only)`
+- `XmlMaps As XmlMaps  (read-only)`
+- `SmartDocument As SmartDocument  (read-only)`
+- `DocumentLibraryVersions As DocumentLibraryVersions  (read-only)`
+- `InactiveListBorderVisible As Boolean  (read/write)`
+- `DisplayInkComments As Boolean  (read/write)`
+- `ContentTypeProperties As MetaProperties  (read-only)`
+- `Connections As Connections  (read-only)`
+- `Signatures As SignatureSet  (read-only)`
+- `ServerPolicy As ServerPolicy  (read-only)`
+- `DocumentInspectors As DocumentInspectors  (read-only)`
+- `ServerViewableItems As ServerViewableItems  (read-only)`
+- `TableStyles As TableStyles  (read-only)`
+- `DefaultTableStyle As Variant  (read/write)`
+- `DefaultPivotTableStyle As Variant  (read/write)`
+- `CheckCompatibility As Boolean  (read/write)`
+- `HasVBProject As Boolean  (read-only)`
+- `CustomXMLParts As CustomXMLParts  (read-only)`
+- `Final As Boolean  (read/write)`
+- `Research As Research  (read-only)`
+- `Theme As OfficeTheme  (read-only)`
+- `Excel8CompatibilityMode As Boolean  (read-only)`
+- `ConnectionsDisabled As Boolean  (read-only)`
+- `ShowPivotChartActiveFields As Boolean  (read/write)`
+- `IconSets As IconSets  (read-only)`
+- `EncryptionProvider As String  (read/write)`
+- `DoNotPromptForConvert As Boolean  (read/write)`
+- `ForceFullCalculation As Boolean  (read/write)`
+- `SlicerCaches As SlicerCaches  (read-only)`
+- `ActiveSlicer As Slicer  (read-only)`
+- `DefaultSlicerStyle As Variant  (read/write)`
+- `AccuracyVersion As Long  (read/write)`
+- `CaseSensitive As Boolean  (read-only)`
+- `UseWholeCellCriteria As Boolean  (read-only)`
+- `UseWildcards As Boolean  (read-only)`
+- `PivotTables As Object  (read-only)`
+- `Model As Model  (read-only)`
+- `ChartDataPointTrack As Boolean  (read/write)`
+- `DefaultTimelineStyle As Variant  (read/write)`
+- `Queries As Queries  (read-only)`
+- `WorkIdentity As String  (read/write)`
+- `AutoSaveOn As Boolean  (read/write)`
+- `SensitivityLabel As ISensitivityLabel  (read-only)`
+- `ExternalCodeServiceTimeout As Long  (read/write)`
+- `CompatibilityVersion As Long  (read/write)`
+
+## Methods (65)
+
+- `Activate()`
+- `ChangeFileAccess(Mode As XlFileAccess, [WritePassword As Variant], [Notify As Variant])`
+- `ChangeLink(Name As String, NewName As String, [Type As XlLinkType])`
+- `Close([SaveChanges As Variant], [Filename As Variant], [RouteWorkbook As Variant])`
+- `DeleteNumberFormat(NumberFormat As String)`
+- `ExclusiveAccess() As Boolean`
+- `ForwardMailer()`
+- `LinkInfo(Name As String, LinkInfo As XlLinkInfo, [Type As Variant], [EditionRef As Variant]) As Variant`
+- `LinkSources([Type As Variant]) As Variant`
+- `MergeWorkbook(Filename As Variant)`
+- `NewWindow() As Window`
+- `OpenLinks(Name As String, [ReadOnly As Variant], [Type As Variant])`
+- `PivotCaches() As PivotCaches`
+- `Post([DestName As Variant])`
+- `PrintPreview([EnableChanges As Variant])`
+- `RefreshAll()`
+- `Reply()`
+- `ReplyAll()`
+- `RemoveUser(Index As Long)`
+- `RunAutoMacros(Which As XlRunAutoMacro)`
+- `Save()`
+- `SaveCopyAs([Filename As Variant])`
+- `SendMail(Recipients As Variant, [Subject As Variant], [ReturnReceipt As Variant])`
+- `SendMailer([FileFormat As Variant], [Priority As XlPriority])`
+- `SetLinkOnData(Name As String, [Procedure As Variant])`
+- `Unprotect([Password As Variant])`
+- `UnprotectSharing([SharingPassword As Variant])`
+- `UpdateFromFile()`
+- `UpdateLink([Name As Variant], [Type As Variant])`
+- `HighlightChangesOptions([When As Variant], [Who As Variant], [Where As Variant])`
+- `PurgeChangeHistoryNow(Days As Long, [SharingPassword As Variant])`
+- `AcceptAllChanges([When As Variant], [Who As Variant], [Where As Variant])`
+- `RejectAllChanges([When As Variant], [Who As Variant], [Where As Variant])`
+- `ResetColors()`
+- `FollowHyperlink(Address As String, [SubAddress As Variant], [NewWindow As Variant], [AddHistory As Variant], [ExtraInfo As Variant], [Method As Variant], [HeaderInfo As Variant])`
+- `AddToFavorites()`
+- `WebPagePreview()`
+- `ReloadAs(Encoding As MsoEncoding)`
+- `BreakLink(Name As String, Type As XlLinkType)`
+- `CheckIn([SaveChanges As Variant], [Comments As Variant], [MakePublic As Variant])`
+- `CanCheckIn() As Boolean`
+- `SendForReview([Recipients As Variant], [Subject As Variant], [ShowMessage As Variant], [IncludeAttachment As Variant])`
+- `ReplyWithChanges([ShowMessage As Variant])`
+- `EndReview()`
+- `SetPasswordEncryptionOptions([PasswordEncryptionProvider As Variant], [PasswordEncryptionAlgorithm As Variant], [PasswordEncryptionKeyLength As Variant], [PasswordEncryptionFileProperties As Variant])`
+- `Protect([Password As Variant], [Structure As Variant], [Windows As Variant])`
+- `SendFaxOverInternet([Recipients As Variant], [Subject As Variant], [ShowMessage As Variant])`
+- `XmlImport(Url As String, ImportMap As XmlMap, [Overwrite As Variant], [Destination As Variant]) As XlXmlImportResult`
+- `XmlImportXml(Data As String, ImportMap As XmlMap, [Overwrite As Variant], [Destination As Variant]) As XlXmlImportResult`
+- `SaveAsXMLData(Filename As String, Map As XmlMap)`
+- `ToggleFormsDesign()`
+- `RemoveDocumentInformation(RemoveDocInfoType As XlRemoveDocInfoType)`
+- `CheckInWithVersion([SaveChanges As Variant], [Comments As Variant], [MakePublic As Variant], [VersionType As Variant])`
+- `LockServerFile()`
+- `GetWorkflowTasks() As WorkflowTasks`
+- `GetWorkflowTemplates() As WorkflowTemplates`
+- `PrintOut([From As Variant], [To As Variant], [Copies As Variant], [Preview As Variant], [ActivePrinter As Variant], [PrintToFile As Variant], [Collate As Variant], [PrToFileName As Variant], [IgnorePrintAreas As Variant])`
+- `ApplyTheme(Filename As String)`
+- `EnableConnections()`
+- `ProtectSharing([Filename As Variant], [Password As Variant], [WriteResPassword As Variant], [ReadOnlyRecommended As Variant], [CreateBackup As Variant], [SharingPassword As Variant], [FileFormat As Variant])`
+- `CreateForecastSheet(Timeline As Range, Values As Range, [ForecastStart As Variant], [ForecastEnd As Variant], [ConfInt As Variant], [Seasonality As Variant], [DataCompletion As Variant], [Aggregation As Variant], [ChartType As Variant], [ShowStatsTable As Variant])`
+- `SaveAs([Filename As Variant], [FileFormat As Variant], [Password As Variant], [WriteResPassword As Variant], [ReadOnlyRecommended As Variant], [CreateBackup As Variant], [AccessMode As XlSaveAsAccessMode], [ConflictResolution As Variant], [AddToMru As Variant], [TextCodepage As Variant], [TextVisualLayout As Variant], [Local As Variant], [WorkIdentity As Variant])`
+- `ExportAsFixedFormat(Type As XlFixedFormatType, [Filename As Variant], [Quality As Variant], [IncludeDocProperties As Variant], [IgnorePrintAreas As Variant], [From As Variant], [To As Variant], [OpenAfterPublish As Variant], [FixedFormatExtClassPtr As Variant], [WorkIdentity As Variant])`
+- `PublishToPBI([PublishType As Variant], [nameConflict As Variant], [bstrGroupName As Variant]) As String`
+- `ConvertComments()`
+
+## Events (42)
+
+- `Open()`
+- `Activate()`
+- `Deactivate()`
+- `BeforeClose(Cancel As Boolean)`
+- `BeforeSave(SaveAsUI As Boolean, Cancel As Boolean)`
+- `BeforePrint(Cancel As Boolean)`
+- `NewSheet(Sh As Object)`
+- `AddinInstall()`
+- `AddinUninstall()`
+- `WindowResize(Wn As Window)`
+- `WindowActivate(Wn As Window)`
+- `WindowDeactivate(Wn As Window)`
+- `SheetSelectionChange(Sh As Object, Target As Range)`
+- `SheetBeforeDoubleClick(Sh As Object, Target As Range, Cancel As Boolean)`
+- `SheetBeforeRightClick(Sh As Object, Target As Range, Cancel As Boolean)`
+- `SheetActivate(Sh As Object)`
+- `SheetDeactivate(Sh As Object)`
+- `SheetCalculate(Sh As Object)`
+- `SheetChange(Sh As Object, Target As Range)`
+- `SheetFollowHyperlink(Sh As Object, Target As Hyperlink)`
+- `SheetPivotTableUpdate(Sh As Object, Target As PivotTable)`
+- `PivotTableCloseConnection(Target As PivotTable)`
+- `PivotTableOpenConnection(Target As PivotTable)`
+- `Sync(SyncEventType As MsoSyncEventType)`
+- `BeforeXmlImport(Map As XmlMap, Url As String, IsRefresh As Boolean, Cancel As Boolean)`
+- `AfterXmlImport(Map As XmlMap, IsRefresh As Boolean, Result As XlXmlImportResult)`
+- `BeforeXmlExport(Map As XmlMap, Url As String, Cancel As Boolean)`
+- `AfterXmlExport(Map As XmlMap, Url As String, Result As XlXmlExportResult)`
+- `RowsetComplete(Description As String, Sheet As String, Success As Boolean)`
+- `SheetPivotTableAfterValueChange(Sh As Object, TargetPivotTable As PivotTable, TargetRange As Range)`
+- `SheetPivotTableBeforeAllocateChanges(Sh As Object, TargetPivotTable As PivotTable, ValueChangeStart As Long, ValueChangeEnd As Long, Cancel As Boolean)`
+- `SheetPivotTableBeforeCommitChanges(Sh As Object, TargetPivotTable As PivotTable, ValueChangeStart As Long, ValueChangeEnd As Long, Cancel As Boolean)`
+- `SheetPivotTableBeforeDiscardChanges(Sh As Object, TargetPivotTable As PivotTable, ValueChangeStart As Long, ValueChangeEnd As Long)`
+- `SheetPivotTableChangeSync(Sh As Object, Target As PivotTable)`
+- `AfterSave(Success As Boolean)`
+- `NewChart(Ch As Chart)`
+- `SheetLensGalleryRenderComplete(Sh As Object)`
+- `SheetTableUpdate(Sh As Object, Target As TableObject)`
+- `ModelChange(Changes As ModelChanges)`
+- `SheetBeforeDelete(Sh As Object)`
+- `BeforeRemoteChange()`
+- `AfterRemoteChange()`

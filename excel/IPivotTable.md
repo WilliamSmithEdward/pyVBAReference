@@ -1,0 +1,147 @@
+# IPivotTable
+
+**Type:** Interface  
+**Library:** Microsoft Excel 16.0 Object Library  
+**GUID:** {00020872-0001-0000-C000-000000000046}  
+
+## Properties (105)
+
+- `Application As HRESULT  (read-only)`
+- `Creator As HRESULT  (read-only)`
+- `Parent As HRESULT  (read-only)`
+- `ColumnFields As HRESULT  (read-only)`
+- `ColumnGrand As HRESULT  (read/write)`
+- `ColumnRange As HRESULT  (read-only)`
+- `DataBodyRange As HRESULT  (read-only)`
+- `DataFields As HRESULT  (read-only)`
+- `DataLabelRange As HRESULT  (read-only)`
+- `_Default As HRESULT  (read/write)`
+- `HasAutoFormat As HRESULT  (read/write)`
+- `HiddenFields As HRESULT  (read-only)`
+- `InnerDetail As HRESULT  (read/write)`
+- `Name As HRESULT  (read/write)`
+- `PageFields As HRESULT  (read-only)`
+- `PageRange As HRESULT  (read-only)`
+- `PageRangeCells As HRESULT  (read-only)`
+- `RefreshDate As HRESULT  (read-only)`
+- `RefreshName As HRESULT  (read-only)`
+- `RowFields As HRESULT  (read-only)`
+- `RowGrand As HRESULT  (read/write)`
+- `RowRange As HRESULT  (read-only)`
+- `SaveData As HRESULT  (read/write)`
+- `SourceData As HRESULT  (read/write)`
+- `TableRange1 As HRESULT  (read-only)`
+- `TableRange2 As HRESULT  (read-only)`
+- `Value As HRESULT  (read/write)`
+- `VisibleFields As HRESULT  (read-only)`
+- `CacheIndex As HRESULT  (read/write)`
+- `DisplayErrorString As HRESULT  (read/write)`
+- `DisplayNullString As HRESULT  (read/write)`
+- `EnableDrilldown As HRESULT  (read/write)`
+- `EnableFieldDialog As HRESULT  (read/write)`
+- `EnableWizard As HRESULT  (read/write)`
+- `ErrorString As HRESULT  (read/write)`
+- `ManualUpdate As HRESULT  (read/write)`
+- `MergeLabels As HRESULT  (read/write)`
+- `NullString As HRESULT  (read/write)`
+- `PivotFormulas As HRESULT  (read-only)`
+- `SubtotalHiddenPageItems As HRESULT  (read/write)`
+- `PageFieldOrder As HRESULT  (read/write)`
+- `PageFieldStyle As HRESULT  (read/write)`
+- `PageFieldWrapCount As HRESULT  (read/write)`
+- `PreserveFormatting As HRESULT  (read/write)`
+- `PivotSelection As HRESULT  (read/write)`
+- `SelectionMode As HRESULT  (read/write)`
+- `Tag As HRESULT  (read/write)`
+- `VacatedStyle As HRESULT  (read/write)`
+- `PrintTitles As HRESULT  (read/write)`
+- `CubeFields As HRESULT  (read-only)`
+- `GrandTotalName As HRESULT  (read/write)`
+- `SmallGrid As HRESULT  (read/write)`
+- `RepeatItemsOnEachPrintedPage As HRESULT  (read/write)`
+- `TotalsAnnotation As HRESULT  (read/write)`
+- `PivotSelectionStandard As HRESULT  (read/write)`
+- `DataPivotField As HRESULT  (read-only)`
+- `EnableDataValueEditing As HRESULT  (read/write)`
+- `MDX As HRESULT  (read-only)`
+- `ViewCalculatedMembers As HRESULT  (read/write)`
+- `CalculatedMembers As HRESULT  (read-only)`
+- `DisplayImmediateItems As HRESULT  (read/write)`
+- `EnableFieldList As HRESULT  (read/write)`
+- `VisualTotals As HRESULT  (read/write)`
+- `ShowPageMultipleItemLabel As HRESULT  (read/write)`
+- `Version As HRESULT  (read-only)`
+- `DisplayEmptyRow As HRESULT  (read/write)`
+- `DisplayEmptyColumn As HRESULT  (read/write)`
+- `PivotColumnAxis As HRESULT  (read-only)`
+- `PivotRowAxis As HRESULT  (read-only)`
+- `ShowDrillIndicators As HRESULT  (read/write)`
+- `PrintDrillIndicators As HRESULT  (read/write)`
+- `DisplayMemberPropertyTooltips As HRESULT  (read/write)`
+- `DisplayContextTooltips As HRESULT  (read/write)`
+- `CompactRowIndent As HRESULT  (read/write)`
+- `LayoutRowDefault As HRESULT  (read/write)`
+- `DisplayFieldCaptions As HRESULT  (read/write)`
+- `ActiveFilters As HRESULT  (read-only)`
+- `InGridDropZones As HRESULT  (read/write)`
+- `TableStyle2 As HRESULT  (read/write)`
+- `ShowTableStyleLastColumn As HRESULT  (read/write)`
+- `ShowTableStyleRowStripes As HRESULT  (read/write)`
+- `ShowTableStyleColumnStripes As HRESULT  (read/write)`
+- `ShowTableStyleRowHeaders As HRESULT  (read/write)`
+- `ShowTableStyleColumnHeaders As HRESULT  (read/write)`
+- `AllowMultipleFilters As HRESULT  (read/write)`
+- `CompactLayoutRowHeader As HRESULT  (read/write)`
+- `CompactLayoutColumnHeader As HRESULT  (read/write)`
+- `FieldListSortAscending As HRESULT  (read/write)`
+- `SortUsingCustomLists As HRESULT  (read/write)`
+- `Location As HRESULT  (read/write)`
+- `EnableWriteback As HRESULT  (read/write)`
+- `Allocation As HRESULT  (read/write)`
+- `AllocationValue As HRESULT  (read/write)`
+- `AllocationMethod As HRESULT  (read/write)`
+- `AllocationWeightExpression As HRESULT  (read/write)`
+- `ChangeList As HRESULT  (read-only)`
+- `Slicers As HRESULT  (read-only)`
+- `AlternativeText As HRESULT  (read/write)`
+- `Summary As HRESULT  (read/write)`
+- `VisualTotalsForSets As HRESULT  (read/write)`
+- `ShowValuesRow As HRESULT  (read/write)`
+- `CalculatedMembersInFilters As HRESULT  (read/write)`
+- `Hidden As HRESULT  (read-only)`
+- `PivotChart As HRESULT  (read-only)`
+- `AutoRefresh As HRESULT  (read/write)`
+
+## Methods (31)
+
+- `AddFields([RowFields As Variant], [ColumnFields As Variant], [PageFields As Variant], [AddToTable As Variant], RHS As Variant)`
+- `ShowPages([PageField As Variant], RHS As Variant)`
+- `PivotFields([Index As Variant], RHS As Object)`
+- `RefreshTable(RHS As Boolean)`
+- `CalculatedFields(RHS As CalculatedFields)`
+- `GetData(Name As String, RHS As Double)`
+- `ListFormulas()`
+- `PivotCache(RHS As PivotCache)`
+- `PivotTableWizard([SourceType As Variant], [SourceData As Variant], [TableDestination As Variant], [TableName As Variant], [RowGrand As Variant], [ColumnGrand As Variant], [SaveData As Variant], [HasAutoFormat As Variant], [AutoPage As Variant], [Reserved As Variant], [BackgroundQuery As Variant], [OptimizeCache As Variant], [PageFieldOrder As Variant], [PageFieldWrapCount As Variant], [ReadData As Variant], [Connection As Variant])`
+- `Update()`
+- `PivotSelect(Name As String, [Mode As XlPTSelectionMode], [UseStandardName As Variant])`
+- `GetPivotData([DataField As Variant], [Field1 As Variant], [Item1 As Variant], [Field2 As Variant], [Item2 As Variant], [Field3 As Variant], [Item3 As Variant], [Field4 As Variant], [Item4 As Variant], [Field5 As Variant], [Item5 As Variant], [Field6 As Variant], [Item6 As Variant], [Field7 As Variant], [Item7 As Variant], [Field8 As Variant], [Item8 As Variant], [Field9 As Variant], [Item9 As Variant], [Field10 As Variant], [Item10 As Variant], [Field11 As Variant], [Item11 As Variant], [Field12 As Variant], [Item12 As Variant], [Field13 As Variant], [Item13 As Variant], [Field14 As Variant], [Item14 As Variant], RHS As Range)`
+- `AddDataField(Field As Object, [Caption As Variant], [Function As Variant], RHS As PivotField)`
+- `CreateCubeFile(File As String, [Measures As Variant], [Levels As Variant], [Members As Variant], [Properties As Variant], RHS As String)`
+- `ClearTable()`
+- `RowAxisLayout(RowLayout As XlLayoutRowType)`
+- `SubtotalLocation(Location As XlSubtototalLocationType)`
+- `ClearAllFilters()`
+- `ConvertToFormulas(ConvertFilters As Boolean)`
+- `ChangeConnection(conn As WorkbookConnection)`
+- `ChangePivotCache(PivotCache As Variant)`
+- `AllocateChanges()`
+- `CommitChanges()`
+- `DiscardChanges()`
+- `RefreshDataSourceValues()`
+- `RepeatAllLabels(Repeat As XlPivotFieldRepeatLabels)`
+- `PivotValueCell([rowline As Variant], [columnline As Variant], RHS As PivotValueCell)`
+- `DrillDown(PivotItem As PivotItem, [PivotLine As Variant])`
+- `DrillUp(PivotItem As PivotItem, [PivotLine As Variant], [LevelUniqueName As Variant])`
+- `DrillTo(PivotItem As PivotItem, CubeField As CubeField, [PivotLine As Variant])`
+- `ApplyLayout()`

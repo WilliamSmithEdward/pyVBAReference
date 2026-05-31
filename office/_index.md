@@ -1,0 +1,514 @@
+# Microsoft Office 16.0 Object Library
+
+Scraped object model: 510 entries.
+
+- [Adjustments](Adjustments.md) - Dispatch Interface
+- [AnswerWizard](AnswerWizard.md) - Dispatch Interface
+- [AnswerWizardFiles](AnswerWizardFiles.md) - Dispatch Interface
+- [Assistant](Assistant.md) - Dispatch Interface
+- [Axes](Axes.md) - Dispatch Interface
+- [BackstageGroupStyle](BackstageGroupStyle.md) - Enumeration
+- [Balloon](Balloon.md) - Dispatch Interface
+- [BalloonCheckbox](BalloonCheckbox.md) - Dispatch Interface
+- [BalloonCheckboxes](BalloonCheckboxes.md) - Dispatch Interface
+- [BalloonLabel](BalloonLabel.md) - Dispatch Interface
+- [BalloonLabels](BalloonLabels.md) - Dispatch Interface
+- [BulletFormat2](BulletFormat2.md) - Dispatch Interface
+- [CalloutFormat](CalloutFormat.md) - Dispatch Interface
+- [CanvasShapes](CanvasShapes.md) - Dispatch Interface
+- [CategoryCollection](CategoryCollection.md) - Interface
+- [CertificateDetail](CertificateDetail.md) - Enumeration
+- [CertificateVerificationResults](CertificateVerificationResults.md) - Enumeration
+- [ChartColorFormat](ChartColorFormat.md) - Interface
+- [ChartFillFormat](ChartFillFormat.md) - Dispatch Interface
+- [ChartFont](ChartFont.md) - Dispatch Interface
+- [ChartGroups](ChartGroups.md) - Dispatch Interface
+- [ChartPoint](ChartPoint.md) - Interface
+- [ColorFormat](ColorFormat.md) - Dispatch Interface
+- [COMAddIn](COMAddIn.md) - Dispatch Interface
+- [COMAddIns](COMAddIns.md) - Dispatch Interface
+- [CommandBar](CommandBar.md) - Dispatch Interface
+- [CommandBarActiveX](CommandBarActiveX.md) - Dispatch Interface
+- [CommandBarButton](CommandBarButton.md) - Class
+- [CommandBarButtonEvents](CommandBarButtonEvents.md) - Dispatch Interface
+- [CommandBarComboBox](CommandBarComboBox.md) - Class
+- [CommandBarComboBoxEvents](CommandBarComboBoxEvents.md) - Dispatch Interface
+- [CommandBarControl](CommandBarControl.md) - Dispatch Interface
+- [CommandBarControls](CommandBarControls.md) - Dispatch Interface
+- [CommandBarPopup](CommandBarPopup.md) - Dispatch Interface
+- [CommandBars](CommandBars.md) - Class
+- [CommandBarsEvents](CommandBarsEvents.md) - Dispatch Interface
+- [ConnectorFormat](ConnectorFormat.md) - Dispatch Interface
+- [ContactCard](ContactCard.md) - Dispatch Interface
+- [ContentVerificationResults](ContentVerificationResults.md) - Enumeration
+- [Crop](Crop.md) - Dispatch Interface
+- [CustomTaskPane](CustomTaskPane.md) - Class
+- [CustomTaskPaneEvents](CustomTaskPaneEvents.md) - Dispatch Interface
+- [CustomXMLNode](CustomXMLNode.md) - Dispatch Interface
+- [CustomXMLNodes](CustomXMLNodes.md) - Dispatch Interface
+- [CustomXMLPart](CustomXMLPart.md) - Class
+- [CustomXMLPartEvents](CustomXMLPartEvents.md) - Dispatch Interface
+- [CustomXMLParts](CustomXMLParts.md) - Class
+- [CustomXMLPartsEvents](CustomXMLPartsEvents.md) - Dispatch Interface
+- [CustomXMLPrefixMapping](CustomXMLPrefixMapping.md) - Dispatch Interface
+- [CustomXMLPrefixMappings](CustomXMLPrefixMappings.md) - Dispatch Interface
+- [CustomXMLSchema](CustomXMLSchema.md) - Dispatch Interface
+- [CustomXMLSchemaCollection](CustomXMLSchemaCollection.md) - Class
+- [CustomXMLValidationError](CustomXMLValidationError.md) - Dispatch Interface
+- [CustomXMLValidationErrors](CustomXMLValidationErrors.md) - Dispatch Interface
+- [DataPrivacyOptions](DataPrivacyOptions.md) - Dispatch Interface
+- [DiagramNode](DiagramNode.md) - Dispatch Interface
+- [DiagramNodeChildren](DiagramNodeChildren.md) - Dispatch Interface
+- [DiagramNodes](DiagramNodes.md) - Dispatch Interface
+- [DocProperties](DocProperties.md) - Enumeration
+- [DocumentInspector](DocumentInspector.md) - Dispatch Interface
+- [DocumentInspectors](DocumentInspectors.md) - Dispatch Interface
+- [DocumentLibraryVersion](DocumentLibraryVersion.md) - Dispatch Interface
+- [DocumentLibraryVersions](DocumentLibraryVersions.md) - Dispatch Interface
+- [DocumentProperties](DocumentProperties.md) - Interface
+- [DocumentProperty](DocumentProperty.md) - Interface
+- [EffectParameter](EffectParameter.md) - Dispatch Interface
+- [EffectParameters](EffectParameters.md) - Dispatch Interface
+- [EncryptionCipherMode](EncryptionCipherMode.md) - Enumeration
+- [EncryptionProvider](EncryptionProvider.md) - Dispatch Interface
+- [EncryptionProviderDetail](EncryptionProviderDetail.md) - Enumeration
+- [FileDialog](FileDialog.md) - Dispatch Interface
+- [FileDialogFilter](FileDialogFilter.md) - Dispatch Interface
+- [FileDialogFilters](FileDialogFilters.md) - Dispatch Interface
+- [FileDialogSelectedItems](FileDialogSelectedItems.md) - Dispatch Interface
+- [FileSearch](FileSearch.md) - Dispatch Interface
+- [FileTypes](FileTypes.md) - Dispatch Interface
+- [FillFormat](FillFormat.md) - Dispatch Interface
+- [Font2](Font2.md) - Dispatch Interface
+- [FoundFiles](FoundFiles.md) - Dispatch Interface
+- [FreeformBuilder](FreeformBuilder.md) - Dispatch Interface
+- [FullSeriesCollection](FullSeriesCollection.md) - Interface
+- [GlowFormat](GlowFormat.md) - Dispatch Interface
+- [GradientStop](GradientStop.md) - Dispatch Interface
+- [GradientStops](GradientStops.md) - Dispatch Interface
+- [GridLines](GridLines.md) - Dispatch Interface
+- [GroupShapes](GroupShapes.md) - Dispatch Interface
+- [HTMLProject](HTMLProject.md) - Dispatch Interface
+- [HTMLProjectItem](HTMLProjectItem.md) - Dispatch Interface
+- [HTMLProjectItems](HTMLProjectItems.md) - Dispatch Interface
+- [IAssistance](IAssistance.md) - Dispatch Interface
+- [IBlogExtensibility](IBlogExtensibility.md) - Dispatch Interface
+- [IBlogPictureExtensibility](IBlogPictureExtensibility.md) - Dispatch Interface
+- [ICommandBarButtonEvents](ICommandBarButtonEvents.md) - Dispatch Interface
+- [ICommandBarComboBoxEvents](ICommandBarComboBoxEvents.md) - Dispatch Interface
+- [ICommandBarsEvents](ICommandBarsEvents.md) - Dispatch Interface
+- [IConverter](IConverter.md) - Interface
+- [IConverterApplicationPreferences](IConverterApplicationPreferences.md) - Interface
+- [IConverterPreferences](IConverterPreferences.md) - Interface
+- [IConverterUICallback](IConverterUICallback.md) - Interface
+- [ICTPFactory](ICTPFactory.md) - Dispatch Interface
+- [ICustomTaskPaneConsumer](ICustomTaskPaneConsumer.md) - Dispatch Interface
+- [ICustomXMLPartEvents](ICustomXMLPartEvents.md) - Dispatch Interface
+- [ICustomXMLPartsEvents](ICustomXMLPartsEvents.md) - Dispatch Interface
+- [IDocumentInspector](IDocumentInspector.md) - Interface
+- [IFind](IFind.md) - Dispatch Interface
+- [IFoundFiles](IFoundFiles.md) - Dispatch Interface
+- [ILicAgent](ILicAgent.md) - Dispatch Interface
+- [ILicValidator](ILicValidator.md) - Dispatch Interface
+- [ILicWizExternal](ILicWizExternal.md) - Dispatch Interface
+- [IMsoAxis](IMsoAxis.md) - Dispatch Interface
+- [IMsoAxisTitle](IMsoAxisTitle.md) - Dispatch Interface
+- [IMsoBorder](IMsoBorder.md) - Dispatch Interface
+- [IMsoCategory](IMsoCategory.md) - Interface
+- [IMsoCharacters](IMsoCharacters.md) - Dispatch Interface
+- [IMsoChart](IMsoChart.md) - Dispatch Interface
+- [IMsoChartArea](IMsoChartArea.md) - Dispatch Interface
+- [IMsoChartData](IMsoChartData.md) - Dispatch Interface
+- [IMsoChartFormat](IMsoChartFormat.md) - Dispatch Interface
+- [IMsoChartGroup](IMsoChartGroup.md) - Dispatch Interface
+- [IMsoChartTitle](IMsoChartTitle.md) - Dispatch Interface
+- [IMsoContactCard](IMsoContactCard.md) - Dispatch Interface
+- [IMsoCorners](IMsoCorners.md) - Dispatch Interface
+- [IMsoDataLabel](IMsoDataLabel.md) - Interface
+- [IMsoDataLabels](IMsoDataLabels.md) - Interface
+- [IMsoDataTable](IMsoDataTable.md) - Dispatch Interface
+- [IMsoDiagram](IMsoDiagram.md) - Dispatch Interface
+- [IMsoDispCagNotifySink](IMsoDispCagNotifySink.md) - Dispatch Interface
+- [IMsoDisplayUnitLabel](IMsoDisplayUnitLabel.md) - Dispatch Interface
+- [IMsoDispObj](IMsoDispObj.md) - Dispatch Interface
+- [IMsoDownBars](IMsoDownBars.md) - Dispatch Interface
+- [IMsoDropLines](IMsoDropLines.md) - Dispatch Interface
+- [IMsoEnvelopeVB](IMsoEnvelopeVB.md) - Dispatch Interface
+- [IMsoEnvelopeVBEvents](IMsoEnvelopeVBEvents.md) - Dispatch Interface
+- [IMsoErrorBars](IMsoErrorBars.md) - Interface
+- [IMsoEServicesDialog](IMsoEServicesDialog.md) - Dispatch Interface
+- [IMsoFloor](IMsoFloor.md) - Dispatch Interface
+- [IMsoHiLoLines](IMsoHiLoLines.md) - Dispatch Interface
+- [IMsoInterior](IMsoInterior.md) - Dispatch Interface
+- [IMsoLeaderLines](IMsoLeaderLines.md) - Dispatch Interface
+- [IMsoLegend](IMsoLegend.md) - Dispatch Interface
+- [IMsoLegendKey](IMsoLegendKey.md) - Interface
+- [IMsoOleAccDispObj](IMsoOleAccDispObj.md) - Dispatch Interface
+- [IMsoPlotArea](IMsoPlotArea.md) - Dispatch Interface
+- [IMsoSeries](IMsoSeries.md) - Interface
+- [IMsoSeriesLines](IMsoSeriesLines.md) - Dispatch Interface
+- [IMsoTickLabels](IMsoTickLabels.md) - Dispatch Interface
+- [IMsoTrendline](IMsoTrendline.md) - Interface
+- [IMsoUpBars](IMsoUpBars.md) - Dispatch Interface
+- [IMsoWalls](IMsoWalls.md) - Dispatch Interface
+- [IRibbonControl](IRibbonControl.md) - Dispatch Interface
+- [IRibbonExtensibility](IRibbonExtensibility.md) - Dispatch Interface
+- [IRibbonUI](IRibbonUI.md) - Dispatch Interface
+- [ISensitivityLabel](ISensitivityLabel.md) - Dispatch Interface
+- [ISensitivityLabelEvents](ISensitivityLabelEvents.md) - Dispatch Interface
+- [LabelInfo](LabelInfo.md) - Dispatch Interface
+- [LanguageSettings](LanguageSettings.md) - Dispatch Interface
+- [LegendEntries](LegendEntries.md) - Interface
+- [LegendEntry](LegendEntry.md) - Interface
+- [LineFormat](LineFormat.md) - Dispatch Interface
+- [MailFormat](MailFormat.md) - Enumeration
+- [MetaProperties](MetaProperties.md) - Dispatch Interface
+- [MetaProperty](MetaProperty.md) - Dispatch Interface
+- [Model3DFormat](Model3DFormat.md) - Dispatch Interface
+- [MsoAlertButtonType](MsoAlertButtonType.md) - Enumeration
+- [MsoAlertCancelType](MsoAlertCancelType.md) - Enumeration
+- [MsoAlertDefaultType](MsoAlertDefaultType.md) - Enumeration
+- [MsoAlertIconType](MsoAlertIconType.md) - Enumeration
+- [MsoAlignCmd](MsoAlignCmd.md) - Enumeration
+- [MsoAnimationType](MsoAnimationType.md) - Enumeration
+- [MsoAppLanguageID](MsoAppLanguageID.md) - Enumeration
+- [MsoArrowheadLength](MsoArrowheadLength.md) - Enumeration
+- [MsoArrowheadStyle](MsoArrowheadStyle.md) - Enumeration
+- [MsoArrowheadWidth](MsoArrowheadWidth.md) - Enumeration
+- [MsoAssignmentMethod](MsoAssignmentMethod.md) - Enumeration
+- [MsoAutomationSecurity](MsoAutomationSecurity.md) - Enumeration
+- [MsoAutoShapeType](MsoAutoShapeType.md) - Enumeration
+- [MsoAutoSize](MsoAutoSize.md) - Enumeration
+- [MsoBackgroundStyleIndex](MsoBackgroundStyleIndex.md) - Enumeration
+- [MsoBalloonButtonType](MsoBalloonButtonType.md) - Enumeration
+- [MsoBalloonErrorType](MsoBalloonErrorType.md) - Enumeration
+- [MsoBalloonType](MsoBalloonType.md) - Enumeration
+- [MsoBarPosition](MsoBarPosition.md) - Enumeration
+- [MsoBarProtection](MsoBarProtection.md) - Enumeration
+- [MsoBarRow](MsoBarRow.md) - Enumeration
+- [MsoBarType](MsoBarType.md) - Enumeration
+- [MsoBaselineAlignment](MsoBaselineAlignment.md) - Enumeration
+- [MsoBevelType](MsoBevelType.md) - Enumeration
+- [MsoBlackWhiteMode](MsoBlackWhiteMode.md) - Enumeration
+- [MsoBlogCategorySupport](MsoBlogCategorySupport.md) - Enumeration
+- [MsoBlogImageType](MsoBlogImageType.md) - Enumeration
+- [MsoBroadcastCapabilities](MsoBroadcastCapabilities.md) - Enumeration
+- [MsoBroadcastState](MsoBroadcastState.md) - Enumeration
+- [MsoBulletType](MsoBulletType.md) - Enumeration
+- [MsoButtonSetType](MsoButtonSetType.md) - Enumeration
+- [MsoButtonState](MsoButtonState.md) - Enumeration
+- [MsoButtonStyle](MsoButtonStyle.md) - Enumeration
+- [MsoButtonStyleHidden](MsoButtonStyleHidden.md) - Enumeration
+- [MsoCalloutAngleType](MsoCalloutAngleType.md) - Enumeration
+- [MsoCalloutDropType](MsoCalloutDropType.md) - Enumeration
+- [MsoCalloutType](MsoCalloutType.md) - Enumeration
+- [MsoCharacterSet](MsoCharacterSet.md) - Enumeration
+- [MsoChartElementType](MsoChartElementType.md) - Enumeration
+- [MsoChartFieldType](MsoChartFieldType.md) - Enumeration
+- [MsoClipboardFormat](MsoClipboardFormat.md) - Enumeration
+- [MsoColorType](MsoColorType.md) - Enumeration
+- [MsoComboStyle](MsoComboStyle.md) - Enumeration
+- [MsoCommandBarButtonHyperlinkType](MsoCommandBarButtonHyperlinkType.md) - Enumeration
+- [MsoCondition](MsoCondition.md) - Enumeration
+- [MsoConnector](MsoConnector.md) - Enumeration
+- [MsoConnectorType](MsoConnectorType.md) - Enumeration
+- [MsoContactCardAddressType](MsoContactCardAddressType.md) - Enumeration
+- [MsoContactCardStyle](MsoContactCardStyle.md) - Enumeration
+- [MsoContactCardType](MsoContactCardType.md) - Enumeration
+- [MsoControlOLEUsage](MsoControlOLEUsage.md) - Enumeration
+- [MsoControlType](MsoControlType.md) - Enumeration
+- [MsoCTPDockPosition](MsoCTPDockPosition.md) - Enumeration
+- [MsoCTPDockPositionRestrict](MsoCTPDockPositionRestrict.md) - Enumeration
+- [MsoCustomXMLNodeType](MsoCustomXMLNodeType.md) - Enumeration
+- [MsoCustomXMLValidationErrorType](MsoCustomXMLValidationErrorType.md) - Enumeration
+- [MsoDateTimeFormat](MsoDateTimeFormat.md) - Enumeration
+- [MsoDebugOptions](MsoDebugOptions.md) - Dispatch Interface
+- [MsoDebugOptions_UT](MsoDebugOptions_UT.md) - Dispatch Interface
+- [MsoDebugOptions_UTManager](MsoDebugOptions_UTManager.md) - Dispatch Interface
+- [MsoDebugOptions_UTRunResult](MsoDebugOptions_UTRunResult.md) - Dispatch Interface
+- [MsoDebugOptions_UTs](MsoDebugOptions_UTs.md) - Dispatch Interface
+- [MsoDiagramNodeType](MsoDiagramNodeType.md) - Enumeration
+- [MsoDiagramType](MsoDiagramType.md) - Enumeration
+- [MsoDistributeCmd](MsoDistributeCmd.md) - Enumeration
+- [MsoDocInspectorStatus](MsoDocInspectorStatus.md) - Enumeration
+- [MsoDocProperties](MsoDocProperties.md) - Enumeration
+- [MsoEditingType](MsoEditingType.md) - Enumeration
+- [MsoEncoding](MsoEncoding.md) - Enumeration
+- [MsoEnvelope](MsoEnvelope.md) - Class
+- [MsoExtraInfoMethod](MsoExtraInfoMethod.md) - Enumeration
+- [MsoExtrusionColorType](MsoExtrusionColorType.md) - Enumeration
+- [MsoFarEastLineBreakLanguageID](MsoFarEastLineBreakLanguageID.md) - Enumeration
+- [MsoFeatureInstall](MsoFeatureInstall.md) - Enumeration
+- [MsoFileDialogType](MsoFileDialogType.md) - Enumeration
+- [MsoFileDialogView](MsoFileDialogView.md) - Enumeration
+- [MsoFileFindListBy](MsoFileFindListBy.md) - Enumeration
+- [MsoFileFindOptions](MsoFileFindOptions.md) - Enumeration
+- [MsoFileFindSortBy](MsoFileFindSortBy.md) - Enumeration
+- [MsoFileFindView](MsoFileFindView.md) - Enumeration
+- [MsoFileNewAction](MsoFileNewAction.md) - Enumeration
+- [MsoFileNewSection](MsoFileNewSection.md) - Enumeration
+- [MsoFileType](MsoFileType.md) - Enumeration
+- [MsoFileValidationMode](MsoFileValidationMode.md) - Enumeration
+- [MsoFillType](MsoFillType.md) - Enumeration
+- [MsoFilterComparison](MsoFilterComparison.md) - Enumeration
+- [MsoFilterConjunction](MsoFilterConjunction.md) - Enumeration
+- [MsoFlipCmd](MsoFlipCmd.md) - Enumeration
+- [MsoFontLanguageIndex](MsoFontLanguageIndex.md) - Enumeration
+- [MsoGradientColorType](MsoGradientColorType.md) - Enumeration
+- [MsoGradientStyle](MsoGradientStyle.md) - Enumeration
+- [MsoGraphicStyleIndex](MsoGraphicStyleIndex.md) - Enumeration
+- [MsoHorizontalAnchor](MsoHorizontalAnchor.md) - Enumeration
+- [MsoHTMLProjectOpen](MsoHTMLProjectOpen.md) - Enumeration
+- [MsoHTMLProjectState](MsoHTMLProjectState.md) - Enumeration
+- [MsoHyperlinkType](MsoHyperlinkType.md) - Enumeration
+- [MsoIconType](MsoIconType.md) - Enumeration
+- [MsoIodGroup](MsoIodGroup.md) - Enumeration
+- [MsoLanguageID](MsoLanguageID.md) - Enumeration
+- [MsoLanguageIDHidden](MsoLanguageIDHidden.md) - Enumeration
+- [MsoLastModified](MsoLastModified.md) - Enumeration
+- [MsoLightRigType](MsoLightRigType.md) - Enumeration
+- [MsoLineCapStyle](MsoLineCapStyle.md) - Enumeration
+- [MsoLineDashStyle](MsoLineDashStyle.md) - Enumeration
+- [MsoLineFillType](MsoLineFillType.md) - Enumeration
+- [MsoLineJoinStyle](MsoLineJoinStyle.md) - Enumeration
+- [MsoLineStyle](MsoLineStyle.md) - Enumeration
+- [MsoMenuAnimation](MsoMenuAnimation.md) - Enumeration
+- [MsoMergeCmd](MsoMergeCmd.md) - Enumeration
+- [MsoMetaPropertyType](MsoMetaPropertyType.md) - Enumeration
+- [MsoMixedType](MsoMixedType.md) - Enumeration
+- [MsoModeType](MsoModeType.md) - Enumeration
+- [MsoMoveRow](MsoMoveRow.md) - Enumeration
+- [MsoNumberedBulletStyle](MsoNumberedBulletStyle.md) - Enumeration
+- [MsoOLEMenuGroup](MsoOLEMenuGroup.md) - Enumeration
+- [MsoOrgChartLayoutType](MsoOrgChartLayoutType.md) - Enumeration
+- [MsoOrgChartOrientation](MsoOrgChartOrientation.md) - Enumeration
+- [MsoOrientation](MsoOrientation.md) - Enumeration
+- [MsoParagraphAlignment](MsoParagraphAlignment.md) - Enumeration
+- [MsoPathFormat](MsoPathFormat.md) - Enumeration
+- [MsoPatternType](MsoPatternType.md) - Enumeration
+- [MsoPermission](MsoPermission.md) - Enumeration
+- [MsoPickerField](MsoPickerField.md) - Enumeration
+- [MsoPictureColorType](MsoPictureColorType.md) - Enumeration
+- [MsoPictureCompress](MsoPictureCompress.md) - Enumeration
+- [MsoPictureEffectType](MsoPictureEffectType.md) - Enumeration
+- [MsoPictureType](MsoPictureType.md) - Enumeration
+- [MsoPresetCamera](MsoPresetCamera.md) - Enumeration
+- [MsoPresetExtrusionDirection](MsoPresetExtrusionDirection.md) - Enumeration
+- [MsoPresetGradientType](MsoPresetGradientType.md) - Enumeration
+- [MsoPresetLightingDirection](MsoPresetLightingDirection.md) - Enumeration
+- [MsoPresetLightingSoftness](MsoPresetLightingSoftness.md) - Enumeration
+- [MsoPresetMaterial](MsoPresetMaterial.md) - Enumeration
+- [MsoPresetTextEffect](MsoPresetTextEffect.md) - Enumeration
+- [MsoPresetTextEffectShape](MsoPresetTextEffectShape.md) - Enumeration
+- [MsoPresetTexture](MsoPresetTexture.md) - Enumeration
+- [MsoPresetThreeDFormat](MsoPresetThreeDFormat.md) - Enumeration
+- [MsoPrivacyOptionSetting](MsoPrivacyOptionSetting.md) - Enumeration
+- [MsoReflectionType](MsoReflectionType.md) - Enumeration
+- [MsoRelativeNodePosition](MsoRelativeNodePosition.md) - Enumeration
+- [MsoScaleFrom](MsoScaleFrom.md) - Enumeration
+- [MsoScreenSize](MsoScreenSize.md) - Enumeration
+- [MsoScriptLanguage](MsoScriptLanguage.md) - Enumeration
+- [MsoScriptLocation](MsoScriptLocation.md) - Enumeration
+- [MsoSearchIn](MsoSearchIn.md) - Enumeration
+- [MsoSegmentType](MsoSegmentType.md) - Enumeration
+- [MsoSensitivityLabelError](MsoSensitivityLabelError.md) - Enumeration
+- [MsoShadowStyle](MsoShadowStyle.md) - Enumeration
+- [MsoShadowType](MsoShadowType.md) - Enumeration
+- [MsoShapeStyleIndex](MsoShapeStyleIndex.md) - Enumeration
+- [MsoShapeType](MsoShapeType.md) - Enumeration
+- [MsoSharedWorkspaceTaskPriority](MsoSharedWorkspaceTaskPriority.md) - Enumeration
+- [MsoSharedWorkspaceTaskStatus](MsoSharedWorkspaceTaskStatus.md) - Enumeration
+- [MsoSignatureSubset](MsoSignatureSubset.md) - Enumeration
+- [MsoSmartArtNodePosition](MsoSmartArtNodePosition.md) - Enumeration
+- [MsoSmartArtNodeType](MsoSmartArtNodeType.md) - Enumeration
+- [MsoSoftEdgeType](MsoSoftEdgeType.md) - Enumeration
+- [MsoSortBy](MsoSortBy.md) - Enumeration
+- [MsoSortOrder](MsoSortOrder.md) - Enumeration
+- [MsoSyncAvailableType](MsoSyncAvailableType.md) - Enumeration
+- [MsoSyncCompareType](MsoSyncCompareType.md) - Enumeration
+- [MsoSyncConflictResolutionType](MsoSyncConflictResolutionType.md) - Enumeration
+- [MsoSyncErrorType](MsoSyncErrorType.md) - Enumeration
+- [MsoSyncEventType](MsoSyncEventType.md) - Enumeration
+- [MsoSyncStatusType](MsoSyncStatusType.md) - Enumeration
+- [MsoSyncVersionType](MsoSyncVersionType.md) - Enumeration
+- [MsoTabStopType](MsoTabStopType.md) - Enumeration
+- [MsoTargetBrowser](MsoTargetBrowser.md) - Enumeration
+- [MsoTelemetryConsentLevel](MsoTelemetryConsentLevel.md) - Enumeration
+- [MsoTextCaps](MsoTextCaps.md) - Enumeration
+- [MsoTextChangeCase](MsoTextChangeCase.md) - Enumeration
+- [MsoTextCharWrap](MsoTextCharWrap.md) - Enumeration
+- [MsoTextDirection](MsoTextDirection.md) - Enumeration
+- [MsoTextEffectAlignment](MsoTextEffectAlignment.md) - Enumeration
+- [MsoTextFontAlign](MsoTextFontAlign.md) - Enumeration
+- [MsoTextOrientation](MsoTextOrientation.md) - Enumeration
+- [MsoTextRangeInsertPosition](MsoTextRangeInsertPosition.md) - Enumeration
+- [MsoTextStrike](MsoTextStrike.md) - Enumeration
+- [MsoTextTabAlign](MsoTextTabAlign.md) - Enumeration
+- [MsoTextUnderlineType](MsoTextUnderlineType.md) - Enumeration
+- [MsoTextureAlignment](MsoTextureAlignment.md) - Enumeration
+- [MsoTextureType](MsoTextureType.md) - Enumeration
+- [MsoThemeColorIndex](MsoThemeColorIndex.md) - Enumeration
+- [MsoThemeColorSchemeIndex](MsoThemeColorSchemeIndex.md) - Enumeration
+- [MsoTriState](MsoTriState.md) - Enumeration
+- [MsoVerticalAnchor](MsoVerticalAnchor.md) - Enumeration
+- [MsoWarpFormat](MsoWarpFormat.md) - Enumeration
+- [MsoWizardActType](MsoWizardActType.md) - Enumeration
+- [MsoWizardMsgType](MsoWizardMsgType.md) - Enumeration
+- [MsoZOrderCmd](MsoZOrderCmd.md) - Enumeration
+- [NewFile](NewFile.md) - Dispatch Interface
+- [ODSOColumn](ODSOColumn.md) - Dispatch Interface
+- [ODSOColumns](ODSOColumns.md) - Dispatch Interface
+- [ODSOFilter](ODSOFilter.md) - Dispatch Interface
+- [ODSOFilters](ODSOFilters.md) - Dispatch Interface
+- [OfficeDataSourceObject](OfficeDataSourceObject.md) - Dispatch Interface
+- [OfficeTheme](OfficeTheme.md) - Dispatch Interface
+- [ParagraphFormat2](ParagraphFormat2.md) - Dispatch Interface
+- [Permission](Permission.md) - Dispatch Interface
+- [PickerDialog](PickerDialog.md) - Dispatch Interface
+- [PickerField](PickerField.md) - Dispatch Interface
+- [PickerFields](PickerFields.md) - Dispatch Interface
+- [PickerProperties](PickerProperties.md) - Dispatch Interface
+- [PickerProperty](PickerProperty.md) - Dispatch Interface
+- [PickerResult](PickerResult.md) - Dispatch Interface
+- [PickerResults](PickerResults.md) - Dispatch Interface
+- [PictureEffect](PictureEffect.md) - Dispatch Interface
+- [PictureEffects](PictureEffects.md) - Dispatch Interface
+- [PictureFormat](PictureFormat.md) - Dispatch Interface
+- [Points](Points.md) - Interface
+- [PolicyItem](PolicyItem.md) - Dispatch Interface
+- [PropertyTest](PropertyTest.md) - Dispatch Interface
+- [PropertyTests](PropertyTests.md) - Dispatch Interface
+- [ReflectionFormat](ReflectionFormat.md) - Dispatch Interface
+- [RibbonControlSize](RibbonControlSize.md) - Enumeration
+- [Ruler2](Ruler2.md) - Dispatch Interface
+- [RulerLevel2](RulerLevel2.md) - Dispatch Interface
+- [RulerLevels2](RulerLevels2.md) - Dispatch Interface
+- [ScopeFolder](ScopeFolder.md) - Dispatch Interface
+- [ScopeFolders](ScopeFolders.md) - Dispatch Interface
+- [Script](Script.md) - Dispatch Interface
+- [Scripts](Scripts.md) - Dispatch Interface
+- [SearchFolders](SearchFolders.md) - Dispatch Interface
+- [SearchScope](SearchScope.md) - Dispatch Interface
+- [SearchScopes](SearchScopes.md) - Dispatch Interface
+- [SensitivityLabel](SensitivityLabel.md) - Class
+- [SensitivityLabelEvents](SensitivityLabelEvents.md) - Dispatch Interface
+- [SensitivityLabelInitInfo](SensitivityLabelInitInfo.md) - Dispatch Interface
+- [SensitivityLabelPolicy](SensitivityLabelPolicy.md) - Dispatch Interface
+- [SeriesCollection](SeriesCollection.md) - Interface
+- [SeriesGradientStopColorFormat](SeriesGradientStopColorFormat.md) - Interface
+- [SeriesGradientStopData](SeriesGradientStopData.md) - Interface
+- [ServerPolicy](ServerPolicy.md) - Dispatch Interface
+- [ShadowFormat](ShadowFormat.md) - Dispatch Interface
+- [Shape](Shape.md) - Dispatch Interface
+- [ShapeNode](ShapeNode.md) - Dispatch Interface
+- [ShapeNodes](ShapeNodes.md) - Dispatch Interface
+- [ShapeRange](ShapeRange.md) - Dispatch Interface
+- [Shapes](Shapes.md) - Dispatch Interface
+- [SharedWorkspace](SharedWorkspace.md) - Dispatch Interface
+- [SharedWorkspaceFile](SharedWorkspaceFile.md) - Dispatch Interface
+- [SharedWorkspaceFiles](SharedWorkspaceFiles.md) - Dispatch Interface
+- [SharedWorkspaceFolder](SharedWorkspaceFolder.md) - Dispatch Interface
+- [SharedWorkspaceFolders](SharedWorkspaceFolders.md) - Dispatch Interface
+- [SharedWorkspaceLink](SharedWorkspaceLink.md) - Dispatch Interface
+- [SharedWorkspaceLinks](SharedWorkspaceLinks.md) - Dispatch Interface
+- [SharedWorkspaceMember](SharedWorkspaceMember.md) - Dispatch Interface
+- [SharedWorkspaceMembers](SharedWorkspaceMembers.md) - Dispatch Interface
+- [SharedWorkspaceTask](SharedWorkspaceTask.md) - Dispatch Interface
+- [SharedWorkspaceTasks](SharedWorkspaceTasks.md) - Dispatch Interface
+- [Signature](Signature.md) - Dispatch Interface
+- [SignatureDetail](SignatureDetail.md) - Enumeration
+- [SignatureInfo](SignatureInfo.md) - Dispatch Interface
+- [SignatureLineImage](SignatureLineImage.md) - Enumeration
+- [SignatureProvider](SignatureProvider.md) - Dispatch Interface
+- [SignatureProviderDetail](SignatureProviderDetail.md) - Enumeration
+- [SignatureSet](SignatureSet.md) - Dispatch Interface
+- [SignatureSetup](SignatureSetup.md) - Dispatch Interface
+- [SignatureType](SignatureType.md) - Enumeration
+- [SmartArt](SmartArt.md) - Dispatch Interface
+- [SmartArtColor](SmartArtColor.md) - Dispatch Interface
+- [SmartArtColors](SmartArtColors.md) - Dispatch Interface
+- [SmartArtLayout](SmartArtLayout.md) - Dispatch Interface
+- [SmartArtLayouts](SmartArtLayouts.md) - Dispatch Interface
+- [SmartArtNode](SmartArtNode.md) - Dispatch Interface
+- [SmartArtNodes](SmartArtNodes.md) - Dispatch Interface
+- [SmartArtQuickStyle](SmartArtQuickStyle.md) - Dispatch Interface
+- [SmartArtQuickStyles](SmartArtQuickStyles.md) - Dispatch Interface
+- [SmartDocument](SmartDocument.md) - Dispatch Interface
+- [SoftEdgeFormat](SoftEdgeFormat.md) - Dispatch Interface
+- [Sync](Sync.md) - Dispatch Interface
+- [TabStop2](TabStop2.md) - Dispatch Interface
+- [TabStops2](TabStops2.md) - Dispatch Interface
+- [TextColumn2](TextColumn2.md) - Dispatch Interface
+- [TextEffectFormat](TextEffectFormat.md) - Dispatch Interface
+- [TextFrame](TextFrame.md) - Dispatch Interface
+- [TextFrame2](TextFrame2.md) - Dispatch Interface
+- [TextRange2](TextRange2.md) - Dispatch Interface
+- [ThemeColor](ThemeColor.md) - Dispatch Interface
+- [ThemeColorScheme](ThemeColorScheme.md) - Dispatch Interface
+- [ThemeEffectScheme](ThemeEffectScheme.md) - Dispatch Interface
+- [ThemeFont](ThemeFont.md) - Dispatch Interface
+- [ThemeFonts](ThemeFonts.md) - Dispatch Interface
+- [ThemeFontScheme](ThemeFontScheme.md) - Dispatch Interface
+- [ThreeDFormat](ThreeDFormat.md) - Dispatch Interface
+- [Trendlines](Trendlines.md) - Interface
+- [UserPermission](UserPermission.md) - Dispatch Interface
+- [WebComponent](WebComponent.md) - Dispatch Interface
+- [WebComponentFormat](WebComponentFormat.md) - Dispatch Interface
+- [WebComponentProperties](WebComponentProperties.md) - Dispatch Interface
+- [WebComponentWindowExternal](WebComponentWindowExternal.md) - Dispatch Interface
+- [WebPageFont](WebPageFont.md) - Dispatch Interface
+- [WebPageFonts](WebPageFonts.md) - Dispatch Interface
+- [WorkflowTask](WorkflowTask.md) - Dispatch Interface
+- [WorkflowTasks](WorkflowTasks.md) - Dispatch Interface
+- [WorkflowTemplate](WorkflowTemplate.md) - Dispatch Interface
+- [WorkflowTemplates](WorkflowTemplates.md) - Dispatch Interface
+- [XlAxisCrosses](XlAxisCrosses.md) - Enumeration
+- [XlAxisGroup](XlAxisGroup.md) - Enumeration
+- [XlAxisType](XlAxisType.md) - Enumeration
+- [XlBarShape](XlBarShape.md) - Enumeration
+- [XlBinsType](XlBinsType.md) - Enumeration
+- [XlBorderWeight](XlBorderWeight.md) - Enumeration
+- [XlCategoryLabelLevel](XlCategoryLabelLevel.md) - Enumeration
+- [XlCategorySortOrder](XlCategorySortOrder.md) - Enumeration
+- [XlCategoryType](XlCategoryType.md) - Enumeration
+- [XlChartElementPosition](XlChartElementPosition.md) - Enumeration
+- [XlChartItem](XlChartItem.md) - Enumeration
+- [XlChartOrientation](XlChartOrientation.md) - Enumeration
+- [XlChartPictureType](XlChartPictureType.md) - Enumeration
+- [XlChartSplitType](XlChartSplitType.md) - Enumeration
+- [XlChartType](XlChartType.md) - Enumeration
+- [XlColorIndex](XlColorIndex.md) - Enumeration
+- [XlConstants](XlConstants.md) - Enumeration
+- [XlDataLabelPosition](XlDataLabelPosition.md) - Enumeration
+- [XlDataLabelsType](XlDataLabelsType.md) - Enumeration
+- [XlDisplayBlanksAs](XlDisplayBlanksAs.md) - Enumeration
+- [XlDisplayUnit](XlDisplayUnit.md) - Enumeration
+- [XlEndStyleCap](XlEndStyleCap.md) - Enumeration
+- [XlErrorBarDirection](XlErrorBarDirection.md) - Enumeration
+- [XlErrorBarInclude](XlErrorBarInclude.md) - Enumeration
+- [XlErrorBarType](XlErrorBarType.md) - Enumeration
+- [XlGeoMappingLevel](XlGeoMappingLevel.md) - Enumeration
+- [XlGeoProjectionType](XlGeoProjectionType.md) - Enumeration
+- [XlGradientStopPositionType](XlGradientStopPositionType.md) - Enumeration
+- [XlHAlign](XlHAlign.md) - Enumeration
+- [XlLegendPosition](XlLegendPosition.md) - Enumeration
+- [XlMarkerStyle](XlMarkerStyle.md) - Enumeration
+- [XlParentDataLabelOptions](XlParentDataLabelOptions.md) - Enumeration
+- [XlPieSliceIndex](XlPieSliceIndex.md) - Enumeration
+- [XlPieSliceLocation](XlPieSliceLocation.md) - Enumeration
+- [XlPivotFieldOrientation](XlPivotFieldOrientation.md) - Enumeration
+- [XlReadingOrder](XlReadingOrder.md) - Enumeration
+- [XlRegionLabelOptions](XlRegionLabelOptions.md) - Enumeration
+- [XlRowCol](XlRowCol.md) - Enumeration
+- [XlScaleType](XlScaleType.md) - Enumeration
+- [XlSeriesColorGradientStyle](XlSeriesColorGradientStyle.md) - Enumeration
+- [XlSeriesNameLevel](XlSeriesNameLevel.md) - Enumeration
+- [XlSizeRepresents](XlSizeRepresents.md) - Enumeration
+- [XlTickLabelOrientation](XlTickLabelOrientation.md) - Enumeration
+- [XlTickLabelPosition](XlTickLabelPosition.md) - Enumeration
+- [XlTickMark](XlTickMark.md) - Enumeration
+- [XlTimeUnit](XlTimeUnit.md) - Enumeration
+- [XlTrendlineType](XlTrendlineType.md) - Enumeration
+- [XlUnderlineStyle](XlUnderlineStyle.md) - Enumeration
+- [XlVAlign](XlVAlign.md) - Enumeration
+- [XlValueSortOrder](XlValueSortOrder.md) - Enumeration
