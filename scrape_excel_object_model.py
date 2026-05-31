@@ -5,11 +5,11 @@ Mirrors what the VBA Object Browser shows for each library: classes
 (coclasses / dispatch interfaces), their properties / methods / events with
 return types and parameter signatures, plus enumerations and their constants.
 
-Libraries scraped (each into its own folder):
-    * Excel  -> excel/   (Microsoft Excel Object Library)
-    * Office -> office/   (Microsoft Office Object Library)
-    * VBA    -> vba/      (Visual Basic For Applications)
-    * stdole -> stdole/   (OLE Automation)
+Libraries scraped (each into its own folder under reference/):
+    * Excel  -> reference/excel/   (Microsoft Excel Object Library)
+    * Office -> reference/office/   (Microsoft Office Object Library)
+    * VBA    -> reference/vba/      (Visual Basic For Applications)
+    * stdole -> reference/stdole/   (OLE Automation)
 
 VBAProject (the open workbook's own project) is intentionally skipped: it is
 not a reusable reference library and is not registered for discovery.
@@ -40,6 +40,10 @@ import mslearn_docs
 # --------------------------------------------------------------------------- #
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Generated reference data lives in its own subfolder to keep the repo root
+# uncluttered.
+DATA_DIR = os.path.join(ROOT_DIR, "reference")
 
 # Each library: (output folder, include substrings, exclude substrings,
 # MS Learn api prefix). The api prefix is the library namespace used by the
@@ -966,12 +970,13 @@ def main() -> int:
             continue
         lib_doc = tlb.GetDocumentation(-1)
         lib_desc = desc or lib_doc[1] or lib_doc[0] or folder
-        output_dir = os.path.join(ROOT_DIR, folder)
+        output_dir = os.path.join(DATA_DIR, folder)
         _clean_stale_flat(output_dir)
-        print(f"Scraping {lib_desc} -> {folder}/ "
+        print(f"Scraping {lib_desc} -> reference/{folder}/ "
               f"({tlb.GetTypeInfoCount()} type entries)...")
         written = scrape_typelib(tlb, lib_desc, output_dir, doc_prefix, index)
-        print(f"  Wrote {written} types to {folder}/md/ and {folder}/json/")
+        print(f"  Wrote {written} types to reference/{folder}/md/ and "
+              f"reference/{folder}/json/")
         total += written
         libs_done += 1
         done_libs.append((folder, lib_desc))
@@ -981,7 +986,7 @@ def main() -> int:
         return 1
 
     print("Building master indexes (index.json, members.json)...")
-    names = write_master_indexes(ROOT_DIR, done_libs)
+    names = write_master_indexes(DATA_DIR, done_libs)
     print(f"  Indexed {names} distinct member names.")
 
     print(f"\nDone. {total} reference files written across "

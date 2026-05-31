@@ -46,11 +46,13 @@ def data_root() -> Path:
             return bundled
     except (ModuleNotFoundError, AttributeError):
         pass
-    # 2) Development: walk up from this file to the repo root.
+    # 2) Development: walk up from this file looking for the generated data,
+    #    which lives in the repo's ``reference/`` subfolder.
     here = Path(__file__).resolve()
     for parent in here.parents:
-        if (parent / "index.json").is_file():
-            return parent
+        for candidate in (parent / "reference", parent):
+            if (candidate / "index.json").is_file():
+                return candidate
     raise DataNotFoundError(
         "VBA reference data not found. If running from source, generate it "
         "with `python scrape_excel_object_model.py` first."

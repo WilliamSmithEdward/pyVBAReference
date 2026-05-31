@@ -1,4 +1,4 @@
-# vba_reference_library
+# pyVBAReference
 
 A complete, machine-generated reference of the VBA (Visual Basic for Applications)
 object models for ten common COM type libraries. Every public type is exported as
@@ -6,15 +6,21 @@ both human-readable Markdown and machine-readable JSON.
 
 ## Layout
 
+All generated data lives under `reference/` to keep the repo root clean:
+
 ```
-<library>/
-  md/     one .md per type   + _index.md
-  json/   one .json per type + _index.json
+reference/
+  index.json      master catalog of every library and type
+  members.json    member name -> the types that define it
+  <library>/
+    md/     one .md per type   + _index.md
+    json/   one .json per type + _index.json
 ```
 
-Both folders hold the same data: signatures, return types, parameter lists,
-property access modes, enum values, remarks, and examples - introspected from the
-registered COM type libraries and enriched with descriptions from Microsoft Learn.
+Both `md/` and `json/` hold the same data: signatures, return types, parameter
+lists, property access modes, enum values, remarks, and examples - introspected
+from the registered COM type libraries and enriched with descriptions from
+Microsoft Learn.
 
 ## Libraries
 
@@ -36,15 +42,15 @@ VBA language built-ins (`MsgBox`, `Format`, `CStr`, `vbCrLf`, ...) live in the
 
 ## Finding something
 
-- Don't know which type owns a member? Check `members.json` (repo root) - it maps
+- Don't know which type owns a member? Check `reference/members.json` - it maps
   every member name to the types that define it.
-- Want the full catalog? See `index.json` (repo root) - all libraries and types.
-- Know the type name? Open `<library>/md/<TypeName>.md`.
-- Browsing one library? Start at `<library>/md/_index.md`.
-- A global function (e.g. `MsgBox`)? It's in a module under `vba/` -
-  `MsgBox` is in `vba/md/Interaction.md`.
+- Want the full catalog? See `reference/index.json` - all libraries and types.
+- Know the type name? Open `reference/<library>/md/<TypeName>.md`.
+- Browsing one library? Start at `reference/<library>/md/_index.md`.
+- A global function (e.g. `MsgBox`)? It's in a module under `reference/vba/` -
+  `MsgBox` is in `reference/vba/md/Interaction.md`.
 - A constant's value (e.g. `xlCSV`)? See the enum file, e.g.
-  `excel/md/XlFileFormat.md`.
+  `reference/excel/md/XlFileFormat.md`.
 
 ## Regenerating
 
@@ -61,3 +67,38 @@ Flags: `--no-enrich` (signatures only, skip Microsoft Learn text) and
 
 See [agentic_llm_primer.md](agentic_llm_primer.md) for the JSON schema and
 guidance on grounding VBA code against this reference.
+
+## Python library
+
+The same data is exposed as an installable, typed Python package, `vba_reference`.
+The JSON is bundled into the wheel, so an installed copy is self-contained; in this
+repo it reads the generated folders directly.
+
+```powershell
+pip install -e .          # from this repo (editable)
+# or: pip install vba-reference
+```
+
+```python
+import vba_reference as vba
+
+vba.library_names()                          # ['excel', 'office', 'vba', ...]
+ws = vba.get_type("Worksheet")               # TypeDoc (case-insensitive)
+print(ws.remarks)
+protect = ws.member("Protect")               # Member
+[(p.name, p.optional) for p in protect.parameters]
+
+vba.find_members("MsgBox")                    # -> [MemberRef(library='vba', type='Interaction', ...)]
+vba.find_members("SaveAs")                    # every type that defines SaveAs
+vba.get_constant("XlFileFormat", "xlCSV").value   # 6
+```
+
+Command-line interface (`vba-ref` once installed, or `python -m vba_reference`):
+
+```powershell
+vba-ref libs                     # list libraries and type counts
+vba-ref where MsgBox             # where a member/type is defined
+vba-ref type Worksheet           # full type entry
+vba-ref member Worksheet Protect # one member with parameter docs
+```
+

@@ -6,11 +6,12 @@ well-grounded VBA (Visual Basic for Applications) code.
 ## What this repository is
 
 This repository is a **machine-generated reference of the VBA object models** for
-ten commonly referenced COM type libraries. Every public type (class, interface,
-enumeration, and module) is exported in two parallel forms:
+ten commonly referenced COM type libraries. All generated data lives under the
+`reference/` folder. Every public type (class, interface, enumeration, and module)
+is exported in two parallel forms:
 
-- `<library>/md/` - human-readable Markdown, one file per type, plus `_index.md`.
-- `<library>/json/` - machine-readable JSON, one file per type, plus `_index.json`.
+- `reference/<library>/md/` - human-readable Markdown, one file per type, plus `_index.md`.
+- `reference/<library>/json/` - machine-readable JSON, one file per type, plus `_index.json`.
 
 The two folders contain the same information. **Prefer the JSON when reasoning
 programmatically** (stable schema, easy to parse); use the Markdown when you only
@@ -44,20 +45,24 @@ on an object; they are callable from anywhere in VBA.
 
 ## How to find something
 
-1. **Don't know which type defines a member?** Read the repo-root `members.json`
+All paths below are relative to the `reference/` folder.
+
+1. **Don't know which type defines a member?** Read `reference/members.json`
    (see below). It maps every member name to the types that define it across all
    libraries - the fastest way to answer "where is `SaveAs`?".
-2. **Want the catalog of everything?** Read the repo-root `index.json` (see below)
+2. **Want the catalog of everything?** Read `reference/index.json` (see below)
    for all libraries and their types in a single file.
-3. **Know the type name?** Open `<library>/json/<TypeName>.json` (or `.md`). File
-   names match the type name (with characters unsafe for file systems replaced).
-4. **Browsing one library?** Read `<library>/json/_index.json` for the full list of
-   `{ "name", "kind" }` entries, or `<library>/md/_index.md` for a linked index.
+3. **Know the type name?** Open `reference/<library>/json/<TypeName>.json` (or
+   `.md`). File names match the type name (unsafe characters replaced).
+4. **Browsing one library?** Read `reference/<library>/json/_index.json` for the
+   full list of `{ "name", "kind" }` entries, or `reference/<library>/md/_index.md`.
 5. **Looking for a global function** (e.g. `MsgBox`)? It is a function inside a
-   module in the `vba` library - e.g. `MsgBox` lives in `vba/json/Interaction.json`
-   under the `functions` array. `members.json` will point you straight to it.
+   module in the `vba` library - e.g. `MsgBox` lives in
+   `reference/vba/json/Interaction.json` under the `functions` array.
+   `members.json` will point you straight to it.
 6. **Looking for a constant value** (e.g. what number is `xlCSV`)? Open the relevant
-   enumeration file, e.g. `excel/json/XlFileFormat.json`, and read its `constants`.
+   enumeration file, e.g. `reference/excel/json/XlFileFormat.json`, and read its
+   `constants`.
 
 ## JSON schema
 
@@ -148,7 +153,7 @@ Holds global functions and intrinsic constants (mostly in the `vba` library).
 }
 ```
 
-### Per-library index (`<library>/json/_index.json`)
+### Per-library index (`reference/<library>/json/_index.json`)
 
 ```json
 {
@@ -157,10 +162,10 @@ Holds global functions and intrinsic constants (mostly in the `vba` library).
 }
 ```
 
-## Repo-root master indexes
+## Master indexes (`reference/index.json`, `reference/members.json`)
 
-Two files at the repository root span all libraries and are regenerated with the
-rest of the data.
+Two files at the top of `reference/` span all libraries and are regenerated with
+the rest of the data.
 
 ### `index.json` - master catalog
 
@@ -198,7 +203,7 @@ in one read.
 ```
 
 Keys are the exact member names; resolve `library` + `type` to the per-type file
-at `<library>/json/<type>.json` for the full signature and parameter docs.
+at `reference/<library>/json/<type>.json` for the full signature and parameter docs.
 
 ## Rules of engagement for agents
 
@@ -228,7 +233,7 @@ Find a member's signature in Python:
 
 ```python
 import json
-wb = json.load(open("excel/json/Worksheet.json", encoding="utf-8"))
+wb = json.load(open("reference/excel/json/Worksheet.json", encoding="utf-8"))
 protect = next(m for m in wb["methods"] if m["name"] == "Protect")
 print(protect["signature"])
 for p in protect["parameters"]:
@@ -239,7 +244,7 @@ Resolve an enum constant's value:
 
 ```python
 import json
-fmt = json.load(open("excel/json/XlFileFormat.json", encoding="utf-8"))
+fmt = json.load(open("reference/excel/json/XlFileFormat.json", encoding="utf-8"))
 print({c["name"]: c["value"] for c in fmt["constants"]}["xlCSV"])  # -> 6
 ```
 
@@ -247,10 +252,26 @@ Locate a global function across the `vba` library:
 
 ```python
 import json
-mem = json.load(open("members.json", encoding="utf-8"))
+mem = json.load(open("reference/members.json", encoding="utf-8"))
 for hit in mem["members"]["MsgBox"]:
     print(hit)  # -> {'library': 'vba', 'type': 'Interaction', 'kind': 'function'}
 ```
+
+## Python library (optional convenience layer)
+
+The repo also ships an installable, typed package, `vba_reference`, that wraps
+exactly the same data. The agent-facing JSON above remains the source of truth.
+
+```python
+import vba_reference as vba
+
+vba.get_type("Worksheet").member("Protect").parameters  # tuple[Parameter, ...]
+vba.find_members("MsgBox")        # [MemberRef(library='vba', type='Interaction', ...)]
+vba.get_constant("XlFileFormat", "xlCSV").value  # 6
+```
+
+Install from the repo with `pip install -e .`. CLI: `vba-ref where MsgBox`,
+`vba-ref type Worksheet`, `vba-ref member Worksheet Protect`.
 
 ## Regenerating the reference
 

@@ -16,6 +16,11 @@ classifiers = [
 ]
 dependencies = []
 
+[project.urls]
+Homepage = "https://github.com/WilliamSmithEdward/pyVBAReference"
+Repository = "https://github.com/WilliamSmithEdward/pyVBAReference"
+Issues = "https://github.com/WilliamSmithEdward/pyVBAReference/issues"
+
 [project.optional-dependencies]
 # Only needed to regenerate the data (Windows + Microsoft Office).
 generate = ["pywin32>=306"]
@@ -31,18 +36,18 @@ packages = ["vba_reference"]
 # is self-contained once installed. The repository root keeps the canonical
 # copy used in development.
 [tool.hatch.build.targets.wheel.force-include]
-"index.json" = "vba_reference/data/index.json"
-"members.json" = "vba_reference/data/members.json"
-"excel/json" = "vba_reference/data/excel/json"
-"office/json" = "vba_reference/data/office/json"
-"vba/json" = "vba_reference/data/vba/json"
-"stdole/json" = "vba_reference/data/stdole/json"
-"scripting/json" = "vba_reference/data/scripting/json"
-"msforms/json" = "vba_reference/data/msforms/json"
-"adodb/json" = "vba_reference/data/adodb/json"
-"vbide/json" = "vba_reference/data/vbide/json"
-"msxml/json" = "vba_reference/data/msxml/json"
-"winhttp/json" = "vba_reference/data/winhttp/json"
+"reference/index.json" = "vba_reference/data/index.json"
+"reference/members.json" = "vba_reference/data/members.json"
+"reference/excel/json" = "vba_reference/data/excel/json"
+"reference/office/json" = "vba_reference/data/office/json"
+"reference/vba/json" = "vba_reference/data/vba/json"
+"reference/stdole/json" = "vba_reference/data/stdole/json"
+"reference/scripting/json" = "vba_reference/data/scripting/json"
+"reference/msforms/json" = "vba_reference/data/msforms/json"
+"reference/adodb/json" = "vba_reference/data/adodb/json"
+"reference/vbide/json" = "vba_reference/data/vbide/json"
+"reference/msxml/json" = "vba_reference/data/msxml/json"
+"reference/winhttp/json" = "vba_reference/data/winhttp/json"
 
 [tool.hatch.build.targets.sdist]
 # The sdist ships the source + generator; data is rebuilt or pulled from the repo.
