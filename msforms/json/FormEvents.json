@@ -1,0 +1,453 @@
+{
+  "name": "FormEvents",
+  "kind": "Dispatch Interface",
+  "guid": "{5B9D8FC8-4A71-101B-97A6-00000B65C08B}",
+  "library": "Microsoft Forms 2.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "AddControl",
+      "kind": "method",
+      "signature": "AddControl(Control As Control)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Control",
+          "type": "Control",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeDragOver",
+      "kind": "method",
+      "signature": "BeforeDragOver(Cancel As ReturnBoolean, Control As Control, Data As DataObject, X As Single, Y As Single, State As fmDragState, Effect As ReturnEffect, Shift As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "ReturnBoolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Control",
+          "type": "Control",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Data",
+          "type": "DataObject",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "State",
+          "type": "fmDragState",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Effect",
+          "type": "ReturnEffect",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeDropOrPaste",
+      "kind": "method",
+      "signature": "BeforeDropOrPaste(Cancel As ReturnBoolean, Control As Control, Action As fmAction, Data As DataObject, X As Single, Y As Single, Effect As ReturnEffect, Shift As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "ReturnBoolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Control",
+          "type": "Control",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Action",
+          "type": "fmAction",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Data",
+          "type": "DataObject",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Effect",
+          "type": "ReturnEffect",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Click",
+      "kind": "method",
+      "signature": "Click()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "DblClick",
+      "kind": "method",
+      "signature": "DblClick(Cancel As ReturnBoolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "ReturnBoolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Error",
+      "kind": "method",
+      "signature": "Error(Number As Integer, Description As ReturnString, SCode As Long, Source As String, HelpFile As String, HelpContext As Long, CancelDisplay As ReturnBoolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Number",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Description",
+          "type": "ReturnString",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "SCode",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Source",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "HelpFile",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "HelpContext",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "CancelDisplay",
+          "type": "ReturnBoolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyDown",
+      "kind": "method",
+      "signature": "KeyDown(KeyCode As ReturnInteger, Shift As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "ReturnInteger",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyPress",
+      "kind": "method",
+      "signature": "KeyPress(KeyAscii As ReturnInteger)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "KeyAscii",
+          "type": "ReturnInteger",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyUp",
+      "kind": "method",
+      "signature": "KeyUp(KeyCode As ReturnInteger, Shift As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "ReturnInteger",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Layout",
+      "kind": "method",
+      "signature": "Layout()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "MouseDown",
+      "kind": "method",
+      "signature": "MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseMove",
+      "kind": "method",
+      "signature": "MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseUp",
+      "kind": "method",
+      "signature": "MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "RemoveControl",
+      "kind": "method",
+      "signature": "RemoveControl(Control As Control)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Control",
+          "type": "Control",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Scroll",
+      "kind": "method",
+      "signature": "Scroll(ActionX As fmScrollAction, ActionY As fmScrollAction, RequestDx As Single, RequestDy As Single, ActualDx As ReturnSingle, ActualDy As ReturnSingle)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ActionX",
+          "type": "fmScrollAction",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ActionY",
+          "type": "fmScrollAction",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RequestDx",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RequestDy",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ActualDx",
+          "type": "ReturnSingle",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ActualDy",
+          "type": "ReturnSingle",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Zoom",
+      "kind": "method",
+      "signature": "Zoom(Percent As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Percent",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

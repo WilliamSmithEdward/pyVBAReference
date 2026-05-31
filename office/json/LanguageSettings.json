@@ -1,0 +1,48 @@
+{
+  "name": "LanguageSettings",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0353-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Returns information about the language settings in a Microsoft Office application.",
+  "remarks": "Use Application.LanguageSettings.LanguageID(_MsoAppLanguageID_), where MsoAppLanguageID is a constant used to return locale identifier (LCID) information to the specified application.",
+  "example": "MsgBox \"The following locale IDs are registered \" & _\n \"for this application: Install Language - \" & _\n Application.LanguageSettings.LanguageID(msoLanguageIDInstall) & _\n \" User Interface Language - \" & _\n Application.LanguageSettings.LanguageID(msoLanguageIDUI) & _\n \" Help Language - \" & _\n Application.LanguageSettings.LanguageID(msoLanguageIDHelp)",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the LanguageSettings object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the LanguageSettings object was created. Read-only."
+    },
+    {
+      "name": "LanguageID",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets an MsoAppLanguageID constant representing the locale identifier (LCID) for the install language, the user interface language, or the Help language. Read-only."
+    },
+    {
+      "name": "LanguagePreferredForEditing",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets True if the value for the MsoLanguageID constant has been identified in the Windows registry as a preferred language for editing. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the ODSOFilter object. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -1,0 +1,118 @@
+{
+  "name": "IPivotCaches",
+  "kind": "Interface",
+  "guid": "{0002441D-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant, RHS As PivotCache)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "PivotCache",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "method",
+      "signature": "_NewEnum(RHS As IUnknown)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "IUnknown",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Create",
+      "kind": "method",
+      "signature": "Create(SourceType As XlPivotTableSourceType, [SourceData As Variant], [Version As Variant], RHS As PivotCache)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "SourceType",
+          "type": "XlPivotTableSourceType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "SourceData",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Version",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "PivotCache",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

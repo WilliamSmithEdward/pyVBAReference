@@ -1,0 +1,77 @@
+{
+  "name": "AutoFilter",
+  "kind": "Dispatch Interface",
+  "guid": "{00024432-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents autofiltering for the specified worksheet.",
+  "remarks": "",
+  "example": "Dim w As Worksheet\nDim filterArray()\nDim currentFiltRange As String\n\nSub ChangeFilters()\n\nSet w = Worksheets(\"Crew\")\nWith w.AutoFilter\n currentFiltRange = .Range.Address\n With .Filters\n ReDim filterArray(1 To .Count, 1 To 3)\n For f = 1 To .Count\n With .Item(f)\n If .On Then\n filterArray(f, 1) = .Criteria1\n If .Operator Then\n filterArray(f, 2) = .Operator\n filterArray(f, 3) = .Criteria2\n End If\n End If\n End With\n Next\n End With\nEnd With\n\nw.AutoFilterMode = False\nw.Range(\"A1\").AutoFilter field:=1, Criteria1:=\"S\"\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the range to which the specified AutoFilter applies."
+    },
+    {
+      "name": "Filters",
+      "kind": "property",
+      "type": "Filters",
+      "access": "read-only",
+      "description": "Returns a Filters collection that represents all the filters in an autofiltered range. Read-only."
+    },
+    {
+      "name": "FilterMode",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns True if the worksheet is in the AutoFilter filter mode. Read-only Boolean."
+    },
+    {
+      "name": "Sort",
+      "kind": "property",
+      "type": "Sort",
+      "access": "read-only",
+      "description": "Gets the sort column or columns, and sort order for the AutoFilter collection."
+    }
+  ],
+  "methods": [
+    {
+      "name": "ApplyFilter",
+      "kind": "method",
+      "signature": "ApplyFilter()",
+      "description": "Applies the specified AutoFilter object.",
+      "returns": "void"
+    },
+    {
+      "name": "ShowAllData",
+      "kind": "method",
+      "signature": "ShowAllData()",
+      "description": "Displays all the data returned by the AutoFilter object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

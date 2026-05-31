@@ -1,0 +1,397 @@
+{
+  "name": "IBlogExtensibility",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03C4-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "An object that provides the ability to manipulate blog entries.",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "BlogProviderProperties",
+      "kind": "method",
+      "signature": "BlogProviderProperties(BlogProvider As String, FriendlyName As String, CategorySupport As MsoBlogCategorySupport, Padding As Boolean)",
+      "description": "Contains information about the provider.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "BlogProvider",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the blog provider."
+        },
+        {
+          "name": "FriendlyName",
+          "type": "String",
+          "optional": false,
+          "description": "Represents the name displayed in the user interface."
+        },
+        {
+          "name": "CategorySupport",
+          "type": "MsoBlogCategorySupport",
+          "optional": false,
+          "description": "Represents how many categories are supported by the provider."
+        },
+        {
+          "name": "Padding",
+          "type": "Boolean",
+          "optional": false,
+          "description": "Specifies whether table padding is recognized."
+        }
+      ]
+    },
+    {
+      "name": "SetupBlogAccount",
+      "kind": "method",
+      "signature": "SetupBlogAccount(Account As String, ParentWindow As Long, Document As Object, NewAccount As Boolean, ShowPictureUI As Boolean)",
+      "description": "Called from the Choose Account dialog when the provider's name is chosen in the Blog Host drop-down, or when the user requests to change a provider's account in the Blog Accounts dialog box.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Account",
+          "type": "String",
+          "optional": false,
+          "description": "Represents the GUID of the account registry key. Blog account settings are stored in the registry at \\\\HKCU\\Software\\Microsoft\\Office\\Common\\Blog\\Account."
+        },
+        {
+          "name": "ParentWindow",
+          "type": "Long",
+          "optional": false,
+          "description": "Contains the HWND for the window that Microsoft Word is calling from."
+        },
+        {
+          "name": "Document",
+          "type": "Object",
+          "optional": false,
+          "description": "The current document."
+        },
+        {
+          "name": "NewAccount",
+          "type": "Boolean",
+          "optional": false,
+          "description": "Indicates whether this is a new account."
+        },
+        {
+          "name": "ShowPictureUI",
+          "type": "Boolean",
+          "optional": false,
+          "description": "Indicates whether Word's picture user interface needs to be displayed."
+        }
+      ]
+    },
+    {
+      "name": "GetUserBlogs",
+      "kind": "method",
+      "signature": "GetUserBlogs(Account As String, ParentWindow As Long, Document As Object, BlogNames As SAFEARRAY(String), BlogIDs As SAFEARRAY(String), BlogURLs As SAFEARRAY(String))",
+      "description": "Returns the list and details of user blogs associated with the specified account.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Account",
+          "type": "String",
+          "optional": false,
+          "description": "Represents the GUID of the account registry key. Blog account settings are stored in the registry at \\\\HKCU\\Software\\Microsoft\\Office\\Common\\Blog\\Account."
+        },
+        {
+          "name": "ParentWindow",
+          "type": "Long",
+          "optional": false,
+          "description": "Contains the HWND for the window that Microsoft Word is calling from."
+        },
+        {
+          "name": "Document",
+          "type": "Object",
+          "optional": false,
+          "description": "The current document."
+        },
+        {
+          "name": "BlogNames",
+          "type": "SAFEARRAY(String)",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "BlogIDs",
+          "type": "SAFEARRAY(String)",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "BlogURLs",
+          "type": "SAFEARRAY(String)",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetRecentPosts",
+      "kind": "method",
+      "signature": "GetRecentPosts(Account As String, ParentWindow As Long, Document As Object, PostTitles As SAFEARRAY(String), PostDates As SAFEARRAY(String), PostIDs As SAFEARRAY(String))",
+      "description": "Returns the list of the user's last fifteen blog posts that Microsoft Word then displays in the Open Existing Post dialog. This method does not actually return the blog post contents.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Account",
+          "type": "String",
+          "optional": false,
+          "description": "Represents the GUID of the account registry key. Blog account settings are stored in the registry at \\\\HKCU\\Software\\Microsoft\\Office\\Common\\Blog\\Account."
+        },
+        {
+          "name": "ParentWindow",
+          "type": "Long",
+          "optional": false,
+          "description": "Contains the HWND for the window that Microsoft Word is calling from."
+        },
+        {
+          "name": "Document",
+          "type": "Object",
+          "optional": false,
+          "description": "The current document."
+        },
+        {
+          "name": "PostTitles",
+          "type": "SAFEARRAY(String)",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "PostDates",
+          "type": "SAFEARRAY(String)",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "PostIDs",
+          "type": "SAFEARRAY(String)",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open(Account As String, PostID As String, ParentWindow As Long, xHTML As String, Title As String, DatePosted As String, Categories As SAFEARRAY(String))",
+      "description": "Opens the blog specified by the blog ID. It's called by the Open Existing Post dialog based on the item selected by the user.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Account",
+          "type": "String",
+          "optional": false,
+          "description": "Represents the GUID of the account registry key. Blog account settings are stored in the registry at \\\\HKCU\\Software\\Microsoft\\Office\\Common\\Blog\\Account."
+        },
+        {
+          "name": "PostID",
+          "type": "String",
+          "optional": false,
+          "description": "The ID of the post."
+        },
+        {
+          "name": "ParentWindow",
+          "type": "Long",
+          "optional": false,
+          "description": "Contains the HWND for the window that Microsoft Word is calling from."
+        },
+        {
+          "name": "xHTML",
+          "type": "String",
+          "optional": false,
+          "description": "Represents the xHTML of the current document."
+        },
+        {
+          "name": "Title",
+          "type": "String",
+          "optional": false,
+          "description": "The title of the post."
+        },
+        {
+          "name": "DatePosted",
+          "type": "String",
+          "optional": false,
+          "description": "The date the entry was posted."
+        },
+        {
+          "name": "Categories",
+          "type": "SAFEARRAY(String)",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PublishPost",
+      "kind": "method",
+      "signature": "PublishPost(Account As String, ParentWindow As Long, Document As Object, xHTML As String, Title As String, DateTime As String, Categories As SAFEARRAY(String), Draft As Boolean, PostID As String, PublishMessage As String)",
+      "description": "Hands off the current post so that it can be published by the provider.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Account",
+          "type": "String",
+          "optional": false,
+          "description": "Represents the GUID of the account registry key. Blog account settings are stored in the registry at \\\\HKCU\\Software\\Microsoft\\Office\\Common\\Blog\\Account."
+        },
+        {
+          "name": "ParentWindow",
+          "type": "Long",
+          "optional": false,
+          "description": "Contains the HWND for the window that Microsoft Word is calling from."
+        },
+        {
+          "name": "Document",
+          "type": "Object",
+          "optional": false,
+          "description": "The current document."
+        },
+        {
+          "name": "xHTML",
+          "type": "String",
+          "optional": false,
+          "description": "Represents the xHTML of the current document."
+        },
+        {
+          "name": "Title",
+          "type": "String",
+          "optional": false,
+          "description": "The title of the post."
+        },
+        {
+          "name": "DateTime",
+          "type": "String",
+          "optional": false,
+          "description": "The date the entry was posted."
+        },
+        {
+          "name": "Categories",
+          "type": "SAFEARRAY(String)",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Draft",
+          "type": "Boolean",
+          "optional": false,
+          "description": "Specifies whether this is a draft version of the post."
+        },
+        {
+          "name": "PostID",
+          "type": "String",
+          "optional": false,
+          "description": "The ID of the original post if this post has been republished."
+        },
+        {
+          "name": "PublishMessage",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies what is displayed in the publish bar."
+        }
+      ]
+    },
+    {
+      "name": "RepublishPost",
+      "kind": "method",
+      "signature": "RepublishPost(Account As String, ParentWindow As Long, Document As Object, PostID As String, xHTML As String, Title As String, DateTime As String, Categories As SAFEARRAY(String), Draft As Boolean, PublishMessage As String)",
+      "description": "Hands off the current post so it can be republished by the provider.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Account",
+          "type": "String",
+          "optional": false,
+          "description": "Represents the GUID of the account registry key. Blog account settings are stored in the registry at \\\\HKCU\\Software\\Microsoft\\Office\\Common\\Blog\\Account."
+        },
+        {
+          "name": "ParentWindow",
+          "type": "Long",
+          "optional": false,
+          "description": "Contains the HWND for the window that Microsoft Word is calling from."
+        },
+        {
+          "name": "Document",
+          "type": "Object",
+          "optional": false,
+          "description": "The current document."
+        },
+        {
+          "name": "PostID",
+          "type": "String",
+          "optional": false,
+          "description": "The ID of the original post."
+        },
+        {
+          "name": "xHTML",
+          "type": "String",
+          "optional": false,
+          "description": "Represents the xHTML of the current document."
+        },
+        {
+          "name": "Title",
+          "type": "String",
+          "optional": false,
+          "description": "The title of the post."
+        },
+        {
+          "name": "DateTime",
+          "type": "String",
+          "optional": false,
+          "description": "The date the entry was posted."
+        },
+        {
+          "name": "Categories",
+          "type": "SAFEARRAY(String)",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Draft",
+          "type": "Boolean",
+          "optional": false,
+          "description": "Specifies whether this is a draft version of the post."
+        },
+        {
+          "name": "PublishMessage",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies what is displayed in the publish bar."
+        }
+      ]
+    },
+    {
+      "name": "GetCategories",
+      "kind": "method",
+      "signature": "GetCategories(Account As String, ParentWindow As Long, Document As Object, Categories As SAFEARRAY(String))",
+      "description": "This method returns the list of blog categories for an account so that Microsoft Word can populate the categories drop-down list.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Account",
+          "type": "String",
+          "optional": false,
+          "description": "Represents the GUID of the account registry key."
+        },
+        {
+          "name": "ParentWindow",
+          "type": "Long",
+          "optional": false,
+          "description": "Represents the HWND of the host window."
+        },
+        {
+          "name": "Document",
+          "type": "Object",
+          "optional": false,
+          "description": "The current document."
+        },
+        {
+          "name": "Categories",
+          "type": "SAFEARRAY(String)",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

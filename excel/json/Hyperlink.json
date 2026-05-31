@@ -1,0 +1,178 @@
+{
+  "name": "Hyperlink",
+  "kind": "Dispatch Interface",
+  "guid": "{00024431-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a hyperlink.",
+  "remarks": "The Hyperlink object is a member of the Hyperlinks collection.",
+  "example": "Worksheets(1).Shapes(1).Hyperlink.Follow NewWindow:=True",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that represents the name of the object."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the range that the specified hyperlink is attached to."
+    },
+    {
+      "name": "Shape",
+      "kind": "property",
+      "type": "Shape",
+      "access": "read-only",
+      "description": "Returns a Shape object that represents the shape attached to the specified hyperlink."
+    },
+    {
+      "name": "SubAddress",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the location within the document associated with the hyperlink. Read/write String."
+    },
+    {
+      "name": "Address",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value that represents the address of the target document."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value, containing an MsoHyperlinkType constant, that represents the location of the HTML frame."
+    },
+    {
+      "name": "EmailSubject",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the text string of the specified hyperlink's email subject line. The subject line is appended to the hyperlink's address. Read/write String."
+    },
+    {
+      "name": "ScreenTip",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the ScreenTip text for the specified hyperlink. Read/write String."
+    },
+    {
+      "name": "TextToDisplay",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the text to be displayed for the specified hyperlink. The default value is the address of the hyperlink. Read/write String."
+    }
+  ],
+  "methods": [
+    {
+      "name": "AddToFavorites",
+      "kind": "method",
+      "signature": "AddToFavorites()",
+      "description": "Adds a shortcut to the workbook or hyperlink to the Favorites folder.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    },
+    {
+      "name": "Follow",
+      "kind": "method",
+      "signature": "Follow([NewWindow As Variant], [AddHistory As Variant], [ExtraInfo As Variant], [Method As Variant], [HeaderInfo As Variant])",
+      "description": "Displays a cached document, if it's already been downloaded. Otherwise, this method resolves the hyperlink, downloads the target document, and displays the document in the appropriate application.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "NewWindow",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to display the target application in a new window. The default value is False."
+        },
+        {
+          "name": "AddHistory",
+          "type": "Variant",
+          "optional": true,
+          "description": "Not used. Reserved for future use."
+        },
+        {
+          "name": "ExtraInfo",
+          "type": "Variant",
+          "optional": true,
+          "description": "A String or byte array that specifies additional information for HTTP to use to resolve the hyperlink. For example, you can use _ExtraInfo_ to specify the coordinates of an image map, the contents of a form, or a FAT file name."
+        },
+        {
+          "name": "Method",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the way _ExtraInfo_ is attached. Can be one of the MsoExtraInfoMethod constants."
+        },
+        {
+          "name": "HeaderInfo",
+          "type": "Variant",
+          "optional": true,
+          "description": "A String that specifies header information for the HTTP request. The default value is an empty string."
+        }
+      ]
+    },
+    {
+      "name": "CreateNewDocument",
+      "kind": "method",
+      "signature": "CreateNewDocument(Filename As String, EditNow As Boolean, Overwrite As Boolean)",
+      "description": "Creates a new document linked to the specified hyperlink.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Filename",
+          "type": "String",
+          "optional": false,
+          "description": "The file name of the specified document."
+        },
+        {
+          "name": "EditNow",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True to have the specified document open immediately in its associated editing environment. The default value is True."
+        },
+        {
+          "name": "Overwrite",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True to overwrite any existing file of the same name in the same folder. False if any existing file of the same name is preserved and the _FileName_ argument specifies a new file name. The default value is False."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

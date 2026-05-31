@@ -1,0 +1,288 @@
+{
+  "name": "ISAXContentHandler",
+  "kind": "Interface",
+  "guid": "{1545CDFA-9E4E-4497-A8A4-2BF7D0112C44}",
+  "library": "Microsoft XML, v6.0",
+  "description": "ISAXContentHandler interface",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "putDocumentLocator",
+      "kind": "method",
+      "signature": "putDocumentLocator(pLocator As ISAXLocator)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pLocator",
+          "type": "ISAXLocator",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "startDocument",
+      "kind": "method",
+      "signature": "startDocument()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "endDocument",
+      "kind": "method",
+      "signature": "endDocument()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "startPrefixMapping",
+      "kind": "method",
+      "signature": "startPrefixMapping(pwchPrefix As Integer, cchPrefix As Long, pwchUri As Integer, cchUri As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchPrefix",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchPrefix",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchUri",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchUri",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "endPrefixMapping",
+      "kind": "method",
+      "signature": "endPrefixMapping(pwchPrefix As Integer, cchPrefix As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchPrefix",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchPrefix",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "startElement",
+      "kind": "method",
+      "signature": "startElement(pwchNamespaceUri As Integer, cchNamespaceUri As Long, pwchLocalName As Integer, cchLocalName As Long, pwchQName As Integer, cchQName As Long, pAttributes As ISAXAttributes)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchNamespaceUri",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchNamespaceUri",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchLocalName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchLocalName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchQName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchQName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pAttributes",
+          "type": "ISAXAttributes",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "endElement",
+      "kind": "method",
+      "signature": "endElement(pwchNamespaceUri As Integer, cchNamespaceUri As Long, pwchLocalName As Integer, cchLocalName As Long, pwchQName As Integer, cchQName As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchNamespaceUri",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchNamespaceUri",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchLocalName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchLocalName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchQName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchQName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "characters",
+      "kind": "method",
+      "signature": "characters(pwchChars As Integer, cchChars As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchChars",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchChars",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ignorableWhitespace",
+      "kind": "method",
+      "signature": "ignorableWhitespace(pwchChars As Integer, cchChars As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchChars",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchChars",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "processingInstruction",
+      "kind": "method",
+      "signature": "processingInstruction(pwchTarget As Integer, cchTarget As Long, pwchData As Integer, cchData As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchTarget",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchTarget",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchData",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchData",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "skippedEntity",
+      "kind": "method",
+      "signature": "skippedEntity(pwchName As Integer, cchName As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

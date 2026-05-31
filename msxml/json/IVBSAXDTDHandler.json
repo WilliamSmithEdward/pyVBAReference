@@ -1,0 +1,73 @@
+{
+  "name": "IVBSAXDTDHandler",
+  "kind": "Dispatch Interface",
+  "guid": "{24FB3297-302D-4620-BA39-3A732D850558}",
+  "library": "Microsoft XML, v6.0",
+  "description": "IVBSAXDTDHandler interface",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "notationDecl",
+      "kind": "method",
+      "signature": "notationDecl(strName As String, strPublicId As String, strSystemId As String)",
+      "description": "Receive notification of a notation declaration event.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strPublicId",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strSystemId",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "unparsedEntityDecl",
+      "kind": "method",
+      "signature": "unparsedEntityDecl(strName As String, strPublicId As String, strSystemId As String, strNotationName As String)",
+      "description": "Receive notification of an unparsed entity declaration event.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strPublicId",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strSystemId",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strNotationName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

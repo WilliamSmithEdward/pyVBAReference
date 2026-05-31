@@ -1,0 +1,84 @@
+{
+  "name": "SharedWorkspaceFolders",
+  "kind": "Dispatch Interface",
+  "guid": "{000C037E-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "A collection of the SharedWorkspaceFolder objects in the current shared workspace.",
+  "remarks": "",
+  "example": "Dim swsFolders As Office.SharedWorkspaceFolders\n    Set swsFolders = ActiveWorkbook.SharedWorkspace.Folders\n    MsgBox \"There are \" & swsFolders.Count & _\n        \" folder(s) in the current shared workspace.\", _\n        vbInformation + vbOKOnly, _\n        \"Collection Information\"\n    Set swsFolders = Nothing",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SharedWorkspaceFile object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SharedWorkspaceFolders object was created. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "SharedWorkspaceFolder",
+      "access": "read-only",
+      "description": "Gets a SharedWorkspaceFolder object from the Folders collection of the shared workspace. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the SharedWorkspaceFolders collection. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the SharedWorkspaceFolders object. Read-only."
+    },
+    {
+      "name": "ItemCountExceeded",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets a Boolean value that indicates whether the number of SharedWorkspaceFolders items in the collection has exceeded the 99 that can be displayed in the Shared Workspace task pane. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(FolderName As String, [ParentFolder As Variant]) As SharedWorkspaceFolder",
+      "description": "Adds a folder to the document library in a shared workspace. Returns a SharedWorkspaceFolder object.",
+      "returns": "SharedWorkspaceFolder",
+      "parameters": [
+        {
+          "name": "FolderName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the folder to be added to the current shared workspace."
+        },
+        {
+          "name": "ParentFolder",
+          "type": "Variant",
+          "optional": true,
+          "description": "The subfolder in which to place the new folder, if not the main document library folder within the shared workspace. Add the folder to the main document library folder by leaving this optional argument empty."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,322 @@
+{
+  "name": "ConnectionEventsVt",
+  "kind": "Interface",
+  "guid": "{00001402-0000-0010-8000-00AA006D2EA4}",
+  "library": "Microsoft ActiveX Data Objects 6.1 Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "InfoMessage",
+      "kind": "method",
+      "signature": "InfoMessage(pError As Error, adStatus As EventStatusEnum, pConnection As _Connection)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pError",
+          "type": "Error",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pConnection",
+          "type": "_Connection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeginTransComplete",
+      "kind": "method",
+      "signature": "BeginTransComplete(TransactionLevel As Long, pError As Error, adStatus As EventStatusEnum, pConnection As _Connection)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "TransactionLevel",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pError",
+          "type": "Error",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pConnection",
+          "type": "_Connection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CommitTransComplete",
+      "kind": "method",
+      "signature": "CommitTransComplete(pError As Error, adStatus As EventStatusEnum, pConnection As _Connection)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pError",
+          "type": "Error",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pConnection",
+          "type": "_Connection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "RollbackTransComplete",
+      "kind": "method",
+      "signature": "RollbackTransComplete(pError As Error, adStatus As EventStatusEnum, pConnection As _Connection)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pError",
+          "type": "Error",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pConnection",
+          "type": "_Connection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WillExecute",
+      "kind": "method",
+      "signature": "WillExecute(Source As String, CursorType As CursorTypeEnum, LockType As LockTypeEnum, Options As Long, adStatus As EventStatusEnum, pCommand As _Command, pRecordset As _Recordset, pConnection As _Connection)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "CursorType",
+          "type": "CursorTypeEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "LockType",
+          "type": "LockTypeEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Options",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pCommand",
+          "type": "_Command",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pRecordset",
+          "type": "_Recordset",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pConnection",
+          "type": "_Connection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ExecuteComplete",
+      "kind": "method",
+      "signature": "ExecuteComplete(RecordsAffected As Long, pError As Error, adStatus As EventStatusEnum, pCommand As _Command, pRecordset As _Recordset, pConnection As _Connection)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RecordsAffected",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pError",
+          "type": "Error",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pCommand",
+          "type": "_Command",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pRecordset",
+          "type": "_Recordset",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pConnection",
+          "type": "_Connection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WillConnect",
+      "kind": "method",
+      "signature": "WillConnect(ConnectionString As String, UserID As String, Password As String, Options As Long, adStatus As EventStatusEnum, pConnection As _Connection)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ConnectionString",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "UserID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Password",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Options",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pConnection",
+          "type": "_Connection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ConnectComplete",
+      "kind": "method",
+      "signature": "ConnectComplete(pError As Error, adStatus As EventStatusEnum, pConnection As _Connection)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pError",
+          "type": "Error",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pConnection",
+          "type": "_Connection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Disconnect",
+      "kind": "method",
+      "signature": "Disconnect(adStatus As EventStatusEnum, pConnection As _Connection)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pConnection",
+          "type": "_Connection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

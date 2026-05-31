@@ -1,0 +1,55 @@
+{
+  "name": "MultiThreadedCalculation",
+  "kind": "Dispatch Interface",
+  "guid": "{000244B1-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Returns or sets the concurrent calculation mode.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "The Enabled property allows MultiThreadedCalculation objects to be enabled or disabled at run time. Read/write."
+    },
+    {
+      "name": "ThreadMode",
+      "kind": "property",
+      "type": "XlThreadMode",
+      "access": "read/write",
+      "description": "Returns or sets the thread mode for the specified MultiThreadedCalculation object. Read/write XlThreadMode."
+    },
+    {
+      "name": "ThreadCount",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets the total count of the process threads that are a part of the specified MultiThreadedCalculation object."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

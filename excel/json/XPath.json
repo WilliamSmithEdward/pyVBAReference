@@ -1,0 +1,103 @@
+{
+  "name": "XPath",
+  "kind": "Dispatch Interface",
+  "guid": "{0002447E-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents an XPath that has been mapped to a Range or ListColumn object.",
+  "remarks": "Use the SetValue method to map an XPath to a range or list column. The SetValue method is also used to change the properties of an existing XPath. Use the Clear method to remove an XPath that has been mapped to a range or list column.",
+  "example": "Sub CreateXMLList()\n Dim mapContact As XmlMap\n Dim strXPath As String\n Dim lstContacts As ListObject\n Dim lcNewCol As ListColumn\n\n ' Specify the schema map to use.\n Set mapContact = ActiveWorkbook.XmlMaps(\"Contacts\")\n\n ' Create a new list.\n Set lstContacts = ActiveSheet.ListObjects.Add\n\n ' Specify the first element to map.\n strXPath = \"/Root/Person/FirstName\"\n ' Map the element.\n lstContacts.ListColumns(1).XPath.SetValue mapContact, strXPath\n\n ' Specify the element to map.\n strXPath = \"/Root/Person/LastName\"\n ' Add a column to the list.\n Set lcNewCol = lstContacts.ListColumns.Add\n ' Map the element.\n lcNewCol.XPath.SetValue mapContact, strXPath\n\n strXPath = \"/Root/Person/Address/Zip\"\n Set lcNewCol = lstContacts.ListColumns.Add\n lcNewCol.XPath.SetValue mapContact, strXPath\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String that represents the XPath for the specified object."
+    },
+    {
+      "name": "Map",
+      "kind": "property",
+      "type": "XmlMap",
+      "access": "read-only",
+      "description": "Returns an XmlMap object that represents the schema map that contains the specified XPath object. Read-only."
+    },
+    {
+      "name": "Repeating",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns True if the specified XPath object is mapped to an XML list; returns False if the XPath object is mapped to a single cell. Read-only Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "SetValue",
+      "kind": "method",
+      "signature": "SetValue(Map As XmlMap, XPath As String, [SelectionNamespace As Variant], [Repeating As Variant])",
+      "description": "Maps the specified XPath object to a ListColumn object or Range collection. If the XPath object has previously been mapped to the ListColumn object or Range collection, the SetValue method sets the properties of the XPath object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Map",
+          "type": "XmlMap",
+          "optional": false,
+          "description": "The map info that the mapped range will be associated with."
+        },
+        {
+          "name": "XPath",
+          "type": "String",
+          "optional": false,
+          "description": "A valid XPath expression that tells Excel what XML data should appear in this mapped range. The XPath string can also contain valid filters, in which case, only a subset of the data that the XPath points to will ever appear in this mapped range."
+        },
+        {
+          "name": "SelectionNamespace",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies any namespace prefixes used in the _XPath_ argument. This argument can be omitted if the XPath object doesn't contain any prefixes, or if the XPath object uses the Microsoft Excel internal prefixes."
+        },
+        {
+          "name": "Repeating",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies whether the XPath object is to be bound to a column in an XML list or mapped to a single cell. Set to True to bind the XPath object to a column in an XML list. False forces a non-repeating cell to be created. If the range is greater than a single cell and False is specified, a run-time error occurs."
+        }
+      ]
+    },
+    {
+      "name": "Clear",
+      "kind": "method",
+      "signature": "Clear()",
+      "description": "Clears all XPath schema information for the mapped range.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

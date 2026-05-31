@@ -1,0 +1,92 @@
+{
+  "name": "IMsoCharacters",
+  "kind": "Dispatch Interface",
+  "guid": "{000C1731-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "ChartFont",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PhoneticCharacters",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "",
+      "returns": "Variant"
+    },
+    {
+      "name": "Insert",
+      "kind": "method",
+      "signature": "Insert(bstr As String) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "bstr",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

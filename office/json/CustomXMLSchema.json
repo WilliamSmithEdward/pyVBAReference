@@ -1,0 +1,63 @@
+{
+  "name": "CustomXMLSchema",
+  "kind": "Dispatch Interface",
+  "guid": "{000CDB01-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a schema in a CustomXMLSchemaCollection collection.",
+  "remarks": "",
+  "example": "Dim SchemaCollection As CustomXMLSchemaCollection\n\nSchemaCollection.Add \"https://tempuri.org/XMLSchema.xsd\"",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the CustomXMLSchema object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the CustomXMLSchema object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the CustomXMLSchema object. Read-only."
+    },
+    {
+      "name": "Location",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets a String that represents the location of a schema on a computer. Read-only."
+    },
+    {
+      "name": "NamespaceURI",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the unique address identifier for the namespace of the CustomXMLSchema object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified schema from the CustomXMLSchema collection.",
+      "returns": "void"
+    },
+    {
+      "name": "Reload",
+      "kind": "method",
+      "signature": "Reload()",
+      "description": "Reloads a schema from a file.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

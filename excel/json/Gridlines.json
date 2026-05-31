@@ -1,0 +1,106 @@
+{
+  "name": "Gridlines",
+  "kind": "Dispatch Interface",
+  "guid": "{000208C3-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents major or minor gridlines on a chart axis.",
+  "remarks": "Gridlines extend the tick marks on a chart axis to make it easier to see the values associated with the data markers. This object isn't a collection. There's no object that represents a single gridline; you either have all gridlines for an axis turned on or all of them turned off. Use the MajorGridlines property of the Axis object to return the GridLines object that represents the major gridlines for the axis. Use the MinorGridlines property to return the GridLines object that represents the minor gridlines. It's possible to return both major and minor gridlines at the same time.",
+  "example": "With Charts(\"chart1\").Axes(xlCategory)\n .HasMajorGridlines = True\n .MajorGridlines.Border.Color = RGB(0, 0, 255)\n .MajorGridlines.Border.LineStyle = xlDash\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that represents the name of the object."
+    },
+    {
+      "name": "Border",
+      "kind": "property",
+      "type": "Border",
+      "access": "read-only",
+      "description": "Returns a Border object that represents the border of the object."
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "ChartFormat",
+      "access": "read-only",
+      "description": "Returns the ChartFormat object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select() As Variant",
+      "description": "Selects the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "SetProperty",
+      "kind": "method",
+      "signature": "SetProperty(ID As String, Value As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Value",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetProperty",
+      "kind": "method",
+      "signature": "GetProperty(ID As String) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "ID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

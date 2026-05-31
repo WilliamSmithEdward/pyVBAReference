@@ -1,0 +1,70 @@
+{
+  "name": "ConditionValue",
+  "kind": "Dispatch Interface",
+  "guid": "{00024492-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents how the shortest bar or longest bar is evaluated for a data bar conditional formatting rule.",
+  "remarks": "The ConditionValue object is returned by using either the MaxPoint or MinPoint property of the DataBar object. You can change the type of evaluation from the default setting (lowest value for the shortest bar and highest value for the longest bar) by using the Modify method.",
+  "example": "Sub CreateDataBarCF()\n\n Dim cfDataBar As DataBar\n\n 'Create a range of data with a couple of extreme values\n With ActiveSheet\n .Range(\"D1\") = 1\n .Range(\"D2\") = 45\n .Range(\"D3\") = 50\n .Range(\"D2:D3\").AutoFill Destination:=Range(\"D2:D8\")\n .Range(\"D9\") = 500\n End With\n\n Range(\"D1:D9\").Select\n\n 'Create a data bar with default behavior\n Set cfDataBar = Selection.FormatConditions.AddDatabar\n MsgBox \"Because of the extreme values, middle data bars are very similar\"\n\n 'The MinPoint and MaxPoint properties return a ConditionValue object\n 'which you can use to change threshold parameters\n cfDataBar.MinPoint.Modify newtype:=xlConditionValuePercentile, _\n newvalue:=5\n cfDataBar.MaxPoint.Modify newtype:=xlConditionValuePercentile, _\n newvalue:=75\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "XlConditionValueTypes",
+      "access": "read-only",
+      "description": "Returns one of the constants of the XlConditionValueTypes enumeration, which specifies how the threshold values for a data bar, color scale, or icon set conditional format are determined. Read-only."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns or sets the shortest bar or longest bar threshold value for a data bar conditional format. Read/write Variant."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Modify",
+      "kind": "method",
+      "signature": "Modify(newtype As XlConditionValueTypes, [newvalue As Variant])",
+      "description": "Modifies how the longest bar or shortest bar is evaluated for a data bar conditional formatting rule.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "newtype",
+          "type": "XlConditionValueTypes",
+          "optional": false,
+          "description": "Specifies how the shortest bar or longest bar is evaluated. The default value is xlConditionLowestValue for the shortest bar and xlConditionHighestValue for the longest bar."
+        },
+        {
+          "name": "newvalue",
+          "type": "Variant",
+          "optional": true,
+          "description": "The value assigned to the shortest or longest data bar. Depending on the _NewType_ argument, this can be a number or a formula that evaluates to a number."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,170 @@
+{
+  "name": "Legend",
+  "kind": "Dispatch Interface",
+  "guid": "{000208CD-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the legend in a chart. Each chart can have only one legend.",
+  "remarks": "The Legend object contains one or more LegendEntry objects; each LegendEntry object contains a LegendKey object. The chart legend isn't visible unless the HasLegend property is True. If this property is False, properties and methods of the Legend object will fail.",
+  "example": "Worksheets(1).ChartObjects(1).Chart.Legend.Font.Bold = True",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that represents the name of the object."
+    },
+    {
+      "name": "Position",
+      "kind": "property",
+      "type": "XlLegendPosition",
+      "access": "read/write",
+      "description": "Returns or sets an XlLegendPosition value that represents the position of the legend on the chart."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that determines if the object has a shadow."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a Double value that represents the height, in points, of the object."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a Double value that represents the distance, in points, from the left edge of the object to the left edge of column A (on a worksheet) or the left edge of the chart area (on a chart)."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a Double value that represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart)."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a Double value that represents the width, in points, of the object."
+    },
+    {
+      "name": "IncludeInLayout",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a legend will occupy the chart layout space when a chart layout is being determined. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "ChartFormat",
+      "access": "read-only",
+      "description": "Returns the ChartFormat object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select() As Variant",
+      "description": "Selects the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "LegendEntries",
+      "kind": "method",
+      "signature": "LegendEntries([Index As Variant]) As Object",
+      "description": "Returns an object that represents either a single legend entry (a LegendEntry object) or a collection of legend entries (a LegendEntries object) for the legend.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of the legend entry."
+        }
+      ]
+    },
+    {
+      "name": "Clear",
+      "kind": "method",
+      "signature": "Clear() As Variant",
+      "description": "Clears the entire object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "SetProperty",
+      "kind": "method",
+      "signature": "SetProperty(ID As String, Value As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Value",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetProperty",
+      "kind": "method",
+      "signature": "GetProperty(ID As String) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "ID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

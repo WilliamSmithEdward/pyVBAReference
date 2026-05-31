@@ -1,0 +1,62 @@
+{
+  "name": "FormatColor",
+  "kind": "Dispatch Interface",
+  "guid": "{00024491-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the fill color specified for a threshold of a color scale conditional format or the color of the bar in a data bar conditional format.",
+  "remarks": "You can choose a color by passing an RGB value in the Color property, or designate the color by indexing into the theme color palette by using the ThemeColor property.",
+  "example": "Sub CreateColorScaleCF()\n\n Dim cfColorScale As ColorScale\n\n 'Fill cells with sample data from 1 to 10\n With ActiveSheet\n .Range(\"C1\") = 1\n .Range(\"C2\") = 2\n .Range(\"C1:C2\").AutoFill Destination:=Range(\"C1:C10\")\n End With\n\n Range(\"C1:C10\").Select\n\n 'Create a two-color ColorScale object for the created sample data range\n Set cfColorScale = Selection.FormatConditions.AddColorScale(ColorScaleType:=2)\n\n 'Set the minimum threshold to red and maximum threshold to blue\n cfColorScale.ColorScaleCriteria(1).FormatColor.Color = RGB(255, 0, 0)\n cfColorScale.ColorScaleCriteria(2).FormatColor.Color = RGB(0, 0, 255)\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Color",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the fill color associated with a threshold for a data bar or color scale conditional formatting rule."
+    },
+    {
+      "name": "ColorIndex",
+      "kind": "property",
+      "type": "XlColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets one of the constants of the XlColorIndex enumeration, specifying if the fill color is expressed as an index value into the current color palette."
+    },
+    {
+      "name": "ThemeColor",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets one of the constants of the XlThemeColor enumeration, specifying the theme color used in a threshold of a data bar or color scale conditional format."
+    },
+    {
+      "name": "TintAndShade",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Single that lightens or darkens the fill color of a cell for a threshold of a data bar or color scale conditional formatting rule."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -1,0 +1,48 @@
+{
+  "name": "EffectParameters",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03D0-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a collection of EffectParameter objects.",
+  "remarks": "Picture Effects are processed as a chain composed of individual items that are applied in sequence to create the final composited image. An Effects chain will allow an effect to be added to the chain, reordered, or removed from the chain. Effect parameters specify properties of those effects.",
+  "example": "Sub PictureEffectSample()\n' Setup a slide with one picture shape.\nWith ActivePresentation.Slides(1).Shapes(1).Fill.PictureEffects\n\n ' Insert a 150% Saturation effect.\n .Insert(msoEffectSaturation).EffectParameters(1).Value = 1.5\n\n ' Insert Brightness/Contrast effect and set values to -50% Brightness and +25% Contrast.\n Dim brightnessContrast As PictureEffect\n Set brightnessContrast = .Insert(msoEffectBrightnessContrast)\n brightnessContrast.EffectParameters(1).Value = -0.5\n brightnessContrast.EffectParameters(2).Value = 0.25\n\n ' Remove all Picture effects.\n While .Count > 0\n .Delete (1)\n Wend\n\nEnd With\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the EffectParameters object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the EffectParameters object was created. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "EffectParameter",
+      "access": "read-only",
+      "description": "Retrieves an EffectParameter object at the specified index or with the specified unique Id. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Retrieves the count of the number of EffectParameter objects contained within the EffectParameters collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [],
+  "events": []
+}

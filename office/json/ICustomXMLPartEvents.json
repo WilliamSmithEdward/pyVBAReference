@@ -1,0 +1,94 @@
+{
+  "name": "ICustomXMLPartEvents",
+  "kind": "Dispatch Interface",
+  "guid": "{000CDB06-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "NodeAfterInsert",
+      "kind": "method",
+      "signature": "NodeAfterInsert(NewNode As CustomXMLNode, InUndoRedo As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "NewNode",
+          "type": "CustomXMLNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "InUndoRedo",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "NodeAfterDelete",
+      "kind": "method",
+      "signature": "NodeAfterDelete(OldNode As CustomXMLNode, OldParentNode As CustomXMLNode, OldNextSibling As CustomXMLNode, InUndoRedo As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "OldNode",
+          "type": "CustomXMLNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "OldParentNode",
+          "type": "CustomXMLNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "OldNextSibling",
+          "type": "CustomXMLNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "InUndoRedo",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "NodeAfterReplace",
+      "kind": "method",
+      "signature": "NodeAfterReplace(OldNode As CustomXMLNode, NewNode As CustomXMLNode, InUndoRedo As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "OldNode",
+          "type": "CustomXMLNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "NewNode",
+          "type": "CustomXMLNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "InUndoRedo",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

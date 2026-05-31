@@ -1,0 +1,280 @@
+{
+  "name": "DialogSheets",
+  "kind": "Dispatch Interface",
+  "guid": "{000208B0-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "HPageBreaks",
+      "kind": "property",
+      "type": "HPageBreaks",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "VPageBreaks",
+      "kind": "property",
+      "type": "VPageBreaks",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([Before As Variant], [After As Variant], [Count As Variant]) As DialogSheet",
+      "description": "",
+      "returns": "DialogSheet",
+      "parameters": [
+        {
+          "name": "Before",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "After",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Count",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy([Before As Variant], [After As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Before",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "After",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move([Before As Variant], [After As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Before",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "After",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PrintPreview",
+      "kind": "method",
+      "signature": "PrintPreview([EnableChanges As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "EnableChanges",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select([Replace As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Replace",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PrintOut",
+      "kind": "method",
+      "signature": "PrintOut([From As Variant], [To As Variant], [Copies As Variant], [Preview As Variant], [ActivePrinter As Variant], [PrintToFile As Variant], [Collate As Variant], [PrToFileName As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "From",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "To",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Copies",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Preview",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ActivePrinter",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "PrintToFile",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Collate",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "PrToFileName",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Add2",
+      "kind": "method",
+      "signature": "Add2([Before As Variant], [After As Variant], [Count As Variant], [NewLayout As Variant]) As Object",
+      "description": "",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Before",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "After",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Count",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "NewLayout",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

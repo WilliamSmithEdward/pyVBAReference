@@ -1,0 +1,112 @@
+{
+  "name": "IBlogPictureExtensibility",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03C5-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents an object that provides the ability to manipulate blog images.",
+  "remarks": "Pictures are stored with picture providers in an account set up by the user.",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "BlogPictureProviderProperties",
+      "kind": "method",
+      "signature": "BlogPictureProviderProperties(BlogPictureProvider As String, FriendlyName As String)",
+      "description": "Enables picture providers to offer themselves as an upload location for blog pictures.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "BlogPictureProvider",
+          "type": "String",
+          "optional": false,
+          "description": "The ID of the picture provider."
+        },
+        {
+          "name": "FriendlyName",
+          "type": "String",
+          "optional": false,
+          "description": "The friendly name of the picture provider."
+        }
+      ]
+    },
+    {
+      "name": "CreatePictureAccount",
+      "kind": "method",
+      "signature": "CreatePictureAccount(Account As String, BlogProvider As String, ParentWindow As Long, Document As Object)",
+      "description": "Allows a picture provider to display the user interface needed to guide the user through setting up a picture account.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Account",
+          "type": "String",
+          "optional": false,
+          "description": "Represents the GUID of the account registry key. Blog account settings are stored in the registry at \\\\HKCU\\Software\\Microsoft\\Office\\Common\\Blog\\Account."
+        },
+        {
+          "name": "BlogProvider",
+          "type": "String",
+          "optional": false,
+          "description": "The ID of the provider."
+        },
+        {
+          "name": "ParentWindow",
+          "type": "Long",
+          "optional": false,
+          "description": "Contains the HWND for the window that Microsoft Word is calling from."
+        },
+        {
+          "name": "Document",
+          "type": "Object",
+          "optional": false,
+          "description": "The current document."
+        }
+      ]
+    },
+    {
+      "name": "PublishPicture",
+      "kind": "method",
+      "signature": "PublishPicture(Account As String, ParentWindow As Long, Document As Object, Image As IUnknown, PictureURI As String, ImageType As Long)",
+      "description": "Used to post a picture object to its final destination in a blog.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Account",
+          "type": "String",
+          "optional": false,
+          "description": "Represents the GUID of the account registry key. Blog account settings are stored in the registry at \\\\HKCU\\Software\\Microsoft\\Office\\Common\\Blog\\Account."
+        },
+        {
+          "name": "ParentWindow",
+          "type": "Long",
+          "optional": false,
+          "description": "Contains the HWND for the window that Microsoft Word is calling from."
+        },
+        {
+          "name": "Document",
+          "type": "Object",
+          "optional": false,
+          "description": "The current document."
+        },
+        {
+          "name": "Image",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "Represents the name of the image file."
+        },
+        {
+          "name": "PictureURI",
+          "type": "String",
+          "optional": false,
+          "description": "The URI of the picture."
+        },
+        {
+          "name": "ImageType",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

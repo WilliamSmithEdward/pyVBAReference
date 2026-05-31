@@ -1,0 +1,197 @@
+{
+  "name": "IVBSAXContentHandler",
+  "kind": "Dispatch Interface",
+  "guid": "{2ED7290A-4DD5-4B46-BB26-4E4155E77FAA}",
+  "library": "Microsoft XML, v6.0",
+  "description": "IVBSAXContentHandler interface",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "documentLocator",
+      "kind": "property",
+      "type": "IVBSAXLocator",
+      "access": "write-only",
+      "description": "Receive an object for locating the origin of SAX document events."
+    }
+  ],
+  "methods": [
+    {
+      "name": "startDocument",
+      "kind": "method",
+      "signature": "startDocument()",
+      "description": "Receive notification of the beginning of a document.",
+      "returns": "void"
+    },
+    {
+      "name": "endDocument",
+      "kind": "method",
+      "signature": "endDocument()",
+      "description": "Receive notification of the end of a document.",
+      "returns": "void"
+    },
+    {
+      "name": "startPrefixMapping",
+      "kind": "method",
+      "signature": "startPrefixMapping(strPrefix As String, strURI As String)",
+      "description": "Begin the scope of a prefix-URI Namespace mapping.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strPrefix",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "endPrefixMapping",
+      "kind": "method",
+      "signature": "endPrefixMapping(strPrefix As String)",
+      "description": "End the scope of a prefix-URI mapping.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strPrefix",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "startElement",
+      "kind": "method",
+      "signature": "startElement(strNamespaceURI As String, strLocalName As String, strQName As String, oAttributes As IVBSAXAttributes)",
+      "description": "Receive notification of the beginning of an element.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strNamespaceURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strLocalName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strQName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "oAttributes",
+          "type": "IVBSAXAttributes",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "endElement",
+      "kind": "method",
+      "signature": "endElement(strNamespaceURI As String, strLocalName As String, strQName As String)",
+      "description": "Receive notification of the end of an element.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strNamespaceURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strLocalName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strQName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "characters",
+      "kind": "method",
+      "signature": "characters(strChars As String)",
+      "description": "Receive notification of character data.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strChars",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ignorableWhitespace",
+      "kind": "method",
+      "signature": "ignorableWhitespace(strChars As String)",
+      "description": "Receive notification of ignorable whitespace in element content.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strChars",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "processingInstruction",
+      "kind": "method",
+      "signature": "processingInstruction(strTarget As String, strData As String)",
+      "description": "Receive notification of a processing instruction.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strTarget",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strData",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "skippedEntity",
+      "kind": "method",
+      "signature": "skippedEntity(strName As String)",
+      "description": "Receive notification of a skipped entity.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

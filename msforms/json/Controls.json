@@ -1,0 +1,215 @@
+{
+  "name": "Controls",
+  "kind": "Dispatch Interface",
+  "guid": "{04598FC7-866C-11CF-AB7C-00AA00C08FCF}",
+  "library": "Microsoft Forms 2.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(varg As Variant) As Object",
+      "description": "",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "varg",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Clear",
+      "kind": "method",
+      "signature": "Clear()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "_Move",
+      "kind": "method",
+      "signature": "_Move(cx As Long, cy As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "cx",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cy",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_AddByClass",
+      "kind": "method",
+      "signature": "_AddByClass(clsid As Long) As Control",
+      "description": "",
+      "returns": "Control",
+      "parameters": [
+        {
+          "name": "clsid",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Enum",
+      "kind": "method",
+      "signature": "Enum() As IUnknown",
+      "description": "",
+      "returns": "IUnknown"
+    },
+    {
+      "name": "_GetItemByIndex",
+      "kind": "method",
+      "signature": "_GetItemByIndex(lIndex As Long) As Control",
+      "description": "",
+      "returns": "Control",
+      "parameters": [
+        {
+          "name": "lIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetItemByName",
+      "kind": "method",
+      "signature": "_GetItemByName(pstr As String) As Control",
+      "description": "",
+      "returns": "Control",
+      "parameters": [
+        {
+          "name": "pstr",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetItemByID",
+      "kind": "method",
+      "signature": "_GetItemByID(ID As Long) As Control",
+      "description": "",
+      "returns": "Control",
+      "parameters": [
+        {
+          "name": "ID",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SendBackward",
+      "kind": "method",
+      "signature": "SendBackward()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "SendToBack",
+      "kind": "method",
+      "signature": "SendToBack()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move(cx As Single, cy As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "cx",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cy",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(bstrProgID As String, [Name As Variant], [Visible As Variant]) As Control",
+      "description": "",
+      "returns": "Control",
+      "parameters": [
+        {
+          "name": "bstrProgID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Name",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Visible",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Remove",
+      "kind": "method",
+      "signature": "Remove(varg As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "varg",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

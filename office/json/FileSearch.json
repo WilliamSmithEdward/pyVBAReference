@@ -1,0 +1,160 @@
+{
+  "name": "FileSearch",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0332-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "SearchSubFolders",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MatchTextExactly",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MatchAllWordForms",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "FileName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "FileType",
+      "kind": "property",
+      "type": "MsoFileType",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LastModified",
+      "kind": "property",
+      "type": "MsoLastModified",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TextOrProperty",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LookIn",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "FoundFiles",
+      "kind": "property",
+      "type": "FoundFiles",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "PropertyTests",
+      "kind": "property",
+      "type": "PropertyTests",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "SearchScopes",
+      "kind": "property",
+      "type": "SearchScopes",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "SearchFolders",
+      "kind": "property",
+      "type": "SearchFolders",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "FileTypes",
+      "kind": "property",
+      "type": "FileTypes",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Execute",
+      "kind": "method",
+      "signature": "Execute([SortBy As MsoSortBy], [SortOrder As MsoSortOrder], [AlwaysAccurate As Boolean]) As Long",
+      "description": "",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "SortBy",
+          "type": "MsoSortBy",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "SortOrder",
+          "type": "MsoSortOrder",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "AlwaysAccurate",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "NewSearch",
+      "kind": "method",
+      "signature": "NewSearch()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "RefreshScopes",
+      "kind": "method",
+      "signature": "RefreshScopes()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

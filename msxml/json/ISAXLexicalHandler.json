@@ -1,0 +1,142 @@
+{
+  "name": "ISAXLexicalHandler",
+  "kind": "Interface",
+  "guid": "{7F85D5F5-47A8-4497-BDA5-84BA04819EA6}",
+  "library": "Microsoft XML, v6.0",
+  "description": "ISAXLexicalHandler interface",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "startDTD",
+      "kind": "method",
+      "signature": "startDTD(pwchName As Integer, cchName As Long, pwchPublicId As Integer, cchPublicId As Long, pwchSystemId As Integer, cchSystemId As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchPublicId",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchPublicId",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchSystemId",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchSystemId",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "endDTD",
+      "kind": "method",
+      "signature": "endDTD()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "startEntity",
+      "kind": "method",
+      "signature": "startEntity(pwchName As Integer, cchName As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "endEntity",
+      "kind": "method",
+      "signature": "endEntity(pwchName As Integer, cchName As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "startCDATA",
+      "kind": "method",
+      "signature": "startCDATA()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "endCDATA",
+      "kind": "method",
+      "signature": "endCDATA()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "comment",
+      "kind": "method",
+      "signature": "comment(pwchChars As Integer, cchChars As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchChars",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchChars",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

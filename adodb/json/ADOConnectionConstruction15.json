@@ -1,0 +1,49 @@
+{
+  "name": "ADOConnectionConstruction15",
+  "kind": "Interface",
+  "guid": "{00000516-0000-0010-8000-00AA006D2EA4}",
+  "library": "Microsoft ActiveX Data Objects 6.1 Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "DSO",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Session",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "WrapDSOandSession",
+      "kind": "method",
+      "signature": "WrapDSOandSession(pDSO As IUnknown, pSession As IUnknown)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pDSO",
+          "type": "IUnknown",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pSession",
+          "type": "IUnknown",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

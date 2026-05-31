@@ -24,12 +24,15 @@ Usage:
 
 from __future__ import annotations
 
+import json
 import os
 import re
 import sys
 
 import pythoncom
 from win32com.client import selecttlb
+
+import mslearn_docs
 
 
 # --------------------------------------------------------------------------- #
@@ -38,24 +41,26 @@ from win32com.client import selecttlb
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Each library: (output folder, include substrings, exclude substrings).
-# A type library matches when every "include" substring is present in its
-# description and no "exclude" substring is present (case-insensitive).
+# Each library: (output folder, include substrings, exclude substrings,
+# MS Learn api prefix). The api prefix is the library namespace used by the
+# MicrosoftDocs/VBA-Docs reference (e.g. "excel" -> api/Excel.*.md). Use None
+# for libraries that have no MS Learn VBA-API coverage; their files are still
+# written, just without external descriptions.
 LIBRARIES = [
     # --- Default references in every Excel VBA project ---
-    ("excel", ["microsoft excel", "object library"], []),
+    ("excel", ["microsoft excel", "object library"], [], "excel"),
     ("office", ["microsoft office", "object library"],
-     ["access database engine"]),
-    ("vba", ["visual basic for applications"], ["extensibility"]),
-    ("stdole", ["ole automation"], []),
+     ["access database engine"], "office"),
+    ("vba", ["visual basic for applications"], ["extensibility"], "vba"),
+    ("stdole", ["ole automation"], [], None),
     # --- Common references users add via Tools > References ---
-    ("scripting", ["microsoft scripting runtime"], []),
-    ("msforms", ["microsoft forms 2.0 object library"], []),
+    ("scripting", ["microsoft scripting runtime"], [], None),
+    ("msforms", ["microsoft forms 2.0 object library"], [], None),
     ("adodb", ["microsoft activex data objects"],
-     ["recordset", "multi-dimensional", "ext."]),
-    ("vbide", ["visual basic for applications extensibility"], []),
-    ("msxml", ["microsoft xml"], []),
-    ("winhttp", ["winhttp"], []),
+     ["recordset", "multi-dimensional", "ext."], None),
+    ("vbide", ["visual basic for applications extensibility"], [], None),
+    ("msxml", ["microsoft xml"], [], None),
+    ("winhttp", ["winhttp"], [], None),
 ]
 
 
@@ -201,9 +206,14 @@ def resolve_type(tdesc, info) -> str:
 class Member:
     def __init__(self, name: str, kind: str, text: str, doc: str = ""):
         self.name = name
-        self.kind = kind  # property | method | event
+        self.kind = kind  # property | method | event | function
         self.text = text
         self.doc = doc
+        # Structured detail (populated where applicable).
+        self.params: list[dict] = []   # [{name, type, optional, description}]
+        self.ret: str = ""             # return type
+        self.ptype: str = ""           # property type
+        self.access: str = ""          # read/write | read-only | write-only
 
 
 def _is_hidden_func(flags: int) -> bool:
@@ -230,10 +240,21 @@ def _ret_typedesc(fd):
 
 
 def _build_signature(info, fd, names) -> str:
+    sig, _params = _sig_and_params(info, fd, names)
+    return sig
+
+
+def _sig_and_params(info, fd, names):
+    """Return (signature_string, params_list).
+
+    params_list is an ordered list of ``{"name", "type", "optional"}`` dicts;
+    parameter descriptions are filled in later from the MS Learn index.
+    """
     fname = names[0]
     argnames = list(names[1:])
     args = getattr(fd, "args", None) or ()
     parts = []
+    params = []
     for idx in range(len(args)):
         aname = argnames[idx] if idx < len(argnames) else f"Arg{idx + 1}"
         tdesc = None
@@ -246,18 +267,21 @@ def _build_signature(info, fd, names) -> str:
         except (IndexError, TypeError):
             pass
         atype = resolve_type(tdesc, info)
+        optional = bool(pflags & PARAMFLAG_FOPT)
         part = aname
         if atype:
             part += f" As {atype}"
-        if pflags & PARAMFLAG_FOPT:
+        if optional:
             part = f"[{part}]"
         parts.append(part)
+        params.append({"name": aname, "type": atype,
+                       "optional": optional, "description": ""})
 
     rettype = resolve_type(_ret_typedesc(fd), info)
     sig = f"{fname}({', '.join(parts)})"
     if rettype and rettype not in ("void", "HRESULT", "Null"):
         sig += f" As {rettype}"
-    return sig
+    return sig, params
 
 
 def extract_interface_members(info):
@@ -304,8 +328,11 @@ def extract_interface_members(info):
                 except (IndexError, TypeError):
                     pass
         else:
-            methods.append(Member(fname, "method",
-                                  _build_signature(info, fd, names), doc))
+            sig, params = _sig_and_params(info, fd, names)
+            mem = Member(fname, "method", sig, doc)
+            mem.params = params
+            mem.ret = resolve_type(_ret_typedesc(fd), info)
+            methods.append(mem)
 
     # Dispatch properties expressed as variables.
     for i in range(attr.cVars):
@@ -336,8 +363,10 @@ def extract_interface_members(info):
             "read-only" if "get" in access else "write-only")
         ptype = prop_type.get(name, "")
         text = name + (f" As {ptype}" if ptype else "") + f"  ({acc})"
-        properties.append(Member(name, "property", text,
-                                 prop_doc.get(name, "")))
+        mem = Member(name, "property", text, prop_doc.get(name, ""))
+        mem.ptype = ptype
+        mem.access = acc
+        properties.append(mem)
 
     return properties, methods
 
@@ -356,8 +385,10 @@ def extract_events(info):
         if not names:
             continue
         doc = info.GetDocumentation(fd.memid)[1] or ""
-        events.append(Member(names[0], "event",
-                             _build_signature(info, fd, names), doc))
+        sig, params = _sig_and_params(info, fd, names)
+        ev = Member(names[0], "event", sig, doc)
+        ev.params = params
+        events.append(ev)
     return events
 
 
@@ -398,8 +429,11 @@ def extract_module_members(info):
         if not names:
             continue
         doc = info.GetDocumentation(fd.memid)[1] or ""
-        funcs.append(Member(names[0], "function",
-                            _build_signature(info, fd, names), doc))
+        sig, params = _sig_and_params(info, fd, names)
+        fn = Member(names[0], "function", sig, doc)
+        fn.params = params
+        fn.ret = resolve_type(_ret_typedesc(fd), info)
+        funcs.append(fn)
     for i in range(attr.cVars):
         try:
             vd = info.GetVarDesc(i)
@@ -454,9 +488,37 @@ def safe_filename(name: str) -> str:
     return _INVALID.sub("_", name)
 
 
+def _emit_members(lines, members):
+    for m in members:
+        line = f"- `{m.text}`"
+        if m.doc:
+            line += f"  \n  {m.doc}"
+        lines.append(line)
+        for p in m.params:
+            if p.get("description"):
+                opt = "optional" if p["optional"] else "required"
+                t = f" As {p['type']}" if p["type"] else ""
+                lines.append(
+                    f"    - `{p['name']}{t}` ({opt}): {p['description']}")
+
+
+def _emit_remarks_example(lines, remarks, example):
+    if remarks:
+        lines.append(f"**Remarks:** {remarks}")
+        lines.append("")
+    if example:
+        lines.append("**Example:**")
+        lines.append("")
+        lines.append("```vba")
+        lines.append(example)
+        lines.append("```")
+        lines.append("")
+
+
 def write_class_file(output_dir: str, name: str, kind_label: str, guid: str,
                      lib_desc: str, properties, methods, events,
-                     description: str = "") -> None:
+                     description: str = "", remarks: str = "",
+                     example: str = "") -> None:
     lines = [f"# {name}", ""]
     lines.append(f"**Type:** {kind_label}  ")
     lines.append(f"**Library:** {lib_desc}  ")
@@ -466,30 +528,24 @@ def write_class_file(output_dir: str, name: str, kind_label: str, guid: str,
     if description:
         lines.append(description)
         lines.append("")
-
-    def emit(members):
-        for m in members:
-            line = f"- `{m.text}`"
-            if m.doc:
-                line += f"  \n  {m.doc}"
-            lines.append(line)
+    _emit_remarks_example(lines, remarks, example)
 
     if properties:
         lines.append(f"## Properties ({len(properties)})")
         lines.append("")
-        emit(properties)
+        _emit_members(lines, properties)
         lines.append("")
 
     if methods:
         lines.append(f"## Methods ({len(methods)})")
         lines.append("")
-        emit(methods)
+        _emit_members(lines, methods)
         lines.append("")
 
     if events:
         lines.append(f"## Events ({len(events)})")
         lines.append("")
-        emit(events)
+        _emit_members(lines, events)
         lines.append("")
 
     if not (properties or methods or events):
@@ -501,16 +557,22 @@ def write_class_file(output_dir: str, name: str, kind_label: str, guid: str,
         fh.write("\n".join(lines))
 
 
-def write_enum_file(output_dir: str, name: str, lib_desc: str, consts) -> None:
+def write_enum_file(output_dir: str, name: str, lib_desc: str, consts,
+                    description: str = "") -> None:
     lines = [f"# {name}", "", "**Type:** Enumeration  ",
              f"**Library:** {lib_desc}  ", ""]
+    if description:
+        lines.append(description)
+        lines.append("")
     lines.append(f"## Constants ({len(consts)})")
     lines.append("")
-    for cname, value in consts:
-        if value is None:
-            lines.append(f"- `{cname}`")
-        else:
-            lines.append(f"- `{cname}` = {value}")
+    for cname, value, desc in consts:
+        line = f"- `{cname}`"
+        if value is not None:
+            line += f" = {value}"
+        if desc:
+            line += f"  \n  {desc}"
+        lines.append(line)
     lines.append("")
     path = os.path.join(output_dir, safe_filename(name) + ".md")
     with open(path, "w", encoding="utf-8") as fh:
@@ -537,21 +599,105 @@ def write_module_file(output_dir: str, name: str, lib_desc: str, funcs,
     if funcs:
         lines.append(f"## Functions ({len(funcs)})")
         lines.append("")
-        for m in funcs:
-            line = f"- `{m.text}`"
-            if m.doc:
-                line += f"  \n  {m.doc}"
-            lines.append(line)
+        _emit_members(lines, funcs)
         lines.append("")
 
     path = os.path.join(output_dir, safe_filename(name) + ".md")
     with open(path, "w", encoding="utf-8") as fh:
         fh.write("\n".join(lines))
 
-def scrape_typelib(tlb, lib_desc: str, output_dir: str) -> int:
-    """Scrape one type library into ``output_dir``. Returns files written."""
-    os.makedirs(output_dir, exist_ok=True)
+
+# --------------------------------------------------------------------------- #
+# JSON writing (machine-readable, for IDE consumption)
+# --------------------------------------------------------------------------- #
+
+def _member_json(m) -> dict:
+    if m.kind == "property":
+        return {"name": m.name, "kind": "property", "type": m.ptype,
+                "access": m.access, "description": m.doc}
+    d = {"name": m.name, "kind": m.kind, "signature": m.text,
+         "description": m.doc}
+    if m.ret:
+        d["returns"] = m.ret
+    if m.params:
+        d["parameters"] = [
+            {"name": p["name"], "type": p["type"],
+             "optional": p["optional"], "description": p["description"]}
+            for p in m.params]
+    return d
+
+
+def write_type_json(json_dir: str, data: dict) -> None:
+    path = os.path.join(json_dir, safe_filename(data["name"]) + ".json")
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(data, fh, indent=2)
+        fh.write("\n")
+
+
+
+def _apply_params(member, entry) -> None:
+    """Fill structured parameter descriptions from a DocEntry (by name)."""
+    if entry is None or not entry.params:
+        return
+    for p in member.params:
+        desc = entry.params.get(p["name"].lower())
+        if desc:
+            p["description"] = desc
+
+
+def _enrich_api(index, prefix, type_name, props, methods, events):
+    """Overlay MS Learn docs onto api-backed members. Returns the type's
+    DocEntry (for remarks/example) or None."""
+    if index is None or not prefix:
+        return None
+    for m in props:
+        e = index.get_member(prefix, type_name, m.name)
+        if e and e.summary:
+            m.doc = e.summary
+    for m in methods:
+        e = index.get_member(prefix, type_name, m.name)
+        if e:
+            if e.summary:
+                m.doc = e.summary
+            _apply_params(m, e)
+    for m in events:
+        e = index.get_event(prefix, type_name, m.name)
+        if e:
+            if e.summary:
+                m.doc = e.summary
+            _apply_params(m, e)
+    return index.get_type(prefix, type_name)
+
+
+def _enrich_builtins(index, funcs):
+    """Overlay VBA language built-in docs (MsgBox, Format, ...) onto module
+    functions, matched by name."""
+    if index is None:
+        return
+    for m in funcs:
+        e = index.get_builtin(m.name)
+        if e:
+            if e.summary:
+                m.doc = e.summary
+            _apply_params(m, e)
+
+
+def scrape_typelib(tlb, lib_desc: str, output_dir: str, doc_prefix=None,
+                   index=None) -> int:
+    """Scrape one type library into ``output_dir``.
+
+    Writes one Markdown file per type into ``<output_dir>/md/`` and one JSON
+    file per type into ``<output_dir>/json/``. Returns files written.
+    """
+    md_dir = os.path.join(output_dir, "md")
+    json_dir = os.path.join(output_dir, "json")
+    os.makedirs(md_dir, exist_ok=True)
+    os.makedirs(json_dir, exist_ok=True)
     count = tlb.GetTypeInfoCount()
+
+    # The VBA library matches global built-ins by member name, not api path.
+    builtin_mode = (doc_prefix == "vba")
+    api_prefix = None if builtin_mode else doc_prefix
 
     emitted: set[str] = set()
     written = 0
@@ -561,6 +707,27 @@ def scrape_typelib(tlb, lib_desc: str, output_dir: str) -> int:
         # The Object Browser shows coclass names; the underlying dispatch
         # interfaces are typically prefixed with a single underscore.
         return raw[1:] if raw.startswith("_") and len(raw) > 1 else raw
+
+    def emit_class(name, kind_label, guid, props, methods, events,
+                   description):
+        remarks = example = ""
+        if index is not None and api_prefix:
+            entry = _enrich_api(index, api_prefix, name, props, methods,
+                                events)
+            if entry:
+                if entry.summary:
+                    description = entry.summary
+                remarks, example = entry.remarks, entry.example
+        write_class_file(md_dir, name, kind_label, guid, lib_desc, props,
+                         methods, events, description, remarks, example)
+        write_type_json(json_dir, {
+            "name": name, "kind": kind_label, "guid": guid,
+            "library": lib_desc, "description": description,
+            "remarks": remarks, "example": example,
+            "properties": [_member_json(m) for m in props],
+            "methods": [_member_json(m) for m in methods],
+            "events": [_member_json(m) for m in events],
+        })
 
     # Pass 1: coclasses -> rich Application/Range/Worksheet style files.
     for i in range(count):
@@ -580,9 +747,8 @@ def scrape_typelib(tlb, lib_desc: str, output_dir: str) -> int:
             props, methods = extract_interface_members(default_iface)
         if source_iface is not None:
             events = extract_events(source_iface)
-        guid = str(attr.iid)
-        write_class_file(output_dir, name, TKIND_LABEL[TKIND_COCLASS], guid,
-                         lib_desc, props, methods, events, description)
+        emit_class(name, TKIND_LABEL[TKIND_COCLASS], str(attr.iid),
+                   props, methods, events, description)
         emitted.add(name)
         index_entries.append((name, "Class"))
         written += 1
@@ -599,10 +765,26 @@ def scrape_typelib(tlb, lib_desc: str, output_dir: str) -> int:
         name = tlb.GetDocumentation(i)[0]
         if name in emitted:
             continue
-        consts = extract_enum_constants(info)
-        if not consts:
+        raw_consts = extract_enum_constants(info)
+        if not raw_consts:
             continue
-        write_enum_file(output_dir, name, lib_desc, consts)
+        description = tlb.GetDocumentation(i)[1] or ""
+        const_docs = {}
+        if index is not None and api_prefix:
+            entry = index.get_type(api_prefix, name)
+            if entry:
+                if entry.summary:
+                    description = entry.summary
+                const_docs = entry.constants
+        consts = [(cname, value, const_docs.get(cname.lower(), ""))
+                  for cname, value in raw_consts]
+        write_enum_file(md_dir, name, lib_desc, consts, description)
+        write_type_json(json_dir, {
+            "name": name, "kind": "Enumeration", "library": lib_desc,
+            "description": description,
+            "constants": [{"name": c, "value": v, "description": d}
+                          for c, v, d in consts],
+        })
         emitted.add(name)
         index_entries.append((name, "Enumeration"))
         written += 1
@@ -624,8 +806,21 @@ def scrape_typelib(tlb, lib_desc: str, output_dir: str) -> int:
         funcs, consts = extract_module_members(info)
         if not (funcs or consts):
             continue
-        write_module_file(output_dir, name, lib_desc, funcs, consts,
-                          description)
+        if index is not None:
+            if builtin_mode:
+                _enrich_builtins(index, funcs)
+            elif api_prefix:
+                entry = _enrich_api(index, api_prefix, name, [], funcs, [])
+                if entry and entry.summary:
+                    description = entry.summary
+        write_module_file(md_dir, name, lib_desc, funcs, consts, description)
+        write_type_json(json_dir, {
+            "name": name, "kind": "Module", "library": lib_desc,
+            "description": description,
+            "functions": [_member_json(m) for m in funcs],
+            "constants": [{"name": c, "value": v, "type": t}
+                          for c, v, t in consts],
+        })
         emitted.add(name)
         index_entries.append((name, "Module"))
         written += 1
@@ -647,31 +842,123 @@ def scrape_typelib(tlb, lib_desc: str, output_dir: str) -> int:
         props, methods = extract_interface_members(info)
         if not (props or methods):
             continue
-        write_class_file(output_dir, name, TKIND_LABEL[attr.typekind],
-                         str(attr.iid), lib_desc, props, methods, [],
-                         description)
+        emit_class(name, TKIND_LABEL[attr.typekind], str(attr.iid),
+                   props, methods, [], description)
         emitted.add(name)
         index_entries.append((name, TKIND_LABEL[attr.typekind]))
         written += 1
 
-    # Index for navigation.
+    # Index for navigation (Markdown + JSON).
     index_entries.sort(key=lambda e: e[0].lower())
     index_lines = [f"# {lib_desc}", "",
-                   f"Scraped object model: {len(index_entries)} entries.", ""]
+                   f"Scraped object model: {len(index_entries)} entries.", "",
+                   "One Markdown file per type in this folder; matching "
+                   "machine-readable JSON in `../json/`.", ""]
     for name, kind in index_entries:
         index_lines.append(f"- [{name}]({safe_filename(name)}.md) - {kind}")
     index_lines.append("")
-    with open(os.path.join(output_dir, "_index.md"), "w",
+    with open(os.path.join(md_dir, "_index.md"), "w",
               encoding="utf-8") as fh:
         fh.write("\n".join(index_lines))
+    with open(os.path.join(json_dir, "_index.json"), "w",
+              encoding="utf-8") as fh:
+        json.dump({"library": lib_desc,
+                   "types": [{"name": n, "kind": k} for n, k in index_entries]},
+                  fh, indent=2)
+        fh.write("\n")
 
     return written
 
 
+def write_master_indexes(root_dir: str, done_libs) -> int:
+    """Build repo-root ``index.json`` and ``members.json`` from the per-type
+    JSON already written for each library.
+
+    ``done_libs`` is a list of ``(folder, library_description)`` tuples. The
+    master index lists every library and its types; the member index maps each
+    member name to the types that define it (for fast cross-library lookup).
+    Returns the number of distinct member names indexed.
+    """
+    libraries = []
+    members: dict[str, list] = {}
+    total_types = 0
+    for folder, lib_desc in done_libs:
+        json_dir = os.path.join(root_dir, folder, "json")
+        try:
+            with open(os.path.join(json_dir, "_index.json"),
+                      encoding="utf-8") as fh:
+                idx = json.load(fh)
+        except OSError:
+            continue
+        types = idx.get("types", [])
+        total_types += len(types)
+        libraries.append({
+            "folder": folder, "library": lib_desc,
+            "type_count": len(types), "types": types,
+        })
+        for t in types:
+            tname = t["name"]
+            try:
+                with open(os.path.join(json_dir,
+                                       f"{safe_filename(tname)}.json"),
+                          encoding="utf-8") as fh:
+                    data = json.load(fh)
+            except OSError:
+                continue
+            groups = (
+                ("property", data.get("properties", [])),
+                ("method", data.get("methods", [])),
+                ("event", data.get("events", [])),
+                ("function", data.get("functions", [])),
+                ("constant", data.get("constants", [])),
+            )
+            for kind, items in groups:
+                for m in items:
+                    members.setdefault(m["name"], []).append(
+                        {"library": folder, "type": tname, "kind": kind})
+
+    members_sorted = {k: members[k] for k in sorted(members, key=str.lower)}
+    with open(os.path.join(root_dir, "index.json"), "w",
+              encoding="utf-8") as fh:
+        json.dump({"total_libraries": len(libraries),
+                   "total_types": total_types,
+                   "libraries": libraries}, fh, indent=2)
+        fh.write("\n")
+    with open(os.path.join(root_dir, "members.json"), "w",
+              encoding="utf-8") as fh:
+        json.dump({"total_names": len(members_sorted),
+                   "members": members_sorted}, fh, indent=2)
+        fh.write("\n")
+    return len(members_sorted)
+
+
+def _clean_stale_flat(output_dir: str) -> None:
+    """Remove files from the previous flat layout (``<folder>/*.md``) so only
+    the new ``md/`` and ``json/`` subfolders remain."""
+    if not os.path.isdir(output_dir):
+        return
+    for entry in os.listdir(output_dir):
+        full = os.path.join(output_dir, entry)
+        if os.path.isfile(full) and entry.lower().endswith((".md", ".json")):
+            os.remove(full)
+
+
 def main() -> int:
+    no_enrich = "--no-enrich" in sys.argv[1:]
+    force_dl = "--refresh-docs" in sys.argv[1:]
+
+    index = None
+    if not no_enrich:
+        prefixes = {p for (_f, _i, _e, p) in LIBRARIES if p}
+        print("Building MS Learn description index...")
+        index = mslearn_docs.build_index(prefixes, force_download=force_dl)
+        if len(index) == 0:
+            print("  (no descriptions available; writing reference only)")
+
     total = 0
     libs_done = 0
-    for folder, include, exclude in LIBRARIES:
+    done_libs: list[tuple[str, str]] = []
+    for folder, include, exclude, doc_prefix in LIBRARIES:
         tlb, desc = load_typelib(include, exclude)
         if tlb is None:
             print(f"[skip] No registered type library matched '{folder}' "
@@ -680,16 +967,22 @@ def main() -> int:
         lib_doc = tlb.GetDocumentation(-1)
         lib_desc = desc or lib_doc[1] or lib_doc[0] or folder
         output_dir = os.path.join(ROOT_DIR, folder)
+        _clean_stale_flat(output_dir)
         print(f"Scraping {lib_desc} -> {folder}/ "
               f"({tlb.GetTypeInfoCount()} type entries)...")
-        written = scrape_typelib(tlb, lib_desc, output_dir)
-        print(f"  Wrote {written} files to {folder}/ (index: {folder}/_index.md)")
+        written = scrape_typelib(tlb, lib_desc, output_dir, doc_prefix, index)
+        print(f"  Wrote {written} types to {folder}/md/ and {folder}/json/")
         total += written
         libs_done += 1
+        done_libs.append((folder, lib_desc))
 
     if libs_done == 0:
         print("No matching type libraries were found. Is Office installed?")
         return 1
+
+    print("Building master indexes (index.json, members.json)...")
+    names = write_master_indexes(ROOT_DIR, done_libs)
+    print(f"  Indexed {names} distinct member names.")
 
     print(f"\nDone. {total} reference files written across "
           f"{libs_done} libraries.")

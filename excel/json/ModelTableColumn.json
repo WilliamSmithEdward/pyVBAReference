@@ -1,0 +1,48 @@
+{
+  "name": "ModelTableColumn",
+  "kind": "Dispatch Interface",
+  "guid": "{000244D5-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a single column inside a ModelTable object.",
+  "remarks": "The ModelTableColumn object is read-only. Use this object to create relationships programmatically.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Excel application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified ModelTableColumn object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that represents the name of the object."
+    },
+    {
+      "name": "DataType",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the XlParameterDataType enumeration of the ModelTableColumn. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

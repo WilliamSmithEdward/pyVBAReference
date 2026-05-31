@@ -1,0 +1,90 @@
+{
+  "name": "ICustomProperties",
+  "kind": "Interface",
+  "guid": "{00024452-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String, Value As Variant, RHS As CustomProperty)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Value",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "CustomProperty",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

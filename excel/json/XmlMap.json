@@ -1,0 +1,218 @@
+{
+  "name": "XmlMap",
+  "kind": "Dispatch Interface",
+  "guid": "{0002447B-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents an XML map that has been added to a workbook.",
+  "remarks": "Use the Add method of the XmlMaps collection to add an XML map to a workbook. Use the Import method to import XML data from an XML data file into cells mapped to the specified XmlMap. The ImportXml method imports XML data for a String variable. Use the Export method to export data from cells mapped to the specified XmlMap. The ExportXml method exports XML data to a String variable.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value that represents the friendly name used to uniquely identify a mapping in the workbook."
+    },
+    {
+      "name": "IsExportable",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns True if Microsoft Excel can use the XPath objects in the specified schema map to export XML data, and all XML lists mapped to the specified schema map can be exported."
+    },
+    {
+      "name": "ShowImportExportValidationErrors",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether to display a dialog box that details schema-validation errors when data is imported or exported through the specified XML schema map. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "SaveDataSourceDefinition",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the data source definition of the specified XML schema map is saved with the workbook. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "AdjustColumnWidth",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the column widths are automatically adjusted for the best fit each time that you refresh the specified XML map."
+    },
+    {
+      "name": "PreserveColumnFilter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether filtering is preserved when the specified XML map is refreshed. Read/write Boolean."
+    },
+    {
+      "name": "PreserveNumberFormatting",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if number formatting on cells mapped to the specified XML schema map are preserved when the schema map is refreshed. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "AppendOnImport",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if you want to append new rows to XML lists that are bound to the specified schema map when you are importing new data or refreshing an existing connection."
+    },
+    {
+      "name": "RootElementName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String that represents the name of the root element for the specified XML schema map. Read-only."
+    },
+    {
+      "name": "RootElementNamespace",
+      "kind": "property",
+      "type": "XmlNamespace",
+      "access": "read-only",
+      "description": "Returns an XmlNamespace object that represents the root element for the specified XML schema map. Read-only."
+    },
+    {
+      "name": "Schemas",
+      "kind": "property",
+      "type": "XmlSchemas",
+      "access": "read-only",
+      "description": "Returns an XmlSchemas collection that represents the schemas that the specified XmlMap object contains. Read-only."
+    },
+    {
+      "name": "DataBinding",
+      "kind": "property",
+      "type": "XmlDataBinding",
+      "access": "read-only",
+      "description": "Returns an XmlDataBinding object that represents the binding associated with the specified schema map. Read-only."
+    },
+    {
+      "name": "WorkbookConnection",
+      "kind": "property",
+      "type": "WorkbookConnection",
+      "access": "read-only",
+      "description": "Returns a new connection for the specified XMLMap object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Removes the specified XML map from the workbook.",
+      "returns": "void"
+    },
+    {
+      "name": "Import",
+      "kind": "method",
+      "signature": "Import(Url As String, [Overwrite As Variant]) As XlXmlImportResult",
+      "description": "Imports data from the specified XML data file into cells that have been mapped to the specified XmlMap object.",
+      "returns": "XlXmlImportResult",
+      "parameters": [
+        {
+          "name": "Url",
+          "type": "String",
+          "optional": false,
+          "description": "The path to the XML data to import. The path can be specified in Universal Naming convention (UNC) or Uniform Resource Locator (URL) format. The file can be an XML data file."
+        },
+        {
+          "name": "Overwrite",
+          "type": "Variant",
+          "optional": true,
+          "description": "Set to True to overwrite existing data. Set to False to append to existing data. The default value is False."
+        }
+      ]
+    },
+    {
+      "name": "ImportXml",
+      "kind": "method",
+      "signature": "ImportXml(XmlData As String, [Overwrite As Variant]) As XlXmlImportResult",
+      "description": "Imports XML data from a String variable into cells that have been mapped to the specified XmlMap object.",
+      "returns": "XlXmlImportResult",
+      "parameters": [
+        {
+          "name": "XmlData",
+          "type": "String",
+          "optional": false,
+          "description": "The string that contains the XML data to import."
+        },
+        {
+          "name": "Overwrite",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies whether to overwrite the contents of cells that are currently mapped to the specified XML map. Set to True to overwrite the cells; set to False to append the data to the existing range."
+        }
+      ]
+    },
+    {
+      "name": "Export",
+      "kind": "method",
+      "signature": "Export(Url As String, [Overwrite As Variant]) As XlXmlExportResult",
+      "description": "Exports the contents of cells mapped to the specified XmlMap object to an XML data file.",
+      "returns": "XlXmlExportResult",
+      "parameters": [
+        {
+          "name": "Url",
+          "type": "String",
+          "optional": false,
+          "description": "The path and file name of the XML data file to export to."
+        },
+        {
+          "name": "Overwrite",
+          "type": "Variant",
+          "optional": true,
+          "description": "Set to True to overwrite the file specified in the _Url_ parameter if the file exists. The default value is False."
+        }
+      ]
+    },
+    {
+      "name": "ExportXml",
+      "kind": "method",
+      "signature": "ExportXml(Data As String) As XlXmlExportResult",
+      "description": "Exports the contents of cells mapped to the specified XmlMap object to a String variable.",
+      "returns": "XlXmlExportResult",
+      "parameters": [
+        {
+          "name": "Data",
+          "type": "String",
+          "optional": false,
+          "description": "The variable to export the data to."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

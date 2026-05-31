@@ -1,0 +1,115 @@
+{
+  "name": "ISAXDTDHandler",
+  "kind": "Interface",
+  "guid": "{E15C1BAF-AFB3-4D60-8C36-19A8C45DEFED}",
+  "library": "Microsoft XML, v6.0",
+  "description": "ISAXDTDHandler interface",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "notationDecl",
+      "kind": "method",
+      "signature": "notationDecl(pwchName As Integer, cchName As Long, pwchPublicId As Integer, cchPublicId As Long, pwchSystemId As Integer, cchSystemId As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchPublicId",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchPublicId",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchSystemId",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchSystemId",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "unparsedEntityDecl",
+      "kind": "method",
+      "signature": "unparsedEntityDecl(pwchName As Integer, cchName As Long, pwchPublicId As Integer, cchPublicId As Long, pwchSystemId As Integer, cchSystemId As Long, pwchNotationName As Integer, cchNotationName As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchPublicId",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchPublicId",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchSystemId",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchSystemId",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchNotationName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchNotationName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

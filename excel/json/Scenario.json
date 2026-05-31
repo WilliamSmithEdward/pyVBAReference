@@ -1,0 +1,119 @@
+{
+  "name": "Scenario",
+  "kind": "Dispatch Interface",
+  "guid": "{00020897-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a scenario on a worksheet.",
+  "remarks": "A scenario is a group of input values (called _changing cells_) that's named and saved. The Scenario object is a member of the Scenarios collection. The Scenarios collection contains all the defined scenarios for a worksheet.",
+  "example": "Worksheets(\"options\").Scenarios(\"typical\").Show",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "ChangingCells",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the changing cells for a scenario. Read-only."
+    },
+    {
+      "name": "Comment",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value that represents the comment associated with the scenario."
+    },
+    {
+      "name": "Hidden",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that indicates if the scenario is hidden."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the index number of the object within the collection of similar objects."
+    },
+    {
+      "name": "Locked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that indicates if the object is locked."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value representing the name of the object."
+    },
+    {
+      "name": "Values",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns a Variant array that contains the current values of the changing cells for the scenario."
+    }
+  ],
+  "methods": [
+    {
+      "name": "ChangeScenario",
+      "kind": "method",
+      "signature": "ChangeScenario(ChangingCells As Variant, [Values As Variant]) As Variant",
+      "description": "Changes the scenario to have a new set of changing cells and (optionally) scenario values.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "ChangingCells",
+          "type": "Variant",
+          "optional": false,
+          "description": "A Range object that specifies the new set of changing cells for the scenario. The changing cells must be on the same sheet as the scenario."
+        },
+        {
+          "name": "Values",
+          "type": "Variant",
+          "optional": true,
+          "description": "An array that contains the new scenario values for the changing cells. If this argument is omitted, the scenario values are assumed to be the current values in the changing cells."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Show",
+      "kind": "method",
+      "signature": "Show() As Variant",
+      "description": "Shows the scenario by inserting its values on the worksheet. The affected cells are the changing cells of the scenario.",
+      "returns": "Variant"
+    }
+  ],
+  "events": []
+}

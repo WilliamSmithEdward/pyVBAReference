@@ -1,0 +1,62 @@
+{
+  "name": "FileExportConverters",
+  "kind": "Dispatch Interface",
+  "guid": "{000244B4-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of FileExportConverter objects that represent all the file converters available for saving files.",
+  "remarks": "Use the FileExportConverters property of the Application object to return the FileExportConverters collection. The Add method is not available for the FileExportConverters collection. FileExportConverter objects are added during installation of Microsoft Office or by installing supplemental converters.",
+  "example": "MsgBox FileExportConverters(2).Extensions",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Excel application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified FileExportConverters object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of file converters in the collection. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "FileExportConverter",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "FileExportConverter",
+      "access": "read-only",
+      "description": "Returns an individual FileExportConverter object from a collection."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

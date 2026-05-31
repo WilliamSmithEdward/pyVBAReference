@@ -1,0 +1,145 @@
+{
+  "name": "Scenarios",
+  "kind": "Dispatch Interface",
+  "guid": "{00020896-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of all the Scenario objects on the specified worksheet.",
+  "remarks": "A scenario is a group of input values (called _changing cells_) that's named and saved.",
+  "example": "Worksheets(\"options\").Scenarios.CreateSummary _\n resultCells:=Worksheets(\"options\").Range(\"j10,j20\")",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String, ChangingCells As Variant, [Values As Variant], [Comment As Variant], [Locked As Variant], [Hidden As Variant]) As Scenario",
+      "description": "Creates a new scenario and adds it to the list of scenarios that are available for the current worksheet.",
+      "returns": "Scenario",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The scenario name."
+        },
+        {
+          "name": "ChangingCells",
+          "type": "Variant",
+          "optional": false,
+          "description": "A Range object that refers to the changing cells for the scenario."
+        },
+        {
+          "name": "Values",
+          "type": "Variant",
+          "optional": true,
+          "description": "An array that contains the scenario values for the cells in _ChangingCells_. If this argument is omitted, the scenario values are assumed to be the current values in the cells in _ChangingCells_."
+        },
+        {
+          "name": "Comment",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that specifies comment text for the scenario. When a new scenario is added, the author's name and date are automatically added at the beginning of the comment text."
+        },
+        {
+          "name": "Locked",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to lock the scenario to prevent changes. The default value is True."
+        },
+        {
+          "name": "Hidden",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to hide the scenario. The default value is False."
+        }
+      ]
+    },
+    {
+      "name": "CreateSummary",
+      "kind": "method",
+      "signature": "CreateSummary([ReportType As XlSummaryReportType], [ResultCells As Variant]) As Variant",
+      "description": "Creates a new worksheet that contains a summary report for the scenarios on the specified worksheet. Variant.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "ReportType",
+          "type": "XlSummaryReportType",
+          "optional": true,
+          "description": "Specifies whether the summary report is a PivotTable or a standard summary."
+        },
+        {
+          "name": "ResultCells",
+          "type": "Variant",
+          "optional": true,
+          "description": "A Range object that represents the result cells on the specified worksheet. Normally, this range refers to one or more cells containing the formulas that depend on the changing cell values for your model; that is, the cells that show the results of a particular scenario. If this argument is omitted, there are no result cells included in the report."
+        }
+      ]
+    },
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Scenario",
+      "description": "Returns a single object from a collection.",
+      "returns": "Scenario",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number for the object."
+        }
+      ]
+    },
+    {
+      "name": "Merge",
+      "kind": "method",
+      "signature": "Merge(Source As Variant) As Variant",
+      "description": "Merges the scenarios from another sheet into the Scenarios collection.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name of the sheet that contains scenarios to be merged, or a Worksheet object that represents that sheet."
+        }
+      ]
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "method",
+      "signature": "_NewEnum() As IUnknown",
+      "description": "",
+      "returns": "IUnknown"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,85 @@
+{
+  "name": "RecentFiles",
+  "kind": "Dispatch Interface",
+  "guid": "{00024406-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the list of recently used files.",
+  "remarks": "Each file is represented by a RecentFile object.",
+  "example": "Application.RecentFiles.Maximum = 6",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Maximum",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the maximum number of files in the list of recently used files. Can be a value from 0 (zero) through 50. Read/write Long."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "RecentFile",
+      "access": "read-only",
+      "description": "Returns a single object from a collection."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "RecentFile",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String) As RecentFile",
+      "description": "Adds a file to the list of recently used files.",
+      "returns": "RecentFile",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The file name."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,315 @@
+{
+  "name": "ScrollBars",
+  "kind": "Dispatch Interface",
+  "guid": "{00020886-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Locked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Placement",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PrintObject",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ZOrder",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ShapeRange",
+      "kind": "property",
+      "type": "ShapeRange",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Display3DShading",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LinkedCell",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Max",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Min",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SmallChange",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LargeChange",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "BringToFront",
+      "kind": "method",
+      "signature": "BringToFront() As Variant",
+      "description": "",
+      "returns": "Variant"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy() As Variant",
+      "description": "",
+      "returns": "Variant"
+    },
+    {
+      "name": "CopyPicture",
+      "kind": "method",
+      "signature": "CopyPicture([Appearance As XlPictureAppearance], [Format As XlCopyPictureFormat]) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Appearance",
+          "type": "XlPictureAppearance",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Format",
+          "type": "XlCopyPictureFormat",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Cut",
+      "kind": "method",
+      "signature": "Cut() As Variant",
+      "description": "",
+      "returns": "Variant"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "",
+      "returns": "Variant"
+    },
+    {
+      "name": "Duplicate",
+      "kind": "method",
+      "signature": "Duplicate() As Object",
+      "description": "",
+      "returns": "Object"
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select([Replace As Variant]) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Replace",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SendToBack",
+      "kind": "method",
+      "signature": "SendToBack() As Variant",
+      "description": "",
+      "returns": "Variant"
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Left As Double, Top As Double, Width As Double, Height As Double) As ScrollBar",
+      "description": "",
+      "returns": "ScrollBar",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Double",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Double",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Double",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Double",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Group",
+      "kind": "method",
+      "signature": "Group() As GroupObject",
+      "description": "",
+      "returns": "GroupObject"
+    },
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Object",
+      "description": "",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "method",
+      "signature": "_NewEnum() As IUnknown",
+      "description": "",
+      "returns": "IUnknown"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,63 @@
+{
+  "name": "SharedWorkspaceMember",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0381-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a user who has rights in a shared document workspace site.",
+  "remarks": "Use the SharedWorkspaceMember object to manage users who have rights to participate in a shared workspace and to collaborate on the shared documents saved in the workspace site. The Role specified when the user is added as a member of the workspace (for example, \"Reader\" or \"Contributor\") determines that user's rights in the workspace and cannot be accessed or modified later through properties of the SharedWorkspaceMember object. Use the Item (_index_) property of the SharedWorkspaceMembers collection to return a specific SharedWorkspaceMember object. Use the SharedWorkspaceMember object's three distinct name properties to retrieve identifying information about the member. - The Name property returns the members display name. - The Email property returns the member's email address. - The DomainName property returns the member's domain and user name in the format domain\\user.",
+  "example": "Dim swsMember As Office.SharedWorkspaceMember\n    Dim strMemberInfo As String\n    strMemberInfo = \"The shared workspace contains \" & _\n        ActiveWorkbook.SharedWorkspace.Members.Count & \" member(s).\" & vbCrLf\n    If ActiveWorkbook.SharedWorkspace.Members.Count > 0 Then\n        For Each swsMember In ActiveWorkbook.SharedWorkspace.Members\n            strMemberInfo = strMemberInfo & swsMember.Name & vbCrLf & _\n                \" - \" & swsMember.DomainName & vbCrLf & _\n                \" - \" & swsMember.Email & vbCrLf\n        Next\n    End If\n    MsgBox strMemberInfo, vbInformation + vbOKOnly, _\n        \"Members in Shared Workspace\"\n    Set swsMember = Nothing",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SharedWorkspaceMember object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SharedWorkspaceMember object was created. Read-only."
+    },
+    {
+      "name": "DomainName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the domain and user name of the specified SharedWorkspaceMember object in the format domain\\user. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the display name of the shared workspace member. Read-only."
+    },
+    {
+      "name": "Email",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the email name of the specified SharedWorkspaceMember in the format user@domain.com. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the SharedWorkspaceMember object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the current SharedWorkspaceMember object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

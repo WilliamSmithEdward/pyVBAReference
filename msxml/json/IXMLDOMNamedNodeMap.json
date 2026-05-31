@@ -1,0 +1,129 @@
+{
+  "name": "IXMLDOMNamedNodeMap",
+  "kind": "Dispatch Interface",
+  "guid": "{2933BF83-7B36-11D2-B20E-00C04F983E60}",
+  "library": "Microsoft XML, v6.0",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "item",
+      "kind": "property",
+      "type": "IXMLDOMNode",
+      "access": "read-only",
+      "description": "collection of nodes"
+    },
+    {
+      "name": "length",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "number of nodes in the collection"
+    }
+  ],
+  "methods": [
+    {
+      "name": "getNamedItem",
+      "kind": "method",
+      "signature": "getNamedItem(name As String) As IXMLDOMNode",
+      "description": "lookup item by name",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "setNamedItem",
+      "kind": "method",
+      "signature": "setNamedItem(newItem As IXMLDOMNode) As IXMLDOMNode",
+      "description": "set item by name",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "newItem",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "removeNamedItem",
+      "kind": "method",
+      "signature": "removeNamedItem(name As String) As IXMLDOMNode",
+      "description": "remove item by name",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getQualifiedItem",
+      "kind": "method",
+      "signature": "getQualifiedItem(baseName As String, namespaceURI As String) As IXMLDOMNode",
+      "description": "lookup the item by name and namespace",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "baseName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "namespaceURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "removeQualifiedItem",
+      "kind": "method",
+      "signature": "removeQualifiedItem(baseName As String, namespaceURI As String) As IXMLDOMNode",
+      "description": "remove the item by name and namespace",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "baseName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "namespaceURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "nextNode",
+      "kind": "method",
+      "signature": "nextNode() As IXMLDOMNode",
+      "description": "get next node from iterator",
+      "returns": "IXMLDOMNode"
+    },
+    {
+      "name": "reset",
+      "kind": "method",
+      "signature": "reset()",
+      "description": "reset the position of iterator",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,57 @@
+{
+  "name": "SensitivityLabelPolicy",
+  "kind": "Dispatch Interface",
+  "guid": "{88FF5F69-FACF-4667-8DC8-A85B8225DF15}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents sensitivity label policy of the user's organization.",
+  "remarks": "Sensitivity label policy must be initialized before the start of the document otherwise the document will not be able to use the sensitivity label policy set by the organization.",
+  "example": "Function GetSensitivityLabelsPolicyXml(policyVersion As String)\n Dim myOrgPolicyInXml as String\n\n ' Set myOrgPolicyInXml based on your organization's policy based on policyVersion as XML.\n GetSensitivityLabelsPolicyXml = myOrgPolicyInXml\nEnd Function\n\nDim supportedPolicyVersion As String\nDim myInitInfo As Office.SensitivityLabelInitInfo\n\nsupportedPolicyVersion = Application.SensitivityLabelPolicy.BeginInitialize\n\nSet myInitInfo = Application.SensitivityLabelPolicy.CreateSensitivityLabelInitInfo()\nmyInitInfo.UserId = \"someone@example.com\"\nmyInitInfo.SensitivityLabelsPolicyXml = GetSensitivityLabelsPolicyXml(supportedPolicyVersion)\n\nApplication.SensitivityLabelPolicy.CompleteInitialize myInitInfo",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SensitivityLabelPolicy object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SensitivityLabelPolicy object was created. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "BeginInitialize",
+      "kind": "method",
+      "signature": "BeginInitialize() As String",
+      "description": "Begins the SensitivityLabelPolicy initialization sequence.",
+      "returns": "String"
+    },
+    {
+      "name": "CompleteInitialize",
+      "kind": "method",
+      "signature": "CompleteInitialize(SensitivityLabelInitInfo As SensitivityLabelInitInfo)",
+      "description": "Completes the SensitivityLabelPolicy initialization sequence.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SensitivityLabelInitInfo",
+          "type": "SensitivityLabelInitInfo",
+          "optional": false,
+          "description": "The sensitivity label policy initialization object."
+        }
+      ]
+    },
+    {
+      "name": "CreateSensitivityLabelInitInfo",
+      "kind": "method",
+      "signature": "CreateSensitivityLabelInitInfo() As SensitivityLabelInitInfo",
+      "description": "Creates a new SensitivityLabelInitInfo object that can be passed to the CompleteInitialize method.",
+      "returns": "SensitivityLabelInitInfo"
+    }
+  ],
+  "events": []
+}

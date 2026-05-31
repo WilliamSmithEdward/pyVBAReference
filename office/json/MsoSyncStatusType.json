@@ -1,0 +1,48 @@
+{
+  "name": "MsoSyncStatusType",
+  "kind": "Enumeration",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Specifies the status of the synchronization of the local copy of the active document with the server copy. Used with the Status property of the Sync object.",
+  "constants": [
+    {
+      "name": "msoSyncStatusNoSharedWorkspace",
+      "value": 0,
+      "description": "No shared workspace."
+    },
+    {
+      "name": "msoSyncStatusNotRoaming",
+      "value": 0,
+      "description": "No synchronization is needed."
+    },
+    {
+      "name": "msoSyncStatusLatest",
+      "value": 1,
+      "description": "Documents are already in sync."
+    },
+    {
+      "name": "msoSyncStatusNewerAvailable",
+      "value": 2,
+      "description": "Only server copy has changes."
+    },
+    {
+      "name": "msoSyncStatusLocalChanges",
+      "value": 3,
+      "description": "Only local copy has changes."
+    },
+    {
+      "name": "msoSyncStatusConflict",
+      "value": 4,
+      "description": "Both the local and the server copies have changes."
+    },
+    {
+      "name": "msoSyncStatusSuspended",
+      "value": 5,
+      "description": "Synchronization has been suspended."
+    },
+    {
+      "name": "msoSyncStatusError",
+      "value": 6,
+      "description": "An error occurred. Use the ErrorType property of the Sync object to determine the exact error."
+    }
+  ]
+}

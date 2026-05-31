@@ -1,0 +1,170 @@
+{
+  "name": "Model",
+  "kind": "Dispatch Interface",
+  "guid": "{000244DB-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Excel application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified object. Read-only."
+    },
+    {
+      "name": "ModelTables",
+      "kind": "property",
+      "type": "ModelTables",
+      "access": "read-only",
+      "description": "Returns a ModelTables object that represents a collection of tables inside the data model. Read-only."
+    },
+    {
+      "name": "ModelRelationships",
+      "kind": "property",
+      "type": "ModelRelationships",
+      "access": "read-only",
+      "description": "Returns a ModelRelationships object that represents the collection of relationships between data model tables. Read-only."
+    },
+    {
+      "name": "DataModelConnection",
+      "kind": "property",
+      "type": "WorkbookConnection",
+      "access": "read-only",
+      "description": "Returns the model WorkbookConnection object from the workbook connections collection that connects to the model."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value representing the name of the Model object. Read-only."
+    },
+    {
+      "name": "ModelMeasures",
+      "kind": "property",
+      "type": "ModelMeasures",
+      "access": "read-only",
+      "description": "Returns a ModelMeasures object that represents the collection of model measures in the data model. Read-only."
+    },
+    {
+      "name": "ModelFormatGeneral",
+      "kind": "property",
+      "type": "ModelFormatGeneral",
+      "access": "read-only",
+      "description": "Returns a ModelFormatGeneral object that represents formatting of type general in the data model. Read-only."
+    },
+    {
+      "name": "ModelFormatDate",
+      "kind": "property",
+      "type": "ModelFormatDate",
+      "access": "read-only",
+      "description": "Returns a ModelFormatDate object that represents formatting of type date in the data model. Read-only."
+    },
+    {
+      "name": "ModelFormatDecimalNumber",
+      "kind": "property",
+      "type": "ModelFormatDecimalNumber",
+      "access": "read-only",
+      "description": "Returns a ModelFormatDecimalNumber object that represents formatting of type decimal number in the data model. Read-only."
+    },
+    {
+      "name": "ModelFormatWholeNumber",
+      "kind": "property",
+      "type": "ModelFormatWholeNumber",
+      "access": "read-only",
+      "description": "Returns a ModelFormatWholeNumber object that represents formatting of type whole number in the data model. Read-only."
+    },
+    {
+      "name": "ModelFormatPercentageNumber",
+      "kind": "property",
+      "type": "ModelFormatPercentageNumber",
+      "access": "read-only",
+      "description": "Returns a ModelFormatPercentageNumber object that represents formatting of type percentage number in the data model. Read-only."
+    },
+    {
+      "name": "ModelFormatScientificNumber",
+      "kind": "property",
+      "type": "ModelFormatScientificNumber",
+      "access": "read-only",
+      "description": "Returns a ModelFormatScientificNumber object that represents formatting of type scientific number in the data model. Read-only."
+    },
+    {
+      "name": "ModelFormatCurrency",
+      "kind": "property",
+      "type": "ModelFormatCurrency",
+      "access": "read-only",
+      "description": "Returns a ModelFormatCurrency object that represents formatting of type currency in the data model. Read-only."
+    },
+    {
+      "name": "ModelFormatBoolean",
+      "kind": "property",
+      "type": "ModelFormatBoolean",
+      "access": "read-only",
+      "description": "Returns a ModelFormatBoolean object that represents formatting of type True/False in the data model. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Refresh",
+      "kind": "method",
+      "signature": "Refresh()",
+      "description": "Refreshes all data sources associated with the model, fully reprocesses the model, and updates all Excel data features associated with the model.",
+      "returns": "void"
+    },
+    {
+      "name": "AddConnection",
+      "kind": "method",
+      "signature": "AddConnection(ConnectionToDataSource As WorkbookConnection) As WorkbookConnection",
+      "description": "Adds a new WorkbookConnection to the model with the same properties as the one supplied as an argument.",
+      "returns": "WorkbookConnection",
+      "parameters": [
+        {
+          "name": "ConnectionToDataSource",
+          "type": "WorkbookConnection",
+          "optional": false,
+          "description": "The Workbook connection."
+        }
+      ]
+    },
+    {
+      "name": "CreateModelWorkbookConnection",
+      "kind": "method",
+      "signature": "CreateModelWorkbookConnection(ModelTable As Variant) As WorkbookConnection",
+      "description": "Returns a WorkbookConnection object of type ModelConnection.",
+      "returns": "WorkbookConnection",
+      "parameters": [
+        {
+          "name": "ModelTable",
+          "type": "Variant",
+          "optional": false,
+          "description": "Either a model table name or a model table object."
+        }
+      ]
+    },
+    {
+      "name": "Initialize",
+      "kind": "method",
+      "signature": "Initialize()",
+      "description": "Initializes the Workbook's data model. This is called by default the first time the model is used.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,94 @@
+{
+  "name": "ISAXErrorHandler",
+  "kind": "Interface",
+  "guid": "{A60511C4-CCF5-479E-98A3-DC8DC545B7D0}",
+  "library": "Microsoft XML, v6.0",
+  "description": "ISAXErrorHandler interface",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "error",
+      "kind": "method",
+      "signature": "error(pLocator As ISAXLocator, pwchErrorMessage As Integer, hrErrorCode As HRESULT)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pLocator",
+          "type": "ISAXLocator",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchErrorMessage",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "hrErrorCode",
+          "type": "HRESULT",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "fatalError",
+      "kind": "method",
+      "signature": "fatalError(pLocator As ISAXLocator, pwchErrorMessage As Integer, hrErrorCode As HRESULT)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pLocator",
+          "type": "ISAXLocator",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchErrorMessage",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "hrErrorCode",
+          "type": "HRESULT",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ignorableWarning",
+      "kind": "method",
+      "signature": "ignorableWarning(pLocator As ISAXLocator, pwchErrorMessage As Integer, hrErrorCode As HRESULT)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pLocator",
+          "type": "ISAXLocator",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchErrorMessage",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "hrErrorCode",
+          "type": "HRESULT",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

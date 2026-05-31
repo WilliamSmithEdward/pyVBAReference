@@ -1,0 +1,23 @@
+{
+  "name": "XlCellInsertionMode",
+  "kind": "Enumeration",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Specifies the way that rows on the specified worksheet are added or deleted to accommodate the number of rows in a recordset returned by a query.",
+  "constants": [
+    {
+      "name": "xlOverwriteCells",
+      "value": 0,
+      "description": "No new cells or rows are added to the worksheet. Data in surrounding cells is overwritten to accommodate any overflow."
+    },
+    {
+      "name": "xlInsertDeleteCells",
+      "value": 1,
+      "description": "Partial rows are inserted or deleted to match the exact number of rows required for the new recordset."
+    },
+    {
+      "name": "xlInsertEntireRows",
+      "value": 2,
+      "description": "Entire rows are inserted, if necessary, to accommodate any overflow. No cells or rows are deleted from the worksheet."
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "name": "Outline",
+  "kind": "Dispatch Interface",
+  "guid": "{000208AB-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents an outline on a worksheet.",
+  "remarks": "",
+  "example": "Worksheets(\"sheet4\").Outline.ShowLevels 1",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "AutomaticStyles",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the outline uses automatic styles. Read/write Boolean."
+    },
+    {
+      "name": "SummaryColumn",
+      "kind": "property",
+      "type": "XlSummaryColumn",
+      "access": "read/write",
+      "description": "Returns or sets the location of the summary columns in the outline. Read/write XlSummaryColumn."
+    },
+    {
+      "name": "SummaryRow",
+      "kind": "property",
+      "type": "XlSummaryRow",
+      "access": "read/write",
+      "description": "Returns or sets the location of the summary rows in the outline. Read/write XlSummaryRow."
+    }
+  ],
+  "methods": [
+    {
+      "name": "ShowLevels",
+      "kind": "method",
+      "signature": "ShowLevels([RowLevels As Variant], [ColumnLevels As Variant]) As Variant",
+      "description": "Displays the specified number of row and/or column levels of an outline.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "RowLevels",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the number of row levels of an outline to display. If the outline has fewer levels than the number specified, Microsoft Excel displays all the levels. If this argument is 0 (zero) or is omitted, no action is taken on rows."
+        },
+        {
+          "name": "ColumnLevels",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the number of column levels of an outline to display. If the outline has fewer levels than the number specified, Excel displays all the levels. If this argument is 0 (zero) or is omitted, no action is taken on columns."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

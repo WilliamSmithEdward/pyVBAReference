@@ -1,0 +1,95 @@
+{
+  "name": "VBProjects",
+  "kind": "Class",
+  "guid": "{0002E101-0000-0000-C000-000000000046}",
+  "library": "Microsoft Visual Basic for Applications Extensibility 5.3",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "VBE",
+      "kind": "property",
+      "type": "VBE",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "VBE",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(index As Variant) As VBProject",
+      "description": "",
+      "returns": "VBProject",
+      "parameters": [
+        {
+          "name": "index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Type As vbext_ProjectType) As VBProject",
+      "description": "",
+      "returns": "VBProject",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "vbext_ProjectType",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Remove",
+      "kind": "method",
+      "signature": "Remove(lpc As VBProject)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "lpc",
+          "type": "VBProject",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open(bstrPath As String) As VBProject",
+      "description": "",
+      "returns": "VBProject",
+      "parameters": [
+        {
+          "name": "bstrPath",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

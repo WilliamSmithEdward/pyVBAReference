@@ -1,0 +1,57 @@
+{
+  "name": "ODSOColumns",
+  "kind": "Dispatch Interface",
+  "guid": "{000C1532-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "A collection of ODSOColumn objects that represent the data fields in a mail merge data source.",
+  "remarks": "",
+  "example": "Sub ShowFieldNames()\n Dim appOffice As OfficeDataSourceObject\n Dim intCount As Integer\n\n Set appOffice = Application.OfficeDataSourceObject\n appOffice.Open bstrConnect:=\"DRIVER=SQL Server;SERVER=ServerName;\" & _\n \"UID=user;PWD=;DATABASE=Northwind\", bstrTable:=\"Employees\"\n\n With appOffice.Columns\n For intCount = 1 To .Count\n MsgBox \"Column Name: \" & .Item(intCount).Name\n Next\n End With\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the ODSOColumns object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the ODSOColumns object was created. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the ODSOColumns collection. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the ODSOColumns object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(varIndex As Variant) As Object",
+      "description": "Specifies an ODSOColumn object in the ODSOColumns collection.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "varIndex",
+          "type": "Variant",
+          "optional": false,
+          "description": "The index number of the item."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

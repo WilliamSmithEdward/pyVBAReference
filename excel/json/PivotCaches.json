@@ -1,0 +1,98 @@
+{
+  "name": "PivotCaches",
+  "kind": "Dispatch Interface",
+  "guid": "{0002441D-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the collection of memory caches from the PivotTable reports in a workbook.",
+  "remarks": "Each memory cache is represented by a PivotCache object.",
+  "example": "For Each pc In ActiveWorkbook.PivotCaches\n pc.RefreshOnFileOpen = True\nNext",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "PivotCache",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As PivotCache",
+      "description": "Returns a single object from a collection.",
+      "returns": "PivotCache",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number for the object."
+        }
+      ]
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "method",
+      "signature": "_NewEnum() As IUnknown",
+      "description": "",
+      "returns": "IUnknown"
+    },
+    {
+      "name": "Create",
+      "kind": "method",
+      "signature": "Create(SourceType As XlPivotTableSourceType, [SourceData As Variant], [Version As Variant]) As PivotCache",
+      "description": "Creates a new PivotCache.",
+      "returns": "PivotCache",
+      "parameters": [
+        {
+          "name": "SourceType",
+          "type": "XlPivotTableSourceType",
+          "optional": false,
+          "description": "_SourceType_ can be one of these XlPivotTableSourceType constants: xlConsolidation, xlDatabase, or xlExternal."
+        },
+        {
+          "name": "SourceData",
+          "type": "Variant",
+          "optional": true,
+          "description": "The data for the new PivotTable cache."
+        },
+        {
+          "name": "Version",
+          "type": "Variant",
+          "optional": true,
+          "description": "Version of the PivotTable. _Version_ can be one of the XlPivotTableVersionList constants."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

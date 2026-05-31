@@ -1,0 +1,243 @@
+{
+  "name": "IFormatConditions",
+  "kind": "Interface",
+  "guid": "{00024424-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant, RHS As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Type As XlFormatConditionType, [Operator As Variant], [Formula1 As Variant], [Formula2 As Variant], [String As Variant], [TextOperator As Variant], [DateOperator As Variant], [ScopeType As Variant], RHS As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "XlFormatConditionType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Operator",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Formula1",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Formula2",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "String",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "TextOperator",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "DateOperator",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ScopeType",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "AddColorScale",
+      "kind": "method",
+      "signature": "AddColorScale(ColorScaleType As Long, RHS As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ColorScaleType",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddDatabar",
+      "kind": "method",
+      "signature": "AddDatabar(RHS As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddIconSetCondition",
+      "kind": "method",
+      "signature": "AddIconSetCondition(RHS As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddTop10",
+      "kind": "method",
+      "signature": "AddTop10(RHS As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddAboveAverage",
+      "kind": "method",
+      "signature": "AddAboveAverage(RHS As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddUniqueValues",
+      "kind": "method",
+      "signature": "AddUniqueValues(RHS As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,205 @@
+{
+  "name": "IConverter",
+  "kind": "Interface",
+  "guid": "{000C03D7-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "This feature is only available in the Open XML Format SDK.",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "HrInitConverter",
+      "kind": "method",
+      "signature": "HrInitConverter(pcap As IConverterApplicationPreferences, ppcp As IConverterPreferences, pcuic As IConverterUICallback)",
+      "description": "This feature is only available in the Open XML Format SDK.",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pcap",
+          "type": "IConverterApplicationPreferences",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ppcp",
+          "type": "IConverterPreferences",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcuic",
+          "type": "IConverterUICallback",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "HrUninitConverter",
+      "kind": "method",
+      "signature": "HrUninitConverter(pcuic As IConverterUICallback)",
+      "description": "This feature is only available in the Open XML Format SDK.",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pcuic",
+          "type": "IConverterUICallback",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "HrImport",
+      "kind": "method",
+      "signature": "HrImport(bstrSourcePath As String, bstrDestPath As String, pcap As IConverterApplicationPreferences, ppcp As IConverterPreferences, pcuic As IConverterUICallback)",
+      "description": "This feature is only available in the Open XML Format SDK.",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "bstrSourcePath",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "bstrDestPath",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcap",
+          "type": "IConverterApplicationPreferences",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ppcp",
+          "type": "IConverterPreferences",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcuic",
+          "type": "IConverterUICallback",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "HrExport",
+      "kind": "method",
+      "signature": "HrExport(bstrSourcePath As String, bstrDestPath As String, bstrClass As String, pcap As IConverterApplicationPreferences, ppcp As IConverterPreferences, pcuic As IConverterUICallback)",
+      "description": "This feature is only available in the Open XML Format SDK.",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "bstrSourcePath",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "bstrDestPath",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "bstrClass",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcap",
+          "type": "IConverterApplicationPreferences",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ppcp",
+          "type": "IConverterPreferences",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcuic",
+          "type": "IConverterUICallback",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "HrGetFormat",
+      "kind": "method",
+      "signature": "HrGetFormat(bstrPath As String, pbstrClass As String, pcap As IConverterApplicationPreferences, ppcp As IConverterPreferences, pcuic As IConverterUICallback)",
+      "description": "This feature is only available in the Open XML Format SDK.",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "bstrPath",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pbstrClass",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcap",
+          "type": "IConverterApplicationPreferences",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ppcp",
+          "type": "IConverterPreferences",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcuic",
+          "type": "IConverterUICallback",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "HrGetErrorString",
+      "kind": "method",
+      "signature": "HrGetErrorString(hrErr As Long, pbstrErrorMsg As String, pcap As IConverterApplicationPreferences)",
+      "description": "This feature is only available in the Open XML Format SDK.",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "hrErr",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pbstrErrorMsg",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcap",
+          "type": "IConverterApplicationPreferences",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

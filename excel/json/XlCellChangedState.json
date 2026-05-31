@@ -1,0 +1,23 @@
+{
+  "name": "XlCellChangedState",
+  "kind": "Enumeration",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Specifies whether a PivotTable value cell has been edited or recalculated since the PivotTable report was created or the last commit operation was performed.",
+  "constants": [
+    {
+      "name": "xlCellNotChanged",
+      "value": 1,
+      "description": "The value in the cell has not been edited or recalculated."
+    },
+    {
+      "name": "xlCellChanged",
+      "value": 2,
+      "description": "The value in the cell has been edited or recalculated."
+    },
+    {
+      "name": "xlCellChangeApplied",
+      "value": 3,
+      "description": "The value in the cell has been edited or recalculated, and that change has been applied to the data source. (Applies only PivotTable reports with OLAP data sources)"
+    }
+  ]
+}

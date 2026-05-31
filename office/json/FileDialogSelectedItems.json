@@ -1,0 +1,64 @@
+{
+  "name": "FileDialogSelectedItems",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0363-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "A collection of String values that correspond to the paths of the files or folders that a user has selected from a file dialog box displayed through the FileDialog object.",
+  "remarks": "",
+  "example": "Sub Main()\n\n 'Declare a variable as a FileDialog object.\n Dim fd As FileDialog\n\n 'Create a FileDialog object as a File Picker dialog box.\n Set fd = Application.FileDialog(msoFileDialogFilePicker)\n\n 'Declare a variable to contain the path\n 'of each selected item. Even though the path is aString,\n 'the variable must be a Variant because For Each...Next\n 'routines only work with Variants and Objects.\n Dim vrtSelectedItem As Variant\n\n 'Use a With...End With block to reference the FileDialog object.\n With fd\n\n 'Allow the selection of multiple file.\n .AllowMultiSelect = True\n\n 'Use the Show method to display the File Picker dialog box and return the user's action.\n 'The user pressed the button.\n If .Show = -1 Then\n\n 'Step through each string in the FileDialogSelectedItems collection\n For Each vrtSelectedItem In .SelectedItems\n\n 'vrtSelectedItem is aString that contains the path of each selected item.\n 'Use any file I/O functions that you want to work with this path.\n 'This example displays the path in a message box.\n MsgBox \"Selected item's path: \" & vrtSelectedItem\n\n Next vrtSelectedItem\n 'The user pressed Cancel.\n Else\n End If\n End With\n\n 'Set the object variable to Nothing.\n Set fd = Nothing\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the FileDialogSelectedItems object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the FileDialogSelectedItems object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the FileDialogSelectedItems object. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the FileDialogSelectedItems collection. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As String",
+      "description": "Gets a String that corresponds to the path of one of the files by the _Index_ that the user selected from a file dialog box that was displayed by using the Show method of the FileDialog object.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index is one-based."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,260 @@
+{
+  "name": "IMsoAxisTitle",
+  "kind": "Dispatch Interface",
+  "guid": "{ABFA087C-F703-4D53-946E-37FF82B2C994}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Characters",
+      "kind": "property",
+      "type": "IMsoCharacters",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "ChartFont",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "HorizontalAlignment",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Orientation",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "VerticalAlignment",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ReadingOrder",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AutoScaleFont",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Interior",
+      "kind": "property",
+      "type": "IMsoInterior",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Fill",
+      "kind": "property",
+      "type": "ChartFillFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Border",
+      "kind": "property",
+      "type": "IMsoBorder",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "IncludeInLayout",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Position",
+      "kind": "property",
+      "type": "XlChartElementPosition",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "IMsoChartFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Formula",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "FormulaR1C1",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "FormulaLocal",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "FormulaR1C1Local",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "",
+      "returns": "Variant"
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select() As Variant",
+      "description": "",
+      "returns": "Variant"
+    },
+    {
+      "name": "SetProperty",
+      "kind": "method",
+      "signature": "SetProperty(bstrId As String, Value As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrId",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Value",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetProperty",
+      "kind": "method",
+      "signature": "GetProperty(bstrId As String) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "bstrId",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

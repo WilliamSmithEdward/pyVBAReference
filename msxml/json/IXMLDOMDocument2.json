@@ -1,0 +1,703 @@
+{
+  "name": "IXMLDOMDocument2",
+  "kind": "Dispatch Interface",
+  "guid": "{2933BF95-7B36-11D2-B20E-00C04F983E60}",
+  "library": "Microsoft XML, v6.0",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "nodeName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "name of the node"
+    },
+    {
+      "name": "nodeValue",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "value stored in the node"
+    },
+    {
+      "name": "nodeType",
+      "kind": "property",
+      "type": "DOMNodeType",
+      "access": "read-only",
+      "description": "the node's type"
+    },
+    {
+      "name": "parentNode",
+      "kind": "property",
+      "type": "IXMLDOMNode",
+      "access": "read-only",
+      "description": "parent of the node"
+    },
+    {
+      "name": "childNodes",
+      "kind": "property",
+      "type": "IXMLDOMNodeList",
+      "access": "read-only",
+      "description": "the collection of the node's children"
+    },
+    {
+      "name": "firstChild",
+      "kind": "property",
+      "type": "IXMLDOMNode",
+      "access": "read-only",
+      "description": "first child of the node"
+    },
+    {
+      "name": "lastChild",
+      "kind": "property",
+      "type": "IXMLDOMNode",
+      "access": "read-only",
+      "description": "last child of the node"
+    },
+    {
+      "name": "previousSibling",
+      "kind": "property",
+      "type": "IXMLDOMNode",
+      "access": "read-only",
+      "description": "left sibling of the node"
+    },
+    {
+      "name": "nextSibling",
+      "kind": "property",
+      "type": "IXMLDOMNode",
+      "access": "read-only",
+      "description": "right sibling of the node"
+    },
+    {
+      "name": "attributes",
+      "kind": "property",
+      "type": "IXMLDOMNamedNodeMap",
+      "access": "read-only",
+      "description": "the collection of the node's attributes"
+    },
+    {
+      "name": "ownerDocument",
+      "kind": "property",
+      "type": "IXMLDOMDocument",
+      "access": "read-only",
+      "description": "document that contains the node"
+    },
+    {
+      "name": "nodeTypeString",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "the type of node in string form"
+    },
+    {
+      "name": "text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "text content of the node and subtree"
+    },
+    {
+      "name": "specified",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "indicates whether node is a default value"
+    },
+    {
+      "name": "definition",
+      "kind": "property",
+      "type": "IXMLDOMNode",
+      "access": "read-only",
+      "description": "pointer to the definition of the node in the DTD or schema"
+    },
+    {
+      "name": "nodeTypedValue",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "get the strongly typed value of the node"
+    },
+    {
+      "name": "dataType",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "the data type of the node"
+    },
+    {
+      "name": "xml",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "return the XML source for the node and each of its descendants"
+    },
+    {
+      "name": "parsed",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "has sub-tree been completely parsed"
+    },
+    {
+      "name": "namespaceURI",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "the URI for the namespace applying to the node"
+    },
+    {
+      "name": "prefix",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "the prefix for the namespace applying to the node"
+    },
+    {
+      "name": "baseName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "the base name of the node (nodename with the prefix stripped off)"
+    },
+    {
+      "name": "doctype",
+      "kind": "property",
+      "type": "IXMLDOMDocumentType",
+      "access": "read-only",
+      "description": "node corresponding to the DOCTYPE"
+    },
+    {
+      "name": "implementation",
+      "kind": "property",
+      "type": "IXMLDOMImplementation",
+      "access": "read-only",
+      "description": "info on this DOM implementation"
+    },
+    {
+      "name": "documentElement",
+      "kind": "property",
+      "type": "IXMLDOMElement",
+      "access": "read/write",
+      "description": "the root of the tree"
+    },
+    {
+      "name": "readyState",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "get the state of the XML document"
+    },
+    {
+      "name": "parseError",
+      "kind": "property",
+      "type": "IXMLDOMParseError",
+      "access": "read-only",
+      "description": "get the last parser error"
+    },
+    {
+      "name": "url",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "get the URL for the loaded XML document"
+    },
+    {
+      "name": "async",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "flag for asynchronous download"
+    },
+    {
+      "name": "validateOnParse",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "indicates whether the parser performs validation"
+    },
+    {
+      "name": "resolveExternals",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "indicates whether the parser resolves references to external DTD/Entities/Schema"
+    },
+    {
+      "name": "preserveWhiteSpace",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "indicates whether the parser preserves whitespace"
+    },
+    {
+      "name": "onreadystatechange",
+      "kind": "property",
+      "type": "Variant",
+      "access": "write-only",
+      "description": "register a readystatechange event handler"
+    },
+    {
+      "name": "ondataavailable",
+      "kind": "property",
+      "type": "Variant",
+      "access": "write-only",
+      "description": "register an ondataavailable event handler"
+    },
+    {
+      "name": "ontransformnode",
+      "kind": "property",
+      "type": "Variant",
+      "access": "write-only",
+      "description": "register an ontransformnode event handler"
+    },
+    {
+      "name": "namespaces",
+      "kind": "property",
+      "type": "IXMLDOMSchemaCollection",
+      "access": "read-only",
+      "description": "A collection of all namespaces for this document"
+    },
+    {
+      "name": "schemas",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "The associated schema cache"
+    }
+  ],
+  "methods": [
+    {
+      "name": "insertBefore",
+      "kind": "method",
+      "signature": "insertBefore(newChild As IXMLDOMNode, refChild As Variant) As IXMLDOMNode",
+      "description": "insert a child node",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "newChild",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "refChild",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "replaceChild",
+      "kind": "method",
+      "signature": "replaceChild(newChild As IXMLDOMNode, oldChild As IXMLDOMNode) As IXMLDOMNode",
+      "description": "replace a child node",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "newChild",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "oldChild",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "removeChild",
+      "kind": "method",
+      "signature": "removeChild(childNode As IXMLDOMNode) As IXMLDOMNode",
+      "description": "remove a child node",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "childNode",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "appendChild",
+      "kind": "method",
+      "signature": "appendChild(newChild As IXMLDOMNode) As IXMLDOMNode",
+      "description": "append a child node",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "newChild",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "hasChildNodes",
+      "kind": "method",
+      "signature": "hasChildNodes() As Boolean",
+      "description": "",
+      "returns": "Boolean"
+    },
+    {
+      "name": "cloneNode",
+      "kind": "method",
+      "signature": "cloneNode(deep As Boolean) As IXMLDOMNode",
+      "description": "",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "deep",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "transformNode",
+      "kind": "method",
+      "signature": "transformNode(stylesheet As IXMLDOMNode) As String",
+      "description": "apply the stylesheet to the subtree",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "stylesheet",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "selectNodes",
+      "kind": "method",
+      "signature": "selectNodes(queryString As String) As IXMLDOMNodeList",
+      "description": "execute query on the subtree",
+      "returns": "IXMLDOMNodeList",
+      "parameters": [
+        {
+          "name": "queryString",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "selectSingleNode",
+      "kind": "method",
+      "signature": "selectSingleNode(queryString As String) As IXMLDOMNode",
+      "description": "execute query on the subtree",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "queryString",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "transformNodeToObject",
+      "kind": "method",
+      "signature": "transformNodeToObject(stylesheet As IXMLDOMNode, outputObject As Variant)",
+      "description": "apply the stylesheet to the subtree, returning the result through a document or a stream",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "stylesheet",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "outputObject",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "createElement",
+      "kind": "method",
+      "signature": "createElement(tagName As String) As IXMLDOMElement",
+      "description": "create an Element node",
+      "returns": "IXMLDOMElement",
+      "parameters": [
+        {
+          "name": "tagName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "createDocumentFragment",
+      "kind": "method",
+      "signature": "createDocumentFragment() As IXMLDOMDocumentFragment",
+      "description": "create a DocumentFragment node",
+      "returns": "IXMLDOMDocumentFragment"
+    },
+    {
+      "name": "createTextNode",
+      "kind": "method",
+      "signature": "createTextNode(data As String) As IXMLDOMText",
+      "description": "create a text node",
+      "returns": "IXMLDOMText",
+      "parameters": [
+        {
+          "name": "data",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "createComment",
+      "kind": "method",
+      "signature": "createComment(data As String) As IXMLDOMComment",
+      "description": "create a comment node",
+      "returns": "IXMLDOMComment",
+      "parameters": [
+        {
+          "name": "data",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "createCDATASection",
+      "kind": "method",
+      "signature": "createCDATASection(data As String) As IXMLDOMCDATASection",
+      "description": "create a CDATA section node",
+      "returns": "IXMLDOMCDATASection",
+      "parameters": [
+        {
+          "name": "data",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "createProcessingInstruction",
+      "kind": "method",
+      "signature": "createProcessingInstruction(target As String, data As String) As IXMLDOMProcessingInstruction",
+      "description": "create a processing instruction node",
+      "returns": "IXMLDOMProcessingInstruction",
+      "parameters": [
+        {
+          "name": "target",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "data",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "createAttribute",
+      "kind": "method",
+      "signature": "createAttribute(name As String) As IXMLDOMAttribute",
+      "description": "create an attribute node",
+      "returns": "IXMLDOMAttribute",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "createEntityReference",
+      "kind": "method",
+      "signature": "createEntityReference(name As String) As IXMLDOMEntityReference",
+      "description": "create an entity reference node",
+      "returns": "IXMLDOMEntityReference",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getElementsByTagName",
+      "kind": "method",
+      "signature": "getElementsByTagName(tagName As String) As IXMLDOMNodeList",
+      "description": "build a list of elements by name",
+      "returns": "IXMLDOMNodeList",
+      "parameters": [
+        {
+          "name": "tagName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "createNode",
+      "kind": "method",
+      "signature": "createNode(type As Variant, name As String, namespaceURI As String) As IXMLDOMNode",
+      "description": "create a node of the specified node type and name",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "type",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "namespaceURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "nodeFromID",
+      "kind": "method",
+      "signature": "nodeFromID(idString As String) As IXMLDOMNode",
+      "description": "retrieve node from it's ID",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "idString",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "load",
+      "kind": "method",
+      "signature": "load(xmlSource As Variant) As Boolean",
+      "description": "load document from the specified XML source",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "xmlSource",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "abort",
+      "kind": "method",
+      "signature": "abort()",
+      "description": "abort an asynchronous download",
+      "returns": "void"
+    },
+    {
+      "name": "loadXML",
+      "kind": "method",
+      "signature": "loadXML(bstrXML As String) As Boolean",
+      "description": "load the document from a string",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "bstrXML",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "save",
+      "kind": "method",
+      "signature": "save(destination As Variant)",
+      "description": "save the document to a specified destination",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "destination",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "validate",
+      "kind": "method",
+      "signature": "validate() As IXMLDOMParseError",
+      "description": "perform runtime validation on the currently loaded XML document",
+      "returns": "IXMLDOMParseError"
+    },
+    {
+      "name": "setProperty",
+      "kind": "method",
+      "signature": "setProperty(name As String, value As Variant)",
+      "description": "set the value of the named property",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getProperty",
+      "kind": "method",
+      "signature": "getProperty(name As String) As Variant",
+      "description": "get the value of the named property",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

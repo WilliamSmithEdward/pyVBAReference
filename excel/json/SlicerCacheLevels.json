@@ -1,0 +1,62 @@
+{
+  "name": "SlicerCacheLevels",
+  "kind": "Dispatch Interface",
+  "guid": "{000244C5-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the collection of hierarchy levels for the OLAP data source that is filtered by a slicer.",
+  "remarks": "When a slicer is used to filter an OLAP data source, its parent slicer cache can contain multiple hierarchy levels from the data source. Use the SlicerCacheLevels collection of the parent SlicerCache object to access the SlicerCacheLevel objects that represent these hierarchy levels. This collection is not accessible for non-OLAP data sources.",
+  "example": "ActiveWorkbook.SlicerCaches(\"Slicer_Customer_Geography\"). _\n SlicerCacheLevels(\"[Customer].[Customer Geography].[Country]\")",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the SlicerCache object that is the parent of the specified SlicerCacheLevels object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of levels in the specified SlicerCacheLevels collection, which represents the number of levels in the associated SlicerCache object."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "SlicerCacheLevel",
+      "access": "read-only",
+      "description": "Returns the specified SlicerCacheLevel object from the collection, or if no level is specified, returns the first SlicerCacheLevel object in the collection."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "SlicerCacheLevel",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -1,0 +1,120 @@
+{
+  "name": "SparklineGroups",
+  "kind": "Dispatch Interface",
+  "guid": "{000244B6-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a collection of sparkline groups.",
+  "remarks": "The SparklineGroups object can contain multiple SparklineGroup objects. Use the SparklineGroups property of the Range object to return an existing SparklineGroups collection from its parent range. Use the Add method to create a group of new sparklines. Use the Group method to create a group of existing sparklines.",
+  "example": "Range(\"A1:A4\").Select\nSelection.SparklineGroups.Group Location := Range(\"A1\")\nSelection.SparklineGroups.Item(1).Points.Markers.Visible = True\nSelection.SparklineGroups.Item(1).Points.Markers.Color.Color = 255",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the Range object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the count of sparkline groups in the associated Range object. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "SparklineGroup",
+      "access": "read-only",
+      "description": "Returns a SparklineGroup object from a collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "SparklineGroup",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Type As XlSparkType, SourceData As String) As SparklineGroup",
+      "description": "Creates a new sparkline group and returns a SparklineGroup object.",
+      "returns": "SparklineGroup",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "XlSparkType",
+          "optional": false,
+          "description": "The type of sparkline."
+        },
+        {
+          "name": "SourceData",
+          "type": "String",
+          "optional": false,
+          "description": "Represents the range to use to create the sparkline."
+        }
+      ]
+    },
+    {
+      "name": "Clear",
+      "kind": "method",
+      "signature": "Clear()",
+      "description": "Clears the selected sparklines.",
+      "returns": "void"
+    },
+    {
+      "name": "ClearGroups",
+      "kind": "method",
+      "signature": "ClearGroups()",
+      "description": "Clears the selected sparkline groups.",
+      "returns": "void"
+    },
+    {
+      "name": "Group",
+      "kind": "method",
+      "signature": "Group(Location As Range)",
+      "description": "Groups the selected sparklines.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Location",
+          "type": "Range",
+          "optional": false,
+          "description": "The location of the first cell in the group."
+        }
+      ]
+    },
+    {
+      "name": "Ungroup",
+      "kind": "method",
+      "signature": "Ungroup()",
+      "description": "Ungroups the sparklines in the selected sparkline group.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

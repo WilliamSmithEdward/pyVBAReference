@@ -1,0 +1,167 @@
+{
+  "name": "IConnections",
+  "kind": "Interface",
+  "guid": "{00024486-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant, RHS As WorkbookConnection)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "WorkbookConnection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Add2",
+      "kind": "method",
+      "signature": "Add2(Name As String, Description As String, ConnectionString As Variant, CommandText As Variant, [lCmdtype As Variant], [CreateModelConnection As Variant], [ImportRelationships As Variant], RHS As WorkbookConnection)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Description",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ConnectionString",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "CommandText",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "lCmdtype",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CreateModelConnection",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ImportRelationships",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "WorkbookConnection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddFromFile",
+      "kind": "method",
+      "signature": "AddFromFile(Filename As String, [CreateModelConnection As Variant], [ImportRelationships As Variant], RHS As WorkbookConnection)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Filename",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "CreateModelConnection",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ImportRelationships",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "WorkbookConnection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

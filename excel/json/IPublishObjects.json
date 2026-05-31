@@ -1,0 +1,134 @@
+{
+  "name": "IPublishObjects",
+  "kind": "Interface",
+  "guid": "{00024443-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(SourceType As XlSourceType, Filename As String, [Sheet As Variant], [Source As Variant], [HtmlType As Variant], [DivID As Variant], [Title As Variant], RHS As PublishObject)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "SourceType",
+          "type": "XlSourceType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Filename",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Sheet",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Source",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "HtmlType",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "DivID",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Title",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "PublishObject",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "Publish",
+      "kind": "method",
+      "signature": "Publish()",
+      "description": "",
+      "returns": "HRESULT"
+    }
+  ],
+  "events": []
+}

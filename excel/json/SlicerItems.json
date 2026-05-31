@@ -1,0 +1,62 @@
+{
+  "name": "SlicerItems",
+  "kind": "Dispatch Interface",
+  "guid": "{000244CA-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the collection of SlicerItem objects contained in a SlicerCache or SlicerCacheLevel object.",
+  "remarks": "To access the SlicerItems collection that represents the items in a slicer based on data in the workbook or non-OLAP external data, use the SlicerItems property of the SlicerCache object that is associated with the slicer. To access the SlicerItems collection that represents the items in a slicer based on an OLAP data connection, use the SlicerItems property of the SlicerCacheLevel object that represents a level of the hierarchy.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent SlicerCache object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the collection. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "SlicerItem",
+      "access": "read-only",
+      "description": "Returns a SlicerItem object from a collection. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "SlicerItem",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [],
+  "events": []
+}

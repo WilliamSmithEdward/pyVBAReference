@@ -1,0 +1,114 @@
+{
+  "name": "Dictionary",
+  "kind": "Class",
+  "guid": "{EE09B103-97E0-11CF-978F-00A02463E06F}",
+  "library": "Microsoft Scripting Runtime",
+  "description": "Scripting.Dictionary",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Set or get the item for a given key"
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Get the number of items in the dictionary."
+    },
+    {
+      "name": "Key",
+      "kind": "property",
+      "type": "Variant",
+      "access": "write-only",
+      "description": "Change a key to a different key."
+    },
+    {
+      "name": "CompareMode",
+      "kind": "property",
+      "type": "CompareMethod",
+      "access": "read/write",
+      "description": "Set or get the string comparison method."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Key As Variant, Item As Variant)",
+      "description": "Add a new key and item to the dictionary.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Key",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Item",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Exists",
+      "kind": "method",
+      "signature": "Exists(Key As Variant) As Boolean",
+      "description": "Determine if a given key is in the dictionary.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "Key",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Items",
+      "kind": "method",
+      "signature": "Items() As Variant",
+      "description": "Get an array containing all items in the dictionary.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Keys",
+      "kind": "method",
+      "signature": "Keys() As Variant",
+      "description": "Get an array containing all keys in the dictionary.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Remove",
+      "kind": "method",
+      "signature": "Remove(Key As Variant)",
+      "description": "Remove a given key from the dictionary.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Key",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "RemoveAll",
+      "kind": "method",
+      "signature": "RemoveAll()",
+      "description": "Remove all information from the dictionary.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

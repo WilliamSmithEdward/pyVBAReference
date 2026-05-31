@@ -1,0 +1,106 @@
+{
+  "name": "VBComponent_Old",
+  "kind": "Dispatch Interface",
+  "guid": "{0002E164-0000-0000-C000-000000000046}",
+  "library": "Microsoft Visual Basic for Applications Extensibility 5.3",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Saved",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Designer",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "CodeModule",
+      "kind": "property",
+      "type": "CodeModule",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "vbext_ComponentType",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "VBE",
+      "kind": "property",
+      "type": "VBE",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Collection",
+      "kind": "property",
+      "type": "VBComponents",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "HasOpenDesigner",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Properties",
+      "kind": "property",
+      "type": "Properties",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Export",
+      "kind": "method",
+      "signature": "Export(FileName As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DesignerWindow",
+      "kind": "method",
+      "signature": "DesignerWindow() As Window",
+      "description": "",
+      "returns": "Window"
+    },
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

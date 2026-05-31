@@ -1,0 +1,79 @@
+{
+  "name": "Sparkline",
+  "kind": "Dispatch Interface",
+  "guid": "{000244B9-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a single sparkline.",
+  "remarks": "Use the ModifyLocation method to change the location of a single sparkline, and use the ModifySourceData method to change the range of the source data. To work with a group of sparklines at the same time, use the members of the SparklineGroup object.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent SparklineGroup object for the specified object. Read-only."
+    },
+    {
+      "name": "Location",
+      "kind": "property",
+      "type": "Range",
+      "access": "read/write",
+      "description": "Returns or sets the location of a single sparkline. Read/write."
+    },
+    {
+      "name": "SourceData",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the range that contains the source data for a single sparkline. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "ModifyLocation",
+      "kind": "method",
+      "signature": "ModifyLocation(Range As Range)",
+      "description": "Modifies the location of a single sparkline.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The cell that contains the sparkline."
+        }
+      ]
+    },
+    {
+      "name": "ModifySourceData",
+      "kind": "method",
+      "signature": "ModifySourceData(Formula As String)",
+      "description": "Modifies the source data for a single sparkline.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Formula",
+          "type": "String",
+          "optional": false,
+          "description": "The range that contains the source data."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

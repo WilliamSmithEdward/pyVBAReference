@@ -1,0 +1,62 @@
+{
+  "name": "SmartArtColor",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03CE-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Chooses the color scheme for the SmartArt diagram.",
+  "remarks": "Simulates the commands on the Microsoft Office Fluent Ribbon user interface on the SmartArt Tools tab, on the Design group, and on the Change Colors command.",
+  "example": "ActivePresentation.Slides(1).Shapes(1).SmartArt.Color = Application.SmartArtColors(1)",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SmartArtColor object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the calling object. Read-only."
+    },
+    {
+      "name": "Id",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Retrieves the unique Id of the associated SmartArt color style. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Retrieves the string name of the SmartArt color style. Read-only."
+    },
+    {
+      "name": "Description",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Retrieves the description of the SmartArt color style. Read-only."
+    },
+    {
+      "name": "Category",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Retrieves the primary category name associated with the SmartArt color style. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

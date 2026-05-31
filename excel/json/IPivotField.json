@@ -1,0 +1,740 @@
+{
+  "name": "IPivotField",
+  "kind": "Interface",
+  "guid": "{00020874-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Calculation",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChildField",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ChildItems",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "CurrentPage",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DataRange",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "DataType",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Function",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GroupLevel",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "HiddenItems",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "LabelRange",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "NumberFormat",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Orientation",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ShowAllItems",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ParentField",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ParentItems",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Position",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SourceName",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Subtotals",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BaseField",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BaseItem",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TotalLevels",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "VisibleItems",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "DragToColumn",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DragToHide",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DragToPage",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DragToRow",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DragToData",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Formula",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "IsCalculated",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "MemoryUsed",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ServerBased",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AutoSortOrder",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "AutoSortField",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "AutoShowType",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "AutoShowRange",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "AutoShowCount",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "AutoShowField",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "LayoutBlankLine",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LayoutSubtotalLocation",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LayoutPageBreak",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LayoutForm",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SubtotalName",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DrilledDown",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CubeField",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "CurrentPageName",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "StandardFormula",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HiddenItemsList",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DatabaseSort",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "IsMemberProperty",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "PropertyParentField",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "PropertyOrder",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "EnableItemSelection",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CurrentPageList",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Hidden",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "UseMemberPropertyAsCaption",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MemberPropertyCaption",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayAsTooltip",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayInReport",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayAsCaption",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "LayoutCompactRow",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "IncludeNewItemsInFilter",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "VisibleItemsList",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PivotFilters",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "AutoSortPivotLine",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "AutoSortCustomSubtotal",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ShowingInAxis",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "EnableMultiplePageItems",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AllItemsVisible",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "SourceCaption",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ShowDetail",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "RepeatLabels",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "PivotItems",
+      "kind": "method",
+      "signature": "PivotItems([Index As Variant], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CalculatedItems",
+      "kind": "method",
+      "signature": "CalculatedItems(RHS As CalculatedItems)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "CalculatedItems",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "AutoShow",
+      "kind": "method",
+      "signature": "AutoShow(Type As Long, Range As Long, Count As Long, Field As String)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Range",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Count",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Field",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddPageItem",
+      "kind": "method",
+      "signature": "AddPageItem(Item As String, [ClearList As Variant])",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Item",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ClearList",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DrillTo",
+      "kind": "method",
+      "signature": "DrillTo(Field As String)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Field",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ClearManualFilter",
+      "kind": "method",
+      "signature": "ClearManualFilter()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "ClearAllFilters",
+      "kind": "method",
+      "signature": "ClearAllFilters()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "ClearValueFilters",
+      "kind": "method",
+      "signature": "ClearValueFilters()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "ClearLabelFilters",
+      "kind": "method",
+      "signature": "ClearLabelFilters()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "AutoSort",
+      "kind": "method",
+      "signature": "AutoSort(Order As Long, Field As String, [PivotLine As Variant], [CustomSubtotal As Variant])",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Order",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Field",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "PivotLine",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomSubtotal",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AutoGroup",
+      "kind": "method",
+      "signature": "AutoGroup()",
+      "description": "",
+      "returns": "HRESULT"
+    }
+  ],
+  "events": []
+}

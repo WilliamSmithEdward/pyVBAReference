@@ -1,0 +1,140 @@
+{
+  "name": "ConnectorFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0313-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "BeginConnected",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "BeginConnectedShape",
+      "kind": "property",
+      "type": "Shape",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "BeginConnectionSite",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "EndConnected",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "EndConnectedShape",
+      "kind": "property",
+      "type": "Shape",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "EndConnectionSite",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoConnectorType",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "BeginConnect",
+      "kind": "method",
+      "signature": "BeginConnect(ConnectedShape As Shape, ConnectionSite As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ConnectedShape",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ConnectionSite",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeginDisconnect",
+      "kind": "method",
+      "signature": "BeginDisconnect()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "EndConnect",
+      "kind": "method",
+      "signature": "EndConnect(ConnectedShape As Shape, ConnectionSite As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ConnectedShape",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ConnectionSite",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "EndDisconnect",
+      "kind": "method",
+      "signature": "EndDisconnect()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,245 @@
+{
+  "name": "FreeThreadedXMLHTTP60",
+  "kind": "Class",
+  "guid": "{88D96A09-F192-11D4-A65F-0040963251E5}",
+  "library": "Microsoft XML, v6.0",
+  "description": "Free Threaded XML HTTP Request class 6.0",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "open",
+      "kind": "method",
+      "signature": "open(pwszMethod As String, pwszUrl As String, pStatusCallback As IXMLHTTPRequest2Callback, pwszUserName As String, pwszPassword As String, pwszProxyUserName As String, pwszProxyPassword As String)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwszMethod",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwszUrl",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pStatusCallback",
+          "type": "IXMLHTTPRequest2Callback",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwszUserName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwszPassword",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwszProxyUserName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwszProxyPassword",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "send",
+      "kind": "method",
+      "signature": "send(pBody As ISequentialStream, cbBody As LongLong)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pBody",
+          "type": "ISequentialStream",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cbBody",
+          "type": "LongLong",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "abort",
+      "kind": "method",
+      "signature": "abort()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "SetCookie",
+      "kind": "method",
+      "signature": "SetCookie(pCookie As tagXHR_COOKIE, pdwCookieState As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pCookie",
+          "type": "tagXHR_COOKIE",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pdwCookieState",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetCustomResponseStream",
+      "kind": "method",
+      "signature": "SetCustomResponseStream(pSequentialStream As ISequentialStream)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pSequentialStream",
+          "type": "ISequentialStream",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "setProperty",
+      "kind": "method",
+      "signature": "setProperty(eProperty As XHR_PROPERTY, ullValue As LongLong)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "eProperty",
+          "type": "XHR_PROPERTY",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ullValue",
+          "type": "LongLong",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "setRequestHeader",
+      "kind": "method",
+      "signature": "setRequestHeader(pwszHeader As String, pwszValue As String)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwszHeader",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwszValue",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getAllResponseHeaders",
+      "kind": "method",
+      "signature": "getAllResponseHeaders(ppwszHeaders As String)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ppwszHeaders",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetCookie",
+      "kind": "method",
+      "signature": "GetCookie(pwszUrl As String, pwszName As String, dwFlags As Long, pcCookies As Long, ppCookies As tagXHR_COOKIE)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwszUrl",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwszName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "dwFlags",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcCookies",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ppCookies",
+          "type": "tagXHR_COOKIE",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getResponseHeader",
+      "kind": "method",
+      "signature": "getResponseHeader(pwszHeader As String, ppwszValue As String)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwszHeader",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ppwszValue",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

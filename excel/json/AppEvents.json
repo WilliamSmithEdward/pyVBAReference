@@ -1,0 +1,1070 @@
+{
+  "name": "AppEvents",
+  "kind": "Dispatch Interface",
+  "guid": "{00024413-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "NewWorkbook",
+      "kind": "method",
+      "signature": "NewWorkbook(Wb As Workbook)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetSelectionChange",
+      "kind": "method",
+      "signature": "SheetSelectionChange(Sh As Object, Target As Range)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Target",
+          "type": "Range",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetBeforeDoubleClick",
+      "kind": "method",
+      "signature": "SheetBeforeDoubleClick(Sh As Object, Target As Range, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Target",
+          "type": "Range",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetBeforeRightClick",
+      "kind": "method",
+      "signature": "SheetBeforeRightClick(Sh As Object, Target As Range, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Target",
+          "type": "Range",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetActivate",
+      "kind": "method",
+      "signature": "SheetActivate(Sh As Object)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetDeactivate",
+      "kind": "method",
+      "signature": "SheetDeactivate(Sh As Object)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetCalculate",
+      "kind": "method",
+      "signature": "SheetCalculate(Sh As Object)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetChange",
+      "kind": "method",
+      "signature": "SheetChange(Sh As Object, Target As Range)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Target",
+          "type": "Range",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookOpen",
+      "kind": "method",
+      "signature": "WorkbookOpen(Wb As Workbook)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookActivate",
+      "kind": "method",
+      "signature": "WorkbookActivate(Wb As Workbook)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookDeactivate",
+      "kind": "method",
+      "signature": "WorkbookDeactivate(Wb As Workbook)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookBeforeClose",
+      "kind": "method",
+      "signature": "WorkbookBeforeClose(Wb As Workbook, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookBeforeSave",
+      "kind": "method",
+      "signature": "WorkbookBeforeSave(Wb As Workbook, SaveAsUI As Boolean, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "SaveAsUI",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookBeforePrint",
+      "kind": "method",
+      "signature": "WorkbookBeforePrint(Wb As Workbook, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookNewSheet",
+      "kind": "method",
+      "signature": "WorkbookNewSheet(Wb As Workbook, Sh As Object)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookAddinInstall",
+      "kind": "method",
+      "signature": "WorkbookAddinInstall(Wb As Workbook)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookAddinUninstall",
+      "kind": "method",
+      "signature": "WorkbookAddinUninstall(Wb As Workbook)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WindowResize",
+      "kind": "method",
+      "signature": "WindowResize(Wb As Workbook, Wn As Window)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Wn",
+          "type": "Window",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WindowActivate",
+      "kind": "method",
+      "signature": "WindowActivate(Wb As Workbook, Wn As Window)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Wn",
+          "type": "Window",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WindowDeactivate",
+      "kind": "method",
+      "signature": "WindowDeactivate(Wb As Workbook, Wn As Window)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Wn",
+          "type": "Window",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetFollowHyperlink",
+      "kind": "method",
+      "signature": "SheetFollowHyperlink(Sh As Object, Target As Hyperlink)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Target",
+          "type": "Hyperlink",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetPivotTableUpdate",
+      "kind": "method",
+      "signature": "SheetPivotTableUpdate(Sh As Object, Target As PivotTable)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Target",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookPivotTableCloseConnection",
+      "kind": "method",
+      "signature": "WorkbookPivotTableCloseConnection(Wb As Workbook, Target As PivotTable)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Target",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookPivotTableOpenConnection",
+      "kind": "method",
+      "signature": "WorkbookPivotTableOpenConnection(Wb As Workbook, Target As PivotTable)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Target",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookSync",
+      "kind": "method",
+      "signature": "WorkbookSync(Wb As Workbook, SyncEventType As MsoSyncEventType)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "SyncEventType",
+          "type": "MsoSyncEventType",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookBeforeXmlImport",
+      "kind": "method",
+      "signature": "WorkbookBeforeXmlImport(Wb As Workbook, Map As XmlMap, Url As String, IsRefresh As Boolean, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Map",
+          "type": "XmlMap",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Url",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "IsRefresh",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookAfterXmlImport",
+      "kind": "method",
+      "signature": "WorkbookAfterXmlImport(Wb As Workbook, Map As XmlMap, IsRefresh As Boolean, Result As XlXmlImportResult)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Map",
+          "type": "XmlMap",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "IsRefresh",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Result",
+          "type": "XlXmlImportResult",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookBeforeXmlExport",
+      "kind": "method",
+      "signature": "WorkbookBeforeXmlExport(Wb As Workbook, Map As XmlMap, Url As String, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Map",
+          "type": "XmlMap",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Url",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookAfterXmlExport",
+      "kind": "method",
+      "signature": "WorkbookAfterXmlExport(Wb As Workbook, Map As XmlMap, Url As String, Result As XlXmlExportResult)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Map",
+          "type": "XmlMap",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Url",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Result",
+          "type": "XlXmlExportResult",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookRowsetComplete",
+      "kind": "method",
+      "signature": "WorkbookRowsetComplete(Wb As Workbook, Description As String, Sheet As String, Success As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Description",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Sheet",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Success",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AfterCalculate",
+      "kind": "method",
+      "signature": "AfterCalculate()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "SheetPivotTableAfterValueChange",
+      "kind": "method",
+      "signature": "SheetPivotTableAfterValueChange(Sh As Object, TargetPivotTable As PivotTable, TargetRange As Range)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "TargetPivotTable",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "TargetRange",
+          "type": "Range",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetPivotTableBeforeAllocateChanges",
+      "kind": "method",
+      "signature": "SheetPivotTableBeforeAllocateChanges(Sh As Object, TargetPivotTable As PivotTable, ValueChangeStart As Long, ValueChangeEnd As Long, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "TargetPivotTable",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ValueChangeStart",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ValueChangeEnd",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetPivotTableBeforeCommitChanges",
+      "kind": "method",
+      "signature": "SheetPivotTableBeforeCommitChanges(Sh As Object, TargetPivotTable As PivotTable, ValueChangeStart As Long, ValueChangeEnd As Long, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "TargetPivotTable",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ValueChangeStart",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ValueChangeEnd",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetPivotTableBeforeDiscardChanges",
+      "kind": "method",
+      "signature": "SheetPivotTableBeforeDiscardChanges(Sh As Object, TargetPivotTable As PivotTable, ValueChangeStart As Long, ValueChangeEnd As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "TargetPivotTable",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ValueChangeStart",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ValueChangeEnd",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowOpen",
+      "kind": "method",
+      "signature": "ProtectedViewWindowOpen(Pvw As ProtectedViewWindow)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Pvw",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowBeforeEdit",
+      "kind": "method",
+      "signature": "ProtectedViewWindowBeforeEdit(Pvw As ProtectedViewWindow, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Pvw",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowBeforeClose",
+      "kind": "method",
+      "signature": "ProtectedViewWindowBeforeClose(Pvw As ProtectedViewWindow, Reason As XlProtectedViewCloseReason, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Pvw",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Reason",
+          "type": "XlProtectedViewCloseReason",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowResize",
+      "kind": "method",
+      "signature": "ProtectedViewWindowResize(Pvw As ProtectedViewWindow)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Pvw",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowActivate",
+      "kind": "method",
+      "signature": "ProtectedViewWindowActivate(Pvw As ProtectedViewWindow)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Pvw",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowDeactivate",
+      "kind": "method",
+      "signature": "ProtectedViewWindowDeactivate(Pvw As ProtectedViewWindow)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Pvw",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookAfterSave",
+      "kind": "method",
+      "signature": "WorkbookAfterSave(Wb As Workbook, Success As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Success",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookNewChart",
+      "kind": "method",
+      "signature": "WorkbookNewChart(Wb As Workbook, Ch As Chart)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Ch",
+          "type": "Chart",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetLensGalleryRenderComplete",
+      "kind": "method",
+      "signature": "SheetLensGalleryRenderComplete(Sh As Object)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetTableUpdate",
+      "kind": "method",
+      "signature": "SheetTableUpdate(Sh As Object, Target As TableObject)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Target",
+          "type": "TableObject",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookModelChange",
+      "kind": "method",
+      "signature": "WorkbookModelChange(Wb As Workbook, Changes As ModelChanges)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Changes",
+          "type": "ModelChanges",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetBeforeDelete",
+      "kind": "method",
+      "signature": "SheetBeforeDelete(Sh As Object)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookBeforeRemoteChange",
+      "kind": "method",
+      "signature": "WorkbookBeforeRemoteChange(Wb As Workbook)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WorkbookAfterRemoteChange",
+      "kind": "method",
+      "signature": "WorkbookAfterRemoteChange(Wb As Workbook)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wb",
+          "type": "Workbook",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

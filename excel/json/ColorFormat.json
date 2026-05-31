@@ -1,0 +1,76 @@
+{
+  "name": "ColorFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0312-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the color of a one-color object, the foreground or background color of an object with a gradient or patterned fill, or the pointer color.",
+  "remarks": "You can set colors to an explicit red-green-blue value (by using the RGB property) or to a color in the color scheme (by using the SchemeColor property). Use one of the properties listed in the following table to return a ColorFormat object.",
+  "example": "Set myDocument = Worksheets(1)\nWith myDocument.Shapes.AddShape(msoShapeRectangle, _\n 90, 90, 90, 50).Fill\n .ForeColor.RGB = RGB(128, 0, 0)\n .BackColor.RGB = RGB(170, 170, 170)\n .TwoColorGradient msoGradientHorizontal, 1\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "RGB",
+      "kind": "property",
+      "type": "MsoRGBType",
+      "access": "read/write",
+      "description": "Returns or sets a Long value that represents the red-green-blue value of the specified color."
+    },
+    {
+      "name": "SchemeColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets an Integer value that represents the color of a Color object, as an index in the current color."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoColorType",
+      "access": "read-only",
+      "description": "Returns an MsoColorType value that represents the color format type."
+    },
+    {
+      "name": "TintAndShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that lightens or darkens a color."
+    },
+    {
+      "name": "ObjectThemeColor",
+      "kind": "property",
+      "type": "MsoThemeColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets a color that is mapped to the theme color scheme. Read/write MsoThemeColorIndex."
+    },
+    {
+      "name": "Brightness",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the luminosity of the specified object. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -1,0 +1,94 @@
+{
+  "name": "PickerResults",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03E5-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "A collection of PickerResult objects.",
+  "remarks": "Each PickerResult object represents a resolved or selected item data.",
+  "example": "Dim objPickerDialog As PickerDialog\nDim objPickerProperties As PickerProperties\nDim objPickerProperty As PickerProperty\nDim objPickerExistingResults As PickerResults\nDim objPickerExistingResults As PickerResult\nDim objPickerResults As PickerResults\n\n' Configure the Picker Dialog properties.\nSet objPickerDialog = Application.PickerDialog\nobjPickerDialog.DataHandlerId = \"{000CDF0A-0000-0000-C000-000000000046}\"\nobjPickerDialog.Title = \"Sample Picker Dialog\"\nSet objPickerProperties = objPickerDialog.Properties\nSet objPickerProperty = objPickerProperties.Add(\"SiteUrl\", \"https://my\", msoPickerFieldtypeText)\nSet objPickerExistingResults = objPickerDialog.CreatePickerResults\nSet objPickerExistingResult = objPickerExistingResults.Add(\"johndoe@contoso.com\", \"John Doe\", \"User\")\n\n' Show the Picker Dialog and get the results.\nSet objPickerResults = objPickerDialog.Show(True, objPickerExistingResult)\n\n' Enumerate the results.\nFor index = 1 To objPickerResults.Count-1\n Debug.Print objPickerResults.Item(index).Id\n Debug.Print objPickerResults.Item(index).DisplayName\n Debug.Print objPickerResults.Item(index).Type\n Debug.Print objPickerResults.Item(index).SIPId\nNext",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the PickerResults object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the PickerResults object was created. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "PickerResult",
+      "access": "read-only",
+      "description": "Retrieves a PickerResult object at the specified index. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Retrieves the count of the number of PickerResult objects contained within the PickerResults collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Id As String, DisplayName As String, Type As String, [SIPId As String], [ItemData As Variant], [SubItems As Variant]) As PickerResult",
+      "description": "Adds a PickerResult object to the PickerResults collection.",
+      "returns": "PickerResult",
+      "parameters": [
+        {
+          "name": "Id",
+          "type": "String",
+          "optional": false,
+          "description": "Represents an identifier of the PickerResult."
+        },
+        {
+          "name": "DisplayName",
+          "type": "String",
+          "optional": false,
+          "description": "Represents a display name of the PickerResult."
+        },
+        {
+          "name": "Type",
+          "type": "String",
+          "optional": false,
+          "description": "Represents a type of the PickerResult."
+        },
+        {
+          "name": "SIPId",
+          "type": "String",
+          "optional": true,
+          "description": "Currently not supported. The SIPId is the identifier for Office Communication Server. It's used only for the people picking scenario."
+        },
+        {
+          "name": "ItemData",
+          "type": "Variant",
+          "optional": true,
+          "description": "Non-displaying item binding data."
+        },
+        {
+          "name": "SubItems",
+          "type": "Variant",
+          "optional": true,
+          "description": "Displays the purpose or non-display purpose field data of the PickerResult. It's used for passing column values in the PickerDialog."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

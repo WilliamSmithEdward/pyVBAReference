@@ -1,0 +1,104 @@
+{
+  "name": "Comment",
+  "kind": "Dispatch Interface",
+  "guid": "{00024427-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a cell comment.",
+  "remarks": "The Comment object is a member of the Comments collection.",
+  "example": "Worksheets(1).Range(\"E5\").Comment.Text \"reviewed on \" & Date",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Author",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the author of the comment. Read-only String."
+    },
+    {
+      "name": "Shape",
+      "kind": "property",
+      "type": "Shape",
+      "access": "read-only",
+      "description": "Returns a Shape object that represents the shape attached to the specified comment."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that determines whether the object is visible. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Text",
+      "kind": "method",
+      "signature": "Text([Text As Variant], [Start As Variant], [Overwrite As Variant]) As String",
+      "description": "Sets comment text.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Text",
+          "type": "Variant",
+          "optional": true,
+          "description": "The text to be added."
+        },
+        {
+          "name": "Start",
+          "type": "Variant",
+          "optional": true,
+          "description": "The character number where the added text will be placed. If this argument is omitted, any existing text in the comment is deleted."
+        },
+        {
+          "name": "Overwrite",
+          "type": "Variant",
+          "optional": true,
+          "description": "False to insert the text. The default value is True (text is overwritten)."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    },
+    {
+      "name": "Next",
+      "kind": "method",
+      "signature": "Next() As Comment",
+      "description": "Returns a Comment object that represents the next comment.",
+      "returns": "Comment"
+    },
+    {
+      "name": "Previous",
+      "kind": "method",
+      "signature": "Previous() As Comment",
+      "description": "Returns a Comment object that represents the previous comment.",
+      "returns": "Comment"
+    }
+  ],
+  "events": []
+}

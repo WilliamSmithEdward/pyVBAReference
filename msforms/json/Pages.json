@@ -1,0 +1,189 @@
+{
+  "name": "Pages",
+  "kind": "Dispatch Interface",
+  "guid": "{92E11A03-7358-11CE-80CB-00AA00611080}",
+  "library": "Microsoft Forms 2.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(varg As Variant) As Object",
+      "description": "",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "varg",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Enum",
+      "kind": "method",
+      "signature": "Enum() As IUnknown",
+      "description": "",
+      "returns": "IUnknown"
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([bstrName As Variant], [bstrCaption As Variant], [lIndex As Variant]) As Page",
+      "description": "",
+      "returns": "Page",
+      "parameters": [
+        {
+          "name": "bstrName",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "bstrCaption",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "lIndex",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_AddCtrl",
+      "kind": "method",
+      "signature": "_AddCtrl(clsid As Long, bstrName As String, bstrCaption As String) As Page",
+      "description": "",
+      "returns": "Page",
+      "parameters": [
+        {
+          "name": "clsid",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "bstrName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "bstrCaption",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_InsertCtrl",
+      "kind": "method",
+      "signature": "_InsertCtrl(clsid As Long, bstrName As String, bstrCaption As String, lIndex As Long) As Page",
+      "description": "",
+      "returns": "Page",
+      "parameters": [
+        {
+          "name": "clsid",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "bstrName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "bstrCaption",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "lIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetItemByIndex",
+      "kind": "method",
+      "signature": "_GetItemByIndex(lIndex As Long) As Control",
+      "description": "",
+      "returns": "Control",
+      "parameters": [
+        {
+          "name": "lIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetItemByName",
+      "kind": "method",
+      "signature": "_GetItemByName(pstrName As String) As Control",
+      "description": "",
+      "returns": "Control",
+      "parameters": [
+        {
+          "name": "pstrName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Remove",
+      "kind": "method",
+      "signature": "Remove(varg As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "varg",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Clear",
+      "kind": "method",
+      "signature": "Clear()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

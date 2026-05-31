@@ -1,0 +1,76 @@
+{
+  "name": "IUserAccessList",
+  "kind": "Interface",
+  "guid": "{0002446C-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String, AllowEdit As Boolean, RHS As UserAccess)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "AllowEdit",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "UserAccess",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DeleteAll",
+      "kind": "method",
+      "signature": "DeleteAll()",
+      "description": "",
+      "returns": "HRESULT"
+    }
+  ],
+  "events": []
+}

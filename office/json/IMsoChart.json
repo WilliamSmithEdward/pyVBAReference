@@ -1,0 +1,861 @@
+{
+  "name": "IMsoChart",
+  "kind": "Dispatch Interface",
+  "guid": "{000C1709-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "HasTitle",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartTitle",
+      "kind": "property",
+      "type": "IMsoChartTitle",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "DepthPercent",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Elevation",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GapDepth",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HeightPercent",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Perspective",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "RightAngleAxes",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Rotation",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayBlanksAs",
+      "kind": "property",
+      "type": "XlDisplayBlanksAs",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartGroups",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ChartType",
+      "kind": "property",
+      "type": "XlChartType",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HasDataTable",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PlotBy",
+      "kind": "property",
+      "type": "XlRowCol",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HasLegend",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Legend",
+      "kind": "property",
+      "type": "IMsoLegend",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "HasAxis",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Walls",
+      "kind": "property",
+      "type": "IMsoWalls",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Floor",
+      "kind": "property",
+      "type": "IMsoFloor",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "PlotArea",
+      "kind": "property",
+      "type": "IMsoPlotArea",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "PlotVisibleOnly",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartArea",
+      "kind": "property",
+      "type": "IMsoChartArea",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "AutoScaling",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DataTable",
+      "kind": "property",
+      "type": "IMsoDataTable",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "BarShape",
+      "kind": "property",
+      "type": "XlBarShape",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SideWall",
+      "kind": "property",
+      "type": "IMsoWalls",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "BackWall",
+      "kind": "property",
+      "type": "IMsoWalls",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ChartStyle",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PivotLayout",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ShowDataLabelsOverMaximum",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartData",
+      "kind": "property",
+      "type": "IMsoChartData",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "IMsoChartFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Shapes",
+      "kind": "property",
+      "type": "Shapes",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ShowReportFilterFieldButtons",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ShowLegendFieldButtons",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ShowAxisFieldButtons",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ShowValueFieldButtons",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ShowAllFieldButtons",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CategoryLabelLevel",
+      "kind": "property",
+      "type": "XlCategoryLabelLevel",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SeriesNameLevel",
+      "kind": "property",
+      "type": "XlSeriesNameLevel",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartColor",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ShowExpandCollapseEntireFieldButtons",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayValueNotAvailableAsBlank",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "SeriesCollection",
+      "kind": "method",
+      "signature": "SeriesCollection([Index As Variant]) As Object",
+      "description": "",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ApplyDataLabels",
+      "kind": "method",
+      "signature": "ApplyDataLabels([Type As XlDataLabelsType], [IMsoLegendKey As Variant], [AutoText As Variant], [HasLeaderLines As Variant], [ShowSeriesName As Variant], [ShowCategoryName As Variant], [ShowValue As Variant], [ShowPercentage As Variant], [ShowBubbleSize As Variant], [Separator As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "XlDataLabelsType",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "IMsoLegendKey",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "AutoText",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "HasLeaderLines",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ShowSeriesName",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ShowCategoryName",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ShowValue",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ShowPercentage",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ShowBubbleSize",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Separator",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ApplyCustomType",
+      "kind": "method",
+      "signature": "ApplyCustomType(ChartType As XlChartType, [TypeName As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ChartType",
+          "type": "XlChartType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "TypeName",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetChartElement",
+      "kind": "method",
+      "signature": "GetChartElement(x As Long, y As Long, ElementID As Long, Arg1 As Long, Arg2 As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "x",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "y",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ElementID",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Arg1",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Arg2",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetSourceData",
+      "kind": "method",
+      "signature": "SetSourceData(Source As String, [PlotBy As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "PlotBy",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Axes",
+      "kind": "method",
+      "signature": "Axes([Type As Variant], [AxisGroup As XlAxisGroup]) As Object",
+      "description": "",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "AxisGroup",
+          "type": "XlAxisGroup",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AutoFormat",
+      "kind": "method",
+      "signature": "AutoFormat(rGallery As Long, [varFormat As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "rGallery",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "varFormat",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ChartWizard",
+      "kind": "method",
+      "signature": "ChartWizard([varSource As Variant], [varGallery As Variant], [varFormat As Variant], [varPlotBy As Variant], [varCategoryLabels As Variant], [varSeriesLabels As Variant], [varHasLegend As Variant], [varTitle As Variant], [varCategoryTitle As Variant], [varValueTitle As Variant], [varExtraTitle As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "varSource",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varGallery",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varFormat",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varPlotBy",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varCategoryLabels",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varSeriesLabels",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varHasLegend",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varTitle",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varCategoryTitle",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varValueTitle",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varExtraTitle",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CopyPicture",
+      "kind": "method",
+      "signature": "CopyPicture([Appearance As Long], [Format As Long], [Size As Long])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Appearance",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Format",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Size",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Export",
+      "kind": "method",
+      "signature": "Export(bstr As String, [varFilterName As Variant], [varInteractive As Variant]) As Boolean",
+      "description": "",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "bstr",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "varFilterName",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varInteractive",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetDefaultChart",
+      "kind": "method",
+      "signature": "SetDefaultChart(varName As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "varName",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ApplyChartTemplate",
+      "kind": "method",
+      "signature": "ApplyChartTemplate(bstrFileName As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrFileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SaveChartTemplate",
+      "kind": "method",
+      "signature": "SaveChartTemplate(bstrFileName As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrFileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ClearToMatchStyle",
+      "kind": "method",
+      "signature": "ClearToMatchStyle()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "RefreshPivotTable",
+      "kind": "method",
+      "signature": "RefreshPivotTable()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "ApplyLayout",
+      "kind": "method",
+      "signature": "ApplyLayout(Layout As Long, [varChartType As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Layout",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "varChartType",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Refresh",
+      "kind": "method",
+      "signature": "Refresh()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "SetElement",
+      "kind": "method",
+      "signature": "SetElement(RHS As MsoChartElementType)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "MsoChartElementType",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "",
+      "returns": "Variant"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy() As Variant",
+      "description": "",
+      "returns": "Variant"
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select([Replace As Variant]) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Replace",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "FullSeriesCollection",
+      "kind": "method",
+      "signature": "FullSeriesCollection([Index As Variant]) As Object",
+      "description": "",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ClearToMatchColorStyle",
+      "kind": "method",
+      "signature": "ClearToMatchColorStyle()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "SetProperty",
+      "kind": "method",
+      "signature": "SetProperty(bstrId As String, Value As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrId",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Value",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetProperty",
+      "kind": "method",
+      "signature": "GetProperty(bstrId As String) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "bstrId",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

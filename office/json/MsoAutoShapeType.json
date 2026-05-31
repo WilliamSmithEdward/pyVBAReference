@@ -1,0 +1,928 @@
+{
+  "name": "MsoAutoShapeType",
+  "kind": "Enumeration",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Specifies the shape type for an AutoShape object.",
+  "constants": [
+    {
+      "name": "msoShapeMixed",
+      "value": -2,
+      "description": "Return value only; indicates a combination of the other states."
+    },
+    {
+      "name": "msoShapeRectangle",
+      "value": 1,
+      "description": "Rectangle"
+    },
+    {
+      "name": "msoShapeParallelogram",
+      "value": 2,
+      "description": "Parallelogram"
+    },
+    {
+      "name": "msoShapeTrapezoid",
+      "value": 3,
+      "description": "Trapezoid"
+    },
+    {
+      "name": "msoShapeDiamond",
+      "value": 4,
+      "description": "Diamond"
+    },
+    {
+      "name": "msoShapeRoundedRectangle",
+      "value": 5,
+      "description": "Rounded rectangle"
+    },
+    {
+      "name": "msoShapeOctagon",
+      "value": 6,
+      "description": "Octagon"
+    },
+    {
+      "name": "msoShapeIsoscelesTriangle",
+      "value": 7,
+      "description": "Isosceles triangle"
+    },
+    {
+      "name": "msoShapeRightTriangle",
+      "value": 8,
+      "description": "Right triangle"
+    },
+    {
+      "name": "msoShapeOval",
+      "value": 9,
+      "description": "Oval"
+    },
+    {
+      "name": "msoShapeHexagon",
+      "value": 10,
+      "description": "Hexagon"
+    },
+    {
+      "name": "msoShapeCross",
+      "value": 11,
+      "description": "Cross"
+    },
+    {
+      "name": "msoShapeRegularPentagon",
+      "value": 12,
+      "description": "Pentagon"
+    },
+    {
+      "name": "msoShapeCan",
+      "value": 13,
+      "description": "Can"
+    },
+    {
+      "name": "msoShapeCube",
+      "value": 14,
+      "description": "Cube"
+    },
+    {
+      "name": "msoShapeBevel",
+      "value": 15,
+      "description": "Bevel"
+    },
+    {
+      "name": "msoShapeFoldedCorner",
+      "value": 16,
+      "description": "Folded corner"
+    },
+    {
+      "name": "msoShapeSmileyFace",
+      "value": 17,
+      "description": "Smiley face"
+    },
+    {
+      "name": "msoShapeDonut",
+      "value": 18,
+      "description": "Donut"
+    },
+    {
+      "name": "msoShapeNoSymbol",
+      "value": 19,
+      "description": "\"No\" symbol"
+    },
+    {
+      "name": "msoShapeBlockArc",
+      "value": 20,
+      "description": "Block arc"
+    },
+    {
+      "name": "msoShapeHeart",
+      "value": 21,
+      "description": "Heart"
+    },
+    {
+      "name": "msoShapeLightningBolt",
+      "value": 22,
+      "description": "Lightning bolt"
+    },
+    {
+      "name": "msoShapeSun",
+      "value": 23,
+      "description": "Sun"
+    },
+    {
+      "name": "msoShapeMoon",
+      "value": 24,
+      "description": "Moon"
+    },
+    {
+      "name": "msoShapeArc",
+      "value": 25,
+      "description": "Arc"
+    },
+    {
+      "name": "msoShapeDoubleBracket",
+      "value": 26,
+      "description": "Double bracket"
+    },
+    {
+      "name": "msoShapeDoubleBrace",
+      "value": 27,
+      "description": "Double brace"
+    },
+    {
+      "name": "msoShapePlaque",
+      "value": 28,
+      "description": "Plaque"
+    },
+    {
+      "name": "msoShapeLeftBracket",
+      "value": 29,
+      "description": "Left bracket"
+    },
+    {
+      "name": "msoShapeRightBracket",
+      "value": 30,
+      "description": "Right bracket"
+    },
+    {
+      "name": "msoShapeLeftBrace",
+      "value": 31,
+      "description": "Left brace"
+    },
+    {
+      "name": "msoShapeRightBrace",
+      "value": 32,
+      "description": "Right brace"
+    },
+    {
+      "name": "msoShapeRightArrow",
+      "value": 33,
+      "description": "Block arrow that points right"
+    },
+    {
+      "name": "msoShapeLeftArrow",
+      "value": 34,
+      "description": "Block arrow that points left"
+    },
+    {
+      "name": "msoShapeUpArrow",
+      "value": 35,
+      "description": "Block arrow that points up"
+    },
+    {
+      "name": "msoShapeDownArrow",
+      "value": 36,
+      "description": "Block arrow that points down"
+    },
+    {
+      "name": "msoShapeLeftRightArrow",
+      "value": 37,
+      "description": "Block arrow with arrowheads that point both left and right"
+    },
+    {
+      "name": "msoShapeUpDownArrow",
+      "value": 38,
+      "description": "Block arrow that points up and down"
+    },
+    {
+      "name": "msoShapeQuadArrow",
+      "value": 39,
+      "description": "Block arrows that point up, down, left, and right"
+    },
+    {
+      "name": "msoShapeLeftRightUpArrow",
+      "value": 40,
+      "description": "Block arrow with arrowheads that point left, right, and up"
+    },
+    {
+      "name": "msoShapeBentArrow",
+      "value": 41,
+      "description": "Block arrow that follows a curved 90-degree angle."
+    },
+    {
+      "name": "msoShapeUTurnArrow",
+      "value": 42,
+      "description": "Block arrow forming a U shape"
+    },
+    {
+      "name": "msoShapeLeftUpArrow",
+      "value": 43,
+      "description": "Block arrow with arrowheads that point left and up"
+    },
+    {
+      "name": "msoShapeBentUpArrow",
+      "value": 44,
+      "description": "Block arrow that follows a sharp 90-degree angle. Points up by default."
+    },
+    {
+      "name": "msoShapeCurvedRightArrow",
+      "value": 45,
+      "description": "Block arrow that curves right"
+    },
+    {
+      "name": "msoShapeCurvedLeftArrow",
+      "value": 46,
+      "description": "Block arrow that curves left"
+    },
+    {
+      "name": "msoShapeCurvedUpArrow",
+      "value": 47,
+      "description": "Block arrow that curves up"
+    },
+    {
+      "name": "msoShapeCurvedDownArrow",
+      "value": 48,
+      "description": "Block arrow that curves down"
+    },
+    {
+      "name": "msoShapeStripedRightArrow",
+      "value": 49,
+      "description": "Block arrow that points right with stripes at the tail"
+    },
+    {
+      "name": "msoShapeNotchedRightArrow",
+      "value": 50,
+      "description": "Notched block arrow that points right"
+    },
+    {
+      "name": "msoShapePentagon",
+      "value": 51,
+      "description": "Pentagon"
+    },
+    {
+      "name": "msoShapeChevron",
+      "value": 52,
+      "description": "Chevron"
+    },
+    {
+      "name": "msoShapeRightArrowCallout",
+      "value": 53,
+      "description": "Callout with arrow that points right"
+    },
+    {
+      "name": "msoShapeLeftArrowCallout",
+      "value": 54,
+      "description": "Callout with arrow that points left"
+    },
+    {
+      "name": "msoShapeUpArrowCallout",
+      "value": 55,
+      "description": "Callout with arrow that points up"
+    },
+    {
+      "name": "msoShapeDownArrowCallout",
+      "value": 56,
+      "description": "Callout with arrow that points down"
+    },
+    {
+      "name": "msoShapeLeftRightArrowCallout",
+      "value": 57,
+      "description": "Callout with arrowheads that point both left and right"
+    },
+    {
+      "name": "msoShapeUpDownArrowCallout",
+      "value": 58,
+      "description": "Callout with arrows that point up and down"
+    },
+    {
+      "name": "msoShapeQuadArrowCallout",
+      "value": 59,
+      "description": "Callout with arrows that point up, down, left, and right"
+    },
+    {
+      "name": "msoShapeCircularArrow",
+      "value": 60,
+      "description": "Block arrow that follows a curved 180-degree angle"
+    },
+    {
+      "name": "msoShapeFlowchartProcess",
+      "value": 61,
+      "description": "Process flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartAlternateProcess",
+      "value": 62,
+      "description": "Alternate process flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartDecision",
+      "value": 63,
+      "description": "Decision flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartData",
+      "value": 64,
+      "description": "Data flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartPredefinedProcess",
+      "value": 65,
+      "description": "Predefined process flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartInternalStorage",
+      "value": 66,
+      "description": "Internal storage flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartDocument",
+      "value": 67,
+      "description": "Document flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartMultidocument",
+      "value": 68,
+      "description": "Multi-document flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartTerminator",
+      "value": 69,
+      "description": "Terminator flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartPreparation",
+      "value": 70,
+      "description": "Preparation flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartManualInput",
+      "value": 71,
+      "description": "Manual input flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartManualOperation",
+      "value": 72,
+      "description": "Manual operation flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartConnector",
+      "value": 73,
+      "description": "Connector flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartOffpageConnector",
+      "value": 74,
+      "description": "Off-page connector flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartCard",
+      "value": 75,
+      "description": "Card flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartPunchedTape",
+      "value": 76,
+      "description": "Punched tape flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartSummingJunction",
+      "value": 77,
+      "description": "Summing junction flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartOr",
+      "value": 78,
+      "description": "\"Or\" flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartCollate",
+      "value": 79,
+      "description": "Collate flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartSort",
+      "value": 80,
+      "description": "Sort flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartExtract",
+      "value": 81,
+      "description": "Extract flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartMerge",
+      "value": 82,
+      "description": "Merge flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartStoredData",
+      "value": 83,
+      "description": "Stored data flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartDelay",
+      "value": 84,
+      "description": "Delay flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartSequentialAccessStorage",
+      "value": 85,
+      "description": "Sequential access storage flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartMagneticDisk",
+      "value": 86,
+      "description": "Magnetic disk flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartDirectAccessStorage",
+      "value": 87,
+      "description": "Direct access storage flowchart symbol"
+    },
+    {
+      "name": "msoShapeFlowchartDisplay",
+      "value": 88,
+      "description": "Display flowchart symbol"
+    },
+    {
+      "name": "msoShapeExplosion1",
+      "value": 89,
+      "description": "Explosion"
+    },
+    {
+      "name": "msoShapeExplosion2",
+      "value": 90,
+      "description": "Explosion"
+    },
+    {
+      "name": "msoShape4pointStar",
+      "value": 91,
+      "description": "4-point star"
+    },
+    {
+      "name": "msoShape5pointStar",
+      "value": 92,
+      "description": "5-point star"
+    },
+    {
+      "name": "msoShape8pointStar",
+      "value": 93,
+      "description": "8-point star"
+    },
+    {
+      "name": "msoShape16pointStar",
+      "value": 94,
+      "description": "16-point star"
+    },
+    {
+      "name": "msoShape24pointStar",
+      "value": 95,
+      "description": "24-point star"
+    },
+    {
+      "name": "msoShape32pointStar",
+      "value": 96,
+      "description": "32-point star"
+    },
+    {
+      "name": "msoShapeUpRibbon",
+      "value": 97,
+      "description": "Ribbon banner with center area above ribbon ends"
+    },
+    {
+      "name": "msoShapeDownRibbon",
+      "value": 98,
+      "description": "Ribbon banner with center area below ribbon ends"
+    },
+    {
+      "name": "msoShapeCurvedUpRibbon",
+      "value": 99,
+      "description": "Ribbon banner that curves up"
+    },
+    {
+      "name": "msoShapeCurvedDownRibbon",
+      "value": 100,
+      "description": "Ribbon banner that curves down"
+    },
+    {
+      "name": "msoShapeVerticalScroll",
+      "value": 101,
+      "description": "Vertical scroll"
+    },
+    {
+      "name": "msoShapeHorizontalScroll",
+      "value": 102,
+      "description": "Horizontal scroll"
+    },
+    {
+      "name": "msoShapeWave",
+      "value": 103,
+      "description": "Wave"
+    },
+    {
+      "name": "msoShapeDoubleWave",
+      "value": 104,
+      "description": "Double wave"
+    },
+    {
+      "name": "msoShapeRectangularCallout",
+      "value": 105,
+      "description": "Rectangular callout"
+    },
+    {
+      "name": "msoShapeRoundedRectangularCallout",
+      "value": 106,
+      "description": "Rounded rectangle-shaped callout"
+    },
+    {
+      "name": "msoShapeOvalCallout",
+      "value": 107,
+      "description": "Oval-shaped callout"
+    },
+    {
+      "name": "msoShapeCloudCallout",
+      "value": 108,
+      "description": "Cloud callout"
+    },
+    {
+      "name": "msoShapeLineCallout1",
+      "value": 109,
+      "description": "Callout with border and horizontal callout line"
+    },
+    {
+      "name": "msoShapeLineCallout2",
+      "value": 110,
+      "description": "Callout with diagonal straight line"
+    },
+    {
+      "name": "msoShapeLineCallout3",
+      "value": 111,
+      "description": "Callout with angled line"
+    },
+    {
+      "name": "msoShapeLineCallout4",
+      "value": 112,
+      "description": "Callout with callout line segments forming a U-shape"
+    },
+    {
+      "name": "msoShapeLineCallout1AccentBar",
+      "value": 113,
+      "description": "Callout with horizontal accent bar"
+    },
+    {
+      "name": "msoShapeLineCallout2AccentBar",
+      "value": 114,
+      "description": "Callout with diagonal callout line and accent bar"
+    },
+    {
+      "name": "msoShapeLineCallout3AccentBar",
+      "value": 115,
+      "description": "Callout with angled callout line and accent bar"
+    },
+    {
+      "name": "msoShapeLineCallout4AccentBar",
+      "value": 116,
+      "description": "Callout with accent bar and callout line segments forming a U-shape"
+    },
+    {
+      "name": "msoShapeLineCallout1NoBorder",
+      "value": 117,
+      "description": "Callout with horizontal line"
+    },
+    {
+      "name": "msoShapeLineCallout2NoBorder",
+      "value": 118,
+      "description": "Callout with no border and diagonal callout line"
+    },
+    {
+      "name": "msoShapeLineCallout3NoBorder",
+      "value": 119,
+      "description": "Callout with no border and angled callout line"
+    },
+    {
+      "name": "msoShapeLineCallout4NoBorder",
+      "value": 120,
+      "description": "Callout with no border and callout line segments forming a U-shape"
+    },
+    {
+      "name": "msoShapeLineCallout1BorderandAccentBar",
+      "value": 121,
+      "description": "Callout with border and horizontal accent bar"
+    },
+    {
+      "name": "msoShapeLineCallout2BorderandAccentBar",
+      "value": 122,
+      "description": "Callout with border, diagonal straight line, and accent bar"
+    },
+    {
+      "name": "msoShapeLineCallout3BorderandAccentBar",
+      "value": 123,
+      "description": "Callout with border, angled callout line, and accent bar"
+    },
+    {
+      "name": "msoShapeLineCallout4BorderandAccentBar",
+      "value": 124,
+      "description": "Callout with border, accent bar, and callout line segments forming a U-shape"
+    },
+    {
+      "name": "msoShapeActionButtonCustom",
+      "value": 125,
+      "description": "Button with no default picture or text. Supports mouse-click and mouse-over actions."
+    },
+    {
+      "name": "msoShapeActionButtonHome",
+      "value": 126,
+      "description": "Home button. Supports mouse-click and mouse-over actions."
+    },
+    {
+      "name": "msoShapeActionButtonHelp",
+      "value": 127,
+      "description": "Help button. Supports mouse-click and mouse-over actions."
+    },
+    {
+      "name": "msoShapeActionButtonInformation",
+      "value": 128,
+      "description": "Information button. Supports mouse-click and mouse-over actions."
+    },
+    {
+      "name": "msoShapeActionButtonBackorPrevious",
+      "value": 129,
+      "description": "Back or Previous button. Supports mouse-click and mouse-over actions."
+    },
+    {
+      "name": "msoShapeActionButtonForwardorNext",
+      "value": 130,
+      "description": "Forward or Next button. Supports mouse-click and mouse-over actions."
+    },
+    {
+      "name": "msoShapeActionButtonBeginning",
+      "value": 131,
+      "description": "Beginning button. Supports mouse-click and mouse-over actions."
+    },
+    {
+      "name": "msoShapeActionButtonEnd",
+      "value": 132,
+      "description": "End button. Supports mouse-click and mouse-over actions."
+    },
+    {
+      "name": "msoShapeActionButtonReturn",
+      "value": 133,
+      "description": "Return button. Supports mouse-click and mouse-over actions."
+    },
+    {
+      "name": "msoShapeActionButtonDocument",
+      "value": 134,
+      "description": "Document button. Supports mouse-click and mouse-over actions."
+    },
+    {
+      "name": "msoShapeActionButtonSound",
+      "value": 135,
+      "description": "Sound button. Supports mouse-click and mouse-over actions."
+    },
+    {
+      "name": "msoShapeActionButtonMovie",
+      "value": 136,
+      "description": "Movie button. Supports mouse-click and mouse-over actions."
+    },
+    {
+      "name": "msoShapeBalloon",
+      "value": 137,
+      "description": "Balloon"
+    },
+    {
+      "name": "msoShapeNotPrimitive",
+      "value": 138,
+      "description": "Not supported"
+    },
+    {
+      "name": "msoShapeFlowchartOfflineStorage",
+      "value": 139,
+      "description": "Offline storage flowchart symbol"
+    },
+    {
+      "name": "msoShapeLeftRightRibbon",
+      "value": 140,
+      "description": "Ribbon with an arrow at both ends"
+    },
+    {
+      "name": "msoShapeDiagonalStripe",
+      "value": 141,
+      "description": "Rectangle with two triangles-shapes removed; a diagonal stripe"
+    },
+    {
+      "name": "msoShapePie",
+      "value": 142,
+      "description": "Circle ('pie') with a portion missing"
+    },
+    {
+      "name": "msoShapeNonIsoscelesTrapezoid",
+      "value": 143,
+      "description": "Trapezoid with asymmetrical non-parallel sides"
+    },
+    {
+      "name": "msoShapeDecagon",
+      "value": 144,
+      "description": "Decagon"
+    },
+    {
+      "name": "msoShapeHeptagon",
+      "value": 145,
+      "description": "Heptagon"
+    },
+    {
+      "name": "msoShapeDodecagon",
+      "value": 146,
+      "description": "Dodecagon"
+    },
+    {
+      "name": "msoShape6pointStar",
+      "value": 147,
+      "description": "6-point star"
+    },
+    {
+      "name": "msoShape7pointStar",
+      "value": 148,
+      "description": "7-point star"
+    },
+    {
+      "name": "msoShape10pointStar",
+      "value": 149,
+      "description": "10-point star"
+    },
+    {
+      "name": "msoShape12pointStar",
+      "value": 150,
+      "description": "12-point star"
+    },
+    {
+      "name": "msoShapeRound1Rectangle",
+      "value": 151,
+      "description": "Rectangle with one rounded corner"
+    },
+    {
+      "name": "msoShapeRound2SameRectangle",
+      "value": 152,
+      "description": "Rectangle with two-rounded corners that share a side"
+    },
+    {
+      "name": "msoShapeRound2DiagRectangle",
+      "value": 153,
+      "description": "Rectangle with two rounded corners, diagonally-opposed"
+    },
+    {
+      "name": "msoShapeSnipRoundRectangle",
+      "value": 154,
+      "description": "Rectangle with one snipped corner and one rounded corner"
+    },
+    {
+      "name": "msoShapeSnip1Rectangle",
+      "value": 155,
+      "description": "Rectangle with one snipped corner"
+    },
+    {
+      "name": "msoShapeSnip2SameRectangle",
+      "value": 156,
+      "description": "Rectangle with two snipped corners that share a side"
+    },
+    {
+      "name": "msoShapeSnip2DiagRectangle",
+      "value": 157,
+      "description": "Rectangle with two snipped corners, diagonally-opposed"
+    },
+    {
+      "name": "msoShapeFrame",
+      "value": 158,
+      "description": "Rectangular picture frame"
+    },
+    {
+      "name": "msoShapeHalfFrame",
+      "value": 159,
+      "description": "Half of a rectangular picture frame"
+    },
+    {
+      "name": "msoShapeTear",
+      "value": 160,
+      "description": "Water droplet"
+    },
+    {
+      "name": "msoShapeChord",
+      "value": 161,
+      "description": "Circle with a line connecting two points on the perimeter through the interior of the circle; a circle with a chord"
+    },
+    {
+      "name": "msoShapeCorner",
+      "value": 162,
+      "description": "Rectangle with rectangular-shaped hole."
+    },
+    {
+      "name": "msoShapeMathPlus",
+      "value": 163,
+      "description": "Addition symbol +"
+    },
+    {
+      "name": "msoShapeMathMinus",
+      "value": 164,
+      "description": "Subtraction symbol -"
+    },
+    {
+      "name": "msoShapeMathMultiply",
+      "value": 165,
+      "description": "Multiplication symbol x"
+    },
+    {
+      "name": "msoShapeMathDivide",
+      "value": 166,
+      "description": "Division symbol "
+    },
+    {
+      "name": "msoShapeMathEqual",
+      "value": 167,
+      "description": "Equivalence symbol ="
+    },
+    {
+      "name": "msoShapeMathNotEqual",
+      "value": 168,
+      "description": "Non-equivalence symbol "
+    },
+    {
+      "name": "msoShapeCornerTabs",
+      "value": 169,
+      "description": "Four right triangles aligning along a rectangular path; four 'snipped' corners."
+    },
+    {
+      "name": "msoShapeSquareTabs",
+      "value": 170,
+      "description": "Four small squares that define a rectangular shape"
+    },
+    {
+      "name": "msoShapePlaqueTabs",
+      "value": 171,
+      "description": "Four quarter-circles defining a rectangular shape"
+    },
+    {
+      "name": "msoShapeGear6",
+      "value": 172,
+      "description": "Gear with six teeth"
+    },
+    {
+      "name": "msoShapeGear9",
+      "value": 173,
+      "description": "Gear with nine teeth"
+    },
+    {
+      "name": "msoShapeFunnel",
+      "value": 174,
+      "description": "Funnel"
+    },
+    {
+      "name": "msoShapePieWedge",
+      "value": 175,
+      "description": "Quarter of a circular shape"
+    },
+    {
+      "name": "msoShapeLeftCircularArrow",
+      "value": 176,
+      "description": "Circular arrow pointing counter-clockwise"
+    },
+    {
+      "name": "msoShapeLeftRightCircularArrow",
+      "value": 177,
+      "description": "Circular arrow pointing clockwise and counter-clockwise; a curved arrow with points at both ends"
+    },
+    {
+      "name": "msoShapeSwooshArrow",
+      "value": 178,
+      "description": "Curved arrow"
+    },
+    {
+      "name": "msoShapeCloud",
+      "value": 179,
+      "description": "Cloud shape"
+    },
+    {
+      "name": "msoShapeChartX",
+      "value": 180,
+      "description": "Square divided into four parts along diagonal lines"
+    },
+    {
+      "name": "msoShapeChartStar",
+      "value": 181,
+      "description": "Square divided into six parts along vertical and diagonal lines"
+    },
+    {
+      "name": "msoShapeChartPlus",
+      "value": 182,
+      "description": "Square divided vertically and horizontally into four quarters"
+    },
+    {
+      "name": "msoShapeLineInverse",
+      "value": 183,
+      "description": "Line inverse"
+    }
+  ]
+}

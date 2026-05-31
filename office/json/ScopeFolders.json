@@ -1,0 +1,48 @@
+{
+  "name": "ScopeFolders",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0369-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "A collection of ScopeFolder objects.",
+  "remarks": "Only ScopeFolder objects contain ScopeFolders collections. Each ScopeFolders collection contains the ScopeFolder objects that correspond to the subfolders of the parent ScopeFolder object. Use the ScopeFolders property of the ScopeFolder object to return a ScopeFolders collection. You can't add or remove ScopeFolder objects from a ScopeFolders collection.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the ScopeFolders object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the ScopeFolders object was created. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "ScopeFolder",
+      "access": "read-only",
+      "description": "Gets a ScopeFolder object that represents a subfolder of the parent object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the ScopeFolders collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [],
+  "events": []
+}

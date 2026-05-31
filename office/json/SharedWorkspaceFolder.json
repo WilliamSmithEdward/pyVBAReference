@@ -1,0 +1,57 @@
+{
+  "name": "SharedWorkspaceFolder",
+  "kind": "Dispatch Interface",
+  "guid": "{000C037D-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a folder in a shared document workspace.",
+  "remarks": "Use the SharedWorkspaceFolder object to manage subfolders within the main document library folder of a shared workspace. The Count property of the SharedWorkspaceFolders collection does not include the workspace's main folder, and returns 0 (zero) if no subfolders have been created. The SharedWorkspaceFolder object does not expose the CreatedBy, CreatedDate, ModifiedBy, and ModifiedDate properties available on the SharedWorkspaceFile, SharedWorkspaceLink, and SharedWorkspaceTask objects. Use the Item (_index_) property of the SharedWorkspaceFolders collection to return a specific SharedWorkspaceFolder object.",
+  "example": "Dim swsFolder As SharedWorkspaceFolder\n    Set swsFolder = ActiveWorkbook.SharedWorkspace.Folders(1)\n    MsgBox swsFolder.FolderName, vbInformation + vbOKOnly, \"Folder Name\"\n    Set swsFolder = Nothing",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SharedWorkspaceFolder object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SharedWorkspaceFolder object was created. Read-only."
+    },
+    {
+      "name": "FolderName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the name of a subfolder within the main document library folder of a shared workspace. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the SharedWorkspaceFolder object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete([DeleteEventIfFolderContainsFiles As Variant])",
+      "description": "Deletes the current shared workspace folder and all data within it.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "DeleteEventIfFolderContainsFiles",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

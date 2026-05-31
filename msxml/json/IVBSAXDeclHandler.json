@@ -1,0 +1,121 @@
+{
+  "name": "IVBSAXDeclHandler",
+  "kind": "Dispatch Interface",
+  "guid": "{E8917260-7579-4BE1-B5DD-7AFBFA6F077B}",
+  "library": "Microsoft XML, v6.0",
+  "description": "IVBSAXDeclHandler interface",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "elementDecl",
+      "kind": "method",
+      "signature": "elementDecl(strName As String, strModel As String)",
+      "description": "Report an element type declaration.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strModel",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "attributeDecl",
+      "kind": "method",
+      "signature": "attributeDecl(strElementName As String, strAttributeName As String, strType As String, strValueDefault As String, strValue As String)",
+      "description": "Report an attribute type declaration.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strElementName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strAttributeName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strType",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strValueDefault",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strValue",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "internalEntityDecl",
+      "kind": "method",
+      "signature": "internalEntityDecl(strName As String, strValue As String)",
+      "description": "Report an internal entity declaration.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strValue",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "externalEntityDecl",
+      "kind": "method",
+      "signature": "externalEntityDecl(strName As String, strPublicId As String, strSystemId As String)",
+      "description": "Report a parsed external entity declaration.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strPublicId",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strSystemId",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

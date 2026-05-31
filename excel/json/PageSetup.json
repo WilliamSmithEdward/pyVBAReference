@@ -1,0 +1,349 @@
+{
+  "name": "PageSetup",
+  "kind": "Dispatch Interface",
+  "guid": "{000208B4-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the page setup description.",
+  "remarks": "The PageSetup object contains all page setup attributes (left margin, bottom margin, paper size, and so on) as properties.",
+  "example": "With Worksheets(\"Sheet1\")\n .PageSetup.Orientation = xlLandscape\n .PrintOut\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "BlackAndWhite",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if elements of the document will be printed in black and white. Read/write Boolean."
+    },
+    {
+      "name": "BottomMargin",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the size of the bottom margin, in points. Read/write Double."
+    },
+    {
+      "name": "CenterFooter",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Center aligns the footer information in the PageSetup object. Read/write String."
+    },
+    {
+      "name": "CenterHeader",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Center aligns the header information in the PageSetup object. Read/write String."
+    },
+    {
+      "name": "CenterHorizontally",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the sheet is centered horizontally on the page when it's printed. Read/write Boolean."
+    },
+    {
+      "name": "CenterVertically",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the sheet is centered vertically on the page when it's printed. Read/write Boolean."
+    },
+    {
+      "name": "Draft",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the sheet will be printed without graphics. Read/write Boolean."
+    },
+    {
+      "name": "FirstPageNumber",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the first page number that will be used when this sheet is printed. If xlAutomatic, Microsoft Excel chooses the first page number. The default is xlAutomatic (Constants). Read/write Long."
+    },
+    {
+      "name": "FitToPagesTall",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the number of pages tall that the worksheet will be scaled to when it's printed. Applies only to worksheets. Read/write Variant."
+    },
+    {
+      "name": "FitToPagesWide",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the number of pages wide that the worksheet will be scaled to when it's printed. Applies only to worksheets. Read/write Variant."
+    },
+    {
+      "name": "FooterMargin",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the distance from the bottom of the page to the footer, in points. Read/write Double."
+    },
+    {
+      "name": "HeaderMargin",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the distance from the top of the page to the header, in points. Read/write Double."
+    },
+    {
+      "name": "LeftFooter",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the alignment of text on the left footer of a workbook or section."
+    },
+    {
+      "name": "LeftHeader",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the alignment of text on the left header of a workbook or section."
+    },
+    {
+      "name": "LeftMargin",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the size of the left margin, in points. Read/write Double."
+    },
+    {
+      "name": "Order",
+      "kind": "property",
+      "type": "XlOrder",
+      "access": "read/write",
+      "description": "Returns or sets an XlOrder value that represents the order that Microsoft Excel uses to number pages when printing a large worksheet."
+    },
+    {
+      "name": "Orientation",
+      "kind": "property",
+      "type": "XlPageOrientation",
+      "access": "read/write",
+      "description": "Returns or sets an XlPageOrientation value that represents the portrait or landscape printing mode."
+    },
+    {
+      "name": "PaperSize",
+      "kind": "property",
+      "type": "XlPaperSize",
+      "access": "read/write",
+      "description": "Returns or sets the size of the paper. Read/write XlPaperSize."
+    },
+    {
+      "name": "PrintArea",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the range to be printed as a String using A1-style references in the language of the macro. Read/write String."
+    },
+    {
+      "name": "PrintGridlines",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if cell gridlines are printed on the page. Applies only to worksheets. Read/write Boolean."
+    },
+    {
+      "name": "PrintHeadings",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if row and column headings are printed with this page. Applies only to worksheets. Read/write Boolean."
+    },
+    {
+      "name": "PrintNotes",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if cell notes are printed as end notes with the sheet. Applies only to worksheets. Read/write Boolean."
+    },
+    {
+      "name": "PrintQuality",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the print quality. Read/write Variant."
+    },
+    {
+      "name": "PrintTitleColumns",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the columns that contain the cells to be repeated on the left side of each page, as a String in A1-style notation in the language of the macro. Read/write String."
+    },
+    {
+      "name": "PrintTitleRows",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the rows that contain the cells to be repeated at the top of each page, as a String in A1-style notation in the language of the macro. Read/write String."
+    },
+    {
+      "name": "RightFooter",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the right edge of the page and the right boundary of the footer. Read/write String."
+    },
+    {
+      "name": "RightHeader",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the right part of the header. Read/write String."
+    },
+    {
+      "name": "RightMargin",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the size of the right margin, in points. Read/write Double."
+    },
+    {
+      "name": "TopMargin",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the size of the top margin, in points. Read/write Double."
+    },
+    {
+      "name": "Zoom",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents a percentage (between 10 and 400 percent) by which Microsoft Excel will scale the worksheet for printing."
+    },
+    {
+      "name": "PrintComments",
+      "kind": "property",
+      "type": "XlPrintLocation",
+      "access": "read/write",
+      "description": "Returns or sets the way comments are printed with the sheet. Read/write XlPrintLocation."
+    },
+    {
+      "name": "PrintErrors",
+      "kind": "property",
+      "type": "XlPrintErrors",
+      "access": "read/write",
+      "description": "Sets or returns an XlPrintErrors constant specifying the type of print error displayed. This feature allows users to suppress the display of error values when printing a worksheet. Read/write."
+    },
+    {
+      "name": "CenterHeaderPicture",
+      "kind": "property",
+      "type": "Graphic",
+      "access": "read-only",
+      "description": "Returns a Graphic object that represents the picture for the center section of the header. Used to set attributes about the picture."
+    },
+    {
+      "name": "CenterFooterPicture",
+      "kind": "property",
+      "type": "Graphic",
+      "access": "read-only",
+      "description": "Returns a Graphic object that represents the picture for the center section of the footer. Used to set attributes about the picture."
+    },
+    {
+      "name": "LeftHeaderPicture",
+      "kind": "property",
+      "type": "Graphic",
+      "access": "read-only",
+      "description": "Returns a Graphic object that represents the picture for the left section of the header. Used to set attributes about the picture."
+    },
+    {
+      "name": "LeftFooterPicture",
+      "kind": "property",
+      "type": "Graphic",
+      "access": "read-only",
+      "description": "Returns a Graphic object that represents the picture for the left section of the footer. Used to set attributes about the picture."
+    },
+    {
+      "name": "RightHeaderPicture",
+      "kind": "property",
+      "type": "Graphic",
+      "access": "read-only",
+      "description": "Returns a Graphic object that represents the picture for the right section of the header. Used to set attributes about the picture."
+    },
+    {
+      "name": "RightFooterPicture",
+      "kind": "property",
+      "type": "Graphic",
+      "access": "read-only",
+      "description": "Returns a Graphic object that represents the picture for the right section of the footer. Used to set attributes of the picture."
+    },
+    {
+      "name": "OddAndEvenPagesHeaderFooter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified PageSetup object has different headers and footers for odd-numbered and even-numbered pages. Read/write Boolean."
+    },
+    {
+      "name": "DifferentFirstPageHeaderFooter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a different header or footer is used on the first page. Read/write Boolean."
+    },
+    {
+      "name": "ScaleWithDocHeaderFooter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets if the header and footer should be scaled with the document when the size of the document changes. Read/write Boolean."
+    },
+    {
+      "name": "AlignMarginsHeaderFooter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns True for Excel to align the header and the footer with the margins set in the page setup options. Read/write Boolean."
+    },
+    {
+      "name": "Pages",
+      "kind": "property",
+      "type": "Pages",
+      "access": "read-only",
+      "description": "Returns or sets the count or item number of the pages in the Pages collection."
+    },
+    {
+      "name": "EvenPage",
+      "kind": "property",
+      "type": "Page",
+      "access": "read-only",
+      "description": "Returns or sets the alignment of text on the even page of a workbook or section."
+    },
+    {
+      "name": "FirstPage",
+      "kind": "property",
+      "type": "Page",
+      "access": "read-only",
+      "description": "Returns or sets the alignment of text on the first page of a workbook or section."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

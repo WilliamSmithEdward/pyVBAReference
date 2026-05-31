@@ -1,0 +1,62 @@
+{
+  "name": "ReflectionFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03BE-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents the reflection effect in Office graphics.",
+  "remarks": "",
+  "example": "With ActivePresentation.Slides(1).Shapes(2)\n With .TextFrame2.TextRange.Font\n .Size = 32\n .Name = \"Palatino\"\n .Reflection.Type = msoReflectionType6\n End With\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the ReflectionFormat object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the ReflectionFormat object was created. Read-only."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoReflectionType",
+      "access": "read/write",
+      "description": "Gets or sets the type of the ReflectionFormat object. Read/write."
+    },
+    {
+      "name": "Transparency",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the amount of transparency, measured in percentages, of the shape's reflection image. Read/write."
+    },
+    {
+      "name": "Size",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the size, measured in percentages, of the shape's reflection image. Read/write."
+    },
+    {
+      "name": "Offset",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the amount of separation, measured in points, of the reflected image from the shape. Read/write."
+    },
+    {
+      "name": "Blur",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the amount of blur, measured in points, of the shape's reflection image. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

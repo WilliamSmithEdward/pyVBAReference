@@ -1,0 +1,2875 @@
+{
+  "name": "Range",
+  "kind": "Dispatch Interface",
+  "guid": "{00020846-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a cell, a row, a column, a selection of cells containing one or more contiguous blocks of cells, or a 3D range.",
+  "remarks": "The default member of Range forwards calls without parameters to the Value property and calls with parameters to the Item member. Accordingly, someRange = someOtherRange is equivalent to someRange.Value = someOtherRange.Value, someRange(1) to someRange.Item(1) and someRange(1,1) to someRange.Item(1,1). The following properties and methods for returning a Range object are described in the Example section: - Range and Cells properties of the Worksheet object - Range and Cells properties of the Range object - Rows and Columns properties of the Worksheet object - Rows and Columns properties of the Range object - Offset property of the Range object - Union method of the Application object",
+  "example": "Worksheets(\"Sheet1\").Range(\"A5\").Value = _\n    Worksheets(\"Sheet1\").Range(\"A1\").Value",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "AddIndent",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that indicates if text is automatically indented when the text alignment in a cell is set to equal distribution (either horizontally or vertically)."
+    },
+    {
+      "name": "Address",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that represents the range reference in the language of the macro."
+    },
+    {
+      "name": "AddressLocal",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the range reference for the specified range in the language of the user. Read-only String."
+    },
+    {
+      "name": "Areas",
+      "kind": "property",
+      "type": "Areas",
+      "access": "read-only",
+      "description": "Returns an Areas collection that represents all the ranges in a multiple-area selection. Read-only."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read-only",
+      "description": "Returns a Borders collection that represents the borders of a style or a range of cells (including a range defined as part of a conditional format)."
+    },
+    {
+      "name": "Cells",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the cells in the specified range."
+    },
+    {
+      "name": "Characters",
+      "kind": "property",
+      "type": "Characters",
+      "access": "read-only",
+      "description": "Returns a Characters object that represents a range of characters within the object text. Use the Characters object to format characters within a text string."
+    },
+    {
+      "name": "Column",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of the first column in the first area in the specified range. Read-only Long."
+    },
+    {
+      "name": "Columns",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the columns in the specified range."
+    },
+    {
+      "name": "ColumnWidth",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the width of all columns in the specified range. Read/write Double."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "CurrentArray",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "If the specified cell is part of an array, returns a Range object that represents the entire array. Read-only."
+    },
+    {
+      "name": "CurrentRegion",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the current region. The current region is a range bounded by any combination of blank rows and blank columns. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Dependents",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the range containing all the dependents of a cell. This can be a multiple selection (a union of Range objects) if there's more than one dependent. Read-only Range object."
+    },
+    {
+      "name": "DirectDependents",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the range containing all the direct dependents of a cell. This can be a multiple selection (a union of Range objects) if there's more than one dependent. Read-only Range object."
+    },
+    {
+      "name": "DirectPrecedents",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the range containing all the direct precedents of a cell. This can be a multiple selection (a union of Range objects) if there's more than one precedent. Read-only Range object."
+    },
+    {
+      "name": "End",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the cell at the end of the region that contains the source range. Equivalent to pressing END+UP ARROW, END+DOWN ARROW, END+LEFT ARROW, or END+RIGHT ARROW. Read-only Range object."
+    },
+    {
+      "name": "EntireColumn",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the entire column (or columns) that contains the specified range. Read-only."
+    },
+    {
+      "name": "EntireRow",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the entire row (or rows) that contains the specified range. Read-only."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read-only",
+      "description": "Returns a Font object that represents the font of the specified object."
+    },
+    {
+      "name": "Formula",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the object's implicitly intersecting formula in A1-style notation."
+    },
+    {
+      "name": "FormulaArray",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the array formula of a range. Returns (or can be set to) a single formula or a Visual Basic array. If the specified range doesn't contain an array formula, this property returns null. Read/write Variant."
+    },
+    {
+      "name": "FormulaHidden",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that indicates if the formula will be hidden when the worksheet is protected."
+    },
+    {
+      "name": "FormulaLocal",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the formula for the object, using A1-style references in the language of the user. Read/write Variant."
+    },
+    {
+      "name": "FormulaR1C1",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the formula for the object, using R1C1-style notation in the language of the macro. Read/write Variant."
+    },
+    {
+      "name": "FormulaR1C1Local",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the formula for the object, using R1C1-style notation in the language of the user. Read/write Variant."
+    },
+    {
+      "name": "HasArray",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "True if the specified cell is part of an array formula. Read-only Variant."
+    },
+    {
+      "name": "HasFormula",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "True if all cells in the range contain formulas; False if none of the cells in the range contains a formula; null otherwise. Read-only Variant."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns a Double value that represents the height, in points, of the range. Read-only."
+    },
+    {
+      "name": "Hidden",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that indicates if the rows or columns are hidden."
+    },
+    {
+      "name": "HorizontalAlignment",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the horizontal alignment for the specified object. Read/write."
+    },
+    {
+      "name": "IndentLevel",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the indent level for the cell or range. Can be an integer from 0 to 15."
+    },
+    {
+      "name": "Interior",
+      "kind": "property",
+      "type": "Interior",
+      "access": "read-only",
+      "description": "Returns an Interior object that represents the interior of the specified object."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns a Range object that represents a range at an offset to the specified range."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns a Variant value that represents the distance, in points, from the left edge of column A to the left edge of the range."
+    },
+    {
+      "name": "ListHeaderRows",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of header rows for the specified range. Read-only Long."
+    },
+    {
+      "name": "LocationInTable",
+      "kind": "property",
+      "type": "XlLocationInTable",
+      "access": "read-only",
+      "description": "Returns a constant that describes the part of the PivotTable report that contains the upper-left corner of the specified range. Can be one of the following XlLocationInTable constants. Read-only Long."
+    },
+    {
+      "name": "Locked",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that indicates if the object is locked."
+    },
+    {
+      "name": "MergeArea",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the merged range containing the specified cell. If the specified cell isn't in a merged range, this property returns the specified cell. Read-only Variant."
+    },
+    {
+      "name": "MergeCells",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "True if the range contains merged cells. Read/write Variant."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the name of the object."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Next",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the next cell."
+    },
+    {
+      "name": "NumberFormat",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the format code for the object."
+    },
+    {
+      "name": "NumberFormatLocal",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the format code for the object as a string in the language of the user."
+    },
+    {
+      "name": "Offset",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents a range that's offset from the specified range."
+    },
+    {
+      "name": "Orientation",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the text orientation."
+    },
+    {
+      "name": "OutlineLevel",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the current outline level of the specified row or column. Read/write Variant."
+    },
+    {
+      "name": "PageBreak",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the location of a page break. Can be one of the following XlPageBreak constants: xlPageBreakAutomatic, xlPageBreakManual, or xlPageBreakNone. Read/write Long."
+    },
+    {
+      "name": "PivotField",
+      "kind": "property",
+      "type": "PivotField",
+      "access": "read-only",
+      "description": "Returns a PivotField object that represents the PivotTable field containing the upper-left corner of the specified range."
+    },
+    {
+      "name": "PivotItem",
+      "kind": "property",
+      "type": "PivotItem",
+      "access": "read-only",
+      "description": "Returns a PivotItem object that represents the PivotTable item containing the upper-left corner of the specified range."
+    },
+    {
+      "name": "PivotTable",
+      "kind": "property",
+      "type": "PivotTable",
+      "access": "read-only",
+      "description": "Returns a PivotTable object that represents the PivotTable report containing the upper-left corner of the specified range."
+    },
+    {
+      "name": "Precedents",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents all the precedents of a cell. This can be a multiple selection (a union of Range objects) if there's more than one precedent. Read-only."
+    },
+    {
+      "name": "PrefixCharacter",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns the prefix character for the cell. Read-only Variant."
+    },
+    {
+      "name": "Previous",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the previous cell."
+    },
+    {
+      "name": "QueryTable",
+      "kind": "property",
+      "type": "QueryTable",
+      "access": "read-only",
+      "description": "Returns a QueryTable object that represents the query table that intersects the specified Range object."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents a cell or a range of cells."
+    },
+    {
+      "name": "Resize",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Resizes the specified range. Returns a Range object that represents the resized range."
+    },
+    {
+      "name": "Row",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of the first row of the first area in the range. Read-only Long."
+    },
+    {
+      "name": "RowHeight",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the height of the first row in the range specified, measured in points. Read/write Double."
+    },
+    {
+      "name": "Rows",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the rows in the specified range."
+    },
+    {
+      "name": "ShowDetail",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "True if the outline is expanded for the specified range (so that the detail of the column or row is visible). The specified range must be a single summary column or row in an outline. Read/write Variant."
+    },
+    {
+      "name": "ShrinkToFit",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that indicates if text automatically shrinks to fit in the available column width."
+    },
+    {
+      "name": "SoundNote",
+      "kind": "property",
+      "type": "SoundNote",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Style",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value containing a Style object that represents the style of the specified range."
+    },
+    {
+      "name": "Summary",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "True if the range is an outlining summary row or column. The range should be a row or a column. Read-only Variant."
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns the formatted text for the specified object. Read-only String."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns a Variant value that represents the distance, in points, from the top edge of row 1 to the top edge of the range."
+    },
+    {
+      "name": "UseStandardHeight",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "True if the row height of the Range object equals the standard height of the sheet. Returns Null if the range contains more than one row and the rows aren't all the same height. Read/write Variant."
+    },
+    {
+      "name": "UseStandardWidth",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "True if the column width of the Range object equals the standard width of the sheet. Returns null if the range contains more than one column and the columns aren't all the same width. Read/write Variant."
+    },
+    {
+      "name": "Validation",
+      "kind": "property",
+      "type": "Validation",
+      "access": "read-only",
+      "description": "Returns the Validation object that represents data validation for the specified range. Read-only."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the value of the specified range."
+    },
+    {
+      "name": "Value2",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the cell value. Read/write Variant."
+    },
+    {
+      "name": "VerticalAlignment",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the vertical alignment of the specified object. Read/write."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns a Double value that represents the width of a range in points. Read-only."
+    },
+    {
+      "name": "Worksheet",
+      "kind": "property",
+      "type": "Worksheet",
+      "access": "read-only",
+      "description": "Returns a Worksheet object that represents the worksheet containing the specified range. Read-only."
+    },
+    {
+      "name": "WrapText",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that indicates if Microsoft Excel wraps the text in the object."
+    },
+    {
+      "name": "Comment",
+      "kind": "property",
+      "type": "Comment",
+      "access": "read-only",
+      "description": "Returns a Comment object that represents the comment associated with the cell in the upper-left corner of the range."
+    },
+    {
+      "name": "Phonetic",
+      "kind": "property",
+      "type": "Phonetic",
+      "access": "read-only",
+      "description": "Returns the Phonetic object, which contains information about a specific phonetic text string in a cell."
+    },
+    {
+      "name": "FormatConditions",
+      "kind": "property",
+      "type": "FormatConditions",
+      "access": "read-only",
+      "description": "Returns a FormatConditions collection that represents all the conditional formats for the specified range. Read-only."
+    },
+    {
+      "name": "ReadingOrder",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the reading order for the specified object. Can be one of the following XlReadingOrder constants: xlRTL (right-to-left), xlLTR (left-to-right), or xlContext. Read/write Long."
+    },
+    {
+      "name": "Hyperlinks",
+      "kind": "property",
+      "type": "Hyperlinks",
+      "access": "read-only",
+      "description": "Returns a Hyperlinks collection that represents the hyperlinks for the range."
+    },
+    {
+      "name": "Phonetics",
+      "kind": "property",
+      "type": "Phonetics",
+      "access": "read-only",
+      "description": "Returns the Phonetics collection of the range. Read-only."
+    },
+    {
+      "name": "ID",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value that represents the identifying label for the specified cell when the page is saved as a webpage."
+    },
+    {
+      "name": "PivotCell",
+      "kind": "property",
+      "type": "PivotCell",
+      "access": "read-only",
+      "description": "Returns a PivotCell object that represents a cell in a PivotTable report."
+    },
+    {
+      "name": "Errors",
+      "kind": "property",
+      "type": "Errors",
+      "access": "read-only",
+      "description": "Allows the user to access error checking options."
+    },
+    {
+      "name": "AllowEdit",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean value that indicates if the range can be edited on a protected worksheet."
+    },
+    {
+      "name": "ListObject",
+      "kind": "property",
+      "type": "ListObject",
+      "access": "read-only",
+      "description": "Returns a ListObject object for the Range object. Read-only ListObject object."
+    },
+    {
+      "name": "XPath",
+      "kind": "property",
+      "type": "XPath",
+      "access": "read-only",
+      "description": "Returns an XPath object that represents the XPath of the element mapped to the specified Range object. The context of the range determines whether the action succeeds or returns an empty object. Read-only."
+    },
+    {
+      "name": "ServerActions",
+      "kind": "property",
+      "type": "Actions",
+      "access": "read-only",
+      "description": "Specifies the actions that can be performed on the SharePoint server for a Range object."
+    },
+    {
+      "name": "MDX",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the MDX name for the specified Range object. Read-only String."
+    },
+    {
+      "name": "CountLarge",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns a value that represents the number of objects in the collection. Read-only Variant."
+    },
+    {
+      "name": "SparklineGroups",
+      "kind": "property",
+      "type": "SparklineGroups",
+      "access": "read-only",
+      "description": "Returns a SparklineGroups object that represents an existing group of sparklines from the specified range. Read-only."
+    },
+    {
+      "name": "DisplayFormat",
+      "kind": "property",
+      "type": "DisplayFormat",
+      "access": "read-only",
+      "description": "Returns a DisplayFormat object that represents the display settings for the specified range. Read-only."
+    },
+    {
+      "name": "HasRichDataType",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "True if all cells in the range contain a Rich data type. False if none of the cells in the range contains a Rich data type; otherwise, null. Read-only Variant."
+    },
+    {
+      "name": "CommentThreaded",
+      "kind": "property",
+      "type": "CommentThreaded",
+      "access": "read-only",
+      "description": "Returns a CommentThreaded object that represents the threaded comment associated with the cell in the upper-left corner of the range."
+    },
+    {
+      "name": "LinkedDataTypeState",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns information about the state of any Linked data types, such as Stocks or Geography, in the range. Possible values are from the XlLinkedDataTypeState enumeration. Read-only."
+    },
+    {
+      "name": "HasSpill",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "True if all of the cells in the range are part of a spilled range; False if none of the cells in the range are part of a spilled range; null otherwise. Read-only Variant."
+    },
+    {
+      "name": "SpillingToRange",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "SpillParent",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "If a cell is a member of a spill, returns the cell containing the formula responsible. Otherwise, an error is returned."
+    },
+    {
+      "name": "Formula2",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the object's formula in A1-style array notation."
+    },
+    {
+      "name": "Formula2Local",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "This is the Formula2 Variant of Range.FormulaLocal. See Range.Formula2 for more detail."
+    },
+    {
+      "name": "Formula2R1C1",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "This is the Formula2 Variant of Range.FormulaR1C1. See Range.Formula2 and Range.FormulaR1C1 for more detail."
+    },
+    {
+      "name": "Formula2R1C1Local",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "This is the Formula2 Variant of Range.FormulaR1C1Local. See Range.Formula2 and Range.FormulaR1C1Local for more detail."
+    },
+    {
+      "name": "SavedAsArray",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "True if all of the cells in the range would be saved to file as an array formula; False if none of the cells in the range would be saved to file as a legacy array formula; null otherwise. Read-only Variant."
+    },
+    {
+      "name": "CellControl",
+      "kind": "property",
+      "type": "CellControl",
+      "access": "read-only",
+      "description": "This is a child of the Range object, representing the cell controls contained within that range. Properties and methods here let you inspect and modify the cell controls on the range."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate() As Variant",
+      "description": "Activates a single cell, which must be inside the current selection. To select a range of cells, use the Select method.",
+      "returns": "Variant"
+    },
+    {
+      "name": "AdvancedFilter",
+      "kind": "method",
+      "signature": "AdvancedFilter(Action As XlFilterAction, [CriteriaRange As Variant], [CopyToRange As Variant], [Unique As Variant]) As Variant",
+      "description": "Filters or copies data from a list based on a criteria range. If the initial selection is a single cell, that cell's current region is used.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Action",
+          "type": "XlFilterAction",
+          "optional": false,
+          "description": "One of the constants of XlFilterAction specifying whether to make a copy or filter the list in place."
+        },
+        {
+          "name": "CriteriaRange",
+          "type": "Variant",
+          "optional": true,
+          "description": "The criteria range. If this argument is omitted, there are no criteria."
+        },
+        {
+          "name": "CopyToRange",
+          "type": "Variant",
+          "optional": true,
+          "description": "The destination range for the copied rows if _Action_ is xlFilterCopy. Otherwise, this argument is ignored."
+        },
+        {
+          "name": "Unique",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to filter unique records only. False to filter all records that meet the criteria. The default value is False."
+        }
+      ]
+    },
+    {
+      "name": "ApplyNames",
+      "kind": "method",
+      "signature": "ApplyNames([Names As Variant], [IgnoreRelativeAbsolute As Variant], [UseRowColumnNames As Variant], [OmitColumn As Variant], [OmitRow As Variant], [Order As XlApplyNamesOrder], [AppendLast As Variant]) As Variant",
+      "description": "Applies names to the cells in the specified range.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Names",
+          "type": "Variant",
+          "optional": true,
+          "description": "An array of the names to be applied. If this argument is omitted, all names on the sheet are applied to the range."
+        },
+        {
+          "name": "IgnoreRelativeAbsolute",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to replace references with names, regardless of the reference types of either the names or references. False to replace absolute references only with absolute names, relative references only with relative names, and mixed references only with mixed names. The default value is True."
+        },
+        {
+          "name": "UseRowColumnNames",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to use the names of row and column ranges that contain the specified range if names for the range cannot be found. False to ignore the _OmitColumn_ and _OmitRow_ arguments. The default value is True."
+        },
+        {
+          "name": "OmitColumn",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to replace the entire reference with the row-oriented name. The column-oriented name can be omitted only if the referenced cell is in the same column as the formula and is within a row-oriented named range. The default value is True."
+        },
+        {
+          "name": "OmitRow",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to replace the entire reference with the column-oriented name. The row-oriented name can be omitted only if the referenced cell is in the same row as the formula and is within a column-oriented named range. The default value is True."
+        },
+        {
+          "name": "Order",
+          "type": "XlApplyNamesOrder",
+          "optional": true,
+          "description": "Determines which range name is listed first when a cell reference is replaced by a row-oriented and column-oriented range name."
+        },
+        {
+          "name": "AppendLast",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to replace the definitions of the names in _Names_ and also replace the definitions of the last names that were defined. False to replace the definitions of the names in _Names_ only. The default value is False."
+        }
+      ]
+    },
+    {
+      "name": "ApplyOutlineStyles",
+      "kind": "method",
+      "signature": "ApplyOutlineStyles() As Variant",
+      "description": "Applies outlining styles to the specified range.",
+      "returns": "Variant"
+    },
+    {
+      "name": "AutoComplete",
+      "kind": "method",
+      "signature": "AutoComplete(String As String) As String",
+      "description": "Returns an AutoComplete match from the list. If there's no AutoComplete match or if more than one entry in the list matches the string to complete, this method returns an empty string.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "String",
+          "type": "String",
+          "optional": false,
+          "description": "The string to complete."
+        }
+      ]
+    },
+    {
+      "name": "AutoFill",
+      "kind": "method",
+      "signature": "AutoFill(Destination As Range, [Type As XlAutoFillType]) As Variant",
+      "description": "Performs an autofill on the cells in the specified range.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Destination",
+          "type": "Range",
+          "optional": false,
+          "description": "The cells to be filled. The destination must include the source range."
+        },
+        {
+          "name": "Type",
+          "type": "XlAutoFillType",
+          "optional": true,
+          "description": "Specifies the fill type."
+        }
+      ]
+    },
+    {
+      "name": "AutoFit",
+      "kind": "method",
+      "signature": "AutoFit() As Variant",
+      "description": "Changes the width of the columns in the range or the height of the rows in the range to achieve the best fit.",
+      "returns": "Variant"
+    },
+    {
+      "name": "AutoOutline",
+      "kind": "method",
+      "signature": "AutoOutline() As Variant",
+      "description": "Automatically creates an outline for the specified range. If the range is a single cell, Microsoft Excel creates an outline for the entire sheet. The new outline replaces any existing outline.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Calculate",
+      "kind": "method",
+      "signature": "Calculate() As Variant",
+      "description": "Calculates all open workbooks, a specific worksheet in a workbook, or a specified range of cells on a worksheet, as shown in the table in the Remarks section.",
+      "returns": "Variant"
+    },
+    {
+      "name": "CheckSpelling",
+      "kind": "method",
+      "signature": "CheckSpelling([CustomDictionary As Variant], [IgnoreUppercase As Variant], [AlwaysSuggest As Variant], [SpellLang As Variant]) As Variant",
+      "description": "Checks the spelling of an object.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "CustomDictionary",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that indicates the file name of the custom dictionary to be examined if the word isn't found in the main dictionary. If this argument is omitted, the currently specified dictionary is used."
+        },
+        {
+          "name": "IgnoreUppercase",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have Microsoft Excel ignore words that are all uppercase. False to have Excel check words that are all uppercase. If this argument is omitted, the current setting will be used."
+        },
+        {
+          "name": "AlwaysSuggest",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have Excel display a list of suggested alternate spellings when an incorrect spelling is found. False to have Excel wait for you to input the correct spelling. If this argument is omitted, the current setting will be used."
+        },
+        {
+          "name": "SpellLang",
+          "type": "Variant",
+          "optional": true,
+          "description": "The language of the dictionary being used. Can be one of the MsoLanguageID values."
+        }
+      ]
+    },
+    {
+      "name": "Clear",
+      "kind": "method",
+      "signature": "Clear() As Variant",
+      "description": "Clears the entire object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "ClearFormats",
+      "kind": "method",
+      "signature": "ClearFormats() As Variant",
+      "description": "Clears the formatting of the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "ClearNotes",
+      "kind": "method",
+      "signature": "ClearNotes() As Variant",
+      "description": "Clears notes and sound notes from all the cells in the specified range.",
+      "returns": "Variant"
+    },
+    {
+      "name": "ClearOutline",
+      "kind": "method",
+      "signature": "ClearOutline() As Variant",
+      "description": "Clears the outline for the specified range.",
+      "returns": "Variant"
+    },
+    {
+      "name": "ColumnDifferences",
+      "kind": "method",
+      "signature": "ColumnDifferences(Comparison As Variant) As Range",
+      "description": "Returns a Range object that represents all the cells whose contents are different from the comparison cell in each column.",
+      "returns": "Range",
+      "parameters": [
+        {
+          "name": "Comparison",
+          "type": "Variant",
+          "optional": false,
+          "description": "A single cell to compare to the specified range."
+        }
+      ]
+    },
+    {
+      "name": "Consolidate",
+      "kind": "method",
+      "signature": "Consolidate([Sources As Variant], [Function As Variant], [TopRow As Variant], [LeftColumn As Variant], [CreateLinks As Variant]) As Variant",
+      "description": "Consolidates data from multiple ranges on multiple worksheets into a single range on a single worksheet. Variant.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Sources",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sources of the consolidation as an array of text reference strings in R1C1-style notation. The references must include the full path of sheets to be consolidated."
+        },
+        {
+          "name": "Function",
+          "type": "Variant",
+          "optional": true,
+          "description": "One of the constants of XlConsolidationFunction, which specifies the type of consolidation."
+        },
+        {
+          "name": "TopRow",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to consolidate data based on column titles in the top row of the consolidation ranges. False to consolidate data by position. The default value is False."
+        },
+        {
+          "name": "LeftColumn",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to consolidate data based on row titles in the left column of the consolidation ranges. False to consolidate data by position. The default value is False."
+        },
+        {
+          "name": "CreateLinks",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have the consolidation use worksheet links. False to have the consolidation copy the data. The default value is False."
+        }
+      ]
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy([Destination As Variant]) As Variant",
+      "description": "Copies the range to the specified range or to the Clipboard.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Destination",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the new range to which the specified range will be copied. If this argument is omitted, Microsoft Excel copies the range to the Clipboard."
+        }
+      ]
+    },
+    {
+      "name": "CopyFromRecordset",
+      "kind": "method",
+      "signature": "CopyFromRecordset(Data As IUnknown, [MaxRows As Variant], [MaxColumns As Variant]) As Long",
+      "description": "Copies the contents of an ADO or DAO Recordset object onto a worksheet, beginning at the upper-left corner of the specified range. If the Recordset object contains fields with OLE objects in them, this method fails.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Data",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "The Recordset object to copy into the range."
+        },
+        {
+          "name": "MaxRows",
+          "type": "Variant",
+          "optional": true,
+          "description": "The maximum number of records to copy onto the worksheet. If this argument is omitted, all the records in the Recordset object are copied."
+        },
+        {
+          "name": "MaxColumns",
+          "type": "Variant",
+          "optional": true,
+          "description": "The maximum number of fields to copy onto the worksheet. If this argument is omitted, all the fields in the Recordset object are copied."
+        }
+      ]
+    },
+    {
+      "name": "CopyPicture",
+      "kind": "method",
+      "signature": "CopyPicture([Appearance As XlPictureAppearance], [Format As XlCopyPictureFormat]) As Variant",
+      "description": "Copies the selected object to the Clipboard as a picture. Variant.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Appearance",
+          "type": "XlPictureAppearance",
+          "optional": true,
+          "description": "Specifies how the picture should be copied."
+        },
+        {
+          "name": "Format",
+          "type": "XlCopyPictureFormat",
+          "optional": true,
+          "description": "The format of the picture."
+        }
+      ]
+    },
+    {
+      "name": "CreateNames",
+      "kind": "method",
+      "signature": "CreateNames([Top As Variant], [Left As Variant], [Bottom As Variant], [Right As Variant]) As Variant",
+      "description": "Creates names in the specified range, based on text labels in the sheet.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to create names by using labels in the top row. The default value is False."
+        },
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to create names by using labels in the left column. The default value is False."
+        },
+        {
+          "name": "Bottom",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to create names by using labels in the bottom row. The default value is False."
+        },
+        {
+          "name": "Right",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to create names by using labels in the right column. The default value is False."
+        }
+      ]
+    },
+    {
+      "name": "Cut",
+      "kind": "method",
+      "signature": "Cut([Destination As Variant]) As Variant",
+      "description": "Cuts the object to the Clipboard or pastes it into a specified destination.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Destination",
+          "type": "Variant",
+          "optional": true,
+          "description": "The range where the object should be pasted. If this argument is omitted, the object is cut to the Clipboard."
+        }
+      ]
+    },
+    {
+      "name": "DataSeries",
+      "kind": "method",
+      "signature": "DataSeries([Rowcol As Variant], [Type As XlDataSeriesType], [Date As XlDataSeriesDate], [Step As Variant], [Stop As Variant], [Trend As Variant]) As Variant",
+      "description": "Creates a data series in the specified range. Variant.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Rowcol",
+          "type": "Variant",
+          "optional": true,
+          "description": "Can be the xlRows or xlColumns constant to have the data series entered in rows or columns, respectively. If this argument is omitted, the size and shape of the range is used."
+        },
+        {
+          "name": "Type",
+          "type": "XlDataSeriesType",
+          "optional": true,
+          "description": "The type for the data series."
+        },
+        {
+          "name": "Date",
+          "type": "XlDataSeriesDate",
+          "optional": true,
+          "description": "If the _Type_ argument is xlChronological, the _Date_ argument indicates the step date unit."
+        },
+        {
+          "name": "Step",
+          "type": "Variant",
+          "optional": true,
+          "description": "The step value for the series. The default value is 1."
+        },
+        {
+          "name": "Stop",
+          "type": "Variant",
+          "optional": true,
+          "description": "The stop value for the series. If this argument is omitted, Microsoft Excel fills to the end of the range."
+        },
+        {
+          "name": "Trend",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to create a linear trend or growth trend. False to create a standard data series. The default value is False."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete([Shift As Variant]) As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Shift",
+          "type": "Variant",
+          "optional": true,
+          "description": "Used only with Range objects. Specifies how to shift cells to replace deleted cells. Can be one of the following XlDeleteShiftDirection constants: xlShiftToLeft or xlShiftUp. If this argument is omitted, Microsoft Excel decides based on the shape of the range."
+        }
+      ]
+    },
+    {
+      "name": "DialogBox",
+      "kind": "method",
+      "signature": "DialogBox() As Variant",
+      "description": "Displays a dialog box defined by a dialog box definition table on a Microsoft Excel 4.0 macro sheet. Returns the number of the chosen control, or returns False if the user chooses the Cancel button.",
+      "returns": "Variant"
+    },
+    {
+      "name": "EditionOptions",
+      "kind": "method",
+      "signature": "EditionOptions(Type As XlEditionType, Option As XlEditionOptionsOption, [Name As Variant], [Reference As Variant], [Appearance As XlPictureAppearance], [ChartSize As XlPictureAppearance], [Format As Variant]) As Variant",
+      "description": "You have requested Help for a Visual Basic keyword used only on the Macintosh. For information about this keyword, consult the language reference Help included with Microsoft Office Macintosh Edition.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "XlEditionType",
+          "optional": false,
+          "description": "See the Help included with Microsoft Office Macintosh Edition."
+        },
+        {
+          "name": "Option",
+          "type": "XlEditionOptionsOption",
+          "optional": false,
+          "description": "See the Help included with Microsoft Office Macintosh Edition."
+        },
+        {
+          "name": "Name",
+          "type": "Variant",
+          "optional": true,
+          "description": "See the Help included with Microsoft Office Macintosh Edition."
+        },
+        {
+          "name": "Reference",
+          "type": "Variant",
+          "optional": true,
+          "description": "See the Help included with Microsoft Office Macintosh Edition."
+        },
+        {
+          "name": "Appearance",
+          "type": "XlPictureAppearance",
+          "optional": true,
+          "description": "See the Help included with Microsoft Office Macintosh Edition."
+        },
+        {
+          "name": "ChartSize",
+          "type": "XlPictureAppearance",
+          "optional": true,
+          "description": "See the Help included with Microsoft Office Macintosh Edition."
+        },
+        {
+          "name": "Format",
+          "type": "Variant",
+          "optional": true,
+          "description": "See the Help included with Microsoft Office Macintosh Edition."
+        }
+      ]
+    },
+    {
+      "name": "FillDown",
+      "kind": "method",
+      "signature": "FillDown() As Variant",
+      "description": "Fills down from the top cell or cells in the specified range to the bottom of the range. The contents and formatting of the cell or cells in the top row of a range are copied into the rest of the rows in the range.",
+      "returns": "Variant"
+    },
+    {
+      "name": "FillLeft",
+      "kind": "method",
+      "signature": "FillLeft() As Variant",
+      "description": "Fills left from the rightmost cell or cells in the specified range. The contents and formatting of the cell or cells in the rightmost column of a range are copied into the rest of the columns in the range.",
+      "returns": "Variant"
+    },
+    {
+      "name": "FillRight",
+      "kind": "method",
+      "signature": "FillRight() As Variant",
+      "description": "Fills right from the leftmost cell or cells in the specified range. The contents and formatting of the cell or cells in the leftmost column of a range are copied into the rest of the columns in the range.",
+      "returns": "Variant"
+    },
+    {
+      "name": "FillUp",
+      "kind": "method",
+      "signature": "FillUp() As Variant",
+      "description": "Fills up from the bottom cell or cells in the specified range to the top of the range. The contents and formatting of the cell or cells in the bottom row of a range are copied into the rest of the rows in the range.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Find",
+      "kind": "method",
+      "signature": "Find(What As Variant, [After As Variant], [LookIn As Variant], [LookAt As Variant], [SearchOrder As Variant], [SearchDirection As XlSearchDirection], [MatchCase As Variant], [MatchByte As Variant], [SearchFormat As Variant]) As Range",
+      "description": "Finds specific information in a range.",
+      "returns": "Range",
+      "parameters": [
+        {
+          "name": "What",
+          "type": "Variant",
+          "optional": false,
+          "description": "The data to search for. Can be a string or any Microsoft Excel data type."
+        },
+        {
+          "name": "After",
+          "type": "Variant",
+          "optional": true,
+          "description": "The cell after which you want the search to begin. This corresponds to the position of the active cell when a search is done from the user interface. Notice that _After_ must be a single cell in the range. Remember that the search begins after this cell; the specified cell isn't searched until the method wraps back around to this cell. If you don't specify this argument, the search starts after the cell in the upper-left corner of the range."
+        },
+        {
+          "name": "LookIn",
+          "type": "Variant",
+          "optional": true,
+          "description": "Can be one of the following XlFindLookIn constants: xlFormulas, xlValues, xlComments, or xlCommentsThreaded."
+        },
+        {
+          "name": "LookAt",
+          "type": "Variant",
+          "optional": true,
+          "description": "Can be one of the following XlLookAt constants: xlWhole or xlPart."
+        },
+        {
+          "name": "SearchOrder",
+          "type": "Variant",
+          "optional": true,
+          "description": "Can be one of the following XlSearchOrder constants: xlByRows or xlByColumns."
+        },
+        {
+          "name": "SearchDirection",
+          "type": "XlSearchDirection",
+          "optional": true,
+          "description": "Can be one of the following XlSearchDirection constants: xlNext or xlPrevious."
+        },
+        {
+          "name": "MatchCase",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to make the search case-sensitive. The default value is False."
+        },
+        {
+          "name": "MatchByte",
+          "type": "Variant",
+          "optional": true,
+          "description": "Used only if you have selected or installed double-byte language support. True to have double-byte characters match only double-byte characters. False to have double-byte characters match their single-byte equivalents."
+        },
+        {
+          "name": "SearchFormat",
+          "type": "Variant",
+          "optional": true,
+          "description": "The search format."
+        }
+      ]
+    },
+    {
+      "name": "FindNext",
+      "kind": "method",
+      "signature": "FindNext([After As Variant]) As Range",
+      "description": "Continues a search that was begun with the Find method. Finds the next cell that matches those same conditions and returns a Range object that represents that cell. This does not affect the selection or the active cell.",
+      "returns": "Range",
+      "parameters": [
+        {
+          "name": "After",
+          "type": "Variant",
+          "optional": true,
+          "description": "The cell after which you want to search. This corresponds to the position of the active cell when a search is done from the user interface. Be aware that _After_ must be a single cell in the range."
+        }
+      ]
+    },
+    {
+      "name": "FindPrevious",
+      "kind": "method",
+      "signature": "FindPrevious([After As Variant]) As Range",
+      "description": "Continues a search that was begun with the Find method. Finds the previous cell that matches those same conditions and returns a Range object that represents that cell. Doesn't affect the selection or the active cell.",
+      "returns": "Range",
+      "parameters": [
+        {
+          "name": "After",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "FunctionWizard",
+      "kind": "method",
+      "signature": "FunctionWizard() As Variant",
+      "description": "Starts the Function Wizard for the upper-left cell of the range.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Group",
+      "kind": "method",
+      "signature": "Group([Start As Variant], [End As Variant], [By As Variant], [Periods As Variant]) As Variant",
+      "description": "When the Range object represents a single cell in a PivotTable field's data range, the Group method performs numeric or date-based grouping in that field.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Start",
+          "type": "Variant",
+          "optional": true,
+          "description": "The first value to be grouped. If this argument is omitted or True, the first value in the field is used."
+        },
+        {
+          "name": "End",
+          "type": "Variant",
+          "optional": true,
+          "description": "The last value to be grouped. If this argument is omitted or True, the last value in the field is used."
+        },
+        {
+          "name": "By",
+          "type": "Variant",
+          "optional": true,
+          "description": "If the field is numeric, this argument specifies the size of each group. If the field is a date, this argument specifies the number of days in each group if element 4 in the _Periods_ array is True and all the other elements are False. Otherwise, this argument is ignored. If this argument is omitted, Microsoft Excel automatically chooses a default group size."
+        },
+        {
+          "name": "Periods",
+          "type": "Variant",
+          "optional": true,
+          "description": "An array of Boolean values that specify the period for the group, described in the Remarks section. If an element in the array is True, a group is created for the corresponding time; if the element is False, no group is created. If the field isn't a date field, this argument is ignored."
+        }
+      ]
+    },
+    {
+      "name": "InsertIndent",
+      "kind": "method",
+      "signature": "InsertIndent(InsertAmount As Long)",
+      "description": "Adds an indent to the specified range.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "InsertAmount",
+          "type": "Long",
+          "optional": false,
+          "description": "The amount to be added to the current indent."
+        }
+      ]
+    },
+    {
+      "name": "Insert",
+      "kind": "method",
+      "signature": "Insert([Shift As Variant], [CopyOrigin As Variant]) As Variant",
+      "description": "Inserts a cell or a range of cells into the worksheet or macro sheet and shifts other cells away to make space.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Shift",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies which way to shift the cells. Can be one of the following XlInsertShiftDirection constants: xlShiftToRight or xlShiftDown. If this argument is omitted, Microsoft Excel decides based on the shape of the range."
+        },
+        {
+          "name": "CopyOrigin",
+          "type": "Variant",
+          "optional": true,
+          "description": "The copy origin; that is, from where to copy the format for inserted cells. Can be one of the following XlInsertFormatOrigin constants: xlFormatFromLeftOrAbove (default) or xlFormatFromRightOrBelow."
+        }
+      ]
+    },
+    {
+      "name": "Justify",
+      "kind": "method",
+      "signature": "Justify() As Variant",
+      "description": "Rearranges the text in a range so that it fills the range evenly.",
+      "returns": "Variant"
+    },
+    {
+      "name": "ListNames",
+      "kind": "method",
+      "signature": "ListNames() As Variant",
+      "description": "Pastes a list of all nonhidden names onto the worksheet, beginning with the first cell in the range.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Merge",
+      "kind": "method",
+      "signature": "Merge([Across As Variant])",
+      "description": "Creates a merged cell from the specified Range object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Across",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to merge cells in each row of the specified range as separate merged cells. The default value is False."
+        }
+      ]
+    },
+    {
+      "name": "UnMerge",
+      "kind": "method",
+      "signature": "UnMerge()",
+      "description": "Separates a merged area into individual cells.",
+      "returns": "void"
+    },
+    {
+      "name": "NavigateArrow",
+      "kind": "method",
+      "signature": "NavigateArrow([TowardPrecedent As Variant], [ArrowNumber As Variant], [LinkNumber As Variant]) As Variant",
+      "description": "Navigates a tracer arrow for the specified range to the precedent, dependent, or error-causing cell or cells. Selects the precedent, dependent, or error cells and returns a Range object that represents the new selection. This method causes an error if it's applied to a cell without visible tracer arrows.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "TowardPrecedent",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the direction to navigate; True to navigate toward precedents, False to navigate toward dependents."
+        },
+        {
+          "name": "ArrowNumber",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the arrow number to navigate; corresponds to the numbered reference in the cell's formula."
+        },
+        {
+          "name": "LinkNumber",
+          "type": "Variant",
+          "optional": true,
+          "description": "If the arrow is an external reference arrow, this argument indicates which external reference to follow. If this argument is omitted, the first external reference is followed."
+        }
+      ]
+    },
+    {
+      "name": "NoteText",
+      "kind": "method",
+      "signature": "NoteText([Text As Variant], [Start As Variant], [Length As Variant]) As String",
+      "description": "Returns or sets the cell note associated with the cell in the upper-left corner of the range. Read/write String. Cell notes have been replaced by range comments. For more information, see the Comment object.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Text",
+          "type": "Variant",
+          "optional": true,
+          "description": "The text to add to the note (up to 255 characters). The text is inserted starting at position _Start_, replacing _Length_ characters of the existing note. If this argument is omitted, this method returns the current text of the note starting at position _Start_, for _Length_ characters."
+        },
+        {
+          "name": "Start",
+          "type": "Variant",
+          "optional": true,
+          "description": "The starting position for the text that's set or returned. If this argument is omitted, this method starts at the first character. To append text to the note, specify a number larger than the number of characters in the existing note."
+        },
+        {
+          "name": "Length",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of characters to be set or returned. If this argument is omitted, Microsoft Excel sets or returns characters from the starting position to the end of the note (up to 255 characters). If there are more than 255 characters from _Start_ to the end of the note, this method returns only 255 characters."
+        }
+      ]
+    },
+    {
+      "name": "Parse",
+      "kind": "method",
+      "signature": "Parse([ParseLine As Variant], [Destination As Variant]) As Variant",
+      "description": "Parses a range of data and breaks it into multiple cells. Distributes the contents of the range to fill several adjacent columns; the range can be no more than one column wide.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "ParseLine",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that contains left and right brackets to indicate where the cells should be split."
+        },
+        {
+          "name": "Destination",
+          "type": "Variant",
+          "optional": true,
+          "description": "A Range object that represents the upper-left corner of the destination range for the parsed data. If this argument is omitted, Microsoft Excel parses in place."
+        }
+      ]
+    },
+    {
+      "name": "PrintPreview",
+      "kind": "method",
+      "signature": "PrintPreview([EnableChanges As Variant]) As Variant",
+      "description": "Shows a preview of the object as it would look when printed.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "EnableChanges",
+          "type": "Variant",
+          "optional": true,
+          "description": "Pass a Boolean value to specify if the user can change the margins and other page setup options available in print preview."
+        }
+      ]
+    },
+    {
+      "name": "RemoveSubtotal",
+      "kind": "method",
+      "signature": "RemoveSubtotal() As Variant",
+      "description": "Removes subtotals from a list.",
+      "returns": "Variant"
+    },
+    {
+      "name": "RowDifferences",
+      "kind": "method",
+      "signature": "RowDifferences(Comparison As Variant) As Range",
+      "description": "Returns a Range object that represents all the cells whose contents are different from those of the comparison cell in each row.",
+      "returns": "Range",
+      "parameters": [
+        {
+          "name": "Comparison",
+          "type": "Variant",
+          "optional": false,
+          "description": "A single cell to compare with the specified range."
+        }
+      ]
+    },
+    {
+      "name": "Run",
+      "kind": "method",
+      "signature": "Run([Arg1 As Variant], [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant]) As Variant",
+      "description": "Runs the Microsoft Excel macro at this location. The range must be on a macro sheet.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Arg1",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg2",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg3",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg4",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg5",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg6",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg7",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg8",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg9",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg10",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg11",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg12",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg13",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg14",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg15",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg16",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg17",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg18",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg19",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg20",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg21",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg22",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg23",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg24",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg25",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg26",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg27",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg28",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg29",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg30",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select() As Variant",
+      "description": "Selects the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Show",
+      "kind": "method",
+      "signature": "Show() As Variant",
+      "description": "Scrolls through the contents of the active window to move the range into view. The range must consist of a single cell in the active document.",
+      "returns": "Variant"
+    },
+    {
+      "name": "ShowDependents",
+      "kind": "method",
+      "signature": "ShowDependents([Remove As Variant]) As Variant",
+      "description": "Draws tracer arrows to the direct dependents of the range.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Remove",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to remove one level of tracer arrows to direct dependents. False to expand one level of tracer arrows. The default value is False."
+        }
+      ]
+    },
+    {
+      "name": "ShowErrors",
+      "kind": "method",
+      "signature": "ShowErrors() As Variant",
+      "description": "Draws tracer arrows through the precedents tree to the cell that's the source of the error, and returns the range that contains that cell.",
+      "returns": "Variant"
+    },
+    {
+      "name": "ShowPrecedents",
+      "kind": "method",
+      "signature": "ShowPrecedents([Remove As Variant]) As Variant",
+      "description": "Draws tracer arrows to the direct precedents of the range.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Remove",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to remove one level of tracer arrows to direct precedents. False to expand one level of tracer arrows. The default value is False."
+        }
+      ]
+    },
+    {
+      "name": "SortSpecial",
+      "kind": "method",
+      "signature": "SortSpecial([SortMethod As XlSortMethod], [Key1 As Variant], [Order1 As XlSortOrder], [Type As Variant], [Key2 As Variant], [Order2 As XlSortOrder], [Key3 As Variant], [Order3 As XlSortOrder], [Header As XlYesNoGuess], [OrderCustom As Variant], [MatchCase As Variant], [Orientation As XlSortOrientation], [DataOption1 As XlSortDataOption], [DataOption2 As XlSortDataOption], [DataOption3 As XlSortDataOption]) As Variant",
+      "description": "Uses East Asian sorting methods to sort the range, a PivotTable report, or uses the method for the active region if the range contains only one cell. For example, Japanese sorts in the order of the Kana syllabary.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "SortMethod",
+          "type": "XlSortMethod",
+          "optional": true,
+          "description": "The type of sort. Some of these constants may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "Key1",
+          "type": "Variant",
+          "optional": true,
+          "description": "The first sort field, as either text (a PivotTable field or range name) or a Range object (\"Dept\" or Cells(1, 1), for example)."
+        },
+        {
+          "name": "Order1",
+          "type": "XlSortOrder",
+          "optional": true,
+          "description": "The sort order for the field or range specified in the _Key1_ argument."
+        },
+        {
+          "name": "Type",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies which elements are to be sorted. Use this argument only when sorting PivotTable reports."
+        },
+        {
+          "name": "Key2",
+          "type": "Variant",
+          "optional": true,
+          "description": "The second sort field, as either text (a PivotTable field or range name) or a Range object. If you omit this argument, there's no second sort field. Cannot be used when sorting PivotTable reports."
+        },
+        {
+          "name": "Order2",
+          "type": "XlSortOrder",
+          "optional": true,
+          "description": "The sort order for the field or range specified in the _Key2_ argument. Cannot be used when sorting PivotTable reports."
+        },
+        {
+          "name": "Key3",
+          "type": "Variant",
+          "optional": true,
+          "description": "The third sort field, as either text (a range name) or a Range object. If you omit this argument, there's no third sort field. Cannot be used when sorting PivotTable reports."
+        },
+        {
+          "name": "Order3",
+          "type": "XlSortOrder",
+          "optional": true,
+          "description": "The sort order for the field or range specified in the _Key3_ argument. Cannot be used when sorting PivotTable reports."
+        },
+        {
+          "name": "Header",
+          "type": "XlYesNoGuess",
+          "optional": true,
+          "description": "Specifies whether or not the first row contains headers. Cannot be used when sorting PivotTable reports."
+        },
+        {
+          "name": "OrderCustom",
+          "type": "Variant",
+          "optional": true,
+          "description": "This argument is a one-based integer offset to the list of custom sort orders. If you omit _OrderCustom_, (normal sort order) is used."
+        },
+        {
+          "name": "MatchCase",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to do a case-sensitive sort; False to do a sort that's not case-sensitive. Cannot be used when sorting PivotTable reports."
+        },
+        {
+          "name": "Orientation",
+          "type": "XlSortOrientation",
+          "optional": true,
+          "description": "The sort orientation."
+        },
+        {
+          "name": "DataOption1",
+          "type": "XlSortDataOption",
+          "optional": true,
+          "description": "Specifies how to sort text in _Key1_. Cannot be used when sorting PivotTable reports."
+        },
+        {
+          "name": "DataOption2",
+          "type": "XlSortDataOption",
+          "optional": true,
+          "description": "Specifies how to sort text in _Key2_. Cannot be used when sorting PivotTable reports."
+        },
+        {
+          "name": "DataOption3",
+          "type": "XlSortDataOption",
+          "optional": true,
+          "description": "Specifies how to sort text in _Key3_. Cannot be used when sorting PivotTable reports."
+        }
+      ]
+    },
+    {
+      "name": "SpecialCells",
+      "kind": "method",
+      "signature": "SpecialCells(Type As XlCellType, [Value As Variant]) As Range",
+      "description": "Returns a Range object that represents all the cells that match the specified type and value.",
+      "returns": "Range",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "XlCellType",
+          "optional": false,
+          "description": "The cells to include."
+        },
+        {
+          "name": "Value",
+          "type": "Variant",
+          "optional": true,
+          "description": "If _Type_ is either xlCellTypeConstants or xlCellTypeFormulas, this argument is used to determine which types of cells to include in the result. These values can be added together to return more than one type. The default is to select all constants or formulas, no matter what the type."
+        }
+      ]
+    },
+    {
+      "name": "SubscribeTo",
+      "kind": "method",
+      "signature": "SubscribeTo(Edition As String, [Format As XlSubscribeToFormat]) As Variant",
+      "description": "You have requested Help for a Visual Basic keyword used only on the Macintosh. For information about this keyword, consult the language reference Help included with Microsoft Office Macintosh Edition.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Edition",
+          "type": "String",
+          "optional": false,
+          "description": "See help included with Microsoft Office Macintosh Edition."
+        },
+        {
+          "name": "Format",
+          "type": "XlSubscribeToFormat",
+          "optional": true,
+          "description": "See help included with Microsoft Office Macintosh Edition."
+        }
+      ]
+    },
+    {
+      "name": "Subtotal",
+      "kind": "method",
+      "signature": "Subtotal(GroupBy As Long, Function As XlConsolidationFunction, TotalList As Variant, [Replace As Variant], [PageBreaks As Variant], [SummaryBelowData As XlSummaryRow]) As Variant",
+      "description": "Creates subtotals for the range (or the current region, if the range is a single cell).",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "GroupBy",
+          "type": "Long",
+          "optional": false,
+          "description": "The field to group by, as a one-based integer offset. For more information, see the example."
+        },
+        {
+          "name": "Function",
+          "type": "XlConsolidationFunction",
+          "optional": false,
+          "description": "The subtotal function."
+        },
+        {
+          "name": "TotalList",
+          "type": "Variant",
+          "optional": false,
+          "description": "An array of 1-based field offsets, indicating the fields to which the subtotals are added. For more information, see the example."
+        },
+        {
+          "name": "Replace",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to replace existing subtotals. The default value is True."
+        },
+        {
+          "name": "PageBreaks",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to add page breaks after each group. The default value is False."
+        },
+        {
+          "name": "SummaryBelowData",
+          "type": "XlSummaryRow",
+          "optional": true,
+          "description": "Places the summary data relative to the subtotal."
+        }
+      ]
+    },
+    {
+      "name": "Table",
+      "kind": "method",
+      "signature": "Table([RowInput As Variant], [ColumnInput As Variant]) As Variant",
+      "description": "Creates a data table based on input values and formulas that you define on a worksheet.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "RowInput",
+          "type": "Variant",
+          "optional": true,
+          "description": "A single cell to use as the row input for your table."
+        },
+        {
+          "name": "ColumnInput",
+          "type": "Variant",
+          "optional": true,
+          "description": "A single cell to use as the column input for your table."
+        }
+      ]
+    },
+    {
+      "name": "TextToColumns",
+      "kind": "method",
+      "signature": "TextToColumns([Destination As Variant], [DataType As XlTextParsingType], [TextQualifier As XlTextQualifier], [ConsecutiveDelimiter As Variant], [Tab As Variant], [Semicolon As Variant], [Comma As Variant], [Space As Variant], [Other As Variant], [OtherChar As Variant], [FieldInfo As Variant], [DecimalSeparator As Variant], [ThousandsSeparator As Variant], [TrailingMinusNumbers As Variant]) As Variant",
+      "description": "Parses a column of cells that contain text into several columns.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Destination",
+          "type": "Variant",
+          "optional": true,
+          "description": "A Range object that specifies where Microsoft Excel will place the results. If the range is larger than a single cell, the top left cell is used."
+        },
+        {
+          "name": "DataType",
+          "type": "XlTextParsingType",
+          "optional": true,
+          "description": "The format of the text to be split into columns."
+        },
+        {
+          "name": "TextQualifier",
+          "type": "XlTextQualifier",
+          "optional": true,
+          "description": "Specifies whether to use single, double, or no quotes as the text qualifier."
+        },
+        {
+          "name": "ConsecutiveDelimiter",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have Excel consider consecutive delimiters as one delimiter. The default value is False."
+        },
+        {
+          "name": "Tab",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have _DataType_ be xlDelimited and to have the tab character be a delimiter. The default value is False."
+        },
+        {
+          "name": "Semicolon",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have _DataType_ be xlDelimited and to have the semicolon be a delimiter. The default value is False."
+        },
+        {
+          "name": "Comma",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have _DataType_ be xlDelimited and to have the comma be a delimiter. The default value is False."
+        },
+        {
+          "name": "Space",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have _DataType_ be xlDelimited and to have the space character be a delimiter. The default value is False."
+        },
+        {
+          "name": "Other",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have _DataType_ be xlDelimited and to have the character specified by the _OtherChar_ argument be a delimiter. The default value is False."
+        },
+        {
+          "name": "OtherChar",
+          "type": "Variant",
+          "optional": true,
+          "description": "Required if _Other_ is True; the delimiter character when _Other_ is True. If more than one character is specified, only the first character of the string is used; the remaining characters are ignored."
+        },
+        {
+          "name": "FieldInfo",
+          "type": "Variant",
+          "optional": true,
+          "description": "An array containing parse information for the individual columns of data. The interpretation depends on the value of _DataType_. When the data is delimited, this argument is an array of two-element arrays, with each two-element array specifying the conversion options for a particular column. The first element is the column number (1-based), and the second element is one of the XlColumnDataType constants specifying how the column is parsed."
+        },
+        {
+          "name": "DecimalSeparator",
+          "type": "Variant",
+          "optional": true,
+          "description": "The decimal separator that Microsoft Excel uses when recognizing numbers. The default setting is the system setting."
+        },
+        {
+          "name": "ThousandsSeparator",
+          "type": "Variant",
+          "optional": true,
+          "description": "The thousands separator that Excel uses when recognizing numbers. The default setting is the system setting."
+        },
+        {
+          "name": "TrailingMinusNumbers",
+          "type": "Variant",
+          "optional": true,
+          "description": "Numbers that begin with a minus character."
+        }
+      ]
+    },
+    {
+      "name": "Ungroup",
+      "kind": "method",
+      "signature": "Ungroup() As Variant",
+      "description": "Promotes a range in an outline (that is, decreases its outline level). The specified range must be a row or column, or a range of rows or columns. If the range is in a PivotTable report, this method ungroups the items contained in the range.",
+      "returns": "Variant"
+    },
+    {
+      "name": "AddComment",
+      "kind": "method",
+      "signature": "AddComment([Text As Variant]) As Comment",
+      "description": "Adds a comment to the range.",
+      "returns": "Comment",
+      "parameters": [
+        {
+          "name": "Text",
+          "type": "Variant",
+          "optional": true,
+          "description": "The comment text."
+        }
+      ]
+    },
+    {
+      "name": "ClearComments",
+      "kind": "method",
+      "signature": "ClearComments()",
+      "description": "Clears all cell comments from the specified range.",
+      "returns": "void"
+    },
+    {
+      "name": "SetPhonetic",
+      "kind": "method",
+      "signature": "SetPhonetic()",
+      "description": "Creates Phonetic objects for all the cells in the specified range.",
+      "returns": "void"
+    },
+    {
+      "name": "Dirty",
+      "kind": "method",
+      "signature": "Dirty()",
+      "description": "Designates a range to be recalculated when the next recalculation occurs.",
+      "returns": "void"
+    },
+    {
+      "name": "Speak",
+      "kind": "method",
+      "signature": "Speak([SpeakDirection As Variant], [SpeakFormulas As Variant])",
+      "description": "Causes the cells of the range to be spoken in row order or column order.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SpeakDirection",
+          "type": "Variant",
+          "optional": true,
+          "description": "The speak direction, by rows or columns."
+        },
+        {
+          "name": "SpeakFormulas",
+          "type": "Variant",
+          "optional": true,
+          "description": "True will cause formulas to be sent to the Text-To-Speech (TTS) engine for cells that have formulas. The value is sent if the cells don't have formulas. False (default) will cause values to always be sent to the TTS engine."
+        }
+      ]
+    },
+    {
+      "name": "PasteSpecial",
+      "kind": "method",
+      "signature": "PasteSpecial([Paste As XlPasteType], [Operation As XlPasteSpecialOperation], [SkipBlanks As Variant], [Transpose As Variant]) As Variant",
+      "description": "Pastes a Range object that has been copied into the specified range.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Paste",
+          "type": "XlPasteType",
+          "optional": true,
+          "description": "The part of the range to be pasted, such as xlPasteAll or xlPasteValues."
+        },
+        {
+          "name": "Operation",
+          "type": "XlPasteSpecialOperation",
+          "optional": true,
+          "description": "The paste operation, such as xlPasteSpecialOperationAdd."
+        },
+        {
+          "name": "SkipBlanks",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have blank cells in the range on the clipboard not be pasted into the destination range. The default value is False."
+        },
+        {
+          "name": "Transpose",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to transpose rows and columns when the range is pasted. The default value is False."
+        }
+      ]
+    },
+    {
+      "name": "RemoveDuplicates",
+      "kind": "method",
+      "signature": "RemoveDuplicates([Columns As Variant], [Header As XlYesNoGuess])",
+      "description": "Removes duplicate values from a range of values.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Columns",
+          "type": "Variant",
+          "optional": true,
+          "description": "Array of indexes of the columns that contain the duplicate information."
+        },
+        {
+          "name": "Header",
+          "type": "XlYesNoGuess",
+          "optional": true,
+          "description": "Specifies whether the first row contains header information. xlNo is the default value; specify xlGuess if you want Excel to attempt to determine the header."
+        }
+      ]
+    },
+    {
+      "name": "PrintOut",
+      "kind": "method",
+      "signature": "PrintOut([From As Variant], [To As Variant], [Copies As Variant], [Preview As Variant], [ActivePrinter As Variant], [PrintToFile As Variant], [Collate As Variant], [PrToFileName As Variant]) As Variant",
+      "description": "Prints the object.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "From",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of the page at which to start printing. If this argument is omitted, printing starts at the beginning."
+        },
+        {
+          "name": "To",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of the last page to print. If this argument is omitted, printing ends with the last page."
+        },
+        {
+          "name": "Copies",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of copies to print. If this argument is omitted, one copy is printed."
+        },
+        {
+          "name": "Preview",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have Microsoft Excel invoke print preview before printing the object. False (or omitted) to print the object immediately."
+        },
+        {
+          "name": "ActivePrinter",
+          "type": "Variant",
+          "optional": true,
+          "description": "Sets the name of the active printer."
+        },
+        {
+          "name": "PrintToFile",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to print to a file. If _PrToFileName_ is not specified, Microsoft Excel prompts the user to enter the name of the output file."
+        },
+        {
+          "name": "Collate",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to collate multiple copies."
+        },
+        {
+          "name": "PrToFileName",
+          "type": "Variant",
+          "optional": true,
+          "description": "If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to."
+        }
+      ]
+    },
+    {
+      "name": "CalculateRowMajorOrder",
+      "kind": "method",
+      "signature": "CalculateRowMajorOrder() As Variant",
+      "description": "Calculates a specified range of cells.",
+      "returns": "Variant"
+    },
+    {
+      "name": "ClearHyperlinks",
+      "kind": "method",
+      "signature": "ClearHyperlinks()",
+      "description": "Removes all hyperlinks from the specified range.",
+      "returns": "void"
+    },
+    {
+      "name": "BorderAround",
+      "kind": "method",
+      "signature": "BorderAround([LineStyle As Variant], [Weight As XlBorderWeight], [ColorIndex As XlColorIndex], [Color As Variant], [ThemeColor As Variant]) As Variant",
+      "description": "Adds a border to a range and sets the Color, LineStyle, and Weight properties of the Border object for the new border. Variant.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "LineStyle",
+          "type": "Variant",
+          "optional": true,
+          "description": "One of the constants of XlLineStyle specifying the line style for the border."
+        },
+        {
+          "name": "Weight",
+          "type": "XlBorderWeight",
+          "optional": true,
+          "description": "The border weight."
+        },
+        {
+          "name": "ColorIndex",
+          "type": "XlColorIndex",
+          "optional": true,
+          "description": "The border color, as an index into the current color palette or as an XlColorIndex constant."
+        },
+        {
+          "name": "Color",
+          "type": "Variant",
+          "optional": true,
+          "description": "The border color, as an RGB value."
+        },
+        {
+          "name": "ThemeColor",
+          "type": "Variant",
+          "optional": true,
+          "description": "The theme color, as an index into the current color theme or as an XlThemeColor value."
+        }
+      ]
+    },
+    {
+      "name": "AllocateChanges",
+      "kind": "method",
+      "signature": "AllocateChanges()",
+      "description": "Performs a writeback operation for all edited cells in a range based on an OLAP data source.",
+      "returns": "void"
+    },
+    {
+      "name": "DiscardChanges",
+      "kind": "method",
+      "signature": "DiscardChanges()",
+      "description": "Discards all changes in the edited cells of the range.",
+      "returns": "void"
+    },
+    {
+      "name": "FlashFill",
+      "kind": "method",
+      "signature": "FlashFill()",
+      "description": "True indicates that the Excel Flash Fill feature has been enabled and is active.",
+      "returns": "void"
+    },
+    {
+      "name": "ExportAsFixedFormat",
+      "kind": "method",
+      "signature": "ExportAsFixedFormat(Type As XlFixedFormatType, [Filename As Variant], [Quality As Variant], [IncludeDocProperties As Variant], [IgnorePrintAreas As Variant], [From As Variant], [To As Variant], [OpenAfterPublish As Variant], [FixedFormatExtClassPtr As Variant], [WorkIdentity As Variant])",
+      "description": "Exports to a file of the specified format.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "XlFixedFormatType",
+          "optional": false,
+          "description": "The type of file format to export to."
+        },
+        {
+          "name": "Filename",
+          "type": "Variant",
+          "optional": true,
+          "description": "The file name of the file to be saved. You can include a full path, or Excel saves the file in the current folder."
+        },
+        {
+          "name": "Quality",
+          "type": "Variant",
+          "optional": true,
+          "description": "Optional XlFixedFormatQuality. Specifies the quality of the published file."
+        },
+        {
+          "name": "IncludeDocProperties",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to include the document properties; otherwise, False."
+        },
+        {
+          "name": "IgnorePrintAreas",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore any print areas set when publishing; otherwise, False."
+        },
+        {
+          "name": "From",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of the page at which to start publishing. If this argument is omitted, publishing starts at the beginning."
+        },
+        {
+          "name": "To",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of the last page to publish. If this argument is omitted, publishing ends with the last page."
+        },
+        {
+          "name": "OpenAfterPublish",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to display the file in the viewer after it is published; otherwise, False."
+        },
+        {
+          "name": "FixedFormatExtClassPtr",
+          "type": "Variant",
+          "optional": true,
+          "description": "Pointer to the FixedFormatExt class."
+        },
+        {
+          "name": "WorkIdentity",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ShowCard",
+      "kind": "method",
+      "signature": "ShowCard()",
+      "description": "For a cell containing a Linked data type, such as Stocks or Geography, this method causes a card to appear that shows details about the cell (that is, the same card that the user can view by choosing the cell icon).",
+      "returns": "void"
+    },
+    {
+      "name": "AddCommentThreaded",
+      "kind": "method",
+      "signature": "AddCommentThreaded(Text As String) As CommentThreaded",
+      "description": "Adds a new modern threaded comment to the range if no comment already exists.",
+      "returns": "CommentThreaded",
+      "parameters": [
+        {
+          "name": "Text",
+          "type": "String",
+          "optional": false,
+          "description": "The comment text."
+        }
+      ]
+    },
+    {
+      "name": "Sort",
+      "kind": "method",
+      "signature": "Sort([Key1 As Variant], [Order1 As XlSortOrder], [Key2 As Variant], [Type As Variant], [Order2 As XlSortOrder], [Key3 As Variant], [Order3 As XlSortOrder], [Header As XlYesNoGuess], [OrderCustom As Variant], [MatchCase As Variant], [Orientation As XlSortOrientation], [SortMethod As XlSortMethod], [DataOption1 As XlSortDataOption], [DataOption2 As XlSortDataOption], [DataOption3 As XlSortDataOption], [SubField1 As Variant]) As Variant",
+      "description": "Sorts a range of values.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Key1",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the first sort field, either as a range name (String) or Range object; determines the values to be sorted."
+        },
+        {
+          "name": "Order1",
+          "type": "XlSortOrder",
+          "optional": true,
+          "description": "Determines the sort order for the values specified in _Key1_."
+        },
+        {
+          "name": "Key2",
+          "type": "Variant",
+          "optional": true,
+          "description": "Second sort field; cannot be used when sorting a PivotTable."
+        },
+        {
+          "name": "Type",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies which type of elements are to be sorted within a PivotTable. Specify xLSortLabels to sort by the labels targeted by the _experession_ Range in the Row/Colum Labels areas of the PivotTable's range, or xLSortValues when _Key1_ additionally targets a cell in the Values or Sub/Grand Totals areas using R1C1 notation."
+        },
+        {
+          "name": "Order2",
+          "type": "XlSortOrder",
+          "optional": true,
+          "description": "Determines the sort order for the values specified in _Key2_."
+        },
+        {
+          "name": "Key3",
+          "type": "Variant",
+          "optional": true,
+          "description": "Third sort field; cannot be used when sorting a PivotTable."
+        },
+        {
+          "name": "Order3",
+          "type": "XlSortOrder",
+          "optional": true,
+          "description": "Determines the sort order for the values specified in _Key3_."
+        },
+        {
+          "name": "Header",
+          "type": "XlYesNoGuess",
+          "optional": true,
+          "description": "Specifies whether the first row contains header information. xlNo is the default value; specify xlGuess if you want Excel to attempt to determine the header."
+        },
+        {
+          "name": "OrderCustom",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies a one-based integer offset into the list of custom sort orders."
+        },
+        {
+          "name": "MatchCase",
+          "type": "Variant",
+          "optional": true,
+          "description": "Set to True to perform a case-sensitive sort, False to perform a non-case-sensitive sort; cannot be used with PivotTables."
+        },
+        {
+          "name": "Orientation",
+          "type": "XlSortOrientation",
+          "optional": true,
+          "description": "Specifies if the sort should be by row (default) or column. Set xlSortColumns value to 1 to sort by column. Set xlSortRows value to 2 to sort by row (this is the default value)."
+        },
+        {
+          "name": "SortMethod",
+          "type": "XlSortMethod",
+          "optional": true,
+          "description": "Specifies the sort method."
+        },
+        {
+          "name": "DataOption1",
+          "type": "XlSortDataOption",
+          "optional": true,
+          "description": "Specifies how to sort text in the range specified in _Key1_; does not apply to PivotTable sorting."
+        },
+        {
+          "name": "DataOption2",
+          "type": "XlSortDataOption",
+          "optional": true,
+          "description": "Specifies how to sort text in the range specified in _Key2_; does not apply to PivotTable sorting."
+        },
+        {
+          "name": "DataOption3",
+          "type": "XlSortDataOption",
+          "optional": true,
+          "description": "Specifies how to sort text in the range specified in _Key3_; does not apply to PivotTable sorting."
+        },
+        {
+          "name": "SubField1",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AutoFilter",
+      "kind": "method",
+      "signature": "AutoFilter([Field As Variant], [Criteria1 As Variant], [Operator As XlAutoFilterOperator], [Criteria2 As Variant], [VisibleDropDown As Variant], [SubField As Variant]) As Variant",
+      "description": "Filters a list by using the AutoFilter.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Field",
+          "type": "Variant",
+          "optional": true,
+          "description": "The integer offset of the field on which you want to base the filter (from the left of the list; the leftmost field is field one)."
+        },
+        {
+          "name": "Criteria1",
+          "type": "Variant",
+          "optional": true,
+          "description": "The criteria (a string; for example, \"101\"). Use \"=\" to find blank fields, \"<>\" to find non-blank fields, and \"><\" to select (No Data) fields in data types. If this argument is omitted, the criteria is All. If _Operator_ is xlTop10Items, _Criteria1_ specifies the number of items (for example, \"10\")."
+        },
+        {
+          "name": "Operator",
+          "type": "XlAutoFilterOperator",
+          "optional": true,
+          "description": "An XlAutoFilterOperator constant specifying the type of filter."
+        },
+        {
+          "name": "Criteria2",
+          "type": "Variant",
+          "optional": true,
+          "description": "The second criteria (a string). Used with _Criteria1_ and _Operator_ to construct compound criteria. Also used as single criteria on date fields filtering by date, month or year. Followed by an Array detailing the filtering Array(Level, Date). Where Level is 0-2 (year,month,date) and Date is one valid Date inside the filtering period."
+        },
+        {
+          "name": "VisibleDropDown",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to display the AutoFilter drop-down arrow for the filtered field. False to hide the AutoFilter drop-down arrow for the filtered field. True by default."
+        },
+        {
+          "name": "SubField",
+          "type": "Variant",
+          "optional": true,
+          "description": "The field from a data type on which to apply the criteria (for example, the \"Population\" field from Geography or \"Volume\" field from Stocks). Omitting this value targets the \"(Display Value)\"."
+        }
+      ]
+    },
+    {
+      "name": "ConvertToLinkedDataType",
+      "kind": "method",
+      "signature": "ConvertToLinkedDataType(ServiceID As Long, LanguageCulture As String)",
+      "description": "Attempts to convert all the cells in the range to a Linked data type such as Stocks or Geography.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ServiceID",
+          "type": "Long",
+          "optional": false,
+          "description": "The ID of the service that will provide the linked entity."
+        },
+        {
+          "name": "LanguageCulture",
+          "type": "String",
+          "optional": false,
+          "description": "A string representing the LCID of the language and culture that you would like to use for the linked entity."
+        }
+      ]
+    },
+    {
+      "name": "SetCellDataTypeFromCell",
+      "kind": "method",
+      "signature": "SetCellDataTypeFromCell(SourceCell As Range)",
+      "description": "Creates another instance of a Linked data type, such as Stocks or Geography, that exists in another cell. The new instance will be linked to the data source in the same way as the original, so it will refresh from the service if you call the Workbook.RefreshAll method.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SourceCell",
+          "type": "Range",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DataTypeToText",
+      "kind": "method",
+      "signature": "DataTypeToText()",
+      "description": "If any of the cells in the range are a Linked data type, such as Stocks or Geography, this call will convert their values to text.",
+      "returns": "void"
+    },
+    {
+      "name": "RefreshLinkedDataType",
+      "kind": "method",
+      "signature": "RefreshLinkedDataType([DomainID As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "DomainID",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Replace",
+      "kind": "method",
+      "signature": "Replace(What As Variant, Replacement As Variant, [LookAt As Variant], [SearchOrder As Variant], [MatchCase As Variant], [MatchByte As Variant], [SearchFormat As Variant], [ReplaceFormat As Variant], [FormulaVersion As Variant]) As Boolean",
+      "description": "Returns a Boolean indicating characters in cells within the specified range. Using this method doesn't change either the selection or the active cell.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "What",
+          "type": "Variant",
+          "optional": false,
+          "description": "The string that you want Microsoft Excel to search for."
+        },
+        {
+          "name": "Replacement",
+          "type": "Variant",
+          "optional": false,
+          "description": "The replacement string."
+        },
+        {
+          "name": "LookAt",
+          "type": "Variant",
+          "optional": true,
+          "description": "Can be one of the following XlLookAt constants: xlWhole or xlPart."
+        },
+        {
+          "name": "SearchOrder",
+          "type": "Variant",
+          "optional": true,
+          "description": "Can be one of the following XlSearchOrder constants: xlByRows or xlByColumns."
+        },
+        {
+          "name": "MatchCase",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to make the search case-sensitive."
+        },
+        {
+          "name": "MatchByte",
+          "type": "Variant",
+          "optional": true,
+          "description": "Use this argument only if you have selected or installed double-byte language support in Microsoft Excel. True to have double-byte characters match only double-byte characters. False to have double-byte characters match their single-byte equivalents."
+        },
+        {
+          "name": "SearchFormat",
+          "type": "Variant",
+          "optional": true,
+          "description": "The search format for the method."
+        },
+        {
+          "name": "ReplaceFormat",
+          "type": "Variant",
+          "optional": true,
+          "description": "The replace format for the method."
+        },
+        {
+          "name": "FormulaVersion",
+          "type": "Variant",
+          "optional": true,
+          "description": "Determines whether to replace in Dynamic Array formula state constants: xlReplaceFormula or xlReplaceFormula2."
+        }
+      ]
+    },
+    {
+      "name": "InsertPictureInCell",
+      "kind": "method",
+      "signature": "InsertPictureInCell(PictureURI As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "PictureURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PastePictureInCell",
+      "kind": "method",
+      "signature": "PastePictureInCell()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "PlacePictureOverCells",
+      "kind": "method",
+      "signature": "PlacePictureOverCells([AsReference As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "AsReference",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "UpdatePictureInCellAlternativeText",
+      "kind": "method",
+      "signature": "UpdatePictureInCellAlternativeText(AlternativeText As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "AlternativeText",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ClearContents",
+      "kind": "method",
+      "signature": "ClearContents([RemoveControls As Variant]) As Variant",
+      "description": "Clears formulas and values from the range.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "RemoveControls",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ResetContents",
+      "kind": "method",
+      "signature": "ResetContents()",
+      "description": "Clears the cell values of the cells in the range, with special consideration given to cell controls.",
+      "returns": "void"
+    },
+    {
+      "name": "RemoveControls",
+      "kind": "method",
+      "signature": "RemoveControls()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "TogglePythonMarshalMode",
+      "kind": "method",
+      "signature": "TogglePythonMarshalMode([MarshalMode As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "MarshalMode",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

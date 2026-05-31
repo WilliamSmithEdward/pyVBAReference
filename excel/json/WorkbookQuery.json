@@ -1,0 +1,85 @@
+{
+  "name": "WorkbookQuery",
+  "kind": "Dispatch Interface",
+  "guid": "{000244EB-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "An object that represents a query that was created by Power Query. Introduced in Office 2016.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "The name of the query. Read/write String."
+    },
+    {
+      "name": "Formula",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "The Power Query M formula for the object. Read/write String."
+    },
+    {
+      "name": "Description",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "The description of the query. Read/write String."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete([DeleteConnection As Variant])",
+      "description": "Deletes this query and its underlying connection and removes it from the Queries collection.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "DeleteConnection",
+          "type": "Variant",
+          "optional": true,
+          "description": "True To delete the both the query and its underlying connection . The default is False."
+        }
+      ]
+    },
+    {
+      "name": "Refresh",
+      "kind": "method",
+      "signature": "Refresh()",
+      "description": "Refreshes this query and its underlying connection.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,70 @@
+{
+  "name": "WorkflowTemplate",
+  "kind": "Dispatch Interface",
+  "guid": "{000CD902-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents one of the workflows available for the current document.",
+  "remarks": "A WorkflowTemplate object corresponds to one of the options displayed in the Start New Workflow dialog box. On a webpage, the workflow templates are displayed as a list of options.",
+  "example": "Sub DisplayWorkTemplates()\nDim objWorkflowTemplates As WorkflowTemplates\nDim objWorkflowTemplate As WorkflowTemplate\nDim cnt As Integer\n\nSet objWorkflowTemplates = Document.GetWorkflowTemplates()\n\nFor cnt = 1 To objWorkflowTemplates.Count\n Debug.Print objWorkflowTemplate(cnt).Name\nNext\n\nSet objWorkflowTemplate = objWorkflowTemplates(1)\nobjWorkflowTemplate.Show\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the WorkflowTemplate object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the WorkflowTemplate object was created. Read-only."
+    },
+    {
+      "name": "Id",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the ID of a template used to create a workflow instance. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the name of the WorkflowTemplate object. Read-only."
+    },
+    {
+      "name": "Description",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the description of a workflow template. Read-only."
+    },
+    {
+      "name": "DocumentLibraryName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the name of the document library associated with the workflow template. Read-only."
+    },
+    {
+      "name": "DocumentLibraryURL",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the URL address of the document library where workflow templates are stored. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Show",
+      "kind": "method",
+      "signature": "Show() As Long",
+      "description": "Displays a workflow-specific configuration user interface for the specified WorkflowTemplate object.",
+      "returns": "Long"
+    }
+  ],
+  "events": []
+}

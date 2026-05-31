@@ -1,0 +1,284 @@
+{
+  "name": "DataLabels",
+  "kind": "Dispatch Interface",
+  "guid": "{000208B3-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of all the DataLabel objects for the specified series.",
+  "remarks": "Each DataLabel object represents a data label for a point or trendline. For a series without definable points (such as an area series), the DataLabels collection contains a single data label.",
+  "example": "With Charts(1).SeriesCollection(1)\n .HasDataLabels = True\n .DataLabels.NumberFormat = \"##.##\"\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that represents the name of the object."
+    },
+    {
+      "name": "HorizontalAlignment",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the horizontal alignment for the specified object."
+    },
+    {
+      "name": "Orientation",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the text orientation."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that determines if the object has a shadow."
+    },
+    {
+      "name": "VerticalAlignment",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the vertical alignment of the specified object."
+    },
+    {
+      "name": "ReadingOrder",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the reading order for the specified object. Can be one of the following XlReadingOrder constants: xlRTL (right-to-left), xlLTR (left-to-right), or xlContext. Read/write Long."
+    },
+    {
+      "name": "AutoText",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the object automatically generates appropriate text based on context. Read/write Boolean."
+    },
+    {
+      "name": "NumberFormat",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value that represents the format code for the object."
+    },
+    {
+      "name": "NumberFormatLinked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the number format is linked to the cells (so that the number format changes in the labels when it changes in the cells). Read/write Boolean."
+    },
+    {
+      "name": "NumberFormatLocal",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the format code for the object as a string in the language of the user."
+    },
+    {
+      "name": "ShowLegendKey",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the data label legend key is visible. Read/write Boolean."
+    },
+    {
+      "name": "Position",
+      "kind": "property",
+      "type": "XlDataLabelPosition",
+      "access": "read/write",
+      "description": "Returns or sets an XlDataLabelPosition value that represents the position of the data label."
+    },
+    {
+      "name": "ShowSeriesName",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean to indicate the series name display behavior for the data labels on a chart. True to show the series name. False to hide. Read/write."
+    },
+    {
+      "name": "ShowCategoryName",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True to display the category name for the data labels on a chart. False to hide. Read/write Boolean."
+    },
+    {
+      "name": "ShowValue",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean corresponding to a specified chart's data label values display behavior. True displays the values. False to hide. Read/write."
+    },
+    {
+      "name": "ShowPercentage",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True to display the percentage value for the data labels on a chart. False to hide. Read/write Boolean."
+    },
+    {
+      "name": "ShowBubbleSize",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True to show the bubble size for the data labels on a chart. False to hide. Read/write Boolean."
+    },
+    {
+      "name": "Separator",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Sets or returns a Variant representing the separator used for the data labels on a chart. Read/write."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "ChartFormat",
+      "access": "read-only",
+      "description": "Returns the ChartFormat object. Read-only."
+    },
+    {
+      "name": "ShowRange",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Used to toggle the Range field if it exists on the data label range. Read/write Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select() As Variant",
+      "description": "Selects the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As DataLabel",
+      "description": "Returns a single object from a collection.",
+      "returns": "DataLabel",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The index number for the object."
+        }
+      ]
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "method",
+      "signature": "_NewEnum() As IUnknown",
+      "description": "",
+      "returns": "IUnknown"
+    },
+    {
+      "name": "_Default",
+      "kind": "method",
+      "signature": "_Default(Index As Variant) As DataLabel",
+      "description": "",
+      "returns": "DataLabel",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Propagate",
+      "kind": "method",
+      "signature": "Propagate(Index As Variant)",
+      "description": "Enables you to take the contents and formatting of a single data label and apply it to every other data label in the series.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The index number of the data label to propagate."
+        }
+      ]
+    },
+    {
+      "name": "SetProperty",
+      "kind": "method",
+      "signature": "SetProperty(ID As String, Value As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Value",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetProperty",
+      "kind": "method",
+      "signature": "GetProperty(ID As String) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "ID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,113 @@
+{
+  "name": "CustomTaskPane",
+  "kind": "Class",
+  "guid": "{C5771BE5-A188-466B-AB31-00A6A32B1B1C}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a custom task pane in the container application.",
+  "remarks": "",
+  "example": "public class Connect : Object, Extensibility.IDTExtensibility2, ICustomTaskPaneConsumer\n...\nobject missing = Type.Missing;\npublic CustomTaskPane CTP = null;\n\npublic void CTPFactoryAvailable(ICTPFactory CTPFactoryInst)\n{\n CTP = CTPFactoryInst.CreateCTP(\"SampleActiveX.myControl\", \"Task Pane Example\", missing);\n sampleAX = (myControl)CTP.ContentControl;\n sampleAX.InsertTextClicked += new InsertTextEventHandler(sampleAX_InsertTextClicked);\n CTP.Visible = true;\n}\n...",
+  "properties": [
+    {
+      "name": "Title",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets a String representing the title of a CustomTaskPane object. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Application object of the host application. Read-only."
+    },
+    {
+      "name": "Window",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the parent window object of the CustomTaskPane object. Read-only."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified CustomTaskPane object is visible. Read/write."
+    },
+    {
+      "name": "ContentControl",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Microsoft ActiveX control instance displayed in the custom task pane frame. Read-only."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the height of the CustomTaskPane object (in points). Read/write."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the width of the task pane specified by the CustomTaskPane object. Read/write."
+    },
+    {
+      "name": "DockPosition",
+      "kind": "property",
+      "type": "MsoCTPDockPosition",
+      "access": "read/write",
+      "description": "Gets or sets an enumerated value specifying the docked position of a CustomTaskPane object. Read/write."
+    },
+    {
+      "name": "DockPositionRestrict",
+      "kind": "property",
+      "type": "MsoCTPDockPositionRestrict",
+      "access": "read/write",
+      "description": "Gets or sets an enumerated value specifying a restriction on the orientation of a CustomTaskPane object. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the active custom task pane.",
+      "returns": "void"
+    }
+  ],
+  "events": [
+    {
+      "name": "VisibleStateChange",
+      "kind": "event",
+      "signature": "VisibleStateChange(CustomTaskPaneInst As _CustomTaskPane)",
+      "description": "Occurs when the user changes the visibility of the custom task pane.",
+      "parameters": [
+        {
+          "name": "CustomTaskPaneInst",
+          "type": "_CustomTaskPane",
+          "optional": false,
+          "description": "The active task pane."
+        }
+      ]
+    },
+    {
+      "name": "DockPositionStateChange",
+      "kind": "event",
+      "signature": "DockPositionStateChange(CustomTaskPaneInst As _CustomTaskPane)",
+      "description": "Occurs when the user changes the docking position of the active custom task pane.",
+      "parameters": [
+        {
+          "name": "CustomTaskPaneInst",
+          "type": "_CustomTaskPane",
+          "optional": false,
+          "description": "The active custom task pane."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "name": "DocumentProperty",
+  "kind": "Interface",
+  "guid": "{2DF8D04E-5BFA-101B-BDE5-00AA0044DE52}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a custom or built-in document property of a container document. The DocumentProperty object is a member of the DocumentProperties collection.",
+  "remarks": "Use the Microsoft Word Document.BuiltinDocumentProperties(_index_) property, where _index_ is the name or index number of the built-in document property, to return a single DocumentProperty object that represents a specific built-in document property. Use the Word Document.CustomDocumentProperties(_index_) property, where _index_ is the name or index number of the custom document property, to return a DocumentProperty object that represents a specific custom document property.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the DocumentProperty object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": "Gets or sets the name of a document property. Read/write."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": "Gets or sets the value of a document property. Read/write."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": "Gets or sets the document property type. Read-only for built-in document properties; read/write for custom document properties."
+    },
+    {
+      "name": "LinkToContent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": "Is True if the value of the custom document property is linked to the content of the container document. False if the value is static. Read/write."
+    },
+    {
+      "name": "LinkSource",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": "Gets or sets the source of a linked custom document property. Read/write."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the DocumentProperty object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the DocumentProperty object was created. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Removes a custom document property.",
+      "returns": "HRESULT"
+    }
+  ],
+  "events": []
+}

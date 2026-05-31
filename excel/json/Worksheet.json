@@ -1,0 +1,1510 @@
+{
+  "name": "Worksheet",
+  "kind": "Class",
+  "guid": "{00020820-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a worksheet.",
+  "remarks": "The Worksheet object is a member of the Worksheets collection. The Worksheets collection contains all the Worksheet objects in a workbook. The Worksheet object is also a member of the Sheets collection. The Sheets collection contains all the sheets in the workbook (both chart sheets and worksheets).",
+  "example": "Worksheets(1).Visible = False",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "CodeName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the code name for the object. Read-only String."
+    },
+    {
+      "name": "_CodeName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the index number of the object within the collection of similar objects."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value that represents the object name."
+    },
+    {
+      "name": "Next",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns a Worksheet object that represents the next sheet."
+    },
+    {
+      "name": "PageSetup",
+      "kind": "property",
+      "type": "PageSetup",
+      "access": "read-only",
+      "description": "Returns a PageSetup object that contains all the page setup settings for the specified object. Read-only."
+    },
+    {
+      "name": "Previous",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns a Worksheet object that represents the previous sheet."
+    },
+    {
+      "name": "ProtectContents",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the contents of the sheet are protected. This protects the individual cells. To turn on content protection, use the Protect method with the _Contents_ argument set to True. Read-only Boolean."
+    },
+    {
+      "name": "ProtectDrawingObjects",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if shapes are protected. To turn on shape protection, use the Protect method with the _DrawingObjects_ argument set to True. Read-only Boolean."
+    },
+    {
+      "name": "ProtectionMode",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if user-interface-only protection is turned on. To turn on user interface protection, use the Protect method with the _UserInterfaceOnly_ argument set to True. Read-only Boolean."
+    },
+    {
+      "name": "ProtectScenarios",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the worksheet scenarios are protected. Read-only Boolean."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "XlSheetVisibility",
+      "access": "read/write",
+      "description": "Returns or sets an XlSheetVisibility value that determines whether the object is visible."
+    },
+    {
+      "name": "Shapes",
+      "kind": "property",
+      "type": "Shapes",
+      "access": "read-only",
+      "description": "Returns a Shapes collection that represents all the shapes on the worksheet. Read-only."
+    },
+    {
+      "name": "TransitionExpEval",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Excel uses Lotus 1-2-3 expression evaluation rules for the worksheet. Read/write Boolean."
+    },
+    {
+      "name": "AutoFilterMode",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the AutoFilter drop-down arrows are currently displayed on the sheet. This property is independent of the FilterMode property. Read/write Boolean."
+    },
+    {
+      "name": "EnableCalculation",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Excel automatically recalculates the worksheet when necessary. False if Excel doesn't recalculate the sheet. Read/write Boolean."
+    },
+    {
+      "name": "Cells",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents all the cells on the worksheet (not just the cells that are currently in use)."
+    },
+    {
+      "name": "CircularReference",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the range containing the first circular reference on the sheet, or returns Nothing if there's no circular reference on the sheet. The circular reference must be removed before calculation can proceed."
+    },
+    {
+      "name": "Columns",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents all the columns on the specified worksheet."
+    },
+    {
+      "name": "ConsolidationFunction",
+      "kind": "property",
+      "type": "XlConsolidationFunction",
+      "access": "read-only",
+      "description": "Returns the function code used for the current consolidation. Can be one of the constants of XlConsolidationFunction. Read-only Long."
+    },
+    {
+      "name": "ConsolidationOptions",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns a three-element array of consolidation options, as shown in the following table. If the element is True, that option is set. Read-only Variant."
+    },
+    {
+      "name": "ConsolidationSources",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns an array of string values that name the source sheets for the worksheet's current consolidation. Returns Empty if there's no consolidation on the sheet. Read-only Variant."
+    },
+    {
+      "name": "EnableAutoFilter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if AutoFilter arrows are enabled when user-interface-only protection is turned on. Read/write Boolean."
+    },
+    {
+      "name": "EnableSelection",
+      "kind": "property",
+      "type": "XlEnableSelection",
+      "access": "read/write",
+      "description": "Returns or sets what can be selected on the sheet. Read/write XlEnableSelection."
+    },
+    {
+      "name": "EnableOutlining",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if outlining symbols are enabled when user-interface-only protection is turned on. Read/write Boolean."
+    },
+    {
+      "name": "EnablePivotTable",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if PivotTable controls and actions are enabled when user-interface-only protection is turned on. Read/write Boolean."
+    },
+    {
+      "name": "FilterMode",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the worksheet is in the filter mode. Read-only Boolean."
+    },
+    {
+      "name": "Names",
+      "kind": "property",
+      "type": "Names",
+      "access": "read-only",
+      "description": "Returns a Names collection that represents all the worksheet-specific names (names defined with the \"WorksheetName!\" prefix). Read-only Names object."
+    },
+    {
+      "name": "Outline",
+      "kind": "property",
+      "type": "Outline",
+      "access": "read-only",
+      "description": "Returns an Outline object that represents the outline for the specified worksheet. Read-only."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents a cell or a range of cells."
+    },
+    {
+      "name": "Rows",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents all the rows on the specified worksheet."
+    },
+    {
+      "name": "ScrollArea",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the range where scrolling is allowed, as an A1-style range reference. Cells outside the scroll area cannot be selected. Read/write String."
+    },
+    {
+      "name": "StandardHeight",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": "Returns the standard (default) height of all the rows on the worksheet, in points. Read-only Double."
+    },
+    {
+      "name": "StandardWidth",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the standard (default) width of all the columns on the worksheet. Read/write Double."
+    },
+    {
+      "name": "TransitionFormEntry",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Excel uses Lotus 1-2-3 formula entry rules for the worksheet. Read/write Boolean."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "XlSheetType",
+      "access": "read-only",
+      "description": "Returns an XlSheetType value that represents the worksheet type."
+    },
+    {
+      "name": "UsedRange",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the used range on the specified worksheet. Read-only."
+    },
+    {
+      "name": "HPageBreaks",
+      "kind": "property",
+      "type": "HPageBreaks",
+      "access": "read-only",
+      "description": "Returns an HPageBreaks collection that represents the horizontal page breaks on the sheet. Read-only."
+    },
+    {
+      "name": "VPageBreaks",
+      "kind": "property",
+      "type": "VPageBreaks",
+      "access": "read-only",
+      "description": "Returns a VPageBreaks collection that represents the vertical page breaks on the sheet. Read-only."
+    },
+    {
+      "name": "QueryTables",
+      "kind": "property",
+      "type": "QueryTables",
+      "access": "read-only",
+      "description": "Returns the QueryTables collection that represents all the query tables on the specified worksheet. Read-only."
+    },
+    {
+      "name": "DisplayPageBreaks",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if page breaks (both automatic and manual) on the specified worksheet are displayed. Read/write Boolean."
+    },
+    {
+      "name": "Comments",
+      "kind": "property",
+      "type": "Comments",
+      "access": "read-only",
+      "description": "Returns a Comments collection that represents all the comments for the specified worksheet. Read-only."
+    },
+    {
+      "name": "Hyperlinks",
+      "kind": "property",
+      "type": "Hyperlinks",
+      "access": "read-only",
+      "description": "Returns a Hyperlinks collection that represents the hyperlinks for the worksheet."
+    },
+    {
+      "name": "DisplayRightToLeft",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified worksheet is displayed from right to left instead of from left to right. False if the object is displayed from left to right. Read-only Boolean."
+    },
+    {
+      "name": "Tab",
+      "kind": "property",
+      "type": "Tab",
+      "access": "read-only",
+      "description": "Returns a Tab object for a worksheet."
+    },
+    {
+      "name": "MailEnvelope",
+      "kind": "property",
+      "type": "MsoEnvelope",
+      "access": "read-only",
+      "description": "Represents an email header for a document."
+    },
+    {
+      "name": "CustomProperties",
+      "kind": "property",
+      "type": "CustomProperties",
+      "access": "read-only",
+      "description": "Returns a CustomProperties object representing the identifier information associated with a worksheet."
+    },
+    {
+      "name": "Protection",
+      "kind": "property",
+      "type": "Protection",
+      "access": "read-only",
+      "description": "Returns a Protection object that represents the protection options of the worksheet."
+    },
+    {
+      "name": "ListObjects",
+      "kind": "property",
+      "type": "ListObjects",
+      "access": "read-only",
+      "description": "Returns a collection of ListObject objects on the worksheet. Read-only ListObjects collection."
+    },
+    {
+      "name": "EnableFormatConditionsCalculation",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets if conditional formats occur automatically as needed. Read/write Boolean."
+    },
+    {
+      "name": "PrintedCommentPages",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of comment pages that will be printed for the current worksheet. Read-only."
+    },
+    {
+      "name": "CommentsThreaded",
+      "kind": "property",
+      "type": "CommentsThreaded",
+      "access": "read-only",
+      "description": "Returns a CommentsThreaded collection that represents all the top-level/root comments (no replies) for the specified worksheet. Includes legacy and modern comments. Read-only."
+    },
+    {
+      "name": "AutoFilter",
+      "kind": "property",
+      "type": "AutoFilter",
+      "access": "read-only",
+      "description": "Returns an AutoFilter object if filtering is on. Read-only."
+    },
+    {
+      "name": "Sort",
+      "kind": "property",
+      "type": "Sort",
+      "access": "read-only",
+      "description": "Returns a Sort object. Read-only."
+    },
+    {
+      "name": "NamedSheetViews",
+      "kind": "property",
+      "type": "NamedSheetViewCollection",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate()",
+      "description": "Makes the current sheet the active sheet.",
+      "returns": "void"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy([Before As Variant], [After As Variant])",
+      "description": "Copies the sheet to another location in the current workbook or a new workbook.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Before",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sheet before which the copied sheet will be placed. You cannot specify _Before_ if you specify _After_."
+        },
+        {
+          "name": "After",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sheet after which the copied sheet will be placed. You cannot specify _After_ if you specify _Before_."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move([Before As Variant], [After As Variant])",
+      "description": "Moves the sheet to another location in the workbook.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Before",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sheet before which the moved sheet will be placed. You cannot specify _Before_ if you specify _After_."
+        },
+        {
+          "name": "After",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sheet after which the moved sheet will be placed. You cannot specify _After_ if you specify _Before_."
+        }
+      ]
+    },
+    {
+      "name": "PrintPreview",
+      "kind": "method",
+      "signature": "PrintPreview([EnableChanges As Variant])",
+      "description": "Shows a preview of the object as it would look when printed.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "EnableChanges",
+          "type": "Variant",
+          "optional": true,
+          "description": "Passes a Boolean value to specify if the user can change the margins and other page setup options available in print preview."
+        }
+      ]
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select([Replace As Variant])",
+      "description": "Selects the object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Replace",
+          "type": "Variant",
+          "optional": true,
+          "description": "(used only with sheets). True to replace the current selection with the specified object. False to extend the current selection to include any previously selected objects and the specified object."
+        }
+      ]
+    },
+    {
+      "name": "Unprotect",
+      "kind": "method",
+      "signature": "Unprotect([Password As Variant])",
+      "description": "Removes protection from a sheet or workbook. This method has no effect if the sheet or workbook isn't protected.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Password",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that denotes the case-sensitive password to use to unprotect the sheet or workbook. If the sheet or workbook isn't protected with a password, this argument is ignored. If you omit this argument for a sheet that's protected with a password, you'll be prompted for the password. If you omit this argument for a workbook that's protected with a password, the method fails."
+        }
+      ]
+    },
+    {
+      "name": "SetBackgroundPicture",
+      "kind": "method",
+      "signature": "SetBackgroundPicture(Filename As String)",
+      "description": "Sets the background graphic for a worksheet.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Filename",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the graphic file."
+        }
+      ]
+    },
+    {
+      "name": "Calculate",
+      "kind": "method",
+      "signature": "Calculate()",
+      "description": "Calculates all open workbooks, a specific worksheet in a workbook, or a specified range of cells on a worksheet, as shown in the following table.",
+      "returns": "void"
+    },
+    {
+      "name": "ChartObjects",
+      "kind": "method",
+      "signature": "ChartObjects([Index As Variant]) As Object",
+      "description": "Returns an object that represents either a single embedded chart (a ChartObject object) or a collection of all the embedded charts (a ChartObjects object) on the sheet.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name or number of the chart. This argument can be an array to specify more than one chart."
+        }
+      ]
+    },
+    {
+      "name": "CheckSpelling",
+      "kind": "method",
+      "signature": "CheckSpelling([CustomDictionary As Variant], [IgnoreUppercase As Variant], [AlwaysSuggest As Variant], [SpellLang As Variant])",
+      "description": "Checks the spelling of an object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "CustomDictionary",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that indicates the file name of the custom dictionary to be examined if the word isn't found in the main dictionary. If this argument is omitted, the currently specified dictionary is used."
+        },
+        {
+          "name": "IgnoreUppercase",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have Microsoft Excel ignore words that are all uppercase. False to have Excel check words that are all uppercase. If this argument is omitted, the current setting will be used."
+        },
+        {
+          "name": "AlwaysSuggest",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have Excel display a list of suggested alternate spellings when an incorrect spelling is found. False to have Excel wait for you to input the correct spelling. If this argument is omitted, the current setting will be used."
+        },
+        {
+          "name": "SpellLang",
+          "type": "Variant",
+          "optional": true,
+          "description": "The language of the dictionary being used. Can be one of the MsoLanguageID values."
+        }
+      ]
+    },
+    {
+      "name": "ClearArrows",
+      "kind": "method",
+      "signature": "ClearArrows()",
+      "description": "Clears the tracer arrows from the worksheet. Tracer arrows are added by using the auditing feature.",
+      "returns": "void"
+    },
+    {
+      "name": "Evaluate",
+      "kind": "method",
+      "signature": "Evaluate(Name As Variant) As Variant",
+      "description": "Converts a Microsoft Excel name to an object or a value.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name of the object, using the naming convention of Excel."
+        }
+      ]
+    },
+    {
+      "name": "_Evaluate",
+      "kind": "method",
+      "signature": "_Evaluate(Name As Variant) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ResetAllPageBreaks",
+      "kind": "method",
+      "signature": "ResetAllPageBreaks()",
+      "description": "Resets all page breaks on the specified worksheet.",
+      "returns": "void"
+    },
+    {
+      "name": "OLEObjects",
+      "kind": "method",
+      "signature": "OLEObjects([Index As Variant]) As Object",
+      "description": "Returns an object that represents either a single OLE object (an OLEObject) or a collection of all OLE objects (an OLEObjects collection) on the chart or sheet. Read-only.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name or number of the OLE object."
+        }
+      ]
+    },
+    {
+      "name": "Paste",
+      "kind": "method",
+      "signature": "Paste([Destination As Variant], [Link As Variant])",
+      "description": "Pastes the contents of the Clipboard onto the sheet.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Destination",
+          "type": "Variant",
+          "optional": true,
+          "description": "A Range object that specifies where the Clipboard contents should be pasted. If this argument is omitted, the current selection is used. This argument can be specified only if the contents of the Clipboard can be pasted into a range. If this argument is specified, the _Link_ argument cannot be used."
+        },
+        {
+          "name": "Link",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to establish a link to the source of the pasted data. If this argument is specified, the _Destination_ argument cannot be used. The default value is False."
+        }
+      ]
+    },
+    {
+      "name": "PivotTables",
+      "kind": "method",
+      "signature": "PivotTables([Index As Variant]) As Object",
+      "description": "Returns an object that represents either a single PivotTable report (a PivotTable object) or a collection of all the PivotTable reports (a PivotTables object) on a worksheet. Read-only.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name or number of the report."
+        }
+      ]
+    },
+    {
+      "name": "PivotTableWizard",
+      "kind": "method",
+      "signature": "PivotTableWizard([SourceType As Variant], [SourceData As Variant], [TableDestination As Variant], [TableName As Variant], [RowGrand As Variant], [ColumnGrand As Variant], [SaveData As Variant], [HasAutoFormat As Variant], [AutoPage As Variant], [Reserved As Variant], [BackgroundQuery As Variant], [OptimizeCache As Variant], [PageFieldOrder As Variant], [PageFieldWrapCount As Variant], [ReadData As Variant], [Connection As Variant]) As PivotTable",
+      "description": "Creates a new PivotTable report. This method doesn't display the PivotTable Wizard. This method isn't available for OLE DB data sources. Use the Add method to add a PivotTable cache, and then create a PivotTable report based on the cache.",
+      "returns": "PivotTable",
+      "parameters": [
+        {
+          "name": "SourceType",
+          "type": "Variant",
+          "optional": true,
+          "description": "An XlPivotTableSourceType value that represents the source of the report data. If you specify this argument, you must also specify _SourceData_. If _SourceType_ and _SourceData_ are omitted, Microsoft Excel assumes that the source type is xlDatabase, and the source data comes from the named range Database. If this named range doesn't exist, Excel uses the current region if the current selection is in a range of more than 10 cells that contain data. If this isn't true, this method will fail."
+        },
+        {
+          "name": "SourceData",
+          "type": "Variant",
+          "optional": true,
+          "description": "The data for the new report. Can be a Range object, an array of ranges, or a text constant that represents the name of another report. For an external database, _SourceData_ is an array of strings containing the SQL query string, where each element is up to 255 characters in length. You should use the _Connection_ argument to specify the ODBC connection string. For compatibility with earlier versions of Excel, _SourceData_ can be a two-element array. The first element is the connection string specifying the ODBC source for the data. The second element is the SQL query string used to get the data. If you specify _SourceData_, you must also specify _SourceType_. If the active cell is inside the _SourceData_ range, you must specify _TableDestination_ as well."
+        },
+        {
+          "name": "TableDestination",
+          "type": "Variant",
+          "optional": true,
+          "description": "A Range object specifying where the report should be placed on the worksheet. If this argument is omitted, the report is placed at the active cell."
+        },
+        {
+          "name": "TableName",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that specifies the name of the new report."
+        },
+        {
+          "name": "RowGrand",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to show grand totals for rows in the report."
+        },
+        {
+          "name": "ColumnGrand",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to show grand totals for columns in the report."
+        },
+        {
+          "name": "SaveData",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to save data with the report. False to save only the report definition."
+        },
+        {
+          "name": "HasAutoFormat",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have Excel automatically format the report when it's refreshed or when fields are moved."
+        },
+        {
+          "name": "AutoPage",
+          "type": "Variant",
+          "optional": true,
+          "description": "Valid only if _SourceType_ is xlConsolidation. True to have Excel create a page field for the consolidation. If _AutoPage_ is False, you must create the page field or fields."
+        },
+        {
+          "name": "Reserved",
+          "type": "Variant",
+          "optional": true,
+          "description": "Not used by Excel."
+        },
+        {
+          "name": "BackgroundQuery",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have Excel perform queries for the report asynchronously (in the background). The default value is False."
+        },
+        {
+          "name": "OptimizeCache",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to optimize the PivotTable cache when it's constructed. The default value is False."
+        },
+        {
+          "name": "PageFieldOrder",
+          "type": "Variant",
+          "optional": true,
+          "description": "The order in which page fields are added to the PivotTable report's layout. Can be one of the following XlOrder constants: xlDownThenOver (default) or xlOverThenDown."
+        },
+        {
+          "name": "PageFieldWrapCount",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of page fields in each column or row in the PivotTable report. The default value is 0 (zero)."
+        },
+        {
+          "name": "ReadData",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to create a PivotTable cache that contains all records from the external database; this cache can be very large. If _ReadData_ is False, you can set some of the fields as server-based page fields before the data is actually read."
+        },
+        {
+          "name": "Connection",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that contains ODBC settings that allow Excel to connect to an ODBC data source. The connection string has the form ODBC;<connection string>. This argument overrides any previous setting for the PivotCache object's Connection property."
+        }
+      ]
+    },
+    {
+      "name": "Scenarios",
+      "kind": "method",
+      "signature": "Scenarios([Index As Variant]) As Object",
+      "description": "Returns an object that represents either a single scenario (a Scenario object) or a collection of scenarios (a Scenarios object) on the worksheet.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name or number of the scenario. Use an array to specify more than one scenario."
+        }
+      ]
+    },
+    {
+      "name": "ShowAllData",
+      "kind": "method",
+      "signature": "ShowAllData()",
+      "description": "Makes all rows of the currently filtered list visible. If AutoFilter is in use, this method changes the arrows to \"All.\"",
+      "returns": "void"
+    },
+    {
+      "name": "ShowDataForm",
+      "kind": "method",
+      "signature": "ShowDataForm()",
+      "description": "Displays the data form associated with the worksheet.",
+      "returns": "void"
+    },
+    {
+      "name": "ClearCircles",
+      "kind": "method",
+      "signature": "ClearCircles()",
+      "description": "Clears circles from invalid entries on the worksheet.",
+      "returns": "void"
+    },
+    {
+      "name": "CircleInvalid",
+      "kind": "method",
+      "signature": "CircleInvalid()",
+      "description": "Circles invalid entries on the worksheet.",
+      "returns": "void"
+    },
+    {
+      "name": "PasteSpecial",
+      "kind": "method",
+      "signature": "PasteSpecial([Format As Variant], [Link As Variant], [DisplayAsIcon As Variant], [IconFileName As Variant], [IconIndex As Variant], [IconLabel As Variant], [NoHTMLFormatting As Variant])",
+      "description": "Pastes the contents of the Clipboard onto the sheet, using a specified format. Use this method to paste data from other applications or to paste data in a specific format.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Format",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that specifies the Clipboard format of the data."
+        },
+        {
+          "name": "Link",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to establish a link to the source of the pasted data. If the source data isn't suitable for linking or the source application doesn't support linking, this parameter is ignored. The default value is False."
+        },
+        {
+          "name": "DisplayAsIcon",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to display the pasted data as an icon. The default value is False."
+        },
+        {
+          "name": "IconFileName",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the file that contains the icon to use if _DisplayAsIcon_ is True."
+        },
+        {
+          "name": "IconIndex",
+          "type": "Variant",
+          "optional": true,
+          "description": "The index number of the icon within the icon file."
+        },
+        {
+          "name": "IconLabel",
+          "type": "Variant",
+          "optional": true,
+          "description": "The text label of the icon."
+        },
+        {
+          "name": "NoHTMLFormatting",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to remove all formatting, hyperlinks, and images from HTML. False to paste HTML as is. The default value is False."
+        }
+      ]
+    },
+    {
+      "name": "Protect",
+      "kind": "method",
+      "signature": "Protect([Password As Variant], [DrawingObjects As Variant], [Contents As Variant], [Scenarios As Variant], [UserInterfaceOnly As Variant], [AllowFormattingCells As Variant], [AllowFormattingColumns As Variant], [AllowFormattingRows As Variant], [AllowInsertingColumns As Variant], [AllowInsertingRows As Variant], [AllowInsertingHyperlinks As Variant], [AllowDeletingColumns As Variant], [AllowDeletingRows As Variant], [AllowSorting As Variant], [AllowFiltering As Variant], [AllowUsingPivotTables As Variant])",
+      "description": "Protects a worksheet so that it cannot be modified.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Password",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that specifies a case-sensitive password for the worksheet or workbook. If this argument is omitted, you can unprotect the worksheet or workbook without using a password. Otherwise, you must specify the password to unprotect the worksheet or workbook. If you forget the password, you cannot unprotect the worksheet or workbook. Use strong passwords that combine uppercase and lowercase letters, numbers, and symbols. Weak passwords don't mix these elements. Strong password: Y6dh!et5. Weak password: House27. Passwords should be 8 or more characters in length. A pass phrase that uses 14 or more characters is better. It's critical that you remember your password. If you forget your password, Microsoft cannot retrieve it. Store the passwords that you write down in a secure place away from the information that they help protect."
+        },
+        {
+          "name": "DrawingObjects",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to protect shapes. The default value is True."
+        },
+        {
+          "name": "Contents",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to protect contents. For a chart, this protects the entire chart. For a worksheet, this protects the locked cells. The default value is True."
+        },
+        {
+          "name": "Scenarios",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to protect scenarios. This argument is valid only for worksheets. The default value is True."
+        },
+        {
+          "name": "UserInterfaceOnly",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to protect the user interface, but not macros. If this argument is omitted, protection applies both to macros and to the user interface."
+        },
+        {
+          "name": "AllowFormattingCells",
+          "type": "Variant",
+          "optional": true,
+          "description": "True allows the user to format any cell on a protected worksheet. The default value is False."
+        },
+        {
+          "name": "AllowFormattingColumns",
+          "type": "Variant",
+          "optional": true,
+          "description": "True allows the user to format any column on a protected worksheet. The default value is False."
+        },
+        {
+          "name": "AllowFormattingRows",
+          "type": "Variant",
+          "optional": true,
+          "description": "True allows the user to format any row on a protected worksheet. The default value is False."
+        },
+        {
+          "name": "AllowInsertingColumns",
+          "type": "Variant",
+          "optional": true,
+          "description": "True allows the user to insert columns on the protected worksheet. The default value is False."
+        },
+        {
+          "name": "AllowInsertingRows",
+          "type": "Variant",
+          "optional": true,
+          "description": "True allows the user to insert rows on the protected worksheet. The default value is False."
+        },
+        {
+          "name": "AllowInsertingHyperlinks",
+          "type": "Variant",
+          "optional": true,
+          "description": "True allows the user to insert hyperlinks on the protected worksheet. The default value is False."
+        },
+        {
+          "name": "AllowDeletingColumns",
+          "type": "Variant",
+          "optional": true,
+          "description": "True allows the user to delete columns on the protected worksheet, where every cell in the column to be deleted is unlocked. The default value is False."
+        },
+        {
+          "name": "AllowDeletingRows",
+          "type": "Variant",
+          "optional": true,
+          "description": "True allows the user to delete rows on the protected worksheet, where every cell in the row to be deleted is unlocked. The default value is False."
+        },
+        {
+          "name": "AllowSorting",
+          "type": "Variant",
+          "optional": true,
+          "description": "True allows the user to sort on the protected worksheet. Every cell in the sort range must be unlocked or unprotected. The default value is False."
+        },
+        {
+          "name": "AllowFiltering",
+          "type": "Variant",
+          "optional": true,
+          "description": "True allows the user to set filters on the protected worksheet. Users can change filter criteria but can not enable or disable an auto filter. Users can set filters on an existing auto filter. The default value is False."
+        },
+        {
+          "name": "AllowUsingPivotTables",
+          "type": "Variant",
+          "optional": true,
+          "description": "True allows the user to use PivotTable reports on the protected worksheet. The default value is False."
+        }
+      ]
+    },
+    {
+      "name": "XmlDataQuery",
+      "kind": "method",
+      "signature": "XmlDataQuery(XPath As String, [SelectionNamespaces As Variant], [Map As Variant]) As Range",
+      "description": "Returns a Range object that represents the cells mapped to a particular XPath. Returns Nothing if the specified XPath has not been mapped to the worksheet, or if the mapped range is empty.",
+      "returns": "Range",
+      "parameters": [
+        {
+          "name": "XPath",
+          "type": "String",
+          "optional": false,
+          "description": "The XPath to query for."
+        },
+        {
+          "name": "SelectionNamespaces",
+          "type": "Variant",
+          "optional": true,
+          "description": "A space-delimited String that contains the namespaces referenced in the XPath parameter. A run-time error is generated if one of the specified namespaces cannot be resolved."
+        },
+        {
+          "name": "Map",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specify an XmlMap if you want to query for the XPath within a specific map."
+        }
+      ]
+    },
+    {
+      "name": "XmlMapQuery",
+      "kind": "method",
+      "signature": "XmlMapQuery(XPath As String, [SelectionNamespaces As Variant], [Map As Variant]) As Range",
+      "description": "Returns a Range object that represents the cells mapped to a particular XPath. Returns Nothing if the specified XPath has not been mapped to the worksheet.",
+      "returns": "Range",
+      "parameters": [
+        {
+          "name": "XPath",
+          "type": "String",
+          "optional": false,
+          "description": "The XPath to query for."
+        },
+        {
+          "name": "SelectionNamespaces",
+          "type": "Variant",
+          "optional": true,
+          "description": "A space-delimited String that contains the namespaces referenced in the XPath parameter. A run-time error is generated if one of the specified namespaces cannot be resolved."
+        },
+        {
+          "name": "Map",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specify an XML map if you want to query for the XPath within a specific map."
+        }
+      ]
+    },
+    {
+      "name": "PrintOut",
+      "kind": "method",
+      "signature": "PrintOut([From As Variant], [To As Variant], [Copies As Variant], [Preview As Variant], [ActivePrinter As Variant], [PrintToFile As Variant], [Collate As Variant], [PrToFileName As Variant], [IgnorePrintAreas As Variant])",
+      "description": "Prints the object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "From",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of the page at which to start printing. If this argument is omitted, printing starts at the beginning."
+        },
+        {
+          "name": "To",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of the last page to print. If this argument is omitted, printing ends with the last page."
+        },
+        {
+          "name": "Copies",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of copies to print. If this argument is omitted, one copy is printed."
+        },
+        {
+          "name": "Preview",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have Microsoft Excel invoke print preview before printing the object. False (or omitted) to print the object immediately."
+        },
+        {
+          "name": "ActivePrinter",
+          "type": "Variant",
+          "optional": true,
+          "description": "Sets the name of the active printer."
+        },
+        {
+          "name": "PrintToFile",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to print to a file. If _PrToFileName_ is not specified, Excel prompts the user to enter the name of the output file."
+        },
+        {
+          "name": "Collate",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to collate multiple copies."
+        },
+        {
+          "name": "PrToFileName",
+          "type": "Variant",
+          "optional": true,
+          "description": "If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to."
+        },
+        {
+          "name": "IgnorePrintAreas",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore print areas and print the entire object."
+        }
+      ]
+    },
+    {
+      "name": "ExportAsFixedFormat",
+      "kind": "method",
+      "signature": "ExportAsFixedFormat(Type As XlFixedFormatType, [Filename As Variant], [Quality As Variant], [IncludeDocProperties As Variant], [IgnorePrintAreas As Variant], [From As Variant], [To As Variant], [OpenAfterPublish As Variant], [FixedFormatExtClassPtr As Variant], [WorkIdentity As Variant])",
+      "description": "Exports to a file of the specified format.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "XlFixedFormatType",
+          "optional": false,
+          "description": "The type of file format to export to."
+        },
+        {
+          "name": "Filename",
+          "type": "Variant",
+          "optional": true,
+          "description": "The file name of the file to be saved. You can include a full path, or Excel saves the file in the current folder."
+        },
+        {
+          "name": "Quality",
+          "type": "Variant",
+          "optional": true,
+          "description": "Optional XlFixedFormatQuality. Specifies the quality of the published file."
+        },
+        {
+          "name": "IncludeDocProperties",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to include the document properties; otherwise, False."
+        },
+        {
+          "name": "IgnorePrintAreas",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore any print areas set when publishing; otherwise, False."
+        },
+        {
+          "name": "From",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of the page at which to start publishing. If this argument is omitted, publishing starts at the beginning."
+        },
+        {
+          "name": "To",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of the last page to publish. If this argument is omitted, publishing ends with the last page."
+        },
+        {
+          "name": "OpenAfterPublish",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to display the file in the viewer after it is published; otherwise, False."
+        },
+        {
+          "name": "FixedFormatExtClassPtr",
+          "type": "Variant",
+          "optional": true,
+          "description": "Pointer to the FixedFormatExt class."
+        },
+        {
+          "name": "WorkIdentity",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SaveAs",
+      "kind": "method",
+      "signature": "SaveAs(Filename As String, [FileFormat As Variant], [Password As Variant], [WriteResPassword As Variant], [ReadOnlyRecommended As Variant], [CreateBackup As Variant], [AddToMru As Variant], [TextCodepage As Variant], [TextVisualLayout As Variant], [Local As Variant])",
+      "description": "Saves changes to the chart or worksheet in a different file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Filename",
+          "type": "String",
+          "optional": false,
+          "description": "Variant. A string that indicates the name of the file to be saved. You can include a full path; if you don't, Microsoft Excel saves the file in the current folder."
+        },
+        {
+          "name": "FileFormat",
+          "type": "Variant",
+          "optional": true,
+          "description": "The file format to use when you save the file. For a list of valid choices, see the XlFileFormat enumeration. For an existing file, the default format is the last file format specified; for a new file, the default is the format of the version of Excel being used."
+        },
+        {
+          "name": "Password",
+          "type": "Variant",
+          "optional": true,
+          "description": "A case-sensitive string (no more than 15 characters) that indicates the protection password to be given to the file."
+        },
+        {
+          "name": "WriteResPassword",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that indicates the write-reservation password for this file. If a file is saved with the password and the password isn't supplied when the file is opened, the file is opened as read-only."
+        },
+        {
+          "name": "ReadOnlyRecommended",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to display a message when the file is opened, recommending that the file be opened as read-only."
+        },
+        {
+          "name": "CreateBackup",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to create a backup file."
+        },
+        {
+          "name": "AddToMru",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to add this workbook to the list of recently used files. The default value is False."
+        },
+        {
+          "name": "TextCodepage",
+          "type": "Variant",
+          "optional": true,
+          "description": "Not used in U.S. English Microsoft Excel."
+        },
+        {
+          "name": "TextVisualLayout",
+          "type": "Variant",
+          "optional": true,
+          "description": "Not used in U.S. English Microsoft Excel."
+        },
+        {
+          "name": "Local",
+          "type": "Variant",
+          "optional": true,
+          "description": "True saves files against the language of Excel (including control panel settings). False (default) saves files against the language of Visual Basic for Applications (VBA) (which is typically US English unless the VBA project where Workbooks.Open is run from is an old internationalized XL5/95 VBA project)."
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "SelectionChange",
+      "kind": "event",
+      "signature": "SelectionChange(Target As Range)",
+      "description": "Occurs when the selection changes on a worksheet.",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "Range",
+          "optional": false,
+          "description": "The new selected range."
+        }
+      ]
+    },
+    {
+      "name": "BeforeDoubleClick",
+      "kind": "event",
+      "signature": "BeforeDoubleClick(Target As Range, Cancel As Boolean)",
+      "description": "Occurs when a worksheet is double-clicked, before the default double-click action.",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "Range",
+          "optional": false,
+          "description": "The cell nearest to the mouse pointer when the double-click occurs."
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "False when the event occurs. If the event procedure sets this argument to True, the default double-click action isn't performed when the procedure is finished."
+        }
+      ]
+    },
+    {
+      "name": "BeforeRightClick",
+      "kind": "event",
+      "signature": "BeforeRightClick(Target As Range, Cancel As Boolean)",
+      "description": "Occurs when a worksheet is right-clicked, before the default right-click action.",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "Range",
+          "optional": false,
+          "description": "The cell nearest to the mouse pointer when the right-click occurs."
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "False when the event occurs. If the event procedure sets this argument to True, the default right-click action doesn't occur when the procedure is finished."
+        }
+      ]
+    },
+    {
+      "name": "Activate",
+      "kind": "event",
+      "signature": "Activate()",
+      "description": "Occurs when a workbook, worksheet, chart sheet, or embedded chart is activated."
+    },
+    {
+      "name": "Deactivate",
+      "kind": "event",
+      "signature": "Deactivate()",
+      "description": "Occurs when the chart, worksheet, or workbook is deactivated."
+    },
+    {
+      "name": "Calculate",
+      "kind": "event",
+      "signature": "Calculate()",
+      "description": "Occurs after the worksheet is recalculated for the Worksheet object."
+    },
+    {
+      "name": "Change",
+      "kind": "event",
+      "signature": "Change(Target As Range)",
+      "description": "Occurs when cells on the worksheet are changed by the user or by an external link.",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "Range",
+          "optional": false,
+          "description": "The changed range. Can be more than one cell."
+        }
+      ]
+    },
+    {
+      "name": "FollowHyperlink",
+      "kind": "event",
+      "signature": "FollowHyperlink(Target As Hyperlink)",
+      "description": "Occurs when you choose any hyperlink on a worksheet. For application- and workbook-level events, see the Application.SheetFollowHyperlink event and Workbook.SheetFollowHyperlink event.",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "Hyperlink",
+          "optional": false,
+          "description": "A Hyperlink object that represents the destination of the hyperlink."
+        }
+      ]
+    },
+    {
+      "name": "PivotTableUpdate",
+      "kind": "event",
+      "signature": "PivotTableUpdate(Target As PivotTable)",
+      "description": "Occurs after a PivotTable report is updated on a worksheet.",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "PivotTable",
+          "optional": false,
+          "description": "The selected PivotTable report."
+        }
+      ]
+    },
+    {
+      "name": "PivotTableAfterValueChange",
+      "kind": "event",
+      "signature": "PivotTableAfterValueChange(TargetPivotTable As PivotTable, TargetRange As Range)",
+      "description": "Occurs after a cell or range of cells inside a PivotTable are edited or recalculated (for cells that contain formulas).",
+      "parameters": [
+        {
+          "name": "TargetPivotTable",
+          "type": "PivotTable",
+          "optional": false,
+          "description": "The PivotTable that contains the edited or recalculated cells."
+        },
+        {
+          "name": "TargetRange",
+          "type": "Range",
+          "optional": false,
+          "description": "The range that contains all the edited or recalculated cells."
+        }
+      ]
+    },
+    {
+      "name": "PivotTableBeforeAllocateChanges",
+      "kind": "event",
+      "signature": "PivotTableBeforeAllocateChanges(TargetPivotTable As PivotTable, ValueChangeStart As Long, ValueChangeEnd As Long, Cancel As Boolean)",
+      "description": "Occurs before changes are applied to a PivotTable.",
+      "parameters": [
+        {
+          "name": "TargetPivotTable",
+          "type": "PivotTable",
+          "optional": false,
+          "description": "The PivotTable that contains the changes to apply."
+        },
+        {
+          "name": "ValueChangeStart",
+          "type": "Long",
+          "optional": false,
+          "description": "The index to the first change in the associated PivotTableChangeList collection. The index is specified by the Order property of the ValueChange object in the PivotTableChangeList collection."
+        },
+        {
+          "name": "ValueChangeEnd",
+          "type": "Long",
+          "optional": false,
+          "description": "The index to the last change in the associated PivotTableChangeList collection. The index is specified by the Order property of the ValueChange object in the PivotTableChangeList collection."
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "False when the event occurs. If the event procedure sets this argument to True, the changes are not applied to the PivotTable and all edits are lost."
+        }
+      ]
+    },
+    {
+      "name": "PivotTableBeforeCommitChanges",
+      "kind": "event",
+      "signature": "PivotTableBeforeCommitChanges(TargetPivotTable As PivotTable, ValueChangeStart As Long, ValueChangeEnd As Long, Cancel As Boolean)",
+      "description": "Occurs before changes are committed against the OLAP data source for a PivotTable.",
+      "parameters": [
+        {
+          "name": "TargetPivotTable",
+          "type": "PivotTable",
+          "optional": false,
+          "description": "The PivotTable that contains the changes to commit."
+        },
+        {
+          "name": "ValueChangeStart",
+          "type": "Long",
+          "optional": false,
+          "description": "The index to the first change in the associated PivotTableChangeList object. The index is specified by the Order property of the ValueChange object in the PivotTableChangeList collection."
+        },
+        {
+          "name": "ValueChangeEnd",
+          "type": "Long",
+          "optional": false,
+          "description": "The index to the last change in the associated PivotTableChangeList object. The index is specified by the Order property of the ValueChange object in the PivotTableChangeList collection."
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "False when the event occurs. If the event procedure sets this argument to True, the changes are not committed against the OLAP data source of the PivotTable."
+        }
+      ]
+    },
+    {
+      "name": "PivotTableBeforeDiscardChanges",
+      "kind": "event",
+      "signature": "PivotTableBeforeDiscardChanges(TargetPivotTable As PivotTable, ValueChangeStart As Long, ValueChangeEnd As Long)",
+      "description": "Occurs before changes to a PivotTable are discarded.",
+      "parameters": [
+        {
+          "name": "TargetPivotTable",
+          "type": "PivotTable",
+          "optional": false,
+          "description": "The PivotTable that contains the changes to discard."
+        },
+        {
+          "name": "ValueChangeStart",
+          "type": "Long",
+          "optional": false,
+          "description": "The index to the first change in the associated PivotTableChangeList object. The index is specified by the Order property of the ValueChange object in the PivotTableChangeList collection."
+        },
+        {
+          "name": "ValueChangeEnd",
+          "type": "Long",
+          "optional": false,
+          "description": "The index to the last change in the associated PivotTableChangeList object. The index is specified by the Order property of the ValueChange object in the PivotTableChangeList collection."
+        }
+      ]
+    },
+    {
+      "name": "PivotTableChangeSync",
+      "kind": "event",
+      "signature": "PivotTableChangeSync(Target As PivotTable)",
+      "description": "Occurs after changes to a PivotTable.",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "PivotTable",
+          "optional": false,
+          "description": "The PivotTable that was changed."
+        }
+      ]
+    },
+    {
+      "name": "LensGalleryRenderComplete",
+      "kind": "event",
+      "signature": "LensGalleryRenderComplete()",
+      "description": "Occurs when a callout gallery's icons (dynamic and static) have completed rendering."
+    },
+    {
+      "name": "TableUpdate",
+      "kind": "event",
+      "signature": "TableUpdate(Target As TableObject)",
+      "description": "Occurs after a query table connected to the data model is updated on a worksheet.",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "TableObject",
+          "optional": false,
+          "description": "The query table with data from the data model."
+        }
+      ]
+    },
+    {
+      "name": "BeforeDelete",
+      "kind": "event",
+      "signature": "BeforeDelete()",
+      "description": "Occurs before the worksheet is deleted."
+    }
+  ]
+}

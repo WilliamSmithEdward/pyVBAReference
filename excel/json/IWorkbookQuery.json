@@ -1,0 +1,85 @@
+{
+  "name": "IWorkbookQuery",
+  "kind": "Interface",
+  "guid": "{000244EB-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Formula",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Description",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete([DeleteConnection As Variant])",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "DeleteConnection",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Refresh",
+      "kind": "method",
+      "signature": "Refresh()",
+      "description": "",
+      "returns": "HRESULT"
+    }
+  ],
+  "events": []
+}

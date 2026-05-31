@@ -1,0 +1,54 @@
+{
+  "name": "MsoEnvelope",
+  "kind": "Class",
+  "guid": "{0006F01A-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Provides access to functionality that lets you send documents as email messages directly from Microsoft Office applications.",
+  "remarks": "Use the MailEnvelope property of the Document object, Chart object, or Worksheet object (depending on the application you are using) to return an MsoEnvelope object.",
+  "example": "Sub SendMail(ByVal strRecipient As String)\n\n 'Use a With...End With block to reference the MsoEnvelope object.\n With Application.ActiveDocument.MailEnvelope\n\n 'Add some introductory text before the body of the email.\n .Introduction = \"Please read this and send me your comments.\"\n\n 'Return a Microsoft Outlook MailItem object that\n 'you can use to send the document.\n With .Item\n\n 'All of the mail item settings are saved with the document.\n 'When you add a recipient to the Recipients collection\n 'or change other properties, these settings persist.\n .Recipients.Add strRecipient\n .Subject = \"Here is the document.\"\n\n 'The body of this message will be\n 'the content of the active document.\n .Send\n End With\n End With\nEnd Sub",
+  "properties": [
+    {
+      "name": "Introduction",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or gets the introductory text that is included with a document that is sent by using the MsoEnvelope object. The introductory text is included at the top of the document in the email. Read/write."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets a MailItem object that can be used to send the document as an email. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the MsoEnvelope object. Read-only."
+    },
+    {
+      "name": "CommandBars",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets a CommandBars collection. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": [
+    {
+      "name": "EnvelopeShow",
+      "kind": "event",
+      "signature": "EnvelopeShow()",
+      "description": "Occurs when the user interface (UI) that corresponds to the MsoEnvelope object is displayed."
+    },
+    {
+      "name": "EnvelopeHide",
+      "kind": "event",
+      "signature": "EnvelopeHide()",
+      "description": "Occurs when the user interface (UI) that corresponds to the MsoEnvelope object is hidden."
+    }
+  ]
+}

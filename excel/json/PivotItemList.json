@@ -1,0 +1,71 @@
+{
+  "name": "PivotItemList",
+  "kind": "Dispatch Interface",
+  "guid": "{00024468-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of all the PivotItem objects in the specified PivotTable.",
+  "remarks": "Each PivotItem represents an item in a PivotTable field. Use the RowItems or ColumnItems property of the PivotCell object to return a PivotItemList collection.",
+  "example": "Sub CheckPivotItemList()\n\n ' Identify contents associated with PivotItemList.\n MsgBox \"Contents associated with cell B5: \" & _\n Application.Range(\"B5\").PivotCell.RowItems.Item(1)\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "PivotItem",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As PivotItem",
+      "description": "Returns a single object from a collection.",
+      "returns": "PivotItem",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number for the object."
+        }
+      ]
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "method",
+      "signature": "_NewEnum() As IUnknown",
+      "description": "",
+      "returns": "IUnknown"
+    }
+  ],
+  "events": []
+}

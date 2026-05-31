@@ -1,0 +1,125 @@
+{
+  "name": "ListDataFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{0002447D-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "The ListDataFormat object holds all the data type properties of the ListColumn object. These properties are read-only.",
+  "remarks": "Use the ListDataFormat property of the ListColumn object to return a ListDataFormat object. The default property of the ListDataFormat object is the Type property, which indicates the data type of the list column. This allows the user to write code without specifying the Type property. <!--can't find a ListDataFormat property to link to-->",
+  "example": "Dim objListObject As ListObject\nDim objDataRange As Range\nDim strListGUID as String\nDim strServerName as String\n\nstrServerName = \"https://<servername>/_vti_bin\"\nstrListGUID = \"{<listguid>}\"\n\nSet objListObject = Sheet1.ListObjects.Add(xlSrcExternal, _\n Array(strServerName, strListGUID), True, xlYes, Range(\"A1\"))\n\nWith objListObject.ListColumns(2)\n Set objDataRange = .Range.Offset(1, 0).Resize(.Range.Rows.Count - 2, 1)\n If .ListDataFormat.Type = xlListDataTypeText And .ListDataFormat.Required Then\n objDataRange.Value = \"Hello World\"\n End If\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "XlListDataType",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Choices",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns an Array of String values that contains the choices offered to the user by the ListLookUp, ChoiceMulti, and Choice data types of the DefaultValue property. Read-only Variant."
+    },
+    {
+      "name": "DecimalPlaces",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of decimal places to show for the numbers in the ListColumn object. Read-only Long."
+    },
+    {
+      "name": "DefaultValue",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns Variant representing the default data type value for a new row in a column. The Nothing object is returned when the schema does not specify a default value. Read-only Variant."
+    },
+    {
+      "name": "IsPercent",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean value. Returns True only if the number data for the ListColumn object will be shown in percentage formatting. Read-only Boolean."
+    },
+    {
+      "name": "lcid",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the LCID for the ListColumn object that is specified in the schema definition. Read-only Long."
+    },
+    {
+      "name": "MaxCharacters",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long containing the maximum number of characters allowed in the ListColumn object if the Type property is set to xlListDataTypeText or xlListDataTypeMultiLineText (XlListDataType enumeration). Read-only Long."
+    },
+    {
+      "name": "MaxNumber",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns a Variant containing the maximum value allowed in this field in the list column. Read-only Variant."
+    },
+    {
+      "name": "MinNumber",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns a Variant containing the minimum value allowed in this field in the list column. This can be a negative floating point number. Read-only Variant."
+    },
+    {
+      "name": "Required",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean value indicating whether the schema definition of a column requires data before the row is committed. Read-only Boolean."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "XlListDataType",
+      "access": "read-only",
+      "description": "Returns an XlListDataType value that represents the data type of the list column."
+    },
+    {
+      "name": "ReadOnly",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns True if the object has been opened as read-only. Read-only Boolean."
+    },
+    {
+      "name": "AllowFillIn",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean value indicating whether users can provide their own data for cells in a column (rather than being restricted to a list of values) for those columns that supply a list of values. Returns False for lists that are not linked to a SharePoint site. Also returns False if the column is not specified as choice or multi-choice. Read-only Boolean."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

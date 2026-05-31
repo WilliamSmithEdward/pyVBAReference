@@ -1,0 +1,108 @@
+{
+  "name": "SharedWorkspaceTasks",
+  "kind": "Dispatch Interface",
+  "guid": "{000C037A-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "A collection of the SharedWorkspaceTask objects in the current shared workspace site.",
+  "remarks": "",
+  "example": "Dim swsTasks As Office.SharedWorkspaceTasks\n    Set swsTasks = ActiveWorkbook.SharedWorkspace.Tasks\n    MsgBox \"There are \" & swsTasks.Count & _\n        \" task(s) in the current shared workspace.\", _\n        vbInformation + vbOKOnly, _\n        \"Collection Information\"\n    Set swsTasks = Nothing",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SharedWorkspaceTasks object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SharedWorkspaceTasks object was created. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "SharedWorkspaceTask",
+      "access": "read-only",
+      "description": "Gets a SharedWorkspaceTask object from the Tasks collection of the shared workspace. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the SharedWorkspaceTasks object. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the SharedWorkspaceTasks object. Read-only."
+    },
+    {
+      "name": "ItemCountExceeded",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets a Boolean value that indicates whether the number of SharedWorkspaceTasks items in the collection has exceeded the 99 that can be displayed in the Shared Workspace task pane. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Title As String, [Status As Variant], [Priority As Variant], [Assignee As Variant], [Description As Variant], [DueDate As Variant]) As SharedWorkspaceTask",
+      "description": "Adds a task to the list of tasks in a shared workspace. Returns a SharedWorkspaceTask object.",
+      "returns": "SharedWorkspaceTask",
+      "parameters": [
+        {
+          "name": "Title",
+          "type": "String",
+          "optional": false,
+          "description": "The title of the new task."
+        },
+        {
+          "name": "Status",
+          "type": "Variant",
+          "optional": true,
+          "description": "The status of the new task. Default is msoSharedWorkspaceTaskNotStarted."
+        },
+        {
+          "name": "Priority",
+          "type": "Variant",
+          "optional": true,
+          "description": "The priority of the new task. Default is msoSharedWorkspaceTaskNormal."
+        },
+        {
+          "name": "Assignee",
+          "type": "Variant",
+          "optional": true,
+          "description": "The member to whom the new task is assigned."
+        },
+        {
+          "name": "Description",
+          "type": "Variant",
+          "optional": true,
+          "description": "The description of the new task."
+        },
+        {
+          "name": "DueDate",
+          "type": "Variant",
+          "optional": true,
+          "description": "The due date of the new task."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

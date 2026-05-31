@@ -1,0 +1,67 @@
+{
+  "name": "ISequentialStream",
+  "kind": "Interface",
+  "guid": "{0C733A30-2A1C-11CE-ADE5-00AA0044773D}",
+  "library": "Microsoft XML, v6.0",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "RemoteRead",
+      "kind": "method",
+      "signature": "RemoteRead(pv As Byte, cb As Long, pcbRead As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pv",
+          "type": "Byte",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cb",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcbRead",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "RemoteWrite",
+      "kind": "method",
+      "signature": "RemoteWrite(pv As Byte, cb As Long, pcbWritten As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pv",
+          "type": "Byte",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cb",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcbWritten",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

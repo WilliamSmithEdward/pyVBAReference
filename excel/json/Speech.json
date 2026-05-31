@@ -1,0 +1,61 @@
+{
+  "name": "Speech",
+  "kind": "Dispatch Interface",
+  "guid": "{00024466-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Contains methods and properties that pertain to speech.",
+  "remarks": "Use the Speech property of the Application object to return a Speech object.",
+  "example": "Sub UseSpeech()\n\n Application.Speech.Speak \"Hello\"\n\nEnd Sub()",
+  "properties": [
+    {
+      "name": "Direction",
+      "kind": "property",
+      "type": "XlSpeakDirection",
+      "access": "read/write",
+      "description": "Returns or sets the order in which the cells will be spoken. The value of the Direction property is an XlSpeakDirection constant. Read/write."
+    },
+    {
+      "name": "SpeakCellOnEnter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Microsoft Excel supports a mode where the active cell is spoken when the Enter key is pressed or when the active cell is finished being edited. Setting the SpeakCellOnEnter property to True turns this mode on. False turns this mode off. Read/write Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Speak",
+      "kind": "method",
+      "signature": "Speak(Text As String, [SpeakAsync As Variant], [SpeakXML As Variant], [Purge As Variant])",
+      "description": "Microsoft Excel plays back the text string that is passed as an argument.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Text",
+          "type": "String",
+          "optional": false,
+          "description": "The text to be spoken."
+        },
+        {
+          "name": "SpeakAsync",
+          "type": "Variant",
+          "optional": true,
+          "description": "True causes the text to be spoken asynchronously (the method will not wait for the text to be spoken). False causes the text to be spoken synchronously (the method waits for the text to be spoken before continuing). The default is False."
+        },
+        {
+          "name": "SpeakXML",
+          "type": "Variant",
+          "optional": true,
+          "description": "True causes the text to be interpreted as XML. False causes the text to not be interpreted as XML, so any XML tags are read and not interpreted. The default is False."
+        },
+        {
+          "name": "Purge",
+          "type": "Variant",
+          "optional": true,
+          "description": "True causes current speech to be terminated and any buffered text to be purged before text is spoken. False does not cause the current speech to be terminated and does not purge the buffered text before text is spoken. The default is False."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

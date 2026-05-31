@@ -1,0 +1,62 @@
+{
+  "name": "ChartColorFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{00024436-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a foreground or background color.",
+  "remarks": "Use the ForeColor property to return a ChartColorFormat object that represents the foreground fill color. Use the BackColor property to return the background fill color. Use the RGB property to return the color as an explicit red-green-blue value. Use the SchemeColor property to return or set the color as one of the colors in the current color scheme.",
+  "example": "With myChart.ChartArea.Fill\n    .Visible = True\n    .ForeColor.SchemeColor = 15\n    .BackColor.SchemeColor = 17\n    .TwoColorGradient msoGradientHorizontal, 1\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "SchemeColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "RGB",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [],
+  "events": []
+}

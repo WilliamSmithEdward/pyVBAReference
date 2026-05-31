@@ -1,0 +1,321 @@
+{
+  "name": "ScrollBar",
+  "kind": "Class",
+  "guid": "{DFD181E0-5E2F-11CE-A449-00AA004A803D}",
+  "library": "Microsoft Forms 2.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "BackColor",
+      "kind": "property",
+      "type": "OLE_COLOR",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ForeColor",
+      "kind": "property",
+      "type": "OLE_COLOR",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MousePointer",
+      "kind": "property",
+      "type": "fmMousePointer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Min",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Max",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SmallChange",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LargeChange",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ProportionalThumb",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Orientation",
+      "kind": "property",
+      "type": "fmOrientation",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Delay",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MouseIcon",
+      "kind": "property",
+      "type": "Picture",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [],
+  "events": [
+    {
+      "name": "BeforeDragOver",
+      "kind": "event",
+      "signature": "BeforeDragOver(Cancel As ReturnBoolean, Data As DataObject, X As Single, Y As Single, DragState As fmDragState, Effect As ReturnEffect, Shift As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "ReturnBoolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Data",
+          "type": "DataObject",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "DragState",
+          "type": "fmDragState",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Effect",
+          "type": "ReturnEffect",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeDropOrPaste",
+      "kind": "event",
+      "signature": "BeforeDropOrPaste(Cancel As ReturnBoolean, Action As fmAction, Data As DataObject, X As Single, Y As Single, Effect As ReturnEffect, Shift As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "ReturnBoolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Action",
+          "type": "fmAction",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Data",
+          "type": "DataObject",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Effect",
+          "type": "ReturnEffect",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Change",
+      "kind": "event",
+      "signature": "Change()",
+      "description": ""
+    },
+    {
+      "name": "Error",
+      "kind": "event",
+      "signature": "Error(Number As Integer, Description As ReturnString, SCode As Long, Source As String, HelpFile As String, HelpContext As Long, CancelDisplay As ReturnBoolean)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Number",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Description",
+          "type": "ReturnString",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "SCode",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Source",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "HelpFile",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "HelpContext",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "CancelDisplay",
+          "type": "ReturnBoolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyDown",
+      "kind": "event",
+      "signature": "KeyDown(KeyCode As ReturnInteger, Shift As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "ReturnInteger",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyPress",
+      "kind": "event",
+      "signature": "KeyPress(KeyAscii As ReturnInteger)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "KeyAscii",
+          "type": "ReturnInteger",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyUp",
+      "kind": "event",
+      "signature": "KeyUp(KeyCode As ReturnInteger, Shift As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "ReturnInteger",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Scroll",
+      "kind": "event",
+      "signature": "Scroll()",
+      "description": ""
+    }
+  ]
+}

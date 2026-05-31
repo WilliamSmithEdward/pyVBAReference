@@ -1,0 +1,69 @@
+{
+  "name": "ODSOFilter",
+  "kind": "Dispatch Interface",
+  "guid": "{000C1533-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a filter to be applied to an attached mail merge data source. The ODSOFilter object is a member of the ODSOFilters object.",
+  "remarks": "Each filter is a line in a query string. Use the Column, CompareTo, Comparison, and Conjunction properties to return or set the data source query criterion.",
+  "example": "Sub SetQueryCriterion()\n Dim appOffice As Office.OfficeDataSourceObject\n Dim intItem As Integer\n\n Set appOffice = Application.OfficeDataSourceObject\n appOffice.Open bstrConnect:=\"DRIVER=SQL Server;SERVER=ServerName;\" & _\n \"UID=user;PWD=;DATABASE=Northwind\", bstrTable:=\"Employees\"\n\n With appOffice.Filters\n For intItem = 1 To .Count\n With .Item(intItem)\n If .Column = \"Region\" Then\n .Comparison = msoFilterComparisonNotEqual\n .CompareTo = \"WA\"\n If .Conjunction = \"Or\" Then .Conjunction = \"And\"\n End If\n End With\n Next intItem\n End With\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the ODSOFilter object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the ODSOFilter object was created. Read-only."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long representing the index number for an ODSOFilter object in the collection. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the ODSOFilter object. Read-only."
+    },
+    {
+      "name": "Column",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets a String that represents the name of the field in the mail merge data source to use in the filter. Read/write."
+    },
+    {
+      "name": "Comparison",
+      "kind": "property",
+      "type": "MsoFilterComparison",
+      "access": "read/write",
+      "description": "Gets or sets an MsoFilterComparison constant that represents how to compare the Column and CompareTo properties. Read/write."
+    },
+    {
+      "name": "CompareTo",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets a String that represents the text to compare in the query filter criterion. Read/write."
+    },
+    {
+      "name": "Conjunction",
+      "kind": "property",
+      "type": "MsoFilterConjunction",
+      "access": "read/write",
+      "description": "Gets or sets an MsoFilterConjunction constant that represents how a filter criterion relates to other filter criteria in the ODSOFilters object. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

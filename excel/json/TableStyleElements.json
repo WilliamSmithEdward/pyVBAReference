@@ -1,0 +1,71 @@
+{
+  "name": "TableStyleElements",
+  "kind": "Dispatch Interface",
+  "guid": "{000244A6-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents table style elements.",
+  "remarks": "Table styles define formatting for one or all of the elements of a table, PivotTable, or slicer. For example, a header row, last column, or total row are elements of a table. A table style can define that the fill color of the header row is blue and that the last column is red. A table style element in a table can have formatting specified in a table style applied to the element. The XlTableStyleElementType enumeration contains the types of table style elements that are available for use.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the collection. Read-only Long."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "TableStyleElement",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As XlTableStyleElementType) As TableStyleElement",
+      "description": "Returns a single object from a collection.",
+      "returns": "TableStyleElement",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "XlTableStyleElementType",
+          "optional": false,
+          "description": "A table style element."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

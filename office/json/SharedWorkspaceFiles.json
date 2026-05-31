@@ -1,0 +1,96 @@
+{
+  "name": "SharedWorkspaceFiles",
+  "kind": "Dispatch Interface",
+  "guid": "{000C037C-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "A collection of the SharedWorkspaceFile objects in the current shared workspace.",
+  "remarks": "",
+  "example": "Dim swsFiles As Office.SharedWorkspaceFiles\n    Set swsFiles = ActiveWorkbook.SharedWorkspace.Files\n    MsgBox \"There are \" & swsFiles.Count & _\n        \" file(s)\n        vbInformation + vbOKOnly, _\n        \"Collection Information\"\n    Set swsFiles = Nothing",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SharedWorkspaceFile object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SharedWorkspaceFiles object was created. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "SharedWorkspaceFile",
+      "access": "read-only",
+      "description": "Gets a SharedWorkspaceFile object from the Files collection of the shared workspace. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the SharedWorkspaceFiles collection. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the SharedWorkspaceFiles object. Read-only."
+    },
+    {
+      "name": "ItemCountExceeded",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets a Boolean value indicating whether the number of files allowed in the shared workspace has been exceeded. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(FileName As String, [ParentFolder As Variant], [OverwriteIfFileAlreadyExists As Variant], [KeepInSync As Variant]) As SharedWorkspaceFile",
+      "description": "Adds a file to the document library in a shared workspace. Returns a SharedWorkspaceFile object.",
+      "returns": "SharedWorkspaceFile",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The path and file name of the file to be added to the current shared workspace."
+        },
+        {
+          "name": "ParentFolder",
+          "type": "Variant",
+          "optional": true,
+          "description": "The subfolder in which to place the file, if not the main document library folder within the shared workspace. Add the file to the main document library folder by leaving this optional argument empty."
+        },
+        {
+          "name": "OverwriteIfFileAlreadyExists",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to overwrite an existing file by the same name. Default is False."
+        },
+        {
+          "name": "KeepInSync",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to keep the local copy of the document synchronized with the copy in the shared workspace. Default is False."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

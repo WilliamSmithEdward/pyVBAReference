@@ -1,0 +1,364 @@
+{
+  "name": "RecordsetEvents_Deprecated",
+  "kind": "Dispatch Interface",
+  "guid": "{00000266-0000-0010-8000-00AA006D2EA4}",
+  "library": "Microsoft ActiveX Data Objects 6.1 Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "WillChangeField",
+      "kind": "method",
+      "signature": "WillChangeField(cFields As Long, Fields As Variant, adStatus As EventStatusEnum, pRecordset As _Recordset_Deprecated)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "cFields",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Fields",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pRecordset",
+          "type": "_Recordset_Deprecated",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "FieldChangeComplete",
+      "kind": "method",
+      "signature": "FieldChangeComplete(cFields As Long, Fields As Variant, pError As Error, adStatus As EventStatusEnum, pRecordset As _Recordset_Deprecated)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "cFields",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Fields",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pError",
+          "type": "Error",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pRecordset",
+          "type": "_Recordset_Deprecated",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WillChangeRecord",
+      "kind": "method",
+      "signature": "WillChangeRecord(adReason As EventReasonEnum, cRecords As Long, adStatus As EventStatusEnum, pRecordset As _Recordset_Deprecated)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "adReason",
+          "type": "EventReasonEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cRecords",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pRecordset",
+          "type": "_Recordset_Deprecated",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "RecordChangeComplete",
+      "kind": "method",
+      "signature": "RecordChangeComplete(adReason As EventReasonEnum, cRecords As Long, pError As Error, adStatus As EventStatusEnum, pRecordset As _Recordset_Deprecated)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "adReason",
+          "type": "EventReasonEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cRecords",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pError",
+          "type": "Error",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pRecordset",
+          "type": "_Recordset_Deprecated",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WillChangeRecordset",
+      "kind": "method",
+      "signature": "WillChangeRecordset(adReason As EventReasonEnum, adStatus As EventStatusEnum, pRecordset As _Recordset_Deprecated)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "adReason",
+          "type": "EventReasonEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pRecordset",
+          "type": "_Recordset_Deprecated",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "RecordsetChangeComplete",
+      "kind": "method",
+      "signature": "RecordsetChangeComplete(adReason As EventReasonEnum, pError As Error, adStatus As EventStatusEnum, pRecordset As _Recordset_Deprecated)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "adReason",
+          "type": "EventReasonEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pError",
+          "type": "Error",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pRecordset",
+          "type": "_Recordset_Deprecated",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WillMove",
+      "kind": "method",
+      "signature": "WillMove(adReason As EventReasonEnum, adStatus As EventStatusEnum, pRecordset As _Recordset_Deprecated)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "adReason",
+          "type": "EventReasonEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pRecordset",
+          "type": "_Recordset_Deprecated",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MoveComplete",
+      "kind": "method",
+      "signature": "MoveComplete(adReason As EventReasonEnum, pError As Error, adStatus As EventStatusEnum, pRecordset As _Recordset_Deprecated)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "adReason",
+          "type": "EventReasonEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pError",
+          "type": "Error",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pRecordset",
+          "type": "_Recordset_Deprecated",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "EndOfRecordset",
+      "kind": "method",
+      "signature": "EndOfRecordset(fMoreData As Boolean, adStatus As EventStatusEnum, pRecordset As _Recordset_Deprecated)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "fMoreData",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pRecordset",
+          "type": "_Recordset_Deprecated",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "FetchProgress",
+      "kind": "method",
+      "signature": "FetchProgress(Progress As Long, MaxProgress As Long, adStatus As EventStatusEnum, pRecordset As _Recordset_Deprecated)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Progress",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "MaxProgress",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pRecordset",
+          "type": "_Recordset_Deprecated",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "FetchComplete",
+      "kind": "method",
+      "signature": "FetchComplete(pError As Error, adStatus As EventStatusEnum, pRecordset As _Recordset_Deprecated)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pError",
+          "type": "Error",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pRecordset",
+          "type": "_Recordset_Deprecated",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

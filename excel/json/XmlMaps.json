@@ -1,0 +1,84 @@
+{
+  "name": "XmlMaps",
+  "kind": "Dispatch Interface",
+  "guid": "{0002447C-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the collection of XmlMap objects that have been added to a workbook.",
+  "remarks": "",
+  "example": "Sub AddXmlMap()\n Dim strSchemaLocation As String\n\n strSchemaLocation = \"https://example.microsoft.com/schemas/CustomerData.xsd\"\n ActiveWorkbook.XmlMaps.Add strSchemaLocation, \"Root\"\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "XmlMap",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "XmlMap",
+      "access": "read-only",
+      "description": "Returns a single object from a collection."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Schema As String, [RootElementName As Variant]) As XmlMap",
+      "description": "Adds an XML map to the specified workbook.",
+      "returns": "XmlMap",
+      "parameters": [
+        {
+          "name": "Schema",
+          "type": "String",
+          "optional": false,
+          "description": "The schema to be added as an XML map. The string can be a path to a schema file, or the schema itself. The path can be specified in the Universal Naming Convention (UNC) or Uniform Resource Locator (URL) format."
+        },
+        {
+          "name": "RootElementName",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the root element. This argument can be ignored if the schema contains only one root element."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

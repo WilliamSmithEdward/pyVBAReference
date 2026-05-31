@@ -1,0 +1,141 @@
+{
+  "name": "IScenario",
+  "kind": "Interface",
+  "guid": "{00020897-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ChangingCells",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Comment",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Hidden",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Locked",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Values",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "ChangeScenario",
+      "kind": "method",
+      "signature": "ChangeScenario(ChangingCells As Variant, [Values As Variant], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ChangingCells",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Values",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete(RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Show",
+      "kind": "method",
+      "signature": "Show(RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,149 @@
+{
+  "name": "Connections",
+  "kind": "Dispatch Interface",
+  "guid": "{00024486-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of WorkbookConnection objects for the specified workbook.",
+  "remarks": "",
+  "example": "ActiveWorkbook.Connections.AddFromFile _\n \"C:\\Documents and Settings\\myComputer\\My Documents\\My Data Sources\\Northwind 2007 Customers.odc\"",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the collection. Read-only Long."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "WorkbookConnection",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As WorkbookConnection",
+      "description": "This method creates a connection item.",
+      "returns": "WorkbookConnection",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "Index value of the item."
+        }
+      ]
+    },
+    {
+      "name": "Add2",
+      "kind": "method",
+      "signature": "Add2(Name As String, Description As String, ConnectionString As Variant, CommandText As Variant, [lCmdtype As Variant], [CreateModelConnection As Variant], [ImportRelationships As Variant]) As WorkbookConnection",
+      "description": "",
+      "returns": "WorkbookConnection",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Description",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ConnectionString",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "CommandText",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "lCmdtype",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CreateModelConnection",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ImportRelationships",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddFromFile",
+      "kind": "method",
+      "signature": "AddFromFile(Filename As String, [CreateModelConnection As Variant], [ImportRelationships As Variant]) As WorkbookConnection",
+      "description": "Adds a connection from the specified file.",
+      "returns": "WorkbookConnection",
+      "parameters": [
+        {
+          "name": "Filename",
+          "type": "String",
+          "optional": false,
+          "description": "Name of the file."
+        },
+        {
+          "name": "CreateModelConnection",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies whether to create the connection to the model."
+        },
+        {
+          "name": "ImportRelationships",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies whether to import the connection relationship."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

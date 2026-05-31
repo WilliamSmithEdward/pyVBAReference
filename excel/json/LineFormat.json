@@ -1,0 +1,139 @@
+{
+  "name": "LineFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0317-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents line and arrowhead formatting.",
+  "remarks": "For a line, the LineFormat object contains formatting information for the line itself; for a shape with a border, this object contains formatting information for the shape's border.",
+  "example": "Set myDocument = Worksheets(1)\nWith myDocument.Shapes.AddLine(100, 100, 200, 300).Line\n .DashStyle = msoLineDashDotDot\n .ForeColor.RGB = RGB(50, 0, 128)\n .BeginArrowheadLength = msoArrowheadShort\n .BeginArrowheadStyle = msoArrowheadOval\n .BeginArrowheadWidth = msoArrowheadNarrow\n .EndArrowheadLength = msoArrowheadLong\n .EndArrowheadStyle = msoArrowheadTriangle\n .EndArrowheadWidth = msoArrowheadWide\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "BackColor",
+      "kind": "property",
+      "type": "ColorFormat",
+      "access": "read/write",
+      "description": "Returns or sets a ColorFormat object that represents the specified fill background color."
+    },
+    {
+      "name": "BeginArrowheadLength",
+      "kind": "property",
+      "type": "MsoArrowheadLength",
+      "access": "read/write",
+      "description": "Returns or sets the length of the arrowhead at the beginning of the specified line. Read/write MsoArrowheadLength."
+    },
+    {
+      "name": "BeginArrowheadStyle",
+      "kind": "property",
+      "type": "MsoArrowheadStyle",
+      "access": "read/write",
+      "description": "Returns or sets the style of the arrowhead at the beginning of the specified line. Read/write MsoArrowheadStyle."
+    },
+    {
+      "name": "BeginArrowheadWidth",
+      "kind": "property",
+      "type": "MsoArrowheadWidth",
+      "access": "read/write",
+      "description": "Returns or sets the width of the arrowhead at the beginning of the specified line. Read/write MsoArrowheadWidth."
+    },
+    {
+      "name": "DashStyle",
+      "kind": "property",
+      "type": "MsoLineDashStyle",
+      "access": "read/write",
+      "description": "Returns or sets the dash style for the specified line. Can be one of the MsoLineDashStyle contants. Read/write Long."
+    },
+    {
+      "name": "EndArrowheadLength",
+      "kind": "property",
+      "type": "MsoArrowheadLength",
+      "access": "read/write",
+      "description": "Returns or sets the length of the arrowhead at the end of the specified line. Read/write MsoArrowheadLength."
+    },
+    {
+      "name": "EndArrowheadStyle",
+      "kind": "property",
+      "type": "MsoArrowheadStyle",
+      "access": "read/write",
+      "description": "Returns or sets the style of the arrowhead at the end of the specified line. Read/write MsoArrowheadStyle."
+    },
+    {
+      "name": "EndArrowheadWidth",
+      "kind": "property",
+      "type": "MsoArrowheadWidth",
+      "access": "read/write",
+      "description": "Returns or sets the width of the arrowhead at the end of the specified line. Read/write MsoArrowheadWidth."
+    },
+    {
+      "name": "ForeColor",
+      "kind": "property",
+      "type": "ColorFormat",
+      "access": "read/write",
+      "description": "Returns or sets a ColorFormat object that represents the specified foreground fill or solid color."
+    },
+    {
+      "name": "Pattern",
+      "kind": "property",
+      "type": "MsoPatternType",
+      "access": "read/write",
+      "description": "Returns or sets an MsoPatternType value that represents the fill pattern."
+    },
+    {
+      "name": "Style",
+      "kind": "property",
+      "type": "MsoLineStyle",
+      "access": "read/write",
+      "description": "Returns or sets an MsoLineStyle value that represents the style of the line."
+    },
+    {
+      "name": "Transparency",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the degree of transparency of the specified fill as a value from 0.0 (opaque) through 1.0 (clear). Read/write Double."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Returns or sets an MsoTriState value that determines whether the object is visible. Read/write."
+    },
+    {
+      "name": "Weight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single value that represents the weight of the line."
+    },
+    {
+      "name": "InsetPen",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Returns or sets whether lines are drawn inside the specified shape's boundaries. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

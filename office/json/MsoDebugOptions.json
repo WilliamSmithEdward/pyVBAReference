@@ -1,0 +1,86 @@
+{
+  "name": "MsoDebugOptions",
+  "kind": "Dispatch Interface",
+  "guid": "{000C035A-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "OutputToDebugger",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OutputToFile",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OutputToMessageBox",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "UnitTestManager",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "AddIgnoredAssertTag",
+      "kind": "method",
+      "signature": "AddIgnoredAssertTag(bstrTagToIgnore As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrTagToIgnore",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "RemoveIgnoredAssertTag",
+      "kind": "method",
+      "signature": "RemoveIgnoredAssertTag(bstrTagToIgnore As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrTagToIgnore",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

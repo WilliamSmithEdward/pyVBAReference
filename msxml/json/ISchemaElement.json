@@ -1,0 +1,162 @@
+{
+  "name": "ISchemaElement",
+  "kind": "Dispatch Interface",
+  "guid": "{50EA08B7-DD1B-4664-9A50-C2F40F4BD79A}",
+  "library": "Microsoft XML, v6.0",
+  "description": "XML Schema Element",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "namespaceURI",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "schema",
+      "kind": "property",
+      "type": "ISchema",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "id",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "itemType",
+      "kind": "property",
+      "type": "SOMITEMTYPE",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "unhandledAttributes",
+      "kind": "property",
+      "type": "IVBSAXAttributes",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "minOccurs",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "maxOccurs",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "type",
+      "kind": "property",
+      "type": "ISchemaType",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "scope",
+      "kind": "property",
+      "type": "ISchemaComplexType",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "defaultValue",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "fixedValue",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "isNillable",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "identityConstraints",
+      "kind": "property",
+      "type": "ISchemaItemCollection",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "substitutionGroup",
+      "kind": "property",
+      "type": "ISchemaElement",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "substitutionGroupExclusions",
+      "kind": "property",
+      "type": "SCHEMADERIVATIONMETHOD",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "disallowedSubstitutions",
+      "kind": "property",
+      "type": "SCHEMADERIVATIONMETHOD",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "isAbstract",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "isReference",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "writeAnnotation",
+      "kind": "method",
+      "signature": "writeAnnotation(annotationSink As IUnknown) As Boolean",
+      "description": "",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "annotationSink",
+          "type": "IUnknown",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

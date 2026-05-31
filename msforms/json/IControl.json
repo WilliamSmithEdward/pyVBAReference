@@ -1,0 +1,478 @@
+{
+  "name": "IControl",
+  "kind": "Dispatch Interface",
+  "guid": "{04598FC6-866C-11CF-AB7C-00AA00C08FCF}",
+  "library": "Microsoft Forms 2.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Cancel",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ControlSource",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ControlTipText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Default",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HelpContextID",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LayoutEffect",
+      "kind": "property",
+      "type": "fmLayoutEffect",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OldHeight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "OldLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "OldTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "OldWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Object",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "RowSource",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "RowSourceType",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TabIndex",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TabStop",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Tag",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "_SetHeight",
+      "kind": "method",
+      "signature": "_SetHeight(Height As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Height",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetHeight",
+      "kind": "method",
+      "signature": "_GetHeight(Height As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Height",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_SetLeft",
+      "kind": "method",
+      "signature": "_SetLeft(Left As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetLeft",
+      "kind": "method",
+      "signature": "_GetLeft(Left As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetOldHeight",
+      "kind": "method",
+      "signature": "_GetOldHeight(OldHeight As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "OldHeight",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetOldLeft",
+      "kind": "method",
+      "signature": "_GetOldLeft(OldLeft As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "OldLeft",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetOldTop",
+      "kind": "method",
+      "signature": "_GetOldTop(OldTop As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "OldTop",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetOldWidth",
+      "kind": "method",
+      "signature": "_GetOldWidth(OldWidth As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "OldWidth",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_SetTop",
+      "kind": "method",
+      "signature": "_SetTop(Top As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Top",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetTop",
+      "kind": "method",
+      "signature": "_GetTop(Top As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Top",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_SetWidth",
+      "kind": "method",
+      "signature": "_SetWidth(Width As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Width",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetWidth",
+      "kind": "method",
+      "signature": "_GetWidth(Width As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Width",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move([Left As Variant], [Top As Variant], [Width As Variant], [Height As Variant], [Layout As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Layout",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ZOrder",
+      "kind": "method",
+      "signature": "ZOrder([zPosition As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "zPosition",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetFocus",
+      "kind": "method",
+      "signature": "SetFocus()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "_GethWnd",
+      "kind": "method",
+      "signature": "_GethWnd() As Long",
+      "description": "",
+      "returns": "Long"
+    },
+    {
+      "name": "_GetID",
+      "kind": "method",
+      "signature": "_GetID() As Long",
+      "description": "",
+      "returns": "Long"
+    },
+    {
+      "name": "_Move",
+      "kind": "method",
+      "signature": "_Move(Left As Long, Top As Long, Width As Long, Height As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_ZOrder",
+      "kind": "method",
+      "signature": "_ZOrder(zPosition As fmZOrder)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "zPosition",
+          "type": "fmZOrder",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

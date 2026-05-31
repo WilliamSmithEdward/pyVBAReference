@@ -1,0 +1,414 @@
+{
+  "name": "IMsoAxis",
+  "kind": "Dispatch Interface",
+  "guid": "{000C1713-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "AxisBetweenCategories",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AxisGroup",
+      "kind": "property",
+      "type": "XlAxisGroup",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "AxisTitle",
+      "kind": "property",
+      "type": "IMsoAxisTitle",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "CategoryNames",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Crosses",
+      "kind": "property",
+      "type": "XlAxisCrosses",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CrossesAt",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HasMajorGridlines",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HasMinorGridlines",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HasTitle",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MajorGridlines",
+      "kind": "property",
+      "type": "GridLines",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "MajorTickMark",
+      "kind": "property",
+      "type": "XlTickMark",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MajorUnit",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LogBase",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TickLabelSpacingIsAuto",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MajorUnitIsAuto",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MaximumScale",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MaximumScaleIsAuto",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MinimumScale",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MinimumScaleIsAuto",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MinorGridlines",
+      "kind": "property",
+      "type": "GridLines",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "MinorTickMark",
+      "kind": "property",
+      "type": "XlTickMark",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MinorUnit",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MinorUnitIsAuto",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ReversePlotOrder",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ScaleType",
+      "kind": "property",
+      "type": "XlScaleType",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TickLabelPosition",
+      "kind": "property",
+      "type": "XlTickLabelPosition",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TickLabels",
+      "kind": "property",
+      "type": "IMsoTickLabels",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "TickLabelSpacing",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TickMarkSpacing",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "XlAxisType",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BaseUnit",
+      "kind": "property",
+      "type": "XlTimeUnit",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BaseUnitIsAuto",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MajorUnitScale",
+      "kind": "property",
+      "type": "XlTimeUnit",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MinorUnitScale",
+      "kind": "property",
+      "type": "XlTimeUnit",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CategoryType",
+      "kind": "property",
+      "type": "XlCategoryType",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "DisplayUnit",
+      "kind": "property",
+      "type": "XlDisplayUnit",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayUnitCustom",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HasDisplayUnitLabel",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayUnitLabel",
+      "kind": "property",
+      "type": "IMsoDisplayUnitLabel",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Border",
+      "kind": "property",
+      "type": "IMsoBorder",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "IMsoChartFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "CategorySortOrder",
+      "kind": "property",
+      "type": "XlCategorySortOrder",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "",
+      "returns": "Variant"
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select() As Variant",
+      "description": "",
+      "returns": "Variant"
+    },
+    {
+      "name": "SetProperty",
+      "kind": "method",
+      "signature": "SetProperty(bstrId As String, Value As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrId",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Value",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetProperty",
+      "kind": "method",
+      "signature": "GetProperty(bstrId As String) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "bstrId",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

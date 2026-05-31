@@ -1,0 +1,191 @@
+{
+  "name": "SeriesCollection",
+  "kind": "Dispatch Interface",
+  "guid": "{0002086C-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of all the Series objects in the specified chart or chart group.",
+  "remarks": "Use the SeriesCollection method of the Chart property to return the SeriesCollection collection.",
+  "example": "Worksheets(1).ChartObjects(1).Chart. _\n SeriesCollection.Extend Worksheets(1).Range(\"c1:c10\")",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Source As Variant, [Rowcol As XlRowCol], [SeriesLabels As Variant], [CategoryLabels As Variant], [Replace As Variant]) As Series",
+      "description": "Adds one or more new series to the SeriesCollection collection.",
+      "returns": "Series",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "Variant",
+          "optional": false,
+          "description": "The new data as a Range object."
+        },
+        {
+          "name": "Rowcol",
+          "type": "XlRowCol",
+          "optional": true,
+          "description": "Specifies whether the new values are in the rows or columns of the specified range."
+        },
+        {
+          "name": "SeriesLabels",
+          "type": "Variant",
+          "optional": true,
+          "description": "True if the first row or column contains the name of the data series. False if the first row or column contains the first data point of the series. If this argument is omitted, Microsoft Excel attempts to determine the location of the series name from the contents of the first row or column."
+        },
+        {
+          "name": "CategoryLabels",
+          "type": "Variant",
+          "optional": true,
+          "description": "True if the first row or column contains the name of the category labels. False if the first row or column contains the first data point of the series. If this argument is omitted, Excel attempts to determine the location of the category label from the contents of the first row or column."
+        },
+        {
+          "name": "Replace",
+          "type": "Variant",
+          "optional": true,
+          "description": "If _CategoryLabels_ is True and _Replace_ is True, the specified categories replace the categories that currently exist for the series. If _Replace_ is False, the existing categories will not be replaced. The default value is False."
+        }
+      ]
+    },
+    {
+      "name": "Extend",
+      "kind": "method",
+      "signature": "Extend(Source As Variant, [Rowcol As Variant], [CategoryLabels As Variant]) As Variant",
+      "description": "Adds new data points to an existing series collection.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "Variant",
+          "optional": false,
+          "description": "The new data to be added to the SeriesCollection object as a Range object."
+        },
+        {
+          "name": "Rowcol",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies whether the new values are in the rows or columns of the given range source. Can be one of the following XlRowCol constants: xlRows or xlColumns. If this argument is omitted, Microsoft Excel attempts to determine where the values are by the size and orientation of the selected range or by the dimensions of the array."
+        },
+        {
+          "name": "CategoryLabels",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have the first row or column contain the name of the category labels. False to have the first row or column contain the first data point of the series. If this argument is omitted, Excel attempts to determine the location of the category label from the contents of the first row or column."
+        }
+      ]
+    },
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Series",
+      "description": "Returns a single object from a collection.",
+      "returns": "Series",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number for the object."
+        }
+      ]
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "method",
+      "signature": "_NewEnum() As IUnknown",
+      "description": "",
+      "returns": "IUnknown"
+    },
+    {
+      "name": "Paste",
+      "kind": "method",
+      "signature": "Paste([Rowcol As XlRowCol], [SeriesLabels As Variant], [CategoryLabels As Variant], [Replace As Variant], [NewSeries As Variant]) As Variant",
+      "description": "Pastes data from the Clipboard into the specified series collection.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Rowcol",
+          "type": "XlRowCol",
+          "optional": true,
+          "description": "Specifies whether the values corresponding to a particular data series are in rows or columns."
+        },
+        {
+          "name": "SeriesLabels",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to use the contents of the cell in the first column of each row (or the first row of each column) as the name of the data series in that row (or column). False to use the contents of the cell in the first column of each row (or the first row of each column) as the first data point in the data series. The default value is False."
+        },
+        {
+          "name": "CategoryLabels",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to use the contents of the first row (or column) of the selection as the categories for the chart. False to use the contents of the first row (or column) as the first data series in the chart. The default value is False."
+        },
+        {
+          "name": "Replace",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to apply categories while replacing existing categories with information from the copied range. False to insert new categories without replacing any old ones. The default value is True."
+        },
+        {
+          "name": "NewSeries",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to paste the data as a new series. False to paste the data as new points in an existing series. The default value is True."
+        }
+      ]
+    },
+    {
+      "name": "NewSeries",
+      "kind": "method",
+      "signature": "NewSeries() As Series",
+      "description": "Creates a new series. Returns a Series object that represents the new series.",
+      "returns": "Series"
+    },
+    {
+      "name": "_Default",
+      "kind": "method",
+      "signature": "_Default(Index As Variant) As Series",
+      "description": "",
+      "returns": "Series",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

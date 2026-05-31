@@ -1,0 +1,307 @@
+{
+  "name": "ISAXXMLReader",
+  "kind": "Interface",
+  "guid": "{A4F96ED0-F829-476E-81C0-CDC7BD2A0802}",
+  "library": "Microsoft XML, v6.0",
+  "description": "ISAXXMLReader interface",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "getFeature",
+      "kind": "method",
+      "signature": "getFeature(pwchName As Integer, pvfValue As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pvfValue",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "putFeature",
+      "kind": "method",
+      "signature": "putFeature(pwchName As Integer, vfValue As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "vfValue",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getProperty",
+      "kind": "method",
+      "signature": "getProperty(pwchName As Integer, pvarValue As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pvarValue",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "putProperty",
+      "kind": "method",
+      "signature": "putProperty(pwchName As Integer, varValue As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "varValue",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getEntityResolver",
+      "kind": "method",
+      "signature": "getEntityResolver(ppResolver As ISAXEntityResolver)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ppResolver",
+          "type": "ISAXEntityResolver",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "putEntityResolver",
+      "kind": "method",
+      "signature": "putEntityResolver(pResolver As ISAXEntityResolver)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pResolver",
+          "type": "ISAXEntityResolver",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getContentHandler",
+      "kind": "method",
+      "signature": "getContentHandler(ppHandler As ISAXContentHandler)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ppHandler",
+          "type": "ISAXContentHandler",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "putContentHandler",
+      "kind": "method",
+      "signature": "putContentHandler(pHandler As ISAXContentHandler)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pHandler",
+          "type": "ISAXContentHandler",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getDTDHandler",
+      "kind": "method",
+      "signature": "getDTDHandler(ppHandler As ISAXDTDHandler)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ppHandler",
+          "type": "ISAXDTDHandler",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "putDTDHandler",
+      "kind": "method",
+      "signature": "putDTDHandler(pHandler As ISAXDTDHandler)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pHandler",
+          "type": "ISAXDTDHandler",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getErrorHandler",
+      "kind": "method",
+      "signature": "getErrorHandler(ppHandler As ISAXErrorHandler)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ppHandler",
+          "type": "ISAXErrorHandler",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "putErrorHandler",
+      "kind": "method",
+      "signature": "putErrorHandler(pHandler As ISAXErrorHandler)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pHandler",
+          "type": "ISAXErrorHandler",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getBaseURL",
+      "kind": "method",
+      "signature": "getBaseURL(ppwchBaseUrl As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ppwchBaseUrl",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "putBaseURL",
+      "kind": "method",
+      "signature": "putBaseURL(pwchBaseUrl As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchBaseUrl",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getSecureBaseURL",
+      "kind": "method",
+      "signature": "getSecureBaseURL(ppwchSecureBaseUrl As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ppwchSecureBaseUrl",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "putSecureBaseURL",
+      "kind": "method",
+      "signature": "putSecureBaseURL(pwchSecureBaseUrl As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchSecureBaseUrl",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "parse",
+      "kind": "method",
+      "signature": "parse([varInput As Variant])",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "varInput",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "parseURL",
+      "kind": "method",
+      "signature": "parseURL(pwchUrl As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchUrl",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,158 @@
+{
+  "name": "IVBSAXXMLReader",
+  "kind": "Dispatch Interface",
+  "guid": "{8C033CAA-6CD6-4F73-B728-4531AF74945F}",
+  "library": "Microsoft XML, v6.0",
+  "description": "IVBSAXXMLReader interface",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "entityResolver",
+      "kind": "property",
+      "type": "IVBSAXEntityResolver",
+      "access": "read/write",
+      "description": "Allow an application to register an entity resolver or look up the current entity resolver."
+    },
+    {
+      "name": "contentHandler",
+      "kind": "property",
+      "type": "IVBSAXContentHandler",
+      "access": "read/write",
+      "description": "Allow an application to register a content event handler or look up the current content event handler."
+    },
+    {
+      "name": "dtdHandler",
+      "kind": "property",
+      "type": "IVBSAXDTDHandler",
+      "access": "read/write",
+      "description": "Allow an application to register a DTD event handler or look up the current DTD event handler."
+    },
+    {
+      "name": "errorHandler",
+      "kind": "property",
+      "type": "IVBSAXErrorHandler",
+      "access": "read/write",
+      "description": "Allow an application to register an error event handler or look up the current error event handler."
+    },
+    {
+      "name": "baseURL",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Set or get the base URL for the document."
+    },
+    {
+      "name": "secureBaseURL",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Set or get the secure base URL for the document."
+    }
+  ],
+  "methods": [
+    {
+      "name": "getFeature",
+      "kind": "method",
+      "signature": "getFeature(strName As String) As Boolean",
+      "description": "Look up the value of a feature.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "strName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "putFeature",
+      "kind": "method",
+      "signature": "putFeature(strName As String, fValue As Boolean)",
+      "description": "Set the state of a feature.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "fValue",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getProperty",
+      "kind": "method",
+      "signature": "getProperty(strName As String) As Variant",
+      "description": "Look up the value of a property.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "strName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "putProperty",
+      "kind": "method",
+      "signature": "putProperty(strName As String, varValue As Variant)",
+      "description": "Set the value of a property.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "varValue",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "parse",
+      "kind": "method",
+      "signature": "parse([varInput As Variant])",
+      "description": "Parse an XML document.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "varInput",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "parseURL",
+      "kind": "method",
+      "signature": "parseURL(strURL As String)",
+      "description": "Parse an XML document from a system identifier (URI).",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strURL",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,116 @@
+{
+  "name": "Scripts",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0340-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Script",
+      "description": "",
+      "returns": "Script",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([Anchor As Object], [Location As MsoScriptLocation], [Language As MsoScriptLanguage], [Id As String], [Extended As String], [ScriptText As String]) As Script",
+      "description": "",
+      "returns": "Script",
+      "parameters": [
+        {
+          "name": "Anchor",
+          "type": "Object",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Location",
+          "type": "MsoScriptLocation",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Language",
+          "type": "MsoScriptLanguage",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Id",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Extended",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ScriptText",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,35 @@
+{
+  "name": "UserAccess",
+  "kind": "Dispatch Interface",
+  "guid": "{0002446D-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the user access for a protected range.",
+  "remarks": "",
+  "example": "Sub UseAllowEditRanges()\n\n Dim wksSheet As Worksheet\n\n Set wksSheet = Application.ActiveSheet\n\n ' Add a range that can be edited on the protected worksheet.\n wksSheet.Protection.AllowEditRanges.Add \"Test\", Range(\"A1\")\n\n ' Notify the user the title of the range that can be edited.\n MsgBox wksSheet.Protection.AllowEditRanges(1).Title\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns or sets a String value that represents the name of the object."
+    },
+    {
+      "name": "AllowEdit",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that indicates if the user is allowed access to the specified range on a protected worksheet."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

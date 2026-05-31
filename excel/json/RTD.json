@@ -1,0 +1,35 @@
+{
+  "name": "RTD",
+  "kind": "Dispatch Interface",
+  "guid": "{0002446E-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a real-time data object.",
+  "remarks": "Use the RTD property of the Application object to return an RTD object.",
+  "example": "",
+  "properties": [
+    {
+      "name": "ThrottleInterval",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long indicating the time interval between updates. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "RefreshData",
+      "kind": "method",
+      "signature": "RefreshData()",
+      "description": "Requests an update of real-time data from the real-time data server.",
+      "returns": "void"
+    },
+    {
+      "name": "RestartServers",
+      "kind": "method",
+      "signature": "RestartServers()",
+      "description": "Reconnects to a real-time data server (RTD).",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

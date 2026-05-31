@@ -1,0 +1,330 @@
+{
+  "name": "ListObject",
+  "kind": "Dispatch Interface",
+  "guid": "{00024471-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a list object in the ListObjects collection.",
+  "remarks": "The ListObject object is a member of the ListObjects collection. The ListObjects collection contains all the list objects on a worksheet.",
+  "example": "Dim wrksht As Worksheet\nDim oListCol As ListRow\n\nSet wrksht = ActiveWorkbook.Worksheets(\"Sheet1\")\nSet oListCol = wrksht.ListObjects(1).ListRows.Add",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Active",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean value indicating whether a ListObject object on a worksheet is active-that is, whether the active cell is inside the range of the ListObject object. Read-only Boolean."
+    },
+    {
+      "name": "DataBodyRange",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the range of values, excluding the header row, in a table. Read-only."
+    },
+    {
+      "name": "DisplayRightToLeft",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified ListObject is displayed from right to left instead of from left to right. False if the object is displayed from left to right. Read-only Boolean."
+    },
+    {
+      "name": "HeaderRowRange",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the range of the header row for a list. Read-only Range."
+    },
+    {
+      "name": "InsertRowRange",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object representing the Insert row, if any, of a specified ListObject object. Read-only Range."
+    },
+    {
+      "name": "ListColumns",
+      "kind": "property",
+      "type": "ListColumns",
+      "access": "read-only",
+      "description": "Returns a ListColumns collection that represents all the columns in a ListObject object. Read-only."
+    },
+    {
+      "name": "ListRows",
+      "kind": "property",
+      "type": "ListRows",
+      "access": "read-only",
+      "description": "Returns a ListRows object that represents all the rows of data in the ListObject object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value that represents the name of the ListObject object."
+    },
+    {
+      "name": "QueryTable",
+      "kind": "property",
+      "type": "QueryTable",
+      "access": "read-only",
+      "description": "Returns the QueryTable object that provides a link for the ListObject object to the list server. Read-only."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the range to which the specified list object in the list applies."
+    },
+    {
+      "name": "ShowAutoFilter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns Boolean to indicate whether the AutoFilter will be displayed. Read/write Boolean."
+    },
+    {
+      "name": "ShowTotals",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Gets or sets a Boolean to indicate whether the Total row is visible. Read/write Boolean."
+    },
+    {
+      "name": "SourceType",
+      "kind": "property",
+      "type": "XlListObjectSourceType",
+      "access": "read-only",
+      "description": "Returns an XlListObjectSourceType value that represents the current source of the list."
+    },
+    {
+      "name": "TotalsRowRange",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object representing the Total row, if any, from a specified ListObject object. Read-only."
+    },
+    {
+      "name": "SharePointURL",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String representing the URL of the SharePoint list for a given ListObject object. Read-only String."
+    },
+    {
+      "name": "XmlMap",
+      "kind": "property",
+      "type": "XmlMap",
+      "access": "read-only",
+      "description": "Returns an XmlMap object that represents the schema map used for the specified table. Read-only."
+    },
+    {
+      "name": "DisplayName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the display name for the specified ListObject object. Read/write String."
+    },
+    {
+      "name": "ShowHeaders",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets if the header information should be displayed for the specified ListObject object. Read/write Boolean."
+    },
+    {
+      "name": "TableStyle",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Gets or sets the table style for the specified ListObject object. Read/write Variant."
+    },
+    {
+      "name": "ShowTableStyleFirstColumn",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets if the first column is formatted for the specified ListObject object. Read/write Boolean."
+    },
+    {
+      "name": "ShowTableStyleLastColumn",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets if the last column is displayed for the specified ListObject object. Read/write Boolean."
+    },
+    {
+      "name": "ShowTableStyleRowStripes",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets if the Row Stripes table style is used for the specified ListObject object. Read/write Boolean."
+    },
+    {
+      "name": "ShowTableStyleColumnStripes",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets if the Column Stripes table style is used for the specified ListObject object. Read/write Boolean."
+    },
+    {
+      "name": "Comment",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the comment associated with the list object. Read/write String."
+    },
+    {
+      "name": "AlternativeText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the descriptive (alternative) text string for the specified table. Read/write."
+    },
+    {
+      "name": "Summary",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the description associated with the alternative text string for the specified table. Read/write."
+    },
+    {
+      "name": "TableObject",
+      "kind": "property",
+      "type": "TableObject",
+      "access": "read-only",
+      "description": "Returns a TableObject object. Read-only."
+    },
+    {
+      "name": "Slicers",
+      "kind": "property",
+      "type": "Slicers",
+      "access": "read-only",
+      "description": "Returns a list of the table slicers associated with a ListObject. Read-only."
+    },
+    {
+      "name": "ShowAutoFilterDropDown",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True when the AutoFilter drop-down for the ListObject object is displayed. Read/write Boolean."
+    },
+    {
+      "name": "AutoFilter",
+      "kind": "property",
+      "type": "AutoFilter",
+      "access": "read-only",
+      "description": "Filters a table using the AutoFilter feature. Read-only."
+    },
+    {
+      "name": "Sort",
+      "kind": "property",
+      "type": "Sort",
+      "access": "read-only",
+      "description": "Gets or sets the sort column or columns and sort order for the ListObject collection."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the ListObject object and clears the cell data from the worksheet.",
+      "returns": "void"
+    },
+    {
+      "name": "Publish",
+      "kind": "method",
+      "signature": "Publish(Target As Variant, LinkSource As Boolean) As String",
+      "description": "Publishes the ListObject object to a server that is running Microsoft SharePoint Foundation.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "Variant",
+          "optional": false,
+          "description": "Contains an array of String values, as described in the Remarks section."
+        },
+        {
+          "name": "LinkSource",
+          "type": "Boolean",
+          "optional": false,
+          "description": "See the Remarks section."
+        }
+      ]
+    },
+    {
+      "name": "Refresh",
+      "kind": "method",
+      "signature": "Refresh()",
+      "description": "Retrieves the current data and schema for the list from the server that is running Microsoft SharePoint Foundation. This method can be used only with lists that are linked to a SharePoint site. If the SharePoint site is not available, calling this method returns an error.",
+      "returns": "void"
+    },
+    {
+      "name": "Unlink",
+      "kind": "method",
+      "signature": "Unlink()",
+      "description": "Removes the link to a Microsoft SharePoint Foundation site from a list. Returns Nothing.",
+      "returns": "void"
+    },
+    {
+      "name": "Unlist",
+      "kind": "method",
+      "signature": "Unlist()",
+      "description": "Removes the list functionality from a ListObject object. After you use this method, the range of cells that made up the list will be a regular range of data.",
+      "returns": "void"
+    },
+    {
+      "name": "Resize",
+      "kind": "method",
+      "signature": "Resize(Range As Range)",
+      "description": "The Resize method allows a ListObject object to be resized over a new range. No cells are inserted or moved.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The new range."
+        }
+      ]
+    },
+    {
+      "name": "ExportToVisio",
+      "kind": "method",
+      "signature": "ExportToVisio()",
+      "description": "Exports a ListObject object to Visio.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

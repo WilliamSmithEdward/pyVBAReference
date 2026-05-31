@@ -1,0 +1,351 @@
+{
+  "name": "ThreeDFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0321-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Depth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ExtrusionColor",
+      "kind": "property",
+      "type": "ColorFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ExtrusionColorType",
+      "kind": "property",
+      "type": "MsoExtrusionColorType",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Perspective",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PresetExtrusionDirection",
+      "kind": "property",
+      "type": "MsoPresetExtrusionDirection",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "PresetLightingDirection",
+      "kind": "property",
+      "type": "MsoPresetLightingDirection",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PresetLightingSoftness",
+      "kind": "property",
+      "type": "MsoPresetLightingSoftness",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PresetMaterial",
+      "kind": "property",
+      "type": "MsoPresetMaterial",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PresetThreeDFormat",
+      "kind": "property",
+      "type": "MsoPresetThreeDFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "RotationX",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "RotationY",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PresetLighting",
+      "kind": "property",
+      "type": "MsoLightRigType",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Z",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BevelTopType",
+      "kind": "property",
+      "type": "MsoBevelType",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BevelTopInset",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BevelTopDepth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BevelBottomType",
+      "kind": "property",
+      "type": "MsoBevelType",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BevelBottomInset",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BevelBottomDepth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PresetCamera",
+      "kind": "property",
+      "type": "MsoPresetCamera",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "RotationZ",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ContourWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ContourColor",
+      "kind": "property",
+      "type": "ColorFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "FieldOfView",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ProjectText",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LightAngle",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "IncrementRotationX",
+      "kind": "method",
+      "signature": "IncrementRotationX(Increment As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "IncrementRotationY",
+      "kind": "method",
+      "signature": "IncrementRotationY(Increment As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ResetRotation",
+      "kind": "method",
+      "signature": "ResetRotation()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "SetThreeDFormat",
+      "kind": "method",
+      "signature": "SetThreeDFormat(PresetThreeDFormat As MsoPresetThreeDFormat)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "PresetThreeDFormat",
+          "type": "MsoPresetThreeDFormat",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetExtrusionDirection",
+      "kind": "method",
+      "signature": "SetExtrusionDirection(PresetExtrusionDirection As MsoPresetExtrusionDirection)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "PresetExtrusionDirection",
+          "type": "MsoPresetExtrusionDirection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetPresetCamera",
+      "kind": "method",
+      "signature": "SetPresetCamera(PresetCamera As MsoPresetCamera)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "PresetCamera",
+          "type": "MsoPresetCamera",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "IncrementRotationZ",
+      "kind": "method",
+      "signature": "IncrementRotationZ(Increment As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "IncrementRotationHorizontal",
+      "kind": "method",
+      "signature": "IncrementRotationHorizontal(Increment As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "IncrementRotationVertical",
+      "kind": "method",
+      "signature": "IncrementRotationVertical(Increment As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

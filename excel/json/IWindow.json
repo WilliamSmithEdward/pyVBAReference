@@ -1,0 +1,789 @@
+{
+  "name": "IWindow",
+  "kind": "Interface",
+  "guid": "{00020893-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ActiveCell",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ActiveChart",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ActivePane",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ActiveSheet",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayFormulas",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayGridlines",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayHeadings",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayHorizontalScrollBar",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayOutline",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayVerticalScrollBar",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayWorkbookTabs",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayZeros",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "EnableResize",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "FreezePanes",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineColor",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineColorIndex",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnWindow",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Panes",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "RangeSelection",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ScrollColumn",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ScrollRow",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SelectedSheets",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Selection",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Split",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SplitColumn",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SplitHorizontal",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SplitRow",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SplitVertical",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TabRatio",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "UsableHeight",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "UsableWidth",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "VisibleRange",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "WindowNumber",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "WindowState",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Zoom",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "View",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayRightToLeft",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SheetViews",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ActiveSheetView",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "DisplayRuler",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AutoFilterDateGrouping",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayWhitespace",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Hwnd",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "DisplayDataTypeIcons",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate(RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ActivateNext",
+      "kind": "method",
+      "signature": "ActivateNext(RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ActivatePrevious",
+      "kind": "method",
+      "signature": "ActivatePrevious(RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close([SaveChanges As Variant], [Filename As Variant], [RouteWorkbook As Variant], RHS As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "SaveChanges",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Filename",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RouteWorkbook",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "LargeScroll",
+      "kind": "method",
+      "signature": "LargeScroll([Down As Variant], [Up As Variant], [ToRight As Variant], [ToLeft As Variant], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Down",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Up",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ToRight",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ToLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "NewWindow",
+      "kind": "method",
+      "signature": "NewWindow(RHS As Window)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Window",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PrintPreview",
+      "kind": "method",
+      "signature": "PrintPreview([EnableChanges As Variant], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "EnableChanges",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ScrollWorkbookTabs",
+      "kind": "method",
+      "signature": "ScrollWorkbookTabs([Sheets As Variant], [Position As Variant], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Sheets",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Position",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SmallScroll",
+      "kind": "method",
+      "signature": "SmallScroll([Down As Variant], [Up As Variant], [ToRight As Variant], [ToLeft As Variant], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Down",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Up",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ToRight",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ToLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PointsToScreenPixelsX",
+      "kind": "method",
+      "signature": "PointsToScreenPixelsX(Points As Long, RHS As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PointsToScreenPixelsY",
+      "kind": "method",
+      "signature": "PointsToScreenPixelsY(Points As Long, RHS As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "RangeFromPoint",
+      "kind": "method",
+      "signature": "RangeFromPoint(x As Long, y As Long, RHS As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "x",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "y",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ScrollIntoView",
+      "kind": "method",
+      "signature": "ScrollIntoView(Left As Long, Top As Long, Width As Long, Height As Long, [Start As Variant])",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Start",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PrintOut",
+      "kind": "method",
+      "signature": "PrintOut([From As Variant], [To As Variant], [Copies As Variant], [Preview As Variant], [ActivePrinter As Variant], [PrintToFile As Variant], [Collate As Variant], [PrToFileName As Variant], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "From",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "To",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Copies",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Preview",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ActivePrinter",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "PrintToFile",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Collate",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "PrToFileName",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

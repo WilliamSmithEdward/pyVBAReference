@@ -1,0 +1,833 @@
+{
+  "name": "IDrawingObjects",
+  "kind": "Interface",
+  "guid": "{0002086F-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Locked",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Placement",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PrintObject",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ZOrder",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ShapeRange",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Accelerator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AddIndent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ArrowHeadLength",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ArrowHeadStyle",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ArrowHeadWidth",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AutoSize",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Border",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "CancelButton",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Characters",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DefaultButton",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DismissButton",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Display3DShading",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayVerticalScrollBar",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DropDownLines",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "HelpButton",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HorizontalAlignment",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "InputType",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Interior",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "LargeChange",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LinkedCell",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ListFillRange",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ListIndex",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LockedText",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Max",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Min",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MultiLine",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MultiSelect",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Orientation",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PhoneticAccelerator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "RoundedCorners",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SmallChange",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "VerticalAlignment",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ReadingOrder",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "BringToFront",
+      "kind": "method",
+      "signature": "BringToFront(RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy(RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CopyPicture",
+      "kind": "method",
+      "signature": "CopyPicture([Appearance As XlPictureAppearance], [Format As XlCopyPictureFormat], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Appearance",
+          "type": "XlPictureAppearance",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Format",
+          "type": "XlCopyPictureFormat",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Cut",
+      "kind": "method",
+      "signature": "Cut(RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete(RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Duplicate",
+      "kind": "method",
+      "signature": "Duplicate(RHS As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select([Replace As Variant], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Replace",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SendToBack",
+      "kind": "method",
+      "signature": "SendToBack(RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddItem",
+      "kind": "method",
+      "signature": "AddItem(Text As Variant, [Index As Variant], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Text",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CheckSpelling",
+      "kind": "method",
+      "signature": "CheckSpelling([CustomDictionary As Variant], [IgnoreUppercase As Variant], [AlwaysSuggest As Variant], [SpellLang As Variant], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "CustomDictionary",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "IgnoreUppercase",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "AlwaysSuggest",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "SpellLang",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "List",
+      "kind": "method",
+      "signature": "List([Index As Variant], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "RemoveAllItems",
+      "kind": "method",
+      "signature": "RemoveAllItems(RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "RemoveItem",
+      "kind": "method",
+      "signature": "RemoveItem(Index As Long, [Count As Variant], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Count",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Reshape",
+      "kind": "method",
+      "signature": "Reshape(Vertex As Long, Insert As Variant, [Left As Variant], [Top As Variant], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Vertex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Insert",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Selected",
+      "kind": "method",
+      "signature": "Selected([Index As Variant], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Ungroup",
+      "kind": "method",
+      "signature": "Ungroup(RHS As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Vertices",
+      "kind": "method",
+      "signature": "Vertices([Index1 As Variant], [Index2 As Variant], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Index1",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Index2",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant, RHS As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Group",
+      "kind": "method",
+      "signature": "Group(RHS As GroupObject)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "GroupObject",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "LinkCombo",
+      "kind": "method",
+      "signature": "LinkCombo([Link As Variant], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Link",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "method",
+      "signature": "_NewEnum(RHS As IUnknown)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "IUnknown",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

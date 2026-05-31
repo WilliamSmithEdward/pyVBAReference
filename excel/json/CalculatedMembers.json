@@ -1,0 +1,177 @@
+{
+  "name": "CalculatedMembers",
+  "kind": "Dispatch Interface",
+  "guid": "{00024454-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of all the CalculatedMember objects on the specified PivotTable.",
+  "remarks": "Each CalculatedMember object represents a calculated member or calculated measure. Use the CalculatedMembers property of the PivotTable object to return a CalculatedMembers collection. There are three supported types of calculated members: Named Sets, Calculated Members, and Calculated Measures. Object model support has been available for all three types since Excel 2010. User interface support was made available for Named Sets in Excel 2010. In Excel 2013, the OLAP Calculated Members and Calculated Measures feature was created to build a user interface for the calculated members and measures object model. Named Sets is used exactly the same as in Excel 2010. Named Sets should continue to use the Add method, and the type XlCalculatedMemberType enumeration. Calculated Members has the following changes for Excel 2013: - It now uses the AddCalculatedMember method. - It supports the following properties of the CalculatedMember object: - ParentHierarchy property - ParentMember property - NumberFormat property Calculated Measures has the following changes for Excel 2013: - It now uses the AddCalculatedMember method. - It now uses the type XlCalculatedMemberType enumeration.",
+  "example": "Sub UseCalculatedMember()\n Dim pvtTable As PivotTable\n Set pvtTable = ActiveSheet.PivotTables(1)\n pvtTable.CalculatedMembers.Add Name:=\"[Beef]\", _\n Formula:=\"'{[Product].[All Products].Children}'\", _\n Type:=xlCalculatedSet\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "CalculatedMember",
+      "access": "read-only",
+      "description": "Returns a single object from a collection."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "CalculatedMember",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String, Formula As Variant, [SolveOrder As Variant], [Type As Variant], [Dynamic As Variant], [DisplayFolder As Variant], [HierarchizeDistinct As Variant]) As CalculatedMember",
+      "description": "Adds a calculated field or calculated item to a PivotTable. Returns a CalculatedMember object.",
+      "returns": "CalculatedMember",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the calculated member."
+        },
+        {
+          "name": "Formula",
+          "type": "Variant",
+          "optional": false,
+          "description": "The formula of the calculated member."
+        },
+        {
+          "name": "SolveOrder",
+          "type": "Variant",
+          "optional": true,
+          "description": "The solve order for the calculated member."
+        },
+        {
+          "name": "Type",
+          "type": "Variant",
+          "optional": true,
+          "description": "The type of calculated member."
+        },
+        {
+          "name": "Dynamic",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies if the calculated member is recalculated with every update."
+        },
+        {
+          "name": "DisplayFolder",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the display folder for the calculated member."
+        },
+        {
+          "name": "HierarchizeDistinct",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies whether to order and remove duplicates when displaying the hierarchy of the calculated member in a PivotTable report based on an OLAP cube."
+        }
+      ]
+    },
+    {
+      "name": "AddCalculatedMember",
+      "kind": "method",
+      "signature": "AddCalculatedMember(Name As String, Formula As Variant, [SolveOrder As Variant], [Type As Variant], [DisplayFolder As Variant], [MeasureGroup As Variant], [ParentHierarchy As Variant], [ParentMember As Variant], [NumberFormat As Variant]) As CalculatedMember",
+      "description": "Adds a calculated field or calculated item to a PivotTable.",
+      "returns": "CalculatedMember",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the calculated member."
+        },
+        {
+          "name": "Formula",
+          "type": "Variant",
+          "optional": false,
+          "description": "The formula of the calculated member."
+        },
+        {
+          "name": "SolveOrder",
+          "type": "Variant",
+          "optional": true,
+          "description": "The solve order for the calculated member."
+        },
+        {
+          "name": "Type",
+          "type": "Variant",
+          "optional": true,
+          "description": "The type of calculated member."
+        },
+        {
+          "name": "DisplayFolder",
+          "type": "Variant",
+          "optional": true,
+          "description": "A folder that exists to display calculated measures."
+        },
+        {
+          "name": "MeasureGroup",
+          "type": "Variant",
+          "optional": true,
+          "description": "The group to which the calculated member belongs."
+        },
+        {
+          "name": "ParentHierarchy",
+          "type": "Variant",
+          "optional": true,
+          "description": "The parent path of the ParentMember."
+        },
+        {
+          "name": "ParentMember",
+          "type": "Variant",
+          "optional": true,
+          "description": "The parent of the calculated member."
+        },
+        {
+          "name": "NumberFormat",
+          "type": "Variant",
+          "optional": true,
+          "description": "The format of numbers used for calculated members."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,89 @@
+{
+  "name": "Windows",
+  "kind": "Class",
+  "guid": "{0002E185-0000-0000-C000-000000000046}",
+  "library": "Microsoft Visual Basic for Applications Extensibility 5.3",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "VBE",
+      "kind": "property",
+      "type": "VBE",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(index As Variant) As Window",
+      "description": "",
+      "returns": "Window",
+      "parameters": [
+        {
+          "name": "index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CreateToolWindow",
+      "kind": "method",
+      "signature": "CreateToolWindow(AddInInst As AddIn, ProgId As String, Caption As String, GuidPosition As String, DocObj As Object) As Window",
+      "description": "",
+      "returns": "Window",
+      "parameters": [
+        {
+          "name": "AddInInst",
+          "type": "AddIn",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ProgId",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Caption",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "GuidPosition",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "DocObj",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,329 @@
+{
+  "name": "OLEObjects",
+  "kind": "Dispatch Interface",
+  "guid": "{000208A3-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of all the OLEObject objects on the specified worksheet.",
+  "remarks": "Each OLEObject object represents an ActiveX control or a linked or embedded OLE object. An ActiveX control on a sheet has two names: the name of the shape that contains the control, which you can see in the Name box when you view the sheet, and the code name for the control, which you can see in the cell to the right of (Name) in the Properties window. When you first add a control to a sheet, the shape name and code name match. However, if you change either the shape name or code name, the other is not automatically changed to match. The latter however, seems to have changed with Excel versions. With version 16.0 both are kept consistent and is not possible to change one of the two alone.",
+  "example": "Worksheets(1).OLEObjects.Visible = False",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the object is enabled. Read/write Boolean."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a Double value that represents the height, in points, of the object."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a Double value that represents the distance, in points, from the left edge of the object to the left edge of column A (on a worksheet) or the left edge of the chart area (on a chart)."
+    },
+    {
+      "name": "Locked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that indicates if the object is locked."
+    },
+    {
+      "name": "Placement",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value containing an XlPlacement constant that represents the way the object is attached to the cells below it."
+    },
+    {
+      "name": "PrintObject",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the object will be printed when the document is printed. Read/write Boolean."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a Double value that represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart)."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that determines whether the object is visible. Read/write."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a Double value that represents the width, in points, of the object."
+    },
+    {
+      "name": "ZOrder",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the z-order position of the object. Read-only Long."
+    },
+    {
+      "name": "ShapeRange",
+      "kind": "property",
+      "type": "ShapeRange",
+      "access": "read-only",
+      "description": "Returns a ShapeRange object that represents the specified object or objects. Read-only."
+    },
+    {
+      "name": "Border",
+      "kind": "property",
+      "type": "Border",
+      "access": "read-only",
+      "description": "Returns a Border object that represents the border of the object."
+    },
+    {
+      "name": "Interior",
+      "kind": "property",
+      "type": "Interior",
+      "access": "read-only",
+      "description": "Returns an Interior object that represents the interior of the specified object."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that determines if the object has a shadow."
+    },
+    {
+      "name": "AutoLoad",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the OLE object is automatically loaded when the workbook that contains it is opened. Read/write Boolean."
+    },
+    {
+      "name": "SourceName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value that represents the specified object's link source name."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    }
+  ],
+  "methods": [
+    {
+      "name": "BringToFront",
+      "kind": "method",
+      "signature": "BringToFront() As Variant",
+      "description": "Brings the object to the front of the z-order.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy() As Variant",
+      "description": "Copies the object to the Clipboard.",
+      "returns": "Variant"
+    },
+    {
+      "name": "CopyPicture",
+      "kind": "method",
+      "signature": "CopyPicture([Appearance As XlPictureAppearance], [Format As XlCopyPictureFormat]) As Variant",
+      "description": "Copies the selected object to the Clipboard as a picture. Variant.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Appearance",
+          "type": "XlPictureAppearance",
+          "optional": true,
+          "description": "Specifies how the picture should be copied. The default value is xlScreen."
+        },
+        {
+          "name": "Format",
+          "type": "XlCopyPictureFormat",
+          "optional": true,
+          "description": "The format of the picture. The default value is xlPicture."
+        }
+      ]
+    },
+    {
+      "name": "Cut",
+      "kind": "method",
+      "signature": "Cut() As Variant",
+      "description": "Cuts the object to the Clipboard.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Duplicate",
+      "kind": "method",
+      "signature": "Duplicate() As Object",
+      "description": "Duplicates the object and returns a reference to the new copy.",
+      "returns": "Object"
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select([Replace As Variant]) As Variant",
+      "description": "Selects the object.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Replace",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to replace the current selection with the specified object. False to extend the current selection to include any previously selected objects and the specified object."
+        }
+      ]
+    },
+    {
+      "name": "SendToBack",
+      "kind": "method",
+      "signature": "SendToBack() As Variant",
+      "description": "Sends the object to the back of the z-order.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([ClassType As Variant], [Filename As Variant], [Link As Variant], [DisplayAsIcon As Variant], [IconFileName As Variant], [IconIndex As Variant], [IconLabel As Variant], [Left As Variant], [Top As Variant], [Width As Variant], [Height As Variant]) As OLEObject",
+      "description": "Adds a new OLE object to a sheet.",
+      "returns": "OLEObject",
+      "parameters": [
+        {
+          "name": "ClassType",
+          "type": "Variant",
+          "optional": true,
+          "description": "You must specify either _ClassType_ or _FileName_. A string that contains the programmatic identifier for the object to be created. If _ClassType_ is specified, _FileName_ and _Link_ are ignored."
+        },
+        {
+          "name": "Filename",
+          "type": "Variant",
+          "optional": true,
+          "description": "You must specify either _ClassType_ or _FileName_. A string that specifies the file to be used to create the OLE object."
+        },
+        {
+          "name": "Link",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have the new OLE object based on _FileName_ be linked to that file. If the object isn't linked, the object is created as a copy of the file. The default value is False."
+        },
+        {
+          "name": "DisplayAsIcon",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to display the new OLE object either as an icon or as its regular picture. If this argument is True, _IconFileName_ and _IconIndex_ can be used to specify an icon."
+        },
+        {
+          "name": "IconFileName",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that specifies the file that contains the icon to be displayed. This argument is used only if _DisplayAsIcon_ is True. If this argument isn't specified or the file contains no icons, the default icon for the OLE class is used."
+        },
+        {
+          "name": "IconIndex",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of the icon in the icon file. This is used only if _DisplayAsIcon_ is True and _IconFileName_ refers to a valid file that contains icons. If an icon with the given index number doesn't exist in the file specified by _IconFileName_, the first icon in the file is used."
+        },
+        {
+          "name": "IconLabel",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that specifies a label to display beneath the icon. This is used only if _DisplayAsIcon_ is True. If this argument is omitted or is an empty string (\"\"), no caption is displayed."
+        },
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": true,
+          "description": "The initial coordinates of the new object, in points, relative to the upper-left corner of cell A1 on a worksheet, or to the upper-left corner of a chart."
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": "The initial coordinates of the new object, in points, relative to the top of row 1 on a worksheet, or to the top of the chart area on a chart."
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": "The initial width of the new object, in points."
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": "The initial height of the new object, in points."
+        }
+      ]
+    },
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Object",
+      "description": "Returns a single object from a collection.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number for the object."
+        }
+      ]
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "method",
+      "signature": "_NewEnum() As IUnknown",
+      "description": "",
+      "returns": "IUnknown"
+    }
+  ],
+  "events": []
+}

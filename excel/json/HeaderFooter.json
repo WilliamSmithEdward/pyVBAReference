@@ -1,0 +1,27 @@
+{
+  "name": "HeaderFooter",
+  "kind": "Dispatch Interface",
+  "guid": "{000244A1-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a single header or footer. The HeaderFooter object is a member of the HeadersFooters collection.",
+  "remarks": "You can also return a single HeaderFooter object by using the HeaderFooter property with a Selection object. Use the DifferentFirstPageHeaderFooter property of the PageSetup object to specify a different first page.",
+  "example": "With ActiveSheet.PageSetup\n .CenterHeader = \"&D&T\"\n .OddAndEvenPagesHeaderFooter = False\n .DifferentFirstPageHeaderFooter = False\n .ScaleWithDocHeaderFooter = True\n .AlignMarginsHeaderFooter = True\nEnd With",
+  "properties": [
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a Text object that represents text included in the specified header or footer. Read/write."
+    },
+    {
+      "name": "Picture",
+      "kind": "property",
+      "type": "Graphic",
+      "access": "read-only",
+      "description": "Returns a Picture object that represents a picture field included in the specified header or footer. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

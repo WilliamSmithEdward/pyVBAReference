@@ -1,0 +1,41 @@
+{
+  "name": "Icon",
+  "kind": "Dispatch Interface",
+  "guid": "{0002449A-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a single icon in an icon set used in a conditional formatting rule.",
+  "remarks": "The Icon object is returned from the Item property of the IconSet object.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "IconSet",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value specifying the index number of the Icon object within the IconSet object. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

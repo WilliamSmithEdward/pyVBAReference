@@ -1,0 +1,23 @@
+{
+  "name": "MsoFeatureInstall",
+  "kind": "Enumeration",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Specifies how the application handles calls to methods and properties that require features not yet installed.",
+  "constants": [
+    {
+      "name": "msoFeatureInstallNone",
+      "value": 0,
+      "description": "Generates a generic automation error at run time when uninstalled features are called."
+    },
+    {
+      "name": "msoFeatureInstallOnDemand",
+      "value": 1,
+      "description": "Prompts the user to install new features."
+    },
+    {
+      "name": "msoFeatureInstallOnDemandWithUI",
+      "value": 2,
+      "description": "Displays a progress meter during installation; does not prompt the user to install new features."
+    }
+  ]
+}

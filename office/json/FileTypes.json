@@ -1,0 +1,79 @@
+{
+  "name": "FileTypes",
+  "kind": "Dispatch Interface",
+  "guid": "{000C036C-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "A collection of values of the type msoFileType that determine which types of files are returned during a search.",
+  "remarks": "There is only one FileTypes collection for all searches, so it's important to clear the FileTypes collection before executing a search unless you wish to search for file types from previous searches. The easiest way to clear the collection is to set the FileType property to the first file type for which you want to search. You can also remove individual types by using the Remove method. To determine the file type of each item in the collection, use the Item property to return the msoFileType value.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the FileTypes object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the FileTypes object was created. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "MsoFileType",
+      "access": "read-only",
+      "description": "Gets a value that indicates which file type will be searched for. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the FileTypes collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(FileType As MsoFileType)",
+      "description": "Adds a new file type to a file search.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileType",
+          "type": "MsoFileType",
+          "optional": false,
+          "description": "Specifies the type of file for which to search."
+        }
+      ]
+    },
+    {
+      "name": "Remove",
+      "kind": "method",
+      "signature": "Remove(Index As Long)",
+      "description": "Removes a FileType object from the collection.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the file type to be removed."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

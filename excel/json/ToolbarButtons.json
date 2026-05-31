@@ -1,0 +1,120 @@
+{
+  "name": "ToolbarButtons",
+  "kind": "Dispatch Interface",
+  "guid": "{0002085F-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "ToolbarButton",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "ToolbarButton",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([Button As Variant], [Before As Variant], [OnAction As Variant], [Pushed As Variant], [Enabled As Variant], [StatusBar As Variant], [HelpFile As Variant], [HelpContextID As Variant]) As ToolbarButton",
+      "description": "",
+      "returns": "ToolbarButton",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Before",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "OnAction",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Pushed",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Enabled",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "StatusBar",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "HelpFile",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "HelpContextID",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

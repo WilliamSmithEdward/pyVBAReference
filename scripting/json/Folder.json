@@ -1,0 +1,197 @@
+{
+  "name": "Folder",
+  "kind": "Class",
+  "guid": "{C7C3F5B3-88A3-11D0-ABCB-00A0C90FFFC0}",
+  "library": "Microsoft Scripting Runtime",
+  "description": "Folder object",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Path",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Path to folder"
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Get name of folder"
+    },
+    {
+      "name": "ShortPath",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Short path"
+    },
+    {
+      "name": "ShortName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Short name"
+    },
+    {
+      "name": "Drive",
+      "kind": "property",
+      "type": "IDrive",
+      "access": "read-only",
+      "description": "Get drive that contains folder"
+    },
+    {
+      "name": "ParentFolder",
+      "kind": "property",
+      "type": "IFolder",
+      "access": "read-only",
+      "description": "Get parent folder"
+    },
+    {
+      "name": "Attributes",
+      "kind": "property",
+      "type": "FileAttribute",
+      "access": "read/write",
+      "description": "Folder attributes"
+    },
+    {
+      "name": "DateCreated",
+      "kind": "property",
+      "type": "Date",
+      "access": "read-only",
+      "description": "Date folder was created"
+    },
+    {
+      "name": "DateLastModified",
+      "kind": "property",
+      "type": "Date",
+      "access": "read-only",
+      "description": "Date folder was last modified"
+    },
+    {
+      "name": "DateLastAccessed",
+      "kind": "property",
+      "type": "Date",
+      "access": "read-only",
+      "description": "Date folder was last accessed"
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Type description"
+    },
+    {
+      "name": "IsRootFolder",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if folder is root"
+    },
+    {
+      "name": "Size",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Sum of files and subfolders"
+    },
+    {
+      "name": "SubFolders",
+      "kind": "property",
+      "type": "IFolderCollection",
+      "access": "read-only",
+      "description": "Get folders collection"
+    },
+    {
+      "name": "Files",
+      "kind": "property",
+      "type": "IFileCollection",
+      "access": "read-only",
+      "description": "Get files collection"
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete([Force As Boolean])",
+      "description": "Delete this folder",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Force",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy(Destination As String, [OverWriteFiles As Boolean])",
+      "description": "Copy this folder",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Destination",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "OverWriteFiles",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move(Destination As String)",
+      "description": "Move this folder",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Destination",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CreateTextFile",
+      "kind": "method",
+      "signature": "CreateTextFile(FileName As String, [Overwrite As Boolean], [Unicode As Boolean]) As ITextStream",
+      "description": "Create a file as a TextStream",
+      "returns": "ITextStream",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Overwrite",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Unicode",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

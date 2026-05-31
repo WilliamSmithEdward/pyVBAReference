@@ -1,0 +1,71 @@
+{
+  "name": "SoundNote",
+  "kind": "Dispatch Interface",
+  "guid": "{0002087B-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "",
+      "returns": "Variant"
+    },
+    {
+      "name": "Import",
+      "kind": "method",
+      "signature": "Import(Filename As String) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Filename",
+          "type": "String",
+          "optional": false,
+          "description": "The file name of the sound note to import."
+        }
+      ]
+    },
+    {
+      "name": "Play",
+      "kind": "method",
+      "signature": "Play() As Variant",
+      "description": "",
+      "returns": "Variant"
+    },
+    {
+      "name": "Record",
+      "kind": "method",
+      "signature": "Record() As Variant",
+      "description": "",
+      "returns": "Variant"
+    }
+  ],
+  "events": []
+}

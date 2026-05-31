@@ -1,0 +1,351 @@
+{
+  "name": "Image",
+  "kind": "Class",
+  "guid": "{4C599241-6926-101B-9992-00000B65C6F9}",
+  "library": "Microsoft Forms 2.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MousePointer",
+      "kind": "property",
+      "type": "fmMousePointer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AutoSize",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BackColor",
+      "kind": "property",
+      "type": "OLE_COLOR",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BackStyle",
+      "kind": "property",
+      "type": "fmBackStyle",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderColor",
+      "kind": "property",
+      "type": "OLE_COLOR",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderStyle",
+      "kind": "property",
+      "type": "fmBorderStyle",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Picture",
+      "kind": "property",
+      "type": "Picture",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MouseIcon",
+      "kind": "property",
+      "type": "Picture",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PictureSizeMode",
+      "kind": "property",
+      "type": "fmPictureSizeMode",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PictureAlignment",
+      "kind": "property",
+      "type": "fmPictureAlignment",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PictureTiling",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SpecialEffect",
+      "kind": "property",
+      "type": "fmSpecialEffect",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [],
+  "events": [
+    {
+      "name": "BeforeDragOver",
+      "kind": "event",
+      "signature": "BeforeDragOver(Cancel As ReturnBoolean, Data As DataObject, X As Single, Y As Single, DragState As fmDragState, Effect As ReturnEffect, Shift As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "ReturnBoolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Data",
+          "type": "DataObject",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "DragState",
+          "type": "fmDragState",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Effect",
+          "type": "ReturnEffect",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeDropOrPaste",
+      "kind": "event",
+      "signature": "BeforeDropOrPaste(Cancel As ReturnBoolean, Action As fmAction, Data As DataObject, X As Single, Y As Single, Effect As ReturnEffect, Shift As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "ReturnBoolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Action",
+          "type": "fmAction",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Data",
+          "type": "DataObject",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Effect",
+          "type": "ReturnEffect",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Error",
+      "kind": "event",
+      "signature": "Error(Number As Integer, Description As ReturnString, SCode As Long, Source As String, HelpFile As String, HelpContext As Long, CancelDisplay As ReturnBoolean)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Number",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Description",
+          "type": "ReturnString",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "SCode",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Source",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "HelpFile",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "HelpContext",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "CancelDisplay",
+          "type": "ReturnBoolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseDown",
+      "kind": "event",
+      "signature": "MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseMove",
+      "kind": "event",
+      "signature": "MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseUp",
+      "kind": "event",
+      "signature": "MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

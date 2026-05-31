@@ -1,0 +1,206 @@
+{
+  "name": "SparklineGroup",
+  "kind": "Dispatch Interface",
+  "guid": "{000244B7-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a group of sparklines.",
+  "remarks": "The SparklineGroup object can contain multiple sparklines, and contains the property settings for the group, such as color and axis settings. Each sparkline is represented by a Sparkline object. Use the Modify method to add or remove sparklines from the sparkline group. Use the ModifyLocation method to change the location of the sparkline, and use the ModifySourceData method to change the range of the source data.",
+  "example": "Dim mySG As SparklineGroup\nSet mySG = Range(\"$A$1:$A$4\").SparklineGroups.Add(Type:=xlSparkColumn, SourceData:= _\n \"Sheet2!B1:E4\")\n\nmySG.SeriesColor.Color = RGB(255, 0, 0)",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of sparklines in the sparkline group. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "Sparkline",
+      "access": "read-only",
+      "description": "Returns a Sparkline object. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Location",
+      "kind": "property",
+      "type": "Range",
+      "access": "read/write",
+      "description": "Gets or sets the Range object that represents the location of the sparkline group. Read/write."
+    },
+    {
+      "name": "SourceData",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the range that contains the source data for the sparkline group. Read/write."
+    },
+    {
+      "name": "DateRange",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the date range for the sparkline group. Read/write."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "XlSparkType",
+      "access": "read/write",
+      "description": "Gets or sets the type of sparkline for the group. Read/write."
+    },
+    {
+      "name": "SeriesColor",
+      "kind": "property",
+      "type": "FormatColor",
+      "access": "read-only",
+      "description": "Returns a FormatColor object that represents the main series color for the sparkline group. Read-only."
+    },
+    {
+      "name": "Points",
+      "kind": "property",
+      "type": "SparkPoints",
+      "access": "read-only",
+      "description": "Returns the associated SparkPoints object for the sparkline group. Read-only."
+    },
+    {
+      "name": "Axes",
+      "kind": "property",
+      "type": "SparkAxes",
+      "access": "read-only",
+      "description": "Returns the associated SparkAxes object. Read-only."
+    },
+    {
+      "name": "DisplayBlanksAs",
+      "kind": "property",
+      "type": "XlDisplayBlanksAs",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayHidden",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Specifies if hidden cells are plotted in the sparkline group. Read/write."
+    },
+    {
+      "name": "LineWeight",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Gets or sets the thickness of the sparklines in the sparkline group. Read/write."
+    },
+    {
+      "name": "PlotBy",
+      "kind": "property",
+      "type": "XlSparklineRowCol",
+      "access": "read/write",
+      "description": "Returns or sets how to plot the sparkline when the data on which it is based is in a square-shaped range. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "ModifyLocation",
+      "kind": "method",
+      "signature": "ModifyLocation(Location As Range)",
+      "description": "Sets the associated Range object to modify the location of the sparkline group.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Location",
+          "type": "Range",
+          "optional": false,
+          "description": "The range that represents the location of the sparkline group."
+        }
+      ]
+    },
+    {
+      "name": "ModifySourceData",
+      "kind": "method",
+      "signature": "ModifySourceData(SourceData As String)",
+      "description": "Sets the range that represents the source data for the sparkline group.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SourceData",
+          "type": "String",
+          "optional": false,
+          "description": "The range that represents the source data."
+        }
+      ]
+    },
+    {
+      "name": "Modify",
+      "kind": "method",
+      "signature": "Modify(Location As Range, SourceData As String)",
+      "description": "Sets the location and the source data for the sparkline group.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Location",
+          "type": "Range",
+          "optional": false,
+          "description": "The Range object that represents the location of the sparkline group."
+        },
+        {
+          "name": "SourceData",
+          "type": "String",
+          "optional": false,
+          "description": "The range that represents the source data for the sparkline group."
+        }
+      ]
+    },
+    {
+      "name": "ModifyDateRange",
+      "kind": "method",
+      "signature": "ModifyDateRange(DateRange As String)",
+      "description": "Sets the date range for the sparkline group.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "DateRange",
+          "type": "String",
+          "optional": false,
+          "description": "The date range for the sparkline group."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the sparkline group.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

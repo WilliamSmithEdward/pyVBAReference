@@ -1,0 +1,189 @@
+{
+  "name": "ICalculatedMembers",
+  "kind": "Interface",
+  "guid": "{00024454-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String, Formula As Variant, [SolveOrder As Variant], [Type As Variant], [Dynamic As Variant], [DisplayFolder As Variant], [HierarchizeDistinct As Variant], RHS As CalculatedMember)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Formula",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "SolveOrder",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Type",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Dynamic",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "DisplayFolder",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "HierarchizeDistinct",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "CalculatedMember",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddCalculatedMember",
+      "kind": "method",
+      "signature": "AddCalculatedMember(Name As String, Formula As Variant, [SolveOrder As Variant], [Type As Variant], [DisplayFolder As Variant], [MeasureGroup As Variant], [ParentHierarchy As Variant], [ParentMember As Variant], [NumberFormat As Variant], RHS As CalculatedMember)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Formula",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "SolveOrder",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Type",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "DisplayFolder",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "MeasureGroup",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ParentHierarchy",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ParentMember",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "NumberFormat",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "CalculatedMember",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

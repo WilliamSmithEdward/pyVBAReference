@@ -1,0 +1,180 @@
+{
+  "name": "SignatureInfo",
+  "kind": "Dispatch Interface",
+  "guid": "{000CD6A2-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents the information used to create a digital or in-document signature.",
+  "remarks": "",
+  "example": "Sub GetCertDetails()\nDim objSignatureInfo As SignatureInfo\nDim varDetail As Variant\n\nstrDetail = objSignatureInfo.GetCertificateDetail(certdetExpirationDate)\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SignatureInfo object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SignatureInfo object was created. Read-only."
+    },
+    {
+      "name": "ReadOnly",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets a Boolean value indicating whether the SignatureInfo object is read-only. Read-only."
+    },
+    {
+      "name": "SignatureProvider",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets a value identifying an installed signature provider add-in. Read-only."
+    },
+    {
+      "name": "SignatureText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the value of the signature text used to sign this document. Read/write."
+    },
+    {
+      "name": "SignatureImage",
+      "kind": "property",
+      "type": "IPictureDisp",
+      "access": "read/write",
+      "description": "Gets or sets the value of the image used to sign the document. Read/write."
+    },
+    {
+      "name": "SignatureComment",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets a value containing comments included in a signature packet. Read/write."
+    },
+    {
+      "name": "ContentVerificationResults",
+      "kind": "property",
+      "type": "ContentVerificationResults",
+      "access": "read-only",
+      "description": "Gets a value representing the results of the verification of the hashed contents of a signed document. Read-only."
+    },
+    {
+      "name": "CertificateVerificationResults",
+      "kind": "property",
+      "type": "CertificateVerificationResults",
+      "access": "read-only",
+      "description": "Gets the results from the verification of a digital certificate. Read-only."
+    },
+    {
+      "name": "IsValid",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets a Boolean value indicating whether the signature was successfully validated following signature verification. Read-only."
+    },
+    {
+      "name": "IsCertificateExpired",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets a Boolean value indicating whether the digital certificate is expired. Read-only."
+    },
+    {
+      "name": "IsCertificateRevoked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets a Boolean value indicating whether the digital certificate is revoked. Read-only."
+    },
+    {
+      "name": "IsCertificateUntrusted",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets a Boolean value indicating whether the digital certificate used to digitally sign a document comes from a trusted source. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "GetSignatureDetail",
+      "kind": "method",
+      "signature": "GetSignatureDetail(sigdet As SignatureDetail) As Variant",
+      "description": "Displays a specified detail related to a signature.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "sigdet",
+          "type": "SignatureDetail",
+          "optional": false,
+          "description": "An enumerated value specifying which signature detail to display."
+        }
+      ]
+    },
+    {
+      "name": "GetCertificateDetail",
+      "kind": "method",
+      "signature": "GetCertificateDetail(certdet As CertificateDetail) As Variant",
+      "description": "Displays a specified detail related to a digital certificate.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "certdet",
+          "type": "CertificateDetail",
+          "optional": false,
+          "description": "An enumerated value specifying which certificate detail to display."
+        }
+      ]
+    },
+    {
+      "name": "ShowSignatureCertificate",
+      "kind": "method",
+      "signature": "ShowSignatureCertificate(ParentWindow As IUnknown)",
+      "description": "Displays the selected or default digital certificate.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ParentWindow",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "Contains the handle to the window that contains the Certificate dialog box."
+        }
+      ]
+    },
+    {
+      "name": "SelectSignatureCertificate",
+      "kind": "method",
+      "signature": "SelectSignatureCertificate(ParentWindow As IUnknown)",
+      "description": "Displays a dialog box that allows users to select which signature certificate to use for signing a document.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ParentWindow",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "Contains a handle to the window containing the certificate selection dialog box."
+        }
+      ]
+    },
+    {
+      "name": "SelectCertificateDetailByThumbprint",
+      "kind": "method",
+      "signature": "SelectCertificateDetailByThumbprint(bstrThumbprint As String)",
+      "description": "Displays a dialog box containing information about a digital certificate following verification of the user from a thumbprint.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrThumbprint",
+          "type": "String",
+          "optional": false,
+          "description": "Contains information about the signer identified by the thumbprint."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,123 @@
+{
+  "name": "IPivotTables",
+  "kind": "Interface",
+  "guid": "{00020873-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant, RHS As PivotTable)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "method",
+      "signature": "_NewEnum(RHS As IUnknown)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "IUnknown",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(PivotCache As PivotCache, TableDestination As Variant, [TableName As Variant], [ReadData As Variant], [DefaultVersion As Variant], RHS As PivotTable)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "PivotCache",
+          "type": "PivotCache",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "TableDestination",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "TableName",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ReadData",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "DefaultVersion",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

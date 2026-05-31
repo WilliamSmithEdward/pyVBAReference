@@ -1,0 +1,19 @@
+# XlGeoProjectionType
+
+**Type:** Enumeration  
+**Library:** Microsoft Excel 16.0 Object Library  
+
+Constants passed to and returned by the Series.GeoProjectionType property.
+
+## Constants (5)
+
+- `xlGeoProjectionTypeAutomatic` = 0  
+  Heuristically choose best map projection.
+- `xlGeoProjectionTypeMercator` = 1  
+  Use the Mercator map projection.
+- `xlGeoProjectionTypeMiller` = 2  
+  Use the Miller map projection.
+- `xlGeoProjectionTypeAlbers` = 3  
+  Use the Albers map projection.
+- `xlGeoProjectionTypeRobinson` = 4  
+  Use the Robinson map projection.

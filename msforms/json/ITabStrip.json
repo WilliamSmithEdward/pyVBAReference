@@ -1,0 +1,260 @@
+{
+  "name": "ITabStrip",
+  "kind": "Dispatch Interface",
+  "guid": "{04598FC2-866C-11CF-AB7C-00AA00C08FCF}",
+  "library": "Microsoft Forms 2.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "BackColor",
+      "kind": "property",
+      "type": "OLE_COLOR",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ForeColor",
+      "kind": "property",
+      "type": "OLE_COLOR",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MouseIcon",
+      "kind": "property",
+      "type": "Picture",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MousePointer",
+      "kind": "property",
+      "type": "fmMousePointer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MultiRow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Style",
+      "kind": "property",
+      "type": "fmTabStyle",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TabOrientation",
+      "kind": "property",
+      "type": "fmTabOrientation",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ClientTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ClientLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ClientWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ClientHeight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Tabs",
+      "kind": "property",
+      "type": "Tabs",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "SelectedItem",
+      "kind": "property",
+      "type": "Tab",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TabFixedWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TabFixedHeight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "_SetTabFixedWidth",
+      "kind": "method",
+      "signature": "_SetTabFixedWidth(TabFixedWidth As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "TabFixedWidth",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetTabFixedWidth",
+      "kind": "method",
+      "signature": "_GetTabFixedWidth(TabFixedWidth As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "TabFixedWidth",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_SetTabFixedHeight",
+      "kind": "method",
+      "signature": "_SetTabFixedHeight(TabFixedHeight As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "TabFixedHeight",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetTabFixedHeight",
+      "kind": "method",
+      "signature": "_GetTabFixedHeight(TabFixedHeight As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "TabFixedHeight",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetClientTop",
+      "kind": "method",
+      "signature": "_GetClientTop(ClientTop As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ClientTop",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetClientLeft",
+      "kind": "method",
+      "signature": "_GetClientLeft(ClientLeft As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ClientLeft",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetClientWidth",
+      "kind": "method",
+      "signature": "_GetClientWidth(ClientWidth As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ClientWidth",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetClientHeight",
+      "kind": "method",
+      "signature": "_GetClientHeight(ClientHeight As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ClientHeight",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,120 @@
+{
+  "name": "BulletFormat2",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03B9-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents bullet formatting.",
+  "remarks": "",
+  "example": "With ActivePresentation.Slides(1).Shapes(2)\n With .TextFrame.TextRange.ParagraphFormat.BulletFormat2\n .Visible = True\n .RelativeSize = 1.25\n .Character = 169\n With .Font\n .Color.RGB = RGB(255, 255, 0)\n .Name = \"Symbol\"\n End With\n End With\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an object that represents the BulletFormat2 object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the BulletFormat2 object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the parent of the BulletFormat2 object. Read-only."
+    },
+    {
+      "name": "Character",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the Unicode character value that is used for bullets in the specified text. Read/write."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font2",
+      "access": "read-only",
+      "description": "Gets a Font2 object that represents character formatting for a BulletFormat2 object. Read-only."
+    },
+    {
+      "name": "Number",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets the bullet number of a paragraph. Read-only."
+    },
+    {
+      "name": "RelativeSize",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the bullet size relative to the size of the first text character in the paragraph. Read/write."
+    },
+    {
+      "name": "StartValue",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the beginning value of a bulleted list. Read/write."
+    },
+    {
+      "name": "Style",
+      "kind": "property",
+      "type": "MsoNumberedBulletStyle",
+      "access": "read/write",
+      "description": "Returns or sets a constant that represents the style of a bullet. Read/write."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoBulletType",
+      "access": "read/write",
+      "description": "Gets or sets a constant that represents the type of bullet. Read/write."
+    },
+    {
+      "name": "UseTextColor",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the specified bullets are set to the color of the first text character in the paragraph. Read/write."
+    },
+    {
+      "name": "UseTextFont",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the specified bullets are set to the font of the first text character in the paragraph. Read/write."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Gets or sets a value that specifies whether the bullet is visible. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Picture",
+      "kind": "method",
+      "signature": "Picture(FileName As String)",
+      "description": "Sets the graphics file to be used for bullets in a bulleted list.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The file name of a valid graphics file."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

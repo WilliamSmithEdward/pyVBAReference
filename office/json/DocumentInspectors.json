@@ -1,0 +1,55 @@
+{
+  "name": "DocumentInspectors",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0392-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a collection of DocumentInspector objects.",
+  "remarks": "The DocumentInspectors collection is part of the Document object in Microsoft Word, the Workbook object in Excel, and the Presentation object in PowerPoint. A DocumentInspectors collection contains multiple DocumentInspector objects, one for some built-in options and each installed custom Document Inspector module.",
+  "example": "Public Sub FixDocument()\nDim docStatus As MsoDocInspectorStatus\nDim results As String\n ActiveDocument.DocumentInspectors(3).Fix docStatus, results\n\n MsgBox docStatus\n MsgBox(\"The following items were removed \" & results)\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the creator of the DocumentInspectors object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the DocumentInspectors object was created. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "DocumentInspector",
+      "access": "read-only",
+      "description": "Gets the DocumentInspector object specified by the index. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets the number of items in the DocumentInspectors object. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an object that represents the parent of a DocumentInspectors object. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -1,0 +1,253 @@
+{
+  "name": "Charts",
+  "kind": "Dispatch Interface",
+  "guid": "{0002086D-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of all the chart sheets in the specified or active workbook.",
+  "remarks": "Each chart sheet is represented by a Chart object. This does not include charts embedded on worksheets or dialog sheets. For information about embedded charts, see the Chart and ChartObject objects.",
+  "example": "Charts.PrintOut",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns a single object from a collection."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "HPageBreaks",
+      "kind": "property",
+      "type": "HPageBreaks",
+      "access": "read-only",
+      "description": "Returns an HPageBreaks collection that represents the horizontal page breaks on the chart. Read-only."
+    },
+    {
+      "name": "VPageBreaks",
+      "kind": "property",
+      "type": "VPageBreaks",
+      "access": "read-only",
+      "description": "Returns a VPageBreaks collection that represents the vertical page breaks on the sheet. Read-only."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that determines whether the object is visible."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy([Before As Variant], [After As Variant])",
+      "description": "Copies the sheet to another location in the workbook.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Before",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sheet before which the copied sheet will be placed. You cannot specify _Before_ if you specify _After_."
+        },
+        {
+          "name": "After",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sheet after which the copied sheet will be placed. You cannot specify _After_ if you specify _Before_."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move([Before As Variant], [After As Variant])",
+      "description": "Moves the chart to another location in the workbook.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Before",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sheet before which the moved chart will be placed. You cannot specify _Before_ if you specify _After_."
+        },
+        {
+          "name": "After",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sheet after which the moved chart will be placed. You cannot specify _After_ if you specify _Before_."
+        }
+      ]
+    },
+    {
+      "name": "PrintPreview",
+      "kind": "method",
+      "signature": "PrintPreview([EnableChanges As Variant])",
+      "description": "Shows a preview of the object as it would look when printed.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "EnableChanges",
+          "type": "Variant",
+          "optional": true,
+          "description": "Pass a Boolean value to specify if the user can change the margins and other page setup options available in print preview."
+        }
+      ]
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select([Replace As Variant])",
+      "description": "Selects the object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Replace",
+          "type": "Variant",
+          "optional": true,
+          "description": "Used only with sheets. True to replace the current selection with the specified object. False to extend the current selection to include any previously selected objects and the specified object."
+        }
+      ]
+    },
+    {
+      "name": "PrintOut",
+      "kind": "method",
+      "signature": "PrintOut([From As Variant], [To As Variant], [Copies As Variant], [Preview As Variant], [ActivePrinter As Variant], [PrintToFile As Variant], [Collate As Variant], [PrToFileName As Variant])",
+      "description": "Prints the object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "From",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of the page at which to start printing. If this argument is omitted, printing starts at the beginning."
+        },
+        {
+          "name": "To",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of the last page to print. If this argument is omitted, printing ends with the last page."
+        },
+        {
+          "name": "Copies",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of copies to print. If this argument is omitted, one copy is printed."
+        },
+        {
+          "name": "Preview",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have Microsoft Excel invoke print preview before printing the object. False (or omitted) to print the object immediately."
+        },
+        {
+          "name": "ActivePrinter",
+          "type": "Variant",
+          "optional": true,
+          "description": "Sets the name of the active printer."
+        },
+        {
+          "name": "PrintToFile",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to print to a file. If _PrToFileName_ is not specified, Excel prompts the user to enter the name of the output file."
+        },
+        {
+          "name": "Collate",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to collate multiple copies."
+        },
+        {
+          "name": "PrToFileName",
+          "type": "Variant",
+          "optional": true,
+          "description": "If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to."
+        }
+      ]
+    },
+    {
+      "name": "Add2",
+      "kind": "method",
+      "signature": "Add2([Before As Variant], [After As Variant], [Count As Variant], [NewLayout As Variant]) As Chart",
+      "description": "Inserts a chart directly onto the grid.",
+      "returns": "Chart",
+      "parameters": [
+        {
+          "name": "Before",
+          "type": "Variant",
+          "optional": true,
+          "description": "An object that specifies the sheet before which the new sheet is added."
+        },
+        {
+          "name": "After",
+          "type": "Variant",
+          "optional": true,
+          "description": "An object that specifies the sheet after which the new sheet is added."
+        },
+        {
+          "name": "Count",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of sheets to be added. The default value is one."
+        },
+        {
+          "name": "NewLayout",
+          "type": "Variant",
+          "optional": true,
+          "description": "If NewLayout is True, the chart is inserted by using the new dynamic formatting rules (Title is on, and Legend is on only if there are multiple series)."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,50 @@
+{
+  "name": "VBProjects_Old",
+  "kind": "Dispatch Interface",
+  "guid": "{0002E165-0000-0000-C000-000000000046}",
+  "library": "Microsoft Visual Basic for Applications Extensibility 5.3",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "VBE",
+      "kind": "property",
+      "type": "VBE",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "VBE",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(index As Variant) As VBProject",
+      "description": "",
+      "returns": "VBProject",
+      "parameters": [
+        {
+          "name": "index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

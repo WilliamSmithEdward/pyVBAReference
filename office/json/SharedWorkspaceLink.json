@@ -1,0 +1,98 @@
+{
+  "name": "SharedWorkspaceLink",
+  "kind": "Dispatch Interface",
+  "guid": "{000C037F-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a URL link saved in a shared document workspace site.",
+  "remarks": "Use the SharedWorkspaceLink object to manage links to additional documents and information of interest to the members who are collaborating on the documents in the shared workspace site. Use the Item (_index_) property of the SharedWorkspaceLinks collection to return a specific SharedWorkspaceLink object. Use the Description property to set the link description that appears on the Links tab of the Shared Workspace pane and on the workspace webpage. Use the URL property to set the destination address of the link. Use the Notes property to supply additional information about the link. Use the Save method to upload changes to the server after you modify properties of the SharedWorkspaceLink object. Use the CreatedBy, CreatedDate, ModifiedBy, and ModifiedDate properties to return information about the history of each link.",
+  "example": "Dim swsLink As Office.SharedWorkspaceLink\n    Set swsLink = ActiveWorkbook.SharedWorkspace.Links(1)\n    With swsLink\n        .Description = \"MSDN Home Page\"\n        .URL = \"https://msdn.microsoft.com/\"\n        .Notes = \"My favorite site for developers!\"\n        .Save\n    End With\n    Set swsLink = Nothing",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SharedWorkspaceFile object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SharedWorkspaceLink object was created. Read-only."
+    },
+    {
+      "name": "URL",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets the top-level Uniform Resource Locator (URL) of the shared workspace link. Read/write."
+    },
+    {
+      "name": "Description",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets a descriptive String value for the specified SharedWorkspaceLink or SharedWorkspaceTask object. Read/write."
+    },
+    {
+      "name": "Notes",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the optional notes associated with a shared workspace link. Read/write."
+    },
+    {
+      "name": "CreatedBy",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the display name of the member who created the shared workspace object. Read-only."
+    },
+    {
+      "name": "CreatedDate",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Gets the date and time when the shared workspace object was created. Read-only."
+    },
+    {
+      "name": "ModifiedBy",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the name of the user who last modified the object. Read-only."
+    },
+    {
+      "name": "ModifiedDate",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Gets the date and time when the SharedWorkspaceLink object was last modified. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the SharedWorkspaceLink object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Save",
+      "kind": "method",
+      "signature": "Save()",
+      "description": "Uploads changes made programmatically to a shared server.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the current SharedWorkspaceLink object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

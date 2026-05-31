@@ -1,0 +1,135 @@
+{
+  "name": "IXMLDOMSelection",
+  "kind": "Dispatch Interface",
+  "guid": "{AA634FC7-5888-44A7-A257-3A47150D3A0E}",
+  "library": "Microsoft XML, v6.0",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "item",
+      "kind": "property",
+      "type": "IXMLDOMNode",
+      "access": "read-only",
+      "description": "collection of nodes"
+    },
+    {
+      "name": "length",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "number of nodes in the collection"
+    },
+    {
+      "name": "expr",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "selection expression"
+    },
+    {
+      "name": "context",
+      "kind": "property",
+      "type": "IXMLDOMNode",
+      "access": "read/write",
+      "description": "nodes to apply selection expression to"
+    }
+  ],
+  "methods": [
+    {
+      "name": "nextNode",
+      "kind": "method",
+      "signature": "nextNode() As IXMLDOMNode",
+      "description": "get next node from iterator",
+      "returns": "IXMLDOMNode"
+    },
+    {
+      "name": "reset",
+      "kind": "method",
+      "signature": "reset()",
+      "description": "reset the position of iterator",
+      "returns": "void"
+    },
+    {
+      "name": "peekNode",
+      "kind": "method",
+      "signature": "peekNode() As IXMLDOMNode",
+      "description": "gets the next node without advancing the list position",
+      "returns": "IXMLDOMNode"
+    },
+    {
+      "name": "matches",
+      "kind": "method",
+      "signature": "matches(pNode As IXMLDOMNode) As IXMLDOMNode",
+      "description": "checks to see if the node matches the pattern",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "pNode",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "removeNext",
+      "kind": "method",
+      "signature": "removeNext() As IXMLDOMNode",
+      "description": "removes the next node",
+      "returns": "IXMLDOMNode"
+    },
+    {
+      "name": "removeAll",
+      "kind": "method",
+      "signature": "removeAll()",
+      "description": "removes all the nodes that match the selection",
+      "returns": "void"
+    },
+    {
+      "name": "clone",
+      "kind": "method",
+      "signature": "clone() As IXMLDOMSelection",
+      "description": "clone this object with the same position and context",
+      "returns": "IXMLDOMSelection"
+    },
+    {
+      "name": "getProperty",
+      "kind": "method",
+      "signature": "getProperty(name As String) As Variant",
+      "description": "get the value of the named property",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "setProperty",
+      "kind": "method",
+      "signature": "setProperty(name As String, value As Variant)",
+      "description": "set the value of the named property",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "value",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

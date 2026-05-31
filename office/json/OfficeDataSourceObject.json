@@ -1,0 +1,168 @@
+{
+  "name": "OfficeDataSourceObject",
+  "kind": "Dispatch Interface",
+  "guid": "{000C1530-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents the mail merge data source in a mail merge operation.",
+  "remarks": "To work with the OfficeDataSourceObject object, dimension a variable as an OfficeDataSourceObject object. You can then work with the different properties and methods associated with the object. Use the SetSortOrder method to specify how to sort the records in a data source.",
+  "example": "Sub SetDataSortOrder()\n Dim appOffice As OfficeDataSourceObject\n\n Set appOffice = Application.OfficeDataSourceObject\n appOffice.Open bstrConnect:=\"DRIVER=SQL Server;SERVER=ServerName;\" & _\n \"UID=user;PWD=;DATABASE=Northwind\", bstrTable:=\"Employees\"\n\n appOffice.SetSortOrder SortField1:=\"ZipCode\", _\n SortAscending1:=False, SortField2:=\"LastName\", _\n SortField3:=\"FirstName\"\nEnd Sub",
+  "properties": [
+    {
+      "name": "ConnectString",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets a String that represents the connection to the specified mail merge data source. Read/write."
+    },
+    {
+      "name": "Table",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets a String that represents the name of the table within the data source file that contains the mail merge records. The returned value may be blank if the table name is unknown or not applicable to the current data source. Read-only."
+    },
+    {
+      "name": "DataSource",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets a String that represents the name of the attached data source. Read/write."
+    },
+    {
+      "name": "Columns",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an ODSOColumns object that represents the fields in a data source. Read-only."
+    },
+    {
+      "name": "RowCount",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long that represents the number of records in the specified data source. Read-only."
+    },
+    {
+      "name": "Filters",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the filter status for an OfficeDataSourceObject object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move(MsoMoveRow As MsoMoveRow, [RowNbr As Long]) As Long",
+      "description": "Moves a record in a return set from an OfficeDataSourceObject object from one position to another.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "MsoMoveRow",
+          "type": "MsoMoveRow",
+          "optional": false,
+          "description": "A constant specifying which row to move."
+        },
+        {
+          "name": "RowNbr",
+          "type": "Long",
+          "optional": true,
+          "description": "The number of the destination row."
+        }
+      ]
+    },
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open([bstrSrc As String], [bstrConnect As String], [bstrTable As String], [fOpenExclusive As Long], [fNeverPrompt As Long])",
+      "description": "Opens a table in an OfficeDataSourceObject object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrSrc",
+          "type": "String",
+          "optional": true,
+          "description": "Contains the name of the data source."
+        },
+        {
+          "name": "bstrConnect",
+          "type": "String",
+          "optional": true,
+          "description": "Contains the connection string to the data source."
+        },
+        {
+          "name": "bstrTable",
+          "type": "String",
+          "optional": true,
+          "description": "Specifies which table to open."
+        },
+        {
+          "name": "fOpenExclusive",
+          "type": "Long",
+          "optional": true,
+          "description": "Indicates whether the table should be opened for exclusive access."
+        },
+        {
+          "name": "fNeverPrompt",
+          "type": "Long",
+          "optional": true,
+          "description": "Indicates whether to notify the user if the table cannot be opened."
+        }
+      ]
+    },
+    {
+      "name": "SetSortOrder",
+      "kind": "method",
+      "signature": "SetSortOrder(SortField1 As String, [SortAscending1 As Boolean], [SortField2 As String], [SortAscending2 As Boolean], [SortField3 As String], [SortAscending3 As Boolean])",
+      "description": "Sets the sort order for mail merge data.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SortField1",
+          "type": "String",
+          "optional": false,
+          "description": "The first field on which to sort the mail merge data."
+        },
+        {
+          "name": "SortAscending1",
+          "type": "Boolean",
+          "optional": true,
+          "description": "True (default) to perform an ascending sort on SortField1; False to perform a descending sort."
+        },
+        {
+          "name": "SortField2",
+          "type": "String",
+          "optional": true,
+          "description": "The second field on which to sort the mail merge data. Default is an empty string."
+        },
+        {
+          "name": "SortAscending2",
+          "type": "Boolean",
+          "optional": true,
+          "description": "True (default) to perform an ascending sort on SortField2; False to perform a descending sort."
+        },
+        {
+          "name": "SortField3",
+          "type": "String",
+          "optional": true,
+          "description": "The third field on which to sort the mail merge data. Default is an empty string."
+        },
+        {
+          "name": "SortAscending3",
+          "type": "Boolean",
+          "optional": true,
+          "description": "True (default) to perform an ascending sort on SortField3; False to perform a descending sort."
+        }
+      ]
+    },
+    {
+      "name": "ApplyFilter",
+      "kind": "method",
+      "signature": "ApplyFilter()",
+      "description": "Applies a filter to a mail merge data source to filter specified records meeting specified criteria.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

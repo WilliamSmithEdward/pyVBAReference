@@ -1,0 +1,63 @@
+{
+  "name": "PictureEffect",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03D1-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a picture effect.",
+  "remarks": "Picture effects are processed as a chain composed of individual items that are applied in sequence to create the final composited image. An effects chain will allow an effect to be added to the chain, reordered, or removed from the chain.",
+  "example": "Sub PictureEffectSample()\n' Setup a slide with one picture shape.\nWith ActivePresentation.Slides(1).Shapes(1).Fill.PictureEffects\n\n ' Insert a 150% Saturation effect.\n .Insert(msoEffectSaturation).EffectParameters(1).Value = 1.5\n\n ' Insert Brightness/Contrast effect and set values to -50% Brightness and +25% Contrast.\n Dim brightnessContrast As PictureEffect\n Set brightnessContrast = .Insert(msoEffectBrightnessContrast)\n brightnessContrast.EffectParameters(1).Value = -0.5\n brightnessContrast.EffectParameters(2).Value = 0.25\n\n ' Remove all Picture effects.\n While .Count > 0\n .Delete (1)\n Wend\n\nEnd With\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the PictureEffect object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the PictureEffect object was created. Read-only."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoPictureEffectType",
+      "access": "read-only",
+      "description": "Specifies the type of PictureEffect. Read-only."
+    },
+    {
+      "name": "Position",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Specifies the position of a picture effect in a chain of composite effects. Read/write."
+    },
+    {
+      "name": "EffectParameters",
+      "kind": "property",
+      "type": "EffectParameters",
+      "access": "read-only",
+      "description": "Returns an EffectParameter object. Read-only."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Gets or sets a Boolean value representing the visible state of the picture effect. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes a PictureEffect object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

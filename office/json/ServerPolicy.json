@@ -1,0 +1,83 @@
+{
+  "name": "ServerPolicy",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0390-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a policy specified for a document type stored on a server running Microsoft Office SharePoint Server.",
+  "remarks": "The ServerPolicy object is composed of individual PolicyItem objects representing the individual policy definitions for the active document.",
+  "example": "Sub ListPolicyItems()\nDim objSrvPolicy As ServerPolicy\nDim objPolicyItem As PolicyItem\nDim strPolicyItemList As String\n\nSet objSrvPolicy = ActiveDocument.ServerPolicy\n\nFor Each objPolicyItem In objSrvPolicy\n strPolicyItemList = \"Policy Item \" & objPolicyItem.Name & \" - \" & _\n objPolicyItem.Description & vbCrLf\nNext\nMsgBox (strPolicyItemList)\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the ServerPolicy object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the ServerPolicy object was created. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "PolicyItem",
+      "access": "read-only",
+      "description": "Gets a PolicyItem object from the ServerPolicy collection. Read-only."
+    },
+    {
+      "name": "Id",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the ID of a server policy. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the name of the ServerPolicy object. Read-only."
+    },
+    {
+      "name": "Description",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "A description of what the server policy is and its purpose. Read-only."
+    },
+    {
+      "name": "Statement",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the information specified in the policy statement. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the ServerPolicy collection. Read-only."
+    },
+    {
+      "name": "BlockPreview",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets a Boolean value that indicates whether you can preview items by using this policy. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the ServerPolicy object. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

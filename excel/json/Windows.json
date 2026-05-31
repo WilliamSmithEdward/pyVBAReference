@@ -1,0 +1,132 @@
+{
+  "name": "Windows",
+  "kind": "Dispatch Interface",
+  "guid": "{00020892-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of all the Window objects in Microsoft Excel.",
+  "remarks": "The Windows collection for the Application object contains all the windows in the application, whereas the Windows collection for the Workbook object contains only the windows in the specified workbook.",
+  "example": "Windows.Arrange arrangeStyle:=xlCascade",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "Window",
+      "access": "read-only",
+      "description": "Returns a single object from a collection."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "Window",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "SyncScrollingSideBySide",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True enables scrolling the contents of windows at the same time when documents are being compared side by side. False disables scrolling the windows at the same time."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Arrange",
+      "kind": "method",
+      "signature": "Arrange([ArrangeStyle As XlArrangeStyle], [ActiveWorkbook As Variant], [SyncHorizontal As Variant], [SyncVertical As Variant]) As Variant",
+      "description": "Arranges the windows on the screen.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "ArrangeStyle",
+          "type": "XlArrangeStyle",
+          "optional": true,
+          "description": "One of the constants of XlArrangeStyle specifying how the windows are arranged."
+        },
+        {
+          "name": "ActiveWorkbook",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to arrange only the visible windows of the active workbook. False to arrange all windows. The default value is False."
+        },
+        {
+          "name": "SyncHorizontal",
+          "type": "Variant",
+          "optional": true,
+          "description": "Ignored if _ActiveWorkbook_ is False or omitted. True to synchronize the windows of the active workbook when scrolling horizontally. False to not synchronize the windows. The default value is False."
+        },
+        {
+          "name": "SyncVertical",
+          "type": "Variant",
+          "optional": true,
+          "description": "Ignored if _ActiveWorkbook_ is False or omitted. True to synchronize the windows of the active workbook when scrolling vertically. False to not synchronize the windows. The default value is False."
+        }
+      ]
+    },
+    {
+      "name": "CompareSideBySideWith",
+      "kind": "method",
+      "signature": "CompareSideBySideWith(WindowName As Variant) As Boolean",
+      "description": "Opens two windows in side-by-side mode. Returns a Boolean value.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "WindowName",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name of the window."
+        }
+      ]
+    },
+    {
+      "name": "BreakSideBySide",
+      "kind": "method",
+      "signature": "BreakSideBySide() As Boolean",
+      "description": "Ends side-by-side mode if two windows are in side-by-side mode. Returns a Boolean value that represents whether the method was successful.",
+      "returns": "Boolean"
+    },
+    {
+      "name": "ResetPositionsSideBySide",
+      "kind": "method",
+      "signature": "ResetPositionsSideBySide()",
+      "description": "Resets the position of two worksheet windows that are being compared side by side.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

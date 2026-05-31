@@ -1,0 +1,83 @@
+{
+  "name": "AddIn",
+  "kind": "Dispatch Interface",
+  "guid": "{00020857-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a single add-in, either installed or not installed.",
+  "remarks": "The AddIn object is a member of the AddIns collection. The AddIns collection contains a list of all the add-ins available to Microsoft Excel, regardless of whether they're installed. This list corresponds to the list of add-ins displayed in the Add-Ins dialog box.",
+  "example": "AddIns(\"analysis toolpak\").Installed = True",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "FullName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the object, including its path on disk, as a string. Read-only String."
+    },
+    {
+      "name": "Installed",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the add-in is installed or to install the add-in; False if the add-in is uninstalled or to uninstall the add-in. Read/write Boolean."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that represents the name of the object."
+    },
+    {
+      "name": "Path",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that represents the complete path to the Add-in, excluding the final separator and name of the Add-in."
+    },
+    {
+      "name": "progID",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the programmatic identifiers for the object. Read-only String."
+    },
+    {
+      "name": "CLSID",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a read-only unique identifier, or CLSID, identifying an object as a String."
+    },
+    {
+      "name": "IsOpen",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns True if the add-in is currently open. Read-only Boolean."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

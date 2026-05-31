@@ -1,0 +1,64 @@
+{
+  "name": "RulerLevels2",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03C2-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "A collection of all the RulerLevel2 objects on the specified ruler.",
+  "remarks": "Each RulerLevel2 object represents the first-line and left indent for text at a particular outline level. This collection always contains five members-one for each of the available outline levels.",
+  "example": "With ActivePresentation.SlideMaster.TextStyles(ppBodyStyle).Ruler2\n .Levels(1).FirstMargin = 0\n .Levels(1).LeftMargin = 40\n .Levels(2).FirstMargin = 60\n .Levels(2).LeftMargin = 100\n .Levels(3).FirstMargin = 120\n .Levels(3).LeftMargin = 160\n .Levels(4).FirstMargin = 180\n .Levels(4).LeftMargin = 220\n .Levels(5).FirstMargin = 240\n .Levels(5).LeftMargin = 280\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the RulerLevels2 object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the RulerLevels2 object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the RulerLevels2 object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the RulerLevels2 collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As RulerLevel2",
+      "description": "Gets a member of the RulerLevels2 collection.",
+      "returns": "RulerLevel2",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The index number of the object to be returned."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

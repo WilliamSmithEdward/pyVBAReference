@@ -1,0 +1,69 @@
+{
+  "name": "Filter",
+  "kind": "Dispatch Interface",
+  "guid": "{00024434-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a filter for a single column.",
+  "remarks": "The Filter object is a member of the Filters collection. The Filters collection contains all the filters in an autofiltered range.",
+  "example": "Set w = Worksheets(\"Crew\")\nIf w.AutoFilterMode Then\n filterIsOn = w.AutoFilter.Filters(1).On\nEnd If",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "On",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified filter is on. Read-only Boolean."
+    },
+    {
+      "name": "Criteria1",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns the first filtered value for the specified column in a filtered range. Read-only Variant."
+    },
+    {
+      "name": "Criteria2",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns the second filtered value for the specified column in a filtered range. Read-only Variant."
+    },
+    {
+      "name": "Operator",
+      "kind": "property",
+      "type": "XlAutoFilterOperator",
+      "access": "read/write",
+      "description": "Returns an XlAutoFilterOperator value that represents the operator that associates the two criteria applied by the specified filter."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the collection. Read-only Long."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -1,0 +1,120 @@
+{
+  "name": "TableStyle",
+  "kind": "Dispatch Interface",
+  "guid": "{000244A7-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a single style that can be applied to a table or slicer.",
+  "remarks": "A table style defines the formatting for one or all of the elements of a table, PivotTable, or slicer. For example, a column is an element of a table. A table style can define that columns in a table are formatted with alternating formatting (also known as banding or stripes).",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the object. Read-only String."
+    },
+    {
+      "name": "NameLocal",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns or sets the name of the object in the language of the user. Read-only String."
+    },
+    {
+      "name": "BuiltIn",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the style is a built-in style. Read-only Boolean."
+    },
+    {
+      "name": "TableStyleElements",
+      "kind": "property",
+      "type": "TableStyleElements",
+      "access": "read-only",
+      "description": "Returns the TableStyleElements object. Read-only."
+    },
+    {
+      "name": "ShowAsAvailableTableStyle",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a table style shown as available in the table styles gallery. Read/write Boolean."
+    },
+    {
+      "name": "ShowAsAvailablePivotTableStyle",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Sets or returns whether a style is shown in the gallery for PivotTable styles. Read/write Boolean."
+    },
+    {
+      "name": "ShowAsAvailableSlicerStyle",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether the specified table style is shown as available in the slicer styles gallery. Read/write."
+    },
+    {
+      "name": "ShowAsAvailableTimelineStyle",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether the specified table style is shown as available in the timeline styles gallery. Read/write Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the TableStyle object.",
+      "returns": "void"
+    },
+    {
+      "name": "Duplicate",
+      "kind": "method",
+      "signature": "Duplicate([NewTableStyleName As Variant]) As TableStyle",
+      "description": "Duplicates the TableStyle object and returns a reference to the new copy.",
+      "returns": "TableStyle",
+      "parameters": [
+        {
+          "name": "NewTableStyleName",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the new table style."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

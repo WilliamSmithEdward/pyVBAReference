@@ -1,0 +1,71 @@
+{
+  "name": "OLEFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{00024441-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Contains OLE object properties.",
+  "remarks": "If the Shape object doesn't represent a linked or embedded object, the OLEFormat property of the Shape object fails.",
+  "example": "Worksheets(1).Shapes(1).OLEFormat.Activate",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Object",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the OLE Automation object associated with this OLE object. Read-only Object."
+    },
+    {
+      "name": "progID",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the programmatic identifiers for the object. Read-only String."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate()",
+      "description": "Activates the current OLE object.",
+      "returns": "void"
+    },
+    {
+      "name": "Verb",
+      "kind": "method",
+      "signature": "Verb([Verb As Variant])",
+      "description": "Sends a verb to the server of the specified OLE object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Verb",
+          "type": "Variant",
+          "optional": true,
+          "description": "The verb that the server of the OLE object should act on. If this argument is omitted, the default verb is sent. The available verbs are determined by the object's source application. Typical verbs for an OLE object are Open and Primary (represented by the XlOLEVerb constants xlOpen and xlPrimary)."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

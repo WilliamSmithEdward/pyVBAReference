@@ -1,0 +1,87 @@
+{
+  "name": "Components",
+  "kind": "Class",
+  "guid": "{BE39F3D6-1B13-11D0-887F-00A0C90F2744}",
+  "library": "Microsoft Visual Basic for Applications Extensibility 5.3",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "VBProject",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "VBE",
+      "kind": "property",
+      "type": "VBE",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Remove",
+      "kind": "method",
+      "signature": "Remove(Component As Component)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Component",
+          "type": "Component",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(ComponentType As vbext_ComponentType) As Component",
+      "description": "",
+      "returns": "Component",
+      "parameters": [
+        {
+          "name": "ComponentType",
+          "type": "vbext_ComponentType",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Import",
+      "kind": "method",
+      "signature": "Import(FileName As String) As Component",
+      "description": "",
+      "returns": "Component",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

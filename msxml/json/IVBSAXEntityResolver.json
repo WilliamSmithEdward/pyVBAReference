@@ -1,0 +1,34 @@
+{
+  "name": "IVBSAXEntityResolver",
+  "kind": "Dispatch Interface",
+  "guid": "{0C05D096-F45B-4ACA-AD1A-AA0BC25518DC}",
+  "library": "Microsoft XML, v6.0",
+  "description": "IVBSAXEntityResolver interface",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "resolveEntity",
+      "kind": "method",
+      "signature": "resolveEntity(strPublicId As String, strSystemId As String) As Variant",
+      "description": "Allow the application to resolve external entities.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "strPublicId",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strSystemId",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

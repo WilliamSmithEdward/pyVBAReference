@@ -1,0 +1,260 @@
+{
+  "name": "SAXAttributes60",
+  "kind": "Class",
+  "guid": "{88D96A0E-F192-11D4-A65F-0040963251E5}",
+  "library": "Microsoft XML, v6.0",
+  "description": "SAX Attributes 6.0",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "addAttribute",
+      "kind": "method",
+      "signature": "addAttribute(strURI As String, strLocalName As String, strQName As String, strType As String, strValue As String)",
+      "description": "Add an attribute to the end of the list.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strLocalName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strQName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strType",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strValue",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "addAttributeFromIndex",
+      "kind": "method",
+      "signature": "addAttributeFromIndex(varAtts As Variant, nIndex As Long)",
+      "description": "Add an attribute, whose value is equal to the indexed attribute in the input attributes object, to the end of the list.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "varAtts",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "clear",
+      "kind": "method",
+      "signature": "clear()",
+      "description": "Clear the attribute list for reuse.",
+      "returns": "void"
+    },
+    {
+      "name": "removeAttribute",
+      "kind": "method",
+      "signature": "removeAttribute(nIndex As Long)",
+      "description": "Remove an attribute from the list.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "setAttribute",
+      "kind": "method",
+      "signature": "setAttribute(nIndex As Long, strURI As String, strLocalName As String, strQName As String, strType As String, strValue As String)",
+      "description": "Set an attribute in the list.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strLocalName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strQName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strType",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strValue",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "setAttributes",
+      "kind": "method",
+      "signature": "setAttributes(varAtts As Variant)",
+      "description": "Copy an entire Attributes object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "varAtts",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "setLocalName",
+      "kind": "method",
+      "signature": "setLocalName(nIndex As Long, strLocalName As String)",
+      "description": "Set the local name of a specific attribute.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strLocalName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "setQName",
+      "kind": "method",
+      "signature": "setQName(nIndex As Long, strQName As String)",
+      "description": "Set the qualified name of a specific attribute.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strQName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "setType",
+      "kind": "method",
+      "signature": "setType(nIndex As Long, strType As String)",
+      "description": "Set the type of a specific attribute.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strType",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "setURI",
+      "kind": "method",
+      "signature": "setURI(nIndex As Long, strURI As String)",
+      "description": "Set the Namespace URI of a specific attribute.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "setValue",
+      "kind": "method",
+      "signature": "setValue(nIndex As Long, strValue As String)",
+      "description": "Set the value of a specific attribute.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strValue",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,84 @@
+{
+  "name": "HPageBreak",
+  "kind": "Dispatch Interface",
+  "guid": "{00024401-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a horizontal page break.",
+  "remarks": "The HPageBreak object is a member of the HPageBreaks collection.",
+  "example": "Set Worksheets(1).HPageBreaks(1).Location = Worksheets(1).Range(\"e5\")",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Worksheet",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "XlPageBreak",
+      "access": "read/write",
+      "description": "Returns or sets an XlPageBreak value that represents the page break type."
+    },
+    {
+      "name": "Extent",
+      "kind": "property",
+      "type": "XlPageBreakExtent",
+      "access": "read-only",
+      "description": "Returns the type of the specified page break: full-screen or only within a print area. Can be either of the following XlPageBreakExtent constants: xlPageBreakFull or xlPageBreakPartial. Read-only Long."
+    },
+    {
+      "name": "Location",
+      "kind": "property",
+      "type": "Range",
+      "access": "read/write",
+      "description": "Returns or sets the cell (a Range object) that defines the page-break location. Horizontal page breaks are aligned with the top edge of the location cell. Read/write Range."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    },
+    {
+      "name": "DragOff",
+      "kind": "method",
+      "signature": "DragOff(Direction As XlDirection, RegionIndex As Long)",
+      "description": "Drags a page break out of the print area.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Direction",
+          "type": "XlDirection",
+          "optional": false,
+          "description": "The direction in which the page break is dragged."
+        },
+        {
+          "name": "RegionIndex",
+          "type": "Long",
+          "optional": false,
+          "description": "The print-area region index for the page break (the region where the mouse pointer is located when the mouse button is pressed if the user drags the page break). If the print area is contiguous, there's only one print region. If the print area is discontiguous, there's more than one print region."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

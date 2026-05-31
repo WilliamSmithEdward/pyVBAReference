@@ -1,0 +1,150 @@
+{
+  "name": "CustomXMLParts",
+  "kind": "Class",
+  "guid": "{000CDB0C-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a collection of CustomXMLPart objects.",
+  "remarks": "There are three default parts that are always created with a document. These are cover pages, doc properties, and app properties. The last two were in previous versions of Microsoft Word but are now provided in XML form in the CustomXMLParts object collection.",
+  "example": "Sub AddPartToCollection()\n    Dim myPart As CustomXMLPart\n\n    Set myPart = ActiveDocument.CustomXMLParts.Add(\"<author>Mark Twain</author>\")\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the CustomXMLParts object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the CustomXMLParts object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the CustomXMLParts object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the CustomXMLParts collection. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "CustomXMLPart",
+      "access": "read-only",
+      "description": "Gets a CustomXMLPart object from the CustomXMLParts collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([XML As String], [SchemaCollection As Variant]) As CustomXMLPart",
+      "description": "Allows you to add a new CustomXMLPart to a file.",
+      "returns": "CustomXMLPart",
+      "parameters": [
+        {
+          "name": "XML",
+          "type": "String",
+          "optional": true,
+          "description": "Contains the XML to add to the newly created CustomXMLPart."
+        },
+        {
+          "name": "SchemaCollection",
+          "type": "Variant",
+          "optional": true,
+          "description": "Represents the set of schemas to be used to validate this stream."
+        }
+      ]
+    },
+    {
+      "name": "SelectByID",
+      "kind": "method",
+      "signature": "SelectByID(Id As String) As CustomXMLPart",
+      "description": "Selects a custom XML part matching a GUID.",
+      "returns": "CustomXMLPart",
+      "parameters": [
+        {
+          "name": "Id",
+          "type": "String",
+          "optional": false,
+          "description": "Contains the GUID for the custom XML part."
+        }
+      ]
+    },
+    {
+      "name": "SelectByNamespace",
+      "kind": "method",
+      "signature": "SelectByNamespace(NamespaceURI As String) As CustomXMLParts",
+      "description": "Selects the collection of custom XML parts whose namespace matches the search criteria.",
+      "returns": "CustomXMLParts",
+      "parameters": [
+        {
+          "name": "NamespaceURI",
+          "type": "String",
+          "optional": false,
+          "description": "Contains a namespace URI."
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "PartAfterAdd",
+      "kind": "event",
+      "signature": "PartAfterAdd(NewPart As CustomXMLPart)",
+      "description": "Occurs just after a CustomXMLPart object is added to the CustomXMLParts collection.",
+      "parameters": [
+        {
+          "name": "NewPart",
+          "type": "CustomXMLPart",
+          "optional": false,
+          "description": "The part that was added."
+        }
+      ]
+    },
+    {
+      "name": "PartBeforeDelete",
+      "kind": "event",
+      "signature": "PartBeforeDelete(OldPart As CustomXMLPart)",
+      "description": "Occurs just before a CustomXMLPart object is deleted from the CustomXMLParts collection.",
+      "parameters": [
+        {
+          "name": "OldPart",
+          "type": "CustomXMLPart",
+          "optional": false,
+          "description": "The part that is about to be deleted."
+        }
+      ]
+    },
+    {
+      "name": "PartAfterLoad",
+      "kind": "event",
+      "signature": "PartAfterLoad(Part As CustomXMLPart)",
+      "description": "Occurs just after a CustomXMLPart object is loaded.",
+      "parameters": [
+        {
+          "name": "Part",
+          "type": "CustomXMLPart",
+          "optional": false,
+          "description": "The part that was loaded."
+        }
+      ]
+    }
+  ]
+}

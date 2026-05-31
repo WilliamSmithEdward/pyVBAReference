@@ -1,0 +1,136 @@
+{
+  "name": "CodePane",
+  "kind": "Class",
+  "guid": "{0002E178-0000-0000-C000-000000000046}",
+  "library": "Microsoft Visual Basic for Applications Extensibility 5.3",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Collection",
+      "kind": "property",
+      "type": "CodePanes",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "VBE",
+      "kind": "property",
+      "type": "VBE",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Window",
+      "kind": "property",
+      "type": "Window",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "TopLine",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CountOfVisibleLines",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "CodeModule",
+      "kind": "property",
+      "type": "CodeModule",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "CodePaneView",
+      "kind": "property",
+      "type": "vbext_CodePaneview",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "GetSelection",
+      "kind": "method",
+      "signature": "GetSelection(StartLine As Long, StartColumn As Long, EndLine As Long, EndColumn As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "StartLine",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "StartColumn",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "EndLine",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "EndColumn",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetSelection",
+      "kind": "method",
+      "signature": "SetSelection(StartLine As Long, StartColumn As Long, EndLine As Long, EndColumn As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "StartLine",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "StartColumn",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "EndLine",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "EndColumn",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Show",
+      "kind": "method",
+      "signature": "Show()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

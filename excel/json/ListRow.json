@@ -1,0 +1,56 @@
+{
+  "name": "ListRow",
+  "kind": "Dispatch Interface",
+  "guid": "{00024475-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a row in a table. The ListRow object is a member of the ListRows collection.",
+  "remarks": "The ListRows collection contains all the rows in a list object. Use the ListRows property of the ListObject object to return a ListRows collection.",
+  "example": "Dim wrksht As Worksheet\nDim oListRow As ListRow\n\nSet wrksht = ActiveWorkbook.Worksheets(\"Sheet1\")\nSet oListRow = wrksht.ListObjects(1).ListRows.Add",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the index number of the ListRow object within the ListRows collection."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the range to which the specified list object in the list applies."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the cells of the list row and shifts upward any remaining cells below the deleted row. You can delete rows in the list even when the list is linked to a SharePoint site. The list on the SharePoint site will not be updated, however, until you synchronize your changes.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,218 @@
+{
+  "name": "DiagramNode",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0370-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Children",
+      "kind": "property",
+      "type": "DiagramNodeChildren",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Shape",
+      "kind": "property",
+      "type": "Shape",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Root",
+      "kind": "property",
+      "type": "DiagramNode",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Diagram",
+      "kind": "property",
+      "type": "IMsoDiagram",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Layout",
+      "kind": "property",
+      "type": "MsoOrgChartLayoutType",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TextShape",
+      "kind": "property",
+      "type": "Shape",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "AddNode",
+      "kind": "method",
+      "signature": "AddNode([pos As MsoRelativeNodePosition], [nodeType As MsoDiagramNodeType]) As DiagramNode",
+      "description": "",
+      "returns": "DiagramNode",
+      "parameters": [
+        {
+          "name": "pos",
+          "type": "MsoRelativeNodePosition",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "nodeType",
+          "type": "MsoDiagramNodeType",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "MoveNode",
+      "kind": "method",
+      "signature": "MoveNode(pTargetNode As DiagramNode, pos As MsoRelativeNodePosition)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "pTargetNode",
+          "type": "DiagramNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pos",
+          "type": "MsoRelativeNodePosition",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ReplaceNode",
+      "kind": "method",
+      "signature": "ReplaceNode(pTargetNode As DiagramNode)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "pTargetNode",
+          "type": "DiagramNode",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SwapNode",
+      "kind": "method",
+      "signature": "SwapNode(pTargetNode As DiagramNode, [swapChildren As Boolean])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "pTargetNode",
+          "type": "DiagramNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "swapChildren",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CloneNode",
+      "kind": "method",
+      "signature": "CloneNode(copyChildren As Boolean, pTargetNode As DiagramNode, [pos As MsoRelativeNodePosition]) As DiagramNode",
+      "description": "",
+      "returns": "DiagramNode",
+      "parameters": [
+        {
+          "name": "copyChildren",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pTargetNode",
+          "type": "DiagramNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pos",
+          "type": "MsoRelativeNodePosition",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "TransferChildren",
+      "kind": "method",
+      "signature": "TransferChildren(pReceivingNode As DiagramNode)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "pReceivingNode",
+          "type": "DiagramNode",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "NextNode",
+      "kind": "method",
+      "signature": "NextNode() As DiagramNode",
+      "description": "",
+      "returns": "DiagramNode"
+    },
+    {
+      "name": "PrevNode",
+      "kind": "method",
+      "signature": "PrevNode() As DiagramNode",
+      "description": "",
+      "returns": "DiagramNode"
+    }
+  ],
+  "events": []
+}

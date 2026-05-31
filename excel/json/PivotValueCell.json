@@ -1,0 +1,63 @@
+{
+  "name": "PivotValueCell",
+  "kind": "Dispatch Interface",
+  "guid": "{000244CF-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Provides a way to expose values of cells in the case that actual cells (Range objects) are not available.",
+  "remarks": "",
+  "example": "Sub TestEquality()\nDim X As Double\nDim Y As Double\n\n'This code assumes that you have a Standalone PivotChart on one of the worksheets.\nX = ThisWorkbook.PivotTables(1).PivotValueCell(1, 1).Value\nY = ThisWorkbook.PivotTables(1).PivotValueCell(1, 2).Value\n\nIf X > Y Then\nMsgBox \"X is greater than Y\"\nElse\nMsgBox \"Y is greater than X\"\nEnd If\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Excel application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified PivotValueCell object. Read-only."
+    },
+    {
+      "name": "PivotCell",
+      "kind": "property",
+      "type": "PivotCell",
+      "access": "read-only",
+      "description": "Returns the PivotCell object that specifies the location of the PivotValueCell. Read-only."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns the value at the location. The value is the value after ShowAs and other calculations have been applied. Variant can be Empty, Number, Date, String, or Error value."
+    },
+    {
+      "name": "ServerActions",
+      "kind": "property",
+      "type": "Actions",
+      "access": "read-only",
+      "description": "Returns a collection of OLAP Action name objects that represent OLAP-defined actions that can be executed. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "ShowDetail",
+      "kind": "method",
+      "signature": "ShowDetail()",
+      "description": "Puts the individual rows of an OLAP data source that contribute to an aggregate onto their own Excel worksheet.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

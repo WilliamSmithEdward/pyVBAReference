@@ -1,0 +1,41 @@
+{
+  "name": "Pages",
+  "kind": "Dispatch Interface",
+  "guid": "{000244A3-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of pages in a document. Use the Pages collection and the related objects and properties for programmatically defining page layout in a workbook.",
+  "remarks": "Use the Pages property of the PageSetup object to return a Pages collection. The following example accesses all pages on the active worksheet. Use the Item method to access an individual Page object that represents an individual page on a worksheet. The following example accesses the first page on the active worksheet.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "Page",
+      "access": "read-only",
+      "description": "Returns a Page object that represents a collection of pages in a workbook. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "Page",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the collection. Read-only Long."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [],
+  "events": []
+}

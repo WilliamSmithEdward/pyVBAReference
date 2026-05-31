@@ -1,0 +1,48 @@
+{
+  "name": "TreeviewControl",
+  "kind": "Dispatch Interface",
+  "guid": "{0002444B-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the hierarchical member-selection control of a cube field.",
+  "remarks": "Use this object primarily for macro recording; it is not intended for any other use.",
+  "example": "ActiveSheet.PivotTables(\"PivotTable2\") _\n .CubeFields(1).TreeviewControl.Drilled = _\n Array(Array(\"\", \"\"), _\n Array(\"[state].[states].[CA]\", _\n \"[state].[states].[MD]\"))",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Hidden",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the hidden status of the cube field members in the hierarchical member-selection control of a cube field."
+    },
+    {
+      "name": "Drilled",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Sets the \"drilled\" (expanded or visible) status of the cube field members in the hierarchical member-selection control of a cube field. This property is used primarily for macro recording and isn't intended for any other use. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

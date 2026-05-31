@@ -1,0 +1,28 @@
+{
+  "name": "ICustomTaskPaneConsumer",
+  "kind": "Dispatch Interface",
+  "guid": "{000C033E-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "An interface that provides access to the CTPFactoryAvailable method that is used to create an instance of a custom task pane.",
+  "remarks": "",
+  "example": "public class Connect : Object, Extensibility.IDTExtensibility2, ICustomTaskPaneConsumer\n...\nobject missing = Type.Missing;\npublic CustomTaskPane CTP = null;\n\npublic void CTPFactoryAvailable(ICTPFactory CTPFactoryInst)\n{\n CTP = CTPFactoryInst.CreateCTP(\"SampleActiveX.myControl\", \"Task Pane Example\", missing);\n sampleAX = (myControl)CTP.ContentControl;\n sampleAX.InsertTextClicked += new InsertTextEventHandler(sampleAX_InsertTextClicked);\n CTP.Visible = true;\n}\n...",
+  "properties": [],
+  "methods": [
+    {
+      "name": "CTPFactoryAvailable",
+      "kind": "method",
+      "signature": "CTPFactoryAvailable(CTPFactoryInst As ICTPFactory)",
+      "description": "Passes an ICTPFactory object to a Microsoft ActiveX add-in that can then be used when creating a custom task pane.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "CTPFactoryInst",
+          "type": "ICTPFactory",
+          "optional": false,
+          "description": "The object is used by an add-in to create a task pane."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

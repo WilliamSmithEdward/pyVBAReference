@@ -1,0 +1,236 @@
+{
+  "name": "IChartEvents",
+  "kind": "Interface",
+  "guid": "{0002440F-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "Deactivate",
+      "kind": "method",
+      "signature": "Deactivate()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "Resize",
+      "kind": "method",
+      "signature": "Resize()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "MouseDown",
+      "kind": "method",
+      "signature": "MouseDown(Button As Long, Shift As Long, x As Long, y As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "x",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "y",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseUp",
+      "kind": "method",
+      "signature": "MouseUp(Button As Long, Shift As Long, x As Long, y As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "x",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "y",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseMove",
+      "kind": "method",
+      "signature": "MouseMove(Button As Long, Shift As Long, x As Long, y As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "x",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "y",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeRightClick",
+      "kind": "method",
+      "signature": "BeforeRightClick(Cancel As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeDoubleClick",
+      "kind": "method",
+      "signature": "BeforeDoubleClick(ElementID As Long, Arg1 As Long, Arg2 As Long, Cancel As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ElementID",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Arg1",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Arg2",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select(ElementID As Long, Arg1 As Long, Arg2 As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ElementID",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Arg1",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Arg2",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SeriesChange",
+      "kind": "method",
+      "signature": "SeriesChange(SeriesIndex As Long, PointIndex As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "SeriesIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "PointIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Calculate",
+      "kind": "method",
+      "signature": "Calculate()",
+      "description": "",
+      "returns": "HRESULT"
+    }
+  ],
+  "events": []
+}

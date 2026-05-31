@@ -1,0 +1,89 @@
+{
+  "name": "CustomXMLValidationErrors",
+  "kind": "Dispatch Interface",
+  "guid": "{000CDB0F-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a collection of CustomXMLValidationError objects.",
+  "remarks": "",
+  "example": "Dim ValErrors As CustomXMLValidationErrors\nDim ValError As CustomXMLValidationError\nDim cxp1 As CustomXMLPart\nDim intError As Integer\n\nOn Error Go To validation_error\n\n With ActiveDocument\n\n    ' Add and populate a custom xml part\n    set cxp1 = .CustomXMLParts.Add \"<invoice>\"\n\n    ' Add a node\n    cxp1.AddNode \"<quantity>\", \"supplier\", \"urn:invoice:namespace\"\n\n End With\n\nIf ValErrors.Count > 0 then\n   For Each ValError In ValErrors\n      DeBug.Print(\"Error name: \" & ValError.Name & \" Error description: \" & ValError.Text)\n   Next\nEnd If\n\nExit Sub\n\nvalidation_error:\n   CustomXMLValidationErrors.Add(ValError.Name, ValError.Text))\nResume",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the CustomXMLValidationErrors object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the CustomXMLValidationErrors object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the CustomXMLValidationErrors object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the CustomXMLValidationErrors collection. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "CustomXMLValidationError",
+      "access": "read-only",
+      "description": "Gets a CustomXMLValidationError object from the CustomXMLValidationErrors collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Node As CustomXMLNode, ErrorName As String, [ErrorText As String], [ClearedOnUpdate As Boolean])",
+      "description": "Adds a CustomXMLValidationError object containing an XML validation error to the CustomXMLValidationErrors collection.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Node",
+          "type": "CustomXMLNode",
+          "optional": false,
+          "description": "Represents the node where the error occurred."
+        },
+        {
+          "name": "ErrorName",
+          "type": "String",
+          "optional": false,
+          "description": "Contains the name of the error."
+        },
+        {
+          "name": "ErrorText",
+          "type": "String",
+          "optional": true,
+          "description": "Contains the descriptive error text."
+        },
+        {
+          "name": "ClearedOnUpdate",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether the error is to be cleared from the CustomXMLValidationErrors collection when the XML is corrected and updated."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,78 @@
+{
+  "name": "VPageBreaks",
+  "kind": "Dispatch Interface",
+  "guid": "{00024405-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of vertical page breaks within the print area.",
+  "remarks": "Each vertical page break is represented by a VPageBreak object. When the Application property, Count property, Creator property, Item property, Parent property, or Add method is used in conjunction with the VPageBreaks property: - For an automatic print area, the VPageBreaks property applies only to the page breaks within the print area. - For a user-defined print area of the same range, the VPageBreaks property applies to all of the page breaks.",
+  "example": "ActiveSheet.VPageBreaks.Add Before:=ActiveCell",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "VPageBreak",
+      "access": "read-only",
+      "description": "Returns a single object from a collection."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "VPageBreak",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Before As Object) As VPageBreak",
+      "description": "Adds a vertical page break.",
+      "returns": "VPageBreak",
+      "parameters": [
+        {
+          "name": "Before",
+          "type": "Object",
+          "optional": false,
+          "description": "A Range object. The range to the left of which the new page break will be added."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

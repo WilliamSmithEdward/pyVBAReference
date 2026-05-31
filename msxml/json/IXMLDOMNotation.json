@@ -1,0 +1,342 @@
+{
+  "name": "IXMLDOMNotation",
+  "kind": "Dispatch Interface",
+  "guid": "{2933BF8C-7B36-11D2-B20E-00C04F983E60}",
+  "library": "Microsoft XML, v6.0",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "nodeName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "name of the node"
+    },
+    {
+      "name": "nodeValue",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "value stored in the node"
+    },
+    {
+      "name": "nodeType",
+      "kind": "property",
+      "type": "DOMNodeType",
+      "access": "read-only",
+      "description": "the node's type"
+    },
+    {
+      "name": "parentNode",
+      "kind": "property",
+      "type": "IXMLDOMNode",
+      "access": "read-only",
+      "description": "parent of the node"
+    },
+    {
+      "name": "childNodes",
+      "kind": "property",
+      "type": "IXMLDOMNodeList",
+      "access": "read-only",
+      "description": "the collection of the node's children"
+    },
+    {
+      "name": "firstChild",
+      "kind": "property",
+      "type": "IXMLDOMNode",
+      "access": "read-only",
+      "description": "first child of the node"
+    },
+    {
+      "name": "lastChild",
+      "kind": "property",
+      "type": "IXMLDOMNode",
+      "access": "read-only",
+      "description": "last child of the node"
+    },
+    {
+      "name": "previousSibling",
+      "kind": "property",
+      "type": "IXMLDOMNode",
+      "access": "read-only",
+      "description": "left sibling of the node"
+    },
+    {
+      "name": "nextSibling",
+      "kind": "property",
+      "type": "IXMLDOMNode",
+      "access": "read-only",
+      "description": "right sibling of the node"
+    },
+    {
+      "name": "attributes",
+      "kind": "property",
+      "type": "IXMLDOMNamedNodeMap",
+      "access": "read-only",
+      "description": "the collection of the node's attributes"
+    },
+    {
+      "name": "ownerDocument",
+      "kind": "property",
+      "type": "IXMLDOMDocument",
+      "access": "read-only",
+      "description": "document that contains the node"
+    },
+    {
+      "name": "nodeTypeString",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "the type of node in string form"
+    },
+    {
+      "name": "text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "text content of the node and subtree"
+    },
+    {
+      "name": "specified",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "indicates whether node is a default value"
+    },
+    {
+      "name": "definition",
+      "kind": "property",
+      "type": "IXMLDOMNode",
+      "access": "read-only",
+      "description": "pointer to the definition of the node in the DTD or schema"
+    },
+    {
+      "name": "nodeTypedValue",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "get the strongly typed value of the node"
+    },
+    {
+      "name": "dataType",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "the data type of the node"
+    },
+    {
+      "name": "xml",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "return the XML source for the node and each of its descendants"
+    },
+    {
+      "name": "parsed",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "has sub-tree been completely parsed"
+    },
+    {
+      "name": "namespaceURI",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "the URI for the namespace applying to the node"
+    },
+    {
+      "name": "prefix",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "the prefix for the namespace applying to the node"
+    },
+    {
+      "name": "baseName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "the base name of the node (nodename with the prefix stripped off)"
+    },
+    {
+      "name": "publicId",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "the public ID"
+    },
+    {
+      "name": "systemId",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "the system ID"
+    }
+  ],
+  "methods": [
+    {
+      "name": "insertBefore",
+      "kind": "method",
+      "signature": "insertBefore(newChild As IXMLDOMNode, refChild As Variant) As IXMLDOMNode",
+      "description": "insert a child node",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "newChild",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "refChild",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "replaceChild",
+      "kind": "method",
+      "signature": "replaceChild(newChild As IXMLDOMNode, oldChild As IXMLDOMNode) As IXMLDOMNode",
+      "description": "replace a child node",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "newChild",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "oldChild",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "removeChild",
+      "kind": "method",
+      "signature": "removeChild(childNode As IXMLDOMNode) As IXMLDOMNode",
+      "description": "remove a child node",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "childNode",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "appendChild",
+      "kind": "method",
+      "signature": "appendChild(newChild As IXMLDOMNode) As IXMLDOMNode",
+      "description": "append a child node",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "newChild",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "hasChildNodes",
+      "kind": "method",
+      "signature": "hasChildNodes() As Boolean",
+      "description": "",
+      "returns": "Boolean"
+    },
+    {
+      "name": "cloneNode",
+      "kind": "method",
+      "signature": "cloneNode(deep As Boolean) As IXMLDOMNode",
+      "description": "",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "deep",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "transformNode",
+      "kind": "method",
+      "signature": "transformNode(stylesheet As IXMLDOMNode) As String",
+      "description": "apply the stylesheet to the subtree",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "stylesheet",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "selectNodes",
+      "kind": "method",
+      "signature": "selectNodes(queryString As String) As IXMLDOMNodeList",
+      "description": "execute query on the subtree",
+      "returns": "IXMLDOMNodeList",
+      "parameters": [
+        {
+          "name": "queryString",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "selectSingleNode",
+      "kind": "method",
+      "signature": "selectSingleNode(queryString As String) As IXMLDOMNode",
+      "description": "execute query on the subtree",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "queryString",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "transformNodeToObject",
+      "kind": "method",
+      "signature": "transformNodeToObject(stylesheet As IXMLDOMNode, outputObject As Variant)",
+      "description": "apply the stylesheet to the subtree, returning the result through a document or a stream",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "stylesheet",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "outputObject",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

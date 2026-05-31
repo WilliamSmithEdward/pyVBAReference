@@ -1,0 +1,294 @@
+{
+  "name": "IDocEvents",
+  "kind": "Interface",
+  "guid": "{00024411-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "SelectionChange",
+      "kind": "method",
+      "signature": "SelectionChange(Target As Range)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "Range",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeDoubleClick",
+      "kind": "method",
+      "signature": "BeforeDoubleClick(Target As Range, Cancel As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "Range",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeRightClick",
+      "kind": "method",
+      "signature": "BeforeRightClick(Target As Range, Cancel As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "Range",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "Deactivate",
+      "kind": "method",
+      "signature": "Deactivate()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "Calculate",
+      "kind": "method",
+      "signature": "Calculate()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "Change",
+      "kind": "method",
+      "signature": "Change(Target As Range)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "Range",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "FollowHyperlink",
+      "kind": "method",
+      "signature": "FollowHyperlink(Target As Hyperlink)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "Hyperlink",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PivotTableUpdate",
+      "kind": "method",
+      "signature": "PivotTableUpdate(Target As PivotTable)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PivotTableAfterValueChange",
+      "kind": "method",
+      "signature": "PivotTableAfterValueChange(TargetPivotTable As PivotTable, TargetRange As Range)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "TargetPivotTable",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "TargetRange",
+          "type": "Range",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PivotTableBeforeAllocateChanges",
+      "kind": "method",
+      "signature": "PivotTableBeforeAllocateChanges(TargetPivotTable As PivotTable, ValueChangeStart As Long, ValueChangeEnd As Long, Cancel As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "TargetPivotTable",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ValueChangeStart",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ValueChangeEnd",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PivotTableBeforeCommitChanges",
+      "kind": "method",
+      "signature": "PivotTableBeforeCommitChanges(TargetPivotTable As PivotTable, ValueChangeStart As Long, ValueChangeEnd As Long, Cancel As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "TargetPivotTable",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ValueChangeStart",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ValueChangeEnd",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PivotTableBeforeDiscardChanges",
+      "kind": "method",
+      "signature": "PivotTableBeforeDiscardChanges(TargetPivotTable As PivotTable, ValueChangeStart As Long, ValueChangeEnd As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "TargetPivotTable",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ValueChangeStart",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ValueChangeEnd",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PivotTableChangeSync",
+      "kind": "method",
+      "signature": "PivotTableChangeSync(Target As PivotTable)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "LensGalleryRenderComplete",
+      "kind": "method",
+      "signature": "LensGalleryRenderComplete()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "TableUpdate",
+      "kind": "method",
+      "signature": "TableUpdate(Target As TableObject)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "TableObject",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeDelete",
+      "kind": "method",
+      "signature": "BeforeDelete()",
+      "description": "",
+      "returns": "HRESULT"
+    }
+  ],
+  "events": []
+}

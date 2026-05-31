@@ -1,0 +1,134 @@
+{
+  "name": "AutoCorrect",
+  "kind": "Dispatch Interface",
+  "guid": "{000208D4-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Contains Microsoft Excel AutoCorrect attributes (capitalization of names of days, correction of two initial capital letters, automatic correction list, and so on).",
+  "remarks": "",
+  "example": "With Application.AutoCorrect\n .TwoInitialCapitals = True\n .ReplaceText = True\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "CapitalizeNamesOfDays",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the first letter of day names is capitalized automatically. Read/write Boolean."
+    },
+    {
+      "name": "ReplacementList",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns the array of AutoCorrect replacements."
+    },
+    {
+      "name": "ReplaceText",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if text in the list of AutoCorrect replacements is replaced automatically. Read/write Boolean."
+    },
+    {
+      "name": "TwoInitialCapitals",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if words that begin with two capital letters are corrected automatically. Read/write Boolean."
+    },
+    {
+      "name": "CorrectSentenceCap",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Excel automatically corrects sentence (first word) capitalization. Read/write Boolean."
+    },
+    {
+      "name": "CorrectCapsLock",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Excel automatically corrects accidental use of the CapsLock key. Read/write Boolean."
+    },
+    {
+      "name": "DisplayAutoCorrectOptions",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Allows the user to display or hide the AutoCorrect Options button. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "AutoExpandListRange",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "A Boolean value indicating whether automatic expansion is enabled for lists. When you type in a cell of an empty row or column next to a list, the list will expand to include that row or column if automatic expansion is enabled. Read/write Boolean."
+    },
+    {
+      "name": "AutoFillFormulasInLists",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Affects the creation of calculated columns created by automatic fill-down lists. Read/write Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "AddReplacement",
+      "kind": "method",
+      "signature": "AddReplacement(What As String, Replacement As String) As Variant",
+      "description": "Adds an entry to the array of AutoCorrect replacements.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "What",
+          "type": "String",
+          "optional": false,
+          "description": "The text to be replaced. If this string already exists in the array of AutoCorrect replacements, the existing substitute text is replaced by the new text."
+        },
+        {
+          "name": "Replacement",
+          "type": "String",
+          "optional": false,
+          "description": "The replacement text."
+        }
+      ]
+    },
+    {
+      "name": "DeleteReplacement",
+      "kind": "method",
+      "signature": "DeleteReplacement(What As String) As Variant",
+      "description": "Deletes an entry from the array of AutoCorrect replacements.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "What",
+          "type": "String",
+          "optional": false,
+          "description": "The text to be replaced, as it appears in the row to be deleted from the array of AutoCorrect replacements. If this string doesn't exist in the array of AutoCorrect replacements, this method fails."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

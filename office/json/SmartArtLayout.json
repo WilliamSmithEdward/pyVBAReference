@@ -1,0 +1,62 @@
+{
+  "name": "SmartArtLayout",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03CA-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a SmartArt diagram.",
+  "remarks": "Choices include Basic Block list, Picture Caption list, Vertical Bulleted list, etc.",
+  "example": "ActivePresentation.Slides(1).Shapes(1).SmartArt.Layout = Application.SmartArtLayouts(1)",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SmartArtLayout object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SmartArtLayout object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the calling object. Read-only."
+    },
+    {
+      "name": "Id",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Retrieves the unique Id of the associated SmartArt layout. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Retrieves the string name of the SmartArt layout. Read-only."
+    },
+    {
+      "name": "Description",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Retrieves the description of the SmartArt layout. Read-only."
+    },
+    {
+      "name": "Category",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Retrieves the primary category name associated with the SmartArt layout. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

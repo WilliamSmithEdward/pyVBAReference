@@ -1,0 +1,69 @@
+# DefaultWebOptions
+
+**Type:** Dispatch Interface  
+**Library:** Microsoft Excel 16.0 Object Library  
+**GUID:** {00024448-0000-0000-C000-000000000046}  
+
+Contains global application-level attributes used by Microsoft Excel when you save a document as a webpage or open a webpage. You can return or set attributes either at the application (global) level or at the workbook level.
+
+**Remarks:** Workbook-level attribute settings override application-level attribute settings. Workbook-level attributes are contained in the WebOptions object.
+
+**Example:**
+
+```vba
+Set objAppWebOptions = Application.DefaultWebOptions
+With objAppWebOptions
+ If .AllowPNG = True Then
+ strImageFileType = "PNG"
+ Else
+ strImageFileType = "JPG"
+ End If
+End With
+```
+
+## Properties (22)
+
+- `Application As Application  (read-only)`  
+  When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application.
+- `Creator As XlCreator  (read-only)`  
+  Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long.
+- `Parent As Object  (read-only)`  
+  Returns the parent object for the specified object. Read-only.
+- `RelyOnCSS As Boolean  (read/write)`  
+  True if cascading style sheets (CSS) are used for font formatting when you view a saved document in a web browser. Microsoft Excel creates a cascading style sheet file and saves it either to the specified folder or to the same folder as your webpage, depending on the value of the OrganizeInFolder property. False if HTML <FONT> tags and cascading style sheets are used. The default value is True. Read/write Boolean.
+- `SaveHiddenData As Boolean  (read/write)`  
+  True if data outside of the specified range is saved when you save the document as a webpage. This data may be necessary for maintaining formulas. False if data outside of the specified range is not saved with the webpage. The default value is True. Read/write Boolean.
+- `LoadPictures As Boolean  (read/write)`  
+  True if images are loaded when you open a document in Microsoft Excel, usually when the images and document were not created in Microsoft Excel. False if the images are not loaded. The default value is True. Read/write Boolean.
+- `OrganizeInFolder As Boolean  (read/write)`  
+  True if all supporting files, such as background textures and graphics, are organized in a separate folder when you save the specified document as a webpage. False if supporting files are saved in the same folder as the webpage. The default value is True. Read/write Boolean.
+- `UpdateLinksOnSave As Boolean  (read/write)`  
+  True if hyperlinks and paths to all supporting files are automatically updated before you save the document as a webpage, ensuring that the links are up to date at the time the document is saved. False if the links are not updated. The default value is True. Read/write Boolean.
+- `UseLongFileNames As Boolean  (read/write)`  
+  True if long file names are used when you save the document as a webpage. False if long file names are not used and the DOS file name format (8.3) is used. The default value is True. Read/write Boolean.
+- `CheckIfOfficeIsHTMLEditor As Boolean  (read/write)`  
+  True if Microsoft Excel checks to see whether an Office application is the default HTML editor when you start Excel. False if Excel does not perform this check. The default value is True. Read/write Boolean.
+- `DownloadComponents As Boolean  (read/write)`  
+  True if the necessary Microsoft Office Web components are downloaded when you view the saved document in a web browser, but only if the components are not already installed. False if the components are not downloaded. The default value is False. Read/write Boolean.
+- `RelyOnVML As Boolean  (read/write)`  
+  True if image files are not generated from drawing objects when you save a document as a webpage. False if images are generated. The default value is False. Read/write Boolean.
+- `AllowPNG As Boolean  (read/write)`  
+  True if PNG (Portable Network Graphics) is allowed as an image format when you save documents as a webpage. False if PNG is not allowed as an output format. The default value is False. Read/write Boolean.
+- `ScreenSize As MsoScreenSize  (read/write)`  
+  Returns or sets the ideal minimum screen size (width by height, in pixels) that you should use when viewing the saved document in a web browser. Can be one of the MsoScreenSize constants. The default constant is msoScreenSize800x600. Read/write MsoScreenSize.
+- `PixelsPerInch As Long  (read/write)`  
+  Returns or sets the density (pixels per inch) of graphics images and table cells on a webpage. The range of settings is usually from 19 to 480, and common settings for popular screen sizes are 72, 96, and 120. The default setting is 96. Read/write Long.
+- `LocationOfComponents As String  (read/write)`  
+  Returns or sets the central URL (on the intranet or web) or path (local or network) to the location from which authorized users can download Microsoft Office Web components when viewing your saved document. The default value is the local or network installation path for Microsoft Office. Read/write String.
+- `Encoding As MsoEncoding  (read/write)`  
+  Returns or sets the document encoding (code page or character set) to be used by the web browser when you view the saved document. The default is the system code page. Read/write MsoEncoding.
+- `AlwaysSaveInDefaultEncoding As Boolean  (read/write)`  
+  True if the default encoding is used when you save a webpage or plain text document, independent of the file's original encoding when opened. False if the original encoding of the file is used. The default value is False. Read/write Boolean.
+- `Fonts As WebPageFonts  (read-only)`  
+  Returns the WebPageFonts collection representing the set of fonts Microsoft Excel uses when you open a webpage in Excel and there is either no font information specified on the webpage, or the current default font can't display the character set on the webpage. Read-only.
+- `FolderSuffix As String  (read-only)`  
+  Returns the folder suffix that Microsoft Excel uses when you save a document as a webpage, use long file names, and choose to save supporting files in a separate folder (that is, if the UseLongFileNames and OrganizeInFolder properties are set to True). Read-only String.
+- `TargetBrowser As MsoTargetBrowser  (read/write)`  
+  Returns or sets an MsoTargetBrowser constant indicating the browser version. Read/write.
+- `SaveNewWebPagesAsWebArchives As Boolean  (read/write)`  
+  True if new webpages can be saved as web archives. Read/write Boolean.

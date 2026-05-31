@@ -1,0 +1,199 @@
+{
+  "name": "IMXNamespaceManager",
+  "kind": "Interface",
+  "guid": "{C90352F6-643C-4FBC-BB23-E996EB2D51FD}",
+  "library": "Microsoft XML, v6.0",
+  "description": "IMXNamespaceManager interface",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "putAllowOverride",
+      "kind": "method",
+      "signature": "putAllowOverride(fOverride As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "fOverride",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getAllowOverride",
+      "kind": "method",
+      "signature": "getAllowOverride(fOverride As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "fOverride",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "reset",
+      "kind": "method",
+      "signature": "reset()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "pushContext",
+      "kind": "method",
+      "signature": "pushContext()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "pushNodeContext",
+      "kind": "method",
+      "signature": "pushNodeContext(contextNode As IXMLDOMNode, fDeep As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "contextNode",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "fDeep",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "popContext",
+      "kind": "method",
+      "signature": "popContext()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "declarePrefix",
+      "kind": "method",
+      "signature": "declarePrefix(prefix As String, namespaceURI As String)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "prefix",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "namespaceURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getDeclaredPrefix",
+      "kind": "method",
+      "signature": "getDeclaredPrefix(nIndex As Long, pwchPrefix As Integer, pcchPrefix As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchPrefix",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcchPrefix",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getPrefix",
+      "kind": "method",
+      "signature": "getPrefix(pwszNamespaceURI As String, nIndex As Long, pwchPrefix As Integer, pcchPrefix As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwszNamespaceURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchPrefix",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcchPrefix",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getURI",
+      "kind": "method",
+      "signature": "getURI(pwchPrefix As String, pContextNode As IXMLDOMNode, pwchUri As Integer, pcchUri As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchPrefix",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pContextNode",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchUri",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcchUri",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

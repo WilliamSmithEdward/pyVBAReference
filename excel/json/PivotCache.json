@@ -1,0 +1,378 @@
+{
+  "name": "PivotCache",
+  "kind": "Dispatch Interface",
+  "guid": "{0002441C-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the memory cache for a PivotTable report.",
+  "remarks": "The PivotCache object is a member of the PivotCaches collection.",
+  "example": "Worksheets(1).PivotTables(1).PivotCache.RefreshOnFileOpen = True",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "BackgroundQuery",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if queries for the PivotTable report are performed asynchronously (in the background). Read/write Boolean."
+    },
+    {
+      "name": "Connection",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a string that contains one of the following:"
+    },
+    {
+      "name": "EnableRefresh",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the PivotTable cache or query table can be refreshed by the user. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the index number of the object within the collection of similar objects."
+    },
+    {
+      "name": "MemoryUsed",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the amount of memory currently being used by the object, in bytes. Read-only Long."
+    },
+    {
+      "name": "OptimizeCache",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the PivotTable cache is optimized when it's constructed. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "RecordCount",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of records in the PivotTable cache or the number of cache records that contain the specified item. Read-only Long."
+    },
+    {
+      "name": "RefreshDate",
+      "kind": "property",
+      "type": "Date",
+      "access": "read-only",
+      "description": "Returns the date on which the cache was last refreshed. Read-only Date."
+    },
+    {
+      "name": "RefreshName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the person who last refreshed the PivotTable cache. Read-only String."
+    },
+    {
+      "name": "RefreshOnFileOpen",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the PivotTable cache is automatically updated each time the workbook is opened. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "SavePassword",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if password information in an ODBC connection string is saved with the specified query. False if the password is removed. Read/write Boolean."
+    },
+    {
+      "name": "SourceData",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns the data source for the PivotTable report, as shown in the following table. Read/write Variant."
+    },
+    {
+      "name": "CommandText",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the command string for the specified data source. Read/write Variant."
+    },
+    {
+      "name": "CommandType",
+      "kind": "property",
+      "type": "XlCmdType",
+      "access": "read/write",
+      "description": "Returns or sets one of these XlCmdType constants: xlCmdCube, xlCmdDefault, xlCmdSql, or xlCmdTable."
+    },
+    {
+      "name": "QueryType",
+      "kind": "property",
+      "type": "XlQueryType",
+      "access": "read-only",
+      "description": "Indicates the type of query used by Microsoft Excel to populate the PivotTable cache. Read-only XlQueryType."
+    },
+    {
+      "name": "MaintainConnection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the connection to the specified data source is maintained after the refresh and until the workbook is closed. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "RefreshPeriod",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the number of minutes between refreshes. Read/write Long."
+    },
+    {
+      "name": "Recordset",
+      "kind": "property",
+      "type": "Object",
+      "access": "read/write",
+      "description": "Returns or sets a Recordset object that's used as the data source for the specified PivotTable cache. Read/write."
+    },
+    {
+      "name": "LocalConnection",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the connection string to an offline cube file. Read/write String."
+    },
+    {
+      "name": "UseLocalConnection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns True if the LocalConnection property is used to specify the string that enables Microsoft Excel to connect to a data source. Returns False if the connection string specified by the Connection property is used. Read/write Boolean."
+    },
+    {
+      "name": "ADOConnection",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an ADO Connection object if the PivotTable cache is connected to an OLE DB data source. The ADOConnection property exposes the Microsoft Excel connection to the data provider, allowing the user to write code within the context of the same session that Excel is using with ADO (relational source) or ADO MD (OLAP source). Read-only."
+    },
+    {
+      "name": "IsConnected",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns True if the MaintainConnection property is True, and the PivotTable cache is currently connected to its source. Returns False if it is not currently connected to its source. Read-only Boolean."
+    },
+    {
+      "name": "OLAP",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns True if the PivotTable cache is connected to an Online Analytical Processing (OLAP) server. Read-only Boolean."
+    },
+    {
+      "name": "SourceType",
+      "kind": "property",
+      "type": "XlPivotTableSourceType",
+      "access": "read-only",
+      "description": "Returns an XlPivotTableSourceType value that represents the type of item being published."
+    },
+    {
+      "name": "MissingItemsLimit",
+      "kind": "property",
+      "type": "XlPivotTableMissingItems",
+      "access": "read/write",
+      "description": "Returns or sets the maximum quantity of unique items per PivotTable field that are retained even when they have no supporting data in the cache records. Read/write XlPivotTableMissingItems."
+    },
+    {
+      "name": "SourceConnectionFile",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String indicating the Microsoft Office Data Connection file or similar file that was used to create the PivotTable. Read/write."
+    },
+    {
+      "name": "SourceDataFile",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that indicates the source data file for the cache of the PivotTable."
+    },
+    {
+      "name": "RobustConnect",
+      "kind": "property",
+      "type": "XlRobustConnect",
+      "access": "read/write",
+      "description": "Returns or sets how the PivotTable cache connects to its data source. Read/write XlRobustConnect."
+    },
+    {
+      "name": "WorkbookConnection",
+      "kind": "property",
+      "type": "WorkbookConnection",
+      "access": "read-only",
+      "description": "Establishes a connection between the current workbook and the PivotCache object. Read-only."
+    },
+    {
+      "name": "Version",
+      "kind": "property",
+      "type": "XlPivotTableVersionList",
+      "access": "read-only",
+      "description": "Returns the version of Microsoft Excel in which the PivotCache was created. Read-only XlPivotTableVersionList."
+    },
+    {
+      "name": "UpgradeOnRefresh",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Contains information on whether to upgrade the PivotCache and all connected PivotTables on the next refresh. Read/write Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Refresh",
+      "kind": "method",
+      "signature": "Refresh()",
+      "description": "Causes the specified PivotCache to be redrawn immediately.",
+      "returns": "void"
+    },
+    {
+      "name": "ResetTimer",
+      "kind": "method",
+      "signature": "ResetTimer()",
+      "description": "Resets the refresh timer for the specified query table or PivotTable report to the last interval that you set by using the RefreshPeriod property.",
+      "returns": "void"
+    },
+    {
+      "name": "CreatePivotTable",
+      "kind": "method",
+      "signature": "CreatePivotTable(TableDestination As Variant, [TableName As Variant], [ReadData As Variant], [DefaultVersion As Variant]) As PivotTable",
+      "description": "Creates a PivotTable report based on a PivotCache object. Returns a PivotTable object.",
+      "returns": "PivotTable",
+      "parameters": [
+        {
+          "name": "TableDestination",
+          "type": "Variant",
+          "optional": false,
+          "description": "The cell in the upper-left corner of the PivotTable report's destination range (the range on the worksheet where the resulting PivotTable report will be placed). The destination range must be on a worksheet in the workbook that contains the PivotCache object specified by _expression_."
+        },
+        {
+          "name": "TableName",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the new PivotTable report."
+        },
+        {
+          "name": "ReadData",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to create a PivotTable cache that contains all the records from the external database; this cache can be very large. False to enable setting some of the fields as server-based page fields before the data is actually read."
+        },
+        {
+          "name": "DefaultVersion",
+          "type": "Variant",
+          "optional": true,
+          "description": "The default version of the PivotTable report."
+        }
+      ]
+    },
+    {
+      "name": "MakeConnection",
+      "kind": "method",
+      "signature": "MakeConnection()",
+      "description": "Establishes a connection for the specified PivotTable cache.",
+      "returns": "void"
+    },
+    {
+      "name": "SaveAsODC",
+      "kind": "method",
+      "signature": "SaveAsODC(ODCFileName As String, [Description As Variant], [Keywords As Variant])",
+      "description": "Saves the PivotTable cache source as a Microsoft Office Data Connection file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ODCFileName",
+          "type": "String",
+          "optional": false,
+          "description": "Location to save the file."
+        },
+        {
+          "name": "Description",
+          "type": "Variant",
+          "optional": true,
+          "description": "Description that will be saved in the file."
+        },
+        {
+          "name": "Keywords",
+          "type": "Variant",
+          "optional": true,
+          "description": "Space-separated keywords that can be used to search for this file."
+        }
+      ]
+    },
+    {
+      "name": "CreatePivotChart",
+      "kind": "method",
+      "signature": "CreatePivotChart(ChartDestination As Variant, [XlChartType As Variant], [Left As Variant], [Top As Variant], [Width As Variant], [Height As Variant]) As Shape",
+      "description": "Creates a standalone PivotChart from a PivotCache object. Returns a Shape object.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "ChartDestination",
+          "type": "Variant",
+          "optional": false,
+          "description": "The Destination worksheet."
+        },
+        {
+          "name": "XlChartType",
+          "type": "Variant",
+          "optional": true,
+          "description": "The type of chart."
+        },
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": true,
+          "description": "The distance, in points, from the left edge of the object to the left edge of column A (on a worksheet) or the left edge of the chart area (on a chart)."
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": "The distance, in points, from the top edge of the topmost shape in the shape range to the top edge of the worksheet."
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": "The width, in points, of the object."
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": "The height, in points, of the object."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

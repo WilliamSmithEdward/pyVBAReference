@@ -1,0 +1,105 @@
+{
+  "name": "Queries",
+  "kind": "Dispatch Interface",
+  "guid": "{000244EC-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "The collection of WorkbookQuery objects introduced in Office 2016.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns an integer that represents the number of objects in the collection."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "WorkbookQuery",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "FastCombine",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True to enable the fast combine feature, as long as the workbook is open. Read/write Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String, Formula As String, [Description As Variant]) As WorkbookQuery",
+      "description": "Adds a new WorkbookQuery object to the Queries collection.",
+      "returns": "WorkbookQuery",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the query."
+        },
+        {
+          "name": "Formula",
+          "type": "String",
+          "optional": false,
+          "description": "The Power Query M formula for the new query."
+        },
+        {
+          "name": "Description",
+          "type": "Variant",
+          "optional": true,
+          "description": "The description of the query."
+        }
+      ]
+    },
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(NameOrIndex As Variant) As WorkbookQuery",
+      "description": "Returns a single object from a collection.",
+      "returns": "WorkbookQuery",
+      "parameters": [
+        {
+          "name": "NameOrIndex",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number of the item."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

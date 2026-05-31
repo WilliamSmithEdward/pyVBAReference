@@ -1,0 +1,104 @@
+{
+  "name": "ChartFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{000244B2-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Provides access to the Office Art formatting for chart elements.",
+  "remarks": "Using a property or method that does not apply to the type of object that the ChartFormat object is attached to will result in a run-time error.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Fill",
+      "kind": "property",
+      "type": "FillFormat",
+      "access": "read-only",
+      "description": "Returns a FillFormat object for the parent chart element that contains fill formatting properties for the chart element. Read-only."
+    },
+    {
+      "name": "Glow",
+      "kind": "property",
+      "type": "GlowFormat",
+      "access": "read-only",
+      "description": "Returns a GlowFormat object for a specified chart that contains glow formatting properties for the chart element. Read-only."
+    },
+    {
+      "name": "Line",
+      "kind": "property",
+      "type": "LineFormat",
+      "access": "read-only",
+      "description": "Returns a LineFormat object that contains line formatting properties for the specified chart element. Read-only."
+    },
+    {
+      "name": "PictureFormat",
+      "kind": "property",
+      "type": "PictureFormat",
+      "access": "read-only",
+      "description": "Returns a PictureFormat object for a specified chart that contains pictures. Read-only."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "ShadowFormat",
+      "access": "read-only",
+      "description": "Returns a ShadowFormat object that contains shadow formatting properties for the chart element. Read-only."
+    },
+    {
+      "name": "SoftEdge",
+      "kind": "property",
+      "type": "SoftEdgeFormat",
+      "access": "read-only",
+      "description": "Returns a SoftEdgeFormat object for a specified chart that contains soft edge formatting properties for the chart. Read-only."
+    },
+    {
+      "name": "TextFrame2",
+      "kind": "property",
+      "type": "TextFrame2",
+      "access": "read-only",
+      "description": "Returns a TextFrame2 object that contains text formatting for the specified chart element. Read-only."
+    },
+    {
+      "name": "ThreeD",
+      "kind": "property",
+      "type": "ThreeDFormat",
+      "access": "read-only",
+      "description": "Returns a ThreeDFormat object that contains 3D-effect formatting properties for the specified chart. Read-only."
+    },
+    {
+      "name": "Adjustments",
+      "kind": "property",
+      "type": "Adjustments",
+      "access": "read-only",
+      "description": "Returns an Adjustments object. Read-only."
+    },
+    {
+      "name": "AutoShapeType",
+      "kind": "property",
+      "type": "MsoAutoShapeType",
+      "access": "read/write",
+      "description": "Returns the type of the specified shape. Read-only MsoAutoShapeType."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

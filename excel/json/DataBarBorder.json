@@ -1,0 +1,48 @@
+{
+  "name": "DataBarBorder",
+  "kind": "Dispatch Interface",
+  "guid": "{000244BE-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the border of the data bars specified by a conditional formatting rule.",
+  "remarks": "Use the DataBarBorder object to get or set the color and border type for data bars. To access the DataBarBorder object associated with a data bar conditional formatting rule, use the BarBorder property. After retrieving the DataBarBorder object, use its Color property to return a FormatColor object that you can use to set the color of the data bars.",
+  "example": "Range(\"A1:A10\").Select\nRange(\"A1:A10\").Activate\n\nSet myDataBar = Selection.FormatConditions.AddDatabar\nWith myDataBar.BarBorder\n .Type = xlDataBarBorderSolid\n .Color.ThemeColor = xlThemeColorAccent2\n .Color.TintAndShade = 0\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "XlDataBarBorderType",
+      "access": "read/write",
+      "description": "Returns or sets the type of border for data bars specified by a conditional formatting rule. Read/write."
+    },
+    {
+      "name": "Color",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an object that specifies the color of the border of data bars specified by a conditional formatting rule. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

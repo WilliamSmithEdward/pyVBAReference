@@ -1,0 +1,83 @@
+{
+  "name": "SlicerCacheLevel",
+  "kind": "Dispatch Interface",
+  "guid": "{000244C6-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a level of a hierarchy in an OLAP data source being filtered by a slicer.",
+  "remarks": "When a slicer is used to filter an OLAP data source, the slicer cache that it is associated with can contain multiple hierarchy levels from the data source. Use the SlicerCacheLevels collection of the parent SlicerCache object to access the SlicerCacheLevel objects that represent these hierarchy levels.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the SlicerCache object for the specified SlicerCacheLevel object. Read-only."
+    },
+    {
+      "name": "SlicerItems",
+      "kind": "property",
+      "type": "SlicerItems",
+      "access": "read-only",
+      "description": "Returns a SlicerItems collection that contains the collection of all slicer items for the specified level. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of SlicerItem objects in the specified SlicerCacheLevel object. Read-only."
+    },
+    {
+      "name": "Ordinal",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the one-based ordinal value of the hierarchy level represented by the specified SlicerCacheLevel object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the MDX unique name of the OLAP hierarchy level represented by the object."
+    },
+    {
+      "name": "CrossFilterType",
+      "kind": "property",
+      "type": "XlSlicerCrossFilterType",
+      "access": "read/write",
+      "description": "Returns or sets whether a slicer is participating in cross filtering with other slicers that share the same slicer cache, and how cross filtering is displayed. Read/write."
+    },
+    {
+      "name": "SortItems",
+      "kind": "property",
+      "type": "XlSlicerSort",
+      "access": "read/write",
+      "description": "Returns or sets the sort order of the items in the slicer. Read/write."
+    },
+    {
+      "name": "VisibleSlicerItemsList",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns the list of slicer items that are currently included in the slicer filter. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

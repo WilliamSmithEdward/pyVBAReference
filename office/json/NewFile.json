@@ -1,0 +1,94 @@
+{
+  "name": "NewFile",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0936-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents items listed on the New Item task pane available in several Microsoft Office applications.",
+  "remarks": "Use the Application property or the Creator property to access the NewFile object in each of the applications.",
+  "example": "Sub AddNewDocToTaskPane()\n    Application.NewDocument.Add FileName:=\"C:\\NewDocument.doc\", _\n        Section:=msoNew, DisplayName:=\"New Document\"\n    CommandBars(\"Task Pane\").Visible = True\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the NewFile object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the NewFile object was created. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(FileName As String, [Section As Variant], [DisplayName As Variant], [Action As Variant]) As Boolean",
+      "description": "Adds a new item to the New Item task pane. Returns a Boolean value to indicate whether the operation was successful.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the file to add to the list of files on the task pane."
+        },
+        {
+          "name": "Section",
+          "type": "Variant",
+          "optional": true,
+          "description": "The section to which to add the file. Can be any msoFileNew constant."
+        },
+        {
+          "name": "DisplayName",
+          "type": "Variant",
+          "optional": true,
+          "description": "The text to display in the task pane."
+        },
+        {
+          "name": "Action",
+          "type": "Variant",
+          "optional": true,
+          "description": "The action to take when a user clicks the item. Can be any msoFileNew constant."
+        }
+      ]
+    },
+    {
+      "name": "Remove",
+      "kind": "method",
+      "signature": "Remove(FileName As String, [Section As Variant], [DisplayName As Variant], [Action As Variant]) As Boolean",
+      "description": "Removes an item from the New Item task pane. Returns a Boolean value to indicate whether the operation was successful.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the file reference."
+        },
+        {
+          "name": "Section",
+          "type": "Variant",
+          "optional": true,
+          "description": "The section of the task pane where the file reference exists. Can be any msoFileNew constant."
+        },
+        {
+          "name": "DisplayName",
+          "type": "Variant",
+          "optional": true,
+          "description": "The display text of the file reference."
+        },
+        {
+          "name": "Action",
+          "type": "Variant",
+          "optional": true,
+          "description": "The action to take when a user clicks the item. Can be any msoFileNew constant."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

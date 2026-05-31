@@ -1,0 +1,111 @@
+{
+  "name": "Borders",
+  "kind": "Dispatch Interface",
+  "guid": "{00020855-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of four Border objects that represent the four borders of a Range object or Style object.",
+  "remarks": "Use the Borders property to return the Borders collection, which contains all four borders. You can apply different borders to each side of a cell or range. For more information how to apply borders to a range of cells, see Range.Borders property. You can set border properties for an individual border only with Range and Style objects. Other bordered objects, such as error bars and series lines, have a border that's treated as a single entity, regardless of how many sides it has. For these objects, you must return and set properties for the entire border as a unit. For more information, see the Border object.",
+  "example": "Worksheets(1).Range(\"A1\").Borders.LineStyle = xlDouble",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Color",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the primary color of the object, as shown in the table in the remarks section. Use the RGB function to create a color value. Read/write Variant."
+    },
+    {
+      "name": "ColorIndex",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the color of all four borders."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "Border",
+      "access": "read-only",
+      "description": "Returns a Border object that represents one of the borders of either a range of cells or a style."
+    },
+    {
+      "name": "LineStyle",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the line style for the border. Read/write XlLineStyle, xlGray25, xlGray50, xlGray75, or xlAutomatic."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Synonym for Borders.LineStyle."
+    },
+    {
+      "name": "Weight",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets an XlBorderWeight value that represents the weight of the border."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "Border",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ThemeColor",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the theme color in the applied color scheme that is associated with the specified object. Read/write Variant."
+    },
+    {
+      "name": "TintAndShade",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Single that lightens or darkens a color."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

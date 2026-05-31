@@ -1,0 +1,62 @@
+{
+  "name": "SparkVerticalAxis",
+  "kind": "Dispatch Interface",
+  "guid": "{000244BC-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the settings for the vertical axes of a group of sparklines.",
+  "remarks": "Use the Vertical property of the SparkAxes object to return the SparkVerticalAxis object for group of sparklines.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent SparklineGroup object for the specified object. Read-only."
+    },
+    {
+      "name": "MinScaleType",
+      "kind": "property",
+      "type": "XlSparkScale",
+      "access": "read/write",
+      "description": "Returns or sets how the minimum value of the vertical axis of the sparkline is scaled relative to other sparklines in the group. Read/write."
+    },
+    {
+      "name": "CustomMinScaleValue",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the custom minimum value for the vertical axis of a sparkline. Read/write."
+    },
+    {
+      "name": "MaxScaleType",
+      "kind": "property",
+      "type": "XlSparkScale",
+      "access": "read/write",
+      "description": "Returns or sets how the maximum value of the vertical axis of the sparkline is scaled relative to other sparklines in the group. Read/write."
+    },
+    {
+      "name": "CustomMaxScaleValue",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the custom maximum value for the vertical axis of a sparkline. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

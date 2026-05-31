@@ -1,0 +1,228 @@
+{
+  "name": "FormatCondition",
+  "kind": "Dispatch Interface",
+  "guid": "{00024425-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a conditional format.",
+  "remarks": "The FormatCondition object is a member of the FormatConditions collection. The FormatConditions collection can now contain more than three conditional formats for a given range. Use the Add method of the FormatConditions object to create a new conditional format. If a range has multiple formats, you can use the Modify method to change one of the formats, or you can use the Delete method to delete a format, and then use the Add method to create a new format. Use the Font, Borders, and Interior properties of the FormatCondition object to control the appearance of formatted cells. Some properties of these objects aren't supported by the conditional format object model. Some of the properties that can be used with conditional formatting are listed in the following table.",
+  "example": "With Worksheets(1).Range(\"e1:e10\").FormatConditions(1)\n With .Borders\n .LineStyle = xlContinuous\n .Weight = xlThin\n .ColorIndex = 6\n End With\n With .Font\n .Bold = True\n .ColorIndex = 3\n End With\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value, containing an XlFormatConditionType value, that represents the object type."
+    },
+    {
+      "name": "Operator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the operator for the conditional format."
+    },
+    {
+      "name": "Formula1",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the value or expression associated with the conditional format or data validation. Can be a constant value, a string value, a cell reference, or a formula. Read-only String."
+    },
+    {
+      "name": "Formula2",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the value or expression associated with the second part of a conditional format or data validation. Used only when the data validation conditional format Operator property is xlBetween or xlNotBetween. Can be a constant value, a string value, a cell reference, or a formula. Read-only String."
+    },
+    {
+      "name": "Interior",
+      "kind": "property",
+      "type": "Interior",
+      "access": "read-only",
+      "description": "Returns an Interior object that represents the interior of the specified object."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read-only",
+      "description": "Returns a Borders collection that represents the borders of a style or a range of cells (including a range defined as part of a conditional format)."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read-only",
+      "description": "Returns a Font object that represents the font of the specified object."
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value specifying the text string used by the conditional formatting rule."
+    },
+    {
+      "name": "TextOperator",
+      "kind": "property",
+      "type": "XlContainsOperator",
+      "access": "read/write",
+      "description": "Returns or sets one of the constants of the XlContainsOperator enumeration, specifying the text search performed by the conditional formatting rule."
+    },
+    {
+      "name": "DateOperator",
+      "kind": "property",
+      "type": "XlTimePeriods",
+      "access": "read/write",
+      "description": "Specifies the Date operator used in the format condition. Read/write."
+    },
+    {
+      "name": "NumberFormat",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the number format applied to a cell if the conditional formatting rule evaluates to True. Read/write Variant."
+    },
+    {
+      "name": "Priority",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the priority value of the conditional formatting rule. The priority determines the order of evaluation when multiple conditional formatting rules exist on a worksheet."
+    },
+    {
+      "name": "StopIfTrue",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that determines if additional formatting rules on the cell should be evaluated if the current rule evaluates to True."
+    },
+    {
+      "name": "AppliesTo",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object specifying the cell range to which the formatting rule is applied."
+    },
+    {
+      "name": "PTCondition",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean value indicating if the conditional format is being applied to a PivotTable. Read-only."
+    },
+    {
+      "name": "ScopeType",
+      "kind": "property",
+      "type": "XlPivotConditionScope",
+      "access": "read/write",
+      "description": "Returns or sets one of the constants of the XlPivotConditionScope enumeration, which determines the scope of the conditional format when it is applied to a PivotTable."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    },
+    {
+      "name": "Modify",
+      "kind": "method",
+      "signature": "Modify(Type As XlFormatConditionType, [Operator As Variant], [Formula1 As Variant], [Formula2 As Variant], [String As Variant], [Operator2 As Variant])",
+      "description": "Modifies an existing conditional format.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "XlFormatConditionType",
+          "optional": false,
+          "description": "Specifies whether the conditional format is based on a cell value or an expression."
+        },
+        {
+          "name": "Operator",
+          "type": "Variant",
+          "optional": true,
+          "description": "An XlFormatConditionOperator value that represents the conditional format operator. This parameter is ignored if _Type_ is set to xlExpression."
+        },
+        {
+          "name": "Formula1",
+          "type": "Variant",
+          "optional": true,
+          "description": "The value or expression associated with the conditional format. Can be a constant value, a string value, a cell reference, or a formula."
+        },
+        {
+          "name": "Formula2",
+          "type": "Variant",
+          "optional": true,
+          "description": "The value or expression associated with the conditional format. Can be a constant value, a string value, a cell reference, or a formula."
+        },
+        {
+          "name": "String",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Operator2",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ModifyAppliesToRange",
+      "kind": "method",
+      "signature": "ModifyAppliesToRange(Range As Range)",
+      "description": "Sets the cell range to which this formatting rule applies.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The range to which this formatting rule will be applied."
+        }
+      ]
+    },
+    {
+      "name": "SetFirstPriority",
+      "kind": "method",
+      "signature": "SetFirstPriority()",
+      "description": "Sets the priority value for this conditional formatting rule to 1 so that it will be evaluated before all other rules on the worksheet.",
+      "returns": "void"
+    },
+    {
+      "name": "SetLastPriority",
+      "kind": "method",
+      "signature": "SetLastPriority()",
+      "description": "Sets the evaluation order for this conditional formatting rule so that it is evaluated after all other rules on the worksheet.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

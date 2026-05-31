@@ -1,0 +1,78 @@
+{
+  "name": "XmlDataBinding",
+  "kind": "Dispatch Interface",
+  "guid": "{00024478-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the connection to the source data for an XmlMap object.",
+  "remarks": "Use the ClearSettings method to remove a data binding. Use the LoadSettings method to initialize the settings for an XmlDataBinding object. Use the Refresh method to refresh a data binding.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "SourceUrl",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String that represents the path to the XML data file or the web service that provides the source data for the specified data binding. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Refresh",
+      "kind": "method",
+      "signature": "Refresh() As XlXmlImportResult",
+      "description": "Retrieves XML data by using the current connection settings of the specified XmlDataBinding object.",
+      "returns": "XlXmlImportResult"
+    },
+    {
+      "name": "LoadSettings",
+      "kind": "method",
+      "signature": "LoadSettings(Url As String)",
+      "description": "Initializes the specified data binding with settings from an XML data file or a Data Retrieval Service Connection (.uxdc) file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Url",
+          "type": "String",
+          "optional": false,
+          "description": "The path to the XML data file. The path is specified in the Uniform Resource Locator (URL) or universal naming convention (UNC) format."
+        }
+      ]
+    },
+    {
+      "name": "ClearSettings",
+      "kind": "method",
+      "signature": "ClearSettings()",
+      "description": "Removes the specified data binding.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,101 @@
+{
+  "name": "HTMLProjectItem",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0358-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "IsOpen",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "LoadFromFile",
+      "kind": "method",
+      "signature": "LoadFromFile(FileName As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open([OpenKind As MsoHTMLProjectOpen])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "OpenKind",
+          "type": "MsoHTMLProjectOpen",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SaveCopyAs",
+      "kind": "method",
+      "signature": "SaveCopyAs(FileName As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

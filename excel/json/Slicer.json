@@ -1,0 +1,189 @@
+{
+  "name": "Slicer",
+  "kind": "Dispatch Interface",
+  "guid": "{000244C8-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a slicer in a workbook.",
+  "remarks": "Each Slicer object represents a slicer in a workbook. Slicers are used to filter data in PivotTable reports or OLAP data sources. Use the Add method to add a Slicer object to the Slicers collection. To access the SlicerItem object that represents the currently selected button in a slicer, use the ActiveItem property of the Slicer object.",
+  "example": "ActiveWorkbook.SlicerCaches(1).Slicers(1).Caption = \"My Slicer\"",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the Worksheet object that represents the sheet that contains the slicer. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the specified slicer. Read/write."
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the caption of the specified slicer. Read/write."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the vertical position of the specified slicer, in points, relative to the upper-left corner of cell A1 on a worksheet. Read/write."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the horizontal position of the specified slicer, in points, relative to the upper-left corner of cell A1 on a worksheet. Read/write."
+    },
+    {
+      "name": "DisableMoveResizeUI",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether the specified slicer can be moved or resized by using the user interface. Read/write."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the width of the specified slicer, in points. Read/write."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the height of the specified slicer, in points. Read/write."
+    },
+    {
+      "name": "RowHeight",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the height, in points, of each row in the specified slicer. Read/write."
+    },
+    {
+      "name": "ColumnWidth",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the width, in points, of each column in the slicer. Read/write."
+    },
+    {
+      "name": "NumberOfColumns",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the number of columns in the specified slicer. Read/write."
+    },
+    {
+      "name": "DisplayHeader",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether the header that displays the slicer Caption property is visible. Read/write."
+    },
+    {
+      "name": "Locked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether the specified slicer can be modified when the sheet that contains it is protected. Read/write."
+    },
+    {
+      "name": "SlicerCache",
+      "kind": "property",
+      "type": "SlicerCache",
+      "access": "read-only",
+      "description": "Returns the SlicerCache object associated with the slicer. Read-only."
+    },
+    {
+      "name": "SlicerCacheLevel",
+      "kind": "property",
+      "type": "SlicerCacheLevel",
+      "access": "read-only",
+      "description": "Returns the SlicerCacheLevel object associated with the slicer. Read-only."
+    },
+    {
+      "name": "Shape",
+      "kind": "property",
+      "type": "Shape",
+      "access": "read-only",
+      "description": "Returns the Shape object associated with the specified slicer. Read-only."
+    },
+    {
+      "name": "Style",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the style currently applied to the specified slicer. Read/write."
+    },
+    {
+      "name": "ActiveItem",
+      "kind": "property",
+      "type": "SlicerItem",
+      "access": "read-only",
+      "description": "Returns a SlicerItem object that represents the slicer button that is currently in focus for the specified slicer. Read-only."
+    },
+    {
+      "name": "TimelineViewState",
+      "kind": "property",
+      "type": "TimelineViewState",
+      "access": "read-only",
+      "description": "The timeline-specific state of the slicer. Read-only TimelineViewState."
+    },
+    {
+      "name": "SlicerCacheType",
+      "kind": "property",
+      "type": "XlSlicerCacheType",
+      "access": "read-only",
+      "description": "Returns the type of the slicer cache: slicer (xlSlicer) or timeline (xlTimeline) . Read-only XlSlicerCacheType."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the slicer and removes it from the associated Slicers collection.",
+      "returns": "void"
+    },
+    {
+      "name": "Cut",
+      "kind": "method",
+      "signature": "Cut()",
+      "description": "Cuts the specified slicer and copies it to the clipboard.",
+      "returns": "void"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy()",
+      "description": "Copies the specified slicer to the clipboard.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,114 @@
+{
+  "name": "IMXXMLFilter",
+  "kind": "Dispatch Interface",
+  "guid": "{C90352F7-643C-4FBC-BB23-E996EB2D51FD}",
+  "library": "Microsoft XML, v6.0",
+  "description": "IMXXMLFilter interface",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "entityResolver",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "contentHandler",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "dtdHandler",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "errorHandler",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "getFeature",
+      "kind": "method",
+      "signature": "getFeature(strName As String) As Boolean",
+      "description": "",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "strName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "putFeature",
+      "kind": "method",
+      "signature": "putFeature(strName As String, fValue As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "fValue",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getProperty",
+      "kind": "method",
+      "signature": "getProperty(strName As String) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "strName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "putProperty",
+      "kind": "method",
+      "signature": "putProperty(strName As String, varValue As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "varValue",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

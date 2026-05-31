@@ -1,0 +1,348 @@
+{
+  "name": "XlPivotFilterType",
+  "kind": "Enumeration",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "The type of filter applied.",
+  "constants": [
+    {
+      "name": "xlTopCount",
+      "value": 1,
+      "description": "Filters for the specified number of values from the top of a list"
+    },
+    {
+      "name": "xlBottomCount",
+      "value": 2,
+      "description": "Filters for the specified number of values from the bottom of a list"
+    },
+    {
+      "name": "xlTopPercent",
+      "value": 3,
+      "description": "Filters for the specified percentage of values from a list"
+    },
+    {
+      "name": "xlBottomPercent",
+      "value": 4,
+      "description": "Filters for the specified percentage of values from the bottom of a list"
+    },
+    {
+      "name": "xlTopSum",
+      "value": 5,
+      "description": "Sum of the values from the top of the list"
+    },
+    {
+      "name": "xlBottomSum",
+      "value": 6,
+      "description": "Sum of the values from the bottom of the list"
+    },
+    {
+      "name": "xlValueEquals",
+      "value": 7,
+      "description": "Filters for all values that match the specified value"
+    },
+    {
+      "name": "xlValueDoesNotEqual",
+      "value": 8,
+      "description": "Filters for all values that don't match the specified value"
+    },
+    {
+      "name": "xlValueIsGreaterThan",
+      "value": 9,
+      "description": "Filters for all values that are greater than the specified value"
+    },
+    {
+      "name": "xlValueIsGreaterThanOrEqualTo",
+      "value": 10,
+      "description": "Filters for all values that are greater than or match the specified value"
+    },
+    {
+      "name": "xlValueIsLessThan",
+      "value": 11,
+      "description": "Filters for all values that are less than the specified value"
+    },
+    {
+      "name": "xlValueIsLessThanOrEqualTo",
+      "value": 12,
+      "description": "Filters for all values that are less than or match the specified value"
+    },
+    {
+      "name": "xlValueIsBetween",
+      "value": 13,
+      "description": "Filters for all values that are between a specified range of values"
+    },
+    {
+      "name": "xlValueIsNotBetween",
+      "value": 14,
+      "description": "Filters for all values that are not between a specified range of values"
+    },
+    {
+      "name": "xlCaptionEquals",
+      "value": 15,
+      "description": "Filters for all captions that match the specified string"
+    },
+    {
+      "name": "xlCaptionDoesNotEqual",
+      "value": 16,
+      "description": "Filters for all captions that don't match the specified string"
+    },
+    {
+      "name": "xlCaptionBeginsWith",
+      "value": 17,
+      "description": "Filters for all captions beginning with the specified string"
+    },
+    {
+      "name": "xlCaptionDoesNotBeginWith",
+      "value": 18,
+      "description": "Filters for all captions that don't begin with the specified string"
+    },
+    {
+      "name": "xlCaptionEndsWith",
+      "value": 19,
+      "description": "Filters for all captions that end with the specified string"
+    },
+    {
+      "name": "xlCaptionDoesNotEndWith",
+      "value": 20,
+      "description": "Filters for all captions that don't end with the specified string"
+    },
+    {
+      "name": "xlCaptionContains",
+      "value": 21,
+      "description": "Filters for all captions that contain the specified string"
+    },
+    {
+      "name": "xlCaptionDoesNotContain",
+      "value": 22,
+      "description": "Filters for all captions that don't contain the specified string"
+    },
+    {
+      "name": "xlCaptionIsGreaterThan",
+      "value": 23,
+      "description": "Filters for all captions that are greater than the specified value"
+    },
+    {
+      "name": "xlCaptionIsGreaterThanOrEqualTo",
+      "value": 24,
+      "description": "Filters for all captions that are greater than or match the specified value"
+    },
+    {
+      "name": "xlCaptionIsLessThan",
+      "value": 25,
+      "description": "Filters for all captions that are less than the specified value"
+    },
+    {
+      "name": "xlCaptionIsLessThanOrEqualTo",
+      "value": 26,
+      "description": "Filters for all captions that are less than or match the specified value"
+    },
+    {
+      "name": "xlCaptionIsBetween",
+      "value": 27,
+      "description": "Filters for all captions that are between a specified range of values"
+    },
+    {
+      "name": "xlCaptionIsNotBetween",
+      "value": 28,
+      "description": "Filters for all captions that are not between a specified range of values"
+    },
+    {
+      "name": "xlSpecificDate",
+      "value": 29,
+      "description": "Filters for all dates that match a specified date"
+    },
+    {
+      "name": "xlNotSpecificDate",
+      "value": 30,
+      "description": "Filters for all dates that don't match a specified date"
+    },
+    {
+      "name": "xlBefore",
+      "value": 31,
+      "description": "Filters for all dates before a specified date"
+    },
+    {
+      "name": "xlBeforeOrEqualTo",
+      "value": 32,
+      "description": "Filters for all dates on or before a specified date"
+    },
+    {
+      "name": "xlAfter",
+      "value": 33,
+      "description": "Filters for all dates after a specified date"
+    },
+    {
+      "name": "xlAfterOrEqualTo",
+      "value": 34,
+      "description": "Filters for all dates on or after a specified date"
+    },
+    {
+      "name": "xlDateBetween",
+      "value": 35,
+      "description": "Filters for all dates that are between a specified range of dates"
+    },
+    {
+      "name": "xlDateNotBetween",
+      "value": 36,
+      "description": ""
+    },
+    {
+      "name": "xlDateTomorrow",
+      "value": 37,
+      "description": "Filters for all dates that apply to the next day"
+    },
+    {
+      "name": "xlDateToday",
+      "value": 38,
+      "description": "Filters for all dates that apply to the current date"
+    },
+    {
+      "name": "xlDateYesterday",
+      "value": 39,
+      "description": "Filters for all dates that apply to the previous day"
+    },
+    {
+      "name": "xlDateNextWeek",
+      "value": 40,
+      "description": "Filters for all dates that apply to the next week"
+    },
+    {
+      "name": "xlDateThisWeek",
+      "value": 41,
+      "description": "Filters for all dates that apply to the current week"
+    },
+    {
+      "name": "xlDateLastWeek",
+      "value": 42,
+      "description": "Filters for all dates that apply to the previous week"
+    },
+    {
+      "name": "xlDateNextMonth",
+      "value": 43,
+      "description": "Filters for all dates that apply to the next month"
+    },
+    {
+      "name": "xlDateThisMonth",
+      "value": 44,
+      "description": "Filters for all dates that apply to the current month"
+    },
+    {
+      "name": "xlDateLastMonth",
+      "value": 45,
+      "description": "Filters for all dates that apply to the previous month"
+    },
+    {
+      "name": "xlDateNextQuarter",
+      "value": 46,
+      "description": "Filters for all dates that apply to the next quarter"
+    },
+    {
+      "name": "xlDateThisQuarter",
+      "value": 47,
+      "description": "Filters for all dates that apply to the current quarter"
+    },
+    {
+      "name": "xlDateLastQuarter",
+      "value": 48,
+      "description": "Filters for all dates that apply to the previous quarter"
+    },
+    {
+      "name": "xlDateNextYear",
+      "value": 49,
+      "description": "Filters for all dates that apply to the next year"
+    },
+    {
+      "name": "xlDateThisYear",
+      "value": 50,
+      "description": "Filters for all dates that apply to the current year"
+    },
+    {
+      "name": "xlDateLastYear",
+      "value": 51,
+      "description": "Filters for all dates that apply to the previous year"
+    },
+    {
+      "name": "xlYearToDate",
+      "value": 52,
+      "description": "Filters for all values that are within one year of a specified date"
+    },
+    {
+      "name": "xlAllDatesInPeriodQuarter1",
+      "value": 53,
+      "description": "Filters for all dates in Quarter1"
+    },
+    {
+      "name": "xlAllDatesInPeriodQuarter2",
+      "value": 54,
+      "description": "Filters for all dates in Quarter2"
+    },
+    {
+      "name": "xlAllDatesInPeriodQuarter3",
+      "value": 55,
+      "description": "Filters for all dates in Quarter3"
+    },
+    {
+      "name": "xlAllDatesInPeriodQuarter4",
+      "value": 56,
+      "description": "Filters for all dates in Quarter 4"
+    },
+    {
+      "name": "xlAllDatesInPeriodJanuary",
+      "value": 57,
+      "description": "Filters for all dates in January"
+    },
+    {
+      "name": "xlAllDatesInPeriodFebruary",
+      "value": 58,
+      "description": "Filters for all dates in February"
+    },
+    {
+      "name": "xlAllDatesInPeriodMarch",
+      "value": 59,
+      "description": "Filters for all dates in March"
+    },
+    {
+      "name": "xlAllDatesInPeriodApril",
+      "value": 60,
+      "description": "Filters for all dates in April"
+    },
+    {
+      "name": "xlAllDatesInPeriodMay",
+      "value": 61,
+      "description": "Filters for all dates in May"
+    },
+    {
+      "name": "xlAllDatesInPeriodJune",
+      "value": 62,
+      "description": "Filters for all dates in June"
+    },
+    {
+      "name": "xlAllDatesInPeriodJuly",
+      "value": 63,
+      "description": "Filters for all dates in July"
+    },
+    {
+      "name": "xlAllDatesInPeriodAugust",
+      "value": 64,
+      "description": "Filters for all dates in August"
+    },
+    {
+      "name": "xlAllDatesInPeriodSeptember",
+      "value": 65,
+      "description": "Filters for all dates in September"
+    },
+    {
+      "name": "xlAllDatesInPeriodOctober",
+      "value": 66,
+      "description": "Filters for all dates in October"
+    },
+    {
+      "name": "xlAllDatesInPeriodNovember",
+      "value": 67,
+      "description": "Filters for all dates in November"
+    },
+    {
+      "name": "xlAllDatesInPeriodDecember",
+      "value": 68,
+      "description": "Filters for all dates in December"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "name": "IVBSAXErrorHandler",
+  "kind": "Dispatch Interface",
+  "guid": "{D963D3FE-173C-4862-9095-B92F66995F52}",
+  "library": "Microsoft XML, v6.0",
+  "description": "IVBSAXErrorHandler interface",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "error",
+      "kind": "method",
+      "signature": "error(oLocator As IVBSAXLocator, strErrorMessage As String, nErrorCode As Long)",
+      "description": "Receive notification of a recoverable error.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "oLocator",
+          "type": "IVBSAXLocator",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strErrorMessage",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "nErrorCode",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "fatalError",
+      "kind": "method",
+      "signature": "fatalError(oLocator As IVBSAXLocator, strErrorMessage As String, nErrorCode As Long)",
+      "description": "Receive notification of a non-recoverable error.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "oLocator",
+          "type": "IVBSAXLocator",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strErrorMessage",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "nErrorCode",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ignorableWarning",
+      "kind": "method",
+      "signature": "ignorableWarning(oLocator As IVBSAXLocator, strErrorMessage As String, nErrorCode As Long)",
+      "description": "Receive notification of an ignorable warning.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "oLocator",
+          "type": "IVBSAXLocator",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strErrorMessage",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "nErrorCode",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

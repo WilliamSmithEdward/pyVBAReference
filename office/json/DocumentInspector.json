@@ -1,0 +1,91 @@
+{
+  "name": "DocumentInspector",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0393-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a Document Inspector module in a DocumentInspectors collection.",
+  "remarks": "The DocumentInspector object provides access to the Inspect and Fix methods. The DocumentInspector object represents custom Document Inspector modules and some \"built-in\" options. To see the list of built-in options, open the Document Inspector dialog box from the File menu. The first two options (Comments, Revisions, Versions, and Annotations and Document Properties and Personal Information) are not listed in the DocumentInspectors collection; instead, their functionality is available through the RemoveDocumentInformation method. The remaining options in the dialog box and any installed custom modules developed by third-party sources are available from the DocumentInspectors collection by specifying an index value.",
+  "example": "Public Sub DI_InspectDocument()\nDim docStatus As MsoDocInspectorStatus\nDim result As String\nActiveDocument.DocumentInspectors(3).Inspect docStatus, results\n\nMsgBox (\"The inspection returned the following status \" & docStatus & _\n\" with this result \" & result)\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the creator of the DocumentInspector object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the DocumentInspector object was created. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the name of the module represented by a DocumentInspector object. Read-only."
+    },
+    {
+      "name": "Description",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the description of the DocumentInspector object. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an object that represents the parent of the DocumentInspector object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Inspect",
+      "kind": "method",
+      "signature": "Inspect(Status As MsoDocInspectorStatus, Results As String)",
+      "description": "Inspects a document for specific information or document properties.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Status",
+          "type": "MsoDocInspectorStatus",
+          "optional": false,
+          "description": "An enumeration representing the status of the document. _Status_ is an output parameter, which means that its value is returned when the method has completed its purpose."
+        },
+        {
+          "name": "Results",
+          "type": "String",
+          "optional": false,
+          "description": "Contains a list of the information items or document properties found in the document."
+        }
+      ]
+    },
+    {
+      "name": "Fix",
+      "kind": "method",
+      "signature": "Fix(Status As MsoDocInspectorStatus, Results As String)",
+      "description": "Performs an action on specific information items or document properties depending on the Document Inspector module specified.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Status",
+          "type": "MsoDocInspectorStatus",
+          "optional": false,
+          "description": "An enumeration representing the status of the document. _Status_ is an output parameter, which means that its value is returned when the method has completed its purpose."
+        },
+        {
+          "name": "Results",
+          "type": "String",
+          "optional": false,
+          "description": "Contains the results of the action. _Results_ is an output parameter."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

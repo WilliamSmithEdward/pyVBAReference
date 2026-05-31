@@ -1,0 +1,48 @@
+{
+  "name": "Ruler2",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03C1-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents the ruler for the text in the specified shape or for all text in the specified text style. Contains tab stops and the indentation settings for text outline levels.",
+  "remarks": "Use the Ruler2 property of the TextFrame2 object to return the Ruler2 object that represents the ruler for the text in the specified shape. Use the TabStops2 property to return the TabStops2 object that contains the tab stops on the ruler. Use the Levels property to return the RulerLevels2 object that contains the indentation settings for text outline levels.",
+  "example": "With ActivePresentation.Slides(1).Shapes(2).TextFrame2.Ruler2\n .TabStops2.Add ppTabStopLeft, 144\n .Levels(1).FirstMargin = 0\n .Levels(1).LeftMargin = 36\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the Ruler2 object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the Ruler2 object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the Ruler2 object. Read-only."
+    },
+    {
+      "name": "Levels",
+      "kind": "property",
+      "type": "RulerLevels2",
+      "access": "read-only",
+      "description": "Gets a RulerLevels2 object that represents outline text formatting. Read-only."
+    },
+    {
+      "name": "TabStops",
+      "kind": "property",
+      "type": "TabStops2",
+      "access": "read-only",
+      "description": "Gets a TabStops2 collection that represents the tab stops for the specified text. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

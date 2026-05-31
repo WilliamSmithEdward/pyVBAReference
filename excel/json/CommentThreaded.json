@@ -1,0 +1,126 @@
+{
+  "name": "CommentThreaded",
+  "kind": "Dispatch Interface",
+  "guid": "{000244FD-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a cell's threaded comment. This object can represent both a top-level comment or its replies.",
+  "remarks": "The CommentThreaded object is a member of the CommentsThreaded collection.",
+  "example": "Worksheets(1).Range(\"E5\").CommentThreaded.Text \"reviewed on \" & Date",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Replies",
+      "kind": "property",
+      "type": "CommentsThreaded",
+      "access": "read-only",
+      "description": "If this comment is a parent, returns a CommentsThreaded collection of CommentThreaded objects that are children/replies of the specified comment (if any exist). The replies are sorted by time stamp."
+    },
+    {
+      "name": "Author",
+      "kind": "property",
+      "type": "Author",
+      "access": "read-only",
+      "description": "Returns the Author object that represents the author of the specified CommentThreaded object. Read-only."
+    },
+    {
+      "name": "Date",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns a date String-Variant that represents the date and time that a threaded comment was added in local time. Read-only."
+    },
+    {
+      "name": "Resolved",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "AddReply",
+      "kind": "method",
+      "signature": "AddReply([Text As Variant]) As CommentThreaded",
+      "description": "If the comment is a top-level comment, it will add a reply to its replies collection.",
+      "returns": "CommentThreaded",
+      "parameters": [
+        {
+          "name": "Text",
+          "type": "Variant",
+          "optional": true,
+          "description": "The reply's text."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified threaded comment and all replies associated with that comment (if any exist).",
+      "returns": "void"
+    },
+    {
+      "name": "Text",
+      "kind": "method",
+      "signature": "Text([Text As Variant], [Start As Variant], [Overwrite As Variant]) As String",
+      "description": "Sets threaded comment text.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Text",
+          "type": "Variant",
+          "optional": true,
+          "description": "The text to be added."
+        },
+        {
+          "name": "Start",
+          "type": "Variant",
+          "optional": true,
+          "description": "The character number where the added text will be placed. If the _Overwrite_ parameter is True or blank, and if this argument is omitted, any existing text in the threaded comment is deleted."
+        },
+        {
+          "name": "Overwrite",
+          "type": "Variant",
+          "optional": true,
+          "description": "False to insert the text. The default value is True (text is overwritten)."
+        }
+      ]
+    },
+    {
+      "name": "Next",
+      "kind": "method",
+      "signature": "Next() As CommentThreaded",
+      "description": "Returns a CommentThreaded object that represents the next threaded comment.",
+      "returns": "CommentThreaded"
+    },
+    {
+      "name": "Previous",
+      "kind": "method",
+      "signature": "Previous() As CommentThreaded",
+      "description": "Returns a CommentThreaded object that represents the previous threaded comment.",
+      "returns": "CommentThreaded"
+    }
+  ],
+  "events": []
+}

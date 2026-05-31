@@ -1,0 +1,917 @@
+{
+  "name": "DialogSheet",
+  "kind": "Dispatch Interface",
+  "guid": "{000208AF-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "CodeName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_CodeName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Next",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "PageSetup",
+      "kind": "property",
+      "type": "PageSetup",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Previous",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ProtectContents",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ProtectDrawingObjects",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ProtectionMode",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ProtectScenarios",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "XlSheetVisibility",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Shapes",
+      "kind": "property",
+      "type": "Shapes",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "EnableCalculation",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "EnableAutoFilter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "EnableSelection",
+      "kind": "property",
+      "type": "XlEnableSelection",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "EnableOutlining",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "EnablePivotTable",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Names",
+      "kind": "property",
+      "type": "Names",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ScrollArea",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HPageBreaks",
+      "kind": "property",
+      "type": "HPageBreaks",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "VPageBreaks",
+      "kind": "property",
+      "type": "VPageBreaks",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "QueryTables",
+      "kind": "property",
+      "type": "QueryTables",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "DisplayPageBreaks",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Comments",
+      "kind": "property",
+      "type": "Comments",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Hyperlinks",
+      "kind": "property",
+      "type": "Hyperlinks",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "DisplayRightToLeft",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Tab",
+      "kind": "property",
+      "type": "Tab",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "MailEnvelope",
+      "kind": "property",
+      "type": "MsoEnvelope",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "CustomProperties",
+      "kind": "property",
+      "type": "CustomProperties",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Protection",
+      "kind": "property",
+      "type": "Protection",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "EnableFormatConditionsCalculation",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PrintedCommentPages",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "CommentsThreaded",
+      "kind": "property",
+      "type": "CommentsThreaded",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "AutoFilter",
+      "kind": "property",
+      "type": "AutoFilter",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Sort",
+      "kind": "property",
+      "type": "Sort",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "NamedSheetViews",
+      "kind": "property",
+      "type": "NamedSheetViewCollection",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "DefaultButton",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Focus",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy([Before As Variant], [After As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Before",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "After",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move([Before As Variant], [After As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Before",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "After",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PrintPreview",
+      "kind": "method",
+      "signature": "PrintPreview([EnableChanges As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "EnableChanges",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select([Replace As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Replace",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Unprotect",
+      "kind": "method",
+      "signature": "Unprotect([Password As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Password",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ChartObjects",
+      "kind": "method",
+      "signature": "ChartObjects([Index As Variant]) As Object",
+      "description": "",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CheckSpelling",
+      "kind": "method",
+      "signature": "CheckSpelling([CustomDictionary As Variant], [IgnoreUppercase As Variant], [AlwaysSuggest As Variant], [SpellLang As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "CustomDictionary",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "IgnoreUppercase",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "AlwaysSuggest",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "SpellLang",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Evaluate",
+      "kind": "method",
+      "signature": "Evaluate(Name As Variant) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_Evaluate",
+      "kind": "method",
+      "signature": "_Evaluate(Name As Variant) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ResetAllPageBreaks",
+      "kind": "method",
+      "signature": "ResetAllPageBreaks()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "OLEObjects",
+      "kind": "method",
+      "signature": "OLEObjects([Index As Variant]) As Object",
+      "description": "",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Paste",
+      "kind": "method",
+      "signature": "Paste([Destination As Variant], [Link As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Destination",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Link",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ClearCircles",
+      "kind": "method",
+      "signature": "ClearCircles()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "CircleInvalid",
+      "kind": "method",
+      "signature": "CircleInvalid()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "PasteSpecial",
+      "kind": "method",
+      "signature": "PasteSpecial([Format As Variant], [Link As Variant], [DisplayAsIcon As Variant], [IconFileName As Variant], [IconIndex As Variant], [IconLabel As Variant], [NoHTMLFormatting As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Format",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Link",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "DisplayAsIcon",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "IconFileName",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "IconIndex",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "IconLabel",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "NoHTMLFormatting",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Protect",
+      "kind": "method",
+      "signature": "Protect([Password As Variant], [DrawingObjects As Variant], [Contents As Variant], [Scenarios As Variant], [UserInterfaceOnly As Variant], [AllowFormattingCells As Variant], [AllowFormattingColumns As Variant], [AllowFormattingRows As Variant], [AllowInsertingColumns As Variant], [AllowInsertingRows As Variant], [AllowInsertingHyperlinks As Variant], [AllowDeletingColumns As Variant], [AllowDeletingRows As Variant], [AllowSorting As Variant], [AllowFiltering As Variant], [AllowUsingPivotTables As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Password",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "DrawingObjects",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Contents",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Scenarios",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "UserInterfaceOnly",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "AllowFormattingCells",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "AllowFormattingColumns",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "AllowFormattingRows",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "AllowInsertingColumns",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "AllowInsertingRows",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "AllowInsertingHyperlinks",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "AllowDeletingColumns",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "AllowDeletingRows",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "AllowSorting",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "AllowFiltering",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "AllowUsingPivotTables",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PrintOut",
+      "kind": "method",
+      "signature": "PrintOut([From As Variant], [To As Variant], [Copies As Variant], [Preview As Variant], [ActivePrinter As Variant], [PrintToFile As Variant], [Collate As Variant], [PrToFileName As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "From",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "To",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Copies",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Preview",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ActivePrinter",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "PrintToFile",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Collate",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "PrToFileName",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ExportAsFixedFormat",
+      "kind": "method",
+      "signature": "ExportAsFixedFormat(Type As XlFixedFormatType, [Filename As Variant], [Quality As Variant], [IncludeDocProperties As Variant], [IgnorePrintAreas As Variant], [From As Variant], [To As Variant], [OpenAfterPublish As Variant], [FixedFormatExtClassPtr As Variant], [WorkIdentity As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "XlFixedFormatType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Filename",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Quality",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "IncludeDocProperties",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "IgnorePrintAreas",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "From",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "To",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "OpenAfterPublish",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "FixedFormatExtClassPtr",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "WorkIdentity",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SaveAs",
+      "kind": "method",
+      "signature": "SaveAs(Filename As String, [FileFormat As Variant], [Password As Variant], [WriteResPassword As Variant], [ReadOnlyRecommended As Variant], [CreateBackup As Variant], [AddToMru As Variant], [TextCodepage As Variant], [TextVisualLayout As Variant], [Local As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Filename",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "FileFormat",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Password",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "WriteResPassword",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ReadOnlyRecommended",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CreateBackup",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "AddToMru",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "TextCodepage",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "TextVisualLayout",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Local",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Hide",
+      "kind": "method",
+      "signature": "Hide([Cancel As Variant]) As Boolean",
+      "description": "",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Show",
+      "kind": "method",
+      "signature": "Show() As Boolean",
+      "description": "",
+      "returns": "Boolean"
+    }
+  ],
+  "events": []
+}

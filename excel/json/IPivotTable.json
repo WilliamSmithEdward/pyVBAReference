@@ -1,0 +1,1550 @@
+{
+  "name": "IPivotTable",
+  "kind": "Interface",
+  "guid": "{00020872-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ColumnFields",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ColumnGrand",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ColumnRange",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "DataBodyRange",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "DataFields",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "DataLabelRange",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HasAutoFormat",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HiddenFields",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "InnerDetail",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PageFields",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "PageRange",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "PageRangeCells",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "RefreshDate",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "RefreshName",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "RowFields",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "RowGrand",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "RowRange",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "SaveData",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SourceData",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TableRange1",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "TableRange2",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "VisibleFields",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "CacheIndex",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayErrorString",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayNullString",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "EnableDrilldown",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "EnableFieldDialog",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "EnableWizard",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ErrorString",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ManualUpdate",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MergeLabels",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "NullString",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PivotFormulas",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "SubtotalHiddenPageItems",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PageFieldOrder",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PageFieldStyle",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PageFieldWrapCount",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PreserveFormatting",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PivotSelection",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SelectionMode",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Tag",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "VacatedStyle",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PrintTitles",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CubeFields",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "GrandTotalName",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SmallGrid",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "RepeatItemsOnEachPrintedPage",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TotalsAnnotation",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PivotSelectionStandard",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DataPivotField",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "EnableDataValueEditing",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MDX",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ViewCalculatedMembers",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CalculatedMembers",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "DisplayImmediateItems",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "EnableFieldList",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "VisualTotals",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ShowPageMultipleItemLabel",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Version",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "DisplayEmptyRow",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayEmptyColumn",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PivotColumnAxis",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "PivotRowAxis",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ShowDrillIndicators",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PrintDrillIndicators",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayMemberPropertyTooltips",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayContextTooltips",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CompactRowIndent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LayoutRowDefault",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayFieldCaptions",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ActiveFilters",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "InGridDropZones",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TableStyle2",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ShowTableStyleLastColumn",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ShowTableStyleRowStripes",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ShowTableStyleColumnStripes",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ShowTableStyleRowHeaders",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ShowTableStyleColumnHeaders",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AllowMultipleFilters",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CompactLayoutRowHeader",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CompactLayoutColumnHeader",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "FieldListSortAscending",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SortUsingCustomLists",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Location",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "EnableWriteback",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Allocation",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AllocationValue",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AllocationMethod",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AllocationWeightExpression",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChangeList",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Slicers",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "AlternativeText",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Summary",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "VisualTotalsForSets",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ShowValuesRow",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CalculatedMembersInFilters",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Hidden",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "PivotChart",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "AutoRefresh",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "AddFields",
+      "kind": "method",
+      "signature": "AddFields([RowFields As Variant], [ColumnFields As Variant], [PageFields As Variant], [AddToTable As Variant], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RowFields",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ColumnFields",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "PageFields",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "AddToTable",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ShowPages",
+      "kind": "method",
+      "signature": "ShowPages([PageField As Variant], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "PageField",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PivotFields",
+      "kind": "method",
+      "signature": "PivotFields([Index As Variant], RHS As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "RefreshTable",
+      "kind": "method",
+      "signature": "RefreshTable(RHS As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CalculatedFields",
+      "kind": "method",
+      "signature": "CalculatedFields(RHS As CalculatedFields)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "CalculatedFields",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetData",
+      "kind": "method",
+      "signature": "GetData(Name As String, RHS As Double)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Double",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ListFormulas",
+      "kind": "method",
+      "signature": "ListFormulas()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "PivotCache",
+      "kind": "method",
+      "signature": "PivotCache(RHS As PivotCache)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "PivotCache",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PivotTableWizard",
+      "kind": "method",
+      "signature": "PivotTableWizard([SourceType As Variant], [SourceData As Variant], [TableDestination As Variant], [TableName As Variant], [RowGrand As Variant], [ColumnGrand As Variant], [SaveData As Variant], [HasAutoFormat As Variant], [AutoPage As Variant], [Reserved As Variant], [BackgroundQuery As Variant], [OptimizeCache As Variant], [PageFieldOrder As Variant], [PageFieldWrapCount As Variant], [ReadData As Variant], [Connection As Variant])",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "SourceType",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "SourceData",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "TableDestination",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "TableName",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RowGrand",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ColumnGrand",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "SaveData",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "HasAutoFormat",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "AutoPage",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Reserved",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "BackgroundQuery",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "OptimizeCache",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "PageFieldOrder",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "PageFieldWrapCount",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ReadData",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Connection",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Update",
+      "kind": "method",
+      "signature": "Update()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "PivotSelect",
+      "kind": "method",
+      "signature": "PivotSelect(Name As String, [Mode As XlPTSelectionMode], [UseStandardName As Variant])",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Mode",
+          "type": "XlPTSelectionMode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "UseStandardName",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetPivotData",
+      "kind": "method",
+      "signature": "GetPivotData([DataField As Variant], [Field1 As Variant], [Item1 As Variant], [Field2 As Variant], [Item2 As Variant], [Field3 As Variant], [Item3 As Variant], [Field4 As Variant], [Item4 As Variant], [Field5 As Variant], [Item5 As Variant], [Field6 As Variant], [Item6 As Variant], [Field7 As Variant], [Item7 As Variant], [Field8 As Variant], [Item8 As Variant], [Field9 As Variant], [Item9 As Variant], [Field10 As Variant], [Item10 As Variant], [Field11 As Variant], [Item11 As Variant], [Field12 As Variant], [Item12 As Variant], [Field13 As Variant], [Item13 As Variant], [Field14 As Variant], [Item14 As Variant], RHS As Range)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "DataField",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Field1",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Item1",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Field2",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Item2",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Field3",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Item3",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Field4",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Item4",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Field5",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Item5",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Field6",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Item6",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Field7",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Item7",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Field8",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Item8",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Field9",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Item9",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Field10",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Item10",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Field11",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Item11",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Field12",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Item12",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Field13",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Item13",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Field14",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Item14",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Range",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddDataField",
+      "kind": "method",
+      "signature": "AddDataField(Field As Object, [Caption As Variant], [Function As Variant], RHS As PivotField)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Field",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Caption",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Function",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "PivotField",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CreateCubeFile",
+      "kind": "method",
+      "signature": "CreateCubeFile(File As String, [Measures As Variant], [Levels As Variant], [Members As Variant], [Properties As Variant], RHS As String)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "File",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Measures",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Levels",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Members",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Properties",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ClearTable",
+      "kind": "method",
+      "signature": "ClearTable()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "RowAxisLayout",
+      "kind": "method",
+      "signature": "RowAxisLayout(RowLayout As XlLayoutRowType)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RowLayout",
+          "type": "XlLayoutRowType",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SubtotalLocation",
+      "kind": "method",
+      "signature": "SubtotalLocation(Location As XlSubtototalLocationType)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Location",
+          "type": "XlSubtototalLocationType",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ClearAllFilters",
+      "kind": "method",
+      "signature": "ClearAllFilters()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "ConvertToFormulas",
+      "kind": "method",
+      "signature": "ConvertToFormulas(ConvertFilters As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ConvertFilters",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ChangeConnection",
+      "kind": "method",
+      "signature": "ChangeConnection(conn As WorkbookConnection)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "conn",
+          "type": "WorkbookConnection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ChangePivotCache",
+      "kind": "method",
+      "signature": "ChangePivotCache(PivotCache As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "PivotCache",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AllocateChanges",
+      "kind": "method",
+      "signature": "AllocateChanges()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "CommitChanges",
+      "kind": "method",
+      "signature": "CommitChanges()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "DiscardChanges",
+      "kind": "method",
+      "signature": "DiscardChanges()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "RefreshDataSourceValues",
+      "kind": "method",
+      "signature": "RefreshDataSourceValues()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "RepeatAllLabels",
+      "kind": "method",
+      "signature": "RepeatAllLabels(Repeat As XlPivotFieldRepeatLabels)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Repeat",
+          "type": "XlPivotFieldRepeatLabels",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PivotValueCell",
+      "kind": "method",
+      "signature": "PivotValueCell([rowline As Variant], [columnline As Variant], RHS As PivotValueCell)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "rowline",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "columnline",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "PivotValueCell",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DrillDown",
+      "kind": "method",
+      "signature": "DrillDown(PivotItem As PivotItem, [PivotLine As Variant])",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "PivotItem",
+          "type": "PivotItem",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "PivotLine",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DrillUp",
+      "kind": "method",
+      "signature": "DrillUp(PivotItem As PivotItem, [PivotLine As Variant], [LevelUniqueName As Variant])",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "PivotItem",
+          "type": "PivotItem",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "PivotLine",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "LevelUniqueName",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DrillTo",
+      "kind": "method",
+      "signature": "DrillTo(PivotItem As PivotItem, CubeField As CubeField, [PivotLine As Variant])",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "PivotItem",
+          "type": "PivotItem",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "CubeField",
+          "type": "CubeField",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "PivotLine",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ApplyLayout",
+      "kind": "method",
+      "signature": "ApplyLayout()",
+      "description": "",
+      "returns": "HRESULT"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,124 @@
+{
+  "name": "IXMLHTTPRequest2Callback",
+  "kind": "Interface",
+  "guid": "{A44A9299-E321-40DE-8866-341B41669162}",
+  "library": "Microsoft XML, v6.0",
+  "description": "IXMLHTTPRequest2Callback Interface",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "OnRedirect",
+      "kind": "method",
+      "signature": "OnRedirect(pXHR As IXMLHTTPRequest2, pwszRedirectUrl As String)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pXHR",
+          "type": "IXMLHTTPRequest2",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwszRedirectUrl",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "OnHeadersAvailable",
+      "kind": "method",
+      "signature": "OnHeadersAvailable(pXHR As IXMLHTTPRequest2, dwStatus As Long, pwszStatus As String)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pXHR",
+          "type": "IXMLHTTPRequest2",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "dwStatus",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwszStatus",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ondataavailable",
+      "kind": "method",
+      "signature": "ondataavailable(pXHR As IXMLHTTPRequest2, pResponseStream As ISequentialStream)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pXHR",
+          "type": "IXMLHTTPRequest2",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pResponseStream",
+          "type": "ISequentialStream",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "OnResponseReceived",
+      "kind": "method",
+      "signature": "OnResponseReceived(pXHR As IXMLHTTPRequest2, pResponseStream As ISequentialStream)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pXHR",
+          "type": "IXMLHTTPRequest2",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pResponseStream",
+          "type": "ISequentialStream",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "OnError",
+      "kind": "method",
+      "signature": "OnError(pXHR As IXMLHTTPRequest2, hrError As HRESULT)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pXHR",
+          "type": "IXMLHTTPRequest2",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "hrError",
+          "type": "HRESULT",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

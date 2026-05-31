@@ -1,0 +1,92 @@
+{
+  "name": "TabStops2",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03BA-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "The collection of TabStop2 objects.",
+  "remarks": "Tab stops are indexed numerically from left to right along the ruler.",
+  "example": "Sub ClearTabStop()\n    ActiveDocument.Pages(1).Shapes(1).TextFrame.TextRange _\n        .ParagraphFormat.Tabs(1).Clear\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the TabStops2 object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that represents the Microsoft Office application in which the TabStops2 object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Object that represents the Parent object of the specified TabStops2 object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the TabStops2 collection. Read-only."
+    },
+    {
+      "name": "DefaultSpacing",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the default spacing between tab stops. Read/write."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As TabStop2",
+      "description": "Gets an individual object from the TabStops2 collection.",
+      "returns": "TabStop2",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The number of the object to return."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Type As MsoTabStopType, Position As Single) As TabStop2",
+      "description": "Adds a new tab stop to the specified TabStops2 object.",
+      "returns": "TabStop2",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "MsoTabStopType",
+          "optional": false,
+          "description": "The type of tab stop to add."
+        },
+        {
+          "name": "Position",
+          "type": "Single",
+          "optional": false,
+          "description": "The horizontal position of the new tab stop relative to the left edge of the text frame. Numeric values are evaluated in points; strings are evaluated in the units specified and can be in any measurement unit supported by the Microsoft Office product."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

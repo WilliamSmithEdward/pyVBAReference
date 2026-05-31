@@ -1,0 +1,58 @@
+{
+  "name": "DynaCollection",
+  "kind": "Dispatch Interface",
+  "guid": "{00000513-0000-0010-8000-00AA006D2EA4}",
+  "library": "Microsoft ActiveX Data Objects 6.1 Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Refresh",
+      "kind": "method",
+      "signature": "Refresh()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Append",
+      "kind": "method",
+      "signature": "Append(Object As Object)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Object",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete(Index As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

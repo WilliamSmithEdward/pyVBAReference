@@ -1,0 +1,91 @@
+{
+  "name": "PickerProperties",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03E3-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "A collection of PickerProperty objects.",
+  "remarks": "Each PickerProperty object is a Name(ID)/Value pair for passing option values to a PickerDialog object. You can get a PickerProperties collection object through the Properties property of the PickerDialog object.",
+  "example": "Dim objPickerDialog As PickerDialog\nDim objPickerProperties As PickerProperties\nDim objPickerProperty As PickerProperty\nDim objPickerExistingResults As PickerResults\nDim objPickerExistingResult As PickerResult\nDim objPickerResults As PickerResults\n\n\n' Configure the Picker Dialog properties.\nSet objPickerDialog = Application.PickerDialog\nobjPickerDialog.DataHandlerId = \"{000CDF0A-0000-0000-C000-000000000046}\"\nobjPickerDialog.Title = \"Sample Picker Dialog\"\nSet objPickerProperties = objPickerDialog.Properties\nSet objPickerProperty = objPickerProperties.Add(\"SiteUrl\", \"https://my\", msoPickerFieldtypeText)\nSet objPickerExistingResults = objPickerDialog.CreatePickerResults\nSet objPickerExistingResult = objPickerExistingResults.Add(\"johndoe@contoso.com\", \"John Doe\", \"User\")\n\n' Show the Picker Dialog and get the results.\nSet objPickerResults = objPickerDialog.Show(True, objPickerExistingResult)",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the PickerProperties object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the PickerProperties object was created. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "PickerProperty",
+      "access": "read-only",
+      "description": "Retrieves a PickerProperty object at the specified index. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Retrieves the count of the number of PickerProperty objects contained within the PickerProperties collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Id As String, Value As String, Type As MsoPickerField) As PickerProperty",
+      "description": "Adds a PickerProperty object to the collection.",
+      "returns": "PickerProperty",
+      "parameters": [
+        {
+          "name": "Id",
+          "type": "String",
+          "optional": false,
+          "description": "Key name of the property."
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "optional": false,
+          "description": "Value of the property."
+        },
+        {
+          "name": "Type",
+          "type": "MsoPickerField",
+          "optional": false,
+          "description": "Type of the property."
+        }
+      ]
+    },
+    {
+      "name": "Remove",
+      "kind": "method",
+      "signature": "Remove(Id As String)",
+      "description": "Removes a PickerProperty object from the collection.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Id",
+          "type": "String",
+          "optional": false,
+          "description": "The identifier of the PickerProperty object to remove."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

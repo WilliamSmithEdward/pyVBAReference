@@ -1,0 +1,90 @@
+{
+  "name": "LabelInfo",
+  "kind": "Dispatch Interface",
+  "guid": "{DFD3BED7-93EC-4BCE-866C-6BAB41D28621}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents the label information data object.",
+  "remarks": "The LabelInfo object can be passed to SetLabel method of SensitivityLabel object.",
+  "example": "Sub SetLabelInfo()\n\n Dim myLabelInfo As Office.LabelInfo\n Set myLabelInfo = Application.ActiveDocument.SensitivityLabel.CreateLabelInfo()\n With myLabelInfo\n  .ActionId = \"5cc46055-305d-4bc1-8f5f-5edf82231378\"\n  .AssignmentMethod = MsoAssignmentMethod.PRIVILEGED\n  .ContentBits = 4\n  .IsEnabled = True\n  .Justification = \"Some justification needed only if downgrading label.\"\n  .LabelId = \"9203368f-916c-4d59-8292-9f1c6a1e8f39\"\n  .LabelName = \"MyLabelName\"\n  .SetDate = Now()\n  .SiteId = \"6c15903a-880e-4e17-818a-6cb4f7935615\"\n End With\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "LabelId",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LabelName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AssignmentMethod",
+      "kind": "property",
+      "type": "MsoAssignmentMethod",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Justification",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "IsEnabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SetDate",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SiteId",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ActionId",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ContentBits",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [],
+  "events": []
+}

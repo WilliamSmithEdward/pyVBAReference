@@ -1,0 +1,62 @@
+{
+  "name": "PivotLine",
+  "kind": "Dispatch Interface",
+  "guid": "{00024480-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A PivotLine object is a line of rows or columns in an Excel PivotTable.",
+  "remarks": "PivotLines contain only visible items, so collapsed children of items and items in hidden levels are not present in the PivotLines collection. PivotLines always have a PivotItem in all positions. This means that the PivotLines representing subtotals in the PivotTable contain fewer PivotItems than regular PivotLines.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified PivotLine object. Read-only."
+    },
+    {
+      "name": "LineType",
+      "kind": "property",
+      "type": "XlPivotLineType",
+      "access": "read-only",
+      "description": "Returns an XlPivotLineType constant that indicates the type of PivotLine. Read-only."
+    },
+    {
+      "name": "Position",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns or sets the position of the PivotLine object. Read-only."
+    },
+    {
+      "name": "PivotLineCells",
+      "kind": "property",
+      "type": "PivotLineCells",
+      "access": "read-only",
+      "description": "Returns a collection of PivotCell objects in a PivotLine. Read-only."
+    },
+    {
+      "name": "PivotLineCellsFull",
+      "kind": "property",
+      "type": "PivotLineCells",
+      "access": "read-only",
+      "description": "Retrieves all the PivotLine cells including those that are hidden in compact form. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

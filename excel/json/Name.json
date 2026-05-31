@@ -1,0 +1,168 @@
+{
+  "name": "Name",
+  "kind": "Dispatch Interface",
+  "guid": "{000208B9-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a defined name for a range of cells. Names can be either built-in names-such as Database, Print_Area, and Auto_Open-or custom names.",
+  "remarks": "The Name object is a member of the Names collection for the Application, Workbook, and Worksheet objects. Use Names (_index_), where _index_ is the name index number or defined name, to return a single Name object. The index number indicates the position of the name within the collection. Names are placed in alphabetic order, from a to z, and are not case-sensitive. Although a Range object can have more than one name, there's no Names collection for the Range object. Use Name with a Range object to return the first name from the list of names (sorted alphabetically) assigned to the range.",
+  "example": "MsgBox Names(1).RefersTo",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the index number of the object within the collection of similar objects."
+    },
+    {
+      "name": "Category",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the category for the specified name in the language of the macro. The name must refer to a custom function or command. Read/write String."
+    },
+    {
+      "name": "CategoryLocal",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the category for the specified name, in the language of the user, if the name refers to a custom function or command. Read/write String."
+    },
+    {
+      "name": "MacroType",
+      "kind": "property",
+      "type": "XlXLMMacroType",
+      "access": "read/write",
+      "description": "Returns or sets what the name refers to. Read/write XlXLMMacroType."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value representing the name of the object."
+    },
+    {
+      "name": "RefersTo",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the formula that the name is defined to refer to, in the language of the macro and in A1-style notation, beginning with an equal sign. Read/write String."
+    },
+    {
+      "name": "ShortcutKey",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the shortcut key for a name defined as a custom Microsoft Excel 4.0 macro command. Read/write String."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value that represents the formula that the name is defined to refer to."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that determines whether the object is visible. Read/write."
+    },
+    {
+      "name": "NameLocal",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the object, in the language of the user. Read/write String."
+    },
+    {
+      "name": "RefersToLocal",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the formula that the name refers to. The formula is in the language of the user, and it's in A1-style notation, beginning with an equal sign. Read/write String."
+    },
+    {
+      "name": "RefersToR1C1",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the formula that the name refers to. The formula is in the language of the macro, and it's in R1C1-style notation, beginning with an equal sign. Read/write String."
+    },
+    {
+      "name": "RefersToR1C1Local",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the formula that the name refers to. This formula is in the language of the user, and it's in R1C1-style notation, beginning with an equal sign. Read/write String."
+    },
+    {
+      "name": "RefersToRange",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns the Range object referred to by a Name object. Read-only."
+    },
+    {
+      "name": "Comment",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the comment associated with the name. Read/write String."
+    },
+    {
+      "name": "WorkbookParameter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets the specified Name object as a workbook parameter. Read/write."
+    },
+    {
+      "name": "ValidWorkbookParameter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns True if the specified Name object is a valid workbook parameter. Read-only Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

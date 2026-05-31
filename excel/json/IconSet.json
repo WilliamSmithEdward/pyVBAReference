@@ -1,0 +1,69 @@
+{
+  "name": "IconSet",
+  "kind": "Dispatch Interface",
+  "guid": "{0002449B-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a single set of icons that are used in an icon set conditional formatting rule.",
+  "remarks": "The IconSet object is a child object of the IconSets collection. The icon set for the conditional format is assigned by using the IconSet property of the IconSetCondition object. You set this property to one of the built-in icon sets by passing one of the constants of the XlIconSet enumeration as an index of the IconSets property of the Workbook object. See the example for details.",
+  "example": "Sub CreateIconSetCF()\n\n Dim cfIconSet As IconSetCondition\n\n 'Fill cells with sample data from 1 to 10\n With ActiveSheet\n .Range(\"C1\") = 55\n .Range(\"C2\") = 92\n .Range(\"C3\") = 88\n .Range(\"C4\") = 77\n .Range(\"C5\") = 66\n .Range(\"C6\") = 93\n .Range(\"C7\") = 76\n .Range(\"C8\") = 80\n .Range(\"C9\") = 79\n .Range(\"C10\") = 83\n .Range(\"C11\") = 66\n .Range(\"C12\") = 74\n End With\n\n Range(\"C1:C12\").Select\n\n 'Create an icon set conditional format for the created sample data range\n Set cfIconSet = Selection.FormatConditions.AddIconSetCondition\n\n 'Change the icon set to a 5-arrow icon set\n cfIconSet.IconSet = ActiveWorkbook.IconSets(xl5Arrows)\n\n 'The IconCriterion collection contains all of IconCriteria\n 'By indexing into the collection you can modify each criteria\n\n With cfIconSet.IconCriteria(1)\n .Type = xlConditionValueNumber\n .Value = 0\n .Operator = 7\n End With\n With cfIconSet.IconCriteria(2)\n .Type = xlConditionValueNumber\n .Value = 60\n .Operator = 7\n End With\n With cfIconSet.IconCriteria(3)\n .Type = xlConditionValueNumber\n .Value = 70\n .Operator = 7\n End With\n With cfIconSet.IconCriteria(4)\n .Type = xlConditionValueNumber\n .Value = 80\n .Operator = 7\n End With\n With cfIconSet.IconCriteria(5)\n .Type = xlConditionValueNumber\n .Value = 90\n .Operator = 7\n End With\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "ID",
+      "kind": "property",
+      "type": "XlIconSet",
+      "access": "read-only",
+      "description": "Returns one of the constants of the XlIconSet enumeration, which specifies the name of the icon set used in an icon set conditional formatting rule."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that specifies the number of icons in the icon set. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "Icon",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "Icon",
+      "access": "read-only",
+      "description": "Returns an Icon object that represents a single icon from an icon set. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -1,0 +1,86 @@
+{
+  "name": "IXmlDataBinding",
+  "kind": "Interface",
+  "guid": "{00024478-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "SourceUrl",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Refresh",
+      "kind": "method",
+      "signature": "Refresh(RHS As XlXmlImportResult)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "XlXmlImportResult",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "LoadSettings",
+      "kind": "method",
+      "signature": "LoadSettings(Url As String)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Url",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ClearSettings",
+      "kind": "method",
+      "signature": "ClearSettings()",
+      "description": "",
+      "returns": "HRESULT"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,55 @@
+{
+  "name": "AutoRecover",
+  "kind": "Dispatch Interface",
+  "guid": "{0002445A-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the automatic recovery features of a workbook.",
+  "remarks": "Properties for the AutoRecover object determine the path and time interval for backing up all files. Use the AutoRecover property of the Application object to return an AutoRecover object. Use the Path property of the AutoRecover object to set the path for where the AutoRecover file will be saved.",
+  "example": "Sub SetPath()\n\n Application.AutoRecover.Path = \"C:\\\"\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the object is enabled. Read/write Boolean."
+    },
+    {
+      "name": "Time",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Sets or returns the time interval for the AutoRecover object. Permissible values are integers from 1 to 120 minutes. The default value is 10 minutes. Read/write Long."
+    },
+    {
+      "name": "Path",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value that represents the complete path to where Microsoft Excel will store the AutoRecover temporary files."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

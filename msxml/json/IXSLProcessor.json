@@ -1,0 +1,146 @@
+{
+  "name": "IXSLProcessor",
+  "kind": "Dispatch Interface",
+  "guid": "{2933BF92-7B36-11D2-B20E-00C04F983E60}",
+  "library": "Microsoft XML, v6.0",
+  "description": "IXSLProcessor Interface",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "input",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "XML input tree to transform"
+    },
+    {
+      "name": "ownerTemplate",
+      "kind": "property",
+      "type": "IXSLTemplate",
+      "access": "read-only",
+      "description": "template object used to create this processor object"
+    },
+    {
+      "name": "startMode",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "starting XSL mode"
+    },
+    {
+      "name": "startModeURI",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "namespace of starting XSL mode"
+    },
+    {
+      "name": "output",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "custom stream object for transform output"
+    },
+    {
+      "name": "readyState",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "current state of the processor"
+    },
+    {
+      "name": "stylesheet",
+      "kind": "property",
+      "type": "IXMLDOMNode",
+      "access": "read-only",
+      "description": "current stylesheet being used"
+    }
+  ],
+  "methods": [
+    {
+      "name": "setStartMode",
+      "kind": "method",
+      "signature": "setStartMode(mode As String, [namespaceURI As String])",
+      "description": "set XSL mode and it's namespace",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "mode",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "namespaceURI",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "transform",
+      "kind": "method",
+      "signature": "transform() As Boolean",
+      "description": "start/resume the XSL transformation process",
+      "returns": "Boolean"
+    },
+    {
+      "name": "reset",
+      "kind": "method",
+      "signature": "reset()",
+      "description": "reset state of processor and abort current transform",
+      "returns": "void"
+    },
+    {
+      "name": "addParameter",
+      "kind": "method",
+      "signature": "addParameter(baseName As String, parameter As Variant, [namespaceURI As String])",
+      "description": "set <xsl:param> values",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "baseName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "parameter",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "namespaceURI",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "addObject",
+      "kind": "method",
+      "signature": "addObject(obj As Object, namespaceURI As String)",
+      "description": "pass object to stylesheet",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "namespaceURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

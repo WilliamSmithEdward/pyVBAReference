@@ -1,0 +1,84 @@
+{
+  "name": "MetaProperty",
+  "kind": "Dispatch Interface",
+  "guid": "{000C038F-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a single property in a collection of properties describing the metadata stored in a document.",
+  "remarks": "",
+  "example": "Function ValidateMetaProperty(ByVal metaProps As MetaProperties) As String\nDim result As String\n\nresult = metaProps(1).Validate\nValidateMetaProperty = result\nEnd Function",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the MetaProperty object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the MetaProperty object was created. Read-only."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Gets or sets the value of the MetaProperty object. Read/write."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the name of the MetaProperty object. Read-only."
+    },
+    {
+      "name": "Id",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the ID of the MetaProperty object. Read-only."
+    },
+    {
+      "name": "IsReadOnly",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets a Boolean value that specifies whether the meta property is read-only. Read-only."
+    },
+    {
+      "name": "IsRequired",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets a Boolean value that specifies whether the meta property is required. Read-only."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoMetaPropertyType",
+      "access": "read-only",
+      "description": "Gets the data type of a MetaProperty object. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the MetaProperty object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Validate",
+      "kind": "method",
+      "signature": "Validate() As String",
+      "description": "Validates a MetaProperty object representing a single property value according to a schema.",
+      "returns": "String"
+    }
+  ],
+  "events": []
+}

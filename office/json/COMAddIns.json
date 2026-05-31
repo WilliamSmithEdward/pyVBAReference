@@ -1,0 +1,64 @@
+{
+  "name": "COMAddIns",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0339-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "A collection of COMAddIn objects that provide information about a COM add-in registered in the Windows registry.",
+  "remarks": "",
+  "example": "MsgBox Application.COMAddIns.Count",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the COMAddIns object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the COMAddIns object was created. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a count of the number of COM add-ins in the host application. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the COMAddIns object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As COMAddIn",
+      "description": "Gets a member of the specified COMAddIns collection.",
+      "returns": "COMAddIn",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "Represents the location of the member within the collection."
+        }
+      ]
+    },
+    {
+      "name": "Update",
+      "kind": "method",
+      "signature": "Update()",
+      "description": "Updates the contents of the COMAddIns collection from the list of add-ins stored in the Windows registry.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

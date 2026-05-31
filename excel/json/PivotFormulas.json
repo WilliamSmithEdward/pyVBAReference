@@ -1,0 +1,92 @@
+{
+  "name": "PivotFormulas",
+  "kind": "Dispatch Interface",
+  "guid": "{0002441F-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the collection of formulas for a PivotTable report. Each formula is represented by a PivotFormula object.",
+  "remarks": "This object and its associated properties and methods aren't available for OLAP data sources because calculated fields and items aren't supported.",
+  "example": "For Each pf in ActiveSheet.PivotTables(1).PivotFormulas\n Cells(r, 1).Value = pf.Formula\n r = r + 1\nNext",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "PivotFormula",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As PivotFormula",
+      "description": "Returns a single object from a collection.",
+      "returns": "PivotFormula",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number for the object."
+        }
+      ]
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "method",
+      "signature": "_NewEnum() As IUnknown",
+      "description": "",
+      "returns": "IUnknown"
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Formula As String, [UseStandardFormula As Variant]) As PivotFormula",
+      "description": "Creates a new PivotTable formula.",
+      "returns": "PivotFormula",
+      "parameters": [
+        {
+          "name": "Formula",
+          "type": "String",
+          "optional": false,
+          "description": "The new PivotTable formula."
+        },
+        {
+          "name": "UseStandardFormula",
+          "type": "Variant",
+          "optional": true,
+          "description": "A standard PivotTable formula."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,147 @@
+{
+  "name": "CellFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{00024450-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the search criteria for the cell format.",
+  "remarks": "Use the FindFormat or ReplaceFormat properties of the Application object to return a CellFormat object. Use the Borders, Font, or Interior properties of the CellFormat object to define the search criteria for the cell format.",
+  "example": "Sub ChangeCellFormat()\n\n ' Set the interior of cell A1 to yellow.\n Range(\"A1\").Select\n Selection.Interior.ColorIndex = 36\n MsgBox \"The cell format for cell A1 is a yellow interior.\"\n\n ' Set the CellFormat object to replace yellow with green.\n With Application\n .FindFormat.Interior.ColorIndex = 36\n .ReplaceFormat.Interior.ColorIndex = 35\n End With\n\n ' Find and replace cell A1's yellow interior with green.\n ActiveCell.Replace What:=\"\", Replacement:=\"\", LookAt:=xlPart, _\n SearchOrder:=xlByRows, MatchCase:=False, SearchFormat:=True, _\n ReplaceFormat:=True\n MsgBox \"The cell format for cell A1 is replaced with a green interior.\"\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read/write",
+      "description": "Returns or sets a Borders collection that represents the search criteria based on the cell's border format."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read/write",
+      "description": "Returns a Font object, allowing the user to set or return the search criteria based on the cell's font format."
+    },
+    {
+      "name": "Interior",
+      "kind": "property",
+      "type": "Interior",
+      "access": "read/write",
+      "description": "Returns an Interior object allowing the user to set or return the search criteria based on the cell's interior format."
+    },
+    {
+      "name": "NumberFormat",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the format code for the object."
+    },
+    {
+      "name": "NumberFormatLocal",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the format code for the object as a string in the language of the user."
+    },
+    {
+      "name": "AddIndent",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that indicates if text is automatically indented when the text alignment in a cell is set to equal distribution (either horizontally or vertically)."
+    },
+    {
+      "name": "IndentLevel",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the indent level for the cell or range. Can be an integer from 0 to 250."
+    },
+    {
+      "name": "HorizontalAlignment",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the horizontal alignment for the specified object."
+    },
+    {
+      "name": "VerticalAlignment",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the vertical alignment of the specified object."
+    },
+    {
+      "name": "Orientation",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the text orientation."
+    },
+    {
+      "name": "ShrinkToFit",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that indicates if text automatically shrinks to fit in the available column width."
+    },
+    {
+      "name": "WrapText",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that indicates if Microsoft Excel wraps the text in the object."
+    },
+    {
+      "name": "Locked",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that indicates if the object is locked."
+    },
+    {
+      "name": "FormulaHidden",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that indicates if the formula will be hidden when the worksheet is protected."
+    },
+    {
+      "name": "MergeCells",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "True if the range or style contains merged cells. Read/write Variant."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Clear",
+      "kind": "method",
+      "signature": "Clear()",
+      "description": "Clears the criteria set in the FindFormat and ReplaceFormat properties.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

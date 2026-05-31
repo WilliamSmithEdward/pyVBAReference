@@ -1,0 +1,228 @@
+{
+  "name": "CommandBar",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0304-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a command bar in the container application. The CommandBar object is a member of the CommandBars collection.",
+  "remarks": "",
+  "example": "foundFlag = False\nFor Each cb In CommandBars\n    If cb.Name = \"Forms\" Then\n        cb.Protection = msoBarNoChangeDock\n        cb.Visible = True\n        foundFlag = True\n    End If\nNext cb\nIf Not foundFlag Then\n    MsgBox \"The collection does not contain a Forms command bar.\"\nEnd If",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the CommandBar object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the CommandBar object was created. Read-only."
+    },
+    {
+      "name": "BuiltIn",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets True if the specified command bar is a built-in command bar of the container application. Returns False if it is a custom command bar. Read-only."
+    },
+    {
+      "name": "Context",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets a string that determines where a command bar will be saved. The string is defined and interpreted by the application. Read/write."
+    },
+    {
+      "name": "Controls",
+      "kind": "property",
+      "type": "CommandBarControls",
+      "access": "read-only",
+      "description": "Gets a CommandBarControls object that represents all the controls on a command bar. Read-only."
+    },
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Gets or sets a Boolean value that specifies whether the specified CommandBar is enabled. Read/write."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the height of a CommandBar. Read/write."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long representing the index number for a CommandBar object in the collection. Read-only."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Sets or gets the horizontal distance (in pixels) of the CommandBar from the left edge of the object relative to the screen. Read/write."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets the name of the built-in CommandBar object. Read-only."
+    },
+    {
+      "name": "NameLocal",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets the name of a built-in command bar as it's displayed in the language version of the container application, or returns or sets the name of a custom command bar. Read/write."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the CommandBar object. Read-only."
+    },
+    {
+      "name": "Position",
+      "kind": "property",
+      "type": "MsoBarPosition",
+      "access": "read/write",
+      "description": "Gets or sets an msoBarPosition constant representing the position of a command bar. Read/write."
+    },
+    {
+      "name": "RowIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the docking order of a command bar in relation to other command bars in the same docking area. Can be an integer greater than zero, or either of the following msoBarRow constants: msoBarRowFirst or msoBarRowLast. Read/write."
+    },
+    {
+      "name": "Protection",
+      "kind": "property",
+      "type": "MsoBarProtection",
+      "access": "read/write",
+      "description": "Gets or sets an msoBarProtection constant representing the way a command bar is protected from user customization. Read/write."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Sets or gets the distance from the top edge of the specified command bar, to the top edge of the screen. For docked command bars, this property returns or sets the distance from the command bar to the top of the docking area. Read/write."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoBarType",
+      "access": "read-only",
+      "description": "Gets the type of command bar. Read-only."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Gets or sets the Visible property of the command bar. True if the command bar is visible. Read/write."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the width (in pixels) of the specified command bar. Read/write."
+    },
+    {
+      "name": "AdaptiveMenu",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Gets a Boolean value that specifies whether the command bar should include an adaptive menu. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the CommandBar object from the collection.",
+      "returns": "void"
+    },
+    {
+      "name": "FindControl",
+      "kind": "method",
+      "signature": "FindControl([Type As Variant], [Id As Variant], [Tag As Variant], [Visible As Variant], [Recursive As Variant]) As CommandBarControl",
+      "description": "Gets a CommandBarControl object that fits a specified criteria.",
+      "returns": "CommandBarControl",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "Variant",
+          "optional": true,
+          "description": "The type of control."
+        },
+        {
+          "name": "Id",
+          "type": "Variant",
+          "optional": true,
+          "description": "The identifier of the control."
+        },
+        {
+          "name": "Tag",
+          "type": "Variant",
+          "optional": true,
+          "description": "The tag value of the control."
+        },
+        {
+          "name": "Visible",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to include only visible command bar controls in the search. The default value is False. Visible command bars include all visible toolbars and any menus that are open at the time the FindControl method is executed."
+        },
+        {
+          "name": "Recursive",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to include the command bar and all of its pop-up subtoolbars in the search. This argument only applies to the CommandBar object. The default value is False."
+        }
+      ]
+    },
+    {
+      "name": "Reset",
+      "kind": "method",
+      "signature": "Reset()",
+      "description": "Resets a built-in command bar to its default configuration.",
+      "returns": "void"
+    },
+    {
+      "name": "ShowPopup",
+      "kind": "method",
+      "signature": "ShowPopup([x As Variant], [y As Variant])",
+      "description": "Displays a command bar as a shortcut menu at the specified coordinates or at the current pointer coordinates.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "x",
+          "type": "Variant",
+          "optional": true,
+          "description": "The _x_-coordinate on which the location of the shortcut menu is based. If this argument is omitted, the current _x_-coordinate of the pointer is used."
+        },
+        {
+          "name": "y",
+          "type": "Variant",
+          "optional": true,
+          "description": "The _y_-coordinate on which the location of the shortcut menu is based. If this argument is omitted, the current _y_-coordinate of the pointer is used."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

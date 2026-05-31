@@ -1,0 +1,56 @@
+{
+  "name": "AnswerWizard",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0360-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Files",
+      "kind": "property",
+      "type": "AnswerWizardFiles",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "ClearFileList",
+      "kind": "method",
+      "signature": "ClearFileList()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "ResetFileList",
+      "kind": "method",
+      "signature": "ResetFileList()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

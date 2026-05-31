@@ -1,0 +1,97 @@
+{
+  "name": "SignatureSetup",
+  "kind": "Dispatch Interface",
+  "guid": "{000CD6A1-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents the information used to set up a signature packet.",
+  "remarks": "",
+  "example": "Dim objSigSetup As SignatureSetup\nWith objSigSetup\n.AllowComments = True\n.ShowSignDate = True\n.SigningInstructions = \"Please sign this document.\"\n.SuggestedSignerEmail = \"jdow@example.com\"\nNext",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SignatureSetup object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SignatureSetup object was created. Read-only."
+    },
+    {
+      "name": "ReadOnly",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets a Boolean value indicating whether the SignatureSetup object is read-only. Read-only."
+    },
+    {
+      "name": "Id",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the ID of the signature provider for a document. Read-only."
+    },
+    {
+      "name": "SignatureProvider",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets a value identifying an installed signature provider add-in. Read-only."
+    },
+    {
+      "name": "SuggestedSigner",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the name of the principle signer of the document. Read/write."
+    },
+    {
+      "name": "SuggestedSignerLine2",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the second line of suggested signer information (for example, title). Read/write."
+    },
+    {
+      "name": "SuggestedSignerEmail",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the email address of the signer of the document. Read/write."
+    },
+    {
+      "name": "SigningInstructions",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the instructions for signing the document. Read/write."
+    },
+    {
+      "name": "AllowComments",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Gets or sets a Boolean value specifying whether the signer can enter comments in the Sign dialog box. Read/write."
+    },
+    {
+      "name": "ShowSignDate",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Gets or sets a Boolean value indicating whether the date the document was signed should be displayed. Read/write."
+    },
+    {
+      "name": "AdditionalXml",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets any additional XML information added to the signature during setup. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

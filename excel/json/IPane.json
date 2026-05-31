@@ -1,0 +1,237 @@
+{
+  "name": "IPane",
+  "kind": "Interface",
+  "guid": "{00020895-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ScrollColumn",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ScrollRow",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "VisibleRange",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate(RHS As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "LargeScroll",
+      "kind": "method",
+      "signature": "LargeScroll([Down As Variant], [Up As Variant], [ToRight As Variant], [ToLeft As Variant], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Down",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Up",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ToRight",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ToLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SmallScroll",
+      "kind": "method",
+      "signature": "SmallScroll([Down As Variant], [Up As Variant], [ToRight As Variant], [ToLeft As Variant], RHS As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Down",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Up",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ToRight",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ToLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ScrollIntoView",
+      "kind": "method",
+      "signature": "ScrollIntoView(Left As Long, Top As Long, Width As Long, Height As Long, [Start As Variant])",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Start",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PointsToScreenPixelsX",
+      "kind": "method",
+      "signature": "PointsToScreenPixelsX(Points As Long, RHS As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PointsToScreenPixelsY",
+      "kind": "method",
+      "signature": "PointsToScreenPixelsY(Points As Long, RHS As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

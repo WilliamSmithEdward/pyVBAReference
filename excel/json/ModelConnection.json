@@ -1,0 +1,62 @@
+{
+  "name": "ModelConnection",
+  "kind": "Dispatch Interface",
+  "guid": "{000244D1-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Contains information for the new Model Connection Type introduced in Excel 2013 to interact with the integrated data model.",
+  "remarks": "Use for all PivotTables connected to the model. The ModelConnection object is a new \"special\" workbook connection that always exists (and cannot be deleted) in workbooks that have a data model. It's created when the model is first created in a workbook. All the properties of this workbook connection are read-only. Its name is _Workbook Data Model_.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Excel application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified ModelConnection object. Read-only."
+    },
+    {
+      "name": "CommandText",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the command string for the specified data source. Read/write Variant."
+    },
+    {
+      "name": "CommandType",
+      "kind": "property",
+      "type": "XlCmdType",
+      "access": "read/write",
+      "description": "Returns or sets one of the XlCmdType enumeration constants. Read/write."
+    },
+    {
+      "name": "ADOConnection",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "The ADOConnection object is used to create an open connection to a data source. Enables add-ins, such as Powerview, to create a direct connection to the engine and hence the data model. Read-only ADOConnection object."
+    },
+    {
+      "name": "CalculatedMembers",
+      "kind": "property",
+      "type": "CalculatedMembers",
+      "access": "read-only",
+      "description": "Returns a CalculatedMembers object that represents the calculated members in the model connection."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

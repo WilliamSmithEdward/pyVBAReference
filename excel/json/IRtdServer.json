@@ -1,0 +1,99 @@
+{
+  "name": "IRtdServer",
+  "kind": "Dispatch Interface",
+  "guid": "{EC0E6191-DB51-11D3-8F3E-00C04F3651B8}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents an interface for a real-time data server.",
+  "remarks": "The IRTDServer object can be instantiated or created only by implementing the IRTDServer interface by using the Implements keyword.",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "ServerStart",
+      "kind": "method",
+      "signature": "ServerStart(CallbackObject As IRTDUpdateEvent) As Long",
+      "description": "The ServerStart method is called immediately after a real-time data (RTD) server is instantiated. Returns a Long. A negative value or zero indicates failure to start the server; a positive value indicates success.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "CallbackObject",
+          "type": "IRTDUpdateEvent",
+          "optional": false,
+          "description": "The callback object."
+        }
+      ]
+    },
+    {
+      "name": "ConnectData",
+      "kind": "method",
+      "signature": "ConnectData(TopicID As Long, Strings As SAFEARRAY(Variant), GetNewValues As Boolean) As Variant",
+      "description": "Adds new topics from a real-time data (RTD) server. The ConnectData method is called when a file is opened that contains real-time data functions or when a user types in a new formula that contains the RTD function.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "TopicID",
+          "type": "Long",
+          "optional": false,
+          "description": "A unique value, assigned by Microsoft Excel, that identifies the topic."
+        },
+        {
+          "name": "Strings",
+          "type": "SAFEARRAY(Variant)",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "GetNewValues",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True to determine if new values are to be acquired."
+        }
+      ]
+    },
+    {
+      "name": "RefreshData",
+      "kind": "method",
+      "signature": "RefreshData(TopicCount As Long) As SAFEARRAY(Variant)",
+      "description": "This method is called by Microsoft Excel to get new data. Returns a Variant.",
+      "returns": "SAFEARRAY(Variant)",
+      "parameters": [
+        {
+          "name": "TopicCount",
+          "type": "Long",
+          "optional": false,
+          "description": "The real-time data (RTD) server must change the value of the TopicCount to the number of elements in the array returned."
+        }
+      ]
+    },
+    {
+      "name": "DisconnectData",
+      "kind": "method",
+      "signature": "DisconnectData(TopicID As Long)",
+      "description": "Notifies a real-time data (RTD) server application that a topic is no longer in use.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "TopicID",
+          "type": "Long",
+          "optional": false,
+          "description": "A unique value assigned to the topic assigned by Microsoft Excel."
+        }
+      ]
+    },
+    {
+      "name": "Heartbeat",
+      "kind": "method",
+      "signature": "Heartbeat() As Long",
+      "description": "Determines if the real-time data (RTD) server is still active. Returns a Long value. Zero or a negative number indicates failure; a positive number indicates that the server is active.",
+      "returns": "Long"
+    },
+    {
+      "name": "ServerTerminate",
+      "kind": "method",
+      "signature": "ServerTerminate()",
+      "description": "Terminates the connection to the real-time data (RTD) server.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

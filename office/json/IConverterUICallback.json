@@ -1,0 +1,94 @@
+{
+  "name": "IConverterUICallback",
+  "kind": "Interface",
+  "guid": "{000C03D6-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "This feature is only available in the Open XML Format SDK.",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "HrReportProgress",
+      "kind": "method",
+      "signature": "HrReportProgress(uPercentComplete As Long)",
+      "description": "This feature is only available in the Open XML Format SDK.",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "uPercentComplete",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "HrMessageBox",
+      "kind": "method",
+      "signature": "HrMessageBox(bstrText As String, bstrCaption As String, uType As Long, pidResult As Long)",
+      "description": "This feature is only available in the Open XML Format SDK.",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "bstrText",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "bstrCaption",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "uType",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pidResult",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "HrInputBox",
+      "kind": "method",
+      "signature": "HrInputBox(bstrText As String, bstrCaption As String, pbstrInput As String, fPassword As Long)",
+      "description": "This feature is only available in the Open XML Format SDK.",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "bstrText",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "bstrCaption",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pbstrInput",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "fPassword",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

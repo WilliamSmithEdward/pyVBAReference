@@ -1,0 +1,85 @@
+{
+  "name": "MetaProperties",
+  "kind": "Dispatch Interface",
+  "guid": "{000C038E-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a collection of properties describing the metadata stored in a document.",
+  "remarks": "",
+  "example": "Function ValidateMetaProperty(ByVal metaProps As MetaProperties) As String\nDim result As String\n\nresult = metaProps(1).Validate\nValidateMetaProperty = result\nEnd Function",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the MetaProperties object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the MetaProperties object was created. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "MetaProperty",
+      "access": "read-only",
+      "description": "Gets a MetaProperty object from the MetaProperties collection. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the MetaProperties collection. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the MetaProperties object. Read-only."
+    },
+    {
+      "name": "SchemaXml",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the schema XML for the MetaProperties object. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "GetItemByInternalName",
+      "kind": "method",
+      "signature": "GetItemByInternalName(InternalName As String) As MetaProperty",
+      "description": "Gets a property's value specifying its name as opposed to its index value.",
+      "returns": "MetaProperty",
+      "parameters": [
+        {
+          "name": "InternalName",
+          "type": "String",
+          "optional": false,
+          "description": "Contains the name of the property."
+        }
+      ]
+    },
+    {
+      "name": "Validate",
+      "kind": "method",
+      "signature": "Validate() As String",
+      "description": "Validates all of the properties in a MetaProperties collection object according to a schema.",
+      "returns": "String"
+    }
+  ],
+  "events": []
+}

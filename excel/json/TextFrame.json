@@ -1,0 +1,140 @@
+{
+  "name": "TextFrame",
+  "kind": "Dispatch Interface",
+  "guid": "{0002443D-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the text frame in a Shape object. Contains the text in the text frame as well as the properties and methods that control the alignment and anchoring of the text frame.",
+  "remarks": "Use the TextFrame property of the Shape object to return a TextFrame object.",
+  "example": "Set myDocument = Worksheets(1)\nWith myDocument.Shapes.AddShape(msoShapeRectangle, _\n 0, 0, 250, 140).TextFrame\n .Characters.Text = \"Here is some test text\"\n .MarginBottom = 10\n .MarginLeft = 10\n .MarginRight = 10\n .MarginTop = 10\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "MarginBottom",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the bottom of the text frame and the bottom of the inscribed rectangle of the shape that contains the text. Read/write Single."
+    },
+    {
+      "name": "MarginLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the left edge of the text frame and the left edge of the inscribed rectangle of the shape that contains the text. Read/write Single."
+    },
+    {
+      "name": "MarginRight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the right edge of the text frame and the right edge of the inscribed rectangle of the shape that contains the text. Read/write Single."
+    },
+    {
+      "name": "MarginTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the top of the text frame and the top of the inscribed rectangle of the shape that contains the text. Read/write Single."
+    },
+    {
+      "name": "Orientation",
+      "kind": "property",
+      "type": "MsoTextOrientation",
+      "access": "read/write",
+      "description": "Returns or sets a Long value that represents the text frame orientation."
+    },
+    {
+      "name": "HorizontalAlignment",
+      "kind": "property",
+      "type": "XlHAlign",
+      "access": "read/write",
+      "description": "Returns or sets an XlHAlign value that represents the horizontal alignment for the specified object."
+    },
+    {
+      "name": "VerticalAlignment",
+      "kind": "property",
+      "type": "XlVAlign",
+      "access": "read/write",
+      "description": "Returns or sets an XlVAlign value that represents the vertical alignment of the specified object."
+    },
+    {
+      "name": "AutoSize",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the size of the specified object is changed automatically to fit text within its boundaries. Read/write Boolean."
+    },
+    {
+      "name": "ReadingOrder",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the reading order for the specified object. Can be one of the following XlReadingOrder constants: xlRTL (right-to-left), xlLTR (left-to-right), or xlContext. Read/write Long."
+    },
+    {
+      "name": "AutoMargins",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether Excel automatically calculates text frame margins. Read/write."
+    },
+    {
+      "name": "VerticalOverflow",
+      "kind": "property",
+      "type": "XlOartVerticalOverflow",
+      "access": "read/write",
+      "description": "Returns or sets the vertical overflow setting for the specified object. Read/write."
+    },
+    {
+      "name": "HorizontalOverflow",
+      "kind": "property",
+      "type": "XlOartHorizontalOverflow",
+      "access": "read/write",
+      "description": "Returns or sets the horizontal overflow setting for the specified object. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Characters",
+      "kind": "method",
+      "signature": "Characters([Start As Variant], [Length As Variant]) As Characters",
+      "description": "Returns a Characters object that represents a range of characters within a shape's text frame. Use the Characters object to add and format characters within the text frame.",
+      "returns": "Characters",
+      "parameters": [
+        {
+          "name": "Start",
+          "type": "Variant",
+          "optional": true,
+          "description": "The first character to be returned. If this argument is either set to 1 or omitted, the Characters method returns a range of characters starting with the first character."
+        },
+        {
+          "name": "Length",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of characters to be returned. If this argument is omitted, the Characters method returns the remainder of the string (everything after the character that was set as the _Start_ argument)."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

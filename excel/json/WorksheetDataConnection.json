@@ -1,0 +1,55 @@
+{
+  "name": "WorksheetDataConnection",
+  "kind": "Dispatch Interface",
+  "guid": "{000244D2-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Used to import data into the data model from data on the worksheet such as ranges and tables.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Excel application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified WorksheetDataConnection object. Read-only."
+    },
+    {
+      "name": "Connection",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns the internal connection string to the object in Excel. Read-only Variant."
+    },
+    {
+      "name": "CommandText",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the command string for the specified data source. Read/write Variant."
+    },
+    {
+      "name": "CommandType",
+      "kind": "property",
+      "type": "XlCmdType",
+      "access": "read/write",
+      "description": "Returns or sets one of the XlCmdType enumeration constants. For a WorksheetDataConnection object, this type will be set to xlCmdExcel."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

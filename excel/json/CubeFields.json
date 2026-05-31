@@ -1,0 +1,111 @@
+{
+  "name": "CubeFields",
+  "kind": "Dispatch Interface",
+  "guid": "{0002444D-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of all CubeField objects in a PivotTable report that is based on an OLAP cube. Each CubeField object represents a hierarchy or measure field from the cube.",
+  "remarks": "",
+  "example": "Set objNewSheet = Worksheets.Add\nintRow = 1\nFor Each objCubeFld In _\n Worksheets(\"Sheet1\").PivotTables(1).CubeFields\n If objCubeFld.Orientation = xlDataField Then\n objNewSheet.Cells(intRow, 1).Value = objCubeFld.Name\n intRow = intRow + 1\n End If\nNext objCubeFld",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "CubeField",
+      "access": "read-only",
+      "description": "Returns a single object from a collection."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "CubeField",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "AddSet",
+      "kind": "method",
+      "signature": "AddSet(Name As String, Caption As String) As CubeField",
+      "description": "Adds a new CubeField object to the CubeFields collection. The CubeField object corresponds to a set defined on the Online Analytical Processing (OLAP) provider for the cube.",
+      "returns": "CubeField",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "A valid name in the SETS schema rowset."
+        },
+        {
+          "name": "Caption",
+          "type": "String",
+          "optional": false,
+          "description": "A string representing the field that will be displayed in the PivotTable view."
+        }
+      ]
+    },
+    {
+      "name": "GetMeasure",
+      "kind": "method",
+      "signature": "GetMeasure(AttributeHierarchy As Variant, Function As XlConsolidationFunction, [Caption As Variant]) As CubeField",
+      "description": "Given an attribute hierarchy, returns an implicit measure for the given function that corresponds to this attribute. If an implicit measure does not exist, a new implicit measure is created and added to the CubeFields collection.",
+      "returns": "CubeField",
+      "parameters": [
+        {
+          "name": "AttributeHierarchy",
+          "type": "Variant",
+          "optional": false,
+          "description": "The unique cube field that is an attribute hierarchy (XlCubeFieldType = xlHierarchy, and XlCubeFieldSubType = xlCubeAttribute)."
+        },
+        {
+          "name": "Function",
+          "type": "XlConsolidationFunction",
+          "optional": false,
+          "description": "The function performed in the added data field."
+        },
+        {
+          "name": "Caption",
+          "type": "Variant",
+          "optional": true,
+          "description": "The label used in the PivotTable report to identify this measure. If the measure already exists, _Caption_ will overwrite the existing label of this measure."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

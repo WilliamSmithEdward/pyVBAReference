@@ -1,0 +1,48 @@
+{
+  "name": "SparkColor",
+  "kind": "Dispatch Interface",
+  "guid": "{000244BD-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the color of the horizontal axis and the markers for points in a sparkline.",
+  "remarks": "The SparkColor object corresponds to the settings of the items available on the Marker Color drop-down list in the Style section of the Sparkline Tools Design tab of the ribbon. Use the corresponding properties of the SparkPoints object to set the colors of these items.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent SparklineGroup object for the specified object. Read-only."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether the point is visible. Read/write."
+    },
+    {
+      "name": "Color",
+      "kind": "property",
+      "type": "FormatColor",
+      "access": "read-only",
+      "description": "Returns a FormatColor object that you can use to set the color of the horizontal axis or the markers for points in a sparkline. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

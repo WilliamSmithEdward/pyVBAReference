@@ -1,0 +1,154 @@
+{
+  "name": "SortFields",
+  "kind": "Dispatch Interface",
+  "guid": "{000244AA-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "The SortFields collection is a collection of SortField objects. It allows developers to store a sort state on workbooks, lists, and autofilters.",
+  "remarks": "The object contains properties to add, count, sort, and remove SortField objects.",
+  "example": "ActiveWorksheet.SortFields.Add Key:=Range(\"A1\"), Order:=xlDescending\nActiveWorksheet.SortFields.Add Key:=Range(\"B1\"), Order:=xlDescending\nActiveWorksheet.SortFields.Sort Header:=xlGuess",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "SortField",
+      "access": "read-only",
+      "description": "Returns a SortField object that represents a collection of items that can be sorted in a workbook. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the collection. Read-only Long."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "SortField",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Key As Range, [SortOn As Variant], [Order As Variant], [CustomOrder As Variant], [DataOption As Variant]) As SortField",
+      "description": "Creates a new sort field and returns a SortFields object.",
+      "returns": "SortField",
+      "parameters": [
+        {
+          "name": "Key",
+          "type": "Range",
+          "optional": false,
+          "description": "Specifies a key value for the sort."
+        },
+        {
+          "name": "SortOn",
+          "type": "Variant",
+          "optional": true,
+          "description": "An XlSortOn value that specifies which property of a cell to use for the sort."
+        },
+        {
+          "name": "Order",
+          "type": "Variant",
+          "optional": true,
+          "description": "An XlSortOrder value that specifies the sort order."
+        },
+        {
+          "name": "CustomOrder",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies if a custom sort order should be used."
+        },
+        {
+          "name": "DataOption",
+          "type": "Variant",
+          "optional": true,
+          "description": "An XlSortDataOption value that specifies how to sort text."
+        }
+      ]
+    },
+    {
+      "name": "Clear",
+      "kind": "method",
+      "signature": "Clear()",
+      "description": "Clears all the SortFields objects.",
+      "returns": "void"
+    },
+    {
+      "name": "Add2",
+      "kind": "method",
+      "signature": "Add2(Key As Range, [SortOn As Variant], [Order As Variant], [CustomOrder As Variant], [DataOption As Variant], [SubField As Variant]) As SortField",
+      "description": "Creates a new sort field and returns a SortFields object that can optionally sort data types with the SubField defined.",
+      "returns": "SortField",
+      "parameters": [
+        {
+          "name": "Key",
+          "type": "Range",
+          "optional": false,
+          "description": "Specifies a key value for the sort."
+        },
+        {
+          "name": "SortOn",
+          "type": "Variant",
+          "optional": true,
+          "description": "An XlSortOn value that specifies which property of a cell to use for the sort."
+        },
+        {
+          "name": "Order",
+          "type": "Variant",
+          "optional": true,
+          "description": "An XlSortOrder value that specifies the sort order."
+        },
+        {
+          "name": "CustomOrder",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies if a custom sort order should be used."
+        },
+        {
+          "name": "DataOption",
+          "type": "Variant",
+          "optional": true,
+          "description": "An XlSortDataOption value that specifies how to sort text."
+        },
+        {
+          "name": "SubField",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the field to sort on for a data type (such as Population for Geography or Volume for Stocks)."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

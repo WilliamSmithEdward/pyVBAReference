@@ -1,0 +1,86 @@
+{
+  "name": "GroupShapes",
+  "kind": "Dispatch Interface",
+  "guid": "{0002443C-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the individual shapes within a grouped shape.",
+  "remarks": "Each shape is represented by a Shape object. Using the Item method with this object, you can work with single shapes within a group without having to ungroup them.",
+  "example": "Set myDocument = Worksheets(1)\nWith myDocument.Shapes\n .AddShape(msoShapeIsoscelesTriangle, _\n 10, 10, 100, 100).Name = \"shpOne\"\n .AddShape(msoShapeIsoscelesTriangle, _\n 150, 10, 100, 100).Name = \"shpTwo\"\n .AddShape(msoShapeIsoscelesTriangle, _\n 300, 10, 100, 100).Name = \"shpThree\"\n With .Range(Array(\"shpOne\", \"shpTwo\", \"shpThree\")).Group\n .Fill.PresetTextured msoTextureBlueTissuePaper\n .GroupItems(2).Fill.PresetTextured msoTextureGreenMarble\n End With\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "ShapeRange",
+      "access": "read-only",
+      "description": "Returns a ShapeRange object that represents a subset of the shapes in a Shapes collection."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Shape",
+      "description": "Returns a single object from a collection.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number for the object."
+        }
+      ]
+    },
+    {
+      "name": "_Default",
+      "kind": "method",
+      "signature": "_Default(Index As Variant) As Shape",
+      "description": "",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

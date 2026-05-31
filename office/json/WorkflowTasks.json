@@ -1,0 +1,48 @@
+{
+  "name": "WorkflowTasks",
+  "kind": "Dispatch Interface",
+  "guid": "{000CD901-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a collection of WorkflowTask objects.",
+  "remarks": "",
+  "example": "Sub DisplayWorkTask()\nDim objWorkflowTasks As WorkflowTasks\nDim objWorkflowTask As WorkflowTask\nDim cnt As Integer\n\nSet objWorkflowTasks = Document.GetWorkflowTasks()\n\nFor cnt = 1 To objWorkflowTasks.Count\n Debug.Print objWorkflowTask(cnt).Name\nNext\n\nSet objWorkflowTask = objWorkflowTasks(1)\nobjWorkflowTask.Show\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the WorkflowTasks object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the WorkflowTasks object was created. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "WorkflowTask",
+      "access": "read-only",
+      "description": "Gets a WorkflowTask object from the WorkflowTasks collection. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the WorkflowTasks collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -1,0 +1,929 @@
+{
+  "name": "Frame2",
+  "kind": "Class",
+  "guid": "{7931F65C-2564-4C19-AE71-E7DDFA008F6A}",
+  "library": "Microsoft Forms 2.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "ActiveControl",
+      "kind": "property",
+      "type": "Control",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "BackColor",
+      "kind": "property",
+      "type": "OLE_COLOR",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderColor",
+      "kind": "property",
+      "type": "OLE_COLOR",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderStyle",
+      "kind": "property",
+      "type": "fmBorderStyle",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CanPaste",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "CanRedo",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "CanUndo",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Controls",
+      "kind": "property",
+      "type": "Controls",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Cycle",
+      "kind": "property",
+      "type": "fmCycle",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ForeColor",
+      "kind": "property",
+      "type": "OLE_COLOR",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "InsideHeight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "InsideWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "KeepScrollBarsVisible",
+      "kind": "property",
+      "type": "fmScrollBars",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MouseIcon",
+      "kind": "property",
+      "type": "Picture",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MousePointer",
+      "kind": "property",
+      "type": "fmMousePointer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PictureAlignment",
+      "kind": "property",
+      "type": "fmPictureAlignment",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Picture",
+      "kind": "property",
+      "type": "Picture",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PictureSizeMode",
+      "kind": "property",
+      "type": "fmPictureSizeMode",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PictureTiling",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ScrollBars",
+      "kind": "property",
+      "type": "fmScrollBars",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ScrollHeight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ScrollLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ScrollTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ScrollWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SpecialEffect",
+      "kind": "property",
+      "type": "fmSpecialEffect",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "VerticalScrollBarSide",
+      "kind": "property",
+      "type": "fmVerticalScrollBarSide",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Zoom",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "_GetInsideHeight",
+      "kind": "method",
+      "signature": "_GetInsideHeight(InsideHeight As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "InsideHeight",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetInsideWidth",
+      "kind": "method",
+      "signature": "_GetInsideWidth(InsideWidth As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "InsideWidth",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_SetScrollHeight",
+      "kind": "method",
+      "signature": "_SetScrollHeight(ScrollHeight As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ScrollHeight",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetScrollHeight",
+      "kind": "method",
+      "signature": "_GetScrollHeight(ScrollHeight As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ScrollHeight",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_SetScrollLeft",
+      "kind": "method",
+      "signature": "_SetScrollLeft(ScrollLeft As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ScrollLeft",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetScrollLeft",
+      "kind": "method",
+      "signature": "_GetScrollLeft(ScrollLeft As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ScrollLeft",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_SetScrollTop",
+      "kind": "method",
+      "signature": "_SetScrollTop(ScrollTop As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ScrollTop",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetScrollTop",
+      "kind": "method",
+      "signature": "_GetScrollTop(ScrollTop As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ScrollTop",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_SetScrollWidth",
+      "kind": "method",
+      "signature": "_SetScrollWidth(ScrollWidth As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ScrollWidth",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetScrollWidth",
+      "kind": "method",
+      "signature": "_GetScrollWidth(ScrollWidth As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ScrollWidth",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Cut",
+      "kind": "method",
+      "signature": "Cut()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Paste",
+      "kind": "method",
+      "signature": "Paste()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "RedoAction",
+      "kind": "method",
+      "signature": "RedoAction()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Repaint",
+      "kind": "method",
+      "signature": "Repaint()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Scroll",
+      "kind": "method",
+      "signature": "Scroll([xAction As Variant], [yAction As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "xAction",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "yAction",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetDefaultTabOrder",
+      "kind": "method",
+      "signature": "SetDefaultTabOrder()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "UndoAction",
+      "kind": "method",
+      "signature": "UndoAction()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "_SetGridX",
+      "kind": "method",
+      "signature": "_SetGridX(GridX As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "GridX",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetGridX",
+      "kind": "method",
+      "signature": "_GetGridX(GridX As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "GridX",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_SetGridY",
+      "kind": "method",
+      "signature": "_SetGridY(GridY As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "GridY",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetGridY",
+      "kind": "method",
+      "signature": "_GetGridY(GridY As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "GridY",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "AddControl",
+      "kind": "event",
+      "signature": "AddControl(Control As Control)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Control",
+          "type": "Control",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeDragOver",
+      "kind": "event",
+      "signature": "BeforeDragOver(Cancel As ReturnBoolean, Control As Control, Data As DataObject, X As Single, Y As Single, State As fmDragState, Effect As ReturnEffect, Shift As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "ReturnBoolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Control",
+          "type": "Control",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Data",
+          "type": "DataObject",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "State",
+          "type": "fmDragState",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Effect",
+          "type": "ReturnEffect",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeDropOrPaste",
+      "kind": "event",
+      "signature": "BeforeDropOrPaste(Cancel As ReturnBoolean, Control As Control, Action As fmAction, Data As DataObject, X As Single, Y As Single, Effect As ReturnEffect, Shift As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "ReturnBoolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Control",
+          "type": "Control",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Action",
+          "type": "fmAction",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Data",
+          "type": "DataObject",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Effect",
+          "type": "ReturnEffect",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Click",
+      "kind": "event",
+      "signature": "Click()",
+      "description": ""
+    },
+    {
+      "name": "DblClick",
+      "kind": "event",
+      "signature": "DblClick(Cancel As ReturnBoolean)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "ReturnBoolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Error",
+      "kind": "event",
+      "signature": "Error(Number As Integer, Description As ReturnString, SCode As Long, Source As String, HelpFile As String, HelpContext As Long, CancelDisplay As ReturnBoolean)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Number",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Description",
+          "type": "ReturnString",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "SCode",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Source",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "HelpFile",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "HelpContext",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "CancelDisplay",
+          "type": "ReturnBoolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyDown",
+      "kind": "event",
+      "signature": "KeyDown(KeyCode As ReturnInteger, Shift As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "ReturnInteger",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyPress",
+      "kind": "event",
+      "signature": "KeyPress(KeyAscii As ReturnInteger)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "KeyAscii",
+          "type": "ReturnInteger",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyUp",
+      "kind": "event",
+      "signature": "KeyUp(KeyCode As ReturnInteger, Shift As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "ReturnInteger",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Layout",
+      "kind": "event",
+      "signature": "Layout()",
+      "description": ""
+    },
+    {
+      "name": "MouseDown",
+      "kind": "event",
+      "signature": "MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseMove",
+      "kind": "event",
+      "signature": "MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseUp",
+      "kind": "event",
+      "signature": "MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "RemoveControl",
+      "kind": "event",
+      "signature": "RemoveControl(Control As Control)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Control",
+          "type": "Control",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Scroll",
+      "kind": "event",
+      "signature": "Scroll(ActionX As fmScrollAction, ActionY As fmScrollAction, RequestDx As Single, RequestDy As Single, ActualDx As ReturnSingle, ActualDy As ReturnSingle)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "ActionX",
+          "type": "fmScrollAction",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ActionY",
+          "type": "fmScrollAction",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RequestDx",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RequestDy",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ActualDx",
+          "type": "ReturnSingle",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ActualDy",
+          "type": "ReturnSingle",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Zoom",
+      "kind": "event",
+      "signature": "Zoom(Percent As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Percent",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

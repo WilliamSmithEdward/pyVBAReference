@@ -1,0 +1,40 @@
+{
+  "name": "ICTPFactory",
+  "kind": "Dispatch Interface",
+  "guid": "{000C033D-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Used to create a custom task pane.",
+  "remarks": "",
+  "example": "public class Connect : Object, Extensibility.IDTExtensibility2, ICustomTaskPaneConsumer\n...\nobject missing = Type.Missing;\npublic CustomTaskPane CTP = null;\n\npublic void CTPFactoryAvailable(ICTPFactory CTPFactoryInst)\n{\n CTP = CTPFactoryInst.CreateCTP(\"SampleActiveX.myControl\", \"Task Pane Example\", missing);\n sampleAX = (myControl)CTP.ContentControl;\n sampleAX.InsertTextClicked += new InsertTextEventHandler(sampleAX_InsertTextClicked);\n CTP.Visible = true;\n}\n...",
+  "properties": [],
+  "methods": [
+    {
+      "name": "CreateCTP",
+      "kind": "method",
+      "signature": "CreateCTP(CTPAxID As String, CTPTitle As String, [CTPParentWindow As Variant]) As _CustomTaskPane",
+      "description": "Creates an instance of a custom task pane.",
+      "returns": "_CustomTaskPane",
+      "parameters": [
+        {
+          "name": "CTPAxID",
+          "type": "String",
+          "optional": false,
+          "description": "The CLSID or ProgID of a Microsoft ActiveX object."
+        },
+        {
+          "name": "CTPTitle",
+          "type": "String",
+          "optional": false,
+          "description": "The title for the task pane."
+        },
+        {
+          "name": "CTPParentWindow",
+          "type": "Variant",
+          "optional": true,
+          "description": "The window that hosts the task pane. If not present, the parent of the task pane is the ActiveWindow of the host application."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

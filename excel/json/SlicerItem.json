@@ -1,0 +1,83 @@
+{
+  "name": "SlicerItem",
+  "kind": "Dispatch Interface",
+  "guid": "{000244C9-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents an item in a slicer.",
+  "remarks": "To access the SlicerItem object that represents the currently selected button in the slicer, use the ActiveItem property of the Slicer object. To access the SlicerItems collection that represents all the items in a slicer filtering a PivotTable, use the SlicerItems property of the SlicerCache object that is associated with the Slicer object. To access the SlicerItems collection that represents the items in a slicer filtering a level of an OLAP hierarchy, use the SlicerItems property of the SlicerCacheLevel object that represents that level of the hierarchy.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "SlicerCache",
+      "access": "read-only",
+      "description": "Returns the parent SlicerCache object for the slicer item. Read-only."
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the label text for the slicer item. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the slicer item. Read-only."
+    },
+    {
+      "name": "SourceName",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns the source name of the slicer item. Read-only."
+    },
+    {
+      "name": "SourceNameStandard",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the slicer item's source name in standard English (United States) format settings. Read-only."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the value of the slicer item. Read-only."
+    },
+    {
+      "name": "Selected",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether the slicer item is selected. Read/write for slicers connected to non-OLAP data sources. Read-only for slicers connected to OLAP data sources."
+    },
+    {
+      "name": "HasData",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns whether the slicer item contains data that matches the current manual filter state. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

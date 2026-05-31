@@ -1,0 +1,79 @@
+{
+  "name": "PivotItems",
+  "kind": "Dispatch Interface",
+  "guid": "{00020877-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of all the PivotItem objects in a PivotTable field.",
+  "remarks": "The items are the individual data entries in a field category.",
+  "example": "Worksheets(\"sheet4\").Activate\nWith Worksheets(\"sheet3\").PivotTables(1)\n c = 1\n For i = 1 To .PivotFields.Count\n r = 1\n Cells(r, c) = .PivotFields(i).Name\n r = r + 1\n For x = 1 To .PivotFields(i).PivotItems.Count\n Cells(r, c) = .PivotFields(i).PivotItems(x).Name\n r = r + 1\n Next\n c = c + 1\n Next\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "PivotField",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String)",
+      "description": "Creates a new PivotTable item.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the new PivotTable item."
+        }
+      ]
+    },
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Object",
+      "description": "Returns a single object from a collection.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number for the object."
+        }
+      ]
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "method",
+      "signature": "_NewEnum() As IUnknown",
+      "description": "",
+      "returns": "IUnknown"
+    }
+  ],
+  "events": []
+}

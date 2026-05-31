@@ -1,0 +1,486 @@
+{
+  "name": "CanvasShapes",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0371-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Background",
+      "kind": "property",
+      "type": "Shape",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Shape",
+      "description": "",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddCallout",
+      "kind": "method",
+      "signature": "AddCallout(Type As MsoCalloutType, Left As Single, Top As Single, Width As Single, Height As Single) As Shape",
+      "description": "",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "MsoCalloutType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddConnector",
+      "kind": "method",
+      "signature": "AddConnector(Type As MsoConnectorType, BeginX As Single, BeginY As Single, EndX As Single, EndY As Single) As Shape",
+      "description": "",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "MsoConnectorType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "BeginX",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "BeginY",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "EndX",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "EndY",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddCurve",
+      "kind": "method",
+      "signature": "AddCurve(SafeArrayOfPoints As Variant) As Shape",
+      "description": "",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "SafeArrayOfPoints",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddLabel",
+      "kind": "method",
+      "signature": "AddLabel(Orientation As MsoTextOrientation, Left As Single, Top As Single, Width As Single, Height As Single) As Shape",
+      "description": "",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Orientation",
+          "type": "MsoTextOrientation",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddLine",
+      "kind": "method",
+      "signature": "AddLine(BeginX As Single, BeginY As Single, EndX As Single, EndY As Single) As Shape",
+      "description": "",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "BeginX",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "BeginY",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "EndX",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "EndY",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddPicture",
+      "kind": "method",
+      "signature": "AddPicture(FileName As String, LinkToFile As MsoTriState, SaveWithDocument As MsoTriState, Left As Single, Top As Single, [Width As Single], [Height As Single]) As Shape",
+      "description": "",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "LinkToFile",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "SaveWithDocument",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddPolyline",
+      "kind": "method",
+      "signature": "AddPolyline(SafeArrayOfPoints As Variant) As Shape",
+      "description": "",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "SafeArrayOfPoints",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddShape",
+      "kind": "method",
+      "signature": "AddShape(Type As MsoAutoShapeType, Left As Single, Top As Single, Width As Single, Height As Single) As Shape",
+      "description": "",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "MsoAutoShapeType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddTextEffect",
+      "kind": "method",
+      "signature": "AddTextEffect(PresetTextEffect As MsoPresetTextEffect, Text As String, FontName As String, FontSize As Single, FontBold As MsoTriState, FontItalic As MsoTriState, Left As Single, Top As Single) As Shape",
+      "description": "",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "PresetTextEffect",
+          "type": "MsoPresetTextEffect",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Text",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "FontName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "FontSize",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "FontBold",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "FontItalic",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddTextbox",
+      "kind": "method",
+      "signature": "AddTextbox(Orientation As MsoTextOrientation, Left As Single, Top As Single, Width As Single, Height As Single) As Shape",
+      "description": "",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Orientation",
+          "type": "MsoTextOrientation",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BuildFreeform",
+      "kind": "method",
+      "signature": "BuildFreeform(EditingType As MsoEditingType, X1 As Single, Y1 As Single) As FreeformBuilder",
+      "description": "",
+      "returns": "FreeformBuilder",
+      "parameters": [
+        {
+          "name": "EditingType",
+          "type": "MsoEditingType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X1",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y1",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Range",
+      "kind": "method",
+      "signature": "Range(Index As Variant) As ShapeRange",
+      "description": "",
+      "returns": "ShapeRange",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SelectAll",
+      "kind": "method",
+      "signature": "SelectAll()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

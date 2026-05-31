@@ -1,0 +1,77 @@
+{
+  "name": "IWinHttpRequestEvents",
+  "kind": "Interface",
+  "guid": "{F97F4E15-B787-4212-80D1-D380CBBF982E}",
+  "library": "Microsoft WinHTTP Services, version 5.1",
+  "description": "IWinHttpRequestEvents Interface",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "OnResponseStart",
+      "kind": "method",
+      "signature": "OnResponseStart(Status As Long, ContentType As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Status",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ContentType",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "OnResponseDataAvailable",
+      "kind": "method",
+      "signature": "OnResponseDataAvailable(Data As SAFEARRAY(Byte))",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Data",
+          "type": "SAFEARRAY(Byte)",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "OnResponseFinished",
+      "kind": "method",
+      "signature": "OnResponseFinished()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "OnError",
+      "kind": "method",
+      "signature": "OnError(ErrorNumber As Long, ErrorDescription As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ErrorNumber",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ErrorDescription",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

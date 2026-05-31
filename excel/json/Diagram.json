@@ -1,0 +1,92 @@
+{
+  "name": "Diagram",
+  "kind": "Dispatch Interface",
+  "guid": "{0002446F-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Nodes",
+      "kind": "property",
+      "type": "DiagramNodes",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoDiagramType",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "AutoLayout",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Reverse",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AutoFormat",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Convert",
+      "kind": "method",
+      "signature": "Convert(Type As MsoDiagramType)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "MsoDiagramType",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "FitText",
+      "kind": "method",
+      "signature": "FitText()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

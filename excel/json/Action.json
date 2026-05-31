@@ -1,0 +1,77 @@
+{
+  "name": "Action",
+  "kind": "Dispatch Interface",
+  "guid": "{0002448F-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents an action to be executed in a PivotTable or sheet data.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the object. Read-only String."
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the caption assigned to the Action object. Read-only String."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "XlActionType",
+      "access": "read-only",
+      "description": "Returns the action type. Read-only XlActionType."
+    },
+    {
+      "name": "Coordinate",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the coordinate property of the Action object. Read-only."
+    },
+    {
+      "name": "Content",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the content associated to the Action object. Read-only String."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Execute",
+      "kind": "method",
+      "signature": "Execute()",
+      "description": "Performs the specified action.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

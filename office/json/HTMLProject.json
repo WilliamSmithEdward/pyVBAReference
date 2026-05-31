@@ -1,0 +1,94 @@
+{
+  "name": "HTMLProject",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0356-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "State",
+      "kind": "property",
+      "type": "MsoHTMLProjectState",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "HTMLProjectItems",
+      "kind": "property",
+      "type": "HTMLProjectItems",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "RefreshProject",
+      "kind": "method",
+      "signature": "RefreshProject([Refresh As Boolean])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Refresh",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "RefreshDocument",
+      "kind": "method",
+      "signature": "RefreshDocument([Refresh As Boolean])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Refresh",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open([OpenKind As MsoHTMLProjectOpen])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "OpenKind",
+          "type": "MsoHTMLProjectOpen",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

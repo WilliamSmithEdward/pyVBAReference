@@ -1,0 +1,240 @@
+{
+  "name": "ISchemaComplexType",
+  "kind": "Dispatch Interface",
+  "guid": "{50EA08B9-DD1B-4664-9A50-C2F40F4BD79A}",
+  "library": "Microsoft XML, v6.0",
+  "description": "XML Schema Complex Type",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "namespaceURI",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "schema",
+      "kind": "property",
+      "type": "ISchema",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "id",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "itemType",
+      "kind": "property",
+      "type": "SOMITEMTYPE",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "unhandledAttributes",
+      "kind": "property",
+      "type": "IVBSAXAttributes",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "baseTypes",
+      "kind": "property",
+      "type": "ISchemaItemCollection",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "final",
+      "kind": "property",
+      "type": "SCHEMADERIVATIONMETHOD",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "variety",
+      "kind": "property",
+      "type": "SCHEMATYPEVARIETY",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "derivedBy",
+      "kind": "property",
+      "type": "SCHEMADERIVATIONMETHOD",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "minExclusive",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "minInclusive",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "maxExclusive",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "maxInclusive",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "totalDigits",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "fractionDigits",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "length",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "minLength",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "maxLength",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "enumeration",
+      "kind": "property",
+      "type": "ISchemaStringCollection",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "whitespace",
+      "kind": "property",
+      "type": "SCHEMAWHITESPACE",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "patterns",
+      "kind": "property",
+      "type": "ISchemaStringCollection",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "isAbstract",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "anyAttribute",
+      "kind": "property",
+      "type": "ISchemaAny",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "attributes",
+      "kind": "property",
+      "type": "ISchemaItemCollection",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "contentType",
+      "kind": "property",
+      "type": "SCHEMACONTENTTYPE",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "contentModel",
+      "kind": "property",
+      "type": "ISchemaModelGroup",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "prohibitedSubstitutions",
+      "kind": "property",
+      "type": "SCHEMADERIVATIONMETHOD",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "writeAnnotation",
+      "kind": "method",
+      "signature": "writeAnnotation(annotationSink As IUnknown) As Boolean",
+      "description": "",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "annotationSink",
+          "type": "IUnknown",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "isValid",
+      "kind": "method",
+      "signature": "isValid(data As String) As Boolean",
+      "description": "",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "data",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

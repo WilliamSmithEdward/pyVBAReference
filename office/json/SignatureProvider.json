@@ -1,0 +1,280 @@
+{
+  "name": "SignatureProvider",
+  "kind": "Dispatch Interface",
+  "guid": "{000CD6A3-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a signature provider add-in.",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "GenerateSignatureLineImage",
+      "kind": "method",
+      "signature": "GenerateSignatureLineImage(siglnimg As SignatureLineImage, psigsetup As SignatureSetup, psiginfo As SignatureInfo, XmlDsigStream As IUnknown) As IPictureDisp",
+      "description": "Gets a signature line image.",
+      "returns": "IPictureDisp",
+      "parameters": [
+        {
+          "name": "siglnimg",
+          "type": "SignatureLineImage",
+          "optional": false,
+          "description": "Contains the name of the signature line graphic."
+        },
+        {
+          "name": "psigsetup",
+          "type": "SignatureSetup",
+          "optional": false,
+          "description": "Specifies initial settings of the signature provider add-in."
+        },
+        {
+          "name": "psiginfo",
+          "type": "SignatureInfo",
+          "optional": false,
+          "description": "Specifies information about the signature provider add-in."
+        },
+        {
+          "name": "XmlDsigStream",
+          "type": "IUnknown",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ShowSignatureSetup",
+      "kind": "method",
+      "signature": "ShowSignatureSetup(ParentWindow As IUnknown, psigsetup As SignatureSetup)",
+      "description": "Provides a signature provider add-in the opportunity to display the Signature Setup dialog box to the user.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ParentWindow",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "Contains the handle to the window containing the Signature Setup dialog box."
+        },
+        {
+          "name": "psigsetup",
+          "type": "SignatureSetup",
+          "optional": false,
+          "description": "Specifies initial settings of the signature provider."
+        }
+      ]
+    },
+    {
+      "name": "ShowSigningCeremony",
+      "kind": "method",
+      "signature": "ShowSigningCeremony(ParentWindow As IUnknown, psigsetup As SignatureSetup, psiginfo As SignatureInfo)",
+      "description": "Provides a signature provider add-in the opportunity to display the Signature dialog box to users, allowing them to specify their identity and then be authenticated.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ParentWindow",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "Contains the handle to the window containing the Signature dialog box."
+        },
+        {
+          "name": "psigsetup",
+          "type": "SignatureSetup",
+          "optional": false,
+          "description": "Specifies initial settings of the signature provider."
+        },
+        {
+          "name": "psiginfo",
+          "type": "SignatureInfo",
+          "optional": false,
+          "description": "Specifies information about the signature provider."
+        }
+      ]
+    },
+    {
+      "name": "SignXmlDsig",
+      "kind": "method",
+      "signature": "SignXmlDsig(QueryContinue As IUnknown, psigsetup As SignatureSetup, psiginfo As SignatureInfo, XmlDsigStream As IUnknown)",
+      "description": "Used to sign the XMLDSIG template.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "QueryContinue",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "Provides a way to query the host application for permission to continue the verification operation."
+        },
+        {
+          "name": "psigsetup",
+          "type": "SignatureSetup",
+          "optional": false,
+          "description": "Specifies configuration information about a signature line."
+        },
+        {
+          "name": "psiginfo",
+          "type": "SignatureInfo",
+          "optional": false,
+          "description": "Specifies information captured from the signing ceremony."
+        },
+        {
+          "name": "XmlDsigStream",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "Represents a stream of data containing XML, which represents an XMLDSIG object."
+        }
+      ]
+    },
+    {
+      "name": "NotifySignatureAdded",
+      "kind": "method",
+      "signature": "NotifySignatureAdded(ParentWindow As IUnknown, psigsetup As SignatureSetup, psiginfo As SignatureInfo)",
+      "description": "Used to display a dialog box informing the user that the signing process has completed and providing additional functionality for the add-in.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ParentWindow",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "Allows the host application to obtain the handle to the window containing the displayed dialog box."
+        },
+        {
+          "name": "psigsetup",
+          "type": "SignatureSetup",
+          "optional": false,
+          "description": "Contains initial settings of the signature provider."
+        },
+        {
+          "name": "psiginfo",
+          "type": "SignatureInfo",
+          "optional": false,
+          "description": "Contains information about the signature provider add-in."
+        }
+      ]
+    },
+    {
+      "name": "VerifyXmlDsig",
+      "kind": "method",
+      "signature": "VerifyXmlDsig(QueryContinue As IUnknown, psigsetup As SignatureSetup, psiginfo As SignatureInfo, XmlDsigStream As IUnknown, pcontverres As ContentVerificationResults, pcertverres As CertificateVerificationResults)",
+      "description": "Verifies a signature based on the signed state of the document and the legitimacy of the certificate used for signing.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "QueryContinue",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "Provides a way to query the host application for permission to continue the verification operation."
+        },
+        {
+          "name": "psigsetup",
+          "type": "SignatureSetup",
+          "optional": false,
+          "description": "Specifies configuration information about a signature line."
+        },
+        {
+          "name": "psiginfo",
+          "type": "SignatureInfo",
+          "optional": false,
+          "description": "Specifies information captured from the signing ceremony."
+        },
+        {
+          "name": "XmlDsigStream",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "Represents a stream of data containing XML, which represents an XMLDSIG object."
+        },
+        {
+          "name": "pcontverres",
+          "type": "ContentVerificationResults",
+          "optional": false,
+          "description": "Specifies the status of the signature verification action."
+        },
+        {
+          "name": "pcertverres",
+          "type": "CertificateVerificationResults",
+          "optional": false,
+          "description": "Specifies the status of the signing certificate verification."
+        }
+      ]
+    },
+    {
+      "name": "ShowSignatureDetails",
+      "kind": "method",
+      "signature": "ShowSignatureDetails(ParentWindow As IUnknown, psigsetup As SignatureSetup, psiginfo As SignatureInfo, XmlDsigStream As IUnknown, pcontverres As ContentVerificationResults, pcertverres As CertificateVerificationResults)",
+      "description": "Provides a signature provider add-in the opportunity to display details about a signed signature line and display additional stored information such as a secure time-stamp.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ParentWindow",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "Contains the handle to the window containing the signature details."
+        },
+        {
+          "name": "psigsetup",
+          "type": "SignatureSetup",
+          "optional": false,
+          "description": "Specifies initial settings of the signature provider."
+        },
+        {
+          "name": "psiginfo",
+          "type": "SignatureInfo",
+          "optional": false,
+          "description": "Specifies information about the signed signature line."
+        },
+        {
+          "name": "XmlDsigStream",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "Represents a stream of data or binary large object of XML."
+        },
+        {
+          "name": "pcontverres",
+          "type": "ContentVerificationResults",
+          "optional": false,
+          "description": "Contains a value representing the results of verifying the signature content."
+        },
+        {
+          "name": "pcertverres",
+          "type": "CertificateVerificationResults",
+          "optional": false,
+          "description": "Contains a value representing the results of verifying the signing certification."
+        }
+      ]
+    },
+    {
+      "name": "GetProviderDetail",
+      "kind": "method",
+      "signature": "GetProviderDetail(sigprovdet As SignatureProviderDetail) As Variant",
+      "description": "Queries the signature provider add-in for various details.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "sigprovdet",
+          "type": "SignatureProviderDetail",
+          "optional": false,
+          "description": "Contains an enumerated value representing the type of information to query the add-in for."
+        }
+      ]
+    },
+    {
+      "name": "HashStream",
+      "kind": "method",
+      "signature": "HashStream(QueryContinue As IUnknown, Stream As IUnknown) As SAFEARRAY(Byte)",
+      "description": "Allows a signature provider add-in to create a hash value for the document that you can use to determine if the document contents were tampered with after digital signing.",
+      "returns": "SAFEARRAY(Byte)",
+      "parameters": [
+        {
+          "name": "QueryContinue",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "Provides a way to query the host application for permission to continue the hashing process."
+        },
+        {
+          "name": "Stream",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "Contains the data stream."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

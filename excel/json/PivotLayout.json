@@ -1,0 +1,41 @@
+{
+  "name": "PivotLayout",
+  "kind": "Dispatch Interface",
+  "guid": "{0002444A-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the placement of fields in a PivotChart report.",
+  "remarks": "",
+  "example": "Sub ListFieldNames\n\n Dim objNewSheet As Worksheet\n Dim intRow As Integer\n Dim objPF As PivotField\n\n Set objNewSheet = Worksheets.Add\n\n intRow = 1\n\n For Each objPF In _\n Charts(\"Chart1\").PivotLayout.PivotFields\n\n objNewSheet.Cells(intRow, 1).Value = objPF.Caption\n\n intRow = intRow + 1\n\n Next objPF\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "PivotTable",
+      "kind": "property",
+      "type": "PivotTable",
+      "access": "read-only",
+      "description": "Returns a PivotTable object that represents the PivotTable report associated with the PivotChart report."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

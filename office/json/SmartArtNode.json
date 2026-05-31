@@ -1,0 +1,161 @@
+{
+  "name": "SmartArtNode",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03C8-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "A single semantic node within the data model of a SmartArt graphic.",
+  "remarks": "",
+  "example": "ActivePresentation.Slides(1).Shapes(1).SmartArtNodes.Count",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SmartArtNode object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SmartArtNode object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the calling object. Read-only."
+    },
+    {
+      "name": "OrgChartLayout",
+      "kind": "property",
+      "type": "MsoOrgChartLayoutType",
+      "access": "read/write",
+      "description": "Retrieves or sets the MsoOrgChartLayoutType associated with this node if there is one. Read/write."
+    },
+    {
+      "name": "Shapes",
+      "kind": "property",
+      "type": "ShapeRange",
+      "access": "read-only",
+      "description": "Returns the shape range associated with this SmartArtNode object. Read-only."
+    },
+    {
+      "name": "TextFrame2",
+      "kind": "property",
+      "type": "TextFrame2",
+      "access": "read-only",
+      "description": "Returns the text associated with the SmartArtNode object. Read-only."
+    },
+    {
+      "name": "Level",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Retrieves the node's level in the hierarchy. Read-only."
+    },
+    {
+      "name": "Hidden",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Returns True if this node is a hidden node in the data model. Read-only."
+    },
+    {
+      "name": "Nodes",
+      "kind": "property",
+      "type": "SmartArtNodes",
+      "access": "read-only",
+      "description": "Retrieves the children nodes associated with this SmartArt node. Read-only."
+    },
+    {
+      "name": "ParentNode",
+      "kind": "property",
+      "type": "SmartArtNode",
+      "access": "read-only",
+      "description": "Retrieves the parent SmartArtNode of this SmartArtNode. Read-only."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoSmartArtNodeType",
+      "access": "read-only",
+      "description": "Retrieves the type of SmartArt node. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "AddNode",
+      "kind": "method",
+      "signature": "AddNode([Position As MsoSmartArtNodePosition], [Type As MsoSmartArtNodeType]) As SmartArtNode",
+      "description": "Adds a new SmartArtNode object to the data model in the way specified by the SmartArtNodePosition value, and of type SmartArtNodeType.",
+      "returns": "SmartArtNode",
+      "parameters": [
+        {
+          "name": "Position",
+          "type": "MsoSmartArtNodePosition",
+          "optional": true,
+          "description": "Specifies the location of the SmartArtNode in the data model; for example, msoSmartArtNodeAbove or msoSmartArtNodeAfter."
+        },
+        {
+          "name": "Type",
+          "type": "MsoSmartArtNodeType",
+          "optional": true,
+          "description": "Specifies the type of the added SmartArtNode; for example, msoSmartArtNodeTypeAssistant or msoSmartArtNodeTypeDefault."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Removes the current SmartArt node.",
+      "returns": "void"
+    },
+    {
+      "name": "Promote",
+      "kind": "method",
+      "signature": "Promote()",
+      "description": "Promotes the current node (and all its children) a single level within the data model.",
+      "returns": "void"
+    },
+    {
+      "name": "Demote",
+      "kind": "method",
+      "signature": "Demote()",
+      "description": "Demotes the current node a single level within the data model.",
+      "returns": "void"
+    },
+    {
+      "name": "Larger",
+      "kind": "method",
+      "signature": "Larger()",
+      "description": "Increases the size of the SmartArt node. Mimics the behavior of the Larger button on the Microsoft Office Fluent Ribbon Format tab for SmartArt.",
+      "returns": "void"
+    },
+    {
+      "name": "Smaller",
+      "kind": "method",
+      "signature": "Smaller()",
+      "description": "Decreases the size of the SmartArt. Mimics the behavior of the Smaller button on the Microsoft Office Fluent Ribbon UI Format tab for SmartArt.",
+      "returns": "void"
+    },
+    {
+      "name": "ReorderUp",
+      "kind": "method",
+      "signature": "ReorderUp()",
+      "description": "Swaps a node with the previous node in the bulleted list. This method reorders the node's entire family.",
+      "returns": "void"
+    },
+    {
+      "name": "ReorderDown",
+      "kind": "method",
+      "signature": "ReorderDown()",
+      "description": "Swaps a node with the next node in the bulleted list. This method reorders the node's entire family.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

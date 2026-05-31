@@ -1,0 +1,28 @@
+{
+  "name": "XlFilterStatus",
+  "kind": "Enumeration",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Used to return a status from filter functions.",
+  "constants": [
+    {
+      "name": "xlFilterStatusOK",
+      "value": 0,
+      "description": "Signifies OK or successful."
+    },
+    {
+      "name": "xlFilterStatusDateWrongOrder",
+      "value": 1,
+      "description": "SetFilterDateRange(?): StartDate > EndDate"
+    },
+    {
+      "name": "xlFilterStatusDateHasTime",
+      "value": 2,
+      "description": "SetFilterDateRange(?): StartDate or EndDate have a time portion."
+    },
+    {
+      "name": "xlFilterStatusInvalidDate",
+      "value": 3,
+      "description": "SetFilterDateRange(?): StartDate or EndDate are not valid dates."
+    }
+  ]
+}

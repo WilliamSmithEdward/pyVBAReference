@@ -1,0 +1,227 @@
+{
+  "name": "IFind",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0337-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "SearchPath",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SubDir",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Title",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Author",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Keywords",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Subject",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Options",
+      "kind": "property",
+      "type": "MsoFileFindOptions",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MatchCase",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PatternMatch",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DateSavedFrom",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DateSavedTo",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SavedBy",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DateCreatedFrom",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DateCreatedTo",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "View",
+      "kind": "property",
+      "type": "MsoFileFindView",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SortBy",
+      "kind": "property",
+      "type": "MsoFileFindSortBy",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ListBy",
+      "kind": "property",
+      "type": "MsoFileFindListBy",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SelectedFile",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Results",
+      "kind": "property",
+      "type": "IFoundFiles",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "FileType",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Show",
+      "kind": "method",
+      "signature": "Show() As Long",
+      "description": "",
+      "returns": "Long"
+    },
+    {
+      "name": "Execute",
+      "kind": "method",
+      "signature": "Execute()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Load",
+      "kind": "method",
+      "signature": "Load(bstrQueryName As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrQueryName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Save",
+      "kind": "method",
+      "signature": "Save(bstrQueryName As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrQueryName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete(bstrQueryName As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrQueryName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,72 @@
+{
+  "name": "IMsoEServicesDialog",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0372-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "ApplicationName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "WebComponent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ClipArt",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close([ApplyWebComponentChanges As Boolean])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ApplyWebComponentChanges",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddTrustedDomain",
+      "kind": "method",
+      "signature": "AddTrustedDomain(Domain As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Domain",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

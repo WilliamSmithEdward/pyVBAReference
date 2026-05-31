@@ -1,0 +1,63 @@
+{
+  "name": "CustomProperty",
+  "kind": "Dispatch Interface",
+  "guid": "{00024453-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents identifier information, which can be used as metadata for XML.",
+  "remarks": "Use the Add method or the Item property of the CustomProperties collection to return a CustomProperty object. After a CustomProperty object is returned, you can add metadata to worksheets by using the CustomProperties property of the Worksheet object with the Add method.",
+  "example": "Sub CheckCustomProperties()\n\n Dim wksSheet1 As Worksheet\n\n Set wksSheet1 = Application.ActiveSheet\n\n ' Add metadata to worksheet.\n wksSheet1.CustomProperties.Add _\n Name:=\"Market\", Value:=\"Nasdaq\"\n\n ' Display metadata.\n With wksSheet1.CustomProperties.Item(1)\n MsgBox .Name & vbTab & .Value\n End With\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value representing the name of the object."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Synonym for the Borders.LineStyle property."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,142 @@
+{
+  "name": "Trendlines",
+  "kind": "Dispatch Interface",
+  "guid": "{000208BD-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of all the Trendline objects for the specified series.",
+  "remarks": "Each Trendline object represents a trendline in a chart. A trendline shows the trend, or direction, of data in a series.",
+  "example": "MsgBox Charts(1).SeriesCollection(1).Trendlines.Count",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([Type As XlTrendlineType], [Order As Variant], [Period As Variant], [Forward As Variant], [Backward As Variant], [Intercept As Variant], [DisplayEquation As Variant], [DisplayRSquared As Variant], [Name As Variant]) As Trendline",
+      "description": "Creates a new trendline.",
+      "returns": "Trendline",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "XlTrendlineType",
+          "optional": true,
+          "description": "The trendline type."
+        },
+        {
+          "name": "Order",
+          "type": "Variant",
+          "optional": true,
+          "description": "Variant if _Type_ is xlPolynomial. The trendline order. Must be an integer from 2 to 6, inclusive."
+        },
+        {
+          "name": "Period",
+          "type": "Variant",
+          "optional": true,
+          "description": "Variant if _Type_ is xlMovingAvg. The trendline period. Must be an integer greater than 1 and less than the number of data points in the series you are adding a trendline to."
+        },
+        {
+          "name": "Forward",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of periods (or units on a scatter chart) that the trendline extends forward."
+        },
+        {
+          "name": "Backward",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of periods (or units on a scatter chart) that the trendline extends backward."
+        },
+        {
+          "name": "Intercept",
+          "type": "Variant",
+          "optional": true,
+          "description": "The trendline intercept. If this argument is omitted, the intercept is automatically set by the regression."
+        },
+        {
+          "name": "DisplayEquation",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to display the equation of the trendline on the chart (in the same data label as the R-squared value). The default value is False."
+        },
+        {
+          "name": "DisplayRSquared",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to display the R-squared value of the trendline on the chart (in the same data label as the equation). The default value is False."
+        },
+        {
+          "name": "Name",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the trendline as text. If this argument is omitted, Microsoft Excel generates a name."
+        }
+      ]
+    },
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item([Index As Variant]) As Trendline",
+      "description": "Returns a single object from a collection.",
+      "returns": "Trendline",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": "The index number for the object."
+        }
+      ]
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "method",
+      "signature": "_NewEnum() As IUnknown",
+      "description": "",
+      "returns": "IUnknown"
+    },
+    {
+      "name": "_Default",
+      "kind": "method",
+      "signature": "_Default([Index As Variant]) As Trendline",
+      "description": "",
+      "returns": "Trendline",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

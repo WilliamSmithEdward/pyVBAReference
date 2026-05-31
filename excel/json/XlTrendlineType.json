@@ -1,0 +1,38 @@
+{
+  "name": "XlTrendlineType",
+  "kind": "Enumeration",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Specifies how the trendline that smooths out fluctuations in the data is calculated.",
+  "constants": [
+    {
+      "name": "xlExponential",
+      "value": 5,
+      "description": "Uses an equation to calculate the least squares fit through points, for example, y=ab^x ."
+    },
+    {
+      "name": "xlLinear",
+      "value": -4132,
+      "description": "Uses the linear equation y = mx + b to calculate the least squares fit through points."
+    },
+    {
+      "name": "xlLogarithmic",
+      "value": -4133,
+      "description": "Uses the equation y = c ln x + b to calculate the least squares fit through points."
+    },
+    {
+      "name": "xlMovingAvg",
+      "value": 6,
+      "description": "Uses a sequence of averages computed from parts of the data series. The number of points equals the total number of points in the series less the number specified for the period."
+    },
+    {
+      "name": "xlPolynomial",
+      "value": 3,
+      "description": "Uses an equation to calculate the least squares fit through points, for example, y = ax^6 + bx^5 + cx^4 + dx^3 + ex^2 + fx + g."
+    },
+    {
+      "name": "xlPower",
+      "value": 4,
+      "description": "Uses an equation to calculate the least squares fit through points, for example, y = ax^b."
+    }
+  ]
+}

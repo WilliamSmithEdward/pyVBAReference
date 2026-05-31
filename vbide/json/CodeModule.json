@@ -1,0 +1,255 @@
+{
+  "name": "CodeModule",
+  "kind": "Class",
+  "guid": "{0002E170-0000-0000-C000-000000000046}",
+  "library": "Microsoft Visual Basic for Applications Extensibility 5.3",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "VBComponent",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "VBE",
+      "kind": "property",
+      "type": "VBE",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Lines",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "CountOfLines",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ProcStartLine",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ProcCountLines",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ProcBodyLine",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ProcOfLine",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "CountOfDeclarationLines",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "CodePane",
+      "kind": "property",
+      "type": "CodePane",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "AddFromString",
+      "kind": "method",
+      "signature": "AddFromString(String As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "String",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddFromFile",
+      "kind": "method",
+      "signature": "AddFromFile(FileName As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "InsertLines",
+      "kind": "method",
+      "signature": "InsertLines(Line As Long, String As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Line",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "String",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DeleteLines",
+      "kind": "method",
+      "signature": "DeleteLines(StartLine As Long, [Count As Long])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "StartLine",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Count",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ReplaceLine",
+      "kind": "method",
+      "signature": "ReplaceLine(Line As Long, String As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Line",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "String",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CreateEventProc",
+      "kind": "method",
+      "signature": "CreateEventProc(EventName As String, ObjectName As String) As Long",
+      "description": "",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "EventName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ObjectName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Find",
+      "kind": "method",
+      "signature": "Find(Target As String, StartLine As Long, StartColumn As Long, EndLine As Long, EndColumn As Long, [WholeWord As Boolean], [MatchCase As Boolean], [PatternSearch As Boolean]) As Boolean",
+      "description": "",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "StartLine",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "StartColumn",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "EndLine",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "EndColumn",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "WholeWord",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "MatchCase",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "PatternSearch",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

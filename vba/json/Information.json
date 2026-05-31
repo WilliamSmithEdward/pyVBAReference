@@ -1,0 +1,215 @@
+{
+  "name": "Information",
+  "kind": "Module",
+  "library": "Visual Basic For Applications",
+  "description": "",
+  "functions": [
+    {
+      "name": "Err",
+      "kind": "function",
+      "signature": "Err() As ErrObject",
+      "description": "Contains information about run-time errors.",
+      "returns": "ErrObject"
+    },
+    {
+      "name": "IMEStatus",
+      "kind": "function",
+      "signature": "IMEStatus() As VbIMEStatus",
+      "description": "Returns an Integer specifying the current Input Method Editor (IME) mode of Microsoft Windows; available in East Asian versions only.",
+      "returns": "VbIMEStatus"
+    },
+    {
+      "name": "IsArray",
+      "kind": "function",
+      "signature": "IsArray(VarName As Variant) As Boolean",
+      "description": "Returns a Boolean value indicating whether a variable is an array.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "VarName",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "IsDate",
+      "kind": "function",
+      "signature": "IsDate(Expression As Variant) As Boolean",
+      "description": "Returns True if the expression is a date or is recognizable as a valid date or time; otherwise, it returns False.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "Expression",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "IsEmpty",
+      "kind": "function",
+      "signature": "IsEmpty(Expression As Variant) As Boolean",
+      "description": "Returns a Boolean value indicating whether a variable has been initialized.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "Expression",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "IsError",
+      "kind": "function",
+      "signature": "IsError(Expression As Variant) As Boolean",
+      "description": "Returns a Boolean value indicating whether an expression is an error value.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "Expression",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "IsMissing",
+      "kind": "function",
+      "signature": "IsMissing(ArgName As Variant) As Boolean",
+      "description": "Returns a Boolean value indicating whether an optional Variant argument has been passed to a procedure.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "ArgName",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "IsNull",
+      "kind": "function",
+      "signature": "IsNull(Expression As Variant) As Boolean",
+      "description": "Returns a Boolean value that indicates whether an expression contains no valid data (Null).",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "Expression",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "IsNumeric",
+      "kind": "function",
+      "signature": "IsNumeric(Expression As Variant) As Boolean",
+      "description": "Returns a Boolean value indicating whether an expression can be evaluated as a number.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "Expression",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "IsObject",
+      "kind": "function",
+      "signature": "IsObject(Expression As Variant) As Boolean",
+      "description": "Returns a Boolean value indicating whether an identifier represents an object variable.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "Expression",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "TypeName",
+      "kind": "function",
+      "signature": "TypeName(VarName As Variant) As String",
+      "description": "Returns a String that provides information about a variable.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "VarName",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "VarType",
+      "kind": "function",
+      "signature": "VarType(VarName As Variant) As VbVarType",
+      "description": "Returns an Integer indicating the subtype of a variable, or the type of an object's default property.",
+      "returns": "VbVarType",
+      "parameters": [
+        {
+          "name": "VarName",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "QBColor",
+      "kind": "function",
+      "signature": "QBColor(Color As Integer) As Long",
+      "description": "Returns a Long representing the RGB color code corresponding to the specified color number.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Color",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "RGB",
+      "kind": "function",
+      "signature": "RGB(Red As Integer, Green As Integer, Blue As Integer) As Long",
+      "description": "Returns a Long whole number representing an RGB color value.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Red",
+          "type": "Integer",
+          "optional": false,
+          "description": "Required; Variant (Integer). Number in the range 0&ndash;255, inclusive, that represents the red component of the color."
+        },
+        {
+          "name": "Green",
+          "type": "Integer",
+          "optional": false,
+          "description": "Required; Variant (Integer). Number in the range 0&ndash;255, inclusive, that represents the green component of the color."
+        },
+        {
+          "name": "Blue",
+          "type": "Integer",
+          "optional": false,
+          "description": "Required; Variant (Integer). Number in the range 0&ndash;255, inclusive, that represents the blue component of the color."
+        }
+      ]
+    }
+  ],
+  "constants": []
+}

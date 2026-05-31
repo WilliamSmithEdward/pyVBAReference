@@ -1,0 +1,97 @@
+{
+  "name": "Drive",
+  "kind": "Class",
+  "guid": "{C7C3F5B1-88A3-11D0-ABCB-00A0C90FFFC0}",
+  "library": "Microsoft Scripting Runtime",
+  "description": "Drive Object",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Path",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Path"
+    },
+    {
+      "name": "DriveLetter",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Drive letter"
+    },
+    {
+      "name": "ShareName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Share name"
+    },
+    {
+      "name": "DriveType",
+      "kind": "property",
+      "type": "DriveTypeConst",
+      "access": "read-only",
+      "description": "Drive type"
+    },
+    {
+      "name": "RootFolder",
+      "kind": "property",
+      "type": "IFolder",
+      "access": "read-only",
+      "description": "Root folder"
+    },
+    {
+      "name": "AvailableSpace",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Get available space"
+    },
+    {
+      "name": "FreeSpace",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Get drive free space"
+    },
+    {
+      "name": "TotalSize",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Get total drive size"
+    },
+    {
+      "name": "VolumeName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Name of volume"
+    },
+    {
+      "name": "FileSystem",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Filesystem type"
+    },
+    {
+      "name": "SerialNumber",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Serial number"
+    },
+    {
+      "name": "IsReady",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Check if disk is available"
+    }
+  ],
+  "methods": [],
+  "events": []
+}

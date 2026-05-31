@@ -1,0 +1,56 @@
+{
+  "name": "TabStop2",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03BB-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a single tab stop. The TabStop2 object is a member of the TabStops2 collection.",
+  "remarks": "Tab stops are indexed numerically from left to right along the ruler.",
+  "example": "Sub ClearTabStop()\n Selection.TextRange.ParagraphFormat.Tabs(1).Clear\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the TabStop2 object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that represents the Microsoft Office application in which the TabStop2 object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Object that represents the Parent object for the TabStop2 object. Read-only."
+    },
+    {
+      "name": "Position",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the position of a tab stop relative to the left margin. Read/write."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoTabStopType",
+      "access": "read/write",
+      "description": "Gets or sets the type of the TabStop2 object. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Clear",
+      "kind": "method",
+      "signature": "Clear()",
+      "description": "Removes the specified custom tab stop.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

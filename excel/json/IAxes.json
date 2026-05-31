@@ -1,0 +1,111 @@
+{
+  "name": "IAxes",
+  "kind": "Interface",
+  "guid": "{0002085B-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Type As XlAxisType, [AxisGroup As XlAxisGroup], RHS As Axis)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "XlAxisType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "AxisGroup",
+          "type": "XlAxisGroup",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Axis",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "method",
+      "signature": "_NewEnum(RHS As IUnknown)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "IUnknown",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_Default",
+      "kind": "method",
+      "signature": "_Default(Type As XlAxisType, [AxisGroup As XlAxisGroup], RHS As Axis)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "XlAxisType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "AxisGroup",
+          "type": "XlAxisGroup",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Axis",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

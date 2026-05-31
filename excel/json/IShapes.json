@@ -1,0 +1,912 @@
+{
+  "name": "IShapes",
+  "kind": "Interface",
+  "guid": "{0002443A-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant, RHS As Shape)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_Default",
+      "kind": "method",
+      "signature": "_Default(Index As Variant, RHS As Shape)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddCallout",
+      "kind": "method",
+      "signature": "AddCallout(Type As MsoCalloutType, Left As Single, Top As Single, Width As Single, Height As Single, RHS As Shape)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "MsoCalloutType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddConnector",
+      "kind": "method",
+      "signature": "AddConnector(Type As MsoConnectorType, BeginX As Single, BeginY As Single, EndX As Single, EndY As Single, RHS As Shape)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "MsoConnectorType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "BeginX",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "BeginY",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "EndX",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "EndY",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddCurve",
+      "kind": "method",
+      "signature": "AddCurve(SafeArrayOfPoints As Variant, RHS As Shape)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "SafeArrayOfPoints",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddLabel",
+      "kind": "method",
+      "signature": "AddLabel(Orientation As MsoTextOrientation, Left As Single, Top As Single, Width As Single, Height As Single, RHS As Shape)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Orientation",
+          "type": "MsoTextOrientation",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddLine",
+      "kind": "method",
+      "signature": "AddLine(BeginX As Single, BeginY As Single, EndX As Single, EndY As Single, RHS As Shape)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "BeginX",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "BeginY",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "EndX",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "EndY",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddPicture",
+      "kind": "method",
+      "signature": "AddPicture(Filename As String, LinkToFile As MsoTriState, SaveWithDocument As MsoTriState, Left As Single, Top As Single, Width As Single, Height As Single, RHS As Shape)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Filename",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "LinkToFile",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "SaveWithDocument",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddPolyline",
+      "kind": "method",
+      "signature": "AddPolyline(SafeArrayOfPoints As Variant, RHS As Shape)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "SafeArrayOfPoints",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddShape",
+      "kind": "method",
+      "signature": "AddShape(Type As MsoAutoShapeType, Left As Single, Top As Single, Width As Single, Height As Single, RHS As Shape)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "MsoAutoShapeType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddTextEffect",
+      "kind": "method",
+      "signature": "AddTextEffect(PresetTextEffect As MsoPresetTextEffect, Text As String, FontName As String, FontSize As Single, FontBold As MsoTriState, FontItalic As MsoTriState, Left As Single, Top As Single, RHS As Shape)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "PresetTextEffect",
+          "type": "MsoPresetTextEffect",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Text",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "FontName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "FontSize",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "FontBold",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "FontItalic",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddTextbox",
+      "kind": "method",
+      "signature": "AddTextbox(Orientation As MsoTextOrientation, Left As Single, Top As Single, Width As Single, Height As Single, RHS As Shape)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Orientation",
+          "type": "MsoTextOrientation",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BuildFreeform",
+      "kind": "method",
+      "signature": "BuildFreeform(EditingType As MsoEditingType, X1 As Single, Y1 As Single, RHS As FreeformBuilder)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "EditingType",
+          "type": "MsoEditingType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X1",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y1",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "FreeformBuilder",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SelectAll",
+      "kind": "method",
+      "signature": "SelectAll()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "AddFormControl",
+      "kind": "method",
+      "signature": "AddFormControl(Type As XlFormControl, Left As Long, Top As Long, Width As Long, Height As Long, RHS As Shape)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "XlFormControl",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddOLEObject",
+      "kind": "method",
+      "signature": "AddOLEObject([ClassType As Variant], [Filename As Variant], [Link As Variant], [DisplayAsIcon As Variant], [IconFileName As Variant], [IconIndex As Variant], [IconLabel As Variant], [Left As Variant], [Top As Variant], [Width As Variant], [Height As Variant], RHS As Shape)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ClassType",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Filename",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Link",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "DisplayAsIcon",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "IconFileName",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "IconIndex",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "IconLabel",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddSmartArt",
+      "kind": "method",
+      "signature": "AddSmartArt(Layout As SmartArtLayout, [Left As Variant], [Top As Variant], [Width As Variant], [Height As Variant], RHS As Shape)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Layout",
+          "type": "SmartArtLayout",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddChart2",
+      "kind": "method",
+      "signature": "AddChart2([Style As Variant], [XlChartType As Variant], [Left As Variant], [Top As Variant], [Width As Variant], [Height As Variant], [NewLayout As Variant], RHS As Shape)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Style",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "XlChartType",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "NewLayout",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddPicture2",
+      "kind": "method",
+      "signature": "AddPicture2(Filename As String, LinkToFile As MsoTriState, SaveWithDocument As MsoTriState, Left As Single, Top As Single, Width As Single, Height As Single, Compress As MsoPictureCompress, RHS As Shape)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Filename",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "LinkToFile",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "SaveWithDocument",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Compress",
+          "type": "MsoPictureCompress",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Add3DModel",
+      "kind": "method",
+      "signature": "Add3DModel(Filename As String, [LinkToFile As Variant], [SaveWithDocument As Variant], [Left As Variant], [Top As Variant], [Width As Variant], [Height As Variant], RHS As Shape)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Filename",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "LinkToFile",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "SaveWithDocument",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

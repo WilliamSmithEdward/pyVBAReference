@@ -1,0 +1,48 @@
+{
+  "name": "Error",
+  "kind": "Dispatch Interface",
+  "guid": "{0002445D-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a spreadsheet error for a range.",
+  "remarks": "This object works for ranges containing only one cell. Use the Item property of the Errors object to return an Error object. After an Error object is returned, you can use the Value property in conjunction with the Errors property of the Range object to check whether a particular error checking option is enabled.",
+  "example": "Sub CheckEmptyCells()\n\n Dim rngFormula As Range\n Set rngFormula = Application.Range(\"A1\")\n\n ' Place a formula referencing empty cells.\n Range(\"A1\").Formula = \"=A2+A3\"\n Application.ErrorCheckingOptions.EmptyCellReferences = True\n\n ' Perform check to see if EmptyCellReferences check is on.\n If rngFormula.Errors.Item(xlEmptyCellReferences).Value = True Then\n MsgBox \"The empty cell references error checking feature is enabled.\"\n Else\n MsgBox \"The empty cell references error checking feature is not on.\"\n End If\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean value that indicates if all the validation criteria are met (that is, if the range contains valid data)."
+    },
+    {
+      "name": "Ignore",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Allows the user to set or return the state of an error checking option for a range. False enables an error checking option for a range. True disables an error checking option for a range. Read/write Boolean."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

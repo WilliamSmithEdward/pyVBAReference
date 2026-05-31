@@ -1,0 +1,48 @@
+{
+  "name": "Errors",
+  "kind": "Dispatch Interface",
+  "guid": "{0002445C-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the various spreadsheet errors for a range.",
+  "remarks": "Use the Errors property of the Range object to return an Errors object.",
+  "example": "Sub ErrorValue()\n\n ' Place a number written as text in cell A1.\n Range(\"A1\").Formula = \"'1\"\n\n If Range(\"A1\").Errors.Item(xlNumberAsText).Value = True Then\n MsgBox \"Cell A1 has a number as text.\"\n Else\n MsgBox \"Cell A1 is a number.\"\n End If\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "Error",
+      "access": "read-only",
+      "description": "Returns a single member of the Error object."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "Error",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [],
+  "events": []
+}

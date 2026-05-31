@@ -1,0 +1,64 @@
+{
+  "name": "ThemeFonts",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03A4-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a collection of major and minor fonts in the font scheme of a Microsoft Office theme.",
+  "remarks": "",
+  "example": "Dim tTheme As OfficeTheme\nDim tfThemeFonts As ThemeFonts\nSet tfThemeFonts = tTheme.ThemeFontScheme.MinorFont",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the ThemeFonts object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the ThemeFonts object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the ThemeFonts object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the ThemeFonts collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As MsoFontLanguageIndex) As ThemeFont",
+      "description": "Gets one of the three language fonts contained in the ThemeFonts collection.",
+      "returns": "ThemeFont",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "MsoFontLanguageIndex",
+          "optional": false,
+          "description": "The index value of the ThemeFont object."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,146 @@
+{
+  "name": "Phonetics",
+  "kind": "Dispatch Interface",
+  "guid": "{00024447-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of all the Phonetic objects in the specified range.",
+  "remarks": "Each Phonetic object contains information about a specific phonetic text string.",
+  "example": "Range(\"A1:C4\").Phonetics.Visible = True",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "Start",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the position that represents the first character of a phonetic text string in the specified cell. Read-only Long."
+    },
+    {
+      "name": "Length",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of characters of phonetic text from the position you've specified with the Start property."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that determines whether the object is visible. Read/write."
+    },
+    {
+      "name": "CharacterType",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the type of phonetic text in the specified cell. Read/write XlPhoneticCharacterType."
+    },
+    {
+      "name": "Alignment",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long value that represents the alignment for the specified phonetic text or tick label."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read-only",
+      "description": "Returns a Font object that represents the font of the specified object."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns a single object from a collection."
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the text for the specified object. Read/write String."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Start As Long, Length As Long, Text As String)",
+      "description": "Adds phonetic text to the specified cell.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Start",
+          "type": "Long",
+          "optional": false,
+          "description": "The position that represents the first character in the specified cell."
+        },
+        {
+          "name": "Length",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of characters from the _Start_ position to the end of the text in the cell."
+        },
+        {
+          "name": "Text",
+          "type": "String",
+          "optional": false,
+          "description": "Collectively, the characters that represent the phonetic text in the cell."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,105 @@
+{
+  "name": "LegendEntry",
+  "kind": "Dispatch Interface",
+  "guid": "{000208BA-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a legend entry in a chart legend.",
+  "remarks": "The LegendEntry object is a member of the LegendEntries collection. The LegendEntries collection contains all the LegendEntry objects in the legend. Each legend entry has two parts: the text of the entry, which is the name of the series associated with the legend entry; and an entry marker, which visually links the legend entry with its associated series or trendline in the chart. Formatting properties for the entry marker and its associated series or trendline are contained in the LegendKey object. The text of a legend entry cannot be changed. LegendEntry objects support font formatting, and they can be deleted. No pattern formatting is supported for legend entries. The position and size of entries is fixed. There's no direct way to return the series or trendline corresponding to the legend entry. After legend entries have been deleted, the only way to restore them is to remove and recreate the legend that contained them by setting the HasLegend property for the chart to False and then back to True.",
+  "example": "Worksheets(\"sheet1\").ChartObjects(1).Chart _\n .Legend.LegendEntries(1).Font.Italic = True",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read-only",
+      "description": "Returns a Font object that represents the font of the specified object."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the index number of the object within the collection of similar objects."
+    },
+    {
+      "name": "LegendKey",
+      "kind": "property",
+      "type": "LegendKey",
+      "access": "read-only",
+      "description": "Returns a LegendKey object that represents the legend key associated with the entry."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": "Returns a Double value that represents the distance, in points, from the left edge of the object to the left edge of the chart area."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": "Returns a Double value that represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart)."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": "Returns a Double value that represents the width, in points, of the object."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": "Returns a Double value that represents the height, in points, of the object."
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "ChartFormat",
+      "access": "read-only",
+      "description": "Returns the ChartFormat object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select() As Variant",
+      "description": "Selects the object.",
+      "returns": "Variant"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,62 @@
+{
+  "name": "IXMLDOMParseError",
+  "kind": "Dispatch Interface",
+  "guid": "{3EFAA426-272F-11D2-836F-0000F87A7782}",
+  "library": "Microsoft XML, v6.0",
+  "description": "structure for reporting parser errors",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "errorCode",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "the error code"
+    },
+    {
+      "name": "url",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "the URL of the XML document containing the error"
+    },
+    {
+      "name": "reason",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "the cause of the error"
+    },
+    {
+      "name": "srcText",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "the data where the error occurred"
+    },
+    {
+      "name": "line",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "the line number in the XML document where the error occurred"
+    },
+    {
+      "name": "linepos",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "the character position in the line containing the error"
+    },
+    {
+      "name": "filepos",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "the absolute file position in the XML document containing the error"
+    }
+  ],
+  "methods": [],
+  "events": []
+}

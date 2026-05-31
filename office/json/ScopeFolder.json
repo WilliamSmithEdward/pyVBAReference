@@ -1,0 +1,56 @@
+{
+  "name": "ScopeFolder",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0368-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Corresponds to a searchable folder. ScopeFolder objects are intended for use with the SearchFolders collection.",
+  "remarks": "When you want to search specific folders, you can use the methods and properties of the SearchScope object and ScopeFolders collection to retrieve ScopeFolder objects and add them to the SearchFolders collection. In each ScopeFolder object, there is a ScopeFolders collection that contains the subfolders of the parent ScopeFolder object. You can traverse the entire folder structure of a search scope (for example, all local drives) by looping through these ScopeFolders collections and returning all of the lower-level ScopeFolder objects. A ScopeFolder object with no subfolders contains an empty ScopeFolders collection. For an example that demonstrates how to loop through all of the ScopeFolder objects in a search scope, see the SearchFolders collection topic. Use the Add method of the SearchFolders collection to add a ScopeFolder object to the SearchFolders collection; however, it is usually simpler to use the AddToSearchFolders method of the ScopeFolder that you want to add because there is only one SearchFolders collection for all searches. For an example that demonstrates how to add a ScopeFolder to the SearchFolders collection, see the SearchFolders collection topic.",
+  "example": "Set sf = SearchScopes.Item(1).ScopeFolder",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the ScopeFolder object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the ScopeFolder object was created. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the name of a searchable folder. Read-only."
+    },
+    {
+      "name": "Path",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets a String indicating the full path of a ScopeFolder object. Read-only."
+    },
+    {
+      "name": "ScopeFolders",
+      "kind": "property",
+      "type": "ScopeFolders",
+      "access": "read-only",
+      "description": "Gets a ScopeFolders collection. The items in this collection correspond to the subfolders of the parent ScopeFolder object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "AddToSearchFolders",
+      "kind": "method",
+      "signature": "AddToSearchFolders()",
+      "description": "Adds a ScopeFolder object to the SearchFolders collection.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,167 @@
+{
+  "name": "TextConnection",
+  "kind": "Dispatch Interface",
+  "guid": "{000244D3-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Contains Service Contract settings that enable Microsoft Excel to connect to a Data Feed data source.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Excel application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified TextConnection object. Read-only."
+    },
+    {
+      "name": "Connection",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a string that contains text file names that enable Microsoft Excel to connect to text data sources. Read/write Variant."
+    },
+    {
+      "name": "TextFileHeaderRow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a value that specifies whether the first row (from the starting row) should be treated as a header row. Read/write Boolean."
+    },
+    {
+      "name": "TextFileColumnDataTypes",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets an ordered array of constants that specify the data types applied to the corresponding columns in the text file that you are importing into a query table. The default constant for each column is xlGeneral. Read/write Variant."
+    },
+    {
+      "name": "TextFileCommaDelimiter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the comma is the delimiter when you import a text file into a query table. False if you want to use some other character as the delimiter. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "TextFileConsecutiveDelimiter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if consecutive delimiters are treated as a single delimiter when you import a text file into a query table. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "TextFileDecimalSeparator",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the decimal separator character that Microsoft Excel uses when you import a text file into a query table. The default is the system decimal separator character. Read/write String."
+    },
+    {
+      "name": "TextFileFixedColumnWidths",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets an array of integers that correspond to the widths of the columns (in characters) in the text file that you are importing into a query table. Valid widths are from 1 through 32767 characters. Read/write Variant."
+    },
+    {
+      "name": "TextFileOtherDelimiter",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the character used as the delimiter when you import a text file into a query table. The default value is null. Read/write String."
+    },
+    {
+      "name": "TextFileParseType",
+      "kind": "property",
+      "type": "XlTextParsingType",
+      "access": "read/write",
+      "description": "Returns or sets the column format for the data in the text file that you are importing into a query table. Read/write XlTextParsingType enumeration."
+    },
+    {
+      "name": "TextFilePlatform",
+      "kind": "property",
+      "type": "XlPlatform",
+      "access": "read/write",
+      "description": "Returns or sets the origin of the text file that you are importing into the query table. This property determines which code page is used during the data import. Read/write XlPlatform."
+    },
+    {
+      "name": "TextFilePromptOnRefresh",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if you want to specify the name of the imported text file each time the query table is refreshed. The Import Text File dialog box allows you to specify the path and file name. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "TextFileSemicolonDelimiter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the semicolon is the delimiter when you import a text file into a query table, and if the value of the TextFileParseType property is xlDelimited. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "TextFileSpaceDelimiter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the space character is the delimiter when you import a text file into a query table. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "TextFileStartRow",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the row number at which text parsing will begin when you import a text file into a query table. Valid values are integers from 1 through 32767. The default value is 1. Read/write Long."
+    },
+    {
+      "name": "TextFileTabDelimiter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the tab character is the delimiter when you import a text file into a query table. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "TextFileTextQualifier",
+      "kind": "property",
+      "type": "XlTextQualifier",
+      "access": "read/write",
+      "description": "Returns or sets the text qualifier when you import a text file into a query table. The text qualifier specifies that the enclosed data is in text format. Read/write XlTextQualifier."
+    },
+    {
+      "name": "TextFileThousandsSeparator",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the thousands separator character that Microsoft Excel uses when you import a text file into a query table. The default is the system thousands separator character. Read/write String."
+    },
+    {
+      "name": "TextFileTrailingMinusNumbers",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Excel to treat numbers imported as text that begin with a - (minus) symbol as a negative symbol. False for Excel to treat numbers imported as text that begin with a - symbol as text. Read/write Boolean."
+    },
+    {
+      "name": "TextFileVisualLayout",
+      "kind": "property",
+      "type": "XlTextVisualLayoutType",
+      "access": "read/write",
+      "description": "Returns or sets an XlTextVisualLayoutType value that indicates whether the visual layout of the text being imported is left-to-right or right-to-left. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

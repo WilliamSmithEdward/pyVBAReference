@@ -1,0 +1,70 @@
+{
+  "name": "ISensitivityLabel",
+  "kind": "Dispatch Interface",
+  "guid": "{4B0F95AC-5769-40E9-98DF-80CDD086612E}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "GetLabel",
+      "kind": "method",
+      "signature": "GetLabel() As LabelInfo",
+      "description": "",
+      "returns": "LabelInfo"
+    },
+    {
+      "name": "SetLabel",
+      "kind": "method",
+      "signature": "SetLabel(LabelInfo As LabelInfo, Context As Object)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "LabelInfo",
+          "type": "LabelInfo",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Context",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CreateLabelInfo",
+      "kind": "method",
+      "signature": "CreateLabelInfo() As LabelInfo",
+      "description": "",
+      "returns": "LabelInfo"
+    }
+  ],
+  "events": []
+}

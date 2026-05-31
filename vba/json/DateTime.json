@@ -1,0 +1,427 @@
+{
+  "name": "DateTime",
+  "kind": "Module",
+  "library": "Visual Basic For Applications",
+  "description": "",
+  "functions": [
+    {
+      "name": "_B_var_Date",
+      "kind": "function",
+      "signature": "_B_var_Date() As Variant",
+      "description": "",
+      "returns": "Variant"
+    },
+    {
+      "name": "_B_str_Date",
+      "kind": "function",
+      "signature": "_B_str_Date(Arg1 As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Arg1",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_B_var_Date",
+      "kind": "function",
+      "signature": "_B_var_Date(Arg1 As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Arg1",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_B_str_Date",
+      "kind": "function",
+      "signature": "_B_str_Date() As String",
+      "description": "",
+      "returns": "String"
+    },
+    {
+      "name": "DateSerial",
+      "kind": "function",
+      "signature": "DateSerial(Year As Integer, Month As Integer, Day As Integer) As Variant",
+      "description": "Returns a Variant (Date) for a specified year, month, and day.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Year",
+          "type": "Integer",
+          "optional": false,
+          "description": "Required; Integer. Number between 100 and 9999, inclusive, or a numeric expression."
+        },
+        {
+          "name": "Month",
+          "type": "Integer",
+          "optional": false,
+          "description": "Required; Integer. Any numeric expression."
+        },
+        {
+          "name": "Day",
+          "type": "Integer",
+          "optional": false,
+          "description": "Required; Integer. Any numeric expression."
+        }
+      ]
+    },
+    {
+      "name": "DateValue",
+      "kind": "function",
+      "signature": "DateValue(Date As String) As Variant",
+      "description": "Returns a Variant (Date).",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Date",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Day",
+      "kind": "function",
+      "signature": "Day(Date As Variant) As Variant",
+      "description": "Returns a Variant (Integer) specifying a whole number between 1 and 31, inclusive, representing the day of the month.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Date",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Hour",
+      "kind": "function",
+      "signature": "Hour(Time As Variant) As Variant",
+      "description": "Returns a Variant (Integer) specifying a whole number between 0 and 23, inclusive, representing the hour of the day.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Time",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Minute",
+      "kind": "function",
+      "signature": "Minute(Time As Variant) As Variant",
+      "description": "Returns a Variant (Integer) specifying a whole number between 0 and 59, inclusive, representing the minute of the hour.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Time",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Month",
+      "kind": "function",
+      "signature": "Month(Date As Variant) As Variant",
+      "description": "Returns a Variant (Integer) specifying a whole number between 1 and 12, inclusive, representing the month of the year.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Date",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Now",
+      "kind": "function",
+      "signature": "Now() As Variant",
+      "description": "Returns a Variant (Date) specifying the current date and time according to your computer's system date and time.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Second",
+      "kind": "function",
+      "signature": "Second(Time As Variant) As Variant",
+      "description": "Returns a Variant (Integer) specifying a whole number between 0 and 59, inclusive, representing the second of the minute.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Time",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_B_var_Time",
+      "kind": "function",
+      "signature": "_B_var_Time() As Variant",
+      "description": "",
+      "returns": "Variant"
+    },
+    {
+      "name": "_B_str_Time",
+      "kind": "function",
+      "signature": "_B_str_Time(Arg1 As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Arg1",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_B_var_Time",
+      "kind": "function",
+      "signature": "_B_var_Time(Arg1 As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Arg1",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_B_str_Time",
+      "kind": "function",
+      "signature": "_B_str_Time() As String",
+      "description": "",
+      "returns": "String"
+    },
+    {
+      "name": "Timer",
+      "kind": "function",
+      "signature": "Timer() As Single",
+      "description": "Returns a Single representing the number of seconds elapsed since midnight.",
+      "returns": "Single"
+    },
+    {
+      "name": "TimeSerial",
+      "kind": "function",
+      "signature": "TimeSerial(Hour As Integer, Minute As Integer, Second As Integer) As Variant",
+      "description": "Returns a Variant (Date) containing the time for a specific hour, minute, and second.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Hour",
+          "type": "Integer",
+          "optional": false,
+          "description": "Required; Variant (Integer). Number between 0 (12:00 A.M.) and 23 (11:00 P.M.), inclusive, or a numeric expression."
+        },
+        {
+          "name": "Minute",
+          "type": "Integer",
+          "optional": false,
+          "description": "Required; Variant (Integer). Any numeric expression."
+        },
+        {
+          "name": "Second",
+          "type": "Integer",
+          "optional": false,
+          "description": "Required; Variant (Integer). Any numeric expression."
+        }
+      ]
+    },
+    {
+      "name": "TimeValue",
+      "kind": "function",
+      "signature": "TimeValue(Time As String) As Variant",
+      "description": "Returns a Variant (Date) containing the time.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Time",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Weekday",
+      "kind": "function",
+      "signature": "Weekday(Date As Variant, [FirstDayOfWeek As VbDayOfWeek]) As Variant",
+      "description": "Returns a Variant (Integer) containing a whole number representing the day of the week.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Date",
+          "type": "Variant",
+          "optional": false,
+          "description": "Required. Variant, numeric expression, string expression, or any combination, that can represent a date. If _date_ contains Null, Null is returned."
+        },
+        {
+          "name": "FirstDayOfWeek",
+          "type": "VbDayOfWeek",
+          "optional": true,
+          "description": "Optional. A constant that specifies the first day of the week. If not specified, vbSunday is assumed."
+        }
+      ]
+    },
+    {
+      "name": "Year",
+      "kind": "function",
+      "signature": "Year(Date As Variant) As Variant",
+      "description": "Returns a Variant (Integer) containing a whole number representing the year.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Date",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DateAdd",
+      "kind": "function",
+      "signature": "DateAdd(Interval As String, Number As Double, Date As Variant) As Variant",
+      "description": "Returns a Variant (Date) containing a date to which a specified time interval has been added.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Interval",
+          "type": "String",
+          "optional": false,
+          "description": "Required. String expression that is the interval of time you want to add."
+        },
+        {
+          "name": "Number",
+          "type": "Double",
+          "optional": false,
+          "description": "Required. Numeric expression that is the number of intervals you want to add. It can be positive (to get dates in the future) or negative (to get dates in the past)."
+        },
+        {
+          "name": "Date",
+          "type": "Variant",
+          "optional": false,
+          "description": "Required. Variant (Date) or literal representing the date to which the interval is added."
+        }
+      ]
+    },
+    {
+      "name": "DateDiff",
+      "kind": "function",
+      "signature": "DateDiff(Interval As String, Date1 As Variant, Date2 As Variant, [FirstDayOfWeek As VbDayOfWeek], [FirstWeekOfYear As VbFirstWeekOfYear]) As Variant",
+      "description": "Returns a Variant (Long) specifying the number of time intervals between two specified dates.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Interval",
+          "type": "String",
+          "optional": false,
+          "description": "Required. String expression that is the interval of time you use to calculate the difference between _date1_ and _date2_."
+        },
+        {
+          "name": "Date1",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Date2",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "FirstDayOfWeek",
+          "type": "VbDayOfWeek",
+          "optional": true,
+          "description": "Optional. A constant that specifies the first day of the week. If not specified, Sunday is assumed."
+        },
+        {
+          "name": "FirstWeekOfYear",
+          "type": "VbFirstWeekOfYear",
+          "optional": true,
+          "description": "Optional. A constant that specifies the first week of the year. If not specified, the first week is assumed to be the week in which January 1 occurs."
+        }
+      ]
+    },
+    {
+      "name": "DatePart",
+      "kind": "function",
+      "signature": "DatePart(Interval As String, Date As Variant, [FirstDayOfWeek As VbDayOfWeek], [FirstWeekOfYear As VbFirstWeekOfYear]) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Interval",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Date",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "FirstDayOfWeek",
+          "type": "VbDayOfWeek",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "FirstWeekOfYear",
+          "type": "VbFirstWeekOfYear",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Calendar",
+      "kind": "function",
+      "signature": "Calendar() As VbCalendar",
+      "description": "Returns or sets a value specifying the type of calendar to use with your project.",
+      "returns": "VbCalendar"
+    },
+    {
+      "name": "Calendar",
+      "kind": "function",
+      "signature": "Calendar(Arg1 As VbCalendar)",
+      "description": "Returns or sets a value specifying the type of calendar to use with your project.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Arg1",
+          "type": "VbCalendar",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "constants": []
+}

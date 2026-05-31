@@ -1,0 +1,211 @@
+{
+  "name": "ShapeNodes",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0319-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As ShapeNode",
+      "description": "",
+      "returns": "ShapeNode",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete(Index As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Insert",
+      "kind": "method",
+      "signature": "Insert(Index As Long, SegmentType As MsoSegmentType, EditingType As MsoEditingType, X1 As Single, Y1 As Single, [X2 As Single], [Y2 As Single], [X3 As Single], [Y3 As Single])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "SegmentType",
+          "type": "MsoSegmentType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "EditingType",
+          "type": "MsoEditingType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X1",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y1",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X2",
+          "type": "Single",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Y2",
+          "type": "Single",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "X3",
+          "type": "Single",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Y3",
+          "type": "Single",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetEditingType",
+      "kind": "method",
+      "signature": "SetEditingType(Index As Long, EditingType As MsoEditingType)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "EditingType",
+          "type": "MsoEditingType",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetPosition",
+      "kind": "method",
+      "signature": "SetPosition(Index As Long, X1 As Single, Y1 As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X1",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y1",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetSegmentType",
+      "kind": "method",
+      "signature": "SetSegmentType(Index As Long, SegmentType As MsoSegmentType)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "SegmentType",
+          "type": "MsoSegmentType",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

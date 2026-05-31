@@ -1,0 +1,143 @@
+{
+  "name": "References",
+  "kind": "Class",
+  "guid": "{0002E17C-0000-0000-C000-000000000046}",
+  "library": "Microsoft Visual Basic for Applications Extensibility 5.3",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "VBProject",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "VBE",
+      "kind": "property",
+      "type": "VBE",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(index As Variant) As Reference",
+      "description": "",
+      "returns": "Reference",
+      "parameters": [
+        {
+          "name": "index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "method",
+      "signature": "_NewEnum() As IUnknown",
+      "description": "",
+      "returns": "IUnknown"
+    },
+    {
+      "name": "AddFromGuid",
+      "kind": "method",
+      "signature": "AddFromGuid(Guid As String, Major As Long, Minor As Long) As Reference",
+      "description": "",
+      "returns": "Reference",
+      "parameters": [
+        {
+          "name": "Guid",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Major",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Minor",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddFromFile",
+      "kind": "method",
+      "signature": "AddFromFile(FileName As String) As Reference",
+      "description": "",
+      "returns": "Reference",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Remove",
+      "kind": "method",
+      "signature": "Remove(Reference As Reference)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Reference",
+          "type": "Reference",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "ItemAdded",
+      "kind": "event",
+      "signature": "ItemAdded(Reference As Reference)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Reference",
+          "type": "Reference",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ItemRemoved",
+      "kind": "event",
+      "signature": "ItemRemoved(Reference As Reference)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Reference",
+          "type": "Reference",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

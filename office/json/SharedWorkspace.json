@@ -1,0 +1,154 @@
+{
+  "name": "SharedWorkspace",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0385-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "The SharedWorkspace property of a Document object in Microsoft Word, a Workbook object in Microsoft Excel, and a Presentation object in Microsoft PowerPoint returns a SharedWorkspace object that allows the developer to add the active document to a SharePoint site and to manage other objects in the shared workspace site.",
+  "remarks": "Use the SharedWorkspace object to add the active Word, Excel, or PowerPoint document to a SharePoint document workspace site on the server to take advantage of the workspace's collaboration features, or to disconnect or remove the document from the workspace site. Use the SharedWorkspace object's collections to manage files, folders, links, members, and tasks associated with the shared document. The SharedWorkspace object model is available whether or not a document is stored in a workspace. The SharedWorkspace property of the Document, Workbook, and Presentation objects does not return Nothing when the document is not shared. Use the Connected property of the SharedWorkspace object to determine whether the active document is in fact saved in and connected to a shared workspace. Users require appropriate permissions to use the objects, properties, and methods in the SharedWorkspace object hierarchy. Use the SharedWorkspaceFiles collection, accessed through the Files property of the SharedWorkspace object, to manage documents and files saved in a shared workspace.",
+  "example": "Dim swsWorkspace As Office.SharedWorkspace\n    Dim strSWSInfo As String\n    Set swsWorkspace = ActiveWorkbook.SharedWorkspace\n    strSWSInfo = swsWorkspace.Name & vbCrLf & _\n        \" - URL: \" & swsWorkspace.URL & vbCrLf & _\n        \"The shared workspace contains \" & vbCrLf & _\n        \" - Files: \" & swsWorkspace.Files.Count & vbCrLf & _\n        \" - Folders: \" & swsWorkspace.Folders.Count & vbCrLf & _\n        \" - Links: \" & swsWorkspace.Links.Count & vbCrLf & _\n        \" - Members: \" & swsWorkspace.Members.Count & vbCrLf & _\n        \" - Tasks: \" & swsWorkspace.Tasks.Count & vbCrLf\n    MsgBox strSWSInfo, vbInformation + vbOKOnly, _\n        \"Shared Workspace Information\"\n    Set swsWorkspace = Nothing",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SharedWorkspace object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SharedWorkspace object was created. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the display name of the shared workspace site. Read/write."
+    },
+    {
+      "name": "Members",
+      "kind": "property",
+      "type": "SharedWorkspaceMembers",
+      "access": "read-only",
+      "description": "Gets a SharedWorkspaceMembers collection that represents the list of members in the current shared workspace. Read-only."
+    },
+    {
+      "name": "Tasks",
+      "kind": "property",
+      "type": "SharedWorkspaceTasks",
+      "access": "read-only",
+      "description": "Gets a SharedWorkspaceTasks collection that represents the list of tasks in the current shared workspace. Read-only."
+    },
+    {
+      "name": "Files",
+      "kind": "property",
+      "type": "SharedWorkspaceFiles",
+      "access": "read-only",
+      "description": "Provides access to the SharedWorkspaceFile objects in the SharedWorkspace. Read-only."
+    },
+    {
+      "name": "Folders",
+      "kind": "property",
+      "type": "SharedWorkspaceFolders",
+      "access": "read-only",
+      "description": "Gets a SharedWorkspaceFolders collection that represents the list of subfolders in the document library associated with the current shared workspace. Read-only."
+    },
+    {
+      "name": "Links",
+      "kind": "property",
+      "type": "SharedWorkspaceLinks",
+      "access": "read-only",
+      "description": "Gets a SharedWorkspaceLinks collection that represents the list of links saved in the current shared workspace. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the SharedWorkspace object. Read-only."
+    },
+    {
+      "name": "URL",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the top-level Uniform Resource Locator (URL) of the shared workspace. Read-only."
+    },
+    {
+      "name": "Connected",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets a Boolean value that indicates whether or not the active document is currently saved in and connected to a shared workspace. Read-only."
+    },
+    {
+      "name": "LastRefreshed",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Gets the date and time when the Refresh method was most recently called. Read-only."
+    },
+    {
+      "name": "SourceURL",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Designates the location of the public copy of a shared document to which changes should be published back after the document has been revised in a separate document workspace site. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Refresh",
+      "kind": "method",
+      "signature": "Refresh()",
+      "description": "Refreshes the local cache of the SharedWorkspace object's files, folders, links, members, and tasks from the server.",
+      "returns": "void"
+    },
+    {
+      "name": "CreateNew",
+      "kind": "method",
+      "signature": "CreateNew([URL As Variant], [Name As Variant])",
+      "description": "Creates a document workspace site on the server and adds the active document to the new shared workspace site.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "URL",
+          "type": "Variant",
+          "optional": true,
+          "description": "The URL for the parent folder in which the new shared workspace is to be created. If you don't supply a URL, the site is created in the user's default server location."
+        },
+        {
+          "name": "Name",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the new shared workspace site. The default value is the name of the active document without its file name extension. For example, if you create a workspace site for \"Budget.xls\", the name of the new site becomes \"Budget\"."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the current shared workspace and all data within it.",
+      "returns": "void"
+    },
+    {
+      "name": "RemoveDocument",
+      "kind": "method",
+      "signature": "RemoveDocument()",
+      "description": "Removes the active document from the shared workspace site.",
+      "returns": "void"
+    },
+    {
+      "name": "Disconnect",
+      "kind": "method",
+      "signature": "Disconnect()",
+      "description": "Disconnects the local copy of the active document from the shared workspace site.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

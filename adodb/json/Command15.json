@@ -1,0 +1,136 @@
+{
+  "name": "Command15",
+  "kind": "Dispatch Interface",
+  "guid": "{00001508-0000-0010-8000-00AA006D2EA4}",
+  "library": "Microsoft ActiveX Data Objects 6.1 Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Properties",
+      "kind": "property",
+      "type": "Properties",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ActiveConnection",
+      "kind": "property",
+      "type": "_Connection",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CommandText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CommandTimeout",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Prepared",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Parameters",
+      "kind": "property",
+      "type": "Parameters",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "CommandType",
+      "kind": "property",
+      "type": "CommandTypeEnum",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Execute",
+      "kind": "method",
+      "signature": "Execute([RecordsAffected As Variant], [Parameters As Variant], [Options As Long]) As _Recordset",
+      "description": "",
+      "returns": "_Recordset",
+      "parameters": [
+        {
+          "name": "RecordsAffected",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Parameters",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Options",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CreateParameter",
+      "kind": "method",
+      "signature": "CreateParameter([Name As String], [Type As DataTypeEnum], [Direction As ParameterDirectionEnum], [Size As Long], [Value As Variant]) As _Parameter",
+      "description": "",
+      "returns": "_Parameter",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Type",
+          "type": "DataTypeEnum",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Direction",
+          "type": "ParameterDirectionEnum",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Size",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Value",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

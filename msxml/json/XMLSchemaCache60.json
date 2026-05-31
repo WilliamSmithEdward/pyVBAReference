@@ -1,0 +1,138 @@
+{
+  "name": "XMLSchemaCache60",
+  "kind": "Class",
+  "guid": "{88D96A07-F192-11D4-A65F-0040963251E5}",
+  "library": "Microsoft XML, v6.0",
+  "description": "XML Schema Cache 6.0",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "length",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "number of schemas in collection"
+    },
+    {
+      "name": "namespaceURI",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Get namespaceURI for schema by index"
+    },
+    {
+      "name": "validateOnLoad",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "add",
+      "kind": "method",
+      "signature": "add(namespaceURI As String, var As Variant)",
+      "description": "add a new schema",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "namespaceURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "var",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "get",
+      "kind": "method",
+      "signature": "get(namespaceURI As String) As IXMLDOMNode",
+      "description": "lookup schema by namespaceURI",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "namespaceURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "remove",
+      "kind": "method",
+      "signature": "remove(namespaceURI As String)",
+      "description": "remove schema by namespaceURI",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "namespaceURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "addCollection",
+      "kind": "method",
+      "signature": "addCollection(otherCollection As IXMLDOMSchemaCollection)",
+      "description": "copy & merge other collection into this one",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "otherCollection",
+          "type": "IXMLDOMSchemaCollection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "validate",
+      "kind": "method",
+      "signature": "validate()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "getSchema",
+      "kind": "method",
+      "signature": "getSchema(namespaceURI As String) As ISchema",
+      "description": "",
+      "returns": "ISchema",
+      "parameters": [
+        {
+          "name": "namespaceURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getDeclaration",
+      "kind": "method",
+      "signature": "getDeclaration(node As IXMLDOMNode) As ISchemaItem",
+      "description": "",
+      "returns": "ISchemaItem",
+      "parameters": [
+        {
+          "name": "node",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

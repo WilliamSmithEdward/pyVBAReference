@@ -1,0 +1,64 @@
+{
+  "name": "SmartArtQuickStyles",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03CB-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a collection of SmartArtQuickStyle objects.",
+  "remarks": "",
+  "example": "ActivePresentation.Slides(1).Shapes(1).SmartArt.QuickStyle = Application.SmartArtQuickStyles(i)",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SmartArtQuickStyles object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SmartArtQuickStyles object was created. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the calling object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Retrieves the count of the number of SmartArtQuickStyle objects contained within the SmartArtQuickStyles collection. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As SmartArtQuickStyle",
+      "description": "Retrieves a SmartArtQuickStyle object at the specified index or with the specified unique Id.",
+      "returns": "SmartArtQuickStyle",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "Specifies either an integer representing the index or a string representing the location of the SmartArtQuickStyle object."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

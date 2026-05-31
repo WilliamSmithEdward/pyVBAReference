@@ -1,0 +1,72 @@
+{
+  "name": "AllowEditRange",
+  "kind": "Dispatch Interface",
+  "guid": "{0002446B-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the cells that can be edited on a protected worksheet.",
+  "remarks": "Use the Add method or the Item property of the AllowEditRanges collection to return an AllowEditRange object. After an AllowEditRange object has been returned, you can use the ChangePassword method to change the password to access a range that can be edited on a protected worksheet.",
+  "example": "Sub UseChangePassword()\n\n Dim wksOne As Worksheet\n Dim wksPassword As String\n\n Set wksOne = Application.ActiveSheet\n\n wksPassword = InputBox (\"Enter password for the worksheet\")\n\n ' Establish a range that can allow edits\n ' on the protected worksheet.\n wksOne.Protection.AllowEditRanges.Add _\n Title:=\"Classified\", _\n Range:=Range(\"A1:A4\"), _\n Password:=wksPassword\n\n MsgBox \"Cells A1 to A4 can be edited on the protected worksheet.\"\n\n ' Change the password.\n\n wksPassword = InputBox (\"Enter the new password for the worksheet\")\n\n wksOne.Protection.AllowEditRanges(1).ChangePassword _\n Password:=wksPassword\n\n MsgBox \"The password for these cells has been changed.\"\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Title",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the title of the range of cells that can edited on a protected sheet. Read/write String."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read/write",
+      "description": "Returns a Range object that represents a subset of the ranges that can be edited on a protected worksheet."
+    },
+    {
+      "name": "Users",
+      "kind": "property",
+      "type": "UserAccessList",
+      "access": "read-only",
+      "description": "Returns a UserAccessList object for the protected range on a worksheet."
+    }
+  ],
+  "methods": [
+    {
+      "name": "ChangePassword",
+      "kind": "method",
+      "signature": "ChangePassword(Password As String)",
+      "description": "Changes the password for a range that can be edited on a protected worksheet.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Password",
+          "type": "String",
+          "optional": false,
+          "description": "The new password."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    },
+    {
+      "name": "Unprotect",
+      "kind": "method",
+      "signature": "Unprotect([Password As Variant])",
+      "description": "Removes protection from a sheet or workbook. This method has no effect if the sheet or workbook isn't protected.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Password",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that denotes the case-sensitive password to use to unprotect the range of cells. If the range isn't protected with a password, this argument is ignored."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

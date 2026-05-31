@@ -1,0 +1,107 @@
+{
+  "name": "ModelRelationships",
+  "kind": "Dispatch Interface",
+  "guid": "{000244DA-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "This collection contains all relationships between data tables in the data model of Excel 2013.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Excel application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified ModelRelationships object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of ModelRelationship objects in a ModelRelationships object. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "ModelRelationship",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As ModelRelationship",
+      "description": "Returns a single object from the ModelRelationships object.",
+      "returns": "ModelRelationship",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The index number for the object."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(ForeignKeyColumn As ModelTableColumn, PrimaryKeyColumn As ModelTableColumn) As ModelRelationship",
+      "description": "Adds a new relationship to the model.",
+      "returns": "ModelRelationship",
+      "parameters": [
+        {
+          "name": "ForeignKeyColumn",
+          "type": "ModelTableColumn",
+          "optional": false,
+          "description": "A ModelTableColumn object representing the foreign key column in the table on the many side of the one-to-many relationship."
+        },
+        {
+          "name": "PrimaryKeyColumn",
+          "type": "ModelTableColumn",
+          "optional": false,
+          "description": "A ModelTableColumn object representing the primary key column in the table on the one side of the one-to-many relationship."
+        }
+      ]
+    },
+    {
+      "name": "DetectRelationships",
+      "kind": "method",
+      "signature": "DetectRelationships(PivotTable As PivotTable)",
+      "description": "Detects model relationships in the specified PivotTable object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "PivotTable",
+          "type": "PivotTable",
+          "optional": false,
+          "description": "The PivotTable in which to detect model relationships."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,98 @@
+{
+  "name": "WorkflowTask",
+  "kind": "Dispatch Interface",
+  "guid": "{000CD900-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a single workflow task in a WorkflowTasks collection.",
+  "remarks": "",
+  "example": "Sub DisplayWorkTask()\nDim objWorkflowTasks As WorkflowTasks\nDim objWorkflowTask As WorkflowTask\nDim cnt As Integer\n\nSet objWorkflowTasks = Document.GetWorkflowTasks()\n\nFor cnt = 1 To objWorkflowTasks.Count\n Debug.Print objWorkflowTask(cnt).Name\nNext\n\nSet objWorkflowTask = objWorkflowTasks(1)\nobjWorkflowTask.Show\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the WorkflowTask object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the WorkflowTask object was created. Read-only."
+    },
+    {
+      "name": "Id",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the ID of the Sharepoint list item. Read-only."
+    },
+    {
+      "name": "ListID",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the ID of the list containing the workflow task. Read-only."
+    },
+    {
+      "name": "WorkflowID",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the ID of the workflow associated with a workflow task. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the name of the WorkflowTask object. Read-only."
+    },
+    {
+      "name": "Description",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the description of a workflow task. Read-only."
+    },
+    {
+      "name": "AssignedTo",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the name of the person that the workflow task is assigned to. Read-only."
+    },
+    {
+      "name": "CreatedBy",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the name of the person that created the workflow task. Read-only."
+    },
+    {
+      "name": "DueDate",
+      "kind": "property",
+      "type": "Date",
+      "access": "read-only",
+      "description": "Gets the date that a workflow task is due. Read-only."
+    },
+    {
+      "name": "CreatedDate",
+      "kind": "property",
+      "type": "Date",
+      "access": "read-only",
+      "description": "Gets the date that a workflow task was created. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Show",
+      "kind": "method",
+      "signature": "Show() As Long",
+      "description": "Displays a workflow task edit user interface for the specified WorkflowTask object.",
+      "returns": "Long"
+    }
+  ],
+  "events": []
+}

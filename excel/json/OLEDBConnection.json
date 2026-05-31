@@ -1,0 +1,300 @@
+{
+  "name": "OLEDBConnection",
+  "kind": "Dispatch Interface",
+  "guid": "{0002448D-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the OLE DB connection.",
+  "remarks": "An OLE DB connection can be stored in an Excel workbook. When Excel opens the workbook, it creates an in-memory copy of the OLE DB connection known as the OLEDBConnection object. An OLEDBConnection object contains information related to the connection, such as the name of the server to connect to and the name of the objects to be opened on that server. Optionally, the OLEDBConnection object may also include authentication credential information, or a command that is to be passed to the server and executed (for example, a SELECT statement to be executed by SQL Server).",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "ADOConnection",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an ADO connection object if the PivotTable cache is connected to an OLE DB data source. Read-only."
+    },
+    {
+      "name": "BackgroundQuery",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if queries for the OLE DB connection are performed asynchronously (in the background). Read/write Boolean."
+    },
+    {
+      "name": "CommandText",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the command string for the specified data source. Read/write Variant."
+    },
+    {
+      "name": "CommandType",
+      "kind": "property",
+      "type": "XlCmdType",
+      "access": "read/write",
+      "description": "Returns or sets one of the XlCmdType constants. Read/write XlCmdType."
+    },
+    {
+      "name": "Connection",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a string that contains OLE DB settings that enable Microsoft Excel to connect to an OLE DB data source. Read/write Variant."
+    },
+    {
+      "name": "EnableRefresh",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the connection can be refreshed by the user. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "LocalConnection",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the connection string to an offline cube file. Read/write String."
+    },
+    {
+      "name": "MaintainConnection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns True if the connection to the specified data source is maintained after the refresh operation and until the workbook is closed. Read/write Boolean."
+    },
+    {
+      "name": "RefreshDate",
+      "kind": "property",
+      "type": "Date",
+      "access": "read-only",
+      "description": "Returns the date on which the OLE DB connection was last refreshed. Read-only Date."
+    },
+    {
+      "name": "Refreshing",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if a background OLE DB query is in progress for the specified OLE DB connection. Read/write Boolean."
+    },
+    {
+      "name": "RefreshOnFileOpen",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the connection is automatically updated each time the workbook is opened. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "RefreshPeriod",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the number of minutes between refreshes. Read/write Long."
+    },
+    {
+      "name": "RobustConnect",
+      "kind": "property",
+      "type": "XlRobustConnect",
+      "access": "read/write",
+      "description": "Returns or sets how an OLE DB connection connects to its data source. Read/write XlRobustConnect."
+    },
+    {
+      "name": "SavePassword",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if password information in an OLE DB connection string is saved in the connection string. False if the password is removed. Read/write Boolean."
+    },
+    {
+      "name": "SourceConnectionFile",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String indicating the Microsoft Office Data Connection file or similar file that was used to create the connection. Read/write."
+    },
+    {
+      "name": "SourceDataFile",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String indicating the source data file for an OLE DB connection. Read/write."
+    },
+    {
+      "name": "OLAP",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns True if the OLE DB connection is connected to an Online Analytical Processing (OLAP) server. Read-only Boolean."
+    },
+    {
+      "name": "UseLocalConnection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the LocalConnection property is used to specify the string that enables Microsoft Excel to connect to a data source. False if the connection string specified by the Connection property is used. Read/write Boolean."
+    },
+    {
+      "name": "MaxDrillthroughRecords",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the maximum number of records to retrieve. Read/write Long."
+    },
+    {
+      "name": "IsConnected",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns True if the MaintainConnection property is True. Returns False if it is not currently connected to its source. Read-only Boolean."
+    },
+    {
+      "name": "ServerCredentialsMethod",
+      "kind": "property",
+      "type": "XlCredentialsMethod",
+      "access": "read/write",
+      "description": "Returns or sets the type of credentials that should be used for server authentication. Read/write XlCredentialsMethod."
+    },
+    {
+      "name": "ServerSSOApplicationID",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a single sign-on application (SSO) identifier that is used to perform a lookup in the SSO database for credentials. Read/write String."
+    },
+    {
+      "name": "AlwaysUseConnectionFile",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the connection file is always used to establish a connection to the data source. Read/write Boolean."
+    },
+    {
+      "name": "ServerFillColor",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the fill color format for the OLAP server is retrieved from the server when using the specified connection. Read/write Boolean."
+    },
+    {
+      "name": "ServerFontStyle",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the font style format for the OLAP server is retrieved from the server when using the specified connection. Read/write Boolean."
+    },
+    {
+      "name": "ServerNumberFormat",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the number format for the OLAP server is retrieved from the server when using the specified connection. Read/write Boolean."
+    },
+    {
+      "name": "ServerTextColor",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the text color format for the OLAP server is retrieved from the server when using the specified connection. Read/write Boolean."
+    },
+    {
+      "name": "RetrieveInOfficeUILang",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the data and errors are to be retrieved in the Office user interface display language when available. Read/write Boolean."
+    },
+    {
+      "name": "CalculatedMembers",
+      "kind": "property",
+      "type": "CalculatedMembers",
+      "access": "read-only",
+      "description": "Returns the CalculatedMembers collection for the specified connection. Read-only."
+    },
+    {
+      "name": "LocaleID",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the locale identifier for the specified connection. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "CancelRefresh",
+      "kind": "method",
+      "signature": "CancelRefresh()",
+      "description": "Cancels all refresh operations in progress for the specified OLE DB connection.",
+      "returns": "void"
+    },
+    {
+      "name": "MakeConnection",
+      "kind": "method",
+      "signature": "MakeConnection()",
+      "description": "Establishes a connection for the specified OLE DB connection.",
+      "returns": "void"
+    },
+    {
+      "name": "Refresh",
+      "kind": "method",
+      "signature": "Refresh()",
+      "description": "Refreshes an OLE DB connection.",
+      "returns": "void"
+    },
+    {
+      "name": "SaveAsODC",
+      "kind": "method",
+      "signature": "SaveAsODC(ODCFileName As String, [Description As Variant], [Keywords As Variant])",
+      "description": "Saves the OLE DB connection as a Microsoft Office Data Connection file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ODCFileName",
+          "type": "String",
+          "optional": false,
+          "description": "Location to save the file."
+        },
+        {
+          "name": "Description",
+          "type": "Variant",
+          "optional": true,
+          "description": "Description that will be saved in the file."
+        },
+        {
+          "name": "Keywords",
+          "type": "Variant",
+          "optional": true,
+          "description": "Space-separated keywords that can be used to search for this file."
+        }
+      ]
+    },
+    {
+      "name": "Reconnect",
+      "kind": "method",
+      "signature": "Reconnect()",
+      "description": "Drops and then reconnects the specified connection.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

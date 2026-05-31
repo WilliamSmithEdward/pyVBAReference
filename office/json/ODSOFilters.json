@@ -1,0 +1,117 @@
+{
+  "name": "ODSOFilters",
+  "kind": "Dispatch Interface",
+  "guid": "{000C1534-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents all the filters to apply to the data source attached to the mail merge publication. The ODSOFilters object is composed of ODSOFilter objects.",
+  "remarks": "Use the Add method of the ODSOFilters object to add a new filter criterion to the query.",
+  "example": "Sub SetQueryCriterion()\n Dim appOffice As OfficeDataSourceObject\n\n Set appOffice = Application.OfficeDataSourceObject\n appOffice.Open bstrConnect:=\"DRIVER=SQL Server;SERVER=ServerName;\" & _\n \"UID=user;PWD=;DATABASE=Northwind\", bstrTable:=\"Employees\"\n\n With appOffice.Filters\n .Add Column:=\"Region\", _\n Comparison:=msoFilterComparisonIsBlank, _\n Conjunction:=msoFilterConjunctionAnd\n .ApplyFilter\n End With\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the ODSOFilters object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the ODSOFilters object was created. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the ODSOFilters collection. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the ODSOFilters object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Object",
+      "description": "Represents an ODSOFilter object in the ODSOFilters collection.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of the item."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Column As String, Comparison As MsoFilterComparison, Conjunction As MsoFilterConjunction, [bstrCompareTo As String], [DeferUpdate As Boolean])",
+      "description": "Adds a new filter to the ODSOFilters collection.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Column",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the table in the data source."
+        },
+        {
+          "name": "Comparison",
+          "type": "MsoFilterComparison",
+          "optional": false,
+          "description": "How the data in the table is filtered."
+        },
+        {
+          "name": "Conjunction",
+          "type": "MsoFilterConjunction",
+          "optional": false,
+          "description": "Determines how this filter relates to other filters in the ODSOFilters object."
+        },
+        {
+          "name": "bstrCompareTo",
+          "type": "String",
+          "optional": true,
+          "description": "If the _Comparison_ argument is something other than msoFilterComparisonIsBlank or msoFilterComparisonIsNotBlank, _bstrCompareTo_ is a string to which the data in the table is compared."
+        },
+        {
+          "name": "DeferUpdate",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to delay updating the filter. Default is False."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete(Index As Long, [DeferUpdate As Boolean])",
+      "description": "Deletes a filter object from the ODSOFilters collection.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of the filter to delete."
+        },
+        {
+          "name": "DeferUpdate",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to delay updating the filter. Default is False."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

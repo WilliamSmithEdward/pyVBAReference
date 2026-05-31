@@ -1,0 +1,71 @@
+{
+  "name": "CommentsThreaded",
+  "kind": "Dispatch Interface",
+  "guid": "{000244FC-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of top-level CommentThreaded objects in a Worksheet, or a collection of replies in a single threaded comment.",
+  "remarks": "Each threaded comment is represented by a CommentThreaded object.",
+  "example": "Set cmt = Worksheets(1).CommentsThreaded\nFor Each c In cmt\n c.Text \"Updated Comment\"\nNext",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "CommentThreaded",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As CommentThreaded",
+      "description": "Returns a single object from a collection.",
+      "returns": "CommentThreaded",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number for the object."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

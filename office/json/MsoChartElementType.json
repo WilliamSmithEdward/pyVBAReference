@@ -1,0 +1,643 @@
+{
+  "name": "MsoChartElementType",
+  "kind": "Enumeration",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Specifies whether and how to display chart elements.",
+  "constants": [
+    {
+      "name": "msoElementChartTitleNone",
+      "value": 0,
+      "description": "Do not display chart title."
+    },
+    {
+      "name": "msoElementChartTitleCenteredOverlay",
+      "value": 1,
+      "description": "Display title as centered overlay."
+    },
+    {
+      "name": "msoElementChartTitleAboveChart",
+      "value": 2,
+      "description": "Display title above chart."
+    },
+    {
+      "name": "msoElementLegendNone",
+      "value": 100,
+      "description": "Do not display legend."
+    },
+    {
+      "name": "msoElementLegendRight",
+      "value": 101,
+      "description": "Display legend at the right."
+    },
+    {
+      "name": "msoElementLegendTop",
+      "value": 102,
+      "description": "Display legend at the top."
+    },
+    {
+      "name": "msoElementLegendLeft",
+      "value": 103,
+      "description": "Display legend at the left."
+    },
+    {
+      "name": "msoElementLegendBottom",
+      "value": 104,
+      "description": "Display legend at the bottom."
+    },
+    {
+      "name": "msoElementLegendRightOverlay",
+      "value": 105,
+      "description": "Overlay legend at the right."
+    },
+    {
+      "name": "msoElementLegendLeftOverlay",
+      "value": 106,
+      "description": "Overlay legend at the left."
+    },
+    {
+      "name": "msoElementDataLabelNone",
+      "value": 200,
+      "description": "Do not display data label."
+    },
+    {
+      "name": "msoElementDataLabelShow",
+      "value": 201,
+      "description": "Display data label."
+    },
+    {
+      "name": "msoElementDataLabelCenter",
+      "value": 202,
+      "description": "Display data label in center."
+    },
+    {
+      "name": "msoElementDataLabelInsideEnd",
+      "value": 203,
+      "description": "Display data label inside at the end."
+    },
+    {
+      "name": "msoElementDataLabelInsideBase",
+      "value": 204,
+      "description": "Display data label inside at the base."
+    },
+    {
+      "name": "msoElementDataLabelOutSideEnd",
+      "value": 205,
+      "description": "Display data label outside at the end."
+    },
+    {
+      "name": "msoElementDataLabelLeft",
+      "value": 206,
+      "description": "Display data label to the left."
+    },
+    {
+      "name": "msoElementDataLabelRight",
+      "value": 207,
+      "description": "Display data label to the right."
+    },
+    {
+      "name": "msoElementDataLabelTop",
+      "value": 208,
+      "description": "Display data label at the top."
+    },
+    {
+      "name": "msoElementDataLabelBottom",
+      "value": 209,
+      "description": "Display data label at bottom."
+    },
+    {
+      "name": "msoElementDataLabelBestFit",
+      "value": 210,
+      "description": "Use best fit for data label."
+    },
+    {
+      "name": "msoElementDataLabelCallout",
+      "value": 211,
+      "description": "Display data label as a callout."
+    },
+    {
+      "name": "msoElementPrimaryCategoryAxisTitleNone",
+      "value": 300,
+      "description": "Do not display primary category axis title."
+    },
+    {
+      "name": "msoElementPrimaryCategoryAxisTitleAdjacentToAxis",
+      "value": 301,
+      "description": "Display primary category axis title adjacent to the axis."
+    },
+    {
+      "name": "msoElementPrimaryCategoryAxisTitleBelowAxis",
+      "value": 302,
+      "description": "Display primary category axis title below the axis."
+    },
+    {
+      "name": "msoElementPrimaryCategoryAxisTitleRotated",
+      "value": 303,
+      "description": "Rotate primary category axis title."
+    },
+    {
+      "name": "msoElementPrimaryCategoryAxisTitleVertical",
+      "value": 304,
+      "description": "Display primary category axis title vertically."
+    },
+    {
+      "name": "msoElementPrimaryCategoryAxisTitleHorizontal",
+      "value": 305,
+      "description": "Display primary category axis title horizontally."
+    },
+    {
+      "name": "msoElementPrimaryValueAxisTitleNone",
+      "value": 306,
+      "description": "Do not display primary value axis title."
+    },
+    {
+      "name": "msoElementPrimaryValueAxisTitleAdjacentToAxis",
+      "value": 306,
+      "description": "Place primary value axis title adjacent to the axis."
+    },
+    {
+      "name": "msoElementPrimaryValueAxisTitleBelowAxis",
+      "value": 308,
+      "description": "Place primary value axis title below the axis."
+    },
+    {
+      "name": "msoElementPrimaryValueAxisTitleRotated",
+      "value": 309,
+      "description": "Rotate primary value axis title."
+    },
+    {
+      "name": "msoElementPrimaryValueAxisTitleVertical",
+      "value": 310,
+      "description": "Display primary value axis title vertically."
+    },
+    {
+      "name": "msoElementPrimaryValueAxisTitleHorizontal",
+      "value": 311,
+      "description": "Display primary value axis title horizontally."
+    },
+    {
+      "name": "msoElementSecondaryCategoryAxisTitleNone",
+      "value": 312,
+      "description": "Do not display secondary category axis title."
+    },
+    {
+      "name": "msoElementSecondaryCategoryAxisTitleAdjacentToAxis",
+      "value": 313,
+      "description": "Display secondary category axis title adjacent to axis."
+    },
+    {
+      "name": "msoElementSecondaryCategoryAxisTitleBelowAxis",
+      "value": 314,
+      "description": "Display secondary category axis title below axis."
+    },
+    {
+      "name": "msoElementSecondaryCategoryAxisTitleRotated",
+      "value": 315,
+      "description": "Rotate secondary category axis title."
+    },
+    {
+      "name": "msoElementSecondaryCategoryAxisTitleVertical",
+      "value": 316,
+      "description": "Display secondary category axis title vertically."
+    },
+    {
+      "name": "msoElementSecondaryCategoryAxisTitleHorizontal",
+      "value": 317,
+      "description": "Display secondary category axis title horizontally."
+    },
+    {
+      "name": "msoElementSecondaryValueAxisTitleNone",
+      "value": 318,
+      "description": "Do not display secondary value axis title."
+    },
+    {
+      "name": "msoElementSecondaryValueAxisTitleAdjacentToAxis",
+      "value": 319,
+      "description": "Display secondary value axis title adjacent to axis."
+    },
+    {
+      "name": "msoElementSecondaryValueAxisTitleBelowAxis",
+      "value": 320,
+      "description": "Display secondary value axis title below axis."
+    },
+    {
+      "name": "msoElementSecondaryValueAxisTitleRotated",
+      "value": 321,
+      "description": "Rotate secondary value axis title."
+    },
+    {
+      "name": "msoElementSecondaryValueAxisTitleVertical",
+      "value": 322,
+      "description": "Display secondary value axis title vertically."
+    },
+    {
+      "name": "msoElementSecondaryValueAxisTitleHorizontal",
+      "value": 323,
+      "description": "Display secondary value axis title horizontally."
+    },
+    {
+      "name": "msoElementSeriesAxisTitleNone",
+      "value": 324,
+      "description": "Do not display series axis title."
+    },
+    {
+      "name": "msoElementSeriesAxisTitleRotated",
+      "value": 325,
+      "description": "Rotate series axis title."
+    },
+    {
+      "name": "msoElementSeriesAxisTitleVertical",
+      "value": 326,
+      "description": "Display series axis title vertically."
+    },
+    {
+      "name": "msoElementSeriesAxisTitleHorizontal",
+      "value": 327,
+      "description": "Display series axis title horizontally."
+    },
+    {
+      "name": "msoElementPrimaryValueGridLinesNone",
+      "value": 328,
+      "description": "Do not display grid lines along primary value axis."
+    },
+    {
+      "name": "msoElementPrimaryValueGridLinesMinor",
+      "value": 329,
+      "description": "Display minor gridlines along primary value axis."
+    },
+    {
+      "name": "msoElementPrimaryValueGridLinesMajor",
+      "value": 330,
+      "description": "Display major gridlines along primary value axis."
+    },
+    {
+      "name": "msoElementPrimaryValueGridLinesMinorMajor",
+      "value": 331,
+      "description": "Display both major and minor gridlines along primary value axis."
+    },
+    {
+      "name": "msoElementPrimaryCategoryGridLinesNone",
+      "value": 332,
+      "description": "Do not display grid lines along primary category axis."
+    },
+    {
+      "name": "msoElementPrimaryCategoryGridLinesMinor",
+      "value": 333,
+      "description": "Display minor gridlines along primary category axis."
+    },
+    {
+      "name": "msoElementPrimaryCategoryGridLinesMajor",
+      "value": 334,
+      "description": "Display major gridlines along primary category axis."
+    },
+    {
+      "name": "msoElementPrimaryCategoryGridLinesMinorMajor",
+      "value": 335,
+      "description": "Display both major and minor gridlines along primary category axis."
+    },
+    {
+      "name": "msoElementSecondaryValueGridLinesNone",
+      "value": 336,
+      "description": "Do not display gridlines along secondary value axis."
+    },
+    {
+      "name": "msoElementSecondaryValueGridLinesMinor",
+      "value": 337,
+      "description": "Display minor gridlines along secondary value axis."
+    },
+    {
+      "name": "msoElementSecondaryValueGridLinesMajor",
+      "value": 338,
+      "description": "Display major gridlines along secondary value axis."
+    },
+    {
+      "name": "msoElementSecondaryValueGridLinesMinorMajor",
+      "value": 339,
+      "description": "Display both major and minor gridlines along secondary value axis."
+    },
+    {
+      "name": "msoElementSecondaryCategoryGridLinesNone",
+      "value": 340,
+      "description": "Do not display grid lines along secondary category axis."
+    },
+    {
+      "name": "msoElementSecondaryCategoryGridLinesMinor",
+      "value": 341,
+      "description": "Display minor gridlines along secondary category axis."
+    },
+    {
+      "name": "msoElementSecondaryCategoryGridLinesMajor",
+      "value": 342,
+      "description": "Display major gridlines along secondary category axis."
+    },
+    {
+      "name": "msoElementSecondaryCategoryGridLinesMinorMajor",
+      "value": 343,
+      "description": "Display both major and minor gridlines along secondary category axis."
+    },
+    {
+      "name": "msoElementSeriesAxisGridLinesNone",
+      "value": 344,
+      "description": "Do not display gridlines along series axis."
+    },
+    {
+      "name": "msoElementSeriesAxisGridLinesMinor",
+      "value": 345,
+      "description": "Display minor gridlines along series axis."
+    },
+    {
+      "name": "msoElementSeriesAxisGridLinesMajor",
+      "value": 346,
+      "description": "Display major gridlines along series axis."
+    },
+    {
+      "name": "msoElementSeriesAxisGridLinesMinorMajor",
+      "value": 347,
+      "description": "Display both major and minor gridlines along series axis."
+    },
+    {
+      "name": "msoElementPrimaryCategoryAxisNone",
+      "value": 348,
+      "description": "Do not display primary category axis."
+    },
+    {
+      "name": "msoElementPrimaryCategoryAxisShow",
+      "value": 349,
+      "description": "Show primary category axis."
+    },
+    {
+      "name": "msoElementPrimaryCategoryAxisWithoutLabels",
+      "value": 350,
+      "description": "Display primary category axis without labels."
+    },
+    {
+      "name": "msoElementPrimaryCategoryAxisReverse",
+      "value": 351,
+      "description": "Reverse primary category axis."
+    },
+    {
+      "name": "msoElementPrimaryValueAxisNone",
+      "value": 352,
+      "description": "Do not display primary value axis."
+    },
+    {
+      "name": "msoElementPrimaryValueAxisShow",
+      "value": 353,
+      "description": "Show primary value axis"
+    },
+    {
+      "name": "msoElementPrimaryValueAxisThousands",
+      "value": 354,
+      "description": "Use thousands for primary value axis units."
+    },
+    {
+      "name": "msoElementPrimaryValueAxisMillions",
+      "value": 355,
+      "description": "Use millions for primary value axis units."
+    },
+    {
+      "name": "msoElementPrimaryValueAxisBillions",
+      "value": 356,
+      "description": "Use billions for primary value axis units."
+    },
+    {
+      "name": "msoElementPrimaryValueAxisLogScale",
+      "value": 357,
+      "description": "Use log scale for primary value axis."
+    },
+    {
+      "name": "msoElementSecondaryCategoryAxisNone",
+      "value": 358,
+      "description": "Do not display secondary category axis."
+    },
+    {
+      "name": "msoElementSecondaryCategoryAxisShow",
+      "value": 359,
+      "description": "Display secondary category axis."
+    },
+    {
+      "name": "msoElementSecondaryCategoryAxisWithoutLabels",
+      "value": 360,
+      "description": "Display secondary category axis without labels."
+    },
+    {
+      "name": "msoElementSecondaryCategoryAxisReverse",
+      "value": 361,
+      "description": "Reverse secondary category axis."
+    },
+    {
+      "name": "msoElementSecondaryValueAxisNone",
+      "value": 362,
+      "description": "Do not display secondary value axis."
+    },
+    {
+      "name": "msoElementSecondaryValueAxisShow",
+      "value": 363,
+      "description": "Display secondary value axis."
+    },
+    {
+      "name": "msoElementSecondaryValueAxisThousands",
+      "value": 364,
+      "description": "Use thousands for secondary value axis units."
+    },
+    {
+      "name": "msoElementSecondaryValueAxisMillions",
+      "value": 365,
+      "description": "Use millions for secondary value axis units."
+    },
+    {
+      "name": "msoElementSecondaryValueAxisBillions",
+      "value": 366,
+      "description": "Use billions for secondary value axis units."
+    },
+    {
+      "name": "msoElementSecondaryValueAxisLogScale",
+      "value": 367,
+      "description": "Use log scale for secondary value axis."
+    },
+    {
+      "name": "msoElementSeriesAxisNone",
+      "value": 368,
+      "description": "Do not display series axis."
+    },
+    {
+      "name": "msoElementSeriesAxisShow",
+      "value": 369,
+      "description": "Display series axis."
+    },
+    {
+      "name": "msoElementSeriesAxisWithoutLabeling",
+      "value": 370,
+      "description": "Display series axis title without labeling."
+    },
+    {
+      "name": "msoElementSeriesAxisReverse",
+      "value": 371,
+      "description": "Reverse series axis."
+    },
+    {
+      "name": "msoElementPrimaryCategoryAxisThousands",
+      "value": 372,
+      "description": "Use thousands for primary category axis units."
+    },
+    {
+      "name": "msoElementPrimaryCategoryAxisMillions",
+      "value": 373,
+      "description": "Use millions for primary category axis units."
+    },
+    {
+      "name": "msoElementPrimaryCategoryAxisBillions",
+      "value": 374,
+      "description": "Use billions for primary category axis units."
+    },
+    {
+      "name": "msoElementPrimaryCategoryAxisLogScale",
+      "value": 375,
+      "description": "Use log scale for primary category axis."
+    },
+    {
+      "name": "msoElementSecondaryCategoryAxisThousands",
+      "value": 376,
+      "description": "Use thousands for secondary category axis units."
+    },
+    {
+      "name": "msoElementSecondaryCategoryAxisMillions",
+      "value": 377,
+      "description": "Use millions for secondary category axis units."
+    },
+    {
+      "name": "msoElementSecondaryCategoryAxisBillions",
+      "value": 378,
+      "description": "Use billions for secondary category axis units."
+    },
+    {
+      "name": "msoElementSecondaryCategoryAxisLogScale",
+      "value": 379,
+      "description": "Use log scale for secondary category axis."
+    },
+    {
+      "name": "msoElementDataTableNone",
+      "value": 500,
+      "description": "Do not display data table."
+    },
+    {
+      "name": "msoElementDataTableShow",
+      "value": 501,
+      "description": "Display data table."
+    },
+    {
+      "name": "msoElementDataTableWithLegendKeys",
+      "value": 502,
+      "description": "Display data table with legend keys."
+    },
+    {
+      "name": "msoElementTrendlineNone",
+      "value": 600,
+      "description": "Do not display trendline."
+    },
+    {
+      "name": "msoElementTrendlineAddLinear",
+      "value": 601,
+      "description": "Add a linear trendline."
+    },
+    {
+      "name": "msoElementTrendlineAddExponential",
+      "value": 602,
+      "description": "Add an exponential trendline."
+    },
+    {
+      "name": "msoElementTrendlineAddLinearForecast",
+      "value": 603,
+      "description": "Add a linear forecast."
+    },
+    {
+      "name": "msoElementTrendlineAddTwoPeriodMovingAverage",
+      "value": 604,
+      "description": "Add a two-period moving average."
+    },
+    {
+      "name": "msoElementErrorBarNone",
+      "value": 700,
+      "description": "Do not display error bar."
+    },
+    {
+      "name": "msoElementErrorBarStandardError",
+      "value": 701,
+      "description": "Display standard error bar."
+    },
+    {
+      "name": "msoElementErrorBarPercentage",
+      "value": 702,
+      "description": "Display percentage error bar."
+    },
+    {
+      "name": "msoElementErrorBarStandardDeviation",
+      "value": 703,
+      "description": "Display standard deviation error bar."
+    },
+    {
+      "name": "msoElementLineNone",
+      "value": 800,
+      "description": "Do not display line."
+    },
+    {
+      "name": "msoElementLineDropLine",
+      "value": 801,
+      "description": "Display drop line."
+    },
+    {
+      "name": "msoElementLineHiLoLine",
+      "value": 802,
+      "description": "Display high/low line."
+    },
+    {
+      "name": "msoElementLineSeriesLine",
+      "value": 803,
+      "description": "Display series line."
+    },
+    {
+      "name": "msoElementLineDropHiLoLine",
+      "value": 804,
+      "description": "Display drop high/low line."
+    },
+    {
+      "name": "msoElementUpDownBarsNone",
+      "value": 900,
+      "description": "Do not display up/down bars."
+    },
+    {
+      "name": "msoElementUpDownBarsShow",
+      "value": 901,
+      "description": "Display up/down bars."
+    },
+    {
+      "name": "msoElementPlotAreaNone",
+      "value": 1000,
+      "description": "Do not display plot area."
+    },
+    {
+      "name": "msoElementPlotAreaShow",
+      "value": 1001,
+      "description": "Display plot area."
+    },
+    {
+      "name": "msoElementChartWallNone",
+      "value": 1100,
+      "description": "Do not display chart wall."
+    },
+    {
+      "name": "msoElementChartWallShow",
+      "value": 1101,
+      "description": "Display chart wall."
+    },
+    {
+      "name": "msoElementChartFloorNone",
+      "value": 1200,
+      "description": "Do not display chart floor."
+    },
+    {
+      "name": "msoElementChartFloorShow",
+      "value": 1201,
+      "description": "Display chart floor."
+    }
+  ]
+}

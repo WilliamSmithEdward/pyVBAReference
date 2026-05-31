@@ -1,0 +1,118 @@
+{
+  "name": "CustomXMLSchemaCollection",
+  "kind": "Class",
+  "guid": "{000CDB0D-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a collection of CustomXMLSchema objects attached to a data stream.",
+  "remarks": "",
+  "example": "Dim SchemaCollection As CustomXMLSchemaCollection\n\nSchemaCollection.Add \"https://tempuri.org/XMLSchema.xsd\"",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the CustomXMLSchemaCollection object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the CustomXMLSchemaCollection object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the CustomXMLSchemaCollection object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the CustomXMLSchemaCollection collection. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "CustomXMLSchema",
+      "access": "read-only",
+      "description": "Gets a CustomXMLSchema object from the CustomXMLSchemaCollection collection. Read-only."
+    },
+    {
+      "name": "NamespaceURI",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the unique address identifier for the namespace of the CustomXMLSchemaCollection object. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([NamespaceURI As String], [Alias As String], [FileName As String], [InstallForAllUsers As Boolean]) As CustomXMLSchema",
+      "description": "Allows you to add one or more schemas to a schema collection that can then be added to a stream in the data store and to the Schema Library.",
+      "returns": "CustomXMLSchema",
+      "parameters": [
+        {
+          "name": "NamespaceURI",
+          "type": "String",
+          "optional": true,
+          "description": "Contains the namespace of the schema to be added to the collection. If the schema already exists in the Schema Library, the method will retrieve it from there."
+        },
+        {
+          "name": "Alias",
+          "type": "String",
+          "optional": true,
+          "description": "Contains the alias of the schema to be added to the collection. If the alias already exists in the Schema Library, the method can find it using this argument."
+        },
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": true,
+          "description": "Contains the location of the schema on a disk. If this parameter is specified, the schema is added to the collection and to the Schema Library."
+        },
+        {
+          "name": "InstallForAllUsers",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether, in the case where the method is adding the schema to the Schema Library, the Schema Library keys should be written to the registry (HKey_Local_Machine for all users or HKey_Current_User for just the current user). The parameter defaults to False and writes to HKey_Current_User."
+        }
+      ]
+    },
+    {
+      "name": "AddCollection",
+      "kind": "method",
+      "signature": "AddCollection(SchemaCollection As CustomXMLSchemaCollection)",
+      "description": "Adds an existing schema collection to the current schema collection.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SchemaCollection",
+          "type": "CustomXMLSchemaCollection",
+          "optional": false,
+          "description": "Represents a collection of schemas to be imported into the current schema collection."
+        }
+      ]
+    },
+    {
+      "name": "Validate",
+      "kind": "method",
+      "signature": "Validate() As Boolean",
+      "description": "Specifies whether the schemas in a schema collection are valid (conforms to the syntactic rules of XML and the rules for a specified vocabulary; a standard for structuring XML).",
+      "returns": "Boolean"
+    }
+  ],
+  "events": []
+}

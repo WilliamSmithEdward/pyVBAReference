@@ -1,0 +1,115 @@
+{
+  "name": "NamedSheetViewCollection",
+  "kind": "Dispatch Interface",
+  "guid": "{00024501-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String) As NamedSheetView",
+      "description": "",
+      "returns": "NamedSheetView",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "EnterTemporary",
+      "kind": "method",
+      "signature": "EnterTemporary() As NamedSheetView",
+      "description": "",
+      "returns": "NamedSheetView"
+    },
+    {
+      "name": "Exit",
+      "kind": "method",
+      "signature": "Exit()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "GetActive",
+      "kind": "method",
+      "signature": "GetActive() As NamedSheetView",
+      "description": "",
+      "returns": "NamedSheetView"
+    },
+    {
+      "name": "GetItem",
+      "kind": "method",
+      "signature": "GetItem(Name As String) As NamedSheetView",
+      "description": "",
+      "returns": "NamedSheetView",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetItemAt",
+      "kind": "method",
+      "signature": "GetItemAt(Index As Long) As NamedSheetView",
+      "description": "",
+      "returns": "NamedSheetView",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,325 @@
+{
+  "name": "FileSystem",
+  "kind": "Module",
+  "library": "Visual Basic For Applications",
+  "description": "",
+  "functions": [
+    {
+      "name": "ChDir",
+      "kind": "function",
+      "signature": "ChDir(Path As String)",
+      "description": "Changes the current directory or folder.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Path",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ChDrive",
+      "kind": "function",
+      "signature": "ChDrive(Drive As String)",
+      "description": "Changes the current drive.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Drive",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "EOF",
+      "kind": "function",
+      "signature": "EOF(FileNumber As Integer) As Boolean",
+      "description": "Returns an Integer containing the Boolean value True when the end of a file opened for Random or sequential Input has been reached.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "FileNumber",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "FileAttr",
+      "kind": "function",
+      "signature": "FileAttr(FileNumber As Integer, [ReturnType As Integer]) As Long",
+      "description": "Returns a Long representing the file mode for files opened by using the Open statement.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "FileNumber",
+          "type": "Integer",
+          "optional": false,
+          "description": "Required; Integer. Any valid file number."
+        },
+        {
+          "name": "ReturnType",
+          "type": "Integer",
+          "optional": true,
+          "description": "Required; Integer. Number indicating the type of information to return. Specify 1 to return a value indicating the file mode. On 16-bit systems only, specify 2 to retrieve an operating system file handle. _Returntype_ 2 is not supported in 32-bit systems and causes an error."
+        }
+      ]
+    },
+    {
+      "name": "FileCopy",
+      "kind": "function",
+      "signature": "FileCopy(Source As String, Destination As String)",
+      "description": "Copies a file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "String",
+          "optional": false,
+          "description": "Required. String expression that specifies the name of the file to be copied. The _source_ may include directory or folder, and drive."
+        },
+        {
+          "name": "Destination",
+          "type": "String",
+          "optional": false,
+          "description": "Required. String expression that specifies the target file name. The _destination_ may include directory or folder, and drive."
+        }
+      ]
+    },
+    {
+      "name": "FileDateTime",
+      "kind": "function",
+      "signature": "FileDateTime(PathName As String) As Variant",
+      "description": "Returns a Variant (Date) that indicates the date and time when a file was created or last modified.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "PathName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "FileLen",
+      "kind": "function",
+      "signature": "FileLen(PathName As String) As Long",
+      "description": "Returns a Long specifying the length of a file in bytes.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "PathName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetAttr",
+      "kind": "function",
+      "signature": "GetAttr(PathName As String) As VbFileAttribute",
+      "description": "Returns an Integer representing the attributes of a file, directory, or folder.",
+      "returns": "VbFileAttribute",
+      "parameters": [
+        {
+          "name": "PathName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Kill",
+      "kind": "function",
+      "signature": "Kill(PathName As Variant)",
+      "description": "Deletes files from a disk.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "PathName",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Loc",
+      "kind": "function",
+      "signature": "Loc(FileNumber As Integer) As Long",
+      "description": "Returns a Long specifying the current read/write position within an open file.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "FileNumber",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "LOF",
+      "kind": "function",
+      "signature": "LOF(FileNumber As Integer) As Long",
+      "description": "Returns a Long representing the size, in bytes, of a file opened by using the Open statement.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "FileNumber",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MkDir",
+      "kind": "function",
+      "signature": "MkDir(Path As String)",
+      "description": "Creates a new directory or folder.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Path",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Reset",
+      "kind": "function",
+      "signature": "Reset()",
+      "description": "Closes all disk files opened by using the Open statement.",
+      "returns": "void"
+    },
+    {
+      "name": "RmDir",
+      "kind": "function",
+      "signature": "RmDir(Path As String)",
+      "description": "Removes an existing directory or folder.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Path",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Seek",
+      "kind": "function",
+      "signature": "Seek(FileNumber As Integer) As Long",
+      "description": "Returns a Long specifying the current read/write position within a file opened by using the Open statement.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "FileNumber",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetAttr",
+      "kind": "function",
+      "signature": "SetAttr(PathName As String, Attributes As VbFileAttribute)",
+      "description": "Sets attribute information for a file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "PathName",
+          "type": "String",
+          "optional": false,
+          "description": "Required. String expression that specifies a file name; may include directory or folder, and drive."
+        },
+        {
+          "name": "Attributes",
+          "type": "VbFileAttribute",
+          "optional": false,
+          "description": "Required. Constant or numeric expression whose sum specifies file attributes."
+        }
+      ]
+    },
+    {
+      "name": "_B_str_CurDir",
+      "kind": "function",
+      "signature": "_B_str_CurDir([Drive As Variant]) As String",
+      "description": "",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Drive",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_B_var_CurDir",
+      "kind": "function",
+      "signature": "_B_var_CurDir([Drive As Variant]) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Drive",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "FreeFile",
+      "kind": "function",
+      "signature": "FreeFile([RangeNumber As Variant]) As Integer",
+      "description": "Returns an Integer representing the next file number available for use by the Open statement.",
+      "returns": "Integer",
+      "parameters": [
+        {
+          "name": "RangeNumber",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Dir",
+      "kind": "function",
+      "signature": "Dir([PathName As Variant], [Attributes As VbFileAttribute]) As String",
+      "description": "Returns a String representing the name of a file, directory, or folder that matches a specified pattern or file attribute, or the volume label of a drive.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "PathName",
+          "type": "Variant",
+          "optional": true,
+          "description": "Optional. String expression that specifies a file name; may include directory or folder, and drive. A zero-length string (\"\") is returned if _pathname_ is not found."
+        },
+        {
+          "name": "Attributes",
+          "type": "VbFileAttribute",
+          "optional": true,
+          "description": "Optional. Constant or numeric expression, whose sum specifies file attributes. If omitted, returns files that match _pathname_ but have no attributes."
+        }
+      ]
+    }
+  ],
+  "constants": []
+}

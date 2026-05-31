@@ -1,0 +1,62 @@
+{
+  "name": "NegativeBarFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{000244BF-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the color settings of the data bars for negative values that are defined by a data bar conditional formating rule.",
+  "remarks": "The properties of the NegativeBarFormat object can be used to specify the fill color and border of the data bars for negative values. Use the NegativeBarFormat property of the DataBar object that represents a data bar conditional formatting rule to access the NegativeBarFormat object associated with that rule.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "ColorType",
+      "kind": "property",
+      "type": "XlDataBarNegativeColorType",
+      "access": "read/write",
+      "description": "Specifies whether to use the same fill color as positive data bars. Read/write."
+    },
+    {
+      "name": "BorderColorType",
+      "kind": "property",
+      "type": "XlDataBarNegativeColorType",
+      "access": "read/write",
+      "description": "Specifies whether to use the same border color as positive data bars. Read/write."
+    },
+    {
+      "name": "Color",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns a FormatColor object that you can use to specify the fill color for negative data bars. Read-only."
+    },
+    {
+      "name": "BorderColor",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns a FormatColor object that you can use to specify the border color for negative data bars. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -1,0 +1,55 @@
+{
+  "name": "XmlSchema",
+  "kind": "Dispatch Interface",
+  "guid": "{00024479-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents an XML schema contained by an XmlMap object.",
+  "remarks": "Use the Item method to return an XmlSchema object from the XmlSchemas collection. Use the Namespace property to return the target namespace for a schema. Use the XML property to return the XML contents of a schema.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Namespace",
+      "kind": "property",
+      "type": "XmlNamespace",
+      "access": "read-only",
+      "description": "Returns an XmlNamespace object that represents the target namespace for the specified schema. Read-only."
+    },
+    {
+      "name": "XML",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that represents the content of the specified schema."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that represents the friendly name used to identify an XML schema in an XmlMap object."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

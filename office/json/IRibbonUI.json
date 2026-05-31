@@ -1,0 +1,101 @@
+{
+  "name": "IRibbonUI",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03A7-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "The object that is returned by the onLoad procedure specified on the customUI tag. The object contains methods for invalidating control properties and for refreshing the user interface.",
+  "remarks": "You can customize the Ribbon user interface (UI) by using callback procedures in COM add-ins. When the host application starts, the onLoad callback procedure is called. The callback procedure then returns a IRibbonUI object pointing to the user interface (UI). Use that object to invoke the Invalidate, InvalidateControl, and Refresh methods.",
+  "example": "<customUI ... OnLoad=\"MyAddInInitialize\" ...>",
+  "properties": [],
+  "methods": [
+    {
+      "name": "Invalidate",
+      "kind": "method",
+      "signature": "Invalidate()",
+      "description": "Invalidates the cached values for all of the controls of the Ribbon user interface.",
+      "returns": "void"
+    },
+    {
+      "name": "InvalidateControl",
+      "kind": "method",
+      "signature": "InvalidateControl(ControlID As String)",
+      "description": "Invalidates the cached value for a single control on the Ribbon user interface.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ControlID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "InvalidateControlMso",
+      "kind": "method",
+      "signature": "InvalidateControlMso(ControlID As String)",
+      "description": "Used to invalidate a built-in control.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ControlID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ActivateTab",
+      "kind": "method",
+      "signature": "ActivateTab(ControlID As String)",
+      "description": "Activates the specified custom tab. This method returns S_FALSE if there is no Ribbon or the Ribbon is collapsed.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ControlID",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies the Id of the custom Ribbon tab to be activated."
+        }
+      ]
+    },
+    {
+      "name": "ActivateTabMso",
+      "kind": "method",
+      "signature": "ActivateTabMso(ControlID As String)",
+      "description": "Activates the specified built-in tab.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ControlID",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies the Id of the custom Ribbon tab to be activated."
+        }
+      ]
+    },
+    {
+      "name": "ActivateTabQ",
+      "kind": "method",
+      "signature": "ActivateTabQ(ControlID As String, Namespace As String)",
+      "description": "Activates the specified custom tab on the Microsoft Office Fluent Ribbon UI. Uses the fully qualified name of the tab, which includes the ID and the namespace of the tab.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ControlID",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies the Id of the custom Ribbon tab to be activated."
+        },
+        {
+          "name": "Namespace",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies the namespace of the tab element."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

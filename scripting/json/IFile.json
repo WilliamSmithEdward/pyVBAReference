@@ -1,0 +1,170 @@
+{
+  "name": "IFile",
+  "kind": "Dispatch Interface",
+  "guid": "{C7C3F5A4-88A3-11D0-ABCB-00A0C90FFFC0}",
+  "library": "Microsoft Scripting Runtime",
+  "description": "File Interface",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Path",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Path to the file"
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Get name of file"
+    },
+    {
+      "name": "ShortPath",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Short path"
+    },
+    {
+      "name": "ShortName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Short name"
+    },
+    {
+      "name": "Drive",
+      "kind": "property",
+      "type": "IDrive",
+      "access": "read-only",
+      "description": "Get drive that contains file"
+    },
+    {
+      "name": "ParentFolder",
+      "kind": "property",
+      "type": "IFolder",
+      "access": "read-only",
+      "description": "Get folder that contains file"
+    },
+    {
+      "name": "Attributes",
+      "kind": "property",
+      "type": "FileAttribute",
+      "access": "read/write",
+      "description": "File attributes"
+    },
+    {
+      "name": "DateCreated",
+      "kind": "property",
+      "type": "Date",
+      "access": "read-only",
+      "description": "Date file was created"
+    },
+    {
+      "name": "DateLastModified",
+      "kind": "property",
+      "type": "Date",
+      "access": "read-only",
+      "description": "Date file was last modified"
+    },
+    {
+      "name": "DateLastAccessed",
+      "kind": "property",
+      "type": "Date",
+      "access": "read-only",
+      "description": "Date file was last accessed"
+    },
+    {
+      "name": "Size",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "File size"
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Type description"
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete([Force As Boolean])",
+      "description": "Delete this file",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Force",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy(Destination As String, [OverWriteFiles As Boolean])",
+      "description": "Copy this file",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Destination",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "OverWriteFiles",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move(Destination As String)",
+      "description": "Move this file",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Destination",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "OpenAsTextStream",
+      "kind": "method",
+      "signature": "OpenAsTextStream([IOMode As IOMode], [Format As Tristate]) As ITextStream",
+      "description": "Open a file as a TextStream",
+      "returns": "ITextStream",
+      "parameters": [
+        {
+          "name": "IOMode",
+          "type": "IOMode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Format",
+          "type": "Tristate",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

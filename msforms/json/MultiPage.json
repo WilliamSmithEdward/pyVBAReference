@@ -1,0 +1,671 @@
+{
+  "name": "MultiPage",
+  "kind": "Class",
+  "guid": "{46E31370-3F7A-11CE-BED6-00AA00611080}",
+  "library": "Microsoft Forms 2.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "BackColor",
+      "kind": "property",
+      "type": "OLE_COLOR",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ForeColor",
+      "kind": "property",
+      "type": "OLE_COLOR",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MultiRow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Style",
+      "kind": "property",
+      "type": "fmTabStyle",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TabOrientation",
+      "kind": "property",
+      "type": "fmTabOrientation",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SelectedItem",
+      "kind": "property",
+      "type": "Page",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Pages",
+      "kind": "property",
+      "type": "Pages",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TabFixedWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TabFixedHeight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "_SetTabFixedWidth",
+      "kind": "method",
+      "signature": "_SetTabFixedWidth(Width As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Width",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetTabFixedWidth",
+      "kind": "method",
+      "signature": "_GetTabFixedWidth(Width As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Width",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_SetTabFixedHeight",
+      "kind": "method",
+      "signature": "_SetTabFixedHeight(Height As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Height",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetTabFixedHeight",
+      "kind": "method",
+      "signature": "_GetTabFixedHeight(Height As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Height",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "AddControl",
+      "kind": "event",
+      "signature": "AddControl(Index As Long, Control As Control)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Control",
+          "type": "Control",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeDragOver",
+      "kind": "event",
+      "signature": "BeforeDragOver(Index As Long, Cancel As ReturnBoolean, Control As Control, Data As DataObject, X As Single, Y As Single, State As fmDragState, Effect As ReturnEffect, Shift As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "ReturnBoolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Control",
+          "type": "Control",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Data",
+          "type": "DataObject",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "State",
+          "type": "fmDragState",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Effect",
+          "type": "ReturnEffect",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeDropOrPaste",
+      "kind": "event",
+      "signature": "BeforeDropOrPaste(Index As Long, Cancel As ReturnBoolean, Control As Control, Action As fmAction, Data As DataObject, X As Single, Y As Single, Effect As ReturnEffect, Shift As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "ReturnBoolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Control",
+          "type": "Control",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Action",
+          "type": "fmAction",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Data",
+          "type": "DataObject",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Effect",
+          "type": "ReturnEffect",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Change",
+      "kind": "event",
+      "signature": "Change()",
+      "description": ""
+    },
+    {
+      "name": "Click",
+      "kind": "event",
+      "signature": "Click(Index As Long)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DblClick",
+      "kind": "event",
+      "signature": "DblClick(Index As Long, Cancel As ReturnBoolean)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "ReturnBoolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Error",
+      "kind": "event",
+      "signature": "Error(Index As Long, Number As Integer, Description As ReturnString, SCode As Long, Source As String, HelpFile As String, HelpContext As Long, CancelDisplay As ReturnBoolean)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Number",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Description",
+          "type": "ReturnString",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "SCode",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Source",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "HelpFile",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "HelpContext",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "CancelDisplay",
+          "type": "ReturnBoolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyDown",
+      "kind": "event",
+      "signature": "KeyDown(KeyCode As ReturnInteger, Shift As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "ReturnInteger",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyPress",
+      "kind": "event",
+      "signature": "KeyPress(KeyAscii As ReturnInteger)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "KeyAscii",
+          "type": "ReturnInteger",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyUp",
+      "kind": "event",
+      "signature": "KeyUp(KeyCode As ReturnInteger, Shift As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "ReturnInteger",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Layout",
+      "kind": "event",
+      "signature": "Layout(Index As Long)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseDown",
+      "kind": "event",
+      "signature": "MouseDown(Index As Long, Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseMove",
+      "kind": "event",
+      "signature": "MouseMove(Index As Long, Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseUp",
+      "kind": "event",
+      "signature": "MouseUp(Index As Long, Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "RemoveControl",
+      "kind": "event",
+      "signature": "RemoveControl(Index As Long, Control As Control)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Control",
+          "type": "Control",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Scroll",
+      "kind": "event",
+      "signature": "Scroll(Index As Long, ActionX As fmScrollAction, ActionY As fmScrollAction, RequestDx As Single, RequestDy As Single, ActualDx As ReturnSingle, ActualDy As ReturnSingle)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ActionX",
+          "type": "fmScrollAction",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ActionY",
+          "type": "fmScrollAction",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RequestDx",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RequestDy",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ActualDx",
+          "type": "ReturnSingle",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ActualDy",
+          "type": "ReturnSingle",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Zoom",
+      "kind": "event",
+      "signature": "Zoom(Index As Long, Percent As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Percent",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

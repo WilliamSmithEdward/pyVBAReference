@@ -1,0 +1,304 @@
+{
+  "name": "ChartGroup",
+  "kind": "Dispatch Interface",
+  "guid": "{00020859-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents one or more series plotted in a chart with the same format.",
+  "remarks": "A chart contains one or more chart groups, each chart group contains one or more Series objects, and each series contains one or more Points objects. For example, a single chart might contain both a line chart group that contains all the series plotted with the line chart format, and a bar chart group that contains all the series plotted with the bar chart format. The ChartGroup object is a member of the ChartGroups collection. Use ChartGroups (_index_), where _index_ is the chart-group index number, to return a single ChartGroup object. Because the index number for a particular chart group can change if the chart format used for that group is changed, it may be easier to use one of the named chart group shortcut methods to return a particular chart group. The PieGroups method returns the collection of pie chart groups in a chart, the LineGroups method returns the collection of line chart groups, and so on. Each of these methods can be used with an index number to return a single ChartGroup object, or without an index number to return a ChartGroups collection.",
+  "example": "Charts(1).ChartGroups(1).HasDropLines = True",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "AxisGroup",
+      "kind": "property",
+      "type": "XlAxisGroup",
+      "access": "read/write",
+      "description": "Returns or sets the group for the specified chart. Read/write."
+    },
+    {
+      "name": "DoughnutHoleSize",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the size of the hole in a doughnut chart group. The hole size is expressed as a percentage of the chart size, between 10 and 90 percent. Read/write Long."
+    },
+    {
+      "name": "DownBars",
+      "kind": "property",
+      "type": "DownBars",
+      "access": "read-only",
+      "description": "Returns a DownBars object that represents the down bars on a line chart. Applies only to line charts. Read-only."
+    },
+    {
+      "name": "DropLines",
+      "kind": "property",
+      "type": "DropLines",
+      "access": "read-only",
+      "description": "Returns a DropLines object that represents the drop lines for a series on a line chart or area chart. Applies only to line charts or area charts. Read-only."
+    },
+    {
+      "name": "FirstSliceAngle",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the angle of the first pie-chart or doughnut-chart slice, in degrees (clockwise from vertical). Applies only to pie, 3D pie, and doughnut charts. Can be a value from 0 through 360. Read/write Long."
+    },
+    {
+      "name": "GapWidth",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Bar and Column charts: Returns or sets the space between bar or column clusters, as a percentage of the bar or column width."
+    },
+    {
+      "name": "HasDropLines",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the line chart or area chart has drop lines. Applies only to line and area charts. Read/write Boolean."
+    },
+    {
+      "name": "HasHiLoLines",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the line chart has high-low lines. Applies only to line charts. Read/write Boolean."
+    },
+    {
+      "name": "HasRadarAxisLabels",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a radar chart has axis labels. Applies only to radar charts. Read/write Boolean."
+    },
+    {
+      "name": "HasSeriesLines",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a stacked column chart or bar chart has series lines, or if a Pie of Pie chart or Bar of Pie chart has connector lines between the two sections. Applies only to 2D stacked bar, 2D stacked column, Pie of Pie, or Bar of Pie charts. Read/write Boolean."
+    },
+    {
+      "name": "HasUpDownBars",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a line chart has up and down bars. Applies only to line charts. Read/write Boolean."
+    },
+    {
+      "name": "HiLoLines",
+      "kind": "property",
+      "type": "HiLoLines",
+      "access": "read-only",
+      "description": "Returns a HiLoLines object that represents the high-low lines for a series on a line chart. Applies only to line charts. Read-only."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the index number of the object within the collection of similar objects."
+    },
+    {
+      "name": "Overlap",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Specifies how bars and columns are positioned. Can be a value between -100 and 100. Applies only to 2D bar and 2D column charts. Read/write Long."
+    },
+    {
+      "name": "RadarAxisLabels",
+      "kind": "property",
+      "type": "TickLabels",
+      "access": "read-only",
+      "description": "Returns a TickLabels object that represents the radar axis labels for the specified chart group. Read-only."
+    },
+    {
+      "name": "SeriesLines",
+      "kind": "property",
+      "type": "SeriesLines",
+      "access": "read-only",
+      "description": "Returns a SeriesLines object that represents the series lines for a 2D stacked bar, 2D stacked column, Pie of Pie, or Bar of Pie chart. Read-only."
+    },
+    {
+      "name": "UpBars",
+      "kind": "property",
+      "type": "UpBars",
+      "access": "read-only",
+      "description": "Returns an UpBars object that represents the up bars on a line chart. Applies only to line charts. Read-only."
+    },
+    {
+      "name": "VaryByCategories",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Excel assigns a different color or pattern to each data marker. The chart must contain only one series. Read/write Boolean."
+    },
+    {
+      "name": "SizeRepresents",
+      "kind": "property",
+      "type": "XlSizeRepresents",
+      "access": "read/write",
+      "description": "Returns or sets what the bubble size represents on a bubble chart. Can be either of the following XlSizeRepresents constants: xlSizeIsArea or xlSizeIsWidth. Read/write Long."
+    },
+    {
+      "name": "BubbleScale",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the scale factor for bubbles in the specified chart group. Can be an integer value from 0 (zero) to 300, corresponding to a percentage of the default size. Applies only to bubble charts. Read/write Long."
+    },
+    {
+      "name": "ShowNegativeBubbles",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if negative bubbles are shown for the chart group. Valid only for bubble charts. Read/write Boolean."
+    },
+    {
+      "name": "SplitType",
+      "kind": "property",
+      "type": "XlChartSplitType",
+      "access": "read/write",
+      "description": "Returns or sets the way the two sections of either a Pie of Pie chart or a Bar of Pie chart are split. Read/write XlChartSplitType."
+    },
+    {
+      "name": "SplitValue",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the threshold value separating the two sections of either a Pie of Pie chart or a Bar of Pie chart. Read/write Variant."
+    },
+    {
+      "name": "SecondPlotSize",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the size of the secondary section of either a Pie of Pie chart or a Bar of Pie chart, as a percentage of the size of the primary pie. Can be a value from 5 to 200. Read/write Long."
+    },
+    {
+      "name": "Has3DShading",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets the 3D shading property of a ChartGroup object. Read/write Boolean."
+    },
+    {
+      "name": "BinsType",
+      "kind": "property",
+      "type": "XlBinsType",
+      "access": "read/write",
+      "description": "Specifies how the horizontal axis of the histogram chart is formatted, by bins type. Read/write XlBinsType."
+    },
+    {
+      "name": "BinWidthValue",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Specifies the number of points in each range. Read/write Double."
+    },
+    {
+      "name": "BinsCountValue",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Specifies the number of bins in the histogram chart. Read/write Long."
+    },
+    {
+      "name": "BinsOverflowEnabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Specifies whether a bin for values above the BinsOverflowValue property is enabled. Read/write Boolean."
+    },
+    {
+      "name": "BinsOverflowValue",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "If a BinsOverflowEnabled property is True, specifies the value above which an overflow bin is displayed. Read/write Double."
+    },
+    {
+      "name": "BinsUnderflowEnabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Specifies whether a bin for values below the BinsUnderflowValue property is enabled. Read/write Boolean."
+    },
+    {
+      "name": "BinsUnderflowValue",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "If a BinsUnderflowEnabled property is True, specifies the value below which an underflow bin is displayed. Read/write Double."
+    }
+  ],
+  "methods": [
+    {
+      "name": "SeriesCollection",
+      "kind": "method",
+      "signature": "SeriesCollection([Index As Variant]) As Object",
+      "description": "Returns an object that represents either a single series (a Series object) or a collection of all the series (a SeriesCollection collection) in the chart or chart group.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name or number of the series."
+        }
+      ]
+    },
+    {
+      "name": "FullCategoryCollection",
+      "kind": "method",
+      "signature": "FullCategoryCollection([Index As Variant]) As Object",
+      "description": "Returns an object that represents a collection of all the visible and filtered categories (a CategoryCollection collection) in the chart group.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name or number of the categories."
+        }
+      ]
+    },
+    {
+      "name": "CategoryCollection",
+      "kind": "method",
+      "signature": "CategoryCollection([Index As Variant]) As Object",
+      "description": "Returns an object that represents a collection of all the visible categories (a CategoryCollection collection) in the chart group.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name or number of the categories."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,62 @@
+{
+  "name": "Tab",
+  "kind": "Dispatch Interface",
+  "guid": "{00024469-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the tab of a chart or a worksheet.",
+  "remarks": "Use the Tab property of the Chart object or Worksheet object to return a Tab object. After a Tab object is returned, you can use the ColorIndex property to determine the settings of a tab for a chart or worksheet.",
+  "example": "Sub CheckTab()\n\n ' Determine if color index of 1st tab is set to none.\n If Worksheets(1).Tab.ColorIndex = xlColorIndexNone Then\n MsgBox \"The color index is set to none for the first \" & _\n \"worksheet tab.\"\n Else\n MsgBox \"The color index for the tab of the first worksheet \" & _\n \"is not set none.\"\n End If\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Color",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the primary color of the object, as shown in the table in the remarks section. Use the RGB function to create a color value. Read/write Variant."
+    },
+    {
+      "name": "ColorIndex",
+      "kind": "property",
+      "type": "XlColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the color of the specified worksheet tab or chart tab."
+    },
+    {
+      "name": "ThemeColor",
+      "kind": "property",
+      "type": "XlThemeColor",
+      "access": "read/write",
+      "description": "Returns or sets the theme color in the applied color scheme that is associated with the specified object. Read/write XlThemeColor."
+    },
+    {
+      "name": "TintAndShade",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Single that lightens or darkens a color."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

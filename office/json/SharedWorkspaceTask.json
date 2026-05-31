@@ -1,0 +1,119 @@
+{
+  "name": "SharedWorkspaceTask",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0379-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "The SharedWorkspaceTask object represents a task in a shared document workspace. Member of the SharedWorkspaceTasks collection.",
+  "remarks": "Use the SharedWorkspaceTask object to manage tasks assigned to the members who are collaborating on the documents in the shared workspace. Use the Item (_index_) property of the SharedWorkspaceTasks collection to return a specific SharedWorkspaceTask object. Use the Title property to set the text of the task that appears on the Tasks tab of the Shared Workspace task pane and on the shared workspace webpage. Use the Description property to supply additional information about the task. Assign the task to a member of the workspace by using the AssignedTo property and the member's domain user name. Specify a due date for the task by using the DueDate property. Use the enumerations for task Priority and Status to indicate the relative importance of the task and to update the task's status. Use the Save method to upload changes to the server after you modify properties of the SharedWorkspaceTask object. Use the CreatedBy, CreatedDate, ModifiedBy, and ModifiedDate properties to return information about the history of each task.",
+  "example": "Dim swsTask As Office.SharedWorkspaceTask\n    Dim strTaskInfo As String\n    strTaskInfo = \"The shared workspace contains \" & _\n    ActiveWorkbook.SharedWorkspace.Tasks.Count & \" Task(s).\" & vbCrLf\n    For Each swsTask In ActiveWorkbook.SharedWorkspace.Tasks\n        strTaskInfo = strTaskInfo & swsTask.Title & vbCrLf & _\n            \" - Description: \" & swsTask.Description & vbCrLf & _\n            \" - Assigned to: \" & swsTask.AssignedTo & vbCrLf & _\n            \" - Due date: \" & swsTask.DueDate & vbCrLf & _\n            \" - Priority: \" & swsTask.Priority & vbCrLf & _\n            \" - Status: \" & swsTask.Status & vbCrLf\n    Next\n    MsgBox strTaskInfo, vbInformation + vbOKOnly, _\n        \"Tasks in Shared Workspace\"\n    Set swsTask = Nothing",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SharedWorkspaceTask object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SharedWorkspaceTask object was created. Read-only."
+    },
+    {
+      "name": "Title",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or gets the title of a SharedWorkspaceTask object. Read/write."
+    },
+    {
+      "name": "AssignedTo",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets a value containing the name of the one assigned to the task represented by the SharedWorkspaceTask object. Read/write."
+    },
+    {
+      "name": "Status",
+      "kind": "property",
+      "type": "MsoSharedWorkspaceTaskStatus",
+      "access": "read/write",
+      "description": "Gets or sets the status of the specified shared workspace task. Read/write."
+    },
+    {
+      "name": "Priority",
+      "kind": "property",
+      "type": "MsoSharedWorkspaceTaskPriority",
+      "access": "read/write",
+      "description": "Gets or sets the status of the specified shared workspace task. Read/write."
+    },
+    {
+      "name": "Description",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets a descriptive String value for the specified SharedWorkspaceLink or SharedWorkspaceTask object. Read/write."
+    },
+    {
+      "name": "DueDate",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Gets or sets the optional due date and time of a SharedWorkspaceTask object. Read/write."
+    },
+    {
+      "name": "CreatedBy",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the display name of the member who created the shared workspace object. Read-only."
+    },
+    {
+      "name": "CreatedDate",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Gets the date and time when the shared workspace object was created. Read-only."
+    },
+    {
+      "name": "ModifiedBy",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the name of the user who last modified the object. Read-only."
+    },
+    {
+      "name": "ModifiedDate",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Gets the date and time when the SharedWorkspaceTask object was last modified. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the SharedWorkspaceTask object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Save",
+      "kind": "method",
+      "signature": "Save()",
+      "description": "Uploads changes made programmatically to a shared server.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the current SharedWorkspaceTask object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,100 @@
+{
+  "name": "IDocumentInspector",
+  "kind": "Interface",
+  "guid": "{000CD706-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents the interface through which the methods of an IDocumentInspector object are accessed.",
+  "remarks": "IDocumentInspector provides access to the Fix, GetInfo, and Inspect methods. The IDocumentInspector object is used with custom Document Inspector modules. This is in contrast to modules that are shipped with Microsoft Office.",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "GetInfo",
+      "kind": "method",
+      "signature": "GetInfo(Name As String, Desc As String)",
+      "description": "Gets information about a custom Document Inspector module.",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "Represents the name of the module."
+        },
+        {
+          "name": "Desc",
+          "type": "String",
+          "optional": false,
+          "description": "Represents the description of the module."
+        }
+      ]
+    },
+    {
+      "name": "Inspect",
+      "kind": "method",
+      "signature": "Inspect(Doc As Object, Status As MsoDocInspectorStatus, Result As String, Action As String)",
+      "description": "Inspects a document for specific information items or document properties by using a custom Document Inspector module.",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Object",
+          "optional": false,
+          "description": "An object representing the container document."
+        },
+        {
+          "name": "Status",
+          "type": "MsoDocInspectorStatus",
+          "optional": false,
+          "description": "An enumeration that represents the results of the inspection."
+        },
+        {
+          "name": "Result",
+          "type": "String",
+          "optional": false,
+          "description": "Contains a list of the information items or document properties found in the document."
+        },
+        {
+          "name": "Action",
+          "type": "String",
+          "optional": false,
+          "description": "Indicates to the user what action to take based on the results of the inspection."
+        }
+      ]
+    },
+    {
+      "name": "Fix",
+      "kind": "method",
+      "signature": "Fix(Doc As Object, hwnd As Long, Status As MsoDocInspectorStatus, Result As String)",
+      "description": "Performs some action on specific information items or document properties by using a custom Document Inspector module.",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Object",
+          "optional": false,
+          "description": "An object representing the container object."
+        },
+        {
+          "name": "hwnd",
+          "type": "Long",
+          "optional": false,
+          "description": "Unique identifier of the active document window."
+        },
+        {
+          "name": "Status",
+          "type": "MsoDocInspectorStatus",
+          "optional": false,
+          "description": "An enumeration that indicates the status of the action."
+        },
+        {
+          "name": "Result",
+          "type": "String",
+          "optional": false,
+          "description": "Contains the results of the action."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

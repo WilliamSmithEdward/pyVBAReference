@@ -1,0 +1,114 @@
+{
+  "name": "Sync",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0386-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "The Sync property of the Document object in Microsoft Word, the Workbook object in Microsoft Excel, and the Presentation object in Microsoft PowerPoint returns a Sync object.",
+  "remarks": "Use the Sync object to manage the synchronization of the local and server copies of a shared document stored on a SharePoint site. The Status property returns important information about the current state of synchronization. Use the GetUpdate method to refresh the sync status. Use the LastSyncTime, ErrorType, and WorkspaceLastChangedBy properties to return additional information. See the Status property for additional information about the differences and conflicts that can exist between the local and server copies of shared documents. Use the PutUpdate method to save local changes to the server. Close and re-open the document to retrieve the latest version from the server when no local changes have been made. Use the ResolveConflict method to resolve differences between the local and the server copies, or the OpenVersion method to open a different version alongside the currently open local version of the document. The GetUpdate, PutUpdate, and ResolveConflict methods of the Sync object don't return status codes because they complete their tasks asynchronously.",
+  "example": "Dim objSync As Office.Sync\n    Dim strStatus As String\n    Set objSync = ActiveDocument.Sync\n    If objSync.Status > msoSyncStatusNoSharedWorkspace Then\n        Select Case objSync.Status\n            Case msoSyncStatusConflict\n                objSync.ResolveConflict msoSyncConflictMerge\n                ActiveDocument.Save\n                objSync.ResolveConflict msoSyncConflictClientWins\n                strStatus = \"Conflict resolved by merging changes.\"\n            Case msoSyncStatusError\n                strStatus = \"Last error type: \" & objSync.ErrorType\n            Case msoSyncStatusLatest\n                strStatus = \"Document copies already in sync.\"\n            Case msoSyncStatusLocalChanges\n                objSync.PutUpdate\n                strStatus = \"Local changes saved to server.\"\n            Case msoSyncStatusNewerAvailable\n                objSync.GetUpdate\n                strStatus = \"Local copy updated from server.\"\n            Case msoSyncStatusSuspended\n                objSync.Unsuspend\n                strStatus = \"Synchronization resumed.\"\n        End Select\n    Else\n        strStatus = \"Not a shared workspace document.\"\n    End If\n    MsgBox strStatus, vbInformation + vbOKOnly, \"Sync Information\"\n    Set objSync = Nothing",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the Sync object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the Sync object was created. Read-only."
+    },
+    {
+      "name": "Status",
+      "kind": "property",
+      "type": "MsoSyncStatusType",
+      "access": "read-only",
+      "description": "Gets the status of the synchronization of the local copy of the active document with the server copy. Read-only."
+    },
+    {
+      "name": "WorkspaceLastChangedBy",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Displays the display name of the user who last saved changes to the server copy of a shared document. Read-only."
+    },
+    {
+      "name": "LastSyncTime",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Gets the date and time when the local copy of the active document was last synchronized with the server copy. Read-only."
+    },
+    {
+      "name": "ErrorType",
+      "kind": "property",
+      "type": "MsoSyncErrorType",
+      "access": "read-only",
+      "description": "Gets an MsoSyncErrorType constant that indicates the type of the most recent document synchronization error. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the Sync object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "GetUpdate",
+      "kind": "method",
+      "signature": "GetUpdate()",
+      "description": "Compares the local version of the shared document to the version on the server.",
+      "returns": "void"
+    },
+    {
+      "name": "PutUpdate",
+      "kind": "method",
+      "signature": "PutUpdate()",
+      "description": "Updates the server copy of the shared document with the local copy.",
+      "returns": "void"
+    },
+    {
+      "name": "OpenVersion",
+      "kind": "method",
+      "signature": "OpenVersion(SyncVersionType As MsoSyncVersionType)",
+      "description": "Opens a different version of the shared document alongside the currently open local version.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SyncVersionType",
+          "type": "MsoSyncVersionType",
+          "optional": false,
+          "description": "Represents the type of version."
+        }
+      ]
+    },
+    {
+      "name": "ResolveConflict",
+      "kind": "method",
+      "signature": "ResolveConflict(SyncConflictResolution As MsoSyncConflictResolutionType)",
+      "description": "Resolves conflicts between the local and the server copies of a shared document.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SyncConflictResolution",
+          "type": "MsoSyncConflictResolutionType",
+          "optional": false,
+          "description": "Specifies how conflicts should be resolved."
+        }
+      ]
+    },
+    {
+      "name": "Unsuspend",
+      "kind": "method",
+      "signature": "Unsuspend()",
+      "description": "Resumes synchronization between the local copy and the server copy of a shared document.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

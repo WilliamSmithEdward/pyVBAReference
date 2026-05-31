@@ -1,0 +1,528 @@
+{
+  "name": "Connection",
+  "kind": "Class",
+  "guid": "{00000514-0000-0010-8000-00AA006D2EA4}",
+  "library": "Microsoft ActiveX Data Objects 6.1 Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Properties",
+      "kind": "property",
+      "type": "Properties",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ConnectionString",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CommandTimeout",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ConnectionTimeout",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Version",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Errors",
+      "kind": "property",
+      "type": "Errors",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "DefaultDatabase",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "IsolationLevel",
+      "kind": "property",
+      "type": "IsolationLevelEnum",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Attributes",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CursorLocation",
+      "kind": "property",
+      "type": "CursorLocationEnum",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Mode",
+      "kind": "property",
+      "type": "ConnectModeEnum",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Provider",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "State",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Execute",
+      "kind": "method",
+      "signature": "Execute(CommandText As String, [RecordsAffected As Variant], [Options As Long]) As _Recordset",
+      "description": "",
+      "returns": "_Recordset",
+      "parameters": [
+        {
+          "name": "CommandText",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RecordsAffected",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Options",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeginTrans",
+      "kind": "method",
+      "signature": "BeginTrans() As Long",
+      "description": "",
+      "returns": "Long"
+    },
+    {
+      "name": "CommitTrans",
+      "kind": "method",
+      "signature": "CommitTrans()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "RollbackTrans",
+      "kind": "method",
+      "signature": "RollbackTrans()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open([ConnectionString As String], [UserID As String], [Password As String], [Options As Long])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ConnectionString",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "UserID",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Password",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Options",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "OpenSchema",
+      "kind": "method",
+      "signature": "OpenSchema(Schema As SchemaEnum, [Restrictions As Variant], [SchemaID As Variant]) As _Recordset",
+      "description": "",
+      "returns": "_Recordset",
+      "parameters": [
+        {
+          "name": "Schema",
+          "type": "SchemaEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Restrictions",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "SchemaID",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Cancel",
+      "kind": "method",
+      "signature": "Cancel()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": [
+    {
+      "name": "InfoMessage",
+      "kind": "event",
+      "signature": "InfoMessage(pError As Error, adStatus As EventStatusEnum, pConnection As _Connection)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "pError",
+          "type": "Error",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pConnection",
+          "type": "_Connection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeginTransComplete",
+      "kind": "event",
+      "signature": "BeginTransComplete(TransactionLevel As Long, pError As Error, adStatus As EventStatusEnum, pConnection As _Connection)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "TransactionLevel",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pError",
+          "type": "Error",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pConnection",
+          "type": "_Connection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CommitTransComplete",
+      "kind": "event",
+      "signature": "CommitTransComplete(pError As Error, adStatus As EventStatusEnum, pConnection As _Connection)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "pError",
+          "type": "Error",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pConnection",
+          "type": "_Connection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "RollbackTransComplete",
+      "kind": "event",
+      "signature": "RollbackTransComplete(pError As Error, adStatus As EventStatusEnum, pConnection As _Connection)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "pError",
+          "type": "Error",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pConnection",
+          "type": "_Connection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WillExecute",
+      "kind": "event",
+      "signature": "WillExecute(Source As String, CursorType As CursorTypeEnum, LockType As LockTypeEnum, Options As Long, adStatus As EventStatusEnum, pCommand As _Command, pRecordset As _Recordset, pConnection As _Connection)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "CursorType",
+          "type": "CursorTypeEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "LockType",
+          "type": "LockTypeEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Options",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pCommand",
+          "type": "_Command",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pRecordset",
+          "type": "_Recordset",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pConnection",
+          "type": "_Connection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ExecuteComplete",
+      "kind": "event",
+      "signature": "ExecuteComplete(RecordsAffected As Long, pError As Error, adStatus As EventStatusEnum, pCommand As _Command, pRecordset As _Recordset, pConnection As _Connection)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "RecordsAffected",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pError",
+          "type": "Error",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pCommand",
+          "type": "_Command",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pRecordset",
+          "type": "_Recordset",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pConnection",
+          "type": "_Connection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WillConnect",
+      "kind": "event",
+      "signature": "WillConnect(ConnectionString As String, UserID As String, Password As String, Options As Long, adStatus As EventStatusEnum, pConnection As _Connection)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "ConnectionString",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "UserID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Password",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Options",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pConnection",
+          "type": "_Connection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ConnectComplete",
+      "kind": "event",
+      "signature": "ConnectComplete(pError As Error, adStatus As EventStatusEnum, pConnection As _Connection)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "pError",
+          "type": "Error",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pConnection",
+          "type": "_Connection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Disconnect",
+      "kind": "event",
+      "signature": "Disconnect(adStatus As EventStatusEnum, pConnection As _Connection)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "adStatus",
+          "type": "EventStatusEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pConnection",
+          "type": "_Connection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

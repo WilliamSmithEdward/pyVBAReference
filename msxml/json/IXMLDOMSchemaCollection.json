@@ -1,0 +1,94 @@
+{
+  "name": "IXMLDOMSchemaCollection",
+  "kind": "Dispatch Interface",
+  "guid": "{373984C8-B845-449B-91E7-45AC83036ADE}",
+  "library": "Microsoft XML, v6.0",
+  "description": "XML Schemas Collection",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "length",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "number of schemas in collection"
+    },
+    {
+      "name": "namespaceURI",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Get namespaceURI for schema by index"
+    }
+  ],
+  "methods": [
+    {
+      "name": "add",
+      "kind": "method",
+      "signature": "add(namespaceURI As String, var As Variant)",
+      "description": "add a new schema",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "namespaceURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "var",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "get",
+      "kind": "method",
+      "signature": "get(namespaceURI As String) As IXMLDOMNode",
+      "description": "lookup schema by namespaceURI",
+      "returns": "IXMLDOMNode",
+      "parameters": [
+        {
+          "name": "namespaceURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "remove",
+      "kind": "method",
+      "signature": "remove(namespaceURI As String)",
+      "description": "remove schema by namespaceURI",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "namespaceURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "addCollection",
+      "kind": "method",
+      "signature": "addCollection(otherCollection As IXMLDOMSchemaCollection)",
+      "description": "copy & merge other collection into this one",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "otherCollection",
+          "type": "IXMLDOMSchemaCollection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

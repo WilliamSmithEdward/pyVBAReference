@@ -1,0 +1,204 @@
+{
+  "name": "IVBSAXAttributes",
+  "kind": "Dispatch Interface",
+  "guid": "{10DC0586-132B-4CAC-8BB3-DB00AC8B7EE0}",
+  "library": "Microsoft XML, v6.0",
+  "description": "IVBSAXAttributes interface",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "length",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Get the number of attributes in the list."
+    }
+  ],
+  "methods": [
+    {
+      "name": "getURI",
+      "kind": "method",
+      "signature": "getURI(nIndex As Long) As String",
+      "description": "Look up an attribute's Namespace URI by index.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getLocalName",
+      "kind": "method",
+      "signature": "getLocalName(nIndex As Long) As String",
+      "description": "Look up an attribute's local name by index.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getQName",
+      "kind": "method",
+      "signature": "getQName(nIndex As Long) As String",
+      "description": "Look up an attribute's XML 1.0 qualified name by index.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getIndexFromName",
+      "kind": "method",
+      "signature": "getIndexFromName(strURI As String, strLocalName As String) As Long",
+      "description": "Look up the index of an attribute by Namespace name.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "strURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strLocalName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getIndexFromQName",
+      "kind": "method",
+      "signature": "getIndexFromQName(strQName As String) As Long",
+      "description": "Look up the index of an attribute by XML 1.0 qualified name.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "strQName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getType",
+      "kind": "method",
+      "signature": "getType(nIndex As Long) As String",
+      "description": "Look up an attribute's type by index.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getTypeFromName",
+      "kind": "method",
+      "signature": "getTypeFromName(strURI As String, strLocalName As String) As String",
+      "description": "Look up an attribute's type by Namespace name.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "strURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strLocalName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getTypeFromQName",
+      "kind": "method",
+      "signature": "getTypeFromQName(strQName As String) As String",
+      "description": "Look up an attribute's type by XML 1.0 qualified name.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "strQName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getValue",
+      "kind": "method",
+      "signature": "getValue(nIndex As Long) As String",
+      "description": "Look up an attribute's value by index.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getValueFromName",
+      "kind": "method",
+      "signature": "getValueFromName(strURI As String, strLocalName As String) As String",
+      "description": "Look up an attribute's value by Namespace name.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "strURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strLocalName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getValueFromQName",
+      "kind": "method",
+      "signature": "getValueFromQName(strQName As String) As String",
+      "description": "Look up an attribute's value by XML 1.0 qualified name.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "strQName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,48 @@
+{
+  "name": "FileDialogFilter",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0364-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a file filter in a file dialog box displayed through the FileDialog object. Each file filter determines which files are displayed in the file dialog box.",
+  "remarks": "Use the Item method with the FileDialogFilters collection to return a FileDialogFilter object. Use the Add method to add a FileDialogFilter object to the FileDialogFilters collection. You can return the extensions that a FileDialogFilter object uses to filter files with the Extensions property, and you can return the description of the filter with the Description property; however, both of these properties are read-only. If you want to set the extension or description, you must use the Add method.",
+  "example": "Sub Main()\n\n 'Declare a variable as a FileDialogFilters collection.\n Dim fdfs As FileDialogFilters\n\n 'Declare a variable as a FileDialogFilter object.\n Dim fdf As FileDialogFilter\n\n 'Set the FileDialogFilters collection variable to\n 'the FileDialogFilters collection of the SaveAs dialog box.\n Set fdfs = Application.FileDialog(msoFileDialogSaveAs).Filters\n\n 'Iterate through the description and extensions of each\n 'default filter in the SaveAs dialog box.\n For Each fdf In fdfs\n\n 'Display the description of filters that include\n 'Microsoft Excel files.\n If InStr(1, fdf.Extensions, \"xls\", vbTextCompare) > 0 Then\n MsgBox \"Description of filter: \" & fdf.Description\n End If\n Next fdf\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the FileDialogFilter object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the FileDialogFilter object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the FileDialogFilter object. Read-only."
+    },
+    {
+      "name": "Extensions",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets a value containing the extensions that determine which files are displayed in a file dialog box for each Filter object. Read-only."
+    },
+    {
+      "name": "Description",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the description of each Filter object as a String value. The description is the text that is displayed in a file dialog box. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

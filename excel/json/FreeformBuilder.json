@@ -1,0 +1,99 @@
+{
+  "name": "FreeformBuilder",
+  "kind": "Dispatch Interface",
+  "guid": "{0002443F-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the geometry of a freeform while it's being built.",
+  "remarks": "Use the BuildFreeform method of the Shapes object to return a FreeformBuilder object. Use the AddNodes method to add nodes to the freeform. Use the ConvertToShape method to create the shape defined in the FreeformBuilder object and add it to the Shapes collection.",
+  "example": "Set myDocument = Worksheets(1)\nWith myDocument.Shapes.BuildFreeform(msoEditingCorner, 360, 200)\n .AddNodes msoSegmentCurve, msoEditingCorner, _\n 380, 230, 400, 250, 450, 300\n .AddNodes msoSegmentCurve, msoEditingAuto, 480, 200\n .AddNodes msoSegmentLine, msoEditingAuto, 480, 400\n .AddNodes msoSegmentLine, msoEditingAuto, 360, 200\n .ConvertToShape\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "AddNodes",
+      "kind": "method",
+      "signature": "AddNodes(SegmentType As MsoSegmentType, EditingType As MsoEditingType, X1 As Single, Y1 As Single, [X2 As Variant], [Y2 As Variant], [X3 As Variant], [Y3 As Variant])",
+      "description": "Adds a point in the current shape, and then draws a line from the current node to the last node that was added.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SegmentType",
+          "type": "MsoSegmentType",
+          "optional": false,
+          "description": "The type of segment to be added."
+        },
+        {
+          "name": "EditingType",
+          "type": "MsoEditingType",
+          "optional": false,
+          "description": "The editing property of the vertex."
+        },
+        {
+          "name": "X1",
+          "type": "Single",
+          "optional": false,
+          "description": "If the _EditingType_ of the new segment is msoEditingAuto, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the end point of the new segment. If the _EditingType_ of the new node is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the first control point for the new segment."
+        },
+        {
+          "name": "Y1",
+          "type": "Single",
+          "optional": false,
+          "description": "If the _EditingType_ of the new segment is msoEditingAuto, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the end point of the new segment. If the _EditingType_ of the new node is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the first control point for the new segment."
+        },
+        {
+          "name": "X2",
+          "type": "Variant",
+          "optional": true,
+          "description": "If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument."
+        },
+        {
+          "name": "Y2",
+          "type": "Variant",
+          "optional": true,
+          "description": "If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument."
+        },
+        {
+          "name": "X3",
+          "type": "Variant",
+          "optional": true,
+          "description": "If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument."
+        },
+        {
+          "name": "Y3",
+          "type": "Variant",
+          "optional": true,
+          "description": "If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument."
+        }
+      ]
+    },
+    {
+      "name": "ConvertToShape",
+      "kind": "method",
+      "signature": "ConvertToShape() As Shape",
+      "description": "Creates a shape that has the geometric characteristics of the specified FreeformBuilder object. Returns a Shape object that represents the new shape.",
+      "returns": "Shape"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,13 @@
+# _SCHEMATYPEVARIETY
+
+**Type:** Enumeration  
+**Library:** Microsoft XML, v6.0  
+
+Schema Object Model Type variety values
+
+## Constants (4)
+
+- `SCHEMATYPEVARIETY_NONE` = -1
+- `SCHEMATYPEVARIETY_ATOMIC` = 0
+- `SCHEMATYPEVARIETY_LIST` = 1
+- `SCHEMATYPEVARIETY_UNION` = 2

@@ -1,0 +1,41 @@
+{
+  "name": "SearchScope",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0367-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Corresponds to a type of folder tree that can be searched.",
+  "remarks": "Each SearchScope object contains a single ScopeFolder object that corresponds to the root folder of the search scope. Use the Item property of the SearchScopes collection to return a SearchScope object; for example: Ultimately, the SearchScope object is intended to provide access to ScopeFolder objects that can be added to the SearchFolders collection. For an example that demonstrates how this is accomplished, see the SearchFolders collection topic. See the ScopeFolder object topic to see a simple example of how to return a ScopeFolder object from a SearchScope object.",
+  "example": "Sub DisplayAvailableScopes()\n\n 'Declare a variable that references a\n 'SearchScope object.\n Dim ss As SearchScope\n\n 'Loop through the SearchScopes collection.\n For Each ss In SearchScopes\n Select Case ss.Type\n Case msoSearchInMyComputer\n MsgBox \"My Computer is an available search scope.\"\n Case msoSearchInMyNetworkPlaces\n MsgBox \"My Network Places is an available search scope.\"\n Case msoSearchInOutlook\n MsgBox \"Outlook is an available search scope.\"\n Case msoSearchInCustom\n MsgBox \"A custom search scope is available.\"\n Case Else\n MsgBox \"Can't determine search scope.\"\n End Select\n Next ss\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SearchScope object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SearchScope object was created. Read-only."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoSearchIn",
+      "access": "read-only",
+      "description": "Gets a value that corresponds to the type of SearchScope object. The type indicates the area in which to search for files. Read-only."
+    },
+    {
+      "name": "ScopeFolder",
+      "kind": "property",
+      "type": "ScopeFolder",
+      "access": "read-only",
+      "description": "Gets a ScopeFolder object. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

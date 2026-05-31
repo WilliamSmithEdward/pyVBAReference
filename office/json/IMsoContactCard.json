@@ -1,0 +1,55 @@
+{
+  "name": "IMsoContactCard",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03F0-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a contact card.",
+  "remarks": "You cannot create a new instance of a ContactCard object programmatically. The ContactCard object is returned as an IRibbonControl.Context object when a Microsoft Office Fluent Ribbon callback procedure is triggered from the Contact Card context menu. You use the ContactCard object to determine additional information about the entity displayed in the contact card.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the IMsoContactCard object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the IMsoContactCard object was created. Read-only."
+    },
+    {
+      "name": "Address",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Represents the address in a Contact card. Read-only."
+    },
+    {
+      "name": "AddressType",
+      "kind": "property",
+      "type": "MsoContactCardAddressType",
+      "access": "read-only",
+      "description": "An MsoContactCardAddressType value that represents the address type for the ContactCard object. Read-only."
+    },
+    {
+      "name": "CardType",
+      "kind": "property",
+      "type": "MsoContactCardType",
+      "access": "read-only",
+      "description": "An MsoContactCardType value that represents the type of contact card. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the calling object. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

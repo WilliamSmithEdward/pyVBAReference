@@ -1,0 +1,69 @@
+{
+  "name": "StdFunctions",
+  "kind": "Module",
+  "library": "OLE Automation",
+  "description": "Functions for Standard OLE Objects",
+  "functions": [
+    {
+      "name": "LoadPicture",
+      "kind": "function",
+      "signature": "LoadPicture([filename As Variant], [widthDesired As Long], [heightDesired As Long], [flags As LoadPictureConstants], retval As IPictureDisp)",
+      "description": "Loads a picture from a file",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "filename",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "widthDesired",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "heightDesired",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "flags",
+          "type": "LoadPictureConstants",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "retval",
+          "type": "IPictureDisp",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SavePicture",
+      "kind": "function",
+      "signature": "SavePicture(Picture As IPictureDisp, filename As String)",
+      "description": "Saves a picture to a file",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Picture",
+          "type": "IPictureDisp",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "filename",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "constants": []
+}

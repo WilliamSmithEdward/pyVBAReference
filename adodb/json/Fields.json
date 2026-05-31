@@ -1,0 +1,118 @@
+{
+  "name": "Fields",
+  "kind": "Dispatch Interface",
+  "guid": "{00001564-0000-0010-8000-00AA006D2EA4}",
+  "library": "Microsoft ActiveX Data Objects 6.1 Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "Field",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Refresh",
+      "kind": "method",
+      "signature": "Refresh()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete(Index As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Append",
+      "kind": "method",
+      "signature": "Append(Name As String, Type As DataTypeEnum, [DefinedSize As Long], [Attrib As FieldAttributeEnum], [FieldValue As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Type",
+          "type": "DataTypeEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "DefinedSize",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Attrib",
+          "type": "FieldAttributeEnum",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "FieldValue",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Update",
+      "kind": "method",
+      "signature": "Update()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Resync",
+      "kind": "method",
+      "signature": "Resync([ResyncValues As ResyncEnum])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ResyncValues",
+          "type": "ResyncEnum",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CancelUpdate",
+      "kind": "method",
+      "signature": "CancelUpdate()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

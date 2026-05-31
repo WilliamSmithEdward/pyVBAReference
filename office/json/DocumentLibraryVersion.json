@@ -1,0 +1,84 @@
+{
+  "name": "DocumentLibraryVersion",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0387-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "The DocumentLibraryVersion object represents a single saved version of a shared document that has versioning enabled and which is stored in a document library on the server. Each DocumentLibraryVersion object is a member of the active document's DocumentLibraryVersions collection.",
+  "remarks": "Each DocumentLibraryVersion object represents one saved version of the active document. When versioning is enabled, a new version is created on the server when the actions listed below occur; additional versions are not created each time the user saves changes to the open document. - Check in - Save: A new version is created on the server when the user first saves the document after opening it. Additional changes saved while the document is open apply to the same version. - Restore - Upload Use the Modified, ModifiedBy, and Comments properties to return information about a saved version of a shared document. Use the Open method to open a previous version, or the Restore method to restore a previous version in place of the current version. Use the Delete method to delete a version.",
+  "example": "Dim dlvVersions As Office.DocumentLibraryVersions\n Dim dlvVersion As Office.DocumentLibraryVersion\n Dim strVersionInfo As String\n Set dlvVersions = ActiveDocument.DocumentLibraryVersions\n If dlvVersions.IsVersioningEnabled Then\n strVersionInfo = \"This document has \" & _\n dlvVersions.Count & \" versions: \" & vbCrLf\n For Each dlvVersion In dlvVersions\n strVersionInfo = strVersionInfo & _\n \" - Version #: \" & dlvVersion.Index & vbCrLf & _\n \" - Modified by: \" & dlvVersion.ModifiedBy & vbCrLf & _\n \" - Modified on: \" & dlvVersion.Modified & vbCrLf & _\n \" - Comments: \" & dlvVersion.Comments & vbCrLf\n Next\n Else\n strVersionInfo = \"Versioning not enabled for this document.\"\n End If\n MsgBox strVersionInfo, vbInformation + vbOKOnly, \"Version Information\"\n Set dlvVersion = Nothing\n Set dlvVersions = Nothing",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the DocumentLibraryVersion object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the DocumentLibraryVersion object was created. Read-only."
+    },
+    {
+      "name": "Modified",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Gets the date and time at which the specified version of the shared document was last saved to the server. Read-only."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long representing the index number for a DocumentLibraryVersion object in the collection. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the DocumentLibraryVersion object. Read-only."
+    },
+    {
+      "name": "ModifiedBy",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the name of the user who last saved the specified version of the shared document to the server. Read-only."
+    },
+    {
+      "name": "Comments",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets any optional comments associated with the specified version of the shared document. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Removes a document library version from the DocumentLibraryVersions collection.",
+      "returns": "void"
+    },
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open() As Object",
+      "description": "Opens the specified version of the shared document from the DocumentLibraryVersions collection in read-only mode.",
+      "returns": "Object"
+    },
+    {
+      "name": "Restore",
+      "kind": "method",
+      "signature": "Restore() As Object",
+      "description": "Restores a previous saved version of a shared document from the DocumentLibraryVersions collection.",
+      "returns": "Object"
+    }
+  ],
+  "events": []
+}

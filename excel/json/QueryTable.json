@@ -1,0 +1,540 @@
+{
+  "name": "QueryTable",
+  "kind": "Class",
+  "guid": "{59191DA1-EA47-11CE-A51F-00AA0061507F}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a worksheet table built from data returned from an external data source, such as a SQL server or a Microsoft Access database.",
+  "remarks": "The QueryTable object is a member of the QueryTables collection.",
+  "example": "Sheets(\"sheet1\").QueryTables(1).FillAdjacentFormulas = True",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value representing the name of the object."
+    },
+    {
+      "name": "FieldNames",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if field names from the data source appear as column headings for the returned data. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "RowNumbers",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if row numbers are added as the first column of the specified query table. Read/write Boolean."
+    },
+    {
+      "name": "FillAdjacentFormulas",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if formulas to the right of the specified query table are automatically updated whenever the query table is refreshed. Read/write Boolean."
+    },
+    {
+      "name": "RefreshOnFileOpen",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the PivotTable cache or query table is automatically updated each time the workbook is opened. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "Refreshing",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if there is a background query in progress for the specified query table. Read-only Boolean."
+    },
+    {
+      "name": "FetchedRowOverflow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the number of rows returned by the last use of the Refresh method is greater than the number of rows available on the worksheet. Read-only Boolean."
+    },
+    {
+      "name": "BackgroundQuery",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if queries for the query table are performed asynchronously (in the background). Read/write Boolean."
+    },
+    {
+      "name": "RefreshStyle",
+      "kind": "property",
+      "type": "XlCellInsertionMode",
+      "access": "read/write",
+      "description": "Returns or sets the way rows on the specified worksheet are added or deleted to accommodate the number of rows in a recordset returned by a query. Read/write XlCellInsertionMode."
+    },
+    {
+      "name": "EnableRefresh",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the PivotTable cache or query table can be refreshed by the user. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "SavePassword",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if password information in an ODBC connection string is saved with the specified query. False if the password is removed. Read/write Boolean."
+    },
+    {
+      "name": "Destination",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns the cell in the upper-left corner of the query table destination range (the range where the resulting query table will be placed). The destination range must be on the worksheet that contains the QueryTable object. Read-only Range."
+    },
+    {
+      "name": "Connection",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a string that contains one of the following:"
+    },
+    {
+      "name": "PostText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the string used with the post method of inputting data into a web server to return data from a web query. Read/write String."
+    },
+    {
+      "name": "ResultRange",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the area of the worksheet occupied by the specified query table. Read-only."
+    },
+    {
+      "name": "Parameters",
+      "kind": "property",
+      "type": "Parameters",
+      "access": "read-only",
+      "description": "Returns a Parameters collection that represents the query table parameters. Read-only."
+    },
+    {
+      "name": "Recordset",
+      "kind": "property",
+      "type": "Object",
+      "access": "read/write",
+      "description": "Returns or sets a Recordset object that's used as the data source for the specified query table. Read/write."
+    },
+    {
+      "name": "SaveData",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if data for the QueryTable report is saved with the workbook. False if only the report definition is saved. Read/write Boolean."
+    },
+    {
+      "name": "EnableEditing",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the user can edit the specified query table. False if the user can only refresh the query table. Read/write Boolean."
+    },
+    {
+      "name": "TextFilePlatform",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the origin of the text file that you are importing into the query table. This property determines which code page is used during the data import. Read/write XlPlatform."
+    },
+    {
+      "name": "TextFileStartRow",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the row number at which text parsing will begin when you import a text file into a query table. Valid values are integers from 1 through 32767. The default value is 1. Read/write Long."
+    },
+    {
+      "name": "TextFileParseType",
+      "kind": "property",
+      "type": "XlTextParsingType",
+      "access": "read/write",
+      "description": "Returns or sets the column format for the data in the text file that you are importing into a query table. Read/write XlTextParsingType."
+    },
+    {
+      "name": "TextFileTextQualifier",
+      "kind": "property",
+      "type": "XlTextQualifier",
+      "access": "read/write",
+      "description": "Returns or sets the text qualifier when you import a text file into a query table. The text qualifier specifies that the enclosed data is in text format. Read/write XlTextQualifier."
+    },
+    {
+      "name": "TextFileConsecutiveDelimiter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if consecutive delimiters are treated as a single delimiter when you import a text file into a query table. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "TextFileTabDelimiter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the tab character is the delimiter when you import a text file into a query table. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "TextFileSemicolonDelimiter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the semicolon is the delimiter when you import a text file into a query table, and if the value of the TextFileParseType property is xlDelimited. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "TextFileCommaDelimiter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the comma is the delimiter when you import a text file into a query table. False if you want to use some other character as the delimiter. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "TextFileSpaceDelimiter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the space character is the delimiter when you import a text file into a query table. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "TextFileOtherDelimiter",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the character used as the delimiter when you import a text file into a query table. The default value is null. Read/write String."
+    },
+    {
+      "name": "TextFileColumnDataTypes",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets an ordered array of constants that specify the data types applied to the corresponding columns in the text file that you are importing into a query table. The default constant for each column is xlGeneral. Read/write Variant."
+    },
+    {
+      "name": "TextFileFixedColumnWidths",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets an array of integers that correspond to the widths of the columns (in characters) in the text file that you are importing into a query table. Valid widths are from 1 through 32767 characters. Read/write Variant."
+    },
+    {
+      "name": "PreserveColumnInfo",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if column sorting, filtering, and layout information is preserved whenever a query table is refreshed. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "PreserveFormatting",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if any formatting common to the first five rows of data are applied to new rows of data in the query table. Unused cells aren't formatted. The property is False if the last AutoFormat applied to the query table is applied to new rows of data. The default value is True."
+    },
+    {
+      "name": "AdjustColumnWidth",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the column widths are automatically adjusted for the best fit each time you refresh the specified query table. False if the column widths are not automatically adjusted with each refresh. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "CommandText",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the command string for the specified data source. Read/write Variant."
+    },
+    {
+      "name": "CommandType",
+      "kind": "property",
+      "type": "XlCmdType",
+      "access": "read/write",
+      "description": "Returns or sets one of these XlCmdType constants: xlCmdCube, xlCmdDefault, xlCmdSql, or xlCmdTable. The constant that is returned or set describes the value of the CommandText property. The default value is xlCmdSQL. Read/write XlCmdType."
+    },
+    {
+      "name": "TextFilePromptOnRefresh",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if you want to specify the name of the imported text file each time the query table is refreshed. The Import Text File dialog box allows you to specify the path and file name. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "QueryType",
+      "kind": "property",
+      "type": "XlQueryType",
+      "access": "read-only",
+      "description": "Indicates the type of query used by Microsoft Excel to populate the query table. Read-only XlQueryType."
+    },
+    {
+      "name": "MaintainConnection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the connection to the specified data source is maintained after the refresh and until the workbook is closed. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "TextFileDecimalSeparator",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the decimal separator character that Microsoft Excel uses when you import a text file into a query table. The default is the system decimal separator character. Read/write String."
+    },
+    {
+      "name": "TextFileThousandsSeparator",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the thousands separator character that Microsoft Excel uses when you import a text file into a query table. The default is the system thousands separator character. Read/write String."
+    },
+    {
+      "name": "RefreshPeriod",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the number of minutes between refreshes. Read/write Long."
+    },
+    {
+      "name": "WebSelectionType",
+      "kind": "property",
+      "type": "XlWebSelectionType",
+      "access": "read/write",
+      "description": "Returns or sets a value that determines whether an entire webpage, all tables on the webpage, or only specific tables on the webpage are imported into a query table. Read/write XlWebSelectionType."
+    },
+    {
+      "name": "WebFormatting",
+      "kind": "property",
+      "type": "XlWebFormatting",
+      "access": "read/write",
+      "description": "Returns or sets a value that determines how much formatting from a webpage, if any, is applied when you import the page into a query table. Read/write XlWebFormatting."
+    },
+    {
+      "name": "WebTables",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a comma-delimited list of table names or table index numbers when you import a webpage into a query table. Read/write String."
+    },
+    {
+      "name": "WebPreFormattedTextToColumns",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether data contained within HTML <PRE> tags on the webpage is parsed into columns when you import the page into a query table. The default is True. Read/write Boolean."
+    },
+    {
+      "name": "WebSingleBlockTextImport",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if data from the HTML <PRE> tags on the specified webpage is processed all at once when you import the page into a query table. False if the data is imported in blocks of contiguous rows so that header rows will be recognized as such. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "WebDisableDateRecognition",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if data that resembles dates is parsed as text when you import a webpage into a query table. False if date recognition is used. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "WebConsecutiveDelimitersAsOne",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if consecutive delimiters are treated as a single delimiter when you import data from HTML <PRE> tags on a webpage into a query table, and if the data is to be parsed into columns. False if you want to treat consecutive delimiters as multiple delimiters. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "WebDisableRedirections",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if web query redirections are disabled for a QueryTable object. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "EditWebPage",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the webpage Uniform Resource Locator (URL) for a web query. Read/write Variant."
+    },
+    {
+      "name": "SourceConnectionFile",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String indicating the Microsoft Office Data Connection file or similar file that was used to create the QueryTable. Read/write."
+    },
+    {
+      "name": "SourceDataFile",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value that indicates the source data file for a query table."
+    },
+    {
+      "name": "RobustConnect",
+      "kind": "property",
+      "type": "XlRobustConnect",
+      "access": "read/write",
+      "description": "Returns or sets how the query table connects to its data source. Read/write XlRobustConnect."
+    },
+    {
+      "name": "TextFileTrailingMinusNumbers",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Excel to treat numbers imported as text that begin with a - (minus) symbol as a negative symbol. False for Excel to treat numbers imported as text that begin with a - symbol as text. Read/write Boolean."
+    },
+    {
+      "name": "ListObject",
+      "kind": "property",
+      "type": "ListObject",
+      "access": "read-only",
+      "description": "Returns a ListObject object for the QueryTable object. Read-only ListObject object."
+    },
+    {
+      "name": "TextFileVisualLayout",
+      "kind": "property",
+      "type": "XlTextVisualLayoutType",
+      "access": "read/write",
+      "description": "Returns or sets an XlTextVisualLayoutType enumeration that indicates whether the visual layout of the text being imported is left-to-right or right-to-left."
+    },
+    {
+      "name": "WorkbookConnection",
+      "kind": "property",
+      "type": "WorkbookConnection",
+      "access": "read-only",
+      "description": "Returns the WorkbookConnection object that the query table uses. Read-only."
+    },
+    {
+      "name": "Sort",
+      "kind": "property",
+      "type": "Sort",
+      "access": "read-only",
+      "description": "Returns the sort criteria for the query table range. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "CancelRefresh",
+      "kind": "method",
+      "signature": "CancelRefresh()",
+      "description": "Cancels all background queries for the specified query table. Use the Refreshing property to determine whether a background query is currently in progress.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    },
+    {
+      "name": "Refresh",
+      "kind": "method",
+      "signature": "Refresh([BackgroundQuery As Variant]) As Boolean",
+      "description": "Updates an external data range in a QueryTable object.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "BackgroundQuery",
+          "type": "Variant",
+          "optional": true,
+          "description": "Used only with QueryTables that are based on the results of a SQL query. True to return control to the procedure as soon as a database connection is made and the query is submitted. The QueryTable is updated in the background. False to return control to the procedure only after all data has been fetched to the worksheet. If this argument isn't specified, the setting of the BackgroundQuery property determines the query mode."
+        }
+      ]
+    },
+    {
+      "name": "ResetTimer",
+      "kind": "method",
+      "signature": "ResetTimer()",
+      "description": "Resets the refresh timer for the specified query table or PivotTable report to the last interval that you set by using the RefreshPeriod property.",
+      "returns": "void"
+    },
+    {
+      "name": "SaveAsODC",
+      "kind": "method",
+      "signature": "SaveAsODC(ODCFileName As String, [Description As Variant], [Keywords As Variant])",
+      "description": "Saves the QueryTable cache source as a Microsoft Office Data Connection file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ODCFileName",
+          "type": "String",
+          "optional": false,
+          "description": "Location to save the file."
+        },
+        {
+          "name": "Description",
+          "type": "Variant",
+          "optional": true,
+          "description": "Description that will be saved in the file."
+        },
+        {
+          "name": "Keywords",
+          "type": "Variant",
+          "optional": true,
+          "description": "Space-separated keywords that can be used to search for this file."
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "BeforeRefresh",
+      "kind": "event",
+      "signature": "BeforeRefresh(Cancel As Boolean)",
+      "description": "Occurs before any refreshes of the query table. This includes refreshes resulting from calling the Refresh method, from the user's actions in the product, and from opening the workbook containing the query table.",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "False when the event occurs. If the event procedure sets this argument to True, the refresh doesn't occur when the procedure is finished."
+        }
+      ]
+    },
+    {
+      "name": "AfterRefresh",
+      "kind": "event",
+      "signature": "AfterRefresh(Success As Boolean)",
+      "description": "Occurs after a query is completed or canceled.",
+      "parameters": [
+        {
+          "name": "Success",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True if the query was completed successfully."
+        }
+      ]
+    }
+  ]
+}

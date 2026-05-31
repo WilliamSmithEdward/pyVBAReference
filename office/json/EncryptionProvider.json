@@ -1,0 +1,220 @@
+{
+  "name": "EncryptionProvider",
+  "kind": "Dispatch Interface",
+  "guid": "{000CD809-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Provides the methods for setting up permissions, applying the cryptography of the underlying encryption and decryption, and user authentication.",
+  "remarks": "Encryption providers are implemented through custom COM add-ins. You are provided with storage within Office documents for add-in specific information to store whatever information you need to encrypt, decrypt, apply rights, and display permission setup or authentication user interfaces.",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "GetProviderDetail",
+      "kind": "method",
+      "signature": "GetProviderDetail(encprovdet As EncryptionProviderDetail) As Variant",
+      "description": "Displays information about the encryption of the current document.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "encprovdet",
+          "type": "EncryptionProviderDetail",
+          "optional": false,
+          "description": "Specifies the encryption information that you want."
+        }
+      ]
+    },
+    {
+      "name": "NewSession",
+      "kind": "method",
+      "signature": "NewSession(ParentWindow As IUnknown) As Long",
+      "description": "Used by the EncryptionProvider object to create a new encryption session. This session is used by the provider to cache document-specific information about the encryption, users, and rights while the document is in memory.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "ParentWindow",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "Specifies the window that is called to display the encryption settings."
+        }
+      ]
+    },
+    {
+      "name": "Authenticate",
+      "kind": "method",
+      "signature": "Authenticate(ParentWindow As IUnknown, EncryptionData As IUnknown, PermissionsMask As Long) As Long",
+      "description": "Used to determine whether the user has the proper permissions to open the encrypted document.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "ParentWindow",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "Specifies the window that is called to display the encryption settings."
+        },
+        {
+          "name": "EncryptionData",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "Contains the encrypted data for the current document."
+        },
+        {
+          "name": "PermissionsMask",
+          "type": "Long",
+          "optional": false,
+          "description": "The user interface displayed by the encryption provider add-in."
+        }
+      ]
+    },
+    {
+      "name": "CloneSession",
+      "kind": "method",
+      "signature": "CloneSession(SessionHandle As Long) As Long",
+      "description": "Creates a second, working copy of the EncryptionProvider object's encryption session for a file that is about to be saved.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "SessionHandle",
+          "type": "Long",
+          "optional": false,
+          "description": "The ID of the cloned session."
+        }
+      ]
+    },
+    {
+      "name": "EndSession",
+      "kind": "method",
+      "signature": "EndSession(SessionHandle As Long)",
+      "description": "Ends the current encryption session.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SessionHandle",
+          "type": "Long",
+          "optional": false,
+          "description": "The ID of the current session."
+        }
+      ]
+    },
+    {
+      "name": "Save",
+      "kind": "method",
+      "signature": "Save(SessionHandle As Long, EncryptionData As IUnknown) As Long",
+      "description": "Saves an encrypted document.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "SessionHandle",
+          "type": "Long",
+          "optional": false,
+          "description": "The ID of the current session."
+        },
+        {
+          "name": "EncryptionData",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "Contains the encryption information."
+        }
+      ]
+    },
+    {
+      "name": "EncryptStream",
+      "kind": "method",
+      "signature": "EncryptStream(SessionHandle As Long, StreamName As String, UnencryptedStream As IUnknown, EncryptedStream As IUnknown)",
+      "description": "Encrypts and returns a stream of data for a document.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SessionHandle",
+          "type": "Long",
+          "optional": false,
+          "description": "The ID of the current session."
+        },
+        {
+          "name": "StreamName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the encrypted stream of document data."
+        },
+        {
+          "name": "UnencryptedStream",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "The data stream before encryption."
+        },
+        {
+          "name": "EncryptedStream",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "The data stream information after it has been encrypted."
+        }
+      ]
+    },
+    {
+      "name": "DecryptStream",
+      "kind": "method",
+      "signature": "DecryptStream(SessionHandle As Long, StreamName As String, EncryptedStream As IUnknown, UnencryptedStream As IUnknown)",
+      "description": "Decrypts and returns a stream of encrypted data for a document.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SessionHandle",
+          "type": "Long",
+          "optional": false,
+          "description": "The ID of the current session."
+        },
+        {
+          "name": "StreamName",
+          "type": "String",
+          "optional": false,
+          "description": "The ID of the stream of data."
+        },
+        {
+          "name": "EncryptedStream",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "The encrypted data stream."
+        },
+        {
+          "name": "UnencryptedStream",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "The data stream before dencryption."
+        }
+      ]
+    },
+    {
+      "name": "ShowSettings",
+      "kind": "method",
+      "signature": "ShowSettings(SessionHandle As Long, ParentWindow As IUnknown, ReadOnly As Boolean, Remove As Boolean)",
+      "description": "Used to display a dialog of the encryption settings for the current document.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SessionHandle",
+          "type": "Long",
+          "optional": false,
+          "description": "The ID of the current session."
+        },
+        {
+          "name": "ParentWindow",
+          "type": "IUnknown",
+          "optional": false,
+          "description": "Specifies the window that is called to display the encryption settings."
+        },
+        {
+          "name": "ReadOnly",
+          "type": "Boolean",
+          "optional": false,
+          "description": "Specifies whether you want the user to be able to change the encryption settings."
+        },
+        {
+          "name": "Remove",
+          "type": "Boolean",
+          "optional": false,
+          "description": "If True, the encryption for a document will be removed during the next save operation."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

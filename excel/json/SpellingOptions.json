@@ -1,0 +1,146 @@
+{
+  "name": "SpellingOptions",
+  "kind": "Dispatch Interface",
+  "guid": "{00024465-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the various spell checking options for a worksheet.",
+  "remarks": "Use the SpellingOptions property of the Application object to return a SpellingOptions object. After a SpellingOptions object is returned, you can use the following properties to set or return various spell checking options: - ArabicModes - DictLang - GermanPostReform - HebrewModes - IgnoreCaps - IgnoreFileNames - IgnoreMixedDigits - KoreanCombineAux - KoreanProcessCompound - KoreanUseAutoChangeList - SuggestMainOnly - UserDict",
+  "example": "Sub IgnoreAllCAPS()\n\n ' Place misspelled versions of the same word in all caps and mixed case.\n Range(\"A1\").Formula = \"Testt\"\n Range(\"A2\").Formula = \"TESTT\"\n\n With Application.SpellingOptions\n .SuggestMainOnly = True\n .IgnoreCaps = True\n End With\n\n ' Run a spell check.\n Cells.CheckSpelling\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "DictLang",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Selects the dictionary language used when Microsoft Excel performs spelling checks. Read/write Long."
+    },
+    {
+      "name": "UserDict",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Instructs Microsoft Excel to create a custom dictionary to which new words can be added when performing spelling checks on a worksheet. Read/write String."
+    },
+    {
+      "name": "IgnoreCaps",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "False instructs Microsoft Excel to check for uppercase words; True instructs Excel to ignore words in uppercase when using the spelling checker. Read/write Boolean."
+    },
+    {
+      "name": "SuggestMainOnly",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "When set to True, instructs Microsoft Excel to suggest words from only the main dictionary when using the spelling checker. False removes the limits of suggesting words from only the main dictionary when using the spelling checker. Read/write Boolean."
+    },
+    {
+      "name": "IgnoreMixedDigits",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "False instructs Microsoft Excel to check for mixed digits; True instructs Excel to ignore mixed digits when checking spelling. Read/write Boolean."
+    },
+    {
+      "name": "IgnoreFileNames",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "False instructs Microsoft Excel to check for Internet and file addresses; True instructs Excel to ignore Internet and file addresses when using the spell checker. Read/write Boolean."
+    },
+    {
+      "name": "GermanPostReform",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True to check the spelling of words by using the German post-reform rules. False cancels this feature. Read/write Boolean."
+    },
+    {
+      "name": "KoreanCombineAux",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "When set to True, Microsoft Excel combines Korean auxiliary verbs and adjectives when spelling is checked. Read/write Boolean."
+    },
+    {
+      "name": "KoreanUseAutoChangeList",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "When set to True, this enables Microsoft Excel to use the auto-change list for Korean words when using the spelling checker. Read/write Boolean."
+    },
+    {
+      "name": "KoreanProcessCompound",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "When set to True, this enables Microsoft Excel to process Korean compound nouns when using the spelling checker. Read/write Boolean."
+    },
+    {
+      "name": "HebrewModes",
+      "kind": "property",
+      "type": "XlHebrewModes",
+      "access": "read/write",
+      "description": "Returns or sets the mode for the Hebrew spelling checker. Read/write XlHebrewModes."
+    },
+    {
+      "name": "ArabicModes",
+      "kind": "property",
+      "type": "XlArabicModes",
+      "access": "read/write",
+      "description": "Returns or sets the mode for the Arabic spelling checker. Read/write XlArabicModes."
+    },
+    {
+      "name": "ArabicStrictAlefHamza",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether the spelling checker uses rules regarding Arabic words beginning with an alef hamza. Read/write."
+    },
+    {
+      "name": "ArabicStrictFinalYaa",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether the spelling checker uses rules regarding Arabic words ending with the letter yaa. Read/write."
+    },
+    {
+      "name": "ArabicStrictTaaMarboota",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether the spelling checker uses rules to flag Arabic words ending with haa instead of taa marboota. Read/write."
+    },
+    {
+      "name": "RussianStrictE",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether the spelling checker uses rules regarding Russian words containing the character . Read/write."
+    },
+    {
+      "name": "SpanishModes",
+      "kind": "property",
+      "type": "XlSpanishModes",
+      "access": "read/write",
+      "description": "Returns or sets the mode for checking the spelling of Spanish. Read/write."
+    },
+    {
+      "name": "PortugalReform",
+      "kind": "property",
+      "type": "XlPortugueseReform",
+      "access": "read/write",
+      "description": "Returns or sets the mode for checking the spelling of European Portuguese. Read/write."
+    },
+    {
+      "name": "BrazilReform",
+      "kind": "property",
+      "type": "XlPortugueseReform",
+      "access": "read/write",
+      "description": "Returns or sets the mode for checking the spelling of Brazilian Portuguese. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

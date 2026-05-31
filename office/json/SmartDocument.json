@@ -1,0 +1,64 @@
+{
+  "name": "SmartDocument",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0377-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "The SmartDocument property of the Document object in Microsoft Word and the Workbook object in Microsoft Excel returns a SmartDocument object.",
+  "remarks": "Use the SmartDocument object to manage the XML expansion pack attached to the active document. Use the SmartDocument object's SolutionID and SolutionURI properties to retrieve information about the XML expansion pack attached to the active document or workbook. Use the PickSolution method to allow the user to select an available XML expansion pack from a list to attach to the active document or workbook. Use the RefreshPane method to refresh the smart document's Document Actions task pane. The SmartDocument object model is available whether or not a document has an XML expansion pack attached. The SmartDocument property of the Document or Workbook objects does not return Nothing when the active document has no XML expansion pack attached. Examine the SolutionID property to determine whether the active document has an XML expansion pack attached.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SmartDocument object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SmartDocument object was created. Read-only."
+    },
+    {
+      "name": "SolutionID",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the ID, often a globally unique identifier (GUID), which identifies the XML expansion pack attached to the active document in Microsoft Word or workbook in Microsoft Excel. Read/write."
+    },
+    {
+      "name": "SolutionURL",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets an absolute URL that provides the complete path to the XML expansion pack file attached to the active document in Microsoft Word or a workbook in Microsoft Excel. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "PickSolution",
+      "kind": "method",
+      "signature": "PickSolution([ConsiderAllSchemas As Boolean])",
+      "description": "Displays a dialog box that allows the user to choose an available XML expansion pack to attach to the active document in Microsoft Word or to a workbook in Microsoft Excel.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ConsiderAllSchemas",
+          "type": "Boolean",
+          "optional": true,
+          "description": "True displays all available XML expansion packs installed on the user's computer. False displays only XML expansion packs applicable to the active document. Default value is False."
+        }
+      ]
+    },
+    {
+      "name": "RefreshPane",
+      "kind": "method",
+      "signature": "RefreshPane()",
+      "description": "Refreshes the Document Actions task pane for the active document in Microsoft Word or a workbook in Microsoft Excel.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

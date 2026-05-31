@@ -1,0 +1,41 @@
+{
+  "name": "ColorScaleCriteria",
+  "kind": "Dispatch Interface",
+  "guid": "{00024494-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of ColorScaleCriterion objects that represents all of the criteria for a color scale conditional format. Each criterion specifies the minimum, midpoint, or maximum threshold for the color scale.",
+  "remarks": "To return the ColorScaleCriteria collection, use the ColorScaleCriteria property of the ColorScale object.",
+  "example": "Sub CreateColorScaleCF()\n\n Dim cfColorScale As ColorScale\n\n 'Fill cells with sample data from 1 to 10\n With ActiveSheet\n .Range(\"C1\") = 1\n .Range(\"C2\") = 2\n .Range(\"C1:C2\").AutoFill Destination:=Range(\"C1:C10\")\n End With\n\n Range(\"C1:C10\").Select\n\n 'Create a two-color ColorScale object for the created sample data range\n Set cfColorScale = Selection.FormatConditions.AddColorScale(ColorScaleType:=2)\n\n 'Set the minimum threshold to red and maximum threshold to blue\n cfColorScale.ColorScaleCriteria(1).FormatColor.Color = RGB(255, 0, 0)\n cfColorScale.ColorScaleCriteria(2).FormatColor.Color = RGB(0, 0, 255)\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that specifies the number of criteria for a color scale conditional formatting rule. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "ColorScaleCriterion",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "ColorScaleCriterion",
+      "access": "read-only",
+      "description": "Returns a single ColorScaleCriterion object from the ColorScaleCriteria collection. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

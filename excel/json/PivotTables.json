@@ -1,0 +1,103 @@
+{
+  "name": "PivotTables",
+  "kind": "Dispatch Interface",
+  "guid": "{00020873-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of all the PivotTable objects in the specified workbook.",
+  "remarks": "Because PivotTable report programming can be complex, it's generally easiest to record PivotTable report actions and then revise the recorded code.",
+  "example": "MsgBox Worksheets(\"sheet3\").PivotTables.Count",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As PivotTable",
+      "description": "Returns a single object from a collection.",
+      "returns": "PivotTable",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number for the object."
+        }
+      ]
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "method",
+      "signature": "_NewEnum() As IUnknown",
+      "description": "",
+      "returns": "IUnknown"
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(PivotCache As PivotCache, TableDestination As Variant, [TableName As Variant], [ReadData As Variant], [DefaultVersion As Variant]) As PivotTable",
+      "description": "Adds a new PivotTable report. Returns a PivotTable object.",
+      "returns": "PivotTable",
+      "parameters": [
+        {
+          "name": "PivotCache",
+          "type": "PivotCache",
+          "optional": false,
+          "description": "The PivotTable cache on which the new PivotTable report is based. The cache provides data for the report."
+        },
+        {
+          "name": "TableDestination",
+          "type": "Variant",
+          "optional": false,
+          "description": "The cell in the upper-left corner of the PivotTable report's destination range (the range on the worksheet where the resulting report will be placed). You must specify a destination range on the worksheet that contains the PivotTables object specified by _expression_."
+        },
+        {
+          "name": "TableName",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the new PivotTable report."
+        },
+        {
+          "name": "ReadData",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to create a PivotTable cache that contains all records from the external database; this cache can be very large. False to enable setting some of the fields as server-based page fields before the data is actually read."
+        },
+        {
+          "name": "DefaultVersion",
+          "type": "Variant",
+          "optional": true,
+          "description": "The version of Microsoft Excel that the PivotTable was originally created in."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

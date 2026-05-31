@@ -1,0 +1,135 @@
+{
+  "name": "PictureFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{000C031A-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Contains properties and methods that apply to pictures and OLE objects.",
+  "remarks": "The LinkFormat object contains properties and methods that apply to linked OLE objects only. The OLEFormat object contains properties and methods that apply to OLE objects whether or not they're linked.",
+  "example": "Set myDocument = Worksheets(1)\nWith myDocument.Shapes(1).PictureFormat\n .Brightness = 0.3\n .Contrast = 0.7\n .ColorType = msoPictureGrayScale\n .CropBottom = 18",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Brightness",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the brightness of the specified picture or OLE object. The value for this property must be a number from 0.0 (dimmest) to 1.0 (brightest). Read/write Single."
+    },
+    {
+      "name": "ColorType",
+      "kind": "property",
+      "type": "MsoPictureColorType",
+      "access": "read/write",
+      "description": "Returns or sets the type of color transformation applied to the specified picture or OLE object. Read/write."
+    },
+    {
+      "name": "Contrast",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the contrast for the specified picture or OLE object. The value for this property must be a number from 0.0 (the least contrast) to 1.0 (the greatest contrast). Read/write Single."
+    },
+    {
+      "name": "CropBottom",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the number of points that are cropped off the bottom of the specified picture or OLE object. Read/write Single."
+    },
+    {
+      "name": "CropLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the number of points that are cropped off the left side of the specified picture or OLE object. Read/write Single."
+    },
+    {
+      "name": "CropRight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the number of points that are cropped off the right side of the specified picture or OLE object. Read/write Single."
+    },
+    {
+      "name": "CropTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the number of points that are cropped off the top of the specified picture or OLE object. Read/write Single."
+    },
+    {
+      "name": "TransparencyColor",
+      "kind": "property",
+      "type": "MsoRGBType",
+      "access": "read/write",
+      "description": "Returns or sets the transparent color for the specified picture as a red-green-blue (RGB) value. For this property to take effect, the TransparentBackground property must be set to True. Applies to bitmaps only. Read/write Long."
+    },
+    {
+      "name": "TransparentBackground",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Use the TransparencyColor property to set the transparent color. Applies to bitmaps only. Read/write MsoTriState."
+    },
+    {
+      "name": "Crop",
+      "kind": "property",
+      "type": "Crop",
+      "access": "read-only",
+      "description": "Returns a Crop object that represents the cropping settings for the specified PictureFormat object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "IncrementBrightness",
+      "kind": "method",
+      "signature": "IncrementBrightness(Increment As Single)",
+      "description": "Changes the brightness of the picture by the specified amount. Use the Brightness property to set the absolute brightness of the picture.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": "Specifies how much to change the value of the Brightness property for the picture. A positive value makes the picture brighter; a negative value makes the picture darker."
+        }
+      ]
+    },
+    {
+      "name": "IncrementContrast",
+      "kind": "method",
+      "signature": "IncrementContrast(Increment As Single)",
+      "description": "Changes the contrast of the picture by the specified amount. Use the Contrast property to set the absolute contrast for the picture.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": "Specifies how much to change the value of the Contrast property for the picture. A positive value increases the contrast; a negative value decreases the contrast."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,48 @@
+{
+  "name": "WorkflowTemplates",
+  "kind": "Dispatch Interface",
+  "guid": "{000CD903-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a collection of WorkflowTemplate objects.",
+  "remarks": "",
+  "example": "Sub DisplayWorkTemplates()\nDim objWorkflowTemplates As WorkflowTemplates\nDim objWorkflowTemplate As WorkflowTemplate\nDim cnt As Integer\n\nSet objWorkflowTemplates = Document.GetWorkflowTemplates()\n\nFor cnt = 1 To objWorkflowTemplates.Count\n Debug.Print objWorkflowTemplate(cnt).Name\nNext\n\nSet objWorkflowTemplate = objWorkflowTemplates(1)\nobjWorkflowTemplate.Show\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the WorkflowTemplates object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the WorkflowTemplates object was created. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "WorkflowTemplate",
+      "access": "read-only",
+      "description": "Gets a WorkflowTemplate object from the WorkflowTemplates collection. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the WorkflowTemplates collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -1,0 +1,33 @@
+{
+  "name": "XlLinkedDataTypeState",
+  "kind": "Enumeration",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Indicates the state of cells that may contain Linked data types such as Stocks or Geography. These are the possible values of the Range.LinkedDataTypeState property.",
+  "constants": [
+    {
+      "name": "xlLinkedDataTypeStateNone",
+      "value": 0,
+      "description": "The cell does not contain any Linked data types."
+    },
+    {
+      "name": "xlLinkedDataTypeStateValidLinkedData",
+      "value": 1,
+      "description": "The cell contains a Linked data type."
+    },
+    {
+      "name": "xlLinkedDataTypeStateDisambiguationNeeded",
+      "value": 2,
+      "description": "The cell needs to be disambiguated by the user before a Linked data type can be inserted. For example, if the user types \"New York\" into a cell and attempts to convert it to a \"Geography\" data type, they may need to select whether they meant New York State or New York City. Until they do so, the cell will be in this state."
+    },
+    {
+      "name": "xlLinkedDataTypeStateBrokenLinkedData",
+      "value": 3,
+      "description": "There is a valid Linked data type in the cell, but entity no longer exists on the service."
+    },
+    {
+      "name": "xlLinkedDataTypeStateFetchingData",
+      "value": 4,
+      "description": "The Linked data type in the cell is in the middle of refreshing new data from the service."
+    }
+  ]
+}

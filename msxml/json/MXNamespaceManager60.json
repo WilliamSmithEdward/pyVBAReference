@@ -1,0 +1,142 @@
+{
+  "name": "MXNamespaceManager60",
+  "kind": "Class",
+  "guid": "{88D96A11-F192-11D4-A65F-0040963251E5}",
+  "library": "Microsoft XML, v6.0",
+  "description": "MX Namespace Manager 6.0",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "allowOverride",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "reset",
+      "kind": "method",
+      "signature": "reset()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "pushContext",
+      "kind": "method",
+      "signature": "pushContext()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "pushNodeContext",
+      "kind": "method",
+      "signature": "pushNodeContext(contextNode As IXMLDOMNode, [fDeep As Boolean])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "contextNode",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "fDeep",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "popContext",
+      "kind": "method",
+      "signature": "popContext()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "declarePrefix",
+      "kind": "method",
+      "signature": "declarePrefix(prefix As String, namespaceURI As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "prefix",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "namespaceURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getDeclaredPrefixes",
+      "kind": "method",
+      "signature": "getDeclaredPrefixes() As IMXNamespacePrefixes",
+      "description": "",
+      "returns": "IMXNamespacePrefixes"
+    },
+    {
+      "name": "getPrefixes",
+      "kind": "method",
+      "signature": "getPrefixes(namespaceURI As String) As IMXNamespacePrefixes",
+      "description": "",
+      "returns": "IMXNamespacePrefixes",
+      "parameters": [
+        {
+          "name": "namespaceURI",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getURI",
+      "kind": "method",
+      "signature": "getURI(prefix As String) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "prefix",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getURIFromNode",
+      "kind": "method",
+      "signature": "getURIFromNode(strPrefix As String, contextNode As IXMLDOMNode) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "strPrefix",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "contextNode",
+          "type": "IXMLDOMNode",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

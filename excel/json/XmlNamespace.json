@@ -1,0 +1,55 @@
+{
+  "name": "XmlNamespace",
+  "kind": "Dispatch Interface",
+  "guid": "{00024476-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a namespace that has been added to a workbook.",
+  "remarks": "Use the Prefix property to return the prefix of an XmlNamespace object. Use the Uri property to return the Uniform Resource Identifier (URI) of an XmlNamespace object.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Uri",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String that represents the Uniform Resource Identifier (URI) for the specified XML namespace. Read-only."
+    },
+    {
+      "name": "Prefix",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String that represents the prefix for the specified XML namespace. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

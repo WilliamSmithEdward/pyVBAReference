@@ -1,0 +1,99 @@
+{
+  "name": "Sort",
+  "kind": "Dispatch Interface",
+  "guid": "{000244AB-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a sort of a range of data.",
+  "remarks": "",
+  "example": "Sub SortData()\n\n 'Building data to sort on the active sheet.\n Range(\"A1\").Value = \"Name\"\n Range(\"A2\").Value = \"Bill\"\n Range(\"A3\").Value = \"Rod\"\n Range(\"A4\").Value = \"John\"\n Range(\"A5\").Value = \"Paddy\"\n Range(\"A6\").Value = \"Kelly\"\n Range(\"A7\").Value = \"William\"\n Range(\"A8\").Value = \"Janet\"\n Range(\"A9\").Value = \"Florence\"\n Range(\"A10\").Value = \"Albert\"\n Range(\"A11\").Value = \"Mary\"\n MsgBox \"The list is out of order. Hit Ok to continue...\", vbInformation\n\n 'Selecting a cell within the range.\n Range(\"A2\").Select\n\n 'Applying sort.\n With ActiveWorkbook.Worksheets(ActiveSheet.Name).Sort\n .SortFields.Clear\n .SortFields.Add Key:=Range(\"A2:A11\"), _\n SortOn:=xlSortOnValues, Order:=xlAscending, DataOption:=xlSortNormal\n .SetRange Range(\"A1:A11\")\n .Header = xlYes\n .MatchCase = False\n .Orientation = xlTopToBottom\n .SortMethod = xlPinYin\n .Apply\n End With\n MsgBox \"Sort complete.\", vbInformation\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Rng",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Return the range of values on which the sort is performed. Read-only."
+    },
+    {
+      "name": "Header",
+      "kind": "property",
+      "type": "XlYesNoGuess",
+      "access": "read/write",
+      "description": "Specifies whether the first row contains header information. Read/write XlYesNoGuess."
+    },
+    {
+      "name": "MatchCase",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Set to True to perform a case-sensitive sort, or set to False to perform a non-case-sensitive sort. Read/write."
+    },
+    {
+      "name": "Orientation",
+      "kind": "property",
+      "type": "XlSortOrientation",
+      "access": "read/write",
+      "description": "Specifies the orientation for the sort. Read/write XlSortOrientation."
+    },
+    {
+      "name": "SortMethod",
+      "kind": "property",
+      "type": "XlSortMethod",
+      "access": "read/write",
+      "description": "Specifies the sort method for Chinese languages. Read/write XlSortMethod."
+    },
+    {
+      "name": "SortFields",
+      "kind": "property",
+      "type": "SortFields",
+      "access": "read-only",
+      "description": "Returns the SortFields object that represents the collection of sort fields associated with the Sort object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "SetRange",
+      "kind": "method",
+      "signature": "SetRange(Rng As Range)",
+      "description": "Sets the range over which the sort occurs.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Rng",
+          "type": "Range",
+          "optional": false,
+          "description": "Specifies the range over which the sort represented by the Sort object occurs."
+        }
+      ]
+    },
+    {
+      "name": "Apply",
+      "kind": "method",
+      "signature": "Apply()",
+      "description": "Sorts the range based on the currently applied sort states.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,496 @@
+{
+  "name": "TextRange2",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0397-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents the text frame in a Shape or ShapeRange object.",
+  "remarks": "This object contains the text in the text frame as well as the properties and methods that control the alignment and anchoring of the text frame. Use the TextFrame2 property to return a TextFrame2 object.",
+  "example": "Set myDocument = Worksheets(1)\nWith myDocument.Shapes.AddShape(msoShapeRectangle, _\n 0, 0, 250, 140).TextFrame2\n .TextRange.Text = \"Here is some test text\"\n .MarginBottom = 10\n .MarginLeft = 10\n .MarginRight = 10\n .MarginTop = 10\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the current instance of the Microsoft Office application. When used with an object qualifier, this property returns an Application object that represents the creator of the TextRange2 object. When used with an OLE Automation object, it returns the object's application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the TextRange2 object was created. Read-only."
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets a String value that represents the text in a text range. Read/write."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the TextRange2 collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the TextRange2 object. Read-only."
+    },
+    {
+      "name": "Paragraphs",
+      "kind": "property",
+      "type": "TextRange2",
+      "access": "read-only",
+      "description": "Gets a TextRange2 object that represents the specified subset of text paragraphs. Read-only."
+    },
+    {
+      "name": "Sentences",
+      "kind": "property",
+      "type": "TextRange2",
+      "access": "read-only",
+      "description": "Returns a TextRange2 object that represents the specified subset of text sentences. Read-only."
+    },
+    {
+      "name": "Words",
+      "kind": "property",
+      "type": "TextRange2",
+      "access": "read-only",
+      "description": "Gets a TextRange2 object that represents the specified subset of text words. Read-only."
+    },
+    {
+      "name": "Characters",
+      "kind": "property",
+      "type": "TextRange2",
+      "access": "read-only",
+      "description": "Read-only."
+    },
+    {
+      "name": "Lines",
+      "kind": "property",
+      "type": "TextRange2",
+      "access": "read-only",
+      "description": "Returns a TextRange2 object that represents the specified subset of text lines. Read-only."
+    },
+    {
+      "name": "Runs",
+      "kind": "property",
+      "type": "TextRange2",
+      "access": "read-only",
+      "description": "Gets a TextRange2 object that represents the specified subset of text runs. A text run consists of a range of characters that share the same font attributes. Read-only."
+    },
+    {
+      "name": "ParagraphFormat",
+      "kind": "property",
+      "type": "ParagraphFormat2",
+      "access": "read-only",
+      "description": "Returns a ParagraphFormat object that represents paragraph formatting for the specified text. Read-only."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font2",
+      "access": "read-only",
+      "description": "Returns a Font object that represents character formatting for the TextRange2 object. Read-only."
+    },
+    {
+      "name": "Length",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long that represents the length of a text range. Read-only."
+    },
+    {
+      "name": "Start",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long value indicating the starting point of the specified text range. Read-only."
+    },
+    {
+      "name": "BoundLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Gets the left coordinate, in points, of the text bounding box for the specified text. Read-only."
+    },
+    {
+      "name": "BoundTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Gets the top coordinate, in points, of the text bounding box for the specified text. Read-only."
+    },
+    {
+      "name": "BoundWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Gets the width, in points, of the text bounding box for the specified text. Read-only."
+    },
+    {
+      "name": "BoundHeight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Gets the height, in points, of the text bounding box for the specified text. Read-only."
+    },
+    {
+      "name": "LanguageID",
+      "kind": "property",
+      "type": "MsoLanguageID",
+      "access": "read/write",
+      "description": "Gets or sets the MsoLanguageID value of the TextRange2 object. Read/write."
+    },
+    {
+      "name": "MathZones",
+      "kind": "property",
+      "type": "TextRange2",
+      "access": "read-only",
+      "description": "Sets the starting point and length of a math zone within a text range. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As TextRange2",
+      "description": "Gets the range of text specified by the index number from the TextRange2 object.",
+      "returns": "TextRange2",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The index number of the text range."
+        }
+      ]
+    },
+    {
+      "name": "TrimText",
+      "kind": "method",
+      "signature": "TrimText() As TextRange2",
+      "description": "Returns a TextRange2 object that represents the specified text that has the whitespace removed.",
+      "returns": "TextRange2"
+    },
+    {
+      "name": "InsertAfter",
+      "kind": "method",
+      "signature": "InsertAfter([NewText As String]) As TextRange2",
+      "description": "Inserts text to the right of the existing text in the TextRange2 object.",
+      "returns": "TextRange2",
+      "parameters": [
+        {
+          "name": "NewText",
+          "type": "String",
+          "optional": true,
+          "description": "Contains the text to be inserted."
+        }
+      ]
+    },
+    {
+      "name": "InsertBefore",
+      "kind": "method",
+      "signature": "InsertBefore([NewText As String]) As TextRange2",
+      "description": "Inserts text to the left of the existing text in the TextRange2 object.",
+      "returns": "TextRange2",
+      "parameters": [
+        {
+          "name": "NewText",
+          "type": "String",
+          "optional": true,
+          "description": "Contains the text to be inserted."
+        }
+      ]
+    },
+    {
+      "name": "InsertSymbol",
+      "kind": "method",
+      "signature": "InsertSymbol(FontName As String, CharNumber As Long, [Unicode As MsoTriState]) As TextRange2",
+      "description": "Inserts a symbol from the specified font set into the range of text represented by the TextRange2 object.",
+      "returns": "TextRange2",
+      "parameters": [
+        {
+          "name": "FontName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the font set."
+        },
+        {
+          "name": "CharNumber",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of the symbol."
+        },
+        {
+          "name": "Unicode",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Indicates whether the value of the symbol is specified as a unicode value."
+        }
+      ]
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects the TextRange2 object.",
+      "returns": "void"
+    },
+    {
+      "name": "Cut",
+      "kind": "method",
+      "signature": "Cut()",
+      "description": "Removes a portion or all of the text from a range of text.",
+      "returns": "void"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy()",
+      "description": "Copies a TextRange2 object.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes a TextRange2 object.",
+      "returns": "void"
+    },
+    {
+      "name": "Paste",
+      "kind": "method",
+      "signature": "Paste() As TextRange2",
+      "description": "Pastes the contents of the Clipboard into the TextRange2 object.",
+      "returns": "TextRange2"
+    },
+    {
+      "name": "PasteSpecial",
+      "kind": "method",
+      "signature": "PasteSpecial(Format As MsoClipboardFormat) As TextRange2",
+      "description": "Replaces the text range with the contents of the Clipboard in the format specified. If the paste succeeds, this method returns a TextRange2 object, including the text range that was pasted.",
+      "returns": "TextRange2",
+      "parameters": [
+        {
+          "name": "Format",
+          "type": "MsoClipboardFormat",
+          "optional": false,
+          "description": "Determines the format for the Clipboard contents when they're inserted into the document."
+        }
+      ]
+    },
+    {
+      "name": "ChangeCase",
+      "kind": "method",
+      "signature": "ChangeCase(Type As MsoTextChangeCase)",
+      "description": "Changes the case of a TextRange2 object to one of the values in the MsoTextChangeCase enumeration.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "MsoTextChangeCase",
+          "optional": false,
+          "description": "Specifies the type of change to make to the text."
+        }
+      ]
+    },
+    {
+      "name": "AddPeriods",
+      "kind": "method",
+      "signature": "AddPeriods()",
+      "description": "Adds period (.) punctuation to the right side of the text contained in a TextRange2 object for left-to-right languages and on the left side for right-to-left languages.",
+      "returns": "void"
+    },
+    {
+      "name": "RemovePeriods",
+      "kind": "method",
+      "signature": "RemovePeriods()",
+      "description": "Removes all period (.) punctuation from the text in the TextRange2 object.",
+      "returns": "void"
+    },
+    {
+      "name": "Find",
+      "kind": "method",
+      "signature": "Find(FindWhat As String, [After As Long], [MatchCase As MsoTriState], [WholeWords As MsoTriState]) As TextRange2",
+      "description": "Searches a TextRange2 object for a subset of text.",
+      "returns": "TextRange2",
+      "parameters": [
+        {
+          "name": "FindWhat",
+          "type": "String",
+          "optional": false,
+          "description": "Contains the text to find."
+        },
+        {
+          "name": "After",
+          "type": "Long",
+          "optional": true,
+          "description": "Specifies the point in the text range to start the search."
+        },
+        {
+          "name": "MatchCase",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Specifies if the target text must exactly match the case of the search text."
+        },
+        {
+          "name": "WholeWords",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Specifies that only whole words will be searched."
+        }
+      ]
+    },
+    {
+      "name": "Replace",
+      "kind": "method",
+      "signature": "Replace(FindWhat As String, ReplaceWhat As String, [After As Long], [MatchCase As MsoTriState], [WholeWords As MsoTriState]) As TextRange2",
+      "description": "Finds specific text in a text range, replaces the found text with a specified string, and returns a TextRange2 object that represents the first occurrence of the found text. Returns Nothing if no match is found.",
+      "returns": "TextRange2",
+      "parameters": [
+        {
+          "name": "FindWhat",
+          "type": "String",
+          "optional": false,
+          "description": "The text to search for."
+        },
+        {
+          "name": "ReplaceWhat",
+          "type": "String",
+          "optional": false,
+          "description": "The text you want to replace the found text with."
+        },
+        {
+          "name": "After",
+          "type": "Long",
+          "optional": true,
+          "description": "The position of the character (in the specified text range) after which you want to search for the next occurrence of FindWhat. For example, if you want to search from the fifth character of the text range, specify 4 for After. If this argument is omitted, the first character of the text range is used as the starting point for the search."
+        },
+        {
+          "name": "MatchCase",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Determines whether a distinction is made on the basis of case."
+        },
+        {
+          "name": "WholeWords",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Determines whether only whole words are searched."
+        }
+      ]
+    },
+    {
+      "name": "RotatedBounds",
+      "kind": "method",
+      "signature": "RotatedBounds(X1 As Single, Y1 As Single, X2 As Single, Y2 As Single, X3 As Single, Y3 As Single, x4 As Single, y4 As Single)",
+      "description": "Gets the coordinates of the vertices of the text bounding box for the specified text range. Read-only.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "X1",
+          "type": "Single",
+          "optional": false,
+          "description": "Returns the position (in points) of the _X_ coordinate of the first vertex of the bounding box for the text within the specified text range."
+        },
+        {
+          "name": "Y1",
+          "type": "Single",
+          "optional": false,
+          "description": "Returns the position (in points) of the _Y_ coordinate of the first vertex of the bounding box for the text within the specified text range."
+        },
+        {
+          "name": "X2",
+          "type": "Single",
+          "optional": false,
+          "description": "Returns the position (in points) of the _X_ coordinate of the second vertex of the bounding box for the text within the specified text range."
+        },
+        {
+          "name": "Y2",
+          "type": "Single",
+          "optional": false,
+          "description": "Returns the position (in points) of the _Y_ coordinate of the second vertex of the bounding box for the text within the specified text range."
+        },
+        {
+          "name": "X3",
+          "type": "Single",
+          "optional": false,
+          "description": "Returns the position (in points) of the _X_ coordinate of the third vertex of the bounding box for the text within the specified text range."
+        },
+        {
+          "name": "Y3",
+          "type": "Single",
+          "optional": false,
+          "description": "Returns the position (in points) of the _Y_ coordinate of the third vertex of the bounding box for the text within the specified text range."
+        },
+        {
+          "name": "x4",
+          "type": "Single",
+          "optional": false,
+          "description": "Returns the position (in points) of the _X_ coordinate of the fourth vertex of the bounding box for the text within the specified text range."
+        },
+        {
+          "name": "y4",
+          "type": "Single",
+          "optional": false,
+          "description": "Returns the position (in points) of the _Y_ coordinate of the fourth vertex of the bounding box for the text within the specified text range."
+        }
+      ]
+    },
+    {
+      "name": "RtlRun",
+      "kind": "method",
+      "signature": "RtlRun()",
+      "description": "Returns a TextRange2 object that represents the specified subset of right-to-left text runs. A text run consists of a range of characters that share the same font attributes.",
+      "returns": "void"
+    },
+    {
+      "name": "LtrRun",
+      "kind": "method",
+      "signature": "LtrRun()",
+      "description": "Returns a TextRange2 object that represents the specified subset of left-to-right text runs. A text run consists of a range of characters that share the same font attributes.",
+      "returns": "void"
+    },
+    {
+      "name": "InsertChartField",
+      "kind": "method",
+      "signature": "InsertChartField(ChartFieldType As MsoChartFieldType, [Formula As String], [Position As Long]) As TextRange2",
+      "description": "Inserts a field into the body of a data label in a chart.",
+      "returns": "TextRange2",
+      "parameters": [
+        {
+          "name": "ChartFieldType",
+          "type": "MsoChartFieldType",
+          "optional": false,
+          "description": "Specifies the type of chart field to insert into a data label."
+        },
+        {
+          "name": "Formula",
+          "type": "String",
+          "optional": true,
+          "description": "Specifies a cell (or range) if the msoChartFieldFormula constant is passed in for the _ChartFieldType_ parameter."
+        },
+        {
+          "name": "Position",
+          "type": "Long",
+          "optional": true,
+          "description": "Specifies the character position where the chart field is inserted. The default is to append the field to the end of the text. If the position value is out of range, the default is used."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

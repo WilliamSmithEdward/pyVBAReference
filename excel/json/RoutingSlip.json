@@ -1,0 +1,91 @@
+{
+  "name": "RoutingSlip",
+  "kind": "Dispatch Interface",
+  "guid": "{000208AA-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Delivery",
+      "kind": "property",
+      "type": "XlRoutingSlipDelivery",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Message",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Recipients",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ReturnWhenDone",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Status",
+      "kind": "property",
+      "type": "XlRoutingSlipStatus",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Subject",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TrackStatus",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Reset",
+      "kind": "method",
+      "signature": "Reset() As Variant",
+      "description": "",
+      "returns": "Variant"
+    }
+  ],
+  "events": []
+}

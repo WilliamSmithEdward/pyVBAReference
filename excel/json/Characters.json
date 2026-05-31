@@ -1,0 +1,92 @@
+{
+  "name": "Characters",
+  "kind": "Dispatch Interface",
+  "guid": "{00020878-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents characters in an object that contains text.",
+  "remarks": "The Characters object lets you modify any sequence of characters contained in the full text string. Use Characters (_start_, _length_), where _start_ is the start character number and _length_ is the number of characters, to return a Characters object.",
+  "example": "With Worksheets(\"Sheet1\").Range(\"B1\")\n .Value = \"New Title\"\n .Characters(5, 5).Font.Bold = True\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns a String value that represents the text of this range of characters."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read-only",
+      "description": "Returns a Font object that represents the font of the specified object."
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the text for the specified object. Read/write String."
+    },
+    {
+      "name": "PhoneticCharacters",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the phonetic text in the specified Characters object. Read/write String."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Insert",
+      "kind": "method",
+      "signature": "Insert(String As String) As Variant",
+      "description": "Inserts a string preceding the selected characters.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "String",
+          "type": "String",
+          "optional": false,
+          "description": "The string to insert."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

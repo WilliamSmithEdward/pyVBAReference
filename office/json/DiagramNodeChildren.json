@@ -1,0 +1,106 @@
+{
+  "name": "DiagramNodeChildren",
+  "kind": "Dispatch Interface",
+  "guid": "{000C036F-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "FirstChild",
+      "kind": "property",
+      "type": "DiagramNode",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "LastChild",
+      "kind": "property",
+      "type": "DiagramNode",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As DiagramNode",
+      "description": "",
+      "returns": "DiagramNode",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddNode",
+      "kind": "method",
+      "signature": "AddNode([Index As Variant], [NodeType As MsoDiagramNodeType]) As DiagramNode",
+      "description": "",
+      "returns": "DiagramNode",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "NodeType",
+          "type": "MsoDiagramNodeType",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SelectAll",
+      "kind": "method",
+      "signature": "SelectAll()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

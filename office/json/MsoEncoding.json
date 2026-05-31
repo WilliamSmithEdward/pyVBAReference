@@ -1,0 +1,693 @@
+{
+  "name": "MsoEncoding",
+  "kind": "Enumeration",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Specifies the document encoding (code page or character set) for the web browser to use when a user views a saved document.",
+  "constants": [
+    {
+      "name": "msoEncodingThai",
+      "value": 874,
+      "description": "Thai"
+    },
+    {
+      "name": "msoEncodingJapaneseShiftJIS",
+      "value": 932,
+      "description": "Japanese (Shift-JIS)"
+    },
+    {
+      "name": "msoEncodingSimplifiedChineseGBK",
+      "value": 936,
+      "description": "Simplified Chinese GBK"
+    },
+    {
+      "name": "msoEncodingKorean",
+      "value": 949,
+      "description": "Korean"
+    },
+    {
+      "name": "msoEncodingTraditionalChineseBig5",
+      "value": 950,
+      "description": "Traditional Chinese Big 5"
+    },
+    {
+      "name": "msoEncodingUnicodeLittleEndian",
+      "value": 1200,
+      "description": "Unicode little endian"
+    },
+    {
+      "name": "msoEncodingUnicodeBigEndian",
+      "value": 1201,
+      "description": "Unicode big endian"
+    },
+    {
+      "name": "msoEncodingCentralEuropean",
+      "value": 1250,
+      "description": "Central European"
+    },
+    {
+      "name": "msoEncodingCyrillic",
+      "value": 1251,
+      "description": "Cyrillic"
+    },
+    {
+      "name": "msoEncodingWestern",
+      "value": 1252,
+      "description": "Western"
+    },
+    {
+      "name": "msoEncodingGreek",
+      "value": 1253,
+      "description": "Greek"
+    },
+    {
+      "name": "msoEncodingTurkish",
+      "value": 1254,
+      "description": "Turkish"
+    },
+    {
+      "name": "msoEncodingHebrew",
+      "value": 1255,
+      "description": "Hebrew"
+    },
+    {
+      "name": "msoEncodingArabic",
+      "value": 1256,
+      "description": "Arabic"
+    },
+    {
+      "name": "msoEncodingBaltic",
+      "value": 1257,
+      "description": "Baltic"
+    },
+    {
+      "name": "msoEncodingVietnamese",
+      "value": 1258,
+      "description": "Vietnamese"
+    },
+    {
+      "name": "msoEncodingAutoDetect",
+      "value": 50001,
+      "description": "Web browser auto-detects type of encoding to use."
+    },
+    {
+      "name": "msoEncodingJapaneseAutoDetect",
+      "value": 50932,
+      "description": "Web browser auto-detects type of Japanese encoding to use."
+    },
+    {
+      "name": "msoEncodingSimplifiedChineseAutoDetect",
+      "value": 50936,
+      "description": "Web browser auto-detects type of Simplified Chinese encoding to use."
+    },
+    {
+      "name": "msoEncodingKoreanAutoDetect",
+      "value": 50949,
+      "description": "Web browser auto-detects type of Korean encoding to use."
+    },
+    {
+      "name": "msoEncodingTraditionalChineseAutoDetect",
+      "value": 50950,
+      "description": "Web browser auto-detects type of Traditional Chinese encoding to use."
+    },
+    {
+      "name": "msoEncodingCyrillicAutoDetect",
+      "value": 51251,
+      "description": "Web browser auto-detects type of Cyrillic encoding to use."
+    },
+    {
+      "name": "msoEncodingGreekAutoDetect",
+      "value": 51253,
+      "description": "Web browser auto-detects type of Greek encoding to use."
+    },
+    {
+      "name": "msoEncodingArabicAutoDetect",
+      "value": 51256,
+      "description": "Web browser auto-detects type of Arabic encoding to use."
+    },
+    {
+      "name": "msoEncodingISO88591Latin1",
+      "value": 28591,
+      "description": "ISO 8859-1 Latin 1"
+    },
+    {
+      "name": "msoEncodingISO88592CentralEurope",
+      "value": 28592,
+      "description": "ISO 8859-2 Central Europe"
+    },
+    {
+      "name": "msoEncodingISO88593Latin3",
+      "value": 28593,
+      "description": "ISO 8859-3 Latin 3"
+    },
+    {
+      "name": "msoEncodingISO88594Baltic",
+      "value": 28594,
+      "description": "ISO 8859-4 Baltic"
+    },
+    {
+      "name": "msoEncodingISO88595Cyrillic",
+      "value": 28595,
+      "description": "ISO 8859-5 Cyrillic"
+    },
+    {
+      "name": "msoEncodingISO88596Arabic",
+      "value": 28596,
+      "description": "ISA 8859-6 Arabic"
+    },
+    {
+      "name": "msoEncodingISO88597Greek",
+      "value": 28597,
+      "description": "ISO 8859-7 Greek"
+    },
+    {
+      "name": "msoEncodingISO88598Hebrew",
+      "value": 28598,
+      "description": "ISO 8859-8 Hebrew"
+    },
+    {
+      "name": "msoEncodingISO88599Turkish",
+      "value": 28599,
+      "description": "ISO 8859-9 Turkish"
+    },
+    {
+      "name": "msoEncodingISO885915Latin9",
+      "value": 28605,
+      "description": "ISO 8859-15 with Latin 9"
+    },
+    {
+      "name": "msoEncodingISO88598HebrewLogical",
+      "value": 38598,
+      "description": "ISO 8859-8 Hebrew (Logical)"
+    },
+    {
+      "name": "msoEncodingISO2022JPNoHalfwidthKatakana",
+      "value": 50220,
+      "description": "ISO 2022-JP with no half-width Katakana"
+    },
+    {
+      "name": "msoEncodingISO2022JPJISX02021984",
+      "value": 50221,
+      "description": "ISO 2022-JP"
+    },
+    {
+      "name": "msoEncodingISO2022JPJISX02011989",
+      "value": 50222,
+      "description": "ISO 2022-JP"
+    },
+    {
+      "name": "msoEncodingISO2022KR",
+      "value": 50225,
+      "description": "ISO 2022-KR"
+    },
+    {
+      "name": "msoEncodingISO2022CNTraditionalChinese",
+      "value": 50227,
+      "description": "ISO 2022-CN encoding as used with Traditional Chinese"
+    },
+    {
+      "name": "msoEncodingISO2022CNSimplifiedChinese",
+      "value": 50229,
+      "description": "ISO 2022-CN encoding as used with Simplified Chinese"
+    },
+    {
+      "name": "msoEncodingMacRoman",
+      "value": 10000,
+      "description": "Macintosh Roman"
+    },
+    {
+      "name": "msoEncodingMacJapanese",
+      "value": 10001,
+      "description": "Macintosh Japanese"
+    },
+    {
+      "name": "msoEncodingMacTraditionalChineseBig5",
+      "value": 10002,
+      "description": "Macintosh Traditional Chinese (Big 5)"
+    },
+    {
+      "name": "msoEncodingMacKorean",
+      "value": 10003,
+      "description": "Macintosh Korean"
+    },
+    {
+      "name": "msoEncodingMacArabic",
+      "value": 10004,
+      "description": "Macintosh Arabic"
+    },
+    {
+      "name": "msoEncodingMacHebrew",
+      "value": 10005,
+      "description": "Macintosh Hebrew"
+    },
+    {
+      "name": "msoEncodingMacGreek1",
+      "value": 10006,
+      "description": "Macintosh Greek"
+    },
+    {
+      "name": "msoEncodingMacCyrillic",
+      "value": 10007,
+      "description": "Macintosh Cyrillic"
+    },
+    {
+      "name": "msoEncodingMacSimplifiedChineseGB2312",
+      "value": 10008,
+      "description": "Macintosh Simplified Chinese (GB 2312)"
+    },
+    {
+      "name": "msoEncodingMacRomania",
+      "value": 10010,
+      "description": "Macintosh Romanian"
+    },
+    {
+      "name": "msoEncodingMacUkraine",
+      "value": 10017,
+      "description": "Macintosh Ukrainian"
+    },
+    {
+      "name": "msoEncodingMacLatin2",
+      "value": 10029,
+      "description": "Macintosh Latin 2"
+    },
+    {
+      "name": "msoEncodingMacIcelandic",
+      "value": 10079,
+      "description": "Macintosh Icelandic"
+    },
+    {
+      "name": "msoEncodingMacTurkish",
+      "value": 10081,
+      "description": "Macintosh Turkish"
+    },
+    {
+      "name": "msoEncodingMacCroatia",
+      "value": 10082,
+      "description": "Macintosh Croatian"
+    },
+    {
+      "name": "msoEncodingEBCDICUSCanada",
+      "value": 37,
+      "description": "EBCDIC as used in the United States and Canada"
+    },
+    {
+      "name": "msoEncodingEBCDICInternational",
+      "value": 500,
+      "description": "International EBCDIC"
+    },
+    {
+      "name": "msoEncodingEBCDICMultilingualROECELatin2",
+      "value": 870,
+      "description": "EBCDIC Multilingual ROECE (Latin 2)"
+    },
+    {
+      "name": "msoEncodingEBCDICGreekModern",
+      "value": 875,
+      "description": "EBCDIC as used in the Modern Greek language"
+    },
+    {
+      "name": "msoEncodingEBCDICTurkishLatin5",
+      "value": 1026,
+      "description": "EBCDIC as used with Turkish (Latin 5)"
+    },
+    {
+      "name": "msoEncodingEBCDICGermany",
+      "value": 20273,
+      "description": "EBCDIC as used in Germany"
+    },
+    {
+      "name": "msoEncodingEBCDICDenmarkNorway",
+      "value": 20277,
+      "description": "EBCDIC as used in Denmark and Norway"
+    },
+    {
+      "name": "msoEncodingEBCDICFinlandSweden",
+      "value": 20278,
+      "description": "EBCDIC as used in Finland and Sweden"
+    },
+    {
+      "name": "msoEncodingEBCDICItaly",
+      "value": 20280,
+      "description": "EBCDIC as used in Italy"
+    },
+    {
+      "name": "msoEncodingEBCDICLatinAmericaSpain",
+      "value": 20284,
+      "description": "EBCDIC as used in Latin America and Spain"
+    },
+    {
+      "name": "msoEncodingEBCDICUnitedKingdom",
+      "value": 20285,
+      "description": "EBCDIC as used in the United Kingdom"
+    },
+    {
+      "name": "msoEncodingEBCDICJapaneseKatakanaExtended",
+      "value": 20290,
+      "description": "EBCDIC as used with Japanese Katakana (extended)"
+    },
+    {
+      "name": "msoEncodingEBCDICFrance",
+      "value": 20297,
+      "description": "EBCDIC as used in France"
+    },
+    {
+      "name": "msoEncodingEBCDICArabic",
+      "value": 20420,
+      "description": "Extended Binary Coded Decimal Interchange Code (EBCDIC) Arabic"
+    },
+    {
+      "name": "msoEncodingEBCDICGreek",
+      "value": 20423,
+      "description": "EBCDIC as used in the Greek language"
+    },
+    {
+      "name": "msoEncodingEBCDICHebrew",
+      "value": 20424,
+      "description": "EBCDIC as used in the Hebrew language"
+    },
+    {
+      "name": "msoEncodingEBCDICKoreanExtended",
+      "value": 20833,
+      "description": "EBCDIC as used with Korean (extended)"
+    },
+    {
+      "name": "msoEncodingEBCDICThai",
+      "value": 20838,
+      "description": "EBCDIC as used with Thai"
+    },
+    {
+      "name": "msoEncodingEBCDICIcelandic",
+      "value": 20871,
+      "description": "EBCDIC as used in Iceland"
+    },
+    {
+      "name": "msoEncodingEBCDICTurkish",
+      "value": 20905,
+      "description": "EBCDIC as used with Turkish"
+    },
+    {
+      "name": "msoEncodingEBCDICRussian",
+      "value": 20880,
+      "description": "EBCDIC as used with Russian"
+    },
+    {
+      "name": "msoEncodingEBCDICSerbianBulgarian",
+      "value": 21025,
+      "description": "EBCDIC as used with Serbian and Bulgarian"
+    },
+    {
+      "name": "msoEncodingEBCDICJapaneseKatakanaExtendedAndJapanese",
+      "value": 50930,
+      "description": "EBCDIC as used with Japanese Katakana (extended) and Japanese"
+    },
+    {
+      "name": "msoEncodingEBCDICUSCanadaAndJapanese",
+      "value": 50931,
+      "description": "EBCDIC as used in the United States and Canada, and with Japanese"
+    },
+    {
+      "name": "msoEncodingEBCDICKoreanExtendedAndKorean",
+      "value": 50933,
+      "description": "EBCDIC as used with Korean (extended) and Korean"
+    },
+    {
+      "name": "msoEncodingEBCDICSimplifiedChineseExtendedAndSimplifiedChinese",
+      "value": 50935,
+      "description": "EBCDIC as used with Simplified Chinese (extended) and Simplified Chinese"
+    },
+    {
+      "name": "msoEncodingEBCDICUSCanadaAndTraditionalChinese",
+      "value": 50937,
+      "description": "EBCDIC as used in the United States and Canada, and with Traditional Chinese"
+    },
+    {
+      "name": "msoEncodingEBCDICJapaneseLatinExtendedAndJapanese",
+      "value": 50939,
+      "description": "EBCDIC as used with Japanese Latin (extended) and Japanese"
+    },
+    {
+      "name": "msoEncodingOEMUnitedStates",
+      "value": 437,
+      "description": "OEM as used in the United States"
+    },
+    {
+      "name": "msoEncodingOEMGreek437G",
+      "value": 737,
+      "description": "OEM as used with Greek 437G"
+    },
+    {
+      "name": "msoEncodingOEMBaltic",
+      "value": 775,
+      "description": "OEM as used with Baltic"
+    },
+    {
+      "name": "msoEncodingOEMMultilingualLatinI",
+      "value": 850,
+      "description": "OEM as used with multi-lingual Latin I"
+    },
+    {
+      "name": "msoEncodingOEMMultilingualLatinII",
+      "value": 852,
+      "description": "OEM as used with multi-lingual Latin II"
+    },
+    {
+      "name": "msoEncodingOEMCyrillic",
+      "value": 855,
+      "description": "OEM as used with Cyrillic"
+    },
+    {
+      "name": "msoEncodingOEMTurkish",
+      "value": 857,
+      "description": "OEM as used with Turkish"
+    },
+    {
+      "name": "msoEncodingOEMPortuguese",
+      "value": 860,
+      "description": "OEM as used with Portuguese"
+    },
+    {
+      "name": "msoEncodingOEMIcelandic",
+      "value": 861,
+      "description": "OEM as used with Icelandic"
+    },
+    {
+      "name": "msoEncodingOEMHebrew",
+      "value": 862,
+      "description": "OEM as used with Hebrew"
+    },
+    {
+      "name": "msoEncodingOEMCanadianFrench",
+      "value": 863,
+      "description": "OEM as used with Canadian French"
+    },
+    {
+      "name": "msoEncodingOEMArabic",
+      "value": 864,
+      "description": "OEM as used with Arabic"
+    },
+    {
+      "name": "msoEncodingOEMNordic",
+      "value": 865,
+      "description": "OEM as used with Nordic languages"
+    },
+    {
+      "name": "msoEncodingOEMCyrillicII",
+      "value": 866,
+      "description": "OEM as used with Cyrillic II"
+    },
+    {
+      "name": "msoEncodingOEMModernGreek",
+      "value": 869,
+      "description": "OEM as used with Modern Greek"
+    },
+    {
+      "name": "msoEncodingEUCJapanese",
+      "value": 51932,
+      "description": "EUC as used with Japanese"
+    },
+    {
+      "name": "msoEncodingEUCChineseSimplifiedChinese",
+      "value": 51936,
+      "description": "Extended Unix Code (EUC) as used with Chinese and Simplified Chinese"
+    },
+    {
+      "name": "msoEncodingEUCKorean",
+      "value": 51949,
+      "description": "EUC as used with Korean"
+    },
+    {
+      "name": "msoEncodingEUCTaiwaneseTraditionalChinese",
+      "value": 51950,
+      "description": "EUC as used with Taiwanese and Traditional Chinese"
+    },
+    {
+      "name": "msoEncodingISCIIDevanagari",
+      "value": 57002,
+      "description": "ISCII as used with Devanagari"
+    },
+    {
+      "name": "msoEncodingISCIIBengali",
+      "value": 57003,
+      "description": "ISCII as used with Bengali"
+    },
+    {
+      "name": "msoEncodingISCIITamil",
+      "value": 57004,
+      "description": "ISCII as used with Tamil"
+    },
+    {
+      "name": "msoEncodingISCIITelugu",
+      "value": 57005,
+      "description": "ISCII as used with Telugu"
+    },
+    {
+      "name": "msoEncodingISCIIAssamese",
+      "value": 57006,
+      "description": "Indian Script Code for Information Interchange (ISCII) as used with Assamese"
+    },
+    {
+      "name": "msoEncodingISCIIOriya",
+      "value": 57007,
+      "description": "ISCII as used with Odia (Oriya)"
+    },
+    {
+      "name": "msoEncodingISCIIKannada",
+      "value": 57008,
+      "description": "ISCII as used with Kannada"
+    },
+    {
+      "name": "msoEncodingISCIIMalayalam",
+      "value": 57009,
+      "description": "ISCII as used with Malayalam"
+    },
+    {
+      "name": "msoEncodingISCIIGujarati",
+      "value": 57010,
+      "description": "ISCII as used with Gujarati"
+    },
+    {
+      "name": "msoEncodingISCIIPunjabi",
+      "value": 57011,
+      "description": "ISCII as used with Punjabi"
+    },
+    {
+      "name": "msoEncodingArabicASMO",
+      "value": 708,
+      "description": "Arabic ASMO"
+    },
+    {
+      "name": "msoEncodingArabicTransparentASMO",
+      "value": 720,
+      "description": "Transparent Arabic"
+    },
+    {
+      "name": "msoEncodingKoreanJohab",
+      "value": 1361,
+      "description": "Korean (Johab)"
+    },
+    {
+      "name": "msoEncodingTaiwanCNS",
+      "value": 20000,
+      "description": "Taiwan CNS"
+    },
+    {
+      "name": "msoEncodingTaiwanTCA",
+      "value": 20001,
+      "description": "Taiwan TCA"
+    },
+    {
+      "name": "msoEncodingTaiwanEten",
+      "value": 20002,
+      "description": "Taiwan Eten"
+    },
+    {
+      "name": "msoEncodingTaiwanIBM5550",
+      "value": 20003,
+      "description": "Taiwan IBM 5550"
+    },
+    {
+      "name": "msoEncodingTaiwanTeleText",
+      "value": 20004,
+      "description": "Taiwan Teletext"
+    },
+    {
+      "name": "msoEncodingTaiwanWang",
+      "value": 20005,
+      "description": "Taiwan Wang"
+    },
+    {
+      "name": "msoEncodingIA5IRV",
+      "value": 20105,
+      "description": "IA5, International Reference Version (IRV)"
+    },
+    {
+      "name": "msoEncodingIA5German",
+      "value": 20106,
+      "description": "German (International Alphabet No. 5, or IA5)"
+    },
+    {
+      "name": "msoEncodingIA5Swedish",
+      "value": 20107,
+      "description": "IA5 as used with Swedish"
+    },
+    {
+      "name": "msoEncodingIA5Norwegian",
+      "value": 20108,
+      "description": "IA5 as used with Norwegian"
+    },
+    {
+      "name": "msoEncodingUSASCII",
+      "value": 20127,
+      "description": "United States ASCII"
+    },
+    {
+      "name": "msoEncodingT61",
+      "value": 20261,
+      "description": "T61"
+    },
+    {
+      "name": "msoEncodingISO6937NonSpacingAccent",
+      "value": 20269,
+      "description": "ISO 6937 Non-Spacing Accent"
+    },
+    {
+      "name": "msoEncodingKOI8R",
+      "value": 20866,
+      "description": "KOI8-R"
+    },
+    {
+      "name": "msoEncodingExtAlphaLowercase",
+      "value": 21027,
+      "description": "Extended Alpha lowercase"
+    },
+    {
+      "name": "msoEncodingKOI8U",
+      "value": 21866,
+      "description": "K0I8-U"
+    },
+    {
+      "name": "msoEncodingEuropa3",
+      "value": 29001,
+      "description": "Europa"
+    },
+    {
+      "name": "msoEncodingHZGBSimplifiedChinese",
+      "value": 52936,
+      "description": "Simplified Chinese (HZGB)"
+    },
+    {
+      "name": "msoEncodingSimplifiedChineseGB18030",
+      "value": 54936,
+      "description": "Simplified Chinese GB 18030"
+    },
+    {
+      "name": "msoEncodingUTF7",
+      "value": 65000,
+      "description": "UTF-7 encoding"
+    },
+    {
+      "name": "msoEncodingUTF8",
+      "value": 65001,
+      "description": "UTF-8 encoding"
+    }
+  ]
+}

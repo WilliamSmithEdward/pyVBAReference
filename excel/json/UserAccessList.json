@@ -1,0 +1,70 @@
+{
+  "name": "UserAccessList",
+  "kind": "Dispatch Interface",
+  "guid": "{0002446C-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of UserAccess objects that represents the user access for protected ranges.",
+  "remarks": "",
+  "example": "Sub UseDeleteAll()\n\n Dim wksSheet As Worksheet\n\n Set wksSheet = Application.ActiveSheet\n\n ' Notify the user of the number of users that can access the protected range.\n MsgBox wksSheet.Protection.AllowEditRanges(1).Users.Count\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "UserAccess",
+      "access": "read-only",
+      "description": "Returns a single object from a collection."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "UserAccess",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String, AllowEdit As Boolean) As UserAccess",
+      "description": "Adds a user access list.",
+      "returns": "UserAccess",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the user access list."
+        },
+        {
+          "name": "AllowEdit",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True allows users on the access list to edit the editable ranges on a protected worksheet."
+        }
+      ]
+    },
+    {
+      "name": "DeleteAll",
+      "kind": "method",
+      "signature": "DeleteAll()",
+      "description": "Removes all users who have access to a protected range on a worksheet.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

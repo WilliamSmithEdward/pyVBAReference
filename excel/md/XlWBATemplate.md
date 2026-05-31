@@ -1,0 +1,17 @@
+# XlWBATemplate
+
+**Type:** Enumeration  
+**Library:** Microsoft Excel 16.0 Object Library  
+
+Specifies the type of workbook to create. The new workbook contains a single sheet of the specified type.
+
+## Constants (4)
+
+- `xlWBATChart` = -4109  
+  Chart
+- `xlWBATExcel4IntlMacroSheet` = 4  
+  Excel version 4 macro
+- `xlWBATExcel4MacroSheet` = 3  
+  Excel version 4 international macro
+- `xlWBATWorksheet` = -4167  
+  Worksheet

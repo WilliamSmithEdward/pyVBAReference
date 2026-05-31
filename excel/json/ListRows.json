@@ -1,0 +1,84 @@
+{
+  "name": "ListRows",
+  "kind": "Dispatch Interface",
+  "guid": "{00024474-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of all the ListRow objects in the specified ListObject object.",
+  "remarks": "Each ListRow object represents a row in the table.",
+  "example": "Set myNewRow = Worksheets(1).ListObject(0).ListRows.Add",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "ListRow",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "ListRow",
+      "access": "read-only",
+      "description": "Returns a single object from a collection."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns an Integer value that represents the number of objects in the collection."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([Position As Variant], [AlwaysInsert As Variant]) As ListRow",
+      "description": "Adds a new row to the table represented by the specified ListObject.",
+      "returns": "ListRow",
+      "parameters": [
+        {
+          "name": "Position",
+          "type": "Variant",
+          "optional": true,
+          "description": "Integer. Specifies the relative position of the new row."
+        },
+        {
+          "name": "AlwaysInsert",
+          "type": "Variant",
+          "optional": true,
+          "description": "Boolean. Specifies whether to always shift data in cells below the last row of the table when the new row is inserted, regardless if the row below the table is empty. If True, the cells below the table will be shifted down one row. If False, if the row below the table is empty, the table will expand to occupy that row without shifting cells below it, but if the row below the table contains data, those cells will be shifted down when the new row is inserted."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

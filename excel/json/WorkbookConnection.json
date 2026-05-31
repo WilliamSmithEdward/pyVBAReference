@@ -1,0 +1,147 @@
+{
+  "name": "WorkbookConnection",
+  "kind": "Dispatch Interface",
+  "guid": "{00024485-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A connection is a set of information needed to obtain data from an external data source other than a Microsoft Excel workbook.",
+  "remarks": "Connections can be stored within an Excel workbook. When the workbook is opened, Excel creates an in-memory copy of the connection that is referred to as the connection object. A connection object contains information such as the name of the server and the name of the object to be opened on that server. Optionally, the connection object may also include authentication credentials and/or a command that is to be passed to the server and executed (example: a SELECT statement to be executed by SQL Server). A connection may also be stored in a separate connection file. Most connections in an Excel workbook include a pointer to an external connection file. Connection files have extensions that clearly label them as connection files (.ODC, .IQY, etc.) and may be located on the user's local machine or in other well-known or trusted locations such as WSS (Data Connection Library), or other corporate servers. Connection files enable multiple users within the same organization to re-use connections. Network administrators are able to change the way the entire organization connects to a back-end data source by changing a single connection file.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the WorkbookConnection object. Read/write String."
+    },
+    {
+      "name": "Description",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a brief description for a WorkbookConnection object. Read/write String."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "XlConnectionType",
+      "access": "read-only",
+      "description": "Returns the workbook connection type. Read-only XlConnectionType."
+    },
+    {
+      "name": "OLEDBConnection",
+      "kind": "property",
+      "type": "OLEDBConnection",
+      "access": "read-only",
+      "description": "Returns the OLEDB connection details for the specified WorkbookConnection object. Read-only OLEDBConnection."
+    },
+    {
+      "name": "ODBCConnection",
+      "kind": "property",
+      "type": "ODBCConnection",
+      "access": "read-only",
+      "description": "Returns the ODBC connection details for the specified WorkbookConnection object. Read-only ODBCConnection."
+    },
+    {
+      "name": "Ranges",
+      "kind": "property",
+      "type": "Ranges",
+      "access": "read-only",
+      "description": "Returns the range of objects for the specified WorkbookConnection object. Read-only Ranges."
+    },
+    {
+      "name": "ModelConnection",
+      "kind": "property",
+      "type": "ModelConnection",
+      "access": "read-only",
+      "description": "Returns an object that contains information for the new model connection type introduced in Excel 2013 to interact with the integrated Data Model. Read-only."
+    },
+    {
+      "name": "WorksheetDataConnection",
+      "kind": "property",
+      "type": "WorksheetDataConnection",
+      "access": "read-only",
+      "description": "Returns an object that contains information for a connection from the PowerPivot Model to data within the workbook, such as a range, named range, or table. Read-only."
+    },
+    {
+      "name": "RefreshWithRefreshAll",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Determines if the connection should be refreshed when Refresh All is executed. Read/write Boolean."
+    },
+    {
+      "name": "TextConnection",
+      "kind": "property",
+      "type": "TextConnection",
+      "access": "read-only",
+      "description": "Returns a TextConnection object that contains the information on a query to a text file. Read-only."
+    },
+    {
+      "name": "DataFeedConnection",
+      "kind": "property",
+      "type": "DataFeedConnection",
+      "access": "read-only",
+      "description": "Returns a DataFeedConnection object that contains the data and functionality needed to connect to data feeds. Read-only."
+    },
+    {
+      "name": "InModel",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Specifies whether the WorkbookConnection has been added to the model. Read-only Boolean."
+    },
+    {
+      "name": "ModelTables",
+      "kind": "property",
+      "type": "ModelTables",
+      "access": "read-only",
+      "description": "Returns a ModelTables object associated with the particular connection. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes a workbook connection.",
+      "returns": "void"
+    },
+    {
+      "name": "Refresh",
+      "kind": "method",
+      "signature": "Refresh()",
+      "description": "Refreshes a workbook connection.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

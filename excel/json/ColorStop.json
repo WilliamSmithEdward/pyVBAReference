@@ -1,0 +1,70 @@
+{
+  "name": "ColorStop",
+  "kind": "Dispatch Interface",
+  "guid": "{000244AD-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the color stop point for a gradient fill in a range or selection.",
+  "remarks": "The ColorStop object enables you to set properties for the cell fill, including the Color, ThemeColor, and TintAndShade properties.",
+  "example": "With Selection.Interior\n .Pattern = xlPatternLinearGradient\n .Gradient.Degree = 135\n .Gradient.ColorStops.Clear\nEnd With\n\nWith Selection.Interior.Gradient.ColorStops.Add(0)\n .ThemeColor = xlThemeColorDark1\n .TintAndShade = 0\nEnd With\n\nWith Selection.Interior.Gradient.ColorStops.Add(0.5)\n .ThemeColor = xlThemeColorAccent1\n .TintAndShade = 0\nEnd With\n\nWith Selection.Interior.Gradient.ColorStops.Add(1)\n .ThemeColor = xlThemeColorDark1\n .TintAndShade = 0\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Color",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the color of the represented object. Read/write."
+    },
+    {
+      "name": "ThemeColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the theme color of the represented object. Read/write."
+    },
+    {
+      "name": "TintAndShade",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the tint and shade of the represented object. Read/write"
+    },
+    {
+      "name": "Position",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the position of the ColorStop. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the represented object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

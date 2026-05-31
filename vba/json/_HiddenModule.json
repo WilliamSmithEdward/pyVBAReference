@@ -1,0 +1,129 @@
+{
+  "name": "_HiddenModule",
+  "kind": "Module",
+  "library": "Visual Basic For Applications",
+  "description": "",
+  "functions": [
+    {
+      "name": "Array",
+      "kind": "function",
+      "signature": "Array(ArgList As SAFEARRAY(Variant)) As Variant",
+      "description": "Returns a Variant containing an array.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "ArgList",
+          "type": "SAFEARRAY(Variant)",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_B_str_InputB",
+      "kind": "function",
+      "signature": "_B_str_InputB(Number As Long, FileNumber As Integer) As String",
+      "description": "",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Number",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "FileNumber",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_B_var_InputB",
+      "kind": "function",
+      "signature": "_B_var_InputB(Number As Long, FileNumber As Integer) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Number",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "FileNumber",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_B_str_Input",
+      "kind": "function",
+      "signature": "_B_str_Input(Number As Long, FileNumber As Integer) As String",
+      "description": "",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Number",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "FileNumber",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_B_var_Input",
+      "kind": "function",
+      "signature": "_B_var_Input(Number As Long, FileNumber As Integer) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Number",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "FileNumber",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Width",
+      "kind": "function",
+      "signature": "Width(FileNumber As Integer, Width As Integer)",
+      "description": "Assigns an output line width to a file opened by using the Open statement.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileNumber",
+          "type": "Integer",
+          "optional": false,
+          "description": "Required. Any valid file number."
+        },
+        {
+          "name": "Width",
+          "type": "Integer",
+          "optional": false,
+          "description": "Required. Numeric expression in the range 0&ndash;255, inclusive, that indicates how many characters appear on a line before a new line is started. If _width_ equals 0, there is no limit to the length of a line. The default value for _width_ is 0."
+        }
+      ]
+    }
+  ],
+  "constants": []
+}

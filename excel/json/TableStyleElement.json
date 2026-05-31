@@ -1,0 +1,77 @@
+{
+  "name": "TableStyleElement",
+  "kind": "Dispatch Interface",
+  "guid": "{000244A5-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a single table style element.",
+  "remarks": "Table styles define formatting for one or all of the elements of a table, PivotTable, or slicer. For example, a header row is an element of a table. A table style can define that the fill color of the header row is red. Each table style element in a table can have formatting specified in a table style applied to the element.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "HasFormat",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns whether a table style element has formatting applied to the specified element. Read-only Boolean."
+    },
+    {
+      "name": "Interior",
+      "kind": "property",
+      "type": "Interior",
+      "access": "read-only",
+      "description": "Returns an Interior object that represents the interior of the specified object. Read-only."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read-only",
+      "description": "Returns a Borders collection that represents the borders of a TableStyleElement object. Read-only."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read-only",
+      "description": "Returns a Font object that represents the font of the specified object. Read-only."
+    },
+    {
+      "name": "StripeSize",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the size of banding. Read/write Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Clear",
+      "kind": "method",
+      "signature": "Clear()",
+      "description": "Clears the formatting for this element.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,107 @@
+{
+  "name": "SignatureSet",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0410-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "A collection of Signature objects that correspond to the digital signature attached to a document.",
+  "remarks": "Use the Signatures property of the Document object to return a SignatureSet collection; for example: You can add a Signature object to a SignatureSet collection by using the Add method, and you can return an existing member by using the Item method. The AddSignatureLine method also adds a Signature object to the collection. Also see the Subset property, which acts as a filter for whether certain Signature objects appear in the collection. To remove a Signature from a SignatureSet collection, use the Delete method of the Signature object.",
+  "example": "Function AddSignature(ByVal strIssuer As String, _\n strSigner As String) As Boolean\n\n Dim sig As Signature\n\n 'Display the dialog box that lets the\n 'user select a digital signature.\n 'If the user selects a signature, then\n 'it is added to the Signatures\n 'collection. If the user doesn't, then\n 'an error is returned.\n Set sig = ActiveDocument.Signatures.Add\n\n 'Test several properties before committing the Signature object to disk.\n If sig.Issuer = strIssuer And _\n sig.Signer = strSigner And _\n sig.IsCertificateExpired = False And _\n sig.IsCertificateRevoked = False And _\n sig.IsValid = True Then\n\n MsgBox \"Signed\"\n AddSignature = True\n 'Otherwise, remove the Signature object from the SignatureSet collection.\n Else\n sig.Delete\n MsgBox \"Not signed\"\n AddSignature = False\n End If\n\nEnd Function",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SignatureSet object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SignatureSet object was created. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the SignatureSet object. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "Signature",
+      "access": "read-only",
+      "description": "Gets a Signature object that corresponds to one of the digital signatures with which the document is currently signed. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the SignatureSet object. Read-only."
+    },
+    {
+      "name": "CanAddSignatureLine",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets a Boolean value indicating whether you can add a signature line to a document. Read-only."
+    },
+    {
+      "name": "Subset",
+      "kind": "property",
+      "type": "MsoSignatureSubset",
+      "access": "read/write",
+      "description": "Gets or sets a value that acts as a filter on the available Signature objects for a document. Read/write."
+    },
+    {
+      "name": "ShowSignaturesPane",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "write-only",
+      "description": "Gets or sets a Boolean value indicating whether the Signature task pane should be displayed. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "AddNonVisibleSignature",
+      "kind": "method",
+      "signature": "AddNonVisibleSignature([varSigProv As Variant]) As Signature",
+      "description": "Creates a signature packet when digitally signing a document.",
+      "returns": "Signature",
+      "parameters": [
+        {
+          "name": "varSigProv",
+          "type": "Variant",
+          "optional": true,
+          "description": "Represents the ID of the signature provider."
+        }
+      ]
+    },
+    {
+      "name": "AddSignatureLine",
+      "kind": "method",
+      "signature": "AddSignatureLine([varSigProv As Variant]) As Signature",
+      "description": "Adds lines to a document where signatures are collected.",
+      "returns": "Signature",
+      "parameters": [
+        {
+          "name": "varSigProv",
+          "type": "Variant",
+          "optional": true,
+          "description": "Represents the ID of the signature provider."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

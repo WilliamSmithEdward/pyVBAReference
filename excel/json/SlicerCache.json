@@ -1,0 +1,217 @@
+{
+  "name": "SlicerCache",
+  "kind": "Dispatch Interface",
+  "guid": "{000244C4-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the current filter state for a slicer, and information about which PivotCache or WorkbookConnection object the slicer is connected to.",
+  "remarks": "Use the SlicerCaches property of the Workbook object to access the SlicerCaches collection of SlicerCache objects in a workbook. Each slicer has a base SlicerCache object that represents the items displayed in the slicer and the current user interface state of the tiles displayed with their corresponding item captions. Each slicer control that the user sees in Excel is represented by a Slicer object that has a SlicerCache object associated with it.",
+  "example": "With ActiveWorkbook\n .SlicerCaches.Add(\"AdventureWorks\", _\n \"[Customer].[Customer Geography]\").Slicers.Add SlicerDestination:=\"Sheet2\", _\n Level:=\"[Customer].[Customer Geography].[Country]\", Caption:=\"Country\"\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent SlicerCaches object for the specified SlicerCache object. Read-only."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the index of the specified SlicerCache object in the SlicerCaches collection. Read-only."
+    },
+    {
+      "name": "OLAP",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns whether the slicer associated with the specified slicer cache is based on an OLAP data source. Read-only."
+    },
+    {
+      "name": "SourceType",
+      "kind": "property",
+      "type": "XlPivotTableSourceType",
+      "access": "read-only",
+      "description": "Returns the kind of data source that the slicer is connected to. Read-only."
+    },
+    {
+      "name": "WorkbookConnection",
+      "kind": "property",
+      "type": "WorkbookConnection",
+      "access": "read-only",
+      "description": "Gets or sets the WorkbookConnection object that represents the data connection used by the specified slicer. Read/write."
+    },
+    {
+      "name": "Slicers",
+      "kind": "property",
+      "type": "Slicers",
+      "access": "read-only",
+      "description": "Returns a Slicers collection that contains the collection of Slicer objects associated with the specified SlicerCache object. Read-only."
+    },
+    {
+      "name": "PivotTables",
+      "kind": "property",
+      "type": "SlicerPivotTables",
+      "access": "read-only",
+      "description": "Returns a SlicerPivotTables collection that contains information about the PivotTables that the slicer cache is currently filtering. Read-only."
+    },
+    {
+      "name": "SlicerCacheLevels",
+      "kind": "property",
+      "type": "SlicerCacheLevels",
+      "access": "read-only",
+      "description": "Returns the collection of SlicerCacheLevel objects that represent the levels of an OLAP hierarchy on which the specified slicer cache is based. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the slicer cache."
+    },
+    {
+      "name": "VisibleSlicerItems",
+      "kind": "property",
+      "type": "SlicerItems",
+      "access": "read-only",
+      "description": "Returns a SlicerItems collection that contains the collection of all the visible items in the specified slicer cache. Read-only."
+    },
+    {
+      "name": "VisibleSlicerItemsList",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the list of MDX unique names for members at all levels of the hierarchy where manual filtering is applied. Read/write."
+    },
+    {
+      "name": "SlicerItems",
+      "kind": "property",
+      "type": "SlicerItems",
+      "access": "read-only",
+      "description": "Returns a SlicerItems collection that contains the collection of all items in the slicer cache. Read-only."
+    },
+    {
+      "name": "CrossFilterType",
+      "kind": "property",
+      "type": "XlSlicerCrossFilterType",
+      "access": "read/write",
+      "description": "Returns or sets whether a slicer is participating in cross filtering with other slicers that share the same slicer cache, and how cross filtering is displayed. Read/write."
+    },
+    {
+      "name": "SortItems",
+      "kind": "property",
+      "type": "XlSlicerSort",
+      "access": "read/write",
+      "description": "Returns or sets the sort order of the items in the slicer. Read/write XlSlicerSort."
+    },
+    {
+      "name": "SourceName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the data source that the slicer is connected to. Read-only."
+    },
+    {
+      "name": "SortUsingCustomLists",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether items in the specified slicer cache will be sorted by the custom lists. Read/write."
+    },
+    {
+      "name": "ShowAllItems",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether slicers connected to the specified slicer cache display items that have been deleted from the corresponding PivotCache. Read/write."
+    },
+    {
+      "name": "TimelineState",
+      "kind": "property",
+      "type": "TimelineState",
+      "access": "read-only",
+      "description": "The timeline-specific state of the SlicerCache object. Read-only."
+    },
+    {
+      "name": "SlicerCacheType",
+      "kind": "property",
+      "type": "XlSlicerCacheType",
+      "access": "read-only",
+      "description": "Returns the type of the slicer cache: slicer (xlSlicer) or timeline (xlTimeline) . Read-only XlSlicerCacheType."
+    },
+    {
+      "name": "FilterCleared",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns whether the slicer or timeline filter state is cleared. Read-only Boolean."
+    },
+    {
+      "name": "List",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the slicer cache is for a slicer on a table; otherwise, False. Read-only Boolean."
+    },
+    {
+      "name": "RequireManualUpdate",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True when manual updates of the slicer cache are required. Read/write Boolean."
+    },
+    {
+      "name": "ListObject",
+      "kind": "property",
+      "type": "ListObject",
+      "access": "read-only",
+      "description": "Returns a ListObject object for the QueryTable object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "ClearManualFilter",
+      "kind": "method",
+      "signature": "ClearManualFilter()",
+      "description": "Clears the manual filter for the slicer cache.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified slicer cache and the slicers associated with it.",
+      "returns": "void"
+    },
+    {
+      "name": "ClearAllFilters",
+      "kind": "method",
+      "signature": "ClearAllFilters()",
+      "description": "Clears the filter for either slicer or timeline, depending on the slicer cache type.",
+      "returns": "void"
+    },
+    {
+      "name": "ClearDateFilter",
+      "kind": "method",
+      "signature": "ClearDateFilter()",
+      "description": "Clears the filter for a timeline (date filter).",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

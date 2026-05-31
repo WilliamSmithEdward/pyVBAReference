@@ -1,0 +1,48 @@
+{
+  "name": "SparkAxes",
+  "kind": "Dispatch Interface",
+  "guid": "{000244BA-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the settings for the horizontal and vertical axes of a group of sparklines.",
+  "remarks": "Use the Axes property of a SparklineGroup object to return the SparkAxes object for that group of sparklines.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent SparklineGroup object for the specified SparkAxes object. Read-only."
+    },
+    {
+      "name": "Vertical",
+      "kind": "property",
+      "type": "SparkVerticalAxis",
+      "access": "read-only",
+      "description": "Returns the SparkVerticalAxis object for the specified SparkAxes object. Read-only."
+    },
+    {
+      "name": "Horizontal",
+      "kind": "property",
+      "type": "SparkHorizontalAxis",
+      "access": "read-only",
+      "description": "Returns the SparkHorizontalAxis object for the specified SparkAxes object. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

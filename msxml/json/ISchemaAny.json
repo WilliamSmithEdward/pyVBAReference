@@ -1,0 +1,99 @@
+{
+  "name": "ISchemaAny",
+  "kind": "Dispatch Interface",
+  "guid": "{50EA08BC-DD1B-4664-9A50-C2F40F4BD79A}",
+  "library": "Microsoft XML, v6.0",
+  "description": "XML Schema Any",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "namespaceURI",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "schema",
+      "kind": "property",
+      "type": "ISchema",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "id",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "itemType",
+      "kind": "property",
+      "type": "SOMITEMTYPE",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "unhandledAttributes",
+      "kind": "property",
+      "type": "IVBSAXAttributes",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "minOccurs",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "maxOccurs",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "namespaces",
+      "kind": "property",
+      "type": "ISchemaStringCollection",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "processContents",
+      "kind": "property",
+      "type": "SCHEMAPROCESSCONTENTS",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "writeAnnotation",
+      "kind": "method",
+      "signature": "writeAnnotation(annotationSink As IUnknown) As Boolean",
+      "description": "",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "annotationSink",
+          "type": "IUnknown",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

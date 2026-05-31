@@ -1,0 +1,286 @@
+{
+  "name": "ChartFillFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{00024435-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents fill formatting.",
+  "remarks": "Use the Fill property to return the ChartFillFormat object.",
+  "example": "With myChart.ChartArea.Fill\n    .Visible = True\n    .ForeColor.SchemeColor = 15\n    .BackColor.SchemeColor = 17\n    .TwoColorGradient msoGradientHorizontal, 1\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "BackColor",
+      "kind": "property",
+      "type": "ChartColorFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ForeColor",
+      "kind": "property",
+      "type": "ChartColorFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "GradientColorType",
+      "kind": "property",
+      "type": "MsoGradientColorType",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "GradientDegree",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "GradientStyle",
+      "kind": "property",
+      "type": "MsoGradientStyle",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "GradientVariant",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Pattern",
+      "kind": "property",
+      "type": "MsoPatternType",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "PresetGradientType",
+      "kind": "property",
+      "type": "MsoPresetGradientType",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "PresetTexture",
+      "kind": "property",
+      "type": "MsoPresetTexture",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "TextureName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "TextureType",
+      "kind": "property",
+      "type": "MsoTextureType",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoFillType",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "OneColorGradient",
+      "kind": "method",
+      "signature": "OneColorGradient(Style As MsoGradientStyle, Variant As Long, Degree As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Style",
+          "type": "MsoGradientStyle",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Variant",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Degree",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "TwoColorGradient",
+      "kind": "method",
+      "signature": "TwoColorGradient(Style As MsoGradientStyle, Variant As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Style",
+          "type": "MsoGradientStyle",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Variant",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PresetTextured",
+      "kind": "method",
+      "signature": "PresetTextured(PresetTexture As MsoPresetTexture)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "PresetTexture",
+          "type": "MsoPresetTexture",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Solid",
+      "kind": "method",
+      "signature": "Solid()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Patterned",
+      "kind": "method",
+      "signature": "Patterned(Pattern As MsoPatternType)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Pattern",
+          "type": "MsoPatternType",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "UserPicture",
+      "kind": "method",
+      "signature": "UserPicture([PictureFile As Variant], [PictureFormat As Variant], [PictureStackUnit As Variant], [PicturePlacement As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "PictureFile",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "PictureFormat",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "PictureStackUnit",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "PicturePlacement",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "UserTextured",
+      "kind": "method",
+      "signature": "UserTextured(TextureFile As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "TextureFile",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PresetGradient",
+      "kind": "method",
+      "signature": "PresetGradient(Style As MsoGradientStyle, Variant As Long, PresetGradientType As MsoPresetGradientType)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Style",
+          "type": "MsoGradientStyle",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Variant",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "PresetGradientType",
+          "type": "MsoPresetGradientType",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

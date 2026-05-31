@@ -1,0 +1,86 @@
+{
+  "name": "TableStyles",
+  "kind": "Dispatch Interface",
+  "guid": "{000244A8-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents styles that can be applied to a table.",
+  "remarks": "Table styles provide a way to format an entire table or PivotTable. Table styles replace the existing auto format feature for formatting an entire table. Table styles differ from auto format in the following ways: - You can create and reuse custom table styles. - Table styles work with themes. - Changing the document theme color scheme and/or font scheme will change the look of the built-in table styles. - Table styles can reapply styles to objects such as PivotTables and tables as the object changes. The tables will remember the style applied to them and will re-display appropriately when cells are added, removed, hidden, and shown. - Table styles have a visual user interface in the ribbon.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the collection. Read-only Long."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "TableStyle",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(TableStyleName As String) As TableStyle",
+      "description": "Creates a new TableStyle object and adds it to the collection.",
+      "returns": "TableStyle",
+      "parameters": [
+        {
+          "name": "TableStyleName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the table style."
+        }
+      ]
+    },
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As TableStyle",
+      "description": "Returns a single object from a collection.",
+      "returns": "TableStyle",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number for the object."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

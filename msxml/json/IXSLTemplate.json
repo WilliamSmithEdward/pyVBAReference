@@ -1,0 +1,28 @@
+{
+  "name": "IXSLTemplate",
+  "kind": "Dispatch Interface",
+  "guid": "{2933BF93-7B36-11D2-B20E-00C04F983E60}",
+  "library": "Microsoft XML, v6.0",
+  "description": "IXSLTemplate Interface",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "stylesheet",
+      "kind": "property",
+      "type": "IXMLDOMNode",
+      "access": "read/write",
+      "description": "stylesheet to use with processors"
+    }
+  ],
+  "methods": [
+    {
+      "name": "createProcessor",
+      "kind": "method",
+      "signature": "createProcessor() As IXSLProcessor",
+      "description": "create a new processor object",
+      "returns": "IXSLProcessor"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,98 @@
+{
+  "name": "TimelineState",
+  "kind": "Dispatch Interface",
+  "guid": "{000244DF-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "The timeline-specific state of a SlicerCache object.",
+  "remarks": "Supported contiguous ranges can be set through the SetFilterDateRange method. When the timeline has such a contiguous filter state, the state can be retrieved from the two properties StartDate and EndDate. Any state that the filter may have, including non-contiguous states, can be retrieved through the three properties FilterType, FilterValue1, and FilterValue2.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Excel application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified TimelineState object. Read-only."
+    },
+    {
+      "name": "StartDate",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns the start of the filtering date range. Read-only Variant."
+    },
+    {
+      "name": "EndDate",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns the end of the filtering date range (equal to the StartDate property if range is a single day). Read-only Variant."
+    },
+    {
+      "name": "FilterType",
+      "kind": "property",
+      "type": "XlPivotFilterType",
+      "access": "read-only",
+      "description": "Returns the type of date filter. Read-only XlPivotFilterType."
+    },
+    {
+      "name": "FilterValue1",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns the first value associated with the date filter (semantics vary by filter type). Read-only Variant."
+    },
+    {
+      "name": "FilterValue2",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns the second value associated with the date filter (semantics vary by filter type). Read-only Variant."
+    },
+    {
+      "name": "SingleRangeFilterState",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True when the filtering state is a contiguous date range; otherwise, False. Read-only Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "SetFilterDateRange",
+      "kind": "method",
+      "signature": "SetFilterDateRange(StartDate As Variant, EndDate As Variant) As XlFilterStatus",
+      "description": "Sets the timeline's filter.",
+      "returns": "XlFilterStatus",
+      "parameters": [
+        {
+          "name": "StartDate",
+          "type": "Variant",
+          "optional": false,
+          "description": "The start of the filtering date range."
+        },
+        {
+          "name": "EndDate",
+          "type": "Variant",
+          "optional": false,
+          "description": "The end of the filtering date range."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

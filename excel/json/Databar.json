@@ -1,0 +1,204 @@
+{
+  "name": "Databar",
+  "kind": "Dispatch Interface",
+  "guid": "{00024496-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a data bar conditional formating rule. Applying a data bar to a range helps you see the value of a cell relative to other cells.",
+  "remarks": "All conditional formatting objects are contained within a FormatConditions collection object, which is a child of a Range collection. You can create a data bar formatting rule by using either the Add or AddDatabar methods of the FormatConditions collection. You use the MinPoint and MaxPoint properties of the Databar object to set the values of the shortest bar and longest bar of a range of data. These properties return a ConditionValue object, with which you can specify how the thresholds are evaluated. The Databar object also provides properties that enable you to specify an axis line that is displayed when negative values are present, and to specify the color and formatting of data bars.",
+  "example": "Sub CreateDatabarCF()\n\n Dim cfDatabar As Databar\n\n ' Create a range of data with a couple of extreme values\n With ActiveSheet\n .Range(\"D1\") = 1\n .Range(\"D2\") = 45\n .Range(\"D3\") = 50\n .Range(\"D2:D3\").AutoFill Destination:=Range(\"D2:D8\")\n .Range(\"D9\") = 500\n End With\n\n Range(\"D1:D9\").Select\n\n ' Create a data bar with default behavior\n Set cfDatabar = Selection.FormatConditions.AddDatabar\n MsgBox \"Because of the extreme values, middle data bars are very similar\"\n\n ' The MinPoint and MaxPoint properties return a ConditionValue object\n ' which you can use to change threshold parameters\n cfDatabar.MinPoint.Modify newtype:=xlConditionValuePercentile, _\n newvalue:=5\n cfDatabar.MaxPoint.Modify newtype:=xlConditionValuePercentile, _\n newvalue:=75\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Priority",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the priority value of the conditional formatting rule. The priority determines the order of evaluation when multiple conditional formatting rules exist on a worksheet."
+    },
+    {
+      "name": "StopIfTrue",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns or sets a Boolean value that determines if additional formatting rules on the cell should be evaluated if the current rule evaluates to True."
+    },
+    {
+      "name": "AppliesTo",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object specifying the cell range to which the formatting rule is applied."
+    },
+    {
+      "name": "MinPoint",
+      "kind": "property",
+      "type": "ConditionValue",
+      "access": "read-only",
+      "description": "Returns a ConditionValue object that specifies how the shortest bar is evaluated for a data bar conditional format."
+    },
+    {
+      "name": "MaxPoint",
+      "kind": "property",
+      "type": "ConditionValue",
+      "access": "read-only",
+      "description": "Returns a ConditionValue object that specifies how the longest bar is evaluated for a data bar conditional format."
+    },
+    {
+      "name": "PercentMin",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long value that specifies the length of the shortest data bar as a percentage of cell width."
+    },
+    {
+      "name": "PercentMax",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long value that specifies the length of the longest data bar as a percentage of cell width."
+    },
+    {
+      "name": "BarColor",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns a FormatColor object that you can use to modify the color of the bars in a data bar conditional format."
+    },
+    {
+      "name": "ShowValue",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that specifies if the value in the cell is displayed if the data bar conditional format is applied to the range."
+    },
+    {
+      "name": "Formula",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String representing a formula, which determines the values to which the data bar will be applied."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns one of the constants of the XlFormatConditionType enumeration, which specifies the type of conditional format. Read-only."
+    },
+    {
+      "name": "PTCondition",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean value indicating if the conditional format is being applied to a PivotTable. Read-only."
+    },
+    {
+      "name": "ScopeType",
+      "kind": "property",
+      "type": "XlPivotConditionScope",
+      "access": "read/write",
+      "description": "Returns or sets one of the constants of the XlPivotConditionScope enumeration, which determines the scope of the conditional format when it is applied to a PivotTable."
+    },
+    {
+      "name": "Direction",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the direction that the databar is displayed. Read/write."
+    },
+    {
+      "name": "BarFillType",
+      "kind": "property",
+      "type": "XlDataBarFillType",
+      "access": "read/write",
+      "description": "Returns or sets how a data bar is filled with color. Read/write."
+    },
+    {
+      "name": "AxisPosition",
+      "kind": "property",
+      "type": "XlDataBarAxisPosition",
+      "access": "read/write",
+      "description": "Returns or sets the position of the axis of the data bars specified by a conditional formatting rule. Read/write."
+    },
+    {
+      "name": "AxisColor",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the color of the axis for cells with conditional formatting as data bars. Read-only."
+    },
+    {
+      "name": "BarBorder",
+      "kind": "property",
+      "type": "DataBarBorder",
+      "access": "read-only",
+      "description": "Returns an object that specifies the border of a data bar. Read-only."
+    },
+    {
+      "name": "NegativeBarFormat",
+      "kind": "property",
+      "type": "NegativeBarFormat",
+      "access": "read-only",
+      "description": "Returns the NegativeBarFormat object associated with a data bar conditional formatting rule. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "SetFirstPriority",
+      "kind": "method",
+      "signature": "SetFirstPriority()",
+      "description": "Sets the priority value for this conditional formatting rule to 1 so that it will be evaluated before all other rules on the worksheet.",
+      "returns": "void"
+    },
+    {
+      "name": "SetLastPriority",
+      "kind": "method",
+      "signature": "SetLastPriority()",
+      "description": "Sets the evaluation order for this conditional formatting rule so that it is evaluated after all other rules on the worksheet.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified conditional formatting rule object.",
+      "returns": "void"
+    },
+    {
+      "name": "ModifyAppliesToRange",
+      "kind": "method",
+      "signature": "ModifyAppliesToRange(Range As Range)",
+      "description": "Sets the cell range to which this formatting rule applies.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The range to which this formatting rule will be applied."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

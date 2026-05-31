@@ -1,0 +1,62 @@
+{
+  "name": "Filters",
+  "kind": "Dispatch Interface",
+  "guid": "{00024433-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of Filter objects that represents all the filters in an autofiltered range.",
+  "remarks": "",
+  "example": "Dim f As Filter\nDim w As Worksheet\nConst ns As String = \"Not set\"\n\nSet w = Worksheets(\"Crew\")\nSet w2 = Worksheets(\"FilterData\")\nrw = 1\nFor Each f In w.AutoFilter.Filters\n If f.On Then\n c1 = Right(f.Criteria1, Len(f.Criteria1) - 1)\n If f.Operator Then\n op = f.Operator\n c2 = Right(f.Criteria2, Len(f.Criteria2) - 1)\n Else\n op = ns\n c2 = ns\n End If\n Else\n c1 = ns\n op = ns\n c2 = ns\n End If\n w2.Cells(rw, 1) = c1\n w2.Cells(rw, 2) = op\n w2.Cells(rw, 3) = c2\n rw = rw + 1\nNext",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "Filter",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "Filter",
+      "access": "read-only",
+      "description": "Returns a single object from a collection."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [],
+  "events": []
+}

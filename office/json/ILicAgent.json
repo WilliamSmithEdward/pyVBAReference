@@ -1,0 +1,1092 @@
+{
+  "name": "ILicAgent",
+  "kind": "Dispatch Interface",
+  "guid": "{00194002-D9C3-11D3-8D59-0050048384E3}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "ILicAgent Interface",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "Initialize",
+      "kind": "method",
+      "signature": "Initialize(dwBPC As Long, dwMode As Long, bstrLicSource As String) As Long",
+      "description": "method Initialize",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "dwBPC",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "dwMode",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "bstrLicSource",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetFirstName",
+      "kind": "method",
+      "signature": "GetFirstName() As String",
+      "description": "method GetFirstName",
+      "returns": "String"
+    },
+    {
+      "name": "SetFirstName",
+      "kind": "method",
+      "signature": "SetFirstName(bstrNewVal As String)",
+      "description": "method SetFirstName",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetLastName",
+      "kind": "method",
+      "signature": "GetLastName() As String",
+      "description": "method GetLastName",
+      "returns": "String"
+    },
+    {
+      "name": "SetLastName",
+      "kind": "method",
+      "signature": "SetLastName(bstrNewVal As String)",
+      "description": "method SetLastName",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetOrgName",
+      "kind": "method",
+      "signature": "GetOrgName() As String",
+      "description": "method GetOrgName",
+      "returns": "String"
+    },
+    {
+      "name": "SetOrgName",
+      "kind": "method",
+      "signature": "SetOrgName(bstrNewVal As String)",
+      "description": "method SetOrgName",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetEmail",
+      "kind": "method",
+      "signature": "GetEmail() As String",
+      "description": "method GetEmail",
+      "returns": "String"
+    },
+    {
+      "name": "SetEmail",
+      "kind": "method",
+      "signature": "SetEmail(bstrNewVal As String)",
+      "description": "method SetEmail",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetPhone",
+      "kind": "method",
+      "signature": "GetPhone() As String",
+      "description": "method GetPhone",
+      "returns": "String"
+    },
+    {
+      "name": "SetPhone",
+      "kind": "method",
+      "signature": "SetPhone(bstrNewVal As String)",
+      "description": "method SetPhone",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetAddress1",
+      "kind": "method",
+      "signature": "GetAddress1() As String",
+      "description": "method GetAddress1",
+      "returns": "String"
+    },
+    {
+      "name": "SetAddress1",
+      "kind": "method",
+      "signature": "SetAddress1(bstrNewVal As String)",
+      "description": "method SetAddress1",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetCity",
+      "kind": "method",
+      "signature": "GetCity() As String",
+      "description": "method GetCity",
+      "returns": "String"
+    },
+    {
+      "name": "SetCity",
+      "kind": "method",
+      "signature": "SetCity(bstrNewVal As String)",
+      "description": "method SetCity",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetState",
+      "kind": "method",
+      "signature": "GetState() As String",
+      "description": "method GetState",
+      "returns": "String"
+    },
+    {
+      "name": "SetState",
+      "kind": "method",
+      "signature": "SetState(bstrNewVal As String)",
+      "description": "method SetState",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetCountryCode",
+      "kind": "method",
+      "signature": "GetCountryCode() As String",
+      "description": "method GetCountryCode",
+      "returns": "String"
+    },
+    {
+      "name": "SetCountryCode",
+      "kind": "method",
+      "signature": "SetCountryCode(bstrNewVal As String)",
+      "description": "method SetCountryCode",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetCountryDesc",
+      "kind": "method",
+      "signature": "GetCountryDesc() As String",
+      "description": "method GetCountryDesc",
+      "returns": "String"
+    },
+    {
+      "name": "SetCountryDesc",
+      "kind": "method",
+      "signature": "SetCountryDesc(bstrNewVal As String)",
+      "description": "method SetCountryDesc",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetZip",
+      "kind": "method",
+      "signature": "GetZip() As String",
+      "description": "method GetZip",
+      "returns": "String"
+    },
+    {
+      "name": "SetZip",
+      "kind": "method",
+      "signature": "SetZip(bstrNewVal As String)",
+      "description": "method SetZip",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetIsoLanguage",
+      "kind": "method",
+      "signature": "GetIsoLanguage() As Long",
+      "description": "method GetIsoLanguage",
+      "returns": "Long"
+    },
+    {
+      "name": "SetIsoLanguage",
+      "kind": "method",
+      "signature": "SetIsoLanguage(dwNewVal As Long)",
+      "description": "method SetIsoLanguage",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "dwNewVal",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetMSUpdate",
+      "kind": "method",
+      "signature": "GetMSUpdate() As String",
+      "description": "method GetMSUpdate",
+      "returns": "String"
+    },
+    {
+      "name": "SetMSUpdate",
+      "kind": "method",
+      "signature": "SetMSUpdate(bstrNewVal As String)",
+      "description": "method SetMSUpdate",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetMSOffer",
+      "kind": "method",
+      "signature": "GetMSOffer() As String",
+      "description": "method GetMSOffer",
+      "returns": "String"
+    },
+    {
+      "name": "SetMSOffer",
+      "kind": "method",
+      "signature": "SetMSOffer(bstrNewVal As String)",
+      "description": "method SetMSOffer",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetOtherOffer",
+      "kind": "method",
+      "signature": "GetOtherOffer() As String",
+      "description": "method GetOtherOffer",
+      "returns": "String"
+    },
+    {
+      "name": "SetOtherOffer",
+      "kind": "method",
+      "signature": "SetOtherOffer(bstrNewVal As String)",
+      "description": "method SetOtherOffer",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetAddress2",
+      "kind": "method",
+      "signature": "GetAddress2() As String",
+      "description": "method GetAddress2",
+      "returns": "String"
+    },
+    {
+      "name": "SetAddress2",
+      "kind": "method",
+      "signature": "SetAddress2(bstrNewVal As String)",
+      "description": "method SetAddress2",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CheckSystemClock",
+      "kind": "method",
+      "signature": "CheckSystemClock() As Long",
+      "description": "method CheckSystemClock",
+      "returns": "Long"
+    },
+    {
+      "name": "GetExistingExpiryDate",
+      "kind": "method",
+      "signature": "GetExistingExpiryDate() As Date",
+      "description": "method GetExistingExpiryDate",
+      "returns": "Date"
+    },
+    {
+      "name": "GetNewExpiryDate",
+      "kind": "method",
+      "signature": "GetNewExpiryDate() As Date",
+      "description": "method GetNewExpiryDate",
+      "returns": "Date"
+    },
+    {
+      "name": "GetBillingFirstName",
+      "kind": "method",
+      "signature": "GetBillingFirstName() As String",
+      "description": "method GetBillingFirstName",
+      "returns": "String"
+    },
+    {
+      "name": "SetBillingFirstName",
+      "kind": "method",
+      "signature": "SetBillingFirstName(bstrNewVal As String)",
+      "description": "method SetBillingFirstName",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetBillingLastName",
+      "kind": "method",
+      "signature": "GetBillingLastName() As String",
+      "description": "method GetBillingLastName",
+      "returns": "String"
+    },
+    {
+      "name": "SetBillingLastName",
+      "kind": "method",
+      "signature": "SetBillingLastName(bstrNewVal As String)",
+      "description": "method SetBillingLastName",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetBillingPhone",
+      "kind": "method",
+      "signature": "GetBillingPhone() As String",
+      "description": "method GetBillingPhone",
+      "returns": "String"
+    },
+    {
+      "name": "SetBillingPhone",
+      "kind": "method",
+      "signature": "SetBillingPhone(bstrNewVal As String)",
+      "description": "method SetBillingPhone",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetBillingAddress1",
+      "kind": "method",
+      "signature": "GetBillingAddress1() As String",
+      "description": "method GetBillingAddress1",
+      "returns": "String"
+    },
+    {
+      "name": "SetBillingAddress1",
+      "kind": "method",
+      "signature": "SetBillingAddress1(bstrNewVal As String)",
+      "description": "method SetBillingAddress1",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetBillingAddress2",
+      "kind": "method",
+      "signature": "GetBillingAddress2() As String",
+      "description": "method GetBillingAddress2",
+      "returns": "String"
+    },
+    {
+      "name": "SetBillingAddress2",
+      "kind": "method",
+      "signature": "SetBillingAddress2(bstrNewVal As String)",
+      "description": "method SetBillingAddress2",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetBillingCity",
+      "kind": "method",
+      "signature": "GetBillingCity() As String",
+      "description": "method GetBillingCity",
+      "returns": "String"
+    },
+    {
+      "name": "SetBillingCity",
+      "kind": "method",
+      "signature": "SetBillingCity(bstrNewVal As String)",
+      "description": "method SetBillingCity",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetBillingState",
+      "kind": "method",
+      "signature": "GetBillingState() As String",
+      "description": "method GetBillingState",
+      "returns": "String"
+    },
+    {
+      "name": "SetBillingState",
+      "kind": "method",
+      "signature": "SetBillingState(bstrNewVal As String)",
+      "description": "method SetBillingState",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetBillingCountryCode",
+      "kind": "method",
+      "signature": "GetBillingCountryCode() As String",
+      "description": "method GetBillingCountryCode",
+      "returns": "String"
+    },
+    {
+      "name": "SetBillingCountryCode",
+      "kind": "method",
+      "signature": "SetBillingCountryCode(bstrNewVal As String)",
+      "description": "method SetBillingCountryCode",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetBillingZip",
+      "kind": "method",
+      "signature": "GetBillingZip() As String",
+      "description": "method GetBillingZip",
+      "returns": "String"
+    },
+    {
+      "name": "SetBillingZip",
+      "kind": "method",
+      "signature": "SetBillingZip(bstrNewVal As String)",
+      "description": "method SetBillingZip",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrNewVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SaveBillingInfo",
+      "kind": "method",
+      "signature": "SaveBillingInfo(bSave As Long) As Long",
+      "description": "method SaveBillingInfo",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "bSave",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "IsCCRenewalCountry",
+      "kind": "method",
+      "signature": "IsCCRenewalCountry(bstrCountryCode As String) As Long",
+      "description": "method IsCCRenewalCountry",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "bstrCountryCode",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetVATLabel",
+      "kind": "method",
+      "signature": "GetVATLabel(bstrCountryCode As String) As String",
+      "description": "method GetVATLabel",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "bstrCountryCode",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetCCRenewalExpiryDate",
+      "kind": "method",
+      "signature": "GetCCRenewalExpiryDate() As Date",
+      "description": "method GetCCRenewalExpiryDate",
+      "returns": "Date"
+    },
+    {
+      "name": "SetVATNumber",
+      "kind": "method",
+      "signature": "SetVATNumber(bstrVATNumber As String)",
+      "description": "method SetVATNumber",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrVATNumber",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetCreditCardType",
+      "kind": "method",
+      "signature": "SetCreditCardType(bstrCCCode As String)",
+      "description": "method SetCreditCardType",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrCCCode",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetCreditCardNumber",
+      "kind": "method",
+      "signature": "SetCreditCardNumber(bstrCCNumber As String)",
+      "description": "method SetCreditCardNumber",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrCCNumber",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetCreditCardExpiryYear",
+      "kind": "method",
+      "signature": "SetCreditCardExpiryYear(dwCCYear As Long)",
+      "description": "method SetCreditCardExpiryYear",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "dwCCYear",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetCreditCardExpiryMonth",
+      "kind": "method",
+      "signature": "SetCreditCardExpiryMonth(dwCCMonth As Long)",
+      "description": "method SetCreditCardExpiryMonth",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "dwCCMonth",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetCreditCardCount",
+      "kind": "method",
+      "signature": "GetCreditCardCount() As Long",
+      "description": "method GetCreditCardCount",
+      "returns": "Long"
+    },
+    {
+      "name": "GetCreditCardCode",
+      "kind": "method",
+      "signature": "GetCreditCardCode(dwIndex As Long) As String",
+      "description": "method GetCreditCardCode",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "dwIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetCreditCardName",
+      "kind": "method",
+      "signature": "GetCreditCardName(dwIndex As Long) As String",
+      "description": "method GetCreditCardName",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "dwIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetVATNumber",
+      "kind": "method",
+      "signature": "GetVATNumber() As String",
+      "description": "method GetVATNumber",
+      "returns": "String"
+    },
+    {
+      "name": "GetCreditCardType",
+      "kind": "method",
+      "signature": "GetCreditCardType() As String",
+      "description": "method GetCreditCardType",
+      "returns": "String"
+    },
+    {
+      "name": "GetCreditCardNumber",
+      "kind": "method",
+      "signature": "GetCreditCardNumber() As String",
+      "description": "method GetCreditCardNumber",
+      "returns": "String"
+    },
+    {
+      "name": "GetCreditCardExpiryYear",
+      "kind": "method",
+      "signature": "GetCreditCardExpiryYear() As Long",
+      "description": "method GetCreditCardExpiryYear",
+      "returns": "Long"
+    },
+    {
+      "name": "GetCreditCardExpiryMonth",
+      "kind": "method",
+      "signature": "GetCreditCardExpiryMonth() As Long",
+      "description": "method GetCreditCardExpiryMonth",
+      "returns": "Long"
+    },
+    {
+      "name": "GetDisconnectOption",
+      "kind": "method",
+      "signature": "GetDisconnectOption() As Long",
+      "description": "method GetDisconnectOption",
+      "returns": "Long"
+    },
+    {
+      "name": "SetDisconnectOption",
+      "kind": "method",
+      "signature": "SetDisconnectOption(bNewVal As Long)",
+      "description": "method SetDisconnectOption",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bNewVal",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AsyncProcessHandshakeRequest",
+      "kind": "method",
+      "signature": "AsyncProcessHandshakeRequest(bReviseCustInfo As Long)",
+      "description": "method AsyncProcessHandshakeRequest",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bReviseCustInfo",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AsyncProcessNewLicenseRequest",
+      "kind": "method",
+      "signature": "AsyncProcessNewLicenseRequest()",
+      "description": "method AsyncProcessNewLicenseRequest",
+      "returns": "void"
+    },
+    {
+      "name": "AsyncProcessReissueLicenseRequest",
+      "kind": "method",
+      "signature": "AsyncProcessReissueLicenseRequest()",
+      "description": "method AsyncProcessReissueLicenseRequest",
+      "returns": "void"
+    },
+    {
+      "name": "AsyncProcessRetailRenewalLicenseRequest",
+      "kind": "method",
+      "signature": "AsyncProcessRetailRenewalLicenseRequest()",
+      "description": "method AsyncProcessRetailRenewalLicenseRequest",
+      "returns": "void"
+    },
+    {
+      "name": "AsyncProcessReviseCustInfoRequest",
+      "kind": "method",
+      "signature": "AsyncProcessReviseCustInfoRequest()",
+      "description": "method AsyncProcessReviseCustInfoRequest",
+      "returns": "void"
+    },
+    {
+      "name": "AsyncProcessCCRenewalPriceRequest",
+      "kind": "method",
+      "signature": "AsyncProcessCCRenewalPriceRequest()",
+      "description": "method AsyncProcessCCRenewalPriceRequest",
+      "returns": "void"
+    },
+    {
+      "name": "AsyncProcessCCRenewalLicenseRequest",
+      "kind": "method",
+      "signature": "AsyncProcessCCRenewalLicenseRequest()",
+      "description": "method AsyncProcessCCRenewalLicenseRequest",
+      "returns": "void"
+    },
+    {
+      "name": "GetAsyncProcessReturnCode",
+      "kind": "method",
+      "signature": "GetAsyncProcessReturnCode() As Long",
+      "description": "method GetAsyncProcessReturnCode",
+      "returns": "Long"
+    },
+    {
+      "name": "IsUpgradeAvailable",
+      "kind": "method",
+      "signature": "IsUpgradeAvailable() As Long",
+      "description": "method IsUpgradeAvailable",
+      "returns": "Long"
+    },
+    {
+      "name": "WantUpgrade",
+      "kind": "method",
+      "signature": "WantUpgrade(bWantUpgrade As Long)",
+      "description": "method WantUpgrade",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bWantUpgrade",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AsyncProcessDroppedLicenseRequest",
+      "kind": "method",
+      "signature": "AsyncProcessDroppedLicenseRequest()",
+      "description": "method AsyncProcessDroppedLicenseRequest",
+      "returns": "void"
+    },
+    {
+      "name": "GenerateInstallationId",
+      "kind": "method",
+      "signature": "GenerateInstallationId() As String",
+      "description": "method GenerateInstallationId",
+      "returns": "String"
+    },
+    {
+      "name": "DepositConfirmationId",
+      "kind": "method",
+      "signature": "DepositConfirmationId(bstrVal As String) As Long",
+      "description": "method DepositConfirmationId",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "bstrVal",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "VerifyCheckDigits",
+      "kind": "method",
+      "signature": "VerifyCheckDigits(bstrCIDIID As String) As Long",
+      "description": "method VerifyCheckDigits",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "bstrCIDIID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetCurrentExpiryDate",
+      "kind": "method",
+      "signature": "GetCurrentExpiryDate() As Date",
+      "description": "method GetCurrentExpiryDate",
+      "returns": "Date"
+    },
+    {
+      "name": "CancelAsyncProcessRequest",
+      "kind": "method",
+      "signature": "CancelAsyncProcessRequest(bIsLicenseRequest As Long)",
+      "description": "method CancelAsyncProcessRequest",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bIsLicenseRequest",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetCurrencyDescription",
+      "kind": "method",
+      "signature": "GetCurrencyDescription(dwCurrencyIndex As Long) As String",
+      "description": "method GetCurrencyDescription",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "dwCurrencyIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetPriceItemCount",
+      "kind": "method",
+      "signature": "GetPriceItemCount() As Long",
+      "description": "method GetPriceItemCount",
+      "returns": "Long"
+    },
+    {
+      "name": "GetPriceItemLabel",
+      "kind": "method",
+      "signature": "GetPriceItemLabel(dwIndex As Long) As String",
+      "description": "method GetPriceItemLabel",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "dwIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetPriceItemValue",
+      "kind": "method",
+      "signature": "GetPriceItemValue(dwCurrencyIndex As Long, dwIndex As Long) As String",
+      "description": "method GetPriceItemValue",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "dwCurrencyIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "dwIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetInvoiceText",
+      "kind": "method",
+      "signature": "GetInvoiceText() As String",
+      "description": "method GetInvoiceText",
+      "returns": "String"
+    },
+    {
+      "name": "GetBackendErrorMsg",
+      "kind": "method",
+      "signature": "GetBackendErrorMsg() As String",
+      "description": "method GetBackendErrorMsg",
+      "returns": "String"
+    },
+    {
+      "name": "GetCurrencyOption",
+      "kind": "method",
+      "signature": "GetCurrencyOption() As Long",
+      "description": "method GetCurrencyOption",
+      "returns": "Long"
+    },
+    {
+      "name": "SetCurrencyOption",
+      "kind": "method",
+      "signature": "SetCurrencyOption(dwCurrencyOption As Long)",
+      "description": "method SetCurrencyOption",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "dwCurrencyOption",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetEndOfLifeHtmlText",
+      "kind": "method",
+      "signature": "GetEndOfLifeHtmlText() As String",
+      "description": "method GetEndOfLifeHtmlText",
+      "returns": "String"
+    },
+    {
+      "name": "DisplaySSLCert",
+      "kind": "method",
+      "signature": "DisplaySSLCert() As Long",
+      "description": "method DisplaySSLCert",
+      "returns": "Long"
+    }
+  ],
+  "events": []
+}

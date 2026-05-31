@@ -1,0 +1,493 @@
+{
+  "name": "IFileSystem3",
+  "kind": "Dispatch Interface",
+  "guid": "{2A0B9D10-4B87-11D3-A97A-00104B365C9F}",
+  "library": "Microsoft Scripting Runtime",
+  "description": "FileSystemObject",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Drives",
+      "kind": "property",
+      "type": "IDriveCollection",
+      "access": "read-only",
+      "description": "Get drives collection"
+    }
+  ],
+  "methods": [
+    {
+      "name": "BuildPath",
+      "kind": "method",
+      "signature": "BuildPath(Path As String, Name As String) As String",
+      "description": "Generate a path from an existing path and a name",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Path",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetDriveName",
+      "kind": "method",
+      "signature": "GetDriveName(Path As String) As String",
+      "description": "Return drive from a path",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Path",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetParentFolderName",
+      "kind": "method",
+      "signature": "GetParentFolderName(Path As String) As String",
+      "description": "Return path to the parent folder",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Path",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetFileName",
+      "kind": "method",
+      "signature": "GetFileName(Path As String) As String",
+      "description": "Return the file name from a path",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Path",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetBaseName",
+      "kind": "method",
+      "signature": "GetBaseName(Path As String) As String",
+      "description": "Return base name from a path",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Path",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetExtensionName",
+      "kind": "method",
+      "signature": "GetExtensionName(Path As String) As String",
+      "description": "Return extension from path",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Path",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetAbsolutePathName",
+      "kind": "method",
+      "signature": "GetAbsolutePathName(Path As String) As String",
+      "description": "Return the canonical representation of the path",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Path",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetTempName",
+      "kind": "method",
+      "signature": "GetTempName() As String",
+      "description": "Generate name that can be used to name a temporary file",
+      "returns": "String"
+    },
+    {
+      "name": "DriveExists",
+      "kind": "method",
+      "signature": "DriveExists(DriveSpec As String) As Boolean",
+      "description": "Check if a drive or a share exists",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "DriveSpec",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "FileExists",
+      "kind": "method",
+      "signature": "FileExists(FileSpec As String) As Boolean",
+      "description": "Check if a file exists",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "FileSpec",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "FolderExists",
+      "kind": "method",
+      "signature": "FolderExists(FolderSpec As String) As Boolean",
+      "description": "Check if a path exists",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "FolderSpec",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetDrive",
+      "kind": "method",
+      "signature": "GetDrive(DriveSpec As String) As IDrive",
+      "description": "Get drive or UNC share",
+      "returns": "IDrive",
+      "parameters": [
+        {
+          "name": "DriveSpec",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetFile",
+      "kind": "method",
+      "signature": "GetFile(FilePath As String) As IFile",
+      "description": "Get file",
+      "returns": "IFile",
+      "parameters": [
+        {
+          "name": "FilePath",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetFolder",
+      "kind": "method",
+      "signature": "GetFolder(FolderPath As String) As IFolder",
+      "description": "Get folder",
+      "returns": "IFolder",
+      "parameters": [
+        {
+          "name": "FolderPath",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetSpecialFolder",
+      "kind": "method",
+      "signature": "GetSpecialFolder(SpecialFolder As SpecialFolderConst) As IFolder",
+      "description": "Get location of various system folders",
+      "returns": "IFolder",
+      "parameters": [
+        {
+          "name": "SpecialFolder",
+          "type": "SpecialFolderConst",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DeleteFile",
+      "kind": "method",
+      "signature": "DeleteFile(FileSpec As String, [Force As Boolean])",
+      "description": "Delete a file",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileSpec",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Force",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DeleteFolder",
+      "kind": "method",
+      "signature": "DeleteFolder(FolderSpec As String, [Force As Boolean])",
+      "description": "Delete a folder",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FolderSpec",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Force",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MoveFile",
+      "kind": "method",
+      "signature": "MoveFile(Source As String, Destination As String)",
+      "description": "Move a file",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Destination",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MoveFolder",
+      "kind": "method",
+      "signature": "MoveFolder(Source As String, Destination As String)",
+      "description": "Move a folder",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Destination",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CopyFile",
+      "kind": "method",
+      "signature": "CopyFile(Source As String, Destination As String, [OverWriteFiles As Boolean])",
+      "description": "Copy a file",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Destination",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "OverWriteFiles",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CopyFolder",
+      "kind": "method",
+      "signature": "CopyFolder(Source As String, Destination As String, [OverWriteFiles As Boolean])",
+      "description": "Copy a folder",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Destination",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "OverWriteFiles",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CreateFolder",
+      "kind": "method",
+      "signature": "CreateFolder(Path As String) As IFolder",
+      "description": "Create a folder",
+      "returns": "IFolder",
+      "parameters": [
+        {
+          "name": "Path",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CreateTextFile",
+      "kind": "method",
+      "signature": "CreateTextFile(FileName As String, [Overwrite As Boolean], [Unicode As Boolean]) As ITextStream",
+      "description": "Create a file as a TextStream",
+      "returns": "ITextStream",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Overwrite",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Unicode",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "OpenTextFile",
+      "kind": "method",
+      "signature": "OpenTextFile(FileName As String, [IOMode As IOMode], [Create As Boolean], [Format As Tristate]) As ITextStream",
+      "description": "Open a file as a TextStream",
+      "returns": "ITextStream",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "IOMode",
+          "type": "IOMode",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Create",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Format",
+          "type": "Tristate",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetStandardStream",
+      "kind": "method",
+      "signature": "GetStandardStream(StandardStreamType As StandardStreamTypes, [Unicode As Boolean]) As ITextStream",
+      "description": "Retrieve the standard input, output or error stream",
+      "returns": "ITextStream",
+      "parameters": [
+        {
+          "name": "StandardStreamType",
+          "type": "StandardStreamTypes",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Unicode",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetFileVersion",
+      "kind": "method",
+      "signature": "GetFileVersion(FileName As String) As String",
+      "description": "Retrieve the file version of the specified file into a string",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

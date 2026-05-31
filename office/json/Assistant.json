@@ -1,0 +1,399 @@
+{
+  "name": "Assistant",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0322-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "NewBalloon",
+      "kind": "property",
+      "type": "Balloon",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "BalloonError",
+      "kind": "property",
+      "type": "MsoBalloonErrorType",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Animation",
+      "kind": "property",
+      "type": "MsoAnimationType",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Reduced",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AssistWithHelp",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AssistWithWizards",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AssistWithAlerts",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MoveWhenInTheWay",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Sounds",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "FeatureTips",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MouseTips",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "KeyboardShortcutTips",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HighPriorityTips",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TipOfDay",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GuessHelp",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SearchWhenProgramming",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "FileName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "On",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move(xLeft As Long, yTop As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "xLeft",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "yTop",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Help",
+      "kind": "method",
+      "signature": "Help()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "StartWizard",
+      "kind": "method",
+      "signature": "StartWizard(On As Boolean, Callback As String, PrivateX As Long, [Animation As Variant], [CustomTeaser As Variant], [Top As Variant], [Left As Variant], [Bottom As Variant], [Right As Variant]) As Long",
+      "description": "",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "On",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Callback",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "PrivateX",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Animation",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomTeaser",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Bottom",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Right",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "EndWizard",
+      "kind": "method",
+      "signature": "EndWizard(WizardID As Long, varfSuccess As Boolean, [Animation As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "WizardID",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "varfSuccess",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Animation",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ActivateWizard",
+      "kind": "method",
+      "signature": "ActivateWizard(WizardID As Long, act As MsoWizardActType, [Animation As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "WizardID",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "act",
+          "type": "MsoWizardActType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Animation",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ResetTips",
+      "kind": "method",
+      "signature": "ResetTips()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "DoAlert",
+      "kind": "method",
+      "signature": "DoAlert(bstrAlertTitle As String, bstrAlertText As String, alb As MsoAlertButtonType, alc As MsoAlertIconType, ald As MsoAlertDefaultType, alq As MsoAlertCancelType, varfSysAlert As Boolean) As Long",
+      "description": "",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "bstrAlertTitle",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "bstrAlertText",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "alb",
+          "type": "MsoAlertButtonType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "alc",
+          "type": "MsoAlertIconType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ald",
+          "type": "MsoAlertDefaultType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "alq",
+          "type": "MsoAlertCancelType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "varfSysAlert",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

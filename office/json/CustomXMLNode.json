@@ -1,0 +1,374 @@
+{
+  "name": "CustomXMLNode",
+  "kind": "Dispatch Interface",
+  "guid": "{000CDB04-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents an XML node in a tree in a document. The CustomXMLNode object is a member of the CustomXMLNodes collection.",
+  "remarks": "The CustomXMLNode object is designed to have functional parity with the IXMLDOMNode interface. In addition, it contains an XPath property, which is a great improvement over the objects provided by MSXML.",
+  "example": "Sub CustomXmlNodes()\n    Dim cxp1 As CustomXMLPart\n    Dim cxn As CustomXMLNode\n\n    With ActiveDocument\n\n        ' Returns the first custom xml part with the given root namespace.\n        Set cxp1 = .CustomXMLParts(\"urn:invoice:namespace\")\n\n        ' Get the first node matching the XPath expression.\n        Set cxn = cxp1.SelectSingleNode(\"//*[@quantity < 4]\")\n\n    End With\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for a CustomXMLNode object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the CustomXMLNode object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the CustomXMLNode object. Read-only."
+    },
+    {
+      "name": "Attributes",
+      "kind": "property",
+      "type": "CustomXMLNodes",
+      "access": "read-only",
+      "description": "Gets a CustomXMLNodes collection representing the attributes of the current element in the current node. Read-only."
+    },
+    {
+      "name": "BaseName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the base name of the node without the namespace prefix, if one exists, in the Document Object Model (DOM). Read-only."
+    },
+    {
+      "name": "ChildNodes",
+      "kind": "property",
+      "type": "CustomXMLNodes",
+      "access": "read-only",
+      "description": "Gets a CustomXMLNodes collection containing all of the child elements of the current node. Read-only."
+    },
+    {
+      "name": "FirstChild",
+      "kind": "property",
+      "type": "CustomXMLNode",
+      "access": "read-only",
+      "description": "Gets a CustomXMLNode object corresponding to the first child element of the current node. If the node has no child elements (or if it isn't of type msoCustomXMLNodeElement), returns Nothing. Read-only."
+    },
+    {
+      "name": "LastChild",
+      "kind": "property",
+      "type": "CustomXMLNode",
+      "access": "read-only",
+      "description": "Gets a CustomXMLNode object corresponding to the last child element of the current node. If the node has no child elements (or if it is not of type msoCustomXMLNodeElement), the property returns Nothing. Read-only."
+    },
+    {
+      "name": "NamespaceURI",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the unique address identifier for the namespace of the CustomXMLNode object. Read-only."
+    },
+    {
+      "name": "NextSibling",
+      "kind": "property",
+      "type": "CustomXMLNode",
+      "access": "read-only",
+      "description": "Gets the next sibling node (element, comment, or processing instruction) of the current node. If the node is the last sibling at its level, the property returns Nothing. Read-only."
+    },
+    {
+      "name": "NodeType",
+      "kind": "property",
+      "type": "MsoCustomXMLNodeType",
+      "access": "read-only",
+      "description": "Gets the type of the current node. Read-only."
+    },
+    {
+      "name": "NodeValue",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the value of the current node. Read/write."
+    },
+    {
+      "name": "OwnerDocument",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the object representing the Microsoft Excel workbook, PowerPoint presentation, or Word document associated with this node. Read-only."
+    },
+    {
+      "name": "OwnerPart",
+      "kind": "property",
+      "type": "CustomXMLPart",
+      "access": "read-only",
+      "description": "Gets the object representing the part associated with this node. Read-only."
+    },
+    {
+      "name": "PreviousSibling",
+      "kind": "property",
+      "type": "CustomXMLNode",
+      "access": "read-only",
+      "description": "Gets the previous sibling node (element, comment, or processing instruction) of the current node. If the current node is the first sibling at its level, the property returns Nothing. Read-only."
+    },
+    {
+      "name": "ParentNode",
+      "kind": "property",
+      "type": "CustomXMLNode",
+      "access": "read-only",
+      "description": "Gets the parent element node of the current node. If the current node is at the root level, the property returns Nothing. Read-only."
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the text for the current node. Read/write."
+    },
+    {
+      "name": "XPath",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets a String with the canonicalized XPath for the current node. If the node is no longer in the Document Object Model (DOM), the property returns an error message. Read-only."
+    },
+    {
+      "name": "XML",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the XML representation of the current node and its children, if any exist. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "AppendChildNode",
+      "kind": "method",
+      "signature": "AppendChildNode([Name As String], [NamespaceURI As String], [NodeType As MsoCustomXMLNodeType], [NodeValue As String])",
+      "description": "Appends a single node as the last child under the context element node in the tree.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": true,
+          "description": "Represents the base name of the element to be appended."
+        },
+        {
+          "name": "NamespaceURI",
+          "type": "String",
+          "optional": true,
+          "description": "Represents the namespace of the element to be appended. This parameter is required to append nodes of type msoCustomXMLNodeElement or msoCustomXMLNodeAttribute; otherwise, it is ignored."
+        },
+        {
+          "name": "NodeType",
+          "type": "MsoCustomXMLNodeType",
+          "optional": true,
+          "description": "Specifies the type of node to append. If the parameter is not specified, it is assumed to be of type msoCustomXMLNodeElement."
+        },
+        {
+          "name": "NodeValue",
+          "type": "String",
+          "optional": true,
+          "description": "Used to set the value of the appended node for those nodes that allow text. If the node doesn't allow text, the parameter is ignored."
+        }
+      ]
+    },
+    {
+      "name": "AppendChildSubtree",
+      "kind": "method",
+      "signature": "AppendChildSubtree(XML As String)",
+      "description": "Adds a subtree as the last child under the context element node in the tree.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "XML",
+          "type": "String",
+          "optional": false,
+          "description": "Represents the subtree to add."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the current node from the tree (including all of its children, if any exist).",
+      "returns": "void"
+    },
+    {
+      "name": "HasChildNodes",
+      "kind": "method",
+      "signature": "HasChildNodes() As Boolean",
+      "description": "Gets True if the current element node has child element nodes.",
+      "returns": "Boolean"
+    },
+    {
+      "name": "InsertNodeBefore",
+      "kind": "method",
+      "signature": "InsertNodeBefore([Name As String], [NamespaceURI As String], [NodeType As MsoCustomXMLNodeType], [NodeValue As String], [NextSibling As CustomXMLNode])",
+      "description": "Inserts a new node just before the context node in the tree.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": true,
+          "description": "Represents the base name of the node to be added."
+        },
+        {
+          "name": "NamespaceURI",
+          "type": "String",
+          "optional": true,
+          "description": "Represents the namespace of the element to be added. This parameter is required if adding nodes of type msoCustomXMLNodeElement or msoCustomXMLNodeAttribute; otherwise, it is ignored."
+        },
+        {
+          "name": "NodeType",
+          "type": "MsoCustomXMLNodeType",
+          "optional": true,
+          "description": "Specifies the type of the node to be added. If the parameter is not specified, it is assumed to be a node of type msoCustomXMLNodeElement."
+        },
+        {
+          "name": "NodeValue",
+          "type": "String",
+          "optional": true,
+          "description": "Used to set the value of the node to be added for those nodes that allow text. If the node doesn't allow text, the parameter is ignored."
+        },
+        {
+          "name": "NextSibling",
+          "type": "CustomXMLNode",
+          "optional": true,
+          "description": "Represents the context node."
+        }
+      ]
+    },
+    {
+      "name": "InsertSubtreeBefore",
+      "kind": "method",
+      "signature": "InsertSubtreeBefore(XML As String, [NextSibling As CustomXMLNode])",
+      "description": "Inserts the specified subtree into the location just before the context node.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "XML",
+          "type": "String",
+          "optional": false,
+          "description": "Represents the subtree to be added."
+        },
+        {
+          "name": "NextSibling",
+          "type": "CustomXMLNode",
+          "optional": true,
+          "description": "Specifies the context node."
+        }
+      ]
+    },
+    {
+      "name": "RemoveChild",
+      "kind": "method",
+      "signature": "RemoveChild(Child As CustomXMLNode)",
+      "description": "Removes the specified child node from the tree.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Child",
+          "type": "CustomXMLNode",
+          "optional": false,
+          "description": "Represents the child node of the context node."
+        }
+      ]
+    },
+    {
+      "name": "ReplaceChildNode",
+      "kind": "method",
+      "signature": "ReplaceChildNode(OldNode As CustomXMLNode, [Name As String], [NamespaceURI As String], [NodeType As MsoCustomXMLNodeType], [NodeValue As String])",
+      "description": "Removes the specified child node (and its subtree) from the main tree, and replaces it with a different node in the same location.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "OldNode",
+          "type": "CustomXMLNode",
+          "optional": false,
+          "description": "Represents the child node to be replaced."
+        },
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": true,
+          "description": "Represents the base name of the element to be added."
+        },
+        {
+          "name": "NamespaceURI",
+          "type": "String",
+          "optional": true,
+          "description": "Represents the namespace of the element to be added. This parameter is required if adding nodes of type msoCustomXMLNodeElement or msoCustomXMLNodeAttribute; otherwise, it is ignored."
+        },
+        {
+          "name": "NodeType",
+          "type": "MsoCustomXMLNodeType",
+          "optional": true,
+          "description": "Specifies the type of node to add. If the parameter is not specified, it is assumed to be of type msoCustomXMLNodeElement."
+        },
+        {
+          "name": "NodeValue",
+          "type": "String",
+          "optional": true,
+          "description": "Used to set the value of the node to be added for those nodes that allow text. If the node doesn't allow text, the parameter is ignored."
+        }
+      ]
+    },
+    {
+      "name": "ReplaceChildSubtree",
+      "kind": "method",
+      "signature": "ReplaceChildSubtree(XML As String, OldNode As CustomXMLNode)",
+      "description": "Removes the specified node (and its subtree) from the main tree, and replaces it with a different subtree in the same location.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "XML",
+          "type": "String",
+          "optional": false,
+          "description": "Represents the subtree to be added."
+        },
+        {
+          "name": "OldNode",
+          "type": "CustomXMLNode",
+          "optional": false,
+          "description": "Represents the child node to be replaced."
+        }
+      ]
+    },
+    {
+      "name": "SelectNodes",
+      "kind": "method",
+      "signature": "SelectNodes(XPath As String) As CustomXMLNodes",
+      "description": "Selects a collection of nodes matching an XPath expression. This method differs from the CustomXMLPart.SelectNodes method in that the XPath expression will be evaluated starting with the 'expression' node as the context node.",
+      "returns": "CustomXMLNodes",
+      "parameters": [
+        {
+          "name": "XPath",
+          "type": "String",
+          "optional": false,
+          "description": "Contains an XPath expression."
+        }
+      ]
+    },
+    {
+      "name": "SelectSingleNode",
+      "kind": "method",
+      "signature": "SelectSingleNode(XPath As String) As CustomXMLNode",
+      "description": "Selects a single node from a collection matching an XPath expression. This method differs from the CustomXMLPart.SelectSingleNode method in that the XPath expression will be evaluated starting with the 'expression' node as the context node.",
+      "returns": "CustomXMLNode",
+      "parameters": [
+        {
+          "name": "XPath",
+          "type": "String",
+          "optional": false,
+          "description": "Contains an XPath expression."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

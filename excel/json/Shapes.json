@@ -1,0 +1,798 @@
+{
+  "name": "Shapes",
+  "kind": "Dispatch Interface",
+  "guid": "{0002443A-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of all the Shape objects on the specified sheet.",
+  "remarks": "Each Shape object represents an object in the drawing layer, such as an AutoShape, freeform, OLE object, or picture.",
+  "example": "Set myDocument = Worksheets(1)\nmyDocument.Shapes.SelectAll",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "ShapeRange",
+      "access": "read-only",
+      "description": "Returns a ShapeRange object that represents a subset of the shapes in a Shapes collection."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Shape",
+      "description": "Returns a single object from a collection.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number for the object."
+        }
+      ]
+    },
+    {
+      "name": "_Default",
+      "kind": "method",
+      "signature": "_Default(Index As Variant) As Shape",
+      "description": "",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddCallout",
+      "kind": "method",
+      "signature": "AddCallout(Type As MsoCalloutType, Left As Single, Top As Single, Width As Single, Height As Single) As Shape",
+      "description": "Creates a borderless line callout. Returns a Shape object that represents the new callout.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "MsoCalloutType",
+          "optional": false,
+          "description": "The type of callout line."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the upper-left corner of the callout's bounding box relative to the upper-left corner of the document."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the upper-left corner of the callout's bounding box relative to the top of the document."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": "The width of the callout's bounding box, in points."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": "The height of the callout's bounding box, in points."
+        }
+      ]
+    },
+    {
+      "name": "AddConnector",
+      "kind": "method",
+      "signature": "AddConnector(Type As MsoConnectorType, BeginX As Single, BeginY As Single, EndX As Single, EndY As Single) As Shape",
+      "description": "Creates a connector. Returns a Shape object that represents the new connector. When a connector is added, it's not connected to anything. Use the BeginConnect and EndConnect methods to attach the beginning and end of a connector to other shapes in the document.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "MsoConnectorType",
+          "optional": false,
+          "description": "The connector type to add."
+        },
+        {
+          "name": "BeginX",
+          "type": "Single",
+          "optional": false,
+          "description": "The horizontal position (in points) of the connector's starting point relative to the upper-left corner of the document."
+        },
+        {
+          "name": "BeginY",
+          "type": "Single",
+          "optional": false,
+          "description": "The vertical position (in points) of the connector's starting point relative to the upper-left corner of the document."
+        },
+        {
+          "name": "EndX",
+          "type": "Single",
+          "optional": false,
+          "description": "The horizontal position (in points) of the connector's end point relative to the upper-left corner of the document."
+        },
+        {
+          "name": "EndY",
+          "type": "Single",
+          "optional": false,
+          "description": "The vertical position (in points) of the connector's end point relative to the upper-left corner of the document."
+        }
+      ]
+    },
+    {
+      "name": "AddCurve",
+      "kind": "method",
+      "signature": "AddCurve(SafeArrayOfPoints As Variant) As Shape",
+      "description": "Returns a Shape object that represents a Bzier curve on a worksheet.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "SafeArrayOfPoints",
+          "type": "Variant",
+          "optional": false,
+          "description": "An array of coordinate pairs that specifies the vertices and control points of the curve. The first point that you specify is the starting vertex, and the next two points are control points for the first Bzier segment. Then, for each additional segment of the curve, you specify a vertex and two control points. The last point that you specify is the ending vertex for the curve. Note that you must always specify 3n + 1 points, where n is the number of segments in the curve."
+        }
+      ]
+    },
+    {
+      "name": "AddLabel",
+      "kind": "method",
+      "signature": "AddLabel(Orientation As MsoTextOrientation, Left As Single, Top As Single, Width As Single, Height As Single) As Shape",
+      "description": "Creates a label. Returns a Shape object that represents the new label.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Orientation",
+          "type": "MsoTextOrientation",
+          "optional": false,
+          "description": "The text orientation within the label."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the upper-left corner of the label relative to the upper-left corner of the document."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the upper-left corner of the label relative to the top of the document."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": "The width of the label, in points."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": "The height of the label, in points."
+        }
+      ]
+    },
+    {
+      "name": "AddLine",
+      "kind": "method",
+      "signature": "AddLine(BeginX As Single, BeginY As Single, EndX As Single, EndY As Single) As Shape",
+      "description": "As it applies to the Shapes object, returns a Shape object that represents the new line on a worksheet.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "BeginX",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the line's starting point relative to the upper-left corner of the document."
+        },
+        {
+          "name": "BeginY",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the line's starting point relative to the upper-left corner of the document."
+        },
+        {
+          "name": "EndX",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the line's end point relative to the upper-left corner of the document."
+        },
+        {
+          "name": "EndY",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the line's end point relative to the upper-left corner of the document."
+        }
+      ]
+    },
+    {
+      "name": "AddPicture",
+      "kind": "method",
+      "signature": "AddPicture(Filename As String, LinkToFile As MsoTriState, SaveWithDocument As MsoTriState, Left As Single, Top As Single, Width As Single, Height As Single) As Shape",
+      "description": "Creates a picture from an existing file. Returns a Shape object that represents the new picture.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Filename",
+          "type": "String",
+          "optional": false,
+          "description": "The file from which the picture is to be created."
+        },
+        {
+          "name": "LinkToFile",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "The file to link to. Use msoFalse to make the picture an independent copy of the file. Use msoTrue to link the picture to the file from which it was created."
+        },
+        {
+          "name": "SaveWithDocument",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "To save the picture with the document. Use msoFalse to store only the link information in the document. Use msoTrue to save the linked picture with the document into which it's inserted. This argument must be msoTrue if _LinkToFile_ is msoFalse."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the upper-left corner of the picture relative to the upper-left corner of the document."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the upper-left corner of the picture relative to the top of the document."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": "The width of the picture, in points (enter -1 to retain the width of the existing file)."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": "The height of the picture, in points (enter -1 to retain the height of the existing file)."
+        }
+      ]
+    },
+    {
+      "name": "AddPolyline",
+      "kind": "method",
+      "signature": "AddPolyline(SafeArrayOfPoints As Variant) As Shape",
+      "description": "Creates an open polyline or a closed polygon drawing. Returns a Shape object that represents the new polyline or polygon.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "SafeArrayOfPoints",
+          "type": "Variant",
+          "optional": false,
+          "description": "An array of coordinate pairs that specifies the polyline drawing's vertices."
+        }
+      ]
+    },
+    {
+      "name": "AddShape",
+      "kind": "method",
+      "signature": "AddShape(Type As MsoAutoShapeType, Left As Single, Top As Single, Width As Single, Height As Single) As Shape",
+      "description": "Returns a Shape object that represents the new AutoShape on a worksheet.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "MsoAutoShapeType",
+          "optional": false,
+          "description": "Specifies the type of AutoShape to create."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the upper-left corner of the AutoShape's bounding box relative to the upper-left corner of the document."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the upper-left corner of the AutoShape's bounding box relative to the top of the document."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": "The width of the AutoShape's bounding box, in points."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": "The height of the AutoShape's bounding box, in points."
+        }
+      ]
+    },
+    {
+      "name": "AddTextEffect",
+      "kind": "method",
+      "signature": "AddTextEffect(PresetTextEffect As MsoPresetTextEffect, Text As String, FontName As String, FontSize As Single, FontBold As MsoTriState, FontItalic As MsoTriState, Left As Single, Top As Single) As Shape",
+      "description": "Creates a WordArt object. Returns a Shape object that represents the new WordArt object.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "PresetTextEffect",
+          "type": "MsoPresetTextEffect",
+          "optional": false,
+          "description": "The preset text effect."
+        },
+        {
+          "name": "Text",
+          "type": "String",
+          "optional": false,
+          "description": "The text in the WordArt."
+        },
+        {
+          "name": "FontName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the font used in the WordArt."
+        },
+        {
+          "name": "FontSize",
+          "type": "Single",
+          "optional": false,
+          "description": "The size (in points) of the font used in the WordArt."
+        },
+        {
+          "name": "FontBold",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "The font used in the WordArt to bold."
+        },
+        {
+          "name": "FontItalic",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "The font used in the WordArt to italic."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the upper-left corner of the WordArt's bounding box relative to the upper-left corner of the document."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the upper-left corner of the WordArt's bounding box relative to the top of the document."
+        }
+      ]
+    },
+    {
+      "name": "AddTextbox",
+      "kind": "method",
+      "signature": "AddTextbox(Orientation As MsoTextOrientation, Left As Single, Top As Single, Width As Single, Height As Single) As Shape",
+      "description": "Creates a text box. Returns a Shape object that represents the new text box.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Orientation",
+          "type": "MsoTextOrientation",
+          "optional": false,
+          "description": "The orientation of the textbox."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the upper-left corner of the text box relative to the upper-left corner of the document."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the upper-left corner of the text box relative to the top of the document."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": "The width of the text box, in points."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": "The height of the text box, in points."
+        }
+      ]
+    },
+    {
+      "name": "BuildFreeform",
+      "kind": "method",
+      "signature": "BuildFreeform(EditingType As MsoEditingType, X1 As Single, Y1 As Single) As FreeformBuilder",
+      "description": "Builds a freeform object. Returns a FreeformBuilder object that represents the freeform as it is being built.",
+      "returns": "FreeformBuilder",
+      "parameters": [
+        {
+          "name": "EditingType",
+          "type": "MsoEditingType",
+          "optional": false,
+          "description": "The editing property of the first node."
+        },
+        {
+          "name": "X1",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the first node in the freeform drawing relative to the upper-left corner of the document."
+        },
+        {
+          "name": "Y1",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the first node in the freeform drawing relative to the upper-left corner of the document."
+        }
+      ]
+    },
+    {
+      "name": "SelectAll",
+      "kind": "method",
+      "signature": "SelectAll()",
+      "description": "Selects all the shapes in the specified Shapes collection.",
+      "returns": "void"
+    },
+    {
+      "name": "AddFormControl",
+      "kind": "method",
+      "signature": "AddFormControl(Type As XlFormControl, Left As Long, Top As Long, Width As Long, Height As Long) As Shape",
+      "description": "Creates a Microsoft Excel control. Returns a Shape object that represents the new control.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "XlFormControl",
+          "optional": false,
+          "description": "The Microsoft Excel control type. You cannot create an edit box on a worksheet."
+        },
+        {
+          "name": "Left",
+          "type": "Long",
+          "optional": false,
+          "description": "The initial coordinates of the new object (in points) relative to the upper-left corner of cell A1 on a worksheet or to the upper-left corner of a chart."
+        },
+        {
+          "name": "Top",
+          "type": "Long",
+          "optional": false,
+          "description": "The initial coordinates of the new object (in points) relative to the top of row 1 on a worksheet, or to the top of the chart area on a chart."
+        },
+        {
+          "name": "Width",
+          "type": "Long",
+          "optional": false,
+          "description": "The initial size of the new object, in points."
+        },
+        {
+          "name": "Height",
+          "type": "Long",
+          "optional": false,
+          "description": "The initial size of the new object, in points."
+        }
+      ]
+    },
+    {
+      "name": "AddOLEObject",
+      "kind": "method",
+      "signature": "AddOLEObject([ClassType As Variant], [Filename As Variant], [Link As Variant], [DisplayAsIcon As Variant], [IconFileName As Variant], [IconIndex As Variant], [IconLabel As Variant], [Left As Variant], [Top As Variant], [Width As Variant], [Height As Variant]) As Shape",
+      "description": "Creates an OLE object. Returns a Shape object that represents the new OLE object.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "ClassType",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that contains the programmatic identifier for the object to be created. You must specify either _ClassType_ or _FileName_. If _ClassType_ is specified, _FileName_ and _Link_ are ignored."
+        },
+        {
+          "name": "Filename",
+          "type": "Variant",
+          "optional": true,
+          "description": "The file from which the object is to be created. If the path isn't specified, the current working folder is used. You must specify either the _ClassType_ or _FileName_ argument for the object, but not both."
+        },
+        {
+          "name": "Link",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to link the OLE object to the file from which it was created. False to make the OLE object an independent copy of the file. If you specified a value for _ClassType_, this argument must be False. The default value is False."
+        },
+        {
+          "name": "DisplayAsIcon",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to display the OLE object as an icon. The default value is False."
+        },
+        {
+          "name": "IconFileName",
+          "type": "Variant",
+          "optional": true,
+          "description": "The file that contains the icon to be displayed."
+        },
+        {
+          "name": "IconIndex",
+          "type": "Variant",
+          "optional": true,
+          "description": "The index of the icon within _IconFileName_. The order of icons in the specified file corresponds to the order in which the icons appear in the Change Icon dialog box (accessed from the Object dialog box when the Display as icon check box is selected). The first icon in the file has the index number 0 (zero). If an icon with the given index number doesn't exist in _IconFileName_, the icon with the index number 1 (the second icon in the file) is used. The default value is 0 (zero)."
+        },
+        {
+          "name": "IconLabel",
+          "type": "Variant",
+          "optional": true,
+          "description": "A label (caption) to be displayed beneath the icon."
+        },
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": true,
+          "description": "The position (in points) of the upper-left corner of the new object relative to the upper-left corner of the document. The default value is 0 (zero)."
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": "The position (in points) of the upper-left corner of the new object relative to the top of the document. The default value is 0 (zero)."
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": "The initial dimensions of the OLE object, in points."
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": "The initial dimensions of the OLE object, in points."
+        }
+      ]
+    },
+    {
+      "name": "AddSmartArt",
+      "kind": "method",
+      "signature": "AddSmartArt(Layout As SmartArtLayout, [Left As Variant], [Top As Variant], [Width As Variant], [Height As Variant]) As Shape",
+      "description": "Creates a new SmartArt graphic with the specified layout.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Layout",
+          "type": "SmartArtLayout",
+          "optional": false,
+          "description": "An object that represents the layout to use."
+        },
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": true,
+          "description": "The distance, in points, from the left edge of the object to the left edge of column A (on a worksheet) or the left edge of the chart area (on a chart)."
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": "The distance, in points, from the top edge of the object to the top edge of the worksheet."
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": "The width, in points, of the object."
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": "The height, in points, of the object."
+        }
+      ]
+    },
+    {
+      "name": "AddChart2",
+      "kind": "method",
+      "signature": "AddChart2([Style As Variant], [XlChartType As Variant], [Left As Variant], [Top As Variant], [Width As Variant], [Height As Variant], [NewLayout As Variant]) As Shape",
+      "description": "Adds a chart to the document. Returns a Shape object that represents a chart and adds it to the specified collection.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Style",
+          "type": "Variant",
+          "optional": true,
+          "description": "The chart style. Use \"-1\" to get the default style for the chart type specified in XlChartType."
+        },
+        {
+          "name": "XlChartType",
+          "type": "Variant",
+          "optional": true,
+          "description": "The type of chart."
+        },
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": true,
+          "description": "The position, in points, of the left edge of the chart, relative to the anchor."
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": "The position, in points, of the top edge of the chart, relative to the anchor."
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": "The width, in points, of the chart."
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": "The height, in points, of the chart."
+        },
+        {
+          "name": "NewLayout",
+          "type": "Variant",
+          "optional": true,
+          "description": "If NewLayout is True, the chart is inserted by using the new dynamic formatting rules (Title is on, and Legend is on only if there are multiple series)."
+        }
+      ]
+    },
+    {
+      "name": "AddPicture2",
+      "kind": "method",
+      "signature": "AddPicture2(Filename As String, LinkToFile As MsoTriState, SaveWithDocument As MsoTriState, Left As Single, Top As Single, Width As Single, Height As Single, Compress As MsoPictureCompress) As Shape",
+      "description": "Creates a picture from an existing file. Returns a Shape object that represents the new picture.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Filename",
+          "type": "String",
+          "optional": false,
+          "description": "The file from which the OLE object is to be created."
+        },
+        {
+          "name": "LinkToFile",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "Determines whether the picture will be linked to the file from which it was created."
+        },
+        {
+          "name": "SaveWithDocument",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "Determines whether the linked picture will be saved with the document into which it is inserted. This argument must be msoTrue if _LinkToFile_ is msoFalse."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the left edge of the picture relative to the left edge of the worksheet."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the top edge of the picture relative to the top edge of the worksheet."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": "The width of the picture, measured in points."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": "The height of the picture, measured in points."
+        },
+        {
+          "name": "Compress",
+          "type": "MsoPictureCompress",
+          "optional": false,
+          "description": "Determines whether the picture should be compressed when inserted."
+        }
+      ]
+    },
+    {
+      "name": "Add3DModel",
+      "kind": "method",
+      "signature": "Add3DModel(Filename As String, [LinkToFile As Variant], [SaveWithDocument As Variant], [Left As Variant], [Top As Variant], [Width As Variant], [Height As Variant]) As Shape",
+      "description": "Creates a 3D model from an existing file. Returns a Shape object that represents the new 3D model.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Filename",
+          "type": "String",
+          "optional": false,
+          "description": "The file from which the 3D model is to be created."
+        },
+        {
+          "name": "LinkToFile",
+          "type": "Variant",
+          "optional": true,
+          "description": "Determines whether the 3D model will be linked to the file from which it was created."
+        },
+        {
+          "name": "SaveWithDocument",
+          "type": "Variant",
+          "optional": true,
+          "description": "Determines whether the linked 3D model will be saved with the document into which it is inserted."
+        },
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": true,
+          "description": "The position (in points) of the upper-left corner of the 3D model relative to the upper-left corner of the document."
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": "The position (in points) of the upper-left corner of the 3D model relative to the top of the document."
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": "The width of the 3D model, in points (enter -1 to auto-calculate a width based on the 3D model dimensions)."
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": "The height of the 3D model, in points (enter -1 to auto-calculate a height based on the 3D model dimensions)."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,91 @@
+{
+  "name": "XmlNamespaces",
+  "kind": "Dispatch Interface",
+  "guid": "{00024477-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the collection of XmlNamespace objects in a workbook.",
+  "remarks": "Use the Item method to access a particular XmlNamespace object. Use the Value property to return a String that lists the namespaces that have been added to a workbook.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "XmlNamespace",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "XmlNamespace",
+      "access": "read-only",
+      "description": "Returns a single object from a collection."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that represents the XML namespaces that have been added to the workbook."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "InstallManifest",
+      "kind": "method",
+      "signature": "InstallManifest(Path As String, [InstallForAllUsers As Variant])",
+      "description": "Installs the specified XML expansion pack on the user's computer, making an XML smart document solution available to one or more users.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Path",
+          "type": "String",
+          "optional": false,
+          "description": "The path and file name of the XML expansion pack."
+        },
+        {
+          "name": "InstallForAllUsers",
+          "type": "Variant",
+          "optional": true,
+          "description": "True installs the XML expansion pack and makes it available to all users on a machine. False makes the XML expansion pack available for the current user only. The default is False."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

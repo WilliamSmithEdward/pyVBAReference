@@ -1,0 +1,106 @@
+{
+  "name": "IVBSAXLexicalHandler",
+  "kind": "Dispatch Interface",
+  "guid": "{032AAC35-8C0E-4D9D-979F-E3B702935576}",
+  "library": "Microsoft XML, v6.0",
+  "description": "IVBSAXLexicalHandler interface",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "startDTD",
+      "kind": "method",
+      "signature": "startDTD(strName As String, strPublicId As String, strSystemId As String)",
+      "description": "Report the start of DTD declarations, if any.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strPublicId",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "strSystemId",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "endDTD",
+      "kind": "method",
+      "signature": "endDTD()",
+      "description": "Report the end of DTD declarations.",
+      "returns": "void"
+    },
+    {
+      "name": "startEntity",
+      "kind": "method",
+      "signature": "startEntity(strName As String)",
+      "description": "Report the beginning of some internal and external XML entities.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "endEntity",
+      "kind": "method",
+      "signature": "endEntity(strName As String)",
+      "description": "Report the end of an entity.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "startCDATA",
+      "kind": "method",
+      "signature": "startCDATA()",
+      "description": "Report the start of a CDATA section.",
+      "returns": "void"
+    },
+    {
+      "name": "endCDATA",
+      "kind": "method",
+      "signature": "endCDATA()",
+      "description": "Report the end of a CDATA section.",
+      "returns": "void"
+    },
+    {
+      "name": "comment",
+      "kind": "method",
+      "signature": "comment(strChars As String)",
+      "description": "Report an XML comment anywhere in the document.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "strChars",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

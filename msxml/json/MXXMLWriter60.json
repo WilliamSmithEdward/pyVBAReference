@@ -1,0 +1,77 @@
+{
+  "name": "MXXMLWriter60",
+  "kind": "Class",
+  "guid": "{88D96A0F-F192-11D4-A65F-0040963251E5}",
+  "library": "Microsoft XML, v6.0",
+  "description": "Microsoft XML Writer 6.0",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "output",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Set or get the output."
+    },
+    {
+      "name": "encoding",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Set or get the output encoding."
+    },
+    {
+      "name": "byteOrderMark",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Determine whether or not to write the byte order mark"
+    },
+    {
+      "name": "indent",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Enable or disable auto indent mode."
+    },
+    {
+      "name": "standalone",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Set or get the standalone document declaration."
+    },
+    {
+      "name": "omitXMLDeclaration",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Determine whether or not to omit the XML declaration."
+    },
+    {
+      "name": "version",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Set or get the xml version info."
+    },
+    {
+      "name": "disableOutputEscaping",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "When enabled, the writer no longer escapes out its input when writing it out."
+    }
+  ],
+  "methods": [
+    {
+      "name": "flush",
+      "kind": "method",
+      "signature": "flush()",
+      "description": "Flushes all writer buffers forcing the writer to write to the underlying output object",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,371 @@
+{
+  "name": "Point",
+  "kind": "Dispatch Interface",
+  "guid": "{0002086A-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a single point in a series in a chart.",
+  "remarks": "The Point object is a member of the Points collection. The Points collection contains all the points in one series.",
+  "example": "Worksheets(1).ChartObjects(1).Chart. _\n SeriesCollection(1).Points(3).MarkerStyle = xlDiamond",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "DataLabel",
+      "kind": "property",
+      "type": "DataLabel",
+      "access": "read-only",
+      "description": "Returns a DataLabel object that represents the data label associated with the point. Read-only."
+    },
+    {
+      "name": "Explosion",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the explosion value for a pie-chart or doughnut-chart slice. Returns 0 (zero) if there's no explosion (the tip of the slice is in the center of the pie). Read/write Long."
+    },
+    {
+      "name": "HasDataLabel",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the point has a data label. Read/write Boolean."
+    },
+    {
+      "name": "InvertIfNegative",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Excel inverts the pattern in the item when it corresponds to a negative number. Read/write Boolean."
+    },
+    {
+      "name": "MarkerBackgroundColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Sets the marker background color as an RGB value or returns the corresponding color index value. The background color is displayed as the Fill color in the application. Applies only to line, scatter, and radar charts. Read/write Long."
+    },
+    {
+      "name": "MarkerBackgroundColorIndex",
+      "kind": "property",
+      "type": "XlColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the marker background color as an index into the current color palette, or as one of the following XlColorIndex constants: xlColorIndexAutomatic or xlColorIndexNone. Applies only to line, scatter, and radar charts. Read/write Long."
+    },
+    {
+      "name": "MarkerForegroundColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Sets the marker foreground color as an RGB value or returns the corresponding color index value. The foreground color is displayed as the Border color in the application. Applies only to line, scatter, and radar charts. Read/write Long."
+    },
+    {
+      "name": "MarkerForegroundColorIndex",
+      "kind": "property",
+      "type": "XlColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the marker foreground color as an index into the current color palette, or as one of the following XlColorIndex constants: xlColorIndexAutomatic or xlColorIndexNone. Applies only to line, scatter, and radar charts. Read/write Long."
+    },
+    {
+      "name": "MarkerSize",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the data-marker size, in points. Can be a value from 2 through 72. Read/write Long."
+    },
+    {
+      "name": "MarkerStyle",
+      "kind": "property",
+      "type": "XlMarkerStyle",
+      "access": "read/write",
+      "description": "Returns or sets the marker style for a point or series in a line chart, scatter chart, or radar chart. Read/write XlMarkerStyle."
+    },
+    {
+      "name": "PictureType",
+      "kind": "property",
+      "type": "XlChartPictureType",
+      "access": "read/write",
+      "description": "Returns or sets an XlChartPictureType value that represents the way pictures are displayed on a column or bar picture chart."
+    },
+    {
+      "name": "ApplyPictToSides",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a picture is applied to the sides of the point or all points in the series. Read/write Boolean."
+    },
+    {
+      "name": "ApplyPictToFront",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a picture is applied to the front of the point or all points in the series. Read/write Boolean."
+    },
+    {
+      "name": "ApplyPictToEnd",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a picture is applied to the end of the point or all points in the series. Read/write Boolean."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that determines if the object has a shadow."
+    },
+    {
+      "name": "SecondaryPlot",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the point is in the secondary section of either a Pie of Pie chart or a Bar of Pie chart. Applies only to points on Pie of Pie charts or Bar of Pie charts. Read/write Boolean."
+    },
+    {
+      "name": "Has3DEffect",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a point has a three-dimensional appearance. Read/write Boolean."
+    },
+    {
+      "name": "PictureUnit2",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the unit for each picture on the chart if the PictureType property is set to xlStackScale (if not, this property is ignored). Read/write Double."
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "ChartFormat",
+      "access": "read-only",
+      "description": "Returns the ChartFormat object. Read-only."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": "Returns the height, in points, of the object. Read-only."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": "Returns the width, in points, of the object. Read-only."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": "Returns a value that represents the distance, in points, from the top edge of the object to the top edge of the chart area. Read-only."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": "Returns a value that represents the distance, in points, from the left edge of the object to the left edge of the chart area. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the object name. Read-only."
+    },
+    {
+      "name": "IsTotal",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the point represents a total. Read/write Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "ClearFormats",
+      "kind": "method",
+      "signature": "ClearFormats() As Variant",
+      "description": "Clears the formatting of the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy() As Variant",
+      "description": "If the point has a picture fill, this method copies the picture to the Clipboard.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the series the point belongs to.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Paste",
+      "kind": "method",
+      "signature": "Paste() As Variant",
+      "description": "Pastes a picture from the Clipboard as the marker on the selected point.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select() As Variant",
+      "description": "Selects the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "ApplyDataLabels",
+      "kind": "method",
+      "signature": "ApplyDataLabels([Type As XlDataLabelsType], [LegendKey As Variant], [AutoText As Variant], [HasLeaderLines As Variant], [ShowSeriesName As Variant], [ShowCategoryName As Variant], [ShowValue As Variant], [ShowPercentage As Variant], [ShowBubbleSize As Variant], [Separator As Variant]) As Variant",
+      "description": "Applies data labels to a point.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "XlDataLabelsType",
+          "optional": true,
+          "description": "The type of data label to apply."
+        },
+        {
+          "name": "LegendKey",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to show the legend key next to the point. The default value is False."
+        },
+        {
+          "name": "AutoText",
+          "type": "Variant",
+          "optional": true,
+          "description": "True if the object automatically generates appropriate text based on content."
+        },
+        {
+          "name": "HasLeaderLines",
+          "type": "Variant",
+          "optional": true,
+          "description": "For the Chart and Series objects, True if the series has leader lines."
+        },
+        {
+          "name": "ShowSeriesName",
+          "type": "Variant",
+          "optional": true,
+          "description": "Pass a Boolean value to enable or disable the series name for the data label."
+        },
+        {
+          "name": "ShowCategoryName",
+          "type": "Variant",
+          "optional": true,
+          "description": "Pass a Boolean value to enable or disable the category name for the data label."
+        },
+        {
+          "name": "ShowValue",
+          "type": "Variant",
+          "optional": true,
+          "description": "Pass a Boolean value to enable or disable the value for the data label."
+        },
+        {
+          "name": "ShowPercentage",
+          "type": "Variant",
+          "optional": true,
+          "description": "Pass a Boolean value to enable or disable the percentage for the data label."
+        },
+        {
+          "name": "ShowBubbleSize",
+          "type": "Variant",
+          "optional": true,
+          "description": "Pass a Boolean value to enable or disable the bubble size for the data label."
+        },
+        {
+          "name": "Separator",
+          "type": "Variant",
+          "optional": true,
+          "description": "The separator for the data label."
+        }
+      ]
+    },
+    {
+      "name": "PieSliceLocation",
+      "kind": "method",
+      "signature": "PieSliceLocation(loc As XlPieSliceLocation, [Index As XlPieSliceIndex]) As Double",
+      "description": "Returns the vertical or horizontal position of a point on a chart item, in points, from the top or left edge of the object to the top or left edge of the chart area.",
+      "returns": "Double",
+      "parameters": [
+        {
+          "name": "loc",
+          "type": "XlPieSliceLocation",
+          "optional": false,
+          "description": "Specifies a horizontal or vertical coordinate."
+        },
+        {
+          "name": "Index",
+          "type": "XlPieSliceIndex",
+          "optional": true,
+          "description": "Specifies which pie slice position coordinate to return. The default value is xlOuterCenterPoint."
+        }
+      ]
+    },
+    {
+      "name": "SetProperty",
+      "kind": "method",
+      "signature": "SetProperty(ID As String, Value As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Value",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetProperty",
+      "kind": "method",
+      "signature": "GetProperty(ID As String) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "ID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

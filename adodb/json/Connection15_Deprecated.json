@@ -1,0 +1,220 @@
+{
+  "name": "Connection15_Deprecated",
+  "kind": "Dispatch Interface",
+  "guid": "{00000515-0000-0010-8000-00AA006D2EA4}",
+  "library": "Microsoft ActiveX Data Objects 6.1 Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Properties",
+      "kind": "property",
+      "type": "Properties",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ConnectionString",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CommandTimeout",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ConnectionTimeout",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Version",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Errors",
+      "kind": "property",
+      "type": "Errors",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "DefaultDatabase",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "IsolationLevel",
+      "kind": "property",
+      "type": "IsolationLevelEnum",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Attributes",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CursorLocation",
+      "kind": "property",
+      "type": "CursorLocationEnum",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Mode",
+      "kind": "property",
+      "type": "ConnectModeEnum",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Provider",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "State",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Execute",
+      "kind": "method",
+      "signature": "Execute(CommandText As String, [RecordsAffected As Variant], [Options As Long]) As _Recordset_Deprecated",
+      "description": "",
+      "returns": "_Recordset_Deprecated",
+      "parameters": [
+        {
+          "name": "CommandText",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RecordsAffected",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Options",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeginTrans",
+      "kind": "method",
+      "signature": "BeginTrans() As Long",
+      "description": "",
+      "returns": "Long"
+    },
+    {
+      "name": "CommitTrans",
+      "kind": "method",
+      "signature": "CommitTrans()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "RollbackTrans",
+      "kind": "method",
+      "signature": "RollbackTrans()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open([ConnectionString As String], [UserID As String], [Password As String], [Options As Long])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ConnectionString",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "UserID",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Password",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Options",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "OpenSchema",
+      "kind": "method",
+      "signature": "OpenSchema(Schema As SchemaEnum, [Restrictions As Variant], [SchemaID As Variant]) As _Recordset_Deprecated",
+      "description": "",
+      "returns": "_Recordset_Deprecated",
+      "parameters": [
+        {
+          "name": "Schema",
+          "type": "SchemaEnum",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Restrictions",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "SchemaID",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

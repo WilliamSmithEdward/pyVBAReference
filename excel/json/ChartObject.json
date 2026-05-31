@@ -1,0 +1,246 @@
+{
+  "name": "ChartObject",
+  "kind": "Dispatch Interface",
+  "guid": "{000208CF-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents an embedded chart on a worksheet.",
+  "remarks": "The ChartObject object acts as a container for a Chart object. Properties and methods for the ChartObject object control the appearance and size of the embedded chart on the worksheet. The ChartObject object is a member of the ChartObjects collection. The ChartObjects collection contains all the embedded charts on a single sheet. Use ChartObjects (_index_), where _index_ is the embedded chart index number or name, to return a single ChartObject object.",
+  "example": "Worksheets(\"Sheet1\").ChartObjects(1).Chart. _\n ChartArea.Format.Fill.Pattern = msoPatternLightDownwardDiagonal",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "BottomRightCell",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the cell that lies under the lower-right corner of the object. Read-only."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a Double value that represents the height, in points, of the object."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the index number of the object within the collection of similar objects."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a Double value that represents the distance, in points, from the left edge of the object to the left edge of column A (on a worksheet) or the left edge of the chart area (on a chart)."
+    },
+    {
+      "name": "Locked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that indicates if the object is locked."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns a String value representing the name of the object."
+    },
+    {
+      "name": "Placement",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value, containing an XlPlacement constant, that represents the way the object is attached to the cells below it."
+    },
+    {
+      "name": "PrintObject",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the object will be printed when the document is printed. Read/write Boolean."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a Double value that represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart)."
+    },
+    {
+      "name": "TopLeftCell",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the cell that lies under the upper-left corner of the specified object. Read-only."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that determines whether the object is visible. Read/write."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a Double value that represents the width, in points, of the object."
+    },
+    {
+      "name": "ZOrder",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the z-order position of the object. Read-only Long."
+    },
+    {
+      "name": "ShapeRange",
+      "kind": "property",
+      "type": "ShapeRange",
+      "access": "read-only",
+      "description": "Returns a ShapeRange object that represents the specified object or objects. Read-only."
+    },
+    {
+      "name": "Chart",
+      "kind": "property",
+      "type": "Chart",
+      "access": "read-only",
+      "description": "Returns a Chart object that represents the chart contained in the object. Read-only."
+    },
+    {
+      "name": "ProtectChartObject",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the embedded chart frame cannot be moved, resized, or deleted through the user interface. Read/write Boolean."
+    },
+    {
+      "name": "RoundedCorners",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the embedded chart has rounded corners. Read/write Boolean."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that determines if the font is a shadow font or if the object has a shadow."
+    }
+  ],
+  "methods": [
+    {
+      "name": "BringToFront",
+      "kind": "method",
+      "signature": "BringToFront() As Variant",
+      "description": "Brings the object to the front of the z-order.",
+      "returns": "Variant"
+    },
+    {
+      "name": "CopyPicture",
+      "kind": "method",
+      "signature": "CopyPicture([Appearance As XlPictureAppearance], [Format As XlCopyPictureFormat]) As Variant",
+      "description": "Copies the selected object to the Clipboard as a picture.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Appearance",
+          "type": "XlPictureAppearance",
+          "optional": true,
+          "description": "Specifies how the picture should be copied. The default value is xlScreen."
+        },
+        {
+          "name": "Format",
+          "type": "XlCopyPictureFormat",
+          "optional": true,
+          "description": "The format of the picture. The default value is xlPicture."
+        }
+      ]
+    },
+    {
+      "name": "Cut",
+      "kind": "method",
+      "signature": "Cut() As Variant",
+      "description": "Cuts the object to the Clipboard.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Duplicate",
+      "kind": "method",
+      "signature": "Duplicate() As Object",
+      "description": "Duplicates the object and returns a reference to the new copy.",
+      "returns": "Object"
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select([Replace As Variant]) As Variant",
+      "description": "Selects the object.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Replace",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to replace the current selection with the specified object. False to extend the current selection to include any previously selected objects and the specified object."
+        }
+      ]
+    },
+    {
+      "name": "SendToBack",
+      "kind": "method",
+      "signature": "SendToBack() As Variant",
+      "description": "Sends the object to the back of the z-order.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate() As Variant",
+      "description": "Makes the current chart the active chart.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy() As Variant",
+      "description": "Copies the object to the Clipboard.",
+      "returns": "Variant"
+    }
+  ],
+  "events": []
+}

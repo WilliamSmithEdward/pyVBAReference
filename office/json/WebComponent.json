@@ -1,0 +1,85 @@
+{
+  "name": "WebComponent",
+  "kind": "Dispatch Interface",
+  "guid": "{000CD100-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Shape",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "URL",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HTML",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "SetPlaceHolderGraphic",
+      "kind": "method",
+      "signature": "SetPlaceHolderGraphic(PlaceHolderGraphic As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "PlaceHolderGraphic",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Commit",
+      "kind": "method",
+      "signature": "Commit()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Revert",
+      "kind": "method",
+      "signature": "Revert()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

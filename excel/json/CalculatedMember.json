@@ -1,0 +1,147 @@
+{
+  "name": "CalculatedMember",
+  "kind": "Dispatch Interface",
+  "guid": "{00024455-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the calculated fields, calculated items, and named sets for PivotTables with Online Analytical Processing (OLAP) data sources.",
+  "remarks": "Use the Add method or the Item property of the CalculatedMembers collection to return a CalculatedMember object. With a CalculatedMember object, you can check the validity of a calculated field or item in a PivotTable by using the IsValid property.",
+  "example": "Sub CheckValidity()\n\n Dim pvtTable As PivotTable\n Dim pvtCache As PivotCache\n\n Set pvtTable = ActiveSheet.PivotTables(1)\n Set pvtCache = Application.ActiveWorkbook.PivotCaches.Item(1)\n\n ' Handle run-time error if external source is not an OLEDB data source.\n On Error GoTo Not_OLEDB\n\n ' Check connection setting and make connection if necessary.\n If pvtCache.IsConnected = False Then\n pvtCache.MakeConnection\n End If\n\n ' Check if calculated member is valid.\n If pvtTable.CalculatedMembers.Item(1).IsValid = True Then\n MsgBox \"The calculated member is valid.\"\n Else\n MsgBox \"The calculated member is not valid.\"\n End If\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that represents the name of the object."
+    },
+    {
+      "name": "Formula",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that represents the member's formula in multidimensional expressions (MDX) syntax."
+    },
+    {
+      "name": "SourceName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that represents the specified object's name as it appears in the original source data for the specified PivotTable report."
+    },
+    {
+      "name": "SolveOrder",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long specifying the value of the calculated member's solve order MDX (Mulitdimensional Expression) argument. The default value is zero. Read-only."
+    },
+    {
+      "name": "IsValid",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean that indicates whether the specified calculated member has been successfully instantiated with the OLAP provider during the current session."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "XlCalculatedMemberType",
+      "access": "read-only",
+      "description": "Returns an XlCalculatedMemberType value that represents the calculated member type."
+    },
+    {
+      "name": "Dynamic",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns whether the specified named set is recalculated with every update. Read-only Boolean."
+    },
+    {
+      "name": "DisplayFolder",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the display folder name for a named set. Read-only."
+    },
+    {
+      "name": "HierarchizeDistinct",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether to order and remove duplicates when displaying the hierarchy of the specified named set in a PivotTable report based on an OLAP cube. Read/write Boolean."
+    },
+    {
+      "name": "FlattenHierarchies",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether items from all levels of the hierarchy of the specified named set are displayed in the same field of a PivotTable report based on an OLAP cube. Read/write Boolean."
+    },
+    {
+      "name": "MeasureGroup",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the associated measure group. Read-only String."
+    },
+    {
+      "name": "ParentHierarchy",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the current parent hierarchy from the hierarchies that are available on the cube. Read-only String."
+    },
+    {
+      "name": "ParentMember",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the parent member for the parent hierarchy. Read-only String."
+    },
+    {
+      "name": "NumberFormat",
+      "kind": "property",
+      "type": "XlCalcMemNumberFormatType",
+      "access": "read-only",
+      "description": "Returns an XlCalcMemNumberFormatType value that represents the number format of the calculated member. The default value is xlNumberFormatTypeDefault. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

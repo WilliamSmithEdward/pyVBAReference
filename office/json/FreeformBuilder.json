@@ -1,0 +1,99 @@
+{
+  "name": "FreeformBuilder",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0315-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "AddNodes",
+      "kind": "method",
+      "signature": "AddNodes(SegmentType As MsoSegmentType, EditingType As MsoEditingType, X1 As Single, Y1 As Single, [X2 As Single], [Y2 As Single], [X3 As Single], [Y3 As Single])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SegmentType",
+          "type": "MsoSegmentType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "EditingType",
+          "type": "MsoEditingType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X1",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y1",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X2",
+          "type": "Single",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Y2",
+          "type": "Single",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "X3",
+          "type": "Single",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Y3",
+          "type": "Single",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ConvertToShape",
+      "kind": "method",
+      "signature": "ConvertToShape() As Shape",
+      "description": "",
+      "returns": "Shape"
+    }
+  ],
+  "events": []
+}

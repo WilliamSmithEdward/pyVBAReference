@@ -1,0 +1,19 @@
+# XlPivotFieldOrientation
+
+**Type:** Enumeration  
+**Library:** Microsoft Office 16.0 Object Library  
+
+Specifies the location of the field in a PivotTable report.
+
+## Constants (5)
+
+- `xlColumnField` = 2  
+  Specifies the Column field.
+- `xlDataField` = 4  
+  Specifies the Data field.
+- `xlHidden` = 0  
+  Specifies that the field is hidden.
+- `xlPageField` = 3  
+  Specifies the Page field.
+- `xlRowField` = 1  
+  Specifies the Row field.

@@ -1,0 +1,85 @@
+{
+  "name": "IAssistance",
+  "kind": "Dispatch Interface",
+  "guid": "{4291224C-DEFE-485B-8E69-6CF8AA85CB76}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Provides a means for developers to create a customized help experience for users within Microsoft Office.",
+  "remarks": "The Assistance property returns an IAssistance object. The IAssistance object exposes methods that allow developers to display help topics in the Office Help Viewer or to display help topics that ship with Office in the Help window of the host application. Developers either pass specific Help IDs to the help system or pass specific search queries. Help IDs have to be explicitly added to the Help file in order for the Help ID to return the help topic.",
+  "example": "Sub DisplayHelpTopic()\n Application.Assistance.ShowHelp \"xlmain11.chm60407\", \"\"\n Application.Assistance.ShowHelp \"vbaxl10.chm65879\", \"DEV\"\nEnd Sub",
+  "properties": [],
+  "methods": [
+    {
+      "name": "ShowHelp",
+      "kind": "method",
+      "signature": "ShowHelp([HelpId As String], [Scope As String])",
+      "description": "Displays the help topic specified by its ID in the Office Help Viewer, or for help topics that ship with Office, in the Help window of the current Office application.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "HelpId",
+          "type": "String",
+          "optional": true,
+          "description": "The ID of the help topic."
+        },
+        {
+          "name": "Scope",
+          "type": "String",
+          "optional": true,
+          "description": "The namespace registered within the host application."
+        }
+      ]
+    },
+    {
+      "name": "SearchHelp",
+      "kind": "method",
+      "signature": "SearchHelp(Query As String, [Scope As String])",
+      "description": "Performs a search from the Office Help Viewer based on one or more keywords. Keywords can be a word or a phrase.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Query",
+          "type": "String",
+          "optional": false,
+          "description": "Represents the search keyword or phrase."
+        },
+        {
+          "name": "Scope",
+          "type": "String",
+          "optional": true,
+          "description": "The namespace registered within the host application."
+        }
+      ]
+    },
+    {
+      "name": "SetDefaultContext",
+      "kind": "method",
+      "signature": "SetDefaultContext(HelpId As String)",
+      "description": "Sets a help topic as the default topic that will be displayed when the user opens a help window.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "HelpId",
+          "type": "String",
+          "optional": false,
+          "description": "The ID of the default help topic."
+        }
+      ]
+    },
+    {
+      "name": "ClearDefaultContext",
+      "kind": "method",
+      "signature": "ClearDefaultContext(HelpId As String)",
+      "description": "Clears the default help topic previously defined in the SetDefaultContext method.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "HelpId",
+          "type": "String",
+          "optional": false,
+          "description": "The ID of the default help topic."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

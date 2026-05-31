@@ -1,0 +1,62 @@
+{
+  "name": "Dialogs",
+  "kind": "Dispatch Interface",
+  "guid": "{00020879-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of all the Dialog objects in Microsoft Excel.",
+  "remarks": "Each Dialog object represents a built-in dialog box. You cannot create a new built-in dialog box or add one to the collection. The only useful thing that you can do with a Dialog object is to use it with the Show method to display the corresponding dialog box. The Microsoft Excel Visual Basic object library includes built-in constants for many of the built-in dialog boxes. Each constant is formed from the prefix \"xlDialog\" followed by the name of the dialog box. For example, the Apply Names dialog box constant is xlDialogApplyNames, and the Find File dialog box constant is xlDialogFindFile. These constants are members of the XlBuiltinDialog enumerated type.",
+  "example": "MsgBox Application.Dialogs.Count",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "Dialog",
+      "access": "read-only",
+      "description": "Returns a single object from a collection."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "Dialog",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [],
+  "events": []
+}

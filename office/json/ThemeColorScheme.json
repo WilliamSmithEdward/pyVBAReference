@@ -1,0 +1,109 @@
+{
+  "name": "ThemeColorScheme",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03A2-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents the color scheme of a Microsoft Office theme.",
+  "remarks": "",
+  "example": "Dim tTheme As OfficeTheme\nDim tcsThemeColorScheme As ThemeColorScheme\nSet tcsThemeColorScheme = tTheme.ThemeColorScheme",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the ThemeColorScheme object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the ThemeColorScheme object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the ThemeColorScheme object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets an Integer indicating the number of items in the ThemeColorScheme collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Colors",
+      "kind": "method",
+      "signature": "Colors(Index As MsoThemeColorSchemeIndex) As ThemeColor",
+      "description": "Gets an object that represents a color in the color scheme of a Microsoft Office theme.",
+      "returns": "ThemeColor",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "MsoThemeColorSchemeIndex",
+          "optional": false,
+          "description": "The index value of the ThemeColor object."
+        }
+      ]
+    },
+    {
+      "name": "Load",
+      "kind": "method",
+      "signature": "Load(FileName As String)",
+      "description": "Loads the color scheme of a Microsoft Office theme from a file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the color theme file."
+        }
+      ]
+    },
+    {
+      "name": "Save",
+      "kind": "method",
+      "signature": "Save(FileName As String)",
+      "description": "Saves the color scheme of a Microsoft Office theme to a file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the file."
+        }
+      ]
+    },
+    {
+      "name": "GetCustomColor",
+      "kind": "method",
+      "signature": "GetCustomColor(Name As String) As MsoRGBType",
+      "description": "Gets a value that represents a color in the color scheme of a Microsoft Office theme.",
+      "returns": "MsoRGBType",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the custom color."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,96 @@
+{
+  "name": "ProtectedViewWindows",
+  "kind": "Dispatch Interface",
+  "guid": "{000244CC-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of the ProtectedViewWindow objects that represent all the Protected View windows that are currently open in the application.",
+  "remarks": "Use the ProtectedViewWindows property of the Application object to return the ProtectedViewWindows collection.",
+  "example": "MsgBox \"There are \" & ProtectedViewWindows.Count & _\n \" Protected View windows currently open.\"",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "ProtectedViewWindow",
+      "access": "read-only",
+      "description": "Returns a single object from a collection."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "ProtectedViewWindow",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open(Filename As String, [Password As Variant], [AddToMru As Variant], [RepairMode As Variant]) As ProtectedViewWindow",
+      "description": "Opens the specified workbook in a new Protected View window.",
+      "returns": "ProtectedViewWindow",
+      "parameters": [
+        {
+          "name": "Filename",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the workbook (paths are accepted)."
+        },
+        {
+          "name": "Password",
+          "type": "Variant",
+          "optional": true,
+          "description": "The password for opening the workbook."
+        },
+        {
+          "name": "AddToMru",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to add the file name to the list of recently used files on the Recent tab of the Backstage view."
+        },
+        {
+          "name": "RepairMode",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to repair the workbook to prevent file corruption."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

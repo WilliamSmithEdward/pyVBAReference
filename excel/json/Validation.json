@@ -1,0 +1,225 @@
+{
+  "name": "Validation",
+  "kind": "Dispatch Interface",
+  "guid": "{0002442F-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents data validation for a worksheet range.",
+  "remarks": "",
+  "example": "Range(\"e5\").Validation _\n .Modify xlValidateList, xlValidAlertStop, \"=$A$1:$A$10\"",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "AlertStyle",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the validation alert style. Read-only XlDVAlertStyle."
+    },
+    {
+      "name": "IgnoreBlank",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if blank values are permitted by the range data validation. Read/write Boolean."
+    },
+    {
+      "name": "IMEMode",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the description of the Japanese input rules. Can be one of the XlIMEMode constants listed in the following table. Read/write Long."
+    },
+    {
+      "name": "InCellDropdown",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if data validation displays a drop-down list that contains acceptable values. Read/write Boolean."
+    },
+    {
+      "name": "ErrorMessage",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the data validation error message. Read/write String."
+    },
+    {
+      "name": "ErrorTitle",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the title of the data-validation error dialog box. Read/write String."
+    },
+    {
+      "name": "InputMessage",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the data validation input message. Read/write String."
+    },
+    {
+      "name": "InputTitle",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the title of the data-validation input dialog box. Read/write String. Limited to 32 characters."
+    },
+    {
+      "name": "Formula1",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the value or expression associated with the conditional format or data validation. Can be a constant value, a string value, a cell reference, or a formula. Read-only String."
+    },
+    {
+      "name": "Formula2",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the value or expression associated with the second part of a conditional format or data validation. Used only when the data validation conditional format Operator property is xlBetween or xlNotBetween (XlFormatConditionOperator). Can be a constant value, a string value, a cell reference, or a formula. Read-only String."
+    },
+    {
+      "name": "Operator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the operator for the data validation. See XlFormatConditionOperator."
+    },
+    {
+      "name": "ShowError",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the data validation error message will be displayed whenever the user enters invalid data. Read/write Boolean."
+    },
+    {
+      "name": "ShowInput",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the data validation input message will be displayed whenever the user selects a cell in the data validation range. Read/write Boolean."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value containing an XlDVType constant that represents the data type validation for a range."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean value that indicates if all the validation criteria are met (that is, if the range contains valid data)."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Type As XlDVType, [AlertStyle As Variant], [Operator As Variant], [Formula1 As Variant], [Formula2 As Variant])",
+      "description": "Adds data validation to the specified range.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "XlDVType",
+          "optional": false,
+          "description": "The validation type."
+        },
+        {
+          "name": "AlertStyle",
+          "type": "Variant",
+          "optional": true,
+          "description": "The validation alert style. Can be one of the following XlDVAlertStyle constants: xlValidAlertInformation, xlValidAlertStop, or xlValidAlertWarning."
+        },
+        {
+          "name": "Operator",
+          "type": "Variant",
+          "optional": true,
+          "description": "The data validation operator. Can be one of the following XlFormatConditionOperator constants: xlBetween, xlEqual, xlGreater, xlGreaterEqual, xlLess, xlLessEqual, xlNotBetween, or xlNotEqual."
+        },
+        {
+          "name": "Formula1",
+          "type": "Variant",
+          "optional": true,
+          "description": "The first part of the data validation equation. Value must not exceed 255 characters."
+        },
+        {
+          "name": "Formula2",
+          "type": "Variant",
+          "optional": true,
+          "description": "The second part of the data validation equation when _Operator_ is xlBetween or xlNotBetween (otherwise, this argument is ignored)."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    },
+    {
+      "name": "Modify",
+      "kind": "method",
+      "signature": "Modify([Type As Variant], [AlertStyle As Variant], [Operator As Variant], [Formula1 As Variant], [Formula2 As Variant])",
+      "description": "Modifies data validation for a range.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "Variant",
+          "optional": true,
+          "description": "An XlDVType value that represents the validation type."
+        },
+        {
+          "name": "AlertStyle",
+          "type": "Variant",
+          "optional": true,
+          "description": "An XlDVAlertStyle value that represents the validation alert style."
+        },
+        {
+          "name": "Operator",
+          "type": "Variant",
+          "optional": true,
+          "description": "An XlFormatConditionOperator value that represents the data validation operator."
+        },
+        {
+          "name": "Formula1",
+          "type": "Variant",
+          "optional": true,
+          "description": "The first part of the data validation equation."
+        },
+        {
+          "name": "Formula2",
+          "type": "Variant",
+          "optional": true,
+          "description": "The second part of the data validation equation when Operator is xlBetween or xlNotBetween; otherwise, this argument is ignored."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,48 @@
+{
+  "name": "GlowFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03BD-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a glow effect around an Office graphic.",
+  "remarks": "",
+  "example": "With ActivePresentation.Slides(2).Shapes(2)\n .Text.Font.Glowformat = msoGlowType2\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the GlowFormat object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the GlowFormat object was created. Read-only."
+    },
+    {
+      "name": "Radius",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the radius value of the glow effect for the GlowFormat object. Read/write."
+    },
+    {
+      "name": "Color",
+      "kind": "property",
+      "type": "ColorFormat",
+      "access": "read-only",
+      "description": "Gets a ColorFormat object that represents the color of text formatted as glow. Read-only."
+    },
+    {
+      "name": "Transparency",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the degree of transparency of the specified glow as a value between 0.0 (opaque) and 1.0 (clear). Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

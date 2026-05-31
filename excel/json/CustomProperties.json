@@ -1,0 +1,84 @@
+{
+  "name": "CustomProperties",
+  "kind": "Dispatch Interface",
+  "guid": "{00024452-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of CustomProperty objects that represents additional information. The information can be used as metadata for XML.",
+  "remarks": "Use the CustomProperties property of the Worksheet object to return a CustomProperties collection. After a CustomProperties collection is returned, you can add metadata to worksheets and perform additional actions depending on which you choose to work with. To add metadata to a worksheet, use the CustomProperties property with the Add method.",
+  "example": "Sub CheckCustomProperties()\n\n Dim wksSheet1 As Worksheet\n\n Set wksSheet1 = Application.ActiveSheet\n\n ' Add metadata to worksheet.\n wksSheet1.CustomProperties.Add _\n Name:=\"Market\", Value:=\"Nasdaq\"\n\n ' Display metadata.\n With wksSheet1.CustomProperties.Item(1)\n MsgBox .Name & vbTab & .Value\n End With\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "CustomProperty",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "CustomProperty",
+      "access": "read-only",
+      "description": "Returns a single object from a collection."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String, Value As Variant) As CustomProperty",
+      "description": "Adds custom property information.",
+      "returns": "CustomProperty",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the custom property."
+        },
+        {
+          "name": "Value",
+          "type": "Variant",
+          "optional": false,
+          "description": "The value of the custom property."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

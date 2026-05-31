@@ -1,0 +1,114 @@
+{
+  "name": "IListObjects",
+  "kind": "Interface",
+  "guid": "{00024470-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([SourceType As XlListObjectSourceType], [Source As Variant], [LinkSource As Variant], [XlListObjectHasHeaders As XlYesNoGuess], [Destination As Variant], [TableStyleName As Variant], RHS As ListObject)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "SourceType",
+          "type": "XlListObjectSourceType",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Source",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "LinkSource",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "XlListObjectHasHeaders",
+          "type": "XlYesNoGuess",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Destination",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "TableStyleName",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "ListObject",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

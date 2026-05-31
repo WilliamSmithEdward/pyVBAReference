@@ -1,0 +1,253 @@
+{
+  "name": "Record_Deprecated",
+  "kind": "Dispatch Interface",
+  "guid": "{00000562-0000-0010-8000-00AA006D2EA4}",
+  "library": "Microsoft ActiveX Data Objects 6.1 Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Properties",
+      "kind": "property",
+      "type": "Properties",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ActiveConnection",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "State",
+      "kind": "property",
+      "type": "ObjectStateEnum",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Source",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Mode",
+      "kind": "property",
+      "type": "ConnectModeEnum",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ParentURL",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Fields",
+      "kind": "property",
+      "type": "Fields_Deprecated",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "RecordType",
+      "kind": "property",
+      "type": "RecordTypeEnum",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "MoveRecord",
+      "kind": "method",
+      "signature": "MoveRecord([Source As String], [Destination As String], [UserName As String], [Password As String], [Options As MoveRecordOptionsEnum], [Async As Boolean]) As String",
+      "description": "",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Destination",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "UserName",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Password",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Options",
+          "type": "MoveRecordOptionsEnum",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Async",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CopyRecord",
+      "kind": "method",
+      "signature": "CopyRecord([Source As String], [Destination As String], [UserName As String], [Password As String], [Options As CopyRecordOptionsEnum], [Async As Boolean]) As String",
+      "description": "",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Destination",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "UserName",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Password",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Options",
+          "type": "CopyRecordOptionsEnum",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Async",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DeleteRecord",
+      "kind": "method",
+      "signature": "DeleteRecord([Source As String], [Async As Boolean])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Async",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open([Source As Variant], [ActiveConnection As Variant], [Mode As ConnectModeEnum], [CreateOptions As RecordCreateOptionsEnum], [Options As RecordOpenOptionsEnum], [UserName As String], [Password As String])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ActiveConnection",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Mode",
+          "type": "ConnectModeEnum",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CreateOptions",
+          "type": "RecordCreateOptionsEnum",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Options",
+          "type": "RecordOpenOptionsEnum",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "UserName",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Password",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "GetChildren",
+      "kind": "method",
+      "signature": "GetChildren() As _Recordset_Deprecated",
+      "description": "",
+      "returns": "_Recordset_Deprecated"
+    },
+    {
+      "name": "Cancel",
+      "kind": "method",
+      "signature": "Cancel()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

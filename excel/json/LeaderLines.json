@@ -1,0 +1,63 @@
+{
+  "name": "LeaderLines",
+  "kind": "Dispatch Interface",
+  "guid": "{00024437-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents leader lines on a chart. Leader lines connect data labels to data points.",
+  "remarks": "This object isn't a collection; there's no object that represents a single leader line. This object applies only to pie charts.",
+  "example": "With Worksheets(1).ChartObjects(1).Chart.SeriesCollection(1)\n .HasDataLabels = True\n .DataLabels.Position = xlLabelPositionBestFit\n .HasLeaderLines = True\n .LeaderLines.Border.ColorIndex = 5\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Border",
+      "kind": "property",
+      "type": "Border",
+      "access": "read-only",
+      "description": "Returns a Border object that represents the border of the object."
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "ChartFormat",
+      "access": "read-only",
+      "description": "Returns the ChartFormat object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects the object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

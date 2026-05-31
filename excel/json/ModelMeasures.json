@@ -1,0 +1,110 @@
+{
+  "name": "ModelMeasures",
+  "kind": "Dispatch Interface",
+  "guid": "{000244EE-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a collection of ModelMeasure objects.",
+  "remarks": "Each measure is represented by a ModelMeasure object. Use the ModelMeasures property of the Model object to return the ModelMeasures collection.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns an integer that represents the number of objects in the collection."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "ModelMeasure",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As ModelMeasure",
+      "description": "Returns a single object from a collection.",
+      "returns": "ModelMeasure",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number of the object."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(MeasureName As String, AssociatedTable As ModelTable, Formula As String, FormatInformation As Variant, [Description As Variant]) As ModelMeasure",
+      "description": "Adds a model measure to the model.",
+      "returns": "ModelMeasure",
+      "parameters": [
+        {
+          "name": "MeasureName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the model measure."
+        },
+        {
+          "name": "AssociatedTable",
+          "type": "ModelTable",
+          "optional": false,
+          "description": "The model table associated with the model measure. This is the table that contains the model measure, as seen in the Field List task pane."
+        },
+        {
+          "name": "Formula",
+          "type": "String",
+          "optional": false,
+          "description": "The Data Analysis Expressions (DAX) formula, inserted as a string."
+        },
+        {
+          "name": "FormatInformation",
+          "type": "Variant",
+          "optional": false,
+          "description": "The formatting of the model measure. See Remarks."
+        },
+        {
+          "name": "Description",
+          "type": "Variant",
+          "optional": true,
+          "description": "The description associated with the model measure."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

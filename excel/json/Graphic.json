@@ -1,0 +1,111 @@
+{
+  "name": "Graphic",
+  "kind": "Dispatch Interface",
+  "guid": "{00024459-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Contains properties that apply to header and footer picture objects.",
+  "remarks": "Use the following properties of the PageSetup object to return the Graphic object: - CenterFooterPicture - CenterHeaderPicture - LeftFooterPicture - LeftHeaderPicture - RightFooterPicture - RightHeaderPicture",
+  "example": "Sub InsertPicture()\n\n With ActiveSheet.PageSetup.LeftFooterPicture\n .FileName = \"C:\\Sample.jpg\"\n .Height = 275.25\n .Width = 463.5\n .Brightness = 0.36\n .ColorType = msoPictureGrayscale\n .Contrast = 0.39\n .CropBottom = -14.4\n .CropLeft = -28.8\n .CropRight = -14.4\n .CropTop = 21.6\n End With\n\n ' Enable the image to show up in the left footer.\n ActiveSheet.PageSetup.LeftFooter = \"&G\"\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Brightness",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the brightness of the specified picture or OLE object. The value for this property must be a number from 0.0 (dimmest) to 1.0 (brightest). Read/write Single."
+    },
+    {
+      "name": "ColorType",
+      "kind": "property",
+      "type": "MsoPictureColorType",
+      "access": "read/write",
+      "description": "Returns or sets the type of color transformation applied to the specified picture or OLE object. Read/write MsoPictureColorType."
+    },
+    {
+      "name": "Contrast",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the contrast for the specified picture or OLE object. The value for this property must be a number from 0.0 (the least contrast) to 1.0 (the greatest contrast). Read/write Single."
+    },
+    {
+      "name": "CropBottom",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the number of points that are cropped off the bottom of the specified picture or OLE object. Read/write Single."
+    },
+    {
+      "name": "CropLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the number of points that are cropped off the left side of the specified picture or OLE object. Read/write Single."
+    },
+    {
+      "name": "CropRight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the number of points that are cropped off the right side of the specified picture or OLE object. Read/write Single."
+    },
+    {
+      "name": "CropTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the number of points that are cropped off the top of the specified picture or OLE object. Read/write Single."
+    },
+    {
+      "name": "Filename",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the URL (on the intranet or the web) or path (local or network) to the location where the specified source object was saved. Read/write String."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single value that represents the height, in points, of the object."
+    },
+    {
+      "name": "LockAspectRatio",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "True if the specified shape retains its original proportions when you resize it. False if you can change the height and width of the shape independently of one another when you resize it. Read/write MsoTriState."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single value that represents the width, in points, of the object."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

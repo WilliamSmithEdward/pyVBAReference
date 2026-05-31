@@ -1,0 +1,77 @@
+{
+  "name": "CustomXMLValidationError",
+  "kind": "Dispatch Interface",
+  "guid": "{000CDB0E-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a single validation error in a CustomXMLValidationErrors collection.",
+  "remarks": "Validation errors can either be triggered when validating an operation against the schema, such as when adding a node, or triggered by the user when some condition is not met. For example, if a start date is later than an end date.",
+  "example": "Dim ValErrors As CustomXMLValidationErrors\nDim ValError As CustomXMLValidationError\nDim cxp1 As CustomXMLPart\nDim intError As Integer\n\nOn Error Go To validation_error\n\n With ActiveDocument\n\n    ' Add and populate a custom xml part\n    set cxp1 = .CustomXMLParts.Add \"<invoice>\"\n\n    ' Add a node\n    cxp1.AddNode \"<quantity>\", \"supplier\", \"urn:invoice:namespace\"\n\n End With\n\nIf ValErrors.Count > 0 then\n   For Each ValError In ValErrors\n      DeBug.Print(\"Error name: \" & ValError.Name & \" Error description: \" & ValError.Text)\n   Next\nEnd If\n\nExit Sub\n\nvalidation_error:\n   CustomXMLValidationErrors.Add(ValError.Name, ValError.Text))\nResume",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the CustomXMLValidationError object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the CustomXMLValidationError object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the CustomXMLValidationError object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the name of an error in a CustomXMLValidationError object. If no errors exist, the property returns Nothing. Read-only."
+    },
+    {
+      "name": "Node",
+      "kind": "property",
+      "type": "CustomXMLNode",
+      "access": "read-only",
+      "description": "Gets a node in a CustomXMLValidationError object, if any exist. If no nodes exist, the property returns Nothing. Read-only."
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the text in the CustomXMLValidationError object. Read-only."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoCustomXMLValidationErrorType",
+      "access": "read-only",
+      "description": "Gets the type of error generated from the CustomXMLValidationError object. Read-only."
+    },
+    {
+      "name": "ErrorCode",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a number representing a validation error in a CustomXMLValidationError object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the CustomXMLValidationError object representing a data validation error.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

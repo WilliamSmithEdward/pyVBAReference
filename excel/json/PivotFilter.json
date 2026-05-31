@@ -1,0 +1,133 @@
+{
+  "name": "PivotFilter",
+  "kind": "Dispatch Interface",
+  "guid": "{00024483-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A PivotFilter is applied to a PivotField object.",
+  "remarks": "Developers have the option of naming filters for reference because the index is not reliable. The DataField property specifies the PivotField to base a value filter on.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified PivotFilter object. Read-only."
+    },
+    {
+      "name": "Order",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Specifies the evaluation order of the filter among all Value filters applied to the entire PivotTable. Read/write Integer."
+    },
+    {
+      "name": "FilterType",
+      "kind": "property",
+      "type": "XlPivotFilterType",
+      "access": "read-only",
+      "description": "Specifies the type of filter to be applied. Read-only XlPivotFilterType."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "This property provides the option of naming filters for reference. You cannot rely on the index value for accurate reference because this value can change."
+    },
+    {
+      "name": "Description",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Provides an optional description for the PivotFilter object. Read-only String."
+    },
+    {
+      "name": "Active",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns whether the specified PivotFilter is active. Read-only Boolean."
+    },
+    {
+      "name": "PivotField",
+      "kind": "property",
+      "type": "PivotField",
+      "access": "read-only",
+      "description": "Specifies the PivotField to which the filter is applied. Read-only."
+    },
+    {
+      "name": "DataField",
+      "kind": "property",
+      "type": "PivotField",
+      "access": "read-only",
+      "description": "This property is applicable only to non-OLAP PivotTables and provides the Value field (PivotField in the Values area) being filtered by for a value filter. Read/write PivotField."
+    },
+    {
+      "name": "DataCubeField",
+      "kind": "property",
+      "type": "CubeField",
+      "access": "read-only",
+      "description": "This property is applicable only to OLAP PivotTables and provides the Value field (PivotField in the Values area) being filtered by for a value filter. Read/write CubeField."
+    },
+    {
+      "name": "Value1",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "This property is a user-supplied parameter to define a filter for a PivotField. Read/write Variant."
+    },
+    {
+      "name": "Value2",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "This property is a user-supplied parameter to define a filter for a PivotField. Read/write Variant."
+    },
+    {
+      "name": "MemberPropertyField",
+      "kind": "property",
+      "type": "PivotField",
+      "access": "read-only",
+      "description": "This property specifies the member property PivotField on which the label filter is based. Read/write PivotField."
+    },
+    {
+      "name": "IsMemberPropertyFilter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Specifies whether the label filter is based on the PivotItem captions of a member property of the field or on the PivotItem captions of the PivotField itself. Read-only Boolean."
+    },
+    {
+      "name": "WholeDayFilter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Sets or gets the filtering semantics for date filters. Read/write Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the filter and removes it from the filter collections of the PivotField and the PivotTable.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

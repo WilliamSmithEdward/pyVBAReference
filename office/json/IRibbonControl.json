@@ -1,0 +1,34 @@
+{
+  "name": "IRibbonControl",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0395-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents the object passed into the callback procedure of a control in a ribbon or another user interface that can be customized by using Office Fluent ribbon extensibility.",
+  "remarks": "The IRibbonControl object contains the name (ID) of the control and the current Window object for the Ribbon UI control.",
+  "example": "public void ButtonOnAction(IRibbonControl control)\n{\n MessageBox.Show(\"Button clicked: \" + control.Id);\n}\n\npublic void ToggleButtonOnAction(IRibbonControl control, bool pressed)\n{\n...if (pressed)\n MessageBox.Show(\"ToggleButton was switched on.\");\n else\n MessageBox.Show(\"ToggleButton was switched off.\");\n}",
+  "properties": [
+    {
+      "name": "Id",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the ID of the control specified in the Ribbon XML markup customization file. Read-only."
+    },
+    {
+      "name": "Context",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Represents the active window containing the Ribbon user interface that triggers a callback procedure. Read-only."
+    },
+    {
+      "name": "Tag",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Used to store arbitrary strings and fetch them at runtime. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

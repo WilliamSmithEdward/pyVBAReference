@@ -1,0 +1,64 @@
+{
+  "name": "SmartArtColors",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03CD-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "A collection of SmartArtColor objects.",
+  "remarks": "Simulates the commands on the Microsoft Office Fluent Ribbon user interface on the SmartArt Tools tab, on the Design group, and on the Change Colors command.",
+  "example": "ActivePresentation.Slides(1).Shapes(1).SmartArt.Color = Application.SmartArtColors(1)",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SmartArtColors object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SmartArtColors object was created. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the calling object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Retrieves the count of the number of SmartArtColor objects contained within the SmartArtColors collection. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As SmartArtColor",
+      "description": "Retrieves a SmartArtColor object at the specified index or with the specified unique Id.",
+      "returns": "SmartArtColor",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "Specifies either an integer representing the index or a string representing the Id of the SmartArt color."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

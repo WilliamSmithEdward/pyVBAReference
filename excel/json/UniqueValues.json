@@ -1,0 +1,148 @@
+{
+  "name": "UniqueValues",
+  "kind": "Dispatch Interface",
+  "guid": "{0002449F-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "The UniqueValues object uses the DupeUnique property to return or set an enum that determines whether the rule should look for duplicate or unique values in the range.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Priority",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the priority value of the conditional formatting rule. The priority determines the order of evaluation when multiple conditional formatting rules exist on a worksheet."
+    },
+    {
+      "name": "StopIfTrue",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that determines if additional formatting rules on the cell should be evaluated if the current rule evaluates to True."
+    },
+    {
+      "name": "AppliesTo",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object specifying the cell range to which the formatting rule is applied."
+    },
+    {
+      "name": "DupeUnique",
+      "kind": "property",
+      "type": "XlDupeUnique",
+      "access": "read/write",
+      "description": "Returns or sets one of the constants of the XlDupeUnique enumeration, which specifies if the conditional formatting rule is looking for unique or duplicate values."
+    },
+    {
+      "name": "Interior",
+      "kind": "property",
+      "type": "Interior",
+      "access": "read-only",
+      "description": "Returns an Interior object that specifies a cell's interior attributes for a conditional formatting rule that evaluates to True. Read-only."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read-only",
+      "description": "Returns a Borders collection that specifies the formatting of cell borders if the conditional formatting rule evaluates to True. Read-only."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read-only",
+      "description": "Returns a Font object that specifies the font formatting if the conditional formatting rule evaluates to True. Read-only."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns one of the constants of the XlFormatConditionType enumeration, which specifies the type of conditional format. Read-only."
+    },
+    {
+      "name": "NumberFormat",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the number format applied to a cell if the conditional formatting rule evaluates to True. Read/write Variant."
+    },
+    {
+      "name": "PTCondition",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean value indicating if the conditional format is being applied to a PivotTable. Read-only."
+    },
+    {
+      "name": "ScopeType",
+      "kind": "property",
+      "type": "XlPivotConditionScope",
+      "access": "read/write",
+      "description": "Returns or sets one of the constants of the XlPivotConditionScope enumeration, which determines the scope of the conditional format when it is applied to a PivotTable."
+    }
+  ],
+  "methods": [
+    {
+      "name": "SetFirstPriority",
+      "kind": "method",
+      "signature": "SetFirstPriority()",
+      "description": "Sets the priority value for this conditional formatting rule to 1 so that it will be evaluated before all other rules on the worksheet.",
+      "returns": "void"
+    },
+    {
+      "name": "SetLastPriority",
+      "kind": "method",
+      "signature": "SetLastPriority()",
+      "description": "Sets the evaluation order for this conditional formatting rule so that it is evaluated after all other rules on the worksheet.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified conditional formatting rule object.",
+      "returns": "void"
+    },
+    {
+      "name": "ModifyAppliesToRange",
+      "kind": "method",
+      "signature": "ModifyAppliesToRange(Range As Range)",
+      "description": "Sets the cell range to which this formatting rule applies.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The range to which this formatting rule will be applied."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

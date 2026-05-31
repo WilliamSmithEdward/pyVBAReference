@@ -1,0 +1,41 @@
+{
+  "name": "SoftEdgeFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03BC-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents the soft edge effect in Office graphics.",
+  "remarks": "The soft edge effect creates a mask around the edge of an object and blends the object with the transparent edge. The result is a faded or \"feathered\" edge.",
+  "example": "With ActivePresentation.Slides(1).Shapes(2)\n With .Text.Font\n .Size = 32\n .Name = \"Palatino\"\n .Softedgeformat = msosoftedge6\n End With\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SoftEdgeFormat object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SoftEdgeFormat object was created. Read-only."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoSoftEdgeType",
+      "access": "read/write",
+      "description": "Gets or sets the type of the SoftEdgeFormat object. Read/write."
+    },
+    {
+      "name": "Radius",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the size, measured in points, of the soft edge effect of the shape. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

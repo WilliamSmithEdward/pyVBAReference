@@ -1,0 +1,166 @@
+{
+  "name": "Balloon",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0324-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Checkboxes",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Labels",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "BalloonType",
+      "kind": "property",
+      "type": "MsoBalloonType",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Icon",
+      "kind": "property",
+      "type": "MsoIconType",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Heading",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Mode",
+      "kind": "property",
+      "type": "MsoModeType",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Animation",
+      "kind": "property",
+      "type": "MsoAnimationType",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Button",
+      "kind": "property",
+      "type": "MsoButtonSetType",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Callback",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Private",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "SetAvoidRectangle",
+      "kind": "method",
+      "signature": "SetAvoidRectangle(Left As Long, Top As Long, Right As Long, Bottom As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Right",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Bottom",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Show",
+      "kind": "method",
+      "signature": "Show() As MsoBalloonButtonType",
+      "description": "",
+      "returns": "MsoBalloonButtonType"
+    },
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

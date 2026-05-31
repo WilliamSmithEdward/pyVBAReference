@@ -1,0 +1,28 @@
+{
+  "name": "IRibbonExtensibility",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0396-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "The interface through which the Ribbon user interface (UI) communicates with a COM add-in to customize the UI.",
+  "remarks": "The IRibbonExtensibility interface has a single method, GetCustomUI.",
+  "example": "public class Connect : Object, Extensibility.IDTExtensibility2, IRibbonExtensibility\n...\npublic string GetCustomUI(string RibbonID)\n{\n StreamReader customUIReader = new System.IO.StreamReader(\"C:\\\\RibbonXSampleCS\\\\customUI.xml\");\n string customUIData = customUIReader.ReadToEnd();\n return customUIData;\n}",
+  "properties": [],
+  "methods": [
+    {
+      "name": "GetCustomUI",
+      "kind": "method",
+      "signature": "GetCustomUI(RibbonID As String) As String",
+      "description": "Loads the XML markup, either from an XML customization file or from XML markup embedded in the procedure, that customizes the Ribbon user interface.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "RibbonID",
+          "type": "String",
+          "optional": false,
+          "description": "The ID for the RibbonX UI."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

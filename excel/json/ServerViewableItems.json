@@ -1,0 +1,108 @@
+{
+  "name": "ServerViewableItems",
+  "kind": "Dispatch Interface",
+  "guid": "{000244A4-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of objects that have been marked as viewable on the server.",
+  "remarks": "This is a collection of references to objects in the workbook. Only objects in this collection will be shown on the server. By default, the entire workbook (including all worksheets) is shown. Only one ServerViewableItems object can exist per workbook. This collection is not indexable by name because there is no guarantee that the names of objects that are marked as viewable on the server are unique. In the Excel user interface, you can view the collection of objects that are marked as viewable on the server in the Excel Services Options dialog box.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the collection. Read-only Long."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Obj As Variant) As Object",
+      "description": "Adds a reference to the ServerViewableItems collection.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Obj",
+          "type": "Variant",
+          "optional": false,
+          "description": "The reference to an object. The object can be a reference to sheets or named items (for example, named ranges, charts, tables, and PivotTables). You cannot have both sheets and named items in the same collection."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete(Index As Variant)",
+      "description": "Deletes a reference to an object in the ServerViewableItems collection in the workbook.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The index of the object that you want to delete."
+        }
+      ]
+    },
+    {
+      "name": "DeleteAll",
+      "kind": "method",
+      "signature": "DeleteAll()",
+      "description": "Deletes references to all the objects in the ServerViewableItems collection in the workbook.",
+      "returns": "void"
+    },
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Object",
+      "description": "Returns a single object from the ServerViewableItems collection.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The index of the object to be returned."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,57 @@
+{
+  "name": "AddIns",
+  "kind": "Dispatch Interface",
+  "guid": "{DA936B62-AC8B-11D1-B6E5-00A0C90F2744}",
+  "library": "Microsoft Visual Basic for Applications Extensibility 5.3",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "VBE",
+      "kind": "property",
+      "type": "VBE",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(index As Variant) As AddIn",
+      "description": "",
+      "returns": "AddIn",
+      "parameters": [
+        {
+          "name": "index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Update",
+      "kind": "method",
+      "signature": "Update()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

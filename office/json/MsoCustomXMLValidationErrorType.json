@@ -1,0 +1,23 @@
+{
+  "name": "MsoCustomXMLValidationErrorType",
+  "kind": "Enumeration",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Indicates how validation errors will be cleared or generated.",
+  "constants": [
+    {
+      "name": "msoCustomXMLValidationErrorSchemaGenerated",
+      "value": 0,
+      "description": "Specifies that where there is a non-empty schema collection available for the custom XML part and validation is in effect, any changes to the part will cause validation errors."
+    },
+    {
+      "name": "msoCustomXMLValidationErrorAutomaticallyCleared",
+      "value": 1,
+      "description": "Specifies that the error will clear itself whenever any change is made to the node it is bound to."
+    },
+    {
+      "name": "msoCustomXMLValidationErrorManual",
+      "value": 2,
+      "description": "Specifies that the error will not be cleared until the Delete method is called."
+    }
+  ]
+}

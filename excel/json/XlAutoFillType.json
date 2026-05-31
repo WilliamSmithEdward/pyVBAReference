@@ -1,0 +1,68 @@
+{
+  "name": "XlAutoFillType",
+  "kind": "Enumeration",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Specifies how the target range is to be filled, based on the contents of the source range.",
+  "constants": [
+    {
+      "name": "xlFillCopy",
+      "value": 1,
+      "description": "Copy the values and formats from the source range to the target range, repeating if necessary."
+    },
+    {
+      "name": "xlFillDays",
+      "value": 5,
+      "description": "Extend the names of the days of the week in the source range into the target range. Formats are copied from the source range to the target range, repeating if necessary."
+    },
+    {
+      "name": "xlFillDefault",
+      "value": 0,
+      "description": "Excel determines the values and formats used to fill the target range."
+    },
+    {
+      "name": "xlFillFormats",
+      "value": 3,
+      "description": "Copy only the formats from the source range to the target range, repeating if necessary."
+    },
+    {
+      "name": "xlFillMonths",
+      "value": 7,
+      "description": "Extend the names of the months in the source range into the target range. Formats are copied from the source range to the target range, repeating if necessary."
+    },
+    {
+      "name": "xlFillSeries",
+      "value": 2,
+      "description": "Extend the values in the source range into the target range as a series (for example, '1, 2' is extended as '3, 4, 5'). Formats are copied from the source range to the target range, repeating if necessary."
+    },
+    {
+      "name": "xlFillValues",
+      "value": 4,
+      "description": "Copy only the values from the source range to the target range, repeating if necessary."
+    },
+    {
+      "name": "xlFillWeekdays",
+      "value": 6,
+      "description": "Extend the names of the days of the workweek in the source range into the target range. Formats are copied from the source range to the target range, repeating if necessary."
+    },
+    {
+      "name": "xlFillYears",
+      "value": 8,
+      "description": "Extend the years in the source range into the target range. Formats are copied from the source range to the target range, repeating if necessary."
+    },
+    {
+      "name": "xlGrowthTrend",
+      "value": 10,
+      "description": "Extend the numeric values from the source range into the target range, assuming that the relationships between the numbers in the source range are multiplicative (for example, '1, 2,' is extended as '4, 8, 16', assuming that each number is a result of multiplying the previous number by some value). Formats are copied from the source range to the target range, repeating if necessary."
+    },
+    {
+      "name": "xlLinearTrend",
+      "value": 9,
+      "description": "Extend the numeric values from the source range into the target range, assuming that the relationships between the numbers is additive (for example, '1, 2,' is extended as '3, 4, 5', assuming that each number is a result of adding some value to the previous number). Formats are copied from the source range to the target range, repeating if necessary."
+    },
+    {
+      "name": "xlFlashFill",
+      "value": 11,
+      "description": "Extend the values from the source range into the target range based on the detected pattern of previous user actions, repeating if necessary."
+    }
+  ]
+}

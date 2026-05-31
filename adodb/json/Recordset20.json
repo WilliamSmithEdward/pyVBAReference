@@ -1,0 +1,600 @@
+{
+  "name": "Recordset20",
+  "kind": "Dispatch Interface",
+  "guid": "{0000154F-0000-0010-8000-00AA006D2EA4}",
+  "library": "Microsoft ActiveX Data Objects 6.1 Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Properties",
+      "kind": "property",
+      "type": "Properties",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "AbsolutePosition",
+      "kind": "property",
+      "type": "PositionEnum",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ActiveConnection",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BOF",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Bookmark",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CacheSize",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CursorType",
+      "kind": "property",
+      "type": "CursorTypeEnum",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "EOF",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Fields",
+      "kind": "property",
+      "type": "Fields",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "LockType",
+      "kind": "property",
+      "type": "LockTypeEnum",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MaxRecords",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "RecordCount",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Source",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AbsolutePage",
+      "kind": "property",
+      "type": "PositionEnum",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "EditMode",
+      "kind": "property",
+      "type": "EditModeEnum",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Filter",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PageCount",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "PageSize",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Sort",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Status",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "State",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "CursorLocation",
+      "kind": "property",
+      "type": "CursorLocationEnum",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MarshalOptions",
+      "kind": "property",
+      "type": "MarshalOptionsEnum",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DataSource",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ActiveCommand",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "StayInSync",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DataMember",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "AddNew",
+      "kind": "method",
+      "signature": "AddNew([FieldList As Variant], [Values As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FieldList",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Values",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CancelUpdate",
+      "kind": "method",
+      "signature": "CancelUpdate()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete([AffectRecords As AffectEnum])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "AffectRecords",
+          "type": "AffectEnum",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetRows",
+      "kind": "method",
+      "signature": "GetRows([Rows As Long], [Start As Variant], [Fields As Variant]) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Rows",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Start",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Fields",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move(NumRecords As Long, [Start As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "NumRecords",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Start",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MoveNext",
+      "kind": "method",
+      "signature": "MoveNext()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "MovePrevious",
+      "kind": "method",
+      "signature": "MovePrevious()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "MoveFirst",
+      "kind": "method",
+      "signature": "MoveFirst()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "MoveLast",
+      "kind": "method",
+      "signature": "MoveLast()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open([Source As Variant], [ActiveConnection As Variant], [CursorType As CursorTypeEnum], [LockType As LockTypeEnum], [Options As Long])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ActiveConnection",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CursorType",
+          "type": "CursorTypeEnum",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "LockType",
+          "type": "LockTypeEnum",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Options",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Requery",
+      "kind": "method",
+      "signature": "Requery([Options As Long])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Options",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Update",
+      "kind": "method",
+      "signature": "Update([Fields As Variant], [Values As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Fields",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Values",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "UpdateBatch",
+      "kind": "method",
+      "signature": "UpdateBatch([AffectRecords As AffectEnum])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "AffectRecords",
+          "type": "AffectEnum",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CancelBatch",
+      "kind": "method",
+      "signature": "CancelBatch([AffectRecords As AffectEnum])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "AffectRecords",
+          "type": "AffectEnum",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "NextRecordset",
+      "kind": "method",
+      "signature": "NextRecordset([RecordsAffected As Variant]) As _Recordset",
+      "description": "",
+      "returns": "_Recordset",
+      "parameters": [
+        {
+          "name": "RecordsAffected",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Supports",
+      "kind": "method",
+      "signature": "Supports(CursorOptions As CursorOptionEnum) As Boolean",
+      "description": "",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "CursorOptions",
+          "type": "CursorOptionEnum",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Find",
+      "kind": "method",
+      "signature": "Find(Criteria As String, [SkipRecords As Long], [SearchDirection As SearchDirectionEnum], [Start As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Criteria",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "SkipRecords",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "SearchDirection",
+          "type": "SearchDirectionEnum",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Start",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Cancel",
+      "kind": "method",
+      "signature": "Cancel()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "GetString",
+      "kind": "method",
+      "signature": "GetString([StringFormat As StringFormatEnum], [NumRows As Long], [ColumnDelimeter As String], [RowDelimeter As String], [NullExpr As String]) As String",
+      "description": "",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "StringFormat",
+          "type": "StringFormatEnum",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "NumRows",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ColumnDelimeter",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RowDelimeter",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "NullExpr",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CompareBookmarks",
+      "kind": "method",
+      "signature": "CompareBookmarks(Bookmark1 As Variant, Bookmark2 As Variant) As CompareEnum",
+      "description": "",
+      "returns": "CompareEnum",
+      "parameters": [
+        {
+          "name": "Bookmark1",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Bookmark2",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Clone",
+      "kind": "method",
+      "signature": "Clone([LockType As LockTypeEnum]) As _Recordset",
+      "description": "",
+      "returns": "_Recordset",
+      "parameters": [
+        {
+          "name": "LockType",
+          "type": "LockTypeEnum",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Resync",
+      "kind": "method",
+      "signature": "Resync([AffectRecords As AffectEnum], [ResyncValues As ResyncEnum])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "AffectRecords",
+          "type": "AffectEnum",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "ResyncValues",
+          "type": "ResyncEnum",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

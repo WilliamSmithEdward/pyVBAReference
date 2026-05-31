@@ -1,0 +1,131 @@
+{
+  "name": "Signature",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0411-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a digital signature attached to a document. Signature objects are contained in the SignatureSet collection of the Document object.",
+  "remarks": "You can add a Signature object to a SignatureSet collection by using the Add method, and you can return an existing member by using the Item method. To remove a Signature from a SignatureSet collection, use the Delete method of the Signature object.",
+  "example": "Function AddSignature(ByVal strIssuer As String, _\n strSigner As String) As Boolean\n\n On Error GoTo Error_Handler\n\n Dim sig As Signature\n\n 'Display the dialog box that lets the\n 'user select a digital signature.\n 'If the user selects a signature, then\n 'it is added to the Signatures\n 'collection. If the user does not, then\n 'an error is returned.\n Set sig = ActiveDocument.Signatures.Add\n\n 'Test several properties before commiting the Signature object to disk.\n If sig.Issuer = strIssuer And _\n sig.Signer = strSigner And _\n sig.IsCertificateExpired = False And _\n sig.IsCertificateRevoked = False And _\n sig.IsValid = True Then\n\n MsgBox \"Signed\"\n AddSignature = True\n 'Otherwise, remove the Signature object from the SignatureSet collection.\n Else\n sig.Delete\n MsgBox \"Not signed\"\n AddSignature = False\n End If\n\n 'Commit all signatures in the SignatureSet collection to the disk.\n ActiveDocument.Signatures.Commit\n\n Exit Function\nError_Handler:\n AddSignature = False\n MsgBox \"Action canceled.\"\nEnd Function",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the Signature object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the Signature object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the Signature object. Read-only."
+    },
+    {
+      "name": "IsSigned",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets a Boolean value indicating whether the document was signed successfully. Read-only."
+    },
+    {
+      "name": "Details",
+      "kind": "property",
+      "type": "SignatureInfo",
+      "access": "read-only",
+      "description": "Gets information about a signature. Read-only."
+    },
+    {
+      "name": "CanSetup",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets a Boolean value indicating whether the user can set properties of the Signature object. Read-only."
+    },
+    {
+      "name": "Setup",
+      "kind": "property",
+      "type": "SignatureSetup",
+      "access": "read-only",
+      "description": "Gets a SignatureSetup object that provides access to various properties of a signature packet. Read-only."
+    },
+    {
+      "name": "IsSignatureLine",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets a value indicating whether this is a signature line. Read-only."
+    },
+    {
+      "name": "SignatureLineShape",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Shape object associated with a Signature object that is a signature line. Read-only."
+    },
+    {
+      "name": "SortHint",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a value representing the sort order of the signatures in a packet with multiple signatures. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the Signature object from the collection.",
+      "returns": "void"
+    },
+    {
+      "name": "Sign",
+      "kind": "method",
+      "signature": "Sign([varSigImg As Variant], [varDelSuggSigner As Variant], [varDelSuggSignerLine2 As Variant], [varDelSuggSignerEmail As Variant])",
+      "description": "Creates a signature packet.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "varSigImg",
+          "type": "Variant",
+          "optional": true,
+          "description": "The signature line graphic image."
+        },
+        {
+          "name": "varDelSuggSigner",
+          "type": "Variant",
+          "optional": true,
+          "description": "The suggested signer."
+        },
+        {
+          "name": "varDelSuggSignerLine2",
+          "type": "Variant",
+          "optional": true,
+          "description": "The additional signature line."
+        },
+        {
+          "name": "varDelSuggSignerEmail",
+          "type": "Variant",
+          "optional": true,
+          "description": "The email address of the suggested signer."
+        }
+      ]
+    },
+    {
+      "name": "ShowDetails",
+      "kind": "method",
+      "signature": "ShowDetails()",
+      "description": "Displays details related to a signature packet.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

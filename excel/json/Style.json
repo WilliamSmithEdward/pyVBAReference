@@ -1,0 +1,231 @@
+{
+  "name": "Style",
+  "kind": "Dispatch Interface",
+  "guid": "{00020852-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a style description for a range.",
+  "remarks": "The Style object contains all style attributes (font, number format, alignment, and so on) as properties. There are several built-in styles, including Normal, Currency, and Percent. Using the Style object is a fast and efficient way to change several cell-formatting properties on multiple cells at the same time. For the Workbook object, the Style object is a member of the Styles collection. The Styles collection contains all the defined styles for the workbook. You can change the appearance of a cell by changing properties of the style applied to that cell. Keep in mind, however, that changing a style property affects all cells already formatted with that style. Styles are sorted alphabetically by style name. The style index number denotes the position of the specified style in the sorted list of style names. Styles(1) is the first style in the alphabetic list, and Styles(Styles.Count) is the last one in the list. For more information about creating and modifying a style, see the Styles object.",
+  "example": "Worksheets(\"Sheet1\").Range(\"A1:A10\").Style = \"Percent\"",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "AddIndent",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that indicates if text is automatically indented when the text alignment in a cell is set to equal distribution (either horizontally or vertically)."
+    },
+    {
+      "name": "BuiltIn",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the style is a built-in style. Read-only Boolean."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read-only",
+      "description": "Returns a Borders collection that represents the borders of a style or a range of cells (including a range defined as part of a conditional format)."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read-only",
+      "description": "Returns a Font object that represents the font of the specified object."
+    },
+    {
+      "name": "FormulaHidden",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that indicates if the formula will be hidden when the worksheet is protected."
+    },
+    {
+      "name": "HorizontalAlignment",
+      "kind": "property",
+      "type": "XlHAlign",
+      "access": "read/write",
+      "description": "Returns or sets an XlHAlign value that represents the horizontal alignment for the specified object."
+    },
+    {
+      "name": "IncludeAlignment",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the style includes the AddIndent, HorizontalAlignment, VerticalAlignment, WrapText, IndentLevel, and Orientation properties of the Style object. Read/write Boolean."
+    },
+    {
+      "name": "IncludeBorder",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the style includes the Color, ColorIndex, LineStyle, and Weight properties of the Border object. Read/write Boolean."
+    },
+    {
+      "name": "IncludeFont",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the style includes the Background, Bold, Color, ColorIndex, FontStyle, Italic, Name, Size, Strikethrough, Subscript, Superscript, and Underline font properties. Read/write Boolean."
+    },
+    {
+      "name": "IncludeNumber",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the style includes the NumberFormat property. Read/write Boolean."
+    },
+    {
+      "name": "IncludePatterns",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the style includes the Color, ColorIndex, InvertIfNegative, Pattern, PatternColor, and PatternColorIndex properties of the Interior object. Read/write Boolean."
+    },
+    {
+      "name": "IncludeProtection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the style includes the FormulaHidden and Locked protection properties. Read/write Boolean."
+    },
+    {
+      "name": "IndentLevel",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long value that represents the indent level for the style."
+    },
+    {
+      "name": "Interior",
+      "kind": "property",
+      "type": "Interior",
+      "access": "read-only",
+      "description": "Returns an Interior object that represents the interior of the specified object."
+    },
+    {
+      "name": "Locked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that indicates if the object is locked."
+    },
+    {
+      "name": "MergeCells",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "True if the style contains merged cells. Read/write Variant."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that represents the name of the object."
+    },
+    {
+      "name": "NameLocal",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns or sets the name of the object, in the language of the user. Read-only String."
+    },
+    {
+      "name": "NumberFormat",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value that represents the format code for the object."
+    },
+    {
+      "name": "NumberFormatLocal",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value that represents the format code for the object as a string in the language of the user."
+    },
+    {
+      "name": "Orientation",
+      "kind": "property",
+      "type": "XlOrientation",
+      "access": "read/write",
+      "description": "Returns or sets an XlOrientation value that represents the text orientation."
+    },
+    {
+      "name": "ShrinkToFit",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that indicates if text automatically shrinks to fit in the available column width."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that represents the name of the specified style."
+    },
+    {
+      "name": "VerticalAlignment",
+      "kind": "property",
+      "type": "XlVAlign",
+      "access": "read/write",
+      "description": "Returns or sets an XlVAlign value that represents the vertical alignment of the specified object."
+    },
+    {
+      "name": "WrapText",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that indicates if Microsoft Excel wraps the text in the object."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ReadingOrder",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the reading order for the specified object. Can be one of the following XlReadingOrder constants: xlRTL (right-to-left), xlLTR (left-to-right), or xlContext. Read/write Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant"
+    }
+  ],
+  "events": []
+}

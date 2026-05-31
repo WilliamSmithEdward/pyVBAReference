@@ -1,0 +1,282 @@
+{
+  "name": "CustomXMLPart",
+  "kind": "Class",
+  "guid": "{000CDB08-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a single CustomXMLPart in a CustomXMLParts collection.",
+  "remarks": "",
+  "example": "Sub AddPartToCollection()\n    Dim myPart As CustomXMLPart\n\n    Set myPart = ActiveDocument.CustomXMLParts.Add(\"<author>Mark Twain</author>\")\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the CustomXMLPart object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the CustomXMLPart object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the CustomXMLPart object. Read-only."
+    },
+    {
+      "name": "DocumentElement",
+      "kind": "property",
+      "type": "CustomXMLNode",
+      "access": "read-only",
+      "description": "Gets the root element of a bound region of data in a document. If the region is empty, the property returns Nothing. Read-only."
+    },
+    {
+      "name": "Id",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets a String containing the GUID assigned to the current CustomXMLPart object. Read-only."
+    },
+    {
+      "name": "NamespaceURI",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the unique address identifier for the namespace of the CustomXMLPart object. Read-only."
+    },
+    {
+      "name": "SchemaCollection",
+      "kind": "property",
+      "type": "CustomXMLSchemaCollection",
+      "access": "read/write",
+      "description": "Gets or sets a CustomXMLSchemaCollection object representing the set of schemas attached to a bound region of data in a document. Read/write."
+    },
+    {
+      "name": "NamespaceManager",
+      "kind": "property",
+      "type": "CustomXMLPrefixMappings",
+      "access": "read-only",
+      "description": "Gets the set of namespace prefix mappings used against the current CustomXMLPart object. Read-only."
+    },
+    {
+      "name": "XML",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the XML representation of the current CustomXMLPart object. Read-only."
+    },
+    {
+      "name": "Errors",
+      "kind": "property",
+      "type": "CustomXMLValidationErrors",
+      "access": "read-only",
+      "description": "Gets a CustomXMLValidationErrors object that provides access to any XML validation errors, if any exist. If no validation errors exist, this property returns Nothing. Read-only."
+    },
+    {
+      "name": "BuiltIn",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets a value that indicates whether the CustomXMLPart is built-in. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "AddNode",
+      "kind": "method",
+      "signature": "AddNode(Parent As CustomXMLNode, [Name As String], [NamespaceURI As String], [NextSibling As CustomXMLNode], [NodeType As MsoCustomXMLNodeType], [NodeValue As String])",
+      "description": "Adds a node to the XML tree.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Parent",
+          "type": "CustomXMLNode",
+          "optional": false,
+          "description": "Represents the node under which this node should be added. If adding an attribute, the parameter denotes the element that the attribute should be added to."
+        },
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": true,
+          "description": "Represents the base name of the node to be added."
+        },
+        {
+          "name": "NamespaceURI",
+          "type": "String",
+          "optional": true,
+          "description": "Represents the namespace of the element to be appended. This parameter is required to append nodes of type msoCustomXMLNodeElement or msoCustomXMLNodeAttribute; otherwise, it is ignored."
+        },
+        {
+          "name": "NextSibling",
+          "type": "CustomXMLNode",
+          "optional": true,
+          "description": "Represents the node which should become the next sibling of the new node. If not specified, the node is added to the end of the parent node's children. This parameter is ignored for additions of type msoXMLNodeAttribute. If the node is not a child of the parent, an error is displayed."
+        },
+        {
+          "name": "NodeType",
+          "type": "MsoCustomXMLNodeType",
+          "optional": true,
+          "description": "Specifies the type of node to append. If the parameter is not specified, it is assumed to be of type msoCustomXMLNodeElement."
+        },
+        {
+          "name": "NodeValue",
+          "type": "String",
+          "optional": true,
+          "description": "Used to set the value of the appended node for those nodes that allow text. If the node doesn't allow text, the parameter is ignored."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the current CustomXMLPart from the data store (IXMLDataStore interface).",
+      "returns": "void"
+    },
+    {
+      "name": "Load",
+      "kind": "method",
+      "signature": "Load(FilePath As String) As Boolean",
+      "description": "Allows the template author to populate a CustomXMLPart from an existing file. Returns True if the load was successful.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "FilePath",
+          "type": "String",
+          "optional": false,
+          "description": "Points to the file on the user's computer or on a network containing the XML to be loaded."
+        }
+      ]
+    },
+    {
+      "name": "LoadXML",
+      "kind": "method",
+      "signature": "LoadXML(XML As String) As Boolean",
+      "description": "Allows the template author to populate a CustomXMLPart object from an XML string. Returns True if the load was successful.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "XML",
+          "type": "String",
+          "optional": false,
+          "description": "Contains the XML to load."
+        }
+      ]
+    },
+    {
+      "name": "SelectNodes",
+      "kind": "method",
+      "signature": "SelectNodes(XPath As String) As CustomXMLNodes",
+      "description": "Selects a collection of nodes from a custom XML part.",
+      "returns": "CustomXMLNodes",
+      "parameters": [
+        {
+          "name": "XPath",
+          "type": "String",
+          "optional": false,
+          "description": "Contains the XPath expression."
+        }
+      ]
+    },
+    {
+      "name": "SelectSingleNode",
+      "kind": "method",
+      "signature": "SelectSingleNode(XPath As String) As CustomXMLNode",
+      "description": "Selects a single node within a custom XML part matching an XPath expression.",
+      "returns": "CustomXMLNode",
+      "parameters": [
+        {
+          "name": "XPath",
+          "type": "String",
+          "optional": false,
+          "description": "Contains an XPath expression."
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "NodeAfterInsert",
+      "kind": "event",
+      "signature": "NodeAfterInsert(NewNode As CustomXMLNode, InUndoRedo As Boolean)",
+      "description": "Occurs after a node is inserted in a CustomXMLPart object.",
+      "parameters": [
+        {
+          "name": "NewNode",
+          "type": "CustomXMLNode",
+          "optional": false,
+          "description": "Corresponds to the node just added to the CustomXMLPart object. Note that this node may have children if a subtree was just added to the document."
+        },
+        {
+          "name": "InUndoRedo",
+          "type": "Boolean",
+          "optional": false,
+          "description": "Returns True if the node was inserted as part of an Undo/Redo action by the user."
+        }
+      ]
+    },
+    {
+      "name": "NodeAfterDelete",
+      "kind": "event",
+      "signature": "NodeAfterDelete(OldNode As CustomXMLNode, OldParentNode As CustomXMLNode, OldNextSibling As CustomXMLNode, InUndoRedo As Boolean)",
+      "description": "Occurs after a node is deleted in a CustomXMLPart object.",
+      "parameters": [
+        {
+          "name": "OldNode",
+          "type": "CustomXMLNode",
+          "optional": false,
+          "description": "Corresponds to the node that was just removed from the CustomXMLPart object. Note that this node may have children if a subtree is being removed from the document. Also, this node will be a \"disconnected\" node in that you can query down from the node, but you cannot query up the tree; the node appears to exist alone."
+        },
+        {
+          "name": "OldParentNode",
+          "type": "CustomXMLNode",
+          "optional": false,
+          "description": "Corresponds to the former parent node of _OldNode_."
+        },
+        {
+          "name": "OldNextSibling",
+          "type": "CustomXMLNode",
+          "optional": false,
+          "description": "Corresponds to the former next sibling of _OldNode_."
+        },
+        {
+          "name": "InUndoRedo",
+          "type": "Boolean",
+          "optional": false,
+          "description": "Returns True if the node was inserted as part of an Undo/Redo action by the user."
+        }
+      ]
+    },
+    {
+      "name": "NodeAfterReplace",
+      "kind": "event",
+      "signature": "NodeAfterReplace(OldNode As CustomXMLNode, NewNode As CustomXMLNode, InUndoRedo As Boolean)",
+      "description": "Occurs just after a node is replaced in a CustomXMLPart object.",
+      "parameters": [
+        {
+          "name": "OldNode",
+          "type": "CustomXMLNode",
+          "optional": false,
+          "description": "Corresponds to the node that was just removed from the CustomXMLPart object. Note that this node may have children if a subtree was just added to the document. Also, this node will be a \"disconnected\" node in that you can query down from the node, but cannot go up; it appears to exist alone."
+        },
+        {
+          "name": "NewNode",
+          "type": "CustomXMLNode",
+          "optional": false,
+          "description": "Corresponds to the node just added to the CustomXMLPart object."
+        },
+        {
+          "name": "InUndoRedo",
+          "type": "Boolean",
+          "optional": false,
+          "description": "Returns True if the node was added as part of an Undo/Redo action by the user."
+        }
+      ]
+    }
+  ]
+}

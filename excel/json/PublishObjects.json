@@ -1,0 +1,128 @@
+{
+  "name": "PublishObjects",
+  "kind": "Dispatch Interface",
+  "guid": "{00024443-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of all PublishObject objects in the workbook.",
+  "remarks": "Each PublishObject object represents an item in a workbook that has been saved to a webpage and can be refreshed according to values specified by the properties and methods of the object.",
+  "example": "Set objPObjs = ActiveWorkbook.PublishObjects\nFor Each objPO in objPObjs\n If objPO.HtmlType = xlHTMLStatic Then\n objPO.Publish\n End If\nNext objPO",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "PublishObject",
+      "access": "read-only",
+      "description": "Returns a single object from a collection."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "PublishObject",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(SourceType As XlSourceType, Filename As String, [Sheet As Variant], [Source As Variant], [HtmlType As Variant], [DivID As Variant], [Title As Variant]) As PublishObject",
+      "description": "Creates an object that represents an item in a document saved to a webpage. Such objects facilitate subsequent updates to the webpage while automated changes are being made to the document in Microsoft Excel. Returns a PublishObject object.",
+      "returns": "PublishObject",
+      "parameters": [
+        {
+          "name": "SourceType",
+          "type": "XlSourceType",
+          "optional": false,
+          "description": "The source type."
+        },
+        {
+          "name": "Filename",
+          "type": "String",
+          "optional": false,
+          "description": "String. The URL (on the intranet or the web) or path (local or network) to which the source object was saved."
+        },
+        {
+          "name": "Sheet",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the worksheet that was saved as a webpage."
+        },
+        {
+          "name": "Source",
+          "type": "Variant",
+          "optional": true,
+          "description": "A unique name used to identify items that have one of the following constants as their _SourceType_ argument: xlSourceAutoFilter, xlSourceChart, xlSourcePivotTable, xlSourcePrintArea, xlSourceQuery, or xlSourceRange. If _SourceType_ is xlSourceRange, _Source_ specifies a range, which can be a defined name. If _SourceType_ is xlSourceChart, xlSourcePivotTable, or xlSourceQuery, _Source_ specifies the name of a chart, PivotTable report, or query table."
+        },
+        {
+          "name": "HtmlType",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies whether the item is saved as an interactive Microsoft Office Web component or as static text and images. Can be one of the XlHTMLType constants: xlHtmlCalc, xlHtmlChart, xlHtmlList, or xlHtmlStatic."
+        },
+        {
+          "name": "DivID",
+          "type": "Variant",
+          "optional": true,
+          "description": "The unique identifier used in the HTML DIV tag to identify the item on the webpage."
+        },
+        {
+          "name": "Title",
+          "type": "Variant",
+          "optional": true,
+          "description": "The title of the webpage."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    },
+    {
+      "name": "Publish",
+      "kind": "method",
+      "signature": "Publish()",
+      "description": "Saves a copy of the item or items in the spreadsheet that have been added to the PublishObjects collection to a webpage.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

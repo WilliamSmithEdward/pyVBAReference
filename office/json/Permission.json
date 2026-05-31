@@ -1,0 +1,175 @@
+{
+  "name": "Permission",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0376-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "The Permission property of the Document object in Microsoft Word, a Workbook object in Microsoft Excel, and a Presentation object in Microsoft PowerPoint returns a Permission object.",
+  "remarks": "Use the Permission object to restrict permissions to the active document and to return or set specific permissions settings. The Permission object gives access to a collection of UserPermission objects. Use the UserPermission object to associate specific sets of rights with individual users. While some permissions granted through the user interface (such as msoPermissionPrint) apply to all users, you can use the UserPermission object to assign them on a per-user basis with per-user expiration dates. Microsoft Office Information Rights Management supports the use of administrative permission policies that list users and groups and their document permissions. Use the ApplyPolicy method to apply a permission policy, and the PermissionFromPolicy, PolicyName, and PolicyDescription properties to return policy information. The Permission object model is available whether permissions are restricted on the active document or not. The Permission property of the Document, Workbook, and Presentation objects does not return Nothing when the active document does not have restricted permissions. Use the Enabled property to determine whether a document has restricted permissions.",
+  "example": "Dim irmPermission As Office.Permission\n Dim strIRMInfo As String\n Set irmPermission = ActiveWorkbook.Permission\n If irmPermission.Enabled Then\n strIRMInfo = \"Permissions are restricted on this document.\" & vbCrLf\n strIRMInfo = strIRMInfo & \" View in trusted browser: \" & _\n irmPermission.EnableTrustedBrowser & vbCrLf & _\n \" Document author: \" & irmPermission.DocumentAuthor & vbCrLf & _\n \" Users with permissions: \" & irmPermission.Count & vbCrLf & _\n \" Cache licenses: \" & irmPermission.StoreLicenses & vbCrLf & _\n \" Request permission URL: \" & irmPermission.RequestPermissionURL & vbCrLf\n If irmPermission.PermissionFromPolicy Then\n strIRMInfo = strIRMInfo & \" Permissions applied from policy:\" & vbCrLf & _\n \" Policy name: \" & irmPermission.PolicyName & vbCrLf & _\n \" Policy description: \" & irmPermission.PolicyDescription\n Else\n strIRMInfo = strIRMInfo & \" Default permissions applied.\" & vbCrLf & _\n \" Default policy name: \" & irmPermission.PolicyName & vbCrLf & _\n \" Default policy description: \" & irmPermission.PolicyDescription\n End If\n Else\n strIRMInfo = \"Permissions are NOT restricted on this document.\"\n End If\n MsgBox strIRMInfo, vbInformation + vbOKOnly, \"IRM Information\"\n Set irmPermission = Nothing",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the Permission object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the Permission object was created. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "UserPermission",
+      "access": "read-only",
+      "description": "Gets a UserPermission object that is a member of the Permission collection. The UserPermission object associates a set of permissions on the active document with a single user and an optional expiration date. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the Permission object. Read-only."
+    },
+    {
+      "name": "EnableTrustedBrowser",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Gets or sets a value indicating whether to enable a browser from a trusted source. Read/write."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the Permission object. Read-only."
+    },
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Gets or sets a Boolean value that indicates whether permissions are enabled on the active document. Read/write."
+    },
+    {
+      "name": "RequestPermissionURL",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the file or website URL to visit or the email address to contact for users who need additional permissions on the active document. Read/write."
+    },
+    {
+      "name": "PolicyName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the name of the permissions policy applied to the active document. Read-only."
+    },
+    {
+      "name": "PolicyDescription",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the description of the permissions policy applied to the active document. Read-only."
+    },
+    {
+      "name": "StoreLicenses",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Gets or sets a Boolean value that indicates whether the user's license to view the active document should be cached to allow offline viewing when the user cannot connect to a rights management server. Read/write."
+    },
+    {
+      "name": "DocumentAuthor",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the name in email form of the author of the active document. Read/write."
+    },
+    {
+      "name": "PermissionFromPolicy",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets a Boolean value that indicates whether a permission policy has been applied to the active document. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "DoubleKeyEncryptionUrl",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SensitivityLabelId",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the sensitivity label id included in user defined protection from Microsoft Purview Information Protection. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(UserId As String, [Permission As Variant], [ExpirationDate As Variant]) As UserPermission",
+      "description": "Creates a set of permissions on the active document for the specified user. Returns a UserPermission object.",
+      "returns": "UserPermission",
+      "parameters": [
+        {
+          "name": "UserId",
+          "type": "String",
+          "optional": false,
+          "description": "The email address (in the format user@domain.com) of the user to whom permissions on the active document are being granted."
+        },
+        {
+          "name": "Permission",
+          "type": "Variant",
+          "optional": true,
+          "description": "The permissions on the active document that are being granted to the specified user."
+        },
+        {
+          "name": "ExpirationDate",
+          "type": "Variant",
+          "optional": true,
+          "description": "The expiration date for the permissions that are being granted. NOTE: this parameter is not used and will be ignored."
+        }
+      ]
+    },
+    {
+      "name": "ApplyPolicy",
+      "kind": "method",
+      "signature": "ApplyPolicy(FileName As String)",
+      "description": "Applies the specified permission policy to the active document.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The path and file name of the permission policy template file."
+        }
+      ]
+    },
+    {
+      "name": "RemoveAll",
+      "kind": "method",
+      "signature": "RemoveAll()",
+      "description": "Removes all UserPermission objects from the Permission collection of the active document.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

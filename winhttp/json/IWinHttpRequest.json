@@ -1,0 +1,280 @@
+{
+  "name": "IWinHttpRequest",
+  "kind": "Dispatch Interface",
+  "guid": "{016FE2EC-B2C8-45F8-B23B-39E53A75396B}",
+  "library": "Microsoft WinHTTP Services, version 5.1",
+  "description": "IWinHttpRequest Interface",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Status",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Get HTTP status code"
+    },
+    {
+      "name": "StatusText",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Get HTTP status text"
+    },
+    {
+      "name": "ResponseText",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Get response body as a string"
+    },
+    {
+      "name": "ResponseBody",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Get response body as a safearray of UI1"
+    },
+    {
+      "name": "ResponseStream",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Get response body as a stream"
+    },
+    {
+      "name": "Option",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "SetProxy",
+      "kind": "method",
+      "signature": "SetProxy(ProxySetting As HTTPREQUEST_PROXY_SETTING, [ProxyServer As Variant], [BypassList As Variant])",
+      "description": "Specify proxy configuration",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ProxySetting",
+          "type": "HTTPREQUEST_PROXY_SETTING",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ProxyServer",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "BypassList",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetCredentials",
+      "kind": "method",
+      "signature": "SetCredentials(UserName As String, Password As String, Flags As HTTPREQUEST_SETCREDENTIALS_FLAGS)",
+      "description": "Specify authentication credentials",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "UserName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Password",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Flags",
+          "type": "HTTPREQUEST_SETCREDENTIALS_FLAGS",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open(Method As String, Url As String, [Async As Variant])",
+      "description": "Open HTTP connection",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Method",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Url",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Async",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetRequestHeader",
+      "kind": "method",
+      "signature": "SetRequestHeader(Header As String, Value As String)",
+      "description": "Add HTTP request header",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Header",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetResponseHeader",
+      "kind": "method",
+      "signature": "GetResponseHeader(Header As String) As String",
+      "description": "Get HTTP response header",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Header",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetAllResponseHeaders",
+      "kind": "method",
+      "signature": "GetAllResponseHeaders() As String",
+      "description": "Get all HTTP response headers",
+      "returns": "String"
+    },
+    {
+      "name": "Send",
+      "kind": "method",
+      "signature": "Send([Body As Variant])",
+      "description": "Send HTTP request",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Body",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WaitForResponse",
+      "kind": "method",
+      "signature": "WaitForResponse([Timeout As Variant]) As Boolean",
+      "description": "Wait for asynchronous send to complete, with optional timeout (in seconds)",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "Timeout",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Abort",
+      "kind": "method",
+      "signature": "Abort()",
+      "description": "Abort an asynchronous operation in progress",
+      "returns": "void"
+    },
+    {
+      "name": "SetTimeouts",
+      "kind": "method",
+      "signature": "SetTimeouts(ResolveTimeout As Long, ConnectTimeout As Long, SendTimeout As Long, ReceiveTimeout As Long)",
+      "description": "Specify timeout settings (in milliseconds)",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ResolveTimeout",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ConnectTimeout",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "SendTimeout",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ReceiveTimeout",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetClientCertificate",
+      "kind": "method",
+      "signature": "SetClientCertificate(ClientCertificate As String)",
+      "description": "Specify a client certificate",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ClientCertificate",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetAutoLogonPolicy",
+      "kind": "method",
+      "signature": "SetAutoLogonPolicy(AutoLogonPolicy As WinHttpRequestAutoLogonPolicy)",
+      "description": "Specify if credentials should be sent automatically",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "AutoLogonPolicy",
+          "type": "WinHttpRequestAutoLogonPolicy",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

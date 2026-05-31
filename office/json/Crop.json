@@ -1,0 +1,83 @@
+{
+  "name": "Crop",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03D3-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "An object used to remove a portion of an image.",
+  "remarks": "",
+  "example": "Sub CropImage()\n ActivePresentation.Slides(1).Shapes.AddPicture \"c:\\myImage.png\", msoFalse, msoTrue, 250,150, 200, 200\n ActivePresentation.Slides(1).Shapes(1).PictureFormat.Crop.PictureHeight = 100\n ActivePresentation.Slides(1).Shapes(1).PictureFormat.Crop.PictureWidth = 100\n ActivePresentation.Slides(1).Shapes(1).PictureFormat.Crop.PictureOffsetX = 0\n ActivePresentation.Slides(1).Shapes(1).PictureFormat.Crop.PictureOffsetY = 0\n ActivePresentation.Slides(1).Shapes(1).PictureFormat.Crop.ShapeHeight = 100\n ActivePresentation.Slides(1).Shapes(1).PictureFormat.Crop.ShapeWidth = 100\n ActivePresentation.Slides(1).Shapes(1).PictureFormat.Crop.ShapeLeft = 330\n ActivePresentation.Slides(1).Shapes(1).PictureFormat.Crop.ShapeTop = 170\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Application object of the host application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the Crop object was created. Read-only."
+    },
+    {
+      "name": "PictureOffsetX",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the _x_-axis offset of the image that is to be cropped. Read/write."
+    },
+    {
+      "name": "PictureOffsetY",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the _y_-axis offset of the image that is to be cropped. Read/write."
+    },
+    {
+      "name": "PictureWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the width of the image that is to be cropped. Read/write."
+    },
+    {
+      "name": "PictureHeight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the height of the image that is to be cropped. Read/write."
+    },
+    {
+      "name": "ShapeLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the location of the left-side of a shape that is used to crop an image. Read/write."
+    },
+    {
+      "name": "ShapeTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the location of the top of a shape that is used to crop an image. Read/write."
+    },
+    {
+      "name": "ShapeWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the width of a shape that is used to crop an image. Read/write."
+    },
+    {
+      "name": "ShapeHeight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the height of a shape that is used to crop an image. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

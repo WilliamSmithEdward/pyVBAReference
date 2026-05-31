@@ -1,0 +1,158 @@
+{
+  "name": "IMultiPage",
+  "kind": "Dispatch Interface",
+  "guid": "{04598FC9-866C-11CF-AB7C-00AA00C08FCF}",
+  "library": "Microsoft Forms 2.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "BackColor",
+      "kind": "property",
+      "type": "OLE_COLOR",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ForeColor",
+      "kind": "property",
+      "type": "OLE_COLOR",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MultiRow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Style",
+      "kind": "property",
+      "type": "fmTabStyle",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TabOrientation",
+      "kind": "property",
+      "type": "fmTabOrientation",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SelectedItem",
+      "kind": "property",
+      "type": "Page",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Pages",
+      "kind": "property",
+      "type": "Pages",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TabFixedWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TabFixedHeight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "_SetTabFixedWidth",
+      "kind": "method",
+      "signature": "_SetTabFixedWidth(Width As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Width",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetTabFixedWidth",
+      "kind": "method",
+      "signature": "_GetTabFixedWidth(Width As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Width",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_SetTabFixedHeight",
+      "kind": "method",
+      "signature": "_SetTabFixedHeight(Height As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Height",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "_GetTabFixedHeight",
+      "kind": "method",
+      "signature": "_GetTabFixedHeight(Height As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Height",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,85 @@
+{
+  "name": "PictureEffects",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03D2-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a collection of PictureEffect objects.",
+  "remarks": "Picture effects are processed as a chain composed of individual items that are applied in sequence to create the final composited image. An effects chain will allow an effect to be added to the chain, reordered, or removed from the chain.",
+  "example": "Sub PictureEffectSample()\n' Setup a slide with one picture shape.\nWith ActivePresentation.Slides(1).Shapes(1).Fill.PictureEffects\n\n ' Insert a 150% Saturation effect.\n .Insert(msoEffectSaturation).EffectParameters(1).Value = 1.5\n\n ' Insert Brightness/Contrast effect and set values to -50% Brightness and +25% Contrast.\n Dim brightnessContrast As PictureEffect\n Set brightnessContrast = .Insert(msoEffectBrightnessContrast)\n brightnessContrast.EffectParameters(1).Value = -0.5\n brightnessContrast.EffectParameters(2).Value = 0.25\n\n ' Remove all Picture effects.\n While .Count > 0\n .Delete (1)\n Wend\n\nEnd With\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the PictureEffects object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the PictureEffects object was created. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "PictureEffect",
+      "access": "read-only",
+      "description": "Retrieves a PictureEffect object at the specified index. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Retrieves the count of the number of PictureEffect objects contained within the PictureEffects collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Insert",
+      "kind": "method",
+      "signature": "Insert(EffectType As MsoPictureEffectType, [Position As Long]) As PictureEffect",
+      "description": "Inserts a picture effect in a chain of composite effects.",
+      "returns": "PictureEffect",
+      "parameters": [
+        {
+          "name": "EffectType",
+          "type": "MsoPictureEffectType",
+          "optional": false,
+          "description": "An enumeration specifying the type of picture effect."
+        },
+        {
+          "name": "Position",
+          "type": "Long",
+          "optional": true,
+          "description": "The position of the effect in the composite chain of picture effects."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete([Index As Long])",
+      "description": "Deletes a PictureEffect object from the collection.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": true,
+          "description": "The index number of the PictureEffect object to delete."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

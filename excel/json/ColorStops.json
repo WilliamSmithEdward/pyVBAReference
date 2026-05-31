@@ -1,0 +1,93 @@
+{
+  "name": "ColorStops",
+  "kind": "Dispatch Interface",
+  "guid": "{000244AE-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of all the ColorStop objects for the specified series.",
+  "remarks": "Each ColorStop object represents a color stop for a gradient fill in a range or selection.",
+  "example": "With Selection.Interior\n .Pattern = xlPatternLinearGradient\n .Gradient.Degree = 90\n .Gradient.ColorStops.Clear\nEnd With\n\n 'adds stops after any have been cleared\nWith Selection.Interior.Gradient.ColorStops.Add(0)\n .ThemeColor = xlThemeColorDark1\n .TintAndShade = 0\nEnd With\n\nWith Selection.Interior.Gradient.ColorStops.Add(1)\n .ThemeColor = xlThemeColorAccent1\n .TintAndShade = 0\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns or sets the count of the represented object. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "ColorStop",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Position As Double) As ColorStop",
+      "description": "Adds a ColorStop object to the specified collection.",
+      "returns": "ColorStop",
+      "parameters": [
+        {
+          "name": "Position",
+          "type": "Double",
+          "optional": false,
+          "description": "Represents the position in which to apply the ColorStop."
+        }
+      ]
+    },
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As ColorStop",
+      "description": "Returns a single object from the represented collection.",
+      "returns": "ColorStop",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number for the object."
+        }
+      ]
+    },
+    {
+      "name": "Clear",
+      "kind": "method",
+      "signature": "Clear()",
+      "description": "Clears the represented object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

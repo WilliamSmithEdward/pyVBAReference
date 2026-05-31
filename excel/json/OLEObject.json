@@ -1,0 +1,337 @@
+{
+  "name": "OLEObject",
+  "kind": "Class",
+  "guid": "{00020818-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents an ActiveX control or a linked or embedded OLE object on a worksheet.",
+  "remarks": "The OLEObject object is a member of the OLEObjects collection. The OLEObjects collection contains all the OLE objects on a single worksheet.",
+  "example": "Worksheets(\"sheet1\").OLEObjects(1).Delete",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "BottomRightCell",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the cell that lies under the lower-right corner of the object. Read-only."
+    },
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the object is enabled. Read/write Boolean."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a Double value that represents the height, in points, of the object."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the index number of the object within the collection of similar objects."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a Double value that represents the distance, in points, from the left edge of the object to the left edge of column A (on a worksheet) or the left edge of the chart area (on a chart)."
+    },
+    {
+      "name": "Locked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that indicates if the object is locked."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value representing the name of the object."
+    },
+    {
+      "name": "Placement",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value containing an XlPlacement constant that represents the way the object is attached to the cells below it."
+    },
+    {
+      "name": "PrintObject",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the object is printed when the document is printed. Read/write Boolean."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a Double value that represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart)."
+    },
+    {
+      "name": "TopLeftCell",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the cell that lies under the upper-left corner of the specified object. Read-only."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that determines whether the object is visible. Read/write."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a Double value that represents the width, in points, of the object."
+    },
+    {
+      "name": "ZOrder",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the z-order position of the object. Read-only Long."
+    },
+    {
+      "name": "ShapeRange",
+      "kind": "property",
+      "type": "ShapeRange",
+      "access": "read-only",
+      "description": "Returns a ShapeRange object that represents the specified object or objects. Read-only."
+    },
+    {
+      "name": "Border",
+      "kind": "property",
+      "type": "Border",
+      "access": "read-only",
+      "description": "Returns a Border object that represents the border of the object."
+    },
+    {
+      "name": "Interior",
+      "kind": "property",
+      "type": "Interior",
+      "access": "read-only",
+      "description": "Returns an Interior object that represents the interior of the specified object."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that determines if the object has a shadow."
+    },
+    {
+      "name": "AutoLoad",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the OLE object is automatically loaded when the workbook that contains it is opened. Read/write Boolean."
+    },
+    {
+      "name": "AutoUpdate",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the OLE object is updated automatically when the source changes. Valid only if the object is linked; its OLEType property must be xlOLELink (XlOLEType enumeration). Read-only Boolean."
+    },
+    {
+      "name": "Object",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the OLE Automation object associated with this OLE object. Read-only Object."
+    },
+    {
+      "name": "OLEType",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns the OLE object type. Can be one of the following XlOLEType constants: xlOLELink or xlOLEEmbed. Returns xlOLELink if the object is linked (it exists outside of the file), or returns xlOLEEmbed if the object is embedded (it's entirely contained within the file). Read-only Long."
+    },
+    {
+      "name": "SourceName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value that represents the specified object's link source name."
+    },
+    {
+      "name": "LinkedCell",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the worksheet range linked to the control's value. If you place a value in the cell, the control takes this value. Likewise, if you change the value of the control, that value is also placed in the cell. Read/write String."
+    },
+    {
+      "name": "ListFillRange",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the worksheet range used to fill the specified list box. Setting this property destroys any existing list in the list box. Read/write String."
+    },
+    {
+      "name": "progID",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the programmatic identifiers for the object. Read-only String."
+    }
+  ],
+  "methods": [
+    {
+      "name": "BringToFront",
+      "kind": "method",
+      "signature": "BringToFront() As Variant",
+      "description": "Brings the object to the front of the z-order.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy() As Variant",
+      "description": "Copies the object to the Clipboard.",
+      "returns": "Variant"
+    },
+    {
+      "name": "CopyPicture",
+      "kind": "method",
+      "signature": "CopyPicture([Appearance As XlPictureAppearance], [Format As XlCopyPictureFormat]) As Variant",
+      "description": "Copies the selected object to the Clipboard as a picture. Variant.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Appearance",
+          "type": "XlPictureAppearance",
+          "optional": true,
+          "description": "Specifies how the picture should be copied. The default value is xlScreen."
+        },
+        {
+          "name": "Format",
+          "type": "XlCopyPictureFormat",
+          "optional": true,
+          "description": "The format of the picture. The default value is xlPicture."
+        }
+      ]
+    },
+    {
+      "name": "Cut",
+      "kind": "method",
+      "signature": "Cut() As Variant",
+      "description": "Cuts the object to the Clipboard or pastes it into a specified destination.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Duplicate",
+      "kind": "method",
+      "signature": "Duplicate() As Object",
+      "description": "Duplicates the object and returns a reference to the new copy.",
+      "returns": "Object"
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select([Replace As Variant]) As Variant",
+      "description": "Selects the object.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Replace",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to replace the current selection with the specified object. False to extend the current selection to include any previously selected objects and the specified object."
+        }
+      ]
+    },
+    {
+      "name": "SendToBack",
+      "kind": "method",
+      "signature": "SendToBack() As Variant",
+      "description": "Sends the object to the back of the z-order.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate() As Variant",
+      "description": "Activates the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Update",
+      "kind": "method",
+      "signature": "Update() As Variant",
+      "description": "Updates the link.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Verb",
+      "kind": "method",
+      "signature": "Verb([Verb As XlOLEVerb]) As Variant",
+      "description": "Sends a verb to the server of the specified OLE object.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Verb",
+          "type": "XlOLEVerb",
+          "optional": true,
+          "description": "The verb that the server of the OLE object should act on. If this argument is omitted, the default verb is sent. The available verbs are determined by the object's source application. Typical verbs for an OLE object are Open and Primary (represented by the XlOLEVerb constants xlOpen and xlPrimary)."
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "GotFocus",
+      "kind": "event",
+      "signature": "GotFocus()",
+      "description": "Occurs when an ActiveX control gets input focus."
+    },
+    {
+      "name": "LostFocus",
+      "kind": "event",
+      "signature": "LostFocus()",
+      "description": "Occurs when an ActiveX control loses input focus."
+    }
+  ]
+}

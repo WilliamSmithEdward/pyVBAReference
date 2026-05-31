@@ -1,0 +1,265 @@
+{
+  "name": "Font2",
+  "kind": "Dispatch Interface",
+  "guid": "{000C039A-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Contains font attributes (for example, font name, font size, and color) for an object.",
+  "remarks": "",
+  "example": "With ActiveDocument.Styles(wdStyleHeading2).Font2\n .Name = \"Arial\"\n .Italic = True\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an object that represents the application that the Font2 object is used in. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a value indicating the application that the object was created in. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the parent of the Font2 object. Read-only."
+    },
+    {
+      "name": "Bold",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Gets or sets a value specifying whether the font should be bold. Read/write."
+    },
+    {
+      "name": "Italic",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Gets or sets a value specifying whether the text for a selection is italic. Read/write."
+    },
+    {
+      "name": "Strike",
+      "kind": "property",
+      "type": "MsoTextStrike",
+      "access": "read/write",
+      "description": "Gets or sets a value specifying the strike format used for a selection of text. Read/write."
+    },
+    {
+      "name": "Caps",
+      "kind": "property",
+      "type": "MsoTextCaps",
+      "access": "read/write",
+      "description": "Gets or sets a value specifying that the text should be capitalized. Read/write."
+    },
+    {
+      "name": "AutorotateNumbers",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Gets or sets a value that specifies whether the numbers in a numbered list should be rotated when the text is rotated. Read/write."
+    },
+    {
+      "name": "BaselineOffset",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets a value specifying the horizontal offset of the selected font. Read/write."
+    },
+    {
+      "name": "Kerning",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets a value specifying the amount of spacing between text characters. Read/write."
+    },
+    {
+      "name": "Size",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets a value specifying the size of the font. Read/write."
+    },
+    {
+      "name": "Spacing",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets a value specifying the spacing between characters in a selection of text. Read/write."
+    },
+    {
+      "name": "UnderlineStyle",
+      "kind": "property",
+      "type": "MsoTextUnderlineType",
+      "access": "read/write",
+      "description": "Gets or sets a value specifying the underline style for the selected text. Read/write."
+    },
+    {
+      "name": "Allcaps",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "True if the font is formatted as all capital letters. Read/write."
+    },
+    {
+      "name": "DoubleStrikeThrough",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "True if the specified font is formatted as double strikethrough text. Read/write."
+    },
+    {
+      "name": "Equalize",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Gets or sets a value specifying whether the text for a selection should be spaced equal distances apart. Read/write."
+    },
+    {
+      "name": "Fill",
+      "kind": "property",
+      "type": "FillFormat",
+      "access": "read-only",
+      "description": "Gets the formatting properties for the font of the specified text. Read-only."
+    },
+    {
+      "name": "Glow",
+      "kind": "property",
+      "type": "GlowFormat",
+      "access": "read-only",
+      "description": "Gets a value indicating whether the font is displayed as a glow effect. Read-only."
+    },
+    {
+      "name": "Reflection",
+      "kind": "property",
+      "type": "ReflectionFormat",
+      "access": "read-only",
+      "description": "Gets a value specifying the type of reflection format for the selection of text. Read-only."
+    },
+    {
+      "name": "Line",
+      "kind": "property",
+      "type": "LineFormat",
+      "access": "read-only",
+      "description": "Gets a value specifying the format of a line. Read-only."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "ShadowFormat",
+      "access": "read-only",
+      "description": "Gets the value specifying the type of shadow effect for the selection of text. Read-only."
+    },
+    {
+      "name": "Highlight",
+      "kind": "property",
+      "type": "ColorFormat",
+      "access": "read-only",
+      "description": "Gets a value indicating whether the font is displayed as highlighted. Read-only."
+    },
+    {
+      "name": "UnderlineColor",
+      "kind": "property",
+      "type": "ColorFormat",
+      "access": "read-only",
+      "description": "Gets a value specifying the color of the underline for the selected text. Read-only."
+    },
+    {
+      "name": "Smallcaps",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Gets or sets a value specifying whether small caps should be used with the selection of text. Small caps are the same height as the lowercase letters in a selection of text. Read/write."
+    },
+    {
+      "name": "SoftEdgeFormat",
+      "kind": "property",
+      "type": "MsoSoftEdgeType",
+      "access": "read/write",
+      "description": "Gets or sets a value specifying the type of soft edge effect used in a selection of text. Read/write."
+    },
+    {
+      "name": "StrikeThrough",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Gets or sets a value specifying that the text should be rendered in a strikethrough appearance. Read/write."
+    },
+    {
+      "name": "Subscript",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Gets or sets a value specifying that the selected text should be displayed as subscript. Read/write."
+    },
+    {
+      "name": "Superscript",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Gets or sets a value specifying that the selected text should be displayed as superscript. Read/write."
+    },
+    {
+      "name": "WordArtformat",
+      "kind": "property",
+      "type": "MsoPresetTextEffect",
+      "access": "read/write",
+      "description": "Gets or sets a value specifying the text effect for the selected text. Read/write."
+    },
+    {
+      "name": "Embeddable",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Gets a value indicating whether the font can be embedded on a page. Read-only."
+    },
+    {
+      "name": "Embedded",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Gets a value specifying whether the font is embedded in a page. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets a value specifying the font to use for a selection. Read/write."
+    },
+    {
+      "name": "NameAscii",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the font used for Latin text&mdash;characters with character codes from 0 (zero) through 127. Read/write."
+    },
+    {
+      "name": "NameComplexScript",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the complex script font name. Used for mixed language text. Read/write."
+    },
+    {
+      "name": "NameFarEast",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets an East Asian font name. Read/write."
+    },
+    {
+      "name": "NameOther",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the font used for characters whose character set numbers are greater than 127. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

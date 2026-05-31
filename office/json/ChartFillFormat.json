@@ -1,0 +1,286 @@
+{
+  "name": "ChartFillFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{000C171C-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "BackColor",
+      "kind": "property",
+      "type": "ChartColorFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ForeColor",
+      "kind": "property",
+      "type": "ChartColorFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "GradientColorType",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "GradientDegree",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "GradientStyle",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "GradientVariant",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Pattern",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "PresetGradientType",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "PresetTexture",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "TextureName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "TextureType",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "OneColorGradient",
+      "kind": "method",
+      "signature": "OneColorGradient(Style As Long, Variant As Long, Degree As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Style",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Variant",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Degree",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "TwoColorGradient",
+      "kind": "method",
+      "signature": "TwoColorGradient(Style As Long, Variant As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Style",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Variant",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PresetTextured",
+      "kind": "method",
+      "signature": "PresetTextured(PresetTexture As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "PresetTexture",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Solid",
+      "kind": "method",
+      "signature": "Solid()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Patterned",
+      "kind": "method",
+      "signature": "Patterned(Pattern As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Pattern",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "UserPicture",
+      "kind": "method",
+      "signature": "UserPicture(PictureFile As Variant, PictureFormat As Variant, PictureStackUnit As Variant, PicturePlacement As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "PictureFile",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "PictureFormat",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "PictureStackUnit",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "PicturePlacement",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "UserTextured",
+      "kind": "method",
+      "signature": "UserTextured(TextureFile As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "TextureFile",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PresetGradient",
+      "kind": "method",
+      "signature": "PresetGradient(Style As Long, Variant As Long, PresetGradientType As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Style",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Variant",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "PresetGradientType",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

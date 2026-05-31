@@ -1,0 +1,55 @@
+{
+  "name": "CustomXMLNodes",
+  "kind": "Dispatch Interface",
+  "guid": "{000CDB03-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Contains a collection of CustomXMLNode objects representing the XML nodes in a document.",
+  "remarks": "The Attributes and the ChildNodes properties return collections of nodes of this type.",
+  "example": "Sub CustomXmlNodes()\n    Dim cxp1 As CustomXMLPart\n    Dim cxns As CustomXMLNodes\n\n    With ActiveDocument\n\n        ' Returns the first custom xml part with the given root namespace.\n        Set cxp1 = .CustomXMLParts(\"urn:invoice:namespace\")\n\n        ' Get custom xml nodes using XPath.\n        Set cxns = cxp1.SelectNodes(\"//*[@unitPrice > 20]\")\n\n    End With\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the CustomXMLNodes object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the CustomXMLNodes object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the CustomXMLNodes object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a count of the number of CustomXMLNode objects in a CustomXMLNodes collection. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "CustomXMLNode",
+      "access": "read-only",
+      "description": "Gets a CustomXMLNode object from the CustomXMLNodes collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [],
+  "events": []
+}

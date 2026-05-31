@@ -1,0 +1,77 @@
+{
+  "name": "SharedWorkspaceFile",
+  "kind": "Dispatch Interface",
+  "guid": "{000C037B-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "The SharedWorkspaceFile object represents a file saved in a shared document workspace.",
+  "remarks": "Use the SharedWorkspaceFile object to manage documents and files saved in a shared workspace.",
+  "example": "Private Function FilenameFromURL(FileURL As String) As String\n    Dim intLastSeparator As Integer\n    FileURL = URLDecode(FileURL)\n    intLastSeparator = InStrRev(FileURL, \"/\")\n    FilenameFromURL = Right(FileURL, Len(FileURL) - intLastSeparator)\nEnd Function\n\nPrivate Function URLDecode(URLtoDecode As String) As String\n    URLDecode = Replace(URLtoDecode, \"%20\", \" \")\nEnd Function",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SharedWorkspaceFile object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SharedWorkspaceFile object was created. Read-only."
+    },
+    {
+      "name": "URL",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the full Uniform Resource Locator (URL) and file name of the shared workspace file. Read-only."
+    },
+    {
+      "name": "CreatedBy",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the display name of the member who created the shared workspace object. Read-only."
+    },
+    {
+      "name": "CreatedDate",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Gets the date and time when the shared workspace object was created. Read-only."
+    },
+    {
+      "name": "ModifiedBy",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the name of the user who last modified the object. Read-only."
+    },
+    {
+      "name": "ModifiedDate",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Gets the date and time when the SharedWorkspaceFile object was last modified. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the SharedWorkspaceFile object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the current SharedWorkspaceFile object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

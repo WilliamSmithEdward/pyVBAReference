@@ -1,0 +1,15 @@
+# MsoDocInspectorStatus
+
+**Type:** Enumeration  
+**Library:** Microsoft Office 16.0 Object Library  
+
+Represents the results of running a Document Inspector module.
+
+## Constants (3)
+
+- `msoDocInspectorStatusDocOk` = 0  
+  Indicates that the Document Inspector module returned no issues or errors.
+- `msoDocInspectorStatusIssueFound` = 1  
+  Indicates that the Document Inspector module found one or more occurrences of the search criteria.
+- `msoDocInspectorStatusError` = 2  
+  Indicates that the Document Inspector module returned an error.

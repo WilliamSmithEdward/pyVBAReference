@@ -1,0 +1,157 @@
+{
+  "name": "CalloutFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0311-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Accent",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Angle",
+      "kind": "property",
+      "type": "MsoCalloutAngleType",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AutoAttach",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AutoLength",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Border",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Drop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "DropType",
+      "kind": "property",
+      "type": "MsoCalloutDropType",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Gap",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Length",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoCalloutType",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "AutomaticLength",
+      "kind": "method",
+      "signature": "AutomaticLength()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "CustomDrop",
+      "kind": "method",
+      "signature": "CustomDrop(Drop As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Drop",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CustomLength",
+      "kind": "method",
+      "signature": "CustomLength(Length As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Length",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PresetDrop",
+      "kind": "method",
+      "signature": "PresetDrop(DropType As MsoCalloutDropType)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "DropType",
+          "type": "MsoCalloutDropType",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

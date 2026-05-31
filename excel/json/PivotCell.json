@@ -1,0 +1,154 @@
+{
+  "name": "PivotCell",
+  "kind": "Dispatch Interface",
+  "guid": "{00024458-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a cell in a PivotTable report.",
+  "remarks": "Use the PivotCell property of the Range collection to return a PivotCell object. After a PivotCell object is returned, you can use the ColumnItems or RowItems property to determine the PivotItems collection that corresponds to the items on the column or row axis that represents the selected number.",
+  "example": "Sub CheckPivotCellType()\n\n On Error GoTo Not_In_PivotTable\n\n ' Determine if cell A5 is a data item in the PivotTable.\n If Application.Range(\"A5\").PivotCell.PivotCellType = xlPivotCellValue Then\n MsgBox \"The PivotCell at A5 is a data item.\"\n Else\n MsgBox \"The PivotCell at A5 is not a data item.\"\n End If\n Exit Sub\n\nNot_In_PivotTable:\n MsgBox \"The chosen cell is not in a PivotTable.\"\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "PivotCellType",
+      "kind": "property",
+      "type": "XlPivotCellType",
+      "access": "read-only",
+      "description": "Returns one of the XlPivotCellType constants that identifies the PivotTable entity that the cell corresponds to. Read-only."
+    },
+    {
+      "name": "PivotTable",
+      "kind": "property",
+      "type": "PivotTable",
+      "access": "read-only",
+      "description": "Returns a PivotTable object that represents the PivotTable report associated with the PivotCell."
+    },
+    {
+      "name": "DataField",
+      "kind": "property",
+      "type": "PivotField",
+      "access": "read-only",
+      "description": "Returns a PivotField object that corresponds to the selected data field."
+    },
+    {
+      "name": "PivotField",
+      "kind": "property",
+      "type": "PivotField",
+      "access": "read-only",
+      "description": "Returns a PivotField object that represents the PivotTable field containing the upper-left corner of the specified range."
+    },
+    {
+      "name": "PivotItem",
+      "kind": "property",
+      "type": "PivotItem",
+      "access": "read-only",
+      "description": "Returns a PivotItem object that represents the PivotTable item containing the upper-left corner of the specified range."
+    },
+    {
+      "name": "RowItems",
+      "kind": "property",
+      "type": "PivotItemList",
+      "access": "read-only",
+      "description": "Returns a PivotItemList collection that corresponds to the items on the category axis that represent the selected cell."
+    },
+    {
+      "name": "ColumnItems",
+      "kind": "property",
+      "type": "PivotItemList",
+      "access": "read-only",
+      "description": "Returns a PivotItemList collection that corresponds to the items on the column axis that represent the selected range."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the range that the specified PivotCell applies to."
+    },
+    {
+      "name": "CustomSubtotalFunction",
+      "kind": "property",
+      "type": "XlConsolidationFunction",
+      "access": "read-only",
+      "description": "Returns the custom subtotal function field setting of a PivotCell object. Read-only XlConsolidationFunction."
+    },
+    {
+      "name": "PivotRowLine",
+      "kind": "property",
+      "type": "PivotLine",
+      "access": "read-only",
+      "description": "Returns the PivotLine object on a row for a specific PivotCell object. Read-only PivotLine."
+    },
+    {
+      "name": "PivotColumnLine",
+      "kind": "property",
+      "type": "PivotLine",
+      "access": "read-only",
+      "description": "Returns the PivotLine object on a column for a specific PivotCell object. Read-only PivotLine."
+    },
+    {
+      "name": "DataSourceValue",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns the value last retrieved from the data source for edited cells in a PivotTable report. Read-only."
+    },
+    {
+      "name": "CellChanged",
+      "kind": "property",
+      "type": "XlCellChangedState",
+      "access": "read-only",
+      "description": "Returns whether a PivotTable value cell has been edited or recalculated since the PivotTable report was created or the last commit operation was performed. Read-only."
+    },
+    {
+      "name": "MDX",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a tuple that provides the full MDX coordinates of the specified value cell in a PivotTable with an OLAP data source. Read-only."
+    },
+    {
+      "name": "ServerActions",
+      "kind": "property",
+      "type": "Actions",
+      "access": "read-only",
+      "description": "Represents a collection of _actions_ consisting of OLAP-defined actions that can be executed. The actions are specific to PivotTables existing at a worksheet-level. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "AllocateChange",
+      "kind": "method",
+      "signature": "AllocateChange()",
+      "description": "Performs a writeback operation on the specified cell in a PivotTable report based on an OLAP data source.",
+      "returns": "void"
+    },
+    {
+      "name": "DiscardChange",
+      "kind": "method",
+      "signature": "DiscardChange()",
+      "description": "Discards changes to the specified cell in a PivotTable report.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

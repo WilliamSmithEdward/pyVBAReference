@@ -1,0 +1,55 @@
+{
+  "name": "WebPageFont",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0913-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents the default font used when documents are saved as webpages for a particular character set.",
+  "remarks": "Use the WebPageFont object to describe the proportional font, proportional font size, fixed-width font, and fixed-width font size for any available character set.",
+  "example": "With myFont\n ProportionalFont = Verdana\n ProportionalFontSize = 14",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the WebPageFont object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the WebPageFont object was created. Read-only."
+    },
+    {
+      "name": "ProportionalFont",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or gets the proportional font setting in the host application. Read/write."
+    },
+    {
+      "name": "ProportionalFontSize",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Sets or gets the proportional font size setting in the host application, in points. Read/write."
+    },
+    {
+      "name": "FixedWidthFont",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or gets the fixed-width font setting in the host application. Read/write."
+    },
+    {
+      "name": "FixedWidthFontSize",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Sets or gets the fixed-width font size setting in the host application, in points. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

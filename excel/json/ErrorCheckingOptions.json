@@ -1,0 +1,118 @@
+{
+  "name": "ErrorCheckingOptions",
+  "kind": "Dispatch Interface",
+  "guid": "{0002445B-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the error-checking options for an application.",
+  "remarks": "Use the ErrorCheckingOptions property of the Application object to return an ErrorCheckingOptions object. Reference the Item property of the Errors object to view a list of index values associated with error-checking options. After an ErrorCheckingOptions object is returned, you can use the following properties, which are members of the ErrorCheckingOptions object, to set or return error checking options. - BackgroundChecking - EmptyCellReferences - EvaluateToError - InconsistentFormula - IndicatorColorIndex - NumberAsText - OmittedCells - TextDate - UnlockedFormulaCells",
+  "example": "Sub CheckTextDates()\n\n Dim rngFormula As Range\n Set rngFormula = Application.Range(\"A1\")\n\n Range(\"A1\").Formula = \"'April 23, 00\"\n Application.ErrorCheckingOptions.TextDate = True\n\n ' Perform check to see if 2 digit year TextDate check is on.\n If rngFormula.Errors.Item(xlTextDate).Value = True Then\n MsgBox \"The text date error checking feature is enabled.\"\n Else\n MsgBox \"The text date error checking feature is not on.\"\n End If\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "BackgroundChecking",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Alerts the user for all cells that violate enabled error-checking rules. When this property is set to True (default), the AutoCorrect Options button appears next to all cells that violate enabled errors. False disables background checking for errors. Read/write Boolean."
+    },
+    {
+      "name": "IndicatorColorIndex",
+      "kind": "property",
+      "type": "XlColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the color of the indicator for error checking options. Read/write XlColorIndex."
+    },
+    {
+      "name": "EvaluateToError",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "When set to True (default), Microsoft Excel identifies, with an AutoCorrect Options button, selected cells that contain formulas evaluating to an error. False disables error checking for cells that evaluate to an error value. Read/write Boolean."
+    },
+    {
+      "name": "TextDate",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "When set to True (default), Microsoft Excel identifies, with an AutoCorrect Options button, cells that contain a text date with a two-digit year. False disables error checking for cells containing a text date with a two-digit year. Read/write Boolean."
+    },
+    {
+      "name": "NumberAsText",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "When set to True (default), Microsoft Excel identifies, with an AutoCorrect Options button, selected cells that contain numbers written as text. False disables error checking for numbers written as text. Read/write Boolean."
+    },
+    {
+      "name": "InconsistentFormula",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "When set to True (default), Microsoft Excel identifies cells containing an inconsistent formula in a region. False disables the inconsistent formula check. Read/write Boolean."
+    },
+    {
+      "name": "OmittedCells",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "When set to True (default), Microsoft Excel identifies, with an AutoCorrect Options button, the selected cells that contain formulas referring to a range that omits adjacent cells that could be included. False disables error checking for omitted cells. Read/write Boolean."
+    },
+    {
+      "name": "UnlockedFormulaCells",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "When set to True (default), Microsoft Excel identifies selected cells that are unlocked and contain a formula. False disables error checking for unlocked cells that contain formulas. Read/write Boolean."
+    },
+    {
+      "name": "EmptyCellReferences",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "When set to True (default), Microsoft Excel identifies, with an AutoCorrect Options button, selected cells containing formulas that refer to empty cells. False disables empty cell reference checking. Read/write Boolean."
+    },
+    {
+      "name": "ListDataValidation",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "A Boolean value that is True if data validation is enabled in a list. Read/write Boolean."
+    },
+    {
+      "name": "InconsistentTableFormula",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns True if the table formula is inconsistent. Read/write Boolean."
+    },
+    {
+      "name": "MisleadingNumberFormats",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [],
+  "events": []
+}

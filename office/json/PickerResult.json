@@ -1,0 +1,83 @@
+{
+  "name": "PickerResult",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03E4-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a resolved or selected item of data.",
+  "remarks": "",
+  "example": "Dim objPickerDialog As PickerDialog\nDim objPickerProperties As PickerProperties\nDim objPickerProperty As PickerProperty\nDim objPickerExistingResults As PickerResults\nDim objPickerExistingResult As PickerResult\nDim objPickerResults As PickerResults\n\n\n' Configure the Picker Dialog properties.\nSet objPickerDialog = Application.PickerDialog\nobjPickerDialog.DataHandlerId = \"{000CDF0A-0000-0000-C000-000000000046}\"\nobjPickerDialog.Title = \"Sample Picker Dialog\"\nSet objPickerProperties = objPickerDialog.Properties\nSet objPickerProperty = objPickerProperties.Add(\"SiteUrl\", \"https://my\", msoPickerFieldtypeText)\nSet objPickerExistingResults = objPickerDialog.CreatePickerResults\nSet objPickerExistingResult = objPickerExistingResults.Add(\"johndoe@contoso.com\", \"John Doe\", \"User\")\n\n' Show the Picker Dialog and get the results.\nSet objPickerResults = objPickerDialog.Show(True, objPickerExistingResult)",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the PickerResult object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the PickerResult object was created. Read-only."
+    },
+    {
+      "name": "Id",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Retrieves the unique Id of the associated PickerResult object. Read-only."
+    },
+    {
+      "name": "DisplayName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Represents a display name of PickerResult. Read/write."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Represents the type of a PickerResult object. Read/write."
+    },
+    {
+      "name": "SIPId",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "The identifier for Office Communication Server, used only for the people picking scenario. Read/write."
+    },
+    {
+      "name": "ItemData",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Gets or sets a non-display purpose item binding to data. Read/write."
+    },
+    {
+      "name": "SubItems",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Display purpose or non-display purpose field data of a PickerResult object, used for passing column values in a PickerDialog. Read/write."
+    },
+    {
+      "name": "DuplicateResults",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Gets PickerResult collection if the result of resolving results has multiple candidates. Read-only."
+    },
+    {
+      "name": "Fields",
+      "kind": "property",
+      "type": "PickerFields",
+      "access": "read/write",
+      "description": "Represents field definitions of SubItems in a PickerFields collection. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

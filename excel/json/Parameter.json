@@ -1,0 +1,105 @@
+{
+  "name": "Parameter",
+  "kind": "Dispatch Interface",
+  "guid": "{0002442A-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a single parameter used in a parameter query.",
+  "remarks": "The Parameter object is a member of the Parameters collection.",
+  "example": "With Worksheets(1).QueryTables(1).Parameters(1)\n .SetParam xlPrompt, \"Please \" & .PromptString\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "DataType",
+      "kind": "property",
+      "type": "XlParameterDataType",
+      "access": "read/write",
+      "description": "Returns or sets an XlParameterDataType value that represents the data type of the specified query parameter."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "XlParameterType",
+      "access": "read-only",
+      "description": "Returns an XlParameterType value that represents the parameter type."
+    },
+    {
+      "name": "PromptString",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the phrase that prompts the user for a parameter value in a parameter query. Read-only String."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns a Variant value that represents the parameter value."
+    },
+    {
+      "name": "SourceRange",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the cell that contains the value of the specified query parameter. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value representing the name of the object."
+    },
+    {
+      "name": "RefreshOnChange",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified query table is refreshed whenever you change the parameter value of a parameter query. Read/write Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "SetParam",
+      "kind": "method",
+      "signature": "SetParam(Type As XlParameterType, Value As Variant)",
+      "description": "Defines a parameter for the specified query table.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "XlParameterType",
+          "optional": false,
+          "description": "One of the constants of XlParameterType, which specifies the parameter type."
+        },
+        {
+          "name": "Value",
+          "type": "Variant",
+          "optional": false,
+          "description": "The value of the specified parameter, as shown in the description of the _Type_ argument."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

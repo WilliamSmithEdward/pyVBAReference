@@ -1,0 +1,102 @@
+{
+  "name": "PivotTableChangeList",
+  "kind": "Dispatch Interface",
+  "guid": "{000244C1-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the list of changes a user has made to value cells in a PivotTable report based on an OLAP data source.",
+  "remarks": "The PivotTableChangeList collection contains ValueChange objects that represent the changes a user has made to value cells in a PivotTable report. To return the PivotTableChangeList collection for a PivotTable, use the ChangeList property of the PivotTable object.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent PivotTable object for the specified PivotTableChangeList collection. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "ValueChange",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "ValueChange",
+      "access": "read-only",
+      "description": "Returns a single ValueChange object from the specified PivotTableChangeList collection."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Tuple As String, Value As Double, [AllocationValue As Variant], [AllocationMethod As Variant], [AllocationWeightExpression As Variant]) As ValueChange",
+      "description": "Adds a ValueChange object to the specified PivotTableChangeList collection.",
+      "returns": "ValueChange",
+      "parameters": [
+        {
+          "name": "Tuple",
+          "type": "String",
+          "optional": false,
+          "description": "The MDX tuple of the value to change in the OLAP data source."
+        },
+        {
+          "name": "Value",
+          "type": "Double",
+          "optional": false,
+          "description": "The value to commit."
+        },
+        {
+          "name": "AllocationValue",
+          "type": "Variant",
+          "optional": true,
+          "description": "The value to allocate when performing what-if analysis. If this parameter is not supplied, the default allocation value of the OLAP server will be used."
+        },
+        {
+          "name": "AllocationMethod",
+          "type": "Variant",
+          "optional": true,
+          "description": "The method to use to allocate this value when performing what-if analysis. If this parameter is not supplied, the default allocation method of the OLAP server will be used."
+        },
+        {
+          "name": "AllocationWeightExpression",
+          "type": "Variant",
+          "optional": true,
+          "description": "The MDX weight expression to use for this value when performing what-if analysis. If this parameter is not supplied, the default allocation weight expression of the OLAP server will be used."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

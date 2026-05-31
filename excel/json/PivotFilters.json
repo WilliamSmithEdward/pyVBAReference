@@ -1,0 +1,126 @@
+{
+  "name": "PivotFilters",
+  "kind": "Dispatch Interface",
+  "guid": "{00024484-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "The PivotFilters object is a collection of PivotFilter objects.",
+  "remarks": "The PivotFilters collection contains properties and methods to add new filters, count the number of existing filters in the collection, and reference specific PivotFilter objects.",
+  "example": "ActiveCell.PivotField.PivotFilters.Add FilterType := xlThisWeek",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified PivotFilters object. Read-only."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "PivotFilter",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "PivotFilter",
+      "access": "read-only",
+      "description": "Returns a specific element of the PivotFilters collection object by its position in the collection. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of items in the PivotFilters collection. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add2",
+      "kind": "method",
+      "signature": "Add2(Type As XlPivotFilterType, [DataField As Variant], [Value1 As Variant], [Value2 As Variant], [Order As Variant], [Name As Variant], [Description As Variant], [MemberPropertyField As Variant], [WholeDayFilter As Variant]) As PivotFilter",
+      "description": "",
+      "returns": "PivotFilter",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "XlPivotFilterType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "DataField",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Value1",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Value2",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Order",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Name",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Description",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "MemberPropertyField",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "WholeDayFilter",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

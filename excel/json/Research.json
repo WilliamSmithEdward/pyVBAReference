@@ -1,0 +1,110 @@
+{
+  "name": "Research",
+  "kind": "Dispatch Interface",
+  "guid": "{000244AC-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the controls of a Research query.",
+  "remarks": "When working with Research queries, you must have an existing GUID that corresponds to a live data source. If the data source is unavailable or does not exist, a run-time error occurs.",
+  "example": "Worksheets(\"Sheet1\").Research.Translate = True",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Query",
+      "kind": "method",
+      "signature": "Query(ServiceID As String, [QueryString As Variant], [QueryLanguage As Variant], [UseSelection As Variant], [LaunchQuery As Variant]) As Variant",
+      "description": "Specifies a research query.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "ServiceID",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies a GUID that identifies the research service."
+        },
+        {
+          "name": "QueryString",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the query string."
+        },
+        {
+          "name": "QueryLanguage",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the query language of the query string."
+        },
+        {
+          "name": "UseSelection",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to use the current selection as the query string. This overrides the _QueryString_ parameter if set. Default value is False."
+        },
+        {
+          "name": "LaunchQuery",
+          "type": "Variant",
+          "optional": true,
+          "description": "True launches the query. False displays the Research task pane scoped to search the specified research service."
+        }
+      ]
+    },
+    {
+      "name": "IsResearchService",
+      "kind": "method",
+      "signature": "IsResearchService(ServiceID As String) As Boolean",
+      "description": "Indicates whether the GUID specified in the _ServiceID_ parameter corresponds to a currently configured service.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "ServiceID",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies a GUID that identifies the research service."
+        }
+      ]
+    },
+    {
+      "name": "SetLanguagePair",
+      "kind": "method",
+      "signature": "SetLanguagePair(LanguageFrom As Long, LanguageTo As Long) As Variant",
+      "description": "Sets the languages for the translation service.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "LanguageFrom",
+          "type": "Long",
+          "optional": false,
+          "description": "Specifies the language to translate from."
+        },
+        {
+          "name": "LanguageTo",
+          "type": "Long",
+          "optional": false,
+          "description": "Specifies the language to translate to."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

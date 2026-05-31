@@ -1,0 +1,267 @@
+{
+  "name": "Stream_Deprecated",
+  "kind": "Dispatch Interface",
+  "guid": "{00000565-0000-0010-8000-00AA006D2EA4}",
+  "library": "Microsoft ActiveX Data Objects 6.1 Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Size",
+      "kind": "property",
+      "type": "ADO_LONGPTR",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "EOS",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Position",
+      "kind": "property",
+      "type": "ADO_LONGPTR",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "StreamTypeEnum",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LineSeparator",
+      "kind": "property",
+      "type": "LineSeparatorEnum",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "State",
+      "kind": "property",
+      "type": "ObjectStateEnum",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Mode",
+      "kind": "property",
+      "type": "ConnectModeEnum",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Charset",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Read",
+      "kind": "method",
+      "signature": "Read([NumBytes As Long]) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "NumBytes",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open([Source As Variant], [Mode As ConnectModeEnum], [Options As StreamOpenOptionsEnum], [UserName As String], [Password As String])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Mode",
+          "type": "ConnectModeEnum",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Options",
+          "type": "StreamOpenOptionsEnum",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "UserName",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Password",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "SkipLine",
+      "kind": "method",
+      "signature": "SkipLine()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Write",
+      "kind": "method",
+      "signature": "Write(Buffer As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Buffer",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetEOS",
+      "kind": "method",
+      "signature": "SetEOS()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "CopyTo",
+      "kind": "method",
+      "signature": "CopyTo(DestStream As _Stream_Deprecated, [CharNumber As ADO_LONGPTR])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "DestStream",
+          "type": "_Stream_Deprecated",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "CharNumber",
+          "type": "ADO_LONGPTR",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Flush",
+      "kind": "method",
+      "signature": "Flush()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "SaveToFile",
+      "kind": "method",
+      "signature": "SaveToFile(FileName As String, [Options As SaveOptionsEnum])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Options",
+          "type": "SaveOptionsEnum",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "LoadFromFile",
+      "kind": "method",
+      "signature": "LoadFromFile(FileName As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ReadText",
+      "kind": "method",
+      "signature": "ReadText([NumChars As Long]) As String",
+      "description": "",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "NumChars",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WriteText",
+      "kind": "method",
+      "signature": "WriteText(Data As String, [Options As StreamWriteEnum])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Data",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Options",
+          "type": "StreamWriteEnum",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Cancel",
+      "kind": "method",
+      "signature": "Cancel()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

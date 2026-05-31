@@ -1,0 +1,118 @@
+{
+  "name": "StdPicture",
+  "kind": "Class",
+  "guid": "{0BE35204-8F91-11CE-9DE3-00AA004BB851}",
+  "library": "OLE Automation",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Handle",
+      "kind": "property",
+      "type": "OLE_HANDLE",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "hPal",
+      "kind": "property",
+      "type": "OLE_HANDLE",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "OLE_XSIZE_HIMETRIC",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "OLE_YSIZE_HIMETRIC",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Render",
+      "kind": "method",
+      "signature": "Render(hdc As Long, x As Long, y As Long, cx As Long, cy As Long, xSrc As OLE_XPOS_HIMETRIC, ySrc As OLE_YPOS_HIMETRIC, cxSrc As OLE_XSIZE_HIMETRIC, cySrc As OLE_YSIZE_HIMETRIC, prcWBounds As void)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "hdc",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "x",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "y",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cx",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cy",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "xSrc",
+          "type": "OLE_XPOS_HIMETRIC",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ySrc",
+          "type": "OLE_YPOS_HIMETRIC",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cxSrc",
+          "type": "OLE_XSIZE_HIMETRIC",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cySrc",
+          "type": "OLE_YSIZE_HIMETRIC",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "prcWBounds",
+          "type": "void",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

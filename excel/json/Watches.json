@@ -1,0 +1,85 @@
+{
+  "name": "Watches",
+  "kind": "Dispatch Interface",
+  "guid": "{00024456-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of all the Watch objects in a specified application.",
+  "remarks": "",
+  "example": "Sub AddWatch()\n\n With Application\n .Range(\"A1\").Formula = 1\n .Range(\"A2\").Formula = 2\n .Range(\"A3\").Formula = \"=Sum(A1:A2)\"\n .Range(\"A3\").Select\n .Watches.Add Source:=ActiveCell\n End With\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "Watch",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "Watch",
+      "access": "read-only",
+      "description": "Returns a single object from a collection."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Source As Variant) As Watch",
+      "description": "Adds a range that is tracked when the worksheet is recalculated.",
+      "returns": "Watch",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "Variant",
+          "optional": false,
+          "description": "The source for the range."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

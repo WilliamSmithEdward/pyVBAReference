@@ -1,0 +1,73 @@
+{
+  "name": "ISAXLocator",
+  "kind": "Interface",
+  "guid": "{9B7E472A-0DE4-4640-BFF3-84D38A051C31}",
+  "library": "Microsoft XML, v6.0",
+  "description": "ISAXLocator interface",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "getColumnNumber",
+      "kind": "method",
+      "signature": "getColumnNumber(pnColumn As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pnColumn",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getLineNumber",
+      "kind": "method",
+      "signature": "getLineNumber(pnLine As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pnLine",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getPublicId",
+      "kind": "method",
+      "signature": "getPublicId(ppwchPublicId As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ppwchPublicId",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getSystemId",
+      "kind": "method",
+      "signature": "getSystemId(ppwchSystemId As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ppwchSystemId",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

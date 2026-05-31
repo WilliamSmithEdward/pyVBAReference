@@ -1,0 +1,79 @@
+{
+  "name": "ThemeFontScheme",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03A5-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents the font scheme of a Microsoft Office theme.",
+  "remarks": "",
+  "example": "Dim tTheme As OfficeTheme\nDim tfsThemeFontScheme As ThemeFontScheme\nSet tfsThemeFontScheme = tTheme.ThemeFontScheme",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the ThemeFontScheme object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the ThemeFontScheme object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the ThemeFontScheme object. Read-only."
+    },
+    {
+      "name": "MinorFont",
+      "kind": "property",
+      "type": "ThemeFonts",
+      "access": "read-only",
+      "description": "Gets the font settings for the Body of a document. Read-only."
+    },
+    {
+      "name": "MajorFont",
+      "kind": "property",
+      "type": "ThemeFonts",
+      "access": "read-only",
+      "description": "Gets the font setting for the Headings in a document. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Load",
+      "kind": "method",
+      "signature": "Load(FileName As String)",
+      "description": "Loads the font scheme of a Microsoft Office theme from a file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the font scheme file."
+        }
+      ]
+    },
+    {
+      "name": "Save",
+      "kind": "method",
+      "signature": "Save(FileName As String)",
+      "description": "Saves the font scheme of a Microsoft Office theme to a file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the file."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

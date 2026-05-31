@@ -1,0 +1,13 @@
+# _SCHEMAPROCESSCONTENTS
+
+**Type:** Enumeration  
+**Library:** Microsoft XML, v6.0  
+
+Schema Object Model Process Contents
+
+## Constants (4)
+
+- `SCHEMAPROCESSCONTENTS_NONE` = 0
+- `SCHEMAPROCESSCONTENTS_SKIP` = 1
+- `SCHEMAPROCESSCONTENTS_LAX` = 2
+- `SCHEMAPROCESSCONTENTS_STRICT` = 3

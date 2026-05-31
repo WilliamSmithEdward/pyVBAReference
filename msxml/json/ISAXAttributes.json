@@ -1,0 +1,436 @@
+{
+  "name": "ISAXAttributes",
+  "kind": "Interface",
+  "guid": "{F078ABE1-45D2-4832-91EA-4466CE2F25C9}",
+  "library": "Microsoft XML, v6.0",
+  "description": "ISAXAttributes interface",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "getLength",
+      "kind": "method",
+      "signature": "getLength(pnLength As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pnLength",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getURI",
+      "kind": "method",
+      "signature": "getURI(nIndex As Long, ppwchUri As Integer, pcchUri As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ppwchUri",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcchUri",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getLocalName",
+      "kind": "method",
+      "signature": "getLocalName(nIndex As Long, ppwchLocalName As Integer, pcchLocalName As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ppwchLocalName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcchLocalName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getQName",
+      "kind": "method",
+      "signature": "getQName(nIndex As Long, ppwchQName As Integer, pcchQName As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ppwchQName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcchQName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getName",
+      "kind": "method",
+      "signature": "getName(nIndex As Long, ppwchUri As Integer, pcchUri As Long, ppwchLocalName As Integer, pcchLocalName As Long, ppwchQName As Integer, pcchQName As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ppwchUri",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcchUri",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ppwchLocalName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcchLocalName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ppwchQName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcchQName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getIndexFromName",
+      "kind": "method",
+      "signature": "getIndexFromName(pwchUri As Integer, cchUri As Long, pwchLocalName As Integer, cchLocalName As Long, pnIndex As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchUri",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchUri",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchLocalName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchLocalName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pnIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getIndexFromQName",
+      "kind": "method",
+      "signature": "getIndexFromQName(pwchQName As Integer, cchQName As Long, pnIndex As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchQName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchQName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pnIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getType",
+      "kind": "method",
+      "signature": "getType(nIndex As Long, ppwchType As Integer, pcchType As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ppwchType",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcchType",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getTypeFromName",
+      "kind": "method",
+      "signature": "getTypeFromName(pwchUri As Integer, cchUri As Long, pwchLocalName As Integer, cchLocalName As Long, ppwchType As Integer, pcchType As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchUri",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchUri",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchLocalName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchLocalName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ppwchType",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcchType",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getTypeFromQName",
+      "kind": "method",
+      "signature": "getTypeFromQName(pwchQName As Integer, cchQName As Long, ppwchType As Integer, pcchType As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchQName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchQName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ppwchType",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcchType",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getValue",
+      "kind": "method",
+      "signature": "getValue(nIndex As Long, ppwchValue As Integer, pcchValue As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "nIndex",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ppwchValue",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcchValue",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getValueFromName",
+      "kind": "method",
+      "signature": "getValueFromName(pwchUri As Integer, cchUri As Long, pwchLocalName As Integer, cchLocalName As Long, ppwchValue As Integer, pcchValue As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchUri",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchUri",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pwchLocalName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchLocalName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ppwchValue",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcchValue",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getValueFromQName",
+      "kind": "method",
+      "signature": "getValueFromQName(pwchQName As Integer, cchQName As Long, ppwchValue As Integer, pcchValue As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pwchQName",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cchQName",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ppwchValue",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pcchValue",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

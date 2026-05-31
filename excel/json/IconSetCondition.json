@@ -1,0 +1,155 @@
+{
+  "name": "IconSetCondition",
+  "kind": "Dispatch Interface",
+  "guid": "{00024497-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents an icon set conditional formatting rule.",
+  "remarks": "All conditional formatting objects are contained within a FormatConditions collection object, which is a child of a Range collection. You can create an icon set formatting rule by using either the Add method or AddIconSetCondition method of the FormatConditions collection. Each icon set contains three, four, or five icons. You use the IconSets property of the Workbook object to return an IconSets object to specify one of the built-in icon sets. Each individual icon in the icon set is then assigned to a subset of the values of the range by the members of the IconCriteria object. The type of threshold is also specified by this object.",
+  "example": "Sub CreateIconSetCF()\n\n    Dim cfIconSet As IconSetCondition\n\n    'Fill cells with sample data from 1 to 10\n    With ActiveSheet\n        .Range(\"C1\") = 55\n        .Range(\"C2\") = 92\n        .Range(\"C3\") = 88\n        .Range(\"C4\") = 77\n        .Range(\"C5\") = 66\n        .Range(\"C6\") = 93\n        .Range(\"C7\") = 76\n        .Range(\"C8\") = 80\n        .Range(\"C9\") = 79\n        .Range(\"C10\") = 83\n        .Range(\"C11\") = 66\n        .Range(\"C12\") = 74\n    End With\n\n    Range(\"C1:C12\").Select\n\n    'Create an icon set conditional format for the created sample data range\n    Set cfIconSet = Selection.FormatConditions.AddIconSetCondition\n\n    'Change the icon set to a five-arrow icon set\n    cfIconSet.IconSet = ActiveWorkbook.IconSets(xl5Arrows)\n\n    'The IconCriterion collection contains all IconCriteria\n    'By indexing into the collection you can modify each criterion\n\n    With cfIconSet.IconCriteria(1)\n        .Type = xlConditionValueNumber\n        .Value = 0\n        .Operator = 7\n    End With\n    With cfIconSet.IconCriteria(2)\n        .Type = xlConditionValueNumber\n        .Value = 60\n        .Operator = 7\n    End With\n    With cfIconSet.IconCriteria(3)\n        .Type = xlConditionValueNumber\n        .Value = 70\n        .Operator = 7\n    End With\n    With cfIconSet.IconCriteria(4)\n        .Type = xlConditionValueNumber\n        .Value = 80\n        .Operator = 7\n    End With\n    With cfIconSet.IconCriteria(5)\n        .Type = xlConditionValueNumber\n        .Value = 90\n        .Operator = 7\n    End With\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Priority",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the priority value of the conditional formatting rule. The priority determines the order of evaluation when multiple conditional formatting rules exist on a worksheet."
+    },
+    {
+      "name": "StopIfTrue",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns or sets a Boolean value that determines if additional formatting rules on the cell should be evaluated if the current rule evaluates to True."
+    },
+    {
+      "name": "AppliesTo",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object specifying the cell range to which the formatting rule is applied."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns one of the constants of the XlFormatConditionType enumeration, which specifies the type of conditional format. Read-only."
+    },
+    {
+      "name": "PTCondition",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean value indicating if the conditional format is being applied to a PivotTable. Read-only."
+    },
+    {
+      "name": "ScopeType",
+      "kind": "property",
+      "type": "XlPivotConditionScope",
+      "access": "read/write",
+      "description": "Returns or sets one of the constants of the XlPivotConditionScope enumeration, which determines the scope of the conditional format when it is applied to a PivotTable."
+    },
+    {
+      "name": "ReverseOrder",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value indicating if the order of icons is reversed for an icon set."
+    },
+    {
+      "name": "PercentileValues",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value indicating if the thresholds for an icon set conditional format are determined by using percentiles."
+    },
+    {
+      "name": "ShowIconOnly",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value indicating if only the icon is displayed for an icon set conditional format."
+    },
+    {
+      "name": "Formula",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String representing a formula, which determines the values to which the icon set will be applied."
+    },
+    {
+      "name": "IconSet",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets an IconSets collection, which specifies the icon set used in the conditional format."
+    },
+    {
+      "name": "IconCriteria",
+      "kind": "property",
+      "type": "IconCriteria",
+      "access": "read-only",
+      "description": "Returns an IconCriteria collection, which represents the set of criteria for an icon set conditional formatting rule."
+    }
+  ],
+  "methods": [
+    {
+      "name": "ModifyAppliesToRange",
+      "kind": "method",
+      "signature": "ModifyAppliesToRange(Range As Range)",
+      "description": "Sets the cell range to which this formatting rule applies.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The range to which this formatting rule will be applied."
+        }
+      ]
+    },
+    {
+      "name": "SetFirstPriority",
+      "kind": "method",
+      "signature": "SetFirstPriority()",
+      "description": "Sets the priority value for this conditional formatting rule to 1 so that it will be evaluated before all other rules on the worksheet.",
+      "returns": "void"
+    },
+    {
+      "name": "SetLastPriority",
+      "kind": "method",
+      "signature": "SetLastPriority()",
+      "description": "Sets the evaluation order for this conditional formatting rule so that it is evaluated after all other rules on the worksheet.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified conditional formatting rule object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

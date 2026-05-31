@@ -1,0 +1,242 @@
+{
+  "name": "IXmlMap",
+  "kind": "Interface",
+  "guid": "{0002447B-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "IsExportable",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ShowImportExportValidationErrors",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SaveDataSourceDefinition",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AdjustColumnWidth",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PreserveColumnFilter",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PreserveNumberFormatting",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AppendOnImport",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "RootElementName",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "RootElementNamespace",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Schemas",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "DataBinding",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "WorkbookConnection",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "Import",
+      "kind": "method",
+      "signature": "Import(Url As String, [Overwrite As Variant], RHS As XlXmlImportResult)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Url",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Overwrite",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "XlXmlImportResult",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ImportXml",
+      "kind": "method",
+      "signature": "ImportXml(XmlData As String, [Overwrite As Variant], RHS As XlXmlImportResult)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "XmlData",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Overwrite",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "XlXmlImportResult",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Export",
+      "kind": "method",
+      "signature": "Export(Url As String, [Overwrite As Variant], RHS As XlXmlExportResult)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Url",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Overwrite",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "XlXmlExportResult",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ExportXml",
+      "kind": "method",
+      "signature": "ExportXml(Data As String, RHS As XlXmlExportResult)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Data",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "XlXmlExportResult",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

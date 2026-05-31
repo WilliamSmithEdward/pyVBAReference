@@ -1,0 +1,99 @@
+{
+  "name": "Styles",
+  "kind": "Dispatch Interface",
+  "guid": "{00020853-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "A collection of all the Style objects in the specified or active workbook.",
+  "remarks": "Each Style object represents a style description for a range. The Style object contains all style attributes (font, number format, alignment, and so on) as properties. There are several built-in styles-including Normal, Currency, and Percent.",
+  "example": "For i = 1 To ActiveWorkbook.Styles.Count\n Worksheets(1).Cells(i, 1) = ActiveWorkbook.Styles(i).Name\nNext",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the number of objects in the collection."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "Style",
+      "access": "read-only",
+      "description": "Returns a single object from a collection."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "Style",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String, [BasedOn As Variant]) As Style",
+      "description": "Creates a new style and adds it to the list of styles that are available for the current workbook.",
+      "returns": "Style",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The new style name."
+        },
+        {
+          "name": "BasedOn",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Merge",
+      "kind": "method",
+      "signature": "Merge(Workbook As Variant) As Variant",
+      "description": "Merges the styles from another workbook into the Styles collection.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Workbook",
+          "type": "Variant",
+          "optional": false,
+          "description": "A Workbook object that represents the workbook that contains styles to be merged."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

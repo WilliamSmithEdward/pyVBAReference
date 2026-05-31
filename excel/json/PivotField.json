@@ -1,0 +1,726 @@
+{
+  "name": "PivotField",
+  "kind": "Dispatch Interface",
+  "guid": "{00020874-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a field in a PivotTable report.",
+  "remarks": "The PivotField object is a member of the PivotFields collection. The PivotFields collection contains all the fields in a PivotTable report, including hidden fields. In some cases, it may be easier to use one of the properties that returns a subset of the PivotTable fields. The following properties are available: - ColumnFields property - DataFields property - HiddenFields property - PageFields property - RowFields property - VisibleFields property",
+  "example": "Worksheets(\"sheet3\").PivotTables(1) _\n .PivotFields(\"year\").Orientation = xlRowField",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Calculation",
+      "kind": "property",
+      "type": "XlPivotFieldCalculation",
+      "access": "read/write",
+      "description": "Returns or sets an XlPivotFieldCalculation value that represents the type of calculation performed by the specified field. This property is valid only for data fields."
+    },
+    {
+      "name": "ChildField",
+      "kind": "property",
+      "type": "PivotField",
+      "access": "read-only",
+      "description": "Returns a PivotField object that represents the child field for the specified field (if the field is grouped and has a child field). Read-only."
+    },
+    {
+      "name": "ChildItems",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns an object that represents either a single PivotTable item (a PivotItem object) or a collection of all the items (a PivotItems object) that are group children in the specified field, or children of the specified item. Read-only."
+    },
+    {
+      "name": "CurrentPage",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the current page showing for the page field (valid only for page fields). Read/write PivotItem."
+    },
+    {
+      "name": "DataRange",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object as shown in the following table. Read-only."
+    },
+    {
+      "name": "DataType",
+      "kind": "property",
+      "type": "XlPivotFieldDataType",
+      "access": "read-only",
+      "description": "Returns an XlPivotFieldDataType value that represents the type of data in the PivotTable field."
+    },
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Function",
+      "kind": "property",
+      "type": "XlConsolidationFunction",
+      "access": "read/write",
+      "description": "Returns or sets the function used to summarize the PivotTable field (data fields only). Read/write XlConsolidationFunction."
+    },
+    {
+      "name": "GroupLevel",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns the placement of the specified field within a group of fields (if the field is a member of a grouped set of fields). Read-only."
+    },
+    {
+      "name": "HiddenItems",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns an object that represents either a single hidden PivotTable item (a PivotItem object) or a collection of all the hidden items (a PivotItems object) in the specified field. Read-only."
+    },
+    {
+      "name": "LabelRange",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the cell (or cells) that contain the field label. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value representing the name of the object."
+    },
+    {
+      "name": "NumberFormat",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value that represents the format code for the object."
+    },
+    {
+      "name": "Orientation",
+      "kind": "property",
+      "type": "XlPivotFieldOrientation",
+      "access": "read/write",
+      "description": "Returns or sets an XlPivotFieldOrientation value that represents the location of the field in the specified PivotTable report."
+    },
+    {
+      "name": "ShowAllItems",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if all items in the PivotTable report are displayed, even if they don't contain summary data. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "ParentField",
+      "kind": "property",
+      "type": "PivotField",
+      "access": "read-only",
+      "description": "Returns a PivotField object that represents the PivotTable field that's the group parent of the specified object. The field must be grouped and must have a parent field. Read-only."
+    },
+    {
+      "name": "ParentItems",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns an object that represents either a single PivotTable item (a PivotItem object) or a collection of all the items (a PivotItems object) that are group parents in the specified field. The specified field must be a group parent of another field. Read-only."
+    },
+    {
+      "name": "Position",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the position of the field (first, second, third, and so on) among all the fields in its orientation (Rows, Columns, Pages, Data)."
+    },
+    {
+      "name": "SourceName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that represents the specified object's name as it appears in the original source data for the specified PivotTable report."
+    },
+    {
+      "name": "Subtotals",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets subtotals displayed with the specified field. Valid only for nondata fields. Read/write Variant."
+    },
+    {
+      "name": "BaseField",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the base field for a custom calculation. This property is valid only for data fields. Read/write Variant."
+    },
+    {
+      "name": "BaseItem",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the item in the base field for a custom calculation. Valid only for data fields. Read/write Variant."
+    },
+    {
+      "name": "TotalLevels",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns the total number of fields in the current field group. If the field isn't grouped, or if the data source is OLAP-based, TotalLevels returns the value 1. Read-only Long."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value that represents the name of the specified field in the PivotTable report."
+    },
+    {
+      "name": "VisibleItems",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns an object that represents either a single visible PivotTable item (a PivotItem object) or a collection of all the visible items (a PivotItems object) in the specified field. Read-only."
+    },
+    {
+      "name": "DragToColumn",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified field can be dragged to the column position. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "DragToHide",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the field can be hidden by being dragged off the PivotTable report. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "DragToPage",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the field can be dragged to the page position. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "DragToRow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the field can be dragged to the row position. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "DragToData",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified field can be dragged to the data position. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "Formula",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value that represents the object's formula in A1-style notation and in the language of the macro."
+    },
+    {
+      "name": "IsCalculated",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the PivotTable field is a calculated field or item. Read-only Boolean."
+    },
+    {
+      "name": "MemoryUsed",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the amount of memory currently being used by the object, in bytes. Read-only Long."
+    },
+    {
+      "name": "ServerBased",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the data source for the specified PivotTable report is external and only the items matching the page field selection are retrieved. Read/write Boolean."
+    },
+    {
+      "name": "AutoSortOrder",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the order used to sort the specified PivotTable field automatically. Can be one of the XlSortOrder constants. Read-only Long."
+    },
+    {
+      "name": "AutoSortField",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the data field used to sort the specified PivotTable field automatically. Read-only String."
+    },
+    {
+      "name": "AutoShowType",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the xlAutomatic constant if AutoShow is enabled for the specified PivotTable field; returns xlManual if AutoShow is disabled. Read-only Long."
+    },
+    {
+      "name": "AutoShowRange",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the xlTop constant if the top items are shown automatically in the specified PivotTable field; returns xlBottom if the bottom items are shown. Read-only Long."
+    },
+    {
+      "name": "AutoShowCount",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of top or bottom items that are automatically shown in the specified PivotTable field. Read-only Long."
+    },
+    {
+      "name": "AutoShowField",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the data field used to determine the top or bottom items that are automatically shown in the specified PivotTable field. Read-only String."
+    },
+    {
+      "name": "LayoutBlankLine",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a blank row is inserted after the specified row field in a PivotTable report. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "LayoutSubtotalLocation",
+      "kind": "property",
+      "type": "XlSubtototalLocationType",
+      "access": "read/write",
+      "description": "Returns or sets the position of the PivotTable field subtotals in relation to (either above or below) the specified field. Read/write XlSubtotalLocationType."
+    },
+    {
+      "name": "LayoutPageBreak",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a page break is inserted after each field. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "LayoutForm",
+      "kind": "property",
+      "type": "XlLayoutFormType",
+      "access": "read/write",
+      "description": "Returns or sets the way the specified PivotTable items appear-in table format or in outline format. Read/write XlLayoutFormType."
+    },
+    {
+      "name": "SubtotalName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the text string label displayed in the subtotal column or row heading in the specified PivotTable report. The default value is the string Subtotal. Read/write String."
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns a String value that represents the label text for the pivot field."
+    },
+    {
+      "name": "DrilledDown",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the flag for the specified PivotTable field or PivotTable item is set to \"drilled\" (expanded, or visible). Read/write Boolean."
+    },
+    {
+      "name": "CubeField",
+      "kind": "property",
+      "type": "CubeField",
+      "access": "read-only",
+      "description": "Returns the CubeField object from which the specified PivotTable field is descended. Read-only."
+    },
+    {
+      "name": "CurrentPageName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the currently displayed page of the specified PivotTable report. The name of the page appears in the page field. Note that this property works only if the currently displayed page already exists. Read/write String."
+    },
+    {
+      "name": "StandardFormula",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String specifying formulas with standard English (United States) formatting. Read/write."
+    },
+    {
+      "name": "HiddenItemsList",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant specifying an array of strings that are hidden items for a PivotTable field. Read/write."
+    },
+    {
+      "name": "DatabaseSort",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "When set to True, manual repositioning of items in a PivotTable field is allowed. Returns True if the field has no manually positioned items. Read/write Boolean."
+    },
+    {
+      "name": "IsMemberProperty",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns True when the PivotField contains member properties. Read-only Boolean."
+    },
+    {
+      "name": "PropertyParentField",
+      "kind": "property",
+      "type": "PivotField",
+      "access": "read-only",
+      "description": "Returns a PivotField object representing the field to which the properties in this field pertain."
+    },
+    {
+      "name": "PropertyOrder",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Valid only for PivotTable fields that are member property fields. Returns a Long indicating the display position of the member property within the cube field to which it belongs. Read/write."
+    },
+    {
+      "name": "EnableItemSelection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "When set to False, disables the ability to use the field dropdown in the user interface. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "CurrentPageList",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets an array of strings corresponding to the list of items included in a multiple-item page field of a PivotTable report. Read/write Variant."
+    },
+    {
+      "name": "Hidden",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "This property is used to hide the individual levels of an OLAP hierarchy. Read/write Boolean."
+    },
+    {
+      "name": "UseMemberPropertyAsCaption",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "This property is used to control whether member property captions are used for PivotItem captions of the PivotField. Read/write Boolean."
+    },
+    {
+      "name": "MemberPropertyCaption",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Setting the MemberPropertyCaption property controls which member property is used as a caption for a given level. Read/write Boolean."
+    },
+    {
+      "name": "DisplayAsTooltip",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "This property is used to specify whether a specific member property PivotField is displayed in tooltips. Read/write Boolean."
+    },
+    {
+      "name": "DisplayInReport",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "This property is used to specify whether the specified member property PivotField is displayed in the PivotTable or not. Read/write Boolean."
+    },
+    {
+      "name": "DisplayAsCaption",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "This property is used to display member properties of PivotFields as captions. Read-only."
+    },
+    {
+      "name": "LayoutCompactRow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Specifies whether or not a PivotField is compacted (items of multiple PivotFields are displayed in a single column) when rows are selected. Read/write Boolean."
+    },
+    {
+      "name": "IncludeNewItemsInFilter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Allows developers to specify whether excluded or included items should be tracked when manual filtering is applied to the PivotField. Read/write Boolean."
+    },
+    {
+      "name": "VisibleItemsList",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant specifying an array of strings that represent included items in a manual filter applied to a PivotField. Read/write."
+    },
+    {
+      "name": "PivotFilters",
+      "kind": "property",
+      "type": "PivotFilters",
+      "access": "read-only",
+      "description": "Returns or sets the PivotFilters for the specified PivotField object. Read-only."
+    },
+    {
+      "name": "AutoSortPivotLine",
+      "kind": "property",
+      "type": "PivotLine",
+      "access": "read-only",
+      "description": "Returns the name of the PivotLine object used to sort the specified PivotTable field automatically. Read-only."
+    },
+    {
+      "name": "AutoSortCustomSubtotal",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the name of the custom subtotal used to sort the specified PivotTable field automatically. Read-only."
+    },
+    {
+      "name": "ShowingInAxis",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Indicates if the PivotField is currently visible in the PivotTable or not. Read-only."
+    },
+    {
+      "name": "EnableMultiplePageItems",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Used for specifying whether check boxes are present in the filter drop-down list for fields in the page area. Read/write Boolean."
+    },
+    {
+      "name": "AllItemsVisible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Used to retrieve a Boolean value that indicates whether any manual filtering is applied to the PivotField. Read-only."
+    },
+    {
+      "name": "SourceCaption",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "The SourceCaption property is applicable only for OLAP PivotTables, and returns the original caption from the OLAP server for a PivotField. Read-only."
+    },
+    {
+      "name": "ShowDetail",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Gets or sets whether the specified PivotField object is showing detail. Read/write Boolean."
+    },
+    {
+      "name": "RepeatLabels",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether item labels are repeated in the PivotTable for the specified PivotField. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "PivotItems",
+      "kind": "method",
+      "signature": "PivotItems([Index As Variant]) As Variant",
+      "description": "Returns an object that represents either a single PivotTable item (a PivotItem object) or a collection of all the visible and hidden items (a PivotItems object) in the specified field. Read-only.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name or number of the item to be returned."
+        }
+      ]
+    },
+    {
+      "name": "CalculatedItems",
+      "kind": "method",
+      "signature": "CalculatedItems() As CalculatedItems",
+      "description": "Returns a CalculatedItems collection that represents all the calculated items in the specified PivotTable report. Read-only.",
+      "returns": "CalculatedItems"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    },
+    {
+      "name": "AutoShow",
+      "kind": "method",
+      "signature": "AutoShow(Type As Long, Range As Long, Count As Long, Field As String)",
+      "description": "Displays the number of top or bottom items for a row, page, or column field in the specified PivotTable report.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "Long",
+          "optional": false,
+          "description": "Use the xlAutomatic constant to cause the specified PivotTable report to show the items that match the specified criteria. Use xlManual to disable this feature."
+        },
+        {
+          "name": "Range",
+          "type": "Long",
+          "optional": false,
+          "description": "The location at which to start showing items. Can be either of the following constants: xlTop or xlBottom."
+        },
+        {
+          "name": "Count",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of items to be shown."
+        },
+        {
+          "name": "Field",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the base data field. You must specify the unique name (as returned from the SourceName property), and not the displayed name."
+        }
+      ]
+    },
+    {
+      "name": "AddPageItem",
+      "kind": "method",
+      "signature": "AddPageItem(Item As String, [ClearList As Variant])",
+      "description": "Adds an additional item to a multiple item page field.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Item",
+          "type": "String",
+          "optional": false,
+          "description": "Source name of a PivotItem object, corresponding to the specific Online Analytical Processing (OLAP) member unique name."
+        },
+        {
+          "name": "ClearList",
+          "type": "Variant",
+          "optional": true,
+          "description": "If False (default), adds a page item to the existing list. If True, deletes all current items and adds _Item_."
+        }
+      ]
+    },
+    {
+      "name": "DrillTo",
+      "kind": "method",
+      "signature": "DrillTo(Field As String)",
+      "description": "The DrillTo method supports drilling to a specified PivotField from another PivotField.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Field",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ClearManualFilter",
+      "kind": "method",
+      "signature": "ClearManualFilter()",
+      "description": "Provides an easy way to set the Visible property to True for all items of a PivotField in PivotTables, and to empty the HiddenItemsList and VisibleItemsList collections in OLAP PivotTables.",
+      "returns": "void"
+    },
+    {
+      "name": "ClearAllFilters",
+      "kind": "method",
+      "signature": "ClearAllFilters()",
+      "description": "Calling this method deletes all filters currently applied to the PivotField. This includes deleting all filters from the PivotFilters collection of the PivotField and removing any manual filtering applied to the PivotField as well. If the PivotField is in the Report Filter area, the item selected will be set to the default item.",
+      "returns": "void"
+    },
+    {
+      "name": "ClearValueFilters",
+      "kind": "method",
+      "signature": "ClearValueFilters()",
+      "description": "Calling this method deletes all value filters in the PivotFilters collection of the PivotField.",
+      "returns": "void"
+    },
+    {
+      "name": "ClearLabelFilters",
+      "kind": "method",
+      "signature": "ClearLabelFilters()",
+      "description": "This method deletes all label filters or all date filters in the PivotFilters collection of the PivotField.",
+      "returns": "void"
+    },
+    {
+      "name": "AutoSort",
+      "kind": "method",
+      "signature": "AutoSort(Order As Long, Field As String, [PivotLine As Variant], [CustomSubtotal As Variant])",
+      "description": "Establishes automatic field-sorting rules for PivotTable reports.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Order",
+          "type": "Long",
+          "optional": false,
+          "description": "One of the XlSortOrder constants specifying the sort order."
+        },
+        {
+          "name": "Field",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the sort key field. You must specify the unique name (as returned from the SourceName property), and not the displayed name."
+        },
+        {
+          "name": "PivotLine",
+          "type": "Variant",
+          "optional": true,
+          "description": "A line on a column or row in a PivotTable report."
+        },
+        {
+          "name": "CustomSubtotal",
+          "type": "Variant",
+          "optional": true,
+          "description": "The custom subtotal field."
+        }
+      ]
+    },
+    {
+      "name": "AutoGroup",
+      "kind": "method",
+      "signature": "AutoGroup()",
+      "description": "Automatically groups the pivot fields in a PivotTable.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

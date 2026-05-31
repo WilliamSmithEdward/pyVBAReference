@@ -1,0 +1,133 @@
+{
+  "name": "ProtectedViewWindow",
+  "kind": "Dispatch Interface",
+  "guid": "{000244CD-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a Protected View window.",
+  "remarks": "A Protected View window is used to display a workbook from a potentially unsafe location. Unsafe locations are defined as the following: - Files opened from the Internet. - Attachments opened from Outlook. - Files blocked by File Block Policy. - Files that fail Office file validation. - Files explicitly opened in Protected View by using the Open in Protected View command of the Open button in the Open dialog box. Workbooks displayed in a Protected View window cannot be edited and are restricted from running active content such as Visual Basic for Applications macros and data connections. For more information about Protected View windows, see What is Protected View? To return a single ProtectedViewWindow object from the ProtectedViewWindows collection, use ProtectedViewWindows (_index_), where _index_ is the index number of the window that you want to open. You can also access the ProtectedViewWindow object that represents the active Protected View window by using the ActiveProtectedViewWindow property of the Application object.",
+  "example": "Dim wbProtected As Workbook\n\nIf Application.ProtectedViewWindows.Count > 0 Then\n    Set wbProtected = Application.ProtectedViewWindows(1).Workbook\nEnd If",
+  "properties": [
+    {
+      "name": "_Default",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the name that appears in the title bar of the Protected View window. Read/write."
+    },
+    {
+      "name": "EnableResize",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the Protected View window can be resized. Read/write."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a value that represents the height, in points, of the Protected View window. Read/write."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a value that represents the distance, in points, from the left edge of the client area to the left edge of the Protected View window. Read/write."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a value that represents the distance, in points, from the top edge of the specified Protected View window to the top edge of the usable area. Read/write."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a value that specifies the width, in points, of the specified Protected View window. Read/write."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a value that determines whether the specified Protected View window is visible. Read/write."
+    },
+    {
+      "name": "SourceName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the source file that is open in the specified Protected View window. Read-only."
+    },
+    {
+      "name": "SourcePath",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the path of the source file that is open in the specified Protected View window. Read-only."
+    },
+    {
+      "name": "WindowState",
+      "kind": "property",
+      "type": "XlProtectedViewWindowState",
+      "access": "read/write",
+      "description": "Returns or sets the state of the specified Protected View window. Read/write."
+    },
+    {
+      "name": "Workbook",
+      "kind": "property",
+      "type": "Workbook",
+      "access": "read-only",
+      "description": "Returns an object that represents the workbook that is open in the specified Protected View window. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate()",
+      "description": "Brings the Protected View window to the front of the z-order.",
+      "returns": "void"
+    },
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close() As Boolean",
+      "description": "Closes the specified Protected View window.",
+      "returns": "Boolean"
+    },
+    {
+      "name": "Edit",
+      "kind": "method",
+      "signature": "Edit([WriteResPassword As Variant], [UpdateLinks As Variant]) As Workbook",
+      "description": "Opens the workbook that is open for editing in the specified Protected View window.",
+      "returns": "Workbook",
+      "parameters": [
+        {
+          "name": "WriteResPassword",
+          "type": "Variant",
+          "optional": true,
+          "description": "The password required to write to a write-reserved workbook. If this argument is omitted and the workbook requires a password, the user will be prompted for the password."
+        },
+        {
+          "name": "UpdateLinks",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the way that external references (links) in the file, such as the reference to a range in the Budget.xls workbook in the following formula =SUM([Budget.xls]Annual!C10:C25), are updated. If this argument is omitted, the user is prompted to specify how links will be updated. For more information about the values used by this parameter, see the Remarks section. If Excel is opening a file in the WKS, WK1, or WK3 format and the _UpdateLinks_ argument is 0, no charts are created; otherwise, Excel generates charts from the graphs attached to the file."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

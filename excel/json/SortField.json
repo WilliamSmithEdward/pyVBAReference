@@ -1,0 +1,128 @@
+{
+  "name": "SortField",
+  "kind": "Dispatch Interface",
+  "guid": "{000244A9-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "The SortField object contains all the sort information for the Worksheet, ListObject, and AutoFilter objects.",
+  "remarks": "Developers can use the BeforeSort event to override Excel's default behavior and put their own sort algorithm into the application.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "SortOn",
+      "kind": "property",
+      "type": "XlSortOn",
+      "access": "read/write",
+      "description": "Returns or sets the attribute of the cell to sort on. Read/write XlSortOn."
+    },
+    {
+      "name": "SortOnValue",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the value on which the sort is performed for the specified SortField object. Read-only."
+    },
+    {
+      "name": "Key",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Specifies the range that is currently being sorted on. Read-only."
+    },
+    {
+      "name": "Order",
+      "kind": "property",
+      "type": "XlSortOrder",
+      "access": "read/write",
+      "description": "Determines the sort order for the values specified in the key. Read/write."
+    },
+    {
+      "name": "CustomOrder",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Specifies a custom order to sort the fields. Read/write Variant."
+    },
+    {
+      "name": "DataOption",
+      "kind": "property",
+      "type": "XlSortDataOption",
+      "access": "read/write",
+      "description": "Specifies how to sort text in the range specified in a SortField object. Read/write XlSortDataOption."
+    },
+    {
+      "name": "Priority",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Specifies the priority for the sort field. Read/write."
+    },
+    {
+      "name": "SubField",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Removes the specified SortField object from the SortFields collection.",
+      "returns": "void"
+    },
+    {
+      "name": "ModifyKey",
+      "kind": "method",
+      "signature": "ModifyKey(Key As Range)",
+      "description": "Modify the key value by which values are sorted in the field.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Key",
+          "type": "Range",
+          "optional": false,
+          "description": "Specifies the key to be modified."
+        }
+      ]
+    },
+    {
+      "name": "SetIcon",
+      "kind": "method",
+      "signature": "SetIcon(Icon As Icon)",
+      "description": "Sets an icon for a SortField object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Icon",
+          "type": "Icon",
+          "optional": false,
+          "description": "The icon to be set."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

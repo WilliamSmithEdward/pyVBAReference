@@ -1,0 +1,48 @@
+{
+  "name": "RulerLevel2",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03C3-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Contains first-line indent and hanging indent information for an outline level.",
+  "remarks": "The RulerLevel2 object is a member of the RulerLevels2 collection. The RulerLevels2 collection contains a RulerLevel2 object for each of the five available outline levels.",
+  "example": "With ActivePresentation.SlideMaster _\n .TextStyles(ppBodyStyle).Ruler2.Levels(1)\n .FirstMargin = 9\n .LeftMargin = 54\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the RulerLevel2 object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the RulerLevel2 object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the RulerLevel2 object. Read-only."
+    },
+    {
+      "name": "FirstMargin",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the first-line indent for the specified outline level, in points. Read/write."
+    },
+    {
+      "name": "LeftMargin",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the left indent for the specified outline level, in points. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

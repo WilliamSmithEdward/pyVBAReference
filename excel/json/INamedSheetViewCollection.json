@@ -1,0 +1,149 @@
+{
+  "name": "INamedSheetViewCollection",
+  "kind": "Interface",
+  "guid": "{00024501-0001-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String, RHS As NamedSheetView)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "NamedSheetView",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "EnterTemporary",
+      "kind": "method",
+      "signature": "EnterTemporary(RHS As NamedSheetView)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "NamedSheetView",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Exit",
+      "kind": "method",
+      "signature": "Exit()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "GetActive",
+      "kind": "method",
+      "signature": "GetActive(RHS As NamedSheetView)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "RHS",
+          "type": "NamedSheetView",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetItem",
+      "kind": "method",
+      "signature": "GetItem(Name As String, RHS As NamedSheetView)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "NamedSheetView",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetItemAt",
+      "kind": "method",
+      "signature": "GetItemAt(Index As Long, RHS As NamedSheetView)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RHS",
+          "type": "NamedSheetView",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

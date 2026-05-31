@@ -1,0 +1,704 @@
+{
+  "name": "ShapeRange",
+  "kind": "Dispatch Interface",
+  "guid": "{000C031D-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Adjustments",
+      "kind": "property",
+      "type": "Adjustments",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "AutoShapeType",
+      "kind": "property",
+      "type": "MsoAutoShapeType",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BlackWhiteMode",
+      "kind": "property",
+      "type": "MsoBlackWhiteMode",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Callout",
+      "kind": "property",
+      "type": "CalloutFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ConnectionSiteCount",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Connector",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ConnectorFormat",
+      "kind": "property",
+      "type": "ConnectorFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Fill",
+      "kind": "property",
+      "type": "FillFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "GroupItems",
+      "kind": "property",
+      "type": "GroupShapes",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HorizontalFlip",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Line",
+      "kind": "property",
+      "type": "LineFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "LockAspectRatio",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Nodes",
+      "kind": "property",
+      "type": "ShapeNodes",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Rotation",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PictureFormat",
+      "kind": "property",
+      "type": "PictureFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "ShadowFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "TextEffect",
+      "kind": "property",
+      "type": "TextEffectFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "TextFrame",
+      "kind": "property",
+      "type": "TextFrame",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ThreeD",
+      "kind": "property",
+      "type": "ThreeDFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoShapeType",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "VerticalFlip",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Vertices",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ZOrderPosition",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Script",
+      "kind": "property",
+      "type": "Script",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "AlternativeText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Child",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ParentGroup",
+      "kind": "property",
+      "type": "Shape",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Id",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "TextFrame2",
+      "kind": "property",
+      "type": "TextFrame2",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "HasChart",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Chart",
+      "kind": "property",
+      "type": "IMsoChart",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ShapeStyle",
+      "kind": "property",
+      "type": "MsoShapeStyleIndex",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BackgroundStyle",
+      "kind": "property",
+      "type": "MsoBackgroundStyleIndex",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SoftEdge",
+      "kind": "property",
+      "type": "SoftEdgeFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Glow",
+      "kind": "property",
+      "type": "GlowFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Reflection",
+      "kind": "property",
+      "type": "ReflectionFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Title",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GraphicStyle",
+      "kind": "property",
+      "type": "MsoGraphicStyleIndex",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Model3D",
+      "kind": "property",
+      "type": "Model3DFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Decorative",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Locked",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Shape",
+      "description": "",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Align",
+      "kind": "method",
+      "signature": "Align(AlignCmd As MsoAlignCmd, RelativeTo As MsoTriState)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "AlignCmd",
+          "type": "MsoAlignCmd",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RelativeTo",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Apply",
+      "kind": "method",
+      "signature": "Apply()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Distribute",
+      "kind": "method",
+      "signature": "Distribute(DistributeCmd As MsoDistributeCmd, RelativeTo As MsoTriState)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "DistributeCmd",
+          "type": "MsoDistributeCmd",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RelativeTo",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Duplicate",
+      "kind": "method",
+      "signature": "Duplicate() As ShapeRange",
+      "description": "",
+      "returns": "ShapeRange"
+    },
+    {
+      "name": "Flip",
+      "kind": "method",
+      "signature": "Flip(FlipCmd As MsoFlipCmd)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FlipCmd",
+          "type": "MsoFlipCmd",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "IncrementLeft",
+      "kind": "method",
+      "signature": "IncrementLeft(Increment As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "IncrementRotation",
+      "kind": "method",
+      "signature": "IncrementRotation(Increment As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "IncrementTop",
+      "kind": "method",
+      "signature": "IncrementTop(Increment As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Group",
+      "kind": "method",
+      "signature": "Group() As Shape",
+      "description": "",
+      "returns": "Shape"
+    },
+    {
+      "name": "PickUp",
+      "kind": "method",
+      "signature": "PickUp()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Regroup",
+      "kind": "method",
+      "signature": "Regroup() As Shape",
+      "description": "",
+      "returns": "Shape"
+    },
+    {
+      "name": "RerouteConnections",
+      "kind": "method",
+      "signature": "RerouteConnections()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "ScaleHeight",
+      "kind": "method",
+      "signature": "ScaleHeight(Factor As Single, RelativeToOriginalSize As MsoTriState, [fScale As MsoScaleFrom])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Factor",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RelativeToOriginalSize",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "fScale",
+          "type": "MsoScaleFrom",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ScaleWidth",
+      "kind": "method",
+      "signature": "ScaleWidth(Factor As Single, RelativeToOriginalSize As MsoTriState, [fScale As MsoScaleFrom])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Factor",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "RelativeToOriginalSize",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "fScale",
+          "type": "MsoScaleFrom",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select([Replace As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Replace",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetShapesDefaultProperties",
+      "kind": "method",
+      "signature": "SetShapesDefaultProperties()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Ungroup",
+      "kind": "method",
+      "signature": "Ungroup() As ShapeRange",
+      "description": "",
+      "returns": "ShapeRange"
+    },
+    {
+      "name": "ZOrder",
+      "kind": "method",
+      "signature": "ZOrder(ZOrderCmd As MsoZOrderCmd)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ZOrderCmd",
+          "type": "MsoZOrderCmd",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Cut",
+      "kind": "method",
+      "signature": "Cut()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "MergeShapes",
+      "kind": "method",
+      "signature": "MergeShapes(MergeCmd As MsoMergeCmd, [PrimaryShape As Shape])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "MergeCmd",
+          "type": "MsoMergeCmd",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "PrimaryShape",
+          "type": "Shape",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SaveAsPicture",
+      "kind": "method",
+      "signature": "SaveAsPicture(PictureType As MsoPictureType, FileName As String, FSaveShapesIndividually As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "PictureType",
+          "type": "MsoPictureType",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "FSaveShapesIndividually",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

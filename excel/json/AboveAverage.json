@@ -1,0 +1,162 @@
+{
+  "name": "AboveAverage",
+  "kind": "Dispatch Interface",
+  "guid": "{0002449E-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents an above average visual of a conditional formatting rule. Applies a color or fill to a range or selection to help you see the value of a cell relative to other cells.",
+  "remarks": "All conditional formatting objects are contained within a FormatConditions collection object, which is a child of a Range collection. You can create an above average formatting rule by using either the Add or AddAboveAverage method of the FormatConditions collection.",
+  "example": "Sub AboveAverageCF()\n\n' Building data for Melanie\n Range(\"A1\").Value = \"Name\"\n Range(\"B1\").Value = \"Number\"\n Range(\"A2\").Value = \"Melanie-1\"\n Range(\"A2\").AutoFill Destination:=Range(\"A2:A26\"), Type:=xlFillDefault\n Range(\"B2:B26\").FormulaArray = \"=INT(RAND()*101)\"\n Range(\"B2:B26\").Select\n\n' Applying Conditional Formatting to items above the average. Should appear green fill and dark green font.\n Selection.FormatConditions.AddAboveAverage\n Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority\n Selection.FormatConditions(1).AboveBelow = xlAboveAverage\n With Selection.FormatConditions(1).Font\n .Color = -16752384\n .TintAndShade = 0\n End With\n With Selection.FormatConditions(1).Interior\n .PatternColorIndex = xlAutomatic\n .Color = 13561798\n .TintAndShade = 0\n End With\nMsgBox \"Added an Above Average Conditional Format to Melanie's data. Press F9 to update values.\", vbInformation\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Priority",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the priority value of the conditional formatting rule. The priority determines the order of evaluation when multiple conditional formatting rules exist on a worksheet."
+    },
+    {
+      "name": "StopIfTrue",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that determines if additional formatting rules on the cell should be evaluated if the current rule evaluates to True."
+    },
+    {
+      "name": "AppliesTo",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object specifying the cell range to which the formatting rule is applied."
+    },
+    {
+      "name": "AboveBelow",
+      "kind": "property",
+      "type": "XlAboveBelow",
+      "access": "read/write",
+      "description": "Returns or sets one of the constants of the XlAboveBelow enumeration, specifying if the conditional formatting rule looks for cell values above or below the range average or standard deviation."
+    },
+    {
+      "name": "Interior",
+      "kind": "property",
+      "type": "Interior",
+      "access": "read-only",
+      "description": "Returns an Interior object that specifies a cell's interior attributes for a conditional formatting rule that evaluates to True. Read-only."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read-only",
+      "description": "Returns a Borders collection that specifies the formatting of cell borders if the conditional formatting rule evaluates to True. Read-only."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read-only",
+      "description": "Returns a Font object that specifies the font formatting if the conditional formatting rule evaluates to True. Read-only."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns one of the constants of the XlFormatConditionType enumeration, which specifies the type of conditional format. Read-only."
+    },
+    {
+      "name": "NumberFormat",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the number format applied to a cell if the conditional formatting rule evaluates to True. Read/write Variant."
+    },
+    {
+      "name": "PTCondition",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean value indicating if the conditional format is being applied to a PivotTable. Read-only."
+    },
+    {
+      "name": "ScopeType",
+      "kind": "property",
+      "type": "XlPivotConditionScope",
+      "access": "read/write",
+      "description": "Returns or sets one of the constants of the XlPivotConditionScope enumeration, which determines the scope of the conditional format when it is applied to a PivotTable."
+    },
+    {
+      "name": "CalcFor",
+      "kind": "property",
+      "type": "XlCalcFor",
+      "access": "read/write",
+      "description": "Returns or sets one of the constants of the XlCalcFor enumeration, which specifies the scope of data to be evaluated for the conditional format in a PivotTable report."
+    },
+    {
+      "name": "NumStdDev",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the numeric standard deviation for an AboveAverage object. Read/write Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "SetFirstPriority",
+      "kind": "method",
+      "signature": "SetFirstPriority()",
+      "description": "Sets the priority value for this conditional formatting rule to \"1\" so that it will be evaluated before all other rules on the worksheet.",
+      "returns": "void"
+    },
+    {
+      "name": "SetLastPriority",
+      "kind": "method",
+      "signature": "SetLastPriority()",
+      "description": "Sets the evaluation order for this conditional formatting rule so that it is evaluated after all other rules on the worksheet.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified conditional formatting rule object.",
+      "returns": "void"
+    },
+    {
+      "name": "ModifyAppliesToRange",
+      "kind": "method",
+      "signature": "ModifyAppliesToRange(Range As Range)",
+      "description": "Sets the cell range to which this formatting rule applies.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The range to which this formatting rule will be applied."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

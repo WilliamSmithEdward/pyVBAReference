@@ -1,0 +1,42 @@
+{
+  "name": "IXMLDOMNodeList",
+  "kind": "Dispatch Interface",
+  "guid": "{2933BF82-7B36-11D2-B20E-00C04F983E60}",
+  "library": "Microsoft XML, v6.0",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "item",
+      "kind": "property",
+      "type": "IXMLDOMNode",
+      "access": "read-only",
+      "description": "collection of nodes"
+    },
+    {
+      "name": "length",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "number of nodes in the collection"
+    }
+  ],
+  "methods": [
+    {
+      "name": "nextNode",
+      "kind": "method",
+      "signature": "nextNode() As IXMLDOMNode",
+      "description": "get next node from iterator",
+      "returns": "IXMLDOMNode"
+    },
+    {
+      "name": "reset",
+      "kind": "method",
+      "signature": "reset()",
+      "description": "reset the position of iterator",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

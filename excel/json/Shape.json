@@ -1,0 +1,669 @@
+{
+  "name": "Shape",
+  "kind": "Dispatch Interface",
+  "guid": "{00024439-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents an object in the drawing layer, such as an AutoShape, freeform, OLE object, or picture.",
+  "remarks": "The Shape object is a member of the Shapes collection. The Shapes collection contains all the shapes in a workbook.",
+  "example": "Set myDocument = Worksheets(1)\nmyDocument.Shapes(1).Flip msoFlipHorizontal\nmyDocument.Shapes(\"Rectangle 1\").Flip msoFlipHorizontal",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Adjustments",
+      "kind": "property",
+      "type": "Adjustments",
+      "access": "read-only",
+      "description": "Returns an Adjustments object that contains adjustment values for all the adjustments in the specified shape. Applies to any Shape object that represents an AutoShape, WordArt, or Connector."
+    },
+    {
+      "name": "TextFrame",
+      "kind": "property",
+      "type": "TextFrame",
+      "access": "read-only",
+      "description": "Returns a TextFrame object that contains the alignment and anchoring properties for the specified shape. Read-only."
+    },
+    {
+      "name": "AutoShapeType",
+      "kind": "property",
+      "type": "MsoAutoShapeType",
+      "access": "read/write",
+      "description": "Returns or sets the shape type for the specified Shape or ShapeRange object, which must represent an AutoShape other than a line, freeform drawing, or connector. Read/write MsoAutoShapeType."
+    },
+    {
+      "name": "Callout",
+      "kind": "property",
+      "type": "CalloutFormat",
+      "access": "read-only",
+      "description": "Returns a CalloutFormat object that contains callout formatting properties for the specified shape. Applies to a Shape object that represent line callouts. Read-only."
+    },
+    {
+      "name": "ConnectionSiteCount",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of connection sites on the specified shape. Read-only Long."
+    },
+    {
+      "name": "Connector",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "True if the specified shape is a connector. Read-only MsoTriState."
+    },
+    {
+      "name": "ConnectorFormat",
+      "kind": "property",
+      "type": "ConnectorFormat",
+      "access": "read-only",
+      "description": "Returns a ConnectorFormat object that contains connector formatting properties. Applies to a Shape object that represents connectors. Read-only."
+    },
+    {
+      "name": "Fill",
+      "kind": "property",
+      "type": "FillFormat",
+      "access": "read-only",
+      "description": "Returns a FillFormat object for a specified shape or a ChartFillFormat object for a specified chart that contains fill formatting properties for the shape or chart. Read-only."
+    },
+    {
+      "name": "GroupItems",
+      "kind": "property",
+      "type": "GroupShapes",
+      "access": "read-only",
+      "description": "Returns a GroupShapes object that represents the individual shapes in the specified group. Use the Item method of the GroupShapes object to return a single shape from the group. Applies to Shape objects that represent grouped shapes. Read-only."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single value that represents the height, in points, of the object."
+    },
+    {
+      "name": "HorizontalFlip",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "True if the specified shape is flipped around the horizontal axis. Read-only MsoTriState."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single value that represents the distance, in points, from the left edge of the object to the left edge of column A (on a worksheet) or the left edge of the chart area (on a chart)."
+    },
+    {
+      "name": "Line",
+      "kind": "property",
+      "type": "LineFormat",
+      "access": "read-only",
+      "description": "Returns a LineFormat object that contains line formatting properties for the specified shape. (For a line, the LineFormat object represents the line itself; for a shape with a border, the LineFormat object represents the border). Read-only."
+    },
+    {
+      "name": "LockAspectRatio",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "True if the specified shape retains its original proportions when you resize it. False if you can change the height and width of the shape independently of one another when you resize it. Read/write MsoTriState."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String value representing the name of the object."
+    },
+    {
+      "name": "Nodes",
+      "kind": "property",
+      "type": "ShapeNodes",
+      "access": "read-only",
+      "description": "Returns a ShapeNodes collection that represents the geometric description of the specified shape."
+    },
+    {
+      "name": "Rotation",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the rotation of the shape, in degrees. Read/write Single."
+    },
+    {
+      "name": "PictureFormat",
+      "kind": "property",
+      "type": "PictureFormat",
+      "access": "read-only",
+      "description": "Returns a PictureFormat object that contains picture formatting properties for the specified shape. Applies to a Shape object that represents pictures or OLE objects. Read-only."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "ShadowFormat",
+      "access": "read-only",
+      "description": "Returns a read-only ShadowFormat object that contains shadow formatting properties for the specified shape or shapes."
+    },
+    {
+      "name": "TextEffect",
+      "kind": "property",
+      "type": "TextEffectFormat",
+      "access": "read-only",
+      "description": "Returns a TextEffectFormat object that contains text-effect formatting properties for the specified shape. Read-only."
+    },
+    {
+      "name": "ThreeD",
+      "kind": "property",
+      "type": "ThreeDFormat",
+      "access": "read-only",
+      "description": "Returns a ThreeDFormat object that contains 3D-effect formatting properties for the specified shape. Read-only."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single value that represents the distance, in points, from the top edge of the topmost shape in the shape range to the top edge of the worksheet."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoShapeType",
+      "access": "read-only",
+      "description": "Returns or sets an MsoShapeType value that represents the shape type."
+    },
+    {
+      "name": "VerticalFlip",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "True if the specified shape is flipped around the vertical axis. Read-only MsoTriState."
+    },
+    {
+      "name": "Vertices",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns the coordinates of the specified freeform drawing's vertices (and control points for Bzier curves) as a series of coordinate pairs. Use the array returned by this property as an argument to the AddCurve method or AddPolyLine method. Read-only Variant."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Returns or sets an MsoTriState value that determines whether the object is visible. Read/write."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single value that represents the width, in points, of the object."
+    },
+    {
+      "name": "ZOrderPosition",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the position of the specified shape in the z-order. Read-only Long."
+    },
+    {
+      "name": "Hyperlink",
+      "kind": "property",
+      "type": "Hyperlink",
+      "access": "read-only",
+      "description": "Returns a Hyperlink object that represents the hyperlink for the shape."
+    },
+    {
+      "name": "BlackWhiteMode",
+      "kind": "property",
+      "type": "MsoBlackWhiteMode",
+      "access": "read/write",
+      "description": "Returns or sets a value that indicates how the specified shape appears when the presentation is viewed in black-and-white mode. Read/write MsoBlackWhiteMode."
+    },
+    {
+      "name": "OnAction",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of a macro that's run when the specified object is chosen. Read/write String."
+    },
+    {
+      "name": "Locked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that indicates if the object is locked."
+    },
+    {
+      "name": "TopLeftCell",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the cell that lies under the upper-left corner of the specified object. Read-only."
+    },
+    {
+      "name": "BottomRightCell",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the cell that lies under the lower-right corner of the object. Read-only."
+    },
+    {
+      "name": "Placement",
+      "kind": "property",
+      "type": "XlPlacement",
+      "access": "read/write",
+      "description": "Returns or sets an XlPlacement value that represents the way the object is attached to the cells below it."
+    },
+    {
+      "name": "ControlFormat",
+      "kind": "property",
+      "type": "ControlFormat",
+      "access": "read-only",
+      "description": "Returns a ControlFormat object that contains Microsoft Excel control properties. Read-only."
+    },
+    {
+      "name": "LinkFormat",
+      "kind": "property",
+      "type": "LinkFormat",
+      "access": "read-only",
+      "description": "Returns a LinkFormat object that contains linked OLE object properties. Read-only."
+    },
+    {
+      "name": "OLEFormat",
+      "kind": "property",
+      "type": "OLEFormat",
+      "access": "read-only",
+      "description": "Returns an OLEFormat object that contains OLE object properties. Read-only."
+    },
+    {
+      "name": "FormControlType",
+      "kind": "property",
+      "type": "XlFormControl",
+      "access": "read-only",
+      "description": "Returns the Microsoft Excel control type. Read-only XlFormControl."
+    },
+    {
+      "name": "AlternativeText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the descriptive (alternative) text string for a Shape object when the object is saved to a webpage. Read/write String."
+    },
+    {
+      "name": "Child",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Returns msoTrue if the specified shape is a child shape or if all shapes in a shape range are child shapes of the same parent. Returns msoFalse if the selected shape is not a child shape. Returns msoTriStateMixed if only some of the selected shapes are child shapes. Read-only MsoTriState."
+    },
+    {
+      "name": "ParentGroup",
+      "kind": "property",
+      "type": "Shape",
+      "access": "read-only",
+      "description": "Returns a Shape object that represents the common parent shape of a child shape or a range of child shapes."
+    },
+    {
+      "name": "ID",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the type for the specified object."
+    },
+    {
+      "name": "Chart",
+      "kind": "property",
+      "type": "Chart",
+      "access": "read-only",
+      "description": "Returns a Chart object that represents the chart contained in the shape. Read-only."
+    },
+    {
+      "name": "HasChart",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Returns whether a shape contains a chart. Read-only MsoTriState."
+    },
+    {
+      "name": "TextFrame2",
+      "kind": "property",
+      "type": "TextFrame2",
+      "access": "read-only",
+      "description": "Returns a TextFrame2 object that contains text formatting for the specified shape. Read-only."
+    },
+    {
+      "name": "ShapeStyle",
+      "kind": "property",
+      "type": "MsoShapeStyleIndex",
+      "access": "read/write",
+      "description": "Returns or sets an MsoShapeStyleIndex value that represents the shape style of the shape range. Read/write."
+    },
+    {
+      "name": "BackgroundStyle",
+      "kind": "property",
+      "type": "MsoBackgroundStyleIndex",
+      "access": "read/write",
+      "description": "Returns or sets the background style. Read/write MsoBackgroundStyleIndex."
+    },
+    {
+      "name": "SoftEdge",
+      "kind": "property",
+      "type": "SoftEdgeFormat",
+      "access": "read-only",
+      "description": "Returns a SoftEdgeFormat object for a specified shape that contains soft edge formatting properties for the shape. Read-only."
+    },
+    {
+      "name": "Glow",
+      "kind": "property",
+      "type": "GlowFormat",
+      "access": "read-only",
+      "description": "Returns a GlowFormat object for a specified shape that contains glow formatting properties for the shape. Read-only."
+    },
+    {
+      "name": "Reflection",
+      "kind": "property",
+      "type": "ReflectionFormat",
+      "access": "read-only",
+      "description": "Returns a ReflectionFormat object for a specified shape that contains reflection formatting properties for the shape. Read-only."
+    },
+    {
+      "name": "HasSmartArt",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Returns whether there is a SmartArt diagram present on the specified shape. Read-only."
+    },
+    {
+      "name": "SmartArt",
+      "kind": "property",
+      "type": "SmartArt",
+      "access": "read-only",
+      "description": "Returns an object that represents the SmartArt associated with the shape. Read-only."
+    },
+    {
+      "name": "Title",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the title of the alternative text associated with the specified shape. Read/write."
+    },
+    {
+      "name": "GraphicStyle",
+      "kind": "property",
+      "type": "MsoGraphicStyleIndex",
+      "access": "read/write",
+      "description": "Returns or sets an MsoGraphicStyleIndex constant that represents the style of an SVG graphic. Read/write."
+    },
+    {
+      "name": "Model3D",
+      "kind": "property",
+      "type": "Model3DFormat",
+      "access": "read-only",
+      "description": "Returns a Model3DFormat object that contains Model3D properties. Read-only."
+    },
+    {
+      "name": "Decorative",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Sets or returns the decorative flag for the specified object. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Apply",
+      "kind": "method",
+      "signature": "Apply()",
+      "description": "Applies to the specified shape formatting that's been copied by using the PickUp method.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    },
+    {
+      "name": "Duplicate",
+      "kind": "method",
+      "signature": "Duplicate() As Shape",
+      "description": "Duplicates the object and returns a reference to the new copy.",
+      "returns": "Shape"
+    },
+    {
+      "name": "Flip",
+      "kind": "method",
+      "signature": "Flip(FlipCmd As MsoFlipCmd)",
+      "description": "Flips the specified shape around its horizontal or vertical axis.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FlipCmd",
+          "type": "MsoFlipCmd",
+          "optional": false,
+          "description": "Specifies whether the shape is to be flipped horizontally or vertically."
+        }
+      ]
+    },
+    {
+      "name": "IncrementLeft",
+      "kind": "method",
+      "signature": "IncrementLeft(Increment As Single)",
+      "description": "Moves the specified shape horizontally by the specified number of points.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": "Specifies how far the shape is to be moved horizontally, in points. A positive value moves the shape to the right; a negative value moves it to the left."
+        }
+      ]
+    },
+    {
+      "name": "IncrementRotation",
+      "kind": "method",
+      "signature": "IncrementRotation(Increment As Single)",
+      "description": "Changes the rotation of the specified shape around the z-axis by the specified number of degrees. Use the Rotation property to set the absolute rotation of the shape.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": "Specifies how far the shape is to be rotated horizontally, in degrees. A positive value rotates the shape clockwise; a negative value rotates it counterclockwise."
+        }
+      ]
+    },
+    {
+      "name": "IncrementTop",
+      "kind": "method",
+      "signature": "IncrementTop(Increment As Single)",
+      "description": "Moves the specified shape vertically by the specified number of points.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": "Specifies how far the shape object is to be moved vertically, in points. A positive value moves the shape down; a negative value moves it up."
+        }
+      ]
+    },
+    {
+      "name": "PickUp",
+      "kind": "method",
+      "signature": "PickUp()",
+      "description": "Copies the formatting of the specified shape. Use the Apply method to apply the copied formatting to another shape.",
+      "returns": "void"
+    },
+    {
+      "name": "RerouteConnections",
+      "kind": "method",
+      "signature": "RerouteConnections()",
+      "description": "This method reroutes all connectors attached to the specified shape; if the specified shape is a connector, it's rerouted.",
+      "returns": "void"
+    },
+    {
+      "name": "ScaleHeight",
+      "kind": "method",
+      "signature": "ScaleHeight(Factor As Single, RelativeToOriginalSize As MsoTriState, [Scale As Variant])",
+      "description": "Scales the height of the shape by a specified factor. For pictures and OLE objects, you can indicate whether you want to scale the shape relative to the original or the current size. Shapes other than pictures and OLE objects are always scaled relative to their current height.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Factor",
+          "type": "Single",
+          "optional": false,
+          "description": "Specifies the ratio between the height of the shape after you resize it and the current or original height. For example, to make a rectangle 50 percent larger, specify 1.5 for this argument."
+        },
+        {
+          "name": "RelativeToOriginalSize",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "msoTrue to scale the shape relative to its original size. msoFalse to scale it relative to its current size. You can specify msoTrue for this argument only if the specified shape is a picture or an OLE object."
+        },
+        {
+          "name": "Scale",
+          "type": "Variant",
+          "optional": true,
+          "description": "One of the constants of MsoScaleFrom, which specifies which part of the shape retains its position when the shape is scaled."
+        }
+      ]
+    },
+    {
+      "name": "ScaleWidth",
+      "kind": "method",
+      "signature": "ScaleWidth(Factor As Single, RelativeToOriginalSize As MsoTriState, [Scale As Variant])",
+      "description": "Scales the width of the shape by a specified factor. For pictures and OLE objects, you can indicate whether you want to scale the shape relative to the original or the current size. Shapes other than pictures and OLE objects are always scaled relative to their current width.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Factor",
+          "type": "Single",
+          "optional": false,
+          "description": "Specifies the ratio between the width of the shape after you resize it and the current or original width. For example, to make a rectangle 50 percent larger, specify 1.5 for this argument."
+        },
+        {
+          "name": "RelativeToOriginalSize",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "msoFalse to scale it relative to its current size. You can specify msoTrue for this argument only if the specified shape is a picture or an OLE object."
+        },
+        {
+          "name": "Scale",
+          "type": "Variant",
+          "optional": true,
+          "description": "One of the constants of MsoScaleFrom, which specifies which part of the shape retains its position when the shape is scaled."
+        }
+      ]
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select([Replace As Variant])",
+      "description": "Selects the object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Replace",
+          "type": "Variant",
+          "optional": true,
+          "description": "(used only with sheets). True to replace the current selection with the specified object. False to extend the current selection to include any previously selected objects and the specified object."
+        }
+      ]
+    },
+    {
+      "name": "SetShapesDefaultProperties",
+      "kind": "method",
+      "signature": "SetShapesDefaultProperties()",
+      "description": "Makes the formatting of the specified shape the default formatting for the shape.",
+      "returns": "void"
+    },
+    {
+      "name": "Ungroup",
+      "kind": "method",
+      "signature": "Ungroup() As ShapeRange",
+      "description": "Ungroups any grouped shapes in the specified shape or range of shapes. Disassembles pictures and OLE objects within the specified shape or range of shapes.",
+      "returns": "ShapeRange"
+    },
+    {
+      "name": "ZOrder",
+      "kind": "method",
+      "signature": "ZOrder(ZOrderCmd As MsoZOrderCmd)",
+      "description": "Moves the specified shape in front of or behind other shapes in the collection (that is, changes the shape's position in the z-order).",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ZOrderCmd",
+          "type": "MsoZOrderCmd",
+          "optional": false,
+          "description": "Specifies where to move the specified shape relative to the other shapes."
+        }
+      ]
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy()",
+      "description": "Copies the object to the Clipboard.",
+      "returns": "void"
+    },
+    {
+      "name": "Cut",
+      "kind": "method",
+      "signature": "Cut()",
+      "description": "Cuts the object to the Clipboard.",
+      "returns": "void"
+    },
+    {
+      "name": "CopyPicture",
+      "kind": "method",
+      "signature": "CopyPicture([Appearance As Variant], [Format As Variant])",
+      "description": "Copies the selected object to the Clipboard as a picture.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Appearance",
+          "type": "Variant",
+          "optional": true,
+          "description": "An XlPictureAppearance constant that specifies how the picture should be copied. The default value is xlScreen."
+        },
+        {
+          "name": "Format",
+          "type": "Variant",
+          "optional": true,
+          "description": "An XlCopyPictureFormat constant that specifies the format of the picture. The default value is xlPicture."
+        }
+      ]
+    },
+    {
+      "name": "PlacePictureInCell",
+      "kind": "method",
+      "signature": "PlacePictureInCell()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

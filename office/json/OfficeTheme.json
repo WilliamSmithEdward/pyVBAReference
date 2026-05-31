@@ -1,0 +1,55 @@
+{
+  "name": "OfficeTheme",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03A0-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a Microsoft Office theme.",
+  "remarks": "",
+  "example": "Dim tTheme As OfficeTheme\nDim tcsThemeColorScheme As ThemeColorScheme\nSet tcsThemeColorScheme = tTheme.ThemeColorScheme",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the OfficeTheme object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the OfficeTheme object was created. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the OfficeTheme object. Read-only."
+    },
+    {
+      "name": "ThemeColorScheme",
+      "kind": "property",
+      "type": "ThemeColorScheme",
+      "access": "read-only",
+      "description": "Gets a ThemeColorScheme object that represents the color scheme of a Microsoft Office theme. Read-only."
+    },
+    {
+      "name": "ThemeFontScheme",
+      "kind": "property",
+      "type": "ThemeFontScheme",
+      "access": "read-only",
+      "description": "Gets a ThemeFontScheme object that represents the font scheme of a Microsoft Office theme. Read-only."
+    },
+    {
+      "name": "ThemeEffectScheme",
+      "kind": "property",
+      "type": "ThemeEffectScheme",
+      "access": "read-only",
+      "description": "Gets a ThemeEffectScheme object that represents the effects scheme of a Microsoft Office theme. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -1,0 +1,133 @@
+{
+  "name": "TableObject",
+  "kind": "Dispatch Interface",
+  "guid": "{000244CE-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a worksheet table built from data returned from a PowerPivot model.",
+  "remarks": "",
+  "example": "Sub CreateTable()\nDim objWBConnection As WorkbookConnection\nDim objWorksheet As Worksheet\nDim objTable As TableObject   'This is the new Table object\n\nSet objWorksheet = ActiveWorkbook.Worksheets(\"Sheet1\")\n\n'Create a WorkbookConnection to the external data source first.\nSet objWBConnection = ActiveWorkbook.Connections.Add2( _\n        \"Cubes3 AdventureWorksDW DimEmployee1\", \"\", Array( _\n        \"OLEDB;Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=True;Initial Catalog=AdventureWorksDW;Data Source=MyServer;Use \" _\n        , _\n        \"Procedure for Prepare=1;Auto Translate=True;Packet Size=4096;Workstation ID=MYWORKSTATION;Use Encryption for Data=False;Tag with co\" _\n        , \"lumn collation when possible=False\"), Array( _\n        \"\"\"AdventureWorksDW\"\".\"\"dbo\"\".\"\"DimEmployee\"\"\"), 3, True)\n\n'Create a new table connected to the model.\nSet objTable = objWorksheet.ListObjects.Add(SourceType:=xlSrcModel, Source:=objWBConnection, Destination:=Range(\"$A$1\")).TableObject\n\nobjTable.Refresh\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Excel application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified TableObject object. Read-only."
+    },
+    {
+      "name": "RowNumbers",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Specifies if row numbers are added as the first column of the specified query table. Read/write Boolean."
+    },
+    {
+      "name": "FetchedRowOverflow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Specifies if the number of rows returned by the last use of the Refresh method is greater than the number of rows available on the worksheet. Read-only Boolean."
+    },
+    {
+      "name": "RefreshStyle",
+      "kind": "property",
+      "type": "XlCellInsertionMode",
+      "access": "read/write",
+      "description": "Returns or sets the way rows on the specified worksheet are added or deleted to accommodate the number of rows in a record set returned by a query. Read/write XlCellInsertionMode enumeration."
+    },
+    {
+      "name": "EnableRefresh",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Specifies if the query table can be refreshed by the user. Read/write Boolean."
+    },
+    {
+      "name": "Destination",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns the cell in the upper-left corner of the query table destination range (the range where the resulting query table will be placed). The destination range must be on the worksheet that contains the TableObject object. Read-only Range."
+    },
+    {
+      "name": "ResultRange",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the area of the worksheet occupied by the specified query table. Read-only."
+    },
+    {
+      "name": "EnableEditing",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the user can edit the specified query table. False if the user can only refresh the query table. Read/write Boolean."
+    },
+    {
+      "name": "PreserveColumnInfo",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Specifies if column sorting, filtering, and layout information is preserved whenever a query table is refreshed. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "PreserveFormatting",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if any formatting common to the first five rows of data are applied to new rows of data in the query table. Unused cells aren't formatted. The property is False if the last AutoFormat applied to the query table is applied to new rows of data. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "AdjustColumnWidth",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Specifies if the column widths are automatically adjusted for the best fit each time you refresh the specified query table. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "ListObject",
+      "kind": "property",
+      "type": "ListObject",
+      "access": "read-only",
+      "description": "Returns a ListObject object for the TableObject object. Read-only."
+    },
+    {
+      "name": "WorkbookConnection",
+      "kind": "property",
+      "type": "WorkbookConnection",
+      "access": "read-only",
+      "description": "Returns the WorkbookConnection object used by the TableObject for connecting to the model."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the TableObject object.",
+      "returns": "void"
+    },
+    {
+      "name": "Refresh",
+      "kind": "method",
+      "signature": "Refresh() As Boolean",
+      "description": "This method updates the TableObject object.",
+      "returns": "Boolean"
+    }
+  ],
+  "events": []
+}

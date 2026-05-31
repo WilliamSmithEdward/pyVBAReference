@@ -1,0 +1,703 @@
+{
+  "name": "Window",
+  "kind": "Dispatch Interface",
+  "guid": "{00020893-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a window.",
+  "remarks": "Many worksheet characteristics, such as scroll bars and gridlines, are actually properties of the window. The Window object is a member of the Windows collection. The Windows collection for the Application object contains all the windows in the application, whereas the Windows collection for the Workbook object contains only the windows in the specified workbook.",
+  "example": "Windows(1).WindowState = xlMaximized",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "ActiveCell",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the active cell in the active window (the window on top) or in the specified window. If the window isn't displaying a worksheet, this property fails. Read-only."
+    },
+    {
+      "name": "ActiveChart",
+      "kind": "property",
+      "type": "Chart",
+      "access": "read-only",
+      "description": "Returns a Chart object that represents the active chart (either an embedded chart or a chart sheet). An embedded chart is considered active when it's either selected or activated. When no chart is active, this property returns Nothing."
+    },
+    {
+      "name": "ActivePane",
+      "kind": "property",
+      "type": "Pane",
+      "access": "read-only",
+      "description": "Returns a Pane object that represents the active pane in the window. Read-only."
+    },
+    {
+      "name": "ActiveSheet",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an object that represents the active sheet (the sheet on top) in the active workbook or in the specified window or workbook. Returns Nothing if no sheet is active."
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the name that appears in the title bar of the document window."
+    },
+    {
+      "name": "DisplayFormulas",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the window is displaying formulas; False if the window is displaying values. Read/write Boolean."
+    },
+    {
+      "name": "DisplayGridlines",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if gridlines are displayed. Read/write Boolean."
+    },
+    {
+      "name": "DisplayHeadings",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if both row and column headings are displayed; False if no headings are displayed. Read/write Boolean."
+    },
+    {
+      "name": "DisplayHorizontalScrollBar",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the horizontal scroll bar is displayed. Read/write Boolean."
+    },
+    {
+      "name": "DisplayOutline",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if outline symbols are displayed. Read/write Boolean."
+    },
+    {
+      "name": "DisplayVerticalScrollBar",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the vertical scroll bar is displayed. Read/write Boolean."
+    },
+    {
+      "name": "DisplayWorkbookTabs",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the workbook tabs are displayed. Read/write Boolean."
+    },
+    {
+      "name": "DisplayZeros",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if zero values are displayed. Read/write Boolean."
+    },
+    {
+      "name": "EnableResize",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the window can be resized. Read/write Boolean."
+    },
+    {
+      "name": "FreezePanes",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if split panes are frozen. Read/write Boolean."
+    },
+    {
+      "name": "GridlineColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the gridline color as an RGB value. Read/write Long."
+    },
+    {
+      "name": "GridlineColorIndex",
+      "kind": "property",
+      "type": "XlColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the gridline color as an index into the current color palette or as an XlColorIndex constant."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a Double value that represents the height, in points, of the window."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the index number of the object within the collection of similar objects."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a Double value that represents the distance, in points, from the left edge of the client area to the left edge of the window."
+    },
+    {
+      "name": "OnWindow",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the procedure that's run whenever you activate a window. Read/write String."
+    },
+    {
+      "name": "Panes",
+      "kind": "property",
+      "type": "Panes",
+      "access": "read-only",
+      "description": "Returns a Panes collection that represents all the panes in the specified window. Read-only."
+    },
+    {
+      "name": "RangeSelection",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the selected cells on the worksheet in the specified window even if a graphic object is active or selected on the worksheet. Read-only."
+    },
+    {
+      "name": "ScrollColumn",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the number of the leftmost column in the pane or window. Read/write Long."
+    },
+    {
+      "name": "ScrollRow",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the number of the row that appears at the top of the pane or window. Read/write Long."
+    },
+    {
+      "name": "SelectedSheets",
+      "kind": "property",
+      "type": "Sheets",
+      "access": "read-only",
+      "description": "Returns a Sheets collection that represents all the selected sheets in the specified window. Read-only."
+    },
+    {
+      "name": "Selection",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the specified window, for a Windows object."
+    },
+    {
+      "name": "Split",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the window is split. Read/write Boolean."
+    },
+    {
+      "name": "SplitColumn",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the column number where the window is split into panes (the number of columns to the left of the split line). Read/write Long."
+    },
+    {
+      "name": "SplitHorizontal",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the location of the horizontal window split, in points. Read/write Double."
+    },
+    {
+      "name": "SplitRow",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the row number where the window is split into panes (the number of rows above the split). Read/write Long."
+    },
+    {
+      "name": "SplitVertical",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the location of the vertical window split, in points. Read/write Double."
+    },
+    {
+      "name": "TabRatio",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the ratio of the width of the workbook's tab area to the width of the window's horizontal scroll bar (as a number between 0 (zero) and 1; the default value is 0.6). Read/write Double."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a Double value that represents the distance, in points, from the top edge of the window to the top edge of the usable area (below the menus, any toolbars docked at the top, and the formula bar)."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "XlWindowType",
+      "access": "read-only",
+      "description": "Returns or sets an XlWindowType value that represents the window type."
+    },
+    {
+      "name": "UsableHeight",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": "Returns the maximum height of the space that a window can occupy in the application window area, in points. Read-only Double."
+    },
+    {
+      "name": "UsableWidth",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": "Returns the maximum width of the space that a window can occupy in the application window area, in points. Read-only Double."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that determines whether the object is visible. Read/write."
+    },
+    {
+      "name": "VisibleRange",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the range of cells that are visible in the window or pane. If a column or row is partially visible, it's included in the range. Read-only."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets a Double value that represents the width, in points, of the window."
+    },
+    {
+      "name": "WindowNumber",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the window number. For example, a window named Book1.xls:2 has 2 as its window number. Most windows have the window number 1. Read-only Long."
+    },
+    {
+      "name": "WindowState",
+      "kind": "property",
+      "type": "XlWindowState",
+      "access": "read/write",
+      "description": "Returns or sets the state of the window. Read/write XlWindowState."
+    },
+    {
+      "name": "Zoom",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value that represents the display size of the window, as a percentage (100 equals normal size, 200 equals double size, and so on)."
+    },
+    {
+      "name": "View",
+      "kind": "property",
+      "type": "XlWindowView",
+      "access": "read/write",
+      "description": "Returns or sets the view showing in the window. Read/write XlWindowView."
+    },
+    {
+      "name": "DisplayRightToLeft",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified window is displayed from right to left instead of from left to right. False if the object is displayed from left to right. Read-only Boolean."
+    },
+    {
+      "name": "SheetViews",
+      "kind": "property",
+      "type": "SheetViews",
+      "access": "read-only",
+      "description": "Returns the SheetViews object for the specified window. Read-only."
+    },
+    {
+      "name": "ActiveSheetView",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an object that represents the view of the active sheet in the specified window. Read-only."
+    },
+    {
+      "name": "DisplayRuler",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a ruler is displayed for the specified window. Read/write Boolean."
+    },
+    {
+      "name": "AutoFilterDateGrouping",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the auto filter for date grouping is currently displayed in the specified window. Read/write Boolean."
+    },
+    {
+      "name": "DisplayWhitespace",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if whitespace is displayed. Read/write Boolean."
+    },
+    {
+      "name": "Hwnd",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that indicates the window handle of the specified window. Read-only."
+    },
+    {
+      "name": "DisplayDataTypeIcons",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate() As Variant",
+      "description": "Brings the window to the front of the z-order.",
+      "returns": "Variant"
+    },
+    {
+      "name": "ActivateNext",
+      "kind": "method",
+      "signature": "ActivateNext() As Variant",
+      "description": "Activates the specified window and then sends it to the back of the window z-order.",
+      "returns": "Variant"
+    },
+    {
+      "name": "ActivatePrevious",
+      "kind": "method",
+      "signature": "ActivatePrevious() As Variant",
+      "description": "Activates the specified window and then activates the window at the back of the window z-order.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close([SaveChanges As Variant], [Filename As Variant], [RouteWorkbook As Variant]) As Boolean",
+      "description": "Closes the object.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "SaveChanges",
+          "type": "Variant",
+          "optional": true,
+          "description": "If there are no changes to the workbook, this argument is ignored. If there are changes to the workbook and the workbook appears in other open windows, this argument is ignored. If there are changes to the workbook but the workbook doesn't appear in any other open windows, this argument specifies whether changes should be saved.If set to True, changes are saved to the workbook. If there is not yet a file name associated with the workbook, _FileName_ is used. If _FileName_ is omitted, the user is asked to supply a file name."
+        },
+        {
+          "name": "Filename",
+          "type": "Variant",
+          "optional": true,
+          "description": "Save changes under this file name."
+        },
+        {
+          "name": "RouteWorkbook",
+          "type": "Variant",
+          "optional": true,
+          "description": "If the workbook doesn't need to be routed to the next recipient (if it has no routing slip or has already been routed), this argument is ignored. Otherwise, Microsoft Excel routes the workbook according to the value of this parameter. If set to True, the workbook is sent to the next recipient. If set to False, the workbook is not sent. If omitted, the user is asked whether the workbook should be sent."
+        }
+      ]
+    },
+    {
+      "name": "LargeScroll",
+      "kind": "method",
+      "signature": "LargeScroll([Down As Variant], [Up As Variant], [ToRight As Variant], [ToLeft As Variant]) As Variant",
+      "description": "Scrolls the contents of the window by pages.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Down",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of pages to scroll the contents down."
+        },
+        {
+          "name": "Up",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of pages to scroll the contents up."
+        },
+        {
+          "name": "ToRight",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of pages to scroll the contents to the right."
+        },
+        {
+          "name": "ToLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of pages to scroll the contents to the left."
+        }
+      ]
+    },
+    {
+      "name": "NewWindow",
+      "kind": "method",
+      "signature": "NewWindow() As Window",
+      "description": "Creates a new window or a copy of the specified window.",
+      "returns": "Window"
+    },
+    {
+      "name": "PrintPreview",
+      "kind": "method",
+      "signature": "PrintPreview([EnableChanges As Variant]) As Variant",
+      "description": "Shows a preview of the object as it would look when printed.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "EnableChanges",
+          "type": "Variant",
+          "optional": true,
+          "description": "Pass a Boolean value to specify if the user can change the margins and other page setup options available in print preview."
+        }
+      ]
+    },
+    {
+      "name": "ScrollWorkbookTabs",
+      "kind": "method",
+      "signature": "ScrollWorkbookTabs([Sheets As Variant], [Position As Variant]) As Variant",
+      "description": "Scrolls through the workbook tabs at the bottom of the window. Doesn't affect the active sheet in the workbook.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Sheets",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of sheets to scroll by. Use a positive number to scroll forward, a negative number to scroll backward, or 0 (zero) to not scroll at all. You must specify _Sheets_ if you don't specify _Position_."
+        },
+        {
+          "name": "Position",
+          "type": "Variant",
+          "optional": true,
+          "description": "Use xlFirst to scroll to the first sheet, or use xlLast to scroll to the last sheet. You must specify _Position_ if you don't specify _Sheets_."
+        }
+      ]
+    },
+    {
+      "name": "SmallScroll",
+      "kind": "method",
+      "signature": "SmallScroll([Down As Variant], [Up As Variant], [ToRight As Variant], [ToLeft As Variant]) As Variant",
+      "description": "Scrolls the contents of the window by rows or columns.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Down",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of rows to scroll the contents down."
+        },
+        {
+          "name": "Up",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of rows to scroll the contents up."
+        },
+        {
+          "name": "ToRight",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of columns to scroll the contents to the right."
+        },
+        {
+          "name": "ToLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of columns to scroll the contents to the left."
+        }
+      ]
+    },
+    {
+      "name": "PointsToScreenPixelsX",
+      "kind": "method",
+      "signature": "PointsToScreenPixelsX(Points As Long) As Long",
+      "description": "Converts a horizontal measurement from points (document coordinates) to screen pixels (screen coordinates). Returns the converted measurement as a Long value.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of points horizontally along the top of the document window, starting from the left."
+        }
+      ]
+    },
+    {
+      "name": "PointsToScreenPixelsY",
+      "kind": "method",
+      "signature": "PointsToScreenPixelsY(Points As Long) As Long",
+      "description": "Converts a vertical measurement from points (document coordinates) to screen pixels (screen coordinates). Returns the converted measurement as a Long value.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of points vertically along the left edge of the document window, starting from the top."
+        }
+      ]
+    },
+    {
+      "name": "RangeFromPoint",
+      "kind": "method",
+      "signature": "RangeFromPoint(x As Long, y As Long) As Object",
+      "description": "Returns the Shape or Range object that is positioned at the specified pair of screen coordinates. If there isn't a shape located at the specified coordinates, this method returns Nothing.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "x",
+          "type": "Long",
+          "optional": false,
+          "description": "The value (in pixels) that represents the horizontal distance from the left edge of the screen, starting at the top."
+        },
+        {
+          "name": "y",
+          "type": "Long",
+          "optional": false,
+          "description": "The value (in pixels) that represents the vertical distance from the top of the screen, starting on the left."
+        }
+      ]
+    },
+    {
+      "name": "ScrollIntoView",
+      "kind": "method",
+      "signature": "ScrollIntoView(Left As Long, Top As Long, Width As Long, Height As Long, [Start As Variant])",
+      "description": "Scrolls the document window so that the contents of a specified rectangular area are displayed in either the upper-left or lower-right corner of the document window or pane (depending on the value of the _Start_ argument).",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Long",
+          "optional": false,
+          "description": "The horizontal position of the rectangle (in points) from the left edge of the document window or pane."
+        },
+        {
+          "name": "Top",
+          "type": "Long",
+          "optional": false,
+          "description": "The vertical position of the rectangle (in points) from the top of the document window or pane."
+        },
+        {
+          "name": "Width",
+          "type": "Long",
+          "optional": false,
+          "description": "The width of the rectangle, in points."
+        },
+        {
+          "name": "Height",
+          "type": "Long",
+          "optional": false,
+          "description": "The height of the rectangle, in points."
+        },
+        {
+          "name": "Start",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have the upper-left corner of the rectangle appear in the upper-left corner of the document window or pane. False to have the lower-right corner of the rectangle appear in the lower-right corner of the document window or pane. The default value is True."
+        }
+      ]
+    },
+    {
+      "name": "PrintOut",
+      "kind": "method",
+      "signature": "PrintOut([From As Variant], [To As Variant], [Copies As Variant], [Preview As Variant], [ActivePrinter As Variant], [PrintToFile As Variant], [Collate As Variant], [PrToFileName As Variant]) As Variant",
+      "description": "Prints the object.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "From",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of the page at which to start printing. If this argument is omitted, printing starts at the beginning."
+        },
+        {
+          "name": "To",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of the last page to print. If this argument is omitted, printing ends with the last page."
+        },
+        {
+          "name": "Copies",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of copies to print. If this argument is omitted, one copy is printed."
+        },
+        {
+          "name": "Preview",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have Microsoft Excel invoke print preview before printing the object. False (or omitted) to print the object immediately."
+        },
+        {
+          "name": "ActivePrinter",
+          "type": "Variant",
+          "optional": true,
+          "description": "Sets the name of the active printer."
+        },
+        {
+          "name": "PrintToFile",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to print to a file. If _PrToFileName_ is not specified, Microsoft Excel prompts the user to enter the name of the output file."
+        },
+        {
+          "name": "Collate",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to collate multiple copies."
+        },
+        {
+          "name": "PrToFileName",
+          "type": "Variant",
+          "optional": true,
+          "description": "If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

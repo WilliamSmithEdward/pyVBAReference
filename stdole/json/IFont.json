@@ -1,0 +1,158 @@
+{
+  "name": "IFont",
+  "kind": "Interface",
+  "guid": "{BEF6E002-A874-101A-8BBA-00AA00300CAB}",
+  "library": "OLE Automation",
+  "description": "Font Object",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Size",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Bold",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Italic",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Underline",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Strikethrough",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Weight",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Charset",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "hFont",
+      "kind": "property",
+      "type": "HRESULT",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Clone",
+      "kind": "method",
+      "signature": "Clone(ppfont As IFont)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ppfont",
+          "type": "IFont",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "IsEqual",
+      "kind": "method",
+      "signature": "IsEqual(pfontOther As IFont)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "pfontOther",
+          "type": "IFont",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetRatio",
+      "kind": "method",
+      "signature": "SetRatio(cyLogical As Long, cyHimetric As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "cyLogical",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "cyHimetric",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddRefHfont",
+      "kind": "method",
+      "signature": "AddRefHfont(hFont As OLE_HANDLE)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "hFont",
+          "type": "OLE_HANDLE",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ReleaseHfont",
+      "kind": "method",
+      "signature": "ReleaseHfont(hFont As OLE_HANDLE)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "hFont",
+          "type": "OLE_HANDLE",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,41 @@
+{
+  "name": "ThemeFont",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03A3-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Represents a container for the font schemes of a Microsoft Office theme.",
+  "remarks": "",
+  "example": "Dim tTheme As OfficeTheme\nDim tfThemeFontScheme As ThemeFontScheme\nDim tfThemeFont As ThemeFont\nSet tfThemeFontScheme = tTheme.ThemeFontScheme\nSet tfThemeFont = tfThemeFontScheme.MajorFont(msoThemeLatin)",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the ThemeFont object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the ThemeFont object was created. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the name of a font in the font scheme of a Microsoft Office theme. Read/write."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the ThemeFont object. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

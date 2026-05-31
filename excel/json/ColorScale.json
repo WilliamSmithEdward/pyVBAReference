@@ -1,0 +1,127 @@
+{
+  "name": "ColorScale",
+  "kind": "Dispatch Interface",
+  "guid": "{00024493-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a color scale conditional formatting rule.",
+  "remarks": "All conditional formatting objects are contained within a FormatConditions collection object, which is a child of a Range collection. You can create a color scale formatting rule by using either the Add or AddColorScale method of the FormatConditions collection. Color scales are visual guides that help you understand data distribution and variation. You can apply either a two-color or a three-color scale to a range of data, data in a table, or data in a PivotTable report. For a two-color scale conditional format, you assign the value, type, and color to the minimum and maximum thresholds of a range. A three-color scale also has a midpoint threshold. Each of these thresholds is determined by setting the properties of the ColorScaleCriteria object. The ColorScaleCriteria object, which is a child of the ColorScale object, is a collection of all of the ColorScaleCriterion objects for the color scale.",
+  "example": "Sub CreateColorScaleCF()\n\n Dim cfColorScale As ColorScale\n\n 'Fill cells with sample data from 1 to 10\n With ActiveSheet\n .Range(\"C1\") = 1\n .Range(\"C2\") = 2\n .Range(\"C1:C2\").AutoFill Destination:=Range(\"C1:C10\")\n End With\n\n Range(\"C1:C10\").Select\n\n 'Create a two-color ColorScale object for the created sample data range\n Set cfColorScale = Selection.FormatConditions.AddColorScale(ColorScaleType:=2)\n\n 'Set the minimum threshold to red and maximum threshold to blue\n cfColorScale.ColorScaleCriteria(1).FormatColor.Color = RGB(255, 0, 0)\n cfColorScale.ColorScaleCriteria(2).FormatColor.Color = RGB(0, 0, 255)\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Priority",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the priority value of the conditional formatting rule. The priority determines the order of evaluation when multiple conditional formatting rules exist on a worksheet."
+    },
+    {
+      "name": "StopIfTrue",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns or sets a Boolean value that determines if additional formatting rules on the cell should be evaluated if the current rule evaluates to True."
+    },
+    {
+      "name": "AppliesTo",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object specifying the cell range to which the formatting rule is applied."
+    },
+    {
+      "name": "Formula",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String representing a formula that determines the values to which the icon set will be applied."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns one of the constants of the XlFormatConditionType enumeration, which specifies the type of conditional format. Read-only."
+    },
+    {
+      "name": "PTCondition",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean value indicating if the conditional format is being applied to a PivotTable. Read-only."
+    },
+    {
+      "name": "ScopeType",
+      "kind": "property",
+      "type": "XlPivotConditionScope",
+      "access": "read/write",
+      "description": "Returns or sets one of the constants of the XlPivotConditionScope enumeration, which determines the scope of the conditional format when it is applied to a PivotTable."
+    },
+    {
+      "name": "ColorScaleCriteria",
+      "kind": "property",
+      "type": "ColorScaleCriteria",
+      "access": "read-only",
+      "description": "Returns a ColorScaleCriteria object, which is a collection of individual ColorScaleCriterion objects. The ColorScaleCriterion object specifies the type, value, and color of threshold criteria used in the color scale conditional format. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "SetFirstPriority",
+      "kind": "method",
+      "signature": "SetFirstPriority()",
+      "description": "Sets the priority value for this conditional formatting rule to \"1\" so that it will be evaluated before all other rules on the worksheet.",
+      "returns": "void"
+    },
+    {
+      "name": "SetLastPriority",
+      "kind": "method",
+      "signature": "SetLastPriority()",
+      "description": "Sets the evaluation order for this conditional formatting rule so that it is evaluated after all other rules on the worksheet.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified conditional formatting rule object.",
+      "returns": "void"
+    },
+    {
+      "name": "ModifyAppliesToRange",
+      "kind": "method",
+      "signature": "ModifyAppliesToRange(Range As Range)",
+      "description": "Sets the cell range to which this formatting rule applies.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The range to which this formatting rule will be applied."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

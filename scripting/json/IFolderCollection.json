@@ -1,0 +1,43 @@
+{
+  "name": "IFolderCollection",
+  "kind": "Dispatch Interface",
+  "guid": "{C7C3F5A3-88A3-11D0-ABCB-00A0C90FFFC0}",
+  "library": "Microsoft Scripting Runtime",
+  "description": "Folder Collection Interface",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "IFolder",
+      "access": "read-only",
+      "description": "Get folder"
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Number of folders"
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String) As IFolder",
+      "description": "Create a new folder",
+      "returns": "IFolder",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

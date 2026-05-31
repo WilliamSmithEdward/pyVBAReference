@@ -1,0 +1,195 @@
+{
+  "name": "ODBCConnection",
+  "kind": "Dispatch Interface",
+  "guid": "{0002448E-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents the ODBC connection.",
+  "remarks": "An ODBC connection can be stored in an Excel workbook. When Excel opens the workbook, it creates an in-memory copy of the ODBC connection known as the ODBCConnection object. An ODBCConnection object contains information related to the connection, such as the name of the server to connect to and the name of the objects to be opened on that server. Optionally, the ODBCConnection object may also include authentication credential information, or a command that is to be passed to the server and executed (for example, a SELECT statement to be executed by SQL Server).",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "BackgroundQuery",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if queries for the ODBC connection are performed asynchronously (in the background). Read/write Boolean."
+    },
+    {
+      "name": "CommandText",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the command string for the specified data source. Read/write Variant."
+    },
+    {
+      "name": "CommandType",
+      "kind": "property",
+      "type": "XlCmdType",
+      "access": "read/write",
+      "description": "Returns or sets one of the XlCmdType constants. Read/write XlCmdType."
+    },
+    {
+      "name": "Connection",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a string that contains ODBC settings that enable Microsoft Excel to connect to an ODBC data source. Read/write Variant."
+    },
+    {
+      "name": "EnableRefresh",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the connection can be refreshed by the user. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "RefreshDate",
+      "kind": "property",
+      "type": "Date",
+      "access": "read-only",
+      "description": "Returns the date on which the ODBC connection was last refreshed. Read-only Date."
+    },
+    {
+      "name": "Refreshing",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if a background ODBC query is in progress for the specified ODBC connection. Read/write Boolean."
+    },
+    {
+      "name": "RefreshOnFileOpen",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the connection is automatically updated each time the workbook is opened. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "RefreshPeriod",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the number of minutes between refreshes. Read/write Long."
+    },
+    {
+      "name": "RobustConnect",
+      "kind": "property",
+      "type": "XlRobustConnect",
+      "access": "read/write",
+      "description": "Returns or sets how an ODBC connection connects to its data source. Read/write XlRobustConnect."
+    },
+    {
+      "name": "SavePassword",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if password information in an ODBC connection string is saved in the connection string. False if the password is removed. Read/write Boolean."
+    },
+    {
+      "name": "SourceConnectionFile",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String indicating the Microsoft Office Data Connection file or similar file that was used to create the connection. Read/write."
+    },
+    {
+      "name": "SourceData",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns the data source for the ODBC connection, as shown in the table. Read/write Variant."
+    },
+    {
+      "name": "SourceDataFile",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String indicating the source data file for an ODBC connection. Read/write."
+    },
+    {
+      "name": "ServerCredentialsMethod",
+      "kind": "property",
+      "type": "XlCredentialsMethod",
+      "access": "read/write",
+      "description": "Returns or sets the type of credentials that should be used for server authentication. Read/write XlCredentialsMethod."
+    },
+    {
+      "name": "ServerSSOApplicationID",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a single sign-on application (SSO) identifier that is used to do a lookup in the SSO database for credentials. Read/write String."
+    },
+    {
+      "name": "AlwaysUseConnectionFile",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the connection file is always used to establish connection to the data source. Read/write Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "CancelRefresh",
+      "kind": "method",
+      "signature": "CancelRefresh()",
+      "description": "Cancels all refresh operations in progress for the specified ODBC connection.",
+      "returns": "void"
+    },
+    {
+      "name": "Refresh",
+      "kind": "method",
+      "signature": "Refresh()",
+      "description": "Refreshes an ODBC connection.",
+      "returns": "void"
+    },
+    {
+      "name": "SaveAsODC",
+      "kind": "method",
+      "signature": "SaveAsODC(ODCFileName As String, [Description As Variant], [Keywords As Variant])",
+      "description": "Saves the ODBC connection as a Microsoft Office Data Connection file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ODCFileName",
+          "type": "String",
+          "optional": false,
+          "description": "Location to save the file."
+        },
+        {
+          "name": "Description",
+          "type": "Variant",
+          "optional": true,
+          "description": "Description that will be saved in the file."
+        },
+        {
+          "name": "Keywords",
+          "type": "Variant",
+          "optional": true,
+          "description": "Space-separated keywords that can be used to search for this file."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

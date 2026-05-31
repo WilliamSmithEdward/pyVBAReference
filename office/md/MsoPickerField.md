@@ -1,0 +1,21 @@
+# MsoPickerField
+
+**Type:** Enumeration  
+**Library:** Microsoft Office 16.0 Object Library  
+
+Specifies contact-picker field types.
+
+## Constants (6)
+
+- `msoPickerFieldUnknown` = 0  
+  An unknown type of field
+- `msoPickerFieldDateTime` = 1  
+  A DateTime field
+- `msoPickerFieldNumber` = 2  
+  A number field
+- `msoPickerFieldText` = 3  
+  A text field
+- `msoPickerFieldUser` = 4  
+  A user or group field
+- `msoPickerFieldMax` = 5  
+  The sentinel value of the enumeration

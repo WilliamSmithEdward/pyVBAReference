@@ -1,0 +1,205 @@
+{
+  "name": "Pane",
+  "kind": "Dispatch Interface",
+  "guid": "{00020895-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a pane of a window.",
+  "remarks": "Pane objects exist only for worksheets and Microsoft Excel 4.0 macro sheets. The Pane object is a member of the Panes collection. The Panes collection contains all of the panes shown in a single window.",
+  "example": "Worksheets(1).Activate\nActiveWindow.Split = True\nActiveWindow.Panes(3).ScrollRow = 5",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long value that represents the index number of the object within the collection of similar objects."
+    },
+    {
+      "name": "ScrollColumn",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the number of the leftmost column in the pane or window. Read/write Long."
+    },
+    {
+      "name": "ScrollRow",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the number of the row that appears at the top of the pane or window. Read/write Long."
+    },
+    {
+      "name": "VisibleRange",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the range of cells that are visible in the window or pane. If a column or row is partially visible, it's included in the range. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate() As Boolean",
+      "description": "Activates the pane.",
+      "returns": "Boolean"
+    },
+    {
+      "name": "LargeScroll",
+      "kind": "method",
+      "signature": "LargeScroll([Down As Variant], [Up As Variant], [ToRight As Variant], [ToLeft As Variant]) As Variant",
+      "description": "Scrolls the contents of the window by pages.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Down",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of pages to scroll the contents down."
+        },
+        {
+          "name": "Up",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of pages to scroll the contents up."
+        },
+        {
+          "name": "ToRight",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of pages to scroll the contents to the right."
+        },
+        {
+          "name": "ToLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of pages to scroll the contents to the left."
+        }
+      ]
+    },
+    {
+      "name": "SmallScroll",
+      "kind": "method",
+      "signature": "SmallScroll([Down As Variant], [Up As Variant], [ToRight As Variant], [ToLeft As Variant]) As Variant",
+      "description": "Scrolls the contents of the window by rows or columns.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Down",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of rows to scroll the contents down."
+        },
+        {
+          "name": "Up",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of rows to scroll the contents up."
+        },
+        {
+          "name": "ToRight",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of columns to scroll the contents to the right."
+        },
+        {
+          "name": "ToLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of columns to scroll the contents to the left."
+        }
+      ]
+    },
+    {
+      "name": "ScrollIntoView",
+      "kind": "method",
+      "signature": "ScrollIntoView(Left As Long, Top As Long, Width As Long, Height As Long, [Start As Variant])",
+      "description": "Scrolls the document window so that the contents of a specified rectangular area are displayed in either the upper-left or lower-right corner of the document window or pane (depending on the value of the _Start_ argument).",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Long",
+          "optional": false,
+          "description": "The horizontal position of the rectangle (in points) from the left edge of the document window or pane."
+        },
+        {
+          "name": "Top",
+          "type": "Long",
+          "optional": false,
+          "description": "The vertical position of the rectangle (in points) from the top of the document window or pane."
+        },
+        {
+          "name": "Width",
+          "type": "Long",
+          "optional": false,
+          "description": "The width of the rectangle, in points."
+        },
+        {
+          "name": "Height",
+          "type": "Long",
+          "optional": false,
+          "description": "The height of the rectangle, in points."
+        },
+        {
+          "name": "Start",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have the upper-left corner of the rectangle appear in the upper-left corner of the document window or pane. False to have the lower-right corner of the rectangle appear in the lower-right corner of the document window or pane. The default value is True."
+        }
+      ]
+    },
+    {
+      "name": "PointsToScreenPixelsX",
+      "kind": "method",
+      "signature": "PointsToScreenPixelsX(Points As Long) As Long",
+      "description": "Returns or sets a pixel point on the screen.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Long",
+          "optional": false,
+          "description": "Location of the pixel on the screen."
+        }
+      ]
+    },
+    {
+      "name": "PointsToScreenPixelsY",
+      "kind": "method",
+      "signature": "PointsToScreenPixelsY(Points As Long) As Long",
+      "description": "Returns or sets the location of the pixel on the screen.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Long",
+          "optional": false,
+          "description": "Location of the starting point."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

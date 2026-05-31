@@ -1,0 +1,77 @@
+{
+  "name": "ModelTable",
+  "kind": "Dispatch Interface",
+  "guid": "{000244D7-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a table in the data model.",
+  "remarks": "The ModelTable object is read-only (cannot be created or edited programmatically). There is a ModelTable object for every table in the model.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Excel application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified ModelTable object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that represents the name of the object."
+    },
+    {
+      "name": "SourceName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Name of the data source for the table. If the table has no data source, the call will generate a run-time error. Read-only String."
+    },
+    {
+      "name": "ModelTableColumns",
+      "kind": "property",
+      "type": "ModelTableColumns",
+      "access": "read-only",
+      "description": "Collection of ModelTableColumns objects that make up the ModelTable. Read-only."
+    },
+    {
+      "name": "SourceWorkbookConnection",
+      "kind": "property",
+      "type": "WorkbookConnection",
+      "access": "read-only",
+      "description": "Returns the Workbook Connection from which the model table originated. Read-only."
+    },
+    {
+      "name": "RecordCount",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the total row count for the model table. Read-only Integer."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Refresh",
+      "kind": "method",
+      "signature": "Refresh()",
+      "description": "Refreshes the model table source connections.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

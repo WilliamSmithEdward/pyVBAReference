@@ -1,0 +1,157 @@
+{
+  "name": "CalloutFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0311-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Contains properties and methods that apply to line callouts.",
+  "remarks": "Use the Callout property of the Shape object to return a CalloutFormat object.",
+  "example": "Set myDocument = Worksheets(1)\nWith myDocument.Shapes(3).Callout\n .Accent = True\n .Angle = msoCalloutAngle30\n .Border = False\n .PresetDrop msoCalloutDropTop\n .Type = msoCalloutThree\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Accent",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Allows the user to place a vertical accent bar to separate the callout text from the callout line. Read/write MsoTriState."
+    },
+    {
+      "name": "Angle",
+      "kind": "property",
+      "type": "MsoCalloutAngleType",
+      "access": "read/write",
+      "description": "Returns or sets the angle of the callout line. If the callout line contains more than one line segment, this property returns or sets the angle of the segment that is farthest from the callout text box. Read/write MsoCalloutAngleType."
+    },
+    {
+      "name": "AutoAttach",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "True if the place where the callout line attaches to the callout text box changes depending on whether the origin of the callout line (where the callout points to) is to the left or right of the callout text box. Read/write MsoTriState."
+    },
+    {
+      "name": "AutoLength",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Applies only to callouts whose lines consist of more than one segment (MsoCalloutType types msoCalloutThree and msoCalloutFour). Read/write MsoTriState."
+    },
+    {
+      "name": "Border",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Returns or sets an MsoTriState value that represents the visibility options for the border of the object."
+    },
+    {
+      "name": "Drop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "For callouts with an explicitly set drop value, this property returns the vertical distance (in points) from the edge of the text bounding box to the place where the callout line attaches to the text box. Read-only Single."
+    },
+    {
+      "name": "DropType",
+      "kind": "property",
+      "type": "MsoCalloutDropType",
+      "access": "read-only",
+      "description": "Returns a value that indicates where the callout line attaches to the callout text box. Read-only MsoCalloutDropType."
+    },
+    {
+      "name": "Gap",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the horizontal distance (in points) between the end of the callout line and the text bounding box. Read/write Single."
+    },
+    {
+      "name": "Length",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns a Single value that represents the length (in points) of the first segment of the callout line (the segment attached to the text callout box)."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoCalloutType",
+      "access": "read/write",
+      "description": "Returns or sets an MsoCalloutType value that represents the callout format type."
+    }
+  ],
+  "methods": [
+    {
+      "name": "AutomaticLength",
+      "kind": "method",
+      "signature": "AutomaticLength()",
+      "description": "Specifies that the first segment of the callout line (the segment attached to the text callout box) be scaled automatically when the callout is moved.",
+      "returns": "void"
+    },
+    {
+      "name": "CustomDrop",
+      "kind": "method",
+      "signature": "CustomDrop(Drop As Single)",
+      "description": "Sets the vertical distance (in points) from the edge of the text bounding box to the place where the callout line attaches to the text box.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Drop",
+          "type": "Single",
+          "optional": false,
+          "description": "The drop distance, in points."
+        }
+      ]
+    },
+    {
+      "name": "CustomLength",
+      "kind": "method",
+      "signature": "CustomLength(Length As Single)",
+      "description": "Specifies that the first segment of the callout line (the segment attached to the text callout box) retain a fixed length whenever the callout is moved.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Length",
+          "type": "Single",
+          "optional": false,
+          "description": "The length of the first segment of the callout, in points."
+        }
+      ]
+    },
+    {
+      "name": "PresetDrop",
+      "kind": "method",
+      "signature": "PresetDrop(DropType As MsoCalloutDropType)",
+      "description": "Specifies whether the callout line attaches to the top, bottom, or center of the callout text box, or whether it attaches at a point that's a specified distance from the top or bottom of the text box.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "DropType",
+          "type": "MsoCalloutDropType",
+          "optional": false,
+          "description": "The starting position of the callout line relative to the text bounding box."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

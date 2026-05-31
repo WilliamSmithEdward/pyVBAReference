@@ -1,0 +1,145 @@
+{
+  "name": "TextStream",
+  "kind": "Class",
+  "guid": "{0BB02EC0-EF49-11CF-8940-00A0C9054228}",
+  "library": "Microsoft Scripting Runtime",
+  "description": "TextStream object",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Line",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Current line number"
+    },
+    {
+      "name": "Column",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Current column number"
+    },
+    {
+      "name": "AtEndOfStream",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Is the current position at the end of the stream?"
+    },
+    {
+      "name": "AtEndOfLine",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Is the current position at the end of a line?"
+    }
+  ],
+  "methods": [
+    {
+      "name": "Read",
+      "kind": "method",
+      "signature": "Read(Characters As Long) As String",
+      "description": "Read a specific number of characters into a string",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Characters",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ReadLine",
+      "kind": "method",
+      "signature": "ReadLine() As String",
+      "description": "Read an entire line into a string",
+      "returns": "String"
+    },
+    {
+      "name": "ReadAll",
+      "kind": "method",
+      "signature": "ReadAll() As String",
+      "description": "Read the entire stream into a string",
+      "returns": "String"
+    },
+    {
+      "name": "Write",
+      "kind": "method",
+      "signature": "Write(Text As String)",
+      "description": "Write a string to the stream",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Text",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WriteLine",
+      "kind": "method",
+      "signature": "WriteLine([Text As String])",
+      "description": "Write a string and an end of line to the stream",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Text",
+          "type": "String",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WriteBlankLines",
+      "kind": "method",
+      "signature": "WriteBlankLines(Lines As Long)",
+      "description": "Write a number of blank lines to the stream",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Lines",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Skip",
+      "kind": "method",
+      "signature": "Skip(Characters As Long)",
+      "description": "Skip a specific number of characters",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Characters",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SkipLine",
+      "kind": "method",
+      "signature": "SkipLine()",
+      "description": "Skip a line",
+      "returns": "void"
+    },
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close()",
+      "description": "Close a text stream",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

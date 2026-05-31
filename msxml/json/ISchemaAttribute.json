@@ -1,0 +1,113 @@
+{
+  "name": "ISchemaAttribute",
+  "kind": "Dispatch Interface",
+  "guid": "{50EA08B6-DD1B-4664-9A50-C2F40F4BD79A}",
+  "library": "Microsoft XML, v6.0",
+  "description": "XML Schema Attribute",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "namespaceURI",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "schema",
+      "kind": "property",
+      "type": "ISchema",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "id",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "itemType",
+      "kind": "property",
+      "type": "SOMITEMTYPE",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "unhandledAttributes",
+      "kind": "property",
+      "type": "IVBSAXAttributes",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "type",
+      "kind": "property",
+      "type": "ISchemaType",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "scope",
+      "kind": "property",
+      "type": "ISchemaComplexType",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "defaultValue",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "fixedValue",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "use",
+      "kind": "property",
+      "type": "SCHEMAUSE",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "isReference",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "writeAnnotation",
+      "kind": "method",
+      "signature": "writeAnnotation(annotationSink As IUnknown) As Boolean",
+      "description": "",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "annotationSink",
+          "type": "IUnknown",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,174 @@
+{
+  "name": "XMLHTTP60",
+  "kind": "Class",
+  "guid": "{88D96A0A-F192-11D4-A65F-0040963251E5}",
+  "library": "Microsoft XML, v6.0",
+  "description": "XML HTTP Request class 6.0",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "status",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Get HTTP status code"
+    },
+    {
+      "name": "statusText",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Get HTTP status text"
+    },
+    {
+      "name": "responseXML",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Get response body"
+    },
+    {
+      "name": "responseText",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Get response body"
+    },
+    {
+      "name": "responseBody",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Get response body"
+    },
+    {
+      "name": "responseStream",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Get response body"
+    },
+    {
+      "name": "readyState",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Get ready state"
+    },
+    {
+      "name": "onreadystatechange",
+      "kind": "property",
+      "type": "Object",
+      "access": "write-only",
+      "description": "Register a complete event handler"
+    }
+  ],
+  "methods": [
+    {
+      "name": "open",
+      "kind": "method",
+      "signature": "open(bstrMethod As String, bstrUrl As String, [varAsync As Variant], [bstrUser As Variant], [bstrPassword As Variant])",
+      "description": "Open HTTP connection",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrMethod",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "bstrUrl",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "varAsync",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "bstrUser",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "bstrPassword",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "setRequestHeader",
+      "kind": "method",
+      "signature": "setRequestHeader(bstrHeader As String, bstrValue As String)",
+      "description": "Add HTTP request header",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "bstrHeader",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "bstrValue",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getResponseHeader",
+      "kind": "method",
+      "signature": "getResponseHeader(bstrHeader As String) As String",
+      "description": "Get HTTP response header",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "bstrHeader",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "getAllResponseHeaders",
+      "kind": "method",
+      "signature": "getAllResponseHeaders() As String",
+      "description": "Get all HTTP response headers",
+      "returns": "String"
+    },
+    {
+      "name": "send",
+      "kind": "method",
+      "signature": "send([varBody As Variant])",
+      "description": "Send HTTP request",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "varBody",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "abort",
+      "kind": "method",
+      "signature": "abort()",
+      "description": "Abort HTTP request",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,797 @@
+{
+  "name": "WorkbookEvents",
+  "kind": "Dispatch Interface",
+  "guid": "{00024412-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Deactivate",
+      "kind": "method",
+      "signature": "Deactivate()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "BeforeClose",
+      "kind": "method",
+      "signature": "BeforeClose(Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeSave",
+      "kind": "method",
+      "signature": "BeforeSave(SaveAsUI As Boolean, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SaveAsUI",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforePrint",
+      "kind": "method",
+      "signature": "BeforePrint(Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "NewSheet",
+      "kind": "method",
+      "signature": "NewSheet(Sh As Object)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddinInstall",
+      "kind": "method",
+      "signature": "AddinInstall()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "AddinUninstall",
+      "kind": "method",
+      "signature": "AddinUninstall()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "WindowResize",
+      "kind": "method",
+      "signature": "WindowResize(Wn As Window)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wn",
+          "type": "Window",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WindowActivate",
+      "kind": "method",
+      "signature": "WindowActivate(Wn As Window)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wn",
+          "type": "Window",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WindowDeactivate",
+      "kind": "method",
+      "signature": "WindowDeactivate(Wn As Window)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wn",
+          "type": "Window",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetSelectionChange",
+      "kind": "method",
+      "signature": "SheetSelectionChange(Sh As Object, Target As Range)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Target",
+          "type": "Range",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetBeforeDoubleClick",
+      "kind": "method",
+      "signature": "SheetBeforeDoubleClick(Sh As Object, Target As Range, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Target",
+          "type": "Range",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetBeforeRightClick",
+      "kind": "method",
+      "signature": "SheetBeforeRightClick(Sh As Object, Target As Range, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Target",
+          "type": "Range",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetActivate",
+      "kind": "method",
+      "signature": "SheetActivate(Sh As Object)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetDeactivate",
+      "kind": "method",
+      "signature": "SheetDeactivate(Sh As Object)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetCalculate",
+      "kind": "method",
+      "signature": "SheetCalculate(Sh As Object)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetChange",
+      "kind": "method",
+      "signature": "SheetChange(Sh As Object, Target As Range)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Target",
+          "type": "Range",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetFollowHyperlink",
+      "kind": "method",
+      "signature": "SheetFollowHyperlink(Sh As Object, Target As Hyperlink)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Target",
+          "type": "Hyperlink",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetPivotTableUpdate",
+      "kind": "method",
+      "signature": "SheetPivotTableUpdate(Sh As Object, Target As PivotTable)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Target",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PivotTableCloseConnection",
+      "kind": "method",
+      "signature": "PivotTableCloseConnection(Target As PivotTable)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PivotTableOpenConnection",
+      "kind": "method",
+      "signature": "PivotTableOpenConnection(Target As PivotTable)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Sync",
+      "kind": "method",
+      "signature": "Sync(SyncEventType As MsoSyncEventType)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SyncEventType",
+          "type": "MsoSyncEventType",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeXmlImport",
+      "kind": "method",
+      "signature": "BeforeXmlImport(Map As XmlMap, Url As String, IsRefresh As Boolean, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Map",
+          "type": "XmlMap",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Url",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "IsRefresh",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AfterXmlImport",
+      "kind": "method",
+      "signature": "AfterXmlImport(Map As XmlMap, IsRefresh As Boolean, Result As XlXmlImportResult)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Map",
+          "type": "XmlMap",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "IsRefresh",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Result",
+          "type": "XlXmlImportResult",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeXmlExport",
+      "kind": "method",
+      "signature": "BeforeXmlExport(Map As XmlMap, Url As String, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Map",
+          "type": "XmlMap",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Url",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AfterXmlExport",
+      "kind": "method",
+      "signature": "AfterXmlExport(Map As XmlMap, Url As String, Result As XlXmlExportResult)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Map",
+          "type": "XmlMap",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Url",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Result",
+          "type": "XlXmlExportResult",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "RowsetComplete",
+      "kind": "method",
+      "signature": "RowsetComplete(Description As String, Sheet As String, Success As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Description",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Sheet",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Success",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetPivotTableAfterValueChange",
+      "kind": "method",
+      "signature": "SheetPivotTableAfterValueChange(Sh As Object, TargetPivotTable As PivotTable, TargetRange As Range)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "TargetPivotTable",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "TargetRange",
+          "type": "Range",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetPivotTableBeforeAllocateChanges",
+      "kind": "method",
+      "signature": "SheetPivotTableBeforeAllocateChanges(Sh As Object, TargetPivotTable As PivotTable, ValueChangeStart As Long, ValueChangeEnd As Long, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "TargetPivotTable",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ValueChangeStart",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ValueChangeEnd",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetPivotTableBeforeCommitChanges",
+      "kind": "method",
+      "signature": "SheetPivotTableBeforeCommitChanges(Sh As Object, TargetPivotTable As PivotTable, ValueChangeStart As Long, ValueChangeEnd As Long, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "TargetPivotTable",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ValueChangeStart",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ValueChangeEnd",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetPivotTableBeforeDiscardChanges",
+      "kind": "method",
+      "signature": "SheetPivotTableBeforeDiscardChanges(Sh As Object, TargetPivotTable As PivotTable, ValueChangeStart As Long, ValueChangeEnd As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "TargetPivotTable",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ValueChangeStart",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ValueChangeEnd",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetPivotTableChangeSync",
+      "kind": "method",
+      "signature": "SheetPivotTableChangeSync(Sh As Object, Target As PivotTable)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Target",
+          "type": "PivotTable",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AfterSave",
+      "kind": "method",
+      "signature": "AfterSave(Success As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Success",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "NewChart",
+      "kind": "method",
+      "signature": "NewChart(Ch As Chart)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Ch",
+          "type": "Chart",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetLensGalleryRenderComplete",
+      "kind": "method",
+      "signature": "SheetLensGalleryRenderComplete(Sh As Object)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetTableUpdate",
+      "kind": "method",
+      "signature": "SheetTableUpdate(Sh As Object, Target As TableObject)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Target",
+          "type": "TableObject",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ModelChange",
+      "kind": "method",
+      "signature": "ModelChange(Changes As ModelChanges)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Changes",
+          "type": "ModelChanges",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SheetBeforeDelete",
+      "kind": "method",
+      "signature": "SheetBeforeDelete(Sh As Object)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sh",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeRemoteChange",
+      "kind": "method",
+      "signature": "BeforeRemoteChange()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "AfterRemoteChange",
+      "kind": "method",
+      "signature": "AfterRemoteChange()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

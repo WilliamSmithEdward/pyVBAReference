@@ -1,0 +1,98 @@
+{
+  "name": "PickerDialog",
+  "kind": "Dispatch Interface",
+  "guid": "{000C03E6-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "Provides dialog user interface functionality for picking people or picking data.",
+  "remarks": "Get the PickerDialog object through the PickerDialog property in the Application object.",
+  "example": "Dim objPickerDialog As PickerDialog\nDim objPickerProperties As PickerProperties\nDim objPickerProperty As PickerProperty\nDim objPickerExistingResults As PickerResults\nDim objPickerExistingResult As PickerResult\nDim objPickerResults As PickerResults\n\n' Configure the Picker Dialog properties.\nSet objPickerDialog = Application.PickerDialog\nobjPickerDialog.DataHandlerId = \"{000CDF0A-0000-0000-C000-000000000046}\"\nobjPickerDialog.Title = \"Sample Picker Dialog\"\nSet objPickerProperties = objPickerDialog.Properties\nSet objPickerProperty = objPickerProperties.Add(\"SiteUrl\", \"https://my\", msoPickerFieldtypeText)\nSet objPickerExistingResults = objPickerDialog.CreatePickerResults\nSet objPickerExistingResult = objPickerExistingResults.Add(\"johndoe@contoso.com\", \"John Doe\", \"User\")\n\n' Show the Picker Dialog and get the results.\nSet objPickerResults = objPickerDialog.Show(True, objPickerExistingResult)",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the PickerDialog object. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the PickerDialog object was created. Read-only."
+    },
+    {
+      "name": "DataHandlerId",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or gets the GUID of the PickerDialog data handler component. Read/write."
+    },
+    {
+      "name": "Title",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the title of a PickerDialog displayed in the PickerDialog. Read/write."
+    },
+    {
+      "name": "Properties",
+      "kind": "property",
+      "type": "PickerProperties",
+      "access": "read-only",
+      "description": "Returns the PickerProperties object to specify custom properties for the data handler component. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "CreatePickerResults",
+      "kind": "method",
+      "signature": "CreatePickerResults() As PickerResults",
+      "description": "Creates an empty PickerResults object.",
+      "returns": "PickerResults"
+    },
+    {
+      "name": "Show",
+      "kind": "method",
+      "signature": "Show([IsMultiSelect As Boolean], [ExistingResults As PickerResults]) As PickerResults",
+      "description": "Displays the PickerDialog with the already specified data handler and given options.",
+      "returns": "PickerResults",
+      "parameters": [
+        {
+          "name": "IsMultiSelect",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether the PickerDialog user interface provides multiple item selection functions."
+        },
+        {
+          "name": "ExistingResults",
+          "type": "PickerResults",
+          "optional": true,
+          "description": "Contains existing PickerResults in the PickerDialog user interface. These results are displayed in the selected item control."
+        }
+      ]
+    },
+    {
+      "name": "Resolve",
+      "kind": "method",
+      "signature": "Resolve(TokenText As String, duplicateDlgMode As Long) As PickerResults",
+      "description": "Resolves the token by using the PickerDialog and retrieves the results.",
+      "returns": "PickerResults",
+      "parameters": [
+        {
+          "name": "TokenText",
+          "type": "String",
+          "optional": false,
+          "description": "The text string to resolve."
+        },
+        {
+          "name": "duplicateDlgMode",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

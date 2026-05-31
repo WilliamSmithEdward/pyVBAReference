@@ -1,0 +1,77 @@
+{
+  "name": "IEnumVARIANT",
+  "kind": "Interface",
+  "guid": "{00020404-0000-0000-C000-000000000046}",
+  "library": "OLE Automation",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "Next",
+      "kind": "method",
+      "signature": "Next(celt As Long, rgvar As Variant, pceltFetched As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "celt",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "rgvar",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "pceltFetched",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Skip",
+      "kind": "method",
+      "signature": "Skip(celt As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "celt",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Reset",
+      "kind": "method",
+      "signature": "Reset()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "Clone",
+      "kind": "method",
+      "signature": "Clone(ppenum As IEnumVARIANT)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ppenum",
+          "type": "IEnumVARIANT",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

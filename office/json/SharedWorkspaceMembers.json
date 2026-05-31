@@ -1,0 +1,96 @@
+{
+  "name": "SharedWorkspaceMembers",
+  "kind": "Dispatch Interface",
+  "guid": "{000C0382-0000-0000-C000-000000000046}",
+  "library": "Microsoft Office 16.0 Object Library",
+  "description": "A collection of the SharedWorkspaceMember objects in the current shared workspace site.",
+  "remarks": "",
+  "example": "Dim swsMembers As Office.SharedWorkspaceMembers\n    Set swsMembers = ActiveWorkbook.SharedWorkspace.Members\n    MsgBox \"There are \" & swsMembers.Count & _\n        \" member(s) in the current shared workspace.\", _\n        vbInformation + vbOKOnly, _\n        \"Collection Information\"\n    Set swsMembers = Nothing",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets an Application object that represents the container application for the SharedWorkspaceMembers object (you can use this property with an Automation object to return that object's container application). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a 32-bit integer that indicates the application in which the SharedWorkspaceMembers object was created. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "SharedWorkspaceMember",
+      "access": "read-only",
+      "description": "Gets a SharedWorkspaceMember object from the Members collection of the shared workspace. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Gets a Long indicating the number of items in the SharedWorkspaceMembers object. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Gets the Parent object for the SharedWorkspaceMembers object. Read-only."
+    },
+    {
+      "name": "ItemCountExceeded",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets a Boolean value that indicates whether the number of SharedWorkspaceMembers items in the collection has exceeded the 99 that can be displayed in the Shared Workspace task pane. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Email As String, DomainName As String, DisplayName As String, [Role As Variant]) As SharedWorkspaceMember",
+      "description": "Adds a member to the list of members in a shared workspace site. Returns a SharedWorkspaceMember object.",
+      "returns": "SharedWorkspaceMember",
+      "parameters": [
+        {
+          "name": "Email",
+          "type": "String",
+          "optional": false,
+          "description": "The new member's email address in the format user@domain.com. Raises an error if the user is not a valid candidate for membership in the shared workspace site."
+        },
+        {
+          "name": "DomainName",
+          "type": "String",
+          "optional": false,
+          "description": "The new member's Windows user name in the format domain\\user."
+        },
+        {
+          "name": "DisplayName",
+          "type": "String",
+          "optional": false,
+          "description": "The display name to display for the new member."
+        },
+        {
+          "name": "Role",
+          "type": "Variant",
+          "optional": true,
+          "description": "An optional role that determines the tasks that the new member can accomplish in the shared workspace site; for example, \"Contributor.\" An invalid role name raises an error."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,95 @@
+{
+  "name": "VBComponents_Old",
+  "kind": "Dispatch Interface",
+  "guid": "{0002E162-0000-0000-C000-000000000046}",
+  "library": "Microsoft Visual Basic for Applications Extensibility 5.3",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "VBProject",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "VBE",
+      "kind": "property",
+      "type": "VBE",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(index As Variant) As VBComponent",
+      "description": "",
+      "returns": "VBComponent",
+      "parameters": [
+        {
+          "name": "index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Remove",
+      "kind": "method",
+      "signature": "Remove(VBComponent As VBComponent)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "VBComponent",
+          "type": "VBComponent",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(ComponentType As vbext_ComponentType) As VBComponent",
+      "description": "",
+      "returns": "VBComponent",
+      "parameters": [
+        {
+          "name": "ComponentType",
+          "type": "vbext_ComponentType",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Import",
+      "kind": "method",
+      "signature": "Import(FileName As String) As VBComponent",
+      "description": "",
+      "returns": "VBComponent",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

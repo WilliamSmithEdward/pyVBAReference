@@ -1,0 +1,48 @@
+{
+  "name": "LinearGradient",
+  "kind": "Dispatch Interface",
+  "guid": "{000244AF-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "The LinearGradient object transitions through a series of colors in a linear manner along a specific angle.",
+  "remarks": "Attempting to access the Gradient property of an Interior object that does not have an existing gradient fill results in a run-time error. Be aware of the Pattern property before accessing the Gradient property. If the Pattern property is changed from a gradient type to a non-gradient type, the Gradient property will populate with default values.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "ColorStops",
+      "kind": "property",
+      "type": "ColorStops",
+      "access": "read-only",
+      "description": "Returns the ColorStops object for the LinearGradient object. Read-only."
+    },
+    {
+      "name": "Degree",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "The angle of the linear gradient fill within a selection. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

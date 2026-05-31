@@ -1,0 +1,134 @@
+{
+  "name": "VBProject",
+  "kind": "Class",
+  "guid": "{0002E169-0000-0000-C000-000000000046}",
+  "library": "Microsoft Visual Basic for Applications Extensibility 5.3",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "HelpFile",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HelpContextID",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Description",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Mode",
+      "kind": "property",
+      "type": "vbext_VBAMode",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "References",
+      "kind": "property",
+      "type": "References",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "VBE",
+      "kind": "property",
+      "type": "VBE",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Collection",
+      "kind": "property",
+      "type": "VBProjects",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Protection",
+      "kind": "property",
+      "type": "vbext_ProjectProtection",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Saved",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "VBComponents",
+      "kind": "property",
+      "type": "VBComponents",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "vbext_ProjectType",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "FileName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "BuildFileName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "SaveAs",
+      "kind": "method",
+      "signature": "SaveAs(FileName As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MakeCompiledFile",
+      "kind": "method",
+      "signature": "MakeCompiledFile()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

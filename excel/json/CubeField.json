@@ -1,0 +1,279 @@
+{
+  "name": "CubeField",
+  "kind": "Dispatch Interface",
+  "guid": "{0002444C-0000-0000-C000-000000000046}",
+  "library": "Microsoft Excel 16.0 Object Library",
+  "description": "Represents a hierarchy or measure field from an OLAP cube. In a PivotTable report, the CubeField object is a member of the CubeFields collection.",
+  "remarks": "",
+  "example": "Set objNewSheet = Worksheets.Add\nobjNewSheet.Activate\nintRow = 1\nFor Each objPF in _\n Worksheets(\"Sheet1\").PivotTables(1).PivotFields\n If objPF.CubeField.CubeFieldType = xlHierarchy Then\n objNewSheet.Cells(intRow, 1).Value = objPF.Name\n intRow = intRow + 1\n End If\nNext objPF",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, this property returns an Application object that represents the Microsoft Excel application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "XlCreator",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which this object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "CubeFieldType",
+      "kind": "property",
+      "type": "XlCubeFieldType",
+      "access": "read-only",
+      "description": "Indicates whether the OLAP cube field is a hierarchy field or a measure field. Can be one of the XlCubeFieldType constants."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that represents the name of the object."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String value that represents the name of the specified field."
+    },
+    {
+      "name": "Orientation",
+      "kind": "property",
+      "type": "XlPivotFieldOrientation",
+      "access": "read/write",
+      "description": "Returns or sets an XlPivotFieldOrientation value that represents the location of the field in the specified PivotTable report."
+    },
+    {
+      "name": "Position",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long value that represents the position of the hierarchy field on the PivotTable report when it's dragged from the field well."
+    },
+    {
+      "name": "TreeviewControl",
+      "kind": "property",
+      "type": "TreeviewControl",
+      "access": "read-only",
+      "description": "Returns the TreeviewControl object of the CubeField object, representing the cube manipulation control of an OLAP-based PivotTable report. Read-only."
+    },
+    {
+      "name": "DragToColumn",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified field can be dragged to the column position. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "DragToHide",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the field can be hidden by being dragged off the PivotTable report. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "DragToPage",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the field can be dragged to the page position. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "DragToRow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the field can be dragged to the row position. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "DragToData",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified field can be dragged to the data position. The default value is True. Read/write Boolean."
+    },
+    {
+      "name": "HasMemberProperties",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns True when there are member properties specified to be displayed for the cube field. Read-only Boolean."
+    },
+    {
+      "name": "LayoutForm",
+      "kind": "property",
+      "type": "XlLayoutFormType",
+      "access": "read/write",
+      "description": "Returns or sets the way the specified PivotTable items appear-in table format or in outline format. Read/write XlLayoutFormType."
+    },
+    {
+      "name": "PivotFields",
+      "kind": "property",
+      "type": "PivotFields",
+      "access": "read-only",
+      "description": "Returns the PivotFields collection. This collection contains all PivotTable fields, including those that aren't currently visible on-screen. Read-only PivotFields object."
+    },
+    {
+      "name": "EnableMultiplePageItems",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Set to True to allow multiple items in the page field area for OLAP PivotTables to be selected. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "LayoutSubtotalLocation",
+      "kind": "property",
+      "type": "XlSubtototalLocationType",
+      "access": "read/write",
+      "description": "Returns or sets the position of the PivotTable field subtotals in relation to (either above or below) the specified field. Read/write XlSubtotalLocationType."
+    },
+    {
+      "name": "ShowInFieldList",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "When set to True (default), a CubeField object will be shown in the field list. Read/write Boolean."
+    },
+    {
+      "name": "IncludeNewItemsInFilter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "The IncludeNewItemsInFilter property is used to track included/excluded items in OLAP PivotTables. Read/write."
+    },
+    {
+      "name": "CubeFieldSubType",
+      "kind": "property",
+      "type": "XlCubeFieldSubType",
+      "access": "read-only",
+      "description": "Specifies the type of a CubeField. Read-only."
+    },
+    {
+      "name": "AllItemsVisible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "The AllItemsVisible property checks whether manual filtering is applied to a PivotField or CubeField. Read-only Boolean."
+    },
+    {
+      "name": "CurrentPageName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the page name for a CubeField. Read/write String."
+    },
+    {
+      "name": "IsDate",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns True if the CubeField is a date. Read-only Boolean."
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns a String value that represents the label text for the cube field."
+    },
+    {
+      "name": "FlattenHierarchies",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether items from all levels of hierarchies in a named set cube field are displayed in the same field of a PivotTable report based on an OLAP cube. Read/write."
+    },
+    {
+      "name": "HierarchizeDistinct",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether to order and remove duplicates when displaying the specified named set in a PivotTable report based on an OLAP cube. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    },
+    {
+      "name": "AddMemberPropertyField",
+      "kind": "method",
+      "signature": "AddMemberPropertyField(Property As String, [PropertyOrder As Variant], [PropertyDisplayedIn As Variant])",
+      "description": "Adds a member property field to the display for the cube field.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Property",
+          "type": "String",
+          "optional": false,
+          "description": "The unique name of the member property. For balanced hierarchies, a unique name can be created by appending the \"quoted\" member property name to the unique name of the level with which the member property is associated. For unbalanced hierarchies, a unique name can be created by appending the \"quoted\" member property name to the unique name of the hierarchy."
+        },
+        {
+          "name": "PropertyOrder",
+          "type": "Variant",
+          "optional": true,
+          "description": "Sets the PropertyOrder property value for a CubeField object. The actual position in the collection will be immediately before the PivotTable field that currently has the same PropertyOrder value that is given in the argument. If no field has the given PropertyOrder value, the range of acceptable values is 1 to the number of member properties already showing for the hierarchy plus one. This argument is one-based. If omitted, the property goes to the end of the list."
+        },
+        {
+          "name": "PropertyDisplayedIn",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies where to display the property. If this argument is omitted, the member property field will be added to the PivotTable only."
+        }
+      ]
+    },
+    {
+      "name": "ClearManualFilter",
+      "kind": "method",
+      "signature": "ClearManualFilter()",
+      "description": "The ClearManualFilter method provides an easy way to set the Visible property to True for all items of a PivotField in PivotTables, and to empty the HiddenItemsList/VisibleItemsList collections in OLAP PivotTables.",
+      "returns": "void"
+    },
+    {
+      "name": "CreatePivotFields",
+      "kind": "method",
+      "signature": "CreatePivotFields()",
+      "description": "The CreatePivotFields method enables users to apply a filter to PivotFields not yet added to the PivotTable by creating the corresponding PivotField object.",
+      "returns": "void"
+    },
+    {
+      "name": "AutoGroup",
+      "kind": "method",
+      "signature": "AutoGroup([Orientation As Variant], [Position As Variant])",
+      "description": "Automatically groups the cube fields in an OLAP cube, optionally in the specified orientation and/or at the specified position.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Orientation",
+          "type": "Variant",
+          "optional": true,
+          "description": "The orientation of the group."
+        },
+        {
+          "name": "Position",
+          "type": "Variant",
+          "optional": true,
+          "description": "The position of the group."
+        }
+      ]
+    }
+  ],
+  "events": []
+}
