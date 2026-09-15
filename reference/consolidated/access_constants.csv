@@ -1,0 +1,1596 @@
+Owner,Kind,Constant,Value,Description
+AcAggregateType,Enumeration,acAggregateNone,0,None
+AcAggregateType,Enumeration,acAggregateSum,1,Sum
+AcAggregateType,Enumeration,acAggregateAverage,2,Average
+AcAggregateType,Enumeration,acAggregateMinimum,3,Minimum
+AcAggregateType,Enumeration,acAggregateMaximum,4,Maximum
+AcAggregateType,Enumeration,acAggregateCountDistinct,5,
+AcAggregateType,Enumeration,acAggregateCount,6,Count
+AcAxisRange,Enumeration,acAxisRangeAuto,0,The represented range is determined automatically by the lowest and highest values in the set.
+AcAxisRange,Enumeration,acAxisRangeFixed,1,
+AcAxisUnits,Enumeration,acAxisUnitsNone,0,None (original values)
+AcAxisUnits,Enumeration,acAxisUnitsPercentage,1,Percentage
+AcAxisUnits,Enumeration,acAxisUnitsHundreds,2,Hundreds
+AcAxisUnits,Enumeration,acAxisUnitsThousands,3,Thousands
+AcAxisUnits,Enumeration,acAxisUnitsTenThousands,4,Ten Thousands
+AcAxisUnits,Enumeration,acAxisUnitsHundredThousands,5,Hundred Thousands
+AcAxisUnits,Enumeration,acAxisUnitsMillions,6,Millions
+AcAxisUnits,Enumeration,acAxisUnitsTenMillions,7,Ten Millions
+AcAxisUnits,Enumeration,acAxisUnitsHundredMillions,8,Hundred Millions
+AcAxisUnits,Enumeration,acAxisUnitsBillions,9,Billions
+AcAxisUnits,Enumeration,acAxisUnitsTenBillions,10,Ten Billions
+AcAxisUnits,Enumeration,acAxisUnitsHundredBillions,11,Hundred Billions
+AcAxisUnits,Enumeration,acAxisUnitsTrillions,12,Trillions
+AcBrowseToObjectType,Enumeration,acBrowseToForm,2,Open a form.
+AcBrowseToObjectType,Enumeration,acBrowseToReport,3,Open a report.
+AcChartType,Enumeration,acChartColumnClustered,0,Clustered Column
+AcChartType,Enumeration,acChartColumnStacked,1,Stacked Column
+AcChartType,Enumeration,acChartColumnStacked100,2,100% Stacked Column
+AcChartType,Enumeration,acChartBarClustered,3,Clustered Bar
+AcChartType,Enumeration,acChartBarStacked,4,Stacked Bar
+AcChartType,Enumeration,acChartBarStacked100,5,100% Stacked Bar
+AcChartType,Enumeration,acChartLine,6,Line
+AcChartType,Enumeration,acChartLineStacked,7,Line Stacked
+AcChartType,Enumeration,acChartLineStacked100,8,100% Stacked Line
+AcChartType,Enumeration,acChartPie,9,Pie
+AcChartType,Enumeration,acChartCombo,10,Combo
+AcChartType,Enumeration,acChartArea,11,Area (only available in Current Channel)
+AcChartType,Enumeration,acChartAreaStacked,12,Stacked Area (only available in Current Channel)
+AcChartType,Enumeration,acChartAreaStacked100,13,100% Stacked Area (only available in Current Channel)
+AcChartType,Enumeration,acChartRadar,14,Radar (only available in Current Channel)
+AcChartType,Enumeration,acChartRadarFilled,15,Radar Filled (only available in Current Channel)
+AcChartType,Enumeration,acChartBoxWhisker,16,Box and Whisker (only available in Current Channel)
+AcChartType,Enumeration,acChartBubble,17,Bubble (only available in Current Channel)
+AcChartType,Enumeration,acChartDoughnut,18,Doughnut (only available in Current Channel)
+AcChartType,Enumeration,acChartFunnel,19,Funnel (only available in Current Channel)
+AcChartType,Enumeration,acChartScatter,20,Scatter (only available in Current Channel)
+AcChartType,Enumeration,acChartWaterfall,21,Waterfall (only available in Current Channel)
+AcChartType,Enumeration,acChartWordCloud,22,Word Cloud (only available in Current Channel)
+AcChartType,Enumeration,acChartArc,23,Arc (only available in Current Channel)
+AcChartType,Enumeration,acChartPareto,24,Pareto (only available in Current Channel)
+AcCloseSave,Enumeration,acSavePrompt,0,"The user is asked whether or not they want to save the object. This value is ignored if you are closing a Visual Basic module. The module will be closed, but changes to the module will not be saved."
+AcCloseSave,Enumeration,acSaveYes,1,The specified object is saved.
+AcCloseSave,Enumeration,acSaveNo,2,The specified object is not saved.
+AcColorIndex,Enumeration,acColorIndexBlack,0,Black color.
+AcColorIndex,Enumeration,acColorIndexMaroon,1,Maroon color.
+AcColorIndex,Enumeration,acColorIndexGreen,2,Green color.
+AcColorIndex,Enumeration,acColorIndexOlive,3,Olive color.
+AcColorIndex,Enumeration,acColorIndexDarkBlue,4,Dark blue color.
+AcColorIndex,Enumeration,acColorIndexViolet,5,Violet color.
+AcColorIndex,Enumeration,acColorIndexTeal,6,Teal color.
+AcColorIndex,Enumeration,acColorIndexGray,7,Gray color.
+AcColorIndex,Enumeration,acColorIndexSilver,8,Silver color.
+AcColorIndex,Enumeration,acColorIndexRed,9,Red color.
+AcColorIndex,Enumeration,acColorIndexBrightGreen,10,Bright green color.
+AcColorIndex,Enumeration,acColorIndexYellow,11,Yellow color.
+AcColorIndex,Enumeration,acColorIndexBlue,12,Blue color.
+AcColorIndex,Enumeration,acColorIndexFuschia,13,
+AcColorIndex,Enumeration,acColorIndexAqua,14,Aqua color.
+AcColorIndex,Enumeration,acColorIndexWhite,15,White color.
+AcCommand,Enumeration,acCmdWindowUnhide,1,
+AcCommand,Enumeration,acCmdWindowHide,2,
+AcCommand,Enumeration,acCmdExit,3,
+AcCommand,Enumeration,acCmdCompactDatabase,4,
+AcCommand,Enumeration,acCmdEncryptDecryptDatabase,5,
+AcCommand,Enumeration,acCmdRepairDatabase,6,
+AcCommand,Enumeration,acCmdMakeMDEFile,7,
+AcCommand,Enumeration,acCmdMoreWindows,8,
+AcCommand,Enumeration,acCmdAppRestore,9,
+AcCommand,Enumeration,acCmdAppMaximize,10,
+AcCommand,Enumeration,acCmdAppMinimize,11,
+AcCommand,Enumeration,acCmdAppMove,12,
+AcCommand,Enumeration,acCmdAppSize,13,
+AcCommand,Enumeration,acCmdDocRestore,14,
+AcCommand,Enumeration,acCmdDocMaximize,15,
+AcCommand,Enumeration,acCmdDocMove,16,
+AcCommand,Enumeration,acCmdDocSize,17,
+AcCommand,Enumeration,acCmdRefresh,18,
+AcCommand,Enumeration,acCmdFont,19,
+AcCommand,Enumeration,acCmdSave,20,
+AcCommand,Enumeration,acCmdSaveAs,21,
+AcCommand,Enumeration,acCmdWindowCascade,22,
+AcCommand,Enumeration,acCmdTileVertically,23,
+AcCommand,Enumeration,acCmdWindowArrangeIcons,24,
+AcCommand,Enumeration,acCmdOpenDatabase,25,
+AcCommand,Enumeration,acCmdNewDatabase,26,
+AcCommand,Enumeration,acCmdOLEDDELinks,27,
+AcCommand,Enumeration,acCmdRecordsGoToNew,28,
+AcCommand,Enumeration,acCmdReplace,29,
+AcCommand,Enumeration,acCmdFind,30,
+AcCommand,Enumeration,acCmdRunMacro,31,
+AcCommand,Enumeration,acCmdPageSetup,32,
+AcCommand,Enumeration,acCmdInsertObject,33,
+AcCommand,Enumeration,acCmdDuplicate,34,
+AcCommand,Enumeration,acCmdAboutMicrosoftAccess,35,
+AcCommand,Enumeration,acCmdFormHdrFtr,36,
+AcCommand,Enumeration,acCmdReportHdrFtr,37,
+AcCommand,Enumeration,acCmdPasteAppend,38,
+AcCommand,Enumeration,acCmdInsertFile,39,
+AcCommand,Enumeration,acCmdSelectForm,40,
+AcCommand,Enumeration,acCmdTabOrder,41,
+AcCommand,Enumeration,acCmdFieldList,42,
+AcCommand,Enumeration,acCmdAlignLeft,43,
+AcCommand,Enumeration,acCmdAlignRight,44,
+AcCommand,Enumeration,acCmdAlignTop,45,
+AcCommand,Enumeration,acCmdAlignBottom,46,
+AcCommand,Enumeration,acCmdAlignToGrid,47,
+AcCommand,Enumeration,acCmdSizeToGrid,48,
+AcCommand,Enumeration,acCmdOptions,49,
+AcCommand,Enumeration,acCmdSelectRecord,50,
+AcCommand,Enumeration,acCmdSortingAndGrouping,51,
+AcCommand,Enumeration,acCmdBringToFront,52,
+AcCommand,Enumeration,acCmdSendToBack,53,
+AcCommand,Enumeration,acCmdPrintPreview,54,
+AcCommand,Enumeration,acCmdApplyDefault,55,
+AcCommand,Enumeration,acCmdSetControlDefaults,56,
+AcCommand,Enumeration,acCmdOLEObjectDefaultVerb,57,
+AcCommand,Enumeration,acCmdClose,58,
+AcCommand,Enumeration,acCmdSizeToFit,59,
+AcCommand,Enumeration,acCmdDocMinimize,60,
+AcCommand,Enumeration,acCmdViewRuler,61,
+AcCommand,Enumeration,acCmdSnapToGrid,62,
+AcCommand,Enumeration,acCmdViewGrid,63,
+AcCommand,Enumeration,acCmdPasteSpecial,64,
+AcCommand,Enumeration,acCmdRecordsGoToNext,65,
+AcCommand,Enumeration,acCmdRecordsGoToPrevious,66,
+AcCommand,Enumeration,acCmdRecordsGoToFirst,67,
+AcCommand,Enumeration,acCmdRecordsGoToLast,68,
+AcCommand,Enumeration,acCmdSizeToFitForm,69,
+AcCommand,Enumeration,acCmdEditingAllowed,70,
+AcCommand,Enumeration,acCmdClearGrid,71,
+AcCommand,Enumeration,acCmdJoinProperties,72,
+AcCommand,Enumeration,acCmdQueryTotals,73,
+AcCommand,Enumeration,acCmdQueryTypeCrosstab,74,
+AcCommand,Enumeration,acCmdTableNames,75,
+AcCommand,Enumeration,acCmdQueryParameters,76,
+AcCommand,Enumeration,acCmdFormatCells,77,
+AcCommand,Enumeration,acCmdDataEntry,78,
+AcCommand,Enumeration,acCmdHideColumns,79,
+AcCommand,Enumeration,acCmdUnhideColumns,80,
+AcCommand,Enumeration,acCmdDeleteQueryColumn,81,
+AcCommand,Enumeration,acCmdInsertQueryColumn,82,
+AcCommand,Enumeration,acCmdRemoveTable,84,
+AcCommand,Enumeration,acCmdViewToolbox,85,
+AcCommand,Enumeration,acCmdSingleStep,88,
+AcCommand,Enumeration,acCmdQueryTypeSelect,89,
+AcCommand,Enumeration,acCmdQueryTypeUpdate,90,
+AcCommand,Enumeration,acCmdQueryTypeAppend,91,
+AcCommand,Enumeration,acCmdQueryTypeDelete,92,
+AcCommand,Enumeration,acCmdApplyFilterSort,93,
+AcCommand,Enumeration,acCmdQueryTypeMakeTable,94,
+AcCommand,Enumeration,acCmdLoadFromQuery,95,
+AcCommand,Enumeration,acCmdSaveAsQuery,96,
+AcCommand,Enumeration,acCmdSaveRecord,97,
+AcCommand,Enumeration,acCmdAdvancedFilterSort,99,
+AcCommand,Enumeration,acCmdMicrosoftAccessHelpTopics,100,
+AcCommand,Enumeration,acCmdLinkTables,102,
+AcCommand,Enumeration,acCmdUserAndGroupPermissions,103,
+AcCommand,Enumeration,acCmdUserAndGroupAccounts,104,
+AcCommand,Enumeration,acCmdFreezeColumn,105,
+AcCommand,Enumeration,acCmdUnfreezeAllColumns,106,
+AcCommand,Enumeration,acCmdPrimaryKey,107,
+AcCommand,Enumeration,acCmdSubformDatasheet,108,
+AcCommand,Enumeration,acCmdSelectAllRecords,109,
+AcCommand,Enumeration,acCmdViewTables,110,
+AcCommand,Enumeration,acCmdViewQueries,111,
+AcCommand,Enumeration,acCmdViewForms,112,
+AcCommand,Enumeration,acCmdViewReports,113,
+AcCommand,Enumeration,acCmdViewMacros,114,
+AcCommand,Enumeration,acCmdViewModules,115,
+AcCommand,Enumeration,acCmdRowHeight,116,
+AcCommand,Enumeration,acCmdColumnWidth,117,
+AcCommand,Enumeration,acCmdInsertFileIntoModule,118,
+AcCommand,Enumeration,acCmdSaveModuleAsText,119,
+AcCommand,Enumeration,acCmdFindPrevious,120,
+AcCommand,Enumeration,acCmdWindowSplit,121,
+AcCommand,Enumeration,acCmdProcedureDefinition,122,
+AcCommand,Enumeration,acCmdDebugWindow,123,
+AcCommand,Enumeration,acCmdReset,124,
+AcCommand,Enumeration,acCmdCompileAllModules,125,
+AcCommand,Enumeration,acCmdCompileAndSaveAllModules,126,
+AcCommand,Enumeration,acCmdGoContinue,127,
+AcCommand,Enumeration,acCmdStepOver,128,
+AcCommand,Enumeration,acCmdSetNextStatement,129,
+AcCommand,Enumeration,acCmdShowNextStatement,130,
+AcCommand,Enumeration,acCmdToggleBreakpoint,131,
+AcCommand,Enumeration,acCmdClearAllBreakpoints,132,
+AcCommand,Enumeration,acCmdRelationships,133,
+AcCommand,Enumeration,acCmdNewObjectTable,134,
+AcCommand,Enumeration,acCmdNewObjectQuery,135,
+AcCommand,Enumeration,acCmdNewObjectForm,136,
+AcCommand,Enumeration,acCmdNewObjectReport,137,
+AcCommand,Enumeration,acCmdNewObjectMacro,138,
+AcCommand,Enumeration,acCmdNewObjectModule,139,
+AcCommand,Enumeration,acCmdNewObjectClassModule,140,
+AcCommand,Enumeration,acCmdLayoutPreview,141,
+AcCommand,Enumeration,acCmdSaveAsReport,142,
+AcCommand,Enumeration,acCmdRename,143,
+AcCommand,Enumeration,acCmdRemoveFilterSort,144,
+AcCommand,Enumeration,acCmdSaveLayout,145,
+AcCommand,Enumeration,acCmdClearAll,146,
+AcCommand,Enumeration,acCmdHideTable,147,
+AcCommand,Enumeration,acCmdShowDirectRelationships,148,
+AcCommand,Enumeration,acCmdShowAllRelationships,149,
+AcCommand,Enumeration,acCmdCreateRelationship,150,
+AcCommand,Enumeration,acCmdEditRelationship,151,
+AcCommand,Enumeration,acCmdIndexes,152,
+AcCommand,Enumeration,acCmdAlignToShortest,153,
+AcCommand,Enumeration,acCmdAlignToTallest,154,
+AcCommand,Enumeration,acCmdSizeToNarrowest,155,
+AcCommand,Enumeration,acCmdSizeToWidest,156,
+AcCommand,Enumeration,acCmdHorizontalSpacingMakeEqual,157,
+AcCommand,Enumeration,acCmdHorizontalSpacingDecrease,158,
+AcCommand,Enumeration,acCmdHorizontalSpacingIncrease,159,
+AcCommand,Enumeration,acCmdVerticalSpacingMakeEqual,160,
+AcCommand,Enumeration,acCmdVerticalSpacingDecrease,161,
+AcCommand,Enumeration,acCmdVerticalSpacingIncrease,162,
+AcCommand,Enumeration,acCmdSortAscending,163,
+AcCommand,Enumeration,acCmdSortDescending,164,
+AcCommand,Enumeration,acCmdToolbarsCustomize,165,
+AcCommand,Enumeration,acCmdOLEObjectConvert,167,
+AcCommand,Enumeration,acCmdQueryTypeSQLDataDefinition,168,
+AcCommand,Enumeration,acCmdQueryTypeSQLPassThrough,169,
+AcCommand,Enumeration,acCmdViewCode,170,
+AcCommand,Enumeration,acCmdConvertDatabase,171,
+AcCommand,Enumeration,acCmdCallStack,172,
+AcCommand,Enumeration,acCmdSend,173,
+AcCommand,Enumeration,acCmdOutputToExcel,175,
+AcCommand,Enumeration,acCmdOutputToRTF,176,
+AcCommand,Enumeration,acCmdOutputToText,177,
+AcCommand,Enumeration,acCmdInvokeBuilder,178,
+AcCommand,Enumeration,acCmdZoomBox,179,
+AcCommand,Enumeration,acCmdQueryTypeSQLUnion,180,
+AcCommand,Enumeration,acCmdRun,181,
+AcCommand,Enumeration,acCmdPageHdrFtr,182,
+AcCommand,Enumeration,acCmdDesignView,183,
+AcCommand,Enumeration,acCmdSQLView,184,
+AcCommand,Enumeration,acCmdShowTable,185,
+AcCommand,Enumeration,acCmdCloseWindow,186,
+AcCommand,Enumeration,acCmdInsertRows,187,
+AcCommand,Enumeration,acCmdDeleteRows,188,
+AcCommand,Enumeration,acCmdCut,189,
+AcCommand,Enumeration,acCmdCopy,190,
+AcCommand,Enumeration,acCmdPaste,191,
+AcCommand,Enumeration,acCmdAutoDial,192,
+AcCommand,Enumeration,acCmdNewObjectAutoForm,193,
+AcCommand,Enumeration,acCmdNewObjectAutoReport,194,
+AcCommand,Enumeration,acCmdWordMailMerge,195,
+AcCommand,Enumeration,acCmdTestValidationRules,196,
+AcCommand,Enumeration,acCmdControlWizardsToggle,197,
+AcCommand,Enumeration,acCmdEnd,198,
+AcCommand,Enumeration,acCmdRedo,199,
+AcCommand,Enumeration,acCmdObjectBrowser,200,
+AcCommand,Enumeration,acCmdAddWatch,201,
+AcCommand,Enumeration,acCmdEditWatch,202,
+AcCommand,Enumeration,acCmdQuickWatch,203,
+AcCommand,Enumeration,acCmdStepToCursor,204,
+AcCommand,Enumeration,acCmdIndent,205,
+AcCommand,Enumeration,acCmdOutdent,206,
+AcCommand,Enumeration,acCmdFilterByForm,207,
+AcCommand,Enumeration,acCmdFilterBySelection,208,
+AcCommand,Enumeration,acCmdViewLargeIcons,209,
+AcCommand,Enumeration,acCmdViewDetails,210,
+AcCommand,Enumeration,acCmdViewSmallIcons,211,
+AcCommand,Enumeration,acCmdViewList,212,
+AcCommand,Enumeration,acCmdLineUpIcons,213,
+AcCommand,Enumeration,acCmdArrangeIconsByName,214,
+AcCommand,Enumeration,acCmdArrangeIconsByType,215,
+AcCommand,Enumeration,acCmdArrangeIconsByCreated,216,
+AcCommand,Enumeration,acCmdArrangeIconsByModified,217,
+AcCommand,Enumeration,acCmdArrangeIconsAuto,218,
+AcCommand,Enumeration,acCmdCreateShortcut,219,
+AcCommand,Enumeration,acCmdToggleFilter,220,
+AcCommand,Enumeration,acCmdOpenTable,221,
+AcCommand,Enumeration,acCmdInsertPicture,222,
+AcCommand,Enumeration,acCmdDeleteRecord,223,
+AcCommand,Enumeration,acCmdStartupProperties,224,
+AcCommand,Enumeration,acCmdPageNumber,225,
+AcCommand,Enumeration,acCmdDateAndTime,226,
+AcCommand,Enumeration,acCmdChangeToTextBox,227,
+AcCommand,Enumeration,acCmdChangeToLabel,228,
+AcCommand,Enumeration,acCmdChangeToListBox,229,
+AcCommand,Enumeration,acCmdChangeToComboBox,230,
+AcCommand,Enumeration,acCmdChangeToCheckBox,231,
+AcCommand,Enumeration,acCmdChangeToToggleButton,232,
+AcCommand,Enumeration,acCmdChangeToOptionButton,233,
+AcCommand,Enumeration,acCmdChangeToImage,234,
+AcCommand,Enumeration,acCmdAnswerWizard,235,
+AcCommand,Enumeration,acCmdMicrosoftOnTheWeb,236,
+AcCommand,Enumeration,acCmdClearItemDefaults,237,
+AcCommand,Enumeration,acCmdZoom200,238,
+AcCommand,Enumeration,acCmdZoom150,239,
+AcCommand,Enumeration,acCmdZoom100,240,
+AcCommand,Enumeration,acCmdZoom75,241,
+AcCommand,Enumeration,acCmdZoom50,242,
+AcCommand,Enumeration,acCmdZoom25,243,
+AcCommand,Enumeration,acCmdZoom10,244,
+AcCommand,Enumeration,acCmdFitToWindow,245,
+AcCommand,Enumeration,acCmdPreviewOnePage,246,
+AcCommand,Enumeration,acCmdPreviewTwoPages,247,
+AcCommand,Enumeration,acCmdPreviewFourPages,248,
+AcCommand,Enumeration,acCmdPreviewEightPages,249,
+AcCommand,Enumeration,acCmdPreviewTwelvePages,250,
+AcCommand,Enumeration,acCmdOpenURL,251,
+AcCommand,Enumeration,acCmdOpenStartPage,252,
+AcCommand,Enumeration,acCmdOpenSearchPage,253,
+AcCommand,Enumeration,acCmdRegisterActiveXControls,254,
+AcCommand,Enumeration,acCmdDeleteTab,255,
+AcCommand,Enumeration,acCmdDatabaseProperties,256,
+AcCommand,Enumeration,acCmdInsertActiveXControl,258,
+AcCommand,Enumeration,acCmdInsertHyperlink,259,
+AcCommand,Enumeration,acCmdReferences,260,
+AcCommand,Enumeration,acCmdAutoCorrect,261,
+AcCommand,Enumeration,acCmdInsertProcedure,262,
+AcCommand,Enumeration,acCmdCreateReplica,263,
+AcCommand,Enumeration,acCmdSynchronizeNow,264,
+AcCommand,Enumeration,acCmdRecoverDesignMaster,265,
+AcCommand,Enumeration,acCmdResolveConflicts,266,
+AcCommand,Enumeration,acCmdDeleteWatch,267,
+AcCommand,Enumeration,acCmdSpelling,269,
+AcCommand,Enumeration,acCmdAutoFormat,270,
+AcCommand,Enumeration,acCmdDeleteTableColumn,271,
+AcCommand,Enumeration,acCmdInsertTableColumn,272,
+AcCommand,Enumeration,acCmdInsertLookupColumn,273,
+AcCommand,Enumeration,acCmdRenameColumn,274,
+AcCommand,Enumeration,acCmdSetDatabasePassword,275,
+AcCommand,Enumeration,acCmdUserLevelSecurityWizard,276,
+AcCommand,Enumeration,acCmdFilterExcludingSelection,277,
+AcCommand,Enumeration,acCmdQuickPrint,278,
+AcCommand,Enumeration,acCmdConvertMacrosToVisualBasic,279,
+AcCommand,Enumeration,acCmdSaveAllModules,280,
+AcCommand,Enumeration,acCmdFormView,281,
+AcCommand,Enumeration,acCmdDatasheetView,282,
+AcCommand,Enumeration,acCmdAnalyzePerformance,283,
+AcCommand,Enumeration,acCmdAnalyzeTable,284,
+AcCommand,Enumeration,acCmdDocumenter,285,
+AcCommand,Enumeration,acCmdTileHorizontally,286,
+AcCommand,Enumeration,acCmdProperties,287,
+AcCommand,Enumeration,acCmdTransparentBackground,288,
+AcCommand,Enumeration,acCmdTransparentBorder,289,
+AcCommand,Enumeration,acCmdCompileLoadedModules,290,
+AcCommand,Enumeration,acCmdInsertLookupField,291,
+AcCommand,Enumeration,acCmdUndo,292,
+AcCommand,Enumeration,acCmdInsertChart,293,
+AcCommand,Enumeration,acCmdGoBack,294,
+AcCommand,Enumeration,acCmdGoForward,295,
+AcCommand,Enumeration,acCmdRefreshPage,297,
+AcCommand,Enumeration,acCmdFavoritesOpen,298,
+AcCommand,Enumeration,acCmdFavoritesAddTo,299,
+AcCommand,Enumeration,acCmdToolbarControlProperties,301,
+AcCommand,Enumeration,acCmdShowMembers,302,
+AcCommand,Enumeration,acCmdListConstants,303,
+AcCommand,Enumeration,acCmdQuickInfo,304,
+AcCommand,Enumeration,acCmdParameterInfo,305,
+AcCommand,Enumeration,acCmdCompleteWord,306,
+AcCommand,Enumeration,acCmdBookmarksToggle,307,
+AcCommand,Enumeration,acCmdBookmarksNext,308,
+AcCommand,Enumeration,acCmdBookmarksPrevious,309,
+AcCommand,Enumeration,acCmdBookmarksClearAll,310,
+AcCommand,Enumeration,acCmdStepOut,311,
+AcCommand,Enumeration,acCmdFindPrevWordUnderCursor,312,
+AcCommand,Enumeration,acCmdFindNextWordUnderCursor,313,
+AcCommand,Enumeration,acCmdObjBrwFindWholeWordOnly,314,
+AcCommand,Enumeration,acCmdObjBrwShowHiddenMembers,315,
+AcCommand,Enumeration,acCmdObjBrwHelp,316,
+AcCommand,Enumeration,acCmdObjBrwViewDefinition,317,
+AcCommand,Enumeration,acCmdObjBrwGroupMembers,318,
+AcCommand,Enumeration,acCmdSelectReport,319,
+AcCommand,Enumeration,acCmdSaveAsHTML,321,
+AcCommand,Enumeration,acCmdPublishDefaults,324,
+AcCommand,Enumeration,acCmdEditHyperlink,325,
+AcCommand,Enumeration,acCmdOpenHyperlink,326,
+AcCommand,Enumeration,acCmdOpenNewHyperlink,327,
+AcCommand,Enumeration,acCmdCopyHyperlink,328,
+AcCommand,Enumeration,acCmdHyperlinkDisplayText,329,
+AcCommand,Enumeration,acCmdTabControlPageOrder,330,
+AcCommand,Enumeration,acCmdInsertPage,331,
+AcCommand,Enumeration,acCmdDeletePage,332,
+AcCommand,Enumeration,acCmdSelectAll,333,
+AcCommand,Enumeration,acCmdCreateMenuFromMacro,334,
+AcCommand,Enumeration,acCmdCreateToolbarFromMacro,335,
+AcCommand,Enumeration,acCmdCreateShortcutMenuFromMacro,336,
+AcCommand,Enumeration,acCmdDelete,337,
+AcCommand,Enumeration,acCmdRunOpenMacro,338,
+AcCommand,Enumeration,acCmdLastPosition,339,
+AcCommand,Enumeration,acCmdPrint,340,
+AcCommand,Enumeration,acCmdFindNext,341,
+AcCommand,Enumeration,acCmdStepInto,342,
+AcCommand,Enumeration,acCmdClearHyperlink,343,
+AcCommand,Enumeration,acCmdNewObjectView,350,
+AcCommand,Enumeration,acCmdNewObjectStoredProcedure,351,
+AcCommand,Enumeration,acCmdNewObjectDiagram,352,
+AcCommand,Enumeration,acCmdViewFieldList,353,
+AcCommand,Enumeration,acCmdViewDiagrams,354,
+AcCommand,Enumeration,acCmdViewStoredProcedures,355,
+AcCommand,Enumeration,acCmdViewViews,356,
+AcCommand,Enumeration,acCmdViewShowPaneSQL,357,
+AcCommand,Enumeration,acCmdViewShowPaneDiagram,358,
+AcCommand,Enumeration,acCmdViewShowPaneGrid,359,
+AcCommand,Enumeration,acCmdViewVerifySQL,360,
+AcCommand,Enumeration,acCmdQueryGroupBy,361,
+AcCommand,Enumeration,acCmdQueryAddToOutput,362,
+AcCommand,Enumeration,acCmdViewTableColumnNames,363,
+AcCommand,Enumeration,acCmdViewTableNameOnly,364,
+AcCommand,Enumeration,acCmdHidePane,365,
+AcCommand,Enumeration,acCmdRemove,366,
+AcCommand,Enumeration,acCmdViewTableColumnProperties,368,
+AcCommand,Enumeration,acCmdViewTableKeys,369,
+AcCommand,Enumeration,acCmdViewTableUserView,370,
+AcCommand,Enumeration,acCmdZoomSelection,371,
+AcCommand,Enumeration,acCmdWorkgroupAdministrator,391,
+AcCommand,Enumeration,acCmdSubformFormView,462,
+AcCommand,Enumeration,acCmdSubformDatasheetView,463,
+AcCommand,Enumeration,acCmdPageProperties,467,
+AcCommand,Enumeration,acCmdDataOutline,468,
+AcCommand,Enumeration,acCmdInsertMovieFromFile,469,
+AcCommand,Enumeration,acCmdInsertSpreadsheet,471,
+AcCommand,Enumeration,acCmdInsertUnboundSection,472,
+AcCommand,Enumeration,acCmdBackgroundPicture,474,
+AcCommand,Enumeration,acCmdBackgroundSound,475,
+AcCommand,Enumeration,acCmdAlignMiddle,476,
+AcCommand,Enumeration,acCmdAlignCenter,477,
+AcCommand,Enumeration,acCmdAlignmentAndSizing,478,
+AcCommand,Enumeration,acCmdZoom500,481,
+AcCommand,Enumeration,acCmdZoom1000,482,
+AcCommand,Enumeration,acCmdPrintRelationships,483,
+AcCommand,Enumeration,acCmdGroupControls,484,
+AcCommand,Enumeration,acCmdUngroupControls,485,
+AcCommand,Enumeration,acCmdOfficeClipboard,488,
+AcCommand,Enumeration,acCmdDeleteTable,489,
+AcCommand,Enumeration,acCmdPasteAsHyperlink,490,
+AcCommand,Enumeration,acCmdNewGroup,491,
+AcCommand,Enumeration,acCmdRenameGroup,492,
+AcCommand,Enumeration,acCmdDeleteGroup,493,
+AcCommand,Enumeration,acCmdAddToNewGroup,494,
+AcCommand,Enumeration,acCmdSubformInNewWindow,495,
+AcCommand,Enumeration,acCmdServerProperties,496,
+AcCommand,Enumeration,acCmdTableCustomView,497,
+AcCommand,Enumeration,acCmdTableAddTable,498,
+AcCommand,Enumeration,acCmdInsertSubdatasheet,499,
+AcCommand,Enumeration,acCmdConditionalFormatting,500,
+AcCommand,Enumeration,acCmdChangeToCommandButton,501,
+AcCommand,Enumeration,acCmdSubdatasheetExpandAll,504,
+AcCommand,Enumeration,acCmdSubdatasheetCollapseAll,505,
+AcCommand,Enumeration,acCmdSubdatasheetRemove,506,
+AcCommand,Enumeration,acCmdServerFilterByForm,507,
+AcCommand,Enumeration,acCmdMaximiumRecords,508,
+AcCommand,Enumeration,acCmdSpeech,511,
+AcCommand,Enumeration,acCmdBackup,513,
+AcCommand,Enumeration,acCmdRestore,514,
+AcCommand,Enumeration,acCmdTransferSQLDatabase,515,
+AcCommand,Enumeration,acCmdCopyDatabaseFile,516,
+AcCommand,Enumeration,acCmdDropSQLDatabase,517,
+AcCommand,Enumeration,acCmdLinkedTableManager,519,
+AcCommand,Enumeration,acCmdDatabaseSplitter,520,
+AcCommand,Enumeration,acCmdSwitchboardManager,521,
+AcCommand,Enumeration,acCmdUpsizingWizard,522,
+AcCommand,Enumeration,acCmdPartialReplicaWizard,524,
+AcCommand,Enumeration,acCmdVisualBasicEditor,525,
+AcCommand,Enumeration,acCmdAddInManager,526,
+AcCommand,Enumeration,acCmdShowEnvelope,533,
+AcCommand,Enumeration,acCmdViewObjectDependencies,536,
+AcCommand,Enumeration,acCmdPublishDatabase,537,
+AcCommand,Enumeration,acCmdCloseDatabase,538,
+AcCommand,Enumeration,acCmdReportView,539,
+AcCommand,Enumeration,acCmdToggleOffline,540,
+AcCommand,Enumeration,acCmdRefreshData,541,
+AcCommand,Enumeration,acCmdShareOnSharePoint,542,
+AcCommand,Enumeration,acCmdSavedImports,543,
+AcCommand,Enumeration,acCmdImportAttachAccess,544,
+AcCommand,Enumeration,acCmdImportAttachExcel,545,
+AcCommand,Enumeration,acCmdImportAttachText,546,
+AcCommand,Enumeration,acCmdImportAttachSharePointList,547,
+AcCommand,Enumeration,acCmdImportAttachXML,548,
+AcCommand,Enumeration,acCmdImportAttachODBC,549,
+AcCommand,Enumeration,acCmdImportAttachHTML,550,
+AcCommand,Enumeration,acCmdImportAttachOutlook,551,
+AcCommand,Enumeration,acCmdImportAttachdBase,552,
+AcCommand,Enumeration,acCmdSavedExports,555,
+AcCommand,Enumeration,acCmdExportExcel,556,
+AcCommand,Enumeration,acCmdExportSharePointList,557,
+AcCommand,Enumeration,acCmdExportRTF,558,
+AcCommand,Enumeration,acCmdExportAccess,559,
+AcCommand,Enumeration,acCmdExportText,560,
+AcCommand,Enumeration,acCmdExportXML,561,
+AcCommand,Enumeration,acCmdExportODBC,562,
+AcCommand,Enumeration,acCmdExportSnapShot,563,
+AcCommand,Enumeration,acCmdExportHTML,564,
+AcCommand,Enumeration,acCmdExportdBase,565,
+AcCommand,Enumeration,acCmdStackedLayout,568,
+AcCommand,Enumeration,acCmdTabularLayout,569,
+AcCommand,Enumeration,acCmdSelectEntireRow,570,
+AcCommand,Enumeration,acCmdSelectEntireColumn,571,
+AcCommand,Enumeration,acCmdMoveColumnCellUp,572,
+AcCommand,Enumeration,acCmdMoveColumnCellDown,573,
+AcCommand,Enumeration,acCmdLayoutGridlinesBoth,574,
+AcCommand,Enumeration,acCmdLayoutGridlinesVertical,575,
+AcCommand,Enumeration,acCmdLayoutGridlinesHorizontal,576,
+AcCommand,Enumeration,acCmdLayoutGridlinesNone,577,
+AcCommand,Enumeration,acCmdLayoutGridlinesCrossHatch,578,
+AcCommand,Enumeration,acCmdLayoutGridlinesTop,579,
+AcCommand,Enumeration,acCmdLayoutGridlinesBottom,580,
+AcCommand,Enumeration,acCmdLayoutGridlinesOutline,581,
+AcCommand,Enumeration,acCmdRemoveFromLayout,582,
+AcCommand,Enumeration,acCmdAddFromOutlook,583,
+AcCommand,Enumeration,acCmdSaveAsOutlookContact,584,
+AcCommand,Enumeration,acCmdInsertLogo,585,
+AcCommand,Enumeration,acCmdInsertTitle,586,
+AcCommand,Enumeration,acCmdPasteFormatting,587,
+AcCommand,Enumeration,acCmdMacroAllActions,589,
+AcCommand,Enumeration,acCmdPrintSelection,590,
+AcCommand,Enumeration,acCmdPublishFixedFormat,591,
+AcCommand,Enumeration,acCmdExportFixedFormat,592,
+AcCommand,Enumeration,acCmdLayoutView,593,
+AcCommand,Enumeration,acCmdNewObjectContinuousForm,594,
+AcCommand,Enumeration,acCmdNewObjectSplitForm,595,
+AcCommand,Enumeration,acCmdNewObjectDatasheetForm,598,
+AcCommand,Enumeration,acCmdNewObjectModalForm,599,
+AcCommand,Enumeration,acCmdNewObjectBlankForm,600,
+AcCommand,Enumeration,acCmdNewObjectLabelsReport,601,
+AcCommand,Enumeration,acCmdNewObjectBlankReport,602,
+AcCommand,Enumeration,acCmdNewObjectDesignQuery,603,
+AcCommand,Enumeration,acCmdNewObjectDesignForm,604,
+AcCommand,Enumeration,acCmdNewObjectDesignReport,605,
+AcCommand,Enumeration,acCmdNewObjectDesignTable,606,
+AcCommand,Enumeration,acCmdEditListItems,607,
+AcCommand,Enumeration,acCmdCollectDataViaEmail,608,
+AcCommand,Enumeration,acCmdManageReplies,609,
+AcCommand,Enumeration,acCmdAnchorTopLeft,610,
+AcCommand,Enumeration,acCmdAnchorStretchAcross,611,
+AcCommand,Enumeration,acCmdAnchorTopRight,612,
+AcCommand,Enumeration,acCmdAnchorStretchDown,613,
+AcCommand,Enumeration,acCmdAnchorStretchDownAcross,614,
+AcCommand,Enumeration,acCmdAnchorStretchDownRight,615,
+AcCommand,Enumeration,acCmdAnchorBottomLeft,616,
+AcCommand,Enumeration,acCmdAnchorBottomStretchAcross,617,
+AcCommand,Enumeration,acCmdAnchorBottomRight,618,
+AcCommand,Enumeration,acCmdFilterMenu,619,
+AcCommand,Enumeration,acCmdShowColumnHistory,620,
+AcCommand,Enumeration,acCmdBrowseSharePointList,621,
+AcCommand,Enumeration,acCmdModifySharePointList,622,
+AcCommand,Enumeration,acCmdModifySharePointListAlerts,623,
+AcCommand,Enumeration,acCmdModifySharePointListWorkflow,624,
+AcCommand,Enumeration,acCmdModifySharePointListPermissions,625,
+AcCommand,Enumeration,acCmdRefreshSharePointList,626,
+AcCommand,Enumeration,acCmdDeleteSharePointList,627,
+AcCommand,Enumeration,acCmdControlMarginsNone,628,
+AcCommand,Enumeration,acCmdControlMarginsNarrow,629,
+AcCommand,Enumeration,acCmdControlMarginsMedium,630,
+AcCommand,Enumeration,acCmdControlMarginsWide,631,
+AcCommand,Enumeration,acCmdControlPaddingNone,632,
+AcCommand,Enumeration,acCmdControlPaddingNarrow,633,
+AcCommand,Enumeration,acCmdControlPaddingMedium,634,
+AcCommand,Enumeration,acCmdControlPaddingWide,635,
+AcCommand,Enumeration,acCmdShowDatePicker,636,
+AcCommand,Enumeration,acCmdSetCaption,637,
+AcCommand,Enumeration,acCmdSynchronize,638,
+AcCommand,Enumeration,acCmdDiscardChanges,639,
+AcCommand,Enumeration,acCmdDiscardChangesAndRefresh,640,
+AcCommand,Enumeration,acCmdSharePointSiteRecycleBin,641,
+AcCommand,Enumeration,acCmdToggleCacheListData,642,
+AcCommand,Enumeration,acCmdRemoveFilterFromCurrentColumn,643,
+AcCommand,Enumeration,acCmdRemoveAllFilters,644,
+AcCommand,Enumeration,acCmdRemoveAllSorts,645,
+AcCommand,Enumeration,acCmdCloseAll,646,
+AcCommand,Enumeration,acCmdApplyAutoFormat1,648,
+AcCommand,Enumeration,acCmdApplyAutoFormat2,649,
+AcCommand,Enumeration,acCmdApplyAutoFormat3,650,
+AcCommand,Enumeration,acCmdApplyAutoFormat4,651,
+AcCommand,Enumeration,acCmdApplyAutoFormat5,652,
+AcCommand,Enumeration,acCmdApplyAutoFormat6,653,
+AcCommand,Enumeration,acCmdApplyAutoFormat7,654,
+AcCommand,Enumeration,acCmdApplyAutoFormat8,655,
+AcCommand,Enumeration,acCmdApplyAutoFormat9,656,
+AcCommand,Enumeration,acCmdApplyAutoFormat10,657,
+AcCommand,Enumeration,acCmdApplyAutoFormat11,658,
+AcCommand,Enumeration,acCmdApplyAutoFormat12,659,
+AcCommand,Enumeration,acCmdApplyAutoFormat13,660,
+AcCommand,Enumeration,acCmdApplyAutoFormat14,661,
+AcCommand,Enumeration,acCmdApplyAutoFormat15,662,
+AcCommand,Enumeration,acCmdApplyAutoFormat16,663,
+AcCommand,Enumeration,acCmdApplyAutoFormat17,664,
+AcCommand,Enumeration,acCmdApplyAutoFormat18,665,
+AcCommand,Enumeration,acCmdApplyAutoFormat19,666,
+AcCommand,Enumeration,acCmdApplyAutoFormat20,667,
+AcCommand,Enumeration,acCmdApplyAutoFormat21,668,
+AcCommand,Enumeration,acCmdApplyAutoFormat22,669,
+AcCommand,Enumeration,acCmdApplyAutoFormat23,670,
+AcCommand,Enumeration,acCmdApplyAutoFormat24,671,
+AcCommand,Enumeration,acCmdApplyAutoFormat25,672,
+AcCommand,Enumeration,acCmdManageAttachments,673,
+AcCommand,Enumeration,acCmdWorkflowTasks,674,
+AcCommand,Enumeration,acCmdStartNewWorkflow,675,
+AcCommand,Enumeration,acCmdShowMessageBar,676,
+AcCommand,Enumeration,acCmdHideMessageBar,677,
+AcCommand,Enumeration,acCmdLayoutInsertRowAbove,678,
+AcCommand,Enumeration,acCmdLayoutInsertRowBelow,679,
+AcCommand,Enumeration,acCmdLayoutInsertColumnLeft,680,
+AcCommand,Enumeration,acCmdLayoutInsertColumnRight,681,
+AcCommand,Enumeration,acCmdLayoutMergeCells,682,
+AcCommand,Enumeration,acCmdLayoutSplitColumnCell,683,
+AcCommand,Enumeration,acCmdLayoutSplitRowCell,684,
+AcCommand,Enumeration,acCmdShowLogicCatalog,685,
+AcCommand,Enumeration,acCmdSaveAsTemplate,686,
+AcCommand,Enumeration,acCmdSaveDatabaseAsNewTemplatePart,687,
+AcCommand,Enumeration,acCmdSaveSelectionAsNewDataType,688,
+AcCommand,Enumeration,acCmdNewObjectNavigationTop,689,
+AcCommand,Enumeration,acCmdNewObjectNavigationLeft,690,
+AcCommand,Enumeration,acCmdNewObjectNavigationRight,691,
+AcCommand,Enumeration,acCmdNewObjectNavigationTopTop,692,
+AcCommand,Enumeration,acCmdNewObjectNavigationTopLeft,693,
+AcCommand,Enumeration,acCmdNewObjectNavigationTopRight,694,
+AcCommand,Enumeration,acCmdCompatCheckDatabase,695,
+AcCommand,Enumeration,acCmdCompatCheckCurrentObject,696,
+AcCommand,Enumeration,acCmdDesignObject,697,
+AcCommand,Enumeration,acCmdCalculatedColumn,698,
+AcCommand,Enumeration,acCmdSyncWebApplication,699,
+AcCommand,Enumeration,acCmdConvertLinkedTableToLocal,700,
+AcCommand,Enumeration,acCmdNewObjectContinuousFormWeb,701,
+AcCommand,Enumeration,acCmdNewObjectDatasheetFormWeb,702,
+AcCommand,Enumeration,acCmdNewObjectBlankFormWeb,703,
+AcCommand,Enumeration,acCmdNewObjectBlankReportWeb,704,
+AcCommand,Enumeration,acCmdNewObjectAutoFormWeb,705,
+AcCommand,Enumeration,acCmdNewObjectAutoReportWeb,706,
+AcCommand,Enumeration,acCmdNewObjectQueryWeb,707,
+AcCommand,Enumeration,acCmdNewObjectMacroWeb,708,
+AcCommand,Enumeration,acCmdNewObjectNavigationTopWeb,709,
+AcCommand,Enumeration,acCmdNewObjectNavigationLeftWeb,710,
+AcCommand,Enumeration,acCmdNewObjectNavigationRightWeb,711,
+AcCommand,Enumeration,acCmdNewObjectNavigationTopTopWeb,712,
+AcCommand,Enumeration,acCmdNewObjectNavigationTopLeftWeb,713,
+AcCommand,Enumeration,acCmdNewObjectNavigationTopRightWeb,714,
+AcCommand,Enumeration,acCmdSelectEntireLayout,715,
+AcCommand,Enumeration,acCmdPrepareDatabaseForWeb,716,
+AcCommand,Enumeration,acCmdManageTableEvents,717,
+AcCommand,Enumeration,acCmdAddDataMacroAfterInsert,718,
+AcCommand,Enumeration,acCmdAddDataMacroAfterUpdate,719,
+AcCommand,Enumeration,acCmdAddDataMacroAfterDelete,720,
+AcCommand,Enumeration,acCmdAddDataMacroBeforeDelete,721,
+AcCommand,Enumeration,acCmdAddDataMacroBeforeChange,722,
+AcCommand,Enumeration,acCmdAddNamedDataMacro,723,
+AcCommand,Enumeration,acCmdInsertNavigationButton,724,
+AcControlType,Enumeration,acLabel,100,Label control
+AcControlType,Enumeration,acRectangle,101,Rectangle control
+AcControlType,Enumeration,acLine,102,Line control
+AcControlType,Enumeration,acImage,103,Image control
+AcControlType,Enumeration,acCommandButton,104,CommandButton control
+AcControlType,Enumeration,acOptionButton,105,OptionButton control
+AcControlType,Enumeration,acCheckBox,106,CheckBox control
+AcControlType,Enumeration,acOptionGroup,107,OptionGroup control
+AcControlType,Enumeration,acBoundObjectFrame,108,BoundObjectFrame control
+AcControlType,Enumeration,acTextBox,109,TextBox control
+AcControlType,Enumeration,acListBox,110,ListBox control
+AcControlType,Enumeration,acComboBox,111,ComboBox control
+AcControlType,Enumeration,acSubform,112,SubForm control
+AcControlType,Enumeration,acObjectFrame,114,Unbound ObjectFrame control
+AcControlType,Enumeration,acPageBreak,118,PageBreak control
+AcControlType,Enumeration,acCustomControl,119,ActiveX control
+AcControlType,Enumeration,acToggleButton,122,ToggleButton control
+AcControlType,Enumeration,acTabCtl,123,Tab control
+AcControlType,Enumeration,acPage,124,Page control
+AcControlType,Enumeration,acAttachment,126,Attachment control
+AcControlType,Enumeration,acEmptyCell,127,EmptyCell control
+AcControlType,Enumeration,acWebBrowser,128,WebBrowserControl control
+AcControlType,Enumeration,acNavigationControl,129,NavigationControl control
+AcControlType,Enumeration,acNavigationButton,130,NavigationButton control
+AcControlType,Enumeration,acChart,133,Modern Chart control
+AcControlType,Enumeration,acEdgeBrowser,134,Edge Browser control
+AcCurrentView,Enumeration,acCurViewDesign,0,The object is in Design view.
+AcCurrentView,Enumeration,acCurViewFormBrowse,1,The object is in Form view.
+AcCurrentView,Enumeration,acCurViewDatasheet,2,The object is in Datasheet view.
+AcCurrentView,Enumeration,acCurViewPivotTable,3,The object is in PivotTable view.
+AcCurrentView,Enumeration,acCurViewPivotChart,4,The object is in PivotChart view.
+AcCurrentView,Enumeration,acCurViewPreview,5,The object is in Print Preview.
+AcCurrentView,Enumeration,acCurViewReportBrowse,6,The object is in Report view.
+AcCurrentView,Enumeration,acCurViewLayout,7,The object is in Layout view.
+AcCursorOnHover,Enumeration,acCursorOnHoverDefault,0,The default cursor is displayed.
+AcCursorOnHover,Enumeration,acCursorOnHoverHyperlinkHand,1,The hyperlink hand cursor is displayed.
+AcDashType,Enumeration,acDashTypeSolid,0,Solid
+AcDashType,Enumeration,acDashTypeDash,1,Dash
+AcDashType,Enumeration,acDashTypeDot,2,Dot
+AcDashType,Enumeration,acDashTypeDashDot,3,Dash Dot
+AcDashType,Enumeration,acDashTypeDashDotDot,4,
+AcDataLabelDisplayFormat,Enumeration,acDataLabelDisplayNone,0,No Labels
+AcDataLabelDisplayFormat,Enumeration,acDataLabelDisplayNumber,1,Labels as Number
+AcDataLabelDisplayFormat,Enumeration,acDataLabelDisplayPercentage,2,Labels as Percentage
+AcDataLabelPosition,Enumeration,acBestFit,0,Best Fit
+AcDataLabelPosition,Enumeration,acInsideCenter,1,Inside Center
+AcDataLabelPosition,Enumeration,acInsideEnd,2,Inside End
+AcDataLabelPosition,Enumeration,acOutsideCircle,3,Outside Circle
+AcDataLabelPosition,Enumeration,acOutsideEnd,4,Outside End
+AcDataObjectType,Enumeration,acActiveDataObject,-1,The active object contains the record.
+AcDataObjectType,Enumeration,acDataTable,0,A table contains the record.
+AcDataObjectType,Enumeration,acDataQuery,1,A query contains the record.
+AcDataObjectType,Enumeration,acDataForm,2,A form contains the record.
+AcDataObjectType,Enumeration,acDataReport,3,A report contains the record.
+AcDataObjectType,Enumeration,acDataServerView,7,A server view contains the record (Microsoft Access project only).
+AcDataObjectType,Enumeration,acDataStoredProcedure,9,A stored procedure contains the record (Microsoft Access project only).
+AcDataObjectType,Enumeration,acDataFunction,10,A user-defined function contains the record (Microsoft Access project only).
+AcDataTransferType,Enumeration,acImport,0,(Default) The data is imported.
+AcDataTransferType,Enumeration,acExport,1,The data is exported.
+AcDataTransferType,Enumeration,acLink,2,The database is linked to the specified data source.
+AcDateGroupType,Enumeration,acDateGroupNone,0,No grouping is applied.
+AcDateGroupType,Enumeration,acDateGroupYear,1,The date is grouped by year.
+AcDateGroupType,Enumeration,acDateGroupQuarter,2,The date is grouped by quarter.
+AcDateGroupType,Enumeration,acDateGroupMonth,3,The date is grouped by month.
+AcDateGroupType,Enumeration,acDateGroupDay,4,The date is grouped by day.
+AcDefReportView,Enumeration,acDefViewPreview,0,The report opens in Print Preview.
+AcDefReportView,Enumeration,acDefViewReportBrowse,1,The report opens in Report view.
+AcDefView,Enumeration,acDefViewSingle,0,(Default) Displays one record at a time.
+AcDefView,Enumeration,acDefViewContinuous,1,"The form displays multiple records (as many as will fit in the current window), each in its own copy of the form's detail section."
+AcDefView,Enumeration,acDefViewDatasheet,2,Displays the form fields arranged in rows and columns like a spreadsheet.
+AcDefView,Enumeration,acDefViewPivotTable,3,Displays the form as a PivotTable.
+AcDefView,Enumeration,acDefViewPivotChart,4,Displays the form as a PivotChart.
+AcDefView,Enumeration,acDefViewSplitForm,5,Displays the form in Split Form view.
+AcDisplayAs,Enumeration,acDisplayAsImageIcon,0,"If the attachment is a supported image format, then the image is displayed. If the attachment is not a supported image format, then the icon for that file type is displayed."
+AcDisplayAs,Enumeration,acDisplayAsIcon,1,The attachment is displayed as the icon for that file type.
+AcDisplayAs,Enumeration,acDisplayAsPaperclip,2,A paper clip is displayed.
+AcDisplayAsHyperlink,Enumeration,acDisplayAsHyperlinkIfHyperlink,0,
+AcDisplayAsHyperlink,Enumeration,acDisplayAsHyperlinkAlways,1,Always display the contents of the control as a hyperlink.
+AcDisplayAsHyperlink,Enumeration,acDisplayAsHyperlinkOnScreenOnly,2,Display the contents of the control as a hyperlink only on the screen.
+AcExportQuality,Enumeration,acExportQualityPrint,0,The output is optimized for printing.
+AcExportQuality,Enumeration,acExportQualityScreen,1,The output is optimized for onscreen display.
+AcExportXMLEncoding,Enumeration,acUTF8,0,(Default) UTF8 encoding.
+AcExportXMLEncoding,Enumeration,acUTF16,1,UTF16 encoding.
+AcExportXMLObjectType,Enumeration,acExportTable,0,Table
+AcExportXMLObjectType,Enumeration,acExportQuery,1,Query
+AcExportXMLObjectType,Enumeration,acExportForm,2,Form
+AcExportXMLObjectType,Enumeration,acExportReport,3,Report
+AcExportXMLObjectType,Enumeration,acExportServerView,7,Server view (Microsoft Access project only)
+AcExportXMLObjectType,Enumeration,acExportStoredProcedure,9,Stored procedure (Microsoft Access project only)
+AcExportXMLObjectType,Enumeration,acExportFunction,10,User-defined function (Microsoft Access project only)
+AcExportXMLOtherFlags,Enumeration,acEmbedSchema,1,Writes schema information into the document specified by the DataTarget argument; this value takes precedence over the SchemaTarget argument.
+AcExportXMLOtherFlags,Enumeration,acExcludePrimaryKeyAndIndexes,2,Does not export primary key and index schema properties.
+AcExportXMLOtherFlags,Enumeration,acRunFromServer,4,"Creates an Active Server Pages (ASP) wrapper; otherwise, default is an HTML wrapper. Applies only when you are exporting reports."
+AcExportXMLOtherFlags,Enumeration,acLiveReportSource,8,Creates a live link to a remote Microsoft SQL Server 2000 database. Valid only when you are exporting reports that are bound to a Microsoft SQL Server 2000 database.
+AcExportXMLOtherFlags,Enumeration,acPersistReportML,16,Persists the exported object's ReportML information.
+AcExportXMLOtherFlags,Enumeration,acExportAllTableAndFieldProperties,32,The exported schema contains properties of the table and its fields.
+AcExportXMLSchemaFormat,Enumeration,acSchemaNone,0,
+AcExportXMLSchemaFormat,Enumeration,acSchemaXSD,1,
+AcFileFormat,Enumeration,acFileFormatAccess2,2,Microsoft Access 2.0 format
+AcFileFormat,Enumeration,acFileFormatAccess95,7,Microsoft Access 95 format
+AcFileFormat,Enumeration,acFileFormatAccess97,8,Microsoft Access 97 format
+AcFileFormat,Enumeration,acFileFormatAccess2000,9,Microsoft Access 2000 format
+AcFileFormat,Enumeration,acFileFormatAccess2002,10,Microsoft Access 2002 format
+AcFileFormat,Enumeration,acFileFormatAccess2007,12,Microsoft Access 2007 format
+AcFilterType,Enumeration,acFilterNormal,0,
+AcFilterType,Enumeration,acServerFilter,1,
+AcFindField,Enumeration,acCurrent,-1,Confine the search to the current field.
+AcFindField,Enumeration,acAll,0,Search in all fields in each record.
+AcFindMatch,Enumeration,acAnywhere,0,Search for data in any part of the field.
+AcFindMatch,Enumeration,acEntire,1,Search for data that fills the entire field.
+AcFindMatch,Enumeration,acStart,2,Search for data located at the beginning of the field.
+AcFormatBarLimits,Enumeration,acAutomatic,0,"For the shortest bar, the lowest value is used. For the highest bar, the highest value is used."
+AcFormatBarLimits,Enumeration,acNumber,1,A number is used.
+AcFormatBarLimits,Enumeration,acPercent,2,A percentage is used.
+AcFormatConditionOperator,Enumeration,acBetween,0,The value must be between the values specified by the Expression1 and Expression2 arguments.
+AcFormatConditionOperator,Enumeration,acNotBetween,1,The value must not be between the values specified by the Expression1 and Expression2 arguments.
+AcFormatConditionOperator,Enumeration,acEqual,2,The value must equal to the value specified by the Expression1 argument.
+AcFormatConditionOperator,Enumeration,acNotEqual,3,The value must not be equal to the value specified by the Expression1 argument.
+AcFormatConditionOperator,Enumeration,acGreaterThan,4,The value must be greater than the value specified by the Expression1 argument.
+AcFormatConditionOperator,Enumeration,acLessThan,5,The value must be less than the value specified by the Expression1 argument.
+AcFormatConditionOperator,Enumeration,acGreaterThanOrEqual,6,The value must be greater than or equal to the value specified by the Expression1 argument.
+AcFormatConditionOperator,Enumeration,acLessThanOrEqual,7,The value must be less than or equal to the value specified by the Expression1 argument.
+AcFormatConditionType,Enumeration,acFieldValue,0,The conditional format is based on values in the selected control.
+AcFormatConditionType,Enumeration,acExpression,1,The conditional format is based on an expression.
+AcFormatConditionType,Enumeration,acFieldHasFocus,2,The conditional format is based on the value of the control that has focus on a form.
+AcFormatConditionType,Enumeration,acDataBar,3,The conditional format is displayed as a data bar.
+AcFormOpenDataMode,Enumeration,acFormPropertySettings,-1,The user can only change the form's properties.
+AcFormOpenDataMode,Enumeration,acFormAdd,0,The user can add new records but can't edit existing records.
+AcFormOpenDataMode,Enumeration,acFormEdit,1,The user can edit existing records and add new records.
+AcFormOpenDataMode,Enumeration,acFormReadOnly,2,The user can only view records.
+AcFormView,Enumeration,acNormal,0,(Default) The form opens in Form view.
+AcFormView,Enumeration,acDesign,1,The form opens in Design view.
+AcFormView,Enumeration,acPreview,2,The form opens in Print Preview.
+AcFormView,Enumeration,acFormDS,3,The form opens in Datasheet view.
+AcFormView,Enumeration,acFormPivotTable,4,The form opens in PivotTable view.
+AcFormView,Enumeration,acFormPivotChart,5,The form opens in PivotChart view.
+AcFormView,Enumeration,acLayout,6,The form opens in Layout view.
+AcGridlineType,Enumeration,acGridlineTypeNone,0,No Gridlines
+AcGridlineType,Enumeration,acGridlineTypeMajor,1,Major Gridlines
+AcGridlineType,Enumeration,acGridlineTypeMinor,2,Minor Gridlines
+AcGridlineType,Enumeration,acGridlineTypeMajorMinor,3,Major and Minor Gridlines
+AcHorizontalAnchor,Enumeration,acHorizontalAnchorLeft,0,The control is anchored to the left side of its layout.
+AcHorizontalAnchor,Enumeration,acHorizontalAnchorRight,1,The control is anchored to the right side of its layout.
+AcHorizontalAnchor,Enumeration,acHorizontalAnchorBoth,2,The control is stretched horizontally across its layout.
+AcHyperlinkPart,Enumeration,acDisplayedValue,0,The underlined text displayed in a hyperlink.
+AcHyperlinkPart,Enumeration,acDisplayText,1,The displaytext part of a Hyperlink field.
+AcHyperlinkPart,Enumeration,acAddress,2,The address part of a Hyperlink field.
+AcHyperlinkPart,Enumeration,acSubAddress,3,The subaddress part of a Hyperlink field.
+AcHyperlinkPart,Enumeration,acScreenTip,4,The tooltip part of a Hyperlink field.
+AcHyperlinkPart,Enumeration,acFullAddress,5,"The address and subaddress parts of a Hyperlink field, delimited by a ""#"" character."
+AcImeMode,Enumeration,acImeModeNoControl,0,Does not change the IME mode.
+AcImeMode,Enumeration,acImeModeOn,1,Activates the IME.
+AcImeMode,Enumeration,acImeModeOff,2,Disables the IME and activates Latin text entry.
+AcImeMode,Enumeration,acImeModeDisable,3,Disables the IME.
+AcImeMode,Enumeration,acImeModeHiragana,4,Activates the IME in full-width hiragana mode.
+AcImeMode,Enumeration,acImeModeKatakana,5,Activates the IME in full-width katakana mode.
+AcImeMode,Enumeration,acImeModeKatakanaHalf,6,Activates the IME in half-width katakana mode.
+AcImeMode,Enumeration,acImeModeAlphaFull,7,Activates the IME in full-width Latin mode.
+AcImeMode,Enumeration,acImeModeAlpha,8,Activates the IME in half-width Latin mode.
+AcImeMode,Enumeration,acImeModeHangulFull,9,Activates the IME in full-width Hangul mode.
+AcImeMode,Enumeration,acImeModeHangul,10,Activates the IME in half-width Hangul mode.
+AcImeSentenceMode,Enumeration,acImeSentenceModePhrasePredict,0,
+AcImeSentenceMode,Enumeration,acImeSentenceModePluralClause,1,
+AcImeSentenceMode,Enumeration,acImeSentenceModeConversation,2,
+AcImeSentenceMode,Enumeration,acImeSentenceModeNone,3,
+AcImportXMLOption,Enumeration,acStructureOnly,0,Creates a new table based on the structure of the specified XML file.
+AcImportXMLOption,Enumeration,acStructureAndData,1,Imports the data into a new table based on the structure of the specified XML file.
+AcImportXMLOption,Enumeration,acAppendData,2,Imports the data into an existing table.
+AcLayoutType,Enumeration,acLayoutNone,0,The control is not part of a layout.
+AcLayoutType,Enumeration,acLayoutTabular,1,The control is part of a tabular layout.
+AcLayoutType,Enumeration,acLayoutStacked,2,The control is part of a stacked layout.
+AcLegendPosition,Enumeration,acLegendPositionLeft,0,Left edge of the chart
+AcLegendPosition,Enumeration,acLegendPositionTop,1,Top edge of the chart
+AcLegendPosition,Enumeration,acLegendPositionRight,2,Right edge of the chart
+AcLegendPosition,Enumeration,acLegendPositionBottom,3,Bottom edge of the chart
+AcMarkerType,Enumeration,acMarkerNone,0,None
+AcMarkerType,Enumeration,acMarkerSquare,1,Square
+AcMarkerType,Enumeration,acMarkerDiamond,2,Diamond
+AcMarkerType,Enumeration,acMarkerTriangle,3,Triangle
+AcMarkerType,Enumeration,acMarkerX,4,X
+AcMarkerType,Enumeration,acMarkerAsterisk,5,Asterisk
+AcMarkerType,Enumeration,acMarkerShortDash,6,Short Dash
+AcMarkerType,Enumeration,acMarkerLongDash,7,Long Dash
+AcMarkerType,Enumeration,acMarkerCircle,8,Circle
+AcMarkerType,Enumeration,acMarkerPlus,9,Plus
+AcMissingDataPolicy,Enumeration,acPlotAsZero,0,Plot as zero.
+AcMissingDataPolicy,Enumeration,acDoNotPlot,1,Do not plot.
+AcMissingDataPolicy,Enumeration,acPlotAsInterpolated,2,Plot as interpolated.
+AcModuleType,Enumeration,acStandardModule,0,The specified module is a standard module.
+AcModuleType,Enumeration,acClassModule,1,The specified module is a class module.
+AcNavigationSpan,Enumeration,acHorizontal,0,The navigation buttons are displayed horizontally.
+AcNavigationSpan,Enumeration,acVertical,1,The navigation buttons are displayed vertically.
+AcNewDatabaseFormat,Enumeration,acNewDatabaseFormatUserDefault,0,Create a database in the default file format.
+AcNewDatabaseFormat,Enumeration,acNewDatabaseFormatAccess2000,9,Create a database in the Microsoft Access 2000 (.mdb) file format.
+AcNewDatabaseFormat,Enumeration,acNewDatabaseFormatAccess2002,10,Create a database in the Microsoft Access 2002-2003 (.mdb) file format.
+AcNewDatabaseFormat,Enumeration,acNewDatabaseFormatAccess2007,12,
+AcObjectType,Enumeration,acDefault,-1,
+AcObjectType,Enumeration,acTable,0,Table
+AcObjectType,Enumeration,acQuery,1,Query
+AcObjectType,Enumeration,acForm,2,Form
+AcObjectType,Enumeration,acReport,3,Report
+AcObjectType,Enumeration,acMacro,4,Macro
+AcObjectType,Enumeration,acModule,5,Module
+AcObjectType,Enumeration,acServerView,7,Server View
+AcObjectType,Enumeration,acDiagram,8,Database Diagram (Microsoft Access project)
+AcObjectType,Enumeration,acStoredProcedure,9,Stored Procedure (Microsoft Access project)
+AcObjectType,Enumeration,acFunction,10,Function
+AcObjectType,Enumeration,acDatabaseProperties,11,Database property
+AcObjectType,Enumeration,acTableDataMacro,12,Data macro
+AcOpenDataMode,Enumeration,acAdd,0,The user can add new records but can't view or edit existing records.
+AcOpenDataMode,Enumeration,acEdit,1,The user can view or edit existing records and add new records.
+AcOpenDataMode,Enumeration,acReadOnly,2,The user can only view records.
+AcOutputObjectType,Enumeration,acOutputTable,0,Table
+AcOutputObjectType,Enumeration,acOutputQuery,1,Query
+AcOutputObjectType,Enumeration,acOutputForm,2,Form
+AcOutputObjectType,Enumeration,acOutputReport,3,Report
+AcOutputObjectType,Enumeration,acOutputModule,5,Module
+AcOutputObjectType,Enumeration,acOutputServerView,7,Server View
+AcOutputObjectType,Enumeration,acOutputStoredProcedure,9,Stored Procedure
+AcOutputObjectType,Enumeration,acOutputFunction,10,User-Defined Function
+AcPercentageDataLabelDecimalPlaces,Enumeration,acDecimalPlaces0,0,Zero
+AcPercentageDataLabelDecimalPlaces,Enumeration,acDecimalPlaces1,1,One
+AcPercentageDataLabelDecimalPlaces,Enumeration,acDecimalPlaces2,2,Two
+AcPercentageDataLabelDecimalPlaces,Enumeration,acDecimalPlaces3,3,Three
+AcPercentageDataLabelDecimalPlaces,Enumeration,acDecimalPlaces4,4,Four
+AcPercentageDataLabelDecimalPlaces,Enumeration,acDecimalPlaces5,5,Five
+AcPercentageDataLabelDecimalPlaces,Enumeration,acDecimalPlaces6,6,Six
+AcPercentageDataLabelDecimalPlaces,Enumeration,acDecimalPlaces7,7,Seven
+AcPictureCaptionArrangement,Enumeration,acNoPictureCaption,0,The caption is not displayed.
+AcPictureCaptionArrangement,Enumeration,acGeneral,1,The caption uses the General alignment setting.
+AcPictureCaptionArrangement,Enumeration,acTop,2,The caption appears above the picture.
+AcPictureCaptionArrangement,Enumeration,acBottom,3,The caption appears below the picture.
+AcPictureCaptionArrangement,Enumeration,acLeft,4,The caption appears to the left of the picture.
+AcPictureCaptionArrangement,Enumeration,acRight,5,The caption appears to the right of the picture.
+AcPrintColor,Enumeration,acPRCMMonochrome,1,The printer should print in monochrome.
+AcPrintColor,Enumeration,acPRCMColor,2,The printer should print in color.
+AcPrintDuplex,Enumeration,acPRDPSimplex,1,Single-sided printing with the current orientation setting.
+AcPrintDuplex,Enumeration,acPRDPHorizontal,2,Double-sided printing using a horizontal page turn.
+AcPrintDuplex,Enumeration,acPRDPVertical,3,Double-sided printing using a vertical page turn.
+AcPrintItemLayout,Enumeration,acPRHorizontalColumnLayout,1953,"Columns are laid across, then down."
+AcPrintItemLayout,Enumeration,acPRVerticalColumnLayout,1954,"Columns are laid down, then across."
+AcPrintObjQuality,Enumeration,acPRPQDraft,-1,The printer prints in draft quality.
+AcPrintObjQuality,Enumeration,acPRPQLow,-2,The printer prints in low quality.
+AcPrintObjQuality,Enumeration,acPRPQMedium,-3,The printer prints in medium quality.
+AcPrintObjQuality,Enumeration,acPRPQHigh,-4,The printer prints in high quality.
+AcPrintOrientation,Enumeration,acPRORPortrait,1,Portrait orientation
+AcPrintOrientation,Enumeration,acPRORLandscape,2,Landscape orientation
+AcPrintPaperBin,Enumeration,acPRBNUpper,1,Use paper from the upper bin.
+AcPrintPaperBin,Enumeration,acPRBNLower,2,Use paper from the lower bin.
+AcPrintPaperBin,Enumeration,acPRBNMiddle,3,Use paper from the middle bin.
+AcPrintPaperBin,Enumeration,acPRBNManual,4,Wait for manual insertion of each sheet of paper.
+AcPrintPaperBin,Enumeration,acPRBNEnvelope,5,Use envelopes from the envelope feeder.
+AcPrintPaperBin,Enumeration,acPRBNEnvManual,6,"Use envelopes from the envelope feeder, but wait for manual insertion."
+AcPrintPaperBin,Enumeration,acPRBNAuto,7,(Default) Use paper from the current default bin.
+AcPrintPaperBin,Enumeration,acPRBNTractor,8,Use paper from the tractor feeder.
+AcPrintPaperBin,Enumeration,acPRBNSmallFmt,9,Use paper from the small paper feeder.
+AcPrintPaperBin,Enumeration,acPRBNLargeFmt,10,Use paper from the large paper bin.
+AcPrintPaperBin,Enumeration,acPRBNLargeCapacity,11,Use paper from the large capacity feeder.
+AcPrintPaperBin,Enumeration,acPRBNCassette,14,Use paper from the attached cassette cartridge.
+AcPrintPaperBin,Enumeration,acPRBNFormSource,15,Use paper from the forms bin.
+AcPrintPaperSize,Enumeration,acPRPSLetter,1,Letter (8-1/2 in. x 11 in.)
+AcPrintPaperSize,Enumeration,acPRPSLetterSmall,2,Letter Small (8-1/2 in. x 11 in.)
+AcPrintPaperSize,Enumeration,acPRPSTabloid,3,Tabloid (11 in. x 17 in.)
+AcPrintPaperSize,Enumeration,acPRPSLedger,4,Ledger (17 in. x 11 in.)
+AcPrintPaperSize,Enumeration,acPRPSLegal,5,Legal (8-1/2 in. x 14 in.)
+AcPrintPaperSize,Enumeration,acPRPSStatement,6,Statement (5-1/2 in. x 8-1/2 in.)
+AcPrintPaperSize,Enumeration,acPRPSExecutive,7,Executive (7-1/2 in. x 10-1/2 in.)
+AcPrintPaperSize,Enumeration,acPRPSA3,8,A3 (297 mm x 420 mm)
+AcPrintPaperSize,Enumeration,acPRPSA4,9,A4 (210 mm x 297 mm)
+AcPrintPaperSize,Enumeration,acPRPSA4Small,10,A4 Small (210 mm x 297 mm)
+AcPrintPaperSize,Enumeration,acPRPSA5,11,A5 (148 mm x 210 mm)
+AcPrintPaperSize,Enumeration,acPRPSB4,12,B4 (250 mm x 354 mm)
+AcPrintPaperSize,Enumeration,acPRPSB5,13,B5 (148 mm x 210 mm)
+AcPrintPaperSize,Enumeration,acPRPSFolio,14,Folio (8-1/2 in. x 13 in.)
+AcPrintPaperSize,Enumeration,acPRPSQuarto,15,Quarto (215 mm x 275 mm)
+AcPrintPaperSize,Enumeration,acPRPS10x14,16,10 x 14 in.
+AcPrintPaperSize,Enumeration,acPRPS11x17,17,11 x 17 in.
+AcPrintPaperSize,Enumeration,acPRPSNote,18,Note (8-1/2 in. x 11 in.)
+AcPrintPaperSize,Enumeration,acPRPSEnv9,19,Envelope #9 (3-7/8 in. x 8-7/8 in.)
+AcPrintPaperSize,Enumeration,acPRPSEnv10,20,Envelope #10 (4-1/8 in. x 9-1/2 in.)
+AcPrintPaperSize,Enumeration,acPRPSEnv11,21,Envelope #11 (4-1/2 in. x 10-3/8 in.)
+AcPrintPaperSize,Enumeration,acPRPSEnv12,22,Envelope #12 (4-1/2 in. x 11 in.)
+AcPrintPaperSize,Enumeration,acPRPSEnv14,23,Envelope #14 (5 in. x 11-1/2 in.)
+AcPrintPaperSize,Enumeration,acPRPSCSheet,24,C size sheet
+AcPrintPaperSize,Enumeration,acPRPSDSheet,25,D size sheet
+AcPrintPaperSize,Enumeration,acPRPSESheet,26,E size sheet
+AcPrintPaperSize,Enumeration,acPRPSEnvDL,27,Envelope DL (110 mm x 220 mm)
+AcPrintPaperSize,Enumeration,acPRPSEnvC3,29,Envelope C3 (324 mm x 458 mm)
+AcPrintPaperSize,Enumeration,acPRPSEnvC4,30,Envelope C4 (229 mm x 324 mm)
+AcPrintPaperSize,Enumeration,acPRPSEnvC5,28,Envelope C5 (162 mm x 229 mm)
+AcPrintPaperSize,Enumeration,acPRPSEnvC6,31,Envelope C6 (114 mm x 162 mm)
+AcPrintPaperSize,Enumeration,acPRPSEnvC65,32,Envelope C65 (114 mm x 229 mm)
+AcPrintPaperSize,Enumeration,acPRPSEnvB4,33,Envelope B4 (250 mm x 353 mm)
+AcPrintPaperSize,Enumeration,acPRPSEnvB5,34,Envelope B5 (176 mm x 250 mm)
+AcPrintPaperSize,Enumeration,acPRPSEnvB6,35,Envelope B6 (176 mm x 125 mm)
+AcPrintPaperSize,Enumeration,acPRPSEnvItaly,36,Italian envelope (110 mm x 230 mm)
+AcPrintPaperSize,Enumeration,acPRPSEnvMonarch,37,Monarch envelope (3-7/8 in. x 7-1/2 in.)
+AcPrintPaperSize,Enumeration,acPRPSEnvPersonal,38,Envelope (3-5/8 in. x 6-1/2 in.)
+AcPrintPaperSize,Enumeration,acPRPSFanfoldUS,39,U.S. Standard Fanfold (14-7/8 in. x 11 in.)
+AcPrintPaperSize,Enumeration,acPRPSFanfoldStdGerman,40,German Standard Fanfold (8-1/2 in. x 12 in.)
+AcPrintPaperSize,Enumeration,acPRPSFanfoldLglGerman,41,German Legal Fanfold (8-1/2 in. x 13 in.)
+AcPrintPaperSize,Enumeration,acPRPSUser,256,User-defined
+AcPrintQuality,Enumeration,acHigh,0,(Default) High quality
+AcPrintQuality,Enumeration,acMedium,1,Medium quality
+AcPrintQuality,Enumeration,acLow,2,Low quality
+AcPrintQuality,Enumeration,acDraft,3,Draft quality
+AcPrintRange,Enumeration,acPrintAll,0,Prints all of the object.
+AcPrintRange,Enumeration,acSelection,1,Prints the selected part of the object.
+AcPrintRange,Enumeration,acPages,2,A specific range of pages will be printed. Use the PageFrom and PageTo arguments to specify the range of pages to print.
+AcProjectType,Enumeration,acNull,0,
+AcProjectType,Enumeration,acADP,1,The current project is a Microsoft Access project.
+AcProjectType,Enumeration,acMDB,2,The current project is a Microsoft Access database.
+AcProperty,Enumeration,acPropertyEnabled,0,Set the Enabled property.
+AcProperty,Enumeration,acPropertyVisible,1,Set the Visible property.
+AcProperty,Enumeration,acPropertyLocked,2,Set the Locked property.
+AcProperty,Enumeration,acPropertyLeft,3,Set the Left property.
+AcProperty,Enumeration,acPropertyTop,4,Set the Top property.
+AcProperty,Enumeration,acPropertyWidth,5,Set the Width property.
+AcProperty,Enumeration,acPropertyHeight,6,Set the Height property.
+AcProperty,Enumeration,acPropertyForeColor,7,Set the ForeColor property.
+AcProperty,Enumeration,acPropertyBackColor,8,Set the BackColor property.
+AcProperty,Enumeration,acPropertyCaption,9,Set the Caption property.
+AcProperty,Enumeration,acPropertyValue,10,Set the Value property.
+AcQuitOption,Enumeration,acQuitPrompt,0,Displays a dialog box that asks whether you want to save any database objects that have been changed but not saved.
+AcQuitOption,Enumeration,acQuitSaveAll,1,(Default) Saves all objects without displaying a dialog box.
+AcQuitOption,Enumeration,acQuitSaveNone,2,Quits Microsoft Access without saving any objects.
+AcRecord,Enumeration,acPrevious,0,Make the previous record the current record.
+AcRecord,Enumeration,acNext,1,Make the next record the current record.
+AcRecord,Enumeration,acFirst,2,Make the first record the current record.
+AcRecord,Enumeration,acLast,3,Make the last record the current record.
+AcRecord,Enumeration,acGoTo,4,Make the specified record the current record.
+AcRecord,Enumeration,acNewRec,5,Make a new record the current record.
+AcResourceType,Enumeration,acResourceTheme,0,Office theme.
+AcResourceType,Enumeration,acResourceImage,1,Image.
+AcSearchDirection,Enumeration,acUp,0,Search all records above the current record.
+AcSearchDirection,Enumeration,acDown,1,Search all records below the current record.
+AcSearchDirection,Enumeration,acSearchAll,2,Search all records.
+AcSection,Enumeration,acDetail,0,(Default) Detail section
+AcSection,Enumeration,acHeader,1,Form or report header
+AcSection,Enumeration,acFooter,2,Form or report footer
+AcSection,Enumeration,acPageHeader,3,Page header
+AcSection,Enumeration,acPageFooter,4,Page footer
+AcSection,Enumeration,acGroupLevel1Header,5,Group-level 1 header (reports only)
+AcSection,Enumeration,acGroupLevel1Footer,6,Group-level 1 footer (reports only)
+AcSection,Enumeration,acGroupLevel2Header,7,Group-level 2 header (reports only)
+AcSection,Enumeration,acGroupLevel2Footer,8,Group-level 2 footer (reports only)
+AcSendObjectType,Enumeration,acSendNoObject,-1,(Default) Don't send a database object.
+AcSendObjectType,Enumeration,acSendTable,0,Send a Table.
+AcSendObjectType,Enumeration,acSendQuery,1,Send a Query.
+AcSendObjectType,Enumeration,acSendForm,2,Send a Form.
+AcSendObjectType,Enumeration,acSendReport,3,Send a Report.
+AcSendObjectType,Enumeration,acSendModule,5,Send a Module.
+AcSeparatorCharacters,Enumeration,acSeparatorCharactersSystemSeparator,0,The List separator setting in the Regional and Language Options in the Windows Control Panel is used as the separator character.
+AcSeparatorCharacters,Enumeration,acSeparatorCharactersNewLine,1,Each value appears on its own line.
+AcSeparatorCharacters,Enumeration,acSeparatorCharactersSemiColon,2,A semicolon (;) is used as the separator character.
+AcSeparatorCharacters,Enumeration,acSeparatorCharactersComma,3,"A comma (,) is used as the separator character."
+AcSharePointListTransferType,Enumeration,acImportSharePointList,0,Import the SharePoint list.
+AcSharePointListTransferType,Enumeration,acLinkSharePointList,1,Link to the SharePoint list.
+AcShowToolbar,Enumeration,acToolbarYes,0,Display the toolbar.
+AcShowToolbar,Enumeration,acToolbarWhereApprop,1,Display the toolbar while in the appropriate view.
+AcShowToolbar,Enumeration,acToolbarNo,2,Hide the toolbar.
+AcSortOrderType,Enumeration,acSortOrderTypeNone,0,None
+AcSortOrderType,Enumeration,acSortOrderTypeAscending,1,Ascending
+AcSortOrderType,Enumeration,acSortOrderTypeDescending,2,Descending
+AcSplitFormDatasheet,Enumeration,acDatasheetAllowEdits,0,The user can edit the contents of the datasheet.
+AcSplitFormDatasheet,Enumeration,acDatasheetReadOnly,1,The user cannot edit the contents of the datasheet.
+AcSplitFormOrientation,Enumeration,acDatasheetOnTop,0,The datasheet is displayed above the form.
+AcSplitFormOrientation,Enumeration,acDatasheetOnBottom,1,The datasheet is displayed below the form.
+AcSplitFormOrientation,Enumeration,acDatasheetOnLeft,2,The datasheet is displayed to the left of the form.
+AcSplitFormOrientation,Enumeration,acDatasheetOnRight,3,The datasheet is displayed to the right of the form.
+AcSplitFormPrinting,Enumeration,acFormOnly,0,The contents of the form are printed.
+AcSplitFormPrinting,Enumeration,acGridOnly,1,The contents of the datasheet are printed.
+AcSpreadSheetType,Enumeration,acSpreadsheetTypeExcel3,0,Microsoft Excel 3.0 format
+AcSpreadSheetType,Enumeration,acSpreadsheetTypeExcel5,5,Microsoft Excel 5.0 format
+AcSpreadSheetType,Enumeration,acSpreadsheetTypeExcel7,5,Microsoft Excel 95 format
+AcSpreadSheetType,Enumeration,acSpreadsheetTypeExcel4,6,Microsoft Excel 4.0 format
+AcSpreadSheetType,Enumeration,acSpreadsheetTypeExcel8,8,Microsoft Excel 97 format
+AcSpreadSheetType,Enumeration,acSpreadsheetTypeExcel9,8,Microsoft Excel 2000 format
+AcSpreadSheetType,Enumeration,acSpreadsheetTypeExcel12,9,Microsoft Excel 2010 format
+AcSpreadSheetType,Enumeration,acSpreadsheetTypeExcel12Xml,10,"Microsoft Excel 2010/2013/2016 XML format (.xlsx, .xlsm, .xlsb)"
+AcSysCmdAction,Enumeration,acSysCmdInitMeter,1,Initializes the progress meter. You must specify the argument1 and argument2 arguments when you use this action.
+AcSysCmdAction,Enumeration,acSysCmdUpdateMeter,2,Updates the progress meter with the specified value. You must specify the text argument when you use this action.
+AcSysCmdAction,Enumeration,acSysCmdRemoveMeter,3,Removes the progress meter.
+AcSysCmdAction,Enumeration,acSysCmdSetStatus,4,Sets the status bar text to the text argument.
+AcSysCmdAction,Enumeration,acSysCmdClearStatus,5,Provides information on the state of a database object.
+AcSysCmdAction,Enumeration,acSysCmdRuntime,6,Returns True (1) if a run-time version of Microsoft Access is running.
+AcSysCmdAction,Enumeration,acSysCmdAccessVer,7,Returns the version number of Microsoft Access.
+AcSysCmdAction,Enumeration,acSysCmdIniFile,8,Returns the name of the .ini file associated with Microsoft Access.
+AcSysCmdAction,Enumeration,acSysCmdAccessDir,9,Returns the name of the directory where Msaccess.exe is located.
+AcSysCmdAction,Enumeration,acSysCmdGetObjectState,10,Returns the state of the specified database object. You must specify argument1 and argument2 when you use this action value.
+AcSysCmdAction,Enumeration,acSysCmdClearHelpTopic,11,Resets default help topic.
+AcSysCmdAction,Enumeration,acSysCmdProfile,12,Returns the \/profile setting specified by the user when starting Microsoft Access from the command line.
+AcSysCmdAction,Enumeration,acSysCmdGetWorkgroupFile,13,Returns the path to the workgroup file (System.mdw).
+AcSysCmdAction,Enumeration,acSysCmdCompile,603,Compiles the Visual Basic code modules in the current database. Equivalent to the Debug > Compile menu command.
+AcSysCmdAction,Enumeration,acSysCmdGetMsoBuildNumber,715,"Returns the build number of the shared MSO component as a Long. This is the same value returned by Application.Build, and it may differ from the Access application build. Use acSysCmdGetBuildNumber (725) in new code to get the Access build number."
+AcSysCmdAction,Enumeration,acSysCmdGetFullVersion,720,"Returns a display string containing version, build, channel, and bitness (for example, ""Microsoft Access (Version 2601) Build 16.0.19628.20000 Current Channel 64-bit""). Version 2604 and later."
+AcSysCmdAction,Enumeration,acSysCmdGetVersion,721,"Returns the short YYMM marketing version (for example, ""2601""). Version 2604 and later."
+AcSysCmdAction,Enumeration,acSysCmdGetFullBuildNumber,722,"Returns the full four-part build string (for example, ""16.0.19916.30000""). Version 2604 and later."
+AcSysCmdAction,Enumeration,acSysCmdGetChannelName,723,"Returns the update channel name (for example, ""Current Channel"", ""Monthly Enterprise Channel"", or ""LTSC 2024""). Version 2604 and later."
+AcSysCmdAction,Enumeration,acSysCmdGetBitness,724,"Returns ""32-bit"" or ""64-bit"" as a string matching the bitness of the running binary. Version 2604 and later."
+AcSysCmdAction,Enumeration,acSysCmdGetBuildNumber,725,"Returns the major build number (for example, 19916) as a Long. Version 2604 and later."
+AcTextFormat,Enumeration,acTextFormatPlain,0,(Default) Plain text is displayed.
+AcTextFormat,Enumeration,acTextFormatHTMLRichText,1,Rich text can be displayed.
+AcTextTransferType,Enumeration,acImportDelim,0,Import Delimited
+AcTextTransferType,Enumeration,acImportFixed,1,Import Fixed Width
+AcTextTransferType,Enumeration,acExportDelim,2,Export Delimited
+AcTextTransferType,Enumeration,acExportFixed,3,Export Fixed Width
+AcTextTransferType,Enumeration,acExportMerge,4,Export Microsoft Word Merge
+AcTextTransferType,Enumeration,acLinkDelim,5,Link Delimited
+AcTextTransferType,Enumeration,acLinkFixed,6,Link Fixed Width
+AcTextTransferType,Enumeration,acImportHTML,7,Import HTML
+AcTextTransferType,Enumeration,acExportHTML,8,Export HTML
+AcTextTransferType,Enumeration,acLinkHTML,9,Link HTML
+AcTransformXMLScriptOption,Enumeration,acEnableScript,0,The script is enabled.
+AcTransformXMLScriptOption,Enumeration,acPromptScript,1,The user is prompted to disable or enable the script.
+AcTransformXMLScriptOption,Enumeration,acDisableScript,2,The script is disabled.
+AcTrendlineOptions,Enumeration,acTrendlineNone,0,None
+AcTrendlineOptions,Enumeration,acTrendlineLinear,1,Linear
+AcTrendlineOptions,Enumeration,acTrendlineExponential,2,Exponential
+AcTrendlineOptions,Enumeration,acTrendlineLogarithmic,3,Logarithmic
+AcTrendlineOptions,Enumeration,acTrendlinePolynomial,4,Polynomial
+AcTrendlineOptions,Enumeration,acTrendlinePower,5,Power
+AcTrendlineOptions,Enumeration,acTrendlineMovingAverage,6,Moving Average
+AcValueAxis,Enumeration,acPrimaryAxis,0,Primary axis
+AcValueAxis,Enumeration,acSecondaryAxis,1,Secondary axis
+AcVerticalAnchor,Enumeration,acVerticalAnchorTop,0,The control is anchored at the top of its layout.
+AcVerticalAnchor,Enumeration,acVerticalAnchorBottom,1,The control is anchored at the bottom of its layout.
+AcVerticalAnchor,Enumeration,acVerticalAnchorBoth,2,The control is stretched vertically across its layout.
+AcView,Enumeration,acViewNormal,0,(Default) Normal view
+AcView,Enumeration,acViewDesign,1,Design view
+AcView,Enumeration,acViewPreview,2,Print Preview
+AcView,Enumeration,acViewPivotTable,3,PivotTable view
+AcView,Enumeration,acViewPivotChart,4,PivotChart view
+AcView,Enumeration,acViewReport,5,Report view
+AcView,Enumeration,acViewLayout,6,Layout view
+AcView,Enumeration,acViewSql,7,
+AcWebBrowserScrollBars,Enumeration,acScrollAuto,0,Scroll bars are displayed if the current page in the control is too large to be displayed in its entirely.
+AcWebBrowserScrollBars,Enumeration,acScrollYes,1,Scroll bars are displayed.
+AcWebBrowserScrollBars,Enumeration,acScrollNo,2,Scroll bars are not displayed.
+AcWebBrowserState,Enumeration,acUnintialized,0,
+AcWebBrowserState,Enumeration,acLoading,1,The web browser control is loading a new document.
+AcWebBrowserState,Enumeration,acLoaded,2,"The web browser control has loaded and initialized the new document, but has not yet received all the document data."
+AcWebBrowserState,Enumeration,acInteractive,3,"The web browser control has loaded enough of the document to allow limited user interaction, such as choosing hyperlinks that have been displayed."
+AcWebBrowserState,Enumeration,acComplete,4,The web browser control has finished loading the new document and all its contents.
+AcWebUserDisplay,Enumeration,acWebUserID,0,The current user's member ID.
+AcWebUserDisplay,Enumeration,acWebUserName,1,The current user's display name.
+AcWebUserDisplay,Enumeration,acWebUserLoginName,2,The current user's login name.
+AcWebUserDisplay,Enumeration,acWebUserEmail,3,The current user's email address.
+AcWebUserGroupsDisplay,Enumeration,acWebUserGroupID,0,The identifiers of the groups.
+AcWebUserGroupsDisplay,Enumeration,acWebUserGroupName,1,The names of the groups.
+AcWindowMode,Enumeration,acWindowNormal,0,(Default) The form or report opens in the mode set by its properties.
+AcWindowMode,Enumeration,acHidden,1,The form or report is hidden.
+AcWindowMode,Enumeration,acIcon,2,The form or report opens minimized in the Windows taskbar.
+AcWindowMode,Enumeration,acDialog,3,The form or report's Modal and PopUp properties are set to Yes.
+AcWordCloudShape,Enumeration,acWordCloudRectangle,0,Rectangle
+AcWordCloudShape,Enumeration,acWordCloudOval,1,Oval
+AcWordCloudShape,Enumeration,acWordCloudHeart,2,Heart
+AcWordCloudWordOrientation,Enumeration,acWordCloudHorizontalVertical,0,Horizontal and Vertical
+AcWordCloudWordOrientation,Enumeration,acWordCloudHorizontal,1,Horizontal
+AcWordCloudWordOrientation,Enumeration,acWordCloudVertical,2,Vertical
+Constants,Module,acDataErrContinue,0,
+Constants,Module,acDataErrDisplay,1,
+Constants,Module,acDataErrAdded,2,
+Constants,Module,acDeleteOK,0,
+Constants,Module,acDeleteCancel,1,
+Constants,Module,acDeleteUserCancel,2,
+Constants,Module,acObjStateOpen,1,
+Constants,Module,acObjStateNew,4,
+Constants,Module,acObjStateDirty,2,
+Constants,Module,acLBInitialize,0,
+Constants,Module,acLBOpen,1,
+Constants,Module,acLBGetRowCount,3,
+Constants,Module,acLBGetColumnCount,4,
+Constants,Module,acLBGetColumnWidth,5,
+Constants,Module,acLBGetValue,6,
+Constants,Module,acLBGetFormat,7,
+Constants,Module,acLBClose,8,
+Constants,Module,acLBEnd,9,
+Constants,Module,acPrompt,0,
+Constants,Module,acSave,1,
+Constants,Module,acExit,2,
+Constants,Module,acOLEEither,2,
+Constants,Module,acOLECreateEmbed,0,
+Constants,Module,acOLECreateNew,0,
+Constants,Module,acOLECreateLink,1,
+Constants,Module,acOLECreateFromFile,1,
+Constants,Module,acOLECopy,4,
+Constants,Module,acOLEPaste,5,
+Constants,Module,acOLEUpdate,6,
+Constants,Module,acOLEActivate,7,
+Constants,Module,acOLEClose,9,
+Constants,Module,acOLEDelete,10,
+Constants,Module,acOLEInsertObjDlg,14,
+Constants,Module,acOLEPasteSpecialDlg,15,
+Constants,Module,acOLEFetchVerbs,17,
+Constants,Module,acOLEDisplayContent,0,
+Constants,Module,acOLEDisplayIcon,1,
+Constants,Module,acOLELinked,0,
+Constants,Module,acOLEEmbedded,1,
+Constants,Module,acOLENone,3,
+Constants,Module,acOLESizeClip,0,
+Constants,Module,acOLESizeStretch,1,
+Constants,Module,acOLESizeAutoSize,2,
+Constants,Module,acOLESizeZoom,3,
+Constants,Module,acOLEUpdateAutomatic,0,
+Constants,Module,acOLEUpdateFrozen,1,
+Constants,Module,acOLEUpdateManual,2,
+Constants,Module,acOLEActivateManual,0,
+Constants,Module,acOLEActivateGetFocus,1,
+Constants,Module,acOLEActivateDoubleClick,2,
+Constants,Module,acOLEVerbPrimary,0,
+Constants,Module,acOLEVerbShow,-1,
+Constants,Module,acOLEVerbOpen,-2,
+Constants,Module,acOLEVerbHide,-3,
+Constants,Module,acOLEVerbInPlaceUIActivate,-4,
+Constants,Module,acOLEVerbInPlaceActivate,-5,
+Constants,Module,acMenuVer1X,11,
+Constants,Module,acMenuVer20,20,
+Constants,Module,acMenuVer70,70,
+Constants,Module,acFormBar,0,
+Constants,Module,acFile,0,
+Constants,Module,acEditMenu,1,
+Constants,Module,acRecordsMenu,5,
+Constants,Module,acNew,0,
+Constants,Module,acSaveForm,4,
+Constants,Module,acSaveFormAs,5,
+Constants,Module,acSaveRecord,4,
+Constants,Module,acUndo,0,
+Constants,Module,acCut,1,
+Constants,Module,acCopy,2,
+Constants,Module,acPaste,3,
+Constants,Module,acDelete,6,
+Constants,Module,acSelectRecord,8,
+Constants,Module,acSelectAllRecords,9,
+Constants,Module,acObject,14,
+Constants,Module,acRefresh,5,
+Constants,Module,acObjectVerb,0,
+Constants,Module,acObjectUpdate,3,
+Constants,Module,acFormatRTF,"""Rich Text Format (*.rtf)""",
+Constants,Module,acFormatXLS,"""Microsoft Excel (*.xls)""",
+Constants,Module,acFormatTXT,"""MS-DOS Text (*.txt)""",
+Constants,Module,acFormatHTML,"""HTML (*.html)""",
+Constants,Module,acFormatSNP,"""Snapshot Format (*.snp)""",
+Constants,Module,acFormatPDF,"""PDF Format (*.pdf)""",
+Constants,Module,acFormatXPS,"""XPS Format (*.xps)""",
+Constants,Module,acFormatXLSB,"""Microsoft Excel Binary Workbook (*.xlsb)""",
+Constants,Module,acFormatXLSX,"""Microsoft Excel Workbook (*.xlsx)""",
+Constants,Module,acSecFrmRptReadDef,4,
+Constants,Module,acSecFrmRptWriteDef,65548,
+Constants,Module,acSecFrmRptExecute,256,
+Constants,Module,acSecMacReadDef,10,
+Constants,Module,acSecMacWriteDef,65542,
+Constants,Module,acSecMacExecute,8,
+Constants,Module,acSecModReadDef,2,
+Constants,Module,acSecModWriteDef,65542,
+Constants,Module,acMenuUngray,0,
+Constants,Module,acMenuGray,1,
+Constants,Module,acMenuUncheck,2,
+Constants,Module,acMenuCheck,3,
+Constants,Module,acEffectNormal,0,
+Constants,Module,acEffectRaised,1,
+Constants,Module,acEffectSunken,2,
+Constants,Module,acEffectEtched,3,
+Constants,Module,acEffectShadow,4,
+Constants,Module,acEffectChisel,5,
+Constants,Module,acGridlinesNone,0,
+Constants,Module,acGridlinesHoriz,1,
+Constants,Module,acGridlinesVert,2,
+Constants,Module,acGridlinesBoth,3,
+Constants,Module,acGridlinesBothV2,-1,
+Constants,Module,acFilterByForm,0,
+Constants,Module,acFilterAdvanced,1,
+Constants,Module,acServerFilterByForm,2,
+Constants,Module,acShowAllRecords,0,
+Constants,Module,acApplyFilter,1,
+Constants,Module,acCloseFilterWindow,2,
+Constants,Module,acApplyServerFilter,3,
+Constants,Module,acCloseServerFilterWindow,4,
+Constants,Module,acShiftMask,1,
+Constants,Module,acCtrlMask,2,
+Constants,Module,acAltMask,4,
+Constants,Module,acLeftButton,1,
+Constants,Module,acRightButton,2,
+Constants,Module,acMiddleButton,4,
+Constants,Module,acOLEChanged,0,
+Constants,Module,acOLESaved,1,
+Constants,Module,acOLEClosed,2,
+Constants,Module,acOLERenamed,3,
+Constants,Module,vbKeyLButton,1,
+Constants,Module,vbKeyRButton,2,
+Constants,Module,vbKeyCancel,3,
+Constants,Module,vbKeyMButton,4,
+Constants,Module,vbKeyBack,8,
+Constants,Module,vbKeyTab,9,
+Constants,Module,vbKeyClear,12,
+Constants,Module,vbKeyReturn,13,
+Constants,Module,vbKeyShift,16,
+Constants,Module,vbKeyControl,17,
+Constants,Module,vbKeyMenu,18,
+Constants,Module,vbKeyPause,19,
+Constants,Module,vbKeyCapital,20,
+Constants,Module,vbKeyEscape,27,
+Constants,Module,vbKeySpace,32,
+Constants,Module,vbKeyPageUp,33,
+Constants,Module,vbKeyPageDown,34,
+Constants,Module,vbKeyEnd,35,
+Constants,Module,vbKeyHome,36,
+Constants,Module,vbKeyLeft,37,
+Constants,Module,vbKeyUp,38,
+Constants,Module,vbKeyRight,39,
+Constants,Module,vbKeyDown,40,
+Constants,Module,vbKeySelect,41,
+Constants,Module,vbKeyPrint,42,
+Constants,Module,vbKeyExecute,43,
+Constants,Module,vbKeySnapshot,44,
+Constants,Module,vbKeyInsert,45,
+Constants,Module,vbKeyDelete,46,
+Constants,Module,vbKeyHelp,47,
+Constants,Module,vbKeyNumlock,144,
+Constants,Module,vbKeyA,65,
+Constants,Module,vbKeyB,66,
+Constants,Module,vbKeyC,67,
+Constants,Module,vbKeyD,68,
+Constants,Module,vbKeyE,69,
+Constants,Module,vbKeyF,70,
+Constants,Module,vbKeyG,71,
+Constants,Module,vbKeyH,72,
+Constants,Module,vbKeyI,73,
+Constants,Module,vbKeyJ,74,
+Constants,Module,vbKeyK,75,
+Constants,Module,vbKeyL,76,
+Constants,Module,vbKeyM,77,
+Constants,Module,vbKeyN,78,
+Constants,Module,vbKeyO,79,
+Constants,Module,vbKeyP,80,
+Constants,Module,vbKeyQ,81,
+Constants,Module,vbKeyR,82,
+Constants,Module,vbKeyS,83,
+Constants,Module,vbKeyT,84,
+Constants,Module,vbKeyU,85,
+Constants,Module,vbKeyV,86,
+Constants,Module,vbKeyW,87,
+Constants,Module,vbKeyX,88,
+Constants,Module,vbKeyY,89,
+Constants,Module,vbKeyZ,90,
+Constants,Module,vbKey0,48,
+Constants,Module,vbKey1,49,
+Constants,Module,vbKey2,50,
+Constants,Module,vbKey3,51,
+Constants,Module,vbKey4,52,
+Constants,Module,vbKey5,53,
+Constants,Module,vbKey6,54,
+Constants,Module,vbKey7,55,
+Constants,Module,vbKey8,56,
+Constants,Module,vbKey9,57,
+Constants,Module,vbKeyNumpad0,96,
+Constants,Module,vbKeyNumpad1,97,
+Constants,Module,vbKeyNumpad2,98,
+Constants,Module,vbKeyNumpad3,99,
+Constants,Module,vbKeyNumpad4,100,
+Constants,Module,vbKeyNumpad5,101,
+Constants,Module,vbKeyNumpad6,102,
+Constants,Module,vbKeyNumpad7,103,
+Constants,Module,vbKeyNumpad8,104,
+Constants,Module,vbKeyNumpad9,105,
+Constants,Module,vbKeyMultiply,106,
+Constants,Module,vbKeyAdd,107,
+Constants,Module,vbKeySeparator,108,
+Constants,Module,vbKeySubtract,109,
+Constants,Module,vbKeyDecimal,110,
+Constants,Module,vbKeyDivide,111,
+Constants,Module,vbKeyF1,112,
+Constants,Module,vbKeyF2,113,
+Constants,Module,vbKeyF3,114,
+Constants,Module,vbKeyF4,115,
+Constants,Module,vbKeyF5,116,
+Constants,Module,vbKeyF6,117,
+Constants,Module,vbKeyF7,118,
+Constants,Module,vbKeyF8,119,
+Constants,Module,vbKeyF9,120,
+Constants,Module,vbKeyF10,121,
+Constants,Module,vbKeyF11,122,
+Constants,Module,vbKeyF12,123,
+Constants,Module,vbKeyF13,124,
+Constants,Module,vbKeyF14,125,
+Constants,Module,vbKeyF15,126,
+Constants,Module,vbKeyF16,127,
+OldConstants,Module,V_EMPTY,0,
+OldConstants,Module,V_NULL,1,
+OldConstants,Module,V_INTEGER,2,
+OldConstants,Module,V_LONG,3,
+OldConstants,Module,V_SINGLE,4,
+OldConstants,Module,V_DOUBLE,5,
+OldConstants,Module,V_CURRENCY,6,
+OldConstants,Module,V_DATE,7,
+OldConstants,Module,V_STRING,8,
+OldConstants,Module,DB_BINARY,9,
+OldConstants,Module,DB_OLE,11,
+OldConstants,Module,DB_NONULLS,3,
+OldConstants,Module,A_TABLE,0,
+OldConstants,Module,A_QUERY,1,
+OldConstants,Module,A_FORM,2,
+OldConstants,Module,A_REPORT,3,
+OldConstants,Module,A_MACRO,4,
+OldConstants,Module,A_MODULE,5,
+OldConstants,Module,A_FORMBAR,0,
+OldConstants,Module,A_FILE,0,
+OldConstants,Module,A_EDITMENU,1,
+OldConstants,Module,A_RECORDSMENU,3,
+OldConstants,Module,A_NEW,0,
+OldConstants,Module,A_SAVEFORM,2,
+OldConstants,Module,A_SAVEFORMAS,3,
+OldConstants,Module,A_SAVERECORD,4,
+OldConstants,Module,A_UNDO,0,
+OldConstants,Module,A_UNDOFIELD,1,
+OldConstants,Module,A_CUT,2,
+OldConstants,Module,A_COPY,3,
+OldConstants,Module,A_PASTE,4,
+OldConstants,Module,A_DELETE,6,
+OldConstants,Module,A_SELECTRECORD,7,
+OldConstants,Module,A_SELECTALLRECORDS,8,
+OldConstants,Module,A_OBJECT,14,
+OldConstants,Module,A_REFRESH,2,
+OldConstants,Module,A_OBJECTVERB,0,
+OldConstants,Module,A_OBJECTUPDATE,3,
+OldConstants,Module,A_ANYWHERE,0,
+OldConstants,Module,A_ENTIRE,1,
+OldConstants,Module,A_START,2,
+OldConstants,Module,A_UP,0,
+OldConstants,Module,A_DOWN,1,
+OldConstants,Module,A_CURRENT,1,
+OldConstants,Module,A_ALL,0,
+OldConstants,Module,A_PREVIOUS,0,
+OldConstants,Module,A_NEXT,1,
+OldConstants,Module,A_FIRST,2,
+OldConstants,Module,A_LAST,3,
+OldConstants,Module,A_GOTO,4,
+OldConstants,Module,A_NEWREC,5,
+OldConstants,Module,A_NORMAL,0,
+OldConstants,Module,A_DESIGN,1,
+OldConstants,Module,A_PREVIEW,2,
+OldConstants,Module,A_FORMDS,3,
+OldConstants,Module,A_ADD,0,
+OldConstants,Module,A_EDIT,1,
+OldConstants,Module,A_READONLY,2,
+OldConstants,Module,A_HIDDEN,1,
+OldConstants,Module,A_ICON,2,
+OldConstants,Module,A_DIALOG,3,
+OldConstants,Module,A_PRINTALL,0,
+OldConstants,Module,A_SELECTION,1,
+OldConstants,Module,A_PAGES,2,
+OldConstants,Module,A_HIGH,0,
+OldConstants,Module,A_MEDIUM,1,
+OldConstants,Module,A_LOW,2,
+OldConstants,Module,A_DRAFT,3,
+OldConstants,Module,A_PROMPT,0,
+OldConstants,Module,A_SAVE,1,
+OldConstants,Module,A_EXIT,2,
+OldConstants,Module,A_IMPORT,0,
+OldConstants,Module,A_EXPORT,1,
+OldConstants,Module,A_ATTACH,2,
+OldConstants,Module,A_IMPORTDELIM,0,
+OldConstants,Module,A_IMPORTFIXED,1,
+OldConstants,Module,A_EXPORTDELIM,2,
+OldConstants,Module,A_EXPORTFIXED,3,
+OldConstants,Module,A_EXPORTMERGE,4,
+OldConstants,Module,OLE_CHANGED,0,
+OldConstants,Module,OLE_SAVED,1,
+OldConstants,Module,OLE_CLOSED,2,
+OldConstants,Module,OLE_RENAMED,3,
+OldConstants,Module,OLE_RELEASE,5,
+OldConstants,Module,SHIFT_MASK,1,
+OldConstants,Module,CTRL_MASK,2,
+OldConstants,Module,ALT_MASK,4,
+OldConstants,Module,LEFT_BUTTON,1,
+OldConstants,Module,RIGHT_BUTTON,2,
+OldConstants,Module,MIDDLE_BUTTON,4,
+OldConstants,Module,DATA_ERRCONTINUE,0,
+OldConstants,Module,DATA_ERRDISPLAY,1,
+OldConstants,Module,DATA_ERRADDED,2,
+OldConstants,Module,LB_INITIALIZE,0,
+OldConstants,Module,LB_OPEN,1,
+OldConstants,Module,LB_GETROWCOUNT,3,
+OldConstants,Module,LB_GETCOLUMNCOUNT,4,
+OldConstants,Module,LB_GETCOLUMNWIDTH,5,
+OldConstants,Module,LB_GETVALUE,6,
+OldConstants,Module,LB_GETFORMAT,7,
+OldConstants,Module,LB_CLOSE,8,
+OldConstants,Module,LB_END,9,
+OldConstants,Module,SYSCMD_INITMETER,1,
+OldConstants,Module,SYSCMD_UPDATEMETER,2,
+OldConstants,Module,SYSCMD_REMOVEMETER,3,
+OldConstants,Module,SYSCMD_SETSTATUS,4,
+OldConstants,Module,SYSCMD_CLEARSTATUS,5,
+OldConstants,Module,SYSCMD_RUNTIME,6,
+OldConstants,Module,SYSCMD_ACCESSVER,7,
+OldConstants,Module,SYSCMD_INIFILE,8,
+OldConstants,Module,SYSCMD_ACCESSDIR,9,
+OldConstants,Module,SYSCMD_GETOBJECTSTATE,10,
+OldConstants,Module,SYSCMD_CLEARHELPTOPIC,11,
+OldConstants,Module,OBJSTATE_OPEN,1,
+OldConstants,Module,OBJSTATE_NEW,4,
+OldConstants,Module,OBJSTATE_DIRTY,2,
+OldConstants,Module,A_DELETE_V2,7,
+OldConstants,Module,A_SELECTRECORD_V2,8,
+OldConstants,Module,A_SELECTALLRECORDS_V2,9,
+OldConstants,Module,A_TOOLBAR_YES,0,
+OldConstants,Module,A_TOOLBAR_WHERE_APPROP,1,
+OldConstants,Module,A_TOOLBAR_NO,2,
+OldConstants,Module,DELETE_OK,0,
+OldConstants,Module,DELETE_CANCEL,1,
+OldConstants,Module,DELETE_USER_CANCEL,2,
+OldConstants,Module,DB_SEC_FRMRPT_READDEF,4,
+OldConstants,Module,DB_SEC_FRMRPT_WRITEDEF,65548,
+OldConstants,Module,DB_SEC_FRMRPT_EXECUTE,256,
+OldConstants,Module,DB_SEC_MAC_READDEF,10,
+OldConstants,Module,DB_SEC_MAC_WRITEDEF,65542,
+OldConstants,Module,DB_SEC_MAC_EXECUTE,8,
+OldConstants,Module,DB_SEC_MOD_READDEF,2,
+OldConstants,Module,DB_SEC_MOD_WRITEDEF,65542,
+OldConstants,Module,A_MENU_VER1X,11,
+OldConstants,Module,A_MENU_VER20,20,
+OldConstants,Module,A_FORMATRTF,"""Rich Text Format (*.rtf)""",
+OldConstants,Module,A_FORMATXLS,"""Microsoft Excel (*.xls)""",
+OldConstants,Module,A_FORMATTXT,"""MS-DOS Text (*.txt)""",
+OldConstants,Module,DB_OPEN_TABLE,1,
+OldConstants,Module,DB_OPEN_DYNASET,2,
+OldConstants,Module,DB_OPEN_SNAPSHOT,4,
+OldConstants,Module,DB_DENYWRITE,1,
+OldConstants,Module,DB_DENYREAD,2,
+OldConstants,Module,DB_READONLY,4,
+OldConstants,Module,DB_APPENDONLY,8,
+OldConstants,Module,DB_INCONSISTENT,16,
+OldConstants,Module,DB_CONSISTENT,32,
+OldConstants,Module,DB_SQLPASSTHROUGH,64,
+OldConstants,Module,DB_FAILONERROR,128,
+OldConstants,Module,DB_FORWARDONLY,256,
+OldConstants,Module,DB_OPTIONINIPATH,1,
+OldConstants,Module,DB_FIXEDFIELD,1,
+OldConstants,Module,DB_VARIABLEFIELD,2,
+OldConstants,Module,DB_AUTOINCRFIELD,16,
+OldConstants,Module,DB_UPDATABLEFIELD,32,
+OldConstants,Module,DB_DESCENDING,1,
+OldConstants,Module,DB_BOOLEAN,1,
+OldConstants,Module,DB_BYTE,2,
+OldConstants,Module,DB_INTEGER,3,
+OldConstants,Module,DB_LONG,4,
+OldConstants,Module,DB_CURRENCY,5,
+OldConstants,Module,DB_SINGLE,6,
+OldConstants,Module,DB_DOUBLE,7,
+OldConstants,Module,DB_DATE,8,
+OldConstants,Module,DB_TEXT,10,
+OldConstants,Module,DB_LONGBINARY,11,
+OldConstants,Module,DB_MEMO,12,
+OldConstants,Module,DB_RELATIONUNIQUE,1,
+OldConstants,Module,DB_RELATIONDONTENFORCE,2,
+OldConstants,Module,DB_RELATIONINHERITED,4,
+OldConstants,Module,DB_RELATIONUPDATECASCADE,256,
+OldConstants,Module,DB_RELATIONDELETECASCADE,4096,
+OldConstants,Module,DB_RELATIONLEFT,16777216,
+OldConstants,Module,DB_RELATIONRIGHT,33554432,
+OldConstants,Module,DB_ATTACHEXCLUSIVE,65536,
+OldConstants,Module,DB_ATTACHSAVEPWD,131072,
+OldConstants,Module,DB_SYSTEMOBJECT,-2147483646,
+OldConstants,Module,DB_ATTACHEDTABLE,1073741824,
+OldConstants,Module,DB_ATTACHEDODBC,536870912,
+OldConstants,Module,DB_HIDDENOBJECT,1,
+OldConstants,Module,DB_TABLE,1,
+OldConstants,Module,DB_QUERYDEF,5,
+OldConstants,Module,DB_QSELECT,0,
+OldConstants,Module,DB_QACTION,240,
+OldConstants,Module,DB_QCROSSTAB,16,
+OldConstants,Module,DB_QDELETE,32,
+OldConstants,Module,DB_QUPDATE,48,
+OldConstants,Module,DB_QAPPEND,64,
+OldConstants,Module,DB_QMAKETABLE,80,
+OldConstants,Module,DB_QDDL,96,
+OldConstants,Module,DB_QSQLPASSTHROUGH,112,
+OldConstants,Module,DB_QSETOPERATION,128,
+OldConstants,Module,DB_QSPTBULK,144,
+OldConstants,Module,DB_UNIQUE,1,
+OldConstants,Module,DB_PRIMARY,2,
+OldConstants,Module,DB_PROHIBITNULL,4,
+OldConstants,Module,DB_IGNORENULL,8,
+OldConstants,Module,DB_LANG_ARABIC,""";LANGID=0x0401;CP=1256;COUNTRY=0""",
+OldConstants,Module,DB_LANG_CZECH,""";LANGID=0x0405;CP=1250;COUNTRY=0""",
+OldConstants,Module,DB_LANG_DUTCH,""";LANGID=0x0413;CP=1252;COUNTRY=0""",
+OldConstants,Module,DB_LANG_GENERAL,""";LANGID=0x0409;CP=1252;COUNTRY=0""",
+OldConstants,Module,DB_LANG_GREEK,""";LANGID=0x0408;CP=1253;COUNTRY=0""",
+OldConstants,Module,DB_LANG_HEBREW,""";LANGID=0x040D;CP=1255;COUNTRY=0""",
+OldConstants,Module,DB_LANG_HUNGARIAN,""";LANGID=0x040E;CP=1250;COUNTRY=0""",
+OldConstants,Module,DB_LANG_ICELANDIC,""";LANGID=0x040F;CP=1252;COUNTRY=0""",
+OldConstants,Module,DB_LANG_NORDIC,""";LANGID=0x041D;CP=1252;COUNTRY=0""",
+OldConstants,Module,DB_LANG_NORWDAN,""";LANGID=0x0414;CP=1252;COUNTRY=0""",
+OldConstants,Module,DB_LANG_POLISH,""";LANGID=0x0415;CP=1250;COUNTRY=0""",
+OldConstants,Module,DB_LANG_CYRILLIC,""";LANGID=0x0419;CP=1251;COUNTRY=0""",
+OldConstants,Module,DB_LANG_SPANISH,""";LANGID=0x040A;CP=1252;COUNTRY=0""",
+OldConstants,Module,DB_LANG_SWEDFIN,""";LANGID=0x040B;CP=1252;COUNTRY=0""",
+OldConstants,Module,DB_LANG_TURKISH,""";LANGID=0x041F;CP=1254;COUNTRY=0""",
+OldConstants,Module,DB_VERSION10,1,
+OldConstants,Module,DB_ENCRYPT,2,
+OldConstants,Module,DB_DECRYPT,4,
+OldConstants,Module,DB_VERSION11,8,
+OldConstants,Module,DB_VERSION20,16,
+OldConstants,Module,DB_SORTARABIC,267,
+OldConstants,Module,DB_SORTCYRILLIC,263,
+OldConstants,Module,DB_SORTCZECH,264,
+OldConstants,Module,DB_SORTDUTCH,259,
+OldConstants,Module,DB_SORTGENERAL,256,
+OldConstants,Module,DB_SORTGREEK,269,
+OldConstants,Module,DB_SORTHEBREW,268,
+OldConstants,Module,DB_SORTHUNGARIAN,265,
+OldConstants,Module,DB_SORTICELANDIC,262,
+OldConstants,Module,DB_SORTNORWDAN,261,
+OldConstants,Module,DB_SORTPDXINTL,4096,
+OldConstants,Module,DB_SORTPDXNOR,4098,
+OldConstants,Module,DB_SORTPDXSWE,4097,
+OldConstants,Module,DB_SORTPOLISH,266,
+OldConstants,Module,DB_SORTSPANISH,258,
+OldConstants,Module,DB_SORTSWEDFIN,260,
+OldConstants,Module,DB_SORTTURKISH,270,
+OldConstants,Module,DB_SORTUNDEFINED,-1,
+OldConstants,Module,DB_FREELOCKS,1,
+OldConstants,Module,DB_SEC_NOACCESS,0,
+OldConstants,Module,DB_SEC_FULLACCESS,1048575,
+OldConstants,Module,DB_SEC_DELETE,65536,
+OldConstants,Module,DB_SEC_READSEC,131072,
+OldConstants,Module,DB_SEC_WRITESEC,262144,
+OldConstants,Module,DB_SEC_WRITEOWNER,524288,
+OldConstants,Module,DB_SEC_DBCREATE,1,
+OldConstants,Module,DB_SEC_DBOPEN,2,
+OldConstants,Module,DB_SEC_DBEXCLUSIVE,4,
+OldConstants,Module,DB_SEC_CREATE,1,
+OldConstants,Module,DB_SEC_READDEF,4,
+OldConstants,Module,DB_SEC_WRITEDEF,65548,
+OldConstants,Module,DB_SEC_RETRIEVEDATA,20,
+OldConstants,Module,DB_SEC_INSERTDATA,32,
+OldConstants,Module,DB_SEC_REPLACEDATA,64,
+OldConstants,Module,DB_SEC_DELETEDATA,128,
+ProcKind,Enumeration,Proc,0,
+ProcKind,Enumeration,Let,1,
+ProcKind,Enumeration,Set,2,
+ProcKind,Enumeration,Get,3,
+RefKind,Enumeration,TypeLib,0,
+RefKind,Enumeration,Project,1,

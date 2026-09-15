@@ -21,6 +21,7 @@ SHARED = "shared"
 KEYS = HOSTS + (SHARED,)
 SUFFIXES = ("", "_constants", "_properties")
 CSV_HEADER = ["Object", "Property", "Property split", "Type", "Access"]
+CONSTANTS_CSV_HEADER = ["Owner", "Kind", "Constant", "Value", "Description"]
 ACCESS_CODES = {"R_O", "V", "W_O"}
 
 
@@ -192,6 +193,74 @@ def test_property_csv_is_safe_to_open_in_a_spreadsheet():
         for row in rows(key + "_properties")[1:]:
             for field in row:
                 assert field[:1] not in ("=", "+", "-", "@"), row
+
+
+def test_constants_csv_exists_for_every_application():
+    for key in KEYS:
+        table = rows(key + "_constants")
+        assert list(table[0]) == CONSTANTS_CSV_HEADER
+        assert len(table) > 1
+
+
+def test_constants_csv_matches_the_constants_export():
+    for key in KEYS:
+        table = rows(key + "_constants")
+        doc = export(key + "_constants")
+        assert len(table) - 1 == doc["constant_count"]
+        from_json = [(e["name"], c["name"])
+                     for lib in doc["libraries"] for e in lib["enumerations"]
+                     for c in e["constants"]]
+        assert [(r[0], r[2]) for r in table[1:]] == from_json
+
+
+def test_constants_csv_row_shape():
+    table = rows("excel_constants")
+    csv_format = next(r for r in table
+                      if r[0] == "XlFileFormat" and r[2] == "xlCSV")
+    assert csv_format == ("XlFileFormat", "Enumeration", "xlCSV", "6", "CSV")
+    # Negative values stay usable as numbers.
+    assert any(r[3] == "-4104" for r in table[1:])
+    assert {r[1] for r in table[1:]} <= {"Enumeration", "Module"}
+
+
+def test_constants_csv_renders_values_as_vb_literals():
+    table = rows("shared_constants")
+    by_name = {r[2]: r[3] for r in table[1:]}
+    # A constant whose value *is* a control character must not put raw bytes
+    # in the file.
+    assert by_name["vbCrLf"] == "Chr(13) & Chr(10)"
+    assert by_name["vbTab"] == "Chr(9)"
+    assert by_name["vbNullChar"] == "Chr(0)"
+    assert by_name["vbNullString"] == '""'
+    quoted = rows("access_constants")
+    assert any(r[3] == '"PDF Format (*.pdf)"' for r in quoted[1:])
+
+
+def test_constants_csv_holds_no_control_characters():
+    for key in KEYS:
+        for row in rows(key + "_constants")[1:]:
+            for field in row:
+                assert all(ch == " " or ch.isprintable() for ch in field), row
+
+
+def test_constants_csv_is_safe_to_open_in_a_spreadsheet():
+    # As for the property table, but enum values are legitimately negative,
+    # so a leading "-" is only allowed when the field really is a number.
+    for key in KEYS:
+        for row in rows(key + "_constants")[1:]:
+            for field in row:
+                assert field[:1] not in ("=", "+", "@"), row
+                if field[:1] == "-":
+                    int(field)
+
+
+def test_formula_leading_text_is_kept_as_text():
+    # wdFieldExpression is described as "= (Formula) field.", which a
+    # spreadsheet would evaluate. It survives with a leading space.
+    table = rows("word_constants")
+    expression = next(r for r in table[1:] if r[2] == "wdFieldExpression")
+    assert expression[4] == " = (Formula) field."
+    assert expression[4].strip() == "= (Formula) field."
 
 
 def test_markdown_covers_every_type():

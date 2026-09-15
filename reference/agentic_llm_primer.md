@@ -241,7 +241,7 @@ libraries every host can reference. Each set is three pairs of files:
 | File                                     | Contents                      |
 | ---------------------------------------- | ----------------------------- |
 | `<app>.json` / `.md`                     | every type of the application |
-| `<app>_constants.json` / `.md`           | every enumeration and module constant |
+| `<app>_constants.json` / `.md` / `.csv`  | every enumeration and module constant |
 | `<app>_properties.json` / `.md` / `.csv` | every property of every object |
 
 Use these when you want a whole object model in one read; use the per-type files
@@ -277,16 +277,31 @@ The properties export (`schema: "pyvbareference/properties/1"`) keeps only types
 that have at least one property, each with `property_count` and the source
 `properties` array.
 
-`<app>_properties.csv` is the same property list as a flat table, for loading
-into a spreadsheet or a dataframe. Columns are `Object`, `Property`,
-`Property split` (the name split at capitals, for reading rather than calling),
-`Type`, and `Access` - `R_O` read-only, `V` settable, `W_O` write-only.
+Both lists are also flat CSV tables, for loading into a spreadsheet or a
+dataframe. `<app>_properties.csv` is `Object`, `Property`, `Property split`
+(the name split at capitals, for reading rather than calling), `Type`, and
+`Access` - `R_O` read-only, `V` settable, `W_O` write-only.
 
 ```
 Object,Property,Property split,Type,Access
 Application,ActiveCell,Active Cell,Range,R_O
 Worksheet,Name,Name,String,V
 ```
+
+`<app>_constants.csv` is `Owner`, `Kind` (`Enumeration` or `Module`),
+`Constant`, `Value`, and `Description`. The value is written as a VB6 literal:
+bare numbers, quoted strings, and `Chr()` for a value that is itself a control
+character. Parse the number back out of `Value` if you need it typed; the JSON
+export carries it as a native JSON value.
+
+```
+Owner,Kind,Constant,Value,Description
+XlFileFormat,Enumeration,xlCSV,6,CSV
+Constants,Module,vbCrLf,Chr(13) & Chr(10),
+```
+
+A field that would otherwise open with `=`, `+` or `@` carries one leading
+space so a spreadsheet keeps it as text; strip it before comparing strings.
 
 ```python
 import json

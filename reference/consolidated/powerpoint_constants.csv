@@ -1,0 +1,1481 @@
+Owner,Kind,Constant,Value,Description
+MsoAnimAccumulate,Enumeration,msoAnimAccumulateNone,1,Does not accumulate.
+MsoAnimAccumulate,Enumeration,msoAnimAccumulateAlways,2,Accumulates with other animation behaviors.
+MsoAnimAdditive,Enumeration,msoAnimAdditiveAddBase,1,Uses the animation behavior of the base animations.
+MsoAnimAdditive,Enumeration,msoAnimAdditiveAddSum,2,Adds together the animation behavior of multiple animations.
+MsoAnimAfterEffect,Enumeration,msoAnimAfterEffectMixed,-1,Mixed
+MsoAnimAfterEffect,Enumeration,msoAnimAfterEffectNone,0,Unchanged
+MsoAnimAfterEffect,Enumeration,msoAnimAfterEffectDim,1,Dimmed
+MsoAnimAfterEffect,Enumeration,msoAnimAfterEffectHide,2,Hidden
+MsoAnimAfterEffect,Enumeration,msoAnimAfterEffectHideOnNextClick,3,Hidden on the next mouse click
+MsoAnimateByLevel,Enumeration,msoAnimateLevelMixed,-1,Animate level mixed
+MsoAnimateByLevel,Enumeration,msoAnimateLevelNone,0,Animate level none
+MsoAnimateByLevel,Enumeration,msoAnimateTextByAllLevels,1,Animate text by all levels
+MsoAnimateByLevel,Enumeration,msoAnimateTextByFirstLevel,2,Animate text by first level
+MsoAnimateByLevel,Enumeration,msoAnimateTextBySecondLevel,3,Animate text by second level
+MsoAnimateByLevel,Enumeration,msoAnimateTextByThirdLevel,4,Animate text by third level
+MsoAnimateByLevel,Enumeration,msoAnimateTextByFourthLevel,5,Animate text by fourth level
+MsoAnimateByLevel,Enumeration,msoAnimateTextByFifthLevel,6,Animate text by fifth level
+MsoAnimateByLevel,Enumeration,msoAnimateChartAllAtOnce,7,Animate chart all at once
+MsoAnimateByLevel,Enumeration,msoAnimateChartByCategory,8,Animate chart by category
+MsoAnimateByLevel,Enumeration,msoAnimateChartByCategoryElements,9,Animate chart by category elements
+MsoAnimateByLevel,Enumeration,msoAnimateChartBySeries,10,Animate chart by series
+MsoAnimateByLevel,Enumeration,msoAnimateChartBySeriesElements,11,Animate chart by series elements
+MsoAnimateByLevel,Enumeration,msoAnimateDiagramAllAtOnce,12,Animate diagram all at once
+MsoAnimateByLevel,Enumeration,msoAnimateDiagramDepthByNode,13,Animate diagram depth by node
+MsoAnimateByLevel,Enumeration,msoAnimateDiagramDepthByBranch,14,Animate diagram depth by branch
+MsoAnimateByLevel,Enumeration,msoAnimateDiagramBreadthByNode,15,Animate diagram breadth by node
+MsoAnimateByLevel,Enumeration,msoAnimateDiagramBreadthByLevel,16,Animate diagram breadth by level
+MsoAnimateByLevel,Enumeration,msoAnimateDiagramClockwise,17,Animate diagram clockwise
+MsoAnimateByLevel,Enumeration,msoAnimateDiagramClockwiseIn,18,Animate diagram clockwise in
+MsoAnimateByLevel,Enumeration,msoAnimateDiagramClockwiseOut,19,Animate diagram clockwise out
+MsoAnimateByLevel,Enumeration,msoAnimateDiagramCounterClockwise,20,Animate diagram counter-clockwise
+MsoAnimateByLevel,Enumeration,msoAnimateDiagramCounterClockwiseIn,21,Animate diagram counter-clockwise in
+MsoAnimateByLevel,Enumeration,msoAnimateDiagramCounterClockwiseOut,22,Animate diagram counter-clockwise out
+MsoAnimateByLevel,Enumeration,msoAnimateDiagramInByRing,23,Animate diagram in by ring
+MsoAnimateByLevel,Enumeration,msoAnimateDiagramOutByRing,24,Animate diagram out by ring
+MsoAnimateByLevel,Enumeration,msoAnimateDiagramUp,25,Animate diagram up
+MsoAnimateByLevel,Enumeration,msoAnimateDiagramDown,26,Animate diagram down
+MsoAnimCommandType,Enumeration,msoAnimCommandTypeEvent,0,Event
+MsoAnimCommandType,Enumeration,msoAnimCommandTypeCall,1,Call
+MsoAnimCommandType,Enumeration,msoAnimCommandTypeVerb,2,Verb
+MsoAnimDirection,Enumeration,msoAnimDirectionNone,0,None
+MsoAnimDirection,Enumeration,msoAnimDirectionUp,1,Moves Up
+MsoAnimDirection,Enumeration,msoAnimDirectionRight,2,Moves to the Right
+MsoAnimDirection,Enumeration,msoAnimDirectionDown,3,Down
+MsoAnimDirection,Enumeration,msoAnimDirectionLeft,4,Appears from Left
+MsoAnimDirection,Enumeration,msoAnimDirectionOrdinalMask,5,Ordinal Mask
+MsoAnimDirection,Enumeration,msoAnimDirectionUpLeft,6,Moves up to the Left
+MsoAnimDirection,Enumeration,msoAnimDirectionUpRight,7,Moves up to the Right
+MsoAnimDirection,Enumeration,msoAnimDirectionDownRight,8,Down Right
+MsoAnimDirection,Enumeration,msoAnimDirectionDownLeft,9,Down Left
+MsoAnimDirection,Enumeration,msoAnimDirectionTop,10,Moves to the Top
+MsoAnimDirection,Enumeration,msoAnimDirectionBottom,11,Bottom
+MsoAnimDirection,Enumeration,msoAnimDirectionTopLeft,12,Moves to the Top Left
+MsoAnimDirection,Enumeration,msoAnimDirectionTopRight,13,Moves to the Top Right
+MsoAnimDirection,Enumeration,msoAnimDirectionBottomRight,14,Bottom Right
+MsoAnimDirection,Enumeration,msoAnimDirectionBottomLeft,15,Bottom Left
+MsoAnimDirection,Enumeration,msoAnimDirectionHorizontal,16,Horizontal
+MsoAnimDirection,Enumeration,msoAnimDirectionVertical,17,Moves Vertically
+MsoAnimDirection,Enumeration,msoAnimDirectionAcross,18,Across
+MsoAnimDirection,Enumeration,msoAnimDirectionIn,19,In
+MsoAnimDirection,Enumeration,msoAnimDirectionOut,20,Out
+MsoAnimDirection,Enumeration,msoAnimDirectionClockwise,21,Clockwise
+MsoAnimDirection,Enumeration,msoAnimDirectionCounterclockwise,22,Counterclockwise
+MsoAnimDirection,Enumeration,msoAnimDirectionHorizontalIn,23,Horizontal In
+MsoAnimDirection,Enumeration,msoAnimDirectionHorizontalOut,24,Horizontal Out
+MsoAnimDirection,Enumeration,msoAnimDirectionVerticalIn,25,Moves Vertically In
+MsoAnimDirection,Enumeration,msoAnimDirectionVerticalOut,26,Moves Vertically Out
+MsoAnimDirection,Enumeration,msoAnimDirectionSlightly,27,Slightly
+MsoAnimDirection,Enumeration,msoAnimDirectionCenter,28,Center
+MsoAnimDirection,Enumeration,msoAnimDirectionInSlightly,29,In Slightly
+MsoAnimDirection,Enumeration,msoAnimDirectionInCenter,30,In Center
+MsoAnimDirection,Enumeration,msoAnimDirectionInBottom,31,In Bottom
+MsoAnimDirection,Enumeration,msoAnimDirectionOutSlightly,32,Slightly Out
+MsoAnimDirection,Enumeration,msoAnimDirectionOutCenter,33,Moves out from the Center
+MsoAnimDirection,Enumeration,msoAnimDirectionOutBottom,34,Moves out from the Bottom
+MsoAnimDirection,Enumeration,msoAnimDirectionFontBold,35,Bold style is used
+MsoAnimDirection,Enumeration,msoAnimDirectionFontItalic,36,Italic style is used
+MsoAnimDirection,Enumeration,msoAnimDirectionFontUnderline,37,Underlined style is used
+MsoAnimDirection,Enumeration,msoAnimDirectionFontStrikethrough,38,Strikethrough style is used
+MsoAnimDirection,Enumeration,msoAnimDirectionFontShadow,39,Shadow style is used
+MsoAnimDirection,Enumeration,msoAnimDirectionFontAllCaps,40,Text is all caps
+MsoAnimDirection,Enumeration,msoAnimDirectionInstant,41,Appears Instantly
+MsoAnimDirection,Enumeration,msoAnimDirectionGradual,42,Gradual
+MsoAnimDirection,Enumeration,msoAnimDirectionCycleClockwise,43,Cycle Clockwise
+MsoAnimDirection,Enumeration,msoAnimDirectionCycleCounterclockwise,44,Cycle Counterclockwise
+MsoAnimEffect,Enumeration,msoAnimEffectCustom,0,Custom Effect
+MsoAnimEffect,Enumeration,msoAnimEffectAppear,1,Appears
+MsoAnimEffect,Enumeration,msoAnimEffectFly,2,Fly Effect
+MsoAnimEffect,Enumeration,msoAnimEffectBlinds,3,Blinds
+MsoAnimEffect,Enumeration,msoAnimEffectBox,4,Box
+MsoAnimEffect,Enumeration,msoAnimEffectCheckerboard,5,Checkerboard Effect
+MsoAnimEffect,Enumeration,msoAnimEffectCircle,6,Circle
+MsoAnimEffect,Enumeration,msoAnimEffectCrawl,7,Crawl Effect
+MsoAnimEffect,Enumeration,msoAnimEffectDiamond,8,Diamond Effect
+MsoAnimEffect,Enumeration,msoAnimEffectDissolve,9,Dissolve Effect
+MsoAnimEffect,Enumeration,msoAnimEffectFade,10,Fade Effect
+MsoAnimEffect,Enumeration,msoAnimEffectFlashOnce,11,Flash Once
+MsoAnimEffect,Enumeration,msoAnimEffectPeek,12,Peek effect
+MsoAnimEffect,Enumeration,msoAnimEffectPlus,13,Plus effect
+MsoAnimEffect,Enumeration,msoAnimEffectRandomBars,14,Random Bars effect
+MsoAnimEffect,Enumeration,msoAnimEffectSpiral,15,Spiral effect
+MsoAnimEffect,Enumeration,msoAnimEffectSplit,16,Split effect
+MsoAnimEffect,Enumeration,msoAnimEffectStretch,17,Stretch effect
+MsoAnimEffect,Enumeration,msoAnimEffectStrips,18,Strips effect
+MsoAnimEffect,Enumeration,msoAnimEffectSwivel,19,Swivel effect
+MsoAnimEffect,Enumeration,msoAnimEffectWedge,20,Wedge effect
+MsoAnimEffect,Enumeration,msoAnimEffectWheel,21,Wheel effect
+MsoAnimEffect,Enumeration,msoAnimEffectWipe,22,Wipe effect
+MsoAnimEffect,Enumeration,msoAnimEffectZoom,23,Zoom effect
+MsoAnimEffect,Enumeration,msoAnimEffectRandomEffects,24,Random effects
+MsoAnimEffect,Enumeration,msoAnimEffectBoomerang,25,Boomerangs
+MsoAnimEffect,Enumeration,msoAnimEffectBounce,26,Bounce
+MsoAnimEffect,Enumeration,msoAnimEffectColorReveal,27,Color Revealed
+MsoAnimEffect,Enumeration,msoAnimEffectCredits,28,Credits Effect
+MsoAnimEffect,Enumeration,msoAnimEffectEaseIn,29,EaseIn Effect
+MsoAnimEffect,Enumeration,msoAnimEffectFloat,30,Float Effect
+MsoAnimEffect,Enumeration,msoAnimEffectGrowAndTurn,31,Grow and Turn Effect
+MsoAnimEffect,Enumeration,msoAnimEffectLightSpeed,32,Light Speed Effect
+MsoAnimEffect,Enumeration,msoAnimEffectPinwheel,33,Pinwel effect
+MsoAnimEffect,Enumeration,msoAnimEffectRiseUp,34,Rise Up effect
+MsoAnimEffect,Enumeration,msoAnimEffectSwish,35,Swish effect
+MsoAnimEffect,Enumeration,msoAnimEffectThinLine,36,Thin line effect
+MsoAnimEffect,Enumeration,msoAnimEffectUnfold,37,Unfold effect
+MsoAnimEffect,Enumeration,msoAnimEffectWhip,38,Whip effect
+MsoAnimEffect,Enumeration,msoAnimEffectAscend,39,Ascends
+MsoAnimEffect,Enumeration,msoAnimEffectCenterRevolve,40,Center Revolves
+MsoAnimEffect,Enumeration,msoAnimEffectFadedSwivel,41,Faded Swivel Effect
+MsoAnimEffect,Enumeration,msoAnimEffectDescend,42,Descend Effect
+MsoAnimEffect,Enumeration,msoAnimEffectSling,43,Sling effect
+MsoAnimEffect,Enumeration,msoAnimEffectSpinner,44,Spinner effect
+MsoAnimEffect,Enumeration,msoAnimEffectStretchy,45,Stretchy effect
+MsoAnimEffect,Enumeration,msoAnimEffectZip,46,Zip effect
+MsoAnimEffect,Enumeration,msoAnimEffectArcUp,47,Arcs Up
+MsoAnimEffect,Enumeration,msoAnimEffectFadedZoom,48,Faded Zoom Effect
+MsoAnimEffect,Enumeration,msoAnimEffectGlide,49,Glide Effect
+MsoAnimEffect,Enumeration,msoAnimEffectExpand,50,Expand Effect
+MsoAnimEffect,Enumeration,msoAnimEffectFlip,51,Flip Effect
+MsoAnimEffect,Enumeration,msoAnimEffectShimmer,52,Shimmer effect
+MsoAnimEffect,Enumeration,msoAnimEffectFold,53,Fold Effect
+MsoAnimEffect,Enumeration,msoAnimEffectChangeFillColor,54,FillColor Changes
+MsoAnimEffect,Enumeration,msoAnimEffectChangeFont,55,Font Changes
+MsoAnimEffect,Enumeration,msoAnimEffectChangeFontColor,56,Font Color Changes
+MsoAnimEffect,Enumeration,msoAnimEffectChangeFontSize,57,Font Size Changes
+MsoAnimEffect,Enumeration,msoAnimEffectChangeFontStyle,58,Font Style Changes
+MsoAnimEffect,Enumeration,msoAnimEffectGrowShrink,59,Grow and Shrink Effect
+MsoAnimEffect,Enumeration,msoAnimEffectChangeLineColor,60,Line color Changes
+MsoAnimEffect,Enumeration,msoAnimEffectSpin,61,Spin effect
+MsoAnimEffect,Enumeration,msoAnimEffectTransparency,62,Transparency effect
+MsoAnimEffect,Enumeration,msoAnimEffectBoldFlash,63,Bold Flash
+MsoAnimEffect,Enumeration,msoAnimEffectBlast,64,Blasts
+MsoAnimEffect,Enumeration,msoAnimEffectBoldReveal,65,Bold Reveals
+MsoAnimEffect,Enumeration,msoAnimEffectBrushOnColor,66,Brush on Color
+MsoAnimEffect,Enumeration,msoAnimEffectBrushOnUnderline,67,Brush on Underline
+MsoAnimEffect,Enumeration,msoAnimEffectColorBlend,68,Color Bleeds
+MsoAnimEffect,Enumeration,msoAnimEffectColorWave,69,Color Wave
+MsoAnimEffect,Enumeration,msoAnimEffectComplementaryColor,70,Complementary Color
+MsoAnimEffect,Enumeration,msoAnimEffectComplementaryColor2,71,Complementary Color2
+MsoAnimEffect,Enumeration,msoAnimEffectContrastingColor,72,Contrasting Color
+MsoAnimEffect,Enumeration,msoAnimEffectDarken,73,Darken Effect
+MsoAnimEffect,Enumeration,msoAnimEffectDesaturate,74,Desaturate Effect
+MsoAnimEffect,Enumeration,msoAnimEffectFlashBulb,75,Flash Bulb Effect
+MsoAnimEffect,Enumeration,msoAnimEffectFlicker,76,Flicker Effect
+MsoAnimEffect,Enumeration,msoAnimEffectGrowWithColor,77,Grow with Color Effect
+MsoAnimEffect,Enumeration,msoAnimEffectLighten,78,Lighten Effect
+MsoAnimEffect,Enumeration,msoAnimEffectStyleEmphasis,79,Emphasis effect
+MsoAnimEffect,Enumeration,msoAnimEffectTeeter,80,Teeter effect
+MsoAnimEffect,Enumeration,msoAnimEffectVerticalGrow,81,Vertical Grow effect
+MsoAnimEffect,Enumeration,msoAnimEffectWave,82,Wave effect
+MsoAnimEffect,Enumeration,msoAnimEffectMediaPlay,83,Media Play Effect
+MsoAnimEffect,Enumeration,msoAnimEffectMediaPause,84,Media Pause Effect
+MsoAnimEffect,Enumeration,msoAnimEffectMediaStop,85,Media Stop Effect
+MsoAnimEffect,Enumeration,msoAnimEffectPathCircle,86,Moves on a Circular Path
+MsoAnimEffect,Enumeration,msoAnimEffectPathRightTriangle,87,Moves on a RightTriangle path
+MsoAnimEffect,Enumeration,msoAnimEffectPathDiamond,88,Moves on a Diamond path
+MsoAnimEffect,Enumeration,msoAnimEffectPathHexagon,89,Moves on a Hexagon path
+MsoAnimEffect,Enumeration,msoAnimEffectPath5PointStar,90,Path5PointStar Effect
+MsoAnimEffect,Enumeration,msoAnimEffectPathCrescentMoon,91,Moves on a Crescent Moon path
+MsoAnimEffect,Enumeration,msoAnimEffectPathSquare,92,Moves on a Square path
+MsoAnimEffect,Enumeration,msoAnimEffectPathTrapezoid,93,Moves on a Trapezoid path
+MsoAnimEffect,Enumeration,msoAnimEffectPathHeart,94,Moves on a Heart shape path
+MsoAnimEffect,Enumeration,msoAnimEffectPathOctagon,95,Moves on a Octagon path
+MsoAnimEffect,Enumeration,msoAnimEffectPath6PointStar,96,Path6PointStar Effect
+MsoAnimEffect,Enumeration,msoAnimEffectPathFootball,97,Moves on a Football path
+MsoAnimEffect,Enumeration,msoAnimEffectPathEqualTriangle,98,Moves on a equilateral triangle path
+MsoAnimEffect,Enumeration,msoAnimEffectPathParallelogram,99,Moves on a Parallelogram path
+MsoAnimEffect,Enumeration,msoAnimEffectPathPentagon,100,Moves on a Pentagon path
+MsoAnimEffect,Enumeration,msoAnimEffectPath4PointStar,101,Path4PointStar Effect
+MsoAnimEffect,Enumeration,msoAnimEffectPath8PointStar,102,Path8PointStar Effect
+MsoAnimEffect,Enumeration,msoAnimEffectPathTeardrop,103,Moves on a Teardrop path
+MsoAnimEffect,Enumeration,msoAnimEffectPathPointyStar,104,Moves on a PointyStar path
+MsoAnimEffect,Enumeration,msoAnimEffectPathCurvedSquare,105,Moves on a CurvedSquare path
+MsoAnimEffect,Enumeration,msoAnimEffectPathCurvedX,106,Moves on a Curved X path
+MsoAnimEffect,Enumeration,msoAnimEffectPathVerticalFigure8,107,Moves on a VerticalFigure8 path
+MsoAnimEffect,Enumeration,msoAnimEffectPathCurvyStar,108,Moves on a Curvy Star path
+MsoAnimEffect,Enumeration,msoAnimEffectPathLoopdeLoop,109,Moves on a LoopdeLoop path
+MsoAnimEffect,Enumeration,msoAnimEffectPathBuzzsaw,110,Moves on the Buzzsaw path
+MsoAnimEffect,Enumeration,msoAnimEffectPathHorizontalFigure8,111,Moves on a Horizontal Figure8 path
+MsoAnimEffect,Enumeration,msoAnimEffectPathPeanut,112,Moves on a Peanut path
+MsoAnimEffect,Enumeration,msoAnimEffectPathFigure8Four,113,Moves on a Figure8Four path
+MsoAnimEffect,Enumeration,msoAnimEffectPathNeutron,114,Moves on a Neutron path
+MsoAnimEffect,Enumeration,msoAnimEffectPathSwoosh,115,Moves on a Swoosh path
+MsoAnimEffect,Enumeration,msoAnimEffectPathBean,116,Moves on the Bean path
+MsoAnimEffect,Enumeration,msoAnimEffectPathPlus,117,Moves on a Plus path
+MsoAnimEffect,Enumeration,msoAnimEffectPathInvertedTriangle,118,Moves on a Inverted Triangle path
+MsoAnimEffect,Enumeration,msoAnimEffectPathInvertedSquare,119,Moves on a Inverted Square path
+MsoAnimEffect,Enumeration,msoAnimEffectPathLeft,120,Moves on a Left path
+MsoAnimEffect,Enumeration,msoAnimEffectPathTurnRight,121,Moves on a TurnRight path
+MsoAnimEffect,Enumeration,msoAnimEffectPathArcDown,122,Moves on the Arc Down path
+MsoAnimEffect,Enumeration,msoAnimEffectPathZigzag,123,Moves on a Zigzag path
+MsoAnimEffect,Enumeration,msoAnimEffectPathSCurve2,124,Moves on a SCurve2 path
+MsoAnimEffect,Enumeration,msoAnimEffectPathSineWave,125,Moves on a SineWave path
+MsoAnimEffect,Enumeration,msoAnimEffectPathBounceLeft,126,Moves on the Bounce Left path
+MsoAnimEffect,Enumeration,msoAnimEffectPathDown,127,Moves on a Down path
+MsoAnimEffect,Enumeration,msoAnimEffectPathTurnUp,128,Moves on a TurnUp path
+MsoAnimEffect,Enumeration,msoAnimEffectPathArcUp,129,Moves on the Arc Up path
+MsoAnimEffect,Enumeration,msoAnimEffectPathHeartbeat,130,Moves on a Heart Beat path
+MsoAnimEffect,Enumeration,msoAnimEffectPathSpiralRight,131,Moves on a SpiralRight path
+MsoAnimEffect,Enumeration,msoAnimEffectPathWave,132,Moves on a Wave path
+MsoAnimEffect,Enumeration,msoAnimEffectPathCurvyLeft,133,Moves on a Curvy Left path
+MsoAnimEffect,Enumeration,msoAnimEffectPathDiagonalDownRight,134,Moves on a Diagonal Down-Right path
+MsoAnimEffect,Enumeration,msoAnimEffectPathTurnDown,135,Moves on a TurnDown path
+MsoAnimEffect,Enumeration,msoAnimEffectPathArcLeft,136,Moves on the Arc Left path
+MsoAnimEffect,Enumeration,msoAnimEffectPathFunnel,137,Moves on a Funnel path
+MsoAnimEffect,Enumeration,msoAnimEffectPathSpring,138,Moves on a Spring path
+MsoAnimEffect,Enumeration,msoAnimEffectPathBounceRight,139,Moves on the Bounce Right path
+MsoAnimEffect,Enumeration,msoAnimEffectPathSpiralLeft,140,Moves on a SpiralLeft path
+MsoAnimEffect,Enumeration,msoAnimEffectPathDiagonalUpRight,141,Moves on a Diagonal Up-Right path
+MsoAnimEffect,Enumeration,msoAnimEffectPathTurnUpRight,142,Moves on a TurnUpRight path
+MsoAnimEffect,Enumeration,msoAnimEffectPathArcRight,143,Moves on the Arc Right Path
+MsoAnimEffect,Enumeration,msoAnimEffectPathSCurve1,144,Moves on a SCurve1 path
+MsoAnimEffect,Enumeration,msoAnimEffectPathDecayingWave,145,Moves on a Decaying Wave path
+MsoAnimEffect,Enumeration,msoAnimEffectPathCurvyRight,146,Moves on a Curvy Right path
+MsoAnimEffect,Enumeration,msoAnimEffectPathStairsDown,147,Moves on a StairsDown path
+MsoAnimEffect,Enumeration,msoAnimEffectPathUp,148,Moves on an Up path
+MsoAnimEffect,Enumeration,msoAnimEffectPathRight,149,Moves on a Right path
+MsoAnimEffect,Enumeration,msoAnimEffectMediaPlayFromBookmark,150,
+MsoAnimEffect,Enumeration,msoAnimEffect3DArrive,151,
+MsoAnimEffect,Enumeration,msoAnimEffect3DTurntable,152,
+MsoAnimEffect,Enumeration,msoAnimEffect3DSwing,153,
+MsoAnimEffect,Enumeration,msoAnimEffect3DJumpAndTurn,154,
+MsoAnimEffectAfter,Enumeration,msoAnimEffectAfterFreeze,1,After freeze.
+MsoAnimEffectAfter,Enumeration,msoAnimEffectAfterRemove,2,After remove.
+MsoAnimEffectAfter,Enumeration,msoAnimEffectAfterHold,3,After hold.
+MsoAnimEffectAfter,Enumeration,msoAnimEffectAfterTransition,4,After transition.
+MsoAnimEffectRestart,Enumeration,msoAnimEffectRestartAlways,1,Always restarts.
+MsoAnimEffectRestart,Enumeration,msoAnimEffectRestartWhenOff,2,Restarts when animation is off.
+MsoAnimEffectRestart,Enumeration,msoAnimEffectRestartNever,3,Never restarts.
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeNone,0,None
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeInVertical,1,In Vertical
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeOutVertical,2,Out Vertical
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeInHorizontal,3,In Horizontal
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeOutHorizontal,4,Out Horizontal
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeHorizontal,5,Horizontal
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeVertical,6,Vertical
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeIn,7,In
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeOut,8,Out
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeAcross,9,Across
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeFromLeft,10,From Left
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeFromRight,11,From Right
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeFromTop,12,From Top
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeFromBottom,13,From Bottom
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeDownLeft,14,Left
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeUpLeft,15,Up Left
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeDownRight,16,Right
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeUpRight,17,Up Right
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeSpokes1,18,Spokes 1
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeSpokes2,19,Spokes 2
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeSpokes3,20,Spokes 3
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeSpokes4,21,Spokes 4
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeSpokes8,22,Spokes 8
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeLeft,23,Left
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeRight,24,Right
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeDown,25,Down
+MsoAnimFilterEffectSubtype,Enumeration,msoAnimFilterEffectSubtypeUp,26,Up
+MsoAnimFilterEffectType,Enumeration,msoAnimFilterEffectTypeNone,0,No effect
+MsoAnimFilterEffectType,Enumeration,msoAnimFilterEffectTypeBarn,1,Barn
+MsoAnimFilterEffectType,Enumeration,msoAnimFilterEffectTypeBlinds,2,Blinds
+MsoAnimFilterEffectType,Enumeration,msoAnimFilterEffectTypeBox,3,Box
+MsoAnimFilterEffectType,Enumeration,msoAnimFilterEffectTypeCheckerboard,4,Checkerboard
+MsoAnimFilterEffectType,Enumeration,msoAnimFilterEffectTypeCircle,5,Circle
+MsoAnimFilterEffectType,Enumeration,msoAnimFilterEffectTypeDiamond,6,Diamond
+MsoAnimFilterEffectType,Enumeration,msoAnimFilterEffectTypeDissolve,7,Dissolve
+MsoAnimFilterEffectType,Enumeration,msoAnimFilterEffectTypeFade,8,Fade
+MsoAnimFilterEffectType,Enumeration,msoAnimFilterEffectTypeImage,9,Image
+MsoAnimFilterEffectType,Enumeration,msoAnimFilterEffectTypePixelate,10,Pixelate
+MsoAnimFilterEffectType,Enumeration,msoAnimFilterEffectTypePlus,11,Plus
+MsoAnimFilterEffectType,Enumeration,msoAnimFilterEffectTypeRandomBar,12,Random bars
+MsoAnimFilterEffectType,Enumeration,msoAnimFilterEffectTypeSlide,13,Slide
+MsoAnimFilterEffectType,Enumeration,msoAnimFilterEffectTypeStretch,14,Stretch
+MsoAnimFilterEffectType,Enumeration,msoAnimFilterEffectTypeStrips,15,Strips
+MsoAnimFilterEffectType,Enumeration,msoAnimFilterEffectTypeWedge,16,Wedge
+MsoAnimFilterEffectType,Enumeration,msoAnimFilterEffectTypeWheel,17,Wheel
+MsoAnimFilterEffectType,Enumeration,msoAnimFilterEffectTypeWipe,18,Wipe
+MsoAnimProperty,Enumeration,msoAnimNone,0,None
+MsoAnimProperty,Enumeration,msoAnimX,1,X coordinate
+MsoAnimProperty,Enumeration,msoAnimY,2,Y coordinate
+MsoAnimProperty,Enumeration,msoAnimWidth,3,Width
+MsoAnimProperty,Enumeration,msoAnimHeight,4,Height
+MsoAnimProperty,Enumeration,msoAnimOpacity,5,Opacity
+MsoAnimProperty,Enumeration,msoAnimRotation,6,Rotation
+MsoAnimProperty,Enumeration,msoAnimColor,7,Color
+MsoAnimProperty,Enumeration,msoAnimVisibility,8,Visibility
+MsoAnimProperty,Enumeration,msoAnimTextFontBold,100,Text font bold
+MsoAnimProperty,Enumeration,msoAnimTextFontColor,101,Text font color
+MsoAnimProperty,Enumeration,msoAnimTextFontEmboss,102,Text font emboss
+MsoAnimProperty,Enumeration,msoAnimTextFontItalic,103,Text font italic
+MsoAnimProperty,Enumeration,msoAnimTextFontName,104,Text font name
+MsoAnimProperty,Enumeration,msoAnimTextFontShadow,105,Text font shadow
+MsoAnimProperty,Enumeration,msoAnimTextFontSize,106,Text font size
+MsoAnimProperty,Enumeration,msoAnimTextFontSubscript,107,Text font subscript
+MsoAnimProperty,Enumeration,msoAnimTextFontSuperscript,108,Text font superscript
+MsoAnimProperty,Enumeration,msoAnimTextFontUnderline,109,Text font underline
+MsoAnimProperty,Enumeration,msoAnimTextFontStrikeThrough,110,Text font strikethrough
+MsoAnimProperty,Enumeration,msoAnimTextBulletCharacter,111,Text bullet character
+MsoAnimProperty,Enumeration,msoAnimTextBulletFontName,112,Text bullet fontname
+MsoAnimProperty,Enumeration,msoAnimTextBulletNumber,113,Text bullet number
+MsoAnimProperty,Enumeration,msoAnimTextBulletColor,114,Text bullet color
+MsoAnimProperty,Enumeration,msoAnimTextBulletRelativeSize,115,Relative size of text bullet
+MsoAnimProperty,Enumeration,msoAnimTextBulletStyle,116,Text bullet style
+MsoAnimProperty,Enumeration,msoAnimTextBulletType,117,Text bullet type
+MsoAnimProperty,Enumeration,msoAnimShapePictureContrast,1000,Contrast of the picture
+MsoAnimProperty,Enumeration,msoAnimShapePictureBrightness,1001,Brightness of the picture
+MsoAnimProperty,Enumeration,msoAnimShapePictureGamma,1002,Gamma properties of the picture
+MsoAnimProperty,Enumeration,msoAnimShapePictureGrayscale,1003,Grayscale properties of the picture
+MsoAnimProperty,Enumeration,msoAnimShapeFillOn,1004,Shape fill on
+MsoAnimProperty,Enumeration,msoAnimShapeFillColor,1005,Shape filled with color
+MsoAnimProperty,Enumeration,msoAnimShapeFillOpacity,1006,Shape fill opacity
+MsoAnimProperty,Enumeration,msoAnimShapeFillBackColor,1007,Shape filled with back color
+MsoAnimProperty,Enumeration,msoAnimShapeLineOn,1008,Shape line on
+MsoAnimProperty,Enumeration,msoAnimShapeLineColor,1009,Colored line
+MsoAnimProperty,Enumeration,msoAnimShapeShadowOn,1010,Shadow on
+MsoAnimProperty,Enumeration,msoAnimShapeShadowType,1011,Type of shadow
+MsoAnimProperty,Enumeration,msoAnimShapeShadowColor,1012,Shadow properties of the picture
+MsoAnimProperty,Enumeration,msoAnimShapeShadowOpacity,1013,Opacity of the shape's shadow
+MsoAnimProperty,Enumeration,msoAnimShapeShadowOffsetX,1014,Shadow Offset X
+MsoAnimProperty,Enumeration,msoAnimShapeShadowOffsetY,1015,ShadowOffset Y
+MsoAnimTextUnitEffect,Enumeration,msoAnimTextUnitEffectMixed,-1,Mixed effect.
+MsoAnimTextUnitEffect,Enumeration,msoAnimTextUnitEffectByParagraph,0,By paragraph.
+MsoAnimTextUnitEffect,Enumeration,msoAnimTextUnitEffectByCharacter,1,By character.
+MsoAnimTextUnitEffect,Enumeration,msoAnimTextUnitEffectByWord,2,By word.
+MsoAnimTriggerType,Enumeration,msoAnimTriggerMixed,-1,Mixed actions.
+MsoAnimTriggerType,Enumeration,msoAnimTriggerNone,0,No action associated as the trigger.
+MsoAnimTriggerType,Enumeration,msoAnimTriggerOnPageClick,1,When a page is clicked.
+MsoAnimTriggerType,Enumeration,msoAnimTriggerWithPrevious,2,When the Previous button is clicked.
+MsoAnimTriggerType,Enumeration,msoAnimTriggerAfterPrevious,3,After the Previous button is clicked.
+MsoAnimTriggerType,Enumeration,msoAnimTriggerOnShapeClick,4,When a shape is clicked.
+MsoAnimTriggerType,Enumeration,msoAnimTriggerOnMediaBookmark,5,
+MsoAnimType,Enumeration,msoAnimTypeMixed,-2,Mixed
+MsoAnimType,Enumeration,msoAnimTypeNone,0,None
+MsoAnimType,Enumeration,msoAnimTypeMotion,1,Motion
+MsoAnimType,Enumeration,msoAnimTypeColor,2,Color
+MsoAnimType,Enumeration,msoAnimTypeScale,3,Scale
+MsoAnimType,Enumeration,msoAnimTypeRotation,4,Rotation
+MsoAnimType,Enumeration,msoAnimTypeProperty,5,Property
+MsoAnimType,Enumeration,msoAnimTypeCommand,6,Command
+MsoAnimType,Enumeration,msoAnimTypeFilter,7,Filter
+MsoAnimType,Enumeration,msoAnimTypeSet,8,Set
+MsoClickState,Enumeration,msoClickStateAfterAllAnimations,-2,After all animations.
+MsoClickState,Enumeration,msoClickStateBeforeAutomaticAnimations,-1,Before automatic animations.
+PpActionType,Enumeration,ppActionMixed,-2,Performs a mixed action.
+PpActionType,Enumeration,ppActionNone,0,No action is performed.
+PpActionType,Enumeration,ppActionNextSlide,1,Moves to the next slide.
+PpActionType,Enumeration,ppActionPreviousSlide,2,Moves to the previous slide.
+PpActionType,Enumeration,ppActionFirstSlide,3,Returns to the first slide.
+PpActionType,Enumeration,ppActionLastSlide,4,Moves to the last slide.
+PpActionType,Enumeration,ppActionLastSlideViewed,5,Moves to the last slide viewed.
+PpActionType,Enumeration,ppActionEndShow,6,Slide show ends.
+PpActionType,Enumeration,ppActionHyperlink,7,Hyperlink.
+PpActionType,Enumeration,ppActionRunMacro,8,Runs a macro.
+PpActionType,Enumeration,ppActionRunProgram,9,Runs a program.
+PpActionType,Enumeration,ppActionNamedSlideShow,10,Runs the slideshow.
+PpActionType,Enumeration,ppActionOLEVerb,11,OLE Verb.
+PpActionType,Enumeration,ppActionPlay,12,Begins the slideshow.
+PpAdvanceMode,Enumeration,ppAdvanceModeMixed,-2,Mixed mode.
+PpAdvanceMode,Enumeration,ppAdvanceOnClick,1,Only when clicked.
+PpAdvanceMode,Enumeration,ppAdvanceOnTime,2,Automatically after a specified amount of time.
+PpAfterEffect,Enumeration,ppAfterEffectMixed,-2,Mixed effect
+PpAfterEffect,Enumeration,ppAfterEffectNothing,0,No effect
+PpAfterEffect,Enumeration,ppAfterEffectHide,1,Hides
+PpAfterEffect,Enumeration,ppAfterEffectDim,2,Appears dimmed
+PpAfterEffect,Enumeration,ppAfterEffectHideOnClick,3,Hidden when clicked
+PpAlertLevel,Enumeration,ppAlertsNone,1,No alerts displayed.
+PpAlertLevel,Enumeration,ppAlertsAll,2,All alerts displayed.
+PpArrangeStyle,Enumeration,ppArrangeTiled,1,Tiled
+PpArrangeStyle,Enumeration,ppArrangeCascade,2,Cascade
+PpAutoSize,Enumeration,ppAutoSizeMixed,-2,Mixed size.
+PpAutoSize,Enumeration,ppAutoSizeNone,0,Does not change size.
+PpAutoSize,Enumeration,ppAutoSizeShapeToFitText,1,Auto sizes the shape to fit the text.
+PpBaselineAlignment,Enumeration,ppBaselineAlignMixed,-2,Mixed alignment.
+PpBaselineAlignment,Enumeration,ppBaselineAlignBaseline,1,Aligned to the baseline.
+PpBaselineAlignment,Enumeration,ppBaselineAlignTop,2,Aligned to the top.
+PpBaselineAlignment,Enumeration,ppBaselineAlignCenter,3,Aligned to the center.
+PpBaselineAlignment,Enumeration,ppBaselineAlignFarEast50,4,Align FarEast50.
+PpBaselineAlignment,Enumeration,ppBaselineAlignAuto,5,
+PpBorderType,Enumeration,ppBorderTop,1,Top
+PpBorderType,Enumeration,ppBorderLeft,2,Left
+PpBorderType,Enumeration,ppBorderBottom,3,Bottom
+PpBorderType,Enumeration,ppBorderRight,4,Right
+PpBorderType,Enumeration,ppBorderDiagonalDown,5,Diagonally down
+PpBorderType,Enumeration,ppBorderDiagonalUp,6,Diagonally up
+PpBulletType,Enumeration,ppBulletMixed,-2,Mixed bullets
+PpBulletType,Enumeration,ppBulletNone,0,No bullets
+PpBulletType,Enumeration,ppBulletUnnumbered,1,Unnumbered bullets
+PpBulletType,Enumeration,ppBulletNumbered,2,Numbered bullets
+PpBulletType,Enumeration,ppBulletPicture,3,Bullets with an image
+PpChangeCase,Enumeration,ppCaseSentence,1,Change to lowercase.
+PpChangeCase,Enumeration,ppCaseLower,2,Change to lowercase.
+PpChangeCase,Enumeration,ppCaseUpper,3,Change to uppercase.
+PpChangeCase,Enumeration,ppCaseTitle,4,Change to title case.
+PpChangeCase,Enumeration,ppCaseToggle,5,Toggle the casing.
+PpChartUnitEffect,Enumeration,ppAnimateChartMixed,-2,Chart mixed
+PpChartUnitEffect,Enumeration,ppAnimateBySeries,1,By series
+PpChartUnitEffect,Enumeration,ppAnimateByCategory,2,By category
+PpChartUnitEffect,Enumeration,ppAnimateBySeriesElements,3,By series elements
+PpChartUnitEffect,Enumeration,ppAnimateByCategoryElements,4,By category elements
+PpChartUnitEffect,Enumeration,ppAnimateChartAllAtOnce,5,Chart all at once
+PpCheckInVersionType,Enumeration,ppCheckInMinorVersion,0,Minor version
+PpCheckInVersionType,Enumeration,ppCheckInMajorVersion,1,Major version
+PpCheckInVersionType,Enumeration,ppCheckInOverwriteVersion,2,Overwrite current version
+PpColorSchemeIndex,Enumeration,ppSchemeColorMixed,-2,Mixed scheme color
+PpColorSchemeIndex,Enumeration,ppNotSchemeColor,0,Not scheme color
+PpColorSchemeIndex,Enumeration,ppBackground,1,Background
+PpColorSchemeIndex,Enumeration,ppForeground,2,Foreground
+PpColorSchemeIndex,Enumeration,ppShadow,3,Shadow
+PpColorSchemeIndex,Enumeration,ppTitle,4,Title
+PpColorSchemeIndex,Enumeration,ppFill,5,Fill
+PpColorSchemeIndex,Enumeration,ppAccent1,6,Accent1
+PpColorSchemeIndex,Enumeration,ppAccent2,7,Accent2
+PpColorSchemeIndex,Enumeration,ppAccent3,8,Accent3
+PpDateTimeFormat,Enumeration,ppDateTimeFormatMixed,-2,Mixed Format
+PpDateTimeFormat,Enumeration,ppDateTimeMdyy,1,Mdyy
+PpDateTimeFormat,Enumeration,ppDateTimeddddMMMMddyyyy,2,ddddMMMMddyyyy
+PpDateTimeFormat,Enumeration,ppDateTimedMMMMyyyy,3,dMMMMyyyy
+PpDateTimeFormat,Enumeration,ppDateTimeMMMMdyyyy,4,MMMMdyyyy
+PpDateTimeFormat,Enumeration,ppDateTimedMMMyy,5,dMMMyy
+PpDateTimeFormat,Enumeration,ppDateTimeMMMMyy,6,MMMMyy
+PpDateTimeFormat,Enumeration,ppDateTimeMMyy,7,MMyy
+PpDateTimeFormat,Enumeration,ppDateTimeMMddyyHmm,8,MMddyyHmm
+PpDateTimeFormat,Enumeration,ppDateTimeMMddyyhmmAMPM,9,MMddyyhmmAMPM
+PpDateTimeFormat,Enumeration,ppDateTimeHmm,10,Hmm
+PpDateTimeFormat,Enumeration,ppDateTimeHmmss,11,Hmmss
+PpDateTimeFormat,Enumeration,ppDateTimehmmAMPM,12,hmmAMPM
+PpDateTimeFormat,Enumeration,ppDateTimehmmssAMPM,13,hmmssAMPM
+PpDateTimeFormat,Enumeration,ppDateTimeFigureOut,14,Figure Out
+PpDateTimeFormat,Enumeration,ppDateTimeUAQ1,15,UAQ1
+PpDateTimeFormat,Enumeration,ppDateTimeUAQ2,16,UAQ2
+PpDateTimeFormat,Enumeration,ppDateTimeUAQ3,17,UAQ3
+PpDateTimeFormat,Enumeration,ppDateTimeUAQ4,18,UAQ4
+PpDateTimeFormat,Enumeration,ppDateTimeUAQ5,19,UAQ5
+PpDateTimeFormat,Enumeration,ppDateTimeUAQ6,20,UAQ6
+PpDateTimeFormat,Enumeration,ppDateTimeUAQ7,21,UAQ7
+PpDateTimeFormat,Enumeration,ppDateTimeFullYear,22,
+PpDirection,Enumeration,ppDirectionMixed,-2,Mixed layout
+PpDirection,Enumeration,ppDirectionLeftToRight,1,Left-to-right layout
+PpDirection,Enumeration,ppDirectionRightToLeft,2,Right-to-left layout
+PpEntryEffect,Enumeration,ppEffectMixed,-2,Mixed
+PpEntryEffect,Enumeration,ppEffectNone,0,None
+PpEntryEffect,Enumeration,ppEffectCut,257,Cut
+PpEntryEffect,Enumeration,ppEffectCutThroughBlack,258,Cut Through Black
+PpEntryEffect,Enumeration,ppEffectRandom,513,Random
+PpEntryEffect,Enumeration,ppEffectBlindsHorizontal,769,Blinds Horizontal
+PpEntryEffect,Enumeration,ppEffectBlindsVertical,770,Blinds Vertical
+PpEntryEffect,Enumeration,ppEffectCheckerboardAcross,1025,Checkerboard Across
+PpEntryEffect,Enumeration,ppEffectCheckerboardDown,1026,Checkerboard Down
+PpEntryEffect,Enumeration,ppEffectCoverLeft,1281,Cover Left
+PpEntryEffect,Enumeration,ppEffectCoverUp,1282,Cover Up
+PpEntryEffect,Enumeration,ppEffectCoverRight,1283,
+PpEntryEffect,Enumeration,ppEffectCoverDown,1284,Cover Down
+PpEntryEffect,Enumeration,ppEffectCoverLeftUp,1285,Cover Left Up
+PpEntryEffect,Enumeration,ppEffectCoverRightUp,1286,Cover Right Up
+PpEntryEffect,Enumeration,ppEffectCoverLeftDown,1287,Cover Left Down
+PpEntryEffect,Enumeration,ppEffectCoverRightDown,1288,Cover Right Down
+PpEntryEffect,Enumeration,ppEffectDissolve,1537,Dissolve
+PpEntryEffect,Enumeration,ppEffectFade,1793,Fade
+PpEntryEffect,Enumeration,ppEffectUncoverLeft,2049,Uncover Left
+PpEntryEffect,Enumeration,ppEffectUncoverUp,2050,Uncover Up
+PpEntryEffect,Enumeration,ppEffectUncoverRight,2051,Effect Uncover Right
+PpEntryEffect,Enumeration,ppEffectUncoverDown,2052,Uncover Down
+PpEntryEffect,Enumeration,ppEffectUncoverLeftUp,2053,Uncover Left Up
+PpEntryEffect,Enumeration,ppEffectUncoverRightUp,2054,Uncover Right Up
+PpEntryEffect,Enumeration,ppEffectUncoverLeftDown,2055,Uncover Left Down
+PpEntryEffect,Enumeration,ppEffectUncoverRightDown,2056,Uncover Right Down
+PpEntryEffect,Enumeration,ppEffectRandomBarsHorizontal,2305,Random Bars Horizontal
+PpEntryEffect,Enumeration,ppEffectRandomBarsVertical,2306,Random Bars Vertical
+PpEntryEffect,Enumeration,ppEffectStripsUpLeft,2561,Strips Up Left
+PpEntryEffect,Enumeration,ppEffectStripsUpRight,2562,Strips Up Right
+PpEntryEffect,Enumeration,ppEffectStripsDownLeft,2563,Strips Down Left
+PpEntryEffect,Enumeration,ppEffectStripsDownRight,2564,Strips Down Right
+PpEntryEffect,Enumeration,ppEffectStripsLeftUp,2565,Strips Left Up
+PpEntryEffect,Enumeration,ppEffectStripsRightUp,2566,Strips Right Up
+PpEntryEffect,Enumeration,ppEffectStripsLeftDown,2567,Strips Left Down
+PpEntryEffect,Enumeration,ppEffectStripsRightDown,2568,Strips Right Down
+PpEntryEffect,Enumeration,ppEffectWipeLeft,2817,Wipe Left
+PpEntryEffect,Enumeration,ppEffectWipeUp,2818,Wipe Up
+PpEntryEffect,Enumeration,ppEffectWipeRight,2819,Wipe Right
+PpEntryEffect,Enumeration,ppEffectWipeDown,2820,Wipe Down
+PpEntryEffect,Enumeration,ppEffectBoxOut,3073,Box Out
+PpEntryEffect,Enumeration,ppEffectBoxIn,3074,Box In
+PpEntryEffect,Enumeration,ppEffectFlyFromLeft,3329,Fly From Left
+PpEntryEffect,Enumeration,ppEffectFlyFromTop,3330,Fly From Top
+PpEntryEffect,Enumeration,ppEffectFlyFromRight,3331,Fly From Right
+PpEntryEffect,Enumeration,ppEffectFlyFromBottom,3332,Fly From Bottom
+PpEntryEffect,Enumeration,ppEffectFlyFromTopLeft,3333,Fly From Top Left
+PpEntryEffect,Enumeration,ppEffectFlyFromTopRight,3334,Fly From Top Right
+PpEntryEffect,Enumeration,ppEffectFlyFromBottomLeft,3335,From Bottom Left
+PpEntryEffect,Enumeration,ppEffectFlyFromBottomRight,3336,From Bottom Right
+PpEntryEffect,Enumeration,ppEffectPeekFromLeft,3337,Peek From Left
+PpEntryEffect,Enumeration,ppEffectPeekFromDown,3338,Peek From Down
+PpEntryEffect,Enumeration,ppEffectPeekFromRight,3339,Peek From Right
+PpEntryEffect,Enumeration,ppEffectPeekFromUp,3340,Peek From Up
+PpEntryEffect,Enumeration,ppEffectCrawlFromLeft,3341,Crawl From Left
+PpEntryEffect,Enumeration,ppEffectCrawlFromUp,3342,Crawl From Up
+PpEntryEffect,Enumeration,ppEffectCrawlFromRight,3343,Crawl From Right
+PpEntryEffect,Enumeration,ppEffectCrawlFromDown,3344,Crawl From Down
+PpEntryEffect,Enumeration,ppEffectZoomIn,3345,Zoom In
+PpEntryEffect,Enumeration,ppEffectZoomInSlightly,3346,Zoom In Slightly
+PpEntryEffect,Enumeration,ppEffectZoomOut,3347,Zoom Out
+PpEntryEffect,Enumeration,ppEffectZoomOutSlightly,3348,Zoom Out Slightly
+PpEntryEffect,Enumeration,ppEffectZoomCenter,3349,Zoom Center
+PpEntryEffect,Enumeration,ppEffectZoomBottom,3350,Zoom Bottom
+PpEntryEffect,Enumeration,ppEffectStretchAcross,3351,Stretch Across
+PpEntryEffect,Enumeration,ppEffectStretchLeft,3352,Stretch Left
+PpEntryEffect,Enumeration,ppEffectStretchUp,3353,Stretch Up
+PpEntryEffect,Enumeration,ppEffectStretchRight,3354,Stretch Right
+PpEntryEffect,Enumeration,ppEffectStretchDown,3355,Stretch Down
+PpEntryEffect,Enumeration,ppEffectSwivel,3356,Swivel
+PpEntryEffect,Enumeration,ppEffectSpiral,3357,Spiral
+PpEntryEffect,Enumeration,ppEffectSplitHorizontalOut,3585,Split Horizontal Out
+PpEntryEffect,Enumeration,ppEffectSplitHorizontalIn,3586,Split Horizontal In
+PpEntryEffect,Enumeration,ppEffectSplitVerticalOut,3587,Split Vertical Out
+PpEntryEffect,Enumeration,ppEffectSplitVerticalIn,3588,Split Vertical In
+PpEntryEffect,Enumeration,ppEffectFlashOnceFast,3841,Flash Once Fast
+PpEntryEffect,Enumeration,ppEffectFlashOnceMedium,3842,Flash Once Medium
+PpEntryEffect,Enumeration,ppEffectFlashOnceSlow,3843,Flash Once Slow
+PpEntryEffect,Enumeration,ppEffectAppear,3844,Appear
+PpEntryEffect,Enumeration,ppEffectCircleOut,3845,Circle Out
+PpEntryEffect,Enumeration,ppEffectDiamondOut,3846,Diamond Out
+PpEntryEffect,Enumeration,ppEffectCombHorizontal,3847,Comb Horizontal
+PpEntryEffect,Enumeration,ppEffectCombVertical,3848,Comb Vertical
+PpEntryEffect,Enumeration,ppEffectFadeSmoothly,3849,Fade Smoothly
+PpEntryEffect,Enumeration,ppEffectNewsflash,3850,Newsflash
+PpEntryEffect,Enumeration,ppEffectPlusOut,3851,Plus Out
+PpEntryEffect,Enumeration,ppEffectPushDown,3852,Push Down
+PpEntryEffect,Enumeration,ppEffectPushLeft,3853,Push Left
+PpEntryEffect,Enumeration,ppEffectPushRight,3854,Push Right
+PpEntryEffect,Enumeration,ppEffectPushUp,3855,Push Up
+PpEntryEffect,Enumeration,ppEffectWedge,3856,Wedge
+PpEntryEffect,Enumeration,ppEffectWheel1Spoke,3857,Wheel1 Spoke
+PpEntryEffect,Enumeration,ppEffectWheel2Spokes,3858,Wheel2 Spokes
+PpEntryEffect,Enumeration,ppEffectWheel3Spokes,3859,Wheel3 Spokes
+PpEntryEffect,Enumeration,ppEffectWheel4Spokes,3860,Wheel4 Spokes
+PpEntryEffect,Enumeration,ppEffectWheel8Spokes,3861,Wheel8 Spokes
+PpEntryEffect,Enumeration,ppEffectWheelReverse1Spoke,3862,Wheel Reverse 1 Spoke
+PpEntryEffect,Enumeration,ppEffectVortexLeft,3863,Vortex Left
+PpEntryEffect,Enumeration,ppEffectVortexUp,3864,Vortex Up
+PpEntryEffect,Enumeration,ppEffectVortexRight,3865,Vortex Right
+PpEntryEffect,Enumeration,ppEffectVortexDown,3866,VortexDown
+PpEntryEffect,Enumeration,ppEffectRippleCenter,3867,Ripple Center
+PpEntryEffect,Enumeration,ppEffectRippleRightUp,3868,Ripple Right Up
+PpEntryEffect,Enumeration,ppEffectRippleLeftUp,3869,Ripple Left Up
+PpEntryEffect,Enumeration,ppEffectRippleLeftDown,3870,Ripple Left Down
+PpEntryEffect,Enumeration,ppEffectRippleRightDown,3871,Ripple Right Down
+PpEntryEffect,Enumeration,ppEffectGlitterDiamondLeft,3872,Glitter Diamond Left
+PpEntryEffect,Enumeration,ppEffectGlitterDiamondUp,3873,Glitter Diamond Up
+PpEntryEffect,Enumeration,ppEffectGlitterDiamondRight,3874,Glitter Diamond Right
+PpEntryEffect,Enumeration,ppEffectGlitterDiamondDown,3875,Glitter Diamond Down
+PpEntryEffect,Enumeration,ppEffectGlitterHexagonLeft,3876,Glitter Hexagon Left
+PpEntryEffect,Enumeration,ppEffectGlitterHexagonUp,3877,Glitter Hexagon Up
+PpEntryEffect,Enumeration,ppEffectGlitterHexagonRight,3878,Glitter Hexagon Right
+PpEntryEffect,Enumeration,ppEffectGlitterHexagonDown,3879,Glitter Hexagon Down
+PpEntryEffect,Enumeration,ppEffectGalleryLeft,3880,Gallery Left
+PpEntryEffect,Enumeration,ppEffectGalleryRight,3881,Gallery Right
+PpEntryEffect,Enumeration,ppEffectConveyorLeft,3882,Conveyor Left
+PpEntryEffect,Enumeration,ppEffectConveyorRight,3883,Conveyor Right
+PpEntryEffect,Enumeration,ppEffectDoorsVertical,3884,Doors Vertical
+PpEntryEffect,Enumeration,ppEffectDoorsHorizontal,3885,Doors Horizontal
+PpEntryEffect,Enumeration,ppEffectWindowVertical,3886,Window Vertical
+PpEntryEffect,Enumeration,ppEffectWindowHorizontal,3887,Window Horizontal
+PpEntryEffect,Enumeration,ppEffectWarpIn,3888,Warp In
+PpEntryEffect,Enumeration,ppEffectWarpOut,3889,Warp Out
+PpEntryEffect,Enumeration,ppEffectFlyThroughIn,3890,Fly Through In
+PpEntryEffect,Enumeration,ppEffectFlyThroughOut,3891,Fly Through Out
+PpEntryEffect,Enumeration,ppEffectFlyThroughInBounce,3892,Fly Through In Bounce
+PpEntryEffect,Enumeration,ppEffectFlyThroughOutBounce,3893,Fly Through Out Bounce
+PpEntryEffect,Enumeration,ppEffectRevealSmoothLeft,3894,Reveal Smooth Left
+PpEntryEffect,Enumeration,ppEffectRevealSmoothRight,3895,Reveal Smooth Right
+PpEntryEffect,Enumeration,ppEffectRevealBlackLeft,3896,Reveal Black Left
+PpEntryEffect,Enumeration,ppEffectRevealBlackRight,3897,Reveal Black Right
+PpEntryEffect,Enumeration,ppEffectHoneycomb,3898,Honeycomb
+PpEntryEffect,Enumeration,ppEffectFerrisWheelLeft,3899,Ferris Wheel Left
+PpEntryEffect,Enumeration,ppEffectFerrisWheelRight,3900,Ferris Wheel Rightt
+PpEntryEffect,Enumeration,ppEffectSwitchLeft,3901,Switch Left
+PpEntryEffect,Enumeration,ppEffectSwitchUp,3902,Switch Up
+PpEntryEffect,Enumeration,ppEffectSwitchRight,3903,Switch Right
+PpEntryEffect,Enumeration,ppEffectSwitchDown,3904,Switch Down
+PpEntryEffect,Enumeration,ppEffectFlipLeft,3905,Flip Left
+PpEntryEffect,Enumeration,ppEffectFlipUp,3906,Flip Up
+PpEntryEffect,Enumeration,ppEffectFlipRight,3907,Flip Right
+PpEntryEffect,Enumeration,ppEffectFlipDown,3908,Flip Down
+PpEntryEffect,Enumeration,ppEffectFlashbulb,3909,Flashbulb
+PpEntryEffect,Enumeration,ppEffectShredStripsIn,3910,Shred Strips In
+PpEntryEffect,Enumeration,ppEffectShredStripsOut,3911,Shred Strips Out
+PpEntryEffect,Enumeration,ppEffectShredRectangleIn,3912,Shred Rectangle In
+PpEntryEffect,Enumeration,ppEffectShredRectangleOut,3913,Shred Rectangle Out
+PpEntryEffect,Enumeration,ppEffectCubeLeft,3914,Effect Cube Left
+PpEntryEffect,Enumeration,ppEffectCubeUp,3915,Effect Cube Up
+PpEntryEffect,Enumeration,ppEffectCubeRight,3916,Effect Cube Right
+PpEntryEffect,Enumeration,ppEffectCubeDown,3917,Effect Cube Down
+PpEntryEffect,Enumeration,ppEffectRotateLeft,3918,Rotate Left
+PpEntryEffect,Enumeration,ppEffectRotateUp,3919,Rotate Up
+PpEntryEffect,Enumeration,ppEffectRotateRight,3920,Rotate Right
+PpEntryEffect,Enumeration,ppEffectRotateDown,3921,Rotate Down
+PpEntryEffect,Enumeration,ppEffectBoxLeft,3922,Box Left
+PpEntryEffect,Enumeration,ppEffectBoxUp,3923,Box Up
+PpEntryEffect,Enumeration,ppEffectBoxRight,3924,Box Right
+PpEntryEffect,Enumeration,ppEffectBoxDown,3925,Box Down
+PpEntryEffect,Enumeration,ppEffectOrbitLeft,3926,Orbit Left
+PpEntryEffect,Enumeration,ppEffectOrbitUp,3927,Orbit Up
+PpEntryEffect,Enumeration,ppEffectOrbitRight,3928,Orbit Right
+PpEntryEffect,Enumeration,ppEffectOrbitDown,3929,Orbit Down
+PpEntryEffect,Enumeration,ppEffectPanLeft,3930,Pan Left
+PpEntryEffect,Enumeration,ppEffectPanUp,3931,Pan Up
+PpEntryEffect,Enumeration,ppEffectPanRight,3932,Pan Right
+PpEntryEffect,Enumeration,ppEffectPanDown,3933,Pan Down
+PpEntryEffect,Enumeration,ppEffectFallOverLeft,3934,
+PpEntryEffect,Enumeration,ppEffectFallOverRight,3935,
+PpEntryEffect,Enumeration,ppEffectDrapeLeft,3936,
+PpEntryEffect,Enumeration,ppEffectDrapeRight,3937,
+PpEntryEffect,Enumeration,ppEffectCurtains,3938,
+PpEntryEffect,Enumeration,ppEffectWindLeft,3939,
+PpEntryEffect,Enumeration,ppEffectWindRight,3940,
+PpEntryEffect,Enumeration,ppEffectPrestige,3941,
+PpEntryEffect,Enumeration,ppEffectFracture,3942,
+PpEntryEffect,Enumeration,ppEffectCrush,3943,
+PpEntryEffect,Enumeration,ppEffectPeelOffLeft,3944,
+PpEntryEffect,Enumeration,ppEffectPeelOffRight,3945,
+PpEntryEffect,Enumeration,ppEffectPageCurlSingleLeft,3946,
+PpEntryEffect,Enumeration,ppEffectPageCurlSingleRight,3947,
+PpEntryEffect,Enumeration,ppEffectPageCurlDoubleLeft,3948,
+PpEntryEffect,Enumeration,ppEffectPageCurlDoubleRight,3949,
+PpEntryEffect,Enumeration,ppEffectAirplaneLeft,3950,
+PpEntryEffect,Enumeration,ppEffectAirplaneRight,3951,
+PpEntryEffect,Enumeration,ppEffectOrigamiLeft,3952,
+PpEntryEffect,Enumeration,ppEffectOrigamiRight,3953,
+PpEntryEffect,Enumeration,ppEffectMorphByObject,3954,
+PpEntryEffect,Enumeration,ppEffectMorphByWord,3955,
+PpEntryEffect,Enumeration,ppEffectMorphByChar,3956,
+PpExportMode,Enumeration,ppRelativeToSlide,1,
+PpExportMode,Enumeration,ppClipRelativeToSlide,2,
+PpExportMode,Enumeration,ppScaleToFit,3,
+PpExportMode,Enumeration,ppScaleXY,4,
+PpFarEastLineBreakLevel,Enumeration,ppFarEastLineBreakLevelNormal,1,Normal level
+PpFarEastLineBreakLevel,Enumeration,ppFarEastLineBreakLevelStrict,2,Strict level
+PpFarEastLineBreakLevel,Enumeration,ppFarEastLineBreakLevelCustom,3,Custom level
+PpFileDialogType,Enumeration,ppFileDialogOpen,1,
+PpFileDialogType,Enumeration,ppFileDialogSave,2,
+PpFixedFormatIntent,Enumeration,ppFixedFormatIntentScreen,1,Intent is to view exported file on screen.
+PpFixedFormatIntent,Enumeration,ppFixedFormatIntentPrint,2,Intent is to print exported file.
+PpFixedFormatType,Enumeration,ppFixedFormatTypeXPS,1,XPS format
+PpFixedFormatType,Enumeration,ppFixedFormatTypePDF,2,PDF format
+PpFollowColors,Enumeration,ppFollowColorsMixed,-2,The chart colors follow a mixed format of the slide's color scheme.
+PpFollowColors,Enumeration,ppFollowColorsNone,0,The chart colors don't follow the slide's color scheme.
+PpFollowColors,Enumeration,ppFollowColorsScheme,1,All the colors in the chart follow the slide's color scheme.
+PpFollowColors,Enumeration,ppFollowColorsTextAndBackground,2,Only the text and background follow the slide's color scheme.
+PpFrameColors,Enumeration,ppFrameColorsBrowserColors,1,Use browser colors for the pane and text.
+PpFrameColors,Enumeration,ppFrameColorsPresentationSchemeTextColor,2,Use the Presentation Scheme Text Color.
+PpFrameColors,Enumeration,ppFrameColorsPresentationSchemeAccentColor,3,Use the Presentation Scheme Accent color.
+PpFrameColors,Enumeration,ppFrameColorsWhiteTextOnBlack,4,Use Black text on a White frame.
+PpFrameColors,Enumeration,ppFrameColorsBlackTextOnWhite,5,Use White text on a Black frame.
+PpGuideOrientation,Enumeration,ppHorizontalGuide,1,"Represents a horizontal guide, spanning from the left to right of the slide editing window."
+PpGuideOrientation,Enumeration,ppVerticalGuide,2,"Represents a vertical guide, spanning from top edge to bottom of the slide editing window."
+PpHTMLVersion,Enumeration,ppHTMLv3,1,HTML Version 3
+PpHTMLVersion,Enumeration,ppHTMLv4,2,HTML Version 4 (Default)
+PpHTMLVersion,Enumeration,ppHTMLDual,3,Dual version
+PpHTMLVersion,Enumeration,ppHTMLAutodetect,4,Autodetect
+PpIndentControl,Enumeration,ppIndentControlMixed,-2,Mixed control.
+PpIndentControl,Enumeration,ppIndentReplaceAttr,1,Replace attribute.
+PpIndentControl,Enumeration,ppIndentKeepAttr,2,Keep attribute.
+PpMediaTaskStatus,Enumeration,ppMediaTaskStatusNone,0,No status
+PpMediaTaskStatus,Enumeration,ppMediaTaskStatusInProgress,1,In progress
+PpMediaTaskStatus,Enumeration,ppMediaTaskStatusQueued,2,Queued
+PpMediaTaskStatus,Enumeration,ppMediaTaskStatusDone,3,Done
+PpMediaTaskStatus,Enumeration,ppMediaTaskStatusFailed,4,Failed
+PpMediaType,Enumeration,ppMediaTypeMixed,-2,Mixed
+PpMediaType,Enumeration,ppMediaTypeOther,1,Others
+PpMediaType,Enumeration,ppMediaTypeSound,2,Sound
+PpMediaType,Enumeration,ppMediaTypeMovie,3,Movie
+PpMouseActivation,Enumeration,ppMouseClick,1,Mouse click
+PpMouseActivation,Enumeration,ppMouseOver,2,Mouse over
+PpNumberedBulletStyle,Enumeration,ppBulletStyleMixed,-2,Any undefined style.
+PpNumberedBulletStyle,Enumeration,ppBulletAlphaLCPeriod,0,Lowercase alphabetical characters with a period.
+PpNumberedBulletStyle,Enumeration,ppBulletAlphaUCPeriod,1,Uppercase alphabetical characters with a period.
+PpNumberedBulletStyle,Enumeration,ppBulletArabicParenRight,2,Arabic numerals with closing parenthesis.
+PpNumberedBulletStyle,Enumeration,ppBulletArabicPeriod,3,Arabic numerals with a period.
+PpNumberedBulletStyle,Enumeration,ppBulletRomanLCParenBoth,4,Lowercase Roman numerals with both parentheses.
+PpNumberedBulletStyle,Enumeration,ppBulletRomanLCParenRight,5,Lowercase Roman numerals with closing parenthesis.
+PpNumberedBulletStyle,Enumeration,ppBulletRomanLCPeriod,6,Lowercase Roman numerals with period.
+PpNumberedBulletStyle,Enumeration,ppBulletRomanUCPeriod,7,Uppercase Roman numerals with period.
+PpNumberedBulletStyle,Enumeration,ppBulletAlphaLCParenBoth,8,Lowercase alphabetical characters with both parentheses.
+PpNumberedBulletStyle,Enumeration,ppBulletAlphaLCParenRight,9,Lowercase alphabetical characters with closing parenthesis.
+PpNumberedBulletStyle,Enumeration,ppBulletAlphaUCParenBoth,10,Uppercase alphabetical characters with both parentheses.
+PpNumberedBulletStyle,Enumeration,ppBulletAlphaUCParenRight,11,Uppercase alphabetical characters with closing parenthesis.
+PpNumberedBulletStyle,Enumeration,ppBulletArabicParenBoth,12,Arabic numerals with both parentheses.
+PpNumberedBulletStyle,Enumeration,ppBulletArabicPlain,13,Arabic numerals.
+PpNumberedBulletStyle,Enumeration,ppBulletRomanUCParenBoth,14,Uppercase Roman numerals with both parentheses.
+PpNumberedBulletStyle,Enumeration,ppBulletRomanUCParenRight,15,Uppercase Roman numerals with closing parenthesis.
+PpNumberedBulletStyle,Enumeration,ppBulletSimpChinPlain,16,Simplified Chinese without a period.
+PpNumberedBulletStyle,Enumeration,ppBulletSimpChinPeriod,17,Simplified Chinese with a period.
+PpNumberedBulletStyle,Enumeration,ppBulletCircleNumDBPlain,18,Double-byte circled number for values up to 10.
+PpNumberedBulletStyle,Enumeration,ppBulletCircleNumWDWhitePlain,19,Text colored number with same color circle drawn around it.
+PpNumberedBulletStyle,Enumeration,ppBulletCircleNumWDBlackPlain,20,Shadow color number with circular background of normal text color.
+PpNumberedBulletStyle,Enumeration,ppBulletTradChinPlain,21,Traditional Chinese without a period.
+PpNumberedBulletStyle,Enumeration,ppBulletTradChinPeriod,22,Traditional Chinese with a period.
+PpNumberedBulletStyle,Enumeration,ppBulletArabicAlphaDash,23,Arabic language alphabetical characters with a dash.
+PpNumberedBulletStyle,Enumeration,ppBulletArabicAbjadDash,24,Arabic Abjad alphabets with a dash.
+PpNumberedBulletStyle,Enumeration,ppBulletHebrewAlphaDash,25,Hebrew language alphabetical characters with a dash.
+PpNumberedBulletStyle,Enumeration,ppBulletKanjiKoreanPlain,26,Japanese/Korean numbers without a period.
+PpNumberedBulletStyle,Enumeration,ppBulletKanjiKoreanPeriod,27,Japanese/Korean numbers with a period.
+PpNumberedBulletStyle,Enumeration,ppBulletArabicDBPlain,28,Double-byte Arabic numbering scheme (no punctuation).
+PpNumberedBulletStyle,Enumeration,ppBulletArabicDBPeriod,29,Double-byte Arabic numbering scheme with double-byte period.
+PpNumberedBulletStyle,Enumeration,ppBulletThaiAlphaPeriod,30,Thai Alpha period.
+PpNumberedBulletStyle,Enumeration,ppBulletThaiAlphaParenRight,31,Thai Alpha Paren right.
+PpNumberedBulletStyle,Enumeration,ppBulletThaiAlphaParenBoth,32,Thai Alpha Paren both.
+PpNumberedBulletStyle,Enumeration,ppBulletThaiNumPeriod,33,Thai Num period.
+PpNumberedBulletStyle,Enumeration,ppBulletThaiNumParenRight,34,Thai Num Paren right.
+PpNumberedBulletStyle,Enumeration,ppBulletThaiNumParenBoth,35,Thai Num Paren both.
+PpNumberedBulletStyle,Enumeration,ppBulletHindiAlphaPeriod,36,Hindi Alpha period.
+PpNumberedBulletStyle,Enumeration,ppBulletHindiNumPeriod,37,Hindi Num period.
+PpNumberedBulletStyle,Enumeration,ppBulletKanjiSimpChinDBPeriod,38,Kanji Simple Chinese DBPeriod
+PpNumberedBulletStyle,Enumeration,ppBulletHindiNumParenRight,39,Hindi Num Paren right.
+PpNumberedBulletStyle,Enumeration,ppBulletHindiAlpha1Period,40,Hindi Alpha1 period.
+PpParagraphAlignment,Enumeration,ppAlignmentMixed,-2,Mixed alignment
+PpParagraphAlignment,Enumeration,ppAlignLeft,1,Left aligned
+PpParagraphAlignment,Enumeration,ppAlignCenter,2,Center align
+PpParagraphAlignment,Enumeration,ppAlignRight,3,Right-aligned
+PpParagraphAlignment,Enumeration,ppAlignJustify,4,Justify
+PpParagraphAlignment,Enumeration,ppAlignDistribute,5,Distribute
+PpParagraphAlignment,Enumeration,ppAlignThaiDistribute,6,Thai distributed
+PpParagraphAlignment,Enumeration,ppAlignJustifyLow,7,Low justify
+PpPasteDataType,Enumeration,ppPasteDefault,0,Paste the default content of the clipboard.
+PpPasteDataType,Enumeration,ppPasteBitmap,1,Paste bitmap.
+PpPasteDataType,Enumeration,ppPasteEnhancedMetafile,2,Paste enhanced Metafile
+PpPasteDataType,Enumeration,ppPasteMetafilePicture,3,Paste a Metafile picture.
+PpPasteDataType,Enumeration,ppPasteGIF,4,Paste a GIF image.
+PpPasteDataType,Enumeration,ppPasteJPG,5,Paste a JPG image.
+PpPasteDataType,Enumeration,ppPastePNG,6,Paste PNG image.
+PpPasteDataType,Enumeration,ppPasteText,7,Paste text.
+PpPasteDataType,Enumeration,ppPasteHTML,8,Paste HTML.
+PpPasteDataType,Enumeration,ppPasteRTF,9,Paste RTF.
+PpPasteDataType,Enumeration,ppPasteOLEObject,10,Paste OLE object.
+PpPasteDataType,Enumeration,ppPasteShape,11,Paste a shape.
+PpPasteDataType,Enumeration,ppPasteSVG,12,
+PpPlaceholderType,Enumeration,ppPlaceholderMixed,-2,Mixed
+PpPlaceholderType,Enumeration,ppPlaceholderTitle,1,Title
+PpPlaceholderType,Enumeration,ppPlaceholderBody,2,Body
+PpPlaceholderType,Enumeration,ppPlaceholderCenterTitle,3,Center Title
+PpPlaceholderType,Enumeration,ppPlaceholderSubtitle,4,Subtitle
+PpPlaceholderType,Enumeration,ppPlaceholderVerticalTitle,5,Vertical Title
+PpPlaceholderType,Enumeration,ppPlaceholderVerticalBody,6,Vertical Body
+PpPlaceholderType,Enumeration,ppPlaceholderObject,7,Object
+PpPlaceholderType,Enumeration,ppPlaceholderChart,8,Chart
+PpPlaceholderType,Enumeration,ppPlaceholderBitmap,9,Bitmap
+PpPlaceholderType,Enumeration,ppPlaceholderMediaClip,10,Media Clip
+PpPlaceholderType,Enumeration,ppPlaceholderOrgChart,11,Organization Chart
+PpPlaceholderType,Enumeration,ppPlaceholderTable,12,Table
+PpPlaceholderType,Enumeration,ppPlaceholderSlideNumber,13,Slide Number
+PpPlaceholderType,Enumeration,ppPlaceholderHeader,14,Header
+PpPlaceholderType,Enumeration,ppPlaceholderFooter,15,Footer
+PpPlaceholderType,Enumeration,ppPlaceholderDate,16,Date
+PpPlaceholderType,Enumeration,ppPlaceholderVerticalObject,17,Vertical Object
+PpPlaceholderType,Enumeration,ppPlaceholderPicture,18,Picture
+PpPlaceholderType,Enumeration,ppPlaceholderCameo,19,Cameo
+PpPlayerState,Enumeration,ppPlaying,0,Playing
+PpPlayerState,Enumeration,ppPaused,1,Paused
+PpPlayerState,Enumeration,ppStopped,2,Stopped
+PpPlayerState,Enumeration,ppNotReady,3,Not ready
+PpPrintColorType,Enumeration,ppPrintColor,1,Colored
+PpPrintColorType,Enumeration,ppPrintBlackAndWhite,2,Black and White
+PpPrintColorType,Enumeration,ppPrintPureBlackAndWhite,3,Pure Black and White
+PpPrintHandoutOrder,Enumeration,ppPrintHandoutVerticalFirst,1,"Slides are ordered vertically, with the first slide in the upper-left corner and the second slide below it. If your language setting specifies a right-to-left language, the first slide is in the upper-right corner with the second slide below it."
+PpPrintHandoutOrder,Enumeration,ppPrintHandoutHorizontalFirst,2,"Slides are ordered horizontally, with the first slide in the upper-left corner and the second slide to the right of it. If your language setting specifies a right-to-left language, the first slide is in the upper-right corner with the second slide to the left of it."
+PpPrintOutputType,Enumeration,ppPrintOutputSlides,1,Slides
+PpPrintOutputType,Enumeration,ppPrintOutputTwoSlideHandouts,2,Two Slide Handouts
+PpPrintOutputType,Enumeration,ppPrintOutputThreeSlideHandouts,3,Three Slide Handouts
+PpPrintOutputType,Enumeration,ppPrintOutputSixSlideHandouts,4,Six Slide Handouts
+PpPrintOutputType,Enumeration,ppPrintOutputNotesPages,5,Notes Pages
+PpPrintOutputType,Enumeration,ppPrintOutputOutline,6,Outline
+PpPrintOutputType,Enumeration,ppPrintOutputBuildSlides,7,Build Slides
+PpPrintOutputType,Enumeration,ppPrintOutputFourSlideHandouts,8,Four Slide Handouts
+PpPrintOutputType,Enumeration,ppPrintOutputNineSlideHandouts,9,Nine Slide Handouts
+PpPrintOutputType,Enumeration,ppPrintOutputOneSlideHandouts,10,Single Slide Handouts
+PpPrintRangeType,Enumeration,ppPrintAll,1,Print all slides in the presentation.
+PpPrintRangeType,Enumeration,ppPrintSelection,2,Print a selection of slides.
+PpPrintRangeType,Enumeration,ppPrintCurrent,3,Print the current slide from the presentation.
+PpPrintRangeType,Enumeration,ppPrintSlideRange,4,Print a range of slides.
+PpPrintRangeType,Enumeration,ppPrintNamedSlideShow,5,Print a named slideshow.
+PpPrintRangeType,Enumeration,ppPrintSection,6,
+PpProtectedViewCloseReason,Enumeration,ppProtectedViewCloseNormal,0,Protected view is being closed normally.
+PpProtectedViewCloseReason,Enumeration,ppProtectedViewCloseEdit,1,Protected view is being closed so that the presentation can be edited.
+PpProtectedViewCloseReason,Enumeration,ppProtectedViewCloseForced,2,Protected view is forced closed.
+PpPublishSourceType,Enumeration,ppPublishAll,1,Publish all.
+PpPublishSourceType,Enumeration,ppPublishSlideRange,2,Publish a range of slides.
+PpPublishSourceType,Enumeration,ppPublishNamedSlideShow,3,Publish a named slideshow.
+PpRemoveDocInfoType,Enumeration,ppRDIComments,1,Remove comments.
+PpRemoveDocInfoType,Enumeration,ppRDIRemovePersonalInformation,4,Remove personal information.
+PpRemoveDocInfoType,Enumeration,ppRDIDocumentProperties,8,Remove document properties.
+PpRemoveDocInfoType,Enumeration,ppRDIDocumentWorkspace,10,Remove document workspace information.
+PpRemoveDocInfoType,Enumeration,ppRDIInkAnnotations,11,"Remove Ink annotations. NOTE: This constant has been deprecated, but it remains part of the object model for backward compatibility. You should not use it in new applications."
+PpRemoveDocInfoType,Enumeration,ppRDIPublishPath,13,Remove publication path information.
+PpRemoveDocInfoType,Enumeration,ppRDIDocumentServerProperties,14,Remove document server properties.
+PpRemoveDocInfoType,Enumeration,ppRDIDocumentManagementPolicy,15,Remove document management policy information.
+PpRemoveDocInfoType,Enumeration,ppRDIContentType,16,Remove content type information.
+PpRemoveDocInfoType,Enumeration,ppRDISlideUpdateInformation,17,Remove slide update information.
+PpRemoveDocInfoType,Enumeration,ppRDIAtMentions,18,Remove resolved @mentioned users from comments.
+PpRemoveDocInfoType,Enumeration,ppRDIAll,99,Remove all document information.
+PpResampleMediaProfile,Enumeration,ppResampleMediaProfileCustom,1,Custom profile
+PpResampleMediaProfile,Enumeration,ppResampleMediaProfileSmall,2,Small profile
+PpResampleMediaProfile,Enumeration,ppResampleMediaProfileSmaller,3,Smaller profile
+PpResampleMediaProfile,Enumeration,ppResampleMediaProfileSmallest,4,Smallest profile
+PpRevisionInfo,Enumeration,ppRevisionInfoNone,0,No information.
+PpRevisionInfo,Enumeration,ppRevisionInfoBaseline,1,Information baseline.
+PpRevisionInfo,Enumeration,ppRevisionInfoMerged,2,Information merged.
+PpSaveAsFileType,Enumeration,ppSaveAsPresentation,1,
+PpSaveAsFileType,Enumeration,ppSaveAsTemplate,5,
+PpSaveAsFileType,Enumeration,ppSaveAsRTF,6,
+PpSaveAsFileType,Enumeration,ppSaveAsShow,7,
+PpSaveAsFileType,Enumeration,ppSaveAsAddIn,8,
+PpSaveAsFileType,Enumeration,ppSaveAsDefault,11,
+PpSaveAsFileType,Enumeration,ppSaveAsMetaFile,15,
+PpSaveAsFileType,Enumeration,ppSaveAsGIF,16,
+PpSaveAsFileType,Enumeration,ppSaveAsJPG,17,
+PpSaveAsFileType,Enumeration,ppSaveAsPNG,18,
+PpSaveAsFileType,Enumeration,ppSaveAsBMP,19,
+PpSaveAsFileType,Enumeration,ppSaveAsTIF,21,
+PpSaveAsFileType,Enumeration,ppSaveAsEMF,23,
+PpSaveAsFileType,Enumeration,ppSaveAsOpenXMLPresentation,24,
+PpSaveAsFileType,Enumeration,ppSaveAsOpenXMLPresentationMacroEnabled,25,
+PpSaveAsFileType,Enumeration,ppSaveAsOpenXMLTemplate,26,
+PpSaveAsFileType,Enumeration,ppSaveAsOpenXMLTemplateMacroEnabled,27,
+PpSaveAsFileType,Enumeration,ppSaveAsOpenXMLShow,28,
+PpSaveAsFileType,Enumeration,ppSaveAsOpenXMLShowMacroEnabled,29,
+PpSaveAsFileType,Enumeration,ppSaveAsOpenXMLAddin,30,
+PpSaveAsFileType,Enumeration,ppSaveAsOpenXMLTheme,31,
+PpSaveAsFileType,Enumeration,ppSaveAsPDF,32,
+PpSaveAsFileType,Enumeration,ppSaveAsXPS,33,
+PpSaveAsFileType,Enumeration,ppSaveAsXMLPresentation,34,
+PpSaveAsFileType,Enumeration,ppSaveAsOpenDocumentPresentation,35,
+PpSaveAsFileType,Enumeration,ppSaveAsOpenXMLPicturePresentation,36,
+PpSaveAsFileType,Enumeration,ppSaveAsWMV,37,
+PpSaveAsFileType,Enumeration,ppSaveAsStrictOpenXMLPresentation,38,
+PpSaveAsFileType,Enumeration,ppSaveAsMP4,39,
+PpSaveAsFileType,Enumeration,ppSaveAsAnimatedGIF,40,
+PpSaveAsFileType,Enumeration,ppSaveAsExternalConverter,64000,
+PpSelectionType,Enumeration,ppSelectionNone,0,None
+PpSelectionType,Enumeration,ppSelectionSlides,1,Slides
+PpSelectionType,Enumeration,ppSelectionShapes,2,Shapes
+PpSelectionType,Enumeration,ppSelectionText,3,Text
+PpShapeFormat,Enumeration,ppShapeFormatGIF,0,
+PpShapeFormat,Enumeration,ppShapeFormatJPG,1,
+PpShapeFormat,Enumeration,ppShapeFormatPNG,2,
+PpShapeFormat,Enumeration,ppShapeFormatBMP,3,
+PpShapeFormat,Enumeration,ppShapeFormatWMF,4,
+PpShapeFormat,Enumeration,ppShapeFormatEMF,5,
+PpShapeFormat,Enumeration,ppShapeFormatSVG,6,
+PpSlideLayout,Enumeration,ppLayoutMixed,-2,Mixed
+PpSlideLayout,Enumeration,ppLayoutTitle,1,Title
+PpSlideLayout,Enumeration,ppLayoutText,2,Text
+PpSlideLayout,Enumeration,ppLayoutTwoColumnText,3,Two-column text
+PpSlideLayout,Enumeration,ppLayoutTable,4,Table
+PpSlideLayout,Enumeration,ppLayoutTextAndChart,5,Text and chart
+PpSlideLayout,Enumeration,ppLayoutChartAndText,6,Chart and text
+PpSlideLayout,Enumeration,ppLayoutOrgchart,7,Organization chart
+PpSlideLayout,Enumeration,ppLayoutChart,8,Chart
+PpSlideLayout,Enumeration,ppLayoutTextAndClipart,9,Text and ClipArt
+PpSlideLayout,Enumeration,ppLayoutClipartAndText,10,ClipArt and text
+PpSlideLayout,Enumeration,ppLayoutTitleOnly,11,Title only
+PpSlideLayout,Enumeration,ppLayoutBlank,12,Blank
+PpSlideLayout,Enumeration,ppLayoutTextAndObject,13,Text and object
+PpSlideLayout,Enumeration,ppLayoutObjectAndText,14,Object and text
+PpSlideLayout,Enumeration,ppLayoutLargeObject,15,Large object
+PpSlideLayout,Enumeration,ppLayoutObject,16,Object
+PpSlideLayout,Enumeration,ppLayoutTextAndMediaClip,17,Text and MediaClip
+PpSlideLayout,Enumeration,ppLayoutMediaClipAndText,18,MediaClip and text
+PpSlideLayout,Enumeration,ppLayoutObjectOverText,19,Object over text
+PpSlideLayout,Enumeration,ppLayoutTextOverObject,20,Text over object
+PpSlideLayout,Enumeration,ppLayoutTextAndTwoObjects,21,Text and two objects
+PpSlideLayout,Enumeration,ppLayoutTwoObjectsAndText,22,Two objects and text
+PpSlideLayout,Enumeration,ppLayoutTwoObjectsOverText,23,Two objects over text
+PpSlideLayout,Enumeration,ppLayoutFourObjects,24,Four objects
+PpSlideLayout,Enumeration,ppLayoutVerticalText,25,Vertical text
+PpSlideLayout,Enumeration,ppLayoutClipArtAndVerticalText,26,ClipArt and vertical text
+PpSlideLayout,Enumeration,ppLayoutVerticalTitleAndText,27,Vertical title and text
+PpSlideLayout,Enumeration,ppLayoutVerticalTitleAndTextOverChart,28,Vertical title and text over chart
+PpSlideLayout,Enumeration,ppLayoutTwoObjects,29,Two objects
+PpSlideLayout,Enumeration,ppLayoutObjectAndTwoObjects,30,Object and two objects
+PpSlideLayout,Enumeration,ppLayoutTwoObjectsAndObject,31,Two objects and object
+PpSlideLayout,Enumeration,ppLayoutCustom,32,Custom
+PpSlideLayout,Enumeration,ppLayoutSectionHeader,33,Section header
+PpSlideLayout,Enumeration,ppLayoutComparison,34,Comparison
+PpSlideLayout,Enumeration,ppLayoutContentWithCaption,35,Content with caption
+PpSlideLayout,Enumeration,ppLayoutPictureWithCaption,36,Picture with caption
+PpSlideShowAdvanceMode,Enumeration,ppSlideShowManualAdvance,1,Manual Advance
+PpSlideShowAdvanceMode,Enumeration,ppSlideShowUseSlideTimings,2,Specified timings for each slide
+PpSlideShowAdvanceMode,Enumeration,ppSlideShowRehearseNewTimings,3,Rehearsed timings
+PpSlideShowPointerType,Enumeration,ppSlideShowPointerNone,0,No pointer used.
+PpSlideShowPointerType,Enumeration,ppSlideShowPointerArrow,1,Arrow pointer used.
+PpSlideShowPointerType,Enumeration,ppSlideShowPointerPen,2,Pen pointer used.
+PpSlideShowPointerType,Enumeration,ppSlideShowPointerAlwaysHidden,3,Pointer is always hidden.
+PpSlideShowPointerType,Enumeration,ppSlideShowPointerAutoArrow,4,AutoArrow pointer used.
+PpSlideShowPointerType,Enumeration,ppSlideShowPointerEraser,5,Eraser pointer used.
+PpSlideShowRangeType,Enumeration,ppShowAll,1,Show all.
+PpSlideShowRangeType,Enumeration,ppShowSlideRange,2,Show slide range.
+PpSlideShowRangeType,Enumeration,ppShowNamedSlideShow,3,Show named slideshow.
+PpSlideShowState,Enumeration,ppSlideShowRunning,1,Running
+PpSlideShowState,Enumeration,ppSlideShowPaused,2,Paused
+PpSlideShowState,Enumeration,ppSlideShowBlackScreen,3,Black screen
+PpSlideShowState,Enumeration,ppSlideShowWhiteScreen,4,White screen
+PpSlideShowState,Enumeration,ppSlideShowDone,5,Done
+PpSlideShowType,Enumeration,ppShowTypeSpeaker,1,Speaker
+PpSlideShowType,Enumeration,ppShowTypeWindow,2,Window
+PpSlideShowType,Enumeration,ppShowTypeKiosk,3,Kiosk
+PpSlideShowType,Enumeration,ppShowTypeWindow2,4,Window2
+PpSlideSizeType,Enumeration,ppSlideSizeOnScreen,1,On Screen
+PpSlideSizeType,Enumeration,ppSlideSizeLetterPaper,2,Letter Paper
+PpSlideSizeType,Enumeration,ppSlideSizeA4Paper,3,A4 Paper
+PpSlideSizeType,Enumeration,ppSlideSize35MM,4,35MM
+PpSlideSizeType,Enumeration,ppSlideSizeOverhead,5,Overhead
+PpSlideSizeType,Enumeration,ppSlideSizeBanner,6,Banner
+PpSlideSizeType,Enumeration,ppSlideSizeCustom,7,Custom
+PpSlideSizeType,Enumeration,ppSlideSizeLedgerPaper,8,Ledger Paper
+PpSlideSizeType,Enumeration,ppSlideSizeA3Paper,9,A3 Paper
+PpSlideSizeType,Enumeration,ppSlideSizeB4ISOPaper,10,B4 ISO Paper
+PpSlideSizeType,Enumeration,ppSlideSizeB5ISOPaper,11,B5 ISO Paper
+PpSlideSizeType,Enumeration,ppSlideSizeB4JISPaper,12,B4 JIS Paper
+PpSlideSizeType,Enumeration,ppSlideSizeB5JISPaper,13,B5 JIS Paper
+PpSlideSizeType,Enumeration,ppSlideSizeHagakiCard,14,Hagaki Card
+PpSlideSizeType,Enumeration,ppSlideSizeOnScreen16x9,15,
+PpSlideSizeType,Enumeration,ppSlideSizeOnScreen16x10,16,
+PpSoundEffectType,Enumeration,ppSoundEffectsMixed,-2,Mixed
+PpSoundEffectType,Enumeration,ppSoundNone,0,None
+PpSoundEffectType,Enumeration,ppSoundStopPrevious,1,Stop Previous
+PpSoundEffectType,Enumeration,ppSoundFile,2,File
+PpSoundFormatType,Enumeration,ppSoundFormatMixed,-2,Mixed format
+PpSoundFormatType,Enumeration,ppSoundFormatNone,0,No format
+PpSoundFormatType,Enumeration,ppSoundFormatWAV,1,WAV format
+PpSoundFormatType,Enumeration,ppSoundFormatMIDI,2,MIDI format
+PpSoundFormatType,Enumeration,ppSoundFormatCDAudio,3,CD Audio format
+PpTabStopType,Enumeration,ppTabStopMixed,-2,Mixed
+PpTabStopType,Enumeration,ppTabStopLeft,1,Left tab stop
+PpTabStopType,Enumeration,ppTabStopCenter,2,Center tab stop
+PpTabStopType,Enumeration,ppTabStopRight,3,Right tab stop
+PpTabStopType,Enumeration,ppTabStopDecimal,4,Decimal tab stop
+PpTextLevelEffect,Enumeration,ppAnimateLevelMixed,-2,Mixed level
+PpTextLevelEffect,Enumeration,ppAnimateLevelNone,0,No level
+PpTextLevelEffect,Enumeration,ppAnimateByFirstLevel,1,By first level
+PpTextLevelEffect,Enumeration,ppAnimateBySecondLevel,2,By second level
+PpTextLevelEffect,Enumeration,ppAnimateByThirdLevel,3,By third level
+PpTextLevelEffect,Enumeration,ppAnimateByFourthLevel,4,By fourth level
+PpTextLevelEffect,Enumeration,ppAnimateByFifthLevel,5,By fifth level
+PpTextLevelEffect,Enumeration,ppAnimateByAllLevels,16,By all levels
+PpTextStyleType,Enumeration,ppDefaultStyle,1,Default style
+PpTextStyleType,Enumeration,ppTitleStyle,2,Title style
+PpTextStyleType,Enumeration,ppBodyStyle,3,Body style
+PpTextUnitEffect,Enumeration,ppAnimateUnitMixed,-2,Text-unit effects are animated in a mixed manner.
+PpTextUnitEffect,Enumeration,ppAnimateByParagraph,0,Text-unit effects are animated by paragraph.
+PpTextUnitEffect,Enumeration,ppAnimateByWord,1,Text-unit effects are animated by word.
+PpTextUnitEffect,Enumeration,ppAnimateByCharacter,2,Text-unit effects are animated by character.
+PpTransitionSpeed,Enumeration,ppTransitionSpeedMixed,-2,Mixed
+PpTransitionSpeed,Enumeration,ppTransitionSpeedSlow,1,Slow
+PpTransitionSpeed,Enumeration,ppTransitionSpeedMedium,2,Medium
+PpTransitionSpeed,Enumeration,ppTransitionSpeedFast,3,Fast
+PpUpdateOption,Enumeration,ppUpdateOptionMixed,-2,Mixed
+PpUpdateOption,Enumeration,ppUpdateOptionManual,1,Link will be updated only when the user specifically asks to update the presentation.
+PpUpdateOption,Enumeration,ppUpdateOptionAutomatic,2,Link will be updated each time the presentation is opened or the source file changes.
+PpViewType,Enumeration,ppViewSlide,1,Slide
+PpViewType,Enumeration,ppViewSlideMaster,2,Slide Master
+PpViewType,Enumeration,ppViewNotesPage,3,Notes Page
+PpViewType,Enumeration,ppViewHandoutMaster,4,Handout Master
+PpViewType,Enumeration,ppViewNotesMaster,5,Notes Master
+PpViewType,Enumeration,ppViewOutline,6,Outline
+PpViewType,Enumeration,ppViewSlideSorter,7,Slide Sorter
+PpViewType,Enumeration,ppViewTitleMaster,8,Title Master
+PpViewType,Enumeration,ppViewNormal,9,Normal
+PpViewType,Enumeration,ppViewPrintPreview,10,Print Preview
+PpViewType,Enumeration,ppViewThumbnails,11,Thumbnails
+PpViewType,Enumeration,ppViewMasterThumbnails,12,Master Thumbnails
+PpWindowState,Enumeration,ppWindowNormal,1,Normal
+PpWindowState,Enumeration,ppWindowMinimized,2,Minimized
+PpWindowState,Enumeration,ppWindowMaximized,3,Maximized
+XlAxisCrosses,Enumeration,xlAxisCrossesAutomatic,-4105,Word sets the axis crossing point.
+XlAxisCrosses,Enumeration,xlAxisCrossesCustom,-4114,The CrossesAt property specifies the axis crossing point.
+XlAxisCrosses,Enumeration,xlAxisCrossesMaximum,2,The axis crosses at the maximum value.
+XlAxisCrosses,Enumeration,xlAxisCrossesMinimum,4,The axis crosses at the minimum value.
+XlAxisGroup,Enumeration,xlPrimary,1,The primary axis group.
+XlAxisGroup,Enumeration,xlSecondary,2,The secondary axis group.
+XlAxisType,Enumeration,xlCategory,1,Axis displays categories.
+XlAxisType,Enumeration,xlSeriesAxis,3,Axis displays data series.
+XlAxisType,Enumeration,xlValue,2,Axis displays values.
+XlBackground,Enumeration,xlBackgroundAutomatic,-4105,Word controls the background.
+XlBackground,Enumeration,xlBackgroundOpaque,3,An opaque background.
+XlBackground,Enumeration,xlBackgroundTransparent,2,A transparent background.
+XlBarShape,Enumeration,xlBox,0,A box.
+XlBarShape,Enumeration,xlPyramidToPoint,1,"A pyramid, coming to a point at the specified value."
+XlBarShape,Enumeration,xlPyramidToMax,2,"A pyramid, truncated at the specified value."
+XlBarShape,Enumeration,xlCylinder,3,A cylinder.
+XlBarShape,Enumeration,xlConeToPoint,4,"A cone, coming to a point at the specified value."
+XlBarShape,Enumeration,xlConeToMax,5,"A cone, truncated at the specified value."
+XlBinsType,Enumeration,xlBinsTypeAutomatic,0,Sets bins type automatically.
+XlBinsType,Enumeration,xlBinsTypeCategorical,1,Sets bins type by category.
+XlBinsType,Enumeration,xlBinsTypeManual,2,Sets bins type manually.
+XlBinsType,Enumeration,xlBinsTypeBinSize,3,Sets bins type by size.
+XlBinsType,Enumeration,xlBinsTypeBinCount,4,Sets bins type by count.
+XlBorderWeight,Enumeration,xlHairline,1,A hairline border (thinnest border).
+XlBorderWeight,Enumeration,xlMedium,-4138,A medium border.
+XlBorderWeight,Enumeration,xlThick,4,A thick border (widest border).
+XlBorderWeight,Enumeration,xlThin,2,A thin border.
+XlCategoryLabelLevel,Enumeration,xlCategoryLabelLevelNone,-3,Use no category labels in the chart. Defaults to automatic indexed labels.
+XlCategoryLabelLevel,Enumeration,xlCategoryLabelLevelCustom,-2,Indicates literal data in the category labels.
+XlCategoryLabelLevel,Enumeration,xlCategoryLabelLevelAll,-1,Use all category label levels within range on the chart. The default.
+XlCategorySortOrder,Enumeration,xlIndexAscending,0,
+XlCategorySortOrder,Enumeration,xlIndexDescending,1,
+XlCategorySortOrder,Enumeration,xlCategoryAscending,2,
+XlCategorySortOrder,Enumeration,xlCategoryDescending,3,
+XlCategoryType,Enumeration,xlCategoryScale,2,Axis groups data by an arbitrary set of categories.
+XlCategoryType,Enumeration,xlTimeScale,3,Axis groups data on a time scale.
+XlCategoryType,Enumeration,xlAutomaticScale,-4105,Word controls the axis type.
+XlChartElementPosition,Enumeration,xlChartElementPositionAutomatic,-4105,Automatically sets the position of the chart element.
+XlChartElementPosition,Enumeration,xlChartElementPositionCustom,-4114,Specifies a specific position for the chart element.
+XlChartGallery,Enumeration,xlBuiltIn,21,The built-in gallery.
+XlChartGallery,Enumeration,xlUserDefined,22,The user-defined gallery.
+XlChartGallery,Enumeration,xlAnyGallery,23,Either of the galleries.
+XlChartItem,Enumeration,xlDataLabel,0,Data label.
+XlChartItem,Enumeration,xlChartArea,2,Chart area.
+XlChartItem,Enumeration,xlSeries,3,Series.
+XlChartItem,Enumeration,xlChartTitle,4,Chart title.
+XlChartItem,Enumeration,xlWalls,5,Walls.
+XlChartItem,Enumeration,xlCorners,6,Corners.
+XlChartItem,Enumeration,xlDataTable,7,Data table.
+XlChartItem,Enumeration,xlTrendline,8,Trend line.
+XlChartItem,Enumeration,xlErrorBars,9,Error bars.
+XlChartItem,Enumeration,xlXErrorBars,10,X error bars.
+XlChartItem,Enumeration,xlYErrorBars,11,Y error bars.
+XlChartItem,Enumeration,xlLegendEntry,12,Legend entry.
+XlChartItem,Enumeration,xlLegendKey,13,Legend key.
+XlChartItem,Enumeration,xlShape,14,Shape.
+XlChartItem,Enumeration,xlMajorGridlines,15,Major gridlines.
+XlChartItem,Enumeration,xlMinorGridlines,16,Minor gridlines.
+XlChartItem,Enumeration,xlAxisTitle,17,Axis title.
+XlChartItem,Enumeration,xlUpBars,18,Up bars.
+XlChartItem,Enumeration,xlPlotArea,19,Plot area.
+XlChartItem,Enumeration,xlDownBars,20,Down bars.
+XlChartItem,Enumeration,xlAxis,21,Axis.
+XlChartItem,Enumeration,xlSeriesLines,22,Series lines.
+XlChartItem,Enumeration,xlFloor,23,Floor.
+XlChartItem,Enumeration,xlLegend,24,Legend.
+XlChartItem,Enumeration,xlHiLoLines,25,HiLo lines.
+XlChartItem,Enumeration,xlDropLines,26,Drop lines.
+XlChartItem,Enumeration,xlRadarAxisLabels,27,Radar axis labels.
+XlChartItem,Enumeration,xlNothing,28,Nothing.
+XlChartItem,Enumeration,xlLeaderLines,29,Leader lines.
+XlChartItem,Enumeration,xlDisplayUnitLabel,30,Display unit label.
+XlChartItem,Enumeration,xlPivotChartFieldButton,31,PivotChart field button.
+XlChartItem,Enumeration,xlPivotChartDropZone,32,PivotChart drop zone.
+XlChartPicturePlacement,Enumeration,xlSides,1,Display on sides.
+XlChartPicturePlacement,Enumeration,xlEnd,2,Display on end.
+XlChartPicturePlacement,Enumeration,xlEndSides,3,Display on end and sides.
+XlChartPicturePlacement,Enumeration,xlFront,4,Display on front.
+XlChartPicturePlacement,Enumeration,xlFrontSides,5,Display on front and sides.
+XlChartPicturePlacement,Enumeration,xlFrontEnd,6,Display on front and end.
+XlChartPicturePlacement,Enumeration,xlAllFaces,7,Display on all faces.
+XlChartPictureType,Enumeration,xlStackScale,3,The picture is sized to a specified number of units and repeated the length of the bar.
+XlChartPictureType,Enumeration,xlStack,2,The picture is sized to repeat a maximum of 15 times in the longest stacked bar.
+XlChartPictureType,Enumeration,xlStretch,1,The picture is stretched the full length of the stacked bar.
+XlChartSplitType,Enumeration,xlSplitByPosition,1,The second chart displays the smallest values in the data series. The number of values to display is specified by the SplitValue property.
+XlChartSplitType,Enumeration,xlSplitByPercentValue,3,The second chart displays values less than a percentage of the total value. The percentage is specified by the SplitValue property.
+XlChartSplitType,Enumeration,xlSplitByCustomSplit,4,The second chart displays arbitrary slides.
+XlChartSplitType,Enumeration,xlSplitByValue,2,The second chart displays values less than the value specified by the SplitValue property.
+XlColorIndex,Enumeration,xlColorIndexAutomatic,-4105,Automatic color.
+XlColorIndex,Enumeration,xlColorIndexNone,-4142,No color.
+XlConstants,Enumeration,xlAutomatic,-4105,"Word applies automatic settings, such as a color or page number, to the specified object."
+XlConstants,Enumeration,xlCombination,-4111,Combination.
+XlConstants,Enumeration,xlCustom,-4114,"Word applies custom settings, such as a color or error amount, to the specified object."
+XlConstants,Enumeration,xlBar,2,Two-dimensional bar chart group or series.
+XlConstants,Enumeration,xlColumn,3,Columnar chart group or series.
+XlConstants,Enumeration,xl3DBar,-4099,Three-dimensional bar chart group or series.
+XlConstants,Enumeration,xl3DSurface,-4103,Three-dimensional surface chart group or series.
+XlConstants,Enumeration,xlDefaultAutoFormat,-1,Word applies default or automatic formatting.
+XlConstants,Enumeration,xlNone,-4142,Do not display error bars in the specified chart group or series.
+XlConstants,Enumeration,xlAbove,0,The summary row is displayed above the specified range.
+XlConstants,Enumeration,xlBelow,1,The summary row is displayed below the specified range.
+XlConstants,Enumeration,xlBoth,1,Display positive and negative error bars in the specified chart group or series.
+XlConstants,Enumeration,xlBottom,-4107,Bottom.
+XlConstants,Enumeration,xlCenter,-4108,Center.
+XlConstants,Enumeration,xlChecker,9,Checker pattern.
+XlConstants,Enumeration,xlCircle,8,Circle.
+XlConstants,Enumeration,xlCorner,2,Corner.
+XlConstants,Enumeration,xlCrissCross,16,Criss-cross pattern.
+XlConstants,Enumeration,xlCross,4,Cross pattern.
+XlConstants,Enumeration,xlDiamond,2,Diamond pattern.
+XlConstants,Enumeration,xlDistributed,-4117,Distributed.
+XlConstants,Enumeration,xlFill,5,Fill.
+XlConstants,Enumeration,xlFixedValue,1,Display error amounts as a fixed value.
+XlConstants,Enumeration,xlGeneral,1,General.
+XlConstants,Enumeration,xlGray16,17,16% gray pattern.
+XlConstants,Enumeration,xlGray25,-4124,25% gray pattern.
+XlConstants,Enumeration,xlGray50,-4125,50% gray pattern.
+XlConstants,Enumeration,xlGray75,-4126,75% gray pattern.
+XlConstants,Enumeration,xlGray8,18,8% gray pattern.
+XlConstants,Enumeration,xlGrid,15,Grid pattern.
+XlConstants,Enumeration,xlHigh,-4127,High.
+XlConstants,Enumeration,xlInside,2,Inside.
+XlConstants,Enumeration,xlJustify,-4130,Justify.
+XlConstants,Enumeration,xlLeft,-4131,Left.
+XlConstants,Enumeration,xlLightDown,13,Light down line pattern.
+XlConstants,Enumeration,xlLightHorizontal,11,Light horizontal line pattern.
+XlConstants,Enumeration,xlLightUp,14,Light up line pattern.
+XlConstants,Enumeration,xlLightVertical,12,Light vertical line pattern.
+XlConstants,Enumeration,xlLow,-4134,Low.
+XlConstants,Enumeration,xlMaximum,2,Maximum.
+XlConstants,Enumeration,xlMinimum,4,Minimum.
+XlConstants,Enumeration,xlMinusValues,3,Minus values.
+XlConstants,Enumeration,xlNextToAxis,4,Next to axis.
+XlConstants,Enumeration,xlOpaque,3,Opaque fill.
+XlConstants,Enumeration,xlOutside,3,Outside.
+XlConstants,Enumeration,xlPercent,2,Display error amounts as a percentage.
+XlConstants,Enumeration,xlPlus,9,Display positive error bars in the specified chart group or series.
+XlConstants,Enumeration,xlPlusValues,2,Plus values.
+XlConstants,Enumeration,xlRight,-4152,Right.
+XlConstants,Enumeration,xlScale,3,Scale.
+XlConstants,Enumeration,xlSemiGray75,10,75% semi-gray pattern.
+XlConstants,Enumeration,xlShowLabel,4,Show label.
+XlConstants,Enumeration,xlShowLabelAndPercent,5,Show label and percent.
+XlConstants,Enumeration,xlShowPercent,3,Show percent.
+XlConstants,Enumeration,xlShowValue,2,Show value.
+XlConstants,Enumeration,xlSingle,2,Single line.
+XlConstants,Enumeration,xlSolid,1,Solid pattern.
+XlConstants,Enumeration,xlSquare,1,Square.
+XlConstants,Enumeration,xlStar,5,Star.
+XlConstants,Enumeration,xlStError,4,Display error amounts as a standard error.
+XlConstants,Enumeration,xlTop,-4160,Top.
+XlConstants,Enumeration,xlTransparent,2,Transparent fill.
+XlConstants,Enumeration,xlTriangle,3,Triangle.
+XlCopyPictureFormat,Enumeration,xlBitmap,2,"A bitmap (.bmp, .jpg, .gif)."
+XlCopyPictureFormat,Enumeration,xlPicture,-4147,"A drawn picture (.png, .wmf, .mix)."
+XlDataLabelPosition,Enumeration,xlLabelPositionCenter,-4108,The data label is centered on the data point or is inside a bar or pie chart.
+XlDataLabelPosition,Enumeration,xlLabelPositionAbove,0,The data label is positioned above the data point.
+XlDataLabelPosition,Enumeration,xlLabelPositionBelow,1,The data label is positioned below the data point.
+XlDataLabelPosition,Enumeration,xlLabelPositionLeft,-4131,The data label is positioned to the left of the data point.
+XlDataLabelPosition,Enumeration,xlLabelPositionRight,-4152,The data label is positioned to the right of the data point.
+XlDataLabelPosition,Enumeration,xlLabelPositionOutsideEnd,2,The data label is positioned outside the data point at the top edge.
+XlDataLabelPosition,Enumeration,xlLabelPositionInsideEnd,3,The data label is positioned inside the data point at the top edge.
+XlDataLabelPosition,Enumeration,xlLabelPositionInsideBase,4,The data label is positioned inside the data point at the bottom edge.
+XlDataLabelPosition,Enumeration,xlLabelPositionBestFit,5,Word sets the position of the data label.
+XlDataLabelPosition,Enumeration,xlLabelPositionMixed,6,Data labels are in multiple positions.
+XlDataLabelPosition,Enumeration,xlLabelPositionCustom,7,The data label is in a custom position.
+XlDataLabelSeparator,Enumeration,xlDataLabelSeparatorDefault,1,Word selects the separator.
+XlDataLabelsType,Enumeration,xlDataLabelsShowNone,-4142,No data labels.
+XlDataLabelsType,Enumeration,xlDataLabelsShowValue,2,The default value for the point (assumed if this argument is not specified).
+XlDataLabelsType,Enumeration,xlDataLabelsShowPercent,3,The percentage of the total. Available only for pie charts and doughnut charts.
+XlDataLabelsType,Enumeration,xlDataLabelsShowLabel,4,The category for the point.
+XlDataLabelsType,Enumeration,xlDataLabelsShowLabelAndPercent,5,"The percentage of the total, and the category for the point. Available only for pie charts and doughnut charts."
+XlDataLabelsType,Enumeration,xlDataLabelsShowBubbleSizes,6,Show the size of the bubble in reference to the absolute value.
+XlDisplayBlanksAs,Enumeration,xlInterpolated,3,Values are interpolated into the chart.
+XlDisplayBlanksAs,Enumeration,xlNotPlotted,1,Blank cells are not plotted.
+XlDisplayBlanksAs,Enumeration,xlZero,2,Blanks are plotted as zero.
+XlDisplayUnit,Enumeration,xlHundreds,-2,Hundreds.
+XlDisplayUnit,Enumeration,xlThousands,-3,Thousands.
+XlDisplayUnit,Enumeration,xlTenThousands,-4,Tens of thousands.
+XlDisplayUnit,Enumeration,xlHundredThousands,-5,Hundreds of thousands.
+XlDisplayUnit,Enumeration,xlMillions,-6,Millions.
+XlDisplayUnit,Enumeration,xlTenMillions,-7,Tens of millions.
+XlDisplayUnit,Enumeration,xlHundredMillions,-8,Hundreds of millions.
+XlDisplayUnit,Enumeration,xlThousandMillions,-9,Thousands of millions.
+XlDisplayUnit,Enumeration,xlMillionMillions,-10,Millions of millions.
+XlEndStyleCap,Enumeration,xlCap,1,Caps are applied.
+XlEndStyleCap,Enumeration,xlNoCap,2,No caps are applied.
+XlErrorBarDirection,Enumeration,xlChartX,-4168,Bars run parallel to the y-axis for x-axis values.
+XlErrorBarDirection,Enumeration,xlChartY,1,Bars run parallel to the x-axis for y-axis values.
+XlErrorBarInclude,Enumeration,xlErrorBarIncludeBoth,1,Both the positive and negative error range.
+XlErrorBarInclude,Enumeration,xlErrorBarIncludeMinusValues,3,Only the negative error range.
+XlErrorBarInclude,Enumeration,xlErrorBarIncludeNone,-4142,No error bar range.
+XlErrorBarInclude,Enumeration,xlErrorBarIncludePlusValues,2,Only the positive error range.
+XlErrorBarType,Enumeration,xlErrorBarTypeCustom,-4114,The range is set by fixed values or cell values.
+XlErrorBarType,Enumeration,xlErrorBarTypeFixedValue,1,Fixed-length error bars.
+XlErrorBarType,Enumeration,xlErrorBarTypePercent,2,The percentage of the range to be covered by the error bars.
+XlErrorBarType,Enumeration,xlErrorBarTypeStDev,-4155,Shows the range for a specified number of standard deviations.
+XlErrorBarType,Enumeration,xlErrorBarTypeStError,4,Shows the standard error range.
+XlGeoMappingLevel,Enumeration,xlGeoMappingLevelAutomatic,0,
+XlGeoMappingLevel,Enumeration,xlGeoMappingLevelDataOnly,1,
+XlGeoMappingLevel,Enumeration,xlGeoMappingLevelPostalCode,2,
+XlGeoMappingLevel,Enumeration,xlGeoMappingLevelCounty,3,
+XlGeoMappingLevel,Enumeration,xlGeoMappingLevelState,4,
+XlGeoMappingLevel,Enumeration,xlGeoMappingLevelCountryRegion,5,
+XlGeoMappingLevel,Enumeration,xlGeoMappingLevelCountryRegionList,6,
+XlGeoMappingLevel,Enumeration,xlGeoMappingLevelWorld,7,
+XlGeoProjectionType,Enumeration,xlGeoProjectionTypeAutomatic,0,
+XlGeoProjectionType,Enumeration,xlGeoProjectionTypeMercator,1,
+XlGeoProjectionType,Enumeration,xlGeoProjectionTypeMiller,2,
+XlGeoProjectionType,Enumeration,xlGeoProjectionTypeAlbers,3,
+XlGeoProjectionType,Enumeration,xlGeoProjectionTypeRobinson,4,
+XlGradientStopPositionType,Enumeration,xlGradientStopPositionTypeExtremeValue,0,
+XlGradientStopPositionType,Enumeration,xlGradientStopPositionTypeNumber,1,
+XlGradientStopPositionType,Enumeration,xlGradientStopPositionTypePercent,2,
+XlHAlign,Enumeration,xlHAlignCenter,-4108,Center.
+XlHAlign,Enumeration,xlHAlignCenterAcrossSelection,7,Center across selection.
+XlHAlign,Enumeration,xlHAlignDistributed,-4117,Distribute.
+XlHAlign,Enumeration,xlHAlignFill,5,Fill.
+XlHAlign,Enumeration,xlHAlignGeneral,1,Align according to data type.
+XlHAlign,Enumeration,xlHAlignJustify,-4130,Justify.
+XlHAlign,Enumeration,xlHAlignLeft,-4131,Left.
+XlHAlign,Enumeration,xlHAlignRight,-4152,Right.
+XlLegendPosition,Enumeration,xlLegendPositionBottom,-4107,Below the chart.
+XlLegendPosition,Enumeration,xlLegendPositionCorner,2,In the upper-right corner of the chart border.
+XlLegendPosition,Enumeration,xlLegendPositionLeft,-4131,Left of the chart.
+XlLegendPosition,Enumeration,xlLegendPositionRight,-4152,Right of the chart.
+XlLegendPosition,Enumeration,xlLegendPositionTop,-4160,Above the chart.
+XlLegendPosition,Enumeration,xlLegendPositionCustom,-4161,A custom position.
+XlLineStyle,Enumeration,xlContinuous,1,A continuous line.
+XlLineStyle,Enumeration,xlDash,-4115,A dashed line.
+XlLineStyle,Enumeration,xlDashDot,4,Alternating dashes and dots.
+XlLineStyle,Enumeration,xlDashDotDot,5,A dash followed by two dots.
+XlLineStyle,Enumeration,xlDot,-4118,A dotted line.
+XlLineStyle,Enumeration,xlDouble,-4119,A double line.
+XlLineStyle,Enumeration,xlSlantDashDot,13,Slanted dashes.
+XlLineStyle,Enumeration,xlLineStyleNone,-4142,No line.
+XlMarkerStyle,Enumeration,xlMarkerStyleAutomatic,-4105,Automatic markers.
+XlMarkerStyle,Enumeration,xlMarkerStyleCircle,8,Circular markers.
+XlMarkerStyle,Enumeration,xlMarkerStyleDash,-4115,Long bar markers.
+XlMarkerStyle,Enumeration,xlMarkerStyleDiamond,2,Diamond-shaped markers.
+XlMarkerStyle,Enumeration,xlMarkerStyleDot,-4118,Short bar markers.
+XlMarkerStyle,Enumeration,xlMarkerStyleNone,-4142,No markers.
+XlMarkerStyle,Enumeration,xlMarkerStylePicture,-4147,Picture markers.
+XlMarkerStyle,Enumeration,xlMarkerStylePlus,9,Square markers with a plus sign.
+XlMarkerStyle,Enumeration,xlMarkerStyleSquare,1,Square markers.
+XlMarkerStyle,Enumeration,xlMarkerStyleStar,5,Square markers with an asterisk.
+XlMarkerStyle,Enumeration,xlMarkerStyleTriangle,3,Triangular markers.
+XlMarkerStyle,Enumeration,xlMarkerStyleX,-4168,Square markers with an X.
+XlOrientation,Enumeration,xlDownward,-4170,Text runs downward.
+XlOrientation,Enumeration,xlHorizontal,-4128,Text runs horizontally.
+XlOrientation,Enumeration,xlUpward,-4171,Text runs upward.
+XlOrientation,Enumeration,xlVertical,-4166,Text runs downward and is centered in the cell.
+XlParentDataLabelOptions,Enumeration,xlParentDataLabelOptionsNone,0,No parent labels are shown.
+XlParentDataLabelOptions,Enumeration,xlParentDataLabelOptionsBanner,1,The parent label layout is a banner above the category.
+XlParentDataLabelOptions,Enumeration,xlParentDataLabelOptionsOverlapping,2,The parent label is laid out within the category.
+XlPattern,Enumeration,xlPatternAutomatic,-4105,Word controls the pattern.
+XlPattern,Enumeration,xlPatternChecker,9,A checkerboard.
+XlPattern,Enumeration,xlPatternCrissCross,16,Criss-crossed lines.
+XlPattern,Enumeration,xlPatternDown,-4121,Dark diagonal lines running from the upper-left to the lower-right.
+XlPattern,Enumeration,xlPatternGray16,17,16% gray.
+XlPattern,Enumeration,xlPatternGray25,-4124,25% gray.
+XlPattern,Enumeration,xlPatternGray50,-4125,50% gray.
+XlPattern,Enumeration,xlPatternGray75,-4126,75% gray.
+XlPattern,Enumeration,xlPatternGray8,18,8% gray.
+XlPattern,Enumeration,xlPatternGrid,15,A grid.
+XlPattern,Enumeration,xlPatternHorizontal,-4128,Dark horizontal lines.
+XlPattern,Enumeration,xlPatternLightDown,13,Light diagonal lines running from the upper-left to the lower-right.
+XlPattern,Enumeration,xlPatternLightHorizontal,11,Light horizontal lines.
+XlPattern,Enumeration,xlPatternLightUp,14,Light diagonal lines running from the lower-left to the upper-right.
+XlPattern,Enumeration,xlPatternLightVertical,12,Light vertical bars.
+XlPattern,Enumeration,xlPatternNone,-4142,No pattern.
+XlPattern,Enumeration,xlPatternSemiGray75,10,75% dark moir.
+XlPattern,Enumeration,xlPatternSolid,1,A solid color.
+XlPattern,Enumeration,xlPatternUp,-4162,Dark diagonal lines running from the lower-left to the upper-right.
+XlPattern,Enumeration,xlPatternVertical,-4166,Dark vertical bars.
+XlPattern,Enumeration,xlPatternLinearGradient,4000,A linear gradient.
+XlPattern,Enumeration,xlPatternRectangularGradient,4001,A rectangular gradient.
+XlPictureAppearance,Enumeration,xlPrinter,2,The picture is copied as it will look when it is printed.
+XlPictureAppearance,Enumeration,xlScreen,1,The picture is copied to resemble its display on the screen as closely as possible.
+XlPieSliceIndex,Enumeration,xlOuterCounterClockwisePoint,1,The outermost counterclockwise point of the circumference of a slice.
+XlPieSliceIndex,Enumeration,xlOuterCenterPoint,2,The outer center point of the circumference of a slice.
+XlPieSliceIndex,Enumeration,xlOuterClockwisePoint,3,The outermost clockwise point of the circumference of a slice.
+XlPieSliceIndex,Enumeration,xlMidClockwiseRadiusPoint,4,The midpoint of the most clockwise radius of a slice.
+XlPieSliceIndex,Enumeration,xlCenterPoint,5,The center point of a pie slice.
+XlPieSliceIndex,Enumeration,xlMidCounterClockwiseRadiusPoint,6,The midpoint of the most counterclockwise radius of a slice.
+XlPieSliceIndex,Enumeration,xlInnerClockwisePoint,7,The innermost point of the most clockwise radius of a doughnut slice.
+XlPieSliceIndex,Enumeration,xlInnerCenterPoint,8,The innermost center point of a doughnut slice.
+XlPieSliceIndex,Enumeration,xlInnerCounterClockwisePoint,9,The innermost point of the most counterclockwise radius of a doughnut slice.
+XlPieSliceLocation,Enumeration,xlHorizontalCoordinate,1,
+XlPieSliceLocation,Enumeration,xlVerticalCoordinate,2,
+XlPivotFieldOrientation,Enumeration,xlColumnField,2,A column field.
+XlPivotFieldOrientation,Enumeration,xlDataField,4,A data field.
+XlPivotFieldOrientation,Enumeration,xlHidden,0,A hidden field.
+XlPivotFieldOrientation,Enumeration,xlPageField,3,A page field.
+XlPivotFieldOrientation,Enumeration,xlRowField,1,A row field.
+XlReadingOrder,Enumeration,xlContext,-5002,According to context.
+XlReadingOrder,Enumeration,xlLTR,-5003,Left-to-right.
+XlReadingOrder,Enumeration,xlRTL,-5004,Right-to-left.
+XlRegionLabelOptions,Enumeration,xlRegionLabelOptionsNone,0,
+XlRegionLabelOptions,Enumeration,xlRegionLabelOptionsBestFitOnly,1,
+XlRegionLabelOptions,Enumeration,xlRegionLabelOptionsShowAll,2,
+XlRgbColor,Enumeration,rgbAliceBlue,16775408,
+XlRgbColor,Enumeration,rgbAntiqueWhite,14150650,
+XlRgbColor,Enumeration,rgbAqua,16776960,
+XlRgbColor,Enumeration,rgbAquamarine,13959039,
+XlRgbColor,Enumeration,rgbAzure,16777200,
+XlRgbColor,Enumeration,rgbBeige,14480885,
+XlRgbColor,Enumeration,rgbBisque,12903679,
+XlRgbColor,Enumeration,rgbBlack,0,
+XlRgbColor,Enumeration,rgbBlanchedAlmond,13495295,
+XlRgbColor,Enumeration,rgbBlue,16711680,
+XlRgbColor,Enumeration,rgbBlueViolet,14822282,
+XlRgbColor,Enumeration,rgbBrown,2763429,
+XlRgbColor,Enumeration,rgbBurlyWood,8894686,
+XlRgbColor,Enumeration,rgbCadetBlue,10526303,
+XlRgbColor,Enumeration,rgbChartreuse,65407,
+XlRgbColor,Enumeration,rgbCoral,5275647,
+XlRgbColor,Enumeration,rgbCornflowerBlue,15570276,
+XlRgbColor,Enumeration,rgbCornsilk,14481663,
+XlRgbColor,Enumeration,rgbCrimson,3937500,
+XlRgbColor,Enumeration,rgbDarkBlue,9109504,
+XlRgbColor,Enumeration,rgbDarkCyan,9145088,
+XlRgbColor,Enumeration,rgbDarkGoldenrod,755384,
+XlRgbColor,Enumeration,rgbDarkGreen,25600,
+XlRgbColor,Enumeration,rgbDarkGray,11119017,
+XlRgbColor,Enumeration,rgbDarkGrey,11119017,
+XlRgbColor,Enumeration,rgbDarkKhaki,7059389,
+XlRgbColor,Enumeration,rgbDarkMagenta,9109643,
+XlRgbColor,Enumeration,rgbDarkOliveGreen,3107669,
+XlRgbColor,Enumeration,rgbDarkOrange,36095,
+XlRgbColor,Enumeration,rgbDarkOrchid,13382297,
+XlRgbColor,Enumeration,rgbDarkRed,139,
+XlRgbColor,Enumeration,rgbDarkSalmon,8034025,
+XlRgbColor,Enumeration,rgbDarkSeaGreen,9419919,
+XlRgbColor,Enumeration,rgbDarkSlateBlue,9125192,
+XlRgbColor,Enumeration,rgbDarkSlateGray,5197615,
+XlRgbColor,Enumeration,rgbDarkSlateGrey,5197615,
+XlRgbColor,Enumeration,rgbDarkTurquoise,13749760,
+XlRgbColor,Enumeration,rgbDarkViolet,13828244,
+XlRgbColor,Enumeration,rgbDeepPink,9639167,
+XlRgbColor,Enumeration,rgbDeepSkyBlue,16760576,
+XlRgbColor,Enumeration,rgbDimGray,6908265,
+XlRgbColor,Enumeration,rgbDimGrey,6908265,
+XlRgbColor,Enumeration,rgbDodgerBlue,16748574,
+XlRgbColor,Enumeration,rgbFireBrick,2237106,
+XlRgbColor,Enumeration,rgbFloralWhite,15792895,
+XlRgbColor,Enumeration,rgbForestGreen,2263842,
+XlRgbColor,Enumeration,rgbFuchsia,16711935,
+XlRgbColor,Enumeration,rgbGainsboro,14474460,
+XlRgbColor,Enumeration,rgbGhostWhite,16775416,
+XlRgbColor,Enumeration,rgbGold,55295,
+XlRgbColor,Enumeration,rgbGoldenrod,2139610,
+XlRgbColor,Enumeration,rgbGray,8421504,
+XlRgbColor,Enumeration,rgbGreen,32768,
+XlRgbColor,Enumeration,rgbGrey,8421504,
+XlRgbColor,Enumeration,rgbGreenYellow,3145645,
+XlRgbColor,Enumeration,rgbHoneydew,15794160,
+XlRgbColor,Enumeration,rgbHotPink,11823615,
+XlRgbColor,Enumeration,rgbIndianRed,6053069,
+XlRgbColor,Enumeration,rgbIndigo,8519755,
+XlRgbColor,Enumeration,rgbIvory,15794175,
+XlRgbColor,Enumeration,rgbKhaki,9234160,
+XlRgbColor,Enumeration,rgbLavender,16443110,
+XlRgbColor,Enumeration,rgbLavenderBlush,16118015,
+XlRgbColor,Enumeration,rgbLawnGreen,64636,
+XlRgbColor,Enumeration,rgbLemonChiffon,13499135,
+XlRgbColor,Enumeration,rgbLightBlue,15128749,
+XlRgbColor,Enumeration,rgbLightCoral,8421616,
+XlRgbColor,Enumeration,rgbLightCyan,9145088,
+XlRgbColor,Enumeration,rgbLightGoldenrodYellow,13826810,
+XlRgbColor,Enumeration,rgbLightGray,13882323,
+XlRgbColor,Enumeration,rgbLightGreen,9498256,
+XlRgbColor,Enumeration,rgbLightGrey,13882323,
+XlRgbColor,Enumeration,rgbLightPink,12695295,
+XlRgbColor,Enumeration,rgbLightSalmon,8036607,
+XlRgbColor,Enumeration,rgbLightSeaGreen,11186720,
+XlRgbColor,Enumeration,rgbLightSkyBlue,16436871,
+XlRgbColor,Enumeration,rgbLightSlateGray,10061943,
+XlRgbColor,Enumeration,rgbLightSlateGrey,10061943,
+XlRgbColor,Enumeration,rgbLightSteelBlue,14599344,
+XlRgbColor,Enumeration,rgbLightYellow,14745599,
+XlRgbColor,Enumeration,rgbLime,65280,
+XlRgbColor,Enumeration,rgbLimeGreen,3329330,
+XlRgbColor,Enumeration,rgbLinen,15134970,
+XlRgbColor,Enumeration,rgbMaroon,128,
+XlRgbColor,Enumeration,rgbMediumAquamarine,11206502,
+XlRgbColor,Enumeration,rgbMediumBlue,13434880,
+XlRgbColor,Enumeration,rgbMediumOrchid,13850042,
+XlRgbColor,Enumeration,rgbMediumPurple,14381203,
+XlRgbColor,Enumeration,rgbMediumSeaGreen,7451452,
+XlRgbColor,Enumeration,rgbMediumSlateBlue,15624315,
+XlRgbColor,Enumeration,rgbMediumSpringGreen,10156544,
+XlRgbColor,Enumeration,rgbMediumTurquoise,13422920,
+XlRgbColor,Enumeration,rgbMediumVioletRed,8721863,
+XlRgbColor,Enumeration,rgbMidnightBlue,7346457,
+XlRgbColor,Enumeration,rgbMintCream,16449525,
+XlRgbColor,Enumeration,rgbMistyRose,14804223,
+XlRgbColor,Enumeration,rgbMoccasin,11920639,
+XlRgbColor,Enumeration,rgbNavajoWhite,11394815,
+XlRgbColor,Enumeration,rgbNavy,8388608,
+XlRgbColor,Enumeration,rgbNavyBlue,8388608,
+XlRgbColor,Enumeration,rgbOldLace,15136253,
+XlRgbColor,Enumeration,rgbOlive,32896,
+XlRgbColor,Enumeration,rgbOliveDrab,2330219,
+XlRgbColor,Enumeration,rgbOrange,42495,
+XlRgbColor,Enumeration,rgbOrangeRed,17919,
+XlRgbColor,Enumeration,rgbOrchid,14053594,
+XlRgbColor,Enumeration,rgbPaleGoldenrod,7071982,
+XlRgbColor,Enumeration,rgbPaleGreen,10025880,
+XlRgbColor,Enumeration,rgbPaleTurquoise,15658671,
+XlRgbColor,Enumeration,rgbPaleVioletRed,9662683,
+XlRgbColor,Enumeration,rgbPapayaWhip,14020607,
+XlRgbColor,Enumeration,rgbPeachPuff,12180223,
+XlRgbColor,Enumeration,rgbPeru,4163021,
+XlRgbColor,Enumeration,rgbPink,13353215,
+XlRgbColor,Enumeration,rgbPlum,14524637,
+XlRgbColor,Enumeration,rgbPowderBlue,15130800,
+XlRgbColor,Enumeration,rgbPurple,8388736,
+XlRgbColor,Enumeration,rgbRed,255,
+XlRgbColor,Enumeration,rgbRosyBrown,9408444,
+XlRgbColor,Enumeration,rgbRoyalBlue,14772545,
+XlRgbColor,Enumeration,rgbSalmon,7504122,
+XlRgbColor,Enumeration,rgbSandyBrown,6333684,
+XlRgbColor,Enumeration,rgbSeaGreen,5737262,
+XlRgbColor,Enumeration,rgbSeashell,15660543,
+XlRgbColor,Enumeration,rgbSienna,2970272,
+XlRgbColor,Enumeration,rgbSilver,12632256,
+XlRgbColor,Enumeration,rgbSkyBlue,15453831,
+XlRgbColor,Enumeration,rgbSlateBlue,13458026,
+XlRgbColor,Enumeration,rgbSlateGray,9470064,
+XlRgbColor,Enumeration,rgbSlateGrey,9470064,
+XlRgbColor,Enumeration,rgbSnow,16448255,
+XlRgbColor,Enumeration,rgbSpringGreen,8388352,
+XlRgbColor,Enumeration,rgbSteelBlue,11829830,
+XlRgbColor,Enumeration,rgbTan,9221330,
+XlRgbColor,Enumeration,rgbTeal,8421376,
+XlRgbColor,Enumeration,rgbThistle,14204888,
+XlRgbColor,Enumeration,rgbTomato,4678655,
+XlRgbColor,Enumeration,rgbTurquoise,13688896,
+XlRgbColor,Enumeration,rgbYellow,65535,
+XlRgbColor,Enumeration,rgbYellowGreen,3329434,
+XlRgbColor,Enumeration,rgbViolet,15631086,
+XlRgbColor,Enumeration,rgbWheat,11788021,
+XlRgbColor,Enumeration,rgbWhite,16777215,
+XlRgbColor,Enumeration,rgbWhiteSmoke,16119285,
+XlRowCol,Enumeration,xlColumns,2,The data series is in a row.
+XlRowCol,Enumeration,xlRows,1,The data series is in a column.
+XlScaleType,Enumeration,xlScaleLinear,-4132,A linear scale.
+XlScaleType,Enumeration,xlScaleLogarithmic,-4133,A logarithmic scale.
+XlSeriesColorGradientStyle,Enumeration,xlSeriesColorGradientStyleSequential,0,
+XlSeriesColorGradientStyle,Enumeration,xlSeriesColorGradientStyleDiverging,1,
+XlSeriesNameLevel,Enumeration,xlSeriesNameLevelNone,-3,Sets no series names in the chart.
+XlSeriesNameLevel,Enumeration,xlSeriesNameLevelCustom,-2,Indicates literal data in the series names.
+XlSeriesNameLevel,Enumeration,xlSeriesNameLevelAll,-1,Sets series names to all series name levels within range on the chart. The default.
+XlSizeRepresents,Enumeration,xlSizeIsWidth,2,The width of the bubble.
+XlSizeRepresents,Enumeration,xlSizeIsArea,1,The area of the bubble.
+XlTickLabelOrientation,Enumeration,xlTickLabelOrientationAutomatic,-4105,The text orientation is set by Microsoft Word.
+XlTickLabelOrientation,Enumeration,xlTickLabelOrientationDownward,-4170,The text runs downward.
+XlTickLabelOrientation,Enumeration,xlTickLabelOrientationHorizontal,-4128,The characters run horizontally.
+XlTickLabelOrientation,Enumeration,xlTickLabelOrientationUpward,-4171,The text runs upward.
+XlTickLabelOrientation,Enumeration,xlTickLabelOrientationVertical,-4166,The characters run vertically.
+XlTickLabelPosition,Enumeration,xlTickLabelPositionHigh,-4127,The top or right side of the chart.
+XlTickLabelPosition,Enumeration,xlTickLabelPositionLow,-4134,The bottom or left side of the chart.
+XlTickLabelPosition,Enumeration,xlTickLabelPositionNextToAxis,4,Next to the axis (where the axis is not at either side of the chart).
+XlTickLabelPosition,Enumeration,xlTickLabelPositionNone,-4142,No tick marks.
+XlTickMark,Enumeration,xlTickMarkCross,4,Crosses the axis.
+XlTickMark,Enumeration,xlTickMarkInside,2,Inside the axis.
+XlTickMark,Enumeration,xlTickMarkNone,-4142,No mark.
+XlTickMark,Enumeration,xlTickMarkOutside,3,Outside the axis.
+XlTimeUnit,Enumeration,xlDays,0,Days
+XlTimeUnit,Enumeration,xlMonths,1,Months
+XlTimeUnit,Enumeration,xlYears,2,Years
+XlTrendlineType,Enumeration,xlExponential,5,"Uses an equation to calculate the least squares fit through points (for example, y=ab^x) ."
+XlTrendlineType,Enumeration,xlLinear,-4132,Uses the linear equation y = mx + b to calculate the least squares fit through points.
+XlTrendlineType,Enumeration,xlLogarithmic,-4133,Uses the equation y = c ln x + b to calculate the least squares fit through points.
+XlTrendlineType,Enumeration,xlMovingAvg,6,Uses a sequence of averages computed from parts of the data series. The number of points equals the total number of points in the series minus the number specified for the period.
+XlTrendlineType,Enumeration,xlPolynomial,3,"Uses an equation to calculate the least squares fit through points (for example, y = ax^6 + bx^5 + cx^4 + dx^3 + ex^2 + fx + g)."
+XlTrendlineType,Enumeration,xlPower,4,"Uses an equation to calculate the least squares fit through points (for example, y = ax^b)."
+XlUnderlineStyle,Enumeration,xlUnderlineStyleDouble,-4119,Double thick underline.
+XlUnderlineStyle,Enumeration,xlUnderlineStyleDoubleAccounting,5,Two thin underlines placed close together.
+XlUnderlineStyle,Enumeration,xlUnderlineStyleNone,-4142,No underline.
+XlUnderlineStyle,Enumeration,xlUnderlineStyleSingle,2,Single underline.
+XlUnderlineStyle,Enumeration,xlUnderlineStyleSingleAccounting,4,Not supported.
+XlVAlign,Enumeration,xlVAlignBottom,-4107,Bottom alignment.
+XlVAlign,Enumeration,xlVAlignCenter,-4108,Center alignment.
+XlVAlign,Enumeration,xlVAlignDistributed,-4117,Distributed alignment.
+XlVAlign,Enumeration,xlVAlignJustify,-4130,Justified alignment.
+XlVAlign,Enumeration,xlVAlignTop,-4160,Top alignment.
+XlValueSortOrder,Enumeration,xlValueNone,0,
+XlValueSortOrder,Enumeration,xlValueAscending,1,
+XlValueSortOrder,Enumeration,xlValueDescending,2,

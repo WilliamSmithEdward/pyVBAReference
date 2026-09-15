@@ -69,6 +69,7 @@ _INVALID = re.compile(r'[<>:"/\\|?*]')
 ACCESS_CODES = {"read-only": "R_O", "read/write": "V", "write-only": "W_O"}
 
 CSV_HEADER = ("Object", "Property", "Property split", "Type", "Access")
+CONSTANTS_CSV_HEADER = ("Owner", "Kind", "Constant", "Value", "Description")
 
 # Word boundaries inside a CamelCase identifier: ActiveCell -> Active Cell,
 # XMLDocument -> XML Document. Leaves an acronym intact rather than splitting
@@ -84,6 +85,33 @@ def safe_filename(name: str) -> str:
 def split_at_caps(name: str) -> str:
     """``"ActiveCell"`` -> ``"Active Cell"``, for reading rather than calling."""
     return _CAPS_SPLIT_RE.sub(" ", name)
+
+
+def vb_literal(value) -> str:
+    """Render a constant's value the way it would be written in VB6.
+
+    Numbers stay bare (``6``, ``-4104``); strings are quoted; and the handful
+    of constants whose value *is* a control character - vbCrLf, vbTab,
+    vbNullChar - become Chr() calls rather than raw bytes, which no
+    spreadsheet or CSV parser handles sanely.
+    """
+    if value is None:
+        return ""
+    if not isinstance(value, str):
+        return str(value)
+    parts: list = []
+    run: list = []
+    for ch in value:
+        if 32 <= ord(ch) <= 126:
+            run.append(ch)
+            continue
+        if run:
+            parts.append('"' + "".join(run).replace('"', '""') + '"')
+            run = []
+        parts.append(f"Chr({ord(ch)})")
+    if run or not parts:
+        parts.append('"' + "".join(run).replace('"', '""') + '"')
+    return " & ".join(parts)
 
 
 # --------------------------------------------------------------------------- #
@@ -435,8 +463,31 @@ def build_properties_csv(group: dict, loaded: dict) -> list:
     return rows
 
 
+def build_constants_csv(group: dict, loaded: dict) -> list:
+    """The constant table as flat rows, for import into a spreadsheet.
+
+    One row per constant: the enumeration or module that declares it, its
+    name, its value as a VB6 literal, and the description where Microsoft
+    Learn has one.
+    """
+    rows = [list(CONSTANTS_CSV_HEADER)]
+    for lib in group["libraries"]:
+        for data in loaded[lib["folder"]]:
+            if data.get("kind") not in ("Enumeration", "Module"):
+                continue
+            for const in data.get("constants", []):
+                rows.append([data["name"], data["kind"], const["name"],
+                             vb_literal(const.get("value")),
+                             const.get("description", "")])
+    return rows
+
+
 BUILDERS = (("", build_full), ("_constants", build_constants),
             ("_properties", build_properties))
+
+# Flat CSV tables, keyed by the export they belong to.
+CSV_BUILDERS = (("_properties", build_properties_csv),
+                ("_constants", build_constants_csv))
 
 
 # --------------------------------------------------------------------------- #
@@ -459,11 +510,26 @@ def _write_md(path: str, lines) -> int:
     return os.path.getsize(path)
 
 
+# A spreadsheet evaluates a cell starting with one of these as a formula, so
+# "= (Formula) field." would import as #NAME? instead of as its text.
+_FORMULA_LEAD = ("=", "+", "@")
+
+
+def _csv_field(value: str) -> str:
+    """Keep a field that opens with a formula character readable as text.
+
+    A leading space is enough for Excel and, unlike the usual apostrophe,
+    is not kept as data by every other CSV reader.
+    """
+    return " " + value if value[:1] in _FORMULA_LEAD else value
+
+
 def _write_csv(path: str, rows) -> int:
     # newline="" is required so the csv module's RFC 4180 line endings are not
     # translated a second time on Windows.
     with open(path, "w", encoding="utf-8", newline="") as fh:
-        csv.writer(fh).writerows(rows)
+        csv.writer(fh).writerows(
+            [[_csv_field(field) for field in row] for row in rows])
     return os.path.getsize(path)
 
 
@@ -489,7 +555,7 @@ def _write_index(out_dir: str, rows) -> None:
     for row in rows:
         key = row["key"]
         lines.append(f"| {row['title']} | {cell(key, '')} | "
-                     f"{cell(key, '_constants')} | "
+                     f"{cell(key, '_constants', with_csv=True)} | "
                      f"{cell(key, '_properties', with_csv=True)} |")
     lines.append("")
     lines.append("Counts:")
@@ -499,10 +565,12 @@ def _write_index(out_dir: str, rows) -> None:
                      f"{row['constant_count']:,} constants, "
                      f"{row['property_count']:,} properties")
     lines.append("")
-    lines.append("## The property CSV")
+    lines.append("## The CSV tables")
     lines.append("")
-    lines.append("`<app>_properties.csv` is the same property list as a flat "
-                 "table, for importing into a spreadsheet:")
+    lines.append("The same properties and constants as flat tables, for "
+                 "importing into a spreadsheet.")
+    lines.append("")
+    lines.append("`<app>_properties.csv`:")
     lines.append("")
     lines.append("| Column | Meaning |")
     lines.append("| ------ | ------- |")
@@ -513,6 +581,18 @@ def _write_index(out_dir: str, rows) -> None:
     lines.append("| `Type` | what the property returns |")
     lines.append("| `Access` | `R_O` read-only, `V` settable, `W_O` "
                  "write-only |")
+    lines.append("")
+    lines.append("`<app>_constants.csv`:")
+    lines.append("")
+    lines.append("| Column | Meaning |")
+    lines.append("| ------ | ------- |")
+    lines.append("| `Owner` | the enumeration or module that declares it |")
+    lines.append("| `Kind` | `Enumeration` or `Module` |")
+    lines.append("| `Constant` | the constant name, as written in code |")
+    lines.append("| `Value` | the value as a VB6 literal: `6`, `-4104`, "
+                 "`\"PDF Format (*.pdf)\"`, `Chr(13) & Chr(10)` |")
+    lines.append("| `Description` | from Microsoft Learn, where there is "
+                 "one |")
     lines.append("")
     with open(os.path.join(out_dir, "_index.md"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(lines))
@@ -542,13 +622,14 @@ def build(data_dir: str = DATA_DIR, quiet: bool = False) -> int:
                 print(f"  {group['key']}{suffix}.json ({_size(json_bytes)}), "
                       f"{group['key']}{suffix}.md ({_size(md_bytes)})")
 
-        csv_rows = build_properties_csv(group, loaded)
-        csv_bytes = _write_csv(
-            os.path.join(out_dir, group["key"] + "_properties.csv"), csv_rows)
-        written += 1
-        if not quiet:
-            print(f"  {group['key']}_properties.csv ({_size(csv_bytes)}, "
-                  f"{len(csv_rows) - 1:,} rows)")
+        for suffix, builder in CSV_BUILDERS:
+            csv_rows = builder(group, loaded)
+            name = group["key"] + suffix + ".csv"
+            csv_bytes = _write_csv(os.path.join(out_dir, name), csv_rows)
+            written += 1
+            if not quiet:
+                print(f"  {name} ({_size(csv_bytes)}, "
+                      f"{len(csv_rows) - 1:,} rows)")
 
         rows.append({
             "key": group["key"], "title": group["title"],

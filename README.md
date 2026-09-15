@@ -82,11 +82,11 @@ four have in common. Each set is three pairs of files:
 | File                      | Contents                                          |
 | ------------------------- | ------------------------------------------------- |
 | `<app>.json` / `.md`      | every type, with methods, events and parameter docs |
-| `<app>_constants.json` / `.md`  | every enumeration and module constant, with values |
+| `<app>_constants.json` / `.md` / `.csv`  | every enumeration and module constant, with values |
 | `<app>_properties.json` / `.md` / `.csv` | every property of every object, with type and access |
 
-The property CSV is a flat table for importing into a spreadsheet, one row per
-property - `Object,Property,Property split,Type,Access`:
+The two CSVs are flat tables for importing into a spreadsheet. Properties, as
+`Object,Property,Property split,Type,Access`:
 
 ```
 Application,ActiveCell,Active Cell,Range,R_O
@@ -95,8 +95,20 @@ Worksheet,Name,Name,String,V
 ```
 
 `Property split` is the same name split at capitals, for reading rather than
-calling. `Access` is `R_O` read-only, `V` settable, `W_O` write-only. 26,543
-rows across the five files.
+calling. `Access` is `R_O` read-only, `V` settable, `W_O` write-only.
+
+Constants, as `Owner,Kind,Constant,Value,Description`:
+
+```
+XlFileFormat,Enumeration,xlCSV,6,CSV
+XlFileFormat,Enumeration,xlWorkbookDefault,51,Workbook default
+Constants,Module,vbCrLf,Chr(13) & Chr(10),
+```
+
+`Value` is written as a VB6 literal, so it drops straight into generated code:
+bare numbers, quoted strings, and `Chr()` for the handful of constants whose
+value is a control character. 26,543 property rows and 12,995 constant rows
+across the ten files.
 
 So the whole Word object model is one 3.6 MB JSON file or one 1.8 MB Markdown
 file; every Excel constant is a 175 KB Markdown file. Nothing here is new data -
