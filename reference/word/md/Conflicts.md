@@ -6,7 +6,7 @@
 
 A collection ofConflict objects that represents the conflicts in a document. The type of a Conflict object is specified by the WdRevisionType enumeration.
 
-**Remarks:** Use the Conflicts property to return the Conflicts collection for a document. Use Conflicts (_index_), where _index_ is the conflict index number, to return a single Conflict object.
+**Remarks:** Use the Conflicts property to return the Conflicts collection for a document. Use Conflicts (index), where index is the conflict index number, to return a single Conflict object.
 
 **Example:**
 

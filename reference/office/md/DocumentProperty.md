@@ -6,7 +6,7 @@
 
 Represents a custom or built-in document property of a container document. The DocumentProperty object is a member of the DocumentProperties collection.
 
-**Remarks:** Use the Microsoft Word Document.BuiltinDocumentProperties(_index_) property, where _index_ is the name or index number of the built-in document property, to return a single DocumentProperty object that represents a specific built-in document property. Use the Word Document.CustomDocumentProperties(_index_) property, where _index_ is the name or index number of the custom document property, to return a DocumentProperty object that represents a specific custom document property.
+**Remarks:** Use the Microsoft Word Document.BuiltinDocumentProperties(index) property, where index is the name or index number of the built-in document property, to return a single DocumentProperty object that represents a specific built-in document property. Use the Word Document.CustomDocumentProperties(index) property, where index is the name or index number of the custom document property, to return a DocumentProperty object that represents a specific custom document property.
 
 ## Properties (8)
 

@@ -2843,7 +2843,7 @@
       "name": "Asin",
       "kind": "method",
       "signature": "Asin(Arg1 As Double) As Double",
-      "description": "Returns the arcsine, or inverse sine, of a number. The arcsine is the angle whose sine is _Arg1_. The returned angle is given in radians in the range -pi/2 to pi/2.",
+      "description": "Returns the arcsine, or inverse sine, of a number. The arcsine is the angle whose sine is Arg1. The returned angle is given in radians in the range -pi/2 to pi/2.",
       "returns": "Double",
       "parameters": [
         {
@@ -2858,7 +2858,7 @@
       "name": "Acos",
       "kind": "method",
       "signature": "Acos(Arg1 As Double) As Double",
-      "description": "Returns the arccosine, or inverse cosine, of a number. The arccosine is the angle whose cosine is _Arg1_. The returned angle is given in radians in the range 0 (zero) to pi.",
+      "description": "Returns the arccosine, or inverse cosine, of a number. The arccosine is the angle whose cosine is Arg1. The returned angle is given in radians in the range 0 (zero) to pi.",
       "returns": "Double",
       "parameters": [
         {
@@ -2873,14 +2873,14 @@
       "name": "Choose",
       "kind": "method",
       "signature": "Choose(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant]) As Variant",
-      "description": "Uses _Arg1_ as the index to return a value from the list of value arguments.",
+      "description": "Uses Arg1 as the index to return a value from the list of value arguments.",
       "returns": "Variant",
       "parameters": [
         {
           "name": "Arg1",
           "type": "Variant",
           "optional": false,
-          "description": "Specifies which value argument is selected. _Arg1_ must be a number between 1 and 29, or a formula or reference to a cell containing a number between 1 and 29."
+          "description": "Specifies which value argument is selected. Arg1 must be a number between 1 and 29, or a formula or reference to a cell containing a number between 1 and 29."
         },
         {
           "name": "Arg2",
@@ -3192,19 +3192,19 @@
           "name": "Arg2",
           "type": "Double",
           "optional": false,
-          "description": "The position of the character in _Arg1_ that you want to replace with _Arg4_."
+          "description": "The position of the character in Arg1 that you want to replace with Arg4."
         },
         {
           "name": "Arg3",
           "type": "Double",
           "optional": false,
-          "description": "The number of characters in _Arg1_ that you want the Replace method to replace with _Arg4_."
+          "description": "The number of characters in Arg1 that you want the Replace method to replace with Arg4."
         },
         {
           "name": "Arg4",
           "type": "String",
           "optional": false,
-          "description": "Text that will replace characters in _Arg1_."
+          "description": "Text that will replace characters in Arg1."
         }
       ]
     },
@@ -4494,7 +4494,7 @@
           "name": "Arg2",
           "type": "Double",
           "optional": false,
-          "description": "The number of digits to the right of the decimal point. If _Arg2_ is negative, the number is rounded to the left of the decimal point. If you omit decimals, it is assumed to be 2."
+          "description": "The number of digits to the right of the decimal point. If Arg2 is negative, the number is rounded to the left of the decimal point. If you omit decimals, it is assumed to be 2."
         }
       ]
     },
@@ -5159,7 +5159,7 @@
       "name": "Asinh",
       "kind": "method",
       "signature": "Asinh(Arg1 As Double) As Double",
-      "description": "Returns the inverse hyperbolic sine of a number. The inverse hyperbolic sine is the value whose hyperbolic sine is _Arg1_, so Asinh(Sinh(number)) equals _Arg1_.",
+      "description": "Returns the inverse hyperbolic sine of a number. The inverse hyperbolic sine is the value whose hyperbolic sine is Arg1, so Asinh(Sinh(number)) equals Arg1.",
       "returns": "Double",
       "parameters": [
         {
@@ -5174,7 +5174,7 @@
       "name": "Acosh",
       "kind": "method",
       "signature": "Acosh(Arg1 As Double) As Double",
-      "description": "Returns the inverse hyperbolic cosine of a number. Number must be greater than or equal to 1. The inverse hyperbolic cosine is the value whose hyperbolic cosine is _Arg1_, so Acosh(Cosh(number)) equals _Arg1_.",
+      "description": "Returns the inverse hyperbolic cosine of a number. Number must be greater than or equal to 1. The inverse hyperbolic cosine is the value whose hyperbolic cosine is Arg1, so Acosh(Cosh(number)) equals Arg1.",
       "returns": "Double",
       "parameters": [
         {
@@ -6389,7 +6389,7 @@
       "name": "Correl",
       "kind": "method",
       "signature": "Correl(Arg1 As Variant, Arg2 As Variant) As Double",
-      "description": "Returns the correlation coefficient of the _Arg1_ and _Arg2_ cell ranges.",
+      "description": "Returns the correlation coefficient of the Arg1 and Arg2 cell ranges.",
       "returns": "Double",
       "parameters": [
         {
@@ -7757,14 +7757,14 @@
       "name": "ZTest",
       "kind": "method",
       "signature": "ZTest(Arg1 As Variant, Arg2 As Double, [Arg3 As Variant]) As Double",
-      "description": "Returns the one-tailed probability-value of a z-test. For a given hypothesized population mean, ZTest returns the probability that the sample mean would be greater than the average of observations in the data set (_array_); that is, the observed sample mean.",
+      "description": "Returns the one-tailed probability-value of a z-test. For a given hypothesized population mean, ZTest returns the probability that the sample mean would be greater than the average of observations in the data set (array); that is, the observed sample mean.",
       "returns": "Double",
       "parameters": [
         {
           "name": "Arg1",
           "type": "Variant",
           "optional": false,
-          "description": "_Array_ is the array or range of data against which to test the hypothesized population mean."
+          "description": "Array is the array or range of data against which to test the hypothesized population mean."
         },
         {
           "name": "Arg2",
@@ -7776,7 +7776,7 @@
           "name": "Arg3",
           "type": "Variant",
           "optional": true,
-          "description": "_Sigma_ is the population (known) standard deviation. If omitted, the sample standard deviation is used."
+          "description": "Sigma is the population (known) standard deviation. If omitted, the sample standard deviation is used."
         }
       ]
     },
@@ -15200,14 +15200,14 @@
       "name": "Z_Test",
       "kind": "method",
       "signature": "Z_Test(Arg1 As Variant, Arg2 As Double, [Arg3 As Variant]) As Double",
-      "description": "Returns the one-tailed probability-value of a z-test. For a given hypothesized population mean, Z_Test returns the probability that the sample mean would be greater than the average of observations in the data set (_array_); that is, the observed sample mean.",
+      "description": "Returns the one-tailed probability-value of a z-test. For a given hypothesized population mean, Z_Test returns the probability that the sample mean would be greater than the average of observations in the data set (array); that is, the observed sample mean.",
       "returns": "Double",
       "parameters": [
         {
           "name": "Arg1",
           "type": "Variant",
           "optional": false,
-          "description": "_Array_ is the array or range of data against which to test the hypothesized population mean."
+          "description": "Array is the array or range of data against which to test the hypothesized population mean."
         },
         {
           "name": "Arg2",
@@ -15219,7 +15219,7 @@
           "name": "Arg3",
           "type": "Variant",
           "optional": true,
-          "description": "_Sigma_ is the population (known) standard deviation. If omitted, the sample standard deviation is used."
+          "description": "Sigma is the population (known) standard deviation. If omitted, the sample standard deviation is used."
         }
       ]
     },
@@ -15660,7 +15660,7 @@
           "name": "Arg2",
           "type": "Double",
           "optional": false,
-          "description": "The number of bits that you want to shift _Arg1_ left by."
+          "description": "The number of bits that you want to shift Arg1 left by."
         }
       ]
     },
@@ -15681,7 +15681,7 @@
           "name": "Arg2",
           "type": "Double",
           "optional": false,
-          "description": "The number of bits that you want to shift _Arg1_ right by."
+          "description": "The number of bits that you want to shift Arg1 right by."
         }
       ]
     },
@@ -16002,13 +16002,13 @@
           "name": "Arg1",
           "type": "Variant",
           "optional": false,
-          "description": "start_date(_Arg2_) and end_date (_Arg1_) are the two dates between which you want to know the number of days."
+          "description": "start_date(Arg2) and end_date (Arg1) are the two dates between which you want to know the number of days."
         },
         {
           "name": "Arg2",
           "type": "Variant",
           "optional": false,
-          "description": "start_date(_Arg2_) and end_date (_Arg1_) are the two dates between which you want to know the number of days."
+          "description": "start_date(Arg2) and end_date (Arg1) are the two dates between which you want to know the number of days."
         }
       ]
     },
@@ -16041,7 +16041,7 @@
           "name": "Arg4",
           "type": "Variant",
           "optional": true,
-          "description": "If provided, this function returns the probability that the number of successful trials shall lie between _Arg3_ and _Arg4_."
+          "description": "If provided, this function returns the probability that the number of successful trials shall lie between Arg3 and Arg4."
         }
       ]
     },

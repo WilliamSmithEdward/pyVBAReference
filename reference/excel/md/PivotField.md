@@ -191,7 +191,7 @@ Worksheets("sheet3").PivotTables(1) _
 - `AddPageItem(Item As String, [ClearList As Variant])`  
   Adds an additional item to a multiple item page field.
     - `Item As String` (required): Source name of a PivotItem object, corresponding to the specific Online Analytical Processing (OLAP) member unique name.
-    - `ClearList As Variant` (optional): If False (default), adds a page item to the existing list. If True, deletes all current items and adds _Item_.
+    - `ClearList As Variant` (optional): If False (default), adds a page item to the existing list. If True, deletes all current items and adds Item.
 - `DrillTo(Field As String)`  
   The DrillTo method supports drilling to a specified PivotField from another PivotField.
 - `ClearManualFilter()`  

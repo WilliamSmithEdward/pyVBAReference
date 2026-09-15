@@ -40,7 +40,7 @@ Worksheets(1).Range("E5").CommentThreaded.Text "reviewed on " & Date
 - `Text([Text As Variant], [Start As Variant], [Overwrite As Variant]) As String`  
   Sets threaded comment text.
     - `Text As Variant` (optional): The text to be added.
-    - `Start As Variant` (optional): The character number where the added text will be placed. If the _Overwrite_ parameter is True or blank, and if this argument is omitted, any existing text in the threaded comment is deleted.
+    - `Start As Variant` (optional): The character number where the added text will be placed. If the Overwrite parameter is True or blank, and if this argument is omitted, any existing text in the threaded comment is deleted.
     - `Overwrite As Variant` (optional): False to insert the text. The default value is True (text is overwritten).
 - `Next() As CommentThreaded`  
   Returns a CommentThreaded object that represents the next threaded comment.

@@ -121,7 +121,7 @@ A collection of Shape objects that represent all the shapes in a document or all
     - `Top As Variant` (optional): The distance, in points, from the top edge of the slide to the top edge of the SmartArt graphic.
     - `Width As Variant` (optional): The width of the SmartArt graphic.
     - `Height As Variant` (optional): The height of the SmartArt graphic.
-    - `Anchor As Variant` (optional): A Range object that represents the text to which the SmartArt graphic is bound. If _Anchor_ is specified, the anchor is positioned at the beginning of the first paragraph in the anchoring range. If this argument is omitted, the anchoring range is selected automatically and the SmartArt graphic is positioned relative to the top and left edges of the page.
+    - `Anchor As Variant` (optional): A Range object that represents the text to which the SmartArt graphic is bound. If Anchor is specified, the anchor is positioned at the beginning of the first paragraph in the anchoring range. If this argument is omitted, the anchoring range is selected automatically and the SmartArt graphic is positioned relative to the top and left edges of the page.
 - `AddWebVideo(EmbedCode As String, VideoWidth As Variant, VideoHeight As Variant, [PosterFrameImage As Variant], [Url As Variant], [Left As Variant], [Top As Variant], [Width As Variant], [Height As Variant], [Anchor As Variant]) As Shape`  
   Adds a new web video to the document.
     - `EmbedCode As String` (required): The HTML code to embed.
@@ -133,7 +133,7 @@ A collection of Shape objects that represent all the shapes in a document or all
     - `Top As Variant` (optional): The position, measured in points, of the top edge of the poster frame from the edge of the document.
     - `Width As Variant` (optional): The width, measured in points, of the poster frame in the document.
     - `Height As Variant` (optional): The height, measured in points, of the poster frame in the document.
-    - `Anchor As Variant` (optional): A Range object that represents the text to which the web video is bound. If _Anchor_ is specified, the anchor is positioned at the beginning of the first paragraph in the anchoring range. If this argument is omitted, the anchoring range is selected automatically and the video is positioned relative to the top and left edges of the page.
+    - `Anchor As Variant` (optional): A Range object that represents the text to which the web video is bound. If Anchor is specified, the anchor is positioned at the beginning of the first paragraph in the anchoring range. If this argument is omitted, the anchoring range is selected automatically and the video is positioned relative to the top and left edges of the page.
 - `AddChart2([Style As Long], [Type As XlChartType], [Left As Variant], [Top As Variant], [Width As Variant], [Height As Variant], [Anchor As Variant], [NewLayout As Variant]) As Shape`  
   Adds a chart to the document. Returns a Shape object that represents a chart and adds it to the specified collection.
     - `Style As Long` (optional): The chart style. Use "-1" to get the default style for the chart type specified in Type.
@@ -142,8 +142,8 @@ A collection of Shape objects that represent all the shapes in a document or all
     - `Top As Variant` (optional): The position, in points, of the top edge of the chart, relative to the anchor.
     - `Width As Variant` (optional): The width, in points, of the chart.
     - `Height As Variant` (optional): The height, in points, of the chart.
-    - `Anchor As Variant` (optional): A Range object that represents the text to which the canvas is bound. If _Anchor_ is specified, the anchor is positioned at the beginning of the first paragraph in the anchoring range. If this argument is omitted, the anchoring range is selected automatically and the canvas is positioned relative to the top and left edges of the page.
-    - `NewLayout As Variant` (optional): If _NewLayout_ is True, the chart will be inserted by using the new dynamic formatting rules (Title is on, and Legend is on only if there are multiple series).
+    - `Anchor As Variant` (optional): A Range object that represents the text to which the canvas is bound. If Anchor is specified, the anchor is positioned at the beginning of the first paragraph in the anchoring range. If this argument is omitted, the anchoring range is selected automatically and the canvas is positioned relative to the top and left edges of the page.
+    - `NewLayout As Variant` (optional): If NewLayout is True, the chart will be inserted by using the new dynamic formatting rules (Title is on, and Legend is on only if there are multiple series).
 - `Add3DModel(FileName As String, [LinkToFile As Variant], [SaveWithDocument As Variant], [Left As Variant], [Top As Variant], [Width As Variant], [Height As Variant], [Anchor As Variant]) As Shape`  
   Adds a 3D model to a drawing canvas. Returns a Shape object that represents the 3D model and adds it to the CanvasShapes collection.
     - `FileName As String` (required): The path and file name of the 3D model.

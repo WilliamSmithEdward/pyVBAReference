@@ -219,14 +219,14 @@ MsgBox answer
     - `Arg1 As Double` (required): The x-coordinate of the point.
     - `Arg2 As Double` (required): The y-coordinate of the point.
 - `Asin(Arg1 As Double) As Double`  
-  Returns the arcsine, or inverse sine, of a number. The arcsine is the angle whose sine is _Arg1_. The returned angle is given in radians in the range -pi/2 to pi/2.
+  Returns the arcsine, or inverse sine, of a number. The arcsine is the angle whose sine is Arg1. The returned angle is given in radians in the range -pi/2 to pi/2.
     - `Arg1 As Double` (required): The sine of the angle that you want; must be from -1 to 1.
 - `Acos(Arg1 As Double) As Double`  
-  Returns the arccosine, or inverse cosine, of a number. The arccosine is the angle whose cosine is _Arg1_. The returned angle is given in radians in the range 0 (zero) to pi.
+  Returns the arccosine, or inverse cosine, of a number. The arccosine is the angle whose cosine is Arg1. The returned angle is given in radians in the range 0 (zero) to pi.
     - `Arg1 As Double` (required): The cosine of the angle you want, and must be from -1 to 1.
 - `Choose(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant]) As Variant`  
-  Uses _Arg1_ as the index to return a value from the list of value arguments.
-    - `Arg1 As Variant` (required): Specifies which value argument is selected. _Arg1_ must be a number between 1 and 29, or a formula or reference to a cell containing a number between 1 and 29.
+  Uses Arg1 as the index to return a value from the list of value arguments.
+    - `Arg1 As Variant` (required): Specifies which value argument is selected. Arg1 must be a number between 1 and 29, or a formula or reference to a cell containing a number between 1 and 29.
 - `HLookup(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, [Arg4 As Variant]) As Variant`  
   Searches for a value in the top row of a table or an array of values, and then returns a value in the same column from a row that you specify in the table or array. Use HLookup when your comparison values are located in a row across the top of a table of data, and you want to look down a specified number of rows. Use VLookup when your comparison values are located in a column to the left of the data that you want to find.
     - `Arg1 As Variant` (required): Lookup_value - the value to be found in the first row of the table. Lookup_value can be a value, a reference, or a text string.
@@ -252,9 +252,9 @@ MsgBox answer
 - `Replace(Arg1 As String, Arg2 As Double, Arg3 As Double, Arg4 As String) As String`  
   Replaces part of a text string, based on the number of characters that you specify, with a different text string.
     - `Arg1 As String` (required): Text in which you want to replace some characters.
-    - `Arg2 As Double` (required): The position of the character in _Arg1_ that you want to replace with _Arg4_.
-    - `Arg3 As Double` (required): The number of characters in _Arg1_ that you want the Replace method to replace with _Arg4_.
-    - `Arg4 As String` (required): Text that will replace characters in _Arg1_.
+    - `Arg2 As Double` (required): The position of the character in Arg1 that you want to replace with Arg4.
+    - `Arg3 As Double` (required): The number of characters in Arg1 that you want the Replace method to replace with Arg4.
+    - `Arg4 As String` (required): Text that will replace characters in Arg1.
 - `Substitute(Arg1 As String, Arg2 As String, Arg3 As String, [Arg4 As Variant]) As String`  
   Substitutes new_text for old_text in a text string. Use Substitute when you want to replace specific text in a text string; use Replace when you want to replace any text that occurs in a specific location in a text string.
     - `Arg1 As String` (required): Text - the text or the reference to a cell containing text for which you want to substitute characters.
@@ -360,7 +360,7 @@ MsgBox answer
 - `USDollar(Arg1 As Double, Arg2 As Double) As String`  
   Converts a number to text format and applies a currency symbol. The name of the method (and the symbol that it applies) depends upon the language settings.
     - `Arg1 As Double` (required): A reference to a cell containing a number, or a formula that evaluates to a number.
-    - `Arg2 As Double` (required): The number of digits to the right of the decimal point. If _Arg2_ is negative, the number is rounded to the left of the decimal point. If you omit decimals, it is assumed to be 2.
+    - `Arg2 As Double` (required): The number of digits to the right of the decimal point. If Arg2 is negative, the number is rounded to the left of the decimal point. If you omit decimals, it is assumed to be 2.
 - `FindB(Arg1 As String, Arg2 As String, [Arg3 As Variant]) As Double`  
   Find and FindB locate one text string within a second text string, and return the number of the starting position of the first text string from the first character of the second text string.
     - `Arg1 As String` (required): Find_text - the text you want to find.
@@ -416,10 +416,10 @@ MsgBox answer
   Returns the hyperbolic tangent of a number.
     - `Arg1 As Double` (required): Number - any real number.
 - `Asinh(Arg1 As Double) As Double`  
-  Returns the inverse hyperbolic sine of a number. The inverse hyperbolic sine is the value whose hyperbolic sine is _Arg1_, so Asinh(Sinh(number)) equals _Arg1_.
+  Returns the inverse hyperbolic sine of a number. The inverse hyperbolic sine is the value whose hyperbolic sine is Arg1, so Asinh(Sinh(number)) equals Arg1.
     - `Arg1 As Double` (required): Any real number.
 - `Acosh(Arg1 As Double) As Double`  
-  Returns the inverse hyperbolic cosine of a number. Number must be greater than or equal to 1. The inverse hyperbolic cosine is the value whose hyperbolic cosine is _Arg1_, so Acosh(Cosh(number)) equals _Arg1_.
+  Returns the inverse hyperbolic cosine of a number. Number must be greater than or equal to 1. The inverse hyperbolic cosine is the value whose hyperbolic cosine is Arg1, so Acosh(Cosh(number)) equals Arg1.
     - `Arg1 As Double` (required): Any real number equal to or greater than 1.
 - `Atanh(Arg1 As Double) As Double`  
   Returns the inverse hyperbolic tangent of a number. Number must be between -1 and 1 (excluding -1 and 1).
@@ -613,7 +613,7 @@ MsgBox answer
     - `Arg1 As Variant` (required): The range of data that contains observations to test against expected values.
     - `Arg2 As Variant` (required): The range of data that contains the ratio of the product of row totals and column totals to the grand total.
 - `Correl(Arg1 As Variant, Arg2 As Variant) As Double`  
-  Returns the correlation coefficient of the _Arg1_ and _Arg2_ cell ranges.
+  Returns the correlation coefficient of the Arg1 and Arg2 cell ranges.
     - `Arg1 As Variant` (required): A cell range of values.
     - `Arg2 As Variant` (required): A second cell range of values.
 - `Covar(Arg1 As Variant, Arg2 As Variant) As Double`  
@@ -670,10 +670,10 @@ MsgBox answer
 - `Skew(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant]) As Double`  
   Returns the skewness of a distribution. Skewness characterizes the degree of asymmetry of a distribution around its mean.
 - `ZTest(Arg1 As Variant, Arg2 As Double, [Arg3 As Variant]) As Double`  
-  Returns the one-tailed probability-value of a z-test. For a given hypothesized population mean, ZTest returns the probability that the sample mean would be greater than the average of observations in the data set (_array_); that is, the observed sample mean.
-    - `Arg1 As Variant` (required): _Array_ is the array or range of data against which to test the hypothesized population mean.
+  Returns the one-tailed probability-value of a z-test. For a given hypothesized population mean, ZTest returns the probability that the sample mean would be greater than the average of observations in the data set (array); that is, the observed sample mean.
+    - `Arg1 As Variant` (required): Array is the array or range of data against which to test the hypothesized population mean.
     - `Arg2 As Double` (required): The value to test.
-    - `Arg3 As Variant` (optional): _Sigma_ is the population (known) standard deviation. If omitted, the sample standard deviation is used.
+    - `Arg3 As Variant` (optional): Sigma is the population (known) standard deviation. If omitted, the sample standard deviation is used.
 - `Large(Arg1 As Variant, Arg2 As Double) As Double`  
   Returns the k-th largest value in a data set. Use this function to select a value based on its relative standing. For example, you can use Large to return the highest, runner-up, or third-place score.
     - `Arg1 As Variant` (required): Array - the array or range of data for which you want to determine the k-th largest value.
@@ -1471,10 +1471,10 @@ MsgBox answer
     - `Arg3 As Double` (required): Tails - Specifies the number of distribution tails. If tails = 1, T_Test uses the one-tailed distribution. If tails = 2, T_Test uses the two-tailed distribution.
     - `Arg4 As Double` (required): Type - The kind of t-Test to perform.
 - `Z_Test(Arg1 As Variant, Arg2 As Double, [Arg3 As Variant]) As Double`  
-  Returns the one-tailed probability-value of a z-test. For a given hypothesized population mean, Z_Test returns the probability that the sample mean would be greater than the average of observations in the data set (_array_); that is, the observed sample mean.
-    - `Arg1 As Variant` (required): _Array_ is the array or range of data against which to test the hypothesized population mean.
+  Returns the one-tailed probability-value of a z-test. For a given hypothesized population mean, Z_Test returns the probability that the sample mean would be greater than the average of observations in the data set (array); that is, the observed sample mean.
+    - `Arg1 As Variant` (required): Array is the array or range of data against which to test the hypothesized population mean.
     - `Arg2 As Double` (required): The value to test.
-    - `Arg3 As Variant` (optional): _Sigma_ is the population (known) standard deviation. If omitted, the sample standard deviation is used.
+    - `Arg3 As Variant` (optional): Sigma is the population (known) standard deviation. If omitted, the sample standard deviation is used.
 - `Binom_Dist(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Boolean) As Double`  
   Returns the individual term binomial distribution probability.
     - `Arg1 As Double` (required): Number_s - the number of successes in trials.
@@ -1560,11 +1560,11 @@ MsgBox answer
 - `Bitlshift(Arg1 As Double, Arg2 As Double) As Double`  
   Returns a value number shifted left by shift_amount bits.
     - `Arg1 As Double` (required): The decimal representation of the binary number that you want to evaluate.
-    - `Arg2 As Double` (required): The number of bits that you want to shift _Arg1_ left by.
+    - `Arg2 As Double` (required): The number of bits that you want to shift Arg1 left by.
 - `Bitrshift(Arg1 As Double, Arg2 As Double) As Double`  
   Returns a value number shifted right by shift_amount bits.
     - `Arg1 As Double` (required): The decimal representation of the binary number that you want to evaluate.
-    - `Arg2 As Double` (required): The number of bits that you want to shift _Arg1_ right by.
+    - `Arg2 As Double` (required): The number of bits that you want to shift Arg1 right by.
 - `Xor(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant]) As Boolean`  
   Returns a logical exclusive OR of all arguments.
     - `Arg1 As Variant` (required): 1 to 254 conditions that you want to test that can be either True or False; can be logical values, arrays, or references.
@@ -1592,14 +1592,14 @@ MsgBox answer
     - `Arg2 As Double` (required): The base radix of the number that you are converting.
 - `Days(Arg1 As Variant, Arg2 As Variant) As Double`  
   Returns the number of days between two dates.
-    - `Arg1 As Variant` (required): start_date(_Arg2_) and end_date (_Arg1_) are the two dates between which you want to know the number of days.
-    - `Arg2 As Variant` (required): start_date(_Arg2_) and end_date (_Arg1_) are the two dates between which you want to know the number of days.
+    - `Arg1 As Variant` (required): start_date(Arg2) and end_date (Arg1) are the two dates between which you want to know the number of days.
+    - `Arg2 As Variant` (required): start_date(Arg2) and end_date (Arg1) are the two dates between which you want to know the number of days.
 - `Binom_Dist_Range(Arg1 As Double, Arg2 As Double, Arg3 As Double, [Arg4 As Variant]) As Double`  
   Returns the probability of a trial result using a binomial distribution.
     - `Arg1 As Double` (required): The number of independent trials.
     - `Arg2 As Double` (required): The probability of success on each trial.
     - `Arg3 As Double` (required): The number of successes in trials.
-    - `Arg4 As Variant` (optional): If provided, this function returns the probability that the number of successful trials shall lie between _Arg3_ and _Arg4_.
+    - `Arg4 As Variant` (optional): If provided, this function returns the probability that the number of successful trials shall lie between Arg3 and Arg4.
 - `Gamma(Arg1 As Double) As Double`  
   Returns the gamma function value.
     - `Arg1 As Double` (required): The value for which you want to calculate gamma.

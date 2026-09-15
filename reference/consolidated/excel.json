@@ -570,7 +570,7 @@
           "guid": "{000C0310-0000-0000-C000-000000000046}",
           "library": "Microsoft Excel 16.0 Object Library",
           "description": "Contains a collection of adjustment values for the specified AutoShape, WordArt object, or connector.",
-          "remarks": "Each adjustment value represents one way that an adjustment handle can be adjusted. Because some adjustment handles can be adjusted in two ways&mdash;for example, some handles can be adjusted both horizontally and vertically&mdash;a shape can have more adjustment values than it has adjustment handles. A shape can have up to eight adjustments. Use the Adjustments property to return an Adjustments object. Use Adjustments (_index_), where _index_ is the adjustment value's index number, to return a single adjustment value. Different shapes have different numbers of adjustment values. Different kinds of adjustments change the geometry of a shape in different ways. In addition, different kinds of adjustments have different ranges of valid values. For example, the following illustration shows what each of the four adjustment values for a right-arrow callout contributes to the definition of the callout's geometry. !Adjustment The following table summarizes the ranges of valid adjustment values for different types of adjustments. In most cases, if you specify a value that's beyond the range of valid values, the closest valid value will be assigned to the adjustment.",
+          "remarks": "Each adjustment value represents one way that an adjustment handle can be adjusted. Because some adjustment handles can be adjusted in two ways&mdash;for example, some handles can be adjusted both horizontally and vertically&mdash;a shape can have more adjustment values than it has adjustment handles. A shape can have up to eight adjustments. Use the Adjustments property to return an Adjustments object. Use Adjustments (index), where index is the adjustment value's index number, to return a single adjustment value. Different shapes have different numbers of adjustment values. Different kinds of adjustments change the geometry of a shape in different ways. In addition, different kinds of adjustments have different ranges of valid values. For example, the following illustration shows what each of the four adjustment values for a right-arrow callout contributes to the definition of the callout's geometry. !Adjustment The following table summarizes the ranges of valid adjustment values for different types of adjustments. In most cases, if you specify a value that's beyond the range of valid values, the closest valid value will be assigned to the adjustment.",
           "example": "Set myDocument = Worksheets(1)\nSet rac = myDocument.Shapes.AddShape(msoShapeRightArrowCallout, _\n 10, 10, 250, 190)\nWith rac.Adjustments\n .Item(1) = 0.5 'adjusts width of text box\n .Item(2) = 0.15 'adjusts width of arrow head\n .Item(3) = 0.8 'adjusts length of arrow head\n .Item(4) = 0.4 'adjusts width of arrow neck\nEnd With",
           "properties": [
             {
@@ -606,7 +606,7 @@
               "kind": "property",
               "type": "Single",
               "access": "read/write",
-              "description": "Returns or sets the adjustment value specified by the _Index_ argument. Read/write Single."
+              "description": "Returns or sets the adjustment value specified by the Index argument. Read/write Single."
             }
           ],
           "methods": [],
@@ -3492,7 +3492,7 @@
                   "name": "String",
                   "type": "String",
                   "optional": false,
-                  "description": "A Microsoft Excel 4.0 macro language function without the equal sign. All references must be given as R1C1 strings. If _String_ contains embedded double quotation marks, you must double them. For example, to run the macro function =MID(\"sometext\",1,4), _String_ would have to be \"MID(\"\"sometext\"\",1,4)\"."
+                  "description": "A Microsoft Excel 4.0 macro language function without the equal sign. All references must be given as R1C1 strings. If String contains embedded double quotation marks, you must double them. For example, to run the macro function =MID(\"sometext\",1,4), String would have to be \"MID(\"\"sometext\"\",1,4)\"."
                 }
               ]
             },
@@ -4317,7 +4317,7 @@
                   "name": "ByRow",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Only used if _ListArray_ is a Range object. True to create a custom list from each row in the range. False to create a custom list from each column in the range. If this argument is omitted and there are more rows than columns (or an equal number of rows and columns) in the range, Microsoft Excel creates a custom list from each column in the range. If this argument is omitted and there are more columns than rows in the range, Excel creates a custom list from each row in the range."
+                  "description": "Only used if ListArray is a Range object. True to create a custom list from each row in the range. False to create a custom list from each column in the range. If this argument is omitted and there are more rows than columns (or an equal number of rows and columns) in the range, Microsoft Excel creates a custom list from each column in the range. If this argument is omitted and there are more columns than rows in the range, Excel creates a custom list from each row in the range."
                 }
               ]
             },
@@ -4386,7 +4386,7 @@
                   "name": "ToReferenceStyle",
                   "type": "Variant",
                   "optional": true,
-                  "description": "A constant of XlReferenceStyle specifying the reference style that you want returned. If this argument is omitted, the reference style isn't changed; the formula stays in the style specified by _FromReferenceStyle_."
+                  "description": "A constant of XlReferenceStyle specifying the reference style that you want returned. If this argument is omitted, the reference style isn't changed; the formula stays in the style specified by FromReferenceStyle."
                 },
                 {
                   "name": "ToAbsolute",
@@ -4471,7 +4471,7 @@
                   "name": "FilterIndex",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Specifies the index numbers of the default file filtering criteria, from 1 to the number of filters specified in _FileFilter_. If this argument is omitted or greater than the number of filters present, the first file filter is used."
+                  "description": "Specifies the index numbers of the default file filtering criteria, from 1 to the number of filters specified in FileFilter. If this argument is omitted or greater than the number of filters present, the first file filter is used."
                 },
                 {
                   "name": "Title",
@@ -4516,7 +4516,7 @@
                   "name": "FilterIndex",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Specifies the index number of the default file filtering criteria, from 1 to the number of filters specified in _FileFilter_. If this argument is omitted or greater than the number of filters present, the first file filter is used."
+                  "description": "Specifies the index number of the default file filtering criteria, from 1 to the number of filters specified in FileFilter. If this argument is omitted or greater than the number of filters present, the first file filter is used."
                 },
                 {
                   "name": "Title",
@@ -4630,13 +4630,13 @@
                   "name": "HelpFile",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The name of the Help file for this input box. If the _HelpFile_ and _HelpContextID_ arguments are present, a Help button will appear in the dialog box."
+                  "description": "The name of the Help file for this input box. If the HelpFile and HelpContextID arguments are present, a Help button will appear in the dialog box."
                 },
                 {
                   "name": "HelpContextID",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The context ID number of the Help topic in _HelpFile_."
+                  "description": "The context ID number of the Help topic in HelpFile."
                 },
                 {
                   "name": "Type",
@@ -4704,7 +4704,7 @@
                   "name": "Procedure",
                   "type": "Variant",
                   "optional": true,
-                  "description": "A string indicating the name of the procedure to be run. If _Procedure_ is \"\" (empty text), nothing happens when _Key_ is pressed. This form of OnKey changes the normal result of keystrokes in Microsoft Excel. If _Procedure_ is omitted, _Key_ reverts to its normal result in Microsoft Excel, and any special key assignments made with previous OnKey methods are cleared."
+                  "description": "A string indicating the name of the procedure to be run. If Procedure is \"\" (empty text), nothing happens when Key is pressed. This form of OnKey changes the normal result of keystrokes in Microsoft Excel. If Procedure is omitted, Key reverts to its normal result in Microsoft Excel, and any special key assignments made with previous OnKey methods are cleared."
                 }
               ]
             },
@@ -4752,7 +4752,7 @@
                   "name": "LatestTime",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The latest time at which the procedure can be run. For example, if _LatestTime_ is set to _EarliestTime_ + 30 and Microsoft Excel is not in Ready, Copy, Cut, or Find mode at _EarliestTime_ because another procedure is running, Excel will wait 30 seconds for the first procedure to complete. If Excel is not in Ready mode within 30 seconds, the procedure won't be run. If this argument is omitted, Excel will wait until the procedure can be run."
+                  "description": "The latest time at which the procedure can be run. For example, if LatestTime is set to EarliestTime + 30 and Microsoft Excel is not in Ready, Copy, Cut, or Find mode at EarliestTime because another procedure is running, Excel will wait 30 seconds for the first procedure to complete. If Excel is not in Ready mode within 30 seconds, the procedure won't be run. If this argument is omitted, Excel will wait until the procedure can be run."
                 },
                 {
                   "name": "Schedule",
@@ -4881,7 +4881,7 @@
                   "name": "Text",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Specifies the text to be converted to phonetic text. If you omit this argument, the next possible phonetic text string (if any) of the previously specified _Text_ is returned. If there are no more possible phonetic text strings, an empty string is returned."
+                  "description": "Specifies the text to be converted to phonetic text. If you omit this argument, the next possible phonetic text string (if any) of the previously specified Text is returned. If there are no more possible phonetic text strings, an empty string is returned."
                 }
               ]
             },
@@ -4925,7 +4925,7 @@
               "name": "DisplayXMLSourcePane",
               "kind": "method",
               "signature": "DisplayXMLSourcePane([XmlMap As Variant])",
-              "description": "Opens the XML Source task pane and displays the XML map specified by the _XmlMap_ argument.",
+              "description": "Opens the XML Source task pane and displays the XML map specified by the XmlMap argument.",
               "returns": "void",
               "parameters": [
                 {
@@ -4993,13 +4993,13 @@
                   "name": "HasShortcutKey",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to assign a shortcut key to the macro (_ShortcutKey_ must also be specified). If this argument is False, no shortcut key is assigned to the macro. If the macro already has a shortcut key, setting this argument to False removes the shortcut key. The default value is False."
+                  "description": "True to assign a shortcut key to the macro (ShortcutKey must also be specified). If this argument is False, no shortcut key is assigned to the macro. If the macro already has a shortcut key, setting this argument to False removes the shortcut key. The default value is False."
                 },
                 {
                   "name": "ShortcutKey",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Required if _HasShortcutKey_ is True; ignored otherwise. The shortcut key."
+                  "description": "Required if HasShortcutKey is True; ignored otherwise. The shortcut key."
                 },
                 {
                   "name": "Category",
@@ -5023,7 +5023,7 @@
                   "name": "HelpFile",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The name of the Help file that contains the Help topic defined by _HelpContextId_."
+                  "description": "The name of the Help file that contains the Help topic defined by HelpContextId."
                 },
                 {
                   "name": "ArgumentDescriptions",
@@ -7187,7 +7187,7 @@
           "guid": "{0002085B-0000-0000-C000-000000000046}",
           "library": "Microsoft Excel 16.0 Object Library",
           "description": "A collection of all the Axis objects in the specified chart.",
-          "remarks": "Use the Axes method of the Chart object to return the Axes collection. Use Axes (_type_, _group_), where _type_ is the axis type and _group_ is the axis group, to return a single Axis object. - _Type_ can be one of the following XlAxisType constants: xlCategory, xlSeriesAxis, or xlValue. - _Group_ can be one of the following XlAxisGroup constants: xlPrimary or xlSecondary.",
+          "remarks": "Use the Axes method of the Chart object to return the Axes collection. Use Axes (type, group), where type is the axis type and group is the axis group, to return a single Axis object. - Type can be one of the following XlAxisType constants: xlCategory, xlSeriesAxis, or xlValue. - Group can be one of the following XlAxisGroup constants: xlPrimary or xlSecondary.",
           "example": "With Worksheets(1).ChartObjects(1).Chart\n MsgBox.Axes.Count\nEnd With",
           "properties": [
             {
@@ -7278,7 +7278,7 @@
           "guid": "{00020848-0000-0000-C000-000000000046}",
           "library": "Microsoft Excel 16.0 Object Library",
           "description": "Represents a single axis in a chart.",
-          "remarks": "The Axis object is a member of the Axes collection. Use Axes (_type_, _group_), where _type_ is the axis type and _group_ is the axis group, to return a single Axis object. - _Type_ can be one of the following XlAxisType constants: xlCategory, xlSeriesAxis, or xlValue. - _Group_ can be one of the following XlAxisGroup constants: xlPrimary or xlSecondary. For more information, see the Axes method of the Chart object.",
+          "remarks": "The Axis object is a member of the Axes collection. Use Axes (type, group), where type is the axis type and group is the axis group, to return a single Axis object. - Type can be one of the following XlAxisType constants: xlCategory, xlSeriesAxis, or xlValue. - Group can be one of the following XlAxisGroup constants: xlPrimary or xlSecondary. For more information, see the Axes method of the Chart object.",
           "example": "With Charts(\"chart1\").Axes(xlCategory)\n .HasTitle = True\n .AxisTitle.Caption = \"1994\"\nEnd With",
           "properties": [
             {
@@ -8906,7 +8906,7 @@
           "guid": "{00024420-0000-0000-C000-000000000046}",
           "library": "Microsoft Excel 16.0 Object Library",
           "description": "A collection of PivotField objects that represents all the calculated fields in the specified PivotTable report.",
-          "remarks": "A report that contains Revenue and Expense fields could have a calculated field named Profit defined as the amount in the Revenue field minus the amount in the Expense field. For OLAP data sources, you cannot set this collection, and it always returns Nothing. Use the CalculatedFields method of the PivotTable object to return the CalculatedFields collection. Use CalculatedFields (_index_), where _index_ is the specified field's name or index number, to return a single PivotField object from the CalculatedFields collection.",
+          "remarks": "A report that contains Revenue and Expense fields could have a calculated field named Profit defined as the amount in the Revenue field minus the amount in the Expense field. For OLAP data sources, you cannot set this collection, and it always returns Nothing. Use the CalculatedFields method of the PivotTable object to return the CalculatedFields collection. Use CalculatedFields (index), where index is the specified field's name or index number, to return a single PivotField object from the CalculatedFields collection.",
           "example": "For Each fld in _\n Worksheets(1).PivotTables(\"Pivot1\").CalculatedFields\n fld.Delete\nNext",
           "properties": [
             {
@@ -9004,7 +9004,7 @@
           "guid": "{00024421-0000-0000-C000-000000000046}",
           "library": "Microsoft Excel 16.0 Object Library",
           "description": "A collection of PivotItem objects that represents all the calculated items in the specified PivotTable report.",
-          "remarks": "A PivotTable report that contains January, February, and March items could have a calculated item named FirstQuarter defined as the sum of the amounts in January, February, and March. Use the CalculatedItems method of the PivotField object to return the CalculatedItems collection. Use CalculatedFields (_index_), where _index_ is the name or index number of the field, to return a single PivotField object from the CalculatedFields collection.",
+          "remarks": "A PivotTable report that contains January, February, and March items could have a calculated item named FirstQuarter defined as the sum of the amounts in January, February, and March. Use the CalculatedItems method of the PivotField object to return the CalculatedItems collection. Use CalculatedFields (index), where index is the name or index number of the field, to return a single PivotField object from the CalculatedFields collection.",
           "example": "Set pt = Worksheets(1).PivotTables(1)\nFor Each ci In pt.PivotFields(\"Sales\").CalculatedItems\n r = r + 1\n With Worksheets(2)\n .Cells(r, 1).Value = ci.Name\n .Cells(r, 2).Value = ci.Formula\n End With\nNext",
           "properties": [
             {
@@ -9851,7 +9851,7 @@
           "guid": "{00020878-0000-0000-C000-000000000046}",
           "library": "Microsoft Excel 16.0 Object Library",
           "description": "Represents characters in an object that contains text.",
-          "remarks": "The Characters object lets you modify any sequence of characters contained in the full text string. Use Characters (_start_, _length_), where _start_ is the start character number and _length_ is the number of characters, to return a Characters object.",
+          "remarks": "The Characters object lets you modify any sequence of characters contained in the full text string. Use Characters (start, length), where start is the start character number and length is the number of characters, to return a Characters object.",
           "example": "With Worksheets(\"Sheet1\").Range(\"B1\")\n .Value = \"New Title\"\n .Characters(5, 5).Font.Bold = True\nEnd With",
           "properties": [
             {
@@ -9943,7 +9943,7 @@
           "guid": "{00020821-0000-0000-C000-000000000046}",
           "library": "Microsoft Excel 16.0 Object Library",
           "description": "Represents a chart in a workbook.",
-          "remarks": "The chart can be either an embedded chart (contained in a ChartObject object) or a separate chart sheet. The Charts collection contains a Chart object for each chart sheet in a workbook. Use Charts (_index_), where _index_ is the chart-sheet index number or name, to return a single Chart object. The chart _index_ number represents the position of the chart sheet on the workbook tab bar. _Charts(1)_ is the first (leftmost) chart in the workbook; _Charts(Charts.Count)_ is the last (rightmost). All chart sheets are included in the index count, even if they are hidden. The chart-sheet name is shown on the workbook tab for the chart. Use the Name property of the ChartObject object to set or return the chart name. The following example changes the color of series 1 on chart sheet 1. The following example moves the chart named Sales to the end of the active workbook. The Chart object is also a member of the Sheets collection, which contains all the sheets in the workbook (both chart sheets and worksheets). Use Sheets (_index_), where _index_ is the sheet index number or name, to return a single sheet. When a chart is the active object, you can use the ActiveChart property to refer to it.",
+          "remarks": "The chart can be either an embedded chart (contained in a ChartObject object) or a separate chart sheet. The Charts collection contains a Chart object for each chart sheet in a workbook. Use Charts (index), where index is the chart-sheet index number or name, to return a single Chart object. The chart index number represents the position of the chart sheet on the workbook tab bar. Charts(1) is the first (leftmost) chart in the workbook; Charts(Charts.Count) is the last (rightmost). All chart sheets are included in the index count, even if they are hidden. The chart-sheet name is shown on the workbook tab for the chart. Use the Name property of the ChartObject object to set or return the chart name. The following example changes the color of series 1 on chart sheet 1. The following example moves the chart named Sales to the end of the active workbook. The Chart object is also a member of the Sheets collection, which contains all the sheets in the workbook (both chart sheets and worksheets). Use Sheets (index), where index is the sheet index number or name, to return a single sheet. When a chart is the active object, you can use the ActiveChart property to refer to it.",
           "example": "",
           "properties": [
             {
@@ -10021,21 +10021,21 @@
               "kind": "property",
               "type": "Boolean",
               "access": "read-only",
-              "description": "True if the contents of the sheet are protected. For a chart, this protects the entire chart. To turn on content protection, use the Protect method with the _Contents_ argument set to True. Read-only Boolean."
+              "description": "True if the contents of the sheet are protected. For a chart, this protects the entire chart. To turn on content protection, use the Protect method with the Contents argument set to True. Read-only Boolean."
             },
             {
               "name": "ProtectDrawingObjects",
               "kind": "property",
               "type": "Boolean",
               "access": "read-only",
-              "description": "True if shapes are protected. To turn on shape protection, use the Protect method with the _DrawingObjects_ argument set to True. Read-only Boolean."
+              "description": "True if shapes are protected. To turn on shape protection, use the Protect method with the DrawingObjects argument set to True. Read-only Boolean."
             },
             {
               "name": "ProtectionMode",
               "kind": "property",
               "type": "Boolean",
               "access": "read-only",
-              "description": "True if user-interface-only protection is turned on. To turn on user interface protection, use the Protect method with the _UserInterfaceOnly_ argument set to True. Read-only Boolean."
+              "description": "True if user-interface-only protection is turned on. To turn on user interface protection, use the Protect method with the UserInterfaceOnly argument set to True. Read-only Boolean."
             },
             {
               "name": "Visible",
@@ -10393,13 +10393,13 @@
                   "name": "Before",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The sheet before which the copied sheet will be placed. You cannot specify _Before_ if you specify _After_."
+                  "description": "The sheet before which the copied sheet will be placed. You cannot specify Before if you specify After."
                 },
                 {
                   "name": "After",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The sheet after which the copied sheet will be placed. You cannot specify _After_ if you specify _Before_."
+                  "description": "The sheet after which the copied sheet will be placed. You cannot specify After if you specify Before."
                 }
               ]
             },
@@ -10421,13 +10421,13 @@
                   "name": "Before",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The sheet before which the moved chart will be placed. You cannot specify _Before_ if you specify _After_."
+                  "description": "The sheet before which the moved chart will be placed. You cannot specify Before if you specify After."
                 },
                 {
                   "name": "After",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The sheet after which the moved chart will be placed. You cannot specify _After_ if you specify _Before_."
+                  "description": "The sheet after which the moved chart will be placed. You cannot specify After if you specify Before."
                 }
               ]
             },
@@ -10724,7 +10724,7 @@
                   "name": "Name",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Required if _Where_ is xlLocationAsObject. The name of the sheet where the chart will be embedded if _Where_ is xlLocationAsObject, or the name of the new sheet if _Where_ is xlLocationAsNewSheet."
+                  "description": "Required if Where is xlLocationAsObject. The name of the sheet where the chart will be embedded if Where is xlLocationAsObject, or the name of the new sheet if Where is xlLocationAsNewSheet."
                 }
               ]
             },
@@ -10777,20 +10777,20 @@
               "name": "GetChartElement",
               "kind": "method",
               "signature": "GetChartElement(x As Long, y As Long, ElementID As Long, Arg1 As Long, Arg2 As Long)",
-              "description": "Returns information about the chart element at specified _x_ and _y_ coordinates. This method is unusual in that you specify values for only the first two arguments. Microsoft Excel fills in the other arguments, and your code should examine those values when the method returns.",
+              "description": "Returns information about the chart element at specified x and y coordinates. This method is unusual in that you specify values for only the first two arguments. Microsoft Excel fills in the other arguments, and your code should examine those values when the method returns.",
               "returns": "void",
               "parameters": [
                 {
                   "name": "x",
                   "type": "Long",
                   "optional": false,
-                  "description": "The _x_ coordinate of the chart element."
+                  "description": "The x coordinate of the chart element."
                 },
                 {
                   "name": "y",
                   "type": "Long",
                   "optional": false,
-                  "description": "The _y_ coordinate of the chart element."
+                  "description": "The y coordinate of the chart element."
                 },
                 {
                   "name": "ElementID",
@@ -11052,7 +11052,7 @@
                   "name": "PrintToFile",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to print to a file. If _PrToFileName_ is not specified, Excel prompts the user to enter the name of the output file."
+                  "description": "True to print to a file. If PrToFileName is not specified, Excel prompts the user to enter the name of the output file."
                 },
                 {
                   "name": "Collate",
@@ -11064,7 +11064,7 @@
                   "name": "PrToFileName",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to."
+                  "description": "If PrintToFile is set to True, this argument specifies the name of the file that you want to print to."
                 }
               ]
             },
@@ -11124,7 +11124,7 @@
               "name": "FullSeriesCollection",
               "kind": "method",
               "signature": "FullSeriesCollection([Index As Variant]) As Object",
-              "description": "Enables retrieving the filtered out series specified by the _Index_ argument.",
+              "description": "Enables retrieving the filtered out series specified by the Index argument.",
               "returns": "Object",
               "parameters": [
                 {
@@ -11358,13 +11358,13 @@
                   "name": "x",
                   "type": "Long",
                   "optional": false,
-                  "description": "The _x_ coordinate of the mouse pointer in chart object client coordinates."
+                  "description": "The x coordinate of the mouse pointer in chart object client coordinates."
                 },
                 {
                   "name": "y",
                   "type": "Long",
                   "optional": false,
-                  "description": "The _y_ coordinate of the mouse pointer in chart object client coordinates."
+                  "description": "The y coordinate of the mouse pointer in chart object client coordinates."
                 }
               ]
             },
@@ -11390,13 +11390,13 @@
                   "name": "x",
                   "type": "Long",
                   "optional": false,
-                  "description": "The _x_ coordinate of the mouse pointer in chart object client coordinates."
+                  "description": "The x coordinate of the mouse pointer in chart object client coordinates."
                 },
                 {
                   "name": "y",
                   "type": "Long",
                   "optional": false,
-                  "description": "The _y_ coordinate of the mouse pointer in chart object client coordinates."
+                  "description": "The y coordinate of the mouse pointer in chart object client coordinates."
                 }
               ]
             },
@@ -11422,13 +11422,13 @@
                   "name": "x",
                   "type": "Long",
                   "optional": false,
-                  "description": "The _x_ coordinate of the mouse pointer in chart object client coordinates."
+                  "description": "The x coordinate of the mouse pointer in chart object client coordinates."
                 },
                 {
                   "name": "y",
                   "type": "Long",
                   "optional": false,
-                  "description": "The _y_ coordinate of the mouse pointer in chart object client coordinates."
+                  "description": "The y coordinate of the mouse pointer in chart object client coordinates."
                 }
               ]
             },
@@ -11456,19 +11456,19 @@
                   "name": "ElementID",
                   "type": "Long",
                   "optional": false,
-                  "description": "The double-clicked object. The value of this parameter determines the expected values of _Arg1_ and _Arg2_. For more information about this parameter, see the Remarks section."
+                  "description": "The double-clicked object. The value of this parameter determines the expected values of Arg1 and Arg2. For more information about this parameter, see the Remarks section."
                 },
                 {
                   "name": "Arg1",
                   "type": "Long",
                   "optional": false,
-                  "description": "Additional event information, depending on the value of _ElementID_. For more information about this parameter, see the Remarks section."
+                  "description": "Additional event information, depending on the value of ElementID. For more information about this parameter, see the Remarks section."
                 },
                 {
                   "name": "Arg2",
                   "type": "Long",
                   "optional": false,
-                  "description": "Additional event information, depending on the value of _ElementID_. For more information about this parameter, see the Remarks section."
+                  "description": "Additional event information, depending on the value of ElementID. For more information about this parameter, see the Remarks section."
                 },
                 {
                   "name": "Cancel",
@@ -12400,7 +12400,7 @@
           "guid": "{00020859-0000-0000-C000-000000000046}",
           "library": "Microsoft Excel 16.0 Object Library",
           "description": "Represents one or more series plotted in a chart with the same format.",
-          "remarks": "A chart contains one or more chart groups, each chart group contains one or more Series objects, and each series contains one or more Points objects. For example, a single chart might contain both a line chart group that contains all the series plotted with the line chart format, and a bar chart group that contains all the series plotted with the bar chart format. The ChartGroup object is a member of the ChartGroups collection. Use ChartGroups (_index_), where _index_ is the chart-group index number, to return a single ChartGroup object. Because the index number for a particular chart group can change if the chart format used for that group is changed, it may be easier to use one of the named chart group shortcut methods to return a particular chart group. The PieGroups method returns the collection of pie chart groups in a chart, the LineGroups method returns the collection of line chart groups, and so on. Each of these methods can be used with an index number to return a single ChartGroup object, or without an index number to return a ChartGroups collection.",
+          "remarks": "A chart contains one or more chart groups, each chart group contains one or more Series objects, and each series contains one or more Points objects. For example, a single chart might contain both a line chart group that contains all the series plotted with the line chart format, and a bar chart group that contains all the series plotted with the bar chart format. The ChartGroup object is a member of the ChartGroups collection. Use ChartGroups (index), where index is the chart-group index number, to return a single ChartGroup object. Because the index number for a particular chart group can change if the chart format used for that group is changed, it may be easier to use one of the named chart group shortcut methods to return a particular chart group. The PieGroups method returns the collection of pie chart groups in a chart, the LineGroups method returns the collection of line chart groups, and so on. Each of these methods can be used with an index number to return a single ChartGroup object, or without an index number to return a ChartGroups collection.",
           "example": "Charts(1).ChartGroups(1).HasDropLines = True",
           "properties": [
             {
@@ -12704,7 +12704,7 @@
           "guid": "{0002085A-0000-0000-C000-000000000046}",
           "library": "Microsoft Excel 16.0 Object Library",
           "description": "Represents one or more series plotted in a chart with the same format.",
-          "remarks": "A ChartGroups collection is a collection of all the ChartGroup objects in the specified chart. A chart contains one or more chart groups, each chart group contains one or more Series objects, and each series contains one or more Points objects. For example, a single chart might contain both a line chart group, containing all the series plotted with the line chart format, and a bar chart group, containing all the series plotted with the bar chart format. Use the ChartGroups method of the Chart object to return the ChartGroups collection. The following example displays the number of chart groups on embedded chart 1 on worksheet 1. Use ChartGroups (_index_), where _index_ is the chart-group index number, to return a single ChartGroup object. The following example adds drop lines to chart group 1 on chart sheet 1. If the chart has been activated, you can use ActiveChart. Because the index number for a particular chart group can change if the chart format used for that group is changed, it may be easier to use one of the named chart group shortcut methods to return a particular chart group.",
+          "remarks": "A ChartGroups collection is a collection of all the ChartGroup objects in the specified chart. A chart contains one or more chart groups, each chart group contains one or more Series objects, and each series contains one or more Points objects. For example, a single chart might contain both a line chart group, containing all the series plotted with the line chart format, and a bar chart group, containing all the series plotted with the bar chart format. Use the ChartGroups method of the Chart object to return the ChartGroups collection. The following example displays the number of chart groups on embedded chart 1 on worksheet 1. Use ChartGroups (index), where index is the chart-group index number, to return a single ChartGroup object. The following example adds drop lines to chart group 1 on chart sheet 1. If the chart has been activated, you can use ActiveChart. Because the index number for a particular chart group can change if the chart format used for that group is changed, it may be easier to use one of the named chart group shortcut methods to return a particular chart group.",
           "example": "",
           "properties": [
             {
@@ -12768,7 +12768,7 @@
           "guid": "{000208CF-0000-0000-C000-000000000046}",
           "library": "Microsoft Excel 16.0 Object Library",
           "description": "Represents an embedded chart on a worksheet.",
-          "remarks": "The ChartObject object acts as a container for a Chart object. Properties and methods for the ChartObject object control the appearance and size of the embedded chart on the worksheet. The ChartObject object is a member of the ChartObjects collection. The ChartObjects collection contains all the embedded charts on a single sheet. Use ChartObjects (_index_), where _index_ is the embedded chart index number or name, to return a single ChartObject object.",
+          "remarks": "The ChartObject object acts as a container for a Chart object. Properties and methods for the ChartObject object control the appearance and size of the embedded chart on the worksheet. The ChartObject object is a member of the ChartObjects collection. The ChartObjects collection contains all the embedded charts on a single sheet. Use ChartObjects (index), where index is the embedded chart index number or name, to return a single ChartObject object.",
           "example": "Worksheets(\"Sheet1\").ChartObjects(1).Chart. _\n ChartArea.Format.Fill.Pattern = msoPatternLightDownwardDiagonal",
           "properties": [
             {
@@ -13346,13 +13346,13 @@
                   "name": "Before",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The sheet before which the copied sheet will be placed. You cannot specify _Before_ if you specify _After_."
+                  "description": "The sheet before which the copied sheet will be placed. You cannot specify Before if you specify After."
                 },
                 {
                   "name": "After",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The sheet after which the copied sheet will be placed. You cannot specify _After_ if you specify _Before_."
+                  "description": "The sheet after which the copied sheet will be placed. You cannot specify After if you specify Before."
                 }
               ]
             },
@@ -13374,13 +13374,13 @@
                   "name": "Before",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The sheet before which the moved chart will be placed. You cannot specify _Before_ if you specify _After_."
+                  "description": "The sheet before which the moved chart will be placed. You cannot specify Before if you specify After."
                 },
                 {
                   "name": "After",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The sheet after which the moved chart will be placed. You cannot specify _After_ if you specify _Before_."
+                  "description": "The sheet after which the moved chart will be placed. You cannot specify After if you specify Before."
                 }
               ]
             },
@@ -13455,7 +13455,7 @@
                   "name": "PrintToFile",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to print to a file. If _PrToFileName_ is not specified, Excel prompts the user to enter the name of the output file."
+                  "description": "True to print to a file. If PrToFileName is not specified, Excel prompts the user to enter the name of the output file."
                 },
                 {
                   "name": "Collate",
@@ -13467,7 +13467,7 @@
                   "name": "PrToFileName",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to."
+                  "description": "If PrintToFile is set to True, this argument specifies the name of the file that you want to print to."
                 }
               ]
             },
@@ -14789,7 +14789,7 @@
           "guid": "{00024495-0000-0000-C000-000000000046}",
           "library": "Microsoft Excel 16.0 Object Library",
           "description": "Represents the criteria for the minimum, midpoint, or maximum thresholds for a color format conditional format.",
-          "remarks": "Each ColorScaleCriterion is part of the ColorScaleCriteria collection. Use ColorScaleCriteria (_index_), to return an individual criterion. You can set the Type, Value, and FormatColor of each threshold for the color scale.",
+          "remarks": "Each ColorScaleCriterion is part of the ColorScaleCriteria collection. Use ColorScaleCriteria (index), to return an individual criterion. You can set the Type, Value, and FormatColor of each threshold for the color scale.",
           "example": "Sub CreateColorScaleCF()\n\n Dim cfColorScale As ColorScale\n\n 'Fill cells with sample data from 1 to 10\n With ActiveSheet\n .Range(\"C1\") = 1\n .Range(\"C2\") = 2\n .Range(\"C1:C2\").AutoFill Destination:=Range(\"C1:C10\")\n End With\n\n Range(\"C1:C10\").Select\n\n 'Create a two-color ColorScale object for the created sample data range\n Set cfColorScale = Selection.FormatConditions.AddColorScale(ColorScaleType:=2)\n\n 'Set the minimum threshold to red and maximum threshold to blue\n cfColorScale.ColorScaleCriteria(1).FormatColor.Color = RGB(255, 0, 0)\n cfColorScale.ColorScaleCriteria(2).FormatColor.Color = RGB(0, 0, 255)\n\nEnd Sub",
           "properties": [
             {
@@ -15332,7 +15332,7 @@
                   "name": "Start",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The character number where the added text will be placed. If the _Overwrite_ parameter is True or blank, and if this argument is omitted, any existing text in the threaded comment is deleted."
+                  "description": "The character number where the added text will be placed. If the Overwrite parameter is True or blank, and if this argument is omitted, any existing text in the threaded comment is deleted."
                 },
                 {
                   "name": "Overwrite",
@@ -15422,7 +15422,7 @@
                   "name": "newvalue",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The value assigned to the shortest or longest data bar. Depending on the _NewType_ argument, this can be a number or a formula that evaluates to a number."
+                  "description": "The value assigned to the shortest or longest data bar. Depending on the NewType argument, this can be a number or a formula that evaluates to a number."
                 }
               ]
             }
@@ -15676,7 +15676,7 @@
                   "name": "ConnectionSite",
                   "type": "Long",
                   "optional": false,
-                  "description": "A connection site on the shape specified by _ConnectedShape_. Must be an integer between 1 and the integer returned by the ConnectionSiteCount property of the specified shape. If you want the connector to automatically find the shortest path between the two shapes it connects, specify any valid integer for this argument, and then use the RerouteConnections method after the connector is attached to shapes at both ends."
+                  "description": "A connection site on the shape specified by ConnectedShape. Must be an integer between 1 and the integer returned by the ConnectionSiteCount property of the specified shape. If you want the connector to automatically find the shortest path between the two shapes it connects, specify any valid integer for this argument, and then use the RerouteConnections method after the connector is attached to shapes at both ends."
                 }
               ]
             },
@@ -16743,7 +16743,7 @@
                   "name": "Count",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The number of items to be removed, starting at item _Index_. If this argument is omitted, one item is removed. If _Index_ + _Count_ exceeds the number of items in the list, all items from _Index_ through the end of the list are removed without an error."
+                  "description": "The number of items to be removed, starting at item Index. If this argument is omitted, one item is removed. If Index + Count exceeds the number of items in the list, all items from Index through the end of the list are removed without an error."
                 }
               ]
             },
@@ -17175,7 +17175,7 @@
                   "name": "Caption",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The label used in the PivotTable report to identify this measure. If the measure already exists, _Caption_ will overwrite the existing label of this measure."
+                  "description": "The label used in the PivotTable report to identify this measure. If the measure already exists, Caption will overwrite the existing label of this measure."
                 }
               ]
             }
@@ -25782,7 +25782,7 @@
                   "name": "Variant",
                   "type": "Long",
                   "optional": false,
-                  "description": "The gradient variant. Can be a value from 1 through 4, corresponding to one of the four variants on the Gradient tab in the Fill Effects dialog box. If _GradientStyle_ is msoGradientFromCenter, the _Variant_ argument can only be 1 or 2."
+                  "description": "The gradient variant. Can be a value from 1 through 4, corresponding to one of the four variants on the Gradient tab in the Fill Effects dialog box. If GradientStyle is msoGradientFromCenter, the Variant argument can only be 1 or 2."
                 },
                 {
                   "name": "Degree",
@@ -25824,7 +25824,7 @@
                   "name": "Variant",
                   "type": "Long",
                   "optional": false,
-                  "description": "The gradient variant. Can be a value from 1 through 4, corresponding to one of the four variants on the Gradient tab in the Fill Effects dialog box. If _Style_ is msoGradientFromCenter, the _Variant_ argument can only be 1 or 2."
+                  "description": "The gradient variant. Can be a value from 1 through 4, corresponding to one of the four variants on the Gradient tab in the Fill Effects dialog box. If Style is msoGradientFromCenter, the Variant argument can only be 1 or 2."
                 },
                 {
                   "name": "PresetGradientType",
@@ -25873,7 +25873,7 @@
                   "name": "Variant",
                   "type": "Long",
                   "optional": false,
-                  "description": "The gradient variant. Can be a value from 1 through 4, corresponding to one of the four variants on the Gradient tab in the Fill Effects dialog box. If _Style_ is msoGradientFromCenter, the _Variant_ argument can only be 1 or 2."
+                  "description": "The gradient variant. Can be a value from 1 through 4, corresponding to one of the four variants on the Gradient tab in the Fill Effects dialog box. If Style is msoGradientFromCenter, the Variant argument can only be 1 or 2."
                 }
               ]
             },
@@ -26494,7 +26494,7 @@
                   "name": "Operator",
                   "type": "Variant",
                   "optional": true,
-                  "description": "An XlFormatConditionOperator value that represents the conditional format operator. This parameter is ignored if _Type_ is set to xlExpression."
+                  "description": "An XlFormatConditionOperator value that represents the conditional format operator. This parameter is ignored if Type is set to xlExpression."
                 },
                 {
                   "name": "Formula1",
@@ -26639,7 +26639,7 @@
                   "name": "Operator",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The conditional format operator. Can be one of the following XlFormatConditionOperator constants: xlBetween, xlEqual, xlGreater, xlGreaterEqual, xlLess, xlLessEqual, xlNotBetween, or xlNotEqual. If _Type_ is xlExpression, the _Operator_ argument is ignored."
+                  "description": "The conditional format operator. Can be one of the following XlFormatConditionOperator constants: xlBetween, xlEqual, xlGreater, xlGreaterEqual, xlLess, xlLessEqual, xlNotBetween, or xlNotEqual. If Type is xlExpression, the Operator argument is ignored."
                 },
                 {
                   "name": "Formula1",
@@ -26651,7 +26651,7 @@
                   "name": "Formula2",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The value or expression associated with the second part of the conditional format when _Operator_ is xlBetween or xlNotBetween (otherwise, this argument is ignored). Can be a constant value, a string value, a cell reference, or a formula."
+                  "description": "The value or expression associated with the second part of the conditional format when Operator is xlBetween or xlNotBetween (otherwise, this argument is ignored). Can be a constant value, a string value, a cell reference, or a formula."
                 },
                 {
                   "name": "String",
@@ -26794,37 +26794,37 @@
                   "name": "X1",
                   "type": "Single",
                   "optional": false,
-                  "description": "If the _EditingType_ of the new segment is msoEditingAuto, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the end point of the new segment. If the _EditingType_ of the new node is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the first control point for the new segment."
+                  "description": "If the EditingType of the new segment is msoEditingAuto, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the end point of the new segment. If the EditingType of the new node is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the first control point for the new segment."
                 },
                 {
                   "name": "Y1",
                   "type": "Single",
                   "optional": false,
-                  "description": "If the _EditingType_ of the new segment is msoEditingAuto, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the end point of the new segment. If the _EditingType_ of the new node is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the first control point for the new segment."
+                  "description": "If the EditingType of the new segment is msoEditingAuto, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the end point of the new segment. If the EditingType of the new node is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the first control point for the new segment."
                 },
                 {
                   "name": "X2",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument."
+                  "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
                 },
                 {
                   "name": "Y2",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument."
+                  "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
                 },
                 {
                   "name": "X3",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument."
+                  "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
                 },
                 {
                   "name": "Y3",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument."
+                  "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
                 }
               ]
             },
@@ -30135,13 +30135,13 @@
                   "name": "ExtraInfo",
                   "type": "Variant",
                   "optional": true,
-                  "description": "A String or byte array that specifies additional information for HTTP to use to resolve the hyperlink. For example, you can use _ExtraInfo_ to specify the coordinates of an image map, the contents of a form, or a FAT file name."
+                  "description": "A String or byte array that specifies additional information for HTTP to use to resolve the hyperlink. For example, you can use ExtraInfo to specify the coordinates of an image map, the contents of a form, or a FAT file name."
                 },
                 {
                   "name": "Method",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Specifies the way _ExtraInfo_ is attached. Can be one of the MsoExtraInfoMethod constants."
+                  "description": "Specifies the way ExtraInfo is attached. Can be one of the MsoExtraInfoMethod constants."
                 },
                 {
                   "name": "HeaderInfo",
@@ -30174,7 +30174,7 @@
                   "name": "Overwrite",
                   "type": "Boolean",
                   "optional": false,
-                  "description": "True to overwrite any existing file of the same name in the same folder. False if any existing file of the same name is preserved and the _FileName_ argument specifies a new file name. The default value is False."
+                  "description": "True to overwrite any existing file of the same name in the same folder. False if any existing file of the same name is preserved and the FileName argument specifies a new file name. The default value is False."
                 }
               ]
             }
@@ -120547,25 +120547,25 @@
                   "name": "Source",
                   "type": "Variant",
                   "optional": true,
-                  "description": "When _SourceType_ = xlSrcRange: A Range object representing the data source. If omitted, the _Source_ will default to the range returned by list range detection code. When _SourceType_ = xlSrcExternal: An array of String values specifying a connection to the source, containing the following elements:<ul><li>0 - URL to SharePoint site</li><li>1 - ListName</li><li>2 - ViewGUID</li></ul> When _SourceType_ = xlSrcQuery: Accepts ODBC or OLEDB connection string (this also works with xlSrcExternal). When _SourceType_ = xlSrcModel: Accepts a WorkbookConnection object (see TableObject for example)."
+                  "description": "When SourceType = xlSrcRange: A Range object representing the data source. If omitted, the Source will default to the range returned by list range detection code. When SourceType = xlSrcExternal: An array of String values specifying a connection to the source, containing the following elements:<ul><li>0 - URL to SharePoint site</li><li>1 - ListName</li><li>2 - ViewGUID</li></ul> When SourceType = xlSrcQuery: Accepts ODBC or OLEDB connection string (this also works with xlSrcExternal). When SourceType = xlSrcModel: Accepts a WorkbookConnection object (see TableObject for example)."
                 },
                 {
                   "name": "LinkSource",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Indicates whether an external data source is to be linked to the ListObject object. If _SourceType_ is xlSrcExternal, the default is True. Invalid if _SourceType_ is xlSrcRange, and will return an error if not omitted."
+                  "description": "Indicates whether an external data source is to be linked to the ListObject object. If SourceType is xlSrcExternal, the default is True. Invalid if SourceType is xlSrcRange, and will return an error if not omitted."
                 },
                 {
                   "name": "XlListObjectHasHeaders",
                   "type": "XlYesNoGuess",
                   "optional": true,
-                  "description": "An XlYesNoGuess constant that indicates whether the data being imported has column labels. If the _Source_ does not contain headers, Excel will automatically generate headers. Default value: xlGuess."
+                  "description": "An XlYesNoGuess constant that indicates whether the data being imported has column labels. If the Source does not contain headers, Excel will automatically generate headers. Default value: xlGuess."
                 },
                 {
                   "name": "Destination",
                   "type": "Variant",
                   "optional": true,
-                  "description": "A Range object specifying a single-cell reference as the destination for the top-left corner of the new list object. If the Range object refers to more than one cell, an error is generated. The _Destination_ argument must be specified when _SourceType_ is set to xlSrcExternal. The _Destination_ argument is ignored if _SourceType_ is set to xlSrcRange. The destination range must be on the worksheet that contains the ListObjects collection specified by _expression_. New columns will be inserted at the _Destination_ to fit the new list. Therefore, existing data will not be overwritten."
+                  "description": "A Range object specifying a single-cell reference as the destination for the top-left corner of the new list object. If the Range object refers to more than one cell, an error is generated. The Destination argument must be specified when SourceType is set to xlSrcExternal. The Destination argument is ignored if SourceType is set to xlSrcRange. The destination range must be on the worksheet that contains the ListObjects collection specified by expression. New columns will be inserted at the Destination to fit the new list. Therefore, existing data will not be overwritten."
                 },
                 {
                   "name": "TableStyleName",
@@ -122079,7 +122079,7 @@
           "guid": "{000244D1-0000-0000-C000-000000000046}",
           "library": "Microsoft Excel 16.0 Object Library",
           "description": "Contains information for the new Model Connection Type introduced in Excel 2013 to interact with the integrated data model.",
-          "remarks": "Use for all PivotTables connected to the model. The ModelConnection object is a new \"special\" workbook connection that always exists (and cannot be deleted) in workbooks that have a data model. It's created when the model is first created in a workbook. All the properties of this workbook connection are read-only. Its name is _Workbook Data Model_.",
+          "remarks": "Use for all PivotTables connected to the model. The ModelConnection object is a new \"special\" workbook connection that always exists (and cannot be deleted) in workbooks that have a data model. It's created when the model is first created in a workbook. All the properties of this workbook connection are read-only. Its name is Workbook Data Model.",
           "example": "",
           "properties": [
             {
@@ -122252,7 +122252,7 @@
               "kind": "property",
               "type": "String",
               "access": "read/write",
-              "description": "Specifies the date format, for example, \"_dd/mm/yy_\". Read/write String."
+              "description": "Specifies the date format, for example, \"dd/mm/yy\". Read/write String."
             }
           ],
           "methods": [],
@@ -124155,7 +124155,7 @@
           "guid": "{000208B9-0000-0000-C000-000000000046}",
           "library": "Microsoft Excel 16.0 Object Library",
           "description": "Represents a defined name for a range of cells. Names can be either built-in names-such as Database, Print_Area, and Auto_Open-or custom names.",
-          "remarks": "The Name object is a member of the Names collection for the Application, Workbook, and Worksheet objects. Use Names (_index_), where _index_ is the name index number or defined name, to return a single Name object. The index number indicates the position of the name within the collection. Names are placed in alphabetic order, from a to z, and are not case-sensitive. Although a Range object can have more than one name, there's no Names collection for the Range object. Use Name with a Range object to return the first name from the list of names (sorted alphabetically) assigned to the range.",
+          "remarks": "The Name object is a member of the Names collection for the Application, Workbook, and Worksheet objects. Use Names (index), where index is the name index number or defined name, to return a single Name object. The index number indicates the position of the name within the collection. Names are placed in alphabetic order, from a to z, and are not case-sensitive. Although a Range object can have more than one name, there's no Names collection for the Range object. Use Name with a Range object to return the first name from the list of names (sorted alphabetically) assigned to the range.",
           "example": "MsgBox Names(1).RefersTo",
           "properties": [
             {
@@ -124509,7 +124509,7 @@
           "guid": "{000208B8-0000-0000-C000-000000000046}",
           "library": "Microsoft Excel 16.0 Object Library",
           "description": "A collection of all the Name objects in the application or workbook.",
-          "remarks": "Each Name object represents a defined name for a range of cells. Names can be either built-in names-such as Database, Print_Area, and Auto_Open-or custom names. The _RefersTo_ argument must be specified in A1-style notation, including dollar signs ($) where appropriate. For example, if cell A10 is selected on Sheet1 and you define a name by using the _RefersTo_ argument \"=sheet1!A1:B1\", the new name actually refers to cells A10:B10 (because you specified a relative reference). To specify an absolute reference, use \"=sheet1!$A$1:$B$1\".",
+          "remarks": "Each Name object represents a defined name for a range of cells. Names can be either built-in names-such as Database, Print_Area, and Auto_Open-or custom names. The RefersTo argument must be specified in A1-style notation, including dollar signs ($) where appropriate. For example, if cell A10 is selected on Sheet1 and you define a name by using the RefersTo argument \"=sheet1!A1:B1\", the new name actually refers to cells A10:B10 (because you specified a relative reference). To specify an absolute reference, use \"=sheet1!$A$1:$B$1\".",
           "example": "Set nms = ActiveWorkbook.Names\nSet wks = Worksheets(1)\nFor r = 1 To nms.Count\n    wks.Cells(r, 2).Value = nms(r).Name\n    wks.Cells(r, 3).Value = nms(r).RefersToRange.Address\nNext",
           "properties": [
             {
@@ -124560,13 +124560,13 @@
                   "name": "Name",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Specifies the text, in English, to use as the name if the _NameLocal_ parameter is not specified. Names cannot include spaces and cannot be formatted as cell references."
+                  "description": "Specifies the text, in English, to use as the name if the NameLocal parameter is not specified. Names cannot include spaces and cannot be formatted as cell references."
                 },
                 {
                   "name": "RefersTo",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Describes what the name refers to, in English, using A1-style notation, if the _RefersToLocal_, _RefersToR1C1_, and _RefersToR1C1Local_ parameters are not specified. NOTE: Nothing is returned if the reference does not exist."
+                  "description": "Describes what the name refers to, in English, using A1-style notation, if the RefersToLocal, RefersToR1C1, and RefersToR1C1Local parameters are not specified. NOTE: Nothing is returned if the reference does not exist."
                 },
                 {
                   "name": "Visible",
@@ -124590,37 +124590,37 @@
                   "name": "Category",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The category of the macro or function if the _MacroType_ argument equals 1 or 2. The category is used in the Function Wizard. Existing categories can be referred to either by number, starting at 1, or by name, in English. Excel creates a new category if the specified category does not exist."
+                  "description": "The category of the macro or function if the MacroType argument equals 1 or 2. The category is used in the Function Wizard. Existing categories can be referred to either by number, starting at 1, or by name, in English. Excel creates a new category if the specified category does not exist."
                 },
                 {
                   "name": "NameLocal",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Specifies the localized text to use as the name if the _Name_ parameter is not specified. Names cannot include spaces and cannot be formatted as cell references."
+                  "description": "Specifies the localized text to use as the name if the Name parameter is not specified. Names cannot include spaces and cannot be formatted as cell references."
                 },
                 {
                   "name": "RefersToLocal",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Describes what the name refers to, in localized text using A1-style notation, if the _RefersTo_, _RefersToR1C1_, and _RefersToR1C1Local_ parameters are not specified."
+                  "description": "Describes what the name refers to, in localized text using A1-style notation, if the RefersTo, RefersToR1C1, and RefersToR1C1Local parameters are not specified."
                 },
                 {
                   "name": "CategoryLocal",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Specifies the localized text that identifies the category of a custom function if the _Category_ parameter is not specified."
+                  "description": "Specifies the localized text that identifies the category of a custom function if the Category parameter is not specified."
                 },
                 {
                   "name": "RefersToR1C1",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Describes what the name refers to, in English using R1C1-style notation, if the _RefersTo_, _RefersToLocal_, and _RefersToR1C1Local_ parameters are not specified."
+                  "description": "Describes what the name refers to, in English using R1C1-style notation, if the RefersTo, RefersToLocal, and RefersToR1C1Local parameters are not specified."
                 },
                 {
                   "name": "RefersToR1C1Local",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Describes what the name refers to, in localized text using R1C1-style notation, if the _RefersTo_, _RefersToLocal_, and _RefersToR1C1_ parameters are not specified."
+                  "description": "Describes what the name refers to, in localized text using R1C1-style notation, if the RefersTo, RefersToLocal, and RefersToR1C1 parameters are not specified."
                 }
               ]
             },
@@ -126172,43 +126172,43 @@
                   "name": "ClassType",
                   "type": "Variant",
                   "optional": true,
-                  "description": "You must specify either _ClassType_ or _FileName_. A string that contains the programmatic identifier for the object to be created. If _ClassType_ is specified, _FileName_ and _Link_ are ignored."
+                  "description": "You must specify either ClassType or FileName. A string that contains the programmatic identifier for the object to be created. If ClassType is specified, FileName and Link are ignored."
                 },
                 {
                   "name": "Filename",
                   "type": "Variant",
                   "optional": true,
-                  "description": "You must specify either _ClassType_ or _FileName_. A string that specifies the file to be used to create the OLE object."
+                  "description": "You must specify either ClassType or FileName. A string that specifies the file to be used to create the OLE object."
                 },
                 {
                   "name": "Link",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to have the new OLE object based on _FileName_ be linked to that file. If the object isn't linked, the object is created as a copy of the file. The default value is False."
+                  "description": "True to have the new OLE object based on FileName be linked to that file. If the object isn't linked, the object is created as a copy of the file. The default value is False."
                 },
                 {
                   "name": "DisplayAsIcon",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to display the new OLE object either as an icon or as its regular picture. If this argument is True, _IconFileName_ and _IconIndex_ can be used to specify an icon."
+                  "description": "True to display the new OLE object either as an icon or as its regular picture. If this argument is True, IconFileName and IconIndex can be used to specify an icon."
                 },
                 {
                   "name": "IconFileName",
                   "type": "Variant",
                   "optional": true,
-                  "description": "A string that specifies the file that contains the icon to be displayed. This argument is used only if _DisplayAsIcon_ is True. If this argument isn't specified or the file contains no icons, the default icon for the OLE class is used."
+                  "description": "A string that specifies the file that contains the icon to be displayed. This argument is used only if DisplayAsIcon is True. If this argument isn't specified or the file contains no icons, the default icon for the OLE class is used."
                 },
                 {
                   "name": "IconIndex",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The number of the icon in the icon file. This is used only if _DisplayAsIcon_ is True and _IconFileName_ refers to a valid file that contains icons. If an icon with the given index number doesn't exist in the file specified by _IconFileName_, the first icon in the file is used."
+                  "description": "The number of the icon in the icon file. This is used only if DisplayAsIcon is True and IconFileName refers to a valid file that contains icons. If an icon with the given index number doesn't exist in the file specified by IconFileName, the first icon in the file is used."
                 },
                 {
                   "name": "IconLabel",
                   "type": "Variant",
                   "optional": true,
-                  "description": "A string that specifies a label to display beneath the icon. This is used only if _DisplayAsIcon_ is True. If this argument is omitted or is an empty string (\"\"), no caption is displayed."
+                  "description": "A string that specifies a label to display beneath the icon. This is used only if DisplayAsIcon is True. If this argument is omitted or is an empty string (\"\"), no caption is displayed."
                 },
                 {
                   "name": "Left",
@@ -128412,7 +128412,7 @@
               "name": "ScrollIntoView",
               "kind": "method",
               "signature": "ScrollIntoView(Left As Long, Top As Long, Width As Long, Height As Long, [Start As Variant])",
-              "description": "Scrolls the document window so that the contents of a specified rectangular area are displayed in either the upper-left or lower-right corner of the document window or pane (depending on the value of the _Start_ argument).",
+              "description": "Scrolls the document window so that the contents of a specified rectangular area are displayed in either the upper-left or lower-right corner of the document window or pane (depending on the value of the Start argument).",
               "returns": "void",
               "parameters": [
                 {
@@ -128633,7 +128633,7 @@
                   "name": "Value",
                   "type": "Variant",
                   "optional": false,
-                  "description": "The value of the specified parameter, as shown in the description of the _Type_ argument."
+                  "description": "The value of the specified parameter, as shown in the description of the Type argument."
                 }
               ]
             }
@@ -128941,7 +128941,7 @@
                   "name": "Length",
                   "type": "Long",
                   "optional": false,
-                  "description": "The number of characters from the _Start_ position to the end of the text in the cell."
+                  "description": "The number of characters from the Start position to the end of the text in the cell."
                 },
                 {
                   "name": "Text",
@@ -129973,7 +129973,7 @@
                   "name": "TableDestination",
                   "type": "Variant",
                   "optional": false,
-                  "description": "The cell in the upper-left corner of the PivotTable report's destination range (the range on the worksheet where the resulting PivotTable report will be placed). The destination range must be on a worksheet in the workbook that contains the PivotCache object specified by _expression_."
+                  "description": "The cell in the upper-left corner of the PivotTable report's destination range (the range on the worksheet where the resulting PivotTable report will be placed). The destination range must be on a worksheet in the workbook that contains the PivotCache object specified by expression."
                 },
                 {
                   "name": "TableName",
@@ -130156,7 +130156,7 @@
                   "name": "SourceType",
                   "type": "XlPivotTableSourceType",
                   "optional": false,
-                  "description": "_SourceType_ can be one of these XlPivotTableSourceType constants: xlConsolidation, xlDatabase, or xlExternal."
+                  "description": "SourceType can be one of these XlPivotTableSourceType constants: xlConsolidation, xlDatabase, or xlExternal."
                 },
                 {
                   "name": "SourceData",
@@ -130168,7 +130168,7 @@
                   "name": "Version",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Version of the PivotTable. _Version_ can be one of the XlPivotTableVersionList constants."
+                  "description": "Version of the PivotTable. Version can be one of the XlPivotTableVersionList constants."
                 }
               ]
             }
@@ -130308,7 +130308,7 @@
               "kind": "property",
               "type": "Actions",
               "access": "read-only",
-              "description": "Represents a collection of _actions_ consisting of OLAP-defined actions that can be executed. The actions are specific to PivotTables existing at a worksheet-level. Read-only."
+              "description": "Represents a collection of actions consisting of OLAP-defined actions that can be executed. The actions are specific to PivotTables existing at a worksheet-level. Read-only."
             }
           ],
           "methods": [
@@ -130965,7 +130965,7 @@
                   "name": "ClearList",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If False (default), adds a page item to the existing list. If True, deletes all current items and adds _Item_."
+                  "description": "If False (default), adds a page item to the existing list. If True, deletes all current items and adds Item."
                 }
               ]
             },
@@ -131996,7 +131996,7 @@
           "guid": "{0002447F-0000-0000-C000-000000000046}",
           "library": "Microsoft Excel 16.0 Object Library",
           "description": "Collection of PivotCell objects for a specific PivotLine.",
-          "remarks": "Use the PivotLineCells (_index_) property of the PivotLine object to return or specify the location of a specific PivotCell object in the collection. You can also specify a PivotField object or the PivotField name to return a single PivotCell object.",
+          "remarks": "Use the PivotLineCells (index) property of the PivotLine object to return or specify the location of a specific PivotCell object in the collection. You can also specify a PivotField object or the PivotField name to return a single PivotCell object.",
           "example": "",
           "properties": [
             {
@@ -132984,13 +132984,13 @@
                   "name": "SourceType",
                   "type": "Variant",
                   "optional": true,
-                  "description": "An XlPivotTableSourceType value that represents the source of the report data. If you specify this argument, you must also specify _SourceData_. If _SourceType_ and _SourceData_ are omitted, Microsoft Excel assumes that the source type is xlDatabase, and the source data comes from the named range Database. If this named range doesn't exist, Excel uses the current region if the current selection is in a range of more than 10 cells that contain data. If this isn't true, this method will fail."
+                  "description": "An XlPivotTableSourceType value that represents the source of the report data. If you specify this argument, you must also specify SourceData. If SourceType and SourceData are omitted, Microsoft Excel assumes that the source type is xlDatabase, and the source data comes from the named range Database. If this named range doesn't exist, Excel uses the current region if the current selection is in a range of more than 10 cells that contain data. If this isn't true, this method will fail."
                 },
                 {
                   "name": "SourceData",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The data for the new report. Can be a Range object, an array of ranges, or a text constant that represents the name of another report. For an external database, _SourceData_ is an array of strings containing the SQL query string, where each element is up to 255 characters in length. You should use the _Connection_ argument to specify the ODBC connection string. For compatibility with earlier versions of Excel, _SourceData_ can be a two-element array. The first element is the connection string specifying the ODBC source for the data. The second element is the SQL query string used to get the data. If you specify _SourceData_, you must also specify _SourceType_. If the active cell is inside the _SourceData_ range, you must specify _TableDestination_ as well."
+                  "description": "The data for the new report. Can be a Range object, an array of ranges, or a text constant that represents the name of another report. For an external database, SourceData is an array of strings containing the SQL query string, where each element is up to 255 characters in length. You should use the Connection argument to specify the ODBC connection string. For compatibility with earlier versions of Excel, SourceData can be a two-element array. The first element is the connection string specifying the ODBC source for the data. The second element is the SQL query string used to get the data. If you specify SourceData, you must also specify SourceType. If the active cell is inside the SourceData range, you must specify TableDestination as well."
                 },
                 {
                   "name": "TableDestination",
@@ -133032,7 +133032,7 @@
                   "name": "AutoPage",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Valid only if _SourceType_ is xlConsolidation. True to have Excel create a page field for the consolidation. If _AutoPage_ is False, you must create the page field or fields."
+                  "description": "Valid only if SourceType is xlConsolidation. True to have Excel create a page field for the consolidation. If AutoPage is False, you must create the page field or fields."
                 },
                 {
                   "name": "Reserved",
@@ -133068,7 +133068,7 @@
                   "name": "ReadData",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to create a PivotTable cache that contains all records from the external database; this cache can be very large. If _ReadData_ is False, you can set some of the fields as server-based page fields before the data is actually read."
+                  "description": "True to create a PivotTable cache that contains all records from the external database; this cache can be very large. If ReadData is False, you can set some of the fields as server-based page fields before the data is actually read."
                 },
                 {
                   "name": "Connection",
@@ -133135,7 +133135,7 @@
                   "name": "Item1",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The name of an item in _Field1_."
+                  "description": "The name of an item in Field1."
                 },
                 {
                   "name": "Field2",
@@ -133147,7 +133147,7 @@
                   "name": "Item2",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The name of an item in _Field2_."
+                  "description": "The name of an item in Field2."
                 },
                 {
                   "name": "Field3",
@@ -133159,7 +133159,7 @@
                   "name": "Item3",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The name of an item in _Field3_."
+                  "description": "The name of an item in Field3."
                 },
                 {
                   "name": "Field4",
@@ -133171,7 +133171,7 @@
                   "name": "Item4",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The name of an item in _Field4_."
+                  "description": "The name of an item in Field4."
                 },
                 {
                   "name": "Field5",
@@ -133183,7 +133183,7 @@
                   "name": "Item5",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The name of an item in _Field5_."
+                  "description": "The name of an item in Field5."
                 },
                 {
                   "name": "Field6",
@@ -133195,7 +133195,7 @@
                   "name": "Item6",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The name of an item in _Field6_."
+                  "description": "The name of an item in Field6."
                 },
                 {
                   "name": "Field7",
@@ -133207,7 +133207,7 @@
                   "name": "Item7",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The name of an item in _Field7_."
+                  "description": "The name of an item in Field7."
                 },
                 {
                   "name": "Field8",
@@ -133219,7 +133219,7 @@
                   "name": "Item8",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The name of an item in _Field8_."
+                  "description": "The name of an item in Field8."
                 },
                 {
                   "name": "Field9",
@@ -133231,7 +133231,7 @@
                   "name": "Item9",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The name of an item in _Field9_."
+                  "description": "The name of an item in Field9."
                 },
                 {
                   "name": "Field10",
@@ -133243,7 +133243,7 @@
                   "name": "Item10",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The name of an item in _Field10_."
+                  "description": "The name of an item in Field10."
                 },
                 {
                   "name": "Field11",
@@ -133255,7 +133255,7 @@
                   "name": "Item11",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The name of an item in _Field11_."
+                  "description": "The name of an item in Field11."
                 },
                 {
                   "name": "Field12",
@@ -133267,7 +133267,7 @@
                   "name": "Item12",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The name of an item in _Field12_."
+                  "description": "The name of an item in Field12."
                 },
                 {
                   "name": "Field13",
@@ -133279,7 +133279,7 @@
                   "name": "Item13",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The name of an item in _Field13_."
+                  "description": "The name of an item in Field13."
                 },
                 {
                   "name": "Field14",
@@ -133291,7 +133291,7 @@
                   "name": "Item14",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The name of an item in _Field14_."
+                  "description": "The name of an item in Field14."
                 }
               ]
             },
@@ -133351,7 +133351,7 @@
                   "name": "Members",
                   "type": "Variant",
                   "optional": true,
-                  "description": "An array of string arrays. The elements correspond, in order, to the hierarchies represented in the _Levels_ array. Each element is an array of string arrays that consists of the unique names of the top level members in the dimension that are to be included in the slice."
+                  "description": "An array of string arrays. The elements correspond, in order, to the hierarchies represented in the Levels array. Each element is an array of string arrays that consists of the unique names of the top level members in the dimension that are to be included in the slice."
                 },
                 {
                   "name": "Properties",
@@ -133779,7 +133779,7 @@
                   "name": "TableDestination",
                   "type": "Variant",
                   "optional": false,
-                  "description": "The cell in the upper-left corner of the PivotTable report's destination range (the range on the worksheet where the resulting report will be placed). You must specify a destination range on the worksheet that contains the PivotTables object specified by _expression_."
+                  "description": "The cell in the upper-left corner of the PivotTable report's destination range (the range on the worksheet where the resulting report will be placed). You must specify a destination range on the worksheet that contains the PivotTables object specified by expression."
                 },
                 {
                   "name": "TableName",
@@ -134406,7 +134406,7 @@
           "guid": "{00020869-0000-0000-C000-000000000046}",
           "library": "Microsoft Excel 16.0 Object Library",
           "description": "A collection of all the Point objects in the specified series in a chart.",
-          "remarks": "Use Points (_index_), where _index_ is the point index number, to return a single Point object. Points are numbered from left to right on the series. Points(1) is the leftmost point, and Points(Points.Count) is the rightmost point.",
+          "remarks": "Use Points (index), where index is the point index number, to return a single Point object. Points are numbered from left to right on the series. Points(1) is the leftmost point, and Points(Points.Count) is the rightmost point.",
           "example": "Dim pts As Points\nSet pts = Worksheets(1).ChartObjects(1).Chart. _\n SeriesCollection(1).Points\npts(pts.Count).ApplyDataLabels type:=xlShowValue",
           "properties": [
             {
@@ -134485,7 +134485,7 @@
           "guid": "{000244CD-0000-0000-C000-000000000046}",
           "library": "Microsoft Excel 16.0 Object Library",
           "description": "Represents a Protected View window.",
-          "remarks": "A Protected View window is used to display a workbook from a potentially unsafe location. Unsafe locations are defined as the following: - Files opened from the Internet. - Attachments opened from Outlook. - Files blocked by File Block Policy. - Files that fail Office file validation. - Files explicitly opened in Protected View by using the Open in Protected View command of the Open button in the Open dialog box. Workbooks displayed in a Protected View window cannot be edited and are restricted from running active content such as Visual Basic for Applications macros and data connections. For more information about Protected View windows, see What is Protected View? To return a single ProtectedViewWindow object from the ProtectedViewWindows collection, use ProtectedViewWindows (_index_), where _index_ is the index number of the window that you want to open. You can also access the ProtectedViewWindow object that represents the active Protected View window by using the ActiveProtectedViewWindow property of the Application object.",
+          "remarks": "A Protected View window is used to display a workbook from a potentially unsafe location. Unsafe locations are defined as the following: - Files opened from the Internet. - Attachments opened from Outlook. - Files blocked by File Block Policy. - Files that fail Office file validation. - Files explicitly opened in Protected View by using the Open in Protected View command of the Open button in the Open dialog box. Workbooks displayed in a Protected View window cannot be edited and are restricted from running active content such as Visual Basic for Applications macros and data connections. For more information about Protected View windows, see What is Protected View? To return a single ProtectedViewWindow object from the ProtectedViewWindows collection, use ProtectedViewWindows (index), where index is the index number of the window that you want to open. You can also access the ProtectedViewWindow object that represents the active Protected View window by using the ActiveProtectedViewWindow property of the Application object.",
           "example": "Dim wbProtected As Workbook\n\nIf Application.ProtectedViewWindows.Count > 0 Then\n    Set wbProtected = Application.ProtectedViewWindows(1).Workbook\nEnd If",
           "properties": [
             {
@@ -134605,7 +134605,7 @@
                   "name": "UpdateLinks",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Specifies the way that external references (links) in the file, such as the reference to a range in the Budget.xls workbook in the following formula =SUM([Budget.xls]Annual!C10:C25), are updated. If this argument is omitted, the user is prompted to specify how links will be updated. For more information about the values used by this parameter, see the Remarks section. If Excel is opening a file in the WKS, WK1, or WK3 format and the _UpdateLinks_ argument is 0, no charts are created; otherwise, Excel generates charts from the graphs attached to the file."
+                  "description": "Specifies the way that external references (links) in the file, such as the reference to a range in the Budget.xls workbook in the following formula =SUM([Budget.xls]Annual!C10:C25), are updated. If this argument is omitted, the user is prompted to specify how links will be updated. For more information about the values used by this parameter, see the Remarks section. If Excel is opening a file in the WKS, WK1, or WK3 format and the UpdateLinks argument is 0, no charts are created; otherwise, Excel generates charts from the graphs attached to the file."
                 }
               ]
             }
@@ -135052,7 +135052,7 @@
                   "name": "Create",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If the HTML file exists, setting this argument to True replaces the file, and setting this argument to False inserts the item or items at the end of the file. If the file does not exist, the file is created regardless of the value of the _Create_ argument."
+                  "description": "If the HTML file exists, setting this argument to True replaces the file, and setting this argument to False inserts the item or items at the end of the file. If the file does not exist, the file is created regardless of the value of the Create argument."
                 }
               ]
             }
@@ -135148,7 +135148,7 @@
                   "name": "Source",
                   "type": "Variant",
                   "optional": true,
-                  "description": "A unique name used to identify items that have one of the following constants as their _SourceType_ argument: xlSourceAutoFilter, xlSourceChart, xlSourcePivotTable, xlSourcePrintArea, xlSourceQuery, or xlSourceRange. If _SourceType_ is xlSourceRange, _Source_ specifies a range, which can be a defined name. If _SourceType_ is xlSourceChart, xlSourcePivotTable, or xlSourceQuery, _Source_ specifies the name of a chart, PivotTable report, or query table."
+                  "description": "A unique name used to identify items that have one of the following constants as their SourceType argument: xlSourceAutoFilter, xlSourceChart, xlSourcePivotTable, xlSourcePrintArea, xlSourceQuery, or xlSourceRange. If SourceType is xlSourceRange, Source specifies a range, which can be a defined name. If SourceType is xlSourceChart, xlSourcePivotTable, or xlSourceQuery, Source specifies the name of a chart, PivotTable report, or query table."
                 },
                 {
                   "name": "HtmlType",
@@ -136806,7 +136806,7 @@
                   "name": "CopyToRange",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The destination range for the copied rows if _Action_ is xlFilterCopy. Otherwise, this argument is ignored."
+                  "description": "The destination range for the copied rows if Action is xlFilterCopy. Otherwise, this argument is ignored."
                 },
                 {
                   "name": "Unique",
@@ -136839,7 +136839,7 @@
                   "name": "UseRowColumnNames",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to use the names of row and column ranges that contain the specified range if names for the range cannot be found. False to ignore the _OmitColumn_ and _OmitRow_ arguments. The default value is True."
+                  "description": "True to use the names of row and column ranges that contain the specified range if names for the range cannot be found. False to ignore the OmitColumn and OmitRow arguments. The default value is True."
                 },
                 {
                   "name": "OmitColumn",
@@ -136863,7 +136863,7 @@
                   "name": "AppendLast",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to replace the definitions of the names in _Names_ and also replace the definitions of the last names that were defined. False to replace the definitions of the names in _Names_ only. The default value is False."
+                  "description": "True to replace the definitions of the names in Names and also replace the definitions of the last names that were defined. False to replace the definitions of the names in Names only. The default value is False."
                 }
               ]
             },
@@ -137180,7 +137180,7 @@
                   "name": "Date",
                   "type": "XlDataSeriesDate",
                   "optional": true,
-                  "description": "If the _Type_ argument is xlChronological, the _Date_ argument indicates the step date unit."
+                  "description": "If the Type argument is xlChronological, the Date argument indicates the step date unit."
                 },
                 {
                   "name": "Step",
@@ -137320,7 +137320,7 @@
                   "name": "After",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The cell after which you want the search to begin. This corresponds to the position of the active cell when a search is done from the user interface. Notice that _After_ must be a single cell in the range. Remember that the search begins after this cell; the specified cell isn't searched until the method wraps back around to this cell. If you don't specify this argument, the search starts after the cell in the upper-left corner of the range."
+                  "description": "The cell after which you want the search to begin. This corresponds to the position of the active cell when a search is done from the user interface. Notice that After must be a single cell in the range. Remember that the search begins after this cell; the specified cell isn't searched until the method wraps back around to this cell. If you don't specify this argument, the search starts after the cell in the upper-left corner of the range."
                 },
                 {
                   "name": "LookIn",
@@ -137377,7 +137377,7 @@
                   "name": "After",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The cell after which you want to search. This corresponds to the position of the active cell when a search is done from the user interface. Be aware that _After_ must be a single cell in the range."
+                  "description": "The cell after which you want to search. This corresponds to the position of the active cell when a search is done from the user interface. Be aware that After must be a single cell in the range."
                 }
               ]
             },
@@ -137426,7 +137426,7 @@
                   "name": "By",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If the field is numeric, this argument specifies the size of each group. If the field is a date, this argument specifies the number of days in each group if element 4 in the _Periods_ array is True and all the other elements are False. Otherwise, this argument is ignored. If this argument is omitted, Microsoft Excel automatically chooses a default group size."
+                  "description": "If the field is numeric, this argument specifies the size of each group. If the field is a date, this argument specifies the number of days in each group if element 4 in the Periods array is True and all the other elements are False. Otherwise, this argument is ignored. If this argument is omitted, Microsoft Excel automatically chooses a default group size."
                 },
                 {
                   "name": "Periods",
@@ -137546,7 +137546,7 @@
                   "name": "Text",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The text to add to the note (up to 255 characters). The text is inserted starting at position _Start_, replacing _Length_ characters of the existing note. If this argument is omitted, this method returns the current text of the note starting at position _Start_, for _Length_ characters."
+                  "description": "The text to add to the note (up to 255 characters). The text is inserted starting at position Start, replacing Length characters of the existing note. If this argument is omitted, this method returns the current text of the note starting at position Start, for Length characters."
                 },
                 {
                   "name": "Start",
@@ -137558,7 +137558,7 @@
                   "name": "Length",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The number of characters to be set or returned. If this argument is omitted, Microsoft Excel sets or returns characters from the starting position to the end of the note (up to 255 characters). If there are more than 255 characters from _Start_ to the end of the note, this method returns only 255 characters."
+                  "description": "The number of characters to be set or returned. If this argument is omitted, Microsoft Excel sets or returns characters from the starting position to the end of the note (up to 255 characters). If there are more than 255 characters from Start to the end of the note, this method returns only 255 characters."
                 }
               ]
             },
@@ -137883,7 +137883,7 @@
                   "name": "Order1",
                   "type": "XlSortOrder",
                   "optional": true,
-                  "description": "The sort order for the field or range specified in the _Key1_ argument."
+                  "description": "The sort order for the field or range specified in the Key1 argument."
                 },
                 {
                   "name": "Type",
@@ -137901,7 +137901,7 @@
                   "name": "Order2",
                   "type": "XlSortOrder",
                   "optional": true,
-                  "description": "The sort order for the field or range specified in the _Key2_ argument. Cannot be used when sorting PivotTable reports."
+                  "description": "The sort order for the field or range specified in the Key2 argument. Cannot be used when sorting PivotTable reports."
                 },
                 {
                   "name": "Key3",
@@ -137913,7 +137913,7 @@
                   "name": "Order3",
                   "type": "XlSortOrder",
                   "optional": true,
-                  "description": "The sort order for the field or range specified in the _Key3_ argument. Cannot be used when sorting PivotTable reports."
+                  "description": "The sort order for the field or range specified in the Key3 argument. Cannot be used when sorting PivotTable reports."
                 },
                 {
                   "name": "Header",
@@ -137925,7 +137925,7 @@
                   "name": "OrderCustom",
                   "type": "Variant",
                   "optional": true,
-                  "description": "This argument is a one-based integer offset to the list of custom sort orders. If you omit _OrderCustom_, (normal sort order) is used."
+                  "description": "This argument is a one-based integer offset to the list of custom sort orders. If you omit OrderCustom, (normal sort order) is used."
                 },
                 {
                   "name": "MatchCase",
@@ -137943,19 +137943,19 @@
                   "name": "DataOption1",
                   "type": "XlSortDataOption",
                   "optional": true,
-                  "description": "Specifies how to sort text in _Key1_. Cannot be used when sorting PivotTable reports."
+                  "description": "Specifies how to sort text in Key1. Cannot be used when sorting PivotTable reports."
                 },
                 {
                   "name": "DataOption2",
                   "type": "XlSortDataOption",
                   "optional": true,
-                  "description": "Specifies how to sort text in _Key2_. Cannot be used when sorting PivotTable reports."
+                  "description": "Specifies how to sort text in Key2. Cannot be used when sorting PivotTable reports."
                 },
                 {
                   "name": "DataOption3",
                   "type": "XlSortDataOption",
                   "optional": true,
-                  "description": "Specifies how to sort text in _Key3_. Cannot be used when sorting PivotTable reports."
+                  "description": "Specifies how to sort text in Key3. Cannot be used when sorting PivotTable reports."
                 }
               ]
             },
@@ -137976,7 +137976,7 @@
                   "name": "Value",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If _Type_ is either xlCellTypeConstants or xlCellTypeFormulas, this argument is used to determine which types of cells to include in the result. These values can be added together to return more than one type. The default is to select all constants or formulas, no matter what the type."
+                  "description": "If Type is either xlCellTypeConstants or xlCellTypeFormulas, this argument is used to determine which types of cells to include in the result. These values can be added together to return more than one type. The default is to select all constants or formulas, no matter what the type."
                 }
               ]
             },
@@ -138102,43 +138102,43 @@
                   "name": "Tab",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to have _DataType_ be xlDelimited and to have the tab character be a delimiter. The default value is False."
+                  "description": "True to have DataType be xlDelimited and to have the tab character be a delimiter. The default value is False."
                 },
                 {
                   "name": "Semicolon",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to have _DataType_ be xlDelimited and to have the semicolon be a delimiter. The default value is False."
+                  "description": "True to have DataType be xlDelimited and to have the semicolon be a delimiter. The default value is False."
                 },
                 {
                   "name": "Comma",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to have _DataType_ be xlDelimited and to have the comma be a delimiter. The default value is False."
+                  "description": "True to have DataType be xlDelimited and to have the comma be a delimiter. The default value is False."
                 },
                 {
                   "name": "Space",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to have _DataType_ be xlDelimited and to have the space character be a delimiter. The default value is False."
+                  "description": "True to have DataType be xlDelimited and to have the space character be a delimiter. The default value is False."
                 },
                 {
                   "name": "Other",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to have _DataType_ be xlDelimited and to have the character specified by the _OtherChar_ argument be a delimiter. The default value is False."
+                  "description": "True to have DataType be xlDelimited and to have the character specified by the OtherChar argument be a delimiter. The default value is False."
                 },
                 {
                   "name": "OtherChar",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Required if _Other_ is True; the delimiter character when _Other_ is True. If more than one character is specified, only the first character of the string is used; the remaining characters are ignored."
+                  "description": "Required if Other is True; the delimiter character when Other is True. If more than one character is specified, only the first character of the string is used; the remaining characters are ignored."
                 },
                 {
                   "name": "FieldInfo",
                   "type": "Variant",
                   "optional": true,
-                  "description": "An array containing parse information for the individual columns of data. The interpretation depends on the value of _DataType_. When the data is delimited, this argument is an array of two-element arrays, with each two-element array specifying the conversion options for a particular column. The first element is the column number (1-based), and the second element is one of the XlColumnDataType constants specifying how the column is parsed."
+                  "description": "An array containing parse information for the individual columns of data. The interpretation depends on the value of DataType. When the data is delimited, this argument is an array of two-element arrays, with each two-element array specifying the conversion options for a particular column. The first element is the column number (1-based), and the second element is one of the XlColumnDataType constants specifying how the column is parsed."
                 },
                 {
                   "name": "DecimalSeparator",
@@ -138319,7 +138319,7 @@
                   "name": "PrintToFile",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to print to a file. If _PrToFileName_ is not specified, Microsoft Excel prompts the user to enter the name of the output file."
+                  "description": "True to print to a file. If PrToFileName is not specified, Microsoft Excel prompts the user to enter the name of the output file."
                 },
                 {
                   "name": "Collate",
@@ -138331,7 +138331,7 @@
                   "name": "PrToFileName",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to."
+                  "description": "If PrintToFile is set to True, this argument specifies the name of the file that you want to print to."
                 }
               ]
             },
@@ -138517,7 +138517,7 @@
                   "name": "Order1",
                   "type": "XlSortOrder",
                   "optional": true,
-                  "description": "Determines the sort order for the values specified in _Key1_."
+                  "description": "Determines the sort order for the values specified in Key1."
                 },
                 {
                   "name": "Key2",
@@ -138529,13 +138529,13 @@
                   "name": "Type",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Specifies which type of elements are to be sorted within a PivotTable. Specify xLSortLabels to sort by the labels targeted by the _experession_ Range in the Row/Colum Labels areas of the PivotTable's range, or xLSortValues when _Key1_ additionally targets a cell in the Values or Sub/Grand Totals areas using R1C1 notation."
+                  "description": "Specifies which type of elements are to be sorted within a PivotTable. Specify xLSortLabels to sort by the labels targeted by the experession Range in the Row/Colum Labels areas of the PivotTable's range, or xLSortValues when Key1 additionally targets a cell in the Values or Sub/Grand Totals areas using R1C1 notation."
                 },
                 {
                   "name": "Order2",
                   "type": "XlSortOrder",
                   "optional": true,
-                  "description": "Determines the sort order for the values specified in _Key2_."
+                  "description": "Determines the sort order for the values specified in Key2."
                 },
                 {
                   "name": "Key3",
@@ -138547,7 +138547,7 @@
                   "name": "Order3",
                   "type": "XlSortOrder",
                   "optional": true,
-                  "description": "Determines the sort order for the values specified in _Key3_."
+                  "description": "Determines the sort order for the values specified in Key3."
                 },
                 {
                   "name": "Header",
@@ -138583,19 +138583,19 @@
                   "name": "DataOption1",
                   "type": "XlSortDataOption",
                   "optional": true,
-                  "description": "Specifies how to sort text in the range specified in _Key1_; does not apply to PivotTable sorting."
+                  "description": "Specifies how to sort text in the range specified in Key1; does not apply to PivotTable sorting."
                 },
                 {
                   "name": "DataOption2",
                   "type": "XlSortDataOption",
                   "optional": true,
-                  "description": "Specifies how to sort text in the range specified in _Key2_; does not apply to PivotTable sorting."
+                  "description": "Specifies how to sort text in the range specified in Key2; does not apply to PivotTable sorting."
                 },
                 {
                   "name": "DataOption3",
                   "type": "XlSortDataOption",
                   "optional": true,
-                  "description": "Specifies how to sort text in the range specified in _Key3_; does not apply to PivotTable sorting."
+                  "description": "Specifies how to sort text in the range specified in Key3; does not apply to PivotTable sorting."
                 },
                 {
                   "name": "SubField1",
@@ -138622,7 +138622,7 @@
                   "name": "Criteria1",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The criteria (a string; for example, \"101\"). Use \"=\" to find blank fields, \"<>\" to find non-blank fields, and \"><\" to select (No Data) fields in data types. If this argument is omitted, the criteria is All. If _Operator_ is xlTop10Items, _Criteria1_ specifies the number of items (for example, \"10\")."
+                  "description": "The criteria (a string; for example, \"101\"). Use \"=\" to find blank fields, \"<>\" to find non-blank fields, and \"><\" to select (No Data) fields in data types. If this argument is omitted, the criteria is All. If Operator is xlTop10Items, Criteria1 specifies the number of items (for example, \"10\")."
                 },
                 {
                   "name": "Operator",
@@ -138634,7 +138634,7 @@
                   "name": "Criteria2",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The second criteria (a string). Used with _Criteria1_ and _Operator_ to construct compound criteria. Also used as single criteria on date fields filtering by date, month or year. Followed by an Array detailing the filtering Array(Level, Date). Where Level is 0-2 (year,month,date) and Date is one valid Date inside the filtering period."
+                  "description": "The second criteria (a string). Used with Criteria1 and Operator to construct compound criteria. Also used as single criteria on date fields filtering by date, month or year. Followed by an Array detailing the filtering Array(Level, Date). Where Level is 0-2 (year,month,date) and Date is one valid Date inside the filtering period."
                 },
                 {
                   "name": "VisibleDropDown",
@@ -140041,7 +140041,7 @@
                   "name": "UseSelection",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to use the current selection as the query string. This overrides the _QueryString_ parameter if set. Default value is False."
+                  "description": "True to use the current selection as the query string. This overrides the QueryString parameter if set. Default value is False."
                 },
                 {
                   "name": "LaunchQuery",
@@ -140055,7 +140055,7 @@
               "name": "IsResearchService",
               "kind": "method",
               "signature": "IsResearchService(ServiceID As String) As Boolean",
-              "description": "Indicates whether the GUID specified in the _ServiceID_ parameter corresponds to a currently configured service.",
+              "description": "Indicates whether the GUID specified in the ServiceID parameter corresponds to a currently configured service.",
               "returns": "Boolean",
               "parameters": [
                 {
@@ -140222,7 +140222,7 @@
           "guid": "{00020897-0000-0000-C000-000000000046}",
           "library": "Microsoft Excel 16.0 Object Library",
           "description": "Represents a scenario on a worksheet.",
-          "remarks": "A scenario is a group of input values (called _changing cells_) that's named and saved. The Scenario object is a member of the Scenarios collection. The Scenarios collection contains all the defined scenarios for a worksheet.",
+          "remarks": "A scenario is a group of input values (called changing cells) that's named and saved. The Scenario object is a member of the Scenarios collection. The Scenarios collection contains all the defined scenarios for a worksheet.",
           "example": "Worksheets(\"options\").Scenarios(\"typical\").Show",
           "properties": [
             {
@@ -140341,7 +140341,7 @@
           "guid": "{00020896-0000-0000-C000-000000000046}",
           "library": "Microsoft Excel 16.0 Object Library",
           "description": "A collection of all the Scenario objects on the specified worksheet.",
-          "remarks": "A scenario is a group of input values (called _changing cells_) that's named and saved.",
+          "remarks": "A scenario is a group of input values (called changing cells) that's named and saved.",
           "example": "Worksheets(\"options\").Scenarios.CreateSummary _\n resultCells:=Worksheets(\"options\").Range(\"j10,j20\")",
           "properties": [
             {
@@ -140397,7 +140397,7 @@
                   "name": "Values",
                   "type": "Variant",
                   "optional": true,
-                  "description": "An array that contains the scenario values for the cells in _ChangingCells_. If this argument is omitted, the scenario values are assumed to be the current values in the cells in _ChangingCells_."
+                  "description": "An array that contains the scenario values for the cells in ChangingCells. If this argument is omitted, the scenario values are assumed to be the current values in the cells in ChangingCells."
                 },
                 {
                   "name": "Comment",
@@ -141509,13 +141509,13 @@
                   "name": "Amount",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The error amount. Used for only the positive error amount when _Type_ is xlErrorBarTypeCustom."
+                  "description": "The error amount. Used for only the positive error amount when Type is xlErrorBarTypeCustom."
                 },
                 {
                   "name": "MinusValues",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The negative error amount when _Type_ is xlErrorBarTypeCustom."
+                  "description": "The negative error amount when Type is xlErrorBarTypeCustom."
                 }
               ]
             },
@@ -141745,7 +141745,7 @@
                   "name": "Replace",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If _CategoryLabels_ is True and _Replace_ is True, the specified categories replace the categories that currently exist for the series. If _Replace_ is False, the existing categories will not be replaced. The default value is False."
+                  "description": "If CategoryLabels is True and Replace is True, the specified categories replace the categories that currently exist for the series. If Replace is False, the existing categories will not be replaced. The default value is False."
                 }
               ]
             },
@@ -143116,37 +143116,37 @@
                   "name": "X1",
                   "type": "Single",
                   "optional": false,
-                  "description": "If the _EditingType_ of the new segment is msoEditingAuto, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the _EditingType_ of the new node is msoEditingCorner, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the first control point for the new segment."
+                  "description": "If the EditingType of the new segment is msoEditingAuto, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the EditingType of the new node is msoEditingCorner, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the first control point for the new segment."
                 },
                 {
                   "name": "Y1",
                   "type": "Single",
                   "optional": false,
-                  "description": "If the _EditingType_ of the new segment is msoEditingAuto, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the _EditingType_ of the new node is msoEditingCorner, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the first control point for the new segment."
+                  "description": "If the EditingType of the new segment is msoEditingAuto, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the EditingType of the new node is msoEditingCorner, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the first control point for the new segment."
                 },
                 {
                   "name": "X2",
                   "type": "Single",
                   "optional": true,
-                  "description": "If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the second control point for the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument."
+                  "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the second control point for the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
                 },
                 {
                   "name": "Y2",
                   "type": "Single",
                   "optional": true,
-                  "description": "If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the second control point for the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument."
+                  "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the second control point for the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
                 },
                 {
                   "name": "X3",
                   "type": "Single",
                   "optional": true,
-                  "description": "If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument."
+                  "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
                 },
                 {
                   "name": "Y3",
                   "type": "Single",
                   "optional": true,
-                  "description": "If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument."
+                  "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
                 }
               ]
             },
@@ -143154,7 +143154,7 @@
               "name": "SetEditingType",
               "kind": "method",
               "signature": "SetEditingType(Index As Long, EditingType As MsoEditingType)",
-              "description": "Sets the editing type of the node specified by _Index_. If the node is a control point for a curved segment, this method sets the editing type of the node adjacent to it that joins two segments. Note that, depending on the editing type, this method may affect the position of adjacent nodes.",
+              "description": "Sets the editing type of the node specified by Index. If the node is a control point for a curved segment, this method sets the editing type of the node adjacent to it that joins two segments. Note that, depending on the editing type, this method may affect the position of adjacent nodes.",
               "returns": "void",
               "parameters": [
                 {
@@ -143175,7 +143175,7 @@
               "name": "SetPosition",
               "kind": "method",
               "signature": "SetPosition(Index As Long, X1 As Single, Y1 As Single)",
-              "description": "Sets the location of the node specified by _Index_. Note that, depending on the editing type of the node, this method may affect the position of adjacent nodes.",
+              "description": "Sets the location of the node specified by Index. Note that, depending on the editing type of the node, this method may affect the position of adjacent nodes.",
               "returns": "void",
               "parameters": [
                 {
@@ -143202,7 +143202,7 @@
               "name": "SetSegmentType",
               "kind": "method",
               "signature": "SetSegmentType(Index As Long, SegmentType As MsoSegmentType)",
-              "description": "Sets the segment type of the segment that follows the node specified by _Index_. If the node is a control point for a curved segment, this method sets the segment type for that curve. Note that this may affect the total number of nodes by inserting or deleting adjacent nodes.",
+              "description": "Sets the segment type of the segment that follows the node specified by Index. If the node is a control point for a curved segment, this method sets the segment type for that curve. Note that this may affect the total number of nodes by inserting or deleting adjacent nodes.",
               "returns": "void",
               "parameters": [
                 {
@@ -144136,7 +144136,7 @@
                   "name": "SaveWithDocument",
                   "type": "MsoTriState",
                   "optional": false,
-                  "description": "To save the picture with the document. Use msoFalse to store only the link information in the document. Use msoTrue to save the linked picture with the document into which it's inserted. This argument must be msoTrue if _LinkToFile_ is msoFalse."
+                  "description": "To save the picture with the document. Use msoFalse to store only the link information in the document. Use msoTrue to save the linked picture with the document into which it's inserted. This argument must be msoTrue if LinkToFile is msoFalse."
                 },
                 {
                   "name": "Left",
@@ -144398,19 +144398,19 @@
                   "name": "ClassType",
                   "type": "Variant",
                   "optional": true,
-                  "description": "A string that contains the programmatic identifier for the object to be created. You must specify either _ClassType_ or _FileName_. If _ClassType_ is specified, _FileName_ and _Link_ are ignored."
+                  "description": "A string that contains the programmatic identifier for the object to be created. You must specify either ClassType or FileName. If ClassType is specified, FileName and Link are ignored."
                 },
                 {
                   "name": "Filename",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The file from which the object is to be created. If the path isn't specified, the current working folder is used. You must specify either the _ClassType_ or _FileName_ argument for the object, but not both."
+                  "description": "The file from which the object is to be created. If the path isn't specified, the current working folder is used. You must specify either the ClassType or FileName argument for the object, but not both."
                 },
                 {
                   "name": "Link",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to link the OLE object to the file from which it was created. False to make the OLE object an independent copy of the file. If you specified a value for _ClassType_, this argument must be False. The default value is False."
+                  "description": "True to link the OLE object to the file from which it was created. False to make the OLE object an independent copy of the file. If you specified a value for ClassType, this argument must be False. The default value is False."
                 },
                 {
                   "name": "DisplayAsIcon",
@@ -144428,7 +144428,7 @@
                   "name": "IconIndex",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The index of the icon within _IconFileName_. The order of icons in the specified file corresponds to the order in which the icons appear in the Change Icon dialog box (accessed from the Object dialog box when the Display as icon check box is selected). The first icon in the file has the index number 0 (zero). If an icon with the given index number doesn't exist in _IconFileName_, the icon with the index number 1 (the second icon in the file) is used. The default value is 0 (zero)."
+                  "description": "The index of the icon within IconFileName. The order of icons in the specified file corresponds to the order in which the icons appear in the Change Icon dialog box (accessed from the Object dialog box when the Display as icon check box is selected). The first icon in the file has the index number 0 (zero). If an icon with the given index number doesn't exist in IconFileName, the icon with the index number 1 (the second icon in the file) is used. The default value is 0 (zero)."
                 },
                 {
                   "name": "IconLabel",
@@ -144575,7 +144575,7 @@
                   "name": "SaveWithDocument",
                   "type": "MsoTriState",
                   "optional": false,
-                  "description": "Determines whether the linked picture will be saved with the document into which it is inserted. This argument must be msoTrue if _LinkToFile_ is msoFalse."
+                  "description": "Determines whether the linked picture will be saved with the document into which it is inserted. This argument must be msoTrue if LinkToFile is msoFalse."
                 },
                 {
                   "name": "Left",
@@ -144788,13 +144788,13 @@
                   "name": "Before",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The sheet before which the copied sheet will be placed. You cannot specify _Before_ if you specify _After_."
+                  "description": "The sheet before which the copied sheet will be placed. You cannot specify Before if you specify After."
                 },
                 {
                   "name": "After",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The sheet after which the copied sheet will be placed. You cannot specify _After_ if you specify _Before_."
+                  "description": "The sheet after which the copied sheet will be placed. You cannot specify After if you specify Before."
                 }
               ]
             },
@@ -144837,13 +144837,13 @@
                   "name": "Before",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The sheet before which the moved sheet will be placed. You cannot specify _Before_ if you specify _After_."
+                  "description": "The sheet before which the moved sheet will be placed. You cannot specify Before if you specify After."
                 },
                 {
                   "name": "After",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The sheet after which the moved sheet will be placed. You cannot specify _After_ if you specify _Before_."
+                  "description": "The sheet after which the moved sheet will be placed. You cannot specify After if you specify Before."
                 }
               ]
             },
@@ -144918,7 +144918,7 @@
                   "name": "PrintToFile",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to print to a file. If _PrToFileName_ is not specified, Excel prompts the user to enter the name of the output file."
+                  "description": "True to print to a file. If PrToFileName is not specified, Excel prompts the user to enter the name of the output file."
                 },
                 {
                   "name": "Collate",
@@ -144930,7 +144930,7 @@
                   "name": "PrToFileName",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to."
+                  "description": "If PrintToFile is set to True, this argument specifies the name of the file that you want to print to."
                 },
                 {
                   "name": "IgnorePrintAreas",
@@ -150573,7 +150573,7 @@
                   "name": "Length",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The number of characters to be returned. If this argument is omitted, the Characters method returns the remainder of the string (everything after the character that was set as the _Start_ argument)."
+                  "description": "The number of characters to be returned. If this argument is omitted, the Characters method returns the remainder of the string (everything after the character that was set as the Start argument)."
                 }
               ]
             }
@@ -152382,13 +152382,13 @@
                   "name": "Order",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Variant if _Type_ is xlPolynomial. The trendline order. Must be an integer from 2 to 6, inclusive."
+                  "description": "Variant if Type is xlPolynomial. The trendline order. Must be an integer from 2 to 6, inclusive."
                 },
                 {
                   "name": "Period",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Variant if _Type_ is xlMovingAvg. The trendline period. Must be an integer greater than 1 and less than the number of data points in the series you are adding a trendline to."
+                  "description": "Variant if Type is xlMovingAvg. The trendline period. Must be an integer greater than 1 and less than the number of data points in the series you are adding a trendline to."
                 },
                 {
                   "name": "Forward",
@@ -153054,7 +153054,7 @@
                   "name": "Formula2",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The second part of the data validation equation when _Operator_ is xlBetween or xlNotBetween (otherwise, this argument is ignored)."
+                  "description": "The second part of the data validation equation when Operator is xlBetween or xlNotBetween (otherwise, this argument is ignored)."
                 }
               ]
             },
@@ -154146,7 +154146,7 @@
                   "name": "SaveChanges",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If there are no changes to the workbook, this argument is ignored. If there are changes to the workbook and the workbook appears in other open windows, this argument is ignored. If there are changes to the workbook but the workbook doesn't appear in any other open windows, this argument specifies whether changes should be saved.If set to True, changes are saved to the workbook. If there is not yet a file name associated with the workbook, _FileName_ is used. If _FileName_ is omitted, the user is asked to supply a file name."
+                  "description": "If there are no changes to the workbook, this argument is ignored. If there are changes to the workbook and the workbook appears in other open windows, this argument is ignored. If there are changes to the workbook but the workbook doesn't appear in any other open windows, this argument specifies whether changes should be saved.If set to True, changes are saved to the workbook. If there is not yet a file name associated with the workbook, FileName is used. If FileName is omitted, the user is asked to supply a file name."
                 },
                 {
                   "name": "Filename",
@@ -154228,13 +154228,13 @@
                   "name": "Sheets",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The number of sheets to scroll by. Use a positive number to scroll forward, a negative number to scroll backward, or 0 (zero) to not scroll at all. You must specify _Sheets_ if you don't specify _Position_."
+                  "description": "The number of sheets to scroll by. Use a positive number to scroll forward, a negative number to scroll backward, or 0 (zero) to not scroll at all. You must specify Sheets if you don't specify Position."
                 },
                 {
                   "name": "Position",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Use xlFirst to scroll to the first sheet, or use xlLast to scroll to the last sheet. You must specify _Position_ if you don't specify _Sheets_."
+                  "description": "Use xlFirst to scroll to the first sheet, or use xlLast to scroll to the last sheet. You must specify Position if you don't specify Sheets."
                 }
               ]
             },
@@ -154326,7 +154326,7 @@
               "name": "ScrollIntoView",
               "kind": "method",
               "signature": "ScrollIntoView(Left As Long, Top As Long, Width As Long, Height As Long, [Start As Variant])",
-              "description": "Scrolls the document window so that the contents of a specified rectangular area are displayed in either the upper-left or lower-right corner of the document window or pane (depending on the value of the _Start_ argument).",
+              "description": "Scrolls the document window so that the contents of a specified rectangular area are displayed in either the upper-left or lower-right corner of the document window or pane (depending on the value of the Start argument).",
               "returns": "void",
               "parameters": [
                 {
@@ -154402,7 +154402,7 @@
                   "name": "PrintToFile",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to print to a file. If _PrToFileName_ is not specified, Microsoft Excel prompts the user to enter the name of the output file."
+                  "description": "True to print to a file. If PrToFileName is not specified, Microsoft Excel prompts the user to enter the name of the output file."
                 },
                 {
                   "name": "Collate",
@@ -154414,7 +154414,7 @@
                   "name": "PrToFileName",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to."
+                  "description": "If PrintToFile is set to True, this argument specifies the name of the file that you want to print to."
                 }
               ]
             }
@@ -154511,13 +154511,13 @@
                   "name": "SyncHorizontal",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Ignored if _ActiveWorkbook_ is False or omitted. True to synchronize the windows of the active workbook when scrolling horizontally. False to not synchronize the windows. The default value is False."
+                  "description": "Ignored if ActiveWorkbook is False or omitted. True to synchronize the windows of the active workbook when scrolling horizontally. False to not synchronize the windows. The default value is False."
                 },
                 {
                   "name": "SyncVertical",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Ignored if _ActiveWorkbook_ is False or omitted. True to synchronize the windows of the active workbook when scrolling vertically. False to not synchronize the windows. The default value is False."
+                  "description": "Ignored if ActiveWorkbook is False or omitted. True to synchronize the windows of the active workbook when scrolling vertically. False to not synchronize the windows. The default value is False."
                 }
               ]
             },
@@ -155435,7 +155435,7 @@
                   "name": "WritePassword",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Specifies the write-reserved password if the file is write reserved and _Mode_ is xlReadWrite. Ignored if there's no password for the file or if _Mode_ is xlReadOnly."
+                  "description": "Specifies the write-reserved password if the file is write reserved and Mode is xlReadWrite. Ignored if there's no password for the file or if Mode is xlReadOnly."
                 },
                 {
                   "name": "Notify",
@@ -155483,7 +155483,7 @@
                   "name": "SaveChanges",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If there are no changes to the workbook, this argument is ignored. If there are changes to the workbook and the workbook appears in other open windows, this argument is ignored. If there are changes to the workbook but the workbook doesn't appear in any other open windows, this argument specifies whether changes should be saved. If set to True, changes are saved to the workbook. If there is not yet a file name associated with the workbook, _FileName_ is used. If _FileName_ is omitted, the user is asked to supply a file name."
+                  "description": "If there are no changes to the workbook, this argument is ignored. If there are changes to the workbook and the workbook appears in other open windows, this argument is ignored. If there are changes to the workbook but the workbook doesn't appear in any other open windows, this argument specifies whether changes should be saved. If set to True, changes are saved to the workbook. If there is not yet a file name associated with the workbook, FileName is used. If FileName is omitted, the user is asked to supply a file name."
                 },
                 {
                   "name": "Filename",
@@ -156006,13 +156006,13 @@
                   "name": "ExtraInfo",
                   "type": "Variant",
                   "optional": true,
-                  "description": "A String or byte array that specifies additional information for HTTP to use to resolve the hyperlink. For example, you can use _ExtraInfo_ to specify the coordinates of an image map, the contents of a form, or a FAT file name."
+                  "description": "A String or byte array that specifies additional information for HTTP to use to resolve the hyperlink. For example, you can use ExtraInfo to specify the coordinates of an image map, the contents of a form, or a FAT file name."
                 },
                 {
                   "name": "Method",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Specifies the way _ExtraInfo_ is attached. Can be one of the MsoExtraInfoMethod constants: msoMethodGet or msoMethodPost."
+                  "description": "Specifies the way ExtraInfo is attached. Can be one of the MsoExtraInfoMethod constants: msoMethodGet or msoMethodPost."
                 },
                 {
                   "name": "HeaderInfo",
@@ -156089,13 +156089,13 @@
                   "name": "Comments",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Allows the user to enter check-in comments for the revision of the workbook being checked in (applies only if _SaveChanges_ equals True)."
+                  "description": "Allows the user to enter check-in comments for the revision of the workbook being checked in (applies only if SaveChanges equals True)."
                 },
                 {
                   "name": "MakePublic",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True allows the user to publish the workbook after it has been checked in. This submits the workbook for the approval process, which can eventually result in a version of the workbook being published to users with read-only rights to the workbook (applies only if _SaveChanges_ equals True)."
+                  "description": "True allows the user to publish the workbook after it has been checked in. This submits the workbook for the approval process, which can eventually result in a version of the workbook being published to users with read-only rights to the workbook (applies only if SaveChanges equals True)."
                 }
               ]
             },
@@ -156117,7 +156117,7 @@
                   "name": "Recipients",
                   "type": "Variant",
                   "optional": true,
-                  "description": "A string that lists the people to whom to send the message. These can be unresolved names and aliases in an email phone book or full email addresses. Separate multiple recipients with a semicolon (;). If left blank and _ShowMessage_ is False, you'll receive an error message, and the message will not be sent."
+                  "description": "A string that lists the people to whom to send the message. These can be unresolved names and aliases in an email phone book or full email addresses. Separate multiple recipients with a semicolon (;). If left blank and ShowMessage is False, you'll receive an error message, and the message will not be sent."
                 },
                 {
                   "name": "Subject",
@@ -156271,7 +156271,7 @@
                   "name": "Overwrite",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If a value is not specified for the _Destination_ parameter, this parameter specifies whether to overwrite data that has been mapped to the schema map specified in the _ImportMap_ parameter. Set to True to overwrite the data or False to append the new data to the existing data. The default value is True. If a value is specified for the _Destination_ parameter, this parameter specifies whether to overwrite existing data. Set to True to overwrite existing data or False to cancel the import if data would be overwritten. The default value is True."
+                  "description": "If a value is not specified for the Destination parameter, this parameter specifies whether to overwrite data that has been mapped to the schema map specified in the ImportMap parameter. Set to True to overwrite the data or False to append the new data to the existing data. The default value is True. If a value is specified for the Destination parameter, this parameter specifies whether to overwrite existing data. Set to True to overwrite existing data or False to cancel the import if data would be overwritten. The default value is True."
                 },
                 {
                   "name": "Destination",
@@ -156304,7 +156304,7 @@
                   "name": "Overwrite",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If a value is not specified for the _Destination_ parameter, this parameter specifies whether to overwrite data that has been mapped to the schema map specified in the _ImportMap_ parameter. Set to True to overwrite the data or False to append the new data to the existing data. The default value is True. If a value is specified for the _Destination_ parameter, this parameter specifies whether to overwrite existing data. Set to True to overwrite existing data or False to cancel the import if data would be overwritten. The default value is True."
+                  "description": "If a value is not specified for the Destination parameter, this parameter specifies whether to overwrite data that has been mapped to the schema map specified in the ImportMap parameter. Set to True to overwrite the data or False to append the new data to the existing data. The default value is True. If a value is specified for the Destination parameter, this parameter specifies whether to overwrite existing data. Set to True to overwrite existing data or False to cancel the import if data would be overwritten. The default value is True."
                 },
                 {
                   "name": "Destination",
@@ -156374,7 +156374,7 @@
                   "name": "Comments",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Comments for the revision of the workbook being checked in (applies only if _SaveChanges_ is set to True)."
+                  "description": "Comments for the revision of the workbook being checked in (applies only if SaveChanges is set to True)."
                 },
                 {
                   "name": "MakePublic",
@@ -156452,7 +156452,7 @@
                   "name": "PrintToFile",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to print to a file. If _PrToFileName_ is not specified, Microsoft Excel prompts the user to enter the name of the output file."
+                  "description": "True to print to a file. If PrToFileName is not specified, Microsoft Excel prompts the user to enter the name of the output file."
                 },
                 {
                   "name": "Collate",
@@ -156464,7 +156464,7 @@
                   "name": "PrToFileName",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to."
+                  "description": "If PrintToFile is set to True, this argument specifies the name of the file that you want to print to."
                 },
                 {
                   "name": "IgnorePrintAreas",
@@ -156681,13 +156681,13 @@
                   "name": "TextCodepage",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Ignored for all languages in Microsoft Excel. NOTE: When Excel saves a workbook to one of the CSV or text formats, which are specified by using the _FileFormat_ parameter, it uses the code page that corresponds to the language for the system locale in use on the current computer. This system setting is available in the Control Panel > Region and Language > Location tab under Current location."
+                  "description": "Ignored for all languages in Microsoft Excel. NOTE: When Excel saves a workbook to one of the CSV or text formats, which are specified by using the FileFormat parameter, it uses the code page that corresponds to the language for the system locale in use on the current computer. This system setting is available in the Control Panel > Region and Language > Location tab under Current location."
                 },
                 {
                   "name": "TextVisualLayout",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Ignored for all languages in Microsoft Excel. NOTE: When Excel saves a workbook to one of the CSV or text formats, which are specified by using the _FileFormat_ parameter, it saves these formats in logical layout. If left-to-right (LTR) text is embedded within right-to-left (RTL) text in the file, or vice versa, logical layout saves the contents of the file in the correct reading order for all languages in the file without regard to direction. When an application opens the file, each run of LTR or RTL characters are rendered in the correct direction according to the character value ranges within the code page (unless an application that is designed to display the exact memory layout of the file, such as a debugger or editor, is used to open the file)."
+                  "description": "Ignored for all languages in Microsoft Excel. NOTE: When Excel saves a workbook to one of the CSV or text formats, which are specified by using the FileFormat parameter, it saves these formats in logical layout. If left-to-right (LTR) text is embedded within right-to-left (RTL) text in the file, or vice versa, logical layout saves the contents of the file in the correct reading order for all languages in the file without regard to direction. When an application opens the file, each run of LTR or RTL characters are rendered in the correct direction according to the character value ranges within the code page (unless an application that is designed to display the exact memory layout of the file, such as a debugger or editor, is used to open the file)."
                 },
                 {
                   "name": "Local",
@@ -158722,7 +158722,7 @@
                   "name": "Delimiter",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If the file is a text file and the _Format_ argument is 6, this argument is a string that specifies the character to be used as the delimiter. For example, use Chr(9) for tabs, use \",\" for commas, use \";\" for semicolons, or use a custom character. Only the first character of the string is used."
+                  "description": "If the file is a text file and the Format argument is 6, this argument is a string that specifies the character to be used as the delimiter. For example, use Chr(9) for tabs, use \",\" for commas, use \";\" for semicolons, or use a custom character. Only the first character of the string is used."
                 },
                 {
                   "name": "Editable",
@@ -158833,19 +158833,19 @@
                   "name": "Other",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to have the character specified by the _OtherChar_ argument be the delimiter (DataType must be xlDelimited). The default value is False."
+                  "description": "True to have the character specified by the OtherChar argument be the delimiter (DataType must be xlDelimited). The default value is False."
                 },
                 {
                   "name": "OtherChar",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Required if _Other_ is True. Specifies the delimiter character when _Other_ is True. If more than one character is specified, only the first character of the string is used; the remaining characters are ignored."
+                  "description": "Required if Other is True. Specifies the delimiter character when Other is True. If more than one character is specified, only the first character of the string is used; the remaining characters are ignored."
                 },
                 {
                   "name": "FieldInfo",
                   "type": "Variant",
                   "optional": true,
-                  "description": "An array containing parse information for individual columns of data. The interpretation depends on the value of _DataType_. When the data is delimited, this argument is an array of two-element arrays, with each two-element array specifying the conversion options for a particular column. The first element is the column number (1-based), and the second element is one of the XlColumnDataType constants specifying how the column is parsed."
+                  "description": "An array containing parse information for individual columns of data. The interpretation depends on the value of DataType. When the data is delimited, this argument is an array of two-element arrays, with each two-element array specifying the conversion options for a particular column. The first element is the column number (1-based), and the second element is one of the XlColumnDataType constants specifying how the column is parsed."
                 },
                 {
                   "name": "TextVisualLayout",
@@ -159062,21 +159062,21 @@
               "kind": "property",
               "type": "Boolean",
               "access": "read-only",
-              "description": "True if the contents of the sheet are protected. This protects the individual cells. To turn on content protection, use the Protect method with the _Contents_ argument set to True. Read-only Boolean."
+              "description": "True if the contents of the sheet are protected. This protects the individual cells. To turn on content protection, use the Protect method with the Contents argument set to True. Read-only Boolean."
             },
             {
               "name": "ProtectDrawingObjects",
               "kind": "property",
               "type": "Boolean",
               "access": "read-only",
-              "description": "True if shapes are protected. To turn on shape protection, use the Protect method with the _DrawingObjects_ argument set to True. Read-only Boolean."
+              "description": "True if shapes are protected. To turn on shape protection, use the Protect method with the DrawingObjects argument set to True. Read-only Boolean."
             },
             {
               "name": "ProtectionMode",
               "kind": "property",
               "type": "Boolean",
               "access": "read-only",
-              "description": "True if user-interface-only protection is turned on. To turn on user interface protection, use the Protect method with the _UserInterfaceOnly_ argument set to True. Read-only Boolean."
+              "description": "True if user-interface-only protection is turned on. To turn on user interface protection, use the Protect method with the UserInterfaceOnly argument set to True. Read-only Boolean."
             },
             {
               "name": "ProtectScenarios",
@@ -159413,13 +159413,13 @@
                   "name": "Before",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The sheet before which the copied sheet will be placed. You cannot specify _Before_ if you specify _After_."
+                  "description": "The sheet before which the copied sheet will be placed. You cannot specify Before if you specify After."
                 },
                 {
                   "name": "After",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The sheet after which the copied sheet will be placed. You cannot specify _After_ if you specify _Before_."
+                  "description": "The sheet after which the copied sheet will be placed. You cannot specify After if you specify Before."
                 }
               ]
             },
@@ -159441,13 +159441,13 @@
                   "name": "Before",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The sheet before which the moved sheet will be placed. You cannot specify _Before_ if you specify _After_."
+                  "description": "The sheet before which the moved sheet will be placed. You cannot specify Before if you specify After."
                 },
                 {
                   "name": "After",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The sheet after which the moved sheet will be placed. You cannot specify _After_ if you specify _Before_."
+                  "description": "The sheet after which the moved sheet will be placed. You cannot specify After if you specify Before."
                 }
               ]
             },
@@ -159636,13 +159636,13 @@
                   "name": "Destination",
                   "type": "Variant",
                   "optional": true,
-                  "description": "A Range object that specifies where the Clipboard contents should be pasted. If this argument is omitted, the current selection is used. This argument can be specified only if the contents of the Clipboard can be pasted into a range. If this argument is specified, the _Link_ argument cannot be used."
+                  "description": "A Range object that specifies where the Clipboard contents should be pasted. If this argument is omitted, the current selection is used. This argument can be specified only if the contents of the Clipboard can be pasted into a range. If this argument is specified, the Link argument cannot be used."
                 },
                 {
                   "name": "Link",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to establish a link to the source of the pasted data. If this argument is specified, the _Destination_ argument cannot be used. The default value is False."
+                  "description": "True to establish a link to the source of the pasted data. If this argument is specified, the Destination argument cannot be used. The default value is False."
                 }
               ]
             },
@@ -159672,13 +159672,13 @@
                   "name": "SourceType",
                   "type": "Variant",
                   "optional": true,
-                  "description": "An XlPivotTableSourceType value that represents the source of the report data. If you specify this argument, you must also specify _SourceData_. If _SourceType_ and _SourceData_ are omitted, Microsoft Excel assumes that the source type is xlDatabase, and the source data comes from the named range Database. If this named range doesn't exist, Excel uses the current region if the current selection is in a range of more than 10 cells that contain data. If this isn't true, this method will fail."
+                  "description": "An XlPivotTableSourceType value that represents the source of the report data. If you specify this argument, you must also specify SourceData. If SourceType and SourceData are omitted, Microsoft Excel assumes that the source type is xlDatabase, and the source data comes from the named range Database. If this named range doesn't exist, Excel uses the current region if the current selection is in a range of more than 10 cells that contain data. If this isn't true, this method will fail."
                 },
                 {
                   "name": "SourceData",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The data for the new report. Can be a Range object, an array of ranges, or a text constant that represents the name of another report. For an external database, _SourceData_ is an array of strings containing the SQL query string, where each element is up to 255 characters in length. You should use the _Connection_ argument to specify the ODBC connection string. For compatibility with earlier versions of Excel, _SourceData_ can be a two-element array. The first element is the connection string specifying the ODBC source for the data. The second element is the SQL query string used to get the data. If you specify _SourceData_, you must also specify _SourceType_. If the active cell is inside the _SourceData_ range, you must specify _TableDestination_ as well."
+                  "description": "The data for the new report. Can be a Range object, an array of ranges, or a text constant that represents the name of another report. For an external database, SourceData is an array of strings containing the SQL query string, where each element is up to 255 characters in length. You should use the Connection argument to specify the ODBC connection string. For compatibility with earlier versions of Excel, SourceData can be a two-element array. The first element is the connection string specifying the ODBC source for the data. The second element is the SQL query string used to get the data. If you specify SourceData, you must also specify SourceType. If the active cell is inside the SourceData range, you must specify TableDestination as well."
                 },
                 {
                   "name": "TableDestination",
@@ -159720,7 +159720,7 @@
                   "name": "AutoPage",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Valid only if _SourceType_ is xlConsolidation. True to have Excel create a page field for the consolidation. If _AutoPage_ is False, you must create the page field or fields."
+                  "description": "Valid only if SourceType is xlConsolidation. True to have Excel create a page field for the consolidation. If AutoPage is False, you must create the page field or fields."
                 },
                 {
                   "name": "Reserved",
@@ -159756,7 +159756,7 @@
                   "name": "ReadData",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to create a PivotTable cache that contains all records from the external database; this cache can be very large. If _ReadData_ is False, you can set some of the fields as server-based page fields before the data is actually read."
+                  "description": "True to create a PivotTable cache that contains all records from the external database; this cache can be very large. If ReadData is False, you can set some of the fields as server-based page fields before the data is actually read."
                 },
                 {
                   "name": "Connection",
@@ -159838,7 +159838,7 @@
                   "name": "IconFileName",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The name of the file that contains the icon to use if _DisplayAsIcon_ is True."
+                  "description": "The name of the file that contains the icon to use if DisplayAsIcon is True."
                 },
                 {
                   "name": "IconIndex",
@@ -160060,7 +160060,7 @@
                   "name": "PrintToFile",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to print to a file. If _PrToFileName_ is not specified, Excel prompts the user to enter the name of the output file."
+                  "description": "True to print to a file. If PrToFileName is not specified, Excel prompts the user to enter the name of the output file."
                 },
                 {
                   "name": "Collate",
@@ -160072,7 +160072,7 @@
                   "name": "PrToFileName",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to."
+                  "description": "If PrintToFile is set to True, this argument specifies the name of the file that you want to print to."
                 },
                 {
                   "name": "IgnorePrintAreas",
@@ -163388,7 +163388,7 @@
               "name": "Asin",
               "kind": "method",
               "signature": "Asin(Arg1 As Double) As Double",
-              "description": "Returns the arcsine, or inverse sine, of a number. The arcsine is the angle whose sine is _Arg1_. The returned angle is given in radians in the range -pi/2 to pi/2.",
+              "description": "Returns the arcsine, or inverse sine, of a number. The arcsine is the angle whose sine is Arg1. The returned angle is given in radians in the range -pi/2 to pi/2.",
               "returns": "Double",
               "parameters": [
                 {
@@ -163403,7 +163403,7 @@
               "name": "Acos",
               "kind": "method",
               "signature": "Acos(Arg1 As Double) As Double",
-              "description": "Returns the arccosine, or inverse cosine, of a number. The arccosine is the angle whose cosine is _Arg1_. The returned angle is given in radians in the range 0 (zero) to pi.",
+              "description": "Returns the arccosine, or inverse cosine, of a number. The arccosine is the angle whose cosine is Arg1. The returned angle is given in radians in the range 0 (zero) to pi.",
               "returns": "Double",
               "parameters": [
                 {
@@ -163418,14 +163418,14 @@
               "name": "Choose",
               "kind": "method",
               "signature": "Choose(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant]) As Variant",
-              "description": "Uses _Arg1_ as the index to return a value from the list of value arguments.",
+              "description": "Uses Arg1 as the index to return a value from the list of value arguments.",
               "returns": "Variant",
               "parameters": [
                 {
                   "name": "Arg1",
                   "type": "Variant",
                   "optional": false,
-                  "description": "Specifies which value argument is selected. _Arg1_ must be a number between 1 and 29, or a formula or reference to a cell containing a number between 1 and 29."
+                  "description": "Specifies which value argument is selected. Arg1 must be a number between 1 and 29, or a formula or reference to a cell containing a number between 1 and 29."
                 },
                 {
                   "name": "Arg2",
@@ -163737,19 +163737,19 @@
                   "name": "Arg2",
                   "type": "Double",
                   "optional": false,
-                  "description": "The position of the character in _Arg1_ that you want to replace with _Arg4_."
+                  "description": "The position of the character in Arg1 that you want to replace with Arg4."
                 },
                 {
                   "name": "Arg3",
                   "type": "Double",
                   "optional": false,
-                  "description": "The number of characters in _Arg1_ that you want the Replace method to replace with _Arg4_."
+                  "description": "The number of characters in Arg1 that you want the Replace method to replace with Arg4."
                 },
                 {
                   "name": "Arg4",
                   "type": "String",
                   "optional": false,
-                  "description": "Text that will replace characters in _Arg1_."
+                  "description": "Text that will replace characters in Arg1."
                 }
               ]
             },
@@ -165039,7 +165039,7 @@
                   "name": "Arg2",
                   "type": "Double",
                   "optional": false,
-                  "description": "The number of digits to the right of the decimal point. If _Arg2_ is negative, the number is rounded to the left of the decimal point. If you omit decimals, it is assumed to be 2."
+                  "description": "The number of digits to the right of the decimal point. If Arg2 is negative, the number is rounded to the left of the decimal point. If you omit decimals, it is assumed to be 2."
                 }
               ]
             },
@@ -165704,7 +165704,7 @@
               "name": "Asinh",
               "kind": "method",
               "signature": "Asinh(Arg1 As Double) As Double",
-              "description": "Returns the inverse hyperbolic sine of a number. The inverse hyperbolic sine is the value whose hyperbolic sine is _Arg1_, so Asinh(Sinh(number)) equals _Arg1_.",
+              "description": "Returns the inverse hyperbolic sine of a number. The inverse hyperbolic sine is the value whose hyperbolic sine is Arg1, so Asinh(Sinh(number)) equals Arg1.",
               "returns": "Double",
               "parameters": [
                 {
@@ -165719,7 +165719,7 @@
               "name": "Acosh",
               "kind": "method",
               "signature": "Acosh(Arg1 As Double) As Double",
-              "description": "Returns the inverse hyperbolic cosine of a number. Number must be greater than or equal to 1. The inverse hyperbolic cosine is the value whose hyperbolic cosine is _Arg1_, so Acosh(Cosh(number)) equals _Arg1_.",
+              "description": "Returns the inverse hyperbolic cosine of a number. Number must be greater than or equal to 1. The inverse hyperbolic cosine is the value whose hyperbolic cosine is Arg1, so Acosh(Cosh(number)) equals Arg1.",
               "returns": "Double",
               "parameters": [
                 {
@@ -166934,7 +166934,7 @@
               "name": "Correl",
               "kind": "method",
               "signature": "Correl(Arg1 As Variant, Arg2 As Variant) As Double",
-              "description": "Returns the correlation coefficient of the _Arg1_ and _Arg2_ cell ranges.",
+              "description": "Returns the correlation coefficient of the Arg1 and Arg2 cell ranges.",
               "returns": "Double",
               "parameters": [
                 {
@@ -168302,14 +168302,14 @@
               "name": "ZTest",
               "kind": "method",
               "signature": "ZTest(Arg1 As Variant, Arg2 As Double, [Arg3 As Variant]) As Double",
-              "description": "Returns the one-tailed probability-value of a z-test. For a given hypothesized population mean, ZTest returns the probability that the sample mean would be greater than the average of observations in the data set (_array_); that is, the observed sample mean.",
+              "description": "Returns the one-tailed probability-value of a z-test. For a given hypothesized population mean, ZTest returns the probability that the sample mean would be greater than the average of observations in the data set (array); that is, the observed sample mean.",
               "returns": "Double",
               "parameters": [
                 {
                   "name": "Arg1",
                   "type": "Variant",
                   "optional": false,
-                  "description": "_Array_ is the array or range of data against which to test the hypothesized population mean."
+                  "description": "Array is the array or range of data against which to test the hypothesized population mean."
                 },
                 {
                   "name": "Arg2",
@@ -168321,7 +168321,7 @@
                   "name": "Arg3",
                   "type": "Variant",
                   "optional": true,
-                  "description": "_Sigma_ is the population (known) standard deviation. If omitted, the sample standard deviation is used."
+                  "description": "Sigma is the population (known) standard deviation. If omitted, the sample standard deviation is used."
                 }
               ]
             },
@@ -175745,14 +175745,14 @@
               "name": "Z_Test",
               "kind": "method",
               "signature": "Z_Test(Arg1 As Variant, Arg2 As Double, [Arg3 As Variant]) As Double",
-              "description": "Returns the one-tailed probability-value of a z-test. For a given hypothesized population mean, Z_Test returns the probability that the sample mean would be greater than the average of observations in the data set (_array_); that is, the observed sample mean.",
+              "description": "Returns the one-tailed probability-value of a z-test. For a given hypothesized population mean, Z_Test returns the probability that the sample mean would be greater than the average of observations in the data set (array); that is, the observed sample mean.",
               "returns": "Double",
               "parameters": [
                 {
                   "name": "Arg1",
                   "type": "Variant",
                   "optional": false,
-                  "description": "_Array_ is the array or range of data against which to test the hypothesized population mean."
+                  "description": "Array is the array or range of data against which to test the hypothesized population mean."
                 },
                 {
                   "name": "Arg2",
@@ -175764,7 +175764,7 @@
                   "name": "Arg3",
                   "type": "Variant",
                   "optional": true,
-                  "description": "_Sigma_ is the population (known) standard deviation. If omitted, the sample standard deviation is used."
+                  "description": "Sigma is the population (known) standard deviation. If omitted, the sample standard deviation is used."
                 }
               ]
             },
@@ -176205,7 +176205,7 @@
                   "name": "Arg2",
                   "type": "Double",
                   "optional": false,
-                  "description": "The number of bits that you want to shift _Arg1_ left by."
+                  "description": "The number of bits that you want to shift Arg1 left by."
                 }
               ]
             },
@@ -176226,7 +176226,7 @@
                   "name": "Arg2",
                   "type": "Double",
                   "optional": false,
-                  "description": "The number of bits that you want to shift _Arg1_ right by."
+                  "description": "The number of bits that you want to shift Arg1 right by."
                 }
               ]
             },
@@ -176547,13 +176547,13 @@
                   "name": "Arg1",
                   "type": "Variant",
                   "optional": false,
-                  "description": "start_date(_Arg2_) and end_date (_Arg1_) are the two dates between which you want to know the number of days."
+                  "description": "start_date(Arg2) and end_date (Arg1) are the two dates between which you want to know the number of days."
                 },
                 {
                   "name": "Arg2",
                   "type": "Variant",
                   "optional": false,
-                  "description": "start_date(_Arg2_) and end_date (_Arg1_) are the two dates between which you want to know the number of days."
+                  "description": "start_date(Arg2) and end_date (Arg1) are the two dates between which you want to know the number of days."
                 }
               ]
             },
@@ -176586,7 +176586,7 @@
                   "name": "Arg4",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If provided, this function returns the probability that the number of successful trials shall lie between _Arg3_ and _Arg4_."
+                  "description": "If provided, this function returns the probability that the number of successful trials shall lie between Arg3 and Arg4."
                 }
               ]
             },
@@ -178878,13 +178878,13 @@
                   "name": "Before",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The sheet before which the copied sheet will be placed. You cannot specify _Before_ if you specify _After_."
+                  "description": "The sheet before which the copied sheet will be placed. You cannot specify Before if you specify After."
                 },
                 {
                   "name": "After",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The sheet after which the copied sheet will be placed. You cannot specify _After_ if you specify _Before_."
+                  "description": "The sheet after which the copied sheet will be placed. You cannot specify After if you specify Before."
                 }
               ]
             },
@@ -178927,13 +178927,13 @@
                   "name": "Before",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The sheet before which the moved sheet will be placed. You cannot specify _Before_ if you specify _After_."
+                  "description": "The sheet before which the moved sheet will be placed. You cannot specify Before if you specify After."
                 },
                 {
                   "name": "After",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The sheet after which the moved sheet will be placed. You cannot specify _After_ if you specify _Before_."
+                  "description": "The sheet after which the moved sheet will be placed. You cannot specify After if you specify Before."
                 }
               ]
             },
@@ -179008,7 +179008,7 @@
                   "name": "PrintToFile",
                   "type": "Variant",
                   "optional": true,
-                  "description": "True to print to a file. If _PrToFileName_ is not specified, Microsoft Excel prompts the user to enter the name of the output file."
+                  "description": "True to print to a file. If PrToFileName is not specified, Microsoft Excel prompts the user to enter the name of the output file."
                 },
                 {
                   "name": "Collate",
@@ -179020,7 +179020,7 @@
                   "name": "PrToFileName",
                   "type": "Variant",
                   "optional": true,
-                  "description": "If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to."
+                  "description": "If PrintToFile is set to True, this argument specifies the name of the file that you want to print to."
                 },
                 {
                   "name": "IgnorePrintAreas",
@@ -181368,7 +181368,7 @@
             },
             {
               "name": "xlDialogPivotDefaultLayout",
-              "value": 1360,
+              "value": 1361,
               "description": ""
             }
           ]
@@ -187208,17 +187208,17 @@
             {
               "name": "xlPrompt",
               "value": 0,
-              "description": "Displays a dialog box that prompts the user for the value. The _Value_ argument specifies the text shown in the dialog box."
+              "description": "Displays a dialog box that prompts the user for the value. The Value argument specifies the text shown in the dialog box."
             },
             {
               "name": "xlConstant",
               "value": 1,
-              "description": "Uses the value specified by the _Value_ argument."
+              "description": "Uses the value specified by the Value argument."
             },
             {
               "name": "xlRange",
               "value": 2,
-              "description": "Uses the value of the cell in the upper-left corner of the range. The _Value_ argument specifies a Range object."
+              "description": "Uses the value of the cell in the upper-left corner of the range. The Value argument specifies a Range object."
             }
           ]
         },
@@ -192476,7 +192476,7 @@
                   "name": "Overwrite",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Set to True to overwrite the file specified in the _Url_ parameter if the file exists. The default value is False."
+                  "description": "Set to True to overwrite the file specified in the Url parameter if the file exists. The default value is False."
                 }
               ]
             },
@@ -192928,7 +192928,7 @@
                   "name": "SelectionNamespace",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Specifies any namespace prefixes used in the _XPath_ argument. This argument can be omitted if the XPath object doesn't contain any prefixes, or if the XPath object uses the Microsoft Excel internal prefixes."
+                  "description": "Specifies any namespace prefixes used in the XPath argument. This argument can be omitted if the XPath object doesn't contain any prefixes, or if the XPath object uses the Microsoft Excel internal prefixes."
                 },
                 {
                   "name": "Repeating",

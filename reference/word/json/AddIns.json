@@ -4,7 +4,7 @@
   "guid": "{0002097F-0000-0000-C000-000000000046}",
   "library": "Microsoft Word 16.0 Object Library",
   "description": "A collection of AddIn objects that represents all the add-ins available to Word, regardless of whether or not they are currently loaded. The AddIns collection includes global templates or Word add-in libraries (WLLs) displayed in the Templates and Add-ins dialog box.",
-  "remarks": "Use the AddIns property to return the AddIns collection. The following example displays the name and the installed state of each available add-in. Use the Add method to add an add-in to the list of available add-ins and (optionally) install it using the Install argument. To install an add-in shown in the list of available add-ins, use the Installed property. Use AddIns (_index_), where _index_ is the add-in name or index number, to return a single AddIn object. You must exactly match the spelling (but not necessarily the capitalization) of the name, as it is shown in the Templates and Add-ins dialog box. To install an add-in shown in the list of available add-ins, use the Installed property. The following example loads the Letter.dot template as a global template. Use the Compiled property to determine whether an AddIn object is a template or a WLL.",
+  "remarks": "Use the AddIns property to return the AddIns collection. The following example displays the name and the installed state of each available add-in. Use the Add method to add an add-in to the list of available add-ins and (optionally) install it using the Install argument. To install an add-in shown in the list of available add-ins, use the Installed property. Use AddIns (index), where index is the add-in name or index number, to return a single AddIn object. You must exactly match the spelling (but not necessarily the capitalization) of the name, as it is shown in the Templates and Add-ins dialog box. To install an add-in shown in the list of available add-ins, use the Installed property. The following example loads the Letter.dot template as a global template. Use the Compiled property to determine whether an AddIn object is a template or a WLL.",
   "example": "",
   "properties": [
     {
@@ -84,7 +84,7 @@
       "name": "Unload",
       "kind": "method",
       "signature": "Unload(RemoveFromList As Boolean)",
-      "description": "Unloads all loaded add-ins and, depending on the value of the _RemoveFromList_ argument, removes them from the AddIns collection.",
+      "description": "Unloads all loaded add-ins and, depending on the value of the RemoveFromList argument, removes them from the AddIns collection.",
       "returns": "void",
       "parameters": [
         {

@@ -6,7 +6,7 @@
 
 Represents a single reviewer of a document in which changes have been tracked. The Reviewer object is a member of the Reviewers collection.
 
-**Remarks:** Use Reviewers (_index_), where _index_ is the name or number of the reviewer, to return a Reviewer object. Use the Visible property to display or hide individual reviewers in a document. The following code example hides the reviewer named "Jeff Smith" and displays the reviewer named "Judy Lew." This assumes that "Jeff Smith" and "Judy Lew" are members of the Reviewers collection. If they are not, you will receive an error.
+**Remarks:** Use Reviewers (index), where index is the name or number of the reviewer, to return a Reviewer object. Use the Visible property to display or hide individual reviewers in a document. The following code example hides the reviewer named "Jeff Smith" and displays the reviewer named "Judy Lew." This assumes that "Jeff Smith" and "Judy Lew" are members of the Reviewers collection. If they are not, you will receive an error.
 
 ## Properties (4)
 

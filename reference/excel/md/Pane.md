@@ -50,7 +50,7 @@ ActiveWindow.Panes(3).ScrollRow = 5
     - `ToRight As Variant` (optional): The number of columns to scroll the contents to the right.
     - `ToLeft As Variant` (optional): The number of columns to scroll the contents to the left.
 - `ScrollIntoView(Left As Long, Top As Long, Width As Long, Height As Long, [Start As Variant])`  
-  Scrolls the document window so that the contents of a specified rectangular area are displayed in either the upper-left or lower-right corner of the document window or pane (depending on the value of the _Start_ argument).
+  Scrolls the document window so that the contents of a specified rectangular area are displayed in either the upper-left or lower-right corner of the document window or pane (depending on the value of the Start argument).
     - `Left As Long` (required): The horizontal position of the rectangle (in points) from the left edge of the document window or pane.
     - `Top As Long` (required): The vertical position of the rectangle (in points) from the top of the document window or pane.
     - `Width As Long` (required): The width of the rectangle, in points.

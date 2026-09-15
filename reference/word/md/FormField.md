@@ -6,7 +6,7 @@
 
 Represents a single form field. The FormField object is a member of the FormFields collection.
 
-**Remarks:** Use FormFields (_index_), where _index_ is a bookmark name or index number, to return a single FormField object. The following example sets the result of the Text1 form field to "Don Funk." The index number represents the position of the form field in the selection, range, or document. The following example displays the name of the first form field in the selection. Use the Add method with the FormFields object to add a form field. The following example adds a check box at the beginning of the active document and then selects the check box. Use the CheckBox, DropDown, and TextInput properties with the FormField object to return the CheckDown, DropDown, and TextInput objects. The following example selects the check box named "Check1."
+**Remarks:** Use FormFields (index), where index is a bookmark name or index number, to return a single FormField object. The following example sets the result of the Text1 form field to "Don Funk." The index number represents the position of the form field in the selection, range, or document. The following example displays the name of the first form field in the selection. Use the Add method with the FormFields object to add a form field. The following example adds a check box at the beginning of the active document and then selects the check box. Use the CheckBox, DropDown, and TextInput properties with the FormField object to return the CheckDown, DropDown, and TextInput objects. The following example selects the check box named "Check1."
 
 ## Properties (20)
 

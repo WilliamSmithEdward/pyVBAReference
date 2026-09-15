@@ -59,7 +59,7 @@ Represents an XML map that has been added to a workbook.
 - `Export(Url As String, [Overwrite As Variant]) As XlXmlExportResult`  
   Exports the contents of cells mapped to the specified XmlMap object to an XML data file.
     - `Url As String` (required): The path and file name of the XML data file to export to.
-    - `Overwrite As Variant` (optional): Set to True to overwrite the file specified in the _Url_ parameter if the file exists. The default value is False.
+    - `Overwrite As Variant` (optional): Set to True to overwrite the file specified in the Url parameter if the file exists. The default value is False.
 - `ExportXml(Data As String) As XlXmlExportResult`  
   Exports the contents of cells mapped to the specified XmlMap object to a String variable.
     - `Data As String` (required): The variable to export the data to.

@@ -60,4 +60,4 @@ End With
 - `Characters([Start As Variant], [Length As Variant]) As Characters`  
   Returns a Characters object that represents a range of characters within a shape's text frame. Use the Characters object to add and format characters within the text frame.
     - `Start As Variant` (optional): The first character to be returned. If this argument is either set to 1 or omitted, the Characters method returns a range of characters starting with the first character.
-    - `Length As Variant` (optional): The number of characters to be returned. If this argument is omitted, the Characters method returns the remainder of the string (everything after the character that was set as the _Start_ argument).
+    - `Length As Variant` (optional): The number of characters to be returned. If this argument is omitted, the Characters method returns the remainder of the string (everything after the character that was set as the Start argument).

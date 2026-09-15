@@ -2242,12 +2242,12 @@ Specifies the document encoding (code page or character set) for the web browser
 **Type:** Enumeration  
 **Constants:** 2  
 
-Specifies how to use the value specified in the _ExtraInfo_ parameter of the FollowHyperlink method.
+Specifies how to use the value specified in the ExtraInfo parameter of the FollowHyperlink method.
 
 - `msoMethodGet` = 0  
-  The value specified in the _ExtraInfo_ parameter is a string that is appended to the address.
+  The value specified in the ExtraInfo parameter is a string that is appended to the address.
 - `msoMethodPost` = 1  
-  The value specified in the _ExtraInfo_ parameter is posted as a string or byte array.
+  The value specified in the ExtraInfo parameter is posted as a string or byte array.
 
 ### MsoExtrusionColorType
 

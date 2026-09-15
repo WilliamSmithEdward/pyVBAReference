@@ -211,7 +211,7 @@
           "name": "ObjectName",
           "type": "String",
           "optional": false,
-          "description": "An object that has the event specified by the _EventName_ argument. If the event procedure is being added to a Form, the word \"Form\" should be specified for this argument. If the event procedure is being added to a Report, the word \"Report\" should be specified for this argument. If the event procedure is being added to a Control, the name of the control should be specified for this argument."
+          "description": "An object that has the event specified by the EventName argument. If the event procedure is being added to a Form, the word \"Form\" should be specified for this argument. If the event procedure is being added to a Report, the word \"Report\" should be specified for this argument. If the event procedure is being added to a Control, the name of the control should be specified for this argument."
         }
       ]
     },
@@ -232,25 +232,25 @@
           "name": "StartLine",
           "type": "Long",
           "optional": false,
-          "description": "The line on which to begin searching. If a match is found, the value of the _StartLine_ argument is set to the line on which the beginning character of the matching text is found."
+          "description": "The line on which to begin searching. If a match is found, the value of the StartLine argument is set to the line on which the beginning character of the matching text is found."
         },
         {
           "name": "StartColumn",
           "type": "Long",
           "optional": false,
-          "description": "The column on which to begin searching. Each character in a line is in a separate column, beginning with zero on the left side of the module. If a match is found, the value of the _StartColumn_ argument is set to the column in which the beginning character of the matching text is found."
+          "description": "The column on which to begin searching. Each character in a line is in a separate column, beginning with zero on the left side of the module. If a match is found, the value of the StartColumn argument is set to the column in which the beginning character of the matching text is found."
         },
         {
           "name": "EndLine",
           "type": "Long",
           "optional": false,
-          "description": "The line on which to stop searching. If a match is found, the value of the _EndLine_ argument is set to the line on which the ending character of the matching text is found."
+          "description": "The line on which to stop searching. If a match is found, the value of the EndLine argument is set to the line on which the ending character of the matching text is found."
         },
         {
           "name": "EndColumn",
           "type": "Long",
           "optional": false,
-          "description": "The column on which to stop searching. If a match is found, the value of the _EndColumn_ argument is set to the column in which the beginning character of the matching text is found."
+          "description": "The column on which to stop searching. If a match is found, the value of the EndColumn argument is set to the column in which the beginning character of the matching text is found."
         },
         {
           "name": "WholeWord",
@@ -262,13 +262,13 @@
           "name": "MatchCase",
           "type": "Boolean",
           "optional": true,
-          "description": "True results in a search for words with case matching the _Target_ argument. The default is False."
+          "description": "True results in a search for words with case matching the Target argument. The default is False."
         },
         {
           "name": "PatternSearch",
           "type": "Boolean",
           "optional": true,
-          "description": "True results in a search in which the _Target_ argument may contain wildcard characters such as an asterisk () or a question mark (?). The default is False**."
+          "description": "True results in a search in which the Target argument may contain wildcard characters such as an asterisk () or a question mark (?). The default is False**."
         }
       ]
     }

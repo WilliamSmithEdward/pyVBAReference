@@ -37,7 +37,7 @@ End With
 - `Background As ShapeRange  (read-only)`  
   Returns a ShapeRange object that represents the slide background.
 - `Name As String  (read/write)`  
-  When a slide is inserted into a presentation, Microsoft PowerPoint automatically assigns it a name in the form Slide _n_, where _n_ is an integer that represents the order in which the slide was created in the presentation. For example, the first slide inserted into a presentation is automatically named Slide1. If you copy a slide from one presentation to another, the slide loses the name it had in the first presentation and is automatically assigned a new name in the second presentation. A slide range must contain exactly one slide. Read/write.
+  When a slide is inserted into a presentation, Microsoft PowerPoint automatically assigns it a name in the form Slide n, where n is an integer that represents the order in which the slide was created in the presentation. For example, the first slide inserted into a presentation is automatically named Slide1. If you copy a slide from one presentation to another, the slide loses the name it had in the first presentation and is automatically assigned a new name in the second presentation. A slide range must contain exactly one slide. Read/write.
 - `SlideID As Long  (read-only)`  
   Returns a unique ID number for the specified slide. Read-only.
 - `PrintSteps As Long  (read-only)`  

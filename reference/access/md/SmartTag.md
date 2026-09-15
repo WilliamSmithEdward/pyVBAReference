@@ -6,7 +6,7 @@
 
 Represents a smart tag that has been added to a control on a form or report. The SmartTag object is a member of the SmartTags collection.
 
-**Remarks:** To return a single SmartTag object, use the Item property of the SmartTags collection, or use SmartTags (_index_), where _index_ represents the number of the smart tag. To return the collection of actions available for the smart tag, use the SmartTagActions property. To perform a smart tag action, use the Execute method of the SmartTagAction object.
+**Remarks:** To return a single SmartTag object, use the Item property of the SmartTags collection, or use SmartTags (index), where index represents the number of the smart tag. To return the collection of actions available for the smart tag, use the SmartTagActions property. To perform a smart tag action, use the Execute method of the SmartTagAction object.
 
 ## Properties (7)
 

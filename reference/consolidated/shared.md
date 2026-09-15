@@ -731,8 +731,8 @@ End If
   Resets a built-in command bar to its default configuration.
 - `ShowPopup([x As Variant], [y As Variant])`  
   Displays a command bar as a shortcut menu at the specified coordinates or at the current pointer coordinates.
-    - `x As Variant` (optional): The _x_-coordinate on which the location of the shortcut menu is based. If this argument is omitted, the current _x_-coordinate of the pointer is used.
-    - `y As Variant` (optional): The _y_-coordinate on which the location of the shortcut menu is based. If this argument is omitted, the current _y_-coordinate of the pointer is used.
+    - `x As Variant` (optional): The x-coordinate on which the location of the shortcut menu is based. If this argument is omitted, the current x-coordinate of the pointer is used.
+    - `y As Variant` (optional): The y-coordinate on which the location of the shortcut menu is based. If this argument is omitted, the current y-coordinate of the pointer is used.
 
 ### CommandBarActiveX
 
@@ -923,7 +923,7 @@ End With
 
 Represents a combo box control on a command bar.
 
-**Remarks:** Use Controls(_index_), where _index_ is the index number of the control, to return a CommandBarComboBox object. Note that the Type property of the control must be msoControlEdit, msoControlDropdown, msoControlComboBox, msoControlButtonDropdown, msoControlSplitDropdown, msoControlOCXDropdown, msoControlGraphicCombo, or msoControlGraphicDropdown.
+**Remarks:** Use Controls(index), where index is the index number of the control, to return a CommandBarComboBox object. Note that the Type property of the control must be msoControlEdit, msoControlDropdown, msoControlComboBox, msoControlButtonDropdown, msoControlSplitDropdown, msoControlOCXDropdown, msoControlGraphicCombo, or msoControlGraphicDropdown.
 
 **Example:**
 
@@ -1060,7 +1060,7 @@ End With
 
 Represents a command bar control. The CommandBarControl object is a member of the CommandBarControls collection. The properties and methods of the CommandBarControl object are all shared by the CommandBarButton, CommandBarComboBox, and CommandBarPopup objects.
 
-**Remarks:** When writing Visual Basic code to work with custom command bar controls, you use the CommandBarButton, CommandBarComboBox, and CommandBarPopup objects. When writing code to work with built-in controls in the container application that cannot be represented by one of those three objects, you use the CommandBarControl object. Use Controls (_index_), where _index_ is the index number of a control, to return a CommandBarControl object. (The Type property of the control must be msoControlLabel, msoControlExpandingGrid, msoControlSplitExpandingGrid, msoControlGrid, or msoControlGauge). Variables declared as CommandBarControl can be assigned CommandBarButton, CommandBarComboBox, and CommandBarPopup values.
+**Remarks:** When writing Visual Basic code to work with custom command bar controls, you use the CommandBarButton, CommandBarComboBox, and CommandBarPopup objects. When writing code to work with built-in controls in the container application that cannot be represented by one of those three objects, you use the CommandBarControl object. Use Controls (index), where index is the index number of a control, to return a CommandBarControl object. (The Type property of the control must be msoControlLabel, msoControlExpandingGrid, msoControlSplitExpandingGrid, msoControlGrid, or msoControlGauge). Variables declared as CommandBarControl can be assigned CommandBarButton, CommandBarComboBox, and CommandBarPopup values.
 
 **Example:**
 
@@ -1195,7 +1195,7 @@ Next ctl
 
 Represents a popup control on a command bar.
 
-**Remarks:** Every pop-up control contains a CommandBar object. To return the command bar from a pop-up control, apply the CommandBar property to the CommandBarPopup object. Use Controls(_index_), where _index_ is the number of the control, to return a CommandBarPopup object. Note that the Type property of the control must be msoControlPopup, msoControlGraphicPopup, msoControlButtonPopup, msoControlSplitButtonPopup, or msoControlSplitButtonMRUPopup.
+**Remarks:** Every pop-up control contains a CommandBar object. To return the command bar from a pop-up control, apply the CommandBar property to the CommandBarPopup object. Use Controls(index), where index is the number of the control, to return a CommandBarPopup object. Note that the Type property of the control must be msoControlPopup, msoControlGraphicPopup, msoControlButtonPopup, msoControlSplitButtonPopup, or msoControlSplitButtonMRUPopup.
 
 **Example:**
 
@@ -1356,28 +1356,28 @@ Next
     - `Tag As Variant` (optional): The control's tag value.
     - `Visible As Variant` (optional): True to include only visible command bar controls in the search. The default value is False.
 - `ExecuteMso(idMso As String)`  
-  Executes the control identified by the _idMso_ parameter.
+  Executes the control identified by the idMso parameter.
     - `idMso As String` (required): Identifier for the control.
 - `GetEnabledMso(idMso As String) As Boolean`  
-  Returns True if the control identified by the _idMso_ parameter is enabled.
+  Returns True if the control identified by the idMso parameter is enabled.
     - `idMso As String` (required): Identifier for the control.
 - `GetVisibleMso(idMso As String) As Boolean`  
-  Returns True if the control identified by the _idMso_ parameter is visible.
+  Returns True if the control identified by the idMso parameter is visible.
     - `idMso As String` (required): Identifier for the control.
 - `GetPressedMso(idMso As String) As Boolean`  
-  Returns a value indicating whether the toggleButton control identified by the _idMso_ parameter is pressed.
+  Returns a value indicating whether the toggleButton control identified by the idMso parameter is pressed.
     - `idMso As String` (required): Identifier for the control.
 - `GetLabelMso(idMso As String) As String`  
-  Returns the label of the control identified by the _idMso_ parameter as a String.
+  Returns the label of the control identified by the idMso parameter as a String.
     - `idMso As String` (required): Identifier for the control.
 - `GetScreentipMso(idMso As String) As String`  
-  Returns the screentip of the control identified by the _idMso_ parameter as a String.
+  Returns the screentip of the control identified by the idMso parameter as a String.
     - `idMso As String` (required): Identifier for the control.
 - `GetSupertipMso(idMso As String) As String`  
-  Returns the supertip of the control identified by the _idMso_ parameter as a String.
+  Returns the supertip of the control identified by the idMso parameter as a String.
     - `idMso As String` (required): Identifier for the control.
 - `GetImageMso(idMso As String, Width As Long, Height As Long) As IPictureDisp`  
-  Returns an IPictureDisp object of the control image identified by the _idMso_ parameter scaled to the dimensions specified by width and height.
+  Returns an IPictureDisp object of the control image identified by the idMso parameter scaled to the dimensions specified by width and height.
     - `idMso As String` (required): Identifier for the control.
     - `Width As Long` (required): The width of the image.
     - `Height As Long` (required): The height of the image.
@@ -1448,7 +1448,7 @@ Represents a Microsoft Office contact card.
 - `Close()`  
   Closes the contact card.
 - `Show(CardStyle As MsoContactCardStyle, RectangleLeft As Long, RectangleRight As Long, RectangleTop As Long, RectangleBottom As Long, HorizontalPosition As Long, [ShowWithDelay As Boolean])`  
-  Displays the contact card at the specified _x_-coordinate position outside the specified rectangle.
+  Displays the contact card at the specified x-coordinate position outside the specified rectangle.
 
 ### ContentVerificationResults
 
@@ -1501,9 +1501,9 @@ End Sub
 - `Creator As Long  (read-only)`  
   Gets a 32-bit integer that indicates the application in which the Crop object was created. Read-only.
 - `PictureOffsetX As Single  (read/write)`  
-  Gets or sets the _x_-axis offset of the image that is to be cropped. Read/write.
+  Gets or sets the x-axis offset of the image that is to be cropped. Read/write.
 - `PictureOffsetY As Single  (read/write)`  
-  Gets or sets the _y_-axis offset of the image that is to be cropped. Read/write.
+  Gets or sets the y-axis offset of the image that is to be cropped. Read/write.
 - `PictureWidth As Single  (read/write)`  
   Gets or sets the width of the image that is to be cropped. Read/write.
 - `PictureHeight As Single  (read/write)`  
@@ -1829,8 +1829,8 @@ End Sub
 - `NodeAfterDelete(OldNode As CustomXMLNode, OldParentNode As CustomXMLNode, OldNextSibling As CustomXMLNode, InUndoRedo As Boolean)`  
   Occurs after a node is deleted in a CustomXMLPart object.
     - `OldNode As CustomXMLNode` (required): Corresponds to the node that was just removed from the CustomXMLPart object. Note that this node may have children if a subtree is being removed from the document. Also, this node will be a "disconnected" node in that you can query down from the node, but you cannot query up the tree; the node appears to exist alone.
-    - `OldParentNode As CustomXMLNode` (required): Corresponds to the former parent node of _OldNode_.
-    - `OldNextSibling As CustomXMLNode` (required): Corresponds to the former next sibling of _OldNode_.
+    - `OldParentNode As CustomXMLNode` (required): Corresponds to the former parent node of OldNode.
+    - `OldNextSibling As CustomXMLNode` (required): Corresponds to the former next sibling of OldNode.
     - `InUndoRedo As Boolean` (required): Returns True if the node was inserted as part of an Undo/Redo action by the user.
 - `NodeAfterReplace(OldNode As CustomXMLNode, NewNode As CustomXMLNode, InUndoRedo As Boolean)`  
   Occurs just after a node is replaced in a CustomXMLPart object.
@@ -2348,12 +2348,12 @@ End Sub
 
 - `Inspect(Status As MsoDocInspectorStatus, Results As String)`  
   Inspects a document for specific information or document properties.
-    - `Status As MsoDocInspectorStatus` (required): An enumeration representing the status of the document. _Status_ is an output parameter, which means that its value is returned when the method has completed its purpose.
+    - `Status As MsoDocInspectorStatus` (required): An enumeration representing the status of the document. Status is an output parameter, which means that its value is returned when the method has completed its purpose.
     - `Results As String` (required): Contains a list of the information items or document properties found in the document.
 - `Fix(Status As MsoDocInspectorStatus, Results As String)`  
   Performs an action on specific information items or document properties depending on the Document Inspector module specified.
-    - `Status As MsoDocInspectorStatus` (required): An enumeration representing the status of the document. _Status_ is an output parameter, which means that its value is returned when the method has completed its purpose.
-    - `Results As String` (required): Contains the results of the action. _Results_ is an output parameter.
+    - `Status As MsoDocInspectorStatus` (required): An enumeration representing the status of the document. Status is an output parameter, which means that its value is returned when the method has completed its purpose.
+    - `Results As String` (required): Contains the results of the action. Results is an output parameter.
 
 ### DocumentInspectors
 
@@ -2513,7 +2513,7 @@ Dim dlvVersions As Office.DocumentLibraryVersions
 
 A collection of DocumentProperty objects. Each DocumentProperty object represents a built-in or custom property of a container document.
 
-**Remarks:** Use the Add method to create a new custom property and add it to the DocumentProperties collection. You cannot use the Add method to create a built-in document property. Use BuiltinDocumentProperties(index), where _index_ is the index number of the built-in document property, to return a single DocumentProperty object that represents a specific built-in document property. Use CustomDocumentProperties(index), where _index_ is the number of the custom document property, to return a DocumentProperty object that represents a specific custom document property.
+**Remarks:** Use the Add method to create a new custom property and add it to the DocumentProperties collection. You cannot use the Add method to create a built-in document property. Use BuiltinDocumentProperties(index), where index is the index number of the built-in document property, to return a single DocumentProperty object that represents a specific built-in document property. Use CustomDocumentProperties(index), where index is the number of the custom document property, to return a DocumentProperty object that represents a specific custom document property.
 
 #### Properties (6)
 
@@ -2534,10 +2534,10 @@ A collection of DocumentProperty objects. Each DocumentProperty object represent
 - `Add(Name As String, LinkToContent As Boolean, [Type As Variant], [Value As Variant], [LinkSource As Variant], lcid As Long, ppIDocProp As DocumentProperty)`  
   Creates a new custom document property. You can add a new document property only to the custom DocumentProperties collection.
     - `Name As String` (required): The string of the Name of the property.
-    - `LinkToContent As Boolean` (required): Specifies whether the LinkToContent property is linked to the contents of the container document. If this argument is True, the _LinkSource_ argument is required; if it's False, the _Value_ argument is required.
+    - `LinkToContent As Boolean` (required): Specifies whether the LinkToContent property is linked to the contents of the container document. If this argument is True, the LinkSource argument is required; if it's False, the Value argument is required.
     - `Type As Variant` (optional): The data type of the Type property. Can be one of the following MsoDocProperties constants: msoPropertyTypeBoolean, msoPropertyTypeDate, msoPropertyTypeFloat, msoPropertyTypeNumber, or msoPropertyTypeString.
-    - `Value As Variant` (optional): The data value of the Value property, if it's not linked to the contents of the container document. The value is converted to match the data type specified by the _Type_ argument, and if it can't be converted, an error occurs. If _LinkToContent_ is True, the argument is ignored, and the new document property is assigned a default value until the linked property values are updated by the container application (usually when the document is saved).
-    - `LinkSource As Variant` (optional): Ignored if _LinkToContent_ is False. The source of the LinkSource property. The container application determines what types of source linking you can use. For example, DDE links use the "Server|Document!Item" syntax.
+    - `Value As Variant` (optional): The data value of the Value property, if it's not linked to the contents of the container document. The value is converted to match the data type specified by the Type argument, and if it can't be converted, an error occurs. If LinkToContent is True, the argument is ignored, and the new document property is assigned a default value until the linked property values are updated by the container application (usually when the document is saved).
+    - `LinkSource As Variant` (optional): Ignored if LinkToContent is False. The source of the LinkSource property. The container application determines what types of source linking you can use. For example, DDE links use the "Server|Document!Item" syntax.
 
 ### DocumentProperty
 
@@ -2547,7 +2547,7 @@ A collection of DocumentProperty objects. Each DocumentProperty object represent
 
 Represents a custom or built-in document property of a container document. The DocumentProperty object is a member of the DocumentProperties collection.
 
-**Remarks:** Use the Microsoft Word Document.BuiltinDocumentProperties(_index_) property, where _index_ is the name or index number of the built-in document property, to return a single DocumentProperty object that represents a specific built-in document property. Use the Word Document.CustomDocumentProperties(_index_) property, where _index_ is the name or index number of the custom document property, to return a DocumentProperty object that represents a specific custom document property.
+**Remarks:** Use the Microsoft Word Document.BuiltinDocumentProperties(index) property, where index is the name or index number of the built-in document property, to return a single DocumentProperty object that represents a specific built-in document property. Use the Word Document.CustomDocumentProperties(index) property, where index is the name or index number of the custom document property, to return a DocumentProperty object that represents a specific custom document property.
 
 #### Properties (8)
 
@@ -3004,7 +3004,7 @@ End Sub
 #### Methods (1)
 
 - `Item(Index As Long) As String`  
-  Gets a String that corresponds to the path of one of the files by the _Index_ that the user selected from a file dialog box that was displayed by using the Show method of the FileDialog object.
+  Gets a String that corresponds to the path of one of the files by the Index that the user selected from a file dialog box that was displayed by using the Show method of the FileDialog object.
     - `Index As Long` (required): The index is one-based.
 
 ### FileSearch
@@ -5534,7 +5534,7 @@ End Sub
 
 Returns information about the language settings in a Microsoft Office application.
 
-**Remarks:** Use Application.LanguageSettings.LanguageID(_MsoAppLanguageID_), where MsoAppLanguageID is a constant used to return locale identifier (LCID) information to the specified application.
+**Remarks:** Use Application.LanguageSettings.LanguageID(MsoAppLanguageID), where MsoAppLanguageID is a constant used to return locale identifier (LCID) information to the specified application.
 
 **Example:**
 
@@ -8142,14 +8142,14 @@ End Sub
 **Type:** Enumeration  
 **Library:** Microsoft Office 16.0 Object Library  
 
-Specifies how to use the value specified in the _ExtraInfo_ parameter of the FollowHyperlink method.
+Specifies how to use the value specified in the ExtraInfo parameter of the FollowHyperlink method.
 
 #### Constants (2)
 
 - `msoMethodGet` = 0  
-  The value specified in the _ExtraInfo_ parameter is a string that is appended to the address.
+  The value specified in the ExtraInfo parameter is a string that is appended to the address.
 - `msoMethodPost` = 1  
-  The value specified in the _ExtraInfo_ parameter is posted as a string or byte array.
+  The value specified in the ExtraInfo parameter is posted as a string or byte array.
 
 ### MsoExtrusionColorType
 
@@ -12019,7 +12019,7 @@ End Sub
 
 Represents a field in a data source. The ODSOColumn object is a member of the ODSOColumns collection.
 
-**Remarks:** The ODSOColumns collection includes all the data fields in a mail merge data source (for example, Name, Address, and City). You cannot add fields to the ODSOColumns collection. All data fields in a data source are automatically included in the ODSOColumns collection. Use Columns(_index_), where _index_ is the data field name or index number, to return a single ODSOColumn object. The index number represents the position of the data field in the mail merge data source.
+**Remarks:** The ODSOColumns collection includes all the data fields in a mail merge data source (for example, Name, Address, and City). You cannot add fields to the ODSOColumns collection. All data fields in a data source are automatically included in the ODSOColumns collection. Use Columns(index), where index is the data field name or index number, to return a single ODSOColumn object. The index number represents the position of the data field in the mail merge data source.
 
 **Example:**
 
@@ -12202,7 +12202,7 @@ End Sub
     - `Column As String` (required): The name of the table in the data source.
     - `Comparison As MsoFilterComparison` (required): How the data in the table is filtered.
     - `Conjunction As MsoFilterConjunction` (required): Determines how this filter relates to other filters in the ODSOFilters object.
-    - `bstrCompareTo As String` (optional): If the _Comparison_ argument is something other than msoFilterComparisonIsBlank or msoFilterComparisonIsNotBlank, _bstrCompareTo_ is a string to which the data in the table is compared.
+    - `bstrCompareTo As String` (optional): If the Comparison argument is something other than msoFilterComparisonIsBlank or msoFilterComparisonIsNotBlank, bstrCompareTo is a string to which the data in the table is compared.
     - `DeferUpdate As Boolean` (optional): Specifies whether to delay updating the filter. Default is False.
 - `Delete(Index As Long, [DeferUpdate As Boolean])`  
   Deletes a filter object from the ODSOFilters collection.
@@ -13409,7 +13409,7 @@ Represents a wrapper object for accessing sensitivity label on the active docume
     - `OldLabelInfo As LabelInfo` (required): Previous label information that existed on the document.
     - `NewLabelInfo As LabelInfo` (required): New label information that was applied on the document.
     - `HResult As Long` (required): An integer representing the error code.
-    - `Context As Object` (required): The _context_ object that was set with SetLabel call.
+    - `Context As Object` (required): The context object that was set with SetLabel call.
 
 ### SensitivityLabelEvents
 
@@ -14062,7 +14062,7 @@ Dim swsFiles As Office.SharedWorkspaceFiles
 
 Represents a folder in a shared document workspace.
 
-**Remarks:** Use the SharedWorkspaceFolder object to manage subfolders within the main document library folder of a shared workspace. The Count property of the SharedWorkspaceFolders collection does not include the workspace's main folder, and returns 0 (zero) if no subfolders have been created. The SharedWorkspaceFolder object does not expose the CreatedBy, CreatedDate, ModifiedBy, and ModifiedDate properties available on the SharedWorkspaceFile, SharedWorkspaceLink, and SharedWorkspaceTask objects. Use the Item (_index_) property of the SharedWorkspaceFolders collection to return a specific SharedWorkspaceFolder object.
+**Remarks:** Use the SharedWorkspaceFolder object to manage subfolders within the main document library folder of a shared workspace. The Count property of the SharedWorkspaceFolders collection does not include the workspace's main folder, and returns 0 (zero) if no subfolders have been created. The SharedWorkspaceFolder object does not expose the CreatedBy, CreatedDate, ModifiedBy, and ModifiedDate properties available on the SharedWorkspaceFile, SharedWorkspaceLink, and SharedWorkspaceTask objects. Use the Item (index) property of the SharedWorkspaceFolders collection to return a specific SharedWorkspaceFolder object.
 
 **Example:**
 
@@ -14140,7 +14140,7 @@ Dim swsFolders As Office.SharedWorkspaceFolders
 
 Represents a URL link saved in a shared document workspace site.
 
-**Remarks:** Use the SharedWorkspaceLink object to manage links to additional documents and information of interest to the members who are collaborating on the documents in the shared workspace site. Use the Item (_index_) property of the SharedWorkspaceLinks collection to return a specific SharedWorkspaceLink object. Use the Description property to set the link description that appears on the Links tab of the Shared Workspace pane and on the workspace webpage. Use the URL property to set the destination address of the link. Use the Notes property to supply additional information about the link. Use the Save method to upload changes to the server after you modify properties of the SharedWorkspaceLink object. Use the CreatedBy, CreatedDate, ModifiedBy, and ModifiedDate properties to return information about the history of each link.
+**Remarks:** Use the SharedWorkspaceLink object to manage links to additional documents and information of interest to the members who are collaborating on the documents in the shared workspace site. Use the Item (index) property of the SharedWorkspaceLinks collection to return a specific SharedWorkspaceLink object. Use the Description property to set the link description that appears on the Links tab of the Shared Workspace pane and on the workspace webpage. Use the URL property to set the destination address of the link. Use the Notes property to supply additional information about the link. Use the Save method to upload changes to the server after you modify properties of the SharedWorkspaceLink object. Use the CreatedBy, CreatedDate, ModifiedBy, and ModifiedDate properties to return information about the history of each link.
 
 **Example:**
 
@@ -14238,7 +14238,7 @@ Dim swsLinks As Office.SharedWorkspaceLinks
 
 Represents a user who has rights in a shared document workspace site.
 
-**Remarks:** Use the SharedWorkspaceMember object to manage users who have rights to participate in a shared workspace and to collaborate on the shared documents saved in the workspace site. The Role specified when the user is added as a member of the workspace (for example, "Reader" or "Contributor") determines that user's rights in the workspace and cannot be accessed or modified later through properties of the SharedWorkspaceMember object. Use the Item (_index_) property of the SharedWorkspaceMembers collection to return a specific SharedWorkspaceMember object. Use the SharedWorkspaceMember object's three distinct name properties to retrieve identifying information about the member. - The Name property returns the members display name. - The Email property returns the member's email address. - The DomainName property returns the member's domain and user name in the format domain\user.
+**Remarks:** Use the SharedWorkspaceMember object to manage users who have rights to participate in a shared workspace and to collaborate on the shared documents saved in the workspace site. The Role specified when the user is added as a member of the workspace (for example, "Reader" or "Contributor") determines that user's rights in the workspace and cannot be accessed or modified later through properties of the SharedWorkspaceMember object. Use the Item (index) property of the SharedWorkspaceMembers collection to return a specific SharedWorkspaceMember object. Use the SharedWorkspaceMember object's three distinct name properties to retrieve identifying information about the member. - The Name property returns the members display name. - The Email property returns the member's email address. - The DomainName property returns the member's domain and user name in the format domain\user.
 
 **Example:**
 
@@ -14332,7 +14332,7 @@ Dim swsMembers As Office.SharedWorkspaceMembers
 
 The SharedWorkspaceTask object represents a task in a shared document workspace. Member of the SharedWorkspaceTasks collection.
 
-**Remarks:** Use the SharedWorkspaceTask object to manage tasks assigned to the members who are collaborating on the documents in the shared workspace. Use the Item (_index_) property of the SharedWorkspaceTasks collection to return a specific SharedWorkspaceTask object. Use the Title property to set the text of the task that appears on the Tasks tab of the Shared Workspace task pane and on the shared workspace webpage. Use the Description property to supply additional information about the task. Assign the task to a member of the workspace by using the AssignedTo property and the member's domain user name. Specify a due date for the task by using the DueDate property. Use the enumerations for task Priority and Status to indicate the relative importance of the task and to update the task's status. Use the Save method to upload changes to the server after you modify properties of the SharedWorkspaceTask object. Use the CreatedBy, CreatedDate, ModifiedBy, and ModifiedDate properties to return information about the history of each task.
+**Remarks:** Use the SharedWorkspaceTask object to manage tasks assigned to the members who are collaborating on the documents in the shared workspace. Use the Item (index) property of the SharedWorkspaceTasks collection to return a specific SharedWorkspaceTask object. Use the Title property to set the text of the task that appears on the Tasks tab of the Shared Workspace task pane and on the shared workspace webpage. Use the Description property to supply additional information about the task. Assign the task to a member of the workspace by using the AssignedTo property and the member's domain user name. Specify a due date for the task by using the DueDate property. Use the enumerations for task Priority and Status to indicate the relative importance of the task and to update the task's status. Use the Save method to upload changes to the server after you modify properties of the SharedWorkspaceTask object. Use the CreatedBy, CreatedDate, ModifiedBy, and ModifiedDate properties to return information about the history of each task.
 
 **Example:**
 
@@ -15441,7 +15441,7 @@ End Sub
 
 Represents a single text column. The TextColumn2 object is a member of the TextColumns2 collection.
 
-**Remarks:** Use TextColumns2(_index_), where _index_ is the index number, to return a single TextColumn2 object. The index number represents the position of the column in the TextColumns2 collection (counting from left to right).
+**Remarks:** Use TextColumns2(index), where index is the index number, to return a single TextColumn2 object. The index number represents the position of the column in the TextColumns2 collection (counting from left to right).
 
 **Example:**
 
@@ -15705,14 +15705,14 @@ End With
     - `WholeWords As MsoTriState` (optional): Determines whether only whole words are searched.
 - `RotatedBounds(X1 As Single, Y1 As Single, X2 As Single, Y2 As Single, X3 As Single, Y3 As Single, x4 As Single, y4 As Single)`  
   Gets the coordinates of the vertices of the text bounding box for the specified text range. Read-only.
-    - `X1 As Single` (required): Returns the position (in points) of the _X_ coordinate of the first vertex of the bounding box for the text within the specified text range.
-    - `Y1 As Single` (required): Returns the position (in points) of the _Y_ coordinate of the first vertex of the bounding box for the text within the specified text range.
-    - `X2 As Single` (required): Returns the position (in points) of the _X_ coordinate of the second vertex of the bounding box for the text within the specified text range.
-    - `Y2 As Single` (required): Returns the position (in points) of the _Y_ coordinate of the second vertex of the bounding box for the text within the specified text range.
-    - `X3 As Single` (required): Returns the position (in points) of the _X_ coordinate of the third vertex of the bounding box for the text within the specified text range.
-    - `Y3 As Single` (required): Returns the position (in points) of the _Y_ coordinate of the third vertex of the bounding box for the text within the specified text range.
-    - `x4 As Single` (required): Returns the position (in points) of the _X_ coordinate of the fourth vertex of the bounding box for the text within the specified text range.
-    - `y4 As Single` (required): Returns the position (in points) of the _Y_ coordinate of the fourth vertex of the bounding box for the text within the specified text range.
+    - `X1 As Single` (required): Returns the position (in points) of the X coordinate of the first vertex of the bounding box for the text within the specified text range.
+    - `Y1 As Single` (required): Returns the position (in points) of the Y coordinate of the first vertex of the bounding box for the text within the specified text range.
+    - `X2 As Single` (required): Returns the position (in points) of the X coordinate of the second vertex of the bounding box for the text within the specified text range.
+    - `Y2 As Single` (required): Returns the position (in points) of the Y coordinate of the second vertex of the bounding box for the text within the specified text range.
+    - `X3 As Single` (required): Returns the position (in points) of the X coordinate of the third vertex of the bounding box for the text within the specified text range.
+    - `Y3 As Single` (required): Returns the position (in points) of the Y coordinate of the third vertex of the bounding box for the text within the specified text range.
+    - `x4 As Single` (required): Returns the position (in points) of the X coordinate of the fourth vertex of the bounding box for the text within the specified text range.
+    - `y4 As Single` (required): Returns the position (in points) of the Y coordinate of the fourth vertex of the bounding box for the text within the specified text range.
 - `RtlRun()`  
   Returns a TextRange2 object that represents the specified subset of right-to-left text runs. A text run consists of a range of characters that share the same font attributes.
 - `LtrRun()`  
@@ -15720,7 +15720,7 @@ End With
 - `InsertChartField(ChartFieldType As MsoChartFieldType, [Formula As String], [Position As Long]) As TextRange2`  
   Inserts a field into the body of a data label in a chart.
     - `ChartFieldType As MsoChartFieldType` (required): Specifies the type of chart field to insert into a data label.
-    - `Formula As String` (optional): Specifies a cell (or range) if the msoChartFieldFormula constant is passed in for the _ChartFieldType_ parameter.
+    - `Formula As String` (optional): Specifies a cell (or range) if the msoChartFieldFormula constant is passed in for the ChartFieldType parameter.
     - `Position As Long` (optional): Specifies the character position where the chart field is inserted. The default is to append the field to the end of the text. If the position value is out of range, the default is used.
 
 ### ThemeColor
@@ -17250,7 +17250,7 @@ Indicates units of time measurement.
 - `Width(FileNumber As Integer, Width As Integer)`  
   Assigns an output line width to a file opened by using the Open statement.
     - `FileNumber As Integer` (required): Required. Any valid file number.
-    - `Width As Integer` (required): Required. Numeric expression in the range 0&ndash;255, inclusive, that indicates how many characters appear on a line before a new line is started. If _width_ equals 0, there is no limit to the length of a line. The default value for _width_ is 0.
+    - `Width As Integer` (required): Required. Numeric expression in the range 0&ndash;255, inclusive, that indicates how many characters appear on a line before a new line is started. If width equals 0, there is no limit to the length of a line. The default value for width is 0.
 
 ### Collection
 
@@ -17367,7 +17367,7 @@ Indicates units of time measurement.
   Returns a Variant (Date) containing the time.
 - `Weekday(Date As Variant, [FirstDayOfWeek As VbDayOfWeek]) As Variant`  
   Returns a Variant (Integer) containing a whole number representing the day of the week.
-    - `Date As Variant` (required): Required. Variant, numeric expression, string expression, or any combination, that can represent a date. If _date_ contains Null, Null is returned.
+    - `Date As Variant` (required): Required. Variant, numeric expression, string expression, or any combination, that can represent a date. If date contains Null, Null is returned.
     - `FirstDayOfWeek As VbDayOfWeek` (optional): Optional. A constant that specifies the first day of the week. If not specified, vbSunday is assumed.
 - `Year(Date As Variant) As Variant`  
   Returns a Variant (Integer) containing a whole number representing the year.
@@ -17378,7 +17378,7 @@ Indicates units of time measurement.
     - `Date As Variant` (required): Required. Variant (Date) or literal representing the date to which the interval is added.
 - `DateDiff(Interval As String, Date1 As Variant, Date2 As Variant, [FirstDayOfWeek As VbDayOfWeek], [FirstWeekOfYear As VbFirstWeekOfYear]) As Variant`  
   Returns a Variant (Long) specifying the number of time intervals between two specified dates.
-    - `Interval As String` (required): Required. String expression that is the interval of time you use to calculate the difference between _date1_ and _date2_.
+    - `Interval As String` (required): Required. String expression that is the interval of time you use to calculate the difference between date1 and date2.
     - `FirstDayOfWeek As VbDayOfWeek` (optional): Optional. A constant that specifies the first day of the week. If not specified, Sunday is assumed.
     - `FirstWeekOfYear As VbFirstWeekOfYear` (optional): Optional. A constant that specifies the first week of the year. If not specified, the first week is assumed to be the week in which January 1 occurs.
 - `DatePart(Interval As String, Date As Variant, [FirstDayOfWeek As VbDayOfWeek], [FirstWeekOfYear As VbFirstWeekOfYear]) As Variant`
@@ -17423,11 +17423,11 @@ Indicates units of time measurement.
 - `FileAttr(FileNumber As Integer, [ReturnType As Integer]) As Long`  
   Returns a Long representing the file mode for files opened by using the Open statement.
     - `FileNumber As Integer` (required): Required; Integer. Any valid file number.
-    - `ReturnType As Integer` (optional): Required; Integer. Number indicating the type of information to return. Specify 1 to return a value indicating the file mode. On 16-bit systems only, specify 2 to retrieve an operating system file handle. _Returntype_ 2 is not supported in 32-bit systems and causes an error.
+    - `ReturnType As Integer` (optional): Required; Integer. Number indicating the type of information to return. Specify 1 to return a value indicating the file mode. On 16-bit systems only, specify 2 to retrieve an operating system file handle. Returntype 2 is not supported in 32-bit systems and causes an error.
 - `FileCopy(Source As String, Destination As String)`  
   Copies a file.
-    - `Source As String` (required): Required. String expression that specifies the name of the file to be copied. The _source_ may include directory or folder, and drive.
-    - `Destination As String` (required): Required. String expression that specifies the target file name. The _destination_ may include directory or folder, and drive.
+    - `Source As String` (required): Required. String expression that specifies the name of the file to be copied. The source may include directory or folder, and drive.
+    - `Destination As String` (required): Required. String expression that specifies the target file name. The destination may include directory or folder, and drive.
 - `FileDateTime(PathName As String) As Variant`  
   Returns a Variant (Date) that indicates the date and time when a file was created or last modified.
 - `FileLen(PathName As String) As Long`  
@@ -17458,8 +17458,8 @@ Indicates units of time measurement.
   Returns an Integer representing the next file number available for use by the Open statement.
 - `Dir([PathName As Variant], [Attributes As VbFileAttribute]) As String`  
   Returns a String representing the name of a file, directory, or folder that matches a specified pattern or file attribute, or the volume label of a drive.
-    - `PathName As Variant` (optional): Optional. String expression that specifies a file name; may include directory or folder, and drive. A zero-length string ("") is returned if _pathname_ is not found.
-    - `Attributes As VbFileAttribute` (optional): Optional. Constant or numeric expression, whose sum specifies file attributes. If omitted, returns files that match _pathname_ but have no attributes.
+    - `PathName As Variant` (optional): Optional. String expression that specifies a file name; may include directory or folder, and drive. A zero-length string ("") is returned if pathname is not found.
+    - `Attributes As VbFileAttribute` (optional): Optional. Constant or numeric expression, whose sum specifies file attributes. If omitted, returns files that match pathname but have no attributes.
 
 ### Financial
 
@@ -17489,14 +17489,14 @@ Indicates units of time measurement.
 - `IPmt(Rate As Double, Per As Double, NPer As Double, PV As Double, [FV As Variant], [Due As Variant]) As Double`  
   Returns a Double specifying the interest payment for a given period of an annuity based on periodic, fixed payments and a fixed interest rate.
     - `Rate As Double` (required): Required. Double specifying interest rate per period. For example, if you get a car loan at an annual percentage rate (APR) of 10 percent and make monthly payments, the rate per period is 0.1/12, or 0.0083.
-    - `Per As Double` (required): Required. Double specifying payment period in the range 1 through _nper_.
+    - `Per As Double` (required): Required. Double specifying payment period in the range 1 through nper.
     - `NPer As Double` (required): Required. Double specifying total number of payment periods in the annuity. For example, if you make monthly payments on a four-year car loan, your loan has a total of 4 * 12 (or 48) payment periods.
     - `PV As Double` (required): Required. Double specifying present value, or value today, of a series of future payments or receipts. For example, when you borrow money to buy a car, the loan amount is the present value to the lender of the monthly car payments you'll make.
     - `FV As Variant` (optional): Optional. Variant specifying future value or cash balance you want after you've made the final payment. For example, the future value of a loan is $0 because that's its value after the final payment. However, if you want to save $50,000 over 18 years for your child's education, $50,000 is the future value. If omitted, 0 is assumed.
 - `PPmt(Rate As Double, Per As Double, NPer As Double, PV As Double, [FV As Variant], [Due As Variant]) As Double`  
   Returns a Double specifying the principal payment for a given period of an annuity based on periodic, fixed payments and a fixed interest rate.
     - `Rate As Double` (required): Required. Double specifying interest rate per period. For example, if you get a car loan at an annual percentage rate (APR) of 10 percent and make monthly payments, the rate per period is 0.1/12, or 0.0083.
-    - `Per As Double` (required): Required. Integer specifying payment period in the range 1 through _nper_.
+    - `Per As Double` (required): Required. Integer specifying payment period in the range 1 through nper.
     - `NPer As Double` (required): Required. Integer specifying total number of payment periods in the annuity. For example, if you make monthly payments on a four-year car loan, your loan has a total of 4 * 12 (or 48) payment periods.
     - `PV As Double` (required): Required. Double specifying present value, or value today, of a series of future payments or receipts. For example, when you borrow money to buy a car, the loan amount is the present value to the lender of the monthly car payments you'll make.
     - `FV As Variant` (optional): Optional. Variant specifying future value or cash balance you want after you've made the final payment. For example, the future value of a loan is $0 because that's its value after the final payment. However, if you want to save $50,000 over 18 years for your child's education, $50,000 is the future value. If omitted, 0 is assumed.
@@ -17530,10 +17530,10 @@ Indicates units of time measurement.
     - `Pmt As Double` (required): Required. Double specifying payment to be made each period. Payments usually contain principal and interest that doesn't change over the life of the annuity.
     - `PV As Double` (required): Required. Double specifying present value, or value today, of a series of future payments or receipts. For example, when you borrow money to buy a car, the loan amount is the present value to the lender of the monthly car payments you'll make.
     - `FV As Variant` (optional): Optional. Variant specifying future value or cash balance you want after you make the final payment. For example, the future value of a loan is $0 because that's its value after the final payment. However, if you want to save $50,000 over 18 years for your child's education, $50,000 is the future value. If omitted, 0 is assumed.
-    - `Guess As Variant` (optional): Optional. Variant specifying value you estimate will be returned by Rate. If omitted, _guess_ is 0.1 (10 percent).
+    - `Guess As Variant` (optional): Optional. Variant specifying value you estimate will be returned by Rate. If omitted, guess is 0.1 (10 percent).
 - `IRR(ValueArray As SAFEARRAY(Double), [Guess As Variant]) As Double`  
   Returns a Double specifying the internal rate of return for a series of periodic cash flows (payments and receipts).
-    - `Guess As Variant` (optional): Optional. Variant specifying value that you estimate will be returned by IRR. If omitted, _guess_ is 0.1 (10 percent).
+    - `Guess As Variant` (optional): Optional. Variant specifying value that you estimate will be returned by IRR. If omitted, guess is 0.1 (10 percent).
 - `MIRR(ValueArray As SAFEARRAY(Double), FinanceRate As Double, ReinvestRate As Double) As Double`  
   Returns a Double specifying the modified internal rate of return for a series of periodic cash flows (payments and receipts).
 - `NPV(Rate As Double, ValueArray As SAFEARRAY(Double)) As Double`  
@@ -17588,36 +17588,36 @@ Indicates units of time measurement.
 
 - `AppActivate(Title As Variant, [Wait As Variant])`  
   Activates an application window.
-    - `Title As Variant` (required): Required. String expression specifying the title in the title bar of the application window you want to activate. The task ID returned by the Shell function can be used in place of _title_ to activate an application.
+    - `Title As Variant` (required): Required. String expression specifying the title in the title bar of the application window you want to activate. The task ID returned by the Shell function can be used in place of title to activate an application.
     - `Wait As Variant` (optional): Optional. Boolean value specifying whether the calling application has the focus before activating another. If False (default), the specified application is immediately activated, even if the calling application does not have the focus. If True, the calling application waits until it has the focus, and then activates the specified application.
 - `Beep()`  
   Sounds a tone through the computer's speaker.
 - `CreateObject(Class As String, [ServerName As String]) As Variant`  
   Creates and returns a reference to an ActiveX object.
     - `Class As String` (required): Required; Variant (String). The application name and class of the object to create.
-    - `ServerName As String` (optional): Optional; Variant (String). The name of the network server where the object will be created. If _servername_ is an empty string (""), the local machine is used.
+    - `ServerName As String` (optional): Optional; Variant (String). The name of the network server where the object will be created. If servername is an empty string (""), the local machine is used.
 - `DoEvents() As Integer`  
   Yields execution so that the operating system can process other events.
 - `GetObject([PathName As Variant], [Class As Variant]) As Variant`  
   Returns a reference to an object provided by an ActiveX component.
-    - `PathName As Variant` (optional): Optional; Variant (String). The full path and name of the file containing the object to retrieve. If _pathname_ is omitted, _class_ is required.
+    - `PathName As Variant` (optional): Optional; Variant (String). The full path and name of the file containing the object to retrieve. If pathname is omitted, class is required.
     - `Class As Variant` (optional): Optional; Variant (String). A string representing the class of the object.
 - `InputBox(Prompt As Variant, [Title As Variant], [Default As Variant], [XPos As Variant], [YPos As Variant], [HelpFile As Variant], [Context As Variant]) As String`  
   Displays a prompt in a dialog box, waits for the user to input text or click a button, and returns a String containing the contents of the text box.
-    - `Prompt As Variant` (required): Required. String expression displayed as the message in the dialog box. The maximum length of _prompt_ is approximately 1024 characters, depending on the width of the characters used. If _prompt_ consists of more than one line, you can separate the lines by using a carriage return character (Chr(13)), a linefeed character (Chr(10)), or carriage return-linefeed character combination ((Chr(13) & (Chr(10)) between each line.
-    - `Title As Variant` (optional): Optional. String expression displayed in the title bar of the dialog box. If you omit _title_, the application name is placed in the title bar.
-    - `Default As Variant` (optional): Optional. String expression displayed in the text box as the default response if no other input is provided. If you omit _default_, the text box is displayed empty.
-    - `XPos As Variant` (optional): Optional. Numeric expression that specifies, in twips, the horizontal distance of the left edge of the dialog box from the left edge of the screen. If _xpos_ is omitted, the dialog box is horizontally centered.
-    - `YPos As Variant` (optional): Optional. Numeric expression that specifies, in twips, the vertical distance of the upper edge of the dialog box from the top of the screen. If _ypos_ is omitted, the dialog box is vertically positioned approximately one-third of the way down the screen.
-    - `HelpFile As Variant` (optional): Optional. String expression that identifies the Help file to use to provide context-sensitive Help for the dialog box. If _helpfile_ is provided, _context_ must also be provided.
-    - `Context As Variant` (optional): Optional. Numeric expression that is the Help context number assigned to the appropriate Help topic by the Help author. If _context_ is provided, _helpfile_ must also be provided.
+    - `Prompt As Variant` (required): Required. String expression displayed as the message in the dialog box. The maximum length of prompt is approximately 1024 characters, depending on the width of the characters used. If prompt consists of more than one line, you can separate the lines by using a carriage return character (Chr(13)), a linefeed character (Chr(10)), or carriage return-linefeed character combination ((Chr(13) & (Chr(10)) between each line.
+    - `Title As Variant` (optional): Optional. String expression displayed in the title bar of the dialog box. If you omit title, the application name is placed in the title bar.
+    - `Default As Variant` (optional): Optional. String expression displayed in the text box as the default response if no other input is provided. If you omit default, the text box is displayed empty.
+    - `XPos As Variant` (optional): Optional. Numeric expression that specifies, in twips, the horizontal distance of the left edge of the dialog box from the left edge of the screen. If xpos is omitted, the dialog box is horizontally centered.
+    - `YPos As Variant` (optional): Optional. Numeric expression that specifies, in twips, the vertical distance of the upper edge of the dialog box from the top of the screen. If ypos is omitted, the dialog box is vertically positioned approximately one-third of the way down the screen.
+    - `HelpFile As Variant` (optional): Optional. String expression that identifies the Help file to use to provide context-sensitive Help for the dialog box. If helpfile is provided, context must also be provided.
+    - `Context As Variant` (optional): Optional. Numeric expression that is the Help context number assigned to the appropriate Help topic by the Help author. If context is provided, helpfile must also be provided.
 - `MsgBox(Prompt As Variant, [Buttons As VbMsgBoxStyle], [Title As Variant], [HelpFile As Variant], [Context As Variant]) As VbMsgBoxResult`  
   Displays a message in a dialog box, waits for the user to click a button, and returns an Integer indicating which button the user clicked.
-    - `Prompt As Variant` (required): Required. String expression displayed as the message in the dialog box. The maximum length of _prompt_ is approximately 1024 characters, depending on the width of the characters used. If _prompt_ consists of more than one line, you can separate the lines by using a carriage return character (Chr(13)), a linefeed character (Chr(10)), or carriage return - linefeed character combination (Chr(13) & Chr(10)) between each line.
-    - `Buttons As VbMsgBoxStyle` (optional): Optional. Numeric expression that is the combination of values specifying the number and type of buttons to display, the icon style to use, the identity of the default button, and the modality of the message box. If omitted, the default value for _buttons_ is 0.
-    - `Title As Variant` (optional): Optional. String expression displayed in the title bar of the dialog box. If you omit _title_, the application name is placed in the title bar.
-    - `HelpFile As Variant` (optional): Optional. String expression that identifies the Help file to use to provide context-sensitive Help for the dialog box. If _helpfile_ is provided, _context_ must also be provided.
-    - `Context As Variant` (optional): Optional. Numeric expression that is the Help context number assigned to the appropriate Help topic by the Help author. If _context_ is provided, _helpfile_ must also be provided.
+    - `Prompt As Variant` (required): Required. String expression displayed as the message in the dialog box. The maximum length of prompt is approximately 1024 characters, depending on the width of the characters used. If prompt consists of more than one line, you can separate the lines by using a carriage return character (Chr(13)), a linefeed character (Chr(10)), or carriage return - linefeed character combination (Chr(13) & Chr(10)) between each line.
+    - `Buttons As VbMsgBoxStyle` (optional): Optional. Numeric expression that is the combination of values specifying the number and type of buttons to display, the icon style to use, the identity of the default button, and the modality of the message box. If omitted, the default value for buttons is 0.
+    - `Title As Variant` (optional): Optional. String expression displayed in the title bar of the dialog box. If you omit title, the application name is placed in the title bar.
+    - `HelpFile As Variant` (optional): Optional. String expression that identifies the Help file to use to provide context-sensitive Help for the dialog box. If helpfile is provided, context must also be provided.
+    - `Context As Variant` (optional): Optional. Numeric expression that is the Help context number assigned to the appropriate Help topic by the Help author. If context is provided, helpfile must also be provided.
 - `SendKeys(String As String, [Wait As Variant])`  
   Sends one or more keystrokes to the active window as if typed at the keyboard.
     - `String As String` (required): Required. String expression specifying the keystrokes to send.
@@ -17625,12 +17625,12 @@ Indicates units of time measurement.
 - `Shell(PathName As Variant, [WindowStyle As VbAppWinStyle]) As Double`  
   Runs an executable program and returns a Variant (Double) representing the program's task ID if successful; otherwise, it returns zero.
     - `PathName As Variant` (required): Required; Variant (String). Name of the program to execute and any required arguments or command-line switches; may include directory or folder and drive. On the Macintosh, you can use the MacID function to specify an application's signature instead of its name. The following example uses the signature for Microsoft Word: Shell MacID("MSWD")
-    - `WindowStyle As VbAppWinStyle` (optional): Optional. Variant (Integer) corresponding to the style of the window in which the program is to be run. If _windowstyle_ is omitted, the program is started minimized with focus. On the Macintosh (System 7.0 or later), _windowstyle_ only determines whether or not the application gets the focus when it is run.
+    - `WindowStyle As VbAppWinStyle` (optional): Optional. Variant (Integer) corresponding to the style of the window in which the program is to be run. If windowstyle is omitted, the program is started minimized with focus. On the Macintosh (System 7.0 or later), windowstyle only determines whether or not the application gets the focus when it is run.
 - `Partition(Number As Variant, Start As Variant, Stop As Variant, Interval As Variant) As Variant`  
   Returns a Variant (String) indicating where a number occurs within a calculated series of ranges.
     - `Number As Variant` (required): Required. The number that you want to evaluate against the ranges.
     - `Start As Variant` (required): Required. The number that is the start of the overall range of numbers. The number can't be less than 0.
-    - `Stop As Variant` (required): Required. The number that is the end of the overall range of numbers. The number can't be equal to or less than _start_.
+    - `Stop As Variant` (required): Required. The number that is the end of the overall range of numbers. The number can't be equal to or less than start.
     - `Interval As Variant` (required): Required. The number that is the difference between one range and the next. The number can't be less than 1.
 - `Choose(Index As Single, Choice As SAFEARRAY(Variant)) As Variant`  
   Selects and returns a value from a list of arguments.
@@ -17644,24 +17644,24 @@ Indicates units of time measurement.
 - `_B_str_Command() As String`
 - `IIf(Expression As Variant, TruePart As Variant, FalsePart As Variant) As Variant`  
   Returns one of two parts, depending on the evaluation of an expression.
-    - `TruePart As Variant` (required): Required. Value or expression returned if _expr_ is True.
-    - `FalsePart As Variant` (required): Required. Value or expression returned if _expr_ is False.
+    - `TruePart As Variant` (required): Required. Value or expression returned if expr is True.
+    - `FalsePart As Variant` (required): Required. Value or expression returned if expr is False.
 - `GetSetting(AppName As String, Section As String, Key As String, [Default As Variant]) As String`  
   Returns a key setting value from an application's entry in the Windows registry or (on the Macintosh) information in the application's initialization file.
     - `AppName As String` (required): Required. String expression containing the name of the application or project whose key setting is requested. On the Macintosh, this is the filename of the initialization file in the Preferences folder in the System folder.
     - `Section As String` (required): Required. String expression containing the name of the section where the key setting is found.
     - `Key As String` (required): Required. String expression containing the name of the key setting to return.
-    - `Default As Variant` (optional): Optional. Expression containing the value to return if no value is set in the key setting. If omitted, _default_ is assumed to be a zero-length string ("").
+    - `Default As Variant` (optional): Optional. Expression containing the value to return if no value is set in the key setting. If omitted, default is assumed to be a zero-length string ("").
 - `SaveSetting(AppName As String, Section As String, Key As String, Setting As String)`  
   Saves or creates an application entry in the application's entry in the Windows registry or (on the Macintosh) information in the application's initialization file.
     - `AppName As String` (required): Required. String expression containing the name of the application or project to which the setting applies. On the Macintosh, this is the filename of the initialization file in the Preferences folder in the System folder.
     - `Section As String` (required): Required. String expression containing the name of the section where the key setting is being saved.
     - `Key As String` (required): Required. String expression containing the name of the key setting being saved.
-    - `Setting As String` (required): Required. Expression containing the value that _key_ is being set to.
+    - `Setting As String` (required): Required. Expression containing the value that key is being set to.
 - `DeleteSetting(AppName As String, [Section As Variant], [Key As Variant])`  
   Deletes a section or key setting from an application's entry in the Windows registry or (on the Macintosh) information in the application's initialization file.
     - `AppName As String` (required): Required. String expression containing the name of the application or project to which the section or key setting applies. On the Macintosh, this is the filename of the initialization file in the Preferences folder in the System folder.
-    - `Section As Variant` (optional): Required. String expression containing the name of the section where the key setting is being deleted. If only _appname_ and _section_ are provided, the specified section is deleted along with all related key settings.
+    - `Section As Variant` (optional): Required. String expression containing the name of the section where the key setting is being deleted. If only appname and section are provided, the specified section is deleted along with all related key settings.
     - `Key As Variant` (optional): Optional. String expression containing the name of the key setting being deleted.
 - `GetAllSettings(AppName As String, Section As String) As Variant`  
   Returns a list of key settings and their respective values (originally created with SaveSetting) from an application's entry in the Windows registry or (on the Macintosh) information in the application's initialization file.
@@ -17687,7 +17687,7 @@ Indicates units of time measurement.
 - `Cos(Number As Double) As Double`  
   Returns a Double specifying the cosine of an angle.
 - `Exp(Number As Double) As Double`  
-  Returns a Double specifying _e_ (the base of natural logarithms) raised to a power.
+  Returns a Double specifying e (the base of natural logarithms) raised to a power.
 - `Log(Number As Double) As Double`  
   Returns a Double specifying the natural logarithm of a number.
 - `Randomize([Number As Variant])`  
@@ -17724,10 +17724,10 @@ Indicates units of time measurement.
 - `_B_var_MidB(String As Variant, Start As Long, [Length As Variant]) As Variant`
 - `InStr([Start As Variant], [String1 As Variant], [String2 As Variant], [Compare As VbCompareMethod]) As Variant`  
   Returns a Variant (Long) specifying the position of the first occurrence of one string within another.
-    - `Start As Variant` (optional): Optional. Numeric expression that sets the starting position for each search. If omitted, search begins at the first character position. If _start_ contains Null, an error occurs. The _start_ argument is required if _compare_ is specified.
+    - `Start As Variant` (optional): Optional. Numeric expression that sets the starting position for each search. If omitted, search begins at the first character position. If start contains Null, an error occurs. The start argument is required if compare is specified.
     - `String1 As Variant` (optional): Required. String expression being searched.
     - `String2 As Variant` (optional): Required. String expression sought.
-    - `Compare As VbCompareMethod` (optional): Optional. Specifies the type of string comparison. If _compare_ is Null, an error occurs. If _compare_ is omitted, the Option Compare setting determines the type of comparison. Specify a valid LCID (LocaleID) to use locale-specific rules in the comparison.
+    - `Compare As VbCompareMethod` (optional): Optional. Specifies the type of string comparison. If compare is Null, an error occurs. If compare is omitted, the Option Compare setting determines the type of comparison. Specify a valid LCID (LocaleID) to use locale-specific rules in the comparison.
 - `InStrB([Start As Variant], [String1 As Variant], [String2 As Variant], [Compare As VbCompareMethod]) As Variant`
 - `_B_str_Left(String As String, Length As Long) As String`
 - `_B_var_Left(String As Variant, Length As Long) As Variant`
@@ -17754,7 +17754,7 @@ Indicates units of time measurement.
   Returns a Variant (Integer) indicating the result of a string comparison.
     - `String1 As Variant` (required): Required. Any valid string expression.
     - `String2 As Variant` (required): Required. Any valid string expression.
-    - `Compare As VbCompareMethod` (optional): Optional. Specifies the type of string comparison. If the _compare_ argument is Null, an error occurs. If _compare_ is omitted, the Option Compare setting determines the type of comparison.
+    - `Compare As VbCompareMethod` (optional): Optional. Specifies the type of string comparison. If the compare argument is Null, an error occurs. If compare is omitted, the Option Compare setting determines the type of comparison.
 - `_B_str_Format(Expression As Variant, [Format As Variant], [FirstDayOfWeek As VbDayOfWeek], [FirstWeekOfYear As VbFirstWeekOfYear]) As String`
 - `_B_var_Format(Expression As Variant, [Format As Variant], [FirstDayOfWeek As VbDayOfWeek], [FirstWeekOfYear As VbFirstWeekOfYear]) As Variant`
 - `Len(Expression As Variant) As Variant`  
@@ -17792,7 +17792,7 @@ Indicates units of time measurement.
     - `GroupDigits As VbTriState` (optional): Optional. Tristate constant that indicates whether or not numbers are grouped by using the group delimiter specified in the computer's regional settings. See Settings section for values.
 - `WeekdayName(Weekday As Long, [Abbreviate As Boolean], [FirstDayOfWeek As VbDayOfWeek]) As String`  
   Returns a string indicating the specified day of the week.
-    - `Weekday As Long` (required): Required. The numeric designation for the day of the week. Numeric value of each day depends on setting of the _firstdayofweek_ setting.
+    - `Weekday As Long` (required): Required. The numeric designation for the day of the week. Numeric value of each day depends on setting of the firstdayofweek setting.
     - `Abbreviate As Boolean` (optional): Optional. Boolean value that indicates if the weekday name is to be abbreviated. If omitted, the default is False, which means that the weekday name is not abbreviated.
     - `FirstDayOfWeek As VbDayOfWeek` (optional): Optional. Numeric value indicating the first day of the week. See Settings section for values.
 - `MonthName(Month As Long, [Abbreviate As Boolean]) As String`  
@@ -17804,7 +17804,7 @@ Indicates units of time measurement.
     - `Expression As String` (required): Required. String expression containing substring to replace.
     - `Find As String` (required): Required. Substring being searched for.
     - `Replace As String` (required): Required. Replacement substring.
-    - `Start As Long` (optional): Optional. Start position for the substring of _expression_ to be searched and returned. If omitted, 1 is assumed.
+    - `Start As Long` (optional): Optional. Start position for the substring of expression to be searched and returned. If omitted, 1 is assumed.
     - `Count As Long` (optional): Optional. Number of substring substitutions to perform. If omitted, the default value is -1, which means, make all possible substitutions.
     - `Compare As VbCompareMethod` (optional): Optional. Numeric value indicating the kind of comparison to use when evaluating substrings. See Settings section for values.
 - `StrReverse(Expression As String) As String`  
@@ -17812,23 +17812,23 @@ Indicates units of time measurement.
 - `Join(SourceArray As Variant, [Delimiter As Variant]) As String`  
   Returns a string created by joining a number of substrings contained in an array.
     - `SourceArray As Variant` (required): Required. One-dimensional array containing substrings to be joined.
-    - `Delimiter As Variant` (optional): Optional. String character used to separate the substrings in the returned string. If omitted, the space character (" ") is used. If _delimiter_ is a zero-length string (""), all items in the list are concatenated with no delimiters.
+    - `Delimiter As Variant` (optional): Optional. String character used to separate the substrings in the returned string. If omitted, the space character (" ") is used. If delimiter is a zero-length string (""), all items in the list are concatenated with no delimiters.
 - `Filter(SourceArray As Variant, Match As String, [Include As Boolean], [Compare As VbCompareMethod]) As Variant`  
   Returns a zero-based array containing a subset of a string array based on a specified filter criteria.
     - `SourceArray As Variant` (required): Required. One-dimensional array of strings to be searched.
     - `Match As String` (required): Required. String to search for.
-    - `Include As Boolean` (optional): Optional. Boolean value indicating whether to return substrings that include or exclude _match_. If _include_ is True, Filter returns the subset of the array that contains _match_ as a substring. If _include_ is False, Filter returns the subset of the array that does not contain _match_ as a substring.
+    - `Include As Boolean` (optional): Optional. Boolean value indicating whether to return substrings that include or exclude match. If include is True, Filter returns the subset of the array that contains match as a substring. If include is False, Filter returns the subset of the array that does not contain match as a substring.
     - `Compare As VbCompareMethod` (optional): Optional. Numeric value indicating the kind of string comparison to use. See Settings section for values.
 - `InStrRev(StringCheck As String, StringMatch As String, [Start As Long], [Compare As VbCompareMethod]) As Long`  
   Returns the position of an occurrence of one string within another, from the end of the string.
     - `StringCheck As String` (required): Required. String expression being searched.
     - `StringMatch As String` (required): Required. String expression being searched for.
-    - `Start As Long` (optional): Optional. Numeric expression that sets the starting position for each search. If omitted, -1 is used, which means that the search begins at the last character position. If _start_ contains Null, an error occurs.
+    - `Start As Long` (optional): Optional. Numeric expression that sets the starting position for each search. If omitted, -1 is used, which means that the search begins at the last character position. If start contains Null, an error occurs.
     - `Compare As VbCompareMethod` (optional): Optional. Numeric value indicating the kind of comparison to use when evaluating substrings. If omitted, a binary comparison is performed. See the Settings section for values.
 - `Split(Expression As String, [Delimiter As Variant], [Limit As Long], [Compare As VbCompareMethod]) As Variant`  
   Returns a zero-based, one-dimensional array containing a specified number of substrings.
-    - `Expression As String` (required): Required. String expression containing substrings and delimiters. If _expression_ is a zero-length string(""), Split returns an empty array, that is, an array with no elements and no data.
-    - `Delimiter As Variant` (optional): Optional. String character used to identify substring limits. If omitted, the space character (" ") is assumed to be the delimiter. If _delimiter_ is a zero-length string, a single-element array containing the entire _expression_ string is returned.
+    - `Expression As String` (required): Required. String expression containing substrings and delimiters. If expression is a zero-length string(""), Split returns an empty array, that is, an array with no elements and no data.
+    - `Delimiter As Variant` (optional): Optional. String character used to identify substring limits. If omitted, the space character (" ") is assumed to be the delimiter. If delimiter is a zero-length string, a single-element array containing the entire expression string is returned.
     - `Limit As Long` (optional): Optional. Number of substrings to be returned; -1 indicates that all substrings are returned.
     - `Compare As VbCompareMethod` (optional): Optional. Numeric value indicating the kind of comparison to use when evaluating substrings. See Settings section for values.
 

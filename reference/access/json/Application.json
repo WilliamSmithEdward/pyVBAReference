@@ -399,13 +399,13 @@
           "name": "Argument2",
           "type": "Variant",
           "optional": true,
-          "description": "The text to be displayed left-aligned in the status bar. This argument is required when the _Action_ argument is acSysCmdInitMeter, acSysCmdUpdateMeter, or acSysCmdSetStatus; this argument isn't valid for other _Action_ argument values. NOTE: When you specify the acSysCmdGetObjectState value for the _Action_ parameter, you must specify the appropriate AcObjectType constant."
+          "description": "The text to be displayed left-aligned in the status bar. This argument is required when the Action argument is acSysCmdInitMeter, acSysCmdUpdateMeter, or acSysCmdSetStatus; this argument isn't valid for other Action argument values. NOTE: When you specify the acSysCmdGetObjectState value for the Action parameter, you must specify the appropriate AcObjectType constant."
         },
         {
           "name": "Argument3",
           "type": "Variant",
           "optional": true,
-          "description": "A numeric expression that controls the display of the progress meter. This argument is required when the _Action_ argument is acSysCmdInitMeter; this argument isn't valid for other _Action_ argument values. NOTE: When you specify the acSysCmdGetObjectState value for the _Action_ parameter, you must specify the name of the database object."
+          "description": "A numeric expression that controls the display of the progress meter. This argument is required when the Action argument is acSysCmdInitMeter; this argument isn't valid for other Action argument values. NOTE: When you specify the acSysCmdGetObjectState value for the Action parameter, you must specify the name of the database object."
         }
       ]
     },
@@ -516,13 +516,13 @@
           "name": "Header",
           "type": "Integer",
           "optional": false,
-          "description": "Indicates that a field or expression will have an associated group header. If the _Header_ argument is True (1), the field or expression will have a group header. If the _Header_ argument is False (0), the field or expression won't. You can create a header by setting the argument to True."
+          "description": "Indicates that a field or expression will have an associated group header. If the Header argument is True (1), the field or expression will have a group header. If the Header argument is False (0), the field or expression won't. You can create a header by setting the argument to True."
         },
         {
           "name": "Footer",
           "type": "Integer",
           "optional": false,
-          "description": "Indicates a field or expression will have an associated group footer. If the _Footer_ argument is True (1), the field or expression will have a group footer. If the _Footer_ argument is False (0), the field or expression won't. You can create a footer by setting the argument to True."
+          "description": "Indicates a field or expression will have an associated group footer. If the Footer argument is True (1), the field or expression will have a group footer. If the Footer argument is False (0), the field or expression won't. You can create a footer by setting the argument to True."
         }
       ]
     },
@@ -537,7 +537,7 @@
           "name": "Expr",
           "type": "String",
           "optional": false,
-          "description": "An expression that identifies the field for which you want to find the minimum or maximum value. It can be a string expression identifying a field in a table or query, or it can be an expression that performs calculation on data in that field. In _expr_, you can include the name of a field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
+          "description": "An expression that identifies the field for which you want to find the minimum or maximum value. It can be a string expression identifying a field in a table or query, or it can be an expression that performs calculation on data in that field. In expr, you can include the name of a field in a table, a control on a form, a constant, or a function. If expr includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
         },
         {
           "name": "Domain",
@@ -549,7 +549,7 @@
           "name": "Criteria",
           "type": "Variant",
           "optional": true,
-          "description": "An optional string expression used to restrict the range of data on which the DMin function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If _criteria_ is omitted, the DMin function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DMin function returns a Null."
+          "description": "An optional string expression used to restrict the range of data on which the DMin function is performed. For example, criteria is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If criteria is omitted, the DMin function evaluates expr against the entire domain. Any field that is included in criteria must also be a field in domain; otherwise, the DMin function returns a Null."
         }
       ]
     },
@@ -564,7 +564,7 @@
           "name": "Expr",
           "type": "String",
           "optional": false,
-          "description": "An expression that identifies the field for which you want to find the minimum or maximum value. It can be a string expression identifying a field in a table or query, or it can be an expression that performs calculation on data in that field. In _expr_, you can include the name of a field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
+          "description": "An expression that identifies the field for which you want to find the minimum or maximum value. It can be a string expression identifying a field in a table or query, or it can be an expression that performs calculation on data in that field. In expr, you can include the name of a field in a table, a control on a form, a constant, or a function. If expr includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
         },
         {
           "name": "Domain",
@@ -576,7 +576,7 @@
           "name": "Criteria",
           "type": "Variant",
           "optional": true,
-          "description": "An optional string expression used to restrict the range of data on which the DMax function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If _criteria_ is omitted, the DMax function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DMax function returns a Null."
+          "description": "An optional string expression used to restrict the range of data on which the DMax function is performed. For example, criteria is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If criteria is omitted, the DMax function evaluates expr against the entire domain. Any field that is included in criteria must also be a field in domain; otherwise, the DMax function returns a Null."
         }
       ]
     },
@@ -591,7 +591,7 @@
           "name": "Expr",
           "type": "String",
           "optional": false,
-          "description": "An expression that identifies the numeric field whose values you want to total. It can be a string expression identifying a field in a table or query, or it can be an expression that performs a calculation on data in that field. In _expr_, you can include the name of a field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
+          "description": "An expression that identifies the numeric field whose values you want to total. It can be a string expression identifying a field in a table or query, or it can be an expression that performs a calculation on data in that field. In expr, you can include the name of a field in a table, a control on a form, a constant, or a function. If expr includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
         },
         {
           "name": "Domain",
@@ -603,7 +603,7 @@
           "name": "Criteria",
           "type": "Variant",
           "optional": true,
-          "description": "An optional string expression used to restrict the range of data on which the DSum function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If _criteria_ is omitted, the DSum function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DSum function returns a Null."
+          "description": "An optional string expression used to restrict the range of data on which the DSum function is performed. For example, criteria is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If criteria is omitted, the DSum function evaluates expr against the entire domain. Any field that is included in criteria must also be a field in domain; otherwise, the DSum function returns a Null."
         }
       ]
     },
@@ -618,7 +618,7 @@
           "name": "Expr",
           "type": "String",
           "optional": false,
-          "description": "An expression that identifies the field containing the numeric data that you want to average. It can be a string expression identifying a field in a table or query, or it can be an expression that performs a calculation on data in that field. In _Expr__, you can include the name of a field in a table, a control on a form, a constant, or a function. If _Expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
+          "description": "An expression that identifies the field containing the numeric data that you want to average. It can be a string expression identifying a field in a table or query, or it can be an expression that performs a calculation on data in that field. In Expr_, you can include the name of a field in a table, a control on a form, a constant, or a function. If Expr includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
         },
         {
           "name": "Domain",
@@ -630,7 +630,7 @@
           "name": "Criteria",
           "type": "Variant",
           "optional": true,
-          "description": "An optional string expression used to restrict the range of data on which the DAvg function is performed. For example, _Criteria_ is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If _Criteria_ is omitted, the DAvg function evaluates _Expr_ against the entire domain. Any field that is included in _Criteria_ must also be a field in _Domain_; otherwise, the DAvg function returns a Null."
+          "description": "An optional string expression used to restrict the range of data on which the DAvg function is performed. For example, Criteria is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If Criteria is omitted, the DAvg function evaluates Expr against the entire domain. Any field that is included in Criteria must also be a field in Domain; otherwise, the DAvg function returns a Null."
         }
       ]
     },
@@ -645,7 +645,7 @@
           "name": "Expr",
           "type": "String",
           "optional": false,
-          "description": "An expression that identifies the field whose value you want to return. It can be a string expression identifying a field in a table or query, or it can be an expression that performs a calculation on data in that field. In _expr_, you can include the name of a field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
+          "description": "An expression that identifies the field whose value you want to return. It can be a string expression identifying a field in a table or query, or it can be an expression that performs a calculation on data in that field. In expr, you can include the name of a field in a table, a control on a form, a constant, or a function. If expr includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
         },
         {
           "name": "Domain",
@@ -657,7 +657,7 @@
           "name": "Criteria",
           "type": "Variant",
           "optional": true,
-          "description": "An optional string expression used to restrict the range of data on which the DLookup function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If _criteria_ is omitted, the DLookup function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DLookup function returns a Null."
+          "description": "An optional string expression used to restrict the range of data on which the DLookup function is performed. For example, criteria is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If criteria is omitted, the DLookup function evaluates expr against the entire domain. Any field that is included in criteria must also be a field in domain; otherwise, the DLookup function returns a Null."
         }
       ]
     },
@@ -672,7 +672,7 @@
           "name": "Expr",
           "type": "String",
           "optional": false,
-          "description": "An expression that identifies the field from which you want to find the first or last value. It can be either a string expression identifying a field in a table or query, or an expression that performs a calculation on data in that field. In _expr_, you can include the name of a field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
+          "description": "An expression that identifies the field from which you want to find the first or last value. It can be either a string expression identifying a field in a table or query, or an expression that performs a calculation on data in that field. In expr, you can include the name of a field in a table, a control on a form, a constant, or a function. If expr includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
         },
         {
           "name": "Domain",
@@ -684,7 +684,7 @@
           "name": "Criteria",
           "type": "Variant",
           "optional": true,
-          "description": "An optional string expression used to restrict the range of data on which the DLast function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the wrd WHERE. If _criteria_ is omitted, the DLast function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DLast function returns a Null."
+          "description": "An optional string expression used to restrict the range of data on which the DLast function is performed. For example, criteria is often equivalent to the WHERE clause in an SQL expression, without the wrd WHERE. If criteria is omitted, the DLast function evaluates expr against the entire domain. Any field that is included in criteria must also be a field in domain; otherwise, the DLast function returns a Null."
         }
       ]
     },
@@ -699,7 +699,7 @@
           "name": "Expr",
           "type": "String",
           "optional": false,
-          "description": "An expression that identifies the numeric field on which you want to find the variance. It can be a string expression identifying a field from a table or query, or it can be an expression that performs a calculation on data in that field. In _expr_, you can include the name field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function. Any field included in _expr_ must be a numeric field."
+          "description": "An expression that identifies the numeric field on which you want to find the variance. It can be a string expression identifying a field from a table or query, or it can be an expression that performs a calculation on data in that field. In expr, you can include the name field in a table, a control on a form, a constant, or a function. If expr includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function. Any field included in expr must be a numeric field."
         },
         {
           "name": "Domain",
@@ -711,7 +711,7 @@
           "name": "Criteria",
           "type": "Variant",
           "optional": true,
-          "description": "An optional string expression used to restrict the range of data on which the DVar function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If _criteria_ is omitted, the DVar function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DVar function returns a Null."
+          "description": "An optional string expression used to restrict the range of data on which the DVar function is performed. For example, criteria is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If criteria is omitted, the DVar function evaluates expr against the entire domain. Any field that is included in criteria must also be a field in domain; otherwise, the DVar function returns a Null."
         }
       ]
     },
@@ -726,7 +726,7 @@
           "name": "Expr",
           "type": "String",
           "optional": false,
-          "description": "An expression that identifies the numeric field on which you want to find the variance. It can be a string expression identifying a field from a table or query, or it can be an expression that performs a calculation on data in that field. In _expr_, you can include the name field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function. Any field included in _expr_ must be a numeric field."
+          "description": "An expression that identifies the numeric field on which you want to find the variance. It can be a string expression identifying a field from a table or query, or it can be an expression that performs a calculation on data in that field. In expr, you can include the name field in a table, a control on a form, a constant, or a function. If expr includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function. Any field included in expr must be a numeric field."
         },
         {
           "name": "Domain",
@@ -738,7 +738,7 @@
           "name": "Criteria",
           "type": "Variant",
           "optional": true,
-          "description": "An optional string expression used to restrict the range of data on which the DVarP function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If _criteria_ is omitted, the DVarP function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DVarP function returns a Null."
+          "description": "An optional string expression used to restrict the range of data on which the DVarP function is performed. For example, criteria is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If criteria is omitted, the DVarP function evaluates expr against the entire domain. Any field that is included in criteria must also be a field in domain; otherwise, the DVarP function returns a Null."
         }
       ]
     },
@@ -753,7 +753,7 @@
           "name": "Expr",
           "type": "String",
           "optional": false,
-          "description": "An expression that identifies the numeric field on which you want to find the standard deviation. It can be a string expression identifying a field from a table or query, or it can be an expression that performs a calculation on data in that field. In _expr_, you can include the name of a field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
+          "description": "An expression that identifies the numeric field on which you want to find the standard deviation. It can be a string expression identifying a field from a table or query, or it can be an expression that performs a calculation on data in that field. In expr, you can include the name of a field in a table, a control on a form, a constant, or a function. If expr includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
         },
         {
           "name": "Domain",
@@ -765,7 +765,7 @@
           "name": "Criteria",
           "type": "Variant",
           "optional": true,
-          "description": "An optional string expression used to restrict the range of data on which the DStDev function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If _criteria_ is omitted, the DStDev function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DStDev function will return a Null."
+          "description": "An optional string expression used to restrict the range of data on which the DStDev function is performed. For example, criteria is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If criteria is omitted, the DStDev function evaluates expr against the entire domain. Any field that is included in criteria must also be a field in domain; otherwise, the DStDev function will return a Null."
         }
       ]
     },
@@ -780,7 +780,7 @@
           "name": "Expr",
           "type": "String",
           "optional": false,
-          "description": "An expression that identifies the numeric field on which you want to find the standard deviation. It can be a string expression identifying a field from a table or query, or it can be an expression that performs a calculation on data in that field. In _expr_, you can include the name of a field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
+          "description": "An expression that identifies the numeric field on which you want to find the standard deviation. It can be a string expression identifying a field from a table or query, or it can be an expression that performs a calculation on data in that field. In expr, you can include the name of a field in a table, a control on a form, a constant, or a function. If expr includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
         },
         {
           "name": "Domain",
@@ -792,7 +792,7 @@
           "name": "Criteria",
           "type": "Variant",
           "optional": true,
-          "description": "An optional string expression used to restrict the range of data on which the DStDevP function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If _criteria_ is omitted, the DStDevP function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DStDevP function will return a Null."
+          "description": "An optional string expression used to restrict the range of data on which the DStDevP function is performed. For example, criteria is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If criteria is omitted, the DStDevP function evaluates expr against the entire domain. Any field that is included in criteria must also be a field in domain; otherwise, the DStDevP function will return a Null."
         }
       ]
     },
@@ -807,7 +807,7 @@
           "name": "Expr",
           "type": "String",
           "optional": false,
-          "description": "An expression that identifies the field from which you want to find the first or last value. It can be either a string expression identifying a field in a table or query, or an expression that performs a calculation on data in that field. In _expr_, you can include the name of a field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
+          "description": "An expression that identifies the field from which you want to find the first or last value. It can be either a string expression identifying a field in a table or query, or an expression that performs a calculation on data in that field. In expr, you can include the name of a field in a table, a control on a form, a constant, or a function. If expr includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
         },
         {
           "name": "Domain",
@@ -819,7 +819,7 @@
           "name": "Criteria",
           "type": "Variant",
           "optional": true,
-          "description": "An optional string expression used to restrict the range of data on which the DFirst function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the wrd WHERE. If _criteria_ is omitted, the DFirst function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DFirst function returns a Null."
+          "description": "An optional string expression used to restrict the range of data on which the DFirst function is performed. For example, criteria is often equivalent to the WHERE clause in an SQL expression, without the wrd WHERE. If criteria is omitted, the DFirst function evaluates expr against the entire domain. Any field that is included in criteria must also be a field in domain; otherwise, the DFirst function returns a Null."
         }
       ]
     },
@@ -834,7 +834,7 @@
           "name": "Expr",
           "type": "String",
           "optional": false,
-          "description": "An expression that identifies the field for which you want to count records. It can be a string expression identifying a field in a table or query, or it can be an expression that performs a calculation on data in that field. In _expr_, you can include the name of a field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
+          "description": "An expression that identifies the field for which you want to count records. It can be a string expression identifying a field in a table or query, or it can be an expression that performs a calculation on data in that field. In expr, you can include the name of a field in a table, a control on a form, a constant, or a function. If expr includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
         },
         {
           "name": "Domain",
@@ -846,7 +846,7 @@
           "name": "Criteria",
           "type": "Variant",
           "optional": true,
-          "description": "An optional string expression used to restrict the range of data on which the DCount function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If _criteria_ is omitted, the DCount function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DCount function returns a Null."
+          "description": "An optional string expression used to restrict the range of data on which the DCount function is performed. For example, criteria is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If criteria is omitted, the DCount function evaluates expr against the entire domain. Any field that is included in criteria must also be a field in domain; otherwise, the DCount function returns a Null."
         }
       ]
     },
@@ -861,7 +861,7 @@
           "name": "StringExpr",
           "type": "String",
           "optional": false,
-          "description": "An expression that evaluates to an alphanumeric text string. For example, _stringexpr_ can be a function that returns a string or a numeric value, or it can be a reference to a control on a form. The _stringexpr_ argument must evaluate to a string or numeric value; it can't evaluate to a Microsoft Access object."
+          "description": "An expression that evaluates to an alphanumeric text string. For example, stringexpr can be a function that returns a string or a numeric value, or it can be a reference to a control on a form. The stringexpr argument must evaluate to a string or numeric value; it can't evaluate to a Microsoft Access object."
         }
       ]
     },
@@ -883,13 +883,13 @@
           "name": "Application",
           "type": "String",
           "optional": false,
-          "description": "A string expression identifying an application that can participate in a DDE conversation. Usually, the _application_ argument is the name of an .exe file (without the .exe extension) for a Microsoft Windows-based application, such as Microsoft Excel."
+          "description": "A string expression identifying an application that can participate in a DDE conversation. Usually, the application argument is the name of an .exe file (without the .exe extension) for a Microsoft Windows-based application, such as Microsoft Excel."
         },
         {
           "name": "Topic",
           "type": "String",
           "optional": false,
-          "description": "A string expression that is the name of a topic recognized by the _application_ argument. Check the application's documentation for a list of topics."
+          "description": "A string expression that is the name of a topic recognized by the application argument. Check the application's documentation for a list of topics."
         }
       ]
     },
@@ -1057,7 +1057,7 @@
           "name": "Procedure",
           "type": "String",
           "optional": false,
-          "description": "The name of the Function or Sub procedure to be run. If you are calling a procedure in another database, use the project name and the procedure name separated by a dot in the form: \"_projectname_._procedurename_\" If you execute Visual Basic code containing the Run method in a library database, Access looks for the procedure first in the library database, and then in the current database."
+          "description": "The name of the Function or Sub procedure to be run. If you are calling a procedure in another database, use the project name and the procedure name separated by a dot in the form: \"projectname.procedurename\" If you execute Visual Basic code containing the Run method in a library database, Access looks for the procedure first in the library database, and then in the current database."
         },
         {
           "name": "Arg1",
@@ -1258,7 +1258,7 @@
           "name": "ValueIfNull",
           "type": "Variant",
           "optional": true,
-          "description": "Optional. A Variant that supplies a value to be returned if the variant argument is Null. This argument enables you to return a value other than zero or a zero-length string. NOTE: If you use the Nz function in an expression in a query without using the _ValueIfNull_ argument, the results will be a zero-length string in the fields that contain Null values."
+          "description": "Optional. A Variant that supplies a value to be returned if the variant argument is Null. This argument enables you to return a value other than zero or a zero-length string. NOTE: If you use the Nz function in an expression in a query without using the ValueIfNull argument, the results will be a zero-length string in the fields that contain Null values."
         }
       ]
     },
@@ -1339,7 +1339,7 @@
           "name": "SubAddress",
           "type": "String",
           "optional": true,
-          "description": "A string expression that evaluates to a named location in the document specified by the _address_ argument. The default is a zero-length string (\" \")."
+          "description": "A string expression that evaluates to a named location in the document specified by the address argument. The default is a zero-length string (\" \")."
         },
         {
           "name": "NewWindow",
@@ -1357,19 +1357,19 @@
           "name": "ExtraInfo",
           "type": "Variant",
           "optional": true,
-          "description": "A string or an array of Byte data that specifies additional information for navigating to a hyperlink. For example, this argument may be used to specify a search parameter for an .asp or .idc file. In your web browser, the _extrainfo_ argument may appear after the hyperlink address, separated from the address by a question mark (?). You don't need to include the question mark when you specify the _extrainfo_ argument."
+          "description": "A string or an array of Byte data that specifies additional information for navigating to a hyperlink. For example, this argument may be used to specify a search parameter for an .asp or .idc file. In your web browser, the extrainfo argument may appear after the hyperlink address, separated from the address by a question mark (?). You don't need to include the question mark when you specify the extrainfo argument."
         },
         {
           "name": "Method",
           "type": "MsoExtraInfoMethod",
           "optional": true,
-          "description": "An MsoExtraInfoMethod constant that specifies how the _extrainfo_ argument is attached."
+          "description": "An MsoExtraInfoMethod constant that specifies how the extrainfo argument is attached."
         },
         {
           "name": "HeaderInfo",
           "type": "String",
           "optional": true,
-          "description": "A string that specifies header information. By default, the _headerinfo_ argument is a zero-length string."
+          "description": "A string that specifies header information. By default, the headerinfo argument is a zero-length string."
         }
       ]
     },
@@ -1563,7 +1563,7 @@
           "name": "FullPrecision",
           "type": "Variant",
           "optional": true,
-          "description": "A Boolean value where True (1) ignores the currency-specific rounding rules (called display precision in the _sourcecurrency_ argument description) and uses the 6-significant-digit conversion factor with no follow-up rounding. False (0) uses the currency-specific rounding rules to display the result. If the parameter is omitted, the default value is False."
+          "description": "A Boolean value where True (1) ignores the currency-specific rounding rules (called display precision in the sourcecurrency argument description) and uses the 6-significant-digit conversion factor with no follow-up rounding. False (0) uses the currency-specific rounding rules to display the result. If the parameter is omitted, the default value is False."
         },
         {
           "name": "TriangulationPrecision",
@@ -1753,7 +1753,7 @@
           "name": "DataSource",
           "type": "String",
           "optional": false,
-          "description": "The name of the AccessObject object to export. The default is the currently open object of the type specified by the _ObjectType_ argument."
+          "description": "The name of the AccessObject object to export. The default is the currently open object of the type specified by the ObjectType argument."
         },
         {
           "name": "DataTarget",
@@ -1801,7 +1801,7 @@
           "name": "AdditionalData",
           "type": "Variant",
           "optional": true,
-          "description": "Specifies additional tables to export. This argument is ignored if the _OtherFlags_ argument is set to acLiveReportSource."
+          "description": "Specifies additional tables to export. This argument is ignored if the OtherFlags argument is set to acLiveReportSource."
         }
       ]
     },
@@ -2179,7 +2179,7 @@
           "name": "CoreTable",
           "type": "String",
           "optional": false,
-          "description": "The table that contains the data that users would most want to create a relationship with when they instantiate the template. The _ApplicationPart_ argument must be set to True if you use this argument."
+          "description": "The table that contains the data that users would most want to create a relationship with when they instantiate the template. The ApplicationPart argument must be set to True if you use this argument."
         },
         {
           "name": "Category",

@@ -139,7 +139,7 @@
           "name": "Delimiter",
           "type": "Variant",
           "optional": true,
-          "description": "If the file is a text file and the _Format_ argument is 6, this argument is a string that specifies the character to be used as the delimiter. For example, use Chr(9) for tabs, use \",\" for commas, use \";\" for semicolons, or use a custom character. Only the first character of the string is used."
+          "description": "If the file is a text file and the Format argument is 6, this argument is a string that specifies the character to be used as the delimiter. For example, use Chr(9) for tabs, use \",\" for commas, use \";\" for semicolons, or use a custom character. Only the first character of the string is used."
         },
         {
           "name": "Editable",
@@ -250,19 +250,19 @@
           "name": "Other",
           "type": "Variant",
           "optional": true,
-          "description": "True to have the character specified by the _OtherChar_ argument be the delimiter (DataType must be xlDelimited). The default value is False."
+          "description": "True to have the character specified by the OtherChar argument be the delimiter (DataType must be xlDelimited). The default value is False."
         },
         {
           "name": "OtherChar",
           "type": "Variant",
           "optional": true,
-          "description": "Required if _Other_ is True. Specifies the delimiter character when _Other_ is True. If more than one character is specified, only the first character of the string is used; the remaining characters are ignored."
+          "description": "Required if Other is True. Specifies the delimiter character when Other is True. If more than one character is specified, only the first character of the string is used; the remaining characters are ignored."
         },
         {
           "name": "FieldInfo",
           "type": "Variant",
           "optional": true,
-          "description": "An array containing parse information for individual columns of data. The interpretation depends on the value of _DataType_. When the data is delimited, this argument is an array of two-element arrays, with each two-element array specifying the conversion options for a particular column. The first element is the column number (1-based), and the second element is one of the XlColumnDataType constants specifying how the column is parsed."
+          "description": "An array containing parse information for individual columns of data. The interpretation depends on the value of DataType. When the data is delimited, this argument is an array of two-element arrays, with each two-element array specifying the conversion options for a particular column. The first element is the column number (1-based), and the second element is one of the XlColumnDataType constants specifying how the column is parsed."
         },
         {
           "name": "TextVisualLayout",

@@ -37,8 +37,8 @@ Windows.Arrange arrangeStyle:=xlCascade
   Arranges the windows on the screen.
     - `ArrangeStyle As XlArrangeStyle` (optional): One of the constants of XlArrangeStyle specifying how the windows are arranged.
     - `ActiveWorkbook As Variant` (optional): True to arrange only the visible windows of the active workbook. False to arrange all windows. The default value is False.
-    - `SyncHorizontal As Variant` (optional): Ignored if _ActiveWorkbook_ is False or omitted. True to synchronize the windows of the active workbook when scrolling horizontally. False to not synchronize the windows. The default value is False.
-    - `SyncVertical As Variant` (optional): Ignored if _ActiveWorkbook_ is False or omitted. True to synchronize the windows of the active workbook when scrolling vertically. False to not synchronize the windows. The default value is False.
+    - `SyncHorizontal As Variant` (optional): Ignored if ActiveWorkbook is False or omitted. True to synchronize the windows of the active workbook when scrolling horizontally. False to not synchronize the windows. The default value is False.
+    - `SyncVertical As Variant` (optional): Ignored if ActiveWorkbook is False or omitted. True to synchronize the windows of the active workbook when scrolling vertically. False to not synchronize the windows. The default value is False.
 - `CompareSideBySideWith(WindowName As Variant) As Boolean`  
   Opens two windows in side-by-side mode. Returns a Boolean value.
     - `WindowName As Variant` (required): The name of the window.

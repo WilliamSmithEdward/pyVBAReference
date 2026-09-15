@@ -362,9 +362,9 @@ Represents a contiguous area in a document. Each Range object is defined by a st
     - `Format As Variant` (optional): A format listed in the Formats box in the Table AutoFormat dialog box (Table menu). Can be any of the WdTableFormat constants. A border is applied to the cells in the table by default.
     - `Style As Variant` (optional): The attributes of the AutoFormat specified by Format that are applied to the table.
     - `LinkToSource As Variant` (optional): True to establish a link between the new table and the data source.
-    - `Connection As Variant` (optional): A range within which to perform the query specified by _SQLStatement_.
+    - `Connection As Variant` (optional): A range within which to perform the query specified by SQLStatement.
     - `SQLStatement As Variant` (optional): An optional query string that retrieves a subset of the data in a primary data source to be inserted into the document.
-    - `SQLStatement1 As Variant` (optional): If the query string is longer than 255 characters, _SQLStatement_ denotes the first portion of the string and _SQLStatement1_ denotes the second portion.
+    - `SQLStatement1 As Variant` (optional): If the query string is longer than 255 characters, SQLStatement denotes the first portion of the string and SQLStatement1 denotes the second portion.
     - `PasswordDocument As Variant` (optional): The password (if any) required to open the data source. (See Remarks below.)
     - `PasswordTemplate As Variant` (optional): If the data source is a Word document, this argument is the password (if any) required to open the attached template. (See Remarks below.)
     - `WritePasswordDocument As Variant` (optional): The password required to save changes to the document. (See Remarks below.)

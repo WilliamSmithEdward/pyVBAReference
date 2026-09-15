@@ -231,7 +231,7 @@ End Sub
 - `WindowLeft As Integer  (read-only)`  
   Returns an Integer indicating the screen position in twips of the left edge of a report relative to the left edge of the Microsoft Access window. Read-only.
 - `OpenArgs As Variant  (read/write)`  
-  Determines the string expression specified by the _OpenArgs_ argument of the OpenReport method that opened a report. Read/write Variant.
+  Determines the string expression specified by the OpenArgs argument of the OpenReport method that opened a report. Read/write Variant.
 - `Printer As _Printer  (read/write)`  
   Returns or sets a Printer object representing the default printer on the current system. Read/write.
 - `Moveable As Boolean  (read/write)`  
@@ -315,17 +315,17 @@ End Sub
 
 - `Circle(flags As Integer, X As Single, Y As Single, radius As Single, color As Long, start As Single, end As Single, aspect As Single)`  
   The Circle method draws a circle, an ellipse, or an arc on a Report object when the Print event occurs.
-    - `radius As Single` (required): Indicates the radius of the circle, ellipse, or arc. The Scale properties (ScaleMode, ScaleLeft, ScaleTop, ScaleHeight, and ScaleWidth) of the Report object specified by the _Object_ argument determine the unit of measure used. By default, distances are measured in twips.
+    - `radius As Single` (required): Indicates the radius of the circle, ellipse, or arc. The Scale properties (ScaleMode, ScaleLeft, ScaleTop, ScaleHeight, and ScaleWidth) of the Report object specified by the Object argument determine the unit of measure used. By default, distances are measured in twips.
     - `color As Long` (required): Indicates the RGB (red-green-blue) color of the circle outline. If this argument is omitted, the value of the ForeColor property is used. You can also use the RGB function or QBColor function to specify the color.
-    - `start As Single` (required): When a partial circle or ellipse is drawn, the _Start_ argument specifies (in radians) the beginning position of the arc. The default value for the _Start_ argument is 0 radians. The range is -2 pi radians to 2 pi radians.
-    - `end As Single` (required): When a partial circle or ellipse is drawn, the _End_ argument specifies (in radians) the end position of the arc. The default value for the _End_ argument is 2 pi radians. The range is -2 pi radians to 2 pi radians.
+    - `start As Single` (required): When a partial circle or ellipse is drawn, the Start argument specifies (in radians) the beginning position of the arc. The default value for the Start argument is 0 radians. The range is -2 pi radians to 2 pi radians.
+    - `end As Single` (required): When a partial circle or ellipse is drawn, the End argument specifies (in radians) the end position of the arc. The default value for the End argument is 2 pi radians. The range is -2 pi radians to 2 pi radians.
     - `aspect As Single` (required): Indicates the aspect ratio of the circle. The default value is 1.0, which yields a perfect (nonelliptical) circle on any screen.
 - `Line(flags As Integer, x1 As Single, y1 As Single, x2 As Single, y2 As Single, color As Long)`  
   The Line method draws lines and rectangles on a Report object when the Print event occurs.
     - `color As Long` (required): Indicates the RGB (red-green-blue) color used to draw the line. If this argument is omitted, the value of the ForeColor property is used. You can also use the RGB function or QBColor function to specify the color.
 - `PSet(flags As Integer, X As Single, Y As Single, color As Long)`  
   The PSet method sets a point on a Report object to a specified color when the Print event occurs.
-    - `flags As Integer` (required): A keyword that indicates that the coordinates are relative to the current graphics position given by the settings for the CurrentX and CurrentY properties of the _Object_ argument.
+    - `flags As Integer` (required): A keyword that indicates that the coordinates are relative to the current graphics position given by the settings for the CurrentX and CurrentY properties of the Object argument.
     - `X As Single` (required): The horizontal coordinate of the point to set.
     - `Y As Single` (required): The vertical coordinate of the point to set.
     - `color As Long` (required): The RGB (red-green-blue) color to set the point to. If this argument is omitted, the value of the ForeColor property is used. You can also use the RGB function or QBColor function to specify the color.
@@ -357,7 +357,7 @@ End Sub
 
 - `Open(Cancel As Integer)`  
   The Open event occurs before a report is previewed or printed.
-    - `Cancel As Integer` (required): The setting determines if the opening of the form or report occurs. Setting the _Cancel_ argument to True (1) cancels the opening of the form or report.
+    - `Cancel As Integer` (required): The setting determines if the opening of the form or report occurs. Setting the Cancel argument to True (1) cancels the opening of the form or report.
 - `Close()`  
   The Close event occurs when a report is closed and removed from the screen.
 - `Activate()`  
@@ -366,11 +366,11 @@ End Sub
   The Deactivate event occurs when a report loses the focus to a Table, Query, Form, Report, Macro, or Module window, or to the Database window.
 - `Error(DataErr As Integer, Response As Integer)`  
   The Error event occurs when a run-time error is produced in Microsoft Access when a report has the focus.
-    - `DataErr As Integer` (required): The error code returned by the Err object when an error occurs. Use the _DataErr_ argument with the Error function to map the number to the corresponding error message.
-    - `Response As Integer` (required): The setting determines whether or not an error message is displayed. The _Response_ argument can be one of the following intrinsic constants: <ul><li><b>acDataErrContinue</b> Ignore the error and continue without displaying the default Microsoft Access error message. You can supply a custom error message in place of the default error message.</li><li><b>acDataErrDisplay</b> (Default) Display the default Access error message.</li></ul>
+    - `DataErr As Integer` (required): The error code returned by the Err object when an error occurs. Use the DataErr argument with the Error function to map the number to the corresponding error message.
+    - `Response As Integer` (required): The setting determines whether or not an error message is displayed. The Response argument can be one of the following intrinsic constants: <ul><li><b>acDataErrContinue</b> Ignore the error and continue without displaying the default Microsoft Access error message. You can supply a custom error message in place of the default error message.</li><li><b>acDataErrDisplay</b> (Default) Display the default Access error message.</li></ul>
 - `NoData(Cancel As Integer)`  
   The NoData event occurs after Microsoft Access formats a report for printing that has no data (the report is bound to an empty recordset), but before the report is printed. Use this event to cancel printing of a blank report.
-    - `Cancel As Integer` (required): The setting determines whether to print the report. Setting the _Cancel_ argument to True (1) prevents the report from printing. You can also use the CancelEvent method of the DoCmd object to cancel printing the report.
+    - `Cancel As Integer` (required): The setting determines whether to print the report. Setting the Cancel argument to True (1) prevents the report from printing. You can also use the CancelEvent method of the DoCmd object to cancel printing the report.
 - `Page()`  
   The Page event occurs after Microsoft Access formats a page of a report for printing, but before the page is printed. Use this event to draw a border around the page, or add other graphic elements to the page.
 - `Current()`  
@@ -390,45 +390,45 @@ End Sub
   The Click event occurs when the user presses and then releases a mouse button over a report.
 - `DblClick(Cancel As Integer)`  
   The DblClick event occurs when the user presses and releases the left mouse button twice over a report within the double-click time limit of the system.
-    - `Cancel As Integer` (required): The setting determines if the DblClick event occurs. Setting the _Cancel_ argument to True (1) cancels the DblClick event.
+    - `Cancel As Integer` (required): The setting determines if the DblClick event occurs. Setting the Cancel argument to True (1) cancels the DblClick event.
 - `MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)`  
   The MouseDown event occurs when the user presses a mouse button.
-    - `Button As Integer` (required): The button that was pressed to trigger the event. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>
-    - `Shift As Integer` (required): The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>
-    - `X As Single` (required): The _x_ coordinate for the current location of the mouse pointer, in twips.
-    - `Y As Single` (required): The _y_ coordinate for the current location of the mouse pointer, in twips.
+    - `Button As Integer` (required): The button that was pressed to trigger the event. If you need to test for the Button argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>
+    - `Shift As Integer` (required): The state of the Shift, Ctrl, and Alt keys when the button specified by the Button argument was pressed or released. If you need to test for the Shift argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>
+    - `X As Single` (required): The x coordinate for the current location of the mouse pointer, in twips.
+    - `Y As Single` (required): The y coordinate for the current location of the mouse pointer, in twips.
 - `MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)`  
   The MouseMove event occurs when the user moves the mouse.
-    - `Button As Integer` (required): The button that was pressed or released when the event was triggered. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>
-    - `Shift As Integer` (required): The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>
-    - `X As Single` (required): The _x_ coordinate for the current location of the mouse pointer, in twips.
-    - `Y As Single` (required): The _y_ coordinate for the current location of the mouse pointer, in twips.
+    - `Button As Integer` (required): The button that was pressed or released when the event was triggered. If you need to test for the Button argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>
+    - `Shift As Integer` (required): The state of the Shift, Ctrl, and Alt keys when the button specified by the Button argument was pressed or released. If you need to test for the Shift argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>
+    - `X As Single` (required): The x coordinate for the current location of the mouse pointer, in twips.
+    - `Y As Single` (required): The y coordinate for the current location of the mouse pointer, in twips.
 - `MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)`  
   The MouseUp event occurs when the user releases a mouse button.
-    - `Button As Integer` (required): The button that was released to trigger the event. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>
-    - `Shift As Integer` (required): The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>
-    - `X As Single` (required): The _x_ coordinate for the current location of the mouse pointer, in twips.
-    - `Y As Single` (required): The _y_ coordinate for the current location of the mouse pointer, in twips.
+    - `Button As Integer` (required): The button that was released to trigger the event. If you need to test for the Button argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>
+    - `Shift As Integer` (required): The state of the Shift, Ctrl, and Alt keys when the button specified by the Button argument was pressed or released. If you need to test for the Shift argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>
+    - `X As Single` (required): The x coordinate for the current location of the mouse pointer, in twips.
+    - `Y As Single` (required): The y coordinate for the current location of the mouse pointer, in twips.
 - `KeyDown(KeyCode As Integer, Shift As Integer)`  
   The KeyDown event occurs when the user presses a key while a report has the focus. This event also occurs if you send a keystroke to a report by using the SendKeys action in a macro or the SendKeys statement in Visual Basic.
-    - `KeyCode As Integer` (required): A key code, such as vbKeyF1 (the F1 key) or vbKeyHome (the Home key). To specify key codes, use the intrinsic constants shown in the Object Browser. You can prevent an object from receiving a keystroke by setting _KeyCode_ to 0.
-    - `Shift As Integer` (required): The state of the Shift, Ctrl, and Alt keys at the time of the event. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>
+    - `KeyCode As Integer` (required): A key code, such as vbKeyF1 (the F1 key) or vbKeyHome (the Home key). To specify key codes, use the intrinsic constants shown in the Object Browser. You can prevent an object from receiving a keystroke by setting KeyCode to 0.
+    - `Shift As Integer` (required): The state of the Shift, Ctrl, and Alt keys at the time of the event. If you need to test for the Shift argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>
 - `KeyPress(KeyAscii As Integer)`  
   The KeyPress event occurs when the user presses and releases a key or key combination that corresponds to an ANSI code while a report has the focus. This event also occurs if you send an ANSI keystroke to a report by using the SendKeys action in a macro or the SendKeys statement in Visual Basic.
-    - `KeyAscii As Integer` (required): Returns a numeric ANSI key code. The _KeyAscii_ argument is passed by reference; changing it sends a different character to the object. Setting the _KeyAscii_ argument to 0 cancels the keystroke so that the object doesn't recognize that a key was pressed.
+    - `KeyAscii As Integer` (required): Returns a numeric ANSI key code. The KeyAscii argument is passed by reference; changing it sends a different character to the object. Setting the KeyAscii argument to 0 cancels the keystroke so that the object doesn't recognize that a key was pressed.
 - `KeyUp(KeyCode As Integer, Shift As Integer)`  
   The KeyUp event occurs when the user releases a key while a report has the focus. This event also occurs if you send a keystroke to a report by using the SendKeys action in a macro or the SendKeys statement in Visual Basic.
-    - `KeyCode As Integer` (required): A key code, such as vbKeyF1 (the F1 key) or vbKeyHome (the Home key). To specify key codes, use the intrinsic constants shown in the Object Browser. You can prevent an object from receiving a keystroke by setting _KeyCode_ to 0.
-    - `Shift As Integer` (required): The state of the Shift, Ctrl, and Alt keys at the time of the event. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>
+    - `KeyCode As Integer` (required): A key code, such as vbKeyF1 (the F1 key) or vbKeyHome (the Home key). To specify key codes, use the intrinsic constants shown in the Object Browser. You can prevent an object from receiving a keystroke by setting KeyCode to 0.
+    - `Shift As Integer` (required): The state of the Shift, Ctrl, and Alt keys at the time of the event. If you need to test for the Shift argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>
 - `Timer()`  
   The Timer event occurs for a report at regular intervals as specified by the report's TimerInterval property.
 - `Filter(Cancel As Integer, FilterType As Integer)`  
   Occurs when the user opens a filter window by choosing Advanced Filter/Sort.
-    - `Cancel As Integer` (required): The setting determines whether to open the filter window. Setting the _Cancel_ argument to True (1) prevents the filter window from opening. You can also use the CancelEvent method of the DoCmd object to cancel opening the filter window.
-    - `FilterType As Integer` (required): The filter window the user is trying to open. The _FilterType_ argument can be acFilterAdvanced.
+    - `Cancel As Integer` (required): The setting determines whether to open the filter window. Setting the Cancel argument to True (1) prevents the filter window from opening. You can also use the CancelEvent method of the DoCmd object to cancel opening the filter window.
+    - `FilterType As Integer` (required): The filter window the user is trying to open. The FilterType argument can be acFilterAdvanced.
 - `ApplyFilter(Cancel As Integer, ApplyType As Integer)`  
   Occurs when a filter is applied to a report.
-    - `Cancel As Integer` (required): The setting determines if the ApplyFilter event occurs. Setting the _Cancel_ argument to True cancels the ApplyFilter event and the filter is not applied to the report.
+    - `Cancel As Integer` (required): The setting determines if the ApplyFilter event occurs. Setting the Cancel argument to True cancels the ApplyFilter event and the filter is not applied to the report.
     - `ApplyType As Integer` (required): Returns the type of filter that was applied.
 - `MouseWheel(Page As Boolean, Count As Long)`  
   Occurs when the user rolls the mouse wheel in Report view or Layout view.

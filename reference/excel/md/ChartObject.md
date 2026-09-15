@@ -6,7 +6,7 @@
 
 Represents an embedded chart on a worksheet.
 
-**Remarks:** The ChartObject object acts as a container for a Chart object. Properties and methods for the ChartObject object control the appearance and size of the embedded chart on the worksheet. The ChartObject object is a member of the ChartObjects collection. The ChartObjects collection contains all the embedded charts on a single sheet. Use ChartObjects (_index_), where _index_ is the embedded chart index number or name, to return a single ChartObject object.
+**Remarks:** The ChartObject object acts as a container for a Chart object. Properties and methods for the ChartObject object control the appearance and size of the embedded chart on the worksheet. The ChartObject object is a member of the ChartObjects collection. The ChartObjects collection contains all the embedded charts on a single sheet. Use ChartObjects (index), where index is the embedded chart index number or name, to return a single ChartObject object.
 
 **Example:**
 

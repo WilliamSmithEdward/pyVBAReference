@@ -426,7 +426,7 @@
           "name": "SaveChanges",
           "type": "Variant",
           "optional": true,
-          "description": "If there are no changes to the workbook, this argument is ignored. If there are changes to the workbook and the workbook appears in other open windows, this argument is ignored. If there are changes to the workbook but the workbook doesn't appear in any other open windows, this argument specifies whether changes should be saved.If set to True, changes are saved to the workbook. If there is not yet a file name associated with the workbook, _FileName_ is used. If _FileName_ is omitted, the user is asked to supply a file name."
+          "description": "If there are no changes to the workbook, this argument is ignored. If there are changes to the workbook and the workbook appears in other open windows, this argument is ignored. If there are changes to the workbook but the workbook doesn't appear in any other open windows, this argument specifies whether changes should be saved.If set to True, changes are saved to the workbook. If there is not yet a file name associated with the workbook, FileName is used. If FileName is omitted, the user is asked to supply a file name."
         },
         {
           "name": "Filename",
@@ -508,13 +508,13 @@
           "name": "Sheets",
           "type": "Variant",
           "optional": true,
-          "description": "The number of sheets to scroll by. Use a positive number to scroll forward, a negative number to scroll backward, or 0 (zero) to not scroll at all. You must specify _Sheets_ if you don't specify _Position_."
+          "description": "The number of sheets to scroll by. Use a positive number to scroll forward, a negative number to scroll backward, or 0 (zero) to not scroll at all. You must specify Sheets if you don't specify Position."
         },
         {
           "name": "Position",
           "type": "Variant",
           "optional": true,
-          "description": "Use xlFirst to scroll to the first sheet, or use xlLast to scroll to the last sheet. You must specify _Position_ if you don't specify _Sheets_."
+          "description": "Use xlFirst to scroll to the first sheet, or use xlLast to scroll to the last sheet. You must specify Position if you don't specify Sheets."
         }
       ]
     },
@@ -606,7 +606,7 @@
       "name": "ScrollIntoView",
       "kind": "method",
       "signature": "ScrollIntoView(Left As Long, Top As Long, Width As Long, Height As Long, [Start As Variant])",
-      "description": "Scrolls the document window so that the contents of a specified rectangular area are displayed in either the upper-left or lower-right corner of the document window or pane (depending on the value of the _Start_ argument).",
+      "description": "Scrolls the document window so that the contents of a specified rectangular area are displayed in either the upper-left or lower-right corner of the document window or pane (depending on the value of the Start argument).",
       "returns": "void",
       "parameters": [
         {
@@ -682,7 +682,7 @@
           "name": "PrintToFile",
           "type": "Variant",
           "optional": true,
-          "description": "True to print to a file. If _PrToFileName_ is not specified, Microsoft Excel prompts the user to enter the name of the output file."
+          "description": "True to print to a file. If PrToFileName is not specified, Microsoft Excel prompts the user to enter the name of the output file."
         },
         {
           "name": "Collate",
@@ -694,7 +694,7 @@
           "name": "PrToFileName",
           "type": "Variant",
           "optional": true,
-          "description": "If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to."
+          "description": "If PrintToFile is set to True, this argument specifies the name of the file that you want to print to."
         }
       ]
     }

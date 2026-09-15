@@ -733,7 +733,7 @@
       "kind": "property",
       "type": "Variant",
       "access": "read/write",
-      "description": "Determines the string expression specified by the _OpenArgs_ argument of the OpenReport method that opened a report. Read/write Variant."
+      "description": "Determines the string expression specified by the OpenArgs argument of the OpenReport method that opened a report. Read/write Variant."
     },
     {
       "name": "Printer",
@@ -1039,7 +1039,7 @@
           "name": "radius",
           "type": "Single",
           "optional": false,
-          "description": "Indicates the radius of the circle, ellipse, or arc. The Scale properties (ScaleMode, ScaleLeft, ScaleTop, ScaleHeight, and ScaleWidth) of the Report object specified by the _Object_ argument determine the unit of measure used. By default, distances are measured in twips."
+          "description": "Indicates the radius of the circle, ellipse, or arc. The Scale properties (ScaleMode, ScaleLeft, ScaleTop, ScaleHeight, and ScaleWidth) of the Report object specified by the Object argument determine the unit of measure used. By default, distances are measured in twips."
         },
         {
           "name": "color",
@@ -1051,13 +1051,13 @@
           "name": "start",
           "type": "Single",
           "optional": false,
-          "description": "When a partial circle or ellipse is drawn, the _Start_ argument specifies (in radians) the beginning position of the arc. The default value for the _Start_ argument is 0 radians. The range is -2 pi radians to 2 pi radians."
+          "description": "When a partial circle or ellipse is drawn, the Start argument specifies (in radians) the beginning position of the arc. The default value for the Start argument is 0 radians. The range is -2 pi radians to 2 pi radians."
         },
         {
           "name": "end",
           "type": "Single",
           "optional": false,
-          "description": "When a partial circle or ellipse is drawn, the _End_ argument specifies (in radians) the end position of the arc. The default value for the _End_ argument is 2 pi radians. The range is -2 pi radians to 2 pi radians."
+          "description": "When a partial circle or ellipse is drawn, the End argument specifies (in radians) the end position of the arc. The default value for the End argument is 2 pi radians. The range is -2 pi radians to 2 pi radians."
         },
         {
           "name": "aspect",
@@ -1123,7 +1123,7 @@
           "name": "flags",
           "type": "Integer",
           "optional": false,
-          "description": "A keyword that indicates that the coordinates are relative to the current graphics position given by the settings for the CurrentX and CurrentY properties of the _Object_ argument."
+          "description": "A keyword that indicates that the coordinates are relative to the current graphics position given by the settings for the CurrentX and CurrentY properties of the Object argument."
         },
         {
           "name": "X",
@@ -1281,7 +1281,7 @@
           "name": "Cancel",
           "type": "Integer",
           "optional": false,
-          "description": "The setting determines if the opening of the form or report occurs. Setting the _Cancel_ argument to True (1) cancels the opening of the form or report."
+          "description": "The setting determines if the opening of the form or report occurs. Setting the Cancel argument to True (1) cancels the opening of the form or report."
         }
       ]
     },
@@ -1313,13 +1313,13 @@
           "name": "DataErr",
           "type": "Integer",
           "optional": false,
-          "description": "The error code returned by the Err object when an error occurs. Use the _DataErr_ argument with the Error function to map the number to the corresponding error message."
+          "description": "The error code returned by the Err object when an error occurs. Use the DataErr argument with the Error function to map the number to the corresponding error message."
         },
         {
           "name": "Response",
           "type": "Integer",
           "optional": false,
-          "description": "The setting determines whether or not an error message is displayed. The _Response_ argument can be one of the following intrinsic constants: <ul><li><b>acDataErrContinue</b> Ignore the error and continue without displaying the default Microsoft Access error message. You can supply a custom error message in place of the default error message.</li><li><b>acDataErrDisplay</b> (Default) Display the default Access error message.</li></ul>"
+          "description": "The setting determines whether or not an error message is displayed. The Response argument can be one of the following intrinsic constants: <ul><li><b>acDataErrContinue</b> Ignore the error and continue without displaying the default Microsoft Access error message. You can supply a custom error message in place of the default error message.</li><li><b>acDataErrDisplay</b> (Default) Display the default Access error message.</li></ul>"
         }
       ]
     },
@@ -1333,7 +1333,7 @@
           "name": "Cancel",
           "type": "Integer",
           "optional": false,
-          "description": "The setting determines whether to print the report. Setting the _Cancel_ argument to True (1) prevents the report from printing. You can also use the CancelEvent method of the DoCmd object to cancel printing the report."
+          "description": "The setting determines whether to print the report. Setting the Cancel argument to True (1) prevents the report from printing. You can also use the CancelEvent method of the DoCmd object to cancel printing the report."
         }
       ]
     },
@@ -1403,7 +1403,7 @@
           "name": "Cancel",
           "type": "Integer",
           "optional": false,
-          "description": "The setting determines if the DblClick event occurs. Setting the _Cancel_ argument to True (1) cancels the DblClick event."
+          "description": "The setting determines if the DblClick event occurs. Setting the Cancel argument to True (1) cancels the DblClick event."
         }
       ]
     },
@@ -1417,25 +1417,25 @@
           "name": "Button",
           "type": "Integer",
           "optional": false,
-          "description": "The button that was pressed to trigger the event. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>"
+          "description": "The button that was pressed to trigger the event. If you need to test for the Button argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>"
         },
         {
           "name": "Shift",
           "type": "Integer",
           "optional": false,
-          "description": "The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+          "description": "The state of the Shift, Ctrl, and Alt keys when the button specified by the Button argument was pressed or released. If you need to test for the Shift argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
         },
         {
           "name": "X",
           "type": "Single",
           "optional": false,
-          "description": "The _x_ coordinate for the current location of the mouse pointer, in twips."
+          "description": "The x coordinate for the current location of the mouse pointer, in twips."
         },
         {
           "name": "Y",
           "type": "Single",
           "optional": false,
-          "description": "The _y_ coordinate for the current location of the mouse pointer, in twips."
+          "description": "The y coordinate for the current location of the mouse pointer, in twips."
         }
       ]
     },
@@ -1449,25 +1449,25 @@
           "name": "Button",
           "type": "Integer",
           "optional": false,
-          "description": "The button that was pressed or released when the event was triggered. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>"
+          "description": "The button that was pressed or released when the event was triggered. If you need to test for the Button argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>"
         },
         {
           "name": "Shift",
           "type": "Integer",
           "optional": false,
-          "description": "The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+          "description": "The state of the Shift, Ctrl, and Alt keys when the button specified by the Button argument was pressed or released. If you need to test for the Shift argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
         },
         {
           "name": "X",
           "type": "Single",
           "optional": false,
-          "description": "The _x_ coordinate for the current location of the mouse pointer, in twips."
+          "description": "The x coordinate for the current location of the mouse pointer, in twips."
         },
         {
           "name": "Y",
           "type": "Single",
           "optional": false,
-          "description": "The _y_ coordinate for the current location of the mouse pointer, in twips."
+          "description": "The y coordinate for the current location of the mouse pointer, in twips."
         }
       ]
     },
@@ -1481,25 +1481,25 @@
           "name": "Button",
           "type": "Integer",
           "optional": false,
-          "description": "The button that was released to trigger the event. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>"
+          "description": "The button that was released to trigger the event. If you need to test for the Button argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>"
         },
         {
           "name": "Shift",
           "type": "Integer",
           "optional": false,
-          "description": "The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+          "description": "The state of the Shift, Ctrl, and Alt keys when the button specified by the Button argument was pressed or released. If you need to test for the Shift argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
         },
         {
           "name": "X",
           "type": "Single",
           "optional": false,
-          "description": "The _x_ coordinate for the current location of the mouse pointer, in twips."
+          "description": "The x coordinate for the current location of the mouse pointer, in twips."
         },
         {
           "name": "Y",
           "type": "Single",
           "optional": false,
-          "description": "The _y_ coordinate for the current location of the mouse pointer, in twips."
+          "description": "The y coordinate for the current location of the mouse pointer, in twips."
         }
       ]
     },
@@ -1513,13 +1513,13 @@
           "name": "KeyCode",
           "type": "Integer",
           "optional": false,
-          "description": "A key code, such as vbKeyF1 (the F1 key) or vbKeyHome (the Home key). To specify key codes, use the intrinsic constants shown in the Object Browser. You can prevent an object from receiving a keystroke by setting _KeyCode_ to 0."
+          "description": "A key code, such as vbKeyF1 (the F1 key) or vbKeyHome (the Home key). To specify key codes, use the intrinsic constants shown in the Object Browser. You can prevent an object from receiving a keystroke by setting KeyCode to 0."
         },
         {
           "name": "Shift",
           "type": "Integer",
           "optional": false,
-          "description": "The state of the Shift, Ctrl, and Alt keys at the time of the event. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+          "description": "The state of the Shift, Ctrl, and Alt keys at the time of the event. If you need to test for the Shift argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
         }
       ]
     },
@@ -1533,7 +1533,7 @@
           "name": "KeyAscii",
           "type": "Integer",
           "optional": false,
-          "description": "Returns a numeric ANSI key code. The _KeyAscii_ argument is passed by reference; changing it sends a different character to the object. Setting the _KeyAscii_ argument to 0 cancels the keystroke so that the object doesn't recognize that a key was pressed."
+          "description": "Returns a numeric ANSI key code. The KeyAscii argument is passed by reference; changing it sends a different character to the object. Setting the KeyAscii argument to 0 cancels the keystroke so that the object doesn't recognize that a key was pressed."
         }
       ]
     },
@@ -1547,13 +1547,13 @@
           "name": "KeyCode",
           "type": "Integer",
           "optional": false,
-          "description": "A key code, such as vbKeyF1 (the F1 key) or vbKeyHome (the Home key). To specify key codes, use the intrinsic constants shown in the Object Browser. You can prevent an object from receiving a keystroke by setting _KeyCode_ to 0."
+          "description": "A key code, such as vbKeyF1 (the F1 key) or vbKeyHome (the Home key). To specify key codes, use the intrinsic constants shown in the Object Browser. You can prevent an object from receiving a keystroke by setting KeyCode to 0."
         },
         {
           "name": "Shift",
           "type": "Integer",
           "optional": false,
-          "description": "The state of the Shift, Ctrl, and Alt keys at the time of the event. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+          "description": "The state of the Shift, Ctrl, and Alt keys at the time of the event. If you need to test for the Shift argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
         }
       ]
     },
@@ -1573,13 +1573,13 @@
           "name": "Cancel",
           "type": "Integer",
           "optional": false,
-          "description": "The setting determines whether to open the filter window. Setting the _Cancel_ argument to True (1) prevents the filter window from opening. You can also use the CancelEvent method of the DoCmd object to cancel opening the filter window."
+          "description": "The setting determines whether to open the filter window. Setting the Cancel argument to True (1) prevents the filter window from opening. You can also use the CancelEvent method of the DoCmd object to cancel opening the filter window."
         },
         {
           "name": "FilterType",
           "type": "Integer",
           "optional": false,
-          "description": "The filter window the user is trying to open. The _FilterType_ argument can be acFilterAdvanced."
+          "description": "The filter window the user is trying to open. The FilterType argument can be acFilterAdvanced."
         }
       ]
     },
@@ -1593,7 +1593,7 @@
           "name": "Cancel",
           "type": "Integer",
           "optional": false,
-          "description": "The setting determines if the ApplyFilter event occurs. Setting the _Cancel_ argument to True cancels the ApplyFilter event and the filter is not applied to the report."
+          "description": "The setting determines if the ApplyFilter event occurs. Setting the Cancel argument to True cancels the ApplyFilter event and the filter is not applied to the report."
         },
         {
           "name": "ApplyType",

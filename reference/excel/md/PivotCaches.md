@@ -36,6 +36,6 @@ Next
 - `_NewEnum() As IUnknown`
 - `Create(SourceType As XlPivotTableSourceType, [SourceData As Variant], [Version As Variant]) As PivotCache`  
   Creates a new PivotCache.
-    - `SourceType As XlPivotTableSourceType` (required): _SourceType_ can be one of these XlPivotTableSourceType constants: xlConsolidation, xlDatabase, or xlExternal.
+    - `SourceType As XlPivotTableSourceType` (required): SourceType can be one of these XlPivotTableSourceType constants: xlConsolidation, xlDatabase, or xlExternal.
     - `SourceData As Variant` (optional): The data for the new PivotTable cache.
-    - `Version As Variant` (optional): Version of the PivotTable. _Version_ can be one of the XlPivotTableVersionList constants.
+    - `Version As Variant` (optional): Version of the PivotTable. Version can be one of the XlPivotTableVersionList constants.

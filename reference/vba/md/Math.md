@@ -12,7 +12,7 @@
 - `Cos(Number As Double) As Double`  
   Returns a Double specifying the cosine of an angle.
 - `Exp(Number As Double) As Double`  
-  Returns a Double specifying _e_ (the base of natural logarithms) raised to a power.
+  Returns a Double specifying e (the base of natural logarithms) raised to a power.
 - `Log(Number As Double) As Double`  
   Returns a Double specifying the natural logarithm of a number.
 - `Randomize([Number As Variant])`  

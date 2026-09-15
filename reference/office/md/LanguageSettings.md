@@ -6,7 +6,7 @@
 
 Returns information about the language settings in a Microsoft Office application.
 
-**Remarks:** Use Application.LanguageSettings.LanguageID(_MsoAppLanguageID_), where MsoAppLanguageID is a constant used to return locale identifier (LCID) information to the specified application.
+**Remarks:** Use Application.LanguageSettings.LanguageID(MsoAppLanguageID), where MsoAppLanguageID is a constant used to return locale identifier (LCID) information to the specified application.
 
 **Example:**
 

@@ -29,9 +29,9 @@ End Sub
 - `Creator As Long  (read-only)`  
   Gets a 32-bit integer that indicates the application in which the Crop object was created. Read-only.
 - `PictureOffsetX As Single  (read/write)`  
-  Gets or sets the _x_-axis offset of the image that is to be cropped. Read/write.
+  Gets or sets the x-axis offset of the image that is to be cropped. Read/write.
 - `PictureOffsetY As Single  (read/write)`  
-  Gets or sets the _y_-axis offset of the image that is to be cropped. Read/write.
+  Gets or sets the y-axis offset of the image that is to be cropped. Read/write.
 - `PictureWidth As Single  (read/write)`  
   Gets or sets the width of the image that is to be cropped. Read/write.
 - `PictureHeight As Single  (read/write)`  

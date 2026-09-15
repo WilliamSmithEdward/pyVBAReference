@@ -469,7 +469,7 @@ Application.Windows("book1.xls").Activate
 - `_Evaluate(Name As Variant) As Variant`
 - `ExecuteExcel4Macro(String As String) As Variant`  
   Runs a Microsoft Excel 4.0 macro function and then returns the result of the function. The return type depends on the function.
-    - `String As String` (required): A Microsoft Excel 4.0 macro language function without the equal sign. All references must be given as R1C1 strings. If _String_ contains embedded double quotation marks, you must double them. For example, to run the macro function =MID("sometext",1,4), _String_ would have to be "MID(""sometext"",1,4)".
+    - `String As String` (required): A Microsoft Excel 4.0 macro language function without the equal sign. All references must be given as R1C1 strings. If String contains embedded double quotation marks, you must double them. For example, to run the macro function =MID("sometext",1,4), String would have to be "MID(""sometext"",1,4)".
 - `Intersect(Arg1 As Range, Arg2 As Range, [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant]) As Range`  
   Returns a Range object that represents the rectangular intersection of two or more ranges. If one or more ranges from a different worksheet are specified, an error is returned.
     - `Arg1 As Range` (required): The intersecting ranges. At least two Range objects must be specified.
@@ -492,7 +492,7 @@ Application.Windows("book1.xls").Activate
 - `AddCustomList(ListArray As Variant, [ByRow As Variant])`  
   Adds a custom list for custom autofill and/or custom sort.
     - `ListArray As Variant` (required): Specifies the source data, as either an array of strings or a Range object.
-    - `ByRow As Variant` (optional): Only used if _ListArray_ is a Range object. True to create a custom list from each row in the range. False to create a custom list from each column in the range. If this argument is omitted and there are more rows than columns (or an equal number of rows and columns) in the range, Microsoft Excel creates a custom list from each column in the range. If this argument is omitted and there are more columns than rows in the range, Excel creates a custom list from each row in the range.
+    - `ByRow As Variant` (optional): Only used if ListArray is a Range object. True to create a custom list from each row in the range. False to create a custom list from each column in the range. If this argument is omitted and there are more rows than columns (or an equal number of rows and columns) in the range, Microsoft Excel creates a custom list from each column in the range. If this argument is omitted and there are more columns than rows in the range, Excel creates a custom list from each row in the range.
 - `CentimetersToPoints(Centimeters As Double) As Double`  
   Converts a measurement from centimeters to points (one point equals 0.035 centimeters).
     - `Centimeters As Double` (required): Specifies the centimeter value to be converted to points.
@@ -505,7 +505,7 @@ Application.Windows("book1.xls").Activate
   Converts cell references in a formula between the A1 and R1C1 reference styles, between relative and absolute references, or both. Variant.
     - `Formula As Variant` (required): A string that contains the formula that you want to convert. This must be a valid formula, and it must begin with an equal sign.
     - `FromReferenceStyle As XlReferenceStyle` (required): The reference style of the formula.
-    - `ToReferenceStyle As Variant` (optional): A constant of XlReferenceStyle specifying the reference style that you want returned. If this argument is omitted, the reference style isn't changed; the formula stays in the style specified by _FromReferenceStyle_.
+    - `ToReferenceStyle As Variant` (optional): A constant of XlReferenceStyle specifying the reference style that you want returned. If this argument is omitted, the reference style isn't changed; the formula stays in the style specified by FromReferenceStyle.
     - `ToAbsolute As Variant` (optional): A constant of XlReferenceType that specifies the converted reference type. If this argument is omitted, the reference type isn't changed.
     - `RelativeTo As Variant` (optional): A Range object that contains one cell. Relative references relate to this cell.
 - `DeleteCustomList(ListNum As Long)`  
@@ -522,7 +522,7 @@ Application.Windows("book1.xls").Activate
 - `GetOpenFilename([FileFilter As Variant], [FilterIndex As Variant], [Title As Variant], [ButtonText As Variant], [MultiSelect As Variant]) As Variant`  
   Displays the standard Open dialog box and gets a file name from the user without actually opening any files.
     - `FileFilter As Variant` (optional): A string specifying file filtering criteria.
-    - `FilterIndex As Variant` (optional): Specifies the index numbers of the default file filtering criteria, from 1 to the number of filters specified in _FileFilter_. If this argument is omitted or greater than the number of filters present, the first file filter is used.
+    - `FilterIndex As Variant` (optional): Specifies the index numbers of the default file filtering criteria, from 1 to the number of filters specified in FileFilter. If this argument is omitted or greater than the number of filters present, the first file filter is used.
     - `Title As Variant` (optional): Specifies the title of the dialog box. If this argument is omitted, the title is "Open."
     - `ButtonText As Variant` (optional): Macintosh only.
     - `MultiSelect As Variant` (optional): True to allow multiple file names to be selected. False to allow only one file name to be selected. The default value is False.
@@ -530,7 +530,7 @@ Application.Windows("book1.xls").Activate
   Displays the standard Save As dialog box and gets a file name from the user without actually saving any files.
     - `InitialFilename As Variant` (optional): Specifies the suggested file name. If this argument is omitted, Microsoft Excel uses the active workbook's name.
     - `FileFilter As Variant` (optional): A string specifying file filtering criteria. Max length is 255 characters, otherwise the method returns Error 2015.
-    - `FilterIndex As Variant` (optional): Specifies the index number of the default file filtering criteria, from 1 to the number of filters specified in _FileFilter_. If this argument is omitted or greater than the number of filters present, the first file filter is used.
+    - `FilterIndex As Variant` (optional): Specifies the index number of the default file filtering criteria, from 1 to the number of filters specified in FileFilter. If this argument is omitted or greater than the number of filters present, the first file filter is used.
     - `Title As Variant` (optional): Specifies the title of the dialog box. If this argument is omitted, the default title is used.
     - `ButtonText As Variant` (optional): Macintosh only.
 - `Goto([Reference As Variant], [Scroll As Variant])`  
@@ -551,8 +551,8 @@ Application.Windows("book1.xls").Activate
     - `Default As Variant` (optional): Specifies a value that will appear in the text box when the dialog box is initially displayed. If this argument is omitted, the text box is left empty. This value can be a Range object.
     - `Left As Variant` (optional): Specifies an x position for the dialog box in relation to the upper-left corner of the screen, in points.
     - `Top As Variant` (optional): Specifies a y position for the dialog box in relation to the upper-left corner of the screen, in points.
-    - `HelpFile As Variant` (optional): The name of the Help file for this input box. If the _HelpFile_ and _HelpContextID_ arguments are present, a Help button will appear in the dialog box.
-    - `HelpContextID As Variant` (optional): The context ID number of the Help topic in _HelpFile_.
+    - `HelpFile As Variant` (optional): The name of the Help file for this input box. If the HelpFile and HelpContextID arguments are present, a Help button will appear in the dialog box.
+    - `HelpContextID As Variant` (optional): The context ID number of the Help topic in HelpFile.
     - `Type As Variant` (optional): Specifies the return data type. If this argument is omitted, the dialog box returns text.
 - `MailLogoff()`  
   Closes a MAPI mail session established by Microsoft Excel.
@@ -566,7 +566,7 @@ Application.Windows("book1.xls").Activate
 - `OnKey(Key As String, [Procedure As Variant])`  
   Runs a specified procedure when a particular key or key combination is pressed.
     - `Key As String` (required): A string indicating the key to be pressed.
-    - `Procedure As Variant` (optional): A string indicating the name of the procedure to be run. If _Procedure_ is "" (empty text), nothing happens when _Key_ is pressed. This form of OnKey changes the normal result of keystrokes in Microsoft Excel. If _Procedure_ is omitted, _Key_ reverts to its normal result in Microsoft Excel, and any special key assignments made with previous OnKey methods are cleared.
+    - `Procedure As Variant` (optional): A string indicating the name of the procedure to be run. If Procedure is "" (empty text), nothing happens when Key is pressed. This form of OnKey changes the normal result of keystrokes in Microsoft Excel. If Procedure is omitted, Key reverts to its normal result in Microsoft Excel, and any special key assignments made with previous OnKey methods are cleared.
 - `OnRepeat(Text As String, Procedure As String)`  
   Sets the Repeat item and the name of the procedure that will run if you choose the Repeat command after running the procedure that sets this property.
     - `Text As String` (required): The text that appears with the Repeat command.
@@ -575,7 +575,7 @@ Application.Windows("book1.xls").Activate
   Schedules a procedure to be run at a specified time in the future (either at a specific time of day or after a specific amount of time has passed).
     - `EarliestTime As Variant` (required): The time when you want this procedure to be run.
     - `Procedure As String` (required): The name of the procedure to be run.
-    - `LatestTime As Variant` (optional): The latest time at which the procedure can be run. For example, if _LatestTime_ is set to _EarliestTime_ + 30 and Microsoft Excel is not in Ready, Copy, Cut, or Find mode at _EarliestTime_ because another procedure is running, Excel will wait 30 seconds for the first procedure to complete. If Excel is not in Ready mode within 30 seconds, the procedure won't be run. If this argument is omitted, Excel will wait until the procedure can be run.
+    - `LatestTime As Variant` (optional): The latest time at which the procedure can be run. For example, if LatestTime is set to EarliestTime + 30 and Microsoft Excel is not in Ready, Copy, Cut, or Find mode at EarliestTime because another procedure is running, Excel will wait 30 seconds for the first procedure to complete. If Excel is not in Ready mode within 30 seconds, the procedure won't be run. If this argument is omitted, Excel will wait until the procedure can be run.
     - `Schedule As Variant` (optional): True to schedule a new OnTime procedure. False to clear a previously set procedure. The default value is True.
 - `OnUndo(Text As String, Procedure As String)`  
   Sets the text of the Undo command and the name of the procedure that's run if you choose the Undo command after running the procedure that sets this property.
@@ -602,7 +602,7 @@ Application.Windows("book1.xls").Activate
     - `Time As Variant` (required): The time at which you want the macro to resume, in Microsoft Excel date format.
 - `GetPhonetic([Text As Variant]) As String`  
   Returns the Japanese phonetic text of the specified text string. This method is available to you only if you have selected or installed Japanese language support for Microsoft Office.
-    - `Text As Variant` (optional): Specifies the text to be converted to phonetic text. If you omit this argument, the next possible phonetic text string (if any) of the previously specified _Text_ is returned. If there are no more possible phonetic text strings, an empty string is returned.
+    - `Text As Variant` (optional): Specifies the text to be converted to phonetic text. If you omit this argument, the next possible phonetic text string (if any) of the previously specified Text is returned. If there are no more possible phonetic text strings, an empty string is returned.
 - `CalculateFull()`  
   Forces a full calculation of the data in all open workbooks.
 - `FindFile() As Boolean`  
@@ -613,7 +613,7 @@ Application.Windows("book1.xls").Activate
   Stops recalculation in a Microsoft Excel application.
     - `KeepAbort As Variant` (optional): Allows recalculation to be performed for a range.
 - `DisplayXMLSourcePane([XmlMap As Variant])`  
-  Opens the XML Source task pane and displays the XML map specified by the _XmlMap_ argument.
+  Opens the XML Source task pane and displays the XML map specified by the XmlMap argument.
     - `XmlMap As Variant` (optional): The XML map to display in the task pane.
 - `CalculateUntilAsyncQueriesDone()`  
   Runs all pending queries to OLEDB and OLAP data sources.
@@ -626,12 +626,12 @@ Application.Windows("book1.xls").Activate
     - `Description As Variant` (optional): The macro description.
     - `HasMenu As Variant` (optional): This argument is ignored.
     - `MenuText As Variant` (optional): This argument is ignored.
-    - `HasShortcutKey As Variant` (optional): True to assign a shortcut key to the macro (_ShortcutKey_ must also be specified). If this argument is False, no shortcut key is assigned to the macro. If the macro already has a shortcut key, setting this argument to False removes the shortcut key. The default value is False.
-    - `ShortcutKey As Variant` (optional): Required if _HasShortcutKey_ is True; ignored otherwise. The shortcut key.
+    - `HasShortcutKey As Variant` (optional): True to assign a shortcut key to the macro (ShortcutKey must also be specified). If this argument is False, no shortcut key is assigned to the macro. If the macro already has a shortcut key, setting this argument to False removes the shortcut key. The default value is False.
+    - `ShortcutKey As Variant` (optional): Required if HasShortcutKey is True; ignored otherwise. The shortcut key.
     - `Category As Variant` (optional): An integer that specifies an existing macro function category (Financial, Date & Time, or User Defined, for example). See the Remarks section to determine the integers that are mapped to the built-in categories. You can also specify a string for a custom category. If you provide a string, it is treated as the category name that is displayed in the Insert Function dialog box. If the category name has never been used, a new category is defined with that name. If you use a category name that is the same as a built-in name (see list in Remarks section), Excel maps the user-defined function to that built-in category.
     - `StatusBar As Variant` (optional): The status bar text for the macro.
     - `HelpContextID As Variant` (optional): An integer that specifies the context ID for the Help topic assigned to the macro.
-    - `HelpFile As Variant` (optional): The name of the Help file that contains the Help topic defined by _HelpContextId_.
+    - `HelpFile As Variant` (optional): The name of the Help file that contains the Help topic defined by HelpContextId.
     - `ArgumentDescriptions As Variant` (optional): A one-dimensional array that contains the descriptions for the arguments to a UDF that are displayed in the Function Arguments dialog box.
 
 ## Events (49)

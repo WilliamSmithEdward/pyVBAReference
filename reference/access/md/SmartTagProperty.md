@@ -6,7 +6,7 @@
 
 Represents a single instance of a custom property for a smart tag. The SmartTagProperty object is a member of the SmartTagProperties collection.
 
-**Remarks:** To return a SmartTagProperty object, use the Item method of the SmartTagProperties collection, or use SmartTagProperties (_index_), where _index_ is the number of the property. To return the information related to a custom property for a smart tag, use the Name and Value properties of the SmartTagProperty object.
+**Remarks:** To return a SmartTagProperty object, use the Item method of the SmartTagProperties collection, or use SmartTagProperties (index), where index is the number of the property. To return the information related to a custom property for a smart tag, use the Name and Value properties of the SmartTagProperty object.
 
 ## Properties (2)
 

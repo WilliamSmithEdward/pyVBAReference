@@ -6,7 +6,7 @@
 
 Represents a popup control on a command bar.
 
-**Remarks:** Every pop-up control contains a CommandBar object. To return the command bar from a pop-up control, apply the CommandBar property to the CommandBarPopup object. Use Controls(_index_), where _index_ is the number of the control, to return a CommandBarPopup object. Note that the Type property of the control must be msoControlPopup, msoControlGraphicPopup, msoControlButtonPopup, msoControlSplitButtonPopup, or msoControlSplitButtonMRUPopup.
+**Remarks:** Every pop-up control contains a CommandBar object. To return the command bar from a pop-up control, apply the CommandBar property to the CommandBarPopup object. Use Controls(index), where index is the number of the control, to return a CommandBarPopup object. Note that the Type property of the control must be msoControlPopup, msoControlGraphicPopup, msoControlButtonPopup, msoControlSplitButtonPopup, or msoControlSplitButtonMRUPopup.
 
 **Example:**
 

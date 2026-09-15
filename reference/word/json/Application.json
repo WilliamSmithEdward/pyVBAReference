@@ -1238,13 +1238,13 @@
           "name": "AddressProperties",
           "type": "Variant",
           "optional": true,
-          "description": "If _UseAutoText_ is True, this argument denotes the name of an AutoText entry that defines a sequence of address book properties. If _UseAutoText_ is False or omitted, this argument defines a custom layout. Valid address book property names or sets of property names are surrounded by angle brackets (\"<\" and \">\") and separated by a space or a paragraph mark (for example, \"<PR_GIVEN_NAME> <PR_SURNAME>\" & vbCr & \"<PR_OFFICE_TELEPHONE_NUMBER>\"). If the _AddressProperties_ parameter is omitted, a default AutoText entry named \"AddressLayout\" is used. If \"AddressLayout\" hasn't been defined, the following address layout definition is used: \"<PR_GIVEN_NAME> <PR_SURNAME>\" & vbCr & \"<PR_STREET_ADDRESS>\" & vbCr & \"<PR_LOCALITY>\" & \", \" & \"<PR_STATE_OR_PROVINCE>\" & \" \" & \"<PR_POSTAL_CODE>\" & vbCr & \"<PR_COUNTRY>\". For a list of the valid address book property names, see the AddAddress method."
+          "description": "If UseAutoText is True, this argument denotes the name of an AutoText entry that defines a sequence of address book properties. If UseAutoText is False or omitted, this argument defines a custom layout. Valid address book property names or sets of property names are surrounded by angle brackets (\"<\" and \">\") and separated by a space or a paragraph mark (for example, \"<PR_GIVEN_NAME> <PR_SURNAME>\" & vbCr & \"<PR_OFFICE_TELEPHONE_NUMBER>\"). If the AddressProperties parameter is omitted, a default AutoText entry named \"AddressLayout\" is used. If \"AddressLayout\" hasn't been defined, the following address layout definition is used: \"<PR_GIVEN_NAME> <PR_SURNAME>\" & vbCr & \"<PR_STREET_ADDRESS>\" & vbCr & \"<PR_LOCALITY>\" & \", \" & \"<PR_STATE_OR_PROVINCE>\" & \" \" & \"<PR_POSTAL_CODE>\" & vbCr & \"<PR_COUNTRY>\". For a list of the valid address book property names, see the AddAddress method."
         },
         {
           "name": "UseAutoText",
           "type": "Variant",
           "optional": true,
-          "description": "True if _AddressProperties_ specifies the name of an AutoText entry that defines a sequence of address book properties; False if it specifies a custom layout."
+          "description": "True if AddressProperties specifies the name of an AutoText entry that defines a sequence of address book properties; False if it specifies a custom layout."
         },
         {
           "name": "DisplaySelectDialog",
@@ -1262,7 +1262,7 @@
           "name": "CheckNamesDialog",
           "type": "Variant",
           "optional": true,
-          "description": "True to display the Check Names dialog box when the value of the _Name_ argument isn't specific enough."
+          "description": "True to display the Check Names dialog box when the value of the Name argument isn't specific enough."
         },
         {
           "name": "RecentAddressesChoice",
@@ -1274,7 +1274,7 @@
           "name": "UpdateRecentAddresses",
           "type": "Variant",
           "optional": true,
-          "description": "True to add an address to the list of recently used addresses; False to not add the address. If _SelectDialog_ is set to 1 or 2, this argument is ignored."
+          "description": "True to add an address to the list of recently used addresses; False to not add the address. If SelectDialog is set to 1 or 2, this argument is ignored."
         }
       ]
     },
@@ -1911,7 +1911,7 @@
           "name": "Name",
           "type": "String",
           "optional": false,
-          "description": "The name of the theme you want to assign as the default theme plus any theme formatting options you want to apply. The format of this string is \"themennn\" where _theme_ and _nnn_ are defined in the Themes table."
+          "description": "The name of the theme you want to assign as the default theme plus any theme formatting options you want to apply. The format of this string is \"themennn\" where theme and nnn are defined in the Themes table."
         },
         {
           "name": "DocumentType",

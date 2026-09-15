@@ -6,7 +6,7 @@
 
 Represents characters in an object that contains text.
 
-**Remarks:** The Characters object lets you modify any sequence of characters contained in the full text string. Use Characters (_start_, _length_), where _start_ is the start character number and _length_ is the number of characters, to return a Characters object.
+**Remarks:** The Characters object lets you modify any sequence of characters contained in the full text string. Use Characters (start, length), where start is the start character number and length is the number of characters, to return a Characters object.
 
 **Example:**
 

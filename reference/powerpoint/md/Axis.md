@@ -6,7 +6,7 @@
 
 Represents a single axis in a chart.
 
-**Remarks:** The Axis object is a member of the Axes collection. Use Axes ( _Type_, _AxisGroup_ ) where _Type_ is the axis type and _AxisGroup_ is the axis group to return a single Axis object. _Type_ can be one of the following XlAxisType constants: xlCategory, xlSeries, or xlValue. _AxisGroup_ can be one of the following XlAxisGroup constants: xlPrimary or xlSecondary. For more information, see the Axes method.
+**Remarks:** The Axis object is a member of the Axes collection. Use Axes ( Type, AxisGroup ) where Type is the axis type and AxisGroup is the axis group to return a single Axis object. Type can be one of the following XlAxisType constants: xlCategory, xlSeries, or xlValue. AxisGroup can be one of the following XlAxisGroup constants: xlPrimary or xlSecondary. For more information, see the Axes method.
 
 **Example:**
 

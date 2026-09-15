@@ -30,10 +30,10 @@ Worksheets("Sheet1").Research.Translate = True
     - `ServiceID As String` (required): Specifies a GUID that identifies the research service.
     - `QueryString As Variant` (optional): Specifies the query string.
     - `QueryLanguage As Variant` (optional): Specifies the query language of the query string.
-    - `UseSelection As Variant` (optional): True to use the current selection as the query string. This overrides the _QueryString_ parameter if set. Default value is False.
+    - `UseSelection As Variant` (optional): True to use the current selection as the query string. This overrides the QueryString parameter if set. Default value is False.
     - `LaunchQuery As Variant` (optional): True launches the query. False displays the Research task pane scoped to search the specified research service.
 - `IsResearchService(ServiceID As String) As Boolean`  
-  Indicates whether the GUID specified in the _ServiceID_ parameter corresponds to a currently configured service.
+  Indicates whether the GUID specified in the ServiceID parameter corresponds to a currently configured service.
     - `ServiceID As String` (required): Specifies a GUID that identifies the research service.
 - `SetLanguagePair(LanguageFrom As Long, LanguageTo As Long) As Variant`  
   Sets the languages for the translation service.

@@ -861,13 +861,13 @@
           "name": "SourceType",
           "type": "Variant",
           "optional": true,
-          "description": "An XlPivotTableSourceType value that represents the source of the report data. If you specify this argument, you must also specify _SourceData_. If _SourceType_ and _SourceData_ are omitted, Microsoft Excel assumes that the source type is xlDatabase, and the source data comes from the named range Database. If this named range doesn't exist, Excel uses the current region if the current selection is in a range of more than 10 cells that contain data. If this isn't true, this method will fail."
+          "description": "An XlPivotTableSourceType value that represents the source of the report data. If you specify this argument, you must also specify SourceData. If SourceType and SourceData are omitted, Microsoft Excel assumes that the source type is xlDatabase, and the source data comes from the named range Database. If this named range doesn't exist, Excel uses the current region if the current selection is in a range of more than 10 cells that contain data. If this isn't true, this method will fail."
         },
         {
           "name": "SourceData",
           "type": "Variant",
           "optional": true,
-          "description": "The data for the new report. Can be a Range object, an array of ranges, or a text constant that represents the name of another report. For an external database, _SourceData_ is an array of strings containing the SQL query string, where each element is up to 255 characters in length. You should use the _Connection_ argument to specify the ODBC connection string. For compatibility with earlier versions of Excel, _SourceData_ can be a two-element array. The first element is the connection string specifying the ODBC source for the data. The second element is the SQL query string used to get the data. If you specify _SourceData_, you must also specify _SourceType_. If the active cell is inside the _SourceData_ range, you must specify _TableDestination_ as well."
+          "description": "The data for the new report. Can be a Range object, an array of ranges, or a text constant that represents the name of another report. For an external database, SourceData is an array of strings containing the SQL query string, where each element is up to 255 characters in length. You should use the Connection argument to specify the ODBC connection string. For compatibility with earlier versions of Excel, SourceData can be a two-element array. The first element is the connection string specifying the ODBC source for the data. The second element is the SQL query string used to get the data. If you specify SourceData, you must also specify SourceType. If the active cell is inside the SourceData range, you must specify TableDestination as well."
         },
         {
           "name": "TableDestination",
@@ -909,7 +909,7 @@
           "name": "AutoPage",
           "type": "Variant",
           "optional": true,
-          "description": "Valid only if _SourceType_ is xlConsolidation. True to have Excel create a page field for the consolidation. If _AutoPage_ is False, you must create the page field or fields."
+          "description": "Valid only if SourceType is xlConsolidation. True to have Excel create a page field for the consolidation. If AutoPage is False, you must create the page field or fields."
         },
         {
           "name": "Reserved",
@@ -945,7 +945,7 @@
           "name": "ReadData",
           "type": "Variant",
           "optional": true,
-          "description": "True to create a PivotTable cache that contains all records from the external database; this cache can be very large. If _ReadData_ is False, you can set some of the fields as server-based page fields before the data is actually read."
+          "description": "True to create a PivotTable cache that contains all records from the external database; this cache can be very large. If ReadData is False, you can set some of the fields as server-based page fields before the data is actually read."
         },
         {
           "name": "Connection",
@@ -1012,7 +1012,7 @@
           "name": "Item1",
           "type": "Variant",
           "optional": true,
-          "description": "The name of an item in _Field1_."
+          "description": "The name of an item in Field1."
         },
         {
           "name": "Field2",
@@ -1024,7 +1024,7 @@
           "name": "Item2",
           "type": "Variant",
           "optional": true,
-          "description": "The name of an item in _Field2_."
+          "description": "The name of an item in Field2."
         },
         {
           "name": "Field3",
@@ -1036,7 +1036,7 @@
           "name": "Item3",
           "type": "Variant",
           "optional": true,
-          "description": "The name of an item in _Field3_."
+          "description": "The name of an item in Field3."
         },
         {
           "name": "Field4",
@@ -1048,7 +1048,7 @@
           "name": "Item4",
           "type": "Variant",
           "optional": true,
-          "description": "The name of an item in _Field4_."
+          "description": "The name of an item in Field4."
         },
         {
           "name": "Field5",
@@ -1060,7 +1060,7 @@
           "name": "Item5",
           "type": "Variant",
           "optional": true,
-          "description": "The name of an item in _Field5_."
+          "description": "The name of an item in Field5."
         },
         {
           "name": "Field6",
@@ -1072,7 +1072,7 @@
           "name": "Item6",
           "type": "Variant",
           "optional": true,
-          "description": "The name of an item in _Field6_."
+          "description": "The name of an item in Field6."
         },
         {
           "name": "Field7",
@@ -1084,7 +1084,7 @@
           "name": "Item7",
           "type": "Variant",
           "optional": true,
-          "description": "The name of an item in _Field7_."
+          "description": "The name of an item in Field7."
         },
         {
           "name": "Field8",
@@ -1096,7 +1096,7 @@
           "name": "Item8",
           "type": "Variant",
           "optional": true,
-          "description": "The name of an item in _Field8_."
+          "description": "The name of an item in Field8."
         },
         {
           "name": "Field9",
@@ -1108,7 +1108,7 @@
           "name": "Item9",
           "type": "Variant",
           "optional": true,
-          "description": "The name of an item in _Field9_."
+          "description": "The name of an item in Field9."
         },
         {
           "name": "Field10",
@@ -1120,7 +1120,7 @@
           "name": "Item10",
           "type": "Variant",
           "optional": true,
-          "description": "The name of an item in _Field10_."
+          "description": "The name of an item in Field10."
         },
         {
           "name": "Field11",
@@ -1132,7 +1132,7 @@
           "name": "Item11",
           "type": "Variant",
           "optional": true,
-          "description": "The name of an item in _Field11_."
+          "description": "The name of an item in Field11."
         },
         {
           "name": "Field12",
@@ -1144,7 +1144,7 @@
           "name": "Item12",
           "type": "Variant",
           "optional": true,
-          "description": "The name of an item in _Field12_."
+          "description": "The name of an item in Field12."
         },
         {
           "name": "Field13",
@@ -1156,7 +1156,7 @@
           "name": "Item13",
           "type": "Variant",
           "optional": true,
-          "description": "The name of an item in _Field13_."
+          "description": "The name of an item in Field13."
         },
         {
           "name": "Field14",
@@ -1168,7 +1168,7 @@
           "name": "Item14",
           "type": "Variant",
           "optional": true,
-          "description": "The name of an item in _Field14_."
+          "description": "The name of an item in Field14."
         }
       ]
     },
@@ -1228,7 +1228,7 @@
           "name": "Members",
           "type": "Variant",
           "optional": true,
-          "description": "An array of string arrays. The elements correspond, in order, to the hierarchies represented in the _Levels_ array. Each element is an array of string arrays that consists of the unique names of the top level members in the dimension that are to be included in the slice."
+          "description": "An array of string arrays. The elements correspond, in order, to the hierarchies represented in the Levels array. Each element is an array of string arrays that consists of the unique names of the top level members in the dimension that are to be included in the slice."
         },
         {
           "name": "Properties",

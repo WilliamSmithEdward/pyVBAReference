@@ -6,7 +6,7 @@
 
 Represents the criteria for the minimum, midpoint, or maximum thresholds for a color format conditional format.
 
-**Remarks:** Each ColorScaleCriterion is part of the ColorScaleCriteria collection. Use ColorScaleCriteria (_index_), to return an individual criterion. You can set the Type, Value, and FormatColor of each threshold for the color scale.
+**Remarks:** Each ColorScaleCriterion is part of the ColorScaleCriteria collection. Use ColorScaleCriteria (index), to return an individual criterion. You can set the Type, Value, and FormatColor of each threshold for the color scale.
 
 **Example:**
 

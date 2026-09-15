@@ -71,28 +71,28 @@ Next
     - `Tag As Variant` (optional): The control's tag value.
     - `Visible As Variant` (optional): True to include only visible command bar controls in the search. The default value is False.
 - `ExecuteMso(idMso As String)`  
-  Executes the control identified by the _idMso_ parameter.
+  Executes the control identified by the idMso parameter.
     - `idMso As String` (required): Identifier for the control.
 - `GetEnabledMso(idMso As String) As Boolean`  
-  Returns True if the control identified by the _idMso_ parameter is enabled.
+  Returns True if the control identified by the idMso parameter is enabled.
     - `idMso As String` (required): Identifier for the control.
 - `GetVisibleMso(idMso As String) As Boolean`  
-  Returns True if the control identified by the _idMso_ parameter is visible.
+  Returns True if the control identified by the idMso parameter is visible.
     - `idMso As String` (required): Identifier for the control.
 - `GetPressedMso(idMso As String) As Boolean`  
-  Returns a value indicating whether the toggleButton control identified by the _idMso_ parameter is pressed.
+  Returns a value indicating whether the toggleButton control identified by the idMso parameter is pressed.
     - `idMso As String` (required): Identifier for the control.
 - `GetLabelMso(idMso As String) As String`  
-  Returns the label of the control identified by the _idMso_ parameter as a String.
+  Returns the label of the control identified by the idMso parameter as a String.
     - `idMso As String` (required): Identifier for the control.
 - `GetScreentipMso(idMso As String) As String`  
-  Returns the screentip of the control identified by the _idMso_ parameter as a String.
+  Returns the screentip of the control identified by the idMso parameter as a String.
     - `idMso As String` (required): Identifier for the control.
 - `GetSupertipMso(idMso As String) As String`  
-  Returns the supertip of the control identified by the _idMso_ parameter as a String.
+  Returns the supertip of the control identified by the idMso parameter as a String.
     - `idMso As String` (required): Identifier for the control.
 - `GetImageMso(idMso As String, Width As Long, Height As Long) As IPictureDisp`  
-  Returns an IPictureDisp object of the control image identified by the _idMso_ parameter scaled to the dimensions specified by width and height.
+  Returns an IPictureDisp object of the control image identified by the idMso parameter scaled to the dimensions specified by width and height.
     - `idMso As String` (required): Identifier for the control.
     - `Width As Long` (required): The width of the image.
     - `Height As Long` (required): The height of the image.

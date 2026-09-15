@@ -44,4 +44,4 @@ End With
 - `SetParam(Type As XlParameterType, Value As Variant)`  
   Defines a parameter for the specified query table.
     - `Type As XlParameterType` (required): One of the constants of XlParameterType, which specifies the parameter type.
-    - `Value As Variant` (required): The value of the specified parameter, as shown in the description of the _Type_ argument.
+    - `Value As Variant` (required): The value of the specified parameter, as shown in the description of the Type argument.

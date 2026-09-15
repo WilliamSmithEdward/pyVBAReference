@@ -4,7 +4,7 @@
   "guid": "{C547E760-9658-101B-81EE-00AA004750E2}",
   "library": "Microsoft Access 16.0 Object Library",
   "description": "Use the methods of the DoCmd object to run Microsoft Office Access actions from Visual Basic. An action performs tasks such as closing windows, opening forms, and setting the value of controls.",
-  "remarks": "For example, you can use the OpenForm method of the DoCmd object to open a form, or use the Hourglass method to change the mouse pointer to an hourglass icon. Most of the methods of the DoCmd object have arguments; some are required, while others are optional. If you omit optional arguments, the arguments assume the default values for the particular method. For example, the OpenForm method uses seven arguments, but only the first argument, _FormName_, is required. The following example shows how you can open the Employees form in the current database. Only employees with the title Sales Representative are included. The DoCmd object doesn't support methods corresponding to the following actions: - MsgBox. Use the MsgBox function. - RunApp. Use the Shell function to run another application. - RunCode. Run the function directly in Visual Basic. - SendKeys. Use the SendKeys statement. - SetValue. Set the value directly in Visual Basic. - StopAllMacros. - StopMacro.",
+  "remarks": "For example, you can use the OpenForm method of the DoCmd object to open a form, or use the Hourglass method to change the mouse pointer to an hourglass icon. Most of the methods of the DoCmd object have arguments; some are required, while others are optional. If you omit optional arguments, the arguments assume the default values for the particular method. For example, the OpenForm method uses seven arguments, but only the first argument, FormName, is required. The following example shows how you can open the Employees form in the current database. Only employees with the title Sales Representative are included. The DoCmd object doesn't support methods corresponding to the following actions: - MsgBox. Use the MsgBox function. - RunApp. Use the Shell function to run another application. - RunCode. Run the function directly in Visual Basic. - SendKeys. Use the SendKeys statement. - SetValue. Set the value directly in Visual Basic. - StopAllMacros. - StopMacro.",
   "example": "Sub ShowNewRecord()\n DoCmd.OpenForm \"Employees\", acNormal\n DoCmd.GoToRecord , , acNewRec\nEnd Sub",
   "properties": [],
   "methods": [
@@ -66,7 +66,7 @@
           "name": "ObjectName",
           "type": "Variant",
           "optional": true,
-          "description": "A string expression that's the valid name of an object of the type selected by the _ObjectType_ argument."
+          "description": "A string expression that's the valid name of an object of the type selected by the ObjectType argument."
         },
         {
           "name": "Save",
@@ -87,7 +87,7 @@
           "name": "DestinationDatabase",
           "type": "Variant",
           "optional": true,
-          "description": "A string expression that's the valid path and file name for the database that you want to copy the object into. To select the current database, leave this argument blank. NOTE: In a Microsoft Access project (.adp), you must leave the _DestinationDatabase_ argument blank. If you execute Visual Basic code containing the CopyObject method in a library database and leave this argument blank, Access copies the object into the library database."
+          "description": "A string expression that's the valid path and file name for the database that you want to copy the object into. To select the current database, leave this argument blank. NOTE: In a Microsoft Access project (.adp), you must leave the DestinationDatabase argument blank. If you execute Visual Basic code containing the CopyObject method in a library database and leave this argument blank, Access copies the object into the library database."
         },
         {
           "name": "NewName",
@@ -105,7 +105,7 @@
           "name": "SourceObjectName",
           "type": "Variant",
           "optional": true,
-          "description": "A string expression that's the valid name of an object of the type selected by the _SourceObjectType_ argument. If you run Visual Basic code containing the CopyObject method in a library database, Access looks for the object with this name first in the library database, and then in the current database."
+          "description": "A string expression that's the valid name of an object of the type selected by the SourceObjectType argument. If you run Visual Basic code containing the CopyObject method in a library database, Access looks for the object with this name first in the library database, and then in the current database."
         }
       ]
     },
@@ -120,31 +120,31 @@
           "name": "MenuBar",
           "type": "Variant",
           "optional": false,
-          "description": "Use the intrinsic constant acFormBar for the menu bar in Form view. For other views, use the number of the view in the _MenuBar_ argument list, as shown in the Macro window in previous versions of Microsoft Access (count down the list, starting from 0)."
+          "description": "Use the intrinsic constant acFormBar for the menu bar in Form view. For other views, use the number of the view in the MenuBar argument list, as shown in the Macro window in previous versions of Microsoft Access (count down the list, starting from 0)."
         },
         {
           "name": "MenuName",
           "type": "Variant",
           "optional": false,
-          "description": "Use one of the following intrinsic constants:<ul><li><p><b>acFile</b></p></li><li><p><b>acEditMenu</b></p></li><li><p><b>acRecordsMenu</b></p></li></ul><p>Use <b>acRecordsMenu</b> only for the Form view menu bar in Access version 2.0 and Access 95 databases. For other menus, use the number of the menu in the _MenuName_ argument list, as shown in the Macro window in previous versions of Access (count down the list, starting from 0).</p>"
+          "description": "Use one of the following intrinsic constants:<ul><li><p><b>acFile</b></p></li><li><p><b>acEditMenu</b></p></li><li><p><b>acRecordsMenu</b></p></li></ul><p>Use <b>acRecordsMenu</b> only for the Form view menu bar in Access version 2.0 and Access 95 databases. For other menus, use the number of the menu in the MenuName argument list, as shown in the Macro window in previous versions of Access (count down the list, starting from 0).</p>"
         },
         {
           "name": "Command",
           "type": "Variant",
           "optional": false,
-          "description": "Use one of the following intrinsic constants:<ul><li><p><b>acNew</b></p></li><li><p><b>acSaveForm</b></p></li><li><p><b>acSaveFormAs</b></p></li><li><p><b>acSaveRecord</b></p></li><li><p><b>acUndo</b></p></li><li><p><b>acCut</b></p></li><li><p><b>acCopy</b></p></li><li><p><b>acPaste</b></p></li><li><p><b>acDelete</b></p></li><li><p><b>acSelectRecord</b></p></li><li><p><b>acSelectAllRecords</b></p></li><li><p><b>acObjectRefresh</b></p></li></ul><p>For other commands, use the number of the command in the _Command_ argument list, as shown in the Macro window in previous versions of Access (count down the list, starting from 0).</p>"
+          "description": "Use one of the following intrinsic constants:<ul><li><p><b>acNew</b></p></li><li><p><b>acSaveForm</b></p></li><li><p><b>acSaveFormAs</b></p></li><li><p><b>acSaveRecord</b></p></li><li><p><b>acUndo</b></p></li><li><p><b>acCut</b></p></li><li><p><b>acCopy</b></p></li><li><p><b>acPaste</b></p></li><li><p><b>acDelete</b></p></li><li><p><b>acSelectRecord</b></p></li><li><p><b>acSelectAllRecords</b></p></li><li><p><b>acObjectRefresh</b></p></li></ul><p>For other commands, use the number of the command in the Command argument list, as shown in the Macro window in previous versions of Access (count down the list, starting from 0).</p>"
         },
         {
           "name": "Subcommand",
           "type": "Variant",
           "optional": true,
-          "description": "Use one of the following intrinsic constants:<ul><li><p><b>acObjectVerb</b></p></li><li><p><b>acObjectUpdate</b></p></li></ul><p>The <b>acObjectVerb</b> constant represents the first command on the submenu of the <b>Object</b> command on the <b>Edit</b> menu. The type of object determines the first command on the submenu. For example, this command is Edit for a Paintbrush object that can be edited.</p> <p>For other commands on submenus, use the number of the subcommand in the _Subcommand_ argument list, as shown in the Macro window in previous versions of Access (count down the list, starting from 0).</p>"
+          "description": "Use one of the following intrinsic constants:<ul><li><p><b>acObjectVerb</b></p></li><li><p><b>acObjectUpdate</b></p></li></ul><p>The <b>acObjectVerb</b> constant represents the first command on the submenu of the <b>Object</b> command on the <b>Edit</b> menu. The type of object determines the first command on the submenu. For example, this command is Edit for a Paintbrush object that can be edited.</p> <p>For other commands on submenus, use the number of the subcommand in the Subcommand argument list, as shown in the Macro window in previous versions of Access (count down the list, starting from 0).</p>"
         },
         {
           "name": "Version",
           "type": "Variant",
           "optional": true,
-          "description": "Use the intrinsic constant acMenuVer70 for code written for Access 95 databases, the intrinsic constant acMenuVer20 for code written for Access version 2.0 databases, and the intrinsic constant acMenuVer1X for code written for Access version 1.x databases. This argument is available only in Visual Basic. NOTE: The default for this argument is acMenuVer1X, so that any code written for Access version 1.x databases will run unchanged. If you are writing code for a Access 95 or version 2.0 database and want to use the Access 95 or version 2.0 menu commands with the DoMenuItem method, you must set this argument to acMenuVer70 or acMenuVer20. Also, when you are counting down the lists for the _MenuBar_, _MenuName_, _Command_, and _Subcommand_ action arguments in the Macro window to get the numbers to use for the arguments in the DoMenuItem method, you must use the Access 95 lists if the _Version_ argument is acMenuVer70, the Access version 2.0 lists if the _Version_ argument is Version, and the Access version 1.x lists if _Version_ is acMenuVer1X (or blank). NOTE: There is no acMenuVer80 setting for this argument. You can't use the DoMenuItem method to display Access commands (although existing DoMenuItem methods in Visual Basic code will still work). Use the RunCommand method instead."
+          "description": "Use the intrinsic constant acMenuVer70 for code written for Access 95 databases, the intrinsic constant acMenuVer20 for code written for Access version 2.0 databases, and the intrinsic constant acMenuVer1X for code written for Access version 1.x databases. This argument is available only in Visual Basic. NOTE: The default for this argument is acMenuVer1X, so that any code written for Access version 1.x databases will run unchanged. If you are writing code for a Access 95 or version 2.0 database and want to use the Access 95 or version 2.0 menu commands with the DoMenuItem method, you must set this argument to acMenuVer70 or acMenuVer20. Also, when you are counting down the lists for the MenuBar, MenuName, Command, and Subcommand action arguments in the Macro window to get the numbers to use for the arguments in the DoMenuItem method, you must use the Access 95 lists if the Version argument is acMenuVer70, the Access version 2.0 lists if the Version argument is Version, and the Access version 1.x lists if Version is acMenuVer1X (or blank). NOTE: There is no acMenuVer80 setting for this argument. You can't use the DoMenuItem method to display Access commands (although existing DoMenuItem methods in Visual Basic code will still work). Use the RunCommand method instead."
         }
       ]
     },
@@ -253,7 +253,7 @@
           "name": "PageNumber",
           "type": "Variant",
           "optional": false,
-          "description": "A numeric expression that's a valid page number for the active form. If you leave this argument blank, the focus stays on the current page. Use the _Right_ and _Down_ arguments to display the part of the page that you want to see."
+          "description": "A numeric expression that's a valid page number for the active form. If you leave this argument blank, the focus stays on the current page. Use the Right and Down arguments to display the part of the page that you want to see."
         },
         {
           "name": "Right",
@@ -286,7 +286,7 @@
           "name": "ObjectName",
           "type": "Variant",
           "optional": true,
-          "description": "A string expression that's the valid name of an object of the type selected by the _ObjectType_ argument."
+          "description": "A string expression that's the valid name of an object of the type selected by the ObjectType argument."
         },
         {
           "name": "Record",
@@ -298,7 +298,7 @@
           "name": "Offset",
           "type": "Variant",
           "optional": true,
-          "description": "A numeric expression that represents the number of records to move forward or backward if you specify acNext or acPrevious for the _Record_ argument, or the record to move to if you specify acGoTo for the _Record_ argument. The expression must result in a valid record number."
+          "description": "A numeric expression that represents the number of records to move forward or backward if you specify acNext or acPrevious for the Record argument, or the record to move to if you specify acGoTo for the Record argument. The expression must result in a valid record number."
         }
       ]
     },
@@ -411,7 +411,7 @@
           "name": "OpenArgs",
           "type": "Variant",
           "optional": true,
-          "description": "A string expression. This expression is used to set the form's OpenArgs property. This setting can then be used by code in a form module, such as the Open event procedure. The OpenArgs property can also be referred to in macros and expressions. For example, suppose that the form that you open is a continuous-form list of clients. If you want the focus to move to a specific client record when the form opens, you can specify the client name with the _OpenArgs_ argument, and then use the FindRecord method to move the focus to the record for the client with the specified name."
+          "description": "A string expression. This expression is used to set the form's OpenArgs property. This setting can then be used by code in a form module, such as the Open event procedure. The OpenArgs property can also be referred to in macros and expressions. For example, suppose that the form that you open is a continuous-form list of clients. If you want the focus to move to a specific client record when the form opens, you can specify the client name with the OpenArgs argument, and then use the FindRecord method to move the focus to the record for the client with the specified name."
         }
       ]
     },
@@ -486,13 +486,13 @@
           "name": "PageFrom",
           "type": "Variant",
           "optional": true,
-          "description": "The first page to print. A numeric expression that's a valid page number in the active form or datasheet. This argument is required if you specify acPages for the _PrintRange_ argument."
+          "description": "The first page to print. A numeric expression that's a valid page number in the active form or datasheet. This argument is required if you specify acPages for the PrintRange argument."
         },
         {
           "name": "PageTo",
           "type": "Variant",
           "optional": true,
-          "description": "The last page to print. A numeric expression that's a valid page number in the active form or datasheet. This argument is required if you specify acPages for the _PrintRange_ argument."
+          "description": "The last page to print. A numeric expression that's a valid page number in the active form or datasheet. This argument is required if you specify acPages for the PrintRange argument."
         },
         {
           "name": "PrintQuality",
@@ -561,7 +561,7 @@
           "name": "ObjectName",
           "type": "Variant",
           "optional": true,
-          "description": "A string expression that's the valid name of an object of the type selected by the _ObjectType_ argument."
+          "description": "A string expression that's the valid name of an object of the type selected by the ObjectType argument."
         }
       ]
     },
@@ -588,7 +588,7 @@
           "name": "OldName",
           "type": "Variant",
           "optional": true,
-          "description": "A string expression that's the valid name of an object of the type specified by the _ObjectType_ argument. If you execute Visual Basic code containing the Rename method in a library database, Access looks for the object with this name first in the library database, and then in the current database."
+          "description": "A string expression that's the valid name of an object of the type specified by the ObjectType argument. If you execute Visual Basic code containing the Rename method in a library database, Access looks for the object with this name first in the library database, and then in the current database."
         }
       ]
     },
@@ -664,7 +664,7 @@
           "name": "ObjectName",
           "type": "Variant",
           "optional": true,
-          "description": "A string expression that's the valid name of an object of the type selected by the _ObjectType_ argument. This is a required argument, unless you specify True (1) for the _InNavigationPane_ argument."
+          "description": "A string expression that's the valid name of an object of the type selected by the ObjectType argument. This is a required argument, unless you specify True (1) for the InNavigationPane argument."
         },
         {
           "name": "InDatabaseWindow",
@@ -713,7 +713,7 @@
           "name": "DatabaseType",
           "type": "Variant",
           "optional": true,
-          "description": "A string expression that's the name of one of the types of databases that you can use to import, export, or link data. The _DatabaseType_ parameter is required for exporting and link data actions but not required for importing actions. The types or databases are:<ul><li><p>Microsoft Access (default) </p></li><li><p>Jet 2.x</p></li><li><p>Jet 3.x</p></li><li><p>dBase III</p></li><li><p>dBase IV</p></li><li><p>dBase 5.0</p></li><li><p>Paradox 3.x</p></li><li><p>Paradox 4.x</p></li><li><p>Paradox 5.x</p></li><li><p>Paradox 7.x</p></li><li><p>ODBC Database</p></li><li><p>WSS (SharePoint)</p></li></ul>"
+          "description": "A string expression that's the name of one of the types of databases that you can use to import, export, or link data. The DatabaseType parameter is required for exporting and link data actions but not required for importing actions. The types or databases are:<ul><li><p>Microsoft Access (default) </p></li><li><p>Jet 2.x</p></li><li><p>Jet 3.x</p></li><li><p>dBase III</p></li><li><p>dBase IV</p></li><li><p>dBase 5.0</p></li><li><p>Paradox 3.x</p></li><li><p>Paradox 4.x</p></li><li><p>Paradox 5.x</p></li><li><p>Paradox 7.x</p></li><li><p>ODBC Database</p></li><li><p>WSS (SharePoint)</p></li></ul>"
         },
         {
           "name": "DatabaseName",
@@ -845,7 +845,7 @@
           "name": "HTMLTableName",
           "type": "Variant",
           "optional": true,
-          "description": "A string expression that's the name of the table or list in the HTML file that you want to import or link. This argument is ignored unless the _TransferType_ argument is set to acImportHTML or acLinkHTML. If you leave this argument blank, the first table or list in the HTML file is imported or linked. The name of the table or list in the HTML file is determined by the text specified by the CAPTION tag, if there's a CAPTION tag. If there's no CAPTION tag, the name is determined by the text specified by the TITLE tag. If more than one table or list has the same name, Access distinguishes them by adding a number to the end of each table or list name; for example, Employees1 and Employees2."
+          "description": "A string expression that's the name of the table or list in the HTML file that you want to import or link. This argument is ignored unless the TransferType argument is set to acImportHTML or acLinkHTML. If you leave this argument blank, the first table or list in the HTML file is imported or linked. The name of the table or list in the HTML file is determined by the text specified by the CAPTION tag, if there's a CAPTION tag. If there's no CAPTION tag, the name is determined by the text specified by the TITLE tag. If more than one table or list has the same name, Access distinguishes them by adding a number to the end of each table or list name; for example, Employees1 and Employees2."
         },
         {
           "name": "CodePage",
@@ -872,7 +872,7 @@
           "name": "ObjectName",
           "type": "Variant",
           "optional": true,
-          "description": "A string expression that's the valid name of an object of the type selected by the _ObjectType_ argument. If you run Visual Basic code containing the DeleteObject method in a library database, Microsoft Access looks for the object with this name first in the library database, and then in the current database."
+          "description": "A string expression that's the valid name of an object of the type selected by the ObjectType argument. If you run Visual Basic code containing the DeleteObject method in a library database, Microsoft Access looks for the object with this name first in the library database, and then in the current database."
         }
       ]
     },
@@ -887,7 +887,7 @@
           "name": "ModuleName",
           "type": "Variant",
           "optional": true,
-          "description": "A string expression that's the valid name of the Visual Basic module that you want to open. If you leave this argument blank, Microsoft Access searches all the standard modules in the database for the procedure that you selected with the _ProcedureName_ argument and opens the module containing the procedure to that procedure. If you execute Visual Basic code containing the OpenModule method in a library database, Access looks for the module with this name first in the library database, and then in the current database."
+          "description": "A string expression that's the valid name of the Visual Basic module that you want to open. If you leave this argument blank, Microsoft Access searches all the standard modules in the database for the procedure that you selected with the ProcedureName argument and opens the module containing the procedure to that procedure. If you execute Visual Basic code containing the OpenModule method in a library database, Access looks for the module with this name first in the library database, and then in the current database."
         },
         {
           "name": "ProcedureName",
@@ -914,7 +914,7 @@
           "name": "ObjectName",
           "type": "Variant",
           "optional": true,
-          "description": "A string expression that's the valid name of an object of the type selected by the _ObjectType_ argument. If you want to include the active object in the mail message, specify the object's type with the _ObjectType_ argument and leave this argument blank. If you leave both the _ObjectType_ and _ObjectName_ arguments blank (the default constant, acSendNoObject, is assumed for the _ObjectType_ argument), Microsoft Access sends a message to the electronic mail application without an included database object. If you run Visual Basic code containing the SendObject method in a library database, Access looks for the object with this name first in the library database, and then in the current database."
+          "description": "A string expression that's the valid name of an object of the type selected by the ObjectType argument. If you want to include the active object in the mail message, specify the object's type with the ObjectType argument and leave this argument blank. If you leave both the ObjectType and ObjectName arguments blank (the default constant, acSendNoObject, is assumed for the ObjectType argument), Microsoft Access sends a message to the electronic mail application without an included database object. If you run Visual Basic code containing the SendObject method in a library database, Access looks for the object with this name first in the library database, and then in the current database."
         },
         {
           "name": "OutputFormat",
@@ -926,7 +926,7 @@
           "name": "To",
           "type": "Variant",
           "optional": true,
-          "description": "A string expression that lists the recipients whose names you want to put on the To line in the mail message. Separate the recipient names that you specify in this argument and in the _Cc_ and _Bcc_ arguments with a semicolon (;), or with the list separator set on the Number tab of the Regional Settings Properties dialog box in the Windows Control Panel. If the recipient names aren't recognized by the mail application, the message isn't sent and an error occurs. If you leave this argument blank, Microsoft Access prompts you for the recipients."
+          "description": "A string expression that lists the recipients whose names you want to put on the To line in the mail message. Separate the recipient names that you specify in this argument and in the Cc and Bcc arguments with a semicolon (;), or with the list separator set on the Number tab of the Regional Settings Properties dialog box in the Windows Control Panel. If the recipient names aren't recognized by the mail application, the message isn't sent and an error occurs. If you leave this argument blank, Microsoft Access prompts you for the recipients."
         },
         {
           "name": "Cc",
@@ -1004,7 +1004,7 @@
           "name": "ObjectName",
           "type": "Variant",
           "optional": true,
-          "description": "A string expression that's the valid name of an object of the type selected by the _ObjectType_ argument."
+          "description": "A string expression that's the valid name of an object of the type selected by the ObjectType argument."
         }
       ]
     },
@@ -1019,19 +1019,19 @@
           "name": "MenuIndex",
           "type": "Variant",
           "optional": false,
-          "description": "An integer, counting from 0, that is the valid index of a menu on the custom menu bar or global menu bar for the active window, as defined in the menu bar macro for the custom menu bar or global menu bar. If you select a menu with this argument and leave the _CommandIndex_ and _SubcommandIndex_ arguments blank (or set them to 1), you can enable or disable the menu name itself. You can't, however, check or uncheck a menu name (Microsoft Access ignores the acMenuCheck and acMenuUncheck settings for the _Flag_ argument for menu names)."
+          "description": "An integer, counting from 0, that is the valid index of a menu on the custom menu bar or global menu bar for the active window, as defined in the menu bar macro for the custom menu bar or global menu bar. If you select a menu with this argument and leave the CommandIndex and SubcommandIndex arguments blank (or set them to 1), you can enable or disable the menu name itself. You can't, however, check or uncheck a menu name (Microsoft Access ignores the acMenuCheck and acMenuUncheck settings for the Flag argument for menu names)."
         },
         {
           "name": "CommandIndex",
           "type": "Variant",
           "optional": true,
-          "description": "An integer, counting from 0, that's the valid index of a command on the menu selected by the _MenuIndex_ argument, as defined in the macro group that defines the selected menu for the custom menu bar or global menu bar for the active window."
+          "description": "An integer, counting from 0, that's the valid index of a command on the menu selected by the MenuIndex argument, as defined in the macro group that defines the selected menu for the custom menu bar or global menu bar for the active window."
         },
         {
           "name": "SubcommandIndex",
           "type": "Variant",
           "optional": true,
-          "description": "An integer, counting from 0, that's the valid index of a subcommand in the submenu selected by the _CommandIndex_ argument, as defined in the macro group that defines the selected submenu for the custom menu bar or global menu bar for the active window."
+          "description": "An integer, counting from 0, that's the valid index of a subcommand in the submenu selected by the CommandIndex argument, as defined in the macro group that defines the selected submenu for the custom menu bar or global menu bar for the active window."
         },
         {
           "name": "Flag",
@@ -1214,19 +1214,19 @@
           "name": "UseTrustedConnection",
           "type": "Variant",
           "optional": true,
-          "description": "True if the current connection is using a login with system administrator privileges. If this argument is not True, you must specify a login and password in the _Login_ and _Password_ arguments."
+          "description": "True if the current connection is using a login with system administrator privileges. If this argument is not True, you must specify a login and password in the Login and Password arguments."
         },
         {
           "name": "Login",
           "type": "Variant",
           "optional": true,
-          "description": "The name of a login on the destination server with system administrator privileges. If _UseTrustedConnection_ is True, this argument is ignored."
+          "description": "The name of a login on the destination server with system administrator privileges. If UseTrustedConnection is True, this argument is ignored."
         },
         {
           "name": "Password",
           "type": "Variant",
           "optional": true,
-          "description": "The password for the login specified in _Login_. If _UseTrustedConnection_ is True, this argument is ignored."
+          "description": "The password for the login specified in Login. If UseTrustedConnection is True, this argument is ignored."
         },
         {
           "name": "TransferCopyData",
@@ -1253,7 +1253,7 @@
           "name": "OverwriteExistingFile",
           "type": "Variant",
           "optional": true,
-          "description": "Determines whether Microsoft Access overwrites the file specified by _DatabaseFileName_. True to overwrite the existing file. If the file doesn't already exist, this argument is ignored."
+          "description": "Determines whether Microsoft Access overwrites the file specified by DatabaseFileName. True to overwrite the existing file. If the file doesn't already exist, this argument is ignored."
         },
         {
           "name": "DisconnectAllUsers",
@@ -1301,7 +1301,7 @@
           "name": "FilterName",
           "type": "Variant",
           "optional": true,
-          "description": "A string expression that is the valid name of a filter or query in the current database. When using this method to apply a server filter, the _FilterName_ argument must be blank."
+          "description": "A string expression that is the valid name of a filter or query in the current database. When using this method to apply a server filter, the FilterName argument must be blank."
         },
         {
           "name": "WhereCondition",
@@ -1334,7 +1334,7 @@
           "name": "ObjectName",
           "type": "Variant",
           "optional": true,
-          "description": "A string expression that's the valid name of an object of the type selected by the _ObjectType_ argument. If you want to output the active object, specify the object's type for the _ObjectType_ argument and leave this argument blank. If you run Visual Basic code containing the OutputTo method in a library database, Microsoft Office Access searches for the object with this name first in the library database, and then in the current database."
+          "description": "A string expression that's the valid name of an object of the type selected by the ObjectType argument. If you want to output the active object, specify the object's type for the ObjectType argument and leave this argument blank. If you run Visual Basic code containing the OutputTo method in a library database, Microsoft Office Access searches for the object with this name first in the library database, and then in the current database."
         },
         {
           "name": "OutputFormat",
@@ -1352,7 +1352,7 @@
           "name": "AutoStart",
           "type": "Variant",
           "optional": true,
-          "description": "Use True (1) to start the appropriate Microsoft Windows-based application immediately, with the file specified by the _OutputFile_ argument loaded. Use False (0) if you don't want to start the application. This argument is ignored for Microsoft Internet Information Server (.htx, .idc) files and Microsoft ActiveX Server (.asp) files. If you leave this argument blank, the default (False**) is assumed."
+          "description": "Use True (1) to start the appropriate Microsoft Windows-based application immediately, with the file specified by the OutputFile argument loaded. Use False (0) if you don't want to start the application. This argument is ignored for Microsoft Internet Information Server (.htx, .idc) files and Microsoft ActiveX Server (.asp) files. If you leave this argument blank, the default (False**) is assumed."
         },
         {
           "name": "TemplateFile",
@@ -1443,7 +1443,7 @@
           "name": "Group",
           "type": "Variant",
           "optional": true,
-          "description": "Determines which objects in the category appear in the navigation pane. If you leave this argument blank, the navigation pane will display all database objects grouped by the criteria that you specify in the _Category_ argument. Examples of valid _Group_ arguments for the various _Category_ arguments are shown in the table under Remarks."
+          "description": "Determines which objects in the category appear in the navigation pane. If you leave this argument blank, the navigation pane will display all database objects grouped by the criteria that you specify in the Category argument. Examples of valid Group arguments for the various Category arguments are shown in the table under Remarks."
         }
       ]
     },
@@ -1589,13 +1589,13 @@
           "name": "ObjectName",
           "type": "Variant",
           "optional": false,
-          "description": "The object that loads inside the subform control referenced by the _PathtoSubformControl_ argument."
+          "description": "The object that loads inside the subform control referenced by the PathtoSubformControl argument."
         },
         {
           "name": "PathtoSubformControl",
           "type": "Variant",
           "optional": true,
-          "description": "If specified, the path from the main form of the application to the target subform control that loads the object specified by the _ObjectName_ argument."
+          "description": "If specified, the path from the main form of the application to the target subform control that loads the object specified by the ObjectName argument."
         },
         {
           "name": "WhereCondition",
@@ -1685,7 +1685,7 @@
           "name": "FilterName",
           "type": "Variant",
           "optional": true,
-          "description": "If provided, the name of a query or of a filter saved as a query. This argument or the _WhereCondition_ argument is required."
+          "description": "If provided, the name of a query or of a filter saved as a query. This argument or the WhereCondition argument is required."
         },
         {
           "name": "WhereCondition",

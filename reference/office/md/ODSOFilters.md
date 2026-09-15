@@ -48,7 +48,7 @@ End Sub
     - `Column As String` (required): The name of the table in the data source.
     - `Comparison As MsoFilterComparison` (required): How the data in the table is filtered.
     - `Conjunction As MsoFilterConjunction` (required): Determines how this filter relates to other filters in the ODSOFilters object.
-    - `bstrCompareTo As String` (optional): If the _Comparison_ argument is something other than msoFilterComparisonIsBlank or msoFilterComparisonIsNotBlank, _bstrCompareTo_ is a string to which the data in the table is compared.
+    - `bstrCompareTo As String` (optional): If the Comparison argument is something other than msoFilterComparisonIsBlank or msoFilterComparisonIsNotBlank, bstrCompareTo is a string to which the data in the table is compared.
     - `DeferUpdate As Boolean` (optional): Specifies whether to delay updating the filter. Default is False.
 - `Delete(Index As Long, [DeferUpdate As Boolean])`  
   Deletes a filter object from the ODSOFilters collection.

@@ -4,7 +4,7 @@
   "guid": "{00024495-0000-0000-C000-000000000046}",
   "library": "Microsoft Excel 16.0 Object Library",
   "description": "Represents the criteria for the minimum, midpoint, or maximum thresholds for a color format conditional format.",
-  "remarks": "Each ColorScaleCriterion is part of the ColorScaleCriteria collection. Use ColorScaleCriteria (_index_), to return an individual criterion. You can set the Type, Value, and FormatColor of each threshold for the color scale.",
+  "remarks": "Each ColorScaleCriterion is part of the ColorScaleCriteria collection. Use ColorScaleCriteria (index), to return an individual criterion. You can set the Type, Value, and FormatColor of each threshold for the color scale.",
   "example": "Sub CreateColorScaleCF()\n\n Dim cfColorScale As ColorScale\n\n 'Fill cells with sample data from 1 to 10\n With ActiveSheet\n .Range(\"C1\") = 1\n .Range(\"C2\") = 2\n .Range(\"C1:C2\").AutoFill Destination:=Range(\"C1:C10\")\n End With\n\n Range(\"C1:C10\").Select\n\n 'Create a two-color ColorScale object for the created sample data range\n Set cfColorScale = Selection.FormatConditions.AddColorScale(ColorScaleType:=2)\n\n 'Set the minimum threshold to red and maximum threshold to blue\n cfColorScale.ColorScaleCriteria(1).FormatColor.Color = RGB(255, 0, 0)\n cfColorScale.ColorScaleCriteria(2).FormatColor.Color = RGB(0, 0, 255)\n\nEnd Sub",
   "properties": [
     {

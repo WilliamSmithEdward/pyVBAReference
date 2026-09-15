@@ -4,7 +4,7 @@
   "guid": "{55F88897-7708-11D1-ACEB-006008961DA5}",
   "library": "Microsoft Office 16.0 Object Library",
   "description": "Represents a combo box control on a command bar.",
-  "remarks": "Use Controls(_index_), where _index_ is the index number of the control, to return a CommandBarComboBox object. Note that the Type property of the control must be msoControlEdit, msoControlDropdown, msoControlComboBox, msoControlButtonDropdown, msoControlSplitDropdown, msoControlOCXDropdown, msoControlGraphicCombo, or msoControlGraphicDropdown.",
+  "remarks": "Use Controls(index), where index is the index number of the control, to return a CommandBarComboBox object. Note that the Type property of the control must be msoControlEdit, msoControlDropdown, msoControlComboBox, msoControlButtonDropdown, msoControlSplitDropdown, msoControlOCXDropdown, msoControlGraphicCombo, or msoControlGraphicDropdown.",
   "example": "Set combo = CommandBars(\"Custom\").Controls(2)\nWith combo\n    .AddItem \"First Item\", 1\n    .AddItem \"Second Item\", 2\n    .DropDownLines = 3\n    .DropDownWidth = 75\n    .ListIndex = 0\nEnd With",
   "properties": [
     {

@@ -43,7 +43,7 @@
   Returns a Variant (Date) containing the time.
 - `Weekday(Date As Variant, [FirstDayOfWeek As VbDayOfWeek]) As Variant`  
   Returns a Variant (Integer) containing a whole number representing the day of the week.
-    - `Date As Variant` (required): Required. Variant, numeric expression, string expression, or any combination, that can represent a date. If _date_ contains Null, Null is returned.
+    - `Date As Variant` (required): Required. Variant, numeric expression, string expression, or any combination, that can represent a date. If date contains Null, Null is returned.
     - `FirstDayOfWeek As VbDayOfWeek` (optional): Optional. A constant that specifies the first day of the week. If not specified, vbSunday is assumed.
 - `Year(Date As Variant) As Variant`  
   Returns a Variant (Integer) containing a whole number representing the year.
@@ -54,7 +54,7 @@
     - `Date As Variant` (required): Required. Variant (Date) or literal representing the date to which the interval is added.
 - `DateDiff(Interval As String, Date1 As Variant, Date2 As Variant, [FirstDayOfWeek As VbDayOfWeek], [FirstWeekOfYear As VbFirstWeekOfYear]) As Variant`  
   Returns a Variant (Long) specifying the number of time intervals between two specified dates.
-    - `Interval As String` (required): Required. String expression that is the interval of time you use to calculate the difference between _date1_ and _date2_.
+    - `Interval As String` (required): Required. String expression that is the interval of time you use to calculate the difference between date1 and date2.
     - `FirstDayOfWeek As VbDayOfWeek` (optional): Optional. A constant that specifies the first day of the week. If not specified, Sunday is assumed.
     - `FirstWeekOfYear As VbFirstWeekOfYear` (optional): Optional. A constant that specifies the first week of the year. If not specified, the first week is assumed to be the week in which January 1 occurs.
 - `DatePart(Interval As String, Date As Variant, [FirstDayOfWeek As VbDayOfWeek], [FirstWeekOfYear As VbFirstWeekOfYear]) As Variant`

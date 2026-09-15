@@ -30,8 +30,8 @@ MsgBox Charts(1).SeriesCollection(1).Trendlines.Count
 - `Add([Type As XlTrendlineType], [Order As Variant], [Period As Variant], [Forward As Variant], [Backward As Variant], [Intercept As Variant], [DisplayEquation As Variant], [DisplayRSquared As Variant], [Name As Variant]) As Trendline`  
   Creates a new trendline.
     - `Type As XlTrendlineType` (optional): The trendline type.
-    - `Order As Variant` (optional): Variant if _Type_ is xlPolynomial. The trendline order. Must be an integer from 2 to 6, inclusive.
-    - `Period As Variant` (optional): Variant if _Type_ is xlMovingAvg. The trendline period. Must be an integer greater than 1 and less than the number of data points in the series you are adding a trendline to.
+    - `Order As Variant` (optional): Variant if Type is xlPolynomial. The trendline order. Must be an integer from 2 to 6, inclusive.
+    - `Period As Variant` (optional): Variant if Type is xlMovingAvg. The trendline period. Must be an integer greater than 1 and less than the number of data points in the series you are adding a trendline to.
     - `Forward As Variant` (optional): The number of periods (or units on a scatter chart) that the trendline extends forward.
     - `Backward As Variant` (optional): The number of periods (or units on a scatter chart) that the trendline extends backward.
     - `Intercept As Variant` (optional): The trendline intercept. If this argument is omitted, the intercept is automatically set by the regression.

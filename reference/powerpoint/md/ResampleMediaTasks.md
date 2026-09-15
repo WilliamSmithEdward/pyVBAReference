@@ -6,7 +6,7 @@
 
 A collection of ResampleMediaTask objects.
 
-**Remarks:** Use ResampleMediaTasks (_index_) to return a ResampleMediaTask object, where _index_ is the position of the ResampleMediaTask object to return.
+**Remarks:** Use ResampleMediaTasks (index) to return a ResampleMediaTask object, where index is the position of the ResampleMediaTask object to return.
 
 ## Properties (2)
 

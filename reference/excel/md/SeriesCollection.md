@@ -34,7 +34,7 @@ Worksheets(1).ChartObjects(1).Chart. _
     - `Rowcol As XlRowCol` (optional): Specifies whether the new values are in the rows or columns of the specified range.
     - `SeriesLabels As Variant` (optional): True if the first row or column contains the name of the data series. False if the first row or column contains the first data point of the series. If this argument is omitted, Microsoft Excel attempts to determine the location of the series name from the contents of the first row or column.
     - `CategoryLabels As Variant` (optional): True if the first row or column contains the name of the category labels. False if the first row or column contains the first data point of the series. If this argument is omitted, Excel attempts to determine the location of the category label from the contents of the first row or column.
-    - `Replace As Variant` (optional): If _CategoryLabels_ is True and _Replace_ is True, the specified categories replace the categories that currently exist for the series. If _Replace_ is False, the existing categories will not be replaced. The default value is False.
+    - `Replace As Variant` (optional): If CategoryLabels is True and Replace is True, the specified categories replace the categories that currently exist for the series. If Replace is False, the existing categories will not be replaced. The default value is False.
 - `Extend(Source As Variant, [Rowcol As Variant], [CategoryLabels As Variant]) As Variant`  
   Adds new data points to an existing series collection.
     - `Source As Variant` (required): The new data to be added to the SeriesCollection object as a Range object.

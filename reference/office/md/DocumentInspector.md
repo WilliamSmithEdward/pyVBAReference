@@ -38,9 +38,9 @@ End Sub
 
 - `Inspect(Status As MsoDocInspectorStatus, Results As String)`  
   Inspects a document for specific information or document properties.
-    - `Status As MsoDocInspectorStatus` (required): An enumeration representing the status of the document. _Status_ is an output parameter, which means that its value is returned when the method has completed its purpose.
+    - `Status As MsoDocInspectorStatus` (required): An enumeration representing the status of the document. Status is an output parameter, which means that its value is returned when the method has completed its purpose.
     - `Results As String` (required): Contains a list of the information items or document properties found in the document.
 - `Fix(Status As MsoDocInspectorStatus, Results As String)`  
   Performs an action on specific information items or document properties depending on the Document Inspector module specified.
-    - `Status As MsoDocInspectorStatus` (required): An enumeration representing the status of the document. _Status_ is an output parameter, which means that its value is returned when the method has completed its purpose.
-    - `Results As String` (required): Contains the results of the action. _Results_ is an output parameter.
+    - `Status As MsoDocInspectorStatus` (required): An enumeration representing the status of the document. Status is an output parameter, which means that its value is returned when the method has completed its purpose.
+    - `Results As String` (required): Contains the results of the action. Results is an output parameter.

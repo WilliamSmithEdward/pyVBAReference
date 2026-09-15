@@ -96,7 +96,7 @@ End With
 - `PresetGradient(Style As MsoGradientStyle, Variant As Long, PresetGradientType As MsoPresetGradientType)`  
   Sets the specified fill to a preset gradient.
     - `Style As MsoGradientStyle` (required): The gradient style.
-    - `Variant As Long` (required): The gradient variant. Can be a value from 1 to 4, corresponding to the four variants on the Gradient subtab on the Shape Fill tab. If _Style_ is msoGradientFromTitle or msoGradientFromCenter, this argument can be either 1 or 2.
+    - `Variant As Long` (required): The gradient variant. Can be a value from 1 to 4, corresponding to the four variants on the Gradient subtab on the Shape Fill tab. If Style is msoGradientFromTitle or msoGradientFromCenter, this argument can be either 1 or 2.
     - `PresetGradientType As MsoPresetGradientType` (required): The gradient type.
 - `PresetTextured(PresetTexture As MsoPresetTexture)`  
   Sets the specified fill to a preset texture.
@@ -106,7 +106,7 @@ End With
 - `TwoColorGradient(Style As MsoGradientStyle, Variant As Long)`  
   Sets the specified fill to a two-color gradient.
     - `Style As MsoGradientStyle` (required): The gradient style.
-    - `Variant As Long` (required): The gradient variant. Can be from 1 to 4, corresponding to the four variants on the Gradient sub-tab on the Shape Fill tab. If _Style_ is msoGradientFromTitle or msoGradientFromCenter, this argument can be either 1 or 2.
+    - `Variant As Long` (required): The gradient variant. Can be from 1 to 4, corresponding to the four variants on the Gradient sub-tab on the Shape Fill tab. If Style is msoGradientFromTitle or msoGradientFromCenter, this argument can be either 1 or 2.
 - `UserPicture(PictureFile As String)`  
   Fills the specified shape with one large image.
     - `PictureFile As String` (required): The name of the picture file.

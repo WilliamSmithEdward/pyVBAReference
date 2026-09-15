@@ -51,11 +51,11 @@ Worksheets(1).Shapes(1).Hyperlink.Follow NewWindow:=True
   Displays a cached document, if it's already been downloaded. Otherwise, this method resolves the hyperlink, downloads the target document, and displays the document in the appropriate application.
     - `NewWindow As Variant` (optional): True to display the target application in a new window. The default value is False.
     - `AddHistory As Variant` (optional): Not used. Reserved for future use.
-    - `ExtraInfo As Variant` (optional): A String or byte array that specifies additional information for HTTP to use to resolve the hyperlink. For example, you can use _ExtraInfo_ to specify the coordinates of an image map, the contents of a form, or a FAT file name.
-    - `Method As Variant` (optional): Specifies the way _ExtraInfo_ is attached. Can be one of the MsoExtraInfoMethod constants.
+    - `ExtraInfo As Variant` (optional): A String or byte array that specifies additional information for HTTP to use to resolve the hyperlink. For example, you can use ExtraInfo to specify the coordinates of an image map, the contents of a form, or a FAT file name.
+    - `Method As Variant` (optional): Specifies the way ExtraInfo is attached. Can be one of the MsoExtraInfoMethod constants.
     - `HeaderInfo As Variant` (optional): A String that specifies header information for the HTTP request. The default value is an empty string.
 - `CreateNewDocument(Filename As String, EditNow As Boolean, Overwrite As Boolean)`  
   Creates a new document linked to the specified hyperlink.
     - `Filename As String` (required): The file name of the specified document.
     - `EditNow As Boolean` (required): True to have the specified document open immediately in its associated editing environment. The default value is True.
-    - `Overwrite As Boolean` (required): True to overwrite any existing file of the same name in the same folder. False if any existing file of the same name is preserved and the _FileName_ argument specifies a new file name. The default value is False.
+    - `Overwrite As Boolean` (required): True to overwrite any existing file of the same name in the same folder. False if any existing file of the same name is preserved and the FileName argument specifies a new file name. The default value is False.

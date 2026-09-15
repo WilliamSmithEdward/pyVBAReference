@@ -6,7 +6,7 @@
 
 Contains a collection of adjustment values for the specified AutoShape, WordArt object, or connector.
 
-**Remarks:** Each adjustment value represents one way that an adjustment handle can be adjusted. Because some adjustment handles can be adjusted in two ways&mdash;for example, some handles can be adjusted both horizontally and vertically&mdash;a shape can have more adjustment values than it has adjustment handles. A shape can have up to eight adjustments. Use the Adjustments property to return an Adjustments object. Use Adjustments (_index_), where _index_ is the adjustment value's index number, to return a single adjustment value. Different shapes have different numbers of adjustment values. Different kinds of adjustments change the geometry of a shape in different ways. In addition, different kinds of adjustments have different ranges of valid values. For example, the following illustration shows what each of the four adjustment values for a right-arrow callout contributes to the definition of the callout's geometry. !Adjustment The following table summarizes the ranges of valid adjustment values for different types of adjustments. In most cases, if you specify a value that's beyond the range of valid values, the closest valid value will be assigned to the adjustment.
+**Remarks:** Each adjustment value represents one way that an adjustment handle can be adjusted. Because some adjustment handles can be adjusted in two ways&mdash;for example, some handles can be adjusted both horizontally and vertically&mdash;a shape can have more adjustment values than it has adjustment handles. A shape can have up to eight adjustments. Use the Adjustments property to return an Adjustments object. Use Adjustments (index), where index is the adjustment value's index number, to return a single adjustment value. Different shapes have different numbers of adjustment values. Different kinds of adjustments change the geometry of a shape in different ways. In addition, different kinds of adjustments have different ranges of valid values. For example, the following illustration shows what each of the four adjustment values for a right-arrow callout contributes to the definition of the callout's geometry. !Adjustment The following table summarizes the ranges of valid adjustment values for different types of adjustments. In most cases, if you specify a value that's beyond the range of valid values, the closest valid value will be assigned to the adjustment.
 
 **Example:**
 
@@ -33,4 +33,4 @@ End With
 - `Count As Long  (read-only)`  
   Returns an Integer value that represents the number of objects in the collection.
 - `Item As Single  (read/write)`  
-  Returns or sets the adjustment value specified by the _Index_ argument. Read/write Single.
+  Returns or sets the adjustment value specified by the Index argument. Read/write Single.

@@ -6,7 +6,7 @@
 
 Represents a set of custom layouts associated with a presentation design.
 
-**Remarks:** Use the CustomLayouts property of the slide Master object to return a CustomLayouts collection. Use CustomLayouts (_index_), where index is the custom layout index number, to return a single CustomLayout object. Use the Add method to create a new custom layout and add it to the CustomLayouts collection. Use the Paste method to past slides from the Clipboard as a CustomLayout object into the CustomLayouts collection. Use the CustomLayout property of a Slide or SlideRange object to return a custom layout for a slide or set of slides.
+**Remarks:** Use the CustomLayouts property of the slide Master object to return a CustomLayouts collection. Use CustomLayouts (index), where index is the custom layout index number, to return a single CustomLayout object. Use the Add method to create a new custom layout and add it to the CustomLayouts collection. Use the Paste method to past slides from the Clipboard as a CustomLayout object into the CustomLayouts collection. Use the CustomLayout property of a Slide or SlideRange object to return a custom layout for a slide or set of slides.
 
 **Example:**
 

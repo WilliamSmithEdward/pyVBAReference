@@ -6,7 +6,7 @@
 
 Represents a chart in a workbook.
 
-**Remarks:** The chart can be either an embedded chart (contained in a ChartObject object) or a separate chart sheet. The Charts collection contains a Chart object for each chart sheet in a workbook. Use Charts (_index_), where _index_ is the chart-sheet index number or name, to return a single Chart object. The chart _index_ number represents the position of the chart sheet on the workbook tab bar. _Charts(1)_ is the first (leftmost) chart in the workbook; _Charts(Charts.Count)_ is the last (rightmost). All chart sheets are included in the index count, even if they are hidden. The chart-sheet name is shown on the workbook tab for the chart. Use the Name property of the ChartObject object to set or return the chart name. The following example changes the color of series 1 on chart sheet 1. The following example moves the chart named Sales to the end of the active workbook. The Chart object is also a member of the Sheets collection, which contains all the sheets in the workbook (both chart sheets and worksheets). Use Sheets (_index_), where _index_ is the sheet index number or name, to return a single sheet. When a chart is the active object, you can use the ActiveChart property to refer to it.
+**Remarks:** The chart can be either an embedded chart (contained in a ChartObject object) or a separate chart sheet. The Charts collection contains a Chart object for each chart sheet in a workbook. Use Charts (index), where index is the chart-sheet index number or name, to return a single Chart object. The chart index number represents the position of the chart sheet on the workbook tab bar. Charts(1) is the first (leftmost) chart in the workbook; Charts(Charts.Count) is the last (rightmost). All chart sheets are included in the index count, even if they are hidden. The chart-sheet name is shown on the workbook tab for the chart. Use the Name property of the ChartObject object to set or return the chart name. The following example changes the color of series 1 on chart sheet 1. The following example moves the chart named Sales to the end of the active workbook. The Chart object is also a member of the Sheets collection, which contains all the sheets in the workbook (both chart sheets and worksheets). Use Sheets (index), where index is the sheet index number or name, to return a single sheet. When a chart is the active object, you can use the ActiveChart property to refer to it.
 
 ## Properties (61)
 
@@ -30,11 +30,11 @@ Represents a chart in a workbook.
 - `Previous As Object  (read-only)`  
   Returns a Worksheet object that represents the previous sheet.
 - `ProtectContents As Boolean  (read-only)`  
-  True if the contents of the sheet are protected. For a chart, this protects the entire chart. To turn on content protection, use the Protect method with the _Contents_ argument set to True. Read-only Boolean.
+  True if the contents of the sheet are protected. For a chart, this protects the entire chart. To turn on content protection, use the Protect method with the Contents argument set to True. Read-only Boolean.
 - `ProtectDrawingObjects As Boolean  (read-only)`  
-  True if shapes are protected. To turn on shape protection, use the Protect method with the _DrawingObjects_ argument set to True. Read-only Boolean.
+  True if shapes are protected. To turn on shape protection, use the Protect method with the DrawingObjects argument set to True. Read-only Boolean.
 - `ProtectionMode As Boolean  (read-only)`  
-  True if user-interface-only protection is turned on. To turn on user interface protection, use the Protect method with the _UserInterfaceOnly_ argument set to True. Read-only Boolean.
+  True if user-interface-only protection is turned on. To turn on user interface protection, use the Protect method with the UserInterfaceOnly argument set to True. Read-only Boolean.
 - `Visible As XlSheetVisibility  (read/write)`  
   Returns or sets an XlSheetVisibility value that determines whether the object is visible.
 - `Shapes As Shapes  (read-only)`  
@@ -137,14 +137,14 @@ Represents a chart in a workbook.
   Makes the current chart the active chart.
 - `Copy([Before As Variant], [After As Variant])`  
   Copies the sheet to another location in the workbook.
-    - `Before As Variant` (optional): The sheet before which the copied sheet will be placed. You cannot specify _Before_ if you specify _After_.
-    - `After As Variant` (optional): The sheet after which the copied sheet will be placed. You cannot specify _After_ if you specify _Before_.
+    - `Before As Variant` (optional): The sheet before which the copied sheet will be placed. You cannot specify Before if you specify After.
+    - `After As Variant` (optional): The sheet after which the copied sheet will be placed. You cannot specify After if you specify Before.
 - `Delete()`  
   Deletes the object.
 - `Move([Before As Variant], [After As Variant])`  
   Moves the chart to another location in the workbook.
-    - `Before As Variant` (optional): The sheet before which the moved chart will be placed. You cannot specify _Before_ if you specify _After_.
-    - `After As Variant` (optional): The sheet after which the moved chart will be placed. You cannot specify _After_ if you specify _Before_.
+    - `Before As Variant` (optional): The sheet before which the moved chart will be placed. You cannot specify Before if you specify After.
+    - `After As Variant` (optional): The sheet after which the moved chart will be placed. You cannot specify After if you specify Before.
 - `PrintPreview([EnableChanges As Variant])`  
   Shows a preview of the object as it would look when printed.
     - `EnableChanges As Variant` (optional): Pass a Boolean value to specify if the user can change the margins and other page setup options available in print preview.
@@ -198,7 +198,7 @@ Represents a chart in a workbook.
 - `Location(Where As XlChartLocation, [Name As Variant]) As Chart`  
   Moves the chart to a new location.
     - `Where As XlChartLocation` (required): Where to move the chart.
-    - `Name As Variant` (optional): Required if _Where_ is xlLocationAsObject. The name of the sheet where the chart will be embedded if _Where_ is xlLocationAsObject, or the name of the new sheet if _Where_ is xlLocationAsNewSheet.
+    - `Name As Variant` (optional): Required if Where is xlLocationAsObject. The name of the sheet where the chart will be embedded if Where is xlLocationAsObject, or the name of the new sheet if Where is xlLocationAsNewSheet.
 - `OLEObjects([Index As Variant]) As Object`  
   Returns an object that represents either a single OLE object (an OLEObject) or a collection of all OLE objects (an OLEObjects collection) on the chart or sheet. Read-only.
     - `Index As Variant` (optional): The name or number of the OLE object.
@@ -209,9 +209,9 @@ Represents a chart in a workbook.
   Returns an object that represents either a single series (a Series object) or a collection of all the series (a SeriesCollection collection) in the chart or chart group.
     - `Index As Variant` (optional): The name or number of the series.
 - `GetChartElement(x As Long, y As Long, ElementID As Long, Arg1 As Long, Arg2 As Long)`  
-  Returns information about the chart element at specified _x_ and _y_ coordinates. This method is unusual in that you specify values for only the first two arguments. Microsoft Excel fills in the other arguments, and your code should examine those values when the method returns.
-    - `x As Long` (required): The _x_ coordinate of the chart element.
-    - `y As Long` (required): The _y_ coordinate of the chart element.
+  Returns information about the chart element at specified x and y coordinates. This method is unusual in that you specify values for only the first two arguments. Microsoft Excel fills in the other arguments, and your code should examine those values when the method returns.
+    - `x As Long` (required): The x coordinate of the chart element.
+    - `y As Long` (required): The y coordinate of the chart element.
     - `ElementID As Long` (required): When the method returns, this argument contains the XLChartItem value of the chart element at the specified coordinates. For more information, see the Remarks section.
     - `Arg1 As Long` (required): When the method returns, this argument contains information related to the chart element. For more information, see the Remarks section.
     - `Arg2 As Long` (required): When the method returns, this argument contains information related to the chart element. For more information, see the Remarks section.
@@ -259,9 +259,9 @@ Represents a chart in a workbook.
     - `Copies As Variant` (optional): The number of copies to print. If this argument is omitted, one copy is printed.
     - `Preview As Variant` (optional): True to have Microsoft Excel invoke print preview before printing the object. False (or omitted) to print the object immediately.
     - `ActivePrinter As Variant` (optional): Sets the name of the active printer.
-    - `PrintToFile As Variant` (optional): True to print to a file. If _PrToFileName_ is not specified, Excel prompts the user to enter the name of the output file.
+    - `PrintToFile As Variant` (optional): True to print to a file. If PrToFileName is not specified, Excel prompts the user to enter the name of the output file.
     - `Collate As Variant` (optional): True to collate multiple copies.
-    - `PrToFileName As Variant` (optional): If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to.
+    - `PrToFileName As Variant` (optional): If PrintToFile is set to True, this argument specifies the name of the file that you want to print to.
 - `ApplyChartTemplate(Filename As String)`  
   Applies a standard or custom chart type to a chart.
     - `Filename As String` (required): The file name for a chart template.
@@ -274,7 +274,7 @@ Represents a chart in a workbook.
 - `ClearToMatchStyle()`  
   Clears the chart elements formatting to automatic.
 - `FullSeriesCollection([Index As Variant]) As Object`  
-  Enables retrieving the filtered out series specified by the _Index_ argument.
+  Enables retrieving the filtered out series specified by the Index argument.
     - `Index As Variant` (optional): The indexed number of the filtered out Series object.
 - `ClearToMatchColorStyle()`  
   Clears all colors on the specified chart that don't follow the color style applied to the chart.
@@ -316,28 +316,28 @@ Represents a chart in a workbook.
   Occurs when a mouse button is pressed while the pointer is over a chart.
     - `Button As Long` (required): The mouse button that was released. Can be one of the following XlMouseButton constants: xlNoButton, xlPrimaryButton, or xlSecondaryButton.
     - `Shift As Long` (required): The state of the Shift, Ctrl, and AlShift, Ctrl, and AlttShift, Ctrl, and Alt keys when the event occurred. Can be one of or a sum of values.
-    - `x As Long` (required): The _x_ coordinate of the mouse pointer in chart object client coordinates.
-    - `y As Long` (required): The _y_ coordinate of the mouse pointer in chart object client coordinates.
+    - `x As Long` (required): The x coordinate of the mouse pointer in chart object client coordinates.
+    - `y As Long` (required): The y coordinate of the mouse pointer in chart object client coordinates.
 - `MouseUp(Button As Long, Shift As Long, x As Long, y As Long)`  
   Occurs when a mouse button is released while the pointer is over a chart.
     - `Button As Long` (required): The mouse button that was released. Can be one of the following XlMouseButton constants: xlNoButton, xlPrimaryButton, or xlSecondaryButton.
     - `Shift As Long` (required): The state of the Shift, Ctrl, and Alt keys when the event occurred. Can be one of or a sum of values.
-    - `x As Long` (required): The _x_ coordinate of the mouse pointer in chart object client coordinates.
-    - `y As Long` (required): The _y_ coordinate of the mouse pointer in chart object client coordinates.
+    - `x As Long` (required): The x coordinate of the mouse pointer in chart object client coordinates.
+    - `y As Long` (required): The y coordinate of the mouse pointer in chart object client coordinates.
 - `MouseMove(Button As Long, Shift As Long, x As Long, y As Long)`  
   Occurs when the position of the mouse pointer changes over a chart.
     - `Button As Long` (required): The mouse button that was released. Can be one of the following XlMouseButton constants: xlNoButton, xlPrimaryButton, or xlSecondaryButton.
     - `Shift As Long` (required): The state of the Shift, Ctrl, and Alt keys when the event occurred. Can be one of or a sum of values.
-    - `x As Long` (required): The _x_ coordinate of the mouse pointer in chart object client coordinates.
-    - `y As Long` (required): The _y_ coordinate of the mouse pointer in chart object client coordinates.
+    - `x As Long` (required): The x coordinate of the mouse pointer in chart object client coordinates.
+    - `y As Long` (required): The y coordinate of the mouse pointer in chart object client coordinates.
 - `BeforeRightClick(Cancel As Boolean)`  
   Occurs when a chart element is right-clicked, before the default right-click action.
     - `Cancel As Boolean` (required): False when the event occurs. If the event procedure sets this argument to True, the default right-click action isn't performed when the procedure is finished.
 - `BeforeDoubleClick(ElementID As Long, Arg1 As Long, Arg2 As Long, Cancel As Boolean)`  
   Occurs when a chart element is double-clicked, before the default double-click action.
-    - `ElementID As Long` (required): The double-clicked object. The value of this parameter determines the expected values of _Arg1_ and _Arg2_. For more information about this parameter, see the Remarks section.
-    - `Arg1 As Long` (required): Additional event information, depending on the value of _ElementID_. For more information about this parameter, see the Remarks section.
-    - `Arg2 As Long` (required): Additional event information, depending on the value of _ElementID_. For more information about this parameter, see the Remarks section.
+    - `ElementID As Long` (required): The double-clicked object. The value of this parameter determines the expected values of Arg1 and Arg2. For more information about this parameter, see the Remarks section.
+    - `Arg1 As Long` (required): Additional event information, depending on the value of ElementID. For more information about this parameter, see the Remarks section.
+    - `Arg2 As Long` (required): Additional event information, depending on the value of ElementID. For more information about this parameter, see the Remarks section.
     - `Cancel As Boolean` (required): False when the event occurs. If the event procedure sets this argument to True, the default double-click action isn't performed when the procedure is finished.
 - `Select(ElementID As Long, Arg1 As Long, Arg2 As Long)`  
   Occurs when a chart element is selected.

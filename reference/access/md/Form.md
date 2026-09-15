@@ -197,7 +197,7 @@ End Sub
 - `PaintPalette As Variant  (read/write)`  
   Use the PaintPalette property to specify a palette to be used by a form. Read/write Variant.
 - `OpenArgs As Variant  (read/write)`  
-  Determines the string expression specified by the _OpenArgs_ argument of the OpenForm method that opened a form. Read/write Variant.
+  Determines the string expression specified by the OpenArgs argument of the OpenForm method that opened a form. Read/write Variant.
 - `OnCurrent As String  (read/write)`  
   Sets or returns the value of the On Current box in the Properties window of a form. Read/write String.
 - `OnInsert As String  (read/write)`  
@@ -477,24 +477,24 @@ End Sub
   Occurs when the focus moves to a record, making it the current record, or when the form is refreshed or requeried.
 - `BeforeInsert(Cancel As Integer)`  
   The BeforeInsert event occurs when the user types the first character in a new record, but before the record is actually created.
-    - `Cancel As Integer` (required): The setting determines if the BeforeInsert event occurs. Setting the _Cancel_ argument to True (1) cancels the BeforeInsert event.
+    - `Cancel As Integer` (required): The setting determines if the BeforeInsert event occurs. Setting the Cancel argument to True (1) cancels the BeforeInsert event.
 - `AfterInsert()`  
   The AfterInsert event occurs after a new record is added.
 - `BeforeUpdate(Cancel As Integer)`
 - `AfterUpdate()`
 - `Delete(Cancel As Integer)`  
   Occurs when the user performs some action, such as pressing the Delete key, to delete a record, but before the record is actually deleted.
-    - `Cancel As Integer` (required): The setting determines if the Delete event occurs. Setting the _Cancel_ argument to True (1) cancels the Delete event.
+    - `Cancel As Integer` (required): The setting determines if the Delete event occurs. Setting the Cancel argument to True (1) cancels the Delete event.
 - `BeforeDelConfirm(Cancel As Integer, Response As Integer)`  
   The BeforeDelConfirm event occurs after the user deletes to the buffer one or more records, but before Microsoft Access displays a dialog box asking the user to confirm the deletions.
-    - `Cancel As Integer` (required): The setting determines if the BeforeDelConfirm event occurs. Setting the _Cancel_ argument to True cancels the BeforeDelConfirm event and prevents the Delete Confirm dialog box from being displayed. If the event is canceled, the original records are restored, but the AfterDelConfirm event still occurs. If _Cancel_ is set to True, the _Response_ argument is ignored. If _Cancel_ is set to False (0), which it is by default, the value in the _Response_ argument is used by Access to determine the type of response to the Delete event.
-    - `Response As Integer` (required): An intrinsic constant that determines whether Access displays the Delete Confirm dialog box asking if the record should be deleted. acDataErrContinue continues without displaying the Delete Confirm dialog box. Setting the _Cancel_ argument to False and the _Response_ argument to acDataErrContinue enables Microsoft Access to delete records without prompting the user. acDataErrDisplay displays the Delete Confirm dialog box. The default value is acDataErrDisplay.
+    - `Cancel As Integer` (required): The setting determines if the BeforeDelConfirm event occurs. Setting the Cancel argument to True cancels the BeforeDelConfirm event and prevents the Delete Confirm dialog box from being displayed. If the event is canceled, the original records are restored, but the AfterDelConfirm event still occurs. If Cancel is set to True, the Response argument is ignored. If Cancel is set to False (0), which it is by default, the value in the Response argument is used by Access to determine the type of response to the Delete event.
+    - `Response As Integer` (required): An intrinsic constant that determines whether Access displays the Delete Confirm dialog box asking if the record should be deleted. acDataErrContinue continues without displaying the Delete Confirm dialog box. Setting the Cancel argument to False and the Response argument to acDataErrContinue enables Microsoft Access to delete records without prompting the user. acDataErrDisplay displays the Delete Confirm dialog box. The default value is acDataErrDisplay.
 - `AfterDelConfirm(Status As Integer)`  
   The AfterDelConfirm event occurs after the user confirms that the deletions and the records are actually deleted or when the deletions are canceled.
     - `Status As Integer` (required): An intrinsic constant that indicates whether a record has been deleted. acDeleteOK indicates that the deletion was successful. acDeleteCancel indicates that the deletion was canceled in Visual Basic. acDeleteUserCancel indicates that the deletion was canceled by the user.
 - `Open(Cancel As Integer)`  
   The Open event occurs when a form is opened, but before the first record is displayed.
-    - `Cancel As Integer` (required): The setting determines if the opening of the form or report occurs. Setting the _Cancel_ argument to True (1) cancels the opening of the form or report.
+    - `Cancel As Integer` (required): The setting determines if the opening of the form or report occurs. Setting the Cancel argument to True (1) cancels the opening of the form or report.
 - `Resize()`  
   The Resize event occurs when a form is opened and whenever the size of a form changes.
 - `Unload(Cancel As Integer)`  
@@ -514,53 +514,53 @@ End Sub
   The Click event occurs when the user presses and then releases a mouse button over an object.
 - `DblClick(Cancel As Integer)`  
   The DblClick event occurs when the user presses and releases the left mouse button twice over an object within the double-click time limit of the system.
-    - `Cancel As Integer` (required): The setting determines if the DblClick event occurs. Setting the _Cancel_ argument to True (1) cancels the DblClick event.
+    - `Cancel As Integer` (required): The setting determines if the DblClick event occurs. Setting the Cancel argument to True (1) cancels the DblClick event.
 - `MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)`  
   The MouseDown event occurs when the user presses a mouse button.
-    - `Button As Integer` (required): The button that was pressed to trigger the event. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>
-    - `Shift As Integer` (required): The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>
-    - `X As Single` (required): The _x_ coordinate for the current location of the mouse pointer, in twips.
-    - `Y As Single` (required): The _y_ coordinate for the current location of the mouse pointer, in twips.
+    - `Button As Integer` (required): The button that was pressed to trigger the event. If you need to test for the Button argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>
+    - `Shift As Integer` (required): The state of the Shift, Ctrl, and Alt keys when the button specified by the Button argument was pressed or released. If you need to test for the Shift argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>
+    - `X As Single` (required): The x coordinate for the current location of the mouse pointer, in twips.
+    - `Y As Single` (required): The y coordinate for the current location of the mouse pointer, in twips.
 - `MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)`  
   The MouseMove event occurs when the user moves the mouse.
-    - `Button As Integer` (required): The button that was pressed or released when the event was triggered. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>
-    - `Shift As Integer` (required): The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>
-    - `X As Single` (required): The _x_ coordinate for the current location of the mouse pointer, in twips.
-    - `Y As Single` (required): The _y_ coordinate for the current location of the mouse pointer, in twips.
+    - `Button As Integer` (required): The button that was pressed or released when the event was triggered. If you need to test for the Button argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>
+    - `Shift As Integer` (required): The state of the Shift, Ctrl, and Alt keys when the button specified by the Button argument was pressed or released. If you need to test for the Shift argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>
+    - `X As Single` (required): The x coordinate for the current location of the mouse pointer, in twips.
+    - `Y As Single` (required): The y coordinate for the current location of the mouse pointer, in twips.
 - `MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)`  
   The MouseUp event occurs when the user releases a mouse button.
-    - `Button As Integer` (required): The button that was released to trigger the event. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>
-    - `Shift As Integer` (required): The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>
-    - `X As Single` (required): The _x_ coordinate for the current location of the mouse pointer, in twips.
-    - `Y As Single` (required): The _y_ coordinate for the current location of the mouse pointer, in twips.
+    - `Button As Integer` (required): The button that was released to trigger the event. If you need to test for the Button argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>
+    - `Shift As Integer` (required): The state of the Shift, Ctrl, and Alt keys when the button specified by the Button argument was pressed or released. If you need to test for the Shift argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>
+    - `X As Single` (required): The x coordinate for the current location of the mouse pointer, in twips.
+    - `Y As Single` (required): The y coordinate for the current location of the mouse pointer, in twips.
 - `KeyDown(KeyCode As Integer, Shift As Integer)`  
   The KeyDown event occurs when the user presses a key while a form or control has the focus. This event also occurs if you send a keystroke to a form or control by using the SendKeys action in a macro or the SendKeys statement in Visual Basic.
-    - `KeyCode As Integer` (required): A key code, such as vbKeyF1 (the F1 key) or vbKeyHome (the Home key). To specify key codes, use the intrinsic constants shown in the Object Browser. You can prevent an object from receiving a keystroke by setting _KeyCode_ to 0.
-    - `Shift As Integer` (required): The state of the Shift, Ctrl, and Alt keys at the time of the event. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>
+    - `KeyCode As Integer` (required): A key code, such as vbKeyF1 (the F1 key) or vbKeyHome (the Home key). To specify key codes, use the intrinsic constants shown in the Object Browser. You can prevent an object from receiving a keystroke by setting KeyCode to 0.
+    - `Shift As Integer` (required): The state of the Shift, Ctrl, and Alt keys at the time of the event. If you need to test for the Shift argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>
 - `KeyPress(KeyAscii As Integer)`  
   The KeyPress event occurs when the user presses and releases a key or key combination that corresponds to an ANSI code while a form or control has the focus. This event also occurs if you send an ANSI keystroke to a form or control by using the SendKeys action in a macro or the SendKeys statement in Visual Basic.
-    - `KeyAscii As Integer` (required): Returns a numeric ANSI key code. The _KeyAscii_ argument is passed by reference; changing it sends a different character to the object. Setting the _KeyAscii_ argument to 0 cancels the keystroke so that the object doesn't recognize that a key was pressed.
+    - `KeyAscii As Integer` (required): Returns a numeric ANSI key code. The KeyAscii argument is passed by reference; changing it sends a different character to the object. Setting the KeyAscii argument to 0 cancels the keystroke so that the object doesn't recognize that a key was pressed.
 - `KeyUp(KeyCode As Integer, Shift As Integer)`  
   The KeyUp event occurs when the user releases a key while a form or control has the focus. This event also occurs if you send a keystroke to a form or control by using the SendKeys action in a macro or the SendKeys statement in Visual Basic.
-    - `KeyCode As Integer` (required): A key code, such as vbKeyF1 (the F1 key) or vbKeyHome (the Home key). To specify key codes, use the intrinsic constants shown in the Object Browser. You can prevent an object from receiving a keystroke by setting _KeyCode_ to 0.
-    - `Shift As Integer` (required): The state of the Shift, Ctrl, and Alt keys at the time of the event. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>
+    - `KeyCode As Integer` (required): A key code, such as vbKeyF1 (the F1 key) or vbKeyHome (the Home key). To specify key codes, use the intrinsic constants shown in the Object Browser. You can prevent an object from receiving a keystroke by setting KeyCode to 0.
+    - `Shift As Integer` (required): The state of the Shift, Ctrl, and Alt keys at the time of the event. If you need to test for the Shift argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>
 - `Error(DataErr As Integer, Response As Integer)`  
   The Error event occurs when a run-time error is produced in Microsoft Access when a form has the focus.
-    - `DataErr As Integer` (required): The error code returned by the Err object when an error occurs. Use the _DataErr_ argument with the Error function to map the number to the corresponding error message.
-    - `Response As Integer` (required): The setting determines whether an error message is displayed. The _Response_ argument can be one of the following intrinsic constants.<ul><li><p><b>acDataErrContinue</b> Ignore the error and continue without displaying the default Microsoft Access error message. You can supply a custom error message in place of the default error message.</p></li><li><p><b>acDataErrDisplay</b> (Default) Display the default Access error message.</p></li></ul>
+    - `DataErr As Integer` (required): The error code returned by the Err object when an error occurs. Use the DataErr argument with the Error function to map the number to the corresponding error message.
+    - `Response As Integer` (required): The setting determines whether an error message is displayed. The Response argument can be one of the following intrinsic constants.<ul><li><p><b>acDataErrContinue</b> Ignore the error and continue without displaying the default Microsoft Access error message. You can supply a custom error message in place of the default error message.</p></li><li><p><b>acDataErrDisplay</b> (Default) Display the default Access error message.</p></li></ul>
 - `Timer()`  
   The Timer event occurs for a form at regular intervals as specified by the form's TimerInterval property.
 - `Filter(Cancel As Integer, FilterType As Integer)`  
   Occurs when the user opens a filter window by choosing Filter by Form, Advanced Filter/Sort, or Server Filter By Form.
-    - `Cancel As Integer` (required): The setting determines whether to open the filter window. Setting the _Cancel_ argument to True (1) prevents the filter window from opening. You can also use the CancelEvent method of the DoCmd object to cancel opening the filter window.
-    - `FilterType As Integer` (required): The filter window the user is trying to open. The _FilterType_ argument can be one of the following intrinsic constants:<ul><li><b>acFilterByForm</b></li><li><b>acFilterAdvanced</b></li><li><b>acServerFilterByForm</b></li></ul>
+    - `Cancel As Integer` (required): The setting determines whether to open the filter window. Setting the Cancel argument to True (1) prevents the filter window from opening. You can also use the CancelEvent method of the DoCmd object to cancel opening the filter window.
+    - `FilterType As Integer` (required): The filter window the user is trying to open. The FilterType argument can be one of the following intrinsic constants:<ul><li><b>acFilterByForm</b></li><li><b>acFilterAdvanced</b></li><li><b>acServerFilterByForm</b></li></ul>
 - `ApplyFilter(Cancel As Integer, ApplyType As Integer)`  
   Occurs when a filter is applied to a form.
-    - `Cancel As Integer` (required): The setting determines if the ApplyFilter event occurs. Setting the _Cancel_ argument to True cancels the ApplyFilter event and the filter is not applied to the form.
+    - `Cancel As Integer` (required): The setting determines if the ApplyFilter event occurs. Setting the Cancel argument to True cancels the ApplyFilter event and the filter is not applied to the form.
     - `ApplyType As Integer` (required): Returns the type of filter that was applied.
 - `Dirty(Cancel As Integer)`  
   The Dirty event occurs when the contents of the specified control changes.
-    - `Cancel As Integer` (required): The setting determines if the Dirty event occurs. Setting the _Cancel_ argument to True (1) cancels the Dirty event.
+    - `Cancel As Integer` (required): The setting determines if the Dirty event occurs. Setting the Cancel argument to True (1) cancels the Dirty event.
 - `Undo(Cancel As Integer)`  
   Occurs when the user undoes a change.
     - `Cancel As Integer` (required): Set this argument to True to cancel the undo operation and leave the control or form in its edited state.
@@ -604,7 +604,7 @@ End Sub
     - `chartObject As Object` (required): The object that is to be rendered. Use the TypeName function to determine the type of the object.
     - `Cancel As Object` (required): Set the Value property of this object to True to cancel the rendering of the PivotChart view object.
 - `AfterRender(drawObject As Object, chartObject As Object)`  
-  Occurs after the object represented by the _chartObject_ argument has been rendered.
+  Occurs after the object represented by the chartObject argument has been rendered.
     - `drawObject As Object` (required): A ChChartDraw object. Use the methods and properties of this object to draw objects on the chart.
     - `chartObject As Object` (required): The object that has just been rendered. Use the TypeName function to determine what type of object has just been rendered.
 - `AfterFinalRender(drawObject As Object)`  
@@ -619,7 +619,7 @@ End Sub
     - `Count As Long` (required): The number of lines by which the view was scrolled with the mouse wheel.
 - `ViewChange(Reason As Long)`  
   Occurs whenever the specified PivotChart view or PivotTable view is redrawn.
-    - `Reason As Long` (required): A PivotViewReasonEnum constant that indicates how the view was changed. _Reason_ always returns 1 for PivotChart views.
+    - `Reason As Long` (required): A PivotViewReasonEnum constant that indicates how the view was changed. Reason always returns 1 for PivotChart views.
 - `DataChange(Reason As Long)`  
   Occurs when certain properties are changed or when certain methods are executed in the specified PivotTable view.
     - `Reason As Long` (required): A PivotDataReasonEnum constant that indicates the reason that this event was triggered.

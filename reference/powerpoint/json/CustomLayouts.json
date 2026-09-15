@@ -4,7 +4,7 @@
   "guid": "{914934F2-5A91-11CF-8700-00AA0060263B}",
   "library": "Microsoft PowerPoint 16.0 Object Library",
   "description": "Represents a set of custom layouts associated with a presentation design.",
-  "remarks": "Use the CustomLayouts property of the slide Master object to return a CustomLayouts collection. Use CustomLayouts (_index_), where index is the custom layout index number, to return a single CustomLayout object. Use the Add method to create a new custom layout and add it to the CustomLayouts collection. Use the Paste method to past slides from the Clipboard as a CustomLayout object into the CustomLayouts collection. Use the CustomLayout property of a Slide or SlideRange object to return a custom layout for a slide or set of slides.",
+  "remarks": "Use the CustomLayouts property of the slide Master object to return a CustomLayouts collection. Use CustomLayouts (index), where index is the custom layout index number, to return a single CustomLayout object. Use the Add method to create a new custom layout and add it to the CustomLayouts collection. Use the Paste method to past slides from the Clipboard as a CustomLayout object into the CustomLayouts collection. Use the CustomLayout property of a Slide or SlideRange object to return a custom layout for a slide or set of slides.",
   "example": "Sub AddCustomLayout()\n\n    With ActivePresentation.SlideMaster\n\n        .CustomLayouts.Add (1)\n\n        .CustomLayouts(1).Name = \"MyLayout\"\n\n    End With\n\nEnd Sub",
   "properties": [
     {

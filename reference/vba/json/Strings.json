@@ -198,7 +198,7 @@
           "name": "Start",
           "type": "Variant",
           "optional": true,
-          "description": "Optional. Numeric expression that sets the starting position for each search. If omitted, search begins at the first character position. If _start_ contains Null, an error occurs. The _start_ argument is required if _compare_ is specified."
+          "description": "Optional. Numeric expression that sets the starting position for each search. If omitted, search begins at the first character position. If start contains Null, an error occurs. The start argument is required if compare is specified."
         },
         {
           "name": "String1",
@@ -216,7 +216,7 @@
           "name": "Compare",
           "type": "VbCompareMethod",
           "optional": true,
-          "description": "Optional. Specifies the type of string comparison. If _compare_ is Null, an error occurs. If _compare_ is omitted, the Option Compare setting determines the type of comparison. Specify a valid LCID (LocaleID) to use locale-specific rules in the comparison."
+          "description": "Optional. Specifies the type of string comparison. If compare is Null, an error occurs. If compare is omitted, the Option Compare setting determines the type of comparison. Specify a valid LCID (LocaleID) to use locale-specific rules in the comparison."
         }
       ]
     },
@@ -663,7 +663,7 @@
           "name": "Compare",
           "type": "VbCompareMethod",
           "optional": true,
-          "description": "Optional. Specifies the type of string comparison. If the _compare_ argument is Null, an error occurs. If _compare_ is omitted, the Option Compare setting determines the type of comparison."
+          "description": "Optional. Specifies the type of string comparison. If the compare argument is Null, an error occurs. If compare is omitted, the Option Compare setting determines the type of comparison."
         }
       ]
     },
@@ -1002,7 +1002,7 @@
           "name": "Weekday",
           "type": "Long",
           "optional": false,
-          "description": "Required. The numeric designation for the day of the week. Numeric value of each day depends on setting of the _firstdayofweek_ setting."
+          "description": "Required. The numeric designation for the day of the week. Numeric value of each day depends on setting of the firstdayofweek setting."
         },
         {
           "name": "Abbreviate",
@@ -1068,7 +1068,7 @@
           "name": "Start",
           "type": "Long",
           "optional": true,
-          "description": "Optional. Start position for the substring of _expression_ to be searched and returned. If omitted, 1 is assumed."
+          "description": "Optional. Start position for the substring of expression to be searched and returned. If omitted, 1 is assumed."
         },
         {
           "name": "Count",
@@ -1116,7 +1116,7 @@
           "name": "Delimiter",
           "type": "Variant",
           "optional": true,
-          "description": "Optional. String character used to separate the substrings in the returned string. If omitted, the space character (\" \") is used. If _delimiter_ is a zero-length string (\"\"), all items in the list are concatenated with no delimiters."
+          "description": "Optional. String character used to separate the substrings in the returned string. If omitted, the space character (\" \") is used. If delimiter is a zero-length string (\"\"), all items in the list are concatenated with no delimiters."
         }
       ]
     },
@@ -1143,7 +1143,7 @@
           "name": "Include",
           "type": "Boolean",
           "optional": true,
-          "description": "Optional. Boolean value indicating whether to return substrings that include or exclude _match_. If _include_ is True, Filter returns the subset of the array that contains _match_ as a substring. If _include_ is False, Filter returns the subset of the array that does not contain _match_ as a substring."
+          "description": "Optional. Boolean value indicating whether to return substrings that include or exclude match. If include is True, Filter returns the subset of the array that contains match as a substring. If include is False, Filter returns the subset of the array that does not contain match as a substring."
         },
         {
           "name": "Compare",
@@ -1176,7 +1176,7 @@
           "name": "Start",
           "type": "Long",
           "optional": true,
-          "description": "Optional. Numeric expression that sets the starting position for each search. If omitted, -1 is used, which means that the search begins at the last character position. If _start_ contains Null, an error occurs."
+          "description": "Optional. Numeric expression that sets the starting position for each search. If omitted, -1 is used, which means that the search begins at the last character position. If start contains Null, an error occurs."
         },
         {
           "name": "Compare",
@@ -1197,13 +1197,13 @@
           "name": "Expression",
           "type": "String",
           "optional": false,
-          "description": "Required. String expression containing substrings and delimiters. If _expression_ is a zero-length string(\"\"), Split returns an empty array, that is, an array with no elements and no data."
+          "description": "Required. String expression containing substrings and delimiters. If expression is a zero-length string(\"\"), Split returns an empty array, that is, an array with no elements and no data."
         },
         {
           "name": "Delimiter",
           "type": "Variant",
           "optional": true,
-          "description": "Optional. String character used to identify substring limits. If omitted, the space character (\" \") is assumed to be the delimiter. If _delimiter_ is a zero-length string, a single-element array containing the entire _expression_ string is returned."
+          "description": "Optional. String character used to identify substring limits. If omitted, the space character (\" \") is assumed to be the delimiter. If delimiter is a zero-length string, a single-element array containing the entire expression string is returned."
         },
         {
           "name": "Limit",

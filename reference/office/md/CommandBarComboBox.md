@@ -6,7 +6,7 @@
 
 Represents a combo box control on a command bar.
 
-**Remarks:** Use Controls(_index_), where _index_ is the index number of the control, to return a CommandBarComboBox object. Note that the Type property of the control must be msoControlEdit, msoControlDropdown, msoControlComboBox, msoControlButtonDropdown, msoControlSplitDropdown, msoControlOCXDropdown, msoControlGraphicCombo, or msoControlGraphicDropdown.
+**Remarks:** Use Controls(index), where index is the index number of the control, to return a CommandBarComboBox object. Note that the Type property of the control must be msoControlEdit, msoControlDropdown, msoControlComboBox, msoControlButtonDropdown, msoControlSplitDropdown, msoControlOCXDropdown, msoControlGraphicCombo, or msoControlGraphicDropdown.
 
 **Example:**
 

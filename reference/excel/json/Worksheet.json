@@ -82,21 +82,21 @@
       "kind": "property",
       "type": "Boolean",
       "access": "read-only",
-      "description": "True if the contents of the sheet are protected. This protects the individual cells. To turn on content protection, use the Protect method with the _Contents_ argument set to True. Read-only Boolean."
+      "description": "True if the contents of the sheet are protected. This protects the individual cells. To turn on content protection, use the Protect method with the Contents argument set to True. Read-only Boolean."
     },
     {
       "name": "ProtectDrawingObjects",
       "kind": "property",
       "type": "Boolean",
       "access": "read-only",
-      "description": "True if shapes are protected. To turn on shape protection, use the Protect method with the _DrawingObjects_ argument set to True. Read-only Boolean."
+      "description": "True if shapes are protected. To turn on shape protection, use the Protect method with the DrawingObjects argument set to True. Read-only Boolean."
     },
     {
       "name": "ProtectionMode",
       "kind": "property",
       "type": "Boolean",
       "access": "read-only",
-      "description": "True if user-interface-only protection is turned on. To turn on user interface protection, use the Protect method with the _UserInterfaceOnly_ argument set to True. Read-only Boolean."
+      "description": "True if user-interface-only protection is turned on. To turn on user interface protection, use the Protect method with the UserInterfaceOnly argument set to True. Read-only Boolean."
     },
     {
       "name": "ProtectScenarios",
@@ -433,13 +433,13 @@
           "name": "Before",
           "type": "Variant",
           "optional": true,
-          "description": "The sheet before which the copied sheet will be placed. You cannot specify _Before_ if you specify _After_."
+          "description": "The sheet before which the copied sheet will be placed. You cannot specify Before if you specify After."
         },
         {
           "name": "After",
           "type": "Variant",
           "optional": true,
-          "description": "The sheet after which the copied sheet will be placed. You cannot specify _After_ if you specify _Before_."
+          "description": "The sheet after which the copied sheet will be placed. You cannot specify After if you specify Before."
         }
       ]
     },
@@ -461,13 +461,13 @@
           "name": "Before",
           "type": "Variant",
           "optional": true,
-          "description": "The sheet before which the moved sheet will be placed. You cannot specify _Before_ if you specify _After_."
+          "description": "The sheet before which the moved sheet will be placed. You cannot specify Before if you specify After."
         },
         {
           "name": "After",
           "type": "Variant",
           "optional": true,
-          "description": "The sheet after which the moved sheet will be placed. You cannot specify _After_ if you specify _Before_."
+          "description": "The sheet after which the moved sheet will be placed. You cannot specify After if you specify Before."
         }
       ]
     },
@@ -656,13 +656,13 @@
           "name": "Destination",
           "type": "Variant",
           "optional": true,
-          "description": "A Range object that specifies where the Clipboard contents should be pasted. If this argument is omitted, the current selection is used. This argument can be specified only if the contents of the Clipboard can be pasted into a range. If this argument is specified, the _Link_ argument cannot be used."
+          "description": "A Range object that specifies where the Clipboard contents should be pasted. If this argument is omitted, the current selection is used. This argument can be specified only if the contents of the Clipboard can be pasted into a range. If this argument is specified, the Link argument cannot be used."
         },
         {
           "name": "Link",
           "type": "Variant",
           "optional": true,
-          "description": "True to establish a link to the source of the pasted data. If this argument is specified, the _Destination_ argument cannot be used. The default value is False."
+          "description": "True to establish a link to the source of the pasted data. If this argument is specified, the Destination argument cannot be used. The default value is False."
         }
       ]
     },
@@ -692,13 +692,13 @@
           "name": "SourceType",
           "type": "Variant",
           "optional": true,
-          "description": "An XlPivotTableSourceType value that represents the source of the report data. If you specify this argument, you must also specify _SourceData_. If _SourceType_ and _SourceData_ are omitted, Microsoft Excel assumes that the source type is xlDatabase, and the source data comes from the named range Database. If this named range doesn't exist, Excel uses the current region if the current selection is in a range of more than 10 cells that contain data. If this isn't true, this method will fail."
+          "description": "An XlPivotTableSourceType value that represents the source of the report data. If you specify this argument, you must also specify SourceData. If SourceType and SourceData are omitted, Microsoft Excel assumes that the source type is xlDatabase, and the source data comes from the named range Database. If this named range doesn't exist, Excel uses the current region if the current selection is in a range of more than 10 cells that contain data. If this isn't true, this method will fail."
         },
         {
           "name": "SourceData",
           "type": "Variant",
           "optional": true,
-          "description": "The data for the new report. Can be a Range object, an array of ranges, or a text constant that represents the name of another report. For an external database, _SourceData_ is an array of strings containing the SQL query string, where each element is up to 255 characters in length. You should use the _Connection_ argument to specify the ODBC connection string. For compatibility with earlier versions of Excel, _SourceData_ can be a two-element array. The first element is the connection string specifying the ODBC source for the data. The second element is the SQL query string used to get the data. If you specify _SourceData_, you must also specify _SourceType_. If the active cell is inside the _SourceData_ range, you must specify _TableDestination_ as well."
+          "description": "The data for the new report. Can be a Range object, an array of ranges, or a text constant that represents the name of another report. For an external database, SourceData is an array of strings containing the SQL query string, where each element is up to 255 characters in length. You should use the Connection argument to specify the ODBC connection string. For compatibility with earlier versions of Excel, SourceData can be a two-element array. The first element is the connection string specifying the ODBC source for the data. The second element is the SQL query string used to get the data. If you specify SourceData, you must also specify SourceType. If the active cell is inside the SourceData range, you must specify TableDestination as well."
         },
         {
           "name": "TableDestination",
@@ -740,7 +740,7 @@
           "name": "AutoPage",
           "type": "Variant",
           "optional": true,
-          "description": "Valid only if _SourceType_ is xlConsolidation. True to have Excel create a page field for the consolidation. If _AutoPage_ is False, you must create the page field or fields."
+          "description": "Valid only if SourceType is xlConsolidation. True to have Excel create a page field for the consolidation. If AutoPage is False, you must create the page field or fields."
         },
         {
           "name": "Reserved",
@@ -776,7 +776,7 @@
           "name": "ReadData",
           "type": "Variant",
           "optional": true,
-          "description": "True to create a PivotTable cache that contains all records from the external database; this cache can be very large. If _ReadData_ is False, you can set some of the fields as server-based page fields before the data is actually read."
+          "description": "True to create a PivotTable cache that contains all records from the external database; this cache can be very large. If ReadData is False, you can set some of the fields as server-based page fields before the data is actually read."
         },
         {
           "name": "Connection",
@@ -858,7 +858,7 @@
           "name": "IconFileName",
           "type": "Variant",
           "optional": true,
-          "description": "The name of the file that contains the icon to use if _DisplayAsIcon_ is True."
+          "description": "The name of the file that contains the icon to use if DisplayAsIcon is True."
         },
         {
           "name": "IconIndex",
@@ -1080,7 +1080,7 @@
           "name": "PrintToFile",
           "type": "Variant",
           "optional": true,
-          "description": "True to print to a file. If _PrToFileName_ is not specified, Excel prompts the user to enter the name of the output file."
+          "description": "True to print to a file. If PrToFileName is not specified, Excel prompts the user to enter the name of the output file."
         },
         {
           "name": "Collate",
@@ -1092,7 +1092,7 @@
           "name": "PrToFileName",
           "type": "Variant",
           "optional": true,
-          "description": "If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to."
+          "description": "If PrintToFile is set to True, this argument specifies the name of the file that you want to print to."
         },
         {
           "name": "IgnorePrintAreas",

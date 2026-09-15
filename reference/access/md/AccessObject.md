@@ -6,7 +6,7 @@
 
 An AccessObject object refers to a particular Access object.
 
-**Remarks:** An AccessObject object includes information about one instance of an object. The following table list the types of objects each AccessObject describes, the name of its collection, and what type of information AccessObject contains. Because an AccessObject object corresponds to an existing object, you can't create new AccessObject objects or delete existing ones. To refer to an AccessObject object in a collection by its ordinal number or by its Name property setting, use any of the following syntax forms: - AllForms (0) - AllForms ("_name_") - AllForms ![ _name_ ]
+**Remarks:** An AccessObject object includes information about one instance of an object. The following table list the types of objects each AccessObject describes, the name of its collection, and what type of information AccessObject contains. Because an AccessObject object corresponds to an existing object, you can't create new AccessObject objects or delete existing ones. To refer to an AccessObject object in a collection by its ordinal number or by its Name property setting, use any of the following syntax forms: - AllForms (0) - AllForms ("name") - AllForms ![ name ]
 
 ## Properties (10)
 
@@ -34,7 +34,7 @@ An AccessObject object refers to a particular Access object.
 ## Methods (2)
 
 - `IsDependentUpon(ObjectType As AcObjectType, ObjectName As String) As Boolean`  
-  Returns a Boolean value that indicates whether the specified object is dependent upon the database object specified in the _ObjectName_ argument.
+  Returns a Boolean value that indicates whether the specified object is dependent upon the database object specified in the ObjectName argument.
     - `ObjectType As AcObjectType` (required): An AcObjectType constant that represents the type of database object to check for dependency.
     - `ObjectName As String` (required): The name of the database object to check for dependency.
 - `GetDependencyInfo() As _DependencyInfo`  

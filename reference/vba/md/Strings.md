@@ -17,10 +17,10 @@
 - `_B_var_MidB(String As Variant, Start As Long, [Length As Variant]) As Variant`
 - `InStr([Start As Variant], [String1 As Variant], [String2 As Variant], [Compare As VbCompareMethod]) As Variant`  
   Returns a Variant (Long) specifying the position of the first occurrence of one string within another.
-    - `Start As Variant` (optional): Optional. Numeric expression that sets the starting position for each search. If omitted, search begins at the first character position. If _start_ contains Null, an error occurs. The _start_ argument is required if _compare_ is specified.
+    - `Start As Variant` (optional): Optional. Numeric expression that sets the starting position for each search. If omitted, search begins at the first character position. If start contains Null, an error occurs. The start argument is required if compare is specified.
     - `String1 As Variant` (optional): Required. String expression being searched.
     - `String2 As Variant` (optional): Required. String expression sought.
-    - `Compare As VbCompareMethod` (optional): Optional. Specifies the type of string comparison. If _compare_ is Null, an error occurs. If _compare_ is omitted, the Option Compare setting determines the type of comparison. Specify a valid LCID (LocaleID) to use locale-specific rules in the comparison.
+    - `Compare As VbCompareMethod` (optional): Optional. Specifies the type of string comparison. If compare is Null, an error occurs. If compare is omitted, the Option Compare setting determines the type of comparison. Specify a valid LCID (LocaleID) to use locale-specific rules in the comparison.
 - `InStrB([Start As Variant], [String1 As Variant], [String2 As Variant], [Compare As VbCompareMethod]) As Variant`
 - `_B_str_Left(String As String, Length As Long) As String`
 - `_B_var_Left(String As Variant, Length As Long) As Variant`
@@ -47,7 +47,7 @@
   Returns a Variant (Integer) indicating the result of a string comparison.
     - `String1 As Variant` (required): Required. Any valid string expression.
     - `String2 As Variant` (required): Required. Any valid string expression.
-    - `Compare As VbCompareMethod` (optional): Optional. Specifies the type of string comparison. If the _compare_ argument is Null, an error occurs. If _compare_ is omitted, the Option Compare setting determines the type of comparison.
+    - `Compare As VbCompareMethod` (optional): Optional. Specifies the type of string comparison. If the compare argument is Null, an error occurs. If compare is omitted, the Option Compare setting determines the type of comparison.
 - `_B_str_Format(Expression As Variant, [Format As Variant], [FirstDayOfWeek As VbDayOfWeek], [FirstWeekOfYear As VbFirstWeekOfYear]) As String`
 - `_B_var_Format(Expression As Variant, [Format As Variant], [FirstDayOfWeek As VbDayOfWeek], [FirstWeekOfYear As VbFirstWeekOfYear]) As Variant`
 - `Len(Expression As Variant) As Variant`  
@@ -85,7 +85,7 @@
     - `GroupDigits As VbTriState` (optional): Optional. Tristate constant that indicates whether or not numbers are grouped by using the group delimiter specified in the computer's regional settings. See Settings section for values.
 - `WeekdayName(Weekday As Long, [Abbreviate As Boolean], [FirstDayOfWeek As VbDayOfWeek]) As String`  
   Returns a string indicating the specified day of the week.
-    - `Weekday As Long` (required): Required. The numeric designation for the day of the week. Numeric value of each day depends on setting of the _firstdayofweek_ setting.
+    - `Weekday As Long` (required): Required. The numeric designation for the day of the week. Numeric value of each day depends on setting of the firstdayofweek setting.
     - `Abbreviate As Boolean` (optional): Optional. Boolean value that indicates if the weekday name is to be abbreviated. If omitted, the default is False, which means that the weekday name is not abbreviated.
     - `FirstDayOfWeek As VbDayOfWeek` (optional): Optional. Numeric value indicating the first day of the week. See Settings section for values.
 - `MonthName(Month As Long, [Abbreviate As Boolean]) As String`  
@@ -97,7 +97,7 @@
     - `Expression As String` (required): Required. String expression containing substring to replace.
     - `Find As String` (required): Required. Substring being searched for.
     - `Replace As String` (required): Required. Replacement substring.
-    - `Start As Long` (optional): Optional. Start position for the substring of _expression_ to be searched and returned. If omitted, 1 is assumed.
+    - `Start As Long` (optional): Optional. Start position for the substring of expression to be searched and returned. If omitted, 1 is assumed.
     - `Count As Long` (optional): Optional. Number of substring substitutions to perform. If omitted, the default value is -1, which means, make all possible substitutions.
     - `Compare As VbCompareMethod` (optional): Optional. Numeric value indicating the kind of comparison to use when evaluating substrings. See Settings section for values.
 - `StrReverse(Expression As String) As String`  
@@ -105,22 +105,22 @@
 - `Join(SourceArray As Variant, [Delimiter As Variant]) As String`  
   Returns a string created by joining a number of substrings contained in an array.
     - `SourceArray As Variant` (required): Required. One-dimensional array containing substrings to be joined.
-    - `Delimiter As Variant` (optional): Optional. String character used to separate the substrings in the returned string. If omitted, the space character (" ") is used. If _delimiter_ is a zero-length string (""), all items in the list are concatenated with no delimiters.
+    - `Delimiter As Variant` (optional): Optional. String character used to separate the substrings in the returned string. If omitted, the space character (" ") is used. If delimiter is a zero-length string (""), all items in the list are concatenated with no delimiters.
 - `Filter(SourceArray As Variant, Match As String, [Include As Boolean], [Compare As VbCompareMethod]) As Variant`  
   Returns a zero-based array containing a subset of a string array based on a specified filter criteria.
     - `SourceArray As Variant` (required): Required. One-dimensional array of strings to be searched.
     - `Match As String` (required): Required. String to search for.
-    - `Include As Boolean` (optional): Optional. Boolean value indicating whether to return substrings that include or exclude _match_. If _include_ is True, Filter returns the subset of the array that contains _match_ as a substring. If _include_ is False, Filter returns the subset of the array that does not contain _match_ as a substring.
+    - `Include As Boolean` (optional): Optional. Boolean value indicating whether to return substrings that include or exclude match. If include is True, Filter returns the subset of the array that contains match as a substring. If include is False, Filter returns the subset of the array that does not contain match as a substring.
     - `Compare As VbCompareMethod` (optional): Optional. Numeric value indicating the kind of string comparison to use. See Settings section for values.
 - `InStrRev(StringCheck As String, StringMatch As String, [Start As Long], [Compare As VbCompareMethod]) As Long`  
   Returns the position of an occurrence of one string within another, from the end of the string.
     - `StringCheck As String` (required): Required. String expression being searched.
     - `StringMatch As String` (required): Required. String expression being searched for.
-    - `Start As Long` (optional): Optional. Numeric expression that sets the starting position for each search. If omitted, -1 is used, which means that the search begins at the last character position. If _start_ contains Null, an error occurs.
+    - `Start As Long` (optional): Optional. Numeric expression that sets the starting position for each search. If omitted, -1 is used, which means that the search begins at the last character position. If start contains Null, an error occurs.
     - `Compare As VbCompareMethod` (optional): Optional. Numeric value indicating the kind of comparison to use when evaluating substrings. If omitted, a binary comparison is performed. See the Settings section for values.
 - `Split(Expression As String, [Delimiter As Variant], [Limit As Long], [Compare As VbCompareMethod]) As Variant`  
   Returns a zero-based, one-dimensional array containing a specified number of substrings.
-    - `Expression As String` (required): Required. String expression containing substrings and delimiters. If _expression_ is a zero-length string(""), Split returns an empty array, that is, an array with no elements and no data.
-    - `Delimiter As Variant` (optional): Optional. String character used to identify substring limits. If omitted, the space character (" ") is assumed to be the delimiter. If _delimiter_ is a zero-length string, a single-element array containing the entire _expression_ string is returned.
+    - `Expression As String` (required): Required. String expression containing substrings and delimiters. If expression is a zero-length string(""), Split returns an empty array, that is, an array with no elements and no data.
+    - `Delimiter As Variant` (optional): Optional. String character used to identify substring limits. If omitted, the space character (" ") is assumed to be the delimiter. If delimiter is a zero-length string, a single-element array containing the entire expression string is returned.
     - `Limit As Long` (optional): Optional. Number of substrings to be returned; -1 indicates that all substrings are returned.
     - `Compare As VbCompareMethod` (optional): Optional. Numeric value indicating the kind of comparison to use when evaluating substrings. See Settings section for values.

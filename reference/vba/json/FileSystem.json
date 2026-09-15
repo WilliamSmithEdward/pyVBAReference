@@ -66,7 +66,7 @@
           "name": "ReturnType",
           "type": "Integer",
           "optional": true,
-          "description": "Required; Integer. Number indicating the type of information to return. Specify 1 to return a value indicating the file mode. On 16-bit systems only, specify 2 to retrieve an operating system file handle. _Returntype_ 2 is not supported in 32-bit systems and causes an error."
+          "description": "Required; Integer. Number indicating the type of information to return. Specify 1 to return a value indicating the file mode. On 16-bit systems only, specify 2 to retrieve an operating system file handle. Returntype 2 is not supported in 32-bit systems and causes an error."
         }
       ]
     },
@@ -81,13 +81,13 @@
           "name": "Source",
           "type": "String",
           "optional": false,
-          "description": "Required. String expression that specifies the name of the file to be copied. The _source_ may include directory or folder, and drive."
+          "description": "Required. String expression that specifies the name of the file to be copied. The source may include directory or folder, and drive."
         },
         {
           "name": "Destination",
           "type": "String",
           "optional": false,
-          "description": "Required. String expression that specifies the target file name. The _destination_ may include directory or folder, and drive."
+          "description": "Required. String expression that specifies the target file name. The destination may include directory or folder, and drive."
         }
       ]
     },
@@ -310,13 +310,13 @@
           "name": "PathName",
           "type": "Variant",
           "optional": true,
-          "description": "Optional. String expression that specifies a file name; may include directory or folder, and drive. A zero-length string (\"\") is returned if _pathname_ is not found."
+          "description": "Optional. String expression that specifies a file name; may include directory or folder, and drive. A zero-length string (\"\") is returned if pathname is not found."
         },
         {
           "name": "Attributes",
           "type": "VbFileAttribute",
           "optional": true,
-          "description": "Optional. Constant or numeric expression, whose sum specifies file attributes. If omitted, returns files that match _pathname_ but have no attributes."
+          "description": "Optional. Constant or numeric expression, whose sum specifies file attributes. If omitted, returns files that match pathname but have no attributes."
         }
       ]
     }

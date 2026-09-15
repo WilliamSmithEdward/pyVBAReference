@@ -50,5 +50,5 @@ Range("A1:C4").Phonetics.Visible = True
 - `Add(Start As Long, Length As Long, Text As String)`  
   Adds phonetic text to the specified cell.
     - `Start As Long` (required): The position that represents the first character in the specified cell.
-    - `Length As Long` (required): The number of characters from the _Start_ position to the end of the text in the cell.
+    - `Length As Long` (required): The number of characters from the Start position to the end of the text in the cell.
     - `Text As String` (required): Collectively, the characters that represent the phonetic text in the cell.

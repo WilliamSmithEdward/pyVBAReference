@@ -6,7 +6,7 @@
 
 Collection of PivotCell objects for a specific PivotLine.
 
-**Remarks:** Use the PivotLineCells (_index_) property of the PivotLine object to return or specify the location of a specific PivotCell object in the collection. You can also specify a PivotField object or the PivotField name to return a single PivotCell object.
+**Remarks:** Use the PivotLineCells (index) property of the PivotLine object to return or specify the location of a specific PivotCell object in the collection. You can also specify a PivotField object or the PivotField name to return a single PivotCell object.
 
 ## Properties (8)
 

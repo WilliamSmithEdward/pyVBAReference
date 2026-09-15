@@ -4,7 +4,7 @@
   "guid": "{C1A870A0-850E-4D38-98A7-741CB8C3BCA4}",
   "library": "Microsoft Word 16.0 Object Library",
   "description": "A collection of all the Point objects in the specified series in a chart.",
-  "remarks": "Use Points (_index_), where _index_ is the point index number, to return a single Point object. Points are numbered from left to right on the series. Points(1) is the leftmost point, and Points(Points.Count) is the rightmost point.",
+  "remarks": "Use Points (index), where index is the point index number, to return a single Point object. Points are numbered from left to right on the series. Points(1) is the leftmost point, and Points(Points.Count) is the rightmost point.",
   "example": "With ActiveDocument.InlineShapes(1)\n If .HasChart Then\n With .Chart.SeriesCollection(1).Points\n .Item(.Count).ApplyDataLabels Type:=xlShowValue\n End With\n End If\nEnd With",
   "properties": [
     {

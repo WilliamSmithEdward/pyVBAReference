@@ -61,7 +61,7 @@ Worksheets(1).Shapes(1).ControlFormat.ListFillRange = "A1:A10"
 - `RemoveItem(Index As Long, [Count As Variant])`  
   Removes one or more items from a list box or combo box.
     - `Index As Long` (required): The number of the first item to be removed. Valid values are from 1 to the number of items in the list (returned by the ListCount property).
-    - `Count As Variant` (optional): The number of items to be removed, starting at item _Index_. If this argument is omitted, one item is removed. If _Index_ + _Count_ exceeds the number of items in the list, all items from _Index_ through the end of the list are removed without an error.
+    - `Count As Variant` (optional): The number of items to be removed, starting at item Index. If this argument is omitted, one item is removed. If Index + Count exceeds the number of items in the list, all items from Index through the end of the list are removed without an error.
 - `List([Index As Variant]) As Variant`  
   Returns or sets the text entries in the specified list box or combo box, as an array of strings, or returns or sets a single text entry. An error occurs if there are no entries in the list.
     - `Index As Variant` (optional): The index number of a single text entry to be set or returned. If this argument is omitted, the entire list is returned or set as an array of strings.

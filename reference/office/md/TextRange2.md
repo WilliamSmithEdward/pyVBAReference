@@ -121,14 +121,14 @@ End With
     - `WholeWords As MsoTriState` (optional): Determines whether only whole words are searched.
 - `RotatedBounds(X1 As Single, Y1 As Single, X2 As Single, Y2 As Single, X3 As Single, Y3 As Single, x4 As Single, y4 As Single)`  
   Gets the coordinates of the vertices of the text bounding box for the specified text range. Read-only.
-    - `X1 As Single` (required): Returns the position (in points) of the _X_ coordinate of the first vertex of the bounding box for the text within the specified text range.
-    - `Y1 As Single` (required): Returns the position (in points) of the _Y_ coordinate of the first vertex of the bounding box for the text within the specified text range.
-    - `X2 As Single` (required): Returns the position (in points) of the _X_ coordinate of the second vertex of the bounding box for the text within the specified text range.
-    - `Y2 As Single` (required): Returns the position (in points) of the _Y_ coordinate of the second vertex of the bounding box for the text within the specified text range.
-    - `X3 As Single` (required): Returns the position (in points) of the _X_ coordinate of the third vertex of the bounding box for the text within the specified text range.
-    - `Y3 As Single` (required): Returns the position (in points) of the _Y_ coordinate of the third vertex of the bounding box for the text within the specified text range.
-    - `x4 As Single` (required): Returns the position (in points) of the _X_ coordinate of the fourth vertex of the bounding box for the text within the specified text range.
-    - `y4 As Single` (required): Returns the position (in points) of the _Y_ coordinate of the fourth vertex of the bounding box for the text within the specified text range.
+    - `X1 As Single` (required): Returns the position (in points) of the X coordinate of the first vertex of the bounding box for the text within the specified text range.
+    - `Y1 As Single` (required): Returns the position (in points) of the Y coordinate of the first vertex of the bounding box for the text within the specified text range.
+    - `X2 As Single` (required): Returns the position (in points) of the X coordinate of the second vertex of the bounding box for the text within the specified text range.
+    - `Y2 As Single` (required): Returns the position (in points) of the Y coordinate of the second vertex of the bounding box for the text within the specified text range.
+    - `X3 As Single` (required): Returns the position (in points) of the X coordinate of the third vertex of the bounding box for the text within the specified text range.
+    - `Y3 As Single` (required): Returns the position (in points) of the Y coordinate of the third vertex of the bounding box for the text within the specified text range.
+    - `x4 As Single` (required): Returns the position (in points) of the X coordinate of the fourth vertex of the bounding box for the text within the specified text range.
+    - `y4 As Single` (required): Returns the position (in points) of the Y coordinate of the fourth vertex of the bounding box for the text within the specified text range.
 - `RtlRun()`  
   Returns a TextRange2 object that represents the specified subset of right-to-left text runs. A text run consists of a range of characters that share the same font attributes.
 - `LtrRun()`  
@@ -136,5 +136,5 @@ End With
 - `InsertChartField(ChartFieldType As MsoChartFieldType, [Formula As String], [Position As Long]) As TextRange2`  
   Inserts a field into the body of a data label in a chart.
     - `ChartFieldType As MsoChartFieldType` (required): Specifies the type of chart field to insert into a data label.
-    - `Formula As String` (optional): Specifies a cell (or range) if the msoChartFieldFormula constant is passed in for the _ChartFieldType_ parameter.
+    - `Formula As String` (optional): Specifies a cell (or range) if the msoChartFieldFormula constant is passed in for the ChartFieldType parameter.
     - `Position As Long` (optional): Specifies the character position where the chart field is inserted. The default is to append the field to the end of the text. If the position value is out of range, the default is used.

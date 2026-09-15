@@ -529,4 +529,4 @@ Specifies which dialog box to display.
 - `xlDialogRecommendedPivotTables` = 1258  
   Recommended PivotTables dialog box
 - `xlDialogForecastETS` = 1300
-- `xlDialogPivotDefaultLayout` = 1360
+- `xlDialogPivotDefaultLayout` = 1361

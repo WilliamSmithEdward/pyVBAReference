@@ -14,11 +14,11 @@
 - `FileAttr(FileNumber As Integer, [ReturnType As Integer]) As Long`  
   Returns a Long representing the file mode for files opened by using the Open statement.
     - `FileNumber As Integer` (required): Required; Integer. Any valid file number.
-    - `ReturnType As Integer` (optional): Required; Integer. Number indicating the type of information to return. Specify 1 to return a value indicating the file mode. On 16-bit systems only, specify 2 to retrieve an operating system file handle. _Returntype_ 2 is not supported in 32-bit systems and causes an error.
+    - `ReturnType As Integer` (optional): Required; Integer. Number indicating the type of information to return. Specify 1 to return a value indicating the file mode. On 16-bit systems only, specify 2 to retrieve an operating system file handle. Returntype 2 is not supported in 32-bit systems and causes an error.
 - `FileCopy(Source As String, Destination As String)`  
   Copies a file.
-    - `Source As String` (required): Required. String expression that specifies the name of the file to be copied. The _source_ may include directory or folder, and drive.
-    - `Destination As String` (required): Required. String expression that specifies the target file name. The _destination_ may include directory or folder, and drive.
+    - `Source As String` (required): Required. String expression that specifies the name of the file to be copied. The source may include directory or folder, and drive.
+    - `Destination As String` (required): Required. String expression that specifies the target file name. The destination may include directory or folder, and drive.
 - `FileDateTime(PathName As String) As Variant`  
   Returns a Variant (Date) that indicates the date and time when a file was created or last modified.
 - `FileLen(PathName As String) As Long`  
@@ -49,5 +49,5 @@
   Returns an Integer representing the next file number available for use by the Open statement.
 - `Dir([PathName As Variant], [Attributes As VbFileAttribute]) As String`  
   Returns a String representing the name of a file, directory, or folder that matches a specified pattern or file attribute, or the volume label of a drive.
-    - `PathName As Variant` (optional): Optional. String expression that specifies a file name; may include directory or folder, and drive. A zero-length string ("") is returned if _pathname_ is not found.
-    - `Attributes As VbFileAttribute` (optional): Optional. Constant or numeric expression, whose sum specifies file attributes. If omitted, returns files that match _pathname_ but have no attributes.
+    - `PathName As Variant` (optional): Optional. String expression that specifies a file name; may include directory or folder, and drive. A zero-length string ("") is returned if pathname is not found.
+    - `Attributes As VbFileAttribute` (optional): Optional. Constant or numeric expression, whose sum specifies file attributes. If omitted, returns files that match pathname but have no attributes.

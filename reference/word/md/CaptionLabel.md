@@ -6,7 +6,7 @@
 
 Represents a single caption label. The CaptionLabel object is a member of the CaptionLabels collection. The items in the CaptionLabels collection are listed in the Label box in the Caption dialog box.
 
-**Remarks:** Use CaptionLabels (_index_), where _index_ is the caption label name or index number, to return a single CaptionLabel object. The following example sets the numbering style for the Figure caption label. The index number represents the position of the caption label in the CaptionLabels collection. The following example displays the first caption label. Use the Add method to add a custom caption label. The following example adds a caption label named "Photo."
+**Remarks:** Use CaptionLabels (index), where index is the caption label name or index number, to return a single CaptionLabel object. The following example sets the numbering style for the Figure caption label. The index number represents the position of the caption label in the CaptionLabels collection. The following example displays the first caption label. Use the Add method to add a custom caption label. The following example adds a caption label named "Photo."
 
 ## Properties (11)
 

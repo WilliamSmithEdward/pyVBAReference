@@ -6,7 +6,7 @@
 
 Represents a presentation window that is in protected view.
 
-**Remarks:** Documents displayed in a Protected View window cannot be edited and are restricted from running active content such as Visual Basic for Applications macros and data connections. Use ProtectedViewWindows (_index_), where _index_ is the index number to return a single ProtectedViewWindow object. The index number represents the position of the Protected View window in the ProtectedViewWindows collection.
+**Remarks:** Documents displayed in a Protected View window cannot be edited and are restricted from running active content such as Visual Basic for Applications macros and data connections. Use ProtectedViewWindows (index), where index is the index number to return a single ProtectedViewWindow object. The index number represents the position of the Protected View window in the ProtectedViewWindows collection.
 
 ## Properties (12)
 

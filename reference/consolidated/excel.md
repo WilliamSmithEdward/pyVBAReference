@@ -279,7 +279,7 @@ A collection of AddIn objects that represent all the add-ins that are currently 
 
 Contains a collection of adjustment values for the specified AutoShape, WordArt object, or connector.
 
-**Remarks:** Each adjustment value represents one way that an adjustment handle can be adjusted. Because some adjustment handles can be adjusted in two ways&mdash;for example, some handles can be adjusted both horizontally and vertically&mdash;a shape can have more adjustment values than it has adjustment handles. A shape can have up to eight adjustments. Use the Adjustments property to return an Adjustments object. Use Adjustments (_index_), where _index_ is the adjustment value's index number, to return a single adjustment value. Different shapes have different numbers of adjustment values. Different kinds of adjustments change the geometry of a shape in different ways. In addition, different kinds of adjustments have different ranges of valid values. For example, the following illustration shows what each of the four adjustment values for a right-arrow callout contributes to the definition of the callout's geometry. !Adjustment The following table summarizes the ranges of valid adjustment values for different types of adjustments. In most cases, if you specify a value that's beyond the range of valid values, the closest valid value will be assigned to the adjustment.
+**Remarks:** Each adjustment value represents one way that an adjustment handle can be adjusted. Because some adjustment handles can be adjusted in two ways&mdash;for example, some handles can be adjusted both horizontally and vertically&mdash;a shape can have more adjustment values than it has adjustment handles. A shape can have up to eight adjustments. Use the Adjustments property to return an Adjustments object. Use Adjustments (index), where index is the adjustment value's index number, to return a single adjustment value. Different shapes have different numbers of adjustment values. Different kinds of adjustments change the geometry of a shape in different ways. In addition, different kinds of adjustments have different ranges of valid values. For example, the following illustration shows what each of the four adjustment values for a right-arrow callout contributes to the definition of the callout's geometry. !Adjustment The following table summarizes the ranges of valid adjustment values for different types of adjustments. In most cases, if you specify a value that's beyond the range of valid values, the closest valid value will be assigned to the adjustment.
 
 **Example:**
 
@@ -306,7 +306,7 @@ End With
 - `Count As Long  (read-only)`  
   Returns an Integer value that represents the number of objects in the collection.
 - `Item As Single  (read/write)`  
-  Returns or sets the adjustment value specified by the _Index_ argument. Read/write Single.
+  Returns or sets the adjustment value specified by the Index argument. Read/write Single.
 
 ### AllowEditRange
 
@@ -959,7 +959,7 @@ Application.Windows("book1.xls").Activate
 - `_Evaluate(Name As Variant) As Variant`
 - `ExecuteExcel4Macro(String As String) As Variant`  
   Runs a Microsoft Excel 4.0 macro function and then returns the result of the function. The return type depends on the function.
-    - `String As String` (required): A Microsoft Excel 4.0 macro language function without the equal sign. All references must be given as R1C1 strings. If _String_ contains embedded double quotation marks, you must double them. For example, to run the macro function =MID("sometext",1,4), _String_ would have to be "MID(""sometext"",1,4)".
+    - `String As String` (required): A Microsoft Excel 4.0 macro language function without the equal sign. All references must be given as R1C1 strings. If String contains embedded double quotation marks, you must double them. For example, to run the macro function =MID("sometext",1,4), String would have to be "MID(""sometext"",1,4)".
 - `Intersect(Arg1 As Range, Arg2 As Range, [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant]) As Range`  
   Returns a Range object that represents the rectangular intersection of two or more ranges. If one or more ranges from a different worksheet are specified, an error is returned.
     - `Arg1 As Range` (required): The intersecting ranges. At least two Range objects must be specified.
@@ -982,7 +982,7 @@ Application.Windows("book1.xls").Activate
 - `AddCustomList(ListArray As Variant, [ByRow As Variant])`  
   Adds a custom list for custom autofill and/or custom sort.
     - `ListArray As Variant` (required): Specifies the source data, as either an array of strings or a Range object.
-    - `ByRow As Variant` (optional): Only used if _ListArray_ is a Range object. True to create a custom list from each row in the range. False to create a custom list from each column in the range. If this argument is omitted and there are more rows than columns (or an equal number of rows and columns) in the range, Microsoft Excel creates a custom list from each column in the range. If this argument is omitted and there are more columns than rows in the range, Excel creates a custom list from each row in the range.
+    - `ByRow As Variant` (optional): Only used if ListArray is a Range object. True to create a custom list from each row in the range. False to create a custom list from each column in the range. If this argument is omitted and there are more rows than columns (or an equal number of rows and columns) in the range, Microsoft Excel creates a custom list from each column in the range. If this argument is omitted and there are more columns than rows in the range, Excel creates a custom list from each row in the range.
 - `CentimetersToPoints(Centimeters As Double) As Double`  
   Converts a measurement from centimeters to points (one point equals 0.035 centimeters).
     - `Centimeters As Double` (required): Specifies the centimeter value to be converted to points.
@@ -995,7 +995,7 @@ Application.Windows("book1.xls").Activate
   Converts cell references in a formula between the A1 and R1C1 reference styles, between relative and absolute references, or both. Variant.
     - `Formula As Variant` (required): A string that contains the formula that you want to convert. This must be a valid formula, and it must begin with an equal sign.
     - `FromReferenceStyle As XlReferenceStyle` (required): The reference style of the formula.
-    - `ToReferenceStyle As Variant` (optional): A constant of XlReferenceStyle specifying the reference style that you want returned. If this argument is omitted, the reference style isn't changed; the formula stays in the style specified by _FromReferenceStyle_.
+    - `ToReferenceStyle As Variant` (optional): A constant of XlReferenceStyle specifying the reference style that you want returned. If this argument is omitted, the reference style isn't changed; the formula stays in the style specified by FromReferenceStyle.
     - `ToAbsolute As Variant` (optional): A constant of XlReferenceType that specifies the converted reference type. If this argument is omitted, the reference type isn't changed.
     - `RelativeTo As Variant` (optional): A Range object that contains one cell. Relative references relate to this cell.
 - `DeleteCustomList(ListNum As Long)`  
@@ -1012,7 +1012,7 @@ Application.Windows("book1.xls").Activate
 - `GetOpenFilename([FileFilter As Variant], [FilterIndex As Variant], [Title As Variant], [ButtonText As Variant], [MultiSelect As Variant]) As Variant`  
   Displays the standard Open dialog box and gets a file name from the user without actually opening any files.
     - `FileFilter As Variant` (optional): A string specifying file filtering criteria.
-    - `FilterIndex As Variant` (optional): Specifies the index numbers of the default file filtering criteria, from 1 to the number of filters specified in _FileFilter_. If this argument is omitted or greater than the number of filters present, the first file filter is used.
+    - `FilterIndex As Variant` (optional): Specifies the index numbers of the default file filtering criteria, from 1 to the number of filters specified in FileFilter. If this argument is omitted or greater than the number of filters present, the first file filter is used.
     - `Title As Variant` (optional): Specifies the title of the dialog box. If this argument is omitted, the title is "Open."
     - `ButtonText As Variant` (optional): Macintosh only.
     - `MultiSelect As Variant` (optional): True to allow multiple file names to be selected. False to allow only one file name to be selected. The default value is False.
@@ -1020,7 +1020,7 @@ Application.Windows("book1.xls").Activate
   Displays the standard Save As dialog box and gets a file name from the user without actually saving any files.
     - `InitialFilename As Variant` (optional): Specifies the suggested file name. If this argument is omitted, Microsoft Excel uses the active workbook's name.
     - `FileFilter As Variant` (optional): A string specifying file filtering criteria. Max length is 255 characters, otherwise the method returns Error 2015.
-    - `FilterIndex As Variant` (optional): Specifies the index number of the default file filtering criteria, from 1 to the number of filters specified in _FileFilter_. If this argument is omitted or greater than the number of filters present, the first file filter is used.
+    - `FilterIndex As Variant` (optional): Specifies the index number of the default file filtering criteria, from 1 to the number of filters specified in FileFilter. If this argument is omitted or greater than the number of filters present, the first file filter is used.
     - `Title As Variant` (optional): Specifies the title of the dialog box. If this argument is omitted, the default title is used.
     - `ButtonText As Variant` (optional): Macintosh only.
 - `Goto([Reference As Variant], [Scroll As Variant])`  
@@ -1041,8 +1041,8 @@ Application.Windows("book1.xls").Activate
     - `Default As Variant` (optional): Specifies a value that will appear in the text box when the dialog box is initially displayed. If this argument is omitted, the text box is left empty. This value can be a Range object.
     - `Left As Variant` (optional): Specifies an x position for the dialog box in relation to the upper-left corner of the screen, in points.
     - `Top As Variant` (optional): Specifies a y position for the dialog box in relation to the upper-left corner of the screen, in points.
-    - `HelpFile As Variant` (optional): The name of the Help file for this input box. If the _HelpFile_ and _HelpContextID_ arguments are present, a Help button will appear in the dialog box.
-    - `HelpContextID As Variant` (optional): The context ID number of the Help topic in _HelpFile_.
+    - `HelpFile As Variant` (optional): The name of the Help file for this input box. If the HelpFile and HelpContextID arguments are present, a Help button will appear in the dialog box.
+    - `HelpContextID As Variant` (optional): The context ID number of the Help topic in HelpFile.
     - `Type As Variant` (optional): Specifies the return data type. If this argument is omitted, the dialog box returns text.
 - `MailLogoff()`  
   Closes a MAPI mail session established by Microsoft Excel.
@@ -1056,7 +1056,7 @@ Application.Windows("book1.xls").Activate
 - `OnKey(Key As String, [Procedure As Variant])`  
   Runs a specified procedure when a particular key or key combination is pressed.
     - `Key As String` (required): A string indicating the key to be pressed.
-    - `Procedure As Variant` (optional): A string indicating the name of the procedure to be run. If _Procedure_ is "" (empty text), nothing happens when _Key_ is pressed. This form of OnKey changes the normal result of keystrokes in Microsoft Excel. If _Procedure_ is omitted, _Key_ reverts to its normal result in Microsoft Excel, and any special key assignments made with previous OnKey methods are cleared.
+    - `Procedure As Variant` (optional): A string indicating the name of the procedure to be run. If Procedure is "" (empty text), nothing happens when Key is pressed. This form of OnKey changes the normal result of keystrokes in Microsoft Excel. If Procedure is omitted, Key reverts to its normal result in Microsoft Excel, and any special key assignments made with previous OnKey methods are cleared.
 - `OnRepeat(Text As String, Procedure As String)`  
   Sets the Repeat item and the name of the procedure that will run if you choose the Repeat command after running the procedure that sets this property.
     - `Text As String` (required): The text that appears with the Repeat command.
@@ -1065,7 +1065,7 @@ Application.Windows("book1.xls").Activate
   Schedules a procedure to be run at a specified time in the future (either at a specific time of day or after a specific amount of time has passed).
     - `EarliestTime As Variant` (required): The time when you want this procedure to be run.
     - `Procedure As String` (required): The name of the procedure to be run.
-    - `LatestTime As Variant` (optional): The latest time at which the procedure can be run. For example, if _LatestTime_ is set to _EarliestTime_ + 30 and Microsoft Excel is not in Ready, Copy, Cut, or Find mode at _EarliestTime_ because another procedure is running, Excel will wait 30 seconds for the first procedure to complete. If Excel is not in Ready mode within 30 seconds, the procedure won't be run. If this argument is omitted, Excel will wait until the procedure can be run.
+    - `LatestTime As Variant` (optional): The latest time at which the procedure can be run. For example, if LatestTime is set to EarliestTime + 30 and Microsoft Excel is not in Ready, Copy, Cut, or Find mode at EarliestTime because another procedure is running, Excel will wait 30 seconds for the first procedure to complete. If Excel is not in Ready mode within 30 seconds, the procedure won't be run. If this argument is omitted, Excel will wait until the procedure can be run.
     - `Schedule As Variant` (optional): True to schedule a new OnTime procedure. False to clear a previously set procedure. The default value is True.
 - `OnUndo(Text As String, Procedure As String)`  
   Sets the text of the Undo command and the name of the procedure that's run if you choose the Undo command after running the procedure that sets this property.
@@ -1092,7 +1092,7 @@ Application.Windows("book1.xls").Activate
     - `Time As Variant` (required): The time at which you want the macro to resume, in Microsoft Excel date format.
 - `GetPhonetic([Text As Variant]) As String`  
   Returns the Japanese phonetic text of the specified text string. This method is available to you only if you have selected or installed Japanese language support for Microsoft Office.
-    - `Text As Variant` (optional): Specifies the text to be converted to phonetic text. If you omit this argument, the next possible phonetic text string (if any) of the previously specified _Text_ is returned. If there are no more possible phonetic text strings, an empty string is returned.
+    - `Text As Variant` (optional): Specifies the text to be converted to phonetic text. If you omit this argument, the next possible phonetic text string (if any) of the previously specified Text is returned. If there are no more possible phonetic text strings, an empty string is returned.
 - `CalculateFull()`  
   Forces a full calculation of the data in all open workbooks.
 - `FindFile() As Boolean`  
@@ -1103,7 +1103,7 @@ Application.Windows("book1.xls").Activate
   Stops recalculation in a Microsoft Excel application.
     - `KeepAbort As Variant` (optional): Allows recalculation to be performed for a range.
 - `DisplayXMLSourcePane([XmlMap As Variant])`  
-  Opens the XML Source task pane and displays the XML map specified by the _XmlMap_ argument.
+  Opens the XML Source task pane and displays the XML map specified by the XmlMap argument.
     - `XmlMap As Variant` (optional): The XML map to display in the task pane.
 - `CalculateUntilAsyncQueriesDone()`  
   Runs all pending queries to OLEDB and OLAP data sources.
@@ -1116,12 +1116,12 @@ Application.Windows("book1.xls").Activate
     - `Description As Variant` (optional): The macro description.
     - `HasMenu As Variant` (optional): This argument is ignored.
     - `MenuText As Variant` (optional): This argument is ignored.
-    - `HasShortcutKey As Variant` (optional): True to assign a shortcut key to the macro (_ShortcutKey_ must also be specified). If this argument is False, no shortcut key is assigned to the macro. If the macro already has a shortcut key, setting this argument to False removes the shortcut key. The default value is False.
-    - `ShortcutKey As Variant` (optional): Required if _HasShortcutKey_ is True; ignored otherwise. The shortcut key.
+    - `HasShortcutKey As Variant` (optional): True to assign a shortcut key to the macro (ShortcutKey must also be specified). If this argument is False, no shortcut key is assigned to the macro. If the macro already has a shortcut key, setting this argument to False removes the shortcut key. The default value is False.
+    - `ShortcutKey As Variant` (optional): Required if HasShortcutKey is True; ignored otherwise. The shortcut key.
     - `Category As Variant` (optional): An integer that specifies an existing macro function category (Financial, Date & Time, or User Defined, for example). See the Remarks section to determine the integers that are mapped to the built-in categories. You can also specify a string for a custom category. If you provide a string, it is treated as the category name that is displayed in the Insert Function dialog box. If the category name has never been used, a new category is defined with that name. If you use a category name that is the same as a built-in name (see list in Remarks section), Excel maps the user-defined function to that built-in category.
     - `StatusBar As Variant` (optional): The status bar text for the macro.
     - `HelpContextID As Variant` (optional): An integer that specifies the context ID for the Help topic assigned to the macro.
-    - `HelpFile As Variant` (optional): The name of the Help file that contains the Help topic defined by _HelpContextId_.
+    - `HelpFile As Variant` (optional): The name of the Help file that contains the Help topic defined by HelpContextId.
     - `ArgumentDescriptions As Variant` (optional): A one-dimensional array that contains the descriptions for the arguments to a UDF that are displayed in the Function Arguments dialog box.
 
 #### Events (49)
@@ -1658,7 +1658,7 @@ End Sub
 
 A collection of all the Axis objects in the specified chart.
 
-**Remarks:** Use the Axes method of the Chart object to return the Axes collection. Use Axes (_type_, _group_), where _type_ is the axis type and _group_ is the axis group, to return a single Axis object. - _Type_ can be one of the following XlAxisType constants: xlCategory, xlSeriesAxis, or xlValue. - _Group_ can be one of the following XlAxisGroup constants: xlPrimary or xlSecondary.
+**Remarks:** Use the Axes method of the Chart object to return the Axes collection. Use Axes (type, group), where type is the axis type and group is the axis group, to return a single Axis object. - Type can be one of the following XlAxisType constants: xlCategory, xlSeriesAxis, or xlValue. - Group can be one of the following XlAxisGroup constants: xlPrimary or xlSecondary.
 
 **Example:**
 
@@ -1696,7 +1696,7 @@ End With
 
 Represents a single axis in a chart.
 
-**Remarks:** The Axis object is a member of the Axes collection. Use Axes (_type_, _group_), where _type_ is the axis type and _group_ is the axis group, to return a single Axis object. - _Type_ can be one of the following XlAxisType constants: xlCategory, xlSeriesAxis, or xlValue. - _Group_ can be one of the following XlAxisGroup constants: xlPrimary or xlSecondary. For more information, see the Axes method of the Chart object.
+**Remarks:** The Axis object is a member of the Axes collection. Use Axes (type, group), where type is the axis type and group is the axis group, to return a single Axis object. - Type can be one of the following XlAxisType constants: xlCategory, xlSeriesAxis, or xlValue. - Group can be one of the following XlAxisGroup constants: xlPrimary or xlSecondary. For more information, see the Axes method of the Chart object.
 
 **Example:**
 
@@ -2109,7 +2109,7 @@ Worksheets(1).Range("A1").Borders.LineStyle = xlDouble
 
 A collection of PivotField objects that represents all the calculated fields in the specified PivotTable report.
 
-**Remarks:** A report that contains Revenue and Expense fields could have a calculated field named Profit defined as the amount in the Revenue field minus the amount in the Expense field. For OLAP data sources, you cannot set this collection, and it always returns Nothing. Use the CalculatedFields method of the PivotTable object to return the CalculatedFields collection. Use CalculatedFields (_index_), where _index_ is the specified field's name or index number, to return a single PivotField object from the CalculatedFields collection.
+**Remarks:** A report that contains Revenue and Expense fields could have a calculated field named Profit defined as the amount in the Revenue field minus the amount in the Expense field. For OLAP data sources, you cannot set this collection, and it always returns Nothing. Use the CalculatedFields method of the PivotTable object to return the CalculatedFields collection. Use CalculatedFields (index), where index is the specified field's name or index number, to return a single PivotField object from the CalculatedFields collection.
 
 **Example:**
 
@@ -2152,7 +2152,7 @@ Next
 
 A collection of PivotItem objects that represents all the calculated items in the specified PivotTable report.
 
-**Remarks:** A PivotTable report that contains January, February, and March items could have a calculated item named FirstQuarter defined as the sum of the amounts in January, February, and March. Use the CalculatedItems method of the PivotField object to return the CalculatedItems collection. Use CalculatedFields (_index_), where _index_ is the name or index number of the field, to return a single PivotField object from the CalculatedFields collection.
+**Remarks:** A PivotTable report that contains January, February, and March items could have a calculated item named FirstQuarter defined as the sum of the amounts in January, February, and March. Use the CalculatedItems method of the PivotField object to return the CalculatedItems collection. Use CalculatedFields (index), where index is the name or index number of the field, to return a single PivotField object from the CalculatedFields collection.
 
 **Example:**
 
@@ -2530,7 +2530,7 @@ End Sub
 
 Represents characters in an object that contains text.
 
-**Remarks:** The Characters object lets you modify any sequence of characters contained in the full text string. Use Characters (_start_, _length_), where _start_ is the start character number and _length_ is the number of characters, to return a Characters object.
+**Remarks:** The Characters object lets you modify any sequence of characters contained in the full text string. Use Characters (start, length), where start is the start character number and length is the number of characters, to return a Characters object.
 
 **Example:**
 
@@ -2576,7 +2576,7 @@ End With
 
 Represents a chart in a workbook.
 
-**Remarks:** The chart can be either an embedded chart (contained in a ChartObject object) or a separate chart sheet. The Charts collection contains a Chart object for each chart sheet in a workbook. Use Charts (_index_), where _index_ is the chart-sheet index number or name, to return a single Chart object. The chart _index_ number represents the position of the chart sheet on the workbook tab bar. _Charts(1)_ is the first (leftmost) chart in the workbook; _Charts(Charts.Count)_ is the last (rightmost). All chart sheets are included in the index count, even if they are hidden. The chart-sheet name is shown on the workbook tab for the chart. Use the Name property of the ChartObject object to set or return the chart name. The following example changes the color of series 1 on chart sheet 1. The following example moves the chart named Sales to the end of the active workbook. The Chart object is also a member of the Sheets collection, which contains all the sheets in the workbook (both chart sheets and worksheets). Use Sheets (_index_), where _index_ is the sheet index number or name, to return a single sheet. When a chart is the active object, you can use the ActiveChart property to refer to it.
+**Remarks:** The chart can be either an embedded chart (contained in a ChartObject object) or a separate chart sheet. The Charts collection contains a Chart object for each chart sheet in a workbook. Use Charts (index), where index is the chart-sheet index number or name, to return a single Chart object. The chart index number represents the position of the chart sheet on the workbook tab bar. Charts(1) is the first (leftmost) chart in the workbook; Charts(Charts.Count) is the last (rightmost). All chart sheets are included in the index count, even if they are hidden. The chart-sheet name is shown on the workbook tab for the chart. Use the Name property of the ChartObject object to set or return the chart name. The following example changes the color of series 1 on chart sheet 1. The following example moves the chart named Sales to the end of the active workbook. The Chart object is also a member of the Sheets collection, which contains all the sheets in the workbook (both chart sheets and worksheets). Use Sheets (index), where index is the sheet index number or name, to return a single sheet. When a chart is the active object, you can use the ActiveChart property to refer to it.
 
 #### Properties (61)
 
@@ -2600,11 +2600,11 @@ Represents a chart in a workbook.
 - `Previous As Object  (read-only)`  
   Returns a Worksheet object that represents the previous sheet.
 - `ProtectContents As Boolean  (read-only)`  
-  True if the contents of the sheet are protected. For a chart, this protects the entire chart. To turn on content protection, use the Protect method with the _Contents_ argument set to True. Read-only Boolean.
+  True if the contents of the sheet are protected. For a chart, this protects the entire chart. To turn on content protection, use the Protect method with the Contents argument set to True. Read-only Boolean.
 - `ProtectDrawingObjects As Boolean  (read-only)`  
-  True if shapes are protected. To turn on shape protection, use the Protect method with the _DrawingObjects_ argument set to True. Read-only Boolean.
+  True if shapes are protected. To turn on shape protection, use the Protect method with the DrawingObjects argument set to True. Read-only Boolean.
 - `ProtectionMode As Boolean  (read-only)`  
-  True if user-interface-only protection is turned on. To turn on user interface protection, use the Protect method with the _UserInterfaceOnly_ argument set to True. Read-only Boolean.
+  True if user-interface-only protection is turned on. To turn on user interface protection, use the Protect method with the UserInterfaceOnly argument set to True. Read-only Boolean.
 - `Visible As XlSheetVisibility  (read/write)`  
   Returns or sets an XlSheetVisibility value that determines whether the object is visible.
 - `Shapes As Shapes  (read-only)`  
@@ -2707,14 +2707,14 @@ Represents a chart in a workbook.
   Makes the current chart the active chart.
 - `Copy([Before As Variant], [After As Variant])`  
   Copies the sheet to another location in the workbook.
-    - `Before As Variant` (optional): The sheet before which the copied sheet will be placed. You cannot specify _Before_ if you specify _After_.
-    - `After As Variant` (optional): The sheet after which the copied sheet will be placed. You cannot specify _After_ if you specify _Before_.
+    - `Before As Variant` (optional): The sheet before which the copied sheet will be placed. You cannot specify Before if you specify After.
+    - `After As Variant` (optional): The sheet after which the copied sheet will be placed. You cannot specify After if you specify Before.
 - `Delete()`  
   Deletes the object.
 - `Move([Before As Variant], [After As Variant])`  
   Moves the chart to another location in the workbook.
-    - `Before As Variant` (optional): The sheet before which the moved chart will be placed. You cannot specify _Before_ if you specify _After_.
-    - `After As Variant` (optional): The sheet after which the moved chart will be placed. You cannot specify _After_ if you specify _Before_.
+    - `Before As Variant` (optional): The sheet before which the moved chart will be placed. You cannot specify Before if you specify After.
+    - `After As Variant` (optional): The sheet after which the moved chart will be placed. You cannot specify After if you specify Before.
 - `PrintPreview([EnableChanges As Variant])`  
   Shows a preview of the object as it would look when printed.
     - `EnableChanges As Variant` (optional): Pass a Boolean value to specify if the user can change the margins and other page setup options available in print preview.
@@ -2768,7 +2768,7 @@ Represents a chart in a workbook.
 - `Location(Where As XlChartLocation, [Name As Variant]) As Chart`  
   Moves the chart to a new location.
     - `Where As XlChartLocation` (required): Where to move the chart.
-    - `Name As Variant` (optional): Required if _Where_ is xlLocationAsObject. The name of the sheet where the chart will be embedded if _Where_ is xlLocationAsObject, or the name of the new sheet if _Where_ is xlLocationAsNewSheet.
+    - `Name As Variant` (optional): Required if Where is xlLocationAsObject. The name of the sheet where the chart will be embedded if Where is xlLocationAsObject, or the name of the new sheet if Where is xlLocationAsNewSheet.
 - `OLEObjects([Index As Variant]) As Object`  
   Returns an object that represents either a single OLE object (an OLEObject) or a collection of all OLE objects (an OLEObjects collection) on the chart or sheet. Read-only.
     - `Index As Variant` (optional): The name or number of the OLE object.
@@ -2779,9 +2779,9 @@ Represents a chart in a workbook.
   Returns an object that represents either a single series (a Series object) or a collection of all the series (a SeriesCollection collection) in the chart or chart group.
     - `Index As Variant` (optional): The name or number of the series.
 - `GetChartElement(x As Long, y As Long, ElementID As Long, Arg1 As Long, Arg2 As Long)`  
-  Returns information about the chart element at specified _x_ and _y_ coordinates. This method is unusual in that you specify values for only the first two arguments. Microsoft Excel fills in the other arguments, and your code should examine those values when the method returns.
-    - `x As Long` (required): The _x_ coordinate of the chart element.
-    - `y As Long` (required): The _y_ coordinate of the chart element.
+  Returns information about the chart element at specified x and y coordinates. This method is unusual in that you specify values for only the first two arguments. Microsoft Excel fills in the other arguments, and your code should examine those values when the method returns.
+    - `x As Long` (required): The x coordinate of the chart element.
+    - `y As Long` (required): The y coordinate of the chart element.
     - `ElementID As Long` (required): When the method returns, this argument contains the XLChartItem value of the chart element at the specified coordinates. For more information, see the Remarks section.
     - `Arg1 As Long` (required): When the method returns, this argument contains information related to the chart element. For more information, see the Remarks section.
     - `Arg2 As Long` (required): When the method returns, this argument contains information related to the chart element. For more information, see the Remarks section.
@@ -2829,9 +2829,9 @@ Represents a chart in a workbook.
     - `Copies As Variant` (optional): The number of copies to print. If this argument is omitted, one copy is printed.
     - `Preview As Variant` (optional): True to have Microsoft Excel invoke print preview before printing the object. False (or omitted) to print the object immediately.
     - `ActivePrinter As Variant` (optional): Sets the name of the active printer.
-    - `PrintToFile As Variant` (optional): True to print to a file. If _PrToFileName_ is not specified, Excel prompts the user to enter the name of the output file.
+    - `PrintToFile As Variant` (optional): True to print to a file. If PrToFileName is not specified, Excel prompts the user to enter the name of the output file.
     - `Collate As Variant` (optional): True to collate multiple copies.
-    - `PrToFileName As Variant` (optional): If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to.
+    - `PrToFileName As Variant` (optional): If PrintToFile is set to True, this argument specifies the name of the file that you want to print to.
 - `ApplyChartTemplate(Filename As String)`  
   Applies a standard or custom chart type to a chart.
     - `Filename As String` (required): The file name for a chart template.
@@ -2844,7 +2844,7 @@ Represents a chart in a workbook.
 - `ClearToMatchStyle()`  
   Clears the chart elements formatting to automatic.
 - `FullSeriesCollection([Index As Variant]) As Object`  
-  Enables retrieving the filtered out series specified by the _Index_ argument.
+  Enables retrieving the filtered out series specified by the Index argument.
     - `Index As Variant` (optional): The indexed number of the filtered out Series object.
 - `ClearToMatchColorStyle()`  
   Clears all colors on the specified chart that don't follow the color style applied to the chart.
@@ -2886,28 +2886,28 @@ Represents a chart in a workbook.
   Occurs when a mouse button is pressed while the pointer is over a chart.
     - `Button As Long` (required): The mouse button that was released. Can be one of the following XlMouseButton constants: xlNoButton, xlPrimaryButton, or xlSecondaryButton.
     - `Shift As Long` (required): The state of the Shift, Ctrl, and AlShift, Ctrl, and AlttShift, Ctrl, and Alt keys when the event occurred. Can be one of or a sum of values.
-    - `x As Long` (required): The _x_ coordinate of the mouse pointer in chart object client coordinates.
-    - `y As Long` (required): The _y_ coordinate of the mouse pointer in chart object client coordinates.
+    - `x As Long` (required): The x coordinate of the mouse pointer in chart object client coordinates.
+    - `y As Long` (required): The y coordinate of the mouse pointer in chart object client coordinates.
 - `MouseUp(Button As Long, Shift As Long, x As Long, y As Long)`  
   Occurs when a mouse button is released while the pointer is over a chart.
     - `Button As Long` (required): The mouse button that was released. Can be one of the following XlMouseButton constants: xlNoButton, xlPrimaryButton, or xlSecondaryButton.
     - `Shift As Long` (required): The state of the Shift, Ctrl, and Alt keys when the event occurred. Can be one of or a sum of values.
-    - `x As Long` (required): The _x_ coordinate of the mouse pointer in chart object client coordinates.
-    - `y As Long` (required): The _y_ coordinate of the mouse pointer in chart object client coordinates.
+    - `x As Long` (required): The x coordinate of the mouse pointer in chart object client coordinates.
+    - `y As Long` (required): The y coordinate of the mouse pointer in chart object client coordinates.
 - `MouseMove(Button As Long, Shift As Long, x As Long, y As Long)`  
   Occurs when the position of the mouse pointer changes over a chart.
     - `Button As Long` (required): The mouse button that was released. Can be one of the following XlMouseButton constants: xlNoButton, xlPrimaryButton, or xlSecondaryButton.
     - `Shift As Long` (required): The state of the Shift, Ctrl, and Alt keys when the event occurred. Can be one of or a sum of values.
-    - `x As Long` (required): The _x_ coordinate of the mouse pointer in chart object client coordinates.
-    - `y As Long` (required): The _y_ coordinate of the mouse pointer in chart object client coordinates.
+    - `x As Long` (required): The x coordinate of the mouse pointer in chart object client coordinates.
+    - `y As Long` (required): The y coordinate of the mouse pointer in chart object client coordinates.
 - `BeforeRightClick(Cancel As Boolean)`  
   Occurs when a chart element is right-clicked, before the default right-click action.
     - `Cancel As Boolean` (required): False when the event occurs. If the event procedure sets this argument to True, the default right-click action isn't performed when the procedure is finished.
 - `BeforeDoubleClick(ElementID As Long, Arg1 As Long, Arg2 As Long, Cancel As Boolean)`  
   Occurs when a chart element is double-clicked, before the default double-click action.
-    - `ElementID As Long` (required): The double-clicked object. The value of this parameter determines the expected values of _Arg1_ and _Arg2_. For more information about this parameter, see the Remarks section.
-    - `Arg1 As Long` (required): Additional event information, depending on the value of _ElementID_. For more information about this parameter, see the Remarks section.
-    - `Arg2 As Long` (required): Additional event information, depending on the value of _ElementID_. For more information about this parameter, see the Remarks section.
+    - `ElementID As Long` (required): The double-clicked object. The value of this parameter determines the expected values of Arg1 and Arg2. For more information about this parameter, see the Remarks section.
+    - `Arg1 As Long` (required): Additional event information, depending on the value of ElementID. For more information about this parameter, see the Remarks section.
+    - `Arg2 As Long` (required): Additional event information, depending on the value of ElementID. For more information about this parameter, see the Remarks section.
     - `Cancel As Boolean` (required): False when the event occurs. If the event procedure sets this argument to True, the default double-click action isn't performed when the procedure is finished.
 - `Select(ElementID As Long, Arg1 As Long, Arg2 As Long)`  
   Occurs when a chart element is selected.
@@ -3146,7 +3146,7 @@ Provides access to the Office Art formatting for chart elements.
 
 Represents one or more series plotted in a chart with the same format.
 
-**Remarks:** A chart contains one or more chart groups, each chart group contains one or more Series objects, and each series contains one or more Points objects. For example, a single chart might contain both a line chart group that contains all the series plotted with the line chart format, and a bar chart group that contains all the series plotted with the bar chart format. The ChartGroup object is a member of the ChartGroups collection. Use ChartGroups (_index_), where _index_ is the chart-group index number, to return a single ChartGroup object. Because the index number for a particular chart group can change if the chart format used for that group is changed, it may be easier to use one of the named chart group shortcut methods to return a particular chart group. The PieGroups method returns the collection of pie chart groups in a chart, the LineGroups method returns the collection of line chart groups, and so on. Each of these methods can be used with an index number to return a single ChartGroup object, or without an index number to return a ChartGroups collection.
+**Remarks:** A chart contains one or more chart groups, each chart group contains one or more Series objects, and each series contains one or more Points objects. For example, a single chart might contain both a line chart group that contains all the series plotted with the line chart format, and a bar chart group that contains all the series plotted with the bar chart format. The ChartGroup object is a member of the ChartGroups collection. Use ChartGroups (index), where index is the chart-group index number, to return a single ChartGroup object. Because the index number for a particular chart group can change if the chart format used for that group is changed, it may be easier to use one of the named chart group shortcut methods to return a particular chart group. The PieGroups method returns the collection of pie chart groups in a chart, the LineGroups method returns the collection of line chart groups, and so on. Each of these methods can be used with an index number to return a single ChartGroup object, or without an index number to return a ChartGroups collection.
 
 **Example:**
 
@@ -3247,7 +3247,7 @@ Charts(1).ChartGroups(1).HasDropLines = True
 
 Represents one or more series plotted in a chart with the same format.
 
-**Remarks:** A ChartGroups collection is a collection of all the ChartGroup objects in the specified chart. A chart contains one or more chart groups, each chart group contains one or more Series objects, and each series contains one or more Points objects. For example, a single chart might contain both a line chart group, containing all the series plotted with the line chart format, and a bar chart group, containing all the series plotted with the bar chart format. Use the ChartGroups method of the Chart object to return the ChartGroups collection. The following example displays the number of chart groups on embedded chart 1 on worksheet 1. Use ChartGroups (_index_), where _index_ is the chart-group index number, to return a single ChartGroup object. The following example adds drop lines to chart group 1 on chart sheet 1. If the chart has been activated, you can use ActiveChart. Because the index number for a particular chart group can change if the chart format used for that group is changed, it may be easier to use one of the named chart group shortcut methods to return a particular chart group.
+**Remarks:** A ChartGroups collection is a collection of all the ChartGroup objects in the specified chart. A chart contains one or more chart groups, each chart group contains one or more Series objects, and each series contains one or more Points objects. For example, a single chart might contain both a line chart group, containing all the series plotted with the line chart format, and a bar chart group, containing all the series plotted with the bar chart format. Use the ChartGroups method of the Chart object to return the ChartGroups collection. The following example displays the number of chart groups on embedded chart 1 on worksheet 1. Use ChartGroups (index), where index is the chart-group index number, to return a single ChartGroup object. The following example adds drop lines to chart group 1 on chart sheet 1. If the chart has been activated, you can use ActiveChart. Because the index number for a particular chart group can change if the chart format used for that group is changed, it may be easier to use one of the named chart group shortcut methods to return a particular chart group.
 
 #### Properties (4)
 
@@ -3275,7 +3275,7 @@ Represents one or more series plotted in a chart with the same format.
 
 Represents an embedded chart on a worksheet.
 
-**Remarks:** The ChartObject object acts as a container for a Chart object. Properties and methods for the ChartObject object control the appearance and size of the embedded chart on the worksheet. The ChartObject object is a member of the ChartObjects collection. The ChartObjects collection contains all the embedded charts on a single sheet. Use ChartObjects (_index_), where _index_ is the embedded chart index number or name, to return a single ChartObject object.
+**Remarks:** The ChartObject object acts as a container for a Chart object. Properties and methods for the ChartObject object control the appearance and size of the embedded chart on the worksheet. The ChartObject object is a member of the ChartObjects collection. The ChartObjects collection contains all the embedded charts on a single sheet. Use ChartObjects (index), where index is the embedded chart index number or name, to return a single ChartObject object.
 
 **Example:**
 
@@ -3468,14 +3468,14 @@ Charts.PrintOut
 
 - `Copy([Before As Variant], [After As Variant])`  
   Copies the sheet to another location in the workbook.
-    - `Before As Variant` (optional): The sheet before which the copied sheet will be placed. You cannot specify _Before_ if you specify _After_.
-    - `After As Variant` (optional): The sheet after which the copied sheet will be placed. You cannot specify _After_ if you specify _Before_.
+    - `Before As Variant` (optional): The sheet before which the copied sheet will be placed. You cannot specify Before if you specify After.
+    - `After As Variant` (optional): The sheet after which the copied sheet will be placed. You cannot specify After if you specify Before.
 - `Delete()`  
   Deletes the object.
 - `Move([Before As Variant], [After As Variant])`  
   Moves the chart to another location in the workbook.
-    - `Before As Variant` (optional): The sheet before which the moved chart will be placed. You cannot specify _Before_ if you specify _After_.
-    - `After As Variant` (optional): The sheet after which the moved chart will be placed. You cannot specify _After_ if you specify _Before_.
+    - `Before As Variant` (optional): The sheet before which the moved chart will be placed. You cannot specify Before if you specify After.
+    - `After As Variant` (optional): The sheet after which the moved chart will be placed. You cannot specify After if you specify Before.
 - `PrintPreview([EnableChanges As Variant])`  
   Shows a preview of the object as it would look when printed.
     - `EnableChanges As Variant` (optional): Pass a Boolean value to specify if the user can change the margins and other page setup options available in print preview.
@@ -3489,9 +3489,9 @@ Charts.PrintOut
     - `Copies As Variant` (optional): The number of copies to print. If this argument is omitted, one copy is printed.
     - `Preview As Variant` (optional): True to have Microsoft Excel invoke print preview before printing the object. False (or omitted) to print the object immediately.
     - `ActivePrinter As Variant` (optional): Sets the name of the active printer.
-    - `PrintToFile As Variant` (optional): True to print to a file. If _PrToFileName_ is not specified, Excel prompts the user to enter the name of the output file.
+    - `PrintToFile As Variant` (optional): True to print to a file. If PrToFileName is not specified, Excel prompts the user to enter the name of the output file.
     - `Collate As Variant` (optional): True to collate multiple copies.
-    - `PrToFileName As Variant` (optional): If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to.
+    - `PrToFileName As Variant` (optional): If PrintToFile is set to True, this argument specifies the name of the file that you want to print to.
 - `Add2([Before As Variant], [After As Variant], [Count As Variant], [NewLayout As Variant]) As Chart`  
   Inserts a chart directly onto the grid.
     - `Before As Variant` (optional): An object that specifies the sheet before which the new sheet is added.
@@ -3890,7 +3890,7 @@ End Sub
 
 Represents the criteria for the minimum, midpoint, or maximum thresholds for a color format conditional format.
 
-**Remarks:** Each ColorScaleCriterion is part of the ColorScaleCriteria collection. Use ColorScaleCriteria (_index_), to return an individual criterion. You can set the Type, Value, and FormatColor of each threshold for the color scale.
+**Remarks:** Each ColorScaleCriterion is part of the ColorScaleCriteria collection. Use ColorScaleCriteria (index), to return an individual criterion. You can set the Type, Value, and FormatColor of each threshold for the color scale.
 
 **Example:**
 
@@ -4204,7 +4204,7 @@ Worksheets(1).Range("E5").CommentThreaded.Text "reviewed on " & Date
 - `Text([Text As Variant], [Start As Variant], [Overwrite As Variant]) As String`  
   Sets threaded comment text.
     - `Text As Variant` (optional): The text to be added.
-    - `Start As Variant` (optional): The character number where the added text will be placed. If the _Overwrite_ parameter is True or blank, and if this argument is omitted, any existing text in the threaded comment is deleted.
+    - `Start As Variant` (optional): The character number where the added text will be placed. If the Overwrite parameter is True or blank, and if this argument is omitted, any existing text in the threaded comment is deleted.
     - `Overwrite As Variant` (optional): False to insert the text. The default value is True (text is overwritten).
 - `Next() As CommentThreaded`  
   Returns a CommentThreaded object that represents the next threaded comment.
@@ -4271,7 +4271,7 @@ End Sub
 - `Modify(newtype As XlConditionValueTypes, [newvalue As Variant])`  
   Modifies how the longest bar or shortest bar is evaluated for a data bar conditional formatting rule.
     - `newtype As XlConditionValueTypes` (required): Specifies how the shortest bar or longest bar is evaluated. The default value is xlConditionLowestValue for the shortest bar and xlConditionHighestValue for the longest bar.
-    - `newvalue As Variant` (optional): The value assigned to the shortest or longest data bar. Depending on the _NewType_ argument, this can be a number or a formula that evaluates to a number.
+    - `newvalue As Variant` (optional): The value assigned to the shortest or longest data bar. Depending on the NewType argument, this can be a number or a formula that evaluates to a number.
 
 ### Connections
 
@@ -4379,7 +4379,7 @@ End With
 - `BeginConnect(ConnectedShape As Shape, ConnectionSite As Long)`  
   Attaches the beginning of the specified connector to a specified shape. If there's already a connection between the beginning of the connector and another shape, that connection is broken.
     - `ConnectedShape As Shape` (required): The shape to attach the beginning of the connector to. The specified Shape object must be in the same Shapes collection as the connector.
-    - `ConnectionSite As Long` (required): A connection site on the shape specified by _ConnectedShape_. Must be an integer between 1 and the integer returned by the ConnectionSiteCount property of the specified shape. If you want the connector to automatically find the shortest path between the two shapes it connects, specify any valid integer for this argument, and then use the RerouteConnections method after the connector is attached to shapes at both ends.
+    - `ConnectionSite As Long` (required): A connection site on the shape specified by ConnectedShape. Must be an integer between 1 and the integer returned by the ConnectionSiteCount property of the specified shape. If you want the connector to automatically find the shortest path between the two shapes it connects, specify any valid integer for this argument, and then use the RerouteConnections method after the connector is attached to shapes at both ends.
 - `BeginDisconnect()`  
   Detaches the beginning of the specified connector from the shape it's attached to. This method doesn't alter the size or position of the connector; the beginning of the connector remains positioned at a connection site but is no longer connected.
 - `EndConnect(ConnectedShape As Shape, ConnectionSite As Long)`  
@@ -4796,7 +4796,7 @@ Worksheets(1).Shapes(1).ControlFormat.ListFillRange = "A1:A10"
 - `RemoveItem(Index As Long, [Count As Variant])`  
   Removes one or more items from a list box or combo box.
     - `Index As Long` (required): The number of the first item to be removed. Valid values are from 1 to the number of items in the list (returned by the ListCount property).
-    - `Count As Variant` (optional): The number of items to be removed, starting at item _Index_. If this argument is omitted, one item is removed. If _Index_ + _Count_ exceeds the number of items in the list, all items from _Index_ through the end of the list are removed without an error.
+    - `Count As Variant` (optional): The number of items to be removed, starting at item Index. If this argument is omitted, one item is removed. If Index + Count exceeds the number of items in the list, all items from Index through the end of the list are removed without an error.
 - `List([Index As Variant]) As Variant`  
   Returns or sets the text entries in the specified list box or combo box, as an array of strings, or returns or sets a single text entry. An error occurs if there are no entries in the list.
     - `Index As Variant` (optional): The index number of a single text entry to be set or returned. If this argument is omitted, the entire list is returned or set as an array of strings.
@@ -4959,7 +4959,7 @@ Next objCubeFld
   Given an attribute hierarchy, returns an implicit measure for the given function that corresponds to this attribute. If an implicit measure does not exist, a new implicit measure is created and added to the CubeFields collection.
     - `AttributeHierarchy As Variant` (required): The unique cube field that is an attribute hierarchy (XlCubeFieldType = xlHierarchy, and XlCubeFieldSubType = xlCubeAttribute).
     - `Function As XlConsolidationFunction` (required): The function performed in the added data field.
-    - `Caption As Variant` (optional): The label used in the PivotTable report to identify this measure. If the measure already exists, _Caption_ will overwrite the existing label of this measure.
+    - `Caption As Variant` (optional): The label used in the PivotTable report to identify this measure. If the measure already exists, Caption will overwrite the existing label of this measure.
 
 ### CustomProperties
 
@@ -6994,7 +6994,7 @@ End With
 - `OneColorGradient(Style As MsoGradientStyle, Variant As Long, Degree As Single)`  
   Sets the specified fill to a one-color gradient.
     - `Style As MsoGradientStyle` (required): The gradient style.
-    - `Variant As Long` (required): The gradient variant. Can be a value from 1 through 4, corresponding to one of the four variants on the Gradient tab in the Fill Effects dialog box. If _GradientStyle_ is msoGradientFromCenter, the _Variant_ argument can only be 1 or 2.
+    - `Variant As Long` (required): The gradient variant. Can be a value from 1 through 4, corresponding to one of the four variants on the Gradient tab in the Fill Effects dialog box. If GradientStyle is msoGradientFromCenter, the Variant argument can only be 1 or 2.
     - `Degree As Single` (required): The gradient degree. Can be a value from 0.0 (dark) through 1.0 (light).
 - `Patterned(Pattern As MsoPatternType)`  
   Sets the specified fill to a pattern.
@@ -7002,7 +7002,7 @@ End With
 - `PresetGradient(Style As MsoGradientStyle, Variant As Long, PresetGradientType As MsoPresetGradientType)`  
   Sets the specified fill to a preset gradient.
     - `Style As MsoGradientStyle` (required): The gradient style.
-    - `Variant As Long` (required): The gradient variant. Can be a value from 1 through 4, corresponding to one of the four variants on the Gradient tab in the Fill Effects dialog box. If _Style_ is msoGradientFromCenter, the _Variant_ argument can only be 1 or 2.
+    - `Variant As Long` (required): The gradient variant. Can be a value from 1 through 4, corresponding to one of the four variants on the Gradient tab in the Fill Effects dialog box. If Style is msoGradientFromCenter, the Variant argument can only be 1 or 2.
     - `PresetGradientType As MsoPresetGradientType` (required): The preset gradient type.
 - `PresetTextured(PresetTexture As MsoPresetTexture)`  
   Sets the specified fill format to a preset texture.
@@ -7012,7 +7012,7 @@ End With
 - `TwoColorGradient(Style As MsoGradientStyle, Variant As Long)`  
   Sets the specified fill to a two-color gradient.
     - `Style As MsoGradientStyle` (required): The gradient style.
-    - `Variant As Long` (required): The gradient variant. Can be a value from 1 through 4, corresponding to one of the four variants on the Gradient tab in the Fill Effects dialog box. If _Style_ is msoGradientFromCenter, the _Variant_ argument can only be 1 or 2.
+    - `Variant As Long` (required): The gradient variant. Can be a value from 1 through 4, corresponding to one of the four variants on the Gradient tab in the Fill Effects dialog box. If Style is msoGradientFromCenter, the Variant argument can only be 1 or 2.
 - `UserPicture(PictureFile As String)`  
   Fills the specified shape with an image.
     - `PictureFile As String` (required): The file path to the picture file, or the name of the picture file if a link to the picture file currently exists.
@@ -7336,7 +7336,7 @@ End With
 - `Modify(Type As XlFormatConditionType, [Operator As Variant], [Formula1 As Variant], [Formula2 As Variant], [String As Variant], [Operator2 As Variant])`  
   Modifies an existing conditional format.
     - `Type As XlFormatConditionType` (required): Specifies whether the conditional format is based on a cell value or an expression.
-    - `Operator As Variant` (optional): An XlFormatConditionOperator value that represents the conditional format operator. This parameter is ignored if _Type_ is set to xlExpression.
+    - `Operator As Variant` (optional): An XlFormatConditionOperator value that represents the conditional format operator. This parameter is ignored if Type is set to xlExpression.
     - `Formula1 As Variant` (optional): The value or expression associated with the conditional format. Can be a constant value, a string value, a cell reference, or a formula.
     - `Formula2 As Variant` (optional): The value or expression associated with the conditional format. Can be a constant value, a string value, a cell reference, or a formula.
 - `ModifyAppliesToRange(Range As Range)`  
@@ -7395,9 +7395,9 @@ End With
 - `Add(Type As XlFormatConditionType, [Operator As Variant], [Formula1 As Variant], [Formula2 As Variant], [String As Variant], [TextOperator As Variant], [DateOperator As Variant], [ScopeType As Variant]) As Object`  
   Adds a new conditional format.
     - `Type As XlFormatConditionType` (required): Specifies whether the conditional format is based on a cell value or an expression.
-    - `Operator As Variant` (optional): The conditional format operator. Can be one of the following XlFormatConditionOperator constants: xlBetween, xlEqual, xlGreater, xlGreaterEqual, xlLess, xlLessEqual, xlNotBetween, or xlNotEqual. If _Type_ is xlExpression, the _Operator_ argument is ignored.
+    - `Operator As Variant` (optional): The conditional format operator. Can be one of the following XlFormatConditionOperator constants: xlBetween, xlEqual, xlGreater, xlGreaterEqual, xlLess, xlLessEqual, xlNotBetween, or xlNotEqual. If Type is xlExpression, the Operator argument is ignored.
     - `Formula1 As Variant` (optional): The value or expression associated with the conditional format. Can be a constant value, a string value, a cell reference, or a formula.
-    - `Formula2 As Variant` (optional): The value or expression associated with the second part of the conditional format when _Operator_ is xlBetween or xlNotBetween (otherwise, this argument is ignored). Can be a constant value, a string value, a cell reference, or a formula.
+    - `Formula2 As Variant` (optional): The value or expression associated with the second part of the conditional format when Operator is xlBetween or xlNotBetween (otherwise, this argument is ignored). Can be a constant value, a string value, a cell reference, or a formula.
 - `Delete()`  
   Deletes the object.
 - `AddColorScale(ColorScaleType As Long) As Object`  
@@ -7453,12 +7453,12 @@ End With
   Adds a point in the current shape, and then draws a line from the current node to the last node that was added.
     - `SegmentType As MsoSegmentType` (required): The type of segment to be added.
     - `EditingType As MsoEditingType` (required): The editing property of the vertex.
-    - `X1 As Single` (required): If the _EditingType_ of the new segment is msoEditingAuto, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the end point of the new segment. If the _EditingType_ of the new node is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the first control point for the new segment.
-    - `Y1 As Single` (required): If the _EditingType_ of the new segment is msoEditingAuto, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the end point of the new segment. If the _EditingType_ of the new node is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the first control point for the new segment.
-    - `X2 As Variant` (optional): If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument.
-    - `Y2 As Variant` (optional): If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument.
-    - `X3 As Variant` (optional): If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument.
-    - `Y3 As Variant` (optional): If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument.
+    - `X1 As Single` (required): If the EditingType of the new segment is msoEditingAuto, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the end point of the new segment. If the EditingType of the new node is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the first control point for the new segment.
+    - `Y1 As Single` (required): If the EditingType of the new segment is msoEditingAuto, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the end point of the new segment. If the EditingType of the new node is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the first control point for the new segment.
+    - `X2 As Variant` (optional): If the EditingType of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument.
+    - `Y2 As Variant` (optional): If the EditingType of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument.
+    - `X3 As Variant` (optional): If the EditingType of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument.
+    - `Y3 As Variant` (optional): If the EditingType of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument.
 - `ConvertToShape() As Shape`  
   Creates a shape that has the geometric characteristics of the specified FreeformBuilder object. Returns a Shape object that represents the new shape.
 
@@ -8110,14 +8110,14 @@ Worksheets(1).Shapes(1).Hyperlink.Follow NewWindow:=True
   Displays a cached document, if it's already been downloaded. Otherwise, this method resolves the hyperlink, downloads the target document, and displays the document in the appropriate application.
     - `NewWindow As Variant` (optional): True to display the target application in a new window. The default value is False.
     - `AddHistory As Variant` (optional): Not used. Reserved for future use.
-    - `ExtraInfo As Variant` (optional): A String or byte array that specifies additional information for HTTP to use to resolve the hyperlink. For example, you can use _ExtraInfo_ to specify the coordinates of an image map, the contents of a form, or a FAT file name.
-    - `Method As Variant` (optional): Specifies the way _ExtraInfo_ is attached. Can be one of the MsoExtraInfoMethod constants.
+    - `ExtraInfo As Variant` (optional): A String or byte array that specifies additional information for HTTP to use to resolve the hyperlink. For example, you can use ExtraInfo to specify the coordinates of an image map, the contents of a form, or a FAT file name.
+    - `Method As Variant` (optional): Specifies the way ExtraInfo is attached. Can be one of the MsoExtraInfoMethod constants.
     - `HeaderInfo As Variant` (optional): A String that specifies header information for the HTTP request. The default value is an empty string.
 - `CreateNewDocument(Filename As String, EditNow As Boolean, Overwrite As Boolean)`  
   Creates a new document linked to the specified hyperlink.
     - `Filename As String` (required): The file name of the specified document.
     - `EditNow As Boolean` (required): True to have the specified document open immediately in its associated editing environment. The default value is True.
-    - `Overwrite As Boolean` (required): True to overwrite any existing file of the same name in the same folder. False if any existing file of the same name is preserved and the _FileName_ argument specifies a new file name. The default value is False.
+    - `Overwrite As Boolean` (required): True to overwrite any existing file of the same name in the same folder. False if any existing file of the same name is preserved and the FileName argument specifies a new file name. The default value is False.
 
 ### Hyperlinks
 
@@ -20019,10 +20019,10 @@ Set myWorksheetLists = Worksheets(1).ListObjects
 - `Add([SourceType As XlListObjectSourceType], [Source As Variant], [LinkSource As Variant], [XlListObjectHasHeaders As XlYesNoGuess], [Destination As Variant], [TableStyleName As Variant]) As ListObject`  
   Creates a new list object.
     - `SourceType As XlListObjectSourceType` (optional): Indicates the kind of source for the query.
-    - `Source As Variant` (optional): When _SourceType_ = xlSrcRange: A Range object representing the data source. If omitted, the _Source_ will default to the range returned by list range detection code. When _SourceType_ = xlSrcExternal: An array of String values specifying a connection to the source, containing the following elements:<ul><li>0 - URL to SharePoint site</li><li>1 - ListName</li><li>2 - ViewGUID</li></ul> When _SourceType_ = xlSrcQuery: Accepts ODBC or OLEDB connection string (this also works with xlSrcExternal). When _SourceType_ = xlSrcModel: Accepts a WorkbookConnection object (see TableObject for example).
-    - `LinkSource As Variant` (optional): Indicates whether an external data source is to be linked to the ListObject object. If _SourceType_ is xlSrcExternal, the default is True. Invalid if _SourceType_ is xlSrcRange, and will return an error if not omitted.
-    - `XlListObjectHasHeaders As XlYesNoGuess` (optional): An XlYesNoGuess constant that indicates whether the data being imported has column labels. If the _Source_ does not contain headers, Excel will automatically generate headers. Default value: xlGuess.
-    - `Destination As Variant` (optional): A Range object specifying a single-cell reference as the destination for the top-left corner of the new list object. If the Range object refers to more than one cell, an error is generated. The _Destination_ argument must be specified when _SourceType_ is set to xlSrcExternal. The _Destination_ argument is ignored if _SourceType_ is set to xlSrcRange. The destination range must be on the worksheet that contains the ListObjects collection specified by _expression_. New columns will be inserted at the _Destination_ to fit the new list. Therefore, existing data will not be overwritten.
+    - `Source As Variant` (optional): When SourceType = xlSrcRange: A Range object representing the data source. If omitted, the Source will default to the range returned by list range detection code. When SourceType = xlSrcExternal: An array of String values specifying a connection to the source, containing the following elements:<ul><li>0 - URL to SharePoint site</li><li>1 - ListName</li><li>2 - ViewGUID</li></ul> When SourceType = xlSrcQuery: Accepts ODBC or OLEDB connection string (this also works with xlSrcExternal). When SourceType = xlSrcModel: Accepts a WorkbookConnection object (see TableObject for example).
+    - `LinkSource As Variant` (optional): Indicates whether an external data source is to be linked to the ListObject object. If SourceType is xlSrcExternal, the default is True. Invalid if SourceType is xlSrcRange, and will return an error if not omitted.
+    - `XlListObjectHasHeaders As XlYesNoGuess` (optional): An XlYesNoGuess constant that indicates whether the data being imported has column labels. If the Source does not contain headers, Excel will automatically generate headers. Default value: xlGuess.
+    - `Destination As Variant` (optional): A Range object specifying a single-cell reference as the destination for the top-left corner of the new list object. If the Range object refers to more than one cell, an error is generated. The Destination argument must be specified when SourceType is set to xlSrcExternal. The Destination argument is ignored if SourceType is set to xlSrcRange. The destination range must be on the worksheet that contains the ListObjects collection specified by expression. New columns will be inserted at the Destination to fit the new list. Therefore, existing data will not be overwritten.
     - `TableStyleName As Variant` (optional): The name of a TableStyle; for example "TableStyleLight1".
 
 ### ListRow
@@ -20516,7 +20516,7 @@ A collection of ModelColumnName objects representing columns of tables in the da
 
 Contains information for the new Model Connection Type introduced in Excel 2013 to interact with the integrated data model.
 
-**Remarks:** Use for all PivotTables connected to the model. The ModelConnection object is a new "special" workbook connection that always exists (and cannot be deleted) in workbooks that have a data model. It's created when the model is first created in a workbook. All the properties of this workbook connection are read-only. Its name is _Workbook Data Model_.
+**Remarks:** Use for all PivotTables connected to the model. The ModelConnection object is a new "special" workbook connection that always exists (and cannot be deleted) in workbooks that have a data model. It's created when the model is first created in a workbook. All the properties of this workbook connection are read-only. Its name is Workbook Data Model.
 
 #### Properties (7)
 
@@ -20590,7 +20590,7 @@ Represents the format to be used for a model measure in the data model.
 - `Parent As Object  (read-only)`  
   Returns the parent object for the specified object. Read-only.
 - `FormatString As String  (read/write)`  
-  Specifies the date format, for example, "_dd/mm/yy_". Read/write String.
+  Specifies the date format, for example, "dd/mm/yy". Read/write String.
 
 ### ModelFormatDecimalNumber
 
@@ -21167,7 +21167,7 @@ Returns or sets the concurrent calculation mode.
 
 Represents a defined name for a range of cells. Names can be either built-in names-such as Database, Print_Area, and Auto_Open-or custom names.
 
-**Remarks:** The Name object is a member of the Names collection for the Application, Workbook, and Worksheet objects. Use Names (_index_), where _index_ is the name index number or defined name, to return a single Name object. The index number indicates the position of the name within the collection. Names are placed in alphabetic order, from a to z, and are not case-sensitive. Although a Range object can have more than one name, there's no Names collection for the Range object. Use Name with a Range object to return the first name from the list of names (sorted alphabetically) assigned to the range.
+**Remarks:** The Name object is a member of the Names collection for the Application, Workbook, and Worksheet objects. Use Names (index), where index is the name index number or defined name, to return a single Name object. The index number indicates the position of the name within the collection. Names are placed in alphabetic order, from a to z, and are not case-sensitive. Although a Range object can have more than one name, there's no Names collection for the Range object. Use Name with a Range object to return the first name from the list of names (sorted alphabetically) assigned to the range.
 
 **Example:**
 
@@ -21274,7 +21274,7 @@ MsgBox Names(1).RefersTo
 
 A collection of all the Name objects in the application or workbook.
 
-**Remarks:** Each Name object represents a defined name for a range of cells. Names can be either built-in names-such as Database, Print_Area, and Auto_Open-or custom names. The _RefersTo_ argument must be specified in A1-style notation, including dollar signs ($) where appropriate. For example, if cell A10 is selected on Sheet1 and you define a name by using the _RefersTo_ argument "=sheet1!A1:B1", the new name actually refers to cells A10:B10 (because you specified a relative reference). To specify an absolute reference, use "=sheet1!$A$1:$B$1".
+**Remarks:** Each Name object represents a defined name for a range of cells. Names can be either built-in names-such as Database, Print_Area, and Auto_Open-or custom names. The RefersTo argument must be specified in A1-style notation, including dollar signs ($) where appropriate. For example, if cell A10 is selected on Sheet1 and you define a name by using the RefersTo argument "=sheet1!A1:B1", the new name actually refers to cells A10:B10 (because you specified a relative reference). To specify an absolute reference, use "=sheet1!$A$1:$B$1".
 
 **Example:**
 
@@ -21303,17 +21303,17 @@ Next
 
 - `Add([Name As Variant], [RefersTo As Variant], [Visible As Variant], [MacroType As Variant], [ShortcutKey As Variant], [Category As Variant], [NameLocal As Variant], [RefersToLocal As Variant], [CategoryLocal As Variant], [RefersToR1C1 As Variant], [RefersToR1C1Local As Variant]) As Name`  
   Defines a new name for a range of cells.
-    - `Name As Variant` (optional): Specifies the text, in English, to use as the name if the _NameLocal_ parameter is not specified. Names cannot include spaces and cannot be formatted as cell references.
-    - `RefersTo As Variant` (optional): Describes what the name refers to, in English, using A1-style notation, if the _RefersToLocal_, _RefersToR1C1_, and _RefersToR1C1Local_ parameters are not specified. NOTE: Nothing is returned if the reference does not exist.
+    - `Name As Variant` (optional): Specifies the text, in English, to use as the name if the NameLocal parameter is not specified. Names cannot include spaces and cannot be formatted as cell references.
+    - `RefersTo As Variant` (optional): Describes what the name refers to, in English, using A1-style notation, if the RefersToLocal, RefersToR1C1, and RefersToR1C1Local parameters are not specified. NOTE: Nothing is returned if the reference does not exist.
     - `Visible As Variant` (optional): True specifies that the name is defined as visible. False specifies that the name is defined as hidden. A hidden name does not appear in the Define Name, Paste Name, or Goto dialog box. The default value is True.
     - `MacroType As Variant` (optional): The macro type, determined by one of the following values:<ul><li><p>1 - User-defined function (<b>Function</b> procedure)</p></li><li><p>2 - Macro (<b>Sub</b> procedure)</p></li><li><p>3 or omitted - None (the name does not refer to a user-defined function or macro)</p></li></ul>
     - `ShortcutKey As Variant` (optional): Specifies the macro shortcut key. Must be a single letter, such as "z" or "Z". Applies only for command macros.
-    - `Category As Variant` (optional): The category of the macro or function if the _MacroType_ argument equals 1 or 2. The category is used in the Function Wizard. Existing categories can be referred to either by number, starting at 1, or by name, in English. Excel creates a new category if the specified category does not exist.
-    - `NameLocal As Variant` (optional): Specifies the localized text to use as the name if the _Name_ parameter is not specified. Names cannot include spaces and cannot be formatted as cell references.
-    - `RefersToLocal As Variant` (optional): Describes what the name refers to, in localized text using A1-style notation, if the _RefersTo_, _RefersToR1C1_, and _RefersToR1C1Local_ parameters are not specified.
-    - `CategoryLocal As Variant` (optional): Specifies the localized text that identifies the category of a custom function if the _Category_ parameter is not specified.
-    - `RefersToR1C1 As Variant` (optional): Describes what the name refers to, in English using R1C1-style notation, if the _RefersTo_, _RefersToLocal_, and _RefersToR1C1Local_ parameters are not specified.
-    - `RefersToR1C1Local As Variant` (optional): Describes what the name refers to, in localized text using R1C1-style notation, if the _RefersTo_, _RefersToLocal_, and _RefersToR1C1_ parameters are not specified.
+    - `Category As Variant` (optional): The category of the macro or function if the MacroType argument equals 1 or 2. The category is used in the Function Wizard. Existing categories can be referred to either by number, starting at 1, or by name, in English. Excel creates a new category if the specified category does not exist.
+    - `NameLocal As Variant` (optional): Specifies the localized text to use as the name if the Name parameter is not specified. Names cannot include spaces and cannot be formatted as cell references.
+    - `RefersToLocal As Variant` (optional): Describes what the name refers to, in localized text using A1-style notation, if the RefersTo, RefersToR1C1, and RefersToR1C1Local parameters are not specified.
+    - `CategoryLocal As Variant` (optional): Specifies the localized text that identifies the category of a custom function if the Category parameter is not specified.
+    - `RefersToR1C1 As Variant` (optional): Describes what the name refers to, in English using R1C1-style notation, if the RefersTo, RefersToLocal, and RefersToR1C1Local parameters are not specified.
+    - `RefersToR1C1Local As Variant` (optional): Describes what the name refers to, in localized text using R1C1-style notation, if the RefersTo, RefersToLocal, and RefersToR1C1 parameters are not specified.
 - `Item([Index As Variant], [IndexLocal As Variant], [RefersTo As Variant]) As Name`  
   Returns a single Name object from a Names collection.
     - `Index As Variant` (optional): The name or number of the defined name to be returned.
@@ -21914,13 +21914,13 @@ Worksheets(1).OLEObjects.Visible = False
   Sends the object to the back of the z-order.
 - `Add([ClassType As Variant], [Filename As Variant], [Link As Variant], [DisplayAsIcon As Variant], [IconFileName As Variant], [IconIndex As Variant], [IconLabel As Variant], [Left As Variant], [Top As Variant], [Width As Variant], [Height As Variant]) As OLEObject`  
   Adds a new OLE object to a sheet.
-    - `ClassType As Variant` (optional): You must specify either _ClassType_ or _FileName_. A string that contains the programmatic identifier for the object to be created. If _ClassType_ is specified, _FileName_ and _Link_ are ignored.
-    - `Filename As Variant` (optional): You must specify either _ClassType_ or _FileName_. A string that specifies the file to be used to create the OLE object.
-    - `Link As Variant` (optional): True to have the new OLE object based on _FileName_ be linked to that file. If the object isn't linked, the object is created as a copy of the file. The default value is False.
-    - `DisplayAsIcon As Variant` (optional): True to display the new OLE object either as an icon or as its regular picture. If this argument is True, _IconFileName_ and _IconIndex_ can be used to specify an icon.
-    - `IconFileName As Variant` (optional): A string that specifies the file that contains the icon to be displayed. This argument is used only if _DisplayAsIcon_ is True. If this argument isn't specified or the file contains no icons, the default icon for the OLE class is used.
-    - `IconIndex As Variant` (optional): The number of the icon in the icon file. This is used only if _DisplayAsIcon_ is True and _IconFileName_ refers to a valid file that contains icons. If an icon with the given index number doesn't exist in the file specified by _IconFileName_, the first icon in the file is used.
-    - `IconLabel As Variant` (optional): A string that specifies a label to display beneath the icon. This is used only if _DisplayAsIcon_ is True. If this argument is omitted or is an empty string (""), no caption is displayed.
+    - `ClassType As Variant` (optional): You must specify either ClassType or FileName. A string that contains the programmatic identifier for the object to be created. If ClassType is specified, FileName and Link are ignored.
+    - `Filename As Variant` (optional): You must specify either ClassType or FileName. A string that specifies the file to be used to create the OLE object.
+    - `Link As Variant` (optional): True to have the new OLE object based on FileName be linked to that file. If the object isn't linked, the object is created as a copy of the file. The default value is False.
+    - `DisplayAsIcon As Variant` (optional): True to display the new OLE object either as an icon or as its regular picture. If this argument is True, IconFileName and IconIndex can be used to specify an icon.
+    - `IconFileName As Variant` (optional): A string that specifies the file that contains the icon to be displayed. This argument is used only if DisplayAsIcon is True. If this argument isn't specified or the file contains no icons, the default icon for the OLE class is used.
+    - `IconIndex As Variant` (optional): The number of the icon in the icon file. This is used only if DisplayAsIcon is True and IconFileName refers to a valid file that contains icons. If an icon with the given index number doesn't exist in the file specified by IconFileName, the first icon in the file is used.
+    - `IconLabel As Variant` (optional): A string that specifies a label to display beneath the icon. This is used only if DisplayAsIcon is True. If this argument is omitted or is an empty string (""), no caption is displayed.
     - `Left As Variant` (optional): The initial coordinates of the new object, in points, relative to the upper-left corner of cell A1 on a worksheet, or to the upper-left corner of a chart.
     - `Top As Variant` (optional): The initial coordinates of the new object, in points, relative to the top of row 1 on a worksheet, or to the top of the chart area on a chart.
     - `Width As Variant` (optional): The initial width of the new object, in points.
@@ -22396,7 +22396,7 @@ ActiveWindow.Panes(3).ScrollRow = 5
     - `ToRight As Variant` (optional): The number of columns to scroll the contents to the right.
     - `ToLeft As Variant` (optional): The number of columns to scroll the contents to the left.
 - `ScrollIntoView(Left As Long, Top As Long, Width As Long, Height As Long, [Start As Variant])`  
-  Scrolls the document window so that the contents of a specified rectangular area are displayed in either the upper-left or lower-right corner of the document window or pane (depending on the value of the _Start_ argument).
+  Scrolls the document window so that the contents of a specified rectangular area are displayed in either the upper-left or lower-right corner of the document window or pane (depending on the value of the Start argument).
     - `Left As Long` (required): The horizontal position of the rectangle (in points) from the left edge of the document window or pane.
     - `Top As Long` (required): The vertical position of the rectangle (in points) from the top of the document window or pane.
     - `Width As Long` (required): The width of the rectangle, in points.
@@ -22486,7 +22486,7 @@ End With
 - `SetParam(Type As XlParameterType, Value As Variant)`  
   Defines a parameter for the specified query table.
     - `Type As XlParameterType` (required): One of the constants of XlParameterType, which specifies the parameter type.
-    - `Value As Variant` (required): The value of the specified parameter, as shown in the description of the _Type_ argument.
+    - `Value As Variant` (required): The value of the specified parameter, as shown in the description of the Type argument.
 
 ### Parameters
 
@@ -22616,7 +22616,7 @@ Range("A1:C4").Phonetics.Visible = True
 - `Add(Start As Long, Length As Long, Text As String)`  
   Adds phonetic text to the specified cell.
     - `Start As Long` (required): The position that represents the first character in the specified cell.
-    - `Length As Long` (required): The number of characters from the _Start_ position to the end of the text in the cell.
+    - `Length As Long` (required): The number of characters from the Start position to the end of the text in the cell.
     - `Text As String` (required): Collectively, the characters that represent the phonetic text in the cell.
 
 ### Picture
@@ -22881,7 +22881,7 @@ Worksheets(1).PivotTables(1).PivotCache.RefreshOnFileOpen = True
   Resets the refresh timer for the specified query table or PivotTable report to the last interval that you set by using the RefreshPeriod property.
 - `CreatePivotTable(TableDestination As Variant, [TableName As Variant], [ReadData As Variant], [DefaultVersion As Variant]) As PivotTable`  
   Creates a PivotTable report based on a PivotCache object. Returns a PivotTable object.
-    - `TableDestination As Variant` (required): The cell in the upper-left corner of the PivotTable report's destination range (the range on the worksheet where the resulting PivotTable report will be placed). The destination range must be on a worksheet in the workbook that contains the PivotCache object specified by _expression_.
+    - `TableDestination As Variant` (required): The cell in the upper-left corner of the PivotTable report's destination range (the range on the worksheet where the resulting PivotTable report will be placed). The destination range must be on a worksheet in the workbook that contains the PivotCache object specified by expression.
     - `TableName As Variant` (optional): The name of the new PivotTable report.
     - `ReadData As Variant` (optional): True to create a PivotTable cache that contains all the records from the external database; this cache can be very large. False to enable setting some of the fields as server-based page fields before the data is actually read.
     - `DefaultVersion As Variant` (optional): The default version of the PivotTable report.
@@ -22939,9 +22939,9 @@ Next
 - `_NewEnum() As IUnknown`
 - `Create(SourceType As XlPivotTableSourceType, [SourceData As Variant], [Version As Variant]) As PivotCache`  
   Creates a new PivotCache.
-    - `SourceType As XlPivotTableSourceType` (required): _SourceType_ can be one of these XlPivotTableSourceType constants: xlConsolidation, xlDatabase, or xlExternal.
+    - `SourceType As XlPivotTableSourceType` (required): SourceType can be one of these XlPivotTableSourceType constants: xlConsolidation, xlDatabase, or xlExternal.
     - `SourceData As Variant` (optional): The data for the new PivotTable cache.
-    - `Version As Variant` (optional): Version of the PivotTable. _Version_ can be one of the XlPivotTableVersionList constants.
+    - `Version As Variant` (optional): Version of the PivotTable. Version can be one of the XlPivotTableVersionList constants.
 
 ### PivotCell
 
@@ -23011,7 +23011,7 @@ End Sub
 - `MDX As String  (read-only)`  
   Returns a tuple that provides the full MDX coordinates of the specified value cell in a PivotTable with an OLAP data source. Read-only.
 - `ServerActions As Actions  (read-only)`  
-  Represents a collection of _actions_ consisting of OLAP-defined actions that can be executed. The actions are specific to PivotTables existing at a worksheet-level. Read-only.
+  Represents a collection of actions consisting of OLAP-defined actions that can be executed. The actions are specific to PivotTables existing at a worksheet-level. Read-only.
 
 #### Methods (2)
 
@@ -23213,7 +23213,7 @@ Worksheets("sheet3").PivotTables(1) _
 - `AddPageItem(Item As String, [ClearList As Variant])`  
   Adds an additional item to a multiple item page field.
     - `Item As String` (required): Source name of a PivotItem object, corresponding to the specific Online Analytical Processing (OLAP) member unique name.
-    - `ClearList As Variant` (optional): If False (default), adds a page item to the existing list. If True, deletes all current items and adds _Item_.
+    - `ClearList As Variant` (optional): If False (default), adds a page item to the existing list. If True, deletes all current items and adds Item.
 - `DrillTo(Field As String)`  
   The DrillTo method supports drilling to a specified PivotField from another PivotField.
 - `ClearManualFilter()`  
@@ -23677,7 +23677,7 @@ A PivotLine object is a line of rows or columns in an Excel PivotTable.
 
 Collection of PivotCell objects for a specific PivotLine.
 
-**Remarks:** Use the PivotLineCells (_index_) property of the PivotLine object to return or specify the location of a specific PivotCell object in the collection. You can also specify a PivotField object or the PivotField name to return a single PivotCell object.
+**Remarks:** Use the PivotLineCells (index) property of the PivotLine object to return or specify the location of a specific PivotCell object in the collection. You can also specify a PivotField object or the PivotField name to return a single PivotCell object.
 
 #### Properties (8)
 
@@ -23974,21 +23974,21 @@ Worksheets("Sheet3").PivotTables(1) _
   Returns a PivotCache object that represents the cache for the specified PivotTable report. Read-only.
 - `PivotTableWizard([SourceType As Variant], [SourceData As Variant], [TableDestination As Variant], [TableName As Variant], [RowGrand As Variant], [ColumnGrand As Variant], [SaveData As Variant], [HasAutoFormat As Variant], [AutoPage As Variant], [Reserved As Variant], [BackgroundQuery As Variant], [OptimizeCache As Variant], [PageFieldOrder As Variant], [PageFieldWrapCount As Variant], [ReadData As Variant], [Connection As Variant])`  
   Creates and returns a PivotTable object. This method doesn't display the PivotTable Wizard. This method isn't available for OLE DB data sources. Use the Add method to add a PivotTable cache, and then create a PivotTable report based on the cache.
-    - `SourceType As Variant` (optional): An XlPivotTableSourceType value that represents the source of the report data. If you specify this argument, you must also specify _SourceData_. If _SourceType_ and _SourceData_ are omitted, Microsoft Excel assumes that the source type is xlDatabase, and the source data comes from the named range Database. If this named range doesn't exist, Excel uses the current region if the current selection is in a range of more than 10 cells that contain data. If this isn't true, this method will fail.
-    - `SourceData As Variant` (optional): The data for the new report. Can be a Range object, an array of ranges, or a text constant that represents the name of another report. For an external database, _SourceData_ is an array of strings containing the SQL query string, where each element is up to 255 characters in length. You should use the _Connection_ argument to specify the ODBC connection string. For compatibility with earlier versions of Excel, _SourceData_ can be a two-element array. The first element is the connection string specifying the ODBC source for the data. The second element is the SQL query string used to get the data. If you specify _SourceData_, you must also specify _SourceType_. If the active cell is inside the _SourceData_ range, you must specify _TableDestination_ as well.
+    - `SourceType As Variant` (optional): An XlPivotTableSourceType value that represents the source of the report data. If you specify this argument, you must also specify SourceData. If SourceType and SourceData are omitted, Microsoft Excel assumes that the source type is xlDatabase, and the source data comes from the named range Database. If this named range doesn't exist, Excel uses the current region if the current selection is in a range of more than 10 cells that contain data. If this isn't true, this method will fail.
+    - `SourceData As Variant` (optional): The data for the new report. Can be a Range object, an array of ranges, or a text constant that represents the name of another report. For an external database, SourceData is an array of strings containing the SQL query string, where each element is up to 255 characters in length. You should use the Connection argument to specify the ODBC connection string. For compatibility with earlier versions of Excel, SourceData can be a two-element array. The first element is the connection string specifying the ODBC source for the data. The second element is the SQL query string used to get the data. If you specify SourceData, you must also specify SourceType. If the active cell is inside the SourceData range, you must specify TableDestination as well.
     - `TableDestination As Variant` (optional): A Range object specifying where the report should be placed on the worksheet. If this argument is omitted, the report is placed at the active cell.
     - `TableName As Variant` (optional): A string that specifies the name of the new report.
     - `RowGrand As Variant` (optional): True to show grand totals for rows in the report.
     - `ColumnGrand As Variant` (optional): True to show grand totals for columns in the report.
     - `SaveData As Variant` (optional): True to save data with the report. False to save only the report definition.
     - `HasAutoFormat As Variant` (optional): True to have Excel automatically format the report when it's refreshed or when fields are moved.
-    - `AutoPage As Variant` (optional): Valid only if _SourceType_ is xlConsolidation. True to have Excel create a page field for the consolidation. If _AutoPage_ is False, you must create the page field or fields.
+    - `AutoPage As Variant` (optional): Valid only if SourceType is xlConsolidation. True to have Excel create a page field for the consolidation. If AutoPage is False, you must create the page field or fields.
     - `Reserved As Variant` (optional): Not used by Excel.
     - `BackgroundQuery As Variant` (optional): True to have Excel perform queries for the report asynchronously (in the background). The default value is False.
     - `OptimizeCache As Variant` (optional): True to optimize the PivotTable cache when it's constructed. The default value is False.
     - `PageFieldOrder As Variant` (optional): The order in which page fields are added to the PivotTable report's layout. Can be one of the following XlOrder constants: xlDownThenOver (default) or xlOverThenDown.
     - `PageFieldWrapCount As Variant` (optional): The number of page fields in each column or row in the PivotTable report. The default value is 0 (zero).
-    - `ReadData As Variant` (optional): True to create a PivotTable cache that contains all records from the external database; this cache can be very large. If _ReadData_ is False, you can set some of the fields as server-based page fields before the data is actually read.
+    - `ReadData As Variant` (optional): True to create a PivotTable cache that contains all records from the external database; this cache can be very large. If ReadData is False, you can set some of the fields as server-based page fields before the data is actually read.
     - `Connection As Variant` (optional): A string that contains ODBC settings that allow Excel to connect to an ODBC data source. The connection string has the form ODBC;<connection string>. This argument overrides any previous setting for the PivotCache object's Connection property.
 - `Update()`  
   Updates the PivotTable report.
@@ -24001,33 +24001,33 @@ Worksheets("Sheet3").PivotTables(1) _
   Returns a Range object with information about a data item in a PivotTable report.
     - `DataField As Variant` (optional): The name of the field containing the data for the PivotTable.
     - `Field1 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item1 As Variant` (optional): The name of an item in _Field1_.
+    - `Item1 As Variant` (optional): The name of an item in Field1.
     - `Field2 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item2 As Variant` (optional): The name of an item in _Field2_.
+    - `Item2 As Variant` (optional): The name of an item in Field2.
     - `Field3 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item3 As Variant` (optional): The name of an item in _Field3_.
+    - `Item3 As Variant` (optional): The name of an item in Field3.
     - `Field4 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item4 As Variant` (optional): The name of an item in _Field4_.
+    - `Item4 As Variant` (optional): The name of an item in Field4.
     - `Field5 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item5 As Variant` (optional): The name of an item in _Field5_.
+    - `Item5 As Variant` (optional): The name of an item in Field5.
     - `Field6 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item6 As Variant` (optional): The name of an item in _Field6_.
+    - `Item6 As Variant` (optional): The name of an item in Field6.
     - `Field7 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item7 As Variant` (optional): The name of an item in _Field7_.
+    - `Item7 As Variant` (optional): The name of an item in Field7.
     - `Field8 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item8 As Variant` (optional): The name of an item in _Field8_.
+    - `Item8 As Variant` (optional): The name of an item in Field8.
     - `Field9 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item9 As Variant` (optional): The name of an item in _Field9_.
+    - `Item9 As Variant` (optional): The name of an item in Field9.
     - `Field10 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item10 As Variant` (optional): The name of an item in _Field10_.
+    - `Item10 As Variant` (optional): The name of an item in Field10.
     - `Field11 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item11 As Variant` (optional): The name of an item in _Field11_.
+    - `Item11 As Variant` (optional): The name of an item in Field11.
     - `Field12 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item12 As Variant` (optional): The name of an item in _Field12_.
+    - `Item12 As Variant` (optional): The name of an item in Field12.
     - `Field13 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item13 As Variant` (optional): The name of an item in _Field13_.
+    - `Item13 As Variant` (optional): The name of an item in Field13.
     - `Field14 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item14 As Variant` (optional): The name of an item in _Field14_.
+    - `Item14 As Variant` (optional): The name of an item in Field14.
 - `AddDataField(Field As Object, [Caption As Variant], [Function As Variant]) As PivotField`  
   Adds a data field to a PivotTable report. Returns a PivotField object that represents the new data field.
     - `Field As Object` (required): The unique field on the server. If the source data is Online Analytical Processing (OLAP), the unique field is a cube field. If the source data is non-OLAP (non-OLAP source data), the unique field is a PivotTable field.
@@ -24038,7 +24038,7 @@ Worksheets("Sheet3").PivotTables(1) _
     - `File As String` (required): The name of the cube file to be created. It will overwrite the file if it already exists.
     - `Measures As Variant` (optional): An array of unique names of measures that are to be part of the slice.
     - `Levels As Variant` (optional): An array of strings. Each array item is a unique level name. It represents the lowest level of a hierarchy that is in the slice.
-    - `Members As Variant` (optional): An array of string arrays. The elements correspond, in order, to the hierarchies represented in the _Levels_ array. Each element is an array of string arrays that consists of the unique names of the top level members in the dimension that are to be included in the slice.
+    - `Members As Variant` (optional): An array of string arrays. The elements correspond, in order, to the hierarchies represented in the Levels array. Each element is an array of string arrays that consists of the unique names of the top level members in the dimension that are to be included in the slice.
     - `Properties As Variant` (optional): False results in no member properties being included in the slice. The default value is True.
 - `ClearTable()`  
   The ClearTable method is used for clearing a PivotTable. Clearing PivotTables includes removing all the fields and deleting all filtering and sorting applied to the PivotTables. This method resets the PivotTable to the state it had right after it was created, before any fields were added to it.
@@ -24160,7 +24160,7 @@ MsgBox Worksheets("sheet3").PivotTables.Count
 - `Add(PivotCache As PivotCache, TableDestination As Variant, [TableName As Variant], [ReadData As Variant], [DefaultVersion As Variant]) As PivotTable`  
   Adds a new PivotTable report. Returns a PivotTable object.
     - `PivotCache As PivotCache` (required): The PivotTable cache on which the new PivotTable report is based. The cache provides data for the report.
-    - `TableDestination As Variant` (required): The cell in the upper-left corner of the PivotTable report's destination range (the range on the worksheet where the resulting report will be placed). You must specify a destination range on the worksheet that contains the PivotTables object specified by _expression_.
+    - `TableDestination As Variant` (required): The cell in the upper-left corner of the PivotTable report's destination range (the range on the worksheet where the resulting report will be placed). You must specify a destination range on the worksheet that contains the PivotTables object specified by expression.
     - `TableName As Variant` (optional): The name of the new PivotTable report.
     - `ReadData As Variant` (optional): True to create a PivotTable cache that contains all records from the external database; this cache can be very large. False to enable setting some of the fields as server-based page fields before the data is actually read.
     - `DefaultVersion As Variant` (optional): The version of Microsoft Excel that the PivotTable was originally created in.
@@ -24387,7 +24387,7 @@ Worksheets(1).ChartObjects(1).Chart. _
 
 A collection of all the Point objects in the specified series in a chart.
 
-**Remarks:** Use Points (_index_), where _index_ is the point index number, to return a single Point object. Points are numbered from left to right on the series. Points(1) is the leftmost point, and Points(Points.Count) is the rightmost point.
+**Remarks:** Use Points (index), where index is the point index number, to return a single Point object. Points are numbered from left to right on the series. Points(1) is the leftmost point, and Points(Points.Count) is the rightmost point.
 
 **Example:**
 
@@ -24425,7 +24425,7 @@ pts(pts.Count).ApplyDataLabels type:=xlShowValue
 
 Represents a Protected View window.
 
-**Remarks:** A Protected View window is used to display a workbook from a potentially unsafe location. Unsafe locations are defined as the following: - Files opened from the Internet. - Attachments opened from Outlook. - Files blocked by File Block Policy. - Files that fail Office file validation. - Files explicitly opened in Protected View by using the Open in Protected View command of the Open button in the Open dialog box. Workbooks displayed in a Protected View window cannot be edited and are restricted from running active content such as Visual Basic for Applications macros and data connections. For more information about Protected View windows, see What is Protected View? To return a single ProtectedViewWindow object from the ProtectedViewWindows collection, use ProtectedViewWindows (_index_), where _index_ is the index number of the window that you want to open. You can also access the ProtectedViewWindow object that represents the active Protected View window by using the ActiveProtectedViewWindow property of the Application object.
+**Remarks:** A Protected View window is used to display a workbook from a potentially unsafe location. Unsafe locations are defined as the following: - Files opened from the Internet. - Attachments opened from Outlook. - Files blocked by File Block Policy. - Files that fail Office file validation. - Files explicitly opened in Protected View by using the Open in Protected View command of the Open button in the Open dialog box. Workbooks displayed in a Protected View window cannot be edited and are restricted from running active content such as Visual Basic for Applications macros and data connections. For more information about Protected View windows, see What is Protected View? To return a single ProtectedViewWindow object from the ProtectedViewWindows collection, use ProtectedViewWindows (index), where index is the index number of the window that you want to open. You can also access the ProtectedViewWindow object that represents the active Protected View window by using the ActiveProtectedViewWindow property of the Application object.
 
 **Example:**
 
@@ -24472,7 +24472,7 @@ End If
 - `Edit([WriteResPassword As Variant], [UpdateLinks As Variant]) As Workbook`  
   Opens the workbook that is open for editing in the specified Protected View window.
     - `WriteResPassword As Variant` (optional): The password required to write to a write-reserved workbook. If this argument is omitted and the workbook requires a password, the user will be prompted for the password.
-    - `UpdateLinks As Variant` (optional): Specifies the way that external references (links) in the file, such as the reference to a range in the Budget.xls workbook in the following formula =SUM([Budget.xls]Annual!C10:C25), are updated. If this argument is omitted, the user is prompted to specify how links will be updated. For more information about the values used by this parameter, see the Remarks section. If Excel is opening a file in the WKS, WK1, or WK3 format and the _UpdateLinks_ argument is 0, no charts are created; otherwise, Excel generates charts from the graphs attached to the file.
+    - `UpdateLinks As Variant` (optional): Specifies the way that external references (links) in the file, such as the reference to a range in the Budget.xls workbook in the following formula =SUM([Budget.xls]Annual!C10:C25), are updated. If this argument is omitted, the user is prompted to specify how links will be updated. For more information about the values used by this parameter, see the Remarks section. If Excel is opening a file in the WKS, WK1, or WK3 format and the UpdateLinks argument is 0, no charts are created; otherwise, Excel generates charts from the graphs attached to the file.
 
 ### ProtectedViewWindows
 
@@ -24656,7 +24656,7 @@ Workbooks(3).PublishObjects(1).FileName = _
   Deletes the object.
 - `Publish([Create As Variant])`  
   Saves an item or a collection of items in a document to a webpage.
-    - `Create As Variant` (optional): If the HTML file exists, setting this argument to True replaces the file, and setting this argument to False inserts the item or items at the end of the file. If the file does not exist, the file is created regardless of the value of the _Create_ argument.
+    - `Create As Variant` (optional): If the HTML file exists, setting this argument to True replaces the file, and setting this argument to False inserts the item or items at the end of the file. If the file does not exist, the file is created regardless of the value of the Create argument.
 
 ### PublishObjects
 
@@ -24701,7 +24701,7 @@ Next objPO
     - `SourceType As XlSourceType` (required): The source type.
     - `Filename As String` (required): String. The URL (on the intranet or the web) or path (local or network) to which the source object was saved.
     - `Sheet As Variant` (optional): The name of the worksheet that was saved as a webpage.
-    - `Source As Variant` (optional): A unique name used to identify items that have one of the following constants as their _SourceType_ argument: xlSourceAutoFilter, xlSourceChart, xlSourcePivotTable, xlSourcePrintArea, xlSourceQuery, or xlSourceRange. If _SourceType_ is xlSourceRange, _Source_ specifies a range, which can be a defined name. If _SourceType_ is xlSourceChart, xlSourcePivotTable, or xlSourceQuery, _Source_ specifies the name of a chart, PivotTable report, or query table.
+    - `Source As Variant` (optional): A unique name used to identify items that have one of the following constants as their SourceType argument: xlSourceAutoFilter, xlSourceChart, xlSourcePivotTable, xlSourcePrintArea, xlSourceQuery, or xlSourceRange. If SourceType is xlSourceRange, Source specifies a range, which can be a defined name. If SourceType is xlSourceChart, xlSourcePivotTable, or xlSourceQuery, Source specifies the name of a chart, PivotTable report, or query table.
     - `HtmlType As Variant` (optional): Specifies whether the item is saved as an interactive Microsoft Office Web component or as static text and images. Can be one of the XlHTMLType constants: xlHtmlCalc, xlHtmlChart, xlHtmlList, or xlHtmlStatic.
     - `DivID As Variant` (optional): The unique identifier used in the HTML DIV tag to identify the item on the webpage.
     - `Title As Variant` (optional): The title of the webpage.
@@ -25229,17 +25229,17 @@ Worksheets("Sheet1").Range("A5").Value = _
   Filters or copies data from a list based on a criteria range. If the initial selection is a single cell, that cell's current region is used.
     - `Action As XlFilterAction` (required): One of the constants of XlFilterAction specifying whether to make a copy or filter the list in place.
     - `CriteriaRange As Variant` (optional): The criteria range. If this argument is omitted, there are no criteria.
-    - `CopyToRange As Variant` (optional): The destination range for the copied rows if _Action_ is xlFilterCopy. Otherwise, this argument is ignored.
+    - `CopyToRange As Variant` (optional): The destination range for the copied rows if Action is xlFilterCopy. Otherwise, this argument is ignored.
     - `Unique As Variant` (optional): True to filter unique records only. False to filter all records that meet the criteria. The default value is False.
 - `ApplyNames([Names As Variant], [IgnoreRelativeAbsolute As Variant], [UseRowColumnNames As Variant], [OmitColumn As Variant], [OmitRow As Variant], [Order As XlApplyNamesOrder], [AppendLast As Variant]) As Variant`  
   Applies names to the cells in the specified range.
     - `Names As Variant` (optional): An array of the names to be applied. If this argument is omitted, all names on the sheet are applied to the range.
     - `IgnoreRelativeAbsolute As Variant` (optional): True to replace references with names, regardless of the reference types of either the names or references. False to replace absolute references only with absolute names, relative references only with relative names, and mixed references only with mixed names. The default value is True.
-    - `UseRowColumnNames As Variant` (optional): True to use the names of row and column ranges that contain the specified range if names for the range cannot be found. False to ignore the _OmitColumn_ and _OmitRow_ arguments. The default value is True.
+    - `UseRowColumnNames As Variant` (optional): True to use the names of row and column ranges that contain the specified range if names for the range cannot be found. False to ignore the OmitColumn and OmitRow arguments. The default value is True.
     - `OmitColumn As Variant` (optional): True to replace the entire reference with the row-oriented name. The column-oriented name can be omitted only if the referenced cell is in the same column as the formula and is within a row-oriented named range. The default value is True.
     - `OmitRow As Variant` (optional): True to replace the entire reference with the column-oriented name. The row-oriented name can be omitted only if the referenced cell is in the same row as the formula and is within a column-oriented named range. The default value is True.
     - `Order As XlApplyNamesOrder` (optional): Determines which range name is listed first when a cell reference is replaced by a row-oriented and column-oriented range name.
-    - `AppendLast As Variant` (optional): True to replace the definitions of the names in _Names_ and also replace the definitions of the last names that were defined. False to replace the definitions of the names in _Names_ only. The default value is False.
+    - `AppendLast As Variant` (optional): True to replace the definitions of the names in Names and also replace the definitions of the last names that were defined. False to replace the definitions of the names in Names only. The default value is False.
 - `ApplyOutlineStyles() As Variant`  
   Applies outlining styles to the specified range.
 - `AutoComplete(String As String) As String`  
@@ -25304,7 +25304,7 @@ Worksheets("Sheet1").Range("A5").Value = _
   Creates a data series in the specified range. Variant.
     - `Rowcol As Variant` (optional): Can be the xlRows or xlColumns constant to have the data series entered in rows or columns, respectively. If this argument is omitted, the size and shape of the range is used.
     - `Type As XlDataSeriesType` (optional): The type for the data series.
-    - `Date As XlDataSeriesDate` (optional): If the _Type_ argument is xlChronological, the _Date_ argument indicates the step date unit.
+    - `Date As XlDataSeriesDate` (optional): If the Type argument is xlChronological, the Date argument indicates the step date unit.
     - `Step As Variant` (optional): The step value for the series. The default value is 1.
     - `Stop As Variant` (optional): The stop value for the series. If this argument is omitted, Microsoft Excel fills to the end of the range.
     - `Trend As Variant` (optional): True to create a linear trend or growth trend. False to create a standard data series. The default value is False.
@@ -25333,7 +25333,7 @@ Worksheets("Sheet1").Range("A5").Value = _
 - `Find(What As Variant, [After As Variant], [LookIn As Variant], [LookAt As Variant], [SearchOrder As Variant], [SearchDirection As XlSearchDirection], [MatchCase As Variant], [MatchByte As Variant], [SearchFormat As Variant]) As Range`  
   Finds specific information in a range.
     - `What As Variant` (required): The data to search for. Can be a string or any Microsoft Excel data type.
-    - `After As Variant` (optional): The cell after which you want the search to begin. This corresponds to the position of the active cell when a search is done from the user interface. Notice that _After_ must be a single cell in the range. Remember that the search begins after this cell; the specified cell isn't searched until the method wraps back around to this cell. If you don't specify this argument, the search starts after the cell in the upper-left corner of the range.
+    - `After As Variant` (optional): The cell after which you want the search to begin. This corresponds to the position of the active cell when a search is done from the user interface. Notice that After must be a single cell in the range. Remember that the search begins after this cell; the specified cell isn't searched until the method wraps back around to this cell. If you don't specify this argument, the search starts after the cell in the upper-left corner of the range.
     - `LookIn As Variant` (optional): Can be one of the following XlFindLookIn constants: xlFormulas, xlValues, xlComments, or xlCommentsThreaded.
     - `LookAt As Variant` (optional): Can be one of the following XlLookAt constants: xlWhole or xlPart.
     - `SearchOrder As Variant` (optional): Can be one of the following XlSearchOrder constants: xlByRows or xlByColumns.
@@ -25343,7 +25343,7 @@ Worksheets("Sheet1").Range("A5").Value = _
     - `SearchFormat As Variant` (optional): The search format.
 - `FindNext([After As Variant]) As Range`  
   Continues a search that was begun with the Find method. Finds the next cell that matches those same conditions and returns a Range object that represents that cell. This does not affect the selection or the active cell.
-    - `After As Variant` (optional): The cell after which you want to search. This corresponds to the position of the active cell when a search is done from the user interface. Be aware that _After_ must be a single cell in the range.
+    - `After As Variant` (optional): The cell after which you want to search. This corresponds to the position of the active cell when a search is done from the user interface. Be aware that After must be a single cell in the range.
 - `FindPrevious([After As Variant]) As Range`  
   Continues a search that was begun with the Find method. Finds the previous cell that matches those same conditions and returns a Range object that represents that cell. Doesn't affect the selection or the active cell.
 - `FunctionWizard() As Variant`  
@@ -25352,7 +25352,7 @@ Worksheets("Sheet1").Range("A5").Value = _
   When the Range object represents a single cell in a PivotTable field's data range, the Group method performs numeric or date-based grouping in that field.
     - `Start As Variant` (optional): The first value to be grouped. If this argument is omitted or True, the first value in the field is used.
     - `End As Variant` (optional): The last value to be grouped. If this argument is omitted or True, the last value in the field is used.
-    - `By As Variant` (optional): If the field is numeric, this argument specifies the size of each group. If the field is a date, this argument specifies the number of days in each group if element 4 in the _Periods_ array is True and all the other elements are False. Otherwise, this argument is ignored. If this argument is omitted, Microsoft Excel automatically chooses a default group size.
+    - `By As Variant` (optional): If the field is numeric, this argument specifies the size of each group. If the field is a date, this argument specifies the number of days in each group if element 4 in the Periods array is True and all the other elements are False. Otherwise, this argument is ignored. If this argument is omitted, Microsoft Excel automatically chooses a default group size.
     - `Periods As Variant` (optional): An array of Boolean values that specify the period for the group, described in the Remarks section. If an element in the array is True, a group is created for the corresponding time; if the element is False, no group is created. If the field isn't a date field, this argument is ignored.
 - `InsertIndent(InsertAmount As Long)`  
   Adds an indent to the specified range.
@@ -25377,9 +25377,9 @@ Worksheets("Sheet1").Range("A5").Value = _
     - `LinkNumber As Variant` (optional): If the arrow is an external reference arrow, this argument indicates which external reference to follow. If this argument is omitted, the first external reference is followed.
 - `NoteText([Text As Variant], [Start As Variant], [Length As Variant]) As String`  
   Returns or sets the cell note associated with the cell in the upper-left corner of the range. Read/write String. Cell notes have been replaced by range comments. For more information, see the Comment object.
-    - `Text As Variant` (optional): The text to add to the note (up to 255 characters). The text is inserted starting at position _Start_, replacing _Length_ characters of the existing note. If this argument is omitted, this method returns the current text of the note starting at position _Start_, for _Length_ characters.
+    - `Text As Variant` (optional): The text to add to the note (up to 255 characters). The text is inserted starting at position Start, replacing Length characters of the existing note. If this argument is omitted, this method returns the current text of the note starting at position Start, for Length characters.
     - `Start As Variant` (optional): The starting position for the text that's set or returned. If this argument is omitted, this method starts at the first character. To append text to the note, specify a number larger than the number of characters in the existing note.
-    - `Length As Variant` (optional): The number of characters to be set or returned. If this argument is omitted, Microsoft Excel sets or returns characters from the starting position to the end of the note (up to 255 characters). If there are more than 255 characters from _Start_ to the end of the note, this method returns only 255 characters.
+    - `Length As Variant` (optional): The number of characters to be set or returned. If this argument is omitted, Microsoft Excel sets or returns characters from the starting position to the end of the note (up to 255 characters). If there are more than 255 characters from Start to the end of the note, this method returns only 255 characters.
 - `Parse([ParseLine As Variant], [Destination As Variant]) As Variant`  
   Parses a range of data and breaks it into multiple cells. Distributes the contents of the range to fill several adjacent columns; the range can be no more than one column wide.
     - `ParseLine As Variant` (optional): A string that contains left and right brackets to indicate where the cells should be split.
@@ -25410,23 +25410,23 @@ Worksheets("Sheet1").Range("A5").Value = _
   Uses East Asian sorting methods to sort the range, a PivotTable report, or uses the method for the active region if the range contains only one cell. For example, Japanese sorts in the order of the Kana syllabary.
     - `SortMethod As XlSortMethod` (optional): The type of sort. Some of these constants may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed.
     - `Key1 As Variant` (optional): The first sort field, as either text (a PivotTable field or range name) or a Range object ("Dept" or Cells(1, 1), for example).
-    - `Order1 As XlSortOrder` (optional): The sort order for the field or range specified in the _Key1_ argument.
+    - `Order1 As XlSortOrder` (optional): The sort order for the field or range specified in the Key1 argument.
     - `Type As Variant` (optional): Specifies which elements are to be sorted. Use this argument only when sorting PivotTable reports.
     - `Key2 As Variant` (optional): The second sort field, as either text (a PivotTable field or range name) or a Range object. If you omit this argument, there's no second sort field. Cannot be used when sorting PivotTable reports.
-    - `Order2 As XlSortOrder` (optional): The sort order for the field or range specified in the _Key2_ argument. Cannot be used when sorting PivotTable reports.
+    - `Order2 As XlSortOrder` (optional): The sort order for the field or range specified in the Key2 argument. Cannot be used when sorting PivotTable reports.
     - `Key3 As Variant` (optional): The third sort field, as either text (a range name) or a Range object. If you omit this argument, there's no third sort field. Cannot be used when sorting PivotTable reports.
-    - `Order3 As XlSortOrder` (optional): The sort order for the field or range specified in the _Key3_ argument. Cannot be used when sorting PivotTable reports.
+    - `Order3 As XlSortOrder` (optional): The sort order for the field or range specified in the Key3 argument. Cannot be used when sorting PivotTable reports.
     - `Header As XlYesNoGuess` (optional): Specifies whether or not the first row contains headers. Cannot be used when sorting PivotTable reports.
-    - `OrderCustom As Variant` (optional): This argument is a one-based integer offset to the list of custom sort orders. If you omit _OrderCustom_, (normal sort order) is used.
+    - `OrderCustom As Variant` (optional): This argument is a one-based integer offset to the list of custom sort orders. If you omit OrderCustom, (normal sort order) is used.
     - `MatchCase As Variant` (optional): True to do a case-sensitive sort; False to do a sort that's not case-sensitive. Cannot be used when sorting PivotTable reports.
     - `Orientation As XlSortOrientation` (optional): The sort orientation.
-    - `DataOption1 As XlSortDataOption` (optional): Specifies how to sort text in _Key1_. Cannot be used when sorting PivotTable reports.
-    - `DataOption2 As XlSortDataOption` (optional): Specifies how to sort text in _Key2_. Cannot be used when sorting PivotTable reports.
-    - `DataOption3 As XlSortDataOption` (optional): Specifies how to sort text in _Key3_. Cannot be used when sorting PivotTable reports.
+    - `DataOption1 As XlSortDataOption` (optional): Specifies how to sort text in Key1. Cannot be used when sorting PivotTable reports.
+    - `DataOption2 As XlSortDataOption` (optional): Specifies how to sort text in Key2. Cannot be used when sorting PivotTable reports.
+    - `DataOption3 As XlSortDataOption` (optional): Specifies how to sort text in Key3. Cannot be used when sorting PivotTable reports.
 - `SpecialCells(Type As XlCellType, [Value As Variant]) As Range`  
   Returns a Range object that represents all the cells that match the specified type and value.
     - `Type As XlCellType` (required): The cells to include.
-    - `Value As Variant` (optional): If _Type_ is either xlCellTypeConstants or xlCellTypeFormulas, this argument is used to determine which types of cells to include in the result. These values can be added together to return more than one type. The default is to select all constants or formulas, no matter what the type.
+    - `Value As Variant` (optional): If Type is either xlCellTypeConstants or xlCellTypeFormulas, this argument is used to determine which types of cells to include in the result. These values can be added together to return more than one type. The default is to select all constants or formulas, no matter what the type.
 - `SubscribeTo(Edition As String, [Format As XlSubscribeToFormat]) As Variant`  
   You have requested Help for a Visual Basic keyword used only on the Macintosh. For information about this keyword, consult the language reference Help included with Microsoft Office Macintosh Edition.
     - `Edition As String` (required): See help included with Microsoft Office Macintosh Edition.
@@ -25449,13 +25449,13 @@ Worksheets("Sheet1").Range("A5").Value = _
     - `DataType As XlTextParsingType` (optional): The format of the text to be split into columns.
     - `TextQualifier As XlTextQualifier` (optional): Specifies whether to use single, double, or no quotes as the text qualifier.
     - `ConsecutiveDelimiter As Variant` (optional): True to have Excel consider consecutive delimiters as one delimiter. The default value is False.
-    - `Tab As Variant` (optional): True to have _DataType_ be xlDelimited and to have the tab character be a delimiter. The default value is False.
-    - `Semicolon As Variant` (optional): True to have _DataType_ be xlDelimited and to have the semicolon be a delimiter. The default value is False.
-    - `Comma As Variant` (optional): True to have _DataType_ be xlDelimited and to have the comma be a delimiter. The default value is False.
-    - `Space As Variant` (optional): True to have _DataType_ be xlDelimited and to have the space character be a delimiter. The default value is False.
-    - `Other As Variant` (optional): True to have _DataType_ be xlDelimited and to have the character specified by the _OtherChar_ argument be a delimiter. The default value is False.
-    - `OtherChar As Variant` (optional): Required if _Other_ is True; the delimiter character when _Other_ is True. If more than one character is specified, only the first character of the string is used; the remaining characters are ignored.
-    - `FieldInfo As Variant` (optional): An array containing parse information for the individual columns of data. The interpretation depends on the value of _DataType_. When the data is delimited, this argument is an array of two-element arrays, with each two-element array specifying the conversion options for a particular column. The first element is the column number (1-based), and the second element is one of the XlColumnDataType constants specifying how the column is parsed.
+    - `Tab As Variant` (optional): True to have DataType be xlDelimited and to have the tab character be a delimiter. The default value is False.
+    - `Semicolon As Variant` (optional): True to have DataType be xlDelimited and to have the semicolon be a delimiter. The default value is False.
+    - `Comma As Variant` (optional): True to have DataType be xlDelimited and to have the comma be a delimiter. The default value is False.
+    - `Space As Variant` (optional): True to have DataType be xlDelimited and to have the space character be a delimiter. The default value is False.
+    - `Other As Variant` (optional): True to have DataType be xlDelimited and to have the character specified by the OtherChar argument be a delimiter. The default value is False.
+    - `OtherChar As Variant` (optional): Required if Other is True; the delimiter character when Other is True. If more than one character is specified, only the first character of the string is used; the remaining characters are ignored.
+    - `FieldInfo As Variant` (optional): An array containing parse information for the individual columns of data. The interpretation depends on the value of DataType. When the data is delimited, this argument is an array of two-element arrays, with each two-element array specifying the conversion options for a particular column. The first element is the column number (1-based), and the second element is one of the XlColumnDataType constants specifying how the column is parsed.
     - `DecimalSeparator As Variant` (optional): The decimal separator that Microsoft Excel uses when recognizing numbers. The default setting is the system setting.
     - `ThousandsSeparator As Variant` (optional): The thousands separator that Excel uses when recognizing numbers. The default setting is the system setting.
     - `TrailingMinusNumbers As Variant` (optional): Numbers that begin with a minus character.
@@ -25491,9 +25491,9 @@ Worksheets("Sheet1").Range("A5").Value = _
     - `Copies As Variant` (optional): The number of copies to print. If this argument is omitted, one copy is printed.
     - `Preview As Variant` (optional): True to have Microsoft Excel invoke print preview before printing the object. False (or omitted) to print the object immediately.
     - `ActivePrinter As Variant` (optional): Sets the name of the active printer.
-    - `PrintToFile As Variant` (optional): True to print to a file. If _PrToFileName_ is not specified, Microsoft Excel prompts the user to enter the name of the output file.
+    - `PrintToFile As Variant` (optional): True to print to a file. If PrToFileName is not specified, Microsoft Excel prompts the user to enter the name of the output file.
     - `Collate As Variant` (optional): True to collate multiple copies.
-    - `PrToFileName As Variant` (optional): If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to.
+    - `PrToFileName As Variant` (optional): If PrintToFile is set to True, this argument specifies the name of the file that you want to print to.
 - `CalculateRowMajorOrder() As Variant`  
   Calculates a specified range of cells.
 - `ClearHyperlinks()`  
@@ -25530,26 +25530,26 @@ Worksheets("Sheet1").Range("A5").Value = _
 - `Sort([Key1 As Variant], [Order1 As XlSortOrder], [Key2 As Variant], [Type As Variant], [Order2 As XlSortOrder], [Key3 As Variant], [Order3 As XlSortOrder], [Header As XlYesNoGuess], [OrderCustom As Variant], [MatchCase As Variant], [Orientation As XlSortOrientation], [SortMethod As XlSortMethod], [DataOption1 As XlSortDataOption], [DataOption2 As XlSortDataOption], [DataOption3 As XlSortDataOption], [SubField1 As Variant]) As Variant`  
   Sorts a range of values.
     - `Key1 As Variant` (optional): Specifies the first sort field, either as a range name (String) or Range object; determines the values to be sorted.
-    - `Order1 As XlSortOrder` (optional): Determines the sort order for the values specified in _Key1_.
+    - `Order1 As XlSortOrder` (optional): Determines the sort order for the values specified in Key1.
     - `Key2 As Variant` (optional): Second sort field; cannot be used when sorting a PivotTable.
-    - `Type As Variant` (optional): Specifies which type of elements are to be sorted within a PivotTable. Specify xLSortLabels to sort by the labels targeted by the _experession_ Range in the Row/Colum Labels areas of the PivotTable's range, or xLSortValues when _Key1_ additionally targets a cell in the Values or Sub/Grand Totals areas using R1C1 notation.
-    - `Order2 As XlSortOrder` (optional): Determines the sort order for the values specified in _Key2_.
+    - `Type As Variant` (optional): Specifies which type of elements are to be sorted within a PivotTable. Specify xLSortLabels to sort by the labels targeted by the experession Range in the Row/Colum Labels areas of the PivotTable's range, or xLSortValues when Key1 additionally targets a cell in the Values or Sub/Grand Totals areas using R1C1 notation.
+    - `Order2 As XlSortOrder` (optional): Determines the sort order for the values specified in Key2.
     - `Key3 As Variant` (optional): Third sort field; cannot be used when sorting a PivotTable.
-    - `Order3 As XlSortOrder` (optional): Determines the sort order for the values specified in _Key3_.
+    - `Order3 As XlSortOrder` (optional): Determines the sort order for the values specified in Key3.
     - `Header As XlYesNoGuess` (optional): Specifies whether the first row contains header information. xlNo is the default value; specify xlGuess if you want Excel to attempt to determine the header.
     - `OrderCustom As Variant` (optional): Specifies a one-based integer offset into the list of custom sort orders.
     - `MatchCase As Variant` (optional): Set to True to perform a case-sensitive sort, False to perform a non-case-sensitive sort; cannot be used with PivotTables.
     - `Orientation As XlSortOrientation` (optional): Specifies if the sort should be by row (default) or column. Set xlSortColumns value to 1 to sort by column. Set xlSortRows value to 2 to sort by row (this is the default value).
     - `SortMethod As XlSortMethod` (optional): Specifies the sort method.
-    - `DataOption1 As XlSortDataOption` (optional): Specifies how to sort text in the range specified in _Key1_; does not apply to PivotTable sorting.
-    - `DataOption2 As XlSortDataOption` (optional): Specifies how to sort text in the range specified in _Key2_; does not apply to PivotTable sorting.
-    - `DataOption3 As XlSortDataOption` (optional): Specifies how to sort text in the range specified in _Key3_; does not apply to PivotTable sorting.
+    - `DataOption1 As XlSortDataOption` (optional): Specifies how to sort text in the range specified in Key1; does not apply to PivotTable sorting.
+    - `DataOption2 As XlSortDataOption` (optional): Specifies how to sort text in the range specified in Key2; does not apply to PivotTable sorting.
+    - `DataOption3 As XlSortDataOption` (optional): Specifies how to sort text in the range specified in Key3; does not apply to PivotTable sorting.
 - `AutoFilter([Field As Variant], [Criteria1 As Variant], [Operator As XlAutoFilterOperator], [Criteria2 As Variant], [VisibleDropDown As Variant], [SubField As Variant]) As Variant`  
   Filters a list by using the AutoFilter.
     - `Field As Variant` (optional): The integer offset of the field on which you want to base the filter (from the left of the list; the leftmost field is field one).
-    - `Criteria1 As Variant` (optional): The criteria (a string; for example, "101"). Use "=" to find blank fields, "<>" to find non-blank fields, and "><" to select (No Data) fields in data types. If this argument is omitted, the criteria is All. If _Operator_ is xlTop10Items, _Criteria1_ specifies the number of items (for example, "10").
+    - `Criteria1 As Variant` (optional): The criteria (a string; for example, "101"). Use "=" to find blank fields, "<>" to find non-blank fields, and "><" to select (No Data) fields in data types. If this argument is omitted, the criteria is All. If Operator is xlTop10Items, Criteria1 specifies the number of items (for example, "10").
     - `Operator As XlAutoFilterOperator` (optional): An XlAutoFilterOperator constant specifying the type of filter.
-    - `Criteria2 As Variant` (optional): The second criteria (a string). Used with _Criteria1_ and _Operator_ to construct compound criteria. Also used as single criteria on date fields filtering by date, month or year. Followed by an Array detailing the filtering Array(Level, Date). Where Level is 0-2 (year,month,date) and Date is one valid Date inside the filtering period.
+    - `Criteria2 As Variant` (optional): The second criteria (a string). Used with Criteria1 and Operator to construct compound criteria. Also used as single criteria on date fields filtering by date, month or year. Followed by an Array detailing the filtering Array(Level, Date). Where Level is 0-2 (year,month,date) and Date is one valid Date inside the filtering period.
     - `VisibleDropDown As Variant` (optional): True to display the AutoFilter drop-down arrow for the filtered field. False to hide the AutoFilter drop-down arrow for the filtered field. True by default.
     - `SubField As Variant` (optional): The field from a data type on which to apply the criteria (for example, the "Population" field from Geography or "Volume" field from Stocks). Omitting this value targets the "(Display Value)".
 - `ConvertToLinkedDataType(ServiceID As Long, LanguageCulture As String)`  
@@ -25868,10 +25868,10 @@ Worksheets("Sheet1").Research.Translate = True
     - `ServiceID As String` (required): Specifies a GUID that identifies the research service.
     - `QueryString As Variant` (optional): Specifies the query string.
     - `QueryLanguage As Variant` (optional): Specifies the query language of the query string.
-    - `UseSelection As Variant` (optional): True to use the current selection as the query string. This overrides the _QueryString_ parameter if set. Default value is False.
+    - `UseSelection As Variant` (optional): True to use the current selection as the query string. This overrides the QueryString parameter if set. Default value is False.
     - `LaunchQuery As Variant` (optional): True launches the query. False displays the Research task pane scoped to search the specified research service.
 - `IsResearchService(ServiceID As String) As Boolean`  
-  Indicates whether the GUID specified in the _ServiceID_ parameter corresponds to a currently configured service.
+  Indicates whether the GUID specified in the ServiceID parameter corresponds to a currently configured service.
     - `ServiceID As String` (required): Specifies a GUID that identifies the research service.
 - `SetLanguagePair(LanguageFrom As Long, LanguageTo As Long) As Variant`  
   Sets the languages for the translation service.
@@ -25931,7 +25931,7 @@ Represents a real-time data object.
 
 Represents a scenario on a worksheet.
 
-**Remarks:** A scenario is a group of input values (called _changing cells_) that's named and saved. The Scenario object is a member of the Scenarios collection. The Scenarios collection contains all the defined scenarios for a worksheet.
+**Remarks:** A scenario is a group of input values (called changing cells) that's named and saved. The Scenario object is a member of the Scenarios collection. The Scenarios collection contains all the defined scenarios for a worksheet.
 
 **Example:**
 
@@ -25981,7 +25981,7 @@ Worksheets("options").Scenarios("typical").Show
 
 A collection of all the Scenario objects on the specified worksheet.
 
-**Remarks:** A scenario is a group of input values (called _changing cells_) that's named and saved.
+**Remarks:** A scenario is a group of input values (called changing cells) that's named and saved.
 
 **Example:**
 
@@ -26007,7 +26007,7 @@ Worksheets("options").Scenarios.CreateSummary _
   Creates a new scenario and adds it to the list of scenarios that are available for the current worksheet.
     - `Name As String` (required): The scenario name.
     - `ChangingCells As Variant` (required): A Range object that refers to the changing cells for the scenario.
-    - `Values As Variant` (optional): An array that contains the scenario values for the cells in _ChangingCells_. If this argument is omitted, the scenario values are assumed to be the current values in the cells in _ChangingCells_.
+    - `Values As Variant` (optional): An array that contains the scenario values for the cells in ChangingCells. If this argument is omitted, the scenario values are assumed to be the current values in the cells in ChangingCells.
     - `Comment As Variant` (optional): A string that specifies comment text for the scenario. When a new scenario is added, the author's name and date are automatically added at the beginning of the comment text.
     - `Locked As Variant` (optional): True to lock the scenario to prevent changes. The default value is True.
     - `Hidden As Variant` (optional): True to hide the scenario. The default value is False.
@@ -26250,8 +26250,8 @@ Worksheets("sheet1").ChartObjects(1).Chart. _
     - `Direction As XlErrorBarDirection` (required): The error bar direction.
     - `Include As XlErrorBarInclude` (required): The error bar parts to include.
     - `Type As XlErrorBarType` (required): The error bar type.
-    - `Amount As Variant` (optional): The error amount. Used for only the positive error amount when _Type_ is xlErrorBarTypeCustom.
-    - `MinusValues As Variant` (optional): The negative error amount when _Type_ is xlErrorBarTypeCustom.
+    - `Amount As Variant` (optional): The error amount. Used for only the positive error amount when Type is xlErrorBarTypeCustom.
+    - `MinusValues As Variant` (optional): The negative error amount when Type is xlErrorBarTypeCustom.
 - `Paste() As Variant`  
   Pastes a picture from the Clipboard as the marker on the selected series.
 - `Points([Index As Variant]) As Object`  
@@ -26313,7 +26313,7 @@ Worksheets(1).ChartObjects(1).Chart. _
     - `Rowcol As XlRowCol` (optional): Specifies whether the new values are in the rows or columns of the specified range.
     - `SeriesLabels As Variant` (optional): True if the first row or column contains the name of the data series. False if the first row or column contains the first data point of the series. If this argument is omitted, Microsoft Excel attempts to determine the location of the series name from the contents of the first row or column.
     - `CategoryLabels As Variant` (optional): True if the first row or column contains the name of the category labels. False if the first row or column contains the first data point of the series. If this argument is omitted, Excel attempts to determine the location of the category label from the contents of the first row or column.
-    - `Replace As Variant` (optional): If _CategoryLabels_ is True and _Replace_ is True, the specified categories replace the categories that currently exist for the series. If _Replace_ is False, the existing categories will not be replaced. The default value is False.
+    - `Replace As Variant` (optional): If CategoryLabels is True and Replace is True, the specified categories replace the categories that currently exist for the series. If Replace is False, the existing categories will not be replaced. The default value is False.
 - `Extend(Source As Variant, [Rowcol As Variant], [CategoryLabels As Variant]) As Variant`  
   Adds new data points to an existing series collection.
     - `Source As Variant` (required): The new data to be added to the SeriesCollection object as a Range object.
@@ -26768,23 +26768,23 @@ myDocument.Shapes(3).Nodes.Delete 4
     - `Index As Long` (required): Long. The number of the shape node after which to insert a new node.
     - `SegmentType As MsoSegmentType` (required): The segment type.
     - `EditingType As MsoEditingType` (required): The editing type.
-    - `X1 As Single` (required): If the _EditingType_ of the new segment is msoEditingAuto, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the _EditingType_ of the new node is msoEditingCorner, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the first control point for the new segment.
-    - `Y1 As Single` (required): If the _EditingType_ of the new segment is msoEditingAuto, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the _EditingType_ of the new node is msoEditingCorner, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the first control point for the new segment.
-    - `X2 As Single` (optional): If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the second control point for the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument.
-    - `Y2 As Single` (optional): If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the second control point for the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument.
-    - `X3 As Single` (optional): If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument.
-    - `Y3 As Single` (optional): If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument.
+    - `X1 As Single` (required): If the EditingType of the new segment is msoEditingAuto, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the EditingType of the new node is msoEditingCorner, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the first control point for the new segment.
+    - `Y1 As Single` (required): If the EditingType of the new segment is msoEditingAuto, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the EditingType of the new node is msoEditingCorner, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the first control point for the new segment.
+    - `X2 As Single` (optional): If the EditingType of the new segment is msoEditingCorner, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the second control point for the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument.
+    - `Y2 As Single` (optional): If the EditingType of the new segment is msoEditingCorner, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the second control point for the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument.
+    - `X3 As Single` (optional): If the EditingType of the new segment is msoEditingCorner, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument.
+    - `Y3 As Single` (optional): If the EditingType of the new segment is msoEditingCorner, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument.
 - `SetEditingType(Index As Long, EditingType As MsoEditingType)`  
-  Sets the editing type of the node specified by _Index_. If the node is a control point for a curved segment, this method sets the editing type of the node adjacent to it that joins two segments. Note that, depending on the editing type, this method may affect the position of adjacent nodes.
+  Sets the editing type of the node specified by Index. If the node is a control point for a curved segment, this method sets the editing type of the node adjacent to it that joins two segments. Note that, depending on the editing type, this method may affect the position of adjacent nodes.
     - `Index As Long` (required): The node whose editing type is to be set.
     - `EditingType As MsoEditingType` (required): The editing property of the vertex.
 - `SetPosition(Index As Long, X1 As Single, Y1 As Single)`  
-  Sets the location of the node specified by _Index_. Note that, depending on the editing type of the node, this method may affect the position of adjacent nodes.
+  Sets the location of the node specified by Index. Note that, depending on the editing type of the node, this method may affect the position of adjacent nodes.
     - `Index As Long` (required): The node whose position is to be set.
     - `X1 As Single` (required): The position (in points) of the new node relative to the upper-left corner of the document.
     - `Y1 As Single` (required): The position (in points) of the new node relative to the upper-left corner of the document.
 - `SetSegmentType(Index As Long, SegmentType As MsoSegmentType)`  
-  Sets the segment type of the segment that follows the node specified by _Index_. If the node is a control point for a curved segment, this method sets the segment type for that curve. Note that this may affect the total number of nodes by inserting or deleting adjacent nodes.
+  Sets the segment type of the segment that follows the node specified by Index. If the node is a control point for a curved segment, this method sets the segment type for that curve. Note that this may affect the total number of nodes by inserting or deleting adjacent nodes.
     - `Index As Long` (required): The node whose segment type is to be set.
     - `SegmentType As MsoSegmentType` (required): Specifies if the segment is straight or curved.
 
@@ -27040,7 +27040,7 @@ myDocument.Shapes.SelectAll
   Creates a picture from an existing file. Returns a Shape object that represents the new picture.
     - `Filename As String` (required): The file from which the picture is to be created.
     - `LinkToFile As MsoTriState` (required): The file to link to. Use msoFalse to make the picture an independent copy of the file. Use msoTrue to link the picture to the file from which it was created.
-    - `SaveWithDocument As MsoTriState` (required): To save the picture with the document. Use msoFalse to store only the link information in the document. Use msoTrue to save the linked picture with the document into which it's inserted. This argument must be msoTrue if _LinkToFile_ is msoFalse.
+    - `SaveWithDocument As MsoTriState` (required): To save the picture with the document. Use msoFalse to store only the link information in the document. Use msoTrue to save the linked picture with the document into which it's inserted. This argument must be msoTrue if LinkToFile is msoFalse.
     - `Left As Single` (required): The position (in points) of the upper-left corner of the picture relative to the upper-left corner of the document.
     - `Top As Single` (required): The position (in points) of the upper-left corner of the picture relative to the top of the document.
     - `Width As Single` (required): The width of the picture, in points (enter -1 to retain the width of the existing file).
@@ -27088,12 +27088,12 @@ myDocument.Shapes.SelectAll
     - `Height As Long` (required): The initial size of the new object, in points.
 - `AddOLEObject([ClassType As Variant], [Filename As Variant], [Link As Variant], [DisplayAsIcon As Variant], [IconFileName As Variant], [IconIndex As Variant], [IconLabel As Variant], [Left As Variant], [Top As Variant], [Width As Variant], [Height As Variant]) As Shape`  
   Creates an OLE object. Returns a Shape object that represents the new OLE object.
-    - `ClassType As Variant` (optional): A string that contains the programmatic identifier for the object to be created. You must specify either _ClassType_ or _FileName_. If _ClassType_ is specified, _FileName_ and _Link_ are ignored.
-    - `Filename As Variant` (optional): The file from which the object is to be created. If the path isn't specified, the current working folder is used. You must specify either the _ClassType_ or _FileName_ argument for the object, but not both.
-    - `Link As Variant` (optional): True to link the OLE object to the file from which it was created. False to make the OLE object an independent copy of the file. If you specified a value for _ClassType_, this argument must be False. The default value is False.
+    - `ClassType As Variant` (optional): A string that contains the programmatic identifier for the object to be created. You must specify either ClassType or FileName. If ClassType is specified, FileName and Link are ignored.
+    - `Filename As Variant` (optional): The file from which the object is to be created. If the path isn't specified, the current working folder is used. You must specify either the ClassType or FileName argument for the object, but not both.
+    - `Link As Variant` (optional): True to link the OLE object to the file from which it was created. False to make the OLE object an independent copy of the file. If you specified a value for ClassType, this argument must be False. The default value is False.
     - `DisplayAsIcon As Variant` (optional): True to display the OLE object as an icon. The default value is False.
     - `IconFileName As Variant` (optional): The file that contains the icon to be displayed.
-    - `IconIndex As Variant` (optional): The index of the icon within _IconFileName_. The order of icons in the specified file corresponds to the order in which the icons appear in the Change Icon dialog box (accessed from the Object dialog box when the Display as icon check box is selected). The first icon in the file has the index number 0 (zero). If an icon with the given index number doesn't exist in _IconFileName_, the icon with the index number 1 (the second icon in the file) is used. The default value is 0 (zero).
+    - `IconIndex As Variant` (optional): The index of the icon within IconFileName. The order of icons in the specified file corresponds to the order in which the icons appear in the Change Icon dialog box (accessed from the Object dialog box when the Display as icon check box is selected). The first icon in the file has the index number 0 (zero). If an icon with the given index number doesn't exist in IconFileName, the icon with the index number 1 (the second icon in the file) is used. The default value is 0 (zero).
     - `IconLabel As Variant` (optional): A label (caption) to be displayed beneath the icon.
     - `Left As Variant` (optional): The position (in points) of the upper-left corner of the new object relative to the upper-left corner of the document. The default value is 0 (zero).
     - `Top As Variant` (optional): The position (in points) of the upper-left corner of the new object relative to the top of the document. The default value is 0 (zero).
@@ -27119,7 +27119,7 @@ myDocument.Shapes.SelectAll
   Creates a picture from an existing file. Returns a Shape object that represents the new picture.
     - `Filename As String` (required): The file from which the OLE object is to be created.
     - `LinkToFile As MsoTriState` (required): Determines whether the picture will be linked to the file from which it was created.
-    - `SaveWithDocument As MsoTriState` (required): Determines whether the linked picture will be saved with the document into which it is inserted. This argument must be msoTrue if _LinkToFile_ is msoFalse.
+    - `SaveWithDocument As MsoTriState` (required): Determines whether the linked picture will be saved with the document into which it is inserted. This argument must be msoTrue if LinkToFile is msoFalse.
     - `Left As Single` (required): The position, measured in points, of the left edge of the picture relative to the left edge of the worksheet.
     - `Top As Single` (required): The position, measured in points, of the top edge of the picture relative to the top edge of the worksheet.
     - `Width As Single` (required): The width of the picture, measured in points.
@@ -27182,8 +27182,8 @@ Sheets.PrintOut
     - `Type As Variant` (optional): Specifies the sheet type. Can be one of the following XlSheetType constants: xlWorksheet, xlChart, xlExcel4MacroSheet, or xlExcel4IntlMacroSheet. If you are inserting a sheet based on an existing template, specify the path to the template. The default value is xlWorksheet.
 - `Copy([Before As Variant], [After As Variant])`  
   Copies the sheet to another location in the workbook.
-    - `Before As Variant` (optional): The sheet before which the copied sheet will be placed. You cannot specify _Before_ if you specify _After_.
-    - `After As Variant` (optional): The sheet after which the copied sheet will be placed. You cannot specify _After_ if you specify _Before_.
+    - `Before As Variant` (optional): The sheet before which the copied sheet will be placed. You cannot specify Before if you specify After.
+    - `After As Variant` (optional): The sheet after which the copied sheet will be placed. You cannot specify After if you specify Before.
 - `Delete()`  
   Deletes the object.
 - `FillAcrossSheets(Range As Range, [Type As XlFillWith])`  
@@ -27192,8 +27192,8 @@ Sheets.PrintOut
     - `Type As XlFillWith` (optional): Specifies how to copy the range.
 - `Move([Before As Variant], [After As Variant])`  
   Moves the sheet to another location in the workbook.
-    - `Before As Variant` (optional): The sheet before which the moved sheet will be placed. You cannot specify _Before_ if you specify _After_.
-    - `After As Variant` (optional): The sheet after which the moved sheet will be placed. You cannot specify _After_ if you specify _Before_.
+    - `Before As Variant` (optional): The sheet before which the moved sheet will be placed. You cannot specify Before if you specify After.
+    - `After As Variant` (optional): The sheet after which the moved sheet will be placed. You cannot specify After if you specify Before.
 - `PrintPreview([EnableChanges As Variant])`  
   Shows a preview of the object as it would look when printed.
     - `EnableChanges As Variant` (optional): Pass a Boolean value to specify if the user can change the margins and other page setup options available in print preview.
@@ -27207,9 +27207,9 @@ Sheets.PrintOut
     - `Copies As Variant` (optional): The number of copies to print. If this argument is omitted, one copy is printed.
     - `Preview As Variant` (optional): True to have Microsoft Excel invoke print preview before printing the object. False (or omitted) to print the object immediately.
     - `ActivePrinter As Variant` (optional): Sets the name of the active printer.
-    - `PrintToFile As Variant` (optional): True to print to a file. If _PrToFileName_ is not specified, Excel prompts the user to enter the name of the output file.
+    - `PrintToFile As Variant` (optional): True to print to a file. If PrToFileName is not specified, Excel prompts the user to enter the name of the output file.
     - `Collate As Variant` (optional): True to collate multiple copies.
-    - `PrToFileName As Variant` (optional): If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to.
+    - `PrToFileName As Variant` (optional): If PrintToFile is set to True, this argument specifies the name of the file that you want to print to.
     - `IgnorePrintAreas As Variant` (optional): True to ignore print areas and print the entire object.
 - `Add2([Before As Variant], [After As Variant], [Count As Variant], [NewLayout As Variant]) As Object`  
   This method is only implemented for the Charts collection object and will produce a run-time error if used on the Sheets and Worksheets objects.
@@ -29121,7 +29121,7 @@ End With
 - `Characters([Start As Variant], [Length As Variant]) As Characters`  
   Returns a Characters object that represents a range of characters within a shape's text frame. Use the Characters object to add and format characters within the text frame.
     - `Start As Variant` (optional): The first character to be returned. If this argument is either set to 1 or omitted, the Characters method returns a range of characters starting with the first character.
-    - `Length As Variant` (optional): The number of characters to be returned. If this argument is omitted, the Characters method returns the remainder of the string (everything after the character that was set as the _Start_ argument).
+    - `Length As Variant` (optional): The number of characters to be returned. If this argument is omitted, the Characters method returns the remainder of the string (everything after the character that was set as the Start argument).
 
 ### TextFrame2
 
@@ -29764,8 +29764,8 @@ MsgBox Charts(1).SeriesCollection(1).Trendlines.Count
 - `Add([Type As XlTrendlineType], [Order As Variant], [Period As Variant], [Forward As Variant], [Backward As Variant], [Intercept As Variant], [DisplayEquation As Variant], [DisplayRSquared As Variant], [Name As Variant]) As Trendline`  
   Creates a new trendline.
     - `Type As XlTrendlineType` (optional): The trendline type.
-    - `Order As Variant` (optional): Variant if _Type_ is xlPolynomial. The trendline order. Must be an integer from 2 to 6, inclusive.
-    - `Period As Variant` (optional): Variant if _Type_ is xlMovingAvg. The trendline period. Must be an integer greater than 1 and less than the number of data points in the series you are adding a trendline to.
+    - `Order As Variant` (optional): Variant if Type is xlPolynomial. The trendline order. Must be an integer from 2 to 6, inclusive.
+    - `Period As Variant` (optional): Variant if Type is xlMovingAvg. The trendline period. Must be an integer greater than 1 and less than the number of data points in the series you are adding a trendline to.
     - `Forward As Variant` (optional): The number of periods (or units on a scatter chart) that the trendline extends forward.
     - `Backward As Variant` (optional): The number of periods (or units on a scatter chart) that the trendline extends backward.
     - `Intercept As Variant` (optional): The trendline intercept. If this argument is omitted, the intercept is automatically set by the regression.
@@ -30046,7 +30046,7 @@ Range("e5").Validation _
     - `AlertStyle As Variant` (optional): The validation alert style. Can be one of the following XlDVAlertStyle constants: xlValidAlertInformation, xlValidAlertStop, or xlValidAlertWarning.
     - `Operator As Variant` (optional): The data validation operator. Can be one of the following XlFormatConditionOperator constants: xlBetween, xlEqual, xlGreater, xlGreaterEqual, xlLess, xlLessEqual, xlNotBetween, or xlNotEqual.
     - `Formula1 As Variant` (optional): The first part of the data validation equation. Value must not exceed 255 characters.
-    - `Formula2 As Variant` (optional): The second part of the data validation equation when _Operator_ is xlBetween or xlNotBetween (otherwise, this argument is ignored).
+    - `Formula2 As Variant` (optional): The second part of the data validation equation when Operator is xlBetween or xlNotBetween (otherwise, this argument is ignored).
 - `Delete()`  
   Deletes the object.
 - `Modify([Type As Variant], [AlertStyle As Variant], [Operator As Variant], [Formula1 As Variant], [Formula2 As Variant])`  
@@ -30506,7 +30506,7 @@ Windows(1).WindowState = xlMaximized
   Activates the specified window and then activates the window at the back of the window z-order.
 - `Close([SaveChanges As Variant], [Filename As Variant], [RouteWorkbook As Variant]) As Boolean`  
   Closes the object.
-    - `SaveChanges As Variant` (optional): If there are no changes to the workbook, this argument is ignored. If there are changes to the workbook and the workbook appears in other open windows, this argument is ignored. If there are changes to the workbook but the workbook doesn't appear in any other open windows, this argument specifies whether changes should be saved.If set to True, changes are saved to the workbook. If there is not yet a file name associated with the workbook, _FileName_ is used. If _FileName_ is omitted, the user is asked to supply a file name.
+    - `SaveChanges As Variant` (optional): If there are no changes to the workbook, this argument is ignored. If there are changes to the workbook and the workbook appears in other open windows, this argument is ignored. If there are changes to the workbook but the workbook doesn't appear in any other open windows, this argument specifies whether changes should be saved.If set to True, changes are saved to the workbook. If there is not yet a file name associated with the workbook, FileName is used. If FileName is omitted, the user is asked to supply a file name.
     - `Filename As Variant` (optional): Save changes under this file name.
     - `RouteWorkbook As Variant` (optional): If the workbook doesn't need to be routed to the next recipient (if it has no routing slip or has already been routed), this argument is ignored. Otherwise, Microsoft Excel routes the workbook according to the value of this parameter. If set to True, the workbook is sent to the next recipient. If set to False, the workbook is not sent. If omitted, the user is asked whether the workbook should be sent.
 - `LargeScroll([Down As Variant], [Up As Variant], [ToRight As Variant], [ToLeft As Variant]) As Variant`  
@@ -30522,8 +30522,8 @@ Windows(1).WindowState = xlMaximized
     - `EnableChanges As Variant` (optional): Pass a Boolean value to specify if the user can change the margins and other page setup options available in print preview.
 - `ScrollWorkbookTabs([Sheets As Variant], [Position As Variant]) As Variant`  
   Scrolls through the workbook tabs at the bottom of the window. Doesn't affect the active sheet in the workbook.
-    - `Sheets As Variant` (optional): The number of sheets to scroll by. Use a positive number to scroll forward, a negative number to scroll backward, or 0 (zero) to not scroll at all. You must specify _Sheets_ if you don't specify _Position_.
-    - `Position As Variant` (optional): Use xlFirst to scroll to the first sheet, or use xlLast to scroll to the last sheet. You must specify _Position_ if you don't specify _Sheets_.
+    - `Sheets As Variant` (optional): The number of sheets to scroll by. Use a positive number to scroll forward, a negative number to scroll backward, or 0 (zero) to not scroll at all. You must specify Sheets if you don't specify Position.
+    - `Position As Variant` (optional): Use xlFirst to scroll to the first sheet, or use xlLast to scroll to the last sheet. You must specify Position if you don't specify Sheets.
 - `SmallScroll([Down As Variant], [Up As Variant], [ToRight As Variant], [ToLeft As Variant]) As Variant`  
   Scrolls the contents of the window by rows or columns.
     - `Down As Variant` (optional): The number of rows to scroll the contents down.
@@ -30541,7 +30541,7 @@ Windows(1).WindowState = xlMaximized
     - `x As Long` (required): The value (in pixels) that represents the horizontal distance from the left edge of the screen, starting at the top.
     - `y As Long` (required): The value (in pixels) that represents the vertical distance from the top of the screen, starting on the left.
 - `ScrollIntoView(Left As Long, Top As Long, Width As Long, Height As Long, [Start As Variant])`  
-  Scrolls the document window so that the contents of a specified rectangular area are displayed in either the upper-left or lower-right corner of the document window or pane (depending on the value of the _Start_ argument).
+  Scrolls the document window so that the contents of a specified rectangular area are displayed in either the upper-left or lower-right corner of the document window or pane (depending on the value of the Start argument).
     - `Left As Long` (required): The horizontal position of the rectangle (in points) from the left edge of the document window or pane.
     - `Top As Long` (required): The vertical position of the rectangle (in points) from the top of the document window or pane.
     - `Width As Long` (required): The width of the rectangle, in points.
@@ -30554,9 +30554,9 @@ Windows(1).WindowState = xlMaximized
     - `Copies As Variant` (optional): The number of copies to print. If this argument is omitted, one copy is printed.
     - `Preview As Variant` (optional): True to have Microsoft Excel invoke print preview before printing the object. False (or omitted) to print the object immediately.
     - `ActivePrinter As Variant` (optional): Sets the name of the active printer.
-    - `PrintToFile As Variant` (optional): True to print to a file. If _PrToFileName_ is not specified, Microsoft Excel prompts the user to enter the name of the output file.
+    - `PrintToFile As Variant` (optional): True to print to a file. If PrToFileName is not specified, Microsoft Excel prompts the user to enter the name of the output file.
     - `Collate As Variant` (optional): True to collate multiple copies.
-    - `PrToFileName As Variant` (optional): If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to.
+    - `PrToFileName As Variant` (optional): If PrintToFile is set to True, this argument specifies the name of the file that you want to print to.
 
 ### Windows
 
@@ -30597,8 +30597,8 @@ Windows.Arrange arrangeStyle:=xlCascade
   Arranges the windows on the screen.
     - `ArrangeStyle As XlArrangeStyle` (optional): One of the constants of XlArrangeStyle specifying how the windows are arranged.
     - `ActiveWorkbook As Variant` (optional): True to arrange only the visible windows of the active workbook. False to arrange all windows. The default value is False.
-    - `SyncHorizontal As Variant` (optional): Ignored if _ActiveWorkbook_ is False or omitted. True to synchronize the windows of the active workbook when scrolling horizontally. False to not synchronize the windows. The default value is False.
-    - `SyncVertical As Variant` (optional): Ignored if _ActiveWorkbook_ is False or omitted. True to synchronize the windows of the active workbook when scrolling vertically. False to not synchronize the windows. The default value is False.
+    - `SyncHorizontal As Variant` (optional): Ignored if ActiveWorkbook is False or omitted. True to synchronize the windows of the active workbook when scrolling horizontally. False to not synchronize the windows. The default value is False.
+    - `SyncVertical As Variant` (optional): Ignored if ActiveWorkbook is False or omitted. True to synchronize the windows of the active workbook when scrolling vertically. False to not synchronize the windows. The default value is False.
 - `CompareSideBySideWith(WindowName As Variant) As Boolean`  
   Opens two windows in side-by-side mode. Returns a Boolean value.
     - `WindowName As Variant` (required): The name of the window.
@@ -30869,7 +30869,7 @@ Workbooks(1).Activate
 - `ChangeFileAccess(Mode As XlFileAccess, [WritePassword As Variant], [Notify As Variant])`  
   Changes the access permissions for the workbook. This may require an updated version to be loaded from the disk.
     - `Mode As XlFileAccess` (required): Specifies the new access mode.
-    - `WritePassword As Variant` (optional): Specifies the write-reserved password if the file is write reserved and _Mode_ is xlReadWrite. Ignored if there's no password for the file or if _Mode_ is xlReadOnly.
+    - `WritePassword As Variant` (optional): Specifies the write-reserved password if the file is write reserved and Mode is xlReadWrite. Ignored if there's no password for the file or if Mode is xlReadOnly.
     - `Notify As Variant` (optional): True (or omitted) to notify the user if the file cannot be immediately accessed.
 - `ChangeLink(Name As String, NewName As String, [Type As XlLinkType])`  
   Changes a link from one document to another.
@@ -30878,7 +30878,7 @@ Workbooks(1).Activate
     - `Type As XlLinkType` (optional): The link type.
 - `Close([SaveChanges As Variant], [Filename As Variant], [RouteWorkbook As Variant])`  
   Closes the object.
-    - `SaveChanges As Variant` (optional): If there are no changes to the workbook, this argument is ignored. If there are changes to the workbook and the workbook appears in other open windows, this argument is ignored. If there are changes to the workbook but the workbook doesn't appear in any other open windows, this argument specifies whether changes should be saved. If set to True, changes are saved to the workbook. If there is not yet a file name associated with the workbook, _FileName_ is used. If _FileName_ is omitted, the user is asked to supply a file name.
+    - `SaveChanges As Variant` (optional): If there are no changes to the workbook, this argument is ignored. If there are changes to the workbook and the workbook appears in other open windows, this argument is ignored. If there are changes to the workbook but the workbook doesn't appear in any other open windows, this argument specifies whether changes should be saved. If set to True, changes are saved to the workbook. If there is not yet a file name associated with the workbook, FileName is used. If FileName is omitted, the user is asked to supply a file name.
     - `Filename As Variant` (optional): Saves changes under this file name.
     - `RouteWorkbook As Variant` (optional): If the workbook doesn't need to be routed to the next recipient (if it has no routing slip or has already been routed), this argument is ignored. Otherwise, Microsoft Excel routes the workbook according to the value of this parameter. If set to True, the workbook is sent to the next recipient. If set to False, the workbook is not sent. If omitted, the user is asked whether the workbook should be sent.
 - `DeleteNumberFormat(NumberFormat As String)`  
@@ -30984,8 +30984,8 @@ Workbooks(1).Activate
     - `SubAddress As Variant` (optional): The location within the target document. The default value is the empty string.
     - `NewWindow As Variant` (optional): True to display the target application in a new window. The default value is False.
     - `AddHistory As Variant` (optional): Not used. Reserved for future use.
-    - `ExtraInfo As Variant` (optional): A String or byte array that specifies additional information for HTTP to use to resolve the hyperlink. For example, you can use _ExtraInfo_ to specify the coordinates of an image map, the contents of a form, or a FAT file name.
-    - `Method As Variant` (optional): Specifies the way _ExtraInfo_ is attached. Can be one of the MsoExtraInfoMethod constants: msoMethodGet or msoMethodPost.
+    - `ExtraInfo As Variant` (optional): A String or byte array that specifies additional information for HTTP to use to resolve the hyperlink. For example, you can use ExtraInfo to specify the coordinates of an image map, the contents of a form, or a FAT file name.
+    - `Method As Variant` (optional): Specifies the way ExtraInfo is attached. Can be one of the MsoExtraInfoMethod constants: msoMethodGet or msoMethodPost.
     - `HeaderInfo As Variant` (optional): A String that specifies header information for the HTTP request. The default value is an empty string.
 - `AddToFavorites()`  
   Adds a shortcut to the workbook or hyperlink to the Favorites folder.
@@ -31001,13 +31001,13 @@ Workbooks(1).Activate
 - `CheckIn([SaveChanges As Variant], [Comments As Variant], [MakePublic As Variant])`  
   Returns a workbook from a local computer to a server, and sets the local workbook to read-only so that it cannot be edited locally. Calling this method will also close the workbook.
     - `SaveChanges As Variant` (optional): True saves changes and checks in the document. False returns the document to a checked-in status without saving revisions.
-    - `Comments As Variant` (optional): Allows the user to enter check-in comments for the revision of the workbook being checked in (applies only if _SaveChanges_ equals True).
-    - `MakePublic As Variant` (optional): True allows the user to publish the workbook after it has been checked in. This submits the workbook for the approval process, which can eventually result in a version of the workbook being published to users with read-only rights to the workbook (applies only if _SaveChanges_ equals True).
+    - `Comments As Variant` (optional): Allows the user to enter check-in comments for the revision of the workbook being checked in (applies only if SaveChanges equals True).
+    - `MakePublic As Variant` (optional): True allows the user to publish the workbook after it has been checked in. This submits the workbook for the approval process, which can eventually result in a version of the workbook being published to users with read-only rights to the workbook (applies only if SaveChanges equals True).
 - `CanCheckIn() As Boolean`  
   True if Microsoft Excel can check in a specified workbook to a server. Read/write Boolean.
 - `SendForReview([Recipients As Variant], [Subject As Variant], [ShowMessage As Variant], [IncludeAttachment As Variant])`  
   Sends a workbook in an email message for review to the specified recipients.
-    - `Recipients As Variant` (optional): A string that lists the people to whom to send the message. These can be unresolved names and aliases in an email phone book or full email addresses. Separate multiple recipients with a semicolon (;). If left blank and _ShowMessage_ is False, you'll receive an error message, and the message will not be sent.
+    - `Recipients As Variant` (optional): A string that lists the people to whom to send the message. These can be unresolved names and aliases in an email phone book or full email addresses. Separate multiple recipients with a semicolon (;). If left blank and ShowMessage is False, you'll receive an error message, and the message will not be sent.
     - `Subject As Variant` (optional): A string for the subject of the message. If left blank, the subject will be: Please review "filename".
     - `ShowMessage As Variant` (optional): A Boolean value that indicates whether the message should be displayed when the method is executed. The default value is True. If set to False, the message is automatically sent to the recipients without first showing the message to the sender.
     - `IncludeAttachment As Variant` (optional): A Boolean value that indicates whether the message should include an attachment or a link to a server location. The default value is True. If set to False, the document must be stored at a shared location.
@@ -31036,13 +31036,13 @@ Workbooks(1).Activate
   Imports an XML data file into the current workbook.
     - `Url As String` (required): A uniform resource locator (URL) or a uniform naming convention (UNC) path to an XML data file.
     - `ImportMap As XmlMap` (required): The schema map to apply when importing the file. If the data was previously imported, contains a reference to the XmlMap object containing the data.
-    - `Overwrite As Variant` (optional): If a value is not specified for the _Destination_ parameter, this parameter specifies whether to overwrite data that has been mapped to the schema map specified in the _ImportMap_ parameter. Set to True to overwrite the data or False to append the new data to the existing data. The default value is True. If a value is specified for the _Destination_ parameter, this parameter specifies whether to overwrite existing data. Set to True to overwrite existing data or False to cancel the import if data would be overwritten. The default value is True.
+    - `Overwrite As Variant` (optional): If a value is not specified for the Destination parameter, this parameter specifies whether to overwrite data that has been mapped to the schema map specified in the ImportMap parameter. Set to True to overwrite the data or False to append the new data to the existing data. The default value is True. If a value is specified for the Destination parameter, this parameter specifies whether to overwrite existing data. Set to True to overwrite existing data or False to cancel the import if data would be overwritten. The default value is True.
     - `Destination As Variant` (optional): Specifies the range where the list will be created. You only use the top-left corner of the range.
 - `XmlImportXml(Data As String, ImportMap As XmlMap, [Overwrite As Variant], [Destination As Variant]) As XlXmlImportResult`  
   Imports an XML data stream that has been previously loaded into memory. Excel uses the first qualifying map found, or if the destination range is specified, Excel automatically lists the data.
     - `Data As String` (required): The data to import.
     - `ImportMap As XmlMap` (required): The schema map to apply when importing the file.
-    - `Overwrite As Variant` (optional): If a value is not specified for the _Destination_ parameter, this parameter specifies whether to overwrite data that has been mapped to the schema map specified in the _ImportMap_ parameter. Set to True to overwrite the data or False to append the new data to the existing data. The default value is True. If a value is specified for the _Destination_ parameter, this parameter specifies whether to overwrite existing data. Set to True to overwrite existing data or False to cancel the import if data would be overwritten. The default value is True.
+    - `Overwrite As Variant` (optional): If a value is not specified for the Destination parameter, this parameter specifies whether to overwrite data that has been mapped to the schema map specified in the ImportMap parameter. Set to True to overwrite the data or False to append the new data to the existing data. The default value is True. If a value is specified for the Destination parameter, this parameter specifies whether to overwrite existing data. Set to True to overwrite existing data or False to cancel the import if data would be overwritten. The default value is True.
     - `Destination As Variant` (optional): Specifies the range where the list will be created. Excel only uses the top-left corner of the range.
 - `SaveAsXMLData(Filename As String, Map As XmlMap)`  
   Exports the data that has been mapped to the specified XML schema map to an XML data file.
@@ -31056,7 +31056,7 @@ Workbooks(1).Activate
 - `CheckInWithVersion([SaveChanges As Variant], [Comments As Variant], [MakePublic As Variant], [VersionType As Variant])`  
   Saves a workbook to a server from a local computer, and sets the local workbook to read-only so that it cannot be edited locally.
     - `SaveChanges As Variant` (optional): True to save the workbook to the server location. The default is True.
-    - `Comments As Variant` (optional): Comments for the revision of the workbook being checked in (applies only if _SaveChanges_ is set to True).
+    - `Comments As Variant` (optional): Comments for the revision of the workbook being checked in (applies only if SaveChanges is set to True).
     - `MakePublic As Variant` (optional): True to allow the user to publish the workbook after it is checked in.
     - `VersionType As Variant` (optional): Specifies versioning information for the workbook.
 - `LockServerFile()`  
@@ -31072,9 +31072,9 @@ Workbooks(1).Activate
     - `Copies As Variant` (optional): The number of copies to print. If this argument is omitted, one copy is printed.
     - `Preview As Variant` (optional): True to have Microsoft Excel invoke print preview before printing the object. False (or omitted) to print the object immediately.
     - `ActivePrinter As Variant` (optional): Sets the name of the active printer.
-    - `PrintToFile As Variant` (optional): True to print to a file. If _PrToFileName_ is not specified, Microsoft Excel prompts the user to enter the name of the output file.
+    - `PrintToFile As Variant` (optional): True to print to a file. If PrToFileName is not specified, Microsoft Excel prompts the user to enter the name of the output file.
     - `Collate As Variant` (optional): True to collate multiple copies.
-    - `PrToFileName As Variant` (optional): If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to.
+    - `PrToFileName As Variant` (optional): If PrintToFile is set to True, this argument specifies the name of the file that you want to print to.
     - `IgnorePrintAreas As Variant` (optional): True to ignore print areas and print the entire object.
 - `ApplyTheme(Filename As String)`  
   Applies the specified theme to the current workbook.
@@ -31103,8 +31103,8 @@ Workbooks(1).Activate
     - `AccessMode As XlSaveAsAccessMode` (optional): The access mode for the workbook.
     - `ConflictResolution As Variant` (optional): An XlSaveConflictResolution value that determines how the method resolves a conflict while saving the workbook. If set to xlUserResolution, the conflict-resolution dialog box is displayed. If set to xlLocalSessionChanges, the local user's changes are automatically accepted. If set to xlOtherSessionChanges, the changes from other sessions are automatically accepted instead of the local user's changes. If this argument is omitted, the conflict-resolution dialog box is displayed.
     - `AddToMru As Variant` (optional): True to add this workbook to the list of recently used files. The default value is False.
-    - `TextCodepage As Variant` (optional): Ignored for all languages in Microsoft Excel. NOTE: When Excel saves a workbook to one of the CSV or text formats, which are specified by using the _FileFormat_ parameter, it uses the code page that corresponds to the language for the system locale in use on the current computer. This system setting is available in the Control Panel > Region and Language > Location tab under Current location.
-    - `TextVisualLayout As Variant` (optional): Ignored for all languages in Microsoft Excel. NOTE: When Excel saves a workbook to one of the CSV or text formats, which are specified by using the _FileFormat_ parameter, it saves these formats in logical layout. If left-to-right (LTR) text is embedded within right-to-left (RTL) text in the file, or vice versa, logical layout saves the contents of the file in the correct reading order for all languages in the file without regard to direction. When an application opens the file, each run of LTR or RTL characters are rendered in the correct direction according to the character value ranges within the code page (unless an application that is designed to display the exact memory layout of the file, such as a debugger or editor, is used to open the file).
+    - `TextCodepage As Variant` (optional): Ignored for all languages in Microsoft Excel. NOTE: When Excel saves a workbook to one of the CSV or text formats, which are specified by using the FileFormat parameter, it uses the code page that corresponds to the language for the system locale in use on the current computer. This system setting is available in the Control Panel > Region and Language > Location tab under Current location.
+    - `TextVisualLayout As Variant` (optional): Ignored for all languages in Microsoft Excel. NOTE: When Excel saves a workbook to one of the CSV or text formats, which are specified by using the FileFormat parameter, it saves these formats in logical layout. If left-to-right (LTR) text is embedded within right-to-left (RTL) text in the file, or vice versa, logical layout saves the contents of the file in the correct reading order for all languages in the file without regard to direction. When an application opens the file, each run of LTR or RTL characters are rendered in the correct direction according to the character value ranges within the code page (unless an application that is designed to display the exact memory layout of the file, such as a debugger or editor, is used to open the file).
     - `Local As Variant` (optional): True saves files against the language of Microsoft Excel (including control panel settings). False (default) saves files against the language of Visual Basic for Applications (VBA) (which is typically US English unless the VBA project where Workbooks.Open is run from is an old internationalized XL5/95 VBA project).
 - `ExportAsFixedFormat(Type As XlFixedFormatType, [Filename As Variant], [Quality As Variant], [IncludeDocProperties As Variant], [IgnorePrintAreas As Variant], [From As Variant], [To As Variant], [OpenAfterPublish As Variant], [FixedFormatExtClassPtr As Variant], [WorkIdentity As Variant])`  
   The ExportAsFixedFormat method is used to publish a workbook to either the PDF or XPS format.
@@ -31460,7 +31460,7 @@ Workbooks.Close
     - `WriteResPassword As Variant` (optional): A string that contains the password required to write to a write-reserved workbook. If this argument is omitted and the workbook requires a password, the user will be prompted for the password.
     - `IgnoreReadOnlyRecommended As Variant` (optional): True to have Microsoft Excel not display the read-only recommended message (if the workbook was saved with the Read-Only Recommended option).
     - `Origin As Variant` (optional): If the file is a text file, this argument indicates where it originated, so that code pages and Carriage Return/Line Feed (CR/LF) can be mapped correctly. Can be one of the following XlPlatform constants: xlMacintosh, xlWindows, or xlMSDOS. If this argument is omitted, the current operating system is used.
-    - `Delimiter As Variant` (optional): If the file is a text file and the _Format_ argument is 6, this argument is a string that specifies the character to be used as the delimiter. For example, use Chr(9) for tabs, use "," for commas, use ";" for semicolons, or use a custom character. Only the first character of the string is used.
+    - `Delimiter As Variant` (optional): If the file is a text file and the Format argument is 6, this argument is a string that specifies the character to be used as the delimiter. For example, use Chr(9) for tabs, use "," for commas, use ";" for semicolons, or use a custom character. Only the first character of the string is used.
     - `Editable As Variant` (optional): If the file is a Microsoft Excel 4.0 add-in, this argument is True to open the add-in so that it is a visible window. If this argument is False or omitted, the add-in is opened as hidden, and it cannot be unhidden. This option does not apply to add-ins created in Microsoft Excel 5.0 or later. If the file is an Excel template, True to open the specified template for editing. False to open a new workbook based on the specified template. The default value is False.
     - `Notify As Variant` (optional): If the file cannot be opened in read/write mode, this argument is True to add the file to the file notification list. Microsoft Excel will open the file as read-only, poll the file notification list, and then notify the user when the file becomes available. If this argument is False or omitted, no notification is requested, and any attempts to open an unavailable file will fail.
     - `Converter As Variant` (optional): The index of the first file converter to try when opening the file. The specified file converter is tried first; if this converter does not recognize the file, all other converters are tried. The converter index consists of the row numbers of the converters returned by the FileConverters property.
@@ -31479,9 +31479,9 @@ Workbooks.Close
     - `Semicolon As Variant` (optional): True to have the semicolon character be the delimiter (DataType must be xlDelimited). The default value is False.
     - `Comma As Variant` (optional): True to have the comma character be the delimiter (DataType must be xlDelimited). The default value is False.
     - `Space As Variant` (optional): True to have the space character be the delimiter (DataType must be xlDelimited). The default value is False.
-    - `Other As Variant` (optional): True to have the character specified by the _OtherChar_ argument be the delimiter (DataType must be xlDelimited). The default value is False.
-    - `OtherChar As Variant` (optional): Required if _Other_ is True. Specifies the delimiter character when _Other_ is True. If more than one character is specified, only the first character of the string is used; the remaining characters are ignored.
-    - `FieldInfo As Variant` (optional): An array containing parse information for individual columns of data. The interpretation depends on the value of _DataType_. When the data is delimited, this argument is an array of two-element arrays, with each two-element array specifying the conversion options for a particular column. The first element is the column number (1-based), and the second element is one of the XlColumnDataType constants specifying how the column is parsed.
+    - `Other As Variant` (optional): True to have the character specified by the OtherChar argument be the delimiter (DataType must be xlDelimited). The default value is False.
+    - `OtherChar As Variant` (optional): Required if Other is True. Specifies the delimiter character when Other is True. If more than one character is specified, only the first character of the string is used; the remaining characters are ignored.
+    - `FieldInfo As Variant` (optional): An array containing parse information for individual columns of data. The interpretation depends on the value of DataType. When the data is delimited, this argument is an array of two-element arrays, with each two-element array specifying the conversion options for a particular column. The first element is the column number (1-based), and the second element is one of the XlColumnDataType constants specifying how the column is parsed.
     - `TextVisualLayout As Variant` (optional): The visual layout of the text.
     - `DecimalSeparator As Variant` (optional): The decimal separator that Microsoft Excel uses when recognizing numbers. The default setting is the system setting.
     - `ThousandsSeparator As Variant` (optional): The thousands separator that Excel uses when recognizing numbers. The default setting is the system setting.
@@ -31544,11 +31544,11 @@ Worksheets(1).Visible = False
 - `Previous As Object  (read-only)`  
   Returns a Worksheet object that represents the previous sheet.
 - `ProtectContents As Boolean  (read-only)`  
-  True if the contents of the sheet are protected. This protects the individual cells. To turn on content protection, use the Protect method with the _Contents_ argument set to True. Read-only Boolean.
+  True if the contents of the sheet are protected. This protects the individual cells. To turn on content protection, use the Protect method with the Contents argument set to True. Read-only Boolean.
 - `ProtectDrawingObjects As Boolean  (read-only)`  
-  True if shapes are protected. To turn on shape protection, use the Protect method with the _DrawingObjects_ argument set to True. Read-only Boolean.
+  True if shapes are protected. To turn on shape protection, use the Protect method with the DrawingObjects argument set to True. Read-only Boolean.
 - `ProtectionMode As Boolean  (read-only)`  
-  True if user-interface-only protection is turned on. To turn on user interface protection, use the Protect method with the _UserInterfaceOnly_ argument set to True. Read-only Boolean.
+  True if user-interface-only protection is turned on. To turn on user interface protection, use the Protect method with the UserInterfaceOnly argument set to True. Read-only Boolean.
 - `ProtectScenarios As Boolean  (read-only)`  
   True if the worksheet scenarios are protected. Read-only Boolean.
 - `Visible As XlSheetVisibility  (read/write)`  
@@ -31645,14 +31645,14 @@ Worksheets(1).Visible = False
   Makes the current sheet the active sheet.
 - `Copy([Before As Variant], [After As Variant])`  
   Copies the sheet to another location in the current workbook or a new workbook.
-    - `Before As Variant` (optional): The sheet before which the copied sheet will be placed. You cannot specify _Before_ if you specify _After_.
-    - `After As Variant` (optional): The sheet after which the copied sheet will be placed. You cannot specify _After_ if you specify _Before_.
+    - `Before As Variant` (optional): The sheet before which the copied sheet will be placed. You cannot specify Before if you specify After.
+    - `After As Variant` (optional): The sheet after which the copied sheet will be placed. You cannot specify After if you specify Before.
 - `Delete()`  
   Deletes the object.
 - `Move([Before As Variant], [After As Variant])`  
   Moves the sheet to another location in the workbook.
-    - `Before As Variant` (optional): The sheet before which the moved sheet will be placed. You cannot specify _Before_ if you specify _After_.
-    - `After As Variant` (optional): The sheet after which the moved sheet will be placed. You cannot specify _After_ if you specify _Before_.
+    - `Before As Variant` (optional): The sheet before which the moved sheet will be placed. You cannot specify Before if you specify After.
+    - `After As Variant` (optional): The sheet after which the moved sheet will be placed. You cannot specify After if you specify Before.
 - `PrintPreview([EnableChanges As Variant])`  
   Shows a preview of the object as it would look when printed.
     - `EnableChanges As Variant` (optional): Passes a Boolean value to specify if the user can change the margins and other page setup options available in print preview.
@@ -31689,28 +31689,28 @@ Worksheets(1).Visible = False
     - `Index As Variant` (optional): The name or number of the OLE object.
 - `Paste([Destination As Variant], [Link As Variant])`  
   Pastes the contents of the Clipboard onto the sheet.
-    - `Destination As Variant` (optional): A Range object that specifies where the Clipboard contents should be pasted. If this argument is omitted, the current selection is used. This argument can be specified only if the contents of the Clipboard can be pasted into a range. If this argument is specified, the _Link_ argument cannot be used.
-    - `Link As Variant` (optional): True to establish a link to the source of the pasted data. If this argument is specified, the _Destination_ argument cannot be used. The default value is False.
+    - `Destination As Variant` (optional): A Range object that specifies where the Clipboard contents should be pasted. If this argument is omitted, the current selection is used. This argument can be specified only if the contents of the Clipboard can be pasted into a range. If this argument is specified, the Link argument cannot be used.
+    - `Link As Variant` (optional): True to establish a link to the source of the pasted data. If this argument is specified, the Destination argument cannot be used. The default value is False.
 - `PivotTables([Index As Variant]) As Object`  
   Returns an object that represents either a single PivotTable report (a PivotTable object) or a collection of all the PivotTable reports (a PivotTables object) on a worksheet. Read-only.
     - `Index As Variant` (optional): The name or number of the report.
 - `PivotTableWizard([SourceType As Variant], [SourceData As Variant], [TableDestination As Variant], [TableName As Variant], [RowGrand As Variant], [ColumnGrand As Variant], [SaveData As Variant], [HasAutoFormat As Variant], [AutoPage As Variant], [Reserved As Variant], [BackgroundQuery As Variant], [OptimizeCache As Variant], [PageFieldOrder As Variant], [PageFieldWrapCount As Variant], [ReadData As Variant], [Connection As Variant]) As PivotTable`  
   Creates a new PivotTable report. This method doesn't display the PivotTable Wizard. This method isn't available for OLE DB data sources. Use the Add method to add a PivotTable cache, and then create a PivotTable report based on the cache.
-    - `SourceType As Variant` (optional): An XlPivotTableSourceType value that represents the source of the report data. If you specify this argument, you must also specify _SourceData_. If _SourceType_ and _SourceData_ are omitted, Microsoft Excel assumes that the source type is xlDatabase, and the source data comes from the named range Database. If this named range doesn't exist, Excel uses the current region if the current selection is in a range of more than 10 cells that contain data. If this isn't true, this method will fail.
-    - `SourceData As Variant` (optional): The data for the new report. Can be a Range object, an array of ranges, or a text constant that represents the name of another report. For an external database, _SourceData_ is an array of strings containing the SQL query string, where each element is up to 255 characters in length. You should use the _Connection_ argument to specify the ODBC connection string. For compatibility with earlier versions of Excel, _SourceData_ can be a two-element array. The first element is the connection string specifying the ODBC source for the data. The second element is the SQL query string used to get the data. If you specify _SourceData_, you must also specify _SourceType_. If the active cell is inside the _SourceData_ range, you must specify _TableDestination_ as well.
+    - `SourceType As Variant` (optional): An XlPivotTableSourceType value that represents the source of the report data. If you specify this argument, you must also specify SourceData. If SourceType and SourceData are omitted, Microsoft Excel assumes that the source type is xlDatabase, and the source data comes from the named range Database. If this named range doesn't exist, Excel uses the current region if the current selection is in a range of more than 10 cells that contain data. If this isn't true, this method will fail.
+    - `SourceData As Variant` (optional): The data for the new report. Can be a Range object, an array of ranges, or a text constant that represents the name of another report. For an external database, SourceData is an array of strings containing the SQL query string, where each element is up to 255 characters in length. You should use the Connection argument to specify the ODBC connection string. For compatibility with earlier versions of Excel, SourceData can be a two-element array. The first element is the connection string specifying the ODBC source for the data. The second element is the SQL query string used to get the data. If you specify SourceData, you must also specify SourceType. If the active cell is inside the SourceData range, you must specify TableDestination as well.
     - `TableDestination As Variant` (optional): A Range object specifying where the report should be placed on the worksheet. If this argument is omitted, the report is placed at the active cell.
     - `TableName As Variant` (optional): A string that specifies the name of the new report.
     - `RowGrand As Variant` (optional): True to show grand totals for rows in the report.
     - `ColumnGrand As Variant` (optional): True to show grand totals for columns in the report.
     - `SaveData As Variant` (optional): True to save data with the report. False to save only the report definition.
     - `HasAutoFormat As Variant` (optional): True to have Excel automatically format the report when it's refreshed or when fields are moved.
-    - `AutoPage As Variant` (optional): Valid only if _SourceType_ is xlConsolidation. True to have Excel create a page field for the consolidation. If _AutoPage_ is False, you must create the page field or fields.
+    - `AutoPage As Variant` (optional): Valid only if SourceType is xlConsolidation. True to have Excel create a page field for the consolidation. If AutoPage is False, you must create the page field or fields.
     - `Reserved As Variant` (optional): Not used by Excel.
     - `BackgroundQuery As Variant` (optional): True to have Excel perform queries for the report asynchronously (in the background). The default value is False.
     - `OptimizeCache As Variant` (optional): True to optimize the PivotTable cache when it's constructed. The default value is False.
     - `PageFieldOrder As Variant` (optional): The order in which page fields are added to the PivotTable report's layout. Can be one of the following XlOrder constants: xlDownThenOver (default) or xlOverThenDown.
     - `PageFieldWrapCount As Variant` (optional): The number of page fields in each column or row in the PivotTable report. The default value is 0 (zero).
-    - `ReadData As Variant` (optional): True to create a PivotTable cache that contains all records from the external database; this cache can be very large. If _ReadData_ is False, you can set some of the fields as server-based page fields before the data is actually read.
+    - `ReadData As Variant` (optional): True to create a PivotTable cache that contains all records from the external database; this cache can be very large. If ReadData is False, you can set some of the fields as server-based page fields before the data is actually read.
     - `Connection As Variant` (optional): A string that contains ODBC settings that allow Excel to connect to an ODBC data source. The connection string has the form ODBC;<connection string>. This argument overrides any previous setting for the PivotCache object's Connection property.
 - `Scenarios([Index As Variant]) As Object`  
   Returns an object that represents either a single scenario (a Scenario object) or a collection of scenarios (a Scenarios object) on the worksheet.
@@ -31728,7 +31728,7 @@ Worksheets(1).Visible = False
     - `Format As Variant` (optional): A string that specifies the Clipboard format of the data.
     - `Link As Variant` (optional): True to establish a link to the source of the pasted data. If the source data isn't suitable for linking or the source application doesn't support linking, this parameter is ignored. The default value is False.
     - `DisplayAsIcon As Variant` (optional): True to display the pasted data as an icon. The default value is False.
-    - `IconFileName As Variant` (optional): The name of the file that contains the icon to use if _DisplayAsIcon_ is True.
+    - `IconFileName As Variant` (optional): The name of the file that contains the icon to use if DisplayAsIcon is True.
     - `IconIndex As Variant` (optional): The index number of the icon within the icon file.
     - `IconLabel As Variant` (optional): The text label of the icon.
     - `NoHTMLFormatting As Variant` (optional): True to remove all formatting, hyperlinks, and images from HTML. False to paste HTML as is. The default value is False.
@@ -31767,9 +31767,9 @@ Worksheets(1).Visible = False
     - `Copies As Variant` (optional): The number of copies to print. If this argument is omitted, one copy is printed.
     - `Preview As Variant` (optional): True to have Microsoft Excel invoke print preview before printing the object. False (or omitted) to print the object immediately.
     - `ActivePrinter As Variant` (optional): Sets the name of the active printer.
-    - `PrintToFile As Variant` (optional): True to print to a file. If _PrToFileName_ is not specified, Excel prompts the user to enter the name of the output file.
+    - `PrintToFile As Variant` (optional): True to print to a file. If PrToFileName is not specified, Excel prompts the user to enter the name of the output file.
     - `Collate As Variant` (optional): True to collate multiple copies.
-    - `PrToFileName As Variant` (optional): If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to.
+    - `PrToFileName As Variant` (optional): If PrintToFile is set to True, this argument specifies the name of the file that you want to print to.
     - `IgnorePrintAreas As Variant` (optional): True to ignore print areas and print the entire object.
 - `ExportAsFixedFormat(Type As XlFixedFormatType, [Filename As Variant], [Quality As Variant], [IncludeDocProperties As Variant], [IgnorePrintAreas As Variant], [From As Variant], [To As Variant], [OpenAfterPublish As Variant], [FixedFormatExtClassPtr As Variant], [WorkIdentity As Variant])`  
   Exports to a file of the specified format.
@@ -32099,14 +32099,14 @@ MsgBox answer
     - `Arg1 As Double` (required): The x-coordinate of the point.
     - `Arg2 As Double` (required): The y-coordinate of the point.
 - `Asin(Arg1 As Double) As Double`  
-  Returns the arcsine, or inverse sine, of a number. The arcsine is the angle whose sine is _Arg1_. The returned angle is given in radians in the range -pi/2 to pi/2.
+  Returns the arcsine, or inverse sine, of a number. The arcsine is the angle whose sine is Arg1. The returned angle is given in radians in the range -pi/2 to pi/2.
     - `Arg1 As Double` (required): The sine of the angle that you want; must be from -1 to 1.
 - `Acos(Arg1 As Double) As Double`  
-  Returns the arccosine, or inverse cosine, of a number. The arccosine is the angle whose cosine is _Arg1_. The returned angle is given in radians in the range 0 (zero) to pi.
+  Returns the arccosine, or inverse cosine, of a number. The arccosine is the angle whose cosine is Arg1. The returned angle is given in radians in the range 0 (zero) to pi.
     - `Arg1 As Double` (required): The cosine of the angle you want, and must be from -1 to 1.
 - `Choose(Arg1 As Variant, Arg2 As Variant, [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant]) As Variant`  
-  Uses _Arg1_ as the index to return a value from the list of value arguments.
-    - `Arg1 As Variant` (required): Specifies which value argument is selected. _Arg1_ must be a number between 1 and 29, or a formula or reference to a cell containing a number between 1 and 29.
+  Uses Arg1 as the index to return a value from the list of value arguments.
+    - `Arg1 As Variant` (required): Specifies which value argument is selected. Arg1 must be a number between 1 and 29, or a formula or reference to a cell containing a number between 1 and 29.
 - `HLookup(Arg1 As Variant, Arg2 As Variant, Arg3 As Variant, [Arg4 As Variant]) As Variant`  
   Searches for a value in the top row of a table or an array of values, and then returns a value in the same column from a row that you specify in the table or array. Use HLookup when your comparison values are located in a row across the top of a table of data, and you want to look down a specified number of rows. Use VLookup when your comparison values are located in a column to the left of the data that you want to find.
     - `Arg1 As Variant` (required): Lookup_value - the value to be found in the first row of the table. Lookup_value can be a value, a reference, or a text string.
@@ -32132,9 +32132,9 @@ MsgBox answer
 - `Replace(Arg1 As String, Arg2 As Double, Arg3 As Double, Arg4 As String) As String`  
   Replaces part of a text string, based on the number of characters that you specify, with a different text string.
     - `Arg1 As String` (required): Text in which you want to replace some characters.
-    - `Arg2 As Double` (required): The position of the character in _Arg1_ that you want to replace with _Arg4_.
-    - `Arg3 As Double` (required): The number of characters in _Arg1_ that you want the Replace method to replace with _Arg4_.
-    - `Arg4 As String` (required): Text that will replace characters in _Arg1_.
+    - `Arg2 As Double` (required): The position of the character in Arg1 that you want to replace with Arg4.
+    - `Arg3 As Double` (required): The number of characters in Arg1 that you want the Replace method to replace with Arg4.
+    - `Arg4 As String` (required): Text that will replace characters in Arg1.
 - `Substitute(Arg1 As String, Arg2 As String, Arg3 As String, [Arg4 As Variant]) As String`  
   Substitutes new_text for old_text in a text string. Use Substitute when you want to replace specific text in a text string; use Replace when you want to replace any text that occurs in a specific location in a text string.
     - `Arg1 As String` (required): Text - the text or the reference to a cell containing text for which you want to substitute characters.
@@ -32240,7 +32240,7 @@ MsgBox answer
 - `USDollar(Arg1 As Double, Arg2 As Double) As String`  
   Converts a number to text format and applies a currency symbol. The name of the method (and the symbol that it applies) depends upon the language settings.
     - `Arg1 As Double` (required): A reference to a cell containing a number, or a formula that evaluates to a number.
-    - `Arg2 As Double` (required): The number of digits to the right of the decimal point. If _Arg2_ is negative, the number is rounded to the left of the decimal point. If you omit decimals, it is assumed to be 2.
+    - `Arg2 As Double` (required): The number of digits to the right of the decimal point. If Arg2 is negative, the number is rounded to the left of the decimal point. If you omit decimals, it is assumed to be 2.
 - `FindB(Arg1 As String, Arg2 As String, [Arg3 As Variant]) As Double`  
   Find and FindB locate one text string within a second text string, and return the number of the starting position of the first text string from the first character of the second text string.
     - `Arg1 As String` (required): Find_text - the text you want to find.
@@ -32296,10 +32296,10 @@ MsgBox answer
   Returns the hyperbolic tangent of a number.
     - `Arg1 As Double` (required): Number - any real number.
 - `Asinh(Arg1 As Double) As Double`  
-  Returns the inverse hyperbolic sine of a number. The inverse hyperbolic sine is the value whose hyperbolic sine is _Arg1_, so Asinh(Sinh(number)) equals _Arg1_.
+  Returns the inverse hyperbolic sine of a number. The inverse hyperbolic sine is the value whose hyperbolic sine is Arg1, so Asinh(Sinh(number)) equals Arg1.
     - `Arg1 As Double` (required): Any real number.
 - `Acosh(Arg1 As Double) As Double`  
-  Returns the inverse hyperbolic cosine of a number. Number must be greater than or equal to 1. The inverse hyperbolic cosine is the value whose hyperbolic cosine is _Arg1_, so Acosh(Cosh(number)) equals _Arg1_.
+  Returns the inverse hyperbolic cosine of a number. Number must be greater than or equal to 1. The inverse hyperbolic cosine is the value whose hyperbolic cosine is Arg1, so Acosh(Cosh(number)) equals Arg1.
     - `Arg1 As Double` (required): Any real number equal to or greater than 1.
 - `Atanh(Arg1 As Double) As Double`  
   Returns the inverse hyperbolic tangent of a number. Number must be between -1 and 1 (excluding -1 and 1).
@@ -32493,7 +32493,7 @@ MsgBox answer
     - `Arg1 As Variant` (required): The range of data that contains observations to test against expected values.
     - `Arg2 As Variant` (required): The range of data that contains the ratio of the product of row totals and column totals to the grand total.
 - `Correl(Arg1 As Variant, Arg2 As Variant) As Double`  
-  Returns the correlation coefficient of the _Arg1_ and _Arg2_ cell ranges.
+  Returns the correlation coefficient of the Arg1 and Arg2 cell ranges.
     - `Arg1 As Variant` (required): A cell range of values.
     - `Arg2 As Variant` (required): A second cell range of values.
 - `Covar(Arg1 As Variant, Arg2 As Variant) As Double`  
@@ -32550,10 +32550,10 @@ MsgBox answer
 - `Skew(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant]) As Double`  
   Returns the skewness of a distribution. Skewness characterizes the degree of asymmetry of a distribution around its mean.
 - `ZTest(Arg1 As Variant, Arg2 As Double, [Arg3 As Variant]) As Double`  
-  Returns the one-tailed probability-value of a z-test. For a given hypothesized population mean, ZTest returns the probability that the sample mean would be greater than the average of observations in the data set (_array_); that is, the observed sample mean.
-    - `Arg1 As Variant` (required): _Array_ is the array or range of data against which to test the hypothesized population mean.
+  Returns the one-tailed probability-value of a z-test. For a given hypothesized population mean, ZTest returns the probability that the sample mean would be greater than the average of observations in the data set (array); that is, the observed sample mean.
+    - `Arg1 As Variant` (required): Array is the array or range of data against which to test the hypothesized population mean.
     - `Arg2 As Double` (required): The value to test.
-    - `Arg3 As Variant` (optional): _Sigma_ is the population (known) standard deviation. If omitted, the sample standard deviation is used.
+    - `Arg3 As Variant` (optional): Sigma is the population (known) standard deviation. If omitted, the sample standard deviation is used.
 - `Large(Arg1 As Variant, Arg2 As Double) As Double`  
   Returns the k-th largest value in a data set. Use this function to select a value based on its relative standing. For example, you can use Large to return the highest, runner-up, or third-place score.
     - `Arg1 As Variant` (required): Array - the array or range of data for which you want to determine the k-th largest value.
@@ -33351,10 +33351,10 @@ MsgBox answer
     - `Arg3 As Double` (required): Tails - Specifies the number of distribution tails. If tails = 1, T_Test uses the one-tailed distribution. If tails = 2, T_Test uses the two-tailed distribution.
     - `Arg4 As Double` (required): Type - The kind of t-Test to perform.
 - `Z_Test(Arg1 As Variant, Arg2 As Double, [Arg3 As Variant]) As Double`  
-  Returns the one-tailed probability-value of a z-test. For a given hypothesized population mean, Z_Test returns the probability that the sample mean would be greater than the average of observations in the data set (_array_); that is, the observed sample mean.
-    - `Arg1 As Variant` (required): _Array_ is the array or range of data against which to test the hypothesized population mean.
+  Returns the one-tailed probability-value of a z-test. For a given hypothesized population mean, Z_Test returns the probability that the sample mean would be greater than the average of observations in the data set (array); that is, the observed sample mean.
+    - `Arg1 As Variant` (required): Array is the array or range of data against which to test the hypothesized population mean.
     - `Arg2 As Double` (required): The value to test.
-    - `Arg3 As Variant` (optional): _Sigma_ is the population (known) standard deviation. If omitted, the sample standard deviation is used.
+    - `Arg3 As Variant` (optional): Sigma is the population (known) standard deviation. If omitted, the sample standard deviation is used.
 - `Binom_Dist(Arg1 As Double, Arg2 As Double, Arg3 As Double, Arg4 As Boolean) As Double`  
   Returns the individual term binomial distribution probability.
     - `Arg1 As Double` (required): Number_s - the number of successes in trials.
@@ -33440,11 +33440,11 @@ MsgBox answer
 - `Bitlshift(Arg1 As Double, Arg2 As Double) As Double`  
   Returns a value number shifted left by shift_amount bits.
     - `Arg1 As Double` (required): The decimal representation of the binary number that you want to evaluate.
-    - `Arg2 As Double` (required): The number of bits that you want to shift _Arg1_ left by.
+    - `Arg2 As Double` (required): The number of bits that you want to shift Arg1 left by.
 - `Bitrshift(Arg1 As Double, Arg2 As Double) As Double`  
   Returns a value number shifted right by shift_amount bits.
     - `Arg1 As Double` (required): The decimal representation of the binary number that you want to evaluate.
-    - `Arg2 As Double` (required): The number of bits that you want to shift _Arg1_ right by.
+    - `Arg2 As Double` (required): The number of bits that you want to shift Arg1 right by.
 - `Xor(Arg1 As Variant, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant]) As Boolean`  
   Returns a logical exclusive OR of all arguments.
     - `Arg1 As Variant` (required): 1 to 254 conditions that you want to test that can be either True or False; can be logical values, arrays, or references.
@@ -33472,14 +33472,14 @@ MsgBox answer
     - `Arg2 As Double` (required): The base radix of the number that you are converting.
 - `Days(Arg1 As Variant, Arg2 As Variant) As Double`  
   Returns the number of days between two dates.
-    - `Arg1 As Variant` (required): start_date(_Arg2_) and end_date (_Arg1_) are the two dates between which you want to know the number of days.
-    - `Arg2 As Variant` (required): start_date(_Arg2_) and end_date (_Arg1_) are the two dates between which you want to know the number of days.
+    - `Arg1 As Variant` (required): start_date(Arg2) and end_date (Arg1) are the two dates between which you want to know the number of days.
+    - `Arg2 As Variant` (required): start_date(Arg2) and end_date (Arg1) are the two dates between which you want to know the number of days.
 - `Binom_Dist_Range(Arg1 As Double, Arg2 As Double, Arg3 As Double, [Arg4 As Variant]) As Double`  
   Returns the probability of a trial result using a binomial distribution.
     - `Arg1 As Double` (required): The number of independent trials.
     - `Arg2 As Double` (required): The probability of success on each trial.
     - `Arg3 As Double` (required): The number of successes in trials.
-    - `Arg4 As Variant` (optional): If provided, this function returns the probability that the number of successful trials shall lie between _Arg3_ and _Arg4_.
+    - `Arg4 As Variant` (optional): If provided, this function returns the probability that the number of successful trials shall lie between Arg3 and Arg4.
 - `Gamma(Arg1 As Double) As Double`  
   Returns the gamma function value.
     - `Arg1 As Double` (required): The value for which you want to calculate gamma.
@@ -33651,8 +33651,8 @@ Worksheets.Move After:=Sheets(Sheets.Count)
     - `Type As Variant` (optional): Specifies the sheet type. Can be one of the following XlSheetType constants: xlWorksheet, xlChart, xlExcel4MacroSheet, or xlExcel4IntlMacroSheet. If you are inserting a sheet based on an existing template, specify the path to the template. The default value is xlWorksheet.
 - `Copy([Before As Variant], [After As Variant])`  
   Copies the sheet to another location in the workbook.
-    - `Before As Variant` (optional): The sheet before which the copied sheet will be placed. You cannot specify _Before_ if you specify _After_.
-    - `After As Variant` (optional): The sheet after which the copied sheet will be placed. You cannot specify _After_ if you specify _Before_.
+    - `Before As Variant` (optional): The sheet before which the copied sheet will be placed. You cannot specify Before if you specify After.
+    - `After As Variant` (optional): The sheet after which the copied sheet will be placed. You cannot specify After if you specify Before.
 - `Delete()`  
   Deletes the object.
 - `FillAcrossSheets(Range As Range, [Type As XlFillWith])`  
@@ -33661,8 +33661,8 @@ Worksheets.Move After:=Sheets(Sheets.Count)
     - `Type As XlFillWith` (optional): Specifies how to copy the range.
 - `Move([Before As Variant], [After As Variant])`  
   Moves the sheet to another location in the workbook.
-    - `Before As Variant` (optional): The sheet before which the moved sheet will be placed. You cannot specify _Before_ if you specify _After_.
-    - `After As Variant` (optional): The sheet after which the moved sheet will be placed. You cannot specify _After_ if you specify _Before_.
+    - `Before As Variant` (optional): The sheet before which the moved sheet will be placed. You cannot specify Before if you specify After.
+    - `After As Variant` (optional): The sheet after which the moved sheet will be placed. You cannot specify After if you specify Before.
 - `PrintPreview([EnableChanges As Variant])`  
   Shows a preview of the object as it would look when printed.
     - `EnableChanges As Variant` (optional): Pass a Boolean value to specify if the user can change the margins and other page setup options available in print preview.
@@ -33676,9 +33676,9 @@ Worksheets.Move After:=Sheets(Sheets.Count)
     - `Copies As Variant` (optional): The number of copies to print. If this argument is omitted, one copy is printed.
     - `Preview As Variant` (optional): True to have Microsoft Excel invoke print preview before printing the object. False (or omitted) to print the object immediately.
     - `ActivePrinter As Variant` (optional): Sets the name of the active printer.
-    - `PrintToFile As Variant` (optional): True to print to a file. If _PrToFileName_ is not specified, Microsoft Excel prompts the user to enter the name of the output file.
+    - `PrintToFile As Variant` (optional): True to print to a file. If PrToFileName is not specified, Microsoft Excel prompts the user to enter the name of the output file.
     - `Collate As Variant` (optional): True to collate multiple copies.
-    - `PrToFileName As Variant` (optional): If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to.
+    - `PrToFileName As Variant` (optional): If PrintToFile is set to True, this argument specifies the name of the file that you want to print to.
     - `IgnorePrintAreas As Variant` (optional): True to ignore print areas and print the entire object.
 - `Add2([Before As Variant], [After As Variant], [Count As Variant], [NewLayout As Variant]) As Object`  
   This method is only implemented for the Charts collection object and will produce a run-time error if used on the Sheets and Worksheets objects.
@@ -34754,7 +34754,7 @@ Specifies which dialog box to display.
 - `xlDialogRecommendedPivotTables` = 1258  
   Recommended PivotTables dialog box
 - `xlDialogForecastETS` = 1300
-- `xlDialogPivotDefaultLayout` = 1360
+- `xlDialogPivotDefaultLayout` = 1361
 
 ### XlCalcFor
 
@@ -37961,11 +37961,11 @@ Specifies how to determine the value of the parameter for the specified query ta
 #### Constants (3)
 
 - `xlPrompt` = 0  
-  Displays a dialog box that prompts the user for the value. The _Value_ argument specifies the text shown in the dialog box.
+  Displays a dialog box that prompts the user for the value. The Value argument specifies the text shown in the dialog box.
 - `xlConstant` = 1  
-  Uses the value specified by the _Value_ argument.
+  Uses the value specified by the Value argument.
 - `xlRange` = 2  
-  Uses the value of the cell in the upper-left corner of the range. The _Value_ argument specifies a Range object.
+  Uses the value of the cell in the upper-left corner of the range. The Value argument specifies a Range object.
 
 ### XlParentDataLabelOptions
 
@@ -40796,7 +40796,7 @@ Represents an XML map that has been added to a workbook.
 - `Export(Url As String, [Overwrite As Variant]) As XlXmlExportResult`  
   Exports the contents of cells mapped to the specified XmlMap object to an XML data file.
     - `Url As String` (required): The path and file name of the XML data file to export to.
-    - `Overwrite As Variant` (optional): Set to True to overwrite the file specified in the _Url_ parameter if the file exists. The default value is False.
+    - `Overwrite As Variant` (optional): Set to True to overwrite the file specified in the Url parameter if the file exists. The default value is False.
 - `ExportXml(Data As String) As XlXmlExportResult`  
   Exports the contents of cells mapped to the specified XmlMap object to a String variable.
     - `Data As String` (required): The variable to export the data to.
@@ -41015,7 +41015,7 @@ End Sub
   Maps the specified XPath object to a ListColumn object or Range collection. If the XPath object has previously been mapped to the ListColumn object or Range collection, the SetValue method sets the properties of the XPath object.
     - `Map As XmlMap` (required): The map info that the mapped range will be associated with.
     - `XPath As String` (required): A valid XPath expression that tells Excel what XML data should appear in this mapped range. The XPath string can also contain valid filters, in which case, only a subset of the data that the XPath points to will ever appear in this mapped range.
-    - `SelectionNamespace As Variant` (optional): Specifies any namespace prefixes used in the _XPath_ argument. This argument can be omitted if the XPath object doesn't contain any prefixes, or if the XPath object uses the Microsoft Excel internal prefixes.
+    - `SelectionNamespace As Variant` (optional): Specifies any namespace prefixes used in the XPath argument. This argument can be omitted if the XPath object doesn't contain any prefixes, or if the XPath object uses the Microsoft Excel internal prefixes.
     - `Repeating As Variant` (optional): Specifies whether the XPath object is to be bound to a column in an XML list or mapped to a single cell. Set to True to bind the XPath object to a column in an XML list. False forces a non-repeating cell to be created. If the range is greater than a single cell and False is specified, a run-time error occurs.
 - `Clear()`  
   Clears all XPath schema information for the mapped range.

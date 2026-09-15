@@ -8,8 +8,8 @@ Specifies how to determine the value of the parameter for the specified query ta
 ## Constants (3)
 
 - `xlPrompt` = 0  
-  Displays a dialog box that prompts the user for the value. The _Value_ argument specifies the text shown in the dialog box.
+  Displays a dialog box that prompts the user for the value. The Value argument specifies the text shown in the dialog box.
 - `xlConstant` = 1  
-  Uses the value specified by the _Value_ argument.
+  Uses the value specified by the Value argument.
 - `xlRange` = 2  
-  Uses the value of the cell in the upper-left corner of the range. The _Value_ argument specifies a Range object.
+  Uses the value of the cell in the upper-left corner of the range. The Value argument specifies a Range object.

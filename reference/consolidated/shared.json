@@ -3425,13 +3425,13 @@
                   "name": "x",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The _x_-coordinate on which the location of the shortcut menu is based. If this argument is omitted, the current _x_-coordinate of the pointer is used."
+                  "description": "The x-coordinate on which the location of the shortcut menu is based. If this argument is omitted, the current x-coordinate of the pointer is used."
                 },
                 {
                   "name": "y",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The _y_-coordinate on which the location of the shortcut menu is based. If this argument is omitted, the current _y_-coordinate of the pointer is used."
+                  "description": "The y-coordinate on which the location of the shortcut menu is based. If this argument is omitted, the current y-coordinate of the pointer is used."
                 }
               ]
             }
@@ -4146,7 +4146,7 @@
           "guid": "{55F88897-7708-11D1-ACEB-006008961DA5}",
           "library": "Microsoft Office 16.0 Object Library",
           "description": "Represents a combo box control on a command bar.",
-          "remarks": "Use Controls(_index_), where _index_ is the index number of the control, to return a CommandBarComboBox object. Note that the Type property of the control must be msoControlEdit, msoControlDropdown, msoControlComboBox, msoControlButtonDropdown, msoControlSplitDropdown, msoControlOCXDropdown, msoControlGraphicCombo, or msoControlGraphicDropdown.",
+          "remarks": "Use Controls(index), where index is the index number of the control, to return a CommandBarComboBox object. Note that the Type property of the control must be msoControlEdit, msoControlDropdown, msoControlComboBox, msoControlButtonDropdown, msoControlSplitDropdown, msoControlOCXDropdown, msoControlGraphicCombo, or msoControlGraphicDropdown.",
           "example": "Set combo = CommandBars(\"Custom\").Controls(2)\nWith combo\n    .AddItem \"First Item\", 1\n    .AddItem \"Second Item\", 2\n    .DropDownLines = 3\n    .DropDownWidth = 75\n    .ListIndex = 0\nEnd With",
           "properties": [
             {
@@ -4555,7 +4555,7 @@
           "guid": "{000C0308-0000-0000-C000-000000000046}",
           "library": "Microsoft Office 16.0 Object Library",
           "description": "Represents a command bar control. The CommandBarControl object is a member of the CommandBarControls collection. The properties and methods of the CommandBarControl object are all shared by the CommandBarButton, CommandBarComboBox, and CommandBarPopup objects.",
-          "remarks": "When writing Visual Basic code to work with custom command bar controls, you use the CommandBarButton, CommandBarComboBox, and CommandBarPopup objects. When writing code to work with built-in controls in the container application that cannot be represented by one of those three objects, you use the CommandBarControl object. Use Controls (_index_), where _index_ is the index number of a control, to return a CommandBarControl object. (The Type property of the control must be msoControlLabel, msoControlExpandingGrid, msoControlSplitExpandingGrid, msoControlGrid, or msoControlGauge). Variables declared as CommandBarControl can be assigned CommandBarButton, CommandBarComboBox, and CommandBarPopup values.",
+          "remarks": "When writing Visual Basic code to work with custom command bar controls, you use the CommandBarButton, CommandBarComboBox, and CommandBarPopup objects. When writing code to work with built-in controls in the container application that cannot be represented by one of those three objects, you use the CommandBarControl object. Use Controls (index), where index is the index number of a control, to return a CommandBarControl object. (The Type property of the control must be msoControlLabel, msoControlExpandingGrid, msoControlSplitExpandingGrid, msoControlGrid, or msoControlGauge). Variables declared as CommandBarControl can be assigned CommandBarButton, CommandBarComboBox, and CommandBarPopup values.",
           "example": "Set lbl = CommandBars.FindControl(Type:= msoControlGauge)\nIf lbl Is Nothing Then\n    MsgBox \"A control of type msoControlGauge was not found.\"\nElse\n    MsgBox \"Control \" & lbl.Index & \" on command bar \" _\n        & lbl.Parent.Name & \" is type msoControlGauge\"\nEnd If",
           "properties": [
             {
@@ -4917,7 +4917,7 @@
           "guid": "{000C030A-0000-0000-C000-000000000046}",
           "library": "Microsoft Office 16.0 Object Library",
           "description": "Represents a popup control on a command bar.",
-          "remarks": "Every pop-up control contains a CommandBar object. To return the command bar from a pop-up control, apply the CommandBar property to the CommandBarPopup object. Use Controls(_index_), where _index_ is the number of the control, to return a CommandBarPopup object. Note that the Type property of the control must be msoControlPopup, msoControlGraphicPopup, msoControlButtonPopup, msoControlSplitButtonPopup, or msoControlSplitButtonMRUPopup.",
+          "remarks": "Every pop-up control contains a CommandBar object. To return the command bar from a pop-up control, apply the CommandBar property to the CommandBarPopup object. Use Controls(index), where index is the number of the control, to return a CommandBarPopup object. Note that the Type property of the control must be msoControlPopup, msoControlGraphicPopup, msoControlButtonPopup, msoControlSplitButtonPopup, or msoControlSplitButtonMRUPopup.",
           "example": "Set myControl = Application.CommandBars.FindControl _\n(Type:=msoControlPopup, Tag:=\"Graphics\")",
           "properties": [
             {
@@ -5432,7 +5432,7 @@
               "name": "ExecuteMso",
               "kind": "method",
               "signature": "ExecuteMso(idMso As String)",
-              "description": "Executes the control identified by the _idMso_ parameter.",
+              "description": "Executes the control identified by the idMso parameter.",
               "returns": "void",
               "parameters": [
                 {
@@ -5447,7 +5447,7 @@
               "name": "GetEnabledMso",
               "kind": "method",
               "signature": "GetEnabledMso(idMso As String) As Boolean",
-              "description": "Returns True if the control identified by the _idMso_ parameter is enabled.",
+              "description": "Returns True if the control identified by the idMso parameter is enabled.",
               "returns": "Boolean",
               "parameters": [
                 {
@@ -5462,7 +5462,7 @@
               "name": "GetVisibleMso",
               "kind": "method",
               "signature": "GetVisibleMso(idMso As String) As Boolean",
-              "description": "Returns True if the control identified by the _idMso_ parameter is visible.",
+              "description": "Returns True if the control identified by the idMso parameter is visible.",
               "returns": "Boolean",
               "parameters": [
                 {
@@ -5477,7 +5477,7 @@
               "name": "GetPressedMso",
               "kind": "method",
               "signature": "GetPressedMso(idMso As String) As Boolean",
-              "description": "Returns a value indicating whether the toggleButton control identified by the _idMso_ parameter is pressed.",
+              "description": "Returns a value indicating whether the toggleButton control identified by the idMso parameter is pressed.",
               "returns": "Boolean",
               "parameters": [
                 {
@@ -5492,7 +5492,7 @@
               "name": "GetLabelMso",
               "kind": "method",
               "signature": "GetLabelMso(idMso As String) As String",
-              "description": "Returns the label of the control identified by the _idMso_ parameter as a String.",
+              "description": "Returns the label of the control identified by the idMso parameter as a String.",
               "returns": "String",
               "parameters": [
                 {
@@ -5507,7 +5507,7 @@
               "name": "GetScreentipMso",
               "kind": "method",
               "signature": "GetScreentipMso(idMso As String) As String",
-              "description": "Returns the screentip of the control identified by the _idMso_ parameter as a String.",
+              "description": "Returns the screentip of the control identified by the idMso parameter as a String.",
               "returns": "String",
               "parameters": [
                 {
@@ -5522,7 +5522,7 @@
               "name": "GetSupertipMso",
               "kind": "method",
               "signature": "GetSupertipMso(idMso As String) As String",
-              "description": "Returns the supertip of the control identified by the _idMso_ parameter as a String.",
+              "description": "Returns the supertip of the control identified by the idMso parameter as a String.",
               "returns": "String",
               "parameters": [
                 {
@@ -5537,7 +5537,7 @@
               "name": "GetImageMso",
               "kind": "method",
               "signature": "GetImageMso(idMso As String, Width As Long, Height As Long) As IPictureDisp",
-              "description": "Returns an IPictureDisp object of the control image identified by the _idMso_ parameter scaled to the dimensions specified by width and height.",
+              "description": "Returns an IPictureDisp object of the control image identified by the idMso parameter scaled to the dimensions specified by width and height.",
               "returns": "IPictureDisp",
               "parameters": [
                 {
@@ -5781,7 +5781,7 @@
               "name": "Show",
               "kind": "method",
               "signature": "Show(CardStyle As MsoContactCardStyle, RectangleLeft As Long, RectangleRight As Long, RectangleTop As Long, RectangleBottom As Long, HorizontalPosition As Long, [ShowWithDelay As Boolean])",
-              "description": "Displays the contact card at the specified _x_-coordinate position outside the specified rectangle.",
+              "description": "Displays the contact card at the specified x-coordinate position outside the specified rectangle.",
               "returns": "void",
               "parameters": [
                 {
@@ -5892,14 +5892,14 @@
               "kind": "property",
               "type": "Single",
               "access": "read/write",
-              "description": "Gets or sets the _x_-axis offset of the image that is to be cropped. Read/write."
+              "description": "Gets or sets the x-axis offset of the image that is to be cropped. Read/write."
             },
             {
               "name": "PictureOffsetY",
               "kind": "property",
               "type": "Single",
               "access": "read/write",
-              "description": "Gets or sets the _y_-axis offset of the image that is to be cropped. Read/write."
+              "description": "Gets or sets the y-axis offset of the image that is to be cropped. Read/write."
             },
             {
               "name": "PictureWidth",
@@ -6770,13 +6770,13 @@
                   "name": "OldParentNode",
                   "type": "CustomXMLNode",
                   "optional": false,
-                  "description": "Corresponds to the former parent node of _OldNode_."
+                  "description": "Corresponds to the former parent node of OldNode."
                 },
                 {
                   "name": "OldNextSibling",
                   "type": "CustomXMLNode",
                   "optional": false,
-                  "description": "Corresponds to the former next sibling of _OldNode_."
+                  "description": "Corresponds to the former next sibling of OldNode."
                 },
                 {
                   "name": "InUndoRedo",
@@ -8160,7 +8160,7 @@
                   "name": "Status",
                   "type": "MsoDocInspectorStatus",
                   "optional": false,
-                  "description": "An enumeration representing the status of the document. _Status_ is an output parameter, which means that its value is returned when the method has completed its purpose."
+                  "description": "An enumeration representing the status of the document. Status is an output parameter, which means that its value is returned when the method has completed its purpose."
                 },
                 {
                   "name": "Results",
@@ -8181,13 +8181,13 @@
                   "name": "Status",
                   "type": "MsoDocInspectorStatus",
                   "optional": false,
-                  "description": "An enumeration representing the status of the document. _Status_ is an output parameter, which means that its value is returned when the method has completed its purpose."
+                  "description": "An enumeration representing the status of the document. Status is an output parameter, which means that its value is returned when the method has completed its purpose."
                 },
                 {
                   "name": "Results",
                   "type": "String",
                   "optional": false,
-                  "description": "Contains the results of the action. _Results_ is an output parameter."
+                  "description": "Contains the results of the action. Results is an output parameter."
                 }
               ]
             }
@@ -8401,7 +8401,7 @@
           "guid": "{2DF8D04D-5BFA-101B-BDE5-00AA0044DE52}",
           "library": "Microsoft Office 16.0 Object Library",
           "description": "A collection of DocumentProperty objects. Each DocumentProperty object represents a built-in or custom property of a container document.",
-          "remarks": "Use the Add method to create a new custom property and add it to the DocumentProperties collection. You cannot use the Add method to create a built-in document property. Use BuiltinDocumentProperties(index), where _index_ is the index number of the built-in document property, to return a single DocumentProperty object that represents a specific built-in document property. Use CustomDocumentProperties(index), where _index_ is the number of the custom document property, to return a DocumentProperty object that represents a specific custom document property.",
+          "remarks": "Use the Add method to create a new custom property and add it to the DocumentProperties collection. You cannot use the Add method to create a built-in document property. Use BuiltinDocumentProperties(index), where index is the index number of the built-in document property, to return a single DocumentProperty object that represents a specific built-in document property. Use CustomDocumentProperties(index), where index is the number of the custom document property, to return a DocumentProperty object that represents a specific custom document property.",
           "example": "",
           "properties": [
             {
@@ -8465,7 +8465,7 @@
                   "name": "LinkToContent",
                   "type": "Boolean",
                   "optional": false,
-                  "description": "Specifies whether the LinkToContent property is linked to the contents of the container document. If this argument is True, the _LinkSource_ argument is required; if it's False, the _Value_ argument is required."
+                  "description": "Specifies whether the LinkToContent property is linked to the contents of the container document. If this argument is True, the LinkSource argument is required; if it's False, the Value argument is required."
                 },
                 {
                   "name": "Type",
@@ -8477,13 +8477,13 @@
                   "name": "Value",
                   "type": "Variant",
                   "optional": true,
-                  "description": "The data value of the Value property, if it's not linked to the contents of the container document. The value is converted to match the data type specified by the _Type_ argument, and if it can't be converted, an error occurs. If _LinkToContent_ is True, the argument is ignored, and the new document property is assigned a default value until the linked property values are updated by the container application (usually when the document is saved)."
+                  "description": "The data value of the Value property, if it's not linked to the contents of the container document. The value is converted to match the data type specified by the Type argument, and if it can't be converted, an error occurs. If LinkToContent is True, the argument is ignored, and the new document property is assigned a default value until the linked property values are updated by the container application (usually when the document is saved)."
                 },
                 {
                   "name": "LinkSource",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Ignored if _LinkToContent_ is False. The source of the LinkSource property. The container application determines what types of source linking you can use. For example, DDE links use the \"Server|Document!Item\" syntax."
+                  "description": "Ignored if LinkToContent is False. The source of the LinkSource property. The container application determines what types of source linking you can use. For example, DDE links use the \"Server|Document!Item\" syntax."
                 },
                 {
                   "name": "lcid",
@@ -8508,7 +8508,7 @@
           "guid": "{2DF8D04E-5BFA-101B-BDE5-00AA0044DE52}",
           "library": "Microsoft Office 16.0 Object Library",
           "description": "Represents a custom or built-in document property of a container document. The DocumentProperty object is a member of the DocumentProperties collection.",
-          "remarks": "Use the Microsoft Word Document.BuiltinDocumentProperties(_index_) property, where _index_ is the name or index number of the built-in document property, to return a single DocumentProperty object that represents a specific built-in document property. Use the Word Document.CustomDocumentProperties(_index_) property, where _index_ is the name or index number of the custom document property, to return a DocumentProperty object that represents a specific custom document property.",
+          "remarks": "Use the Microsoft Word Document.BuiltinDocumentProperties(index) property, where index is the name or index number of the built-in document property, to return a single DocumentProperty object that represents a specific built-in document property. Use the Word Document.CustomDocumentProperties(index) property, where index is the name or index number of the custom document property, to return a DocumentProperty object that represents a specific custom document property.",
           "example": "",
           "properties": [
             {
@@ -9269,7 +9269,7 @@
               "name": "Item",
               "kind": "method",
               "signature": "Item(Index As Long) As String",
-              "description": "Gets a String that corresponds to the path of one of the files by the _Index_ that the user selected from a file dialog box that was displayed by using the Show method of the FileDialog object.",
+              "description": "Gets a String that corresponds to the path of one of the files by the Index that the user selected from a file dialog box that was displayed by using the Show method of the FileDialog object.",
               "returns": "String",
               "parameters": [
                 {
@@ -21377,7 +21377,7 @@
           "guid": "{000C0353-0000-0000-C000-000000000046}",
           "library": "Microsoft Office 16.0 Object Library",
           "description": "Returns information about the language settings in a Microsoft Office application.",
-          "remarks": "Use Application.LanguageSettings.LanguageID(_MsoAppLanguageID_), where MsoAppLanguageID is a constant used to return locale identifier (LCID) information to the specified application.",
+          "remarks": "Use Application.LanguageSettings.LanguageID(MsoAppLanguageID), where MsoAppLanguageID is a constant used to return locale identifier (LCID) information to the specified application.",
           "example": "MsgBox \"The following locale IDs are registered \" & _\n \"for this application: Install Language - \" & _\n Application.LanguageSettings.LanguageID(msoLanguageIDInstall) & _\n \" User Interface Language - \" & _\n Application.LanguageSettings.LanguageID(msoLanguageIDUI) & _\n \" Help Language - \" & _\n Application.LanguageSettings.LanguageID(msoLanguageIDHelp)",
           "properties": [
             {
@@ -27608,17 +27608,17 @@
           "name": "MsoExtraInfoMethod",
           "kind": "Enumeration",
           "library": "Microsoft Office 16.0 Object Library",
-          "description": "Specifies how to use the value specified in the _ExtraInfo_ parameter of the FollowHyperlink method.",
+          "description": "Specifies how to use the value specified in the ExtraInfo parameter of the FollowHyperlink method.",
           "constants": [
             {
               "name": "msoMethodGet",
               "value": 0,
-              "description": "The value specified in the _ExtraInfo_ parameter is a string that is appended to the address."
+              "description": "The value specified in the ExtraInfo parameter is a string that is appended to the address."
             },
             {
               "name": "msoMethodPost",
               "value": 1,
-              "description": "The value specified in the _ExtraInfo_ parameter is posted as a string or byte array."
+              "description": "The value specified in the ExtraInfo parameter is posted as a string or byte array."
             }
           ]
         },
@@ -35959,7 +35959,7 @@
           "guid": "{000C1531-0000-0000-C000-000000000046}",
           "library": "Microsoft Office 16.0 Object Library",
           "description": "Represents a field in a data source. The ODSOColumn object is a member of the ODSOColumns collection.",
-          "remarks": "The ODSOColumns collection includes all the data fields in a mail merge data source (for example, Name, Address, and City). You cannot add fields to the ODSOColumns collection. All data fields in a data source are automatically included in the ODSOColumns collection. Use Columns(_index_), where _index_ is the data field name or index number, to return a single ODSOColumn object. The index number represents the position of the data field in the mail merge data source.",
+          "remarks": "The ODSOColumns collection includes all the data fields in a mail merge data source (for example, Name, Address, and City). You cannot add fields to the ODSOColumns collection. All data fields in a data source are automatically included in the ODSOColumns collection. Use Columns(index), where index is the data field name or index number, to return a single ODSOColumn object. The index number represents the position of the data field in the mail merge data source.",
           "example": "Sub GetDataFromSource()\n\n Dim appOffice As OfficeDataSourceObject\n\n Set appOffice = Application.OfficeDataSourceObject\n appOffice.Open bstrConnect:=\"DRIVER=SQL Server;SERVER=ServerName;\" & _\n \"UID=user;PWD=;DATABASE=Northwind\", bstrTable:=\"Employees\"\n\n With appOffice.Columns\n MsgBox \"Field Name: \" & .Item(1).Name & vbLf & _\n \"Value: \" & .Item(1).Value\n End With\nEnd Sub",
           "properties": [
             {
@@ -36217,7 +36217,7 @@
                   "name": "bstrCompareTo",
                   "type": "String",
                   "optional": true,
-                  "description": "If the _Comparison_ argument is something other than msoFilterComparisonIsBlank or msoFilterComparisonIsNotBlank, _bstrCompareTo_ is a string to which the data in the table is compared."
+                  "description": "If the Comparison argument is something other than msoFilterComparisonIsBlank or msoFilterComparisonIsNotBlank, bstrCompareTo is a string to which the data in the table is compared."
                 },
                 {
                   "name": "DeferUpdate",
@@ -38723,7 +38723,7 @@
                   "name": "Context",
                   "type": "Object",
                   "optional": false,
-                  "description": "The _context_ object that was set with SetLabel call."
+                  "description": "The context object that was set with SetLabel call."
                 }
               ]
             }
@@ -42031,7 +42031,7 @@
           "guid": "{000C037D-0000-0000-C000-000000000046}",
           "library": "Microsoft Office 16.0 Object Library",
           "description": "Represents a folder in a shared document workspace.",
-          "remarks": "Use the SharedWorkspaceFolder object to manage subfolders within the main document library folder of a shared workspace. The Count property of the SharedWorkspaceFolders collection does not include the workspace's main folder, and returns 0 (zero) if no subfolders have been created. The SharedWorkspaceFolder object does not expose the CreatedBy, CreatedDate, ModifiedBy, and ModifiedDate properties available on the SharedWorkspaceFile, SharedWorkspaceLink, and SharedWorkspaceTask objects. Use the Item (_index_) property of the SharedWorkspaceFolders collection to return a specific SharedWorkspaceFolder object.",
+          "remarks": "Use the SharedWorkspaceFolder object to manage subfolders within the main document library folder of a shared workspace. The Count property of the SharedWorkspaceFolders collection does not include the workspace's main folder, and returns 0 (zero) if no subfolders have been created. The SharedWorkspaceFolder object does not expose the CreatedBy, CreatedDate, ModifiedBy, and ModifiedDate properties available on the SharedWorkspaceFile, SharedWorkspaceLink, and SharedWorkspaceTask objects. Use the Item (index) property of the SharedWorkspaceFolders collection to return a specific SharedWorkspaceFolder object.",
           "example": "Dim swsFolder As SharedWorkspaceFolder\n    Set swsFolder = ActiveWorkbook.SharedWorkspace.Folders(1)\n    MsgBox swsFolder.FolderName, vbInformation + vbOKOnly, \"Folder Name\"\n    Set swsFolder = Nothing",
           "properties": [
             {
@@ -42172,7 +42172,7 @@
           "guid": "{000C037F-0000-0000-C000-000000000046}",
           "library": "Microsoft Office 16.0 Object Library",
           "description": "Represents a URL link saved in a shared document workspace site.",
-          "remarks": "Use the SharedWorkspaceLink object to manage links to additional documents and information of interest to the members who are collaborating on the documents in the shared workspace site. Use the Item (_index_) property of the SharedWorkspaceLinks collection to return a specific SharedWorkspaceLink object. Use the Description property to set the link description that appears on the Links tab of the Shared Workspace pane and on the workspace webpage. Use the URL property to set the destination address of the link. Use the Notes property to supply additional information about the link. Use the Save method to upload changes to the server after you modify properties of the SharedWorkspaceLink object. Use the CreatedBy, CreatedDate, ModifiedBy, and ModifiedDate properties to return information about the history of each link.",
+          "remarks": "Use the SharedWorkspaceLink object to manage links to additional documents and information of interest to the members who are collaborating on the documents in the shared workspace site. Use the Item (index) property of the SharedWorkspaceLinks collection to return a specific SharedWorkspaceLink object. Use the Description property to set the link description that appears on the Links tab of the Shared Workspace pane and on the workspace webpage. Use the URL property to set the destination address of the link. Use the Notes property to supply additional information about the link. Use the Save method to upload changes to the server after you modify properties of the SharedWorkspaceLink object. Use the CreatedBy, CreatedDate, ModifiedBy, and ModifiedDate properties to return information about the history of each link.",
           "example": "Dim swsLink As Office.SharedWorkspaceLink\n    Set swsLink = ActiveWorkbook.SharedWorkspace.Links(1)\n    With swsLink\n        .Description = \"MSDN Home Page\"\n        .URL = \"https://msdn.microsoft.com/\"\n        .Notes = \"My favorite site for developers!\"\n        .Save\n    End With\n    Set swsLink = Nothing",
           "properties": [
             {
@@ -42360,7 +42360,7 @@
           "guid": "{000C0381-0000-0000-C000-000000000046}",
           "library": "Microsoft Office 16.0 Object Library",
           "description": "Represents a user who has rights in a shared document workspace site.",
-          "remarks": "Use the SharedWorkspaceMember object to manage users who have rights to participate in a shared workspace and to collaborate on the shared documents saved in the workspace site. The Role specified when the user is added as a member of the workspace (for example, \"Reader\" or \"Contributor\") determines that user's rights in the workspace and cannot be accessed or modified later through properties of the SharedWorkspaceMember object. Use the Item (_index_) property of the SharedWorkspaceMembers collection to return a specific SharedWorkspaceMember object. Use the SharedWorkspaceMember object's three distinct name properties to retrieve identifying information about the member. - The Name property returns the members display name. - The Email property returns the member's email address. - The DomainName property returns the member's domain and user name in the format domain\\user.",
+          "remarks": "Use the SharedWorkspaceMember object to manage users who have rights to participate in a shared workspace and to collaborate on the shared documents saved in the workspace site. The Role specified when the user is added as a member of the workspace (for example, \"Reader\" or \"Contributor\") determines that user's rights in the workspace and cannot be accessed or modified later through properties of the SharedWorkspaceMember object. Use the Item (index) property of the SharedWorkspaceMembers collection to return a specific SharedWorkspaceMember object. Use the SharedWorkspaceMember object's three distinct name properties to retrieve identifying information about the member. - The Name property returns the members display name. - The Email property returns the member's email address. - The DomainName property returns the member's domain and user name in the format domain\\user.",
           "example": "Dim swsMember As Office.SharedWorkspaceMember\n    Dim strMemberInfo As String\n    strMemberInfo = \"The shared workspace contains \" & _\n        ActiveWorkbook.SharedWorkspace.Members.Count & \" member(s).\" & vbCrLf\n    If ActiveWorkbook.SharedWorkspace.Members.Count > 0 Then\n        For Each swsMember In ActiveWorkbook.SharedWorkspace.Members\n            strMemberInfo = strMemberInfo & swsMember.Name & vbCrLf & _\n                \" - \" & swsMember.DomainName & vbCrLf & _\n                \" - \" & swsMember.Email & vbCrLf\n        Next\n    End If\n    MsgBox strMemberInfo, vbInformation + vbOKOnly, _\n        \"Members in Shared Workspace\"\n    Set swsMember = Nothing",
           "properties": [
             {
@@ -42519,7 +42519,7 @@
           "guid": "{000C0379-0000-0000-C000-000000000046}",
           "library": "Microsoft Office 16.0 Object Library",
           "description": "The SharedWorkspaceTask object represents a task in a shared document workspace. Member of the SharedWorkspaceTasks collection.",
-          "remarks": "Use the SharedWorkspaceTask object to manage tasks assigned to the members who are collaborating on the documents in the shared workspace. Use the Item (_index_) property of the SharedWorkspaceTasks collection to return a specific SharedWorkspaceTask object. Use the Title property to set the text of the task that appears on the Tasks tab of the Shared Workspace task pane and on the shared workspace webpage. Use the Description property to supply additional information about the task. Assign the task to a member of the workspace by using the AssignedTo property and the member's domain user name. Specify a due date for the task by using the DueDate property. Use the enumerations for task Priority and Status to indicate the relative importance of the task and to update the task's status. Use the Save method to upload changes to the server after you modify properties of the SharedWorkspaceTask object. Use the CreatedBy, CreatedDate, ModifiedBy, and ModifiedDate properties to return information about the history of each task.",
+          "remarks": "Use the SharedWorkspaceTask object to manage tasks assigned to the members who are collaborating on the documents in the shared workspace. Use the Item (index) property of the SharedWorkspaceTasks collection to return a specific SharedWorkspaceTask object. Use the Title property to set the text of the task that appears on the Tasks tab of the Shared Workspace task pane and on the shared workspace webpage. Use the Description property to supply additional information about the task. Assign the task to a member of the workspace by using the AssignedTo property and the member's domain user name. Specify a due date for the task by using the DueDate property. Use the enumerations for task Priority and Status to indicate the relative importance of the task and to update the task's status. Use the Save method to upload changes to the server after you modify properties of the SharedWorkspaceTask object. Use the CreatedBy, CreatedDate, ModifiedBy, and ModifiedDate properties to return information about the history of each task.",
           "example": "Dim swsTask As Office.SharedWorkspaceTask\n    Dim strTaskInfo As String\n    strTaskInfo = \"The shared workspace contains \" & _\n    ActiveWorkbook.SharedWorkspace.Tasks.Count & \" Task(s).\" & vbCrLf\n    For Each swsTask In ActiveWorkbook.SharedWorkspace.Tasks\n        strTaskInfo = strTaskInfo & swsTask.Title & vbCrLf & _\n            \" - Description: \" & swsTask.Description & vbCrLf & _\n            \" - Assigned to: \" & swsTask.AssignedTo & vbCrLf & _\n            \" - Due date: \" & swsTask.DueDate & vbCrLf & _\n            \" - Priority: \" & swsTask.Priority & vbCrLf & _\n            \" - Status: \" & swsTask.Status & vbCrLf\n    Next\n    MsgBox strTaskInfo, vbInformation + vbOKOnly, _\n        \"Tasks in Shared Workspace\"\n    Set swsTask = Nothing",
           "properties": [
             {
@@ -44814,7 +44814,7 @@
           "guid": "{000C03B2-0000-0000-C000-000000000046}",
           "library": "Microsoft Office 16.0 Object Library",
           "description": "Represents a single text column. The TextColumn2 object is a member of the TextColumns2 collection.",
-          "remarks": "Use TextColumns2(_index_), where _index_ is the index number, to return a single TextColumn2 object. The index number represents the position of the column in the TextColumns2 collection (counting from left to right).",
+          "remarks": "Use TextColumns2(index), where index is the index number, to return a single TextColumn2 object. The index number represents the position of the column in the TextColumns2 collection (counting from left to right).",
           "example": "ActiveDocument.PageSetup.TextColumns2.Add _\n Width:=InchesToPoints(2.5), _\n Spacing:=InchesToPoints(0.5), EvenlySpaced:=False",
           "properties": [
             {
@@ -45625,49 +45625,49 @@
                   "name": "X1",
                   "type": "Single",
                   "optional": false,
-                  "description": "Returns the position (in points) of the _X_ coordinate of the first vertex of the bounding box for the text within the specified text range."
+                  "description": "Returns the position (in points) of the X coordinate of the first vertex of the bounding box for the text within the specified text range."
                 },
                 {
                   "name": "Y1",
                   "type": "Single",
                   "optional": false,
-                  "description": "Returns the position (in points) of the _Y_ coordinate of the first vertex of the bounding box for the text within the specified text range."
+                  "description": "Returns the position (in points) of the Y coordinate of the first vertex of the bounding box for the text within the specified text range."
                 },
                 {
                   "name": "X2",
                   "type": "Single",
                   "optional": false,
-                  "description": "Returns the position (in points) of the _X_ coordinate of the second vertex of the bounding box for the text within the specified text range."
+                  "description": "Returns the position (in points) of the X coordinate of the second vertex of the bounding box for the text within the specified text range."
                 },
                 {
                   "name": "Y2",
                   "type": "Single",
                   "optional": false,
-                  "description": "Returns the position (in points) of the _Y_ coordinate of the second vertex of the bounding box for the text within the specified text range."
+                  "description": "Returns the position (in points) of the Y coordinate of the second vertex of the bounding box for the text within the specified text range."
                 },
                 {
                   "name": "X3",
                   "type": "Single",
                   "optional": false,
-                  "description": "Returns the position (in points) of the _X_ coordinate of the third vertex of the bounding box for the text within the specified text range."
+                  "description": "Returns the position (in points) of the X coordinate of the third vertex of the bounding box for the text within the specified text range."
                 },
                 {
                   "name": "Y3",
                   "type": "Single",
                   "optional": false,
-                  "description": "Returns the position (in points) of the _Y_ coordinate of the third vertex of the bounding box for the text within the specified text range."
+                  "description": "Returns the position (in points) of the Y coordinate of the third vertex of the bounding box for the text within the specified text range."
                 },
                 {
                   "name": "x4",
                   "type": "Single",
                   "optional": false,
-                  "description": "Returns the position (in points) of the _X_ coordinate of the fourth vertex of the bounding box for the text within the specified text range."
+                  "description": "Returns the position (in points) of the X coordinate of the fourth vertex of the bounding box for the text within the specified text range."
                 },
                 {
                   "name": "y4",
                   "type": "Single",
                   "optional": false,
-                  "description": "Returns the position (in points) of the _Y_ coordinate of the fourth vertex of the bounding box for the text within the specified text range."
+                  "description": "Returns the position (in points) of the Y coordinate of the fourth vertex of the bounding box for the text within the specified text range."
                 }
               ]
             },
@@ -45702,7 +45702,7 @@
                   "name": "Formula",
                   "type": "String",
                   "optional": true,
-                  "description": "Specifies a cell (or range) if the msoChartFieldFormula constant is passed in for the _ChartFieldType_ parameter."
+                  "description": "Specifies a cell (or range) if the msoChartFieldFormula constant is passed in for the ChartFieldType parameter."
                 },
                 {
                   "name": "Position",
@@ -49894,7 +49894,7 @@
                   "name": "Width",
                   "type": "Integer",
                   "optional": false,
-                  "description": "Required. Numeric expression in the range 0&ndash;255, inclusive, that indicates how many characters appear on a line before a new line is started. If _width_ equals 0, there is no limit to the length of a line. The default value for _width_ is 0."
+                  "description": "Required. Numeric expression in the range 0&ndash;255, inclusive, that indicates how many characters appear on a line before a new line is started. If width equals 0, there is no limit to the length of a line. The default value for width is 0."
                 }
               ]
             }
@@ -50708,7 +50708,7 @@
                   "name": "Date",
                   "type": "Variant",
                   "optional": false,
-                  "description": "Required. Variant, numeric expression, string expression, or any combination, that can represent a date. If _date_ contains Null, Null is returned."
+                  "description": "Required. Variant, numeric expression, string expression, or any combination, that can represent a date. If date contains Null, Null is returned."
                 },
                 {
                   "name": "FirstDayOfWeek",
@@ -50771,7 +50771,7 @@
                   "name": "Interval",
                   "type": "String",
                   "optional": false,
-                  "description": "Required. String expression that is the interval of time you use to calculate the difference between _date1_ and _date2_."
+                  "description": "Required. String expression that is the interval of time you use to calculate the difference between date1 and date2."
                 },
                 {
                   "name": "Date1",
@@ -51027,7 +51027,7 @@
                   "name": "ReturnType",
                   "type": "Integer",
                   "optional": true,
-                  "description": "Required; Integer. Number indicating the type of information to return. Specify 1 to return a value indicating the file mode. On 16-bit systems only, specify 2 to retrieve an operating system file handle. _Returntype_ 2 is not supported in 32-bit systems and causes an error."
+                  "description": "Required; Integer. Number indicating the type of information to return. Specify 1 to return a value indicating the file mode. On 16-bit systems only, specify 2 to retrieve an operating system file handle. Returntype 2 is not supported in 32-bit systems and causes an error."
                 }
               ]
             },
@@ -51042,13 +51042,13 @@
                   "name": "Source",
                   "type": "String",
                   "optional": false,
-                  "description": "Required. String expression that specifies the name of the file to be copied. The _source_ may include directory or folder, and drive."
+                  "description": "Required. String expression that specifies the name of the file to be copied. The source may include directory or folder, and drive."
                 },
                 {
                   "name": "Destination",
                   "type": "String",
                   "optional": false,
-                  "description": "Required. String expression that specifies the target file name. The _destination_ may include directory or folder, and drive."
+                  "description": "Required. String expression that specifies the target file name. The destination may include directory or folder, and drive."
                 }
               ]
             },
@@ -51271,13 +51271,13 @@
                   "name": "PathName",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Optional. String expression that specifies a file name; may include directory or folder, and drive. A zero-length string (\"\") is returned if _pathname_ is not found."
+                  "description": "Optional. String expression that specifies a file name; may include directory or folder, and drive. A zero-length string (\"\") is returned if pathname is not found."
                 },
                 {
                   "name": "Attributes",
                   "type": "VbFileAttribute",
                   "optional": true,
-                  "description": "Optional. Constant or numeric expression, whose sum specifies file attributes. If omitted, returns files that match _pathname_ but have no attributes."
+                  "description": "Optional. Constant or numeric expression, whose sum specifies file attributes. If omitted, returns files that match pathname but have no attributes."
                 }
               ]
             }
@@ -51406,7 +51406,7 @@
                   "name": "Per",
                   "type": "Double",
                   "optional": false,
-                  "description": "Required. Double specifying payment period in the range 1 through _nper_."
+                  "description": "Required. Double specifying payment period in the range 1 through nper."
                 },
                 {
                   "name": "NPer",
@@ -51451,7 +51451,7 @@
                   "name": "Per",
                   "type": "Double",
                   "optional": false,
-                  "description": "Required. Integer specifying payment period in the range 1 through _nper_."
+                  "description": "Required. Integer specifying payment period in the range 1 through nper."
                 },
                 {
                   "name": "NPer",
@@ -51676,7 +51676,7 @@
                   "name": "Guess",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Optional. Variant specifying value you estimate will be returned by Rate. If omitted, _guess_ is 0.1 (10 percent)."
+                  "description": "Optional. Variant specifying value you estimate will be returned by Rate. If omitted, guess is 0.1 (10 percent)."
                 }
               ]
             },
@@ -51697,7 +51697,7 @@
                   "name": "Guess",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Optional. Variant specifying value that you estimate will be returned by IRR. If omitted, _guess_ is 0.1 (10 percent)."
+                  "description": "Optional. Variant specifying value that you estimate will be returned by IRR. If omitted, guess is 0.1 (10 percent)."
                 }
               ]
             },
@@ -51984,7 +51984,7 @@
                   "name": "Title",
                   "type": "Variant",
                   "optional": false,
-                  "description": "Required. String expression specifying the title in the title bar of the application window you want to activate. The task ID returned by the Shell function can be used in place of _title_ to activate an application."
+                  "description": "Required. String expression specifying the title in the title bar of the application window you want to activate. The task ID returned by the Shell function can be used in place of title to activate an application."
                 },
                 {
                   "name": "Wait",
@@ -52018,7 +52018,7 @@
                   "name": "ServerName",
                   "type": "String",
                   "optional": true,
-                  "description": "Optional; Variant (String). The name of the network server where the object will be created. If _servername_ is an empty string (\"\"), the local machine is used."
+                  "description": "Optional; Variant (String). The name of the network server where the object will be created. If servername is an empty string (\"\"), the local machine is used."
                 }
               ]
             },
@@ -52040,7 +52040,7 @@
                   "name": "PathName",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Optional; Variant (String). The full path and name of the file containing the object to retrieve. If _pathname_ is omitted, _class_ is required."
+                  "description": "Optional; Variant (String). The full path and name of the file containing the object to retrieve. If pathname is omitted, class is required."
                 },
                 {
                   "name": "Class",
@@ -52061,43 +52061,43 @@
                   "name": "Prompt",
                   "type": "Variant",
                   "optional": false,
-                  "description": "Required. String expression displayed as the message in the dialog box. The maximum length of _prompt_ is approximately 1024 characters, depending on the width of the characters used. If _prompt_ consists of more than one line, you can separate the lines by using a carriage return character (Chr(13)), a linefeed character (Chr(10)), or carriage return-linefeed character combination ((Chr(13) & (Chr(10)) between each line."
+                  "description": "Required. String expression displayed as the message in the dialog box. The maximum length of prompt is approximately 1024 characters, depending on the width of the characters used. If prompt consists of more than one line, you can separate the lines by using a carriage return character (Chr(13)), a linefeed character (Chr(10)), or carriage return-linefeed character combination ((Chr(13) & (Chr(10)) between each line."
                 },
                 {
                   "name": "Title",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Optional. String expression displayed in the title bar of the dialog box. If you omit _title_, the application name is placed in the title bar."
+                  "description": "Optional. String expression displayed in the title bar of the dialog box. If you omit title, the application name is placed in the title bar."
                 },
                 {
                   "name": "Default",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Optional. String expression displayed in the text box as the default response if no other input is provided. If you omit _default_, the text box is displayed empty."
+                  "description": "Optional. String expression displayed in the text box as the default response if no other input is provided. If you omit default, the text box is displayed empty."
                 },
                 {
                   "name": "XPos",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Optional. Numeric expression that specifies, in twips, the horizontal distance of the left edge of the dialog box from the left edge of the screen. If _xpos_ is omitted, the dialog box is horizontally centered."
+                  "description": "Optional. Numeric expression that specifies, in twips, the horizontal distance of the left edge of the dialog box from the left edge of the screen. If xpos is omitted, the dialog box is horizontally centered."
                 },
                 {
                   "name": "YPos",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Optional. Numeric expression that specifies, in twips, the vertical distance of the upper edge of the dialog box from the top of the screen. If _ypos_ is omitted, the dialog box is vertically positioned approximately one-third of the way down the screen."
+                  "description": "Optional. Numeric expression that specifies, in twips, the vertical distance of the upper edge of the dialog box from the top of the screen. If ypos is omitted, the dialog box is vertically positioned approximately one-third of the way down the screen."
                 },
                 {
                   "name": "HelpFile",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Optional. String expression that identifies the Help file to use to provide context-sensitive Help for the dialog box. If _helpfile_ is provided, _context_ must also be provided."
+                  "description": "Optional. String expression that identifies the Help file to use to provide context-sensitive Help for the dialog box. If helpfile is provided, context must also be provided."
                 },
                 {
                   "name": "Context",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Optional. Numeric expression that is the Help context number assigned to the appropriate Help topic by the Help author. If _context_ is provided, _helpfile_ must also be provided."
+                  "description": "Optional. Numeric expression that is the Help context number assigned to the appropriate Help topic by the Help author. If context is provided, helpfile must also be provided."
                 }
               ]
             },
@@ -52112,31 +52112,31 @@
                   "name": "Prompt",
                   "type": "Variant",
                   "optional": false,
-                  "description": "Required. String expression displayed as the message in the dialog box. The maximum length of _prompt_ is approximately 1024 characters, depending on the width of the characters used. If _prompt_ consists of more than one line, you can separate the lines by using a carriage return character (Chr(13)), a linefeed character (Chr(10)), or carriage return - linefeed character combination (Chr(13) & Chr(10)) between each line."
+                  "description": "Required. String expression displayed as the message in the dialog box. The maximum length of prompt is approximately 1024 characters, depending on the width of the characters used. If prompt consists of more than one line, you can separate the lines by using a carriage return character (Chr(13)), a linefeed character (Chr(10)), or carriage return - linefeed character combination (Chr(13) & Chr(10)) between each line."
                 },
                 {
                   "name": "Buttons",
                   "type": "VbMsgBoxStyle",
                   "optional": true,
-                  "description": "Optional. Numeric expression that is the combination of values specifying the number and type of buttons to display, the icon style to use, the identity of the default button, and the modality of the message box. If omitted, the default value for _buttons_ is 0."
+                  "description": "Optional. Numeric expression that is the combination of values specifying the number and type of buttons to display, the icon style to use, the identity of the default button, and the modality of the message box. If omitted, the default value for buttons is 0."
                 },
                 {
                   "name": "Title",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Optional. String expression displayed in the title bar of the dialog box. If you omit _title_, the application name is placed in the title bar."
+                  "description": "Optional. String expression displayed in the title bar of the dialog box. If you omit title, the application name is placed in the title bar."
                 },
                 {
                   "name": "HelpFile",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Optional. String expression that identifies the Help file to use to provide context-sensitive Help for the dialog box. If _helpfile_ is provided, _context_ must also be provided."
+                  "description": "Optional. String expression that identifies the Help file to use to provide context-sensitive Help for the dialog box. If helpfile is provided, context must also be provided."
                 },
                 {
                   "name": "Context",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Optional. Numeric expression that is the Help context number assigned to the appropriate Help topic by the Help author. If _context_ is provided, _helpfile_ must also be provided."
+                  "description": "Optional. Numeric expression that is the Help context number assigned to the appropriate Help topic by the Help author. If context is provided, helpfile must also be provided."
                 }
               ]
             },
@@ -52178,7 +52178,7 @@
                   "name": "WindowStyle",
                   "type": "VbAppWinStyle",
                   "optional": true,
-                  "description": "Optional. Variant (Integer) corresponding to the style of the window in which the program is to be run. If _windowstyle_ is omitted, the program is started minimized with focus. On the Macintosh (System 7.0 or later), _windowstyle_ only determines whether or not the application gets the focus when it is run."
+                  "description": "Optional. Variant (Integer) corresponding to the style of the window in which the program is to be run. If windowstyle is omitted, the program is started minimized with focus. On the Macintosh (System 7.0 or later), windowstyle only determines whether or not the application gets the focus when it is run."
                 }
               ]
             },
@@ -52205,7 +52205,7 @@
                   "name": "Stop",
                   "type": "Variant",
                   "optional": false,
-                  "description": "Required. The number that is the end of the overall range of numbers. The number can't be equal to or less than _start_."
+                  "description": "Required. The number that is the end of the overall range of numbers. The number can't be equal to or less than start."
                 },
                 {
                   "name": "Interval",
@@ -52312,13 +52312,13 @@
                   "name": "TruePart",
                   "type": "Variant",
                   "optional": false,
-                  "description": "Required. Value or expression returned if _expr_ is True."
+                  "description": "Required. Value or expression returned if expr is True."
                 },
                 {
                   "name": "FalsePart",
                   "type": "Variant",
                   "optional": false,
-                  "description": "Required. Value or expression returned if _expr_ is False."
+                  "description": "Required. Value or expression returned if expr is False."
                 }
               ]
             },
@@ -52351,7 +52351,7 @@
                   "name": "Default",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Optional. Expression containing the value to return if no value is set in the key setting. If omitted, _default_ is assumed to be a zero-length string (\"\")."
+                  "description": "Optional. Expression containing the value to return if no value is set in the key setting. If omitted, default is assumed to be a zero-length string (\"\")."
                 }
               ]
             },
@@ -52384,7 +52384,7 @@
                   "name": "Setting",
                   "type": "String",
                   "optional": false,
-                  "description": "Required. Expression containing the value that _key_ is being set to."
+                  "description": "Required. Expression containing the value that key is being set to."
                 }
               ]
             },
@@ -52405,7 +52405,7 @@
                   "name": "Section",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Required. String expression containing the name of the section where the key setting is being deleted. If only _appname_ and _section_ are provided, the specified section is deleted along with all related key settings."
+                  "description": "Required. String expression containing the name of the section where the key setting is being deleted. If only appname and section are provided, the specified section is deleted along with all related key settings."
                 },
                 {
                   "name": "Key",
@@ -52533,7 +52533,7 @@
               "name": "Exp",
               "kind": "function",
               "signature": "Exp(Number As Double) As Double",
-              "description": "Returns a Double specifying _e_ (the base of natural logarithms) raised to a power.",
+              "description": "Returns a Double specifying e (the base of natural logarithms) raised to a power.",
               "returns": "Double",
               "parameters": [
                 {
@@ -52873,7 +52873,7 @@
                   "name": "Start",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Optional. Numeric expression that sets the starting position for each search. If omitted, search begins at the first character position. If _start_ contains Null, an error occurs. The _start_ argument is required if _compare_ is specified."
+                  "description": "Optional. Numeric expression that sets the starting position for each search. If omitted, search begins at the first character position. If start contains Null, an error occurs. The start argument is required if compare is specified."
                 },
                 {
                   "name": "String1",
@@ -52891,7 +52891,7 @@
                   "name": "Compare",
                   "type": "VbCompareMethod",
                   "optional": true,
-                  "description": "Optional. Specifies the type of string comparison. If _compare_ is Null, an error occurs. If _compare_ is omitted, the Option Compare setting determines the type of comparison. Specify a valid LCID (LocaleID) to use locale-specific rules in the comparison."
+                  "description": "Optional. Specifies the type of string comparison. If compare is Null, an error occurs. If compare is omitted, the Option Compare setting determines the type of comparison. Specify a valid LCID (LocaleID) to use locale-specific rules in the comparison."
                 }
               ]
             },
@@ -53338,7 +53338,7 @@
                   "name": "Compare",
                   "type": "VbCompareMethod",
                   "optional": true,
-                  "description": "Optional. Specifies the type of string comparison. If the _compare_ argument is Null, an error occurs. If _compare_ is omitted, the Option Compare setting determines the type of comparison."
+                  "description": "Optional. Specifies the type of string comparison. If the compare argument is Null, an error occurs. If compare is omitted, the Option Compare setting determines the type of comparison."
                 }
               ]
             },
@@ -53677,7 +53677,7 @@
                   "name": "Weekday",
                   "type": "Long",
                   "optional": false,
-                  "description": "Required. The numeric designation for the day of the week. Numeric value of each day depends on setting of the _firstdayofweek_ setting."
+                  "description": "Required. The numeric designation for the day of the week. Numeric value of each day depends on setting of the firstdayofweek setting."
                 },
                 {
                   "name": "Abbreviate",
@@ -53743,7 +53743,7 @@
                   "name": "Start",
                   "type": "Long",
                   "optional": true,
-                  "description": "Optional. Start position for the substring of _expression_ to be searched and returned. If omitted, 1 is assumed."
+                  "description": "Optional. Start position for the substring of expression to be searched and returned. If omitted, 1 is assumed."
                 },
                 {
                   "name": "Count",
@@ -53791,7 +53791,7 @@
                   "name": "Delimiter",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Optional. String character used to separate the substrings in the returned string. If omitted, the space character (\" \") is used. If _delimiter_ is a zero-length string (\"\"), all items in the list are concatenated with no delimiters."
+                  "description": "Optional. String character used to separate the substrings in the returned string. If omitted, the space character (\" \") is used. If delimiter is a zero-length string (\"\"), all items in the list are concatenated with no delimiters."
                 }
               ]
             },
@@ -53818,7 +53818,7 @@
                   "name": "Include",
                   "type": "Boolean",
                   "optional": true,
-                  "description": "Optional. Boolean value indicating whether to return substrings that include or exclude _match_. If _include_ is True, Filter returns the subset of the array that contains _match_ as a substring. If _include_ is False, Filter returns the subset of the array that does not contain _match_ as a substring."
+                  "description": "Optional. Boolean value indicating whether to return substrings that include or exclude match. If include is True, Filter returns the subset of the array that contains match as a substring. If include is False, Filter returns the subset of the array that does not contain match as a substring."
                 },
                 {
                   "name": "Compare",
@@ -53851,7 +53851,7 @@
                   "name": "Start",
                   "type": "Long",
                   "optional": true,
-                  "description": "Optional. Numeric expression that sets the starting position for each search. If omitted, -1 is used, which means that the search begins at the last character position. If _start_ contains Null, an error occurs."
+                  "description": "Optional. Numeric expression that sets the starting position for each search. If omitted, -1 is used, which means that the search begins at the last character position. If start contains Null, an error occurs."
                 },
                 {
                   "name": "Compare",
@@ -53872,13 +53872,13 @@
                   "name": "Expression",
                   "type": "String",
                   "optional": false,
-                  "description": "Required. String expression containing substrings and delimiters. If _expression_ is a zero-length string(\"\"), Split returns an empty array, that is, an array with no elements and no data."
+                  "description": "Required. String expression containing substrings and delimiters. If expression is a zero-length string(\"\"), Split returns an empty array, that is, an array with no elements and no data."
                 },
                 {
                   "name": "Delimiter",
                   "type": "Variant",
                   "optional": true,
-                  "description": "Optional. String character used to identify substring limits. If omitted, the space character (\" \") is assumed to be the delimiter. If _delimiter_ is a zero-length string, a single-element array containing the entire _expression_ string is returned."
+                  "description": "Optional. String character used to identify substring limits. If omitted, the space character (\" \") is assumed to be the delimiter. If delimiter is a zero-length string, a single-element array containing the entire expression string is returned."
                 },
                 {
                   "name": "Limit",

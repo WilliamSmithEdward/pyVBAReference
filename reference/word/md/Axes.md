@@ -6,7 +6,7 @@
 
 Represents a collection of all the Axis objects in the specified chart.
 
-**Remarks:** Use the Axes method to return the Axes collection. Use Axes ( _Type_ , _AxisGroup_ ), where _Type_ is the axis type and _AxisGroup_ is the axis group, to return an Axes collection that contains a single Axis object. _Type_ can be one of the following XlAxisType constants: xlCategory, xlSeries, or xlValue. _AxisGroup_ can be one of the following XlAxisGroup constants: xlPrimary or xlSecondary.
+**Remarks:** Use the Axes method to return the Axes collection. Use Axes ( Type , AxisGroup ), where Type is the axis type and AxisGroup is the axis group, to return an Axes collection that contains a single Axis object. Type can be one of the following XlAxisType constants: xlCategory, xlSeries, or xlValue. AxisGroup can be one of the following XlAxisGroup constants: xlPrimary or xlSecondary.
 
 **Example:**
 

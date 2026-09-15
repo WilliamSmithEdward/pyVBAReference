@@ -36,11 +36,11 @@ Worksheets(1).Visible = False
 - `Previous As Object  (read-only)`  
   Returns a Worksheet object that represents the previous sheet.
 - `ProtectContents As Boolean  (read-only)`  
-  True if the contents of the sheet are protected. This protects the individual cells. To turn on content protection, use the Protect method with the _Contents_ argument set to True. Read-only Boolean.
+  True if the contents of the sheet are protected. This protects the individual cells. To turn on content protection, use the Protect method with the Contents argument set to True. Read-only Boolean.
 - `ProtectDrawingObjects As Boolean  (read-only)`  
-  True if shapes are protected. To turn on shape protection, use the Protect method with the _DrawingObjects_ argument set to True. Read-only Boolean.
+  True if shapes are protected. To turn on shape protection, use the Protect method with the DrawingObjects argument set to True. Read-only Boolean.
 - `ProtectionMode As Boolean  (read-only)`  
-  True if user-interface-only protection is turned on. To turn on user interface protection, use the Protect method with the _UserInterfaceOnly_ argument set to True. Read-only Boolean.
+  True if user-interface-only protection is turned on. To turn on user interface protection, use the Protect method with the UserInterfaceOnly argument set to True. Read-only Boolean.
 - `ProtectScenarios As Boolean  (read-only)`  
   True if the worksheet scenarios are protected. Read-only Boolean.
 - `Visible As XlSheetVisibility  (read/write)`  
@@ -137,14 +137,14 @@ Worksheets(1).Visible = False
   Makes the current sheet the active sheet.
 - `Copy([Before As Variant], [After As Variant])`  
   Copies the sheet to another location in the current workbook or a new workbook.
-    - `Before As Variant` (optional): The sheet before which the copied sheet will be placed. You cannot specify _Before_ if you specify _After_.
-    - `After As Variant` (optional): The sheet after which the copied sheet will be placed. You cannot specify _After_ if you specify _Before_.
+    - `Before As Variant` (optional): The sheet before which the copied sheet will be placed. You cannot specify Before if you specify After.
+    - `After As Variant` (optional): The sheet after which the copied sheet will be placed. You cannot specify After if you specify Before.
 - `Delete()`  
   Deletes the object.
 - `Move([Before As Variant], [After As Variant])`  
   Moves the sheet to another location in the workbook.
-    - `Before As Variant` (optional): The sheet before which the moved sheet will be placed. You cannot specify _Before_ if you specify _After_.
-    - `After As Variant` (optional): The sheet after which the moved sheet will be placed. You cannot specify _After_ if you specify _Before_.
+    - `Before As Variant` (optional): The sheet before which the moved sheet will be placed. You cannot specify Before if you specify After.
+    - `After As Variant` (optional): The sheet after which the moved sheet will be placed. You cannot specify After if you specify Before.
 - `PrintPreview([EnableChanges As Variant])`  
   Shows a preview of the object as it would look when printed.
     - `EnableChanges As Variant` (optional): Passes a Boolean value to specify if the user can change the margins and other page setup options available in print preview.
@@ -181,28 +181,28 @@ Worksheets(1).Visible = False
     - `Index As Variant` (optional): The name or number of the OLE object.
 - `Paste([Destination As Variant], [Link As Variant])`  
   Pastes the contents of the Clipboard onto the sheet.
-    - `Destination As Variant` (optional): A Range object that specifies where the Clipboard contents should be pasted. If this argument is omitted, the current selection is used. This argument can be specified only if the contents of the Clipboard can be pasted into a range. If this argument is specified, the _Link_ argument cannot be used.
-    - `Link As Variant` (optional): True to establish a link to the source of the pasted data. If this argument is specified, the _Destination_ argument cannot be used. The default value is False.
+    - `Destination As Variant` (optional): A Range object that specifies where the Clipboard contents should be pasted. If this argument is omitted, the current selection is used. This argument can be specified only if the contents of the Clipboard can be pasted into a range. If this argument is specified, the Link argument cannot be used.
+    - `Link As Variant` (optional): True to establish a link to the source of the pasted data. If this argument is specified, the Destination argument cannot be used. The default value is False.
 - `PivotTables([Index As Variant]) As Object`  
   Returns an object that represents either a single PivotTable report (a PivotTable object) or a collection of all the PivotTable reports (a PivotTables object) on a worksheet. Read-only.
     - `Index As Variant` (optional): The name or number of the report.
 - `PivotTableWizard([SourceType As Variant], [SourceData As Variant], [TableDestination As Variant], [TableName As Variant], [RowGrand As Variant], [ColumnGrand As Variant], [SaveData As Variant], [HasAutoFormat As Variant], [AutoPage As Variant], [Reserved As Variant], [BackgroundQuery As Variant], [OptimizeCache As Variant], [PageFieldOrder As Variant], [PageFieldWrapCount As Variant], [ReadData As Variant], [Connection As Variant]) As PivotTable`  
   Creates a new PivotTable report. This method doesn't display the PivotTable Wizard. This method isn't available for OLE DB data sources. Use the Add method to add a PivotTable cache, and then create a PivotTable report based on the cache.
-    - `SourceType As Variant` (optional): An XlPivotTableSourceType value that represents the source of the report data. If you specify this argument, you must also specify _SourceData_. If _SourceType_ and _SourceData_ are omitted, Microsoft Excel assumes that the source type is xlDatabase, and the source data comes from the named range Database. If this named range doesn't exist, Excel uses the current region if the current selection is in a range of more than 10 cells that contain data. If this isn't true, this method will fail.
-    - `SourceData As Variant` (optional): The data for the new report. Can be a Range object, an array of ranges, or a text constant that represents the name of another report. For an external database, _SourceData_ is an array of strings containing the SQL query string, where each element is up to 255 characters in length. You should use the _Connection_ argument to specify the ODBC connection string. For compatibility with earlier versions of Excel, _SourceData_ can be a two-element array. The first element is the connection string specifying the ODBC source for the data. The second element is the SQL query string used to get the data. If you specify _SourceData_, you must also specify _SourceType_. If the active cell is inside the _SourceData_ range, you must specify _TableDestination_ as well.
+    - `SourceType As Variant` (optional): An XlPivotTableSourceType value that represents the source of the report data. If you specify this argument, you must also specify SourceData. If SourceType and SourceData are omitted, Microsoft Excel assumes that the source type is xlDatabase, and the source data comes from the named range Database. If this named range doesn't exist, Excel uses the current region if the current selection is in a range of more than 10 cells that contain data. If this isn't true, this method will fail.
+    - `SourceData As Variant` (optional): The data for the new report. Can be a Range object, an array of ranges, or a text constant that represents the name of another report. For an external database, SourceData is an array of strings containing the SQL query string, where each element is up to 255 characters in length. You should use the Connection argument to specify the ODBC connection string. For compatibility with earlier versions of Excel, SourceData can be a two-element array. The first element is the connection string specifying the ODBC source for the data. The second element is the SQL query string used to get the data. If you specify SourceData, you must also specify SourceType. If the active cell is inside the SourceData range, you must specify TableDestination as well.
     - `TableDestination As Variant` (optional): A Range object specifying where the report should be placed on the worksheet. If this argument is omitted, the report is placed at the active cell.
     - `TableName As Variant` (optional): A string that specifies the name of the new report.
     - `RowGrand As Variant` (optional): True to show grand totals for rows in the report.
     - `ColumnGrand As Variant` (optional): True to show grand totals for columns in the report.
     - `SaveData As Variant` (optional): True to save data with the report. False to save only the report definition.
     - `HasAutoFormat As Variant` (optional): True to have Excel automatically format the report when it's refreshed or when fields are moved.
-    - `AutoPage As Variant` (optional): Valid only if _SourceType_ is xlConsolidation. True to have Excel create a page field for the consolidation. If _AutoPage_ is False, you must create the page field or fields.
+    - `AutoPage As Variant` (optional): Valid only if SourceType is xlConsolidation. True to have Excel create a page field for the consolidation. If AutoPage is False, you must create the page field or fields.
     - `Reserved As Variant` (optional): Not used by Excel.
     - `BackgroundQuery As Variant` (optional): True to have Excel perform queries for the report asynchronously (in the background). The default value is False.
     - `OptimizeCache As Variant` (optional): True to optimize the PivotTable cache when it's constructed. The default value is False.
     - `PageFieldOrder As Variant` (optional): The order in which page fields are added to the PivotTable report's layout. Can be one of the following XlOrder constants: xlDownThenOver (default) or xlOverThenDown.
     - `PageFieldWrapCount As Variant` (optional): The number of page fields in each column or row in the PivotTable report. The default value is 0 (zero).
-    - `ReadData As Variant` (optional): True to create a PivotTable cache that contains all records from the external database; this cache can be very large. If _ReadData_ is False, you can set some of the fields as server-based page fields before the data is actually read.
+    - `ReadData As Variant` (optional): True to create a PivotTable cache that contains all records from the external database; this cache can be very large. If ReadData is False, you can set some of the fields as server-based page fields before the data is actually read.
     - `Connection As Variant` (optional): A string that contains ODBC settings that allow Excel to connect to an ODBC data source. The connection string has the form ODBC;<connection string>. This argument overrides any previous setting for the PivotCache object's Connection property.
 - `Scenarios([Index As Variant]) As Object`  
   Returns an object that represents either a single scenario (a Scenario object) or a collection of scenarios (a Scenarios object) on the worksheet.
@@ -220,7 +220,7 @@ Worksheets(1).Visible = False
     - `Format As Variant` (optional): A string that specifies the Clipboard format of the data.
     - `Link As Variant` (optional): True to establish a link to the source of the pasted data. If the source data isn't suitable for linking or the source application doesn't support linking, this parameter is ignored. The default value is False.
     - `DisplayAsIcon As Variant` (optional): True to display the pasted data as an icon. The default value is False.
-    - `IconFileName As Variant` (optional): The name of the file that contains the icon to use if _DisplayAsIcon_ is True.
+    - `IconFileName As Variant` (optional): The name of the file that contains the icon to use if DisplayAsIcon is True.
     - `IconIndex As Variant` (optional): The index number of the icon within the icon file.
     - `IconLabel As Variant` (optional): The text label of the icon.
     - `NoHTMLFormatting As Variant` (optional): True to remove all formatting, hyperlinks, and images from HTML. False to paste HTML as is. The default value is False.
@@ -259,9 +259,9 @@ Worksheets(1).Visible = False
     - `Copies As Variant` (optional): The number of copies to print. If this argument is omitted, one copy is printed.
     - `Preview As Variant` (optional): True to have Microsoft Excel invoke print preview before printing the object. False (or omitted) to print the object immediately.
     - `ActivePrinter As Variant` (optional): Sets the name of the active printer.
-    - `PrintToFile As Variant` (optional): True to print to a file. If _PrToFileName_ is not specified, Excel prompts the user to enter the name of the output file.
+    - `PrintToFile As Variant` (optional): True to print to a file. If PrToFileName is not specified, Excel prompts the user to enter the name of the output file.
     - `Collate As Variant` (optional): True to collate multiple copies.
-    - `PrToFileName As Variant` (optional): If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to.
+    - `PrToFileName As Variant` (optional): If PrintToFile is set to True, this argument specifies the name of the file that you want to print to.
     - `IgnorePrintAreas As Variant` (optional): True to ignore print areas and print the entire object.
 - `ExportAsFixedFormat(Type As XlFixedFormatType, [Filename As Variant], [Quality As Variant], [IncludeDocProperties As Variant], [IgnorePrintAreas As Variant], [From As Variant], [To As Variant], [OpenAfterPublish As Variant], [FixedFormatExtClassPtr As Variant], [WorkIdentity As Variant])`  
   Exports to a file of the specified format.

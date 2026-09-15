@@ -4,7 +4,7 @@
   "guid": "{00020906-0000-0000-C000-000000000046}",
   "library": "Microsoft Word 16.0 Object Library",
   "description": "Represents a document. The Document object is a member of the Documents collection. The Documents collection contains all the Document objects that are currently open in Word.",
-  "remarks": "Use Documents (_index_), where _index_ is the document name or index number, to return a single Document object. The following example closes the document named Report.doc without saving changes. The index number represents the position of the document in the Documents collection. The following example activates the first document in the Documents collection. Use the ActiveDocument property to refer to the document with the focus. The following example uses the Activate method to activate the document named Document 1. The example also sets the page orientation to landscape mode and then prints the document.",
+  "remarks": "Use Documents (index), where index is the document name or index number, to return a single Document object. The following example closes the document named Report.doc without saving changes. The index number represents the position of the document in the Documents collection. The following example activates the first document in the Documents collection. Use the ActiveDocument property to refer to the document with the focus. The following example uses the Activate method to activate the document named Document 1. The example also sets the page orientation to landscape mode and then prints the document.",
   "example": "",
   "properties": [
     {
@@ -2375,7 +2375,7 @@
           "name": "MakePublic",
           "type": "Boolean",
           "optional": true,
-          "description": "True allows the user to perform a publish on the document after being checked in. This submits the document for the approval process, which can eventually result in a version of the document being published to users with read-only rights to the document (only applies if _SaveChanges_ equals True). The default is False."
+          "description": "True allows the user to perform a publish on the document after being checked in. This submits the document for the approval process, which can eventually result in a version of the document being published to users with read-only rights to the document (only applies if SaveChanges equals True). The default is False."
         }
       ]
     },
@@ -2996,13 +2996,13 @@
           "name": "From",
           "type": "Long",
           "optional": true,
-          "description": "Specifies the starting page number, if the _Range_ parameter is set to wdExportFromTo."
+          "description": "Specifies the starting page number, if the Range parameter is set to wdExportFromTo."
         },
         {
           "name": "To",
           "type": "Long",
           "optional": true,
-          "description": "Specifies the ending page number, if the _Range_ parameter is set to wdExportFromTo."
+          "description": "Specifies the ending page number, if the Range parameter is set to wdExportFromTo."
         },
         {
           "name": "Item",
@@ -3020,7 +3020,7 @@
           "name": "KeepIRM",
           "type": "Boolean",
           "optional": true,
-          "description": "Specifies whether to copy IRM permissions to an XPS document if the source document has IRM protections.</br></br>If _ExportFormat_ is _wdExportFormatPDF_, this flag also specifies whether to copy labels to the PDF.</br></br>Default value is True."
+          "description": "Specifies whether to copy IRM permissions to an XPS document if the source document has IRM protections.</br></br>If ExportFormat is wdExportFormatPDF, this flag also specifies whether to copy labels to the PDF.</br></br>Default value is True."
         },
         {
           "name": "CreateBookmarks",
@@ -3286,13 +3286,13 @@
           "name": "From",
           "type": "Long",
           "optional": true,
-          "description": "Specifies the starting page number, if the _Range_ parameter is set to wdExportFromTo."
+          "description": "Specifies the starting page number, if the Range parameter is set to wdExportFromTo."
         },
         {
           "name": "To",
           "type": "Long",
           "optional": true,
-          "description": "Specifies the ending page number, if the _Range_ parameter is set to wdExportFromTo."
+          "description": "Specifies the ending page number, if the Range parameter is set to wdExportFromTo."
         },
         {
           "name": "Item",
@@ -3310,7 +3310,7 @@
           "name": "KeepIRM",
           "type": "Boolean",
           "optional": true,
-          "description": "Specifies whether to copy IRM permissions to an XPS document if the source document has IRM protections.</br></br>If _ExportFormat_ is _wdExportFormatPDF_, this flag also specifies whether to copy labels to the PDF.</br></br>Default value is True."
+          "description": "Specifies whether to copy IRM permissions to an XPS document if the source document has IRM protections.</br></br>If ExportFormat is wdExportFormatPDF, this flag also specifies whether to copy labels to the PDF.</br></br>Default value is True."
         },
         {
           "name": "CreateBookmarks",
@@ -3391,13 +3391,13 @@
           "name": "From",
           "type": "Long",
           "optional": true,
-          "description": "Specifies the starting page number, if the _Range_ parameter is set to wdExportFromTo."
+          "description": "Specifies the starting page number, if the Range parameter is set to wdExportFromTo."
         },
         {
           "name": "To",
           "type": "Long",
           "optional": true,
-          "description": "Specifies the ending page number, if the _Range_ parameter is set to wdExportFromTo."
+          "description": "Specifies the ending page number, if the Range parameter is set to wdExportFromTo."
         },
         {
           "name": "Item",
@@ -3415,7 +3415,7 @@
           "name": "KeepIRM",
           "type": "Boolean",
           "optional": true,
-          "description": "Specifies whether to copy IRM permissions to an XPS document if the source document has IRM protections.</br></br>If _ExportFormat_ is _wdExportFormatPDF_, this flag also specifies whether to copy labels to the PDF.</br></br>Default value is True."
+          "description": "Specifies whether to copy IRM permissions to an XPS document if the source document has IRM protections.</br></br>If ExportFormat is wdExportFormatPDF, this flag also specifies whether to copy labels to the PDF.</br></br>Default value is True."
         },
         {
           "name": "CreateBookmarks",

@@ -80,5 +80,5 @@ End If
   Resets a built-in command bar to its default configuration.
 - `ShowPopup([x As Variant], [y As Variant])`  
   Displays a command bar as a shortcut menu at the specified coordinates or at the current pointer coordinates.
-    - `x As Variant` (optional): The _x_-coordinate on which the location of the shortcut menu is based. If this argument is omitted, the current _x_-coordinate of the pointer is used.
-    - `y As Variant` (optional): The _y_-coordinate on which the location of the shortcut menu is based. If this argument is omitted, the current _y_-coordinate of the pointer is used.
+    - `x As Variant` (optional): The x-coordinate on which the location of the shortcut menu is based. If this argument is omitted, the current x-coordinate of the pointer is used.
+    - `y As Variant` (optional): The y-coordinate on which the location of the shortcut menu is based. If this argument is omitted, the current y-coordinate of the pointer is used.

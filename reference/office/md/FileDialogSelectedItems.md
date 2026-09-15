@@ -68,5 +68,5 @@ End Sub
 ## Methods (1)
 
 - `Item(Index As Long) As String`  
-  Gets a String that corresponds to the path of one of the files by the _Index_ that the user selected from a file dialog box that was displayed by using the Show method of the FileDialog object.
+  Gets a String that corresponds to the path of one of the files by the Index that the user selected from a file dialog box that was displayed by using the Show method of the FileDialog object.
     - `Index As Long` (required): The index is one-based.

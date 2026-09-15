@@ -6,7 +6,7 @@
 
 A collection of all the Scenario objects on the specified worksheet.
 
-**Remarks:** A scenario is a group of input values (called _changing cells_) that's named and saved.
+**Remarks:** A scenario is a group of input values (called changing cells) that's named and saved.
 
 **Example:**
 
@@ -32,7 +32,7 @@ Worksheets("options").Scenarios.CreateSummary _
   Creates a new scenario and adds it to the list of scenarios that are available for the current worksheet.
     - `Name As String` (required): The scenario name.
     - `ChangingCells As Variant` (required): A Range object that refers to the changing cells for the scenario.
-    - `Values As Variant` (optional): An array that contains the scenario values for the cells in _ChangingCells_. If this argument is omitted, the scenario values are assumed to be the current values in the cells in _ChangingCells_.
+    - `Values As Variant` (optional): An array that contains the scenario values for the cells in ChangingCells. If this argument is omitted, the scenario values are assumed to be the current values in the cells in ChangingCells.
     - `Comment As Variant` (optional): A string that specifies comment text for the scenario. When a new scenario is added, the author's name and date are automatically added at the beginning of the comment text.
     - `Locked As Variant` (optional): True to lock the scenario to prevent changes. The default value is True.
     - `Hidden As Variant` (optional): True to hide the scenario. The default value is False.

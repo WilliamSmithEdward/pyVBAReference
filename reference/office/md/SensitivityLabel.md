@@ -35,4 +35,4 @@ Represents a wrapper object for accessing sensitivity label on the active docume
     - `OldLabelInfo As LabelInfo` (required): Previous label information that existed on the document.
     - `NewLabelInfo As LabelInfo` (required): New label information that was applied on the document.
     - `HResult As Long` (required): An integer representing the error code.
-    - `Context As Object` (required): The _context_ object that was set with SetLabel call.
+    - `Context As Object` (required): The context object that was set with SetLabel call.

@@ -4,7 +4,7 @@
   "guid": "{00020896-0000-0000-C000-000000000046}",
   "library": "Microsoft Excel 16.0 Object Library",
   "description": "A collection of all the Scenario objects on the specified worksheet.",
-  "remarks": "A scenario is a group of input values (called _changing cells_) that's named and saved.",
+  "remarks": "A scenario is a group of input values (called changing cells) that's named and saved.",
   "example": "Worksheets(\"options\").Scenarios.CreateSummary _\n resultCells:=Worksheets(\"options\").Range(\"j10,j20\")",
   "properties": [
     {
@@ -60,7 +60,7 @@
           "name": "Values",
           "type": "Variant",
           "optional": true,
-          "description": "An array that contains the scenario values for the cells in _ChangingCells_. If this argument is omitted, the scenario values are assumed to be the current values in the cells in _ChangingCells_."
+          "description": "An array that contains the scenario values for the cells in ChangingCells. If this argument is omitted, the scenario values are assumed to be the current values in the cells in ChangingCells."
         },
         {
           "name": "Comment",

@@ -6,7 +6,7 @@
 
 Represents a single text column. The TextColumn2 object is a member of the TextColumns2 collection.
 
-**Remarks:** Use TextColumns2(_index_), where _index_ is the index number, to return a single TextColumn2 object. The index number represents the position of the column in the TextColumns2 collection (counting from left to right).
+**Remarks:** Use TextColumns2(index), where index is the index number, to return a single TextColumn2 object. The index number represents the position of the column in the TextColumns2 collection (counting from left to right).
 
 **Example:**
 

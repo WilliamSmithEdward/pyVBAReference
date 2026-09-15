@@ -253,21 +253,21 @@ Worksheets("Sheet3").PivotTables(1) _
   Returns a PivotCache object that represents the cache for the specified PivotTable report. Read-only.
 - `PivotTableWizard([SourceType As Variant], [SourceData As Variant], [TableDestination As Variant], [TableName As Variant], [RowGrand As Variant], [ColumnGrand As Variant], [SaveData As Variant], [HasAutoFormat As Variant], [AutoPage As Variant], [Reserved As Variant], [BackgroundQuery As Variant], [OptimizeCache As Variant], [PageFieldOrder As Variant], [PageFieldWrapCount As Variant], [ReadData As Variant], [Connection As Variant])`  
   Creates and returns a PivotTable object. This method doesn't display the PivotTable Wizard. This method isn't available for OLE DB data sources. Use the Add method to add a PivotTable cache, and then create a PivotTable report based on the cache.
-    - `SourceType As Variant` (optional): An XlPivotTableSourceType value that represents the source of the report data. If you specify this argument, you must also specify _SourceData_. If _SourceType_ and _SourceData_ are omitted, Microsoft Excel assumes that the source type is xlDatabase, and the source data comes from the named range Database. If this named range doesn't exist, Excel uses the current region if the current selection is in a range of more than 10 cells that contain data. If this isn't true, this method will fail.
-    - `SourceData As Variant` (optional): The data for the new report. Can be a Range object, an array of ranges, or a text constant that represents the name of another report. For an external database, _SourceData_ is an array of strings containing the SQL query string, where each element is up to 255 characters in length. You should use the _Connection_ argument to specify the ODBC connection string. For compatibility with earlier versions of Excel, _SourceData_ can be a two-element array. The first element is the connection string specifying the ODBC source for the data. The second element is the SQL query string used to get the data. If you specify _SourceData_, you must also specify _SourceType_. If the active cell is inside the _SourceData_ range, you must specify _TableDestination_ as well.
+    - `SourceType As Variant` (optional): An XlPivotTableSourceType value that represents the source of the report data. If you specify this argument, you must also specify SourceData. If SourceType and SourceData are omitted, Microsoft Excel assumes that the source type is xlDatabase, and the source data comes from the named range Database. If this named range doesn't exist, Excel uses the current region if the current selection is in a range of more than 10 cells that contain data. If this isn't true, this method will fail.
+    - `SourceData As Variant` (optional): The data for the new report. Can be a Range object, an array of ranges, or a text constant that represents the name of another report. For an external database, SourceData is an array of strings containing the SQL query string, where each element is up to 255 characters in length. You should use the Connection argument to specify the ODBC connection string. For compatibility with earlier versions of Excel, SourceData can be a two-element array. The first element is the connection string specifying the ODBC source for the data. The second element is the SQL query string used to get the data. If you specify SourceData, you must also specify SourceType. If the active cell is inside the SourceData range, you must specify TableDestination as well.
     - `TableDestination As Variant` (optional): A Range object specifying where the report should be placed on the worksheet. If this argument is omitted, the report is placed at the active cell.
     - `TableName As Variant` (optional): A string that specifies the name of the new report.
     - `RowGrand As Variant` (optional): True to show grand totals for rows in the report.
     - `ColumnGrand As Variant` (optional): True to show grand totals for columns in the report.
     - `SaveData As Variant` (optional): True to save data with the report. False to save only the report definition.
     - `HasAutoFormat As Variant` (optional): True to have Excel automatically format the report when it's refreshed or when fields are moved.
-    - `AutoPage As Variant` (optional): Valid only if _SourceType_ is xlConsolidation. True to have Excel create a page field for the consolidation. If _AutoPage_ is False, you must create the page field or fields.
+    - `AutoPage As Variant` (optional): Valid only if SourceType is xlConsolidation. True to have Excel create a page field for the consolidation. If AutoPage is False, you must create the page field or fields.
     - `Reserved As Variant` (optional): Not used by Excel.
     - `BackgroundQuery As Variant` (optional): True to have Excel perform queries for the report asynchronously (in the background). The default value is False.
     - `OptimizeCache As Variant` (optional): True to optimize the PivotTable cache when it's constructed. The default value is False.
     - `PageFieldOrder As Variant` (optional): The order in which page fields are added to the PivotTable report's layout. Can be one of the following XlOrder constants: xlDownThenOver (default) or xlOverThenDown.
     - `PageFieldWrapCount As Variant` (optional): The number of page fields in each column or row in the PivotTable report. The default value is 0 (zero).
-    - `ReadData As Variant` (optional): True to create a PivotTable cache that contains all records from the external database; this cache can be very large. If _ReadData_ is False, you can set some of the fields as server-based page fields before the data is actually read.
+    - `ReadData As Variant` (optional): True to create a PivotTable cache that contains all records from the external database; this cache can be very large. If ReadData is False, you can set some of the fields as server-based page fields before the data is actually read.
     - `Connection As Variant` (optional): A string that contains ODBC settings that allow Excel to connect to an ODBC data source. The connection string has the form ODBC;<connection string>. This argument overrides any previous setting for the PivotCache object's Connection property.
 - `Update()`  
   Updates the PivotTable report.
@@ -280,33 +280,33 @@ Worksheets("Sheet3").PivotTables(1) _
   Returns a Range object with information about a data item in a PivotTable report.
     - `DataField As Variant` (optional): The name of the field containing the data for the PivotTable.
     - `Field1 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item1 As Variant` (optional): The name of an item in _Field1_.
+    - `Item1 As Variant` (optional): The name of an item in Field1.
     - `Field2 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item2 As Variant` (optional): The name of an item in _Field2_.
+    - `Item2 As Variant` (optional): The name of an item in Field2.
     - `Field3 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item3 As Variant` (optional): The name of an item in _Field3_.
+    - `Item3 As Variant` (optional): The name of an item in Field3.
     - `Field4 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item4 As Variant` (optional): The name of an item in _Field4_.
+    - `Item4 As Variant` (optional): The name of an item in Field4.
     - `Field5 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item5 As Variant` (optional): The name of an item in _Field5_.
+    - `Item5 As Variant` (optional): The name of an item in Field5.
     - `Field6 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item6 As Variant` (optional): The name of an item in _Field6_.
+    - `Item6 As Variant` (optional): The name of an item in Field6.
     - `Field7 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item7 As Variant` (optional): The name of an item in _Field7_.
+    - `Item7 As Variant` (optional): The name of an item in Field7.
     - `Field8 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item8 As Variant` (optional): The name of an item in _Field8_.
+    - `Item8 As Variant` (optional): The name of an item in Field8.
     - `Field9 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item9 As Variant` (optional): The name of an item in _Field9_.
+    - `Item9 As Variant` (optional): The name of an item in Field9.
     - `Field10 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item10 As Variant` (optional): The name of an item in _Field10_.
+    - `Item10 As Variant` (optional): The name of an item in Field10.
     - `Field11 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item11 As Variant` (optional): The name of an item in _Field11_.
+    - `Item11 As Variant` (optional): The name of an item in Field11.
     - `Field12 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item12 As Variant` (optional): The name of an item in _Field12_.
+    - `Item12 As Variant` (optional): The name of an item in Field12.
     - `Field13 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item13 As Variant` (optional): The name of an item in _Field13_.
+    - `Item13 As Variant` (optional): The name of an item in Field13.
     - `Field14 As Variant` (optional): The name of a column or row field in the PivotTable report.
-    - `Item14 As Variant` (optional): The name of an item in _Field14_.
+    - `Item14 As Variant` (optional): The name of an item in Field14.
 - `AddDataField(Field As Object, [Caption As Variant], [Function As Variant]) As PivotField`  
   Adds a data field to a PivotTable report. Returns a PivotField object that represents the new data field.
     - `Field As Object` (required): The unique field on the server. If the source data is Online Analytical Processing (OLAP), the unique field is a cube field. If the source data is non-OLAP (non-OLAP source data), the unique field is a PivotTable field.
@@ -317,7 +317,7 @@ Worksheets("Sheet3").PivotTables(1) _
     - `File As String` (required): The name of the cube file to be created. It will overwrite the file if it already exists.
     - `Measures As Variant` (optional): An array of unique names of measures that are to be part of the slice.
     - `Levels As Variant` (optional): An array of strings. Each array item is a unique level name. It represents the lowest level of a hierarchy that is in the slice.
-    - `Members As Variant` (optional): An array of string arrays. The elements correspond, in order, to the hierarchies represented in the _Levels_ array. Each element is an array of string arrays that consists of the unique names of the top level members in the dimension that are to be included in the slice.
+    - `Members As Variant` (optional): An array of string arrays. The elements correspond, in order, to the hierarchies represented in the Levels array. Each element is an array of string arrays that consists of the unique names of the top level members in the dimension that are to be included in the slice.
     - `Properties As Variant` (optional): False results in no member properties being included in the slice. The default value is True.
 - `ClearTable()`  
   The ClearTable method is used for clearing a PivotTable. Clearing PivotTables includes removing all the fields and deleting all filtering and sorting applied to the PivotTables. This method resets the PivotTable to the state it had right after it was created, before any fields were added to it.

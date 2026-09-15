@@ -136,7 +136,7 @@ Windows(1).WindowState = xlMaximized
   Activates the specified window and then activates the window at the back of the window z-order.
 - `Close([SaveChanges As Variant], [Filename As Variant], [RouteWorkbook As Variant]) As Boolean`  
   Closes the object.
-    - `SaveChanges As Variant` (optional): If there are no changes to the workbook, this argument is ignored. If there are changes to the workbook and the workbook appears in other open windows, this argument is ignored. If there are changes to the workbook but the workbook doesn't appear in any other open windows, this argument specifies whether changes should be saved.If set to True, changes are saved to the workbook. If there is not yet a file name associated with the workbook, _FileName_ is used. If _FileName_ is omitted, the user is asked to supply a file name.
+    - `SaveChanges As Variant` (optional): If there are no changes to the workbook, this argument is ignored. If there are changes to the workbook and the workbook appears in other open windows, this argument is ignored. If there are changes to the workbook but the workbook doesn't appear in any other open windows, this argument specifies whether changes should be saved.If set to True, changes are saved to the workbook. If there is not yet a file name associated with the workbook, FileName is used. If FileName is omitted, the user is asked to supply a file name.
     - `Filename As Variant` (optional): Save changes under this file name.
     - `RouteWorkbook As Variant` (optional): If the workbook doesn't need to be routed to the next recipient (if it has no routing slip or has already been routed), this argument is ignored. Otherwise, Microsoft Excel routes the workbook according to the value of this parameter. If set to True, the workbook is sent to the next recipient. If set to False, the workbook is not sent. If omitted, the user is asked whether the workbook should be sent.
 - `LargeScroll([Down As Variant], [Up As Variant], [ToRight As Variant], [ToLeft As Variant]) As Variant`  
@@ -152,8 +152,8 @@ Windows(1).WindowState = xlMaximized
     - `EnableChanges As Variant` (optional): Pass a Boolean value to specify if the user can change the margins and other page setup options available in print preview.
 - `ScrollWorkbookTabs([Sheets As Variant], [Position As Variant]) As Variant`  
   Scrolls through the workbook tabs at the bottom of the window. Doesn't affect the active sheet in the workbook.
-    - `Sheets As Variant` (optional): The number of sheets to scroll by. Use a positive number to scroll forward, a negative number to scroll backward, or 0 (zero) to not scroll at all. You must specify _Sheets_ if you don't specify _Position_.
-    - `Position As Variant` (optional): Use xlFirst to scroll to the first sheet, or use xlLast to scroll to the last sheet. You must specify _Position_ if you don't specify _Sheets_.
+    - `Sheets As Variant` (optional): The number of sheets to scroll by. Use a positive number to scroll forward, a negative number to scroll backward, or 0 (zero) to not scroll at all. You must specify Sheets if you don't specify Position.
+    - `Position As Variant` (optional): Use xlFirst to scroll to the first sheet, or use xlLast to scroll to the last sheet. You must specify Position if you don't specify Sheets.
 - `SmallScroll([Down As Variant], [Up As Variant], [ToRight As Variant], [ToLeft As Variant]) As Variant`  
   Scrolls the contents of the window by rows or columns.
     - `Down As Variant` (optional): The number of rows to scroll the contents down.
@@ -171,7 +171,7 @@ Windows(1).WindowState = xlMaximized
     - `x As Long` (required): The value (in pixels) that represents the horizontal distance from the left edge of the screen, starting at the top.
     - `y As Long` (required): The value (in pixels) that represents the vertical distance from the top of the screen, starting on the left.
 - `ScrollIntoView(Left As Long, Top As Long, Width As Long, Height As Long, [Start As Variant])`  
-  Scrolls the document window so that the contents of a specified rectangular area are displayed in either the upper-left or lower-right corner of the document window or pane (depending on the value of the _Start_ argument).
+  Scrolls the document window so that the contents of a specified rectangular area are displayed in either the upper-left or lower-right corner of the document window or pane (depending on the value of the Start argument).
     - `Left As Long` (required): The horizontal position of the rectangle (in points) from the left edge of the document window or pane.
     - `Top As Long` (required): The vertical position of the rectangle (in points) from the top of the document window or pane.
     - `Width As Long` (required): The width of the rectangle, in points.
@@ -184,6 +184,6 @@ Windows(1).WindowState = xlMaximized
     - `Copies As Variant` (optional): The number of copies to print. If this argument is omitted, one copy is printed.
     - `Preview As Variant` (optional): True to have Microsoft Excel invoke print preview before printing the object. False (or omitted) to print the object immediately.
     - `ActivePrinter As Variant` (optional): Sets the name of the active printer.
-    - `PrintToFile As Variant` (optional): True to print to a file. If _PrToFileName_ is not specified, Microsoft Excel prompts the user to enter the name of the output file.
+    - `PrintToFile As Variant` (optional): True to print to a file. If PrToFileName is not specified, Microsoft Excel prompts the user to enter the name of the output file.
     - `Collate As Variant` (optional): True to collate multiple copies.
-    - `PrToFileName As Variant` (optional): If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to.
+    - `PrToFileName As Variant` (optional): If PrintToFile is set to True, this argument specifies the name of the file that you want to print to.

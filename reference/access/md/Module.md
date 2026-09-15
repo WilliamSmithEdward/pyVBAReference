@@ -59,14 +59,14 @@ A Module object refers to a standard module or a class module.
 - `CreateEventProc(EventName As String, ObjectName As String) As Long`  
   The CreateEventProc method creates an event procedure in a class module.
     - `EventName As String` (required): The name of an event.
-    - `ObjectName As String` (required): An object that has the event specified by the _EventName_ argument. If the event procedure is being added to a Form, the word "Form" should be specified for this argument. If the event procedure is being added to a Report, the word "Report" should be specified for this argument. If the event procedure is being added to a Control, the name of the control should be specified for this argument.
+    - `ObjectName As String` (required): An object that has the event specified by the EventName argument. If the event procedure is being added to a Form, the word "Form" should be specified for this argument. If the event procedure is being added to a Report, the word "Report" should be specified for this argument. If the event procedure is being added to a Control, the name of the control should be specified for this argument.
 - `Find(Target As String, StartLine As Long, StartColumn As Long, EndLine As Long, EndColumn As Long, [WholeWord As Boolean], [MatchCase As Boolean], [PatternSearch As Boolean]) As Boolean`  
   Finds specified text in a standard module or class module.
     - `Target As String` (required): The text that you want to find.
-    - `StartLine As Long` (required): The line on which to begin searching. If a match is found, the value of the _StartLine_ argument is set to the line on which the beginning character of the matching text is found.
-    - `StartColumn As Long` (required): The column on which to begin searching. Each character in a line is in a separate column, beginning with zero on the left side of the module. If a match is found, the value of the _StartColumn_ argument is set to the column in which the beginning character of the matching text is found.
-    - `EndLine As Long` (required): The line on which to stop searching. If a match is found, the value of the _EndLine_ argument is set to the line on which the ending character of the matching text is found.
-    - `EndColumn As Long` (required): The column on which to stop searching. If a match is found, the value of the _EndColumn_ argument is set to the column in which the beginning character of the matching text is found.
+    - `StartLine As Long` (required): The line on which to begin searching. If a match is found, the value of the StartLine argument is set to the line on which the beginning character of the matching text is found.
+    - `StartColumn As Long` (required): The column on which to begin searching. Each character in a line is in a separate column, beginning with zero on the left side of the module. If a match is found, the value of the StartColumn argument is set to the column in which the beginning character of the matching text is found.
+    - `EndLine As Long` (required): The line on which to stop searching. If a match is found, the value of the EndLine argument is set to the line on which the ending character of the matching text is found.
+    - `EndColumn As Long` (required): The column on which to stop searching. If a match is found, the value of the EndColumn argument is set to the column in which the beginning character of the matching text is found.
     - `WholeWord As Boolean` (optional): True results in a search for whole words only. The default is False.
-    - `MatchCase As Boolean` (optional): True results in a search for words with case matching the _Target_ argument. The default is False.
-    - `PatternSearch As Boolean` (optional): True results in a search in which the _Target_ argument may contain wildcard characters such as an asterisk () or a question mark (?). The default is False**.
+    - `MatchCase As Boolean` (optional): True results in a search for words with case matching the Target argument. The default is False.
+    - `PatternSearch As Boolean` (optional): True results in a search in which the Target argument may contain wildcard characters such as an asterisk () or a question mark (?). The default is False**.

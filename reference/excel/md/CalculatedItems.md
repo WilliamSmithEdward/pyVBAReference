@@ -6,7 +6,7 @@
 
 A collection of PivotItem objects that represents all the calculated items in the specified PivotTable report.
 
-**Remarks:** A PivotTable report that contains January, February, and March items could have a calculated item named FirstQuarter defined as the sum of the amounts in January, February, and March. Use the CalculatedItems method of the PivotField object to return the CalculatedItems collection. Use CalculatedFields (_index_), where _index_ is the name or index number of the field, to return a single PivotField object from the CalculatedFields collection.
+**Remarks:** A PivotTable report that contains January, February, and March items could have a calculated item named FirstQuarter defined as the sum of the amounts in January, February, and March. Use the CalculatedItems method of the PivotField object to return the CalculatedItems collection. Use CalculatedFields (index), where index is the name or index number of the field, to return a single PivotField object from the CalculatedFields collection.
 
 **Example:**
 

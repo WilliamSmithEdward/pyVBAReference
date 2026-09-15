@@ -29,5 +29,5 @@ Provides access to the research service feature of Microsoft PowerPoint.
     - `Language1 As Variant` (required): Specifies the language to translate from.
     - `Language2 As Variant` (required): Specifies the language to translate to.
 - `IsResearchService(ServiceID As String) As Boolean`  
-  Indicates whether the GUID specified in the _ServiceID_ parameter corresponds to a currently configured research service.
+  Indicates whether the GUID specified in the ServiceID parameter corresponds to a currently configured research service.
     - `ServiceID As String` (required): A GUID that identifies the research service.

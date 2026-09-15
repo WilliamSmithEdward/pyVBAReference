@@ -6,7 +6,7 @@
 
 A collection of all the Point objects in the specified series in a chart.
 
-**Remarks:** Use Points (_index_), where _index_ is the point index number, to return a single Point object. Points are numbered from left to right on the series. Points(1) is the leftmost point, and Points(Points.Count) is the rightmost point.
+**Remarks:** Use Points (index), where index is the point index number, to return a single Point object. Points are numbered from left to right on the series. Points(1) is the leftmost point, and Points(Points.Count) is the rightmost point.
 
 **Example:**
 

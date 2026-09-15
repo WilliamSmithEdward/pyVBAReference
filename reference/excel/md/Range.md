@@ -242,17 +242,17 @@ Worksheets("Sheet1").Range("A5").Value = _
   Filters or copies data from a list based on a criteria range. If the initial selection is a single cell, that cell's current region is used.
     - `Action As XlFilterAction` (required): One of the constants of XlFilterAction specifying whether to make a copy or filter the list in place.
     - `CriteriaRange As Variant` (optional): The criteria range. If this argument is omitted, there are no criteria.
-    - `CopyToRange As Variant` (optional): The destination range for the copied rows if _Action_ is xlFilterCopy. Otherwise, this argument is ignored.
+    - `CopyToRange As Variant` (optional): The destination range for the copied rows if Action is xlFilterCopy. Otherwise, this argument is ignored.
     - `Unique As Variant` (optional): True to filter unique records only. False to filter all records that meet the criteria. The default value is False.
 - `ApplyNames([Names As Variant], [IgnoreRelativeAbsolute As Variant], [UseRowColumnNames As Variant], [OmitColumn As Variant], [OmitRow As Variant], [Order As XlApplyNamesOrder], [AppendLast As Variant]) As Variant`  
   Applies names to the cells in the specified range.
     - `Names As Variant` (optional): An array of the names to be applied. If this argument is omitted, all names on the sheet are applied to the range.
     - `IgnoreRelativeAbsolute As Variant` (optional): True to replace references with names, regardless of the reference types of either the names or references. False to replace absolute references only with absolute names, relative references only with relative names, and mixed references only with mixed names. The default value is True.
-    - `UseRowColumnNames As Variant` (optional): True to use the names of row and column ranges that contain the specified range if names for the range cannot be found. False to ignore the _OmitColumn_ and _OmitRow_ arguments. The default value is True.
+    - `UseRowColumnNames As Variant` (optional): True to use the names of row and column ranges that contain the specified range if names for the range cannot be found. False to ignore the OmitColumn and OmitRow arguments. The default value is True.
     - `OmitColumn As Variant` (optional): True to replace the entire reference with the row-oriented name. The column-oriented name can be omitted only if the referenced cell is in the same column as the formula and is within a row-oriented named range. The default value is True.
     - `OmitRow As Variant` (optional): True to replace the entire reference with the column-oriented name. The row-oriented name can be omitted only if the referenced cell is in the same row as the formula and is within a column-oriented named range. The default value is True.
     - `Order As XlApplyNamesOrder` (optional): Determines which range name is listed first when a cell reference is replaced by a row-oriented and column-oriented range name.
-    - `AppendLast As Variant` (optional): True to replace the definitions of the names in _Names_ and also replace the definitions of the last names that were defined. False to replace the definitions of the names in _Names_ only. The default value is False.
+    - `AppendLast As Variant` (optional): True to replace the definitions of the names in Names and also replace the definitions of the last names that were defined. False to replace the definitions of the names in Names only. The default value is False.
 - `ApplyOutlineStyles() As Variant`  
   Applies outlining styles to the specified range.
 - `AutoComplete(String As String) As String`  
@@ -317,7 +317,7 @@ Worksheets("Sheet1").Range("A5").Value = _
   Creates a data series in the specified range. Variant.
     - `Rowcol As Variant` (optional): Can be the xlRows or xlColumns constant to have the data series entered in rows or columns, respectively. If this argument is omitted, the size and shape of the range is used.
     - `Type As XlDataSeriesType` (optional): The type for the data series.
-    - `Date As XlDataSeriesDate` (optional): If the _Type_ argument is xlChronological, the _Date_ argument indicates the step date unit.
+    - `Date As XlDataSeriesDate` (optional): If the Type argument is xlChronological, the Date argument indicates the step date unit.
     - `Step As Variant` (optional): The step value for the series. The default value is 1.
     - `Stop As Variant` (optional): The stop value for the series. If this argument is omitted, Microsoft Excel fills to the end of the range.
     - `Trend As Variant` (optional): True to create a linear trend or growth trend. False to create a standard data series. The default value is False.
@@ -346,7 +346,7 @@ Worksheets("Sheet1").Range("A5").Value = _
 - `Find(What As Variant, [After As Variant], [LookIn As Variant], [LookAt As Variant], [SearchOrder As Variant], [SearchDirection As XlSearchDirection], [MatchCase As Variant], [MatchByte As Variant], [SearchFormat As Variant]) As Range`  
   Finds specific information in a range.
     - `What As Variant` (required): The data to search for. Can be a string or any Microsoft Excel data type.
-    - `After As Variant` (optional): The cell after which you want the search to begin. This corresponds to the position of the active cell when a search is done from the user interface. Notice that _After_ must be a single cell in the range. Remember that the search begins after this cell; the specified cell isn't searched until the method wraps back around to this cell. If you don't specify this argument, the search starts after the cell in the upper-left corner of the range.
+    - `After As Variant` (optional): The cell after which you want the search to begin. This corresponds to the position of the active cell when a search is done from the user interface. Notice that After must be a single cell in the range. Remember that the search begins after this cell; the specified cell isn't searched until the method wraps back around to this cell. If you don't specify this argument, the search starts after the cell in the upper-left corner of the range.
     - `LookIn As Variant` (optional): Can be one of the following XlFindLookIn constants: xlFormulas, xlValues, xlComments, or xlCommentsThreaded.
     - `LookAt As Variant` (optional): Can be one of the following XlLookAt constants: xlWhole or xlPart.
     - `SearchOrder As Variant` (optional): Can be one of the following XlSearchOrder constants: xlByRows or xlByColumns.
@@ -356,7 +356,7 @@ Worksheets("Sheet1").Range("A5").Value = _
     - `SearchFormat As Variant` (optional): The search format.
 - `FindNext([After As Variant]) As Range`  
   Continues a search that was begun with the Find method. Finds the next cell that matches those same conditions and returns a Range object that represents that cell. This does not affect the selection or the active cell.
-    - `After As Variant` (optional): The cell after which you want to search. This corresponds to the position of the active cell when a search is done from the user interface. Be aware that _After_ must be a single cell in the range.
+    - `After As Variant` (optional): The cell after which you want to search. This corresponds to the position of the active cell when a search is done from the user interface. Be aware that After must be a single cell in the range.
 - `FindPrevious([After As Variant]) As Range`  
   Continues a search that was begun with the Find method. Finds the previous cell that matches those same conditions and returns a Range object that represents that cell. Doesn't affect the selection or the active cell.
 - `FunctionWizard() As Variant`  
@@ -365,7 +365,7 @@ Worksheets("Sheet1").Range("A5").Value = _
   When the Range object represents a single cell in a PivotTable field's data range, the Group method performs numeric or date-based grouping in that field.
     - `Start As Variant` (optional): The first value to be grouped. If this argument is omitted or True, the first value in the field is used.
     - `End As Variant` (optional): The last value to be grouped. If this argument is omitted or True, the last value in the field is used.
-    - `By As Variant` (optional): If the field is numeric, this argument specifies the size of each group. If the field is a date, this argument specifies the number of days in each group if element 4 in the _Periods_ array is True and all the other elements are False. Otherwise, this argument is ignored. If this argument is omitted, Microsoft Excel automatically chooses a default group size.
+    - `By As Variant` (optional): If the field is numeric, this argument specifies the size of each group. If the field is a date, this argument specifies the number of days in each group if element 4 in the Periods array is True and all the other elements are False. Otherwise, this argument is ignored. If this argument is omitted, Microsoft Excel automatically chooses a default group size.
     - `Periods As Variant` (optional): An array of Boolean values that specify the period for the group, described in the Remarks section. If an element in the array is True, a group is created for the corresponding time; if the element is False, no group is created. If the field isn't a date field, this argument is ignored.
 - `InsertIndent(InsertAmount As Long)`  
   Adds an indent to the specified range.
@@ -390,9 +390,9 @@ Worksheets("Sheet1").Range("A5").Value = _
     - `LinkNumber As Variant` (optional): If the arrow is an external reference arrow, this argument indicates which external reference to follow. If this argument is omitted, the first external reference is followed.
 - `NoteText([Text As Variant], [Start As Variant], [Length As Variant]) As String`  
   Returns or sets the cell note associated with the cell in the upper-left corner of the range. Read/write String. Cell notes have been replaced by range comments. For more information, see the Comment object.
-    - `Text As Variant` (optional): The text to add to the note (up to 255 characters). The text is inserted starting at position _Start_, replacing _Length_ characters of the existing note. If this argument is omitted, this method returns the current text of the note starting at position _Start_, for _Length_ characters.
+    - `Text As Variant` (optional): The text to add to the note (up to 255 characters). The text is inserted starting at position Start, replacing Length characters of the existing note. If this argument is omitted, this method returns the current text of the note starting at position Start, for Length characters.
     - `Start As Variant` (optional): The starting position for the text that's set or returned. If this argument is omitted, this method starts at the first character. To append text to the note, specify a number larger than the number of characters in the existing note.
-    - `Length As Variant` (optional): The number of characters to be set or returned. If this argument is omitted, Microsoft Excel sets or returns characters from the starting position to the end of the note (up to 255 characters). If there are more than 255 characters from _Start_ to the end of the note, this method returns only 255 characters.
+    - `Length As Variant` (optional): The number of characters to be set or returned. If this argument is omitted, Microsoft Excel sets or returns characters from the starting position to the end of the note (up to 255 characters). If there are more than 255 characters from Start to the end of the note, this method returns only 255 characters.
 - `Parse([ParseLine As Variant], [Destination As Variant]) As Variant`  
   Parses a range of data and breaks it into multiple cells. Distributes the contents of the range to fill several adjacent columns; the range can be no more than one column wide.
     - `ParseLine As Variant` (optional): A string that contains left and right brackets to indicate where the cells should be split.
@@ -423,23 +423,23 @@ Worksheets("Sheet1").Range("A5").Value = _
   Uses East Asian sorting methods to sort the range, a PivotTable report, or uses the method for the active region if the range contains only one cell. For example, Japanese sorts in the order of the Kana syllabary.
     - `SortMethod As XlSortMethod` (optional): The type of sort. Some of these constants may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed.
     - `Key1 As Variant` (optional): The first sort field, as either text (a PivotTable field or range name) or a Range object ("Dept" or Cells(1, 1), for example).
-    - `Order1 As XlSortOrder` (optional): The sort order for the field or range specified in the _Key1_ argument.
+    - `Order1 As XlSortOrder` (optional): The sort order for the field or range specified in the Key1 argument.
     - `Type As Variant` (optional): Specifies which elements are to be sorted. Use this argument only when sorting PivotTable reports.
     - `Key2 As Variant` (optional): The second sort field, as either text (a PivotTable field or range name) or a Range object. If you omit this argument, there's no second sort field. Cannot be used when sorting PivotTable reports.
-    - `Order2 As XlSortOrder` (optional): The sort order for the field or range specified in the _Key2_ argument. Cannot be used when sorting PivotTable reports.
+    - `Order2 As XlSortOrder` (optional): The sort order for the field or range specified in the Key2 argument. Cannot be used when sorting PivotTable reports.
     - `Key3 As Variant` (optional): The third sort field, as either text (a range name) or a Range object. If you omit this argument, there's no third sort field. Cannot be used when sorting PivotTable reports.
-    - `Order3 As XlSortOrder` (optional): The sort order for the field or range specified in the _Key3_ argument. Cannot be used when sorting PivotTable reports.
+    - `Order3 As XlSortOrder` (optional): The sort order for the field or range specified in the Key3 argument. Cannot be used when sorting PivotTable reports.
     - `Header As XlYesNoGuess` (optional): Specifies whether or not the first row contains headers. Cannot be used when sorting PivotTable reports.
-    - `OrderCustom As Variant` (optional): This argument is a one-based integer offset to the list of custom sort orders. If you omit _OrderCustom_, (normal sort order) is used.
+    - `OrderCustom As Variant` (optional): This argument is a one-based integer offset to the list of custom sort orders. If you omit OrderCustom, (normal sort order) is used.
     - `MatchCase As Variant` (optional): True to do a case-sensitive sort; False to do a sort that's not case-sensitive. Cannot be used when sorting PivotTable reports.
     - `Orientation As XlSortOrientation` (optional): The sort orientation.
-    - `DataOption1 As XlSortDataOption` (optional): Specifies how to sort text in _Key1_. Cannot be used when sorting PivotTable reports.
-    - `DataOption2 As XlSortDataOption` (optional): Specifies how to sort text in _Key2_. Cannot be used when sorting PivotTable reports.
-    - `DataOption3 As XlSortDataOption` (optional): Specifies how to sort text in _Key3_. Cannot be used when sorting PivotTable reports.
+    - `DataOption1 As XlSortDataOption` (optional): Specifies how to sort text in Key1. Cannot be used when sorting PivotTable reports.
+    - `DataOption2 As XlSortDataOption` (optional): Specifies how to sort text in Key2. Cannot be used when sorting PivotTable reports.
+    - `DataOption3 As XlSortDataOption` (optional): Specifies how to sort text in Key3. Cannot be used when sorting PivotTable reports.
 - `SpecialCells(Type As XlCellType, [Value As Variant]) As Range`  
   Returns a Range object that represents all the cells that match the specified type and value.
     - `Type As XlCellType` (required): The cells to include.
-    - `Value As Variant` (optional): If _Type_ is either xlCellTypeConstants or xlCellTypeFormulas, this argument is used to determine which types of cells to include in the result. These values can be added together to return more than one type. The default is to select all constants or formulas, no matter what the type.
+    - `Value As Variant` (optional): If Type is either xlCellTypeConstants or xlCellTypeFormulas, this argument is used to determine which types of cells to include in the result. These values can be added together to return more than one type. The default is to select all constants or formulas, no matter what the type.
 - `SubscribeTo(Edition As String, [Format As XlSubscribeToFormat]) As Variant`  
   You have requested Help for a Visual Basic keyword used only on the Macintosh. For information about this keyword, consult the language reference Help included with Microsoft Office Macintosh Edition.
     - `Edition As String` (required): See help included with Microsoft Office Macintosh Edition.
@@ -462,13 +462,13 @@ Worksheets("Sheet1").Range("A5").Value = _
     - `DataType As XlTextParsingType` (optional): The format of the text to be split into columns.
     - `TextQualifier As XlTextQualifier` (optional): Specifies whether to use single, double, or no quotes as the text qualifier.
     - `ConsecutiveDelimiter As Variant` (optional): True to have Excel consider consecutive delimiters as one delimiter. The default value is False.
-    - `Tab As Variant` (optional): True to have _DataType_ be xlDelimited and to have the tab character be a delimiter. The default value is False.
-    - `Semicolon As Variant` (optional): True to have _DataType_ be xlDelimited and to have the semicolon be a delimiter. The default value is False.
-    - `Comma As Variant` (optional): True to have _DataType_ be xlDelimited and to have the comma be a delimiter. The default value is False.
-    - `Space As Variant` (optional): True to have _DataType_ be xlDelimited and to have the space character be a delimiter. The default value is False.
-    - `Other As Variant` (optional): True to have _DataType_ be xlDelimited and to have the character specified by the _OtherChar_ argument be a delimiter. The default value is False.
-    - `OtherChar As Variant` (optional): Required if _Other_ is True; the delimiter character when _Other_ is True. If more than one character is specified, only the first character of the string is used; the remaining characters are ignored.
-    - `FieldInfo As Variant` (optional): An array containing parse information for the individual columns of data. The interpretation depends on the value of _DataType_. When the data is delimited, this argument is an array of two-element arrays, with each two-element array specifying the conversion options for a particular column. The first element is the column number (1-based), and the second element is one of the XlColumnDataType constants specifying how the column is parsed.
+    - `Tab As Variant` (optional): True to have DataType be xlDelimited and to have the tab character be a delimiter. The default value is False.
+    - `Semicolon As Variant` (optional): True to have DataType be xlDelimited and to have the semicolon be a delimiter. The default value is False.
+    - `Comma As Variant` (optional): True to have DataType be xlDelimited and to have the comma be a delimiter. The default value is False.
+    - `Space As Variant` (optional): True to have DataType be xlDelimited and to have the space character be a delimiter. The default value is False.
+    - `Other As Variant` (optional): True to have DataType be xlDelimited and to have the character specified by the OtherChar argument be a delimiter. The default value is False.
+    - `OtherChar As Variant` (optional): Required if Other is True; the delimiter character when Other is True. If more than one character is specified, only the first character of the string is used; the remaining characters are ignored.
+    - `FieldInfo As Variant` (optional): An array containing parse information for the individual columns of data. The interpretation depends on the value of DataType. When the data is delimited, this argument is an array of two-element arrays, with each two-element array specifying the conversion options for a particular column. The first element is the column number (1-based), and the second element is one of the XlColumnDataType constants specifying how the column is parsed.
     - `DecimalSeparator As Variant` (optional): The decimal separator that Microsoft Excel uses when recognizing numbers. The default setting is the system setting.
     - `ThousandsSeparator As Variant` (optional): The thousands separator that Excel uses when recognizing numbers. The default setting is the system setting.
     - `TrailingMinusNumbers As Variant` (optional): Numbers that begin with a minus character.
@@ -504,9 +504,9 @@ Worksheets("Sheet1").Range("A5").Value = _
     - `Copies As Variant` (optional): The number of copies to print. If this argument is omitted, one copy is printed.
     - `Preview As Variant` (optional): True to have Microsoft Excel invoke print preview before printing the object. False (or omitted) to print the object immediately.
     - `ActivePrinter As Variant` (optional): Sets the name of the active printer.
-    - `PrintToFile As Variant` (optional): True to print to a file. If _PrToFileName_ is not specified, Microsoft Excel prompts the user to enter the name of the output file.
+    - `PrintToFile As Variant` (optional): True to print to a file. If PrToFileName is not specified, Microsoft Excel prompts the user to enter the name of the output file.
     - `Collate As Variant` (optional): True to collate multiple copies.
-    - `PrToFileName As Variant` (optional): If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to.
+    - `PrToFileName As Variant` (optional): If PrintToFile is set to True, this argument specifies the name of the file that you want to print to.
 - `CalculateRowMajorOrder() As Variant`  
   Calculates a specified range of cells.
 - `ClearHyperlinks()`  
@@ -543,26 +543,26 @@ Worksheets("Sheet1").Range("A5").Value = _
 - `Sort([Key1 As Variant], [Order1 As XlSortOrder], [Key2 As Variant], [Type As Variant], [Order2 As XlSortOrder], [Key3 As Variant], [Order3 As XlSortOrder], [Header As XlYesNoGuess], [OrderCustom As Variant], [MatchCase As Variant], [Orientation As XlSortOrientation], [SortMethod As XlSortMethod], [DataOption1 As XlSortDataOption], [DataOption2 As XlSortDataOption], [DataOption3 As XlSortDataOption], [SubField1 As Variant]) As Variant`  
   Sorts a range of values.
     - `Key1 As Variant` (optional): Specifies the first sort field, either as a range name (String) or Range object; determines the values to be sorted.
-    - `Order1 As XlSortOrder` (optional): Determines the sort order for the values specified in _Key1_.
+    - `Order1 As XlSortOrder` (optional): Determines the sort order for the values specified in Key1.
     - `Key2 As Variant` (optional): Second sort field; cannot be used when sorting a PivotTable.
-    - `Type As Variant` (optional): Specifies which type of elements are to be sorted within a PivotTable. Specify xLSortLabels to sort by the labels targeted by the _experession_ Range in the Row/Colum Labels areas of the PivotTable's range, or xLSortValues when _Key1_ additionally targets a cell in the Values or Sub/Grand Totals areas using R1C1 notation.
-    - `Order2 As XlSortOrder` (optional): Determines the sort order for the values specified in _Key2_.
+    - `Type As Variant` (optional): Specifies which type of elements are to be sorted within a PivotTable. Specify xLSortLabels to sort by the labels targeted by the experession Range in the Row/Colum Labels areas of the PivotTable's range, or xLSortValues when Key1 additionally targets a cell in the Values or Sub/Grand Totals areas using R1C1 notation.
+    - `Order2 As XlSortOrder` (optional): Determines the sort order for the values specified in Key2.
     - `Key3 As Variant` (optional): Third sort field; cannot be used when sorting a PivotTable.
-    - `Order3 As XlSortOrder` (optional): Determines the sort order for the values specified in _Key3_.
+    - `Order3 As XlSortOrder` (optional): Determines the sort order for the values specified in Key3.
     - `Header As XlYesNoGuess` (optional): Specifies whether the first row contains header information. xlNo is the default value; specify xlGuess if you want Excel to attempt to determine the header.
     - `OrderCustom As Variant` (optional): Specifies a one-based integer offset into the list of custom sort orders.
     - `MatchCase As Variant` (optional): Set to True to perform a case-sensitive sort, False to perform a non-case-sensitive sort; cannot be used with PivotTables.
     - `Orientation As XlSortOrientation` (optional): Specifies if the sort should be by row (default) or column. Set xlSortColumns value to 1 to sort by column. Set xlSortRows value to 2 to sort by row (this is the default value).
     - `SortMethod As XlSortMethod` (optional): Specifies the sort method.
-    - `DataOption1 As XlSortDataOption` (optional): Specifies how to sort text in the range specified in _Key1_; does not apply to PivotTable sorting.
-    - `DataOption2 As XlSortDataOption` (optional): Specifies how to sort text in the range specified in _Key2_; does not apply to PivotTable sorting.
-    - `DataOption3 As XlSortDataOption` (optional): Specifies how to sort text in the range specified in _Key3_; does not apply to PivotTable sorting.
+    - `DataOption1 As XlSortDataOption` (optional): Specifies how to sort text in the range specified in Key1; does not apply to PivotTable sorting.
+    - `DataOption2 As XlSortDataOption` (optional): Specifies how to sort text in the range specified in Key2; does not apply to PivotTable sorting.
+    - `DataOption3 As XlSortDataOption` (optional): Specifies how to sort text in the range specified in Key3; does not apply to PivotTable sorting.
 - `AutoFilter([Field As Variant], [Criteria1 As Variant], [Operator As XlAutoFilterOperator], [Criteria2 As Variant], [VisibleDropDown As Variant], [SubField As Variant]) As Variant`  
   Filters a list by using the AutoFilter.
     - `Field As Variant` (optional): The integer offset of the field on which you want to base the filter (from the left of the list; the leftmost field is field one).
-    - `Criteria1 As Variant` (optional): The criteria (a string; for example, "101"). Use "=" to find blank fields, "<>" to find non-blank fields, and "><" to select (No Data) fields in data types. If this argument is omitted, the criteria is All. If _Operator_ is xlTop10Items, _Criteria1_ specifies the number of items (for example, "10").
+    - `Criteria1 As Variant` (optional): The criteria (a string; for example, "101"). Use "=" to find blank fields, "<>" to find non-blank fields, and "><" to select (No Data) fields in data types. If this argument is omitted, the criteria is All. If Operator is xlTop10Items, Criteria1 specifies the number of items (for example, "10").
     - `Operator As XlAutoFilterOperator` (optional): An XlAutoFilterOperator constant specifying the type of filter.
-    - `Criteria2 As Variant` (optional): The second criteria (a string). Used with _Criteria1_ and _Operator_ to construct compound criteria. Also used as single criteria on date fields filtering by date, month or year. Followed by an Array detailing the filtering Array(Level, Date). Where Level is 0-2 (year,month,date) and Date is one valid Date inside the filtering period.
+    - `Criteria2 As Variant` (optional): The second criteria (a string). Used with Criteria1 and Operator to construct compound criteria. Also used as single criteria on date fields filtering by date, month or year. Followed by an Array detailing the filtering Array(Level, Date). Where Level is 0-2 (year,month,date) and Date is one valid Date inside the filtering period.
     - `VisibleDropDown As Variant` (optional): True to display the AutoFilter drop-down arrow for the filtered field. False to hide the AutoFilter drop-down arrow for the filtered field. True by default.
     - `SubField As Variant` (optional): The field from a data type on which to apply the criteria (for example, the "Population" field from Geography or "Volume" field from Stocks). Omitting this value targets the "(Display Value)".
 - `ConvertToLinkedDataType(ServiceID As Long, LanguageCulture As String)`  

@@ -4,7 +4,7 @@
   "guid": "{E59544D5-C299-46A0-84C1-C51AB38F9759}",
   "library": "Microsoft Word 16.0 Object Library",
   "description": "Represents a single co author in the document. The CoAuthor object is a member of the CoAuthors collection. The CoAuthors collection contains all the co authors in the document (authors that are actively editing the document).",
-  "remarks": "Use CoAuthors (_index_), where _index_ is the index number to return a single CoAuthor object.",
+  "remarks": "Use CoAuthors (index), where index is the index number to return a single CoAuthor object.",
   "example": "Dim author As CoAuthor\n\nSet author = ActiveDocument.CoAuthoring.Authors(1)\nMsgBox \"The name of the first co author in this document is \" & author.Name",
   "properties": [
     {

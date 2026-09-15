@@ -76,8 +76,8 @@ End Sub
 - `NodeAfterDelete(OldNode As CustomXMLNode, OldParentNode As CustomXMLNode, OldNextSibling As CustomXMLNode, InUndoRedo As Boolean)`  
   Occurs after a node is deleted in a CustomXMLPart object.
     - `OldNode As CustomXMLNode` (required): Corresponds to the node that was just removed from the CustomXMLPart object. Note that this node may have children if a subtree is being removed from the document. Also, this node will be a "disconnected" node in that you can query down from the node, but you cannot query up the tree; the node appears to exist alone.
-    - `OldParentNode As CustomXMLNode` (required): Corresponds to the former parent node of _OldNode_.
-    - `OldNextSibling As CustomXMLNode` (required): Corresponds to the former next sibling of _OldNode_.
+    - `OldParentNode As CustomXMLNode` (required): Corresponds to the former parent node of OldNode.
+    - `OldNextSibling As CustomXMLNode` (required): Corresponds to the former next sibling of OldNode.
     - `InUndoRedo As Boolean` (required): Returns True if the node was inserted as part of an Undo/Redo action by the user.
 - `NodeAfterReplace(OldNode As CustomXMLNode, NewNode As CustomXMLNode, InUndoRedo As Boolean)`  
   Occurs just after a node is replaced in a CustomXMLPart object.

@@ -251,7 +251,7 @@ Presentations("Sample Presentation").Slides.Add 1, 1
     - `RangeType As PpPrintRangeType` (optional): The type of slide range.
     - `SlideShowName As String` (optional): The name of the slide show.
     - `IncludeDocProperties As Boolean` (optional): Whether the document properties should also be exported. The default is False.
-    - `KeepIRMSettings As Boolean` (optional): Whether the IRM settings should also be exported.</br></br>If _FixedFormatType_ is _PpFixedFormatTypePDF_, this flag determines if labels and IRM settings should be exported.</br></br>The default is True.
+    - `KeepIRMSettings As Boolean` (optional): Whether the IRM settings should also be exported.</br></br>If FixedFormatType is PpFixedFormatTypePDF, this flag determines if labels and IRM settings should be exported.</br></br>The default is True.
     - `DocStructureTags As Boolean` (optional): Whether to include document structure tags to improve document accessibility. The default is True.
     - `BitmapMissingFonts As Boolean` (optional): Whether to include a bitmap of the text. The default is True.
     - `ExternalExporter As Variant` (optional): A pointer to an Office add-in that implements the IMsoDocExporter COM interface and allows calls to an alternate implementation of code. The default is a null pointer.
@@ -292,7 +292,7 @@ Presentations("Sample Presentation").Slides.Add 1, 1
     - `RangeType As PpPrintRangeType` (optional): The type of slide range.
     - `SlideShowName As String` (optional): The name of the slide show.
     - `IncludeDocProperties As Boolean` (optional): Whether the document properties should also be exported. The default is False.
-    - `KeepIRMSettings As Boolean` (optional): Whether the IRM settings should also be exported.</br></br>If _FixedFormatType_ is _PpFixedFormatTypePDF_, this flag determines if labels and IRM settings should be exported.</br></br>The default is True.
+    - `KeepIRMSettings As Boolean` (optional): Whether the IRM settings should also be exported.</br></br>If FixedFormatType is PpFixedFormatTypePDF, this flag determines if labels and IRM settings should be exported.</br></br>The default is True.
     - `DocStructureTags As Boolean` (optional): Whether to include document structure tags to improve document accessibility. The default is True.
     - `BitmapMissingFonts As Boolean` (optional): Whether to include a bitmap of the text. The default is True.
     - `UseISO19005_1 As Boolean` (optional): Whether the resulting document is compliant with ISO 19005-1 (PDF/A). The default is False.
@@ -317,7 +317,7 @@ Presentations("Sample Presentation").Slides.Add 1, 1
     - `RangeType As PpPrintRangeType` (optional): The type of slide range.
     - `SlideShowName As String` (optional): The name of the slide show.
     - `IncludeDocProperties As Boolean` (optional): Whether the document properties should also be exported. The default is False.
-    - `KeepIRMSettings As Boolean` (optional): Whether the IRM settings should also be exported.</br></br>If _FixedFormatType_ is _PpFixedFormatTypePDF_, this flag determines if labels and IRM settings should be exported.</br></br>The default is True.
+    - `KeepIRMSettings As Boolean` (optional): Whether the IRM settings should also be exported.</br></br>If FixedFormatType is PpFixedFormatTypePDF, this flag determines if labels and IRM settings should be exported.</br></br>The default is True.
     - `DocStructureTags As Boolean` (optional): Whether to include document structure tags to improve document accessibility. The default is True.
     - `BitmapMissingFonts As Boolean` (optional): Whether to include a bitmap of the text. The default is True.
     - `UseISO19005_1 As Boolean` (optional): Whether the resulting document is compliant with ISO 19005-1 (PDF/A). The default is False.

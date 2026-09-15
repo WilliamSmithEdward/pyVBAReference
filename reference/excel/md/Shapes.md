@@ -69,7 +69,7 @@ myDocument.Shapes.SelectAll
   Creates a picture from an existing file. Returns a Shape object that represents the new picture.
     - `Filename As String` (required): The file from which the picture is to be created.
     - `LinkToFile As MsoTriState` (required): The file to link to. Use msoFalse to make the picture an independent copy of the file. Use msoTrue to link the picture to the file from which it was created.
-    - `SaveWithDocument As MsoTriState` (required): To save the picture with the document. Use msoFalse to store only the link information in the document. Use msoTrue to save the linked picture with the document into which it's inserted. This argument must be msoTrue if _LinkToFile_ is msoFalse.
+    - `SaveWithDocument As MsoTriState` (required): To save the picture with the document. Use msoFalse to store only the link information in the document. Use msoTrue to save the linked picture with the document into which it's inserted. This argument must be msoTrue if LinkToFile is msoFalse.
     - `Left As Single` (required): The position (in points) of the upper-left corner of the picture relative to the upper-left corner of the document.
     - `Top As Single` (required): The position (in points) of the upper-left corner of the picture relative to the top of the document.
     - `Width As Single` (required): The width of the picture, in points (enter -1 to retain the width of the existing file).
@@ -117,12 +117,12 @@ myDocument.Shapes.SelectAll
     - `Height As Long` (required): The initial size of the new object, in points.
 - `AddOLEObject([ClassType As Variant], [Filename As Variant], [Link As Variant], [DisplayAsIcon As Variant], [IconFileName As Variant], [IconIndex As Variant], [IconLabel As Variant], [Left As Variant], [Top As Variant], [Width As Variant], [Height As Variant]) As Shape`  
   Creates an OLE object. Returns a Shape object that represents the new OLE object.
-    - `ClassType As Variant` (optional): A string that contains the programmatic identifier for the object to be created. You must specify either _ClassType_ or _FileName_. If _ClassType_ is specified, _FileName_ and _Link_ are ignored.
-    - `Filename As Variant` (optional): The file from which the object is to be created. If the path isn't specified, the current working folder is used. You must specify either the _ClassType_ or _FileName_ argument for the object, but not both.
-    - `Link As Variant` (optional): True to link the OLE object to the file from which it was created. False to make the OLE object an independent copy of the file. If you specified a value for _ClassType_, this argument must be False. The default value is False.
+    - `ClassType As Variant` (optional): A string that contains the programmatic identifier for the object to be created. You must specify either ClassType or FileName. If ClassType is specified, FileName and Link are ignored.
+    - `Filename As Variant` (optional): The file from which the object is to be created. If the path isn't specified, the current working folder is used. You must specify either the ClassType or FileName argument for the object, but not both.
+    - `Link As Variant` (optional): True to link the OLE object to the file from which it was created. False to make the OLE object an independent copy of the file. If you specified a value for ClassType, this argument must be False. The default value is False.
     - `DisplayAsIcon As Variant` (optional): True to display the OLE object as an icon. The default value is False.
     - `IconFileName As Variant` (optional): The file that contains the icon to be displayed.
-    - `IconIndex As Variant` (optional): The index of the icon within _IconFileName_. The order of icons in the specified file corresponds to the order in which the icons appear in the Change Icon dialog box (accessed from the Object dialog box when the Display as icon check box is selected). The first icon in the file has the index number 0 (zero). If an icon with the given index number doesn't exist in _IconFileName_, the icon with the index number 1 (the second icon in the file) is used. The default value is 0 (zero).
+    - `IconIndex As Variant` (optional): The index of the icon within IconFileName. The order of icons in the specified file corresponds to the order in which the icons appear in the Change Icon dialog box (accessed from the Object dialog box when the Display as icon check box is selected). The first icon in the file has the index number 0 (zero). If an icon with the given index number doesn't exist in IconFileName, the icon with the index number 1 (the second icon in the file) is used. The default value is 0 (zero).
     - `IconLabel As Variant` (optional): A label (caption) to be displayed beneath the icon.
     - `Left As Variant` (optional): The position (in points) of the upper-left corner of the new object relative to the upper-left corner of the document. The default value is 0 (zero).
     - `Top As Variant` (optional): The position (in points) of the upper-left corner of the new object relative to the top of the document. The default value is 0 (zero).
@@ -148,7 +148,7 @@ myDocument.Shapes.SelectAll
   Creates a picture from an existing file. Returns a Shape object that represents the new picture.
     - `Filename As String` (required): The file from which the OLE object is to be created.
     - `LinkToFile As MsoTriState` (required): Determines whether the picture will be linked to the file from which it was created.
-    - `SaveWithDocument As MsoTriState` (required): Determines whether the linked picture will be saved with the document into which it is inserted. This argument must be msoTrue if _LinkToFile_ is msoFalse.
+    - `SaveWithDocument As MsoTriState` (required): Determines whether the linked picture will be saved with the document into which it is inserted. This argument must be msoTrue if LinkToFile is msoFalse.
     - `Left As Single` (required): The position, measured in points, of the left edge of the picture relative to the left edge of the worksheet.
     - `Top As Single` (required): The position, measured in points, of the top edge of the picture relative to the top edge of the worksheet.
     - `Width As Single` (required): The width of the picture, measured in points.

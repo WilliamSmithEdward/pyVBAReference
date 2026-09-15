@@ -6,7 +6,7 @@
 
 An object representing one of the three panes in normal view or the single pane of any other view in the document window.
 
-**Remarks:** Use Panes (_index_), where _index_ is the index number for a pane, to return a single Pane object. The following table lists the names of the panes in normal view with their corresponding index numbers. When using a document window view other than normal view, use Panes (1) to reference the single Pane object. Use the Activatemethod to make the specified pane active. Use the ViewTypeproperty to determine which pane is active. Normal view is the only view with multiple panes. All other document window views have only a single pane, which is the document window.
+**Remarks:** Use Panes (index), where index is the index number for a pane, to return a single Pane object. The following table lists the names of the panes in normal view with their corresponding index numbers. When using a document window view other than normal view, use Panes (1) to reference the single Pane object. Use the Activatemethod to make the specified pane active. Use the ViewTypeproperty to determine which pane is active. Normal view is the only view with multiple panes. All other document window views have only a single pane, which is the document window.
 
 **Example:**
 

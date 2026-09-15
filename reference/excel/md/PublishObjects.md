@@ -41,7 +41,7 @@ Next objPO
     - `SourceType As XlSourceType` (required): The source type.
     - `Filename As String` (required): String. The URL (on the intranet or the web) or path (local or network) to which the source object was saved.
     - `Sheet As Variant` (optional): The name of the worksheet that was saved as a webpage.
-    - `Source As Variant` (optional): A unique name used to identify items that have one of the following constants as their _SourceType_ argument: xlSourceAutoFilter, xlSourceChart, xlSourcePivotTable, xlSourcePrintArea, xlSourceQuery, or xlSourceRange. If _SourceType_ is xlSourceRange, _Source_ specifies a range, which can be a defined name. If _SourceType_ is xlSourceChart, xlSourcePivotTable, or xlSourceQuery, _Source_ specifies the name of a chart, PivotTable report, or query table.
+    - `Source As Variant` (optional): A unique name used to identify items that have one of the following constants as their SourceType argument: xlSourceAutoFilter, xlSourceChart, xlSourcePivotTable, xlSourcePrintArea, xlSourceQuery, or xlSourceRange. If SourceType is xlSourceRange, Source specifies a range, which can be a defined name. If SourceType is xlSourceChart, xlSourcePivotTable, or xlSourceQuery, Source specifies the name of a chart, PivotTable report, or query table.
     - `HtmlType As Variant` (optional): Specifies whether the item is saved as an interactive Microsoft Office Web component or as static text and images. Can be one of the XlHTMLType constants: xlHtmlCalc, xlHtmlChart, xlHtmlList, or xlHtmlStatic.
     - `DivID As Variant` (optional): The unique identifier used in the HTML DIV tag to identify the item on the webpage.
     - `Title As Variant` (optional): The title of the webpage.

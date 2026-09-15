@@ -45,4 +45,4 @@ Next objCubeFld
   Given an attribute hierarchy, returns an implicit measure for the given function that corresponds to this attribute. If an implicit measure does not exist, a new implicit measure is created and added to the CubeFields collection.
     - `AttributeHierarchy As Variant` (required): The unique cube field that is an attribute hierarchy (XlCubeFieldType = xlHierarchy, and XlCubeFieldSubType = xlCubeAttribute).
     - `Function As XlConsolidationFunction` (required): The function performed in the added data field.
-    - `Caption As Variant` (optional): The label used in the PivotTable report to identify this measure. If the measure already exists, _Caption_ will overwrite the existing label of this measure.
+    - `Caption As Variant` (optional): The label used in the PivotTable report to identify this measure. If the measure already exists, Caption will overwrite the existing label of this measure.

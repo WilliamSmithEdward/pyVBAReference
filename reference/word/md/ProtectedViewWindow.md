@@ -6,7 +6,7 @@
 
 Represents a Protected View window.
 
-**Remarks:** Documents displayed in a Protected View window cannot be edited and are restricted from running active content such as Visual Basic for Applications macros and Data Connections. Use ProtectedViewWindows (_index_), where _index_ is the index number to return a single ProtectedViewWindow object.
+**Remarks:** Documents displayed in a Protected View window cannot be edited and are restricted from running active content such as Visual Basic for Applications macros and Data Connections. Use ProtectedViewWindows (index), where index is the index number to return a single ProtectedViewWindow object.
 
 **Example:**
 

@@ -66,7 +66,7 @@ End Sub
 - `MDX As String  (read-only)`  
   Returns a tuple that provides the full MDX coordinates of the specified value cell in a PivotTable with an OLAP data source. Read-only.
 - `ServerActions As Actions  (read-only)`  
-  Represents a collection of _actions_ consisting of OLAP-defined actions that can be executed. The actions are specific to PivotTables existing at a worksheet-level. Read-only.
+  Represents a collection of actions consisting of OLAP-defined actions that can be executed. The actions are specific to PivotTables existing at a worksheet-level. Read-only.
 
 ## Methods (2)
 

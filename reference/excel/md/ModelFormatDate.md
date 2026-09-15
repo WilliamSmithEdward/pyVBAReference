@@ -15,4 +15,4 @@ Represents the format to be used for a model measure in the data model.
 - `Parent As Object  (read-only)`  
   Returns the parent object for the specified object. Read-only.
 - `FormatString As String  (read/write)`  
-  Specifies the date format, for example, "_dd/mm/yy_". Read/write String.
+  Specifies the date format, for example, "dd/mm/yy". Read/write String.

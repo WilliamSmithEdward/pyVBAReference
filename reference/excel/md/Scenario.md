@@ -6,7 +6,7 @@
 
 Represents a scenario on a worksheet.
 
-**Remarks:** A scenario is a group of input values (called _changing cells_) that's named and saved. The Scenario object is a member of the Scenarios collection. The Scenarios collection contains all the defined scenarios for a worksheet.
+**Remarks:** A scenario is a group of input values (called changing cells) that's named and saved. The Scenario object is a member of the Scenarios collection. The Scenarios collection contains all the defined scenarios for a worksheet.
 
 **Example:**
 

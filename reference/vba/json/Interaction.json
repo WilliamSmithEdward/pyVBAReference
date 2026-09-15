@@ -15,7 +15,7 @@
           "name": "Title",
           "type": "Variant",
           "optional": false,
-          "description": "Required. String expression specifying the title in the title bar of the application window you want to activate. The task ID returned by the Shell function can be used in place of _title_ to activate an application."
+          "description": "Required. String expression specifying the title in the title bar of the application window you want to activate. The task ID returned by the Shell function can be used in place of title to activate an application."
         },
         {
           "name": "Wait",
@@ -49,7 +49,7 @@
           "name": "ServerName",
           "type": "String",
           "optional": true,
-          "description": "Optional; Variant (String). The name of the network server where the object will be created. If _servername_ is an empty string (\"\"), the local machine is used."
+          "description": "Optional; Variant (String). The name of the network server where the object will be created. If servername is an empty string (\"\"), the local machine is used."
         }
       ]
     },
@@ -71,7 +71,7 @@
           "name": "PathName",
           "type": "Variant",
           "optional": true,
-          "description": "Optional; Variant (String). The full path and name of the file containing the object to retrieve. If _pathname_ is omitted, _class_ is required."
+          "description": "Optional; Variant (String). The full path and name of the file containing the object to retrieve. If pathname is omitted, class is required."
         },
         {
           "name": "Class",
@@ -92,43 +92,43 @@
           "name": "Prompt",
           "type": "Variant",
           "optional": false,
-          "description": "Required. String expression displayed as the message in the dialog box. The maximum length of _prompt_ is approximately 1024 characters, depending on the width of the characters used. If _prompt_ consists of more than one line, you can separate the lines by using a carriage return character (Chr(13)), a linefeed character (Chr(10)), or carriage return-linefeed character combination ((Chr(13) & (Chr(10)) between each line."
+          "description": "Required. String expression displayed as the message in the dialog box. The maximum length of prompt is approximately 1024 characters, depending on the width of the characters used. If prompt consists of more than one line, you can separate the lines by using a carriage return character (Chr(13)), a linefeed character (Chr(10)), or carriage return-linefeed character combination ((Chr(13) & (Chr(10)) between each line."
         },
         {
           "name": "Title",
           "type": "Variant",
           "optional": true,
-          "description": "Optional. String expression displayed in the title bar of the dialog box. If you omit _title_, the application name is placed in the title bar."
+          "description": "Optional. String expression displayed in the title bar of the dialog box. If you omit title, the application name is placed in the title bar."
         },
         {
           "name": "Default",
           "type": "Variant",
           "optional": true,
-          "description": "Optional. String expression displayed in the text box as the default response if no other input is provided. If you omit _default_, the text box is displayed empty."
+          "description": "Optional. String expression displayed in the text box as the default response if no other input is provided. If you omit default, the text box is displayed empty."
         },
         {
           "name": "XPos",
           "type": "Variant",
           "optional": true,
-          "description": "Optional. Numeric expression that specifies, in twips, the horizontal distance of the left edge of the dialog box from the left edge of the screen. If _xpos_ is omitted, the dialog box is horizontally centered."
+          "description": "Optional. Numeric expression that specifies, in twips, the horizontal distance of the left edge of the dialog box from the left edge of the screen. If xpos is omitted, the dialog box is horizontally centered."
         },
         {
           "name": "YPos",
           "type": "Variant",
           "optional": true,
-          "description": "Optional. Numeric expression that specifies, in twips, the vertical distance of the upper edge of the dialog box from the top of the screen. If _ypos_ is omitted, the dialog box is vertically positioned approximately one-third of the way down the screen."
+          "description": "Optional. Numeric expression that specifies, in twips, the vertical distance of the upper edge of the dialog box from the top of the screen. If ypos is omitted, the dialog box is vertically positioned approximately one-third of the way down the screen."
         },
         {
           "name": "HelpFile",
           "type": "Variant",
           "optional": true,
-          "description": "Optional. String expression that identifies the Help file to use to provide context-sensitive Help for the dialog box. If _helpfile_ is provided, _context_ must also be provided."
+          "description": "Optional. String expression that identifies the Help file to use to provide context-sensitive Help for the dialog box. If helpfile is provided, context must also be provided."
         },
         {
           "name": "Context",
           "type": "Variant",
           "optional": true,
-          "description": "Optional. Numeric expression that is the Help context number assigned to the appropriate Help topic by the Help author. If _context_ is provided, _helpfile_ must also be provided."
+          "description": "Optional. Numeric expression that is the Help context number assigned to the appropriate Help topic by the Help author. If context is provided, helpfile must also be provided."
         }
       ]
     },
@@ -143,31 +143,31 @@
           "name": "Prompt",
           "type": "Variant",
           "optional": false,
-          "description": "Required. String expression displayed as the message in the dialog box. The maximum length of _prompt_ is approximately 1024 characters, depending on the width of the characters used. If _prompt_ consists of more than one line, you can separate the lines by using a carriage return character (Chr(13)), a linefeed character (Chr(10)), or carriage return - linefeed character combination (Chr(13) & Chr(10)) between each line."
+          "description": "Required. String expression displayed as the message in the dialog box. The maximum length of prompt is approximately 1024 characters, depending on the width of the characters used. If prompt consists of more than one line, you can separate the lines by using a carriage return character (Chr(13)), a linefeed character (Chr(10)), or carriage return - linefeed character combination (Chr(13) & Chr(10)) between each line."
         },
         {
           "name": "Buttons",
           "type": "VbMsgBoxStyle",
           "optional": true,
-          "description": "Optional. Numeric expression that is the combination of values specifying the number and type of buttons to display, the icon style to use, the identity of the default button, and the modality of the message box. If omitted, the default value for _buttons_ is 0."
+          "description": "Optional. Numeric expression that is the combination of values specifying the number and type of buttons to display, the icon style to use, the identity of the default button, and the modality of the message box. If omitted, the default value for buttons is 0."
         },
         {
           "name": "Title",
           "type": "Variant",
           "optional": true,
-          "description": "Optional. String expression displayed in the title bar of the dialog box. If you omit _title_, the application name is placed in the title bar."
+          "description": "Optional. String expression displayed in the title bar of the dialog box. If you omit title, the application name is placed in the title bar."
         },
         {
           "name": "HelpFile",
           "type": "Variant",
           "optional": true,
-          "description": "Optional. String expression that identifies the Help file to use to provide context-sensitive Help for the dialog box. If _helpfile_ is provided, _context_ must also be provided."
+          "description": "Optional. String expression that identifies the Help file to use to provide context-sensitive Help for the dialog box. If helpfile is provided, context must also be provided."
         },
         {
           "name": "Context",
           "type": "Variant",
           "optional": true,
-          "description": "Optional. Numeric expression that is the Help context number assigned to the appropriate Help topic by the Help author. If _context_ is provided, _helpfile_ must also be provided."
+          "description": "Optional. Numeric expression that is the Help context number assigned to the appropriate Help topic by the Help author. If context is provided, helpfile must also be provided."
         }
       ]
     },
@@ -209,7 +209,7 @@
           "name": "WindowStyle",
           "type": "VbAppWinStyle",
           "optional": true,
-          "description": "Optional. Variant (Integer) corresponding to the style of the window in which the program is to be run. If _windowstyle_ is omitted, the program is started minimized with focus. On the Macintosh (System 7.0 or later), _windowstyle_ only determines whether or not the application gets the focus when it is run."
+          "description": "Optional. Variant (Integer) corresponding to the style of the window in which the program is to be run. If windowstyle is omitted, the program is started minimized with focus. On the Macintosh (System 7.0 or later), windowstyle only determines whether or not the application gets the focus when it is run."
         }
       ]
     },
@@ -236,7 +236,7 @@
           "name": "Stop",
           "type": "Variant",
           "optional": false,
-          "description": "Required. The number that is the end of the overall range of numbers. The number can't be equal to or less than _start_."
+          "description": "Required. The number that is the end of the overall range of numbers. The number can't be equal to or less than start."
         },
         {
           "name": "Interval",
@@ -343,13 +343,13 @@
           "name": "TruePart",
           "type": "Variant",
           "optional": false,
-          "description": "Required. Value or expression returned if _expr_ is True."
+          "description": "Required. Value or expression returned if expr is True."
         },
         {
           "name": "FalsePart",
           "type": "Variant",
           "optional": false,
-          "description": "Required. Value or expression returned if _expr_ is False."
+          "description": "Required. Value or expression returned if expr is False."
         }
       ]
     },
@@ -382,7 +382,7 @@
           "name": "Default",
           "type": "Variant",
           "optional": true,
-          "description": "Optional. Expression containing the value to return if no value is set in the key setting. If omitted, _default_ is assumed to be a zero-length string (\"\")."
+          "description": "Optional. Expression containing the value to return if no value is set in the key setting. If omitted, default is assumed to be a zero-length string (\"\")."
         }
       ]
     },
@@ -415,7 +415,7 @@
           "name": "Setting",
           "type": "String",
           "optional": false,
-          "description": "Required. Expression containing the value that _key_ is being set to."
+          "description": "Required. Expression containing the value that key is being set to."
         }
       ]
     },
@@ -436,7 +436,7 @@
           "name": "Section",
           "type": "Variant",
           "optional": true,
-          "description": "Required. String expression containing the name of the section where the key setting is being deleted. If only _appname_ and _section_ are provided, the specified section is deleted along with all related key settings."
+          "description": "Required. String expression containing the name of the section where the key setting is being deleted. If only appname and section are provided, the specified section is deleted along with all related key settings."
         },
         {
           "name": "Key",

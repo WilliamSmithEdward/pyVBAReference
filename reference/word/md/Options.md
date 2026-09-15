@@ -136,7 +136,7 @@ Represents application and document options in Word. Many of the properties for 
 - `AutoFormatReplaceFractions As Boolean  (read/write)`  
   True if typed fractions are replaced with fractions from the current character set when Word formats a document or range automatically. For example, "1/2" is replaced with "." Read/write Boolean.
 - `AutoFormatReplacePlainTextEmphasis As Boolean  (read/write)`  
-  True if manual emphasis characters are replaced with character formatting when Word formats a document or range automatically. For example, "bold" is changed to "bold" and "_underline_" is changed to "underline." Read/write Boolean.
+  True if manual emphasis characters are replaced with character formatting when Word formats a document or range automatically. For example, "bold" is changed to "bold" and "underline" is changed to "underline." Read/write Boolean.
 - `AutoFormatPreserveStyles As Boolean  (read/write)`  
   True if previously applied styles are preserved when Word formats a document or range automatically. Read/write Boolean.
 - `AutoFormatAsYouTypeApplyHeadings As Boolean  (read/write)`  
@@ -156,7 +156,7 @@ Represents application and document options in Word. Many of the properties for 
 - `AutoFormatAsYouTypeReplaceFractions As Boolean  (read/write)`  
   True if typed fractions are replaced with fractions from the current character set as you type. For example, "1/2" is replaced with "." Read/write Boolean.
 - `AutoFormatAsYouTypeReplacePlainTextEmphasis As Boolean  (read/write)`  
-  True if manual emphasis characters are automatically replaced with character formatting as you type. For example, "bold" is changed to " bold " and "_underline_" is changed to "underline." Read/write Boolean.
+  True if manual emphasis characters are automatically replaced with character formatting as you type. For example, "bold" is changed to " bold " and "underline" is changed to "underline." Read/write Boolean.
 - `AutoFormatAsYouTypeFormatListItemBeginning As Boolean  (read/write)`  
   True if Word repeats character formatting applied to the beginning of a list item to the next list item. Read/write Boolean.
 - `AutoFormatAsYouTypeDefineStyles As Boolean  (read/write)`  

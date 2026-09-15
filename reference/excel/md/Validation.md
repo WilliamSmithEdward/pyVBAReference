@@ -60,7 +60,7 @@ Range("e5").Validation _
     - `AlertStyle As Variant` (optional): The validation alert style. Can be one of the following XlDVAlertStyle constants: xlValidAlertInformation, xlValidAlertStop, or xlValidAlertWarning.
     - `Operator As Variant` (optional): The data validation operator. Can be one of the following XlFormatConditionOperator constants: xlBetween, xlEqual, xlGreater, xlGreaterEqual, xlLess, xlLessEqual, xlNotBetween, or xlNotEqual.
     - `Formula1 As Variant` (optional): The first part of the data validation equation. Value must not exceed 255 characters.
-    - `Formula2 As Variant` (optional): The second part of the data validation equation when _Operator_ is xlBetween or xlNotBetween (otherwise, this argument is ignored).
+    - `Formula2 As Variant` (optional): The second part of the data validation equation when Operator is xlBetween or xlNotBetween (otherwise, this argument is ignored).
 - `Delete()`  
   Deletes the object.
 - `Modify([Type As Variant], [AlertStyle As Variant], [Operator As Variant], [Formula1 As Variant], [Formula2 As Variant])`  

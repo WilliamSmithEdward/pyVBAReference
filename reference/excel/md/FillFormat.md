@@ -81,7 +81,7 @@ End With
 - `OneColorGradient(Style As MsoGradientStyle, Variant As Long, Degree As Single)`  
   Sets the specified fill to a one-color gradient.
     - `Style As MsoGradientStyle` (required): The gradient style.
-    - `Variant As Long` (required): The gradient variant. Can be a value from 1 through 4, corresponding to one of the four variants on the Gradient tab in the Fill Effects dialog box. If _GradientStyle_ is msoGradientFromCenter, the _Variant_ argument can only be 1 or 2.
+    - `Variant As Long` (required): The gradient variant. Can be a value from 1 through 4, corresponding to one of the four variants on the Gradient tab in the Fill Effects dialog box. If GradientStyle is msoGradientFromCenter, the Variant argument can only be 1 or 2.
     - `Degree As Single` (required): The gradient degree. Can be a value from 0.0 (dark) through 1.0 (light).
 - `Patterned(Pattern As MsoPatternType)`  
   Sets the specified fill to a pattern.
@@ -89,7 +89,7 @@ End With
 - `PresetGradient(Style As MsoGradientStyle, Variant As Long, PresetGradientType As MsoPresetGradientType)`  
   Sets the specified fill to a preset gradient.
     - `Style As MsoGradientStyle` (required): The gradient style.
-    - `Variant As Long` (required): The gradient variant. Can be a value from 1 through 4, corresponding to one of the four variants on the Gradient tab in the Fill Effects dialog box. If _Style_ is msoGradientFromCenter, the _Variant_ argument can only be 1 or 2.
+    - `Variant As Long` (required): The gradient variant. Can be a value from 1 through 4, corresponding to one of the four variants on the Gradient tab in the Fill Effects dialog box. If Style is msoGradientFromCenter, the Variant argument can only be 1 or 2.
     - `PresetGradientType As MsoPresetGradientType` (required): The preset gradient type.
 - `PresetTextured(PresetTexture As MsoPresetTexture)`  
   Sets the specified fill format to a preset texture.
@@ -99,7 +99,7 @@ End With
 - `TwoColorGradient(Style As MsoGradientStyle, Variant As Long)`  
   Sets the specified fill to a two-color gradient.
     - `Style As MsoGradientStyle` (required): The gradient style.
-    - `Variant As Long` (required): The gradient variant. Can be a value from 1 through 4, corresponding to one of the four variants on the Gradient tab in the Fill Effects dialog box. If _Style_ is msoGradientFromCenter, the _Variant_ argument can only be 1 or 2.
+    - `Variant As Long` (required): The gradient variant. Can be a value from 1 through 4, corresponding to one of the four variants on the Gradient tab in the Fill Effects dialog box. If Style is msoGradientFromCenter, the Variant argument can only be 1 or 2.
 - `UserPicture(PictureFile As String)`  
   Fills the specified shape with an image.
     - `PictureFile As String` (required): The file path to the picture file, or the name of the picture file if a link to the picture file currently exists.

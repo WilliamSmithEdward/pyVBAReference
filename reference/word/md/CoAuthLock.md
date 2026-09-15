@@ -6,7 +6,7 @@
 
 Represents a lock within the document. The CoAuthLock object is a member of the CoAuthLocks collection.
 
-**Remarks:** Use Locks (_index_), where _index_ is the index number, to return a CoAuthLock object. When adding a CoAuthLock object, use the WdLockType enumeration to specify the type of lock.
+**Remarks:** Use Locks (index), where index is the index number, to return a CoAuthLock object. When adding a CoAuthLock object, use the WdLockType enumeration to specify the type of lock.
 
 **Example:**
 

@@ -1667,7 +1667,7 @@
           "name": "String",
           "type": "String",
           "optional": false,
-          "description": "A Microsoft Excel 4.0 macro language function without the equal sign. All references must be given as R1C1 strings. If _String_ contains embedded double quotation marks, you must double them. For example, to run the macro function =MID(\"sometext\",1,4), _String_ would have to be \"MID(\"\"sometext\"\",1,4)\"."
+          "description": "A Microsoft Excel 4.0 macro language function without the equal sign. All references must be given as R1C1 strings. If String contains embedded double quotation marks, you must double them. For example, to run the macro function =MID(\"sometext\",1,4), String would have to be \"MID(\"\"sometext\"\",1,4)\"."
         }
       ]
     },
@@ -2492,7 +2492,7 @@
           "name": "ByRow",
           "type": "Variant",
           "optional": true,
-          "description": "Only used if _ListArray_ is a Range object. True to create a custom list from each row in the range. False to create a custom list from each column in the range. If this argument is omitted and there are more rows than columns (or an equal number of rows and columns) in the range, Microsoft Excel creates a custom list from each column in the range. If this argument is omitted and there are more columns than rows in the range, Excel creates a custom list from each row in the range."
+          "description": "Only used if ListArray is a Range object. True to create a custom list from each row in the range. False to create a custom list from each column in the range. If this argument is omitted and there are more rows than columns (or an equal number of rows and columns) in the range, Microsoft Excel creates a custom list from each column in the range. If this argument is omitted and there are more columns than rows in the range, Excel creates a custom list from each row in the range."
         }
       ]
     },
@@ -2561,7 +2561,7 @@
           "name": "ToReferenceStyle",
           "type": "Variant",
           "optional": true,
-          "description": "A constant of XlReferenceStyle specifying the reference style that you want returned. If this argument is omitted, the reference style isn't changed; the formula stays in the style specified by _FromReferenceStyle_."
+          "description": "A constant of XlReferenceStyle specifying the reference style that you want returned. If this argument is omitted, the reference style isn't changed; the formula stays in the style specified by FromReferenceStyle."
         },
         {
           "name": "ToAbsolute",
@@ -2646,7 +2646,7 @@
           "name": "FilterIndex",
           "type": "Variant",
           "optional": true,
-          "description": "Specifies the index numbers of the default file filtering criteria, from 1 to the number of filters specified in _FileFilter_. If this argument is omitted or greater than the number of filters present, the first file filter is used."
+          "description": "Specifies the index numbers of the default file filtering criteria, from 1 to the number of filters specified in FileFilter. If this argument is omitted or greater than the number of filters present, the first file filter is used."
         },
         {
           "name": "Title",
@@ -2691,7 +2691,7 @@
           "name": "FilterIndex",
           "type": "Variant",
           "optional": true,
-          "description": "Specifies the index number of the default file filtering criteria, from 1 to the number of filters specified in _FileFilter_. If this argument is omitted or greater than the number of filters present, the first file filter is used."
+          "description": "Specifies the index number of the default file filtering criteria, from 1 to the number of filters specified in FileFilter. If this argument is omitted or greater than the number of filters present, the first file filter is used."
         },
         {
           "name": "Title",
@@ -2805,13 +2805,13 @@
           "name": "HelpFile",
           "type": "Variant",
           "optional": true,
-          "description": "The name of the Help file for this input box. If the _HelpFile_ and _HelpContextID_ arguments are present, a Help button will appear in the dialog box."
+          "description": "The name of the Help file for this input box. If the HelpFile and HelpContextID arguments are present, a Help button will appear in the dialog box."
         },
         {
           "name": "HelpContextID",
           "type": "Variant",
           "optional": true,
-          "description": "The context ID number of the Help topic in _HelpFile_."
+          "description": "The context ID number of the Help topic in HelpFile."
         },
         {
           "name": "Type",
@@ -2879,7 +2879,7 @@
           "name": "Procedure",
           "type": "Variant",
           "optional": true,
-          "description": "A string indicating the name of the procedure to be run. If _Procedure_ is \"\" (empty text), nothing happens when _Key_ is pressed. This form of OnKey changes the normal result of keystrokes in Microsoft Excel. If _Procedure_ is omitted, _Key_ reverts to its normal result in Microsoft Excel, and any special key assignments made with previous OnKey methods are cleared."
+          "description": "A string indicating the name of the procedure to be run. If Procedure is \"\" (empty text), nothing happens when Key is pressed. This form of OnKey changes the normal result of keystrokes in Microsoft Excel. If Procedure is omitted, Key reverts to its normal result in Microsoft Excel, and any special key assignments made with previous OnKey methods are cleared."
         }
       ]
     },
@@ -2927,7 +2927,7 @@
           "name": "LatestTime",
           "type": "Variant",
           "optional": true,
-          "description": "The latest time at which the procedure can be run. For example, if _LatestTime_ is set to _EarliestTime_ + 30 and Microsoft Excel is not in Ready, Copy, Cut, or Find mode at _EarliestTime_ because another procedure is running, Excel will wait 30 seconds for the first procedure to complete. If Excel is not in Ready mode within 30 seconds, the procedure won't be run. If this argument is omitted, Excel will wait until the procedure can be run."
+          "description": "The latest time at which the procedure can be run. For example, if LatestTime is set to EarliestTime + 30 and Microsoft Excel is not in Ready, Copy, Cut, or Find mode at EarliestTime because another procedure is running, Excel will wait 30 seconds for the first procedure to complete. If Excel is not in Ready mode within 30 seconds, the procedure won't be run. If this argument is omitted, Excel will wait until the procedure can be run."
         },
         {
           "name": "Schedule",
@@ -3056,7 +3056,7 @@
           "name": "Text",
           "type": "Variant",
           "optional": true,
-          "description": "Specifies the text to be converted to phonetic text. If you omit this argument, the next possible phonetic text string (if any) of the previously specified _Text_ is returned. If there are no more possible phonetic text strings, an empty string is returned."
+          "description": "Specifies the text to be converted to phonetic text. If you omit this argument, the next possible phonetic text string (if any) of the previously specified Text is returned. If there are no more possible phonetic text strings, an empty string is returned."
         }
       ]
     },
@@ -3100,7 +3100,7 @@
       "name": "DisplayXMLSourcePane",
       "kind": "method",
       "signature": "DisplayXMLSourcePane([XmlMap As Variant])",
-      "description": "Opens the XML Source task pane and displays the XML map specified by the _XmlMap_ argument.",
+      "description": "Opens the XML Source task pane and displays the XML map specified by the XmlMap argument.",
       "returns": "void",
       "parameters": [
         {
@@ -3168,13 +3168,13 @@
           "name": "HasShortcutKey",
           "type": "Variant",
           "optional": true,
-          "description": "True to assign a shortcut key to the macro (_ShortcutKey_ must also be specified). If this argument is False, no shortcut key is assigned to the macro. If the macro already has a shortcut key, setting this argument to False removes the shortcut key. The default value is False."
+          "description": "True to assign a shortcut key to the macro (ShortcutKey must also be specified). If this argument is False, no shortcut key is assigned to the macro. If the macro already has a shortcut key, setting this argument to False removes the shortcut key. The default value is False."
         },
         {
           "name": "ShortcutKey",
           "type": "Variant",
           "optional": true,
-          "description": "Required if _HasShortcutKey_ is True; ignored otherwise. The shortcut key."
+          "description": "Required if HasShortcutKey is True; ignored otherwise. The shortcut key."
         },
         {
           "name": "Category",
@@ -3198,7 +3198,7 @@
           "name": "HelpFile",
           "type": "Variant",
           "optional": true,
-          "description": "The name of the Help file that contains the Help topic defined by _HelpContextId_."
+          "description": "The name of the Help file that contains the Help topic defined by HelpContextId."
         },
         {
           "name": "ArgumentDescriptions",

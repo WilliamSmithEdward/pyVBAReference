@@ -6,7 +6,7 @@
 
 Contains a collection of adjustment values for the specified AutoShape or WordArt object. Each adjustment value represents one way an adjustment handle can be adjusted. Because some adjustment handles can be adjusted in two ways&mdash;for instance, some handles can be adjusted both horizontally and vertically&mdash;a shape can have more adjustment values than it has adjustment handles. A shape can have up to eight adjustments.
 
-**Remarks:** Use the Adjustments property to return an Adjustments object. Use Adjustments (_index_), where _index_ is the adjustment value's index number, to return a single adjustment value. Different shapes have different numbers of adjustment values, different kinds of adjustments change the geometry of a shape in different ways, and different kinds of adjustments have different ranges of valid values. The following table summarizes the ranges of valid adjustment values for different types of adjustments. In most cases, if you specify a value that's beyond the range of valid values, the closest valid value will be assigned to the adjustment. The following example adds a right-arrow callout to the active document and sets adjustment values for the callout. Note that although the shape has only three adjustment handles, it has four adjustments. Adjustments three and four both correspond to the handle between the head and neck of the arrow.
+**Remarks:** Use the Adjustments property to return an Adjustments object. Use Adjustments (index), where index is the adjustment value's index number, to return a single adjustment value. Different shapes have different numbers of adjustment values, different kinds of adjustments change the geometry of a shape in different ways, and different kinds of adjustments have different ranges of valid values. The following table summarizes the ranges of valid adjustment values for different types of adjustments. In most cases, if you specify a value that's beyond the range of valid values, the closest valid value will be assigned to the adjustment. The following example adds a right-arrow callout to the active document and sets adjustment values for the callout. Note that although the shape has only three adjustment handles, it has four adjustments. Adjustments three and four both correspond to the handle between the head and neck of the arrow.
 
 ## Properties (5)
 
@@ -19,4 +19,4 @@ Contains a collection of adjustment values for the specified AutoShape or WordAr
 - `Count As Long  (read-only)`  
   Returns the number of items in the Adjustments collection. Read-only Long.
 - `Item As Single  (read/write)`  
-  Returns or sets the adjustment value specified by the _Index_ argument. Read/write Single.
+  Returns or sets the adjustment value specified by the Index argument. Read/write Single.

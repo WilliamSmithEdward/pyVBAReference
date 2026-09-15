@@ -260,7 +260,7 @@ Workbooks(1).Activate
 - `ChangeFileAccess(Mode As XlFileAccess, [WritePassword As Variant], [Notify As Variant])`  
   Changes the access permissions for the workbook. This may require an updated version to be loaded from the disk.
     - `Mode As XlFileAccess` (required): Specifies the new access mode.
-    - `WritePassword As Variant` (optional): Specifies the write-reserved password if the file is write reserved and _Mode_ is xlReadWrite. Ignored if there's no password for the file or if _Mode_ is xlReadOnly.
+    - `WritePassword As Variant` (optional): Specifies the write-reserved password if the file is write reserved and Mode is xlReadWrite. Ignored if there's no password for the file or if Mode is xlReadOnly.
     - `Notify As Variant` (optional): True (or omitted) to notify the user if the file cannot be immediately accessed.
 - `ChangeLink(Name As String, NewName As String, [Type As XlLinkType])`  
   Changes a link from one document to another.
@@ -269,7 +269,7 @@ Workbooks(1).Activate
     - `Type As XlLinkType` (optional): The link type.
 - `Close([SaveChanges As Variant], [Filename As Variant], [RouteWorkbook As Variant])`  
   Closes the object.
-    - `SaveChanges As Variant` (optional): If there are no changes to the workbook, this argument is ignored. If there are changes to the workbook and the workbook appears in other open windows, this argument is ignored. If there are changes to the workbook but the workbook doesn't appear in any other open windows, this argument specifies whether changes should be saved. If set to True, changes are saved to the workbook. If there is not yet a file name associated with the workbook, _FileName_ is used. If _FileName_ is omitted, the user is asked to supply a file name.
+    - `SaveChanges As Variant` (optional): If there are no changes to the workbook, this argument is ignored. If there are changes to the workbook and the workbook appears in other open windows, this argument is ignored. If there are changes to the workbook but the workbook doesn't appear in any other open windows, this argument specifies whether changes should be saved. If set to True, changes are saved to the workbook. If there is not yet a file name associated with the workbook, FileName is used. If FileName is omitted, the user is asked to supply a file name.
     - `Filename As Variant` (optional): Saves changes under this file name.
     - `RouteWorkbook As Variant` (optional): If the workbook doesn't need to be routed to the next recipient (if it has no routing slip or has already been routed), this argument is ignored. Otherwise, Microsoft Excel routes the workbook according to the value of this parameter. If set to True, the workbook is sent to the next recipient. If set to False, the workbook is not sent. If omitted, the user is asked whether the workbook should be sent.
 - `DeleteNumberFormat(NumberFormat As String)`  
@@ -375,8 +375,8 @@ Workbooks(1).Activate
     - `SubAddress As Variant` (optional): The location within the target document. The default value is the empty string.
     - `NewWindow As Variant` (optional): True to display the target application in a new window. The default value is False.
     - `AddHistory As Variant` (optional): Not used. Reserved for future use.
-    - `ExtraInfo As Variant` (optional): A String or byte array that specifies additional information for HTTP to use to resolve the hyperlink. For example, you can use _ExtraInfo_ to specify the coordinates of an image map, the contents of a form, or a FAT file name.
-    - `Method As Variant` (optional): Specifies the way _ExtraInfo_ is attached. Can be one of the MsoExtraInfoMethod constants: msoMethodGet or msoMethodPost.
+    - `ExtraInfo As Variant` (optional): A String or byte array that specifies additional information for HTTP to use to resolve the hyperlink. For example, you can use ExtraInfo to specify the coordinates of an image map, the contents of a form, or a FAT file name.
+    - `Method As Variant` (optional): Specifies the way ExtraInfo is attached. Can be one of the MsoExtraInfoMethod constants: msoMethodGet or msoMethodPost.
     - `HeaderInfo As Variant` (optional): A String that specifies header information for the HTTP request. The default value is an empty string.
 - `AddToFavorites()`  
   Adds a shortcut to the workbook or hyperlink to the Favorites folder.
@@ -392,13 +392,13 @@ Workbooks(1).Activate
 - `CheckIn([SaveChanges As Variant], [Comments As Variant], [MakePublic As Variant])`  
   Returns a workbook from a local computer to a server, and sets the local workbook to read-only so that it cannot be edited locally. Calling this method will also close the workbook.
     - `SaveChanges As Variant` (optional): True saves changes and checks in the document. False returns the document to a checked-in status without saving revisions.
-    - `Comments As Variant` (optional): Allows the user to enter check-in comments for the revision of the workbook being checked in (applies only if _SaveChanges_ equals True).
-    - `MakePublic As Variant` (optional): True allows the user to publish the workbook after it has been checked in. This submits the workbook for the approval process, which can eventually result in a version of the workbook being published to users with read-only rights to the workbook (applies only if _SaveChanges_ equals True).
+    - `Comments As Variant` (optional): Allows the user to enter check-in comments for the revision of the workbook being checked in (applies only if SaveChanges equals True).
+    - `MakePublic As Variant` (optional): True allows the user to publish the workbook after it has been checked in. This submits the workbook for the approval process, which can eventually result in a version of the workbook being published to users with read-only rights to the workbook (applies only if SaveChanges equals True).
 - `CanCheckIn() As Boolean`  
   True if Microsoft Excel can check in a specified workbook to a server. Read/write Boolean.
 - `SendForReview([Recipients As Variant], [Subject As Variant], [ShowMessage As Variant], [IncludeAttachment As Variant])`  
   Sends a workbook in an email message for review to the specified recipients.
-    - `Recipients As Variant` (optional): A string that lists the people to whom to send the message. These can be unresolved names and aliases in an email phone book or full email addresses. Separate multiple recipients with a semicolon (;). If left blank and _ShowMessage_ is False, you'll receive an error message, and the message will not be sent.
+    - `Recipients As Variant` (optional): A string that lists the people to whom to send the message. These can be unresolved names and aliases in an email phone book or full email addresses. Separate multiple recipients with a semicolon (;). If left blank and ShowMessage is False, you'll receive an error message, and the message will not be sent.
     - `Subject As Variant` (optional): A string for the subject of the message. If left blank, the subject will be: Please review "filename".
     - `ShowMessage As Variant` (optional): A Boolean value that indicates whether the message should be displayed when the method is executed. The default value is True. If set to False, the message is automatically sent to the recipients without first showing the message to the sender.
     - `IncludeAttachment As Variant` (optional): A Boolean value that indicates whether the message should include an attachment or a link to a server location. The default value is True. If set to False, the document must be stored at a shared location.
@@ -427,13 +427,13 @@ Workbooks(1).Activate
   Imports an XML data file into the current workbook.
     - `Url As String` (required): A uniform resource locator (URL) or a uniform naming convention (UNC) path to an XML data file.
     - `ImportMap As XmlMap` (required): The schema map to apply when importing the file. If the data was previously imported, contains a reference to the XmlMap object containing the data.
-    - `Overwrite As Variant` (optional): If a value is not specified for the _Destination_ parameter, this parameter specifies whether to overwrite data that has been mapped to the schema map specified in the _ImportMap_ parameter. Set to True to overwrite the data or False to append the new data to the existing data. The default value is True. If a value is specified for the _Destination_ parameter, this parameter specifies whether to overwrite existing data. Set to True to overwrite existing data or False to cancel the import if data would be overwritten. The default value is True.
+    - `Overwrite As Variant` (optional): If a value is not specified for the Destination parameter, this parameter specifies whether to overwrite data that has been mapped to the schema map specified in the ImportMap parameter. Set to True to overwrite the data or False to append the new data to the existing data. The default value is True. If a value is specified for the Destination parameter, this parameter specifies whether to overwrite existing data. Set to True to overwrite existing data or False to cancel the import if data would be overwritten. The default value is True.
     - `Destination As Variant` (optional): Specifies the range where the list will be created. You only use the top-left corner of the range.
 - `XmlImportXml(Data As String, ImportMap As XmlMap, [Overwrite As Variant], [Destination As Variant]) As XlXmlImportResult`  
   Imports an XML data stream that has been previously loaded into memory. Excel uses the first qualifying map found, or if the destination range is specified, Excel automatically lists the data.
     - `Data As String` (required): The data to import.
     - `ImportMap As XmlMap` (required): The schema map to apply when importing the file.
-    - `Overwrite As Variant` (optional): If a value is not specified for the _Destination_ parameter, this parameter specifies whether to overwrite data that has been mapped to the schema map specified in the _ImportMap_ parameter. Set to True to overwrite the data or False to append the new data to the existing data. The default value is True. If a value is specified for the _Destination_ parameter, this parameter specifies whether to overwrite existing data. Set to True to overwrite existing data or False to cancel the import if data would be overwritten. The default value is True.
+    - `Overwrite As Variant` (optional): If a value is not specified for the Destination parameter, this parameter specifies whether to overwrite data that has been mapped to the schema map specified in the ImportMap parameter. Set to True to overwrite the data or False to append the new data to the existing data. The default value is True. If a value is specified for the Destination parameter, this parameter specifies whether to overwrite existing data. Set to True to overwrite existing data or False to cancel the import if data would be overwritten. The default value is True.
     - `Destination As Variant` (optional): Specifies the range where the list will be created. Excel only uses the top-left corner of the range.
 - `SaveAsXMLData(Filename As String, Map As XmlMap)`  
   Exports the data that has been mapped to the specified XML schema map to an XML data file.
@@ -447,7 +447,7 @@ Workbooks(1).Activate
 - `CheckInWithVersion([SaveChanges As Variant], [Comments As Variant], [MakePublic As Variant], [VersionType As Variant])`  
   Saves a workbook to a server from a local computer, and sets the local workbook to read-only so that it cannot be edited locally.
     - `SaveChanges As Variant` (optional): True to save the workbook to the server location. The default is True.
-    - `Comments As Variant` (optional): Comments for the revision of the workbook being checked in (applies only if _SaveChanges_ is set to True).
+    - `Comments As Variant` (optional): Comments for the revision of the workbook being checked in (applies only if SaveChanges is set to True).
     - `MakePublic As Variant` (optional): True to allow the user to publish the workbook after it is checked in.
     - `VersionType As Variant` (optional): Specifies versioning information for the workbook.
 - `LockServerFile()`  
@@ -463,9 +463,9 @@ Workbooks(1).Activate
     - `Copies As Variant` (optional): The number of copies to print. If this argument is omitted, one copy is printed.
     - `Preview As Variant` (optional): True to have Microsoft Excel invoke print preview before printing the object. False (or omitted) to print the object immediately.
     - `ActivePrinter As Variant` (optional): Sets the name of the active printer.
-    - `PrintToFile As Variant` (optional): True to print to a file. If _PrToFileName_ is not specified, Microsoft Excel prompts the user to enter the name of the output file.
+    - `PrintToFile As Variant` (optional): True to print to a file. If PrToFileName is not specified, Microsoft Excel prompts the user to enter the name of the output file.
     - `Collate As Variant` (optional): True to collate multiple copies.
-    - `PrToFileName As Variant` (optional): If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to.
+    - `PrToFileName As Variant` (optional): If PrintToFile is set to True, this argument specifies the name of the file that you want to print to.
     - `IgnorePrintAreas As Variant` (optional): True to ignore print areas and print the entire object.
 - `ApplyTheme(Filename As String)`  
   Applies the specified theme to the current workbook.
@@ -494,8 +494,8 @@ Workbooks(1).Activate
     - `AccessMode As XlSaveAsAccessMode` (optional): The access mode for the workbook.
     - `ConflictResolution As Variant` (optional): An XlSaveConflictResolution value that determines how the method resolves a conflict while saving the workbook. If set to xlUserResolution, the conflict-resolution dialog box is displayed. If set to xlLocalSessionChanges, the local user's changes are automatically accepted. If set to xlOtherSessionChanges, the changes from other sessions are automatically accepted instead of the local user's changes. If this argument is omitted, the conflict-resolution dialog box is displayed.
     - `AddToMru As Variant` (optional): True to add this workbook to the list of recently used files. The default value is False.
-    - `TextCodepage As Variant` (optional): Ignored for all languages in Microsoft Excel. NOTE: When Excel saves a workbook to one of the CSV or text formats, which are specified by using the _FileFormat_ parameter, it uses the code page that corresponds to the language for the system locale in use on the current computer. This system setting is available in the Control Panel > Region and Language > Location tab under Current location.
-    - `TextVisualLayout As Variant` (optional): Ignored for all languages in Microsoft Excel. NOTE: When Excel saves a workbook to one of the CSV or text formats, which are specified by using the _FileFormat_ parameter, it saves these formats in logical layout. If left-to-right (LTR) text is embedded within right-to-left (RTL) text in the file, or vice versa, logical layout saves the contents of the file in the correct reading order for all languages in the file without regard to direction. When an application opens the file, each run of LTR or RTL characters are rendered in the correct direction according to the character value ranges within the code page (unless an application that is designed to display the exact memory layout of the file, such as a debugger or editor, is used to open the file).
+    - `TextCodepage As Variant` (optional): Ignored for all languages in Microsoft Excel. NOTE: When Excel saves a workbook to one of the CSV or text formats, which are specified by using the FileFormat parameter, it uses the code page that corresponds to the language for the system locale in use on the current computer. This system setting is available in the Control Panel > Region and Language > Location tab under Current location.
+    - `TextVisualLayout As Variant` (optional): Ignored for all languages in Microsoft Excel. NOTE: When Excel saves a workbook to one of the CSV or text formats, which are specified by using the FileFormat parameter, it saves these formats in logical layout. If left-to-right (LTR) text is embedded within right-to-left (RTL) text in the file, or vice versa, logical layout saves the contents of the file in the correct reading order for all languages in the file without regard to direction. When an application opens the file, each run of LTR or RTL characters are rendered in the correct direction according to the character value ranges within the code page (unless an application that is designed to display the exact memory layout of the file, such as a debugger or editor, is used to open the file).
     - `Local As Variant` (optional): True saves files against the language of Microsoft Excel (including control panel settings). False (default) saves files against the language of Visual Basic for Applications (VBA) (which is typically US English unless the VBA project where Workbooks.Open is run from is an old internationalized XL5/95 VBA project).
 - `ExportAsFixedFormat(Type As XlFixedFormatType, [Filename As Variant], [Quality As Variant], [IncludeDocProperties As Variant], [IgnorePrintAreas As Variant], [From As Variant], [To As Variant], [OpenAfterPublish As Variant], [FixedFormatExtClassPtr As Variant], [WorkIdentity As Variant])`  
   The ExportAsFixedFormat method is used to publish a workbook to either the PDF or XPS format.

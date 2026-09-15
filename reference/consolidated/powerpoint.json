@@ -300,7 +300,7 @@
           "guid": "{9149347C-5A91-11CF-8700-00AA0060263B}",
           "library": "Microsoft PowerPoint 16.0 Object Library",
           "description": "Contains a collection of adjustment values for the specified AutoShape, WordArt object, or connector.",
-          "remarks": "Each adjustment value represents one way an adjustment handle can be adjusted. Because some adjustment handles can be adjusted in two ways for instance, some handles can be adjusted both horizontally and vertically a shape can have more adjustment values than it has adjustment handles. A shape can have up to eight adjustments. Use the Adjustments property to return an Adjustments object. Use Adjustments (_index_), where _index_ is the adjustment value's index number, to return a single adjustment value. Different shapes have different numbers of adjustment values, different kinds of adjustments change the geometry of a shape in different ways, and different kinds of adjustments have different ranges of valid values. For example, the following illustration shows what each of the four adjustment values for a right-arrow callout contributes to the definition of the callout's geometry. !Adjustment values The following table summarizes the ranges of valid adjustment values for different types of adjustments. In most cases, if you specify a value that's beyond the range of valid values, the closest valid value will be assigned to the adjustment.",
+          "remarks": "Each adjustment value represents one way an adjustment handle can be adjusted. Because some adjustment handles can be adjusted in two ways for instance, some handles can be adjusted both horizontally and vertically a shape can have more adjustment values than it has adjustment handles. A shape can have up to eight adjustments. Use the Adjustments property to return an Adjustments object. Use Adjustments (index), where index is the adjustment value's index number, to return a single adjustment value. Different shapes have different numbers of adjustment values, different kinds of adjustments change the geometry of a shape in different ways, and different kinds of adjustments have different ranges of valid values. For example, the following illustration shows what each of the four adjustment values for a right-arrow callout contributes to the definition of the callout's geometry. !Adjustment values The following table summarizes the ranges of valid adjustment values for different types of adjustments. In most cases, if you specify a value that's beyond the range of valid values, the closest valid value will be assigned to the adjustment.",
           "example": "Set myDocument = ActivePresentation.Slides(1)\n\nSet rac = myDocument.Shapes _\n    .AddShape(msoShapeRightArrowCallout, 10, 10, 250, 190)\n\nWith rac.Adjustments\n    .Item(1) = 0.5    'adjusts width of text box\n    .Item(2) = 0.15   'adjusts width of arrow head\n    .Item(3) = 0.8    'adjusts length of arrow head\n    .Item(4) = 0.4    'adjusts width of arrow neck\nEnd With",
           "properties": [
             {
@@ -525,7 +525,7 @@
                   "name": "Index",
                   "type": "Long",
                   "optional": true,
-                  "description": "The position of the animation behavior in relation to other animation behaviors. The default value is -1, which means that if you omit the _Index_ parameter, the new animation behavior is added at the end of the existing animation behaviors."
+                  "description": "The position of the animation behavior in relation to other animation behaviors. The default value is -1, which means that if you omit the Index parameter, the new animation behavior is added at the end of the existing animation behaviors."
                 }
               ]
             }
@@ -1801,7 +1801,7 @@
           "guid": "{92D41A52-F07E-4CA4-AF6F-BEF486AA4E6F}",
           "library": "Microsoft PowerPoint 16.0 Object Library",
           "description": "Represents a collection of all the Axis objects in the specified chart.",
-          "remarks": "Use the Axes method to return the Axes collection. Use Axes ( _Type_, _AxisGroup_ ), where _Type_ is the axis type and _AxisGroup_ is the axis group, to return an Axes collection that contains a single Axis object. _Type_ can be one of the following XlAxisType constants: xlCategory, xlSeries, or xlValue. _AxisGroup_ can be one of the following XlAxisGroup constants: xlPrimary or xlSecondary.",
+          "remarks": "Use the Axes method to return the Axes collection. Use Axes ( Type, AxisGroup ), where Type is the axis type and AxisGroup is the axis group, to return an Axes collection that contains a single Axis object. Type can be one of the following XlAxisType constants: xlCategory, xlSeries, or xlValue. AxisGroup can be one of the following XlAxisGroup constants: xlPrimary or xlSecondary.",
           "example": "With ActiveDocument.InlineShapes(1)\n\n    If .HasChart Then\n\n        MsgBox .Chart.Axes.Count\n\n    End If\n\nEnd With",
           "properties": [
             {
@@ -1892,7 +1892,7 @@
           "guid": "{92D41A53-F07E-4CA4-AF6F-BEF486AA4E6F}",
           "library": "Microsoft PowerPoint 16.0 Object Library",
           "description": "Represents a single axis in a chart.",
-          "remarks": "The Axis object is a member of the Axes collection. Use Axes ( _Type_, _AxisGroup_ ) where _Type_ is the axis type and _AxisGroup_ is the axis group to return a single Axis object. _Type_ can be one of the following XlAxisType constants: xlCategory, xlSeries, or xlValue. _AxisGroup_ can be one of the following XlAxisGroup constants: xlPrimary or xlSecondary. For more information, see the Axes method.",
+          "remarks": "The Axis object is a member of the Axes collection. Use Axes ( Type, AxisGroup ) where Type is the axis type and AxisGroup is the axis group to return a single Axis object. Type can be one of the following XlAxisType constants: xlCategory, xlSeries, or xlValue. AxisGroup can be one of the following XlAxisGroup constants: xlPrimary or xlSecondary. For more information, see the Axes method.",
           "example": "With ActiveDocument.InlineShapes(1)\n\n    If .HasChart Then\n\n        With .Chart.Axes(xlCategory)\n\n            .HasTitle = True\n\n            .AxisTitle.Caption = \"1994\"\n\n        End With\n\n    End If\n\nEnd With",
           "properties": [
             {
@@ -4750,7 +4750,7 @@
           "guid": "{92D41A57-F07E-4CA4-AF6F-BEF486AA4E6F}",
           "library": "Microsoft PowerPoint 16.0 Object Library",
           "description": "Represents characters in an object that contains text.",
-          "remarks": "The ChartCharacters object lets you modify any sequence of characters contained in the full text string. Use Characters ( _Start_, _Length_ ), where _Start_ is the start character number and _Length_ is the number of characters, to return a ChartCharacters object.",
+          "remarks": "The ChartCharacters object lets you modify any sequence of characters contained in the full text string. Use Characters ( Start, Length ), where Start is the start character number and Length is the number of characters, to return a ChartCharacters object.",
           "example": "With ActiveDocument.InlineShapes(1).Chart\n\n    .ChartTitle.Characters.Font.Italic = True\n\nEnd With",
           "properties": [
             {
@@ -5461,7 +5461,7 @@
           "guid": "{92D41A5D-F07E-4CA4-AF6F-BEF486AA4E6F}",
           "library": "Microsoft PowerPoint 16.0 Object Library",
           "description": "Represents one or more series plotted in a chart with the same format.",
-          "remarks": "A chart contains one or more chart groups, each chart group contains one or more Series objects, and each series contains one or more Points objects. For example, a single chart might contain both a line chart group, which contains all the series plotted with the line chart format, and a bar chart group, which contains all the series plotted with the bar chart format. The ChartGroup object is a member of the ChartGroups collection. Use ChartGroups (_index_), where _index_ is the chart group index number, to return a single ChartGroup object.",
+          "remarks": "A chart contains one or more chart groups, each chart group contains one or more Series objects, and each series contains one or more Points objects. For example, a single chart might contain both a line chart group, which contains all the series plotted with the line chart format, and a bar chart group, which contains all the series plotted with the bar chart format. The ChartGroup object is a member of the ChartGroups collection. Use ChartGroups (index), where index is the chart group index number, to return a single ChartGroup object.",
           "example": "With ActiveDocument.InlineShapes(1).Chart\n\n    .ChartGroups(1).HasDropLines = True\n\nEnd With",
           "properties": [
             {
@@ -5765,7 +5765,7 @@
           "guid": "{92D41A5E-F07E-4CA4-AF6F-BEF486AA4E6F}",
           "library": "Microsoft PowerPoint 16.0 Object Library",
           "description": "Represents one or more series plotted in a chart with the same format.",
-          "remarks": "A ChartGroups collection is a collection of all the ChartGroup objects in the specified chart. A chart contains one or more chart groups, each chart group contains one or more series, and each series contains one or more points. For example, a single chart might contain both a line chart group, containing all the series plotted with the line chart format, and a bar chart group, containing all the series plotted with the bar chart format. The following example displays the number of chart groups on the first chart of the active document. Use the ChartGroups method to return the ChartGroups collection. The following example adds drop lines to chart group 1 on chart sheet 1. Use ChartGroups (_index_), where _index_ is the chart group index number, to return a single ChartGroup object.",
+          "remarks": "A ChartGroups collection is a collection of all the ChartGroup objects in the specified chart. A chart contains one or more chart groups, each chart group contains one or more series, and each series contains one or more points. For example, a single chart might contain both a line chart group, containing all the series plotted with the line chart format, and a bar chart group, containing all the series plotted with the bar chart format. The following example displays the number of chart groups on the first chart of the active document. Use the ChartGroups method to return the ChartGroups collection. The following example adds drop lines to chart group 1 on chart sheet 1. Use ChartGroups (index), where index is the chart group index number, to return a single ChartGroup object.",
           "example": "",
           "properties": [
             {
@@ -7208,7 +7208,7 @@
           "guid": "{914934F2-5A91-11CF-8700-00AA0060263B}",
           "library": "Microsoft PowerPoint 16.0 Object Library",
           "description": "Represents a set of custom layouts associated with a presentation design.",
-          "remarks": "Use the CustomLayouts property of the slide Master object to return a CustomLayouts collection. Use CustomLayouts (_index_), where index is the custom layout index number, to return a single CustomLayout object. Use the Add method to create a new custom layout and add it to the CustomLayouts collection. Use the Paste method to past slides from the Clipboard as a CustomLayout object into the CustomLayouts collection. Use the CustomLayout property of a Slide or SlideRange object to return a custom layout for a slide or set of slides.",
+          "remarks": "Use the CustomLayouts property of the slide Master object to return a CustomLayouts collection. Use CustomLayouts (index), where index is the custom layout index number, to return a single CustomLayout object. Use the Add method to create a new custom layout and add it to the CustomLayouts collection. Use the Paste method to past slides from the Clipboard as a CustomLayout object into the CustomLayouts collection. Use the CustomLayout property of a Slide or SlideRange object to return a custom layout for a slide or set of slides.",
           "example": "Sub AddCustomLayout()\n\n    With ActivePresentation.SlideMaster\n\n        .CustomLayouts.Add (1)\n\n        .CustomLayouts(1).Name = \"MyLayout\"\n\n    End With\n\nEnd Sub",
           "properties": [
             {
@@ -11103,7 +11103,7 @@
                   "name": "Variant",
                   "type": "Long",
                   "optional": false,
-                  "description": "The gradient variant. Can be a value from 1 to 4, corresponding to the four variants on the Gradient subtab on the Shape Fill tab. If _Style_ is msoGradientFromTitle or msoGradientFromCenter, this argument can be either 1 or 2."
+                  "description": "The gradient variant. Can be a value from 1 to 4, corresponding to the four variants on the Gradient subtab on the Shape Fill tab. If Style is msoGradientFromTitle or msoGradientFromCenter, this argument can be either 1 or 2."
                 },
                 {
                   "name": "PresetGradientType",
@@ -11152,7 +11152,7 @@
                   "name": "Variant",
                   "type": "Long",
                   "optional": false,
-                  "description": "The gradient variant. Can be from 1 to 4, corresponding to the four variants on the Gradient sub-tab on the Shape Fill tab. If _Style_ is msoGradientFromTitle or msoGradientFromCenter, this argument can be either 1 or 2."
+                  "description": "The gradient variant. Can be from 1 to 4, corresponding to the four variants on the Gradient sub-tab on the Shape Fill tab. If Style is msoGradientFromTitle or msoGradientFromCenter, this argument can be either 1 or 2."
                 }
               ]
             },
@@ -16624,7 +16624,7 @@
           "guid": "{914934CC-5A91-11CF-8700-00AA0060263B}",
           "library": "Microsoft PowerPoint 16.0 Object Library",
           "description": "An object representing one of the three panes in normal view or the single pane of any other view in the document window.",
-          "remarks": "Use Panes (_index_), where _index_ is the index number for a pane, to return a single Pane object. The following table lists the names of the panes in normal view with their corresponding index numbers. When using a document window view other than normal view, use Panes (1) to reference the single Pane object. Use the Activatemethod to make the specified pane active. Use the ViewTypeproperty to determine which pane is active. Normal view is the only view with multiple panes. All other document window views have only a single pane, which is the document window.",
+          "remarks": "Use Panes (index), where index is the index number for a pane, to return a single Pane object. The following table lists the names of the panes in normal view with their corresponding index numbers. When using a document window view other than normal view, use Panes (1) to reference the single Pane object. Use the Activatemethod to make the specified pane active. Use the ViewTypeproperty to determine which pane is active. Normal view is the only view with multiple panes. All other document window views have only a single pane, which is the document window.",
           "example": "With ActiveWindow\n\n    If .ActivePane.ViewType = ppViewSlide Then\n\n        .Panes(3).Activate\n\n    End If\n\nEnd With",
           "properties": [
             {
@@ -17782,7 +17782,7 @@
           "guid": "{92D41A74-F07E-4CA4-AF6F-BEF486AA4E6F}",
           "library": "Microsoft PowerPoint 16.0 Object Library",
           "description": "A collection of all the Point objects in the specified series in a chart.",
-          "remarks": "Use Points (_index_), where _index_ is the point index number, to return a single Point object. Points are numbered from left to right on the series. Points(1) is the leftmost point, and Points(Points.Count) is the rightmost point.",
+          "remarks": "Use Points (index), where index is the point index number, to return a single Point object. Points are numbered from left to right on the series. Points(1) is the leftmost point, and Points(Points.Count) is the rightmost point.",
           "example": "With ActiveDocument.InlineShapes(1)\n\n    If .HasChart Then\n\n        With .Chart.SeriesCollection(1).Points\n\n            .Item(.Count).ApplyDataLabels Type:=xlShowValue\n\n        End With\n\n    End If\n\nEnd With",
           "properties": [
             {
@@ -22510,7 +22510,7 @@
                   "name": "KeepIRMSettings",
                   "type": "Boolean",
                   "optional": true,
-                  "description": "Whether the IRM settings should also be exported.</br></br>If _FixedFormatType_ is _PpFixedFormatTypePDF_, this flag determines if labels and IRM settings should be exported.</br></br>The default is True."
+                  "description": "Whether the IRM settings should also be exported.</br></br>If FixedFormatType is PpFixedFormatTypePDF, this flag determines if labels and IRM settings should be exported.</br></br>The default is True."
                 },
                 {
                   "name": "DocStructureTags",
@@ -22739,7 +22739,7 @@
                   "name": "KeepIRMSettings",
                   "type": "Boolean",
                   "optional": true,
-                  "description": "Whether the IRM settings should also be exported.</br></br>If _FixedFormatType_ is _PpFixedFormatTypePDF_, this flag determines if labels and IRM settings should be exported.</br></br>The default is True."
+                  "description": "Whether the IRM settings should also be exported.</br></br>If FixedFormatType is PpFixedFormatTypePDF, this flag determines if labels and IRM settings should be exported.</br></br>The default is True."
                 },
                 {
                   "name": "DocStructureTags",
@@ -22883,7 +22883,7 @@
                   "name": "KeepIRMSettings",
                   "type": "Boolean",
                   "optional": true,
-                  "description": "Whether the IRM settings should also be exported.</br></br>If _FixedFormatType_ is _PpFixedFormatTypePDF_, this flag determines if labels and IRM settings should be exported.</br></br>The default is True."
+                  "description": "Whether the IRM settings should also be exported.</br></br>If FixedFormatType is PpFixedFormatTypePDF, this flag determines if labels and IRM settings should be exported.</br></br>The default is True."
                 },
                 {
                   "name": "DocStructureTags",
@@ -23439,7 +23439,7 @@
           "guid": "{BA72E55A-4FF5-48F4-8215-5505F990966F}",
           "library": "Microsoft PowerPoint 16.0 Object Library",
           "description": "Represents a presentation window that is in protected view.",
-          "remarks": "Documents displayed in a Protected View window cannot be edited and are restricted from running active content such as Visual Basic for Applications macros and data connections. Use ProtectedViewWindows (_index_), where _index_ is the index number to return a single ProtectedViewWindow object. The index number represents the position of the Protected View window in the ProtectedViewWindows collection.",
+          "remarks": "Documents displayed in a Protected View window cannot be edited and are restricted from running active content such as Visual Basic for Applications macros and data connections. Use ProtectedViewWindows (index), where index is the index number to return a single ProtectedViewWindow object. The index number represents the position of the Protected View window in the ProtectedViewWindows collection.",
           "example": "",
           "properties": [
             {
@@ -23867,7 +23867,7 @@
           "guid": "{BA72E554-4FF5-48F4-8215-5505F990966F}",
           "library": "Microsoft PowerPoint 16.0 Object Library",
           "description": "A collection of ResampleMediaTask objects.",
-          "remarks": "Use ResampleMediaTasks (_index_) to return a ResampleMediaTask object, where _index_ is the position of the ResampleMediaTask object to return.",
+          "remarks": "Use ResampleMediaTasks (index) to return a ResampleMediaTask object, where index is the position of the ResampleMediaTask object to return.",
           "example": "",
           "properties": [
             {
@@ -24014,7 +24014,7 @@
               "name": "IsResearchService",
               "kind": "method",
               "signature": "IsResearchService(ServiceID As String) As Boolean",
-              "description": "Indicates whether the GUID specified in the _ServiceID_ parameter corresponds to a currently configured research service.",
+              "description": "Indicates whether the GUID specified in the ServiceID parameter corresponds to a currently configured research service.",
               "returns": "Boolean",
               "parameters": [
                 {
@@ -26259,7 +26259,7 @@
               "kind": "property",
               "type": "String",
               "access": "read/write",
-              "description": "When a shape is created, Microsoft PowerPoint automatically assigns it a name in the form _ShapeType Number_, where _ShapeType_ identifies the type of shape or AutoShape, and _Number_ is an integer that's unique within the collection of shapes on the slide. For example, the automatically generated names of the shapes on a slide could be Placeholder 1, Oval 2, and Rectangle 3. To avoid conflict with automatically assigned names, don't use the form _ShapeType Number_ for user-defined names, where _ShapeType_ is a value that is used for automatically generated names, and _Number_ is any positive integer. A shape range must contain exactly one shape. Read/write."
+              "description": "When a shape is created, Microsoft PowerPoint automatically assigns it a name in the form ShapeType Number, where ShapeType identifies the type of shape or AutoShape, and Number is an integer that's unique within the collection of shapes on the slide. For example, the automatically generated names of the shapes on a slide could be Placeholder 1, Oval 2, and Rectangle 3. To avoid conflict with automatically assigned names, don't use the form ShapeType Number for user-defined names, where ShapeType is a value that is used for automatically generated names, and Number is any positive integer. A shape range must contain exactly one shape. Read/write."
             },
             {
               "name": "Nodes",
@@ -27258,7 +27258,7 @@
               "kind": "property",
               "type": "String",
               "access": "read/write",
-              "description": "When a shape is created, Microsoft PowerPoint automatically assigns it a name in the form _ShapeType Number_, where _ShapeType_ identifies the type of shape or AutoShape, and _Number_ is an integer that's unique within the collection of shapes on the slide. For example, the automatically generated names of the shapes on a slide could be Placeholder 1, Oval 2, and Rectangle 3. To avoid conflict with automatically assigned names, don't use the form _ShapeType Number_ for user-defined names, where _ShapeType_ is a value that is used for automatically generated names, and _Number_ is any positive integer. A shape range must contain exactly one shape. Read/write."
+              "description": "When a shape is created, Microsoft PowerPoint automatically assigns it a name in the form ShapeType Number, where ShapeType identifies the type of shape or AutoShape, and Number is an integer that's unique within the collection of shapes on the slide. For example, the automatically generated names of the shapes on a slide could be Placeholder 1, Oval 2, and Rectangle 3. To avoid conflict with automatically assigned names, don't use the form ShapeType Number for user-defined names, where ShapeType is a value that is used for automatically generated names, and Number is any positive integer. A shape range must contain exactly one shape. Read/write."
             },
             {
               "name": "Nodes",
@@ -28875,7 +28875,7 @@
                   "name": "SaveWithDocument",
                   "type": "MsoTriState",
                   "optional": false,
-                  "description": "Determines whether the linked picture will be saved with the document into which it is inserted. This argument must be msoTrue if _LinkToFile_ is msoFalse."
+                  "description": "Determines whether the linked picture will be saved with the document into which it is inserted. This argument must be msoTrue if LinkToFile is msoFalse."
                 },
                 {
                   "name": "Left",
@@ -29065,7 +29065,7 @@
               "kind": "property",
               "type": "String",
               "access": "read/write",
-              "description": "When a slide is inserted into a presentation, Microsoft PowerPoint automatically assigns it a name in the form Slide _n_, where _n_ is an integer that represents the order in which the slide was created in the presentation."
+              "description": "When a slide is inserted into a presentation, Microsoft PowerPoint automatically assigns it a name in the form Slide n, where n is an integer that represents the order in which the slide was created in the presentation."
             },
             {
               "name": "SlideID",
@@ -29473,7 +29473,7 @@
               "kind": "property",
               "type": "String",
               "access": "read/write",
-              "description": "When a slide is inserted into a presentation, Microsoft PowerPoint automatically assigns it a name in the form Slide _n_, where _n_ is an integer that represents the order in which the slide was created in the presentation. For example, the first slide inserted into a presentation is automatically named Slide1. If you copy a slide from one presentation to another, the slide loses the name it had in the first presentation and is automatically assigned a new name in the second presentation. A slide range must contain exactly one slide. Read/write."
+              "description": "When a slide is inserted into a presentation, Microsoft PowerPoint automatically assigns it a name in the form Slide n, where n is an integer that represents the order in which the slide was created in the presentation. For example, the first slide inserted into a presentation is automatically named Slide1. If you copy a slide from one presentation to another, the slide loses the name it had in the first presentation and is automatically assigned a new name in the second presentation. A slide range must contain exactly one slide. Read/write."
             },
             {
               "name": "SlideID",

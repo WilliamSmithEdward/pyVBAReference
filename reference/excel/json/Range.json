@@ -809,7 +809,7 @@
           "name": "CopyToRange",
           "type": "Variant",
           "optional": true,
-          "description": "The destination range for the copied rows if _Action_ is xlFilterCopy. Otherwise, this argument is ignored."
+          "description": "The destination range for the copied rows if Action is xlFilterCopy. Otherwise, this argument is ignored."
         },
         {
           "name": "Unique",
@@ -842,7 +842,7 @@
           "name": "UseRowColumnNames",
           "type": "Variant",
           "optional": true,
-          "description": "True to use the names of row and column ranges that contain the specified range if names for the range cannot be found. False to ignore the _OmitColumn_ and _OmitRow_ arguments. The default value is True."
+          "description": "True to use the names of row and column ranges that contain the specified range if names for the range cannot be found. False to ignore the OmitColumn and OmitRow arguments. The default value is True."
         },
         {
           "name": "OmitColumn",
@@ -866,7 +866,7 @@
           "name": "AppendLast",
           "type": "Variant",
           "optional": true,
-          "description": "True to replace the definitions of the names in _Names_ and also replace the definitions of the last names that were defined. False to replace the definitions of the names in _Names_ only. The default value is False."
+          "description": "True to replace the definitions of the names in Names and also replace the definitions of the last names that were defined. False to replace the definitions of the names in Names only. The default value is False."
         }
       ]
     },
@@ -1183,7 +1183,7 @@
           "name": "Date",
           "type": "XlDataSeriesDate",
           "optional": true,
-          "description": "If the _Type_ argument is xlChronological, the _Date_ argument indicates the step date unit."
+          "description": "If the Type argument is xlChronological, the Date argument indicates the step date unit."
         },
         {
           "name": "Step",
@@ -1323,7 +1323,7 @@
           "name": "After",
           "type": "Variant",
           "optional": true,
-          "description": "The cell after which you want the search to begin. This corresponds to the position of the active cell when a search is done from the user interface. Notice that _After_ must be a single cell in the range. Remember that the search begins after this cell; the specified cell isn't searched until the method wraps back around to this cell. If you don't specify this argument, the search starts after the cell in the upper-left corner of the range."
+          "description": "The cell after which you want the search to begin. This corresponds to the position of the active cell when a search is done from the user interface. Notice that After must be a single cell in the range. Remember that the search begins after this cell; the specified cell isn't searched until the method wraps back around to this cell. If you don't specify this argument, the search starts after the cell in the upper-left corner of the range."
         },
         {
           "name": "LookIn",
@@ -1380,7 +1380,7 @@
           "name": "After",
           "type": "Variant",
           "optional": true,
-          "description": "The cell after which you want to search. This corresponds to the position of the active cell when a search is done from the user interface. Be aware that _After_ must be a single cell in the range."
+          "description": "The cell after which you want to search. This corresponds to the position of the active cell when a search is done from the user interface. Be aware that After must be a single cell in the range."
         }
       ]
     },
@@ -1429,7 +1429,7 @@
           "name": "By",
           "type": "Variant",
           "optional": true,
-          "description": "If the field is numeric, this argument specifies the size of each group. If the field is a date, this argument specifies the number of days in each group if element 4 in the _Periods_ array is True and all the other elements are False. Otherwise, this argument is ignored. If this argument is omitted, Microsoft Excel automatically chooses a default group size."
+          "description": "If the field is numeric, this argument specifies the size of each group. If the field is a date, this argument specifies the number of days in each group if element 4 in the Periods array is True and all the other elements are False. Otherwise, this argument is ignored. If this argument is omitted, Microsoft Excel automatically chooses a default group size."
         },
         {
           "name": "Periods",
@@ -1549,7 +1549,7 @@
           "name": "Text",
           "type": "Variant",
           "optional": true,
-          "description": "The text to add to the note (up to 255 characters). The text is inserted starting at position _Start_, replacing _Length_ characters of the existing note. If this argument is omitted, this method returns the current text of the note starting at position _Start_, for _Length_ characters."
+          "description": "The text to add to the note (up to 255 characters). The text is inserted starting at position Start, replacing Length characters of the existing note. If this argument is omitted, this method returns the current text of the note starting at position Start, for Length characters."
         },
         {
           "name": "Start",
@@ -1561,7 +1561,7 @@
           "name": "Length",
           "type": "Variant",
           "optional": true,
-          "description": "The number of characters to be set or returned. If this argument is omitted, Microsoft Excel sets or returns characters from the starting position to the end of the note (up to 255 characters). If there are more than 255 characters from _Start_ to the end of the note, this method returns only 255 characters."
+          "description": "The number of characters to be set or returned. If this argument is omitted, Microsoft Excel sets or returns characters from the starting position to the end of the note (up to 255 characters). If there are more than 255 characters from Start to the end of the note, this method returns only 255 characters."
         }
       ]
     },
@@ -1886,7 +1886,7 @@
           "name": "Order1",
           "type": "XlSortOrder",
           "optional": true,
-          "description": "The sort order for the field or range specified in the _Key1_ argument."
+          "description": "The sort order for the field or range specified in the Key1 argument."
         },
         {
           "name": "Type",
@@ -1904,7 +1904,7 @@
           "name": "Order2",
           "type": "XlSortOrder",
           "optional": true,
-          "description": "The sort order for the field or range specified in the _Key2_ argument. Cannot be used when sorting PivotTable reports."
+          "description": "The sort order for the field or range specified in the Key2 argument. Cannot be used when sorting PivotTable reports."
         },
         {
           "name": "Key3",
@@ -1916,7 +1916,7 @@
           "name": "Order3",
           "type": "XlSortOrder",
           "optional": true,
-          "description": "The sort order for the field or range specified in the _Key3_ argument. Cannot be used when sorting PivotTable reports."
+          "description": "The sort order for the field or range specified in the Key3 argument. Cannot be used when sorting PivotTable reports."
         },
         {
           "name": "Header",
@@ -1928,7 +1928,7 @@
           "name": "OrderCustom",
           "type": "Variant",
           "optional": true,
-          "description": "This argument is a one-based integer offset to the list of custom sort orders. If you omit _OrderCustom_, (normal sort order) is used."
+          "description": "This argument is a one-based integer offset to the list of custom sort orders. If you omit OrderCustom, (normal sort order) is used."
         },
         {
           "name": "MatchCase",
@@ -1946,19 +1946,19 @@
           "name": "DataOption1",
           "type": "XlSortDataOption",
           "optional": true,
-          "description": "Specifies how to sort text in _Key1_. Cannot be used when sorting PivotTable reports."
+          "description": "Specifies how to sort text in Key1. Cannot be used when sorting PivotTable reports."
         },
         {
           "name": "DataOption2",
           "type": "XlSortDataOption",
           "optional": true,
-          "description": "Specifies how to sort text in _Key2_. Cannot be used when sorting PivotTable reports."
+          "description": "Specifies how to sort text in Key2. Cannot be used when sorting PivotTable reports."
         },
         {
           "name": "DataOption3",
           "type": "XlSortDataOption",
           "optional": true,
-          "description": "Specifies how to sort text in _Key3_. Cannot be used when sorting PivotTable reports."
+          "description": "Specifies how to sort text in Key3. Cannot be used when sorting PivotTable reports."
         }
       ]
     },
@@ -1979,7 +1979,7 @@
           "name": "Value",
           "type": "Variant",
           "optional": true,
-          "description": "If _Type_ is either xlCellTypeConstants or xlCellTypeFormulas, this argument is used to determine which types of cells to include in the result. These values can be added together to return more than one type. The default is to select all constants or formulas, no matter what the type."
+          "description": "If Type is either xlCellTypeConstants or xlCellTypeFormulas, this argument is used to determine which types of cells to include in the result. These values can be added together to return more than one type. The default is to select all constants or formulas, no matter what the type."
         }
       ]
     },
@@ -2105,43 +2105,43 @@
           "name": "Tab",
           "type": "Variant",
           "optional": true,
-          "description": "True to have _DataType_ be xlDelimited and to have the tab character be a delimiter. The default value is False."
+          "description": "True to have DataType be xlDelimited and to have the tab character be a delimiter. The default value is False."
         },
         {
           "name": "Semicolon",
           "type": "Variant",
           "optional": true,
-          "description": "True to have _DataType_ be xlDelimited and to have the semicolon be a delimiter. The default value is False."
+          "description": "True to have DataType be xlDelimited and to have the semicolon be a delimiter. The default value is False."
         },
         {
           "name": "Comma",
           "type": "Variant",
           "optional": true,
-          "description": "True to have _DataType_ be xlDelimited and to have the comma be a delimiter. The default value is False."
+          "description": "True to have DataType be xlDelimited and to have the comma be a delimiter. The default value is False."
         },
         {
           "name": "Space",
           "type": "Variant",
           "optional": true,
-          "description": "True to have _DataType_ be xlDelimited and to have the space character be a delimiter. The default value is False."
+          "description": "True to have DataType be xlDelimited and to have the space character be a delimiter. The default value is False."
         },
         {
           "name": "Other",
           "type": "Variant",
           "optional": true,
-          "description": "True to have _DataType_ be xlDelimited and to have the character specified by the _OtherChar_ argument be a delimiter. The default value is False."
+          "description": "True to have DataType be xlDelimited and to have the character specified by the OtherChar argument be a delimiter. The default value is False."
         },
         {
           "name": "OtherChar",
           "type": "Variant",
           "optional": true,
-          "description": "Required if _Other_ is True; the delimiter character when _Other_ is True. If more than one character is specified, only the first character of the string is used; the remaining characters are ignored."
+          "description": "Required if Other is True; the delimiter character when Other is True. If more than one character is specified, only the first character of the string is used; the remaining characters are ignored."
         },
         {
           "name": "FieldInfo",
           "type": "Variant",
           "optional": true,
-          "description": "An array containing parse information for the individual columns of data. The interpretation depends on the value of _DataType_. When the data is delimited, this argument is an array of two-element arrays, with each two-element array specifying the conversion options for a particular column. The first element is the column number (1-based), and the second element is one of the XlColumnDataType constants specifying how the column is parsed."
+          "description": "An array containing parse information for the individual columns of data. The interpretation depends on the value of DataType. When the data is delimited, this argument is an array of two-element arrays, with each two-element array specifying the conversion options for a particular column. The first element is the column number (1-based), and the second element is one of the XlColumnDataType constants specifying how the column is parsed."
         },
         {
           "name": "DecimalSeparator",
@@ -2322,7 +2322,7 @@
           "name": "PrintToFile",
           "type": "Variant",
           "optional": true,
-          "description": "True to print to a file. If _PrToFileName_ is not specified, Microsoft Excel prompts the user to enter the name of the output file."
+          "description": "True to print to a file. If PrToFileName is not specified, Microsoft Excel prompts the user to enter the name of the output file."
         },
         {
           "name": "Collate",
@@ -2334,7 +2334,7 @@
           "name": "PrToFileName",
           "type": "Variant",
           "optional": true,
-          "description": "If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to."
+          "description": "If PrintToFile is set to True, this argument specifies the name of the file that you want to print to."
         }
       ]
     },
@@ -2520,7 +2520,7 @@
           "name": "Order1",
           "type": "XlSortOrder",
           "optional": true,
-          "description": "Determines the sort order for the values specified in _Key1_."
+          "description": "Determines the sort order for the values specified in Key1."
         },
         {
           "name": "Key2",
@@ -2532,13 +2532,13 @@
           "name": "Type",
           "type": "Variant",
           "optional": true,
-          "description": "Specifies which type of elements are to be sorted within a PivotTable. Specify xLSortLabels to sort by the labels targeted by the _experession_ Range in the Row/Colum Labels areas of the PivotTable's range, or xLSortValues when _Key1_ additionally targets a cell in the Values or Sub/Grand Totals areas using R1C1 notation."
+          "description": "Specifies which type of elements are to be sorted within a PivotTable. Specify xLSortLabels to sort by the labels targeted by the experession Range in the Row/Colum Labels areas of the PivotTable's range, or xLSortValues when Key1 additionally targets a cell in the Values or Sub/Grand Totals areas using R1C1 notation."
         },
         {
           "name": "Order2",
           "type": "XlSortOrder",
           "optional": true,
-          "description": "Determines the sort order for the values specified in _Key2_."
+          "description": "Determines the sort order for the values specified in Key2."
         },
         {
           "name": "Key3",
@@ -2550,7 +2550,7 @@
           "name": "Order3",
           "type": "XlSortOrder",
           "optional": true,
-          "description": "Determines the sort order for the values specified in _Key3_."
+          "description": "Determines the sort order for the values specified in Key3."
         },
         {
           "name": "Header",
@@ -2586,19 +2586,19 @@
           "name": "DataOption1",
           "type": "XlSortDataOption",
           "optional": true,
-          "description": "Specifies how to sort text in the range specified in _Key1_; does not apply to PivotTable sorting."
+          "description": "Specifies how to sort text in the range specified in Key1; does not apply to PivotTable sorting."
         },
         {
           "name": "DataOption2",
           "type": "XlSortDataOption",
           "optional": true,
-          "description": "Specifies how to sort text in the range specified in _Key2_; does not apply to PivotTable sorting."
+          "description": "Specifies how to sort text in the range specified in Key2; does not apply to PivotTable sorting."
         },
         {
           "name": "DataOption3",
           "type": "XlSortDataOption",
           "optional": true,
-          "description": "Specifies how to sort text in the range specified in _Key3_; does not apply to PivotTable sorting."
+          "description": "Specifies how to sort text in the range specified in Key3; does not apply to PivotTable sorting."
         },
         {
           "name": "SubField1",
@@ -2625,7 +2625,7 @@
           "name": "Criteria1",
           "type": "Variant",
           "optional": true,
-          "description": "The criteria (a string; for example, \"101\"). Use \"=\" to find blank fields, \"<>\" to find non-blank fields, and \"><\" to select (No Data) fields in data types. If this argument is omitted, the criteria is All. If _Operator_ is xlTop10Items, _Criteria1_ specifies the number of items (for example, \"10\")."
+          "description": "The criteria (a string; for example, \"101\"). Use \"=\" to find blank fields, \"<>\" to find non-blank fields, and \"><\" to select (No Data) fields in data types. If this argument is omitted, the criteria is All. If Operator is xlTop10Items, Criteria1 specifies the number of items (for example, \"10\")."
         },
         {
           "name": "Operator",
@@ -2637,7 +2637,7 @@
           "name": "Criteria2",
           "type": "Variant",
           "optional": true,
-          "description": "The second criteria (a string). Used with _Criteria1_ and _Operator_ to construct compound criteria. Also used as single criteria on date fields filtering by date, month or year. Followed by an Array detailing the filtering Array(Level, Date). Where Level is 0-2 (year,month,date) and Date is one valid Date inside the filtering period."
+          "description": "The second criteria (a string). Used with Criteria1 and Operator to construct compound criteria. Also used as single criteria on date fields filtering by date, month or year. Followed by an Array detailing the filtering Array(Level, Date). Where Level is 0-2 (year,month,date) and Date is one valid Date inside the filtering period."
         },
         {
           "name": "VisibleDropDown",

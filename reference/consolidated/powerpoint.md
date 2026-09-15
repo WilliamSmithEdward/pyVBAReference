@@ -170,7 +170,7 @@ Next
 
 Contains a collection of adjustment values for the specified AutoShape, WordArt object, or connector.
 
-**Remarks:** Each adjustment value represents one way an adjustment handle can be adjusted. Because some adjustment handles can be adjusted in two ways for instance, some handles can be adjusted both horizontally and vertically a shape can have more adjustment values than it has adjustment handles. A shape can have up to eight adjustments. Use the Adjustments property to return an Adjustments object. Use Adjustments (_index_), where _index_ is the adjustment value's index number, to return a single adjustment value. Different shapes have different numbers of adjustment values, different kinds of adjustments change the geometry of a shape in different ways, and different kinds of adjustments have different ranges of valid values. For example, the following illustration shows what each of the four adjustment values for a right-arrow callout contributes to the definition of the callout's geometry. !Adjustment values The following table summarizes the ranges of valid adjustment values for different types of adjustments. In most cases, if you specify a value that's beyond the range of valid values, the closest valid value will be assigned to the adjustment.
+**Remarks:** Each adjustment value represents one way an adjustment handle can be adjusted. Because some adjustment handles can be adjusted in two ways for instance, some handles can be adjusted both horizontally and vertically a shape can have more adjustment values than it has adjustment handles. A shape can have up to eight adjustments. Use the Adjustments property to return an Adjustments object. Use Adjustments (index), where index is the adjustment value's index number, to return a single adjustment value. Different shapes have different numbers of adjustment values, different kinds of adjustments change the geometry of a shape in different ways, and different kinds of adjustments have different ranges of valid values. For example, the following illustration shows what each of the four adjustment values for a right-arrow callout contributes to the definition of the callout's geometry. !Adjustment values The following table summarizes the ranges of valid adjustment values for different types of adjustments. In most cases, if you specify a value that's beyond the range of valid values, the closest valid value will be assigned to the adjustment.
 
 **Example:**
 
@@ -306,7 +306,7 @@ End Sub
 - `Add(Type As MsoAnimType, [Index As Long]) As AnimationBehavior`  
   Returns an AnimationBehavior object that represents a new animation behavior.
     - `Type As MsoAnimType` (required): The type of the animation behavior.
-    - `Index As Long` (optional): The position of the animation behavior in relation to other animation behaviors. The default value is -1, which means that if you omit the _Index_ parameter, the new animation behavior is added at the end of the existing animation behaviors.
+    - `Index As Long` (optional): The position of the animation behavior in relation to other animation behaviors. The default value is -1, which means that if you omit the Index parameter, the new animation behavior is added at the end of the existing animation behaviors.
 
 ### AnimationPoint
 
@@ -774,7 +774,7 @@ End Sub
 
 Represents a collection of all the Axis objects in the specified chart.
 
-**Remarks:** Use the Axes method to return the Axes collection. Use Axes ( _Type_, _AxisGroup_ ), where _Type_ is the axis type and _AxisGroup_ is the axis group, to return an Axes collection that contains a single Axis object. _Type_ can be one of the following XlAxisType constants: xlCategory, xlSeries, or xlValue. _AxisGroup_ can be one of the following XlAxisGroup constants: xlPrimary or xlSecondary.
+**Remarks:** Use the Axes method to return the Axes collection. Use Axes ( Type, AxisGroup ), where Type is the axis type and AxisGroup is the axis group, to return an Axes collection that contains a single Axis object. Type can be one of the following XlAxisType constants: xlCategory, xlSeries, or xlValue. AxisGroup can be one of the following XlAxisGroup constants: xlPrimary or xlSecondary.
 
 **Example:**
 
@@ -818,7 +818,7 @@ End With
 
 Represents a single axis in a chart.
 
-**Remarks:** The Axis object is a member of the Axes collection. Use Axes ( _Type_, _AxisGroup_ ) where _Type_ is the axis type and _AxisGroup_ is the axis group to return a single Axis object. _Type_ can be one of the following XlAxisType constants: xlCategory, xlSeries, or xlValue. _AxisGroup_ can be one of the following XlAxisGroup constants: xlPrimary or xlSecondary. For more information, see the Axes method.
+**Remarks:** The Axis object is a member of the Axes collection. Use Axes ( Type, AxisGroup ) where Type is the axis type and AxisGroup is the axis group to return a single Axis object. Type can be one of the following XlAxisType constants: xlCategory, xlSeries, or xlValue. AxisGroup can be one of the following XlAxisGroup constants: xlPrimary or xlSecondary. For more information, see the Axes method.
 
 **Example:**
 
@@ -1717,7 +1717,7 @@ Represents all chart categories in the document, whether visible (unfiltered) or
 
 Represents characters in an object that contains text.
 
-**Remarks:** The ChartCharacters object lets you modify any sequence of characters contained in the full text string. Use Characters ( _Start_, _Length_ ), where _Start_ is the start character number and _Length_ is the number of characters, to return a ChartCharacters object.
+**Remarks:** The ChartCharacters object lets you modify any sequence of characters contained in the full text string. Use Characters ( Start, Length ), where Start is the start character number and Length is the number of characters, to return a ChartCharacters object.
 
 **Example:**
 
@@ -1944,7 +1944,7 @@ Provides access to the OfficeArt formatting for chart elements.
 
 Represents one or more series plotted in a chart with the same format.
 
-**Remarks:** A chart contains one or more chart groups, each chart group contains one or more Series objects, and each series contains one or more Points objects. For example, a single chart might contain both a line chart group, which contains all the series plotted with the line chart format, and a bar chart group, which contains all the series plotted with the bar chart format. The ChartGroup object is a member of the ChartGroups collection. Use ChartGroups (_index_), where _index_ is the chart group index number, to return a single ChartGroup object.
+**Remarks:** A chart contains one or more chart groups, each chart group contains one or more Series objects, and each series contains one or more Points objects. For example, a single chart might contain both a line chart group, which contains all the series plotted with the line chart format, and a bar chart group, which contains all the series plotted with the bar chart format. The ChartGroup object is a member of the ChartGroups collection. Use ChartGroups (index), where index is the chart group index number, to return a single ChartGroup object.
 
 **Example:**
 
@@ -2046,7 +2046,7 @@ End With
 
 Represents one or more series plotted in a chart with the same format.
 
-**Remarks:** A ChartGroups collection is a collection of all the ChartGroup objects in the specified chart. A chart contains one or more chart groups, each chart group contains one or more series, and each series contains one or more points. For example, a single chart might contain both a line chart group, containing all the series plotted with the line chart format, and a bar chart group, containing all the series plotted with the bar chart format. The following example displays the number of chart groups on the first chart of the active document. Use the ChartGroups method to return the ChartGroups collection. The following example adds drop lines to chart group 1 on chart sheet 1. Use ChartGroups (_index_), where _index_ is the chart group index number, to return a single ChartGroup object.
+**Remarks:** A ChartGroups collection is a collection of all the ChartGroup objects in the specified chart. A chart contains one or more chart groups, each chart group contains one or more series, and each series contains one or more points. For example, a single chart might contain both a line chart group, containing all the series plotted with the line chart format, and a bar chart group, containing all the series plotted with the bar chart format. The following example displays the number of chart groups on the first chart of the active document. Use the ChartGroups method to return the ChartGroups collection. The following example adds drop lines to chart group 1 on chart sheet 1. Use ChartGroups (index), where index is the chart group index number, to return a single ChartGroup object.
 
 #### Properties (4)
 
@@ -2769,7 +2769,7 @@ Represents a custom layout associated with a presentation design. The CustomLayo
 
 Represents a set of custom layouts associated with a presentation design.
 
-**Remarks:** Use the CustomLayouts property of the slide Master object to return a CustomLayouts collection. Use CustomLayouts (_index_), where index is the custom layout index number, to return a single CustomLayout object. Use the Add method to create a new custom layout and add it to the CustomLayouts collection. Use the Paste method to past slides from the Clipboard as a CustomLayout object into the CustomLayouts collection. Use the CustomLayout property of a Slide or SlideRange object to return a custom layout for a slide or set of slides.
+**Remarks:** Use the CustomLayouts property of the slide Master object to return a CustomLayouts collection. Use CustomLayouts (index), where index is the custom layout index number, to return a single CustomLayout object. Use the Add method to create a new custom layout and add it to the CustomLayouts collection. Use the Paste method to past slides from the Clipboard as a CustomLayout object into the CustomLayouts collection. Use the CustomLayout property of a Slide or SlideRange object to return a custom layout for a slide or set of slides.
 
 **Example:**
 
@@ -4097,7 +4097,7 @@ End With
 - `PresetGradient(Style As MsoGradientStyle, Variant As Long, PresetGradientType As MsoPresetGradientType)`  
   Sets the specified fill to a preset gradient.
     - `Style As MsoGradientStyle` (required): The gradient style.
-    - `Variant As Long` (required): The gradient variant. Can be a value from 1 to 4, corresponding to the four variants on the Gradient subtab on the Shape Fill tab. If _Style_ is msoGradientFromTitle or msoGradientFromCenter, this argument can be either 1 or 2.
+    - `Variant As Long` (required): The gradient variant. Can be a value from 1 to 4, corresponding to the four variants on the Gradient subtab on the Shape Fill tab. If Style is msoGradientFromTitle or msoGradientFromCenter, this argument can be either 1 or 2.
     - `PresetGradientType As MsoPresetGradientType` (required): The gradient type.
 - `PresetTextured(PresetTexture As MsoPresetTexture)`  
   Sets the specified fill to a preset texture.
@@ -4107,7 +4107,7 @@ End With
 - `TwoColorGradient(Style As MsoGradientStyle, Variant As Long)`  
   Sets the specified fill to a two-color gradient.
     - `Style As MsoGradientStyle` (required): The gradient style.
-    - `Variant As Long` (required): The gradient variant. Can be from 1 to 4, corresponding to the four variants on the Gradient sub-tab on the Shape Fill tab. If _Style_ is msoGradientFromTitle or msoGradientFromCenter, this argument can be either 1 or 2.
+    - `Variant As Long` (required): The gradient variant. Can be from 1 to 4, corresponding to the four variants on the Gradient sub-tab on the Shape Fill tab. If Style is msoGradientFromTitle or msoGradientFromCenter, this argument can be either 1 or 2.
 - `UserPicture(PictureFile As String)`  
   Fills the specified shape with one large image.
     - `PictureFile As String` (required): The name of the picture file.
@@ -6687,7 +6687,7 @@ End With
 
 An object representing one of the three panes in normal view or the single pane of any other view in the document window.
 
-**Remarks:** Use Panes (_index_), where _index_ is the index number for a pane, to return a single Pane object. The following table lists the names of the panes in normal view with their corresponding index numbers. When using a document window view other than normal view, use Panes (1) to reference the single Pane object. Use the Activatemethod to make the specified pane active. Use the ViewTypeproperty to determine which pane is active. Normal view is the only view with multiple panes. All other document window views have only a single pane, which is the document window.
+**Remarks:** Use Panes (index), where index is the index number for a pane, to return a single Pane object. The following table lists the names of the panes in normal view with their corresponding index numbers. When using a document window view other than normal view, use Panes (1) to reference the single Pane object. Use the Activatemethod to make the specified pane active. Use the ViewTypeproperty to determine which pane is active. Normal view is the only view with multiple panes. All other document window views have only a single pane, which is the document window.
 
 **Example:**
 
@@ -7220,7 +7220,7 @@ End With
 
 A collection of all the Point objects in the specified series in a chart.
 
-**Remarks:** Use Points (_index_), where _index_ is the point index number, to return a single Point object. Points are numbered from left to right on the series. Points(1) is the leftmost point, and Points(Points.Count) is the rightmost point.
+**Remarks:** Use Points (index), where index is the point index number, to return a single Point object. Points are numbered from left to right on the series. Points(1) is the leftmost point, and Points(Points.Count) is the rightmost point.
 
 **Example:**
 
@@ -9330,7 +9330,7 @@ Presentations("Sample Presentation").Slides.Add 1, 1
     - `RangeType As PpPrintRangeType` (optional): The type of slide range.
     - `SlideShowName As String` (optional): The name of the slide show.
     - `IncludeDocProperties As Boolean` (optional): Whether the document properties should also be exported. The default is False.
-    - `KeepIRMSettings As Boolean` (optional): Whether the IRM settings should also be exported.</br></br>If _FixedFormatType_ is _PpFixedFormatTypePDF_, this flag determines if labels and IRM settings should be exported.</br></br>The default is True.
+    - `KeepIRMSettings As Boolean` (optional): Whether the IRM settings should also be exported.</br></br>If FixedFormatType is PpFixedFormatTypePDF, this flag determines if labels and IRM settings should be exported.</br></br>The default is True.
     - `DocStructureTags As Boolean` (optional): Whether to include document structure tags to improve document accessibility. The default is True.
     - `BitmapMissingFonts As Boolean` (optional): Whether to include a bitmap of the text. The default is True.
     - `ExternalExporter As Variant` (optional): A pointer to an Office add-in that implements the IMsoDocExporter COM interface and allows calls to an alternate implementation of code. The default is a null pointer.
@@ -9371,7 +9371,7 @@ Presentations("Sample Presentation").Slides.Add 1, 1
     - `RangeType As PpPrintRangeType` (optional): The type of slide range.
     - `SlideShowName As String` (optional): The name of the slide show.
     - `IncludeDocProperties As Boolean` (optional): Whether the document properties should also be exported. The default is False.
-    - `KeepIRMSettings As Boolean` (optional): Whether the IRM settings should also be exported.</br></br>If _FixedFormatType_ is _PpFixedFormatTypePDF_, this flag determines if labels and IRM settings should be exported.</br></br>The default is True.
+    - `KeepIRMSettings As Boolean` (optional): Whether the IRM settings should also be exported.</br></br>If FixedFormatType is PpFixedFormatTypePDF, this flag determines if labels and IRM settings should be exported.</br></br>The default is True.
     - `DocStructureTags As Boolean` (optional): Whether to include document structure tags to improve document accessibility. The default is True.
     - `BitmapMissingFonts As Boolean` (optional): Whether to include a bitmap of the text. The default is True.
     - `UseISO19005_1 As Boolean` (optional): Whether the resulting document is compliant with ISO 19005-1 (PDF/A). The default is False.
@@ -9396,7 +9396,7 @@ Presentations("Sample Presentation").Slides.Add 1, 1
     - `RangeType As PpPrintRangeType` (optional): The type of slide range.
     - `SlideShowName As String` (optional): The name of the slide show.
     - `IncludeDocProperties As Boolean` (optional): Whether the document properties should also be exported. The default is False.
-    - `KeepIRMSettings As Boolean` (optional): Whether the IRM settings should also be exported.</br></br>If _FixedFormatType_ is _PpFixedFormatTypePDF_, this flag determines if labels and IRM settings should be exported.</br></br>The default is True.
+    - `KeepIRMSettings As Boolean` (optional): Whether the IRM settings should also be exported.</br></br>If FixedFormatType is PpFixedFormatTypePDF, this flag determines if labels and IRM settings should be exported.</br></br>The default is True.
     - `DocStructureTags As Boolean` (optional): Whether to include document structure tags to improve document accessibility. The default is True.
     - `BitmapMissingFonts As Boolean` (optional): Whether to include a bitmap of the text. The default is True.
     - `UseISO19005_1 As Boolean` (optional): Whether the resulting document is compliant with ISO 19005-1 (PDF/A). The default is False.
@@ -9639,7 +9639,7 @@ ActivePresentation.Slides(1).TimeLine.MainSequence.Item(1) _
 
 Represents a presentation window that is in protected view.
 
-**Remarks:** Documents displayed in a Protected View window cannot be edited and are restricted from running active content such as Visual Basic for Applications macros and data connections. Use ProtectedViewWindows (_index_), where _index_ is the index number to return a single ProtectedViewWindow object. The index number represents the position of the Protected View window in the ProtectedViewWindows collection.
+**Remarks:** Documents displayed in a Protected View window cannot be edited and are restricted from running active content such as Visual Basic for Applications macros and data connections. Use ProtectedViewWindows (index), where index is the index number to return a single ProtectedViewWindow object. The index number represents the position of the Protected View window in the ProtectedViewWindows collection.
 
 #### Properties (12)
 
@@ -9842,7 +9842,7 @@ End With
 
 A collection of ResampleMediaTask objects.
 
-**Remarks:** Use ResampleMediaTasks (_index_) to return a ResampleMediaTask object, where _index_ is the position of the ResampleMediaTask object to return.
+**Remarks:** Use ResampleMediaTasks (index) to return a ResampleMediaTask object, where index is the position of the ResampleMediaTask object to return.
 
 #### Properties (2)
 
@@ -9894,7 +9894,7 @@ Provides access to the research service feature of Microsoft PowerPoint.
     - `Language1 As Variant` (required): Specifies the language to translate from.
     - `Language2 As Variant` (required): Specifies the language to translate to.
 - `IsResearchService(ServiceID As String) As Boolean`  
-  Indicates whether the GUID specified in the _ServiceID_ parameter corresponds to a currently configured research service.
+  Indicates whether the GUID specified in the ServiceID parameter corresponds to a currently configured research service.
     - `ServiceID As String` (required): A GUID that identifies the research service.
 
 ### RGBColor
@@ -10860,7 +10860,7 @@ myDocument.Shapes("Rectangle 1").Flip msoFlipHorizontal
 - `LockAspectRatio As MsoTriState  (read/write)`  
   Determines whether the specified shape retains its original proportions when you resize it. Read/write.
 - `Name As String  (read/write)`  
-  When a shape is created, Microsoft PowerPoint automatically assigns it a name in the form _ShapeType Number_, where _ShapeType_ identifies the type of shape or AutoShape, and _Number_ is an integer that's unique within the collection of shapes on the slide. For example, the automatically generated names of the shapes on a slide could be Placeholder 1, Oval 2, and Rectangle 3. To avoid conflict with automatically assigned names, don't use the form _ShapeType Number_ for user-defined names, where _ShapeType_ is a value that is used for automatically generated names, and _Number_ is any positive integer. A shape range must contain exactly one shape. Read/write.
+  When a shape is created, Microsoft PowerPoint automatically assigns it a name in the form ShapeType Number, where ShapeType identifies the type of shape or AutoShape, and Number is an integer that's unique within the collection of shapes on the slide. For example, the automatically generated names of the shapes on a slide could be Placeholder 1, Oval 2, and Rectangle 3. To avoid conflict with automatically assigned names, don't use the form ShapeType Number for user-defined names, where ShapeType is a value that is used for automatically generated names, and Number is any positive integer. A shape range must contain exactly one shape. Read/write.
 - `Nodes As ShapeNodes  (read-only)`  
   Returns a ShapeNodes collection that represents the geometric description of the specified shape. Applies to Shape objects that represent freeform drawings.
 - `Rotation As Single  (read/write)`  
@@ -11178,7 +11178,7 @@ myDocument.Shapes.Range(Array(1, 3)).Fill _
 - `LockAspectRatio As MsoTriState  (read/write)`  
   Determines whether the specified shape retains its original proportions when you resize it. Read/write.
 - `Name As String  (read/write)`  
-  When a shape is created, Microsoft PowerPoint automatically assigns it a name in the form _ShapeType Number_, where _ShapeType_ identifies the type of shape or AutoShape, and _Number_ is an integer that's unique within the collection of shapes on the slide. For example, the automatically generated names of the shapes on a slide could be Placeholder 1, Oval 2, and Rectangle 3. To avoid conflict with automatically assigned names, don't use the form _ShapeType Number_ for user-defined names, where _ShapeType_ is a value that is used for automatically generated names, and _Number_ is any positive integer. A shape range must contain exactly one shape. Read/write.
+  When a shape is created, Microsoft PowerPoint automatically assigns it a name in the form ShapeType Number, where ShapeType identifies the type of shape or AutoShape, and Number is an integer that's unique within the collection of shapes on the slide. For example, the automatically generated names of the shapes on a slide could be Placeholder 1, Oval 2, and Rectangle 3. To avoid conflict with automatically assigned names, don't use the form ShapeType Number for user-defined names, where ShapeType is a value that is used for automatically generated names, and Number is any positive integer. A shape range must contain exactly one shape. Read/write.
 - `Nodes As ShapeNodes  (read-only)`  
   Returns a ShapeNodes collection that represents the geometric description of the specified shape. Applies to ShapeRange objects that represent freeform drawings.
 - `Rotation As Single  (read/write)`  
@@ -11537,7 +11537,7 @@ ActivePresentation.Slides(1).Shapes.SelectAll
   Creates a picture from an existing file. Returns a Shape object that represents the new picture.
     - `FileName As String` (required): The file from which the OLE object is to be created.
     - `LinkToFile As MsoTriState` (required): Determines whether the picture will be linked to the file from which it was created.
-    - `SaveWithDocument As MsoTriState` (required): Determines whether the linked picture will be saved with the document into which it is inserted. This argument must be msoTrue if _LinkToFile_ is msoFalse.
+    - `SaveWithDocument As MsoTriState` (required): Determines whether the linked picture will be saved with the document into which it is inserted. This argument must be msoTrue if LinkToFile is msoFalse.
     - `Left As Single` (required): The position, measured in points, of the left edge of the picture relative to the left edge of the slide.
     - `Top As Single` (required): The position, measured in points, of the top edge of the picture relative to the top edge of the slide.
     - `Width As Single` (optional): The width of the picture, measured in points.
@@ -11592,7 +11592,7 @@ ActivePresentation.Slides(1).Layout = ppLayoutTitle
 - `Background As ShapeRange  (read-only)`  
   Returns a ShapeRange object that represents the slide background.
 - `Name As String  (read/write)`  
-  When a slide is inserted into a presentation, Microsoft PowerPoint automatically assigns it a name in the form Slide _n_, where _n_ is an integer that represents the order in which the slide was created in the presentation.
+  When a slide is inserted into a presentation, Microsoft PowerPoint automatically assigns it a name in the form Slide n, where n is an integer that represents the order in which the slide was created in the presentation.
 - `SlideID As Long  (read-only)`  
   Returns a unique ID number for the specified slide. Read-only.
 - `PrintSteps As Long  (read-only)`  
@@ -11740,7 +11740,7 @@ End With
 - `Background As ShapeRange  (read-only)`  
   Returns a ShapeRange object that represents the slide background.
 - `Name As String  (read/write)`  
-  When a slide is inserted into a presentation, Microsoft PowerPoint automatically assigns it a name in the form Slide _n_, where _n_ is an integer that represents the order in which the slide was created in the presentation. For example, the first slide inserted into a presentation is automatically named Slide1. If you copy a slide from one presentation to another, the slide loses the name it had in the first presentation and is automatically assigned a new name in the second presentation. A slide range must contain exactly one slide. Read/write.
+  When a slide is inserted into a presentation, Microsoft PowerPoint automatically assigns it a name in the form Slide n, where n is an integer that represents the order in which the slide was created in the presentation. For example, the first slide inserted into a presentation is automatically named Slide1. If you copy a slide from one presentation to another, the slide loses the name it had in the first presentation and is automatically assigned a new name in the second presentation. A slide range must contain exactly one slide. Read/write.
 - `SlideID As Long  (read-only)`  
   Returns a unique ID number for the specified slide. Read-only.
 - `PrintSteps As Long  (read-only)`  

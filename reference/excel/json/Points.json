@@ -4,7 +4,7 @@
   "guid": "{00020869-0000-0000-C000-000000000046}",
   "library": "Microsoft Excel 16.0 Object Library",
   "description": "A collection of all the Point objects in the specified series in a chart.",
-  "remarks": "Use Points (_index_), where _index_ is the point index number, to return a single Point object. Points are numbered from left to right on the series. Points(1) is the leftmost point, and Points(Points.Count) is the rightmost point.",
+  "remarks": "Use Points (index), where index is the point index number, to return a single Point object. Points are numbered from left to right on the series. Points(1) is the leftmost point, and Points(Points.Count) is the rightmost point.",
   "example": "Dim pts As Points\nSet pts = Worksheets(1).ChartObjects(1).Chart. _\n SeriesCollection(1).Points\npts(pts.Count).ApplyDataLabels type:=xlShowValue",
   "properties": [
     {

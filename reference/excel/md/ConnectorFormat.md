@@ -64,7 +64,7 @@ End With
 - `BeginConnect(ConnectedShape As Shape, ConnectionSite As Long)`  
   Attaches the beginning of the specified connector to a specified shape. If there's already a connection between the beginning of the connector and another shape, that connection is broken.
     - `ConnectedShape As Shape` (required): The shape to attach the beginning of the connector to. The specified Shape object must be in the same Shapes collection as the connector.
-    - `ConnectionSite As Long` (required): A connection site on the shape specified by _ConnectedShape_. Must be an integer between 1 and the integer returned by the ConnectionSiteCount property of the specified shape. If you want the connector to automatically find the shortest path between the two shapes it connects, specify any valid integer for this argument, and then use the RerouteConnections method after the connector is attached to shapes at both ends.
+    - `ConnectionSite As Long` (required): A connection site on the shape specified by ConnectedShape. Must be an integer between 1 and the integer returned by the ConnectionSiteCount property of the specified shape. If you want the connector to automatically find the shortest path between the two shapes it connects, specify any valid integer for this argument, and then use the RerouteConnections method after the connector is attached to shapes at both ends.
 - `BeginDisconnect()`  
   Detaches the beginning of the specified connector from the shape it's attached to. This method doesn't alter the size or position of the connector; the beginning of the connector remains positioned at a connection site but is no longer connected.
 - `EndConnect(ConnectedShape As Shape, ConnectionSite As Long)`  

@@ -6,7 +6,7 @@
 
 Represents a document. The Document object is a member of the Documents collection. The Documents collection contains all the Document objects that are currently open in Word.
 
-**Remarks:** Use Documents (_index_), where _index_ is the document name or index number, to return a single Document object. The following example closes the document named Report.doc without saving changes. The index number represents the position of the document in the Documents collection. The following example activates the first document in the Documents collection. Use the ActiveDocument property to refer to the document with the focus. The following example uses the Activate method to activate the document named Document 1. The example also sets the page orientation to landscape mode and then prints the document.
+**Remarks:** Use Documents (index), where index is the document name or index number, to return a single Document object. The following example closes the document named Report.doc without saving changes. The index number represents the position of the document in the Documents collection. The following example activates the first document in the Documents collection. Use the ActiveDocument property to refer to the document with the focus. The following example uses the Activate method to activate the document named Document 1. The example also sets the page orientation to landscape mode and then prints the document.
 
 ## Properties (193)
 
@@ -589,7 +589,7 @@ Represents a document. The Document object is a member of the Documents collecti
   Returns a document from a local computer to a server, and sets the local document to read-only so that it cannot be edited locally.
     - `SaveChanges As Boolean` (optional): True saves the document to the server location. The default is True.
     - `Comments As Variant` (optional): Comments for the revision of the document being checked in (only applies if SaveChanges equals True).
-    - `MakePublic As Boolean` (optional): True allows the user to perform a publish on the document after being checked in. This submits the document for the approval process, which can eventually result in a version of the document being published to users with read-only rights to the document (only applies if _SaveChanges_ equals True). The default is False.
+    - `MakePublic As Boolean` (optional): True allows the user to perform a publish on the document after being checked in. This submits the document for the approval process, which can eventually result in a version of the document being published to users with read-only rights to the document (only applies if SaveChanges equals True). The default is False.
 - `CanCheckin() As Boolean`  
   True if Microsoft Word can check in a specified document to a server. Read/write Boolean.
 - `Merge(FileName As String, [MergeTarget As Variant], [DetectFormatChanges As Variant], [UseFormattingFrom As Variant], [AddToRecentFiles As Variant])`  
@@ -704,11 +704,11 @@ Represents a document. The Document object is a member of the Documents collecti
     - `OpenAfterExport As Boolean` (optional): Opens the new file after exporting the contents.
     - `OptimizeFor As WdExportOptimizeFor` (optional): Specifies whether to optimize for screen or print.
     - `Range As WdExportRange` (optional): Specifies whether the export range is the entire document, the current page, a range of text, or the current selection. The default is to export the entire document.
-    - `From As Long` (optional): Specifies the starting page number, if the _Range_ parameter is set to wdExportFromTo.
-    - `To As Long` (optional): Specifies the ending page number, if the _Range_ parameter is set to wdExportFromTo.
+    - `From As Long` (optional): Specifies the starting page number, if the Range parameter is set to wdExportFromTo.
+    - `To As Long` (optional): Specifies the ending page number, if the Range parameter is set to wdExportFromTo.
     - `Item As WdExportItem` (optional): Specifies whether the export process includes text only or includes text with markup.
     - `IncludeDocProps As Boolean` (optional): Specifies whether to include document properties in the newly exported file.
-    - `KeepIRM As Boolean` (optional): Specifies whether to copy IRM permissions to an XPS document if the source document has IRM protections.</br></br>If _ExportFormat_ is _wdExportFormatPDF_, this flag also specifies whether to copy labels to the PDF.</br></br>Default value is True.
+    - `KeepIRM As Boolean` (optional): Specifies whether to copy IRM permissions to an XPS document if the source document has IRM protections.</br></br>If ExportFormat is wdExportFormatPDF, this flag also specifies whether to copy labels to the PDF.</br></br>Default value is True.
     - `CreateBookmarks As WdExportCreateBookmarks` (optional): Specifies whether to export bookmarks and the type of bookmarks to export.
     - `DocStructureTags As Boolean` (optional): Specifies whether to include extra data to help screen readers, for example information about the flow and logical organization of the content. Default value is True.
     - `BitmapMissingFonts As Boolean` (optional): Specifies whether to include a bitmap of the text. Set this parameter to True when font licenses don't permit a font to be embedded in the PDF file. If False, the font is referenced, and the viewer's computer substitutes an appropriate font if the authored one is not available. Default value is True.
@@ -738,11 +738,11 @@ Represents a document. The Document object is a member of the Documents collecti
     - `OpenAfterExport As Boolean` (optional): Opens the new file after exporting the contents.
     - `OptimizeFor As WdExportOptimizeFor` (optional): Specifies whether to optimize for screen or print.
     - `Range As WdExportRange` (optional): Specifies whether the export range is the entire document, the current page, a range of text, or the current selection. The default is to export the entire document.
-    - `From As Long` (optional): Specifies the starting page number, if the _Range_ parameter is set to wdExportFromTo.
-    - `To As Long` (optional): Specifies the ending page number, if the _Range_ parameter is set to wdExportFromTo.
+    - `From As Long` (optional): Specifies the starting page number, if the Range parameter is set to wdExportFromTo.
+    - `To As Long` (optional): Specifies the ending page number, if the Range parameter is set to wdExportFromTo.
     - `Item As WdExportItem` (optional): Specifies whether the export process includes text only or includes text with markup.
     - `IncludeDocProps As Boolean` (optional): Specifies whether to include document properties in the newly exported file.
-    - `KeepIRM As Boolean` (optional): Specifies whether to copy IRM permissions to an XPS document if the source document has IRM protections.</br></br>If _ExportFormat_ is _wdExportFormatPDF_, this flag also specifies whether to copy labels to the PDF.</br></br>Default value is True.
+    - `KeepIRM As Boolean` (optional): Specifies whether to copy IRM permissions to an XPS document if the source document has IRM protections.</br></br>If ExportFormat is wdExportFormatPDF, this flag also specifies whether to copy labels to the PDF.</br></br>Default value is True.
     - `CreateBookmarks As WdExportCreateBookmarks` (optional): Specifies whether to export bookmarks and the type of bookmarks to export.
     - `DocStructureTags As Boolean` (optional): Specifies whether to include extra data to help screen readers, for example information about the flow and logical organization of the content. Default value is True.
     - `BitmapMissingFonts As Boolean` (optional): Specifies whether to include a bitmap of the text. Set this parameter to True when font licenses don't permit a font to be embedded in the PDF file. If False, the font is referenced, and the viewer's computer substitutes an appropriate font if the authored one is not available. Default value is True.
@@ -755,11 +755,11 @@ Represents a document. The Document object is a member of the Documents collecti
     - `OpenAfterExport As Boolean` (optional): Opens the new file after exporting the contents.
     - `OptimizeFor As WdExportOptimizeFor` (optional): Specifies whether to optimize for screen or print.
     - `Range As WdExportRange` (optional): Specifies whether the export range is the entire document, the current page, a range of text, or the current selection. The default is to export the entire document.
-    - `From As Long` (optional): Specifies the starting page number, if the _Range_ parameter is set to wdExportFromTo.
-    - `To As Long` (optional): Specifies the ending page number, if the _Range_ parameter is set to wdExportFromTo.
+    - `From As Long` (optional): Specifies the starting page number, if the Range parameter is set to wdExportFromTo.
+    - `To As Long` (optional): Specifies the ending page number, if the Range parameter is set to wdExportFromTo.
     - `Item As WdExportItem` (optional): Specifies whether the export process includes text only or includes text with markup.
     - `IncludeDocProps As Boolean` (optional): Specifies whether to include document properties in the newly exported file.
-    - `KeepIRM As Boolean` (optional): Specifies whether to copy IRM permissions to an XPS document if the source document has IRM protections.</br></br>If _ExportFormat_ is _wdExportFormatPDF_, this flag also specifies whether to copy labels to the PDF.</br></br>Default value is True.
+    - `KeepIRM As Boolean` (optional): Specifies whether to copy IRM permissions to an XPS document if the source document has IRM protections.</br></br>If ExportFormat is wdExportFormatPDF, this flag also specifies whether to copy labels to the PDF.</br></br>Default value is True.
     - `CreateBookmarks As WdExportCreateBookmarks` (optional): Specifies whether to export bookmarks and the type of bookmarks to export.
     - `DocStructureTags As Boolean` (optional): Specifies whether to include extra data to help screen readers, for example information about the flow and logical organization of the content. Default value is True.
     - `BitmapMissingFonts As Boolean` (optional): Specifies whether to include a bitmap of the text. Set this parameter to True when font licenses don't permit a font to be embedded in the PDF file. If False, the font is referenced, and the viewer's computer substitutes an appropriate font if the authored one is not available. Default value is True.

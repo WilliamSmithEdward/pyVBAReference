@@ -70,10 +70,10 @@ A collection of InlineShape objects that represent all the inline shapes in a do
     - `VideoHeight As Variant` (required): An integer that represents the height of the web video in pixels.
     - `PosterFrameImage As Variant` (optional): A string that points to the file to use as the poster frame for the web video.
     - `Url As Variant` (optional): The URL to the video.
-    - `Range As Variant` (optional): The range at which to insert the web video. If _Range_ is omitted, the current selection is used.
+    - `Range As Variant` (optional): The range at which to insert the web video. If Range is omitted, the current selection is used.
 - `AddChart2([Style As Long], [Type As XlChartType], [Range As Variant], [NewLayout As Variant]) As InlineShape`  
   Adds a chart to the document. Returns an InlineShape object that represents the chart and adds it to the specified collection.
     - `Style As Long` (optional): The chart style. Use "-1" to get the default style for the chart type specified in Type.
     - `Range As Variant` (optional): The range where the chart will be placed in the text. The chart replaces the range, unless the range is collapsed. If this argument is omitted, the chart is placed automatically.
-    - `NewLayout As Variant` (optional): If _NewLayout_ is true, the chart is inserted by using the new dynamic formatting rules (Title is on, and Legend is on only if there are multiple series).
+    - `NewLayout As Variant` (optional): If NewLayout is true, the chart is inserted by using the new dynamic formatting rules (Title is on, and Legend is on only if there are multiple series).
 - `Add3DModel(FileName As String, [LinkToFile As Variant], [SaveWithDocument As Variant], [Range As Variant]) As InlineShape`

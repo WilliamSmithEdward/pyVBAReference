@@ -34,7 +34,7 @@ MsgBox Worksheets("sheet3").PivotTables.Count
 - `Add(PivotCache As PivotCache, TableDestination As Variant, [TableName As Variant], [ReadData As Variant], [DefaultVersion As Variant]) As PivotTable`  
   Adds a new PivotTable report. Returns a PivotTable object.
     - `PivotCache As PivotCache` (required): The PivotTable cache on which the new PivotTable report is based. The cache provides data for the report.
-    - `TableDestination As Variant` (required): The cell in the upper-left corner of the PivotTable report's destination range (the range on the worksheet where the resulting report will be placed). You must specify a destination range on the worksheet that contains the PivotTables object specified by _expression_.
+    - `TableDestination As Variant` (required): The cell in the upper-left corner of the PivotTable report's destination range (the range on the worksheet where the resulting report will be placed). You must specify a destination range on the worksheet that contains the PivotTables object specified by expression.
     - `TableName As Variant` (optional): The name of the new PivotTable report.
     - `ReadData As Variant` (optional): True to create a PivotTable cache that contains all records from the external database; this cache can be very large. False to enable setting some of the fields as server-based page fields before the data is actually read.
     - `DefaultVersion As Variant` (optional): The version of Microsoft Excel that the PivotTable was originally created in.

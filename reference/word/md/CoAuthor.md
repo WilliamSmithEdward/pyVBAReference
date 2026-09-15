@@ -6,7 +6,7 @@
 
 Represents a single co author in the document. The CoAuthor object is a member of the CoAuthors collection. The CoAuthors collection contains all the co authors in the document (authors that are actively editing the document).
 
-**Remarks:** Use CoAuthors (_index_), where _index_ is the index number to return a single CoAuthor object.
+**Remarks:** Use CoAuthors (index), where index is the index number to return a single CoAuthor object.
 
 **Example:**
 

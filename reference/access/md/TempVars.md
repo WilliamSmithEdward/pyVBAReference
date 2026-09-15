@@ -27,6 +27,6 @@ Represents the collection of TempVar objects.
     - `Value As Variant` (required): The value to store as a TempVar. This value must be a string expression or a numeric expression. Setting this argument to an object data type will result in a run-time error.
 - `Remove(var As Variant)`  
   Removes the specified TempVar object from the TempVars collection.
-    - `var As Variant` (required): An expression that specifies the position of a member of the collection referred to by the _expression_ argument. If a numeric expression, the argument must be a number from 0 to the value of the collection's Count property minus 1. If a string expression, the argument must be the name of a member of the collection.
+    - `var As Variant` (required): An expression that specifies the position of a member of the collection referred to by the expression argument. If a numeric expression, the argument must be a number from 0 to the value of the collection's Count property minus 1. If a string expression, the argument must be the name of a member of the collection.
 - `RemoveAll()`  
   Removes all of the TempVar objects from the TempVars collection.

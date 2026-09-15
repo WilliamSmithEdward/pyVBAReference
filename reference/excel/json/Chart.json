@@ -4,7 +4,7 @@
   "guid": "{00020821-0000-0000-C000-000000000046}",
   "library": "Microsoft Excel 16.0 Object Library",
   "description": "Represents a chart in a workbook.",
-  "remarks": "The chart can be either an embedded chart (contained in a ChartObject object) or a separate chart sheet. The Charts collection contains a Chart object for each chart sheet in a workbook. Use Charts (_index_), where _index_ is the chart-sheet index number or name, to return a single Chart object. The chart _index_ number represents the position of the chart sheet on the workbook tab bar. _Charts(1)_ is the first (leftmost) chart in the workbook; _Charts(Charts.Count)_ is the last (rightmost). All chart sheets are included in the index count, even if they are hidden. The chart-sheet name is shown on the workbook tab for the chart. Use the Name property of the ChartObject object to set or return the chart name. The following example changes the color of series 1 on chart sheet 1. The following example moves the chart named Sales to the end of the active workbook. The Chart object is also a member of the Sheets collection, which contains all the sheets in the workbook (both chart sheets and worksheets). Use Sheets (_index_), where _index_ is the sheet index number or name, to return a single sheet. When a chart is the active object, you can use the ActiveChart property to refer to it.",
+  "remarks": "The chart can be either an embedded chart (contained in a ChartObject object) or a separate chart sheet. The Charts collection contains a Chart object for each chart sheet in a workbook. Use Charts (index), where index is the chart-sheet index number or name, to return a single Chart object. The chart index number represents the position of the chart sheet on the workbook tab bar. Charts(1) is the first (leftmost) chart in the workbook; Charts(Charts.Count) is the last (rightmost). All chart sheets are included in the index count, even if they are hidden. The chart-sheet name is shown on the workbook tab for the chart. Use the Name property of the ChartObject object to set or return the chart name. The following example changes the color of series 1 on chart sheet 1. The following example moves the chart named Sales to the end of the active workbook. The Chart object is also a member of the Sheets collection, which contains all the sheets in the workbook (both chart sheets and worksheets). Use Sheets (index), where index is the sheet index number or name, to return a single sheet. When a chart is the active object, you can use the ActiveChart property to refer to it.",
   "example": "",
   "properties": [
     {
@@ -82,21 +82,21 @@
       "kind": "property",
       "type": "Boolean",
       "access": "read-only",
-      "description": "True if the contents of the sheet are protected. For a chart, this protects the entire chart. To turn on content protection, use the Protect method with the _Contents_ argument set to True. Read-only Boolean."
+      "description": "True if the contents of the sheet are protected. For a chart, this protects the entire chart. To turn on content protection, use the Protect method with the Contents argument set to True. Read-only Boolean."
     },
     {
       "name": "ProtectDrawingObjects",
       "kind": "property",
       "type": "Boolean",
       "access": "read-only",
-      "description": "True if shapes are protected. To turn on shape protection, use the Protect method with the _DrawingObjects_ argument set to True. Read-only Boolean."
+      "description": "True if shapes are protected. To turn on shape protection, use the Protect method with the DrawingObjects argument set to True. Read-only Boolean."
     },
     {
       "name": "ProtectionMode",
       "kind": "property",
       "type": "Boolean",
       "access": "read-only",
-      "description": "True if user-interface-only protection is turned on. To turn on user interface protection, use the Protect method with the _UserInterfaceOnly_ argument set to True. Read-only Boolean."
+      "description": "True if user-interface-only protection is turned on. To turn on user interface protection, use the Protect method with the UserInterfaceOnly argument set to True. Read-only Boolean."
     },
     {
       "name": "Visible",
@@ -454,13 +454,13 @@
           "name": "Before",
           "type": "Variant",
           "optional": true,
-          "description": "The sheet before which the copied sheet will be placed. You cannot specify _Before_ if you specify _After_."
+          "description": "The sheet before which the copied sheet will be placed. You cannot specify Before if you specify After."
         },
         {
           "name": "After",
           "type": "Variant",
           "optional": true,
-          "description": "The sheet after which the copied sheet will be placed. You cannot specify _After_ if you specify _Before_."
+          "description": "The sheet after which the copied sheet will be placed. You cannot specify After if you specify Before."
         }
       ]
     },
@@ -482,13 +482,13 @@
           "name": "Before",
           "type": "Variant",
           "optional": true,
-          "description": "The sheet before which the moved chart will be placed. You cannot specify _Before_ if you specify _After_."
+          "description": "The sheet before which the moved chart will be placed. You cannot specify Before if you specify After."
         },
         {
           "name": "After",
           "type": "Variant",
           "optional": true,
-          "description": "The sheet after which the moved chart will be placed. You cannot specify _After_ if you specify _Before_."
+          "description": "The sheet after which the moved chart will be placed. You cannot specify After if you specify Before."
         }
       ]
     },
@@ -785,7 +785,7 @@
           "name": "Name",
           "type": "Variant",
           "optional": true,
-          "description": "Required if _Where_ is xlLocationAsObject. The name of the sheet where the chart will be embedded if _Where_ is xlLocationAsObject, or the name of the new sheet if _Where_ is xlLocationAsNewSheet."
+          "description": "Required if Where is xlLocationAsObject. The name of the sheet where the chart will be embedded if Where is xlLocationAsObject, or the name of the new sheet if Where is xlLocationAsNewSheet."
         }
       ]
     },
@@ -838,20 +838,20 @@
       "name": "GetChartElement",
       "kind": "method",
       "signature": "GetChartElement(x As Long, y As Long, ElementID As Long, Arg1 As Long, Arg2 As Long)",
-      "description": "Returns information about the chart element at specified _x_ and _y_ coordinates. This method is unusual in that you specify values for only the first two arguments. Microsoft Excel fills in the other arguments, and your code should examine those values when the method returns.",
+      "description": "Returns information about the chart element at specified x and y coordinates. This method is unusual in that you specify values for only the first two arguments. Microsoft Excel fills in the other arguments, and your code should examine those values when the method returns.",
       "returns": "void",
       "parameters": [
         {
           "name": "x",
           "type": "Long",
           "optional": false,
-          "description": "The _x_ coordinate of the chart element."
+          "description": "The x coordinate of the chart element."
         },
         {
           "name": "y",
           "type": "Long",
           "optional": false,
-          "description": "The _y_ coordinate of the chart element."
+          "description": "The y coordinate of the chart element."
         },
         {
           "name": "ElementID",
@@ -1113,7 +1113,7 @@
           "name": "PrintToFile",
           "type": "Variant",
           "optional": true,
-          "description": "True to print to a file. If _PrToFileName_ is not specified, Excel prompts the user to enter the name of the output file."
+          "description": "True to print to a file. If PrToFileName is not specified, Excel prompts the user to enter the name of the output file."
         },
         {
           "name": "Collate",
@@ -1125,7 +1125,7 @@
           "name": "PrToFileName",
           "type": "Variant",
           "optional": true,
-          "description": "If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to."
+          "description": "If PrintToFile is set to True, this argument specifies the name of the file that you want to print to."
         }
       ]
     },
@@ -1185,7 +1185,7 @@
       "name": "FullSeriesCollection",
       "kind": "method",
       "signature": "FullSeriesCollection([Index As Variant]) As Object",
-      "description": "Enables retrieving the filtered out series specified by the _Index_ argument.",
+      "description": "Enables retrieving the filtered out series specified by the Index argument.",
       "returns": "Object",
       "parameters": [
         {
@@ -1419,13 +1419,13 @@
           "name": "x",
           "type": "Long",
           "optional": false,
-          "description": "The _x_ coordinate of the mouse pointer in chart object client coordinates."
+          "description": "The x coordinate of the mouse pointer in chart object client coordinates."
         },
         {
           "name": "y",
           "type": "Long",
           "optional": false,
-          "description": "The _y_ coordinate of the mouse pointer in chart object client coordinates."
+          "description": "The y coordinate of the mouse pointer in chart object client coordinates."
         }
       ]
     },
@@ -1451,13 +1451,13 @@
           "name": "x",
           "type": "Long",
           "optional": false,
-          "description": "The _x_ coordinate of the mouse pointer in chart object client coordinates."
+          "description": "The x coordinate of the mouse pointer in chart object client coordinates."
         },
         {
           "name": "y",
           "type": "Long",
           "optional": false,
-          "description": "The _y_ coordinate of the mouse pointer in chart object client coordinates."
+          "description": "The y coordinate of the mouse pointer in chart object client coordinates."
         }
       ]
     },
@@ -1483,13 +1483,13 @@
           "name": "x",
           "type": "Long",
           "optional": false,
-          "description": "The _x_ coordinate of the mouse pointer in chart object client coordinates."
+          "description": "The x coordinate of the mouse pointer in chart object client coordinates."
         },
         {
           "name": "y",
           "type": "Long",
           "optional": false,
-          "description": "The _y_ coordinate of the mouse pointer in chart object client coordinates."
+          "description": "The y coordinate of the mouse pointer in chart object client coordinates."
         }
       ]
     },
@@ -1517,19 +1517,19 @@
           "name": "ElementID",
           "type": "Long",
           "optional": false,
-          "description": "The double-clicked object. The value of this parameter determines the expected values of _Arg1_ and _Arg2_. For more information about this parameter, see the Remarks section."
+          "description": "The double-clicked object. The value of this parameter determines the expected values of Arg1 and Arg2. For more information about this parameter, see the Remarks section."
         },
         {
           "name": "Arg1",
           "type": "Long",
           "optional": false,
-          "description": "Additional event information, depending on the value of _ElementID_. For more information about this parameter, see the Remarks section."
+          "description": "Additional event information, depending on the value of ElementID. For more information about this parameter, see the Remarks section."
         },
         {
           "name": "Arg2",
           "type": "Long",
           "optional": false,
-          "description": "Additional event information, depending on the value of _ElementID_. For more information about this parameter, see the Remarks section."
+          "description": "Additional event information, depending on the value of ElementID. For more information about this parameter, see the Remarks section."
         },
         {
           "name": "Cancel",

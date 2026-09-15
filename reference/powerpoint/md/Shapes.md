@@ -182,7 +182,7 @@ ActivePresentation.Slides(1).Shapes.SelectAll
   Creates a picture from an existing file. Returns a Shape object that represents the new picture.
     - `FileName As String` (required): The file from which the OLE object is to be created.
     - `LinkToFile As MsoTriState` (required): Determines whether the picture will be linked to the file from which it was created.
-    - `SaveWithDocument As MsoTriState` (required): Determines whether the linked picture will be saved with the document into which it is inserted. This argument must be msoTrue if _LinkToFile_ is msoFalse.
+    - `SaveWithDocument As MsoTriState` (required): Determines whether the linked picture will be saved with the document into which it is inserted. This argument must be msoTrue if LinkToFile is msoFalse.
     - `Left As Single` (required): The position, measured in points, of the left edge of the picture relative to the left edge of the slide.
     - `Top As Single` (required): The position, measured in points, of the top edge of the picture relative to the top edge of the slide.
     - `Width As Single` (optional): The width of the picture, measured in points.

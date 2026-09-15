@@ -6,7 +6,7 @@
 
 Represents the collection of smart tags for a control on a form, report, or data access page.
 
-**Remarks:** To return a single SmartTag object, use the Item property or use SmartTags (_Index_), where _Index_ represents the number of the smart tag.
+**Remarks:** To return a single SmartTag object, use the Item property or use SmartTags (Index), where Index represents the number of the smart tag.
 
 ## Properties (4)
 

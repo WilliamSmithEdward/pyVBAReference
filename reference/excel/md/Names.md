@@ -6,7 +6,7 @@
 
 A collection of all the Name objects in the application or workbook.
 
-**Remarks:** Each Name object represents a defined name for a range of cells. Names can be either built-in names-such as Database, Print_Area, and Auto_Open-or custom names. The _RefersTo_ argument must be specified in A1-style notation, including dollar signs ($) where appropriate. For example, if cell A10 is selected on Sheet1 and you define a name by using the _RefersTo_ argument "=sheet1!A1:B1", the new name actually refers to cells A10:B10 (because you specified a relative reference). To specify an absolute reference, use "=sheet1!$A$1:$B$1".
+**Remarks:** Each Name object represents a defined name for a range of cells. Names can be either built-in names-such as Database, Print_Area, and Auto_Open-or custom names. The RefersTo argument must be specified in A1-style notation, including dollar signs ($) where appropriate. For example, if cell A10 is selected on Sheet1 and you define a name by using the RefersTo argument "=sheet1!A1:B1", the new name actually refers to cells A10:B10 (because you specified a relative reference). To specify an absolute reference, use "=sheet1!$A$1:$B$1".
 
 **Example:**
 
@@ -35,17 +35,17 @@ Next
 
 - `Add([Name As Variant], [RefersTo As Variant], [Visible As Variant], [MacroType As Variant], [ShortcutKey As Variant], [Category As Variant], [NameLocal As Variant], [RefersToLocal As Variant], [CategoryLocal As Variant], [RefersToR1C1 As Variant], [RefersToR1C1Local As Variant]) As Name`  
   Defines a new name for a range of cells.
-    - `Name As Variant` (optional): Specifies the text, in English, to use as the name if the _NameLocal_ parameter is not specified. Names cannot include spaces and cannot be formatted as cell references.
-    - `RefersTo As Variant` (optional): Describes what the name refers to, in English, using A1-style notation, if the _RefersToLocal_, _RefersToR1C1_, and _RefersToR1C1Local_ parameters are not specified. NOTE: Nothing is returned if the reference does not exist.
+    - `Name As Variant` (optional): Specifies the text, in English, to use as the name if the NameLocal parameter is not specified. Names cannot include spaces and cannot be formatted as cell references.
+    - `RefersTo As Variant` (optional): Describes what the name refers to, in English, using A1-style notation, if the RefersToLocal, RefersToR1C1, and RefersToR1C1Local parameters are not specified. NOTE: Nothing is returned if the reference does not exist.
     - `Visible As Variant` (optional): True specifies that the name is defined as visible. False specifies that the name is defined as hidden. A hidden name does not appear in the Define Name, Paste Name, or Goto dialog box. The default value is True.
     - `MacroType As Variant` (optional): The macro type, determined by one of the following values:<ul><li><p>1 - User-defined function (<b>Function</b> procedure)</p></li><li><p>2 - Macro (<b>Sub</b> procedure)</p></li><li><p>3 or omitted - None (the name does not refer to a user-defined function or macro)</p></li></ul>
     - `ShortcutKey As Variant` (optional): Specifies the macro shortcut key. Must be a single letter, such as "z" or "Z". Applies only for command macros.
-    - `Category As Variant` (optional): The category of the macro or function if the _MacroType_ argument equals 1 or 2. The category is used in the Function Wizard. Existing categories can be referred to either by number, starting at 1, or by name, in English. Excel creates a new category if the specified category does not exist.
-    - `NameLocal As Variant` (optional): Specifies the localized text to use as the name if the _Name_ parameter is not specified. Names cannot include spaces and cannot be formatted as cell references.
-    - `RefersToLocal As Variant` (optional): Describes what the name refers to, in localized text using A1-style notation, if the _RefersTo_, _RefersToR1C1_, and _RefersToR1C1Local_ parameters are not specified.
-    - `CategoryLocal As Variant` (optional): Specifies the localized text that identifies the category of a custom function if the _Category_ parameter is not specified.
-    - `RefersToR1C1 As Variant` (optional): Describes what the name refers to, in English using R1C1-style notation, if the _RefersTo_, _RefersToLocal_, and _RefersToR1C1Local_ parameters are not specified.
-    - `RefersToR1C1Local As Variant` (optional): Describes what the name refers to, in localized text using R1C1-style notation, if the _RefersTo_, _RefersToLocal_, and _RefersToR1C1_ parameters are not specified.
+    - `Category As Variant` (optional): The category of the macro or function if the MacroType argument equals 1 or 2. The category is used in the Function Wizard. Existing categories can be referred to either by number, starting at 1, or by name, in English. Excel creates a new category if the specified category does not exist.
+    - `NameLocal As Variant` (optional): Specifies the localized text to use as the name if the Name parameter is not specified. Names cannot include spaces and cannot be formatted as cell references.
+    - `RefersToLocal As Variant` (optional): Describes what the name refers to, in localized text using A1-style notation, if the RefersTo, RefersToR1C1, and RefersToR1C1Local parameters are not specified.
+    - `CategoryLocal As Variant` (optional): Specifies the localized text that identifies the category of a custom function if the Category parameter is not specified.
+    - `RefersToR1C1 As Variant` (optional): Describes what the name refers to, in English using R1C1-style notation, if the RefersTo, RefersToLocal, and RefersToR1C1Local parameters are not specified.
+    - `RefersToR1C1Local As Variant` (optional): Describes what the name refers to, in localized text using R1C1-style notation, if the RefersTo, RefersToLocal, and RefersToR1C1 parameters are not specified.
 - `Item([Index As Variant], [IndexLocal As Variant], [RefersTo As Variant]) As Name`  
   Returns a single Name object from a Names collection.
     - `Index As Variant` (optional): The name or number of the defined name to be returned.

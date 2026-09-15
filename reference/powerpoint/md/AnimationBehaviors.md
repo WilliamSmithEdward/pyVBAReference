@@ -47,4 +47,4 @@ End Sub
 - `Add(Type As MsoAnimType, [Index As Long]) As AnimationBehavior`  
   Returns an AnimationBehavior object that represents a new animation behavior.
     - `Type As MsoAnimType` (required): The type of the animation behavior.
-    - `Index As Long` (optional): The position of the animation behavior in relation to other animation behaviors. The default value is -1, which means that if you omit the _Index_ parameter, the new animation behavior is added at the end of the existing animation behaviors.
+    - `Index As Long` (optional): The position of the animation behavior in relation to other animation behaviors. The default value is -1, which means that if you omit the Index parameter, the new animation behavior is added at the end of the existing animation behaviors.

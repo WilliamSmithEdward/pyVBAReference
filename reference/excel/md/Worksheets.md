@@ -45,8 +45,8 @@ Worksheets.Move After:=Sheets(Sheets.Count)
     - `Type As Variant` (optional): Specifies the sheet type. Can be one of the following XlSheetType constants: xlWorksheet, xlChart, xlExcel4MacroSheet, or xlExcel4IntlMacroSheet. If you are inserting a sheet based on an existing template, specify the path to the template. The default value is xlWorksheet.
 - `Copy([Before As Variant], [After As Variant])`  
   Copies the sheet to another location in the workbook.
-    - `Before As Variant` (optional): The sheet before which the copied sheet will be placed. You cannot specify _Before_ if you specify _After_.
-    - `After As Variant` (optional): The sheet after which the copied sheet will be placed. You cannot specify _After_ if you specify _Before_.
+    - `Before As Variant` (optional): The sheet before which the copied sheet will be placed. You cannot specify Before if you specify After.
+    - `After As Variant` (optional): The sheet after which the copied sheet will be placed. You cannot specify After if you specify Before.
 - `Delete()`  
   Deletes the object.
 - `FillAcrossSheets(Range As Range, [Type As XlFillWith])`  
@@ -55,8 +55,8 @@ Worksheets.Move After:=Sheets(Sheets.Count)
     - `Type As XlFillWith` (optional): Specifies how to copy the range.
 - `Move([Before As Variant], [After As Variant])`  
   Moves the sheet to another location in the workbook.
-    - `Before As Variant` (optional): The sheet before which the moved sheet will be placed. You cannot specify _Before_ if you specify _After_.
-    - `After As Variant` (optional): The sheet after which the moved sheet will be placed. You cannot specify _After_ if you specify _Before_.
+    - `Before As Variant` (optional): The sheet before which the moved sheet will be placed. You cannot specify Before if you specify After.
+    - `After As Variant` (optional): The sheet after which the moved sheet will be placed. You cannot specify After if you specify Before.
 - `PrintPreview([EnableChanges As Variant])`  
   Shows a preview of the object as it would look when printed.
     - `EnableChanges As Variant` (optional): Pass a Boolean value to specify if the user can change the margins and other page setup options available in print preview.
@@ -70,9 +70,9 @@ Worksheets.Move After:=Sheets(Sheets.Count)
     - `Copies As Variant` (optional): The number of copies to print. If this argument is omitted, one copy is printed.
     - `Preview As Variant` (optional): True to have Microsoft Excel invoke print preview before printing the object. False (or omitted) to print the object immediately.
     - `ActivePrinter As Variant` (optional): Sets the name of the active printer.
-    - `PrintToFile As Variant` (optional): True to print to a file. If _PrToFileName_ is not specified, Microsoft Excel prompts the user to enter the name of the output file.
+    - `PrintToFile As Variant` (optional): True to print to a file. If PrToFileName is not specified, Microsoft Excel prompts the user to enter the name of the output file.
     - `Collate As Variant` (optional): True to collate multiple copies.
-    - `PrToFileName As Variant` (optional): If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to.
+    - `PrToFileName As Variant` (optional): If PrintToFile is set to True, this argument specifies the name of the file that you want to print to.
     - `IgnorePrintAreas As Variant` (optional): True to ignore print areas and print the entire object.
 - `Add2([Before As Variant], [After As Variant], [Count As Variant], [NewLayout As Variant]) As Object`  
   This method is only implemented for the Charts collection object and will produce a run-time error if used on the Sheets and Worksheets objects.

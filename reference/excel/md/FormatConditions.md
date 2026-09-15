@@ -46,9 +46,9 @@ End With
 - `Add(Type As XlFormatConditionType, [Operator As Variant], [Formula1 As Variant], [Formula2 As Variant], [String As Variant], [TextOperator As Variant], [DateOperator As Variant], [ScopeType As Variant]) As Object`  
   Adds a new conditional format.
     - `Type As XlFormatConditionType` (required): Specifies whether the conditional format is based on a cell value or an expression.
-    - `Operator As Variant` (optional): The conditional format operator. Can be one of the following XlFormatConditionOperator constants: xlBetween, xlEqual, xlGreater, xlGreaterEqual, xlLess, xlLessEqual, xlNotBetween, or xlNotEqual. If _Type_ is xlExpression, the _Operator_ argument is ignored.
+    - `Operator As Variant` (optional): The conditional format operator. Can be one of the following XlFormatConditionOperator constants: xlBetween, xlEqual, xlGreater, xlGreaterEqual, xlLess, xlLessEqual, xlNotBetween, or xlNotEqual. If Type is xlExpression, the Operator argument is ignored.
     - `Formula1 As Variant` (optional): The value or expression associated with the conditional format. Can be a constant value, a string value, a cell reference, or a formula.
-    - `Formula2 As Variant` (optional): The value or expression associated with the second part of the conditional format when _Operator_ is xlBetween or xlNotBetween (otherwise, this argument is ignored). Can be a constant value, a string value, a cell reference, or a formula.
+    - `Formula2 As Variant` (optional): The value or expression associated with the second part of the conditional format when Operator is xlBetween or xlNotBetween (otherwise, this argument is ignored). Can be a constant value, a string value, a cell reference, or a formula.
 - `Delete()`  
   Deletes the object.
 - `AddColorScale(ColorScaleType As Long) As Object`  

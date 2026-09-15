@@ -46,4 +46,4 @@ Workbooks(3).PublishObjects(1).FileName = _
   Deletes the object.
 - `Publish([Create As Variant])`  
   Saves an item or a collection of items in a document to a webpage.
-    - `Create As Variant` (optional): If the HTML file exists, setting this argument to True replaces the file, and setting this argument to False inserts the item or items at the end of the file. If the file does not exist, the file is created regardless of the value of the _Create_ argument.
+    - `Create As Variant` (optional): If the HTML file exists, setting this argument to True replaces the file, and setting this argument to False inserts the item or items at the end of the file. If the file does not exist, the file is created regardless of the value of the Create argument.

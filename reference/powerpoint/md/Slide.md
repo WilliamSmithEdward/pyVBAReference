@@ -31,7 +31,7 @@ ActivePresentation.Slides(1).Layout = ppLayoutTitle
 - `Background As ShapeRange  (read-only)`  
   Returns a ShapeRange object that represents the slide background.
 - `Name As String  (read/write)`  
-  When a slide is inserted into a presentation, Microsoft PowerPoint automatically assigns it a name in the form Slide _n_, where _n_ is an integer that represents the order in which the slide was created in the presentation.
+  When a slide is inserted into a presentation, Microsoft PowerPoint automatically assigns it a name in the form Slide n, where n is an integer that represents the order in which the slide was created in the presentation.
 - `SlideID As Long  (read-only)`  
   Returns a unique ID number for the specified slide. Read-only.
 - `PrintSteps As Long  (read-only)`  

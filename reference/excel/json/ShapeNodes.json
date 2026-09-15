@@ -103,37 +103,37 @@
           "name": "X1",
           "type": "Single",
           "optional": false,
-          "description": "If the _EditingType_ of the new segment is msoEditingAuto, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the _EditingType_ of the new node is msoEditingCorner, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the first control point for the new segment."
+          "description": "If the EditingType of the new segment is msoEditingAuto, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the EditingType of the new node is msoEditingCorner, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the first control point for the new segment."
         },
         {
           "name": "Y1",
           "type": "Single",
           "optional": false,
-          "description": "If the _EditingType_ of the new segment is msoEditingAuto, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the _EditingType_ of the new node is msoEditingCorner, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the first control point for the new segment."
+          "description": "If the EditingType of the new segment is msoEditingAuto, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the EditingType of the new node is msoEditingCorner, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the first control point for the new segment."
         },
         {
           "name": "X2",
           "type": "Single",
           "optional": true,
-          "description": "If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the second control point for the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument."
+          "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the second control point for the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
         },
         {
           "name": "Y2",
           "type": "Single",
           "optional": true,
-          "description": "If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the second control point for the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument."
+          "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the second control point for the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
         },
         {
           "name": "X3",
           "type": "Single",
           "optional": true,
-          "description": "If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument."
+          "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the horizontal distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
         },
         {
           "name": "Y3",
           "type": "Single",
           "optional": true,
-          "description": "If the _EditingType_ of the new segment is msoEditingCorner, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the _EditingType_ of the new segment is msoEditingAuto, don't specify a value for this argument."
+          "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the vertical distance, measured in points, from the upper-left corner of the document to the end point of the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
         }
       ]
     },
@@ -141,7 +141,7 @@
       "name": "SetEditingType",
       "kind": "method",
       "signature": "SetEditingType(Index As Long, EditingType As MsoEditingType)",
-      "description": "Sets the editing type of the node specified by _Index_. If the node is a control point for a curved segment, this method sets the editing type of the node adjacent to it that joins two segments. Note that, depending on the editing type, this method may affect the position of adjacent nodes.",
+      "description": "Sets the editing type of the node specified by Index. If the node is a control point for a curved segment, this method sets the editing type of the node adjacent to it that joins two segments. Note that, depending on the editing type, this method may affect the position of adjacent nodes.",
       "returns": "void",
       "parameters": [
         {
@@ -162,7 +162,7 @@
       "name": "SetPosition",
       "kind": "method",
       "signature": "SetPosition(Index As Long, X1 As Single, Y1 As Single)",
-      "description": "Sets the location of the node specified by _Index_. Note that, depending on the editing type of the node, this method may affect the position of adjacent nodes.",
+      "description": "Sets the location of the node specified by Index. Note that, depending on the editing type of the node, this method may affect the position of adjacent nodes.",
       "returns": "void",
       "parameters": [
         {
@@ -189,7 +189,7 @@
       "name": "SetSegmentType",
       "kind": "method",
       "signature": "SetSegmentType(Index As Long, SegmentType As MsoSegmentType)",
-      "description": "Sets the segment type of the segment that follows the node specified by _Index_. If the node is a control point for a curved segment, this method sets the segment type for that curve. Note that this may affect the total number of nodes by inserting or deleting adjacent nodes.",
+      "description": "Sets the segment type of the segment that follows the node specified by Index. If the node is a control point for a curved segment, this method sets the segment type for that curve. Note that this may affect the total number of nodes by inserting or deleting adjacent nodes.",
       "returns": "void",
       "parameters": [
         {

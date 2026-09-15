@@ -6,7 +6,7 @@
 
 A collection of AddIn objects that represents all the add-ins available to Word, regardless of whether or not they are currently loaded. The AddIns collection includes global templates or Word add-in libraries (WLLs) displayed in the Templates and Add-ins dialog box.
 
-**Remarks:** Use the AddIns property to return the AddIns collection. The following example displays the name and the installed state of each available add-in. Use the Add method to add an add-in to the list of available add-ins and (optionally) install it using the Install argument. To install an add-in shown in the list of available add-ins, use the Installed property. Use AddIns (_index_), where _index_ is the add-in name or index number, to return a single AddIn object. You must exactly match the spelling (but not necessarily the capitalization) of the name, as it is shown in the Templates and Add-ins dialog box. To install an add-in shown in the list of available add-ins, use the Installed property. The following example loads the Letter.dot template as a global template. Use the Compiled property to determine whether an AddIn object is a template or a WLL.
+**Remarks:** Use the AddIns property to return the AddIns collection. The following example displays the name and the installed state of each available add-in. Use the Add method to add an add-in to the list of available add-ins and (optionally) install it using the Install argument. To install an add-in shown in the list of available add-ins, use the Installed property. Use AddIns (index), where index is the add-in name or index number, to return a single AddIn object. You must exactly match the spelling (but not necessarily the capitalization) of the name, as it is shown in the Templates and Add-ins dialog box. To install an add-in shown in the list of available add-ins, use the Installed property. The following example loads the Letter.dot template as a global template. Use the Compiled property to determine whether an AddIn object is a template or a WLL.
 
 ## Properties (5)
 
@@ -30,5 +30,5 @@ A collection of AddIn objects that represents all the add-ins available to Word,
     - `FileName As String` (required): The path for the template or WLL.
     - `Install As Variant` (optional): True to install the add-in. False to add the add-in to the list of add-ins but not install it. The default value is True.
 - `Unload(RemoveFromList As Boolean)`  
-  Unloads all loaded add-ins and, depending on the value of the _RemoveFromList_ argument, removes them from the AddIns collection.
+  Unloads all loaded add-ins and, depending on the value of the RemoveFromList argument, removes them from the AddIns collection.
     - `RemoveFromList As Boolean` (required): True to remove the unloaded add-ins from the AddIns collection (the names are removed from the Templates and Add-ins dialog box). False to leave the unloaded add-ins in the collection. If the Autoload property for an unloaded add-in returns True, Unload cannot remove that add-in from the AddIns collection, regardless of the value of RemoveFromList.

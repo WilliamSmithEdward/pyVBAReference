@@ -132,8 +132,8 @@ Worksheets("sheet1").ChartObjects(1).Chart. _
     - `Direction As XlErrorBarDirection` (required): The error bar direction.
     - `Include As XlErrorBarInclude` (required): The error bar parts to include.
     - `Type As XlErrorBarType` (required): The error bar type.
-    - `Amount As Variant` (optional): The error amount. Used for only the positive error amount when _Type_ is xlErrorBarTypeCustom.
-    - `MinusValues As Variant` (optional): The negative error amount when _Type_ is xlErrorBarTypeCustom.
+    - `Amount As Variant` (optional): The error amount. Used for only the positive error amount when Type is xlErrorBarTypeCustom.
+    - `MinusValues As Variant` (optional): The negative error amount when Type is xlErrorBarTypeCustom.
 - `Paste() As Variant`  
   Pastes a picture from the Clipboard as the marker on the selected series.
 - `Points([Index As Variant]) As Object`  

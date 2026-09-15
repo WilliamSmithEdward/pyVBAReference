@@ -24,8 +24,8 @@ The FormatConditions collection represents the collection of conditional formats
 - `Add(Type As AcFormatConditionType, [Operator As AcFormatConditionOperator], [Expression1 As Variant], [Expression2 As Variant]) As _FormatCondition`  
   Use the Add method to add a conditional format as a FormatCondition object to the FormatConditions collection of a combo box or text box control.
     - `Type As AcFormatConditionType` (required): An AcFormatConditionType constant that specifies the type of format condition to be added.
-    - `Operator As AcFormatConditionOperator` (optional): An AcFormatConditionOperator constant that specifies the operator. If the _Type_ argument is acExpression, the _Operator_ argument is ignored. If you leave this argument blank, the default constant (acBetween) is assumed.
+    - `Operator As AcFormatConditionOperator` (optional): An AcFormatConditionOperator constant that specifies the operator. If the Type argument is acExpression, the Operator argument is ignored. If you leave this argument blank, the default constant (acBetween) is assumed.
     - `Expression1 As Variant` (optional): A value or expression associated with the first part of the conditional format. Can be a constant or a string value.
-    - `Expression2 As Variant` (optional): A value or expression associated with the second part of the conditional format when the _Operator_ argument is acBetween or acNotBetween (otherwise, this argument is ignored). Can be a constant or a string value.
+    - `Expression2 As Variant` (optional): A value or expression associated with the second part of the conditional format when the Operator argument is acBetween or acNotBetween (otherwise, this argument is ignored). Can be a constant or a string value.
 - `Delete()`  
   Deletes the specified object.

@@ -19,7 +19,7 @@ The References collection contains Reference objects representing each reference
 
 - `Item(var As Variant) As Reference`  
   The Item method returns a specific member of a collection either by position or by key. Reference object.
-    - `var As Variant` (required): An expression that specifies the position of a member of the collection. If a numeric expression, the _var_ argument must be a number from 1 to the value of the collection's Count property. If a string expression, the _var_ argument must be the name of a member of the collection.
+    - `var As Variant` (required): An expression that specifies the position of a member of the collection. If a numeric expression, the var argument must be a number from 1 to the value of the collection's Count property. If a string expression, the var argument must be the name of a member of the collection.
 - `_NewEnum() As IUnknown`
 - `AddFromGuid(Guid As String, Major As Long, Minor As Long) As Reference`  
   The AddFromGUID method creates a Reference object based on the GUID that identifies a type library. Reference object.

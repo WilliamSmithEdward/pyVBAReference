@@ -72,7 +72,7 @@ End With
 - `Modify(Type As XlFormatConditionType, [Operator As Variant], [Formula1 As Variant], [Formula2 As Variant], [String As Variant], [Operator2 As Variant])`  
   Modifies an existing conditional format.
     - `Type As XlFormatConditionType` (required): Specifies whether the conditional format is based on a cell value or an expression.
-    - `Operator As Variant` (optional): An XlFormatConditionOperator value that represents the conditional format operator. This parameter is ignored if _Type_ is set to xlExpression.
+    - `Operator As Variant` (optional): An XlFormatConditionOperator value that represents the conditional format operator. This parameter is ignored if Type is set to xlExpression.
     - `Formula1 As Variant` (optional): The value or expression associated with the conditional format. Can be a constant value, a string value, a cell reference, or a formula.
     - `Formula2 As Variant` (optional): The value or expression associated with the conditional format. Can be a constant value, a string value, a cell reference, or a formula.
 - `ModifyAppliesToRange(Range As Range)`  

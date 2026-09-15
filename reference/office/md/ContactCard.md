@@ -20,4 +20,4 @@ Represents a Microsoft Office contact card.
 - `Close()`  
   Closes the contact card.
 - `Show(CardStyle As MsoContactCardStyle, RectangleLeft As Long, RectangleRight As Long, RectangleTop As Long, RectangleBottom As Long, HorizontalPosition As Long, [ShowWithDelay As Boolean])`  
-  Displays the contact card at the specified _x_-coordinate position outside the specified rectangle.
+  Displays the contact card at the specified x-coordinate position outside the specified rectangle.

@@ -6,7 +6,7 @@
 
 Represents a defined name for a range of cells. Names can be either built-in names-such as Database, Print_Area, and Auto_Open-or custom names.
 
-**Remarks:** The Name object is a member of the Names collection for the Application, Workbook, and Worksheet objects. Use Names (_index_), where _index_ is the name index number or defined name, to return a single Name object. The index number indicates the position of the name within the collection. Names are placed in alphabetic order, from a to z, and are not case-sensitive. Although a Range object can have more than one name, there's no Names collection for the Range object. Use Name with a Range object to return the first name from the list of names (sorted alphabetically) assigned to the range.
+**Remarks:** The Name object is a member of the Names collection for the Application, Workbook, and Worksheet objects. Use Names (index), where index is the name index number or defined name, to return a single Name object. The index number indicates the position of the name within the collection. Names are placed in alphabetic order, from a to z, and are not case-sensitive. Although a Range object can have more than one name, there's no Names collection for the Range object. Use Name with a Range object to return the first name from the list of names (sorted alphabetically) assigned to the range.
 
 **Example:**
 

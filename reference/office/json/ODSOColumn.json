@@ -4,7 +4,7 @@
   "guid": "{000C1531-0000-0000-C000-000000000046}",
   "library": "Microsoft Office 16.0 Object Library",
   "description": "Represents a field in a data source. The ODSOColumn object is a member of the ODSOColumns collection.",
-  "remarks": "The ODSOColumns collection includes all the data fields in a mail merge data source (for example, Name, Address, and City). You cannot add fields to the ODSOColumns collection. All data fields in a data source are automatically included in the ODSOColumns collection. Use Columns(_index_), where _index_ is the data field name or index number, to return a single ODSOColumn object. The index number represents the position of the data field in the mail merge data source.",
+  "remarks": "The ODSOColumns collection includes all the data fields in a mail merge data source (for example, Name, Address, and City). You cannot add fields to the ODSOColumns collection. All data fields in a data source are automatically included in the ODSOColumns collection. Use Columns(index), where index is the data field name or index number, to return a single ODSOColumn object. The index number represents the position of the data field in the mail merge data source.",
   "example": "Sub GetDataFromSource()\n\n Dim appOffice As OfficeDataSourceObject\n\n Set appOffice = Application.OfficeDataSourceObject\n appOffice.Open bstrConnect:=\"DRIVER=SQL Server;SERVER=ServerName;\" & _\n \"UID=user;PWD=;DATABASE=Northwind\", bstrTable:=\"Employees\"\n\n With appOffice.Columns\n MsgBox \"Field Name: \" & .Item(1).Name & vbLf & _\n \"Value: \" & .Item(1).Value\n End With\nEnd Sub",
   "properties": [
     {

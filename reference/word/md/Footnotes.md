@@ -6,7 +6,7 @@
 
 A collection of Footnote objects that represent all the footnotes in a selection, range, or document.
 
-**Remarks:** Use the Footnotes property to return the Footnotes collection. The following example changes all of the footnotes in the active document to endnotes. Use the Add method to add a footnote to the Footnotes collection. The following example adds a footnote immediately after the selection. Use Footnotes (_index_), where _index_ is the index number, to return a single Footnote object. The index number represents the position of the footnote in the selection, range, or document. The following example applies red formatting to the first footnote in the selection.
+**Remarks:** Use the Footnotes property to return the Footnotes collection. The following example changes all of the footnotes in the active document to endnotes. Use the Add method to add a footnote to the Footnotes collection. The following example adds a footnote immediately after the selection. Use Footnotes (index), where index is the index number, to return a single Footnote object. The index number represents the position of the footnote in the selection, range, or document. The following example applies red formatting to the first footnote in the selection.
 
 ## Properties (12)
 

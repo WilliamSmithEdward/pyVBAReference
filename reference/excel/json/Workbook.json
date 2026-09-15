@@ -880,7 +880,7 @@
           "name": "WritePassword",
           "type": "Variant",
           "optional": true,
-          "description": "Specifies the write-reserved password if the file is write reserved and _Mode_ is xlReadWrite. Ignored if there's no password for the file or if _Mode_ is xlReadOnly."
+          "description": "Specifies the write-reserved password if the file is write reserved and Mode is xlReadWrite. Ignored if there's no password for the file or if Mode is xlReadOnly."
         },
         {
           "name": "Notify",
@@ -928,7 +928,7 @@
           "name": "SaveChanges",
           "type": "Variant",
           "optional": true,
-          "description": "If there are no changes to the workbook, this argument is ignored. If there are changes to the workbook and the workbook appears in other open windows, this argument is ignored. If there are changes to the workbook but the workbook doesn't appear in any other open windows, this argument specifies whether changes should be saved. If set to True, changes are saved to the workbook. If there is not yet a file name associated with the workbook, _FileName_ is used. If _FileName_ is omitted, the user is asked to supply a file name."
+          "description": "If there are no changes to the workbook, this argument is ignored. If there are changes to the workbook and the workbook appears in other open windows, this argument is ignored. If there are changes to the workbook but the workbook doesn't appear in any other open windows, this argument specifies whether changes should be saved. If set to True, changes are saved to the workbook. If there is not yet a file name associated with the workbook, FileName is used. If FileName is omitted, the user is asked to supply a file name."
         },
         {
           "name": "Filename",
@@ -1451,13 +1451,13 @@
           "name": "ExtraInfo",
           "type": "Variant",
           "optional": true,
-          "description": "A String or byte array that specifies additional information for HTTP to use to resolve the hyperlink. For example, you can use _ExtraInfo_ to specify the coordinates of an image map, the contents of a form, or a FAT file name."
+          "description": "A String or byte array that specifies additional information for HTTP to use to resolve the hyperlink. For example, you can use ExtraInfo to specify the coordinates of an image map, the contents of a form, or a FAT file name."
         },
         {
           "name": "Method",
           "type": "Variant",
           "optional": true,
-          "description": "Specifies the way _ExtraInfo_ is attached. Can be one of the MsoExtraInfoMethod constants: msoMethodGet or msoMethodPost."
+          "description": "Specifies the way ExtraInfo is attached. Can be one of the MsoExtraInfoMethod constants: msoMethodGet or msoMethodPost."
         },
         {
           "name": "HeaderInfo",
@@ -1534,13 +1534,13 @@
           "name": "Comments",
           "type": "Variant",
           "optional": true,
-          "description": "Allows the user to enter check-in comments for the revision of the workbook being checked in (applies only if _SaveChanges_ equals True)."
+          "description": "Allows the user to enter check-in comments for the revision of the workbook being checked in (applies only if SaveChanges equals True)."
         },
         {
           "name": "MakePublic",
           "type": "Variant",
           "optional": true,
-          "description": "True allows the user to publish the workbook after it has been checked in. This submits the workbook for the approval process, which can eventually result in a version of the workbook being published to users with read-only rights to the workbook (applies only if _SaveChanges_ equals True)."
+          "description": "True allows the user to publish the workbook after it has been checked in. This submits the workbook for the approval process, which can eventually result in a version of the workbook being published to users with read-only rights to the workbook (applies only if SaveChanges equals True)."
         }
       ]
     },
@@ -1562,7 +1562,7 @@
           "name": "Recipients",
           "type": "Variant",
           "optional": true,
-          "description": "A string that lists the people to whom to send the message. These can be unresolved names and aliases in an email phone book or full email addresses. Separate multiple recipients with a semicolon (;). If left blank and _ShowMessage_ is False, you'll receive an error message, and the message will not be sent."
+          "description": "A string that lists the people to whom to send the message. These can be unresolved names and aliases in an email phone book or full email addresses. Separate multiple recipients with a semicolon (;). If left blank and ShowMessage is False, you'll receive an error message, and the message will not be sent."
         },
         {
           "name": "Subject",
@@ -1716,7 +1716,7 @@
           "name": "Overwrite",
           "type": "Variant",
           "optional": true,
-          "description": "If a value is not specified for the _Destination_ parameter, this parameter specifies whether to overwrite data that has been mapped to the schema map specified in the _ImportMap_ parameter. Set to True to overwrite the data or False to append the new data to the existing data. The default value is True. If a value is specified for the _Destination_ parameter, this parameter specifies whether to overwrite existing data. Set to True to overwrite existing data or False to cancel the import if data would be overwritten. The default value is True."
+          "description": "If a value is not specified for the Destination parameter, this parameter specifies whether to overwrite data that has been mapped to the schema map specified in the ImportMap parameter. Set to True to overwrite the data or False to append the new data to the existing data. The default value is True. If a value is specified for the Destination parameter, this parameter specifies whether to overwrite existing data. Set to True to overwrite existing data or False to cancel the import if data would be overwritten. The default value is True."
         },
         {
           "name": "Destination",
@@ -1749,7 +1749,7 @@
           "name": "Overwrite",
           "type": "Variant",
           "optional": true,
-          "description": "If a value is not specified for the _Destination_ parameter, this parameter specifies whether to overwrite data that has been mapped to the schema map specified in the _ImportMap_ parameter. Set to True to overwrite the data or False to append the new data to the existing data. The default value is True. If a value is specified for the _Destination_ parameter, this parameter specifies whether to overwrite existing data. Set to True to overwrite existing data or False to cancel the import if data would be overwritten. The default value is True."
+          "description": "If a value is not specified for the Destination parameter, this parameter specifies whether to overwrite data that has been mapped to the schema map specified in the ImportMap parameter. Set to True to overwrite the data or False to append the new data to the existing data. The default value is True. If a value is specified for the Destination parameter, this parameter specifies whether to overwrite existing data. Set to True to overwrite existing data or False to cancel the import if data would be overwritten. The default value is True."
         },
         {
           "name": "Destination",
@@ -1819,7 +1819,7 @@
           "name": "Comments",
           "type": "Variant",
           "optional": true,
-          "description": "Comments for the revision of the workbook being checked in (applies only if _SaveChanges_ is set to True)."
+          "description": "Comments for the revision of the workbook being checked in (applies only if SaveChanges is set to True)."
         },
         {
           "name": "MakePublic",
@@ -1897,7 +1897,7 @@
           "name": "PrintToFile",
           "type": "Variant",
           "optional": true,
-          "description": "True to print to a file. If _PrToFileName_ is not specified, Microsoft Excel prompts the user to enter the name of the output file."
+          "description": "True to print to a file. If PrToFileName is not specified, Microsoft Excel prompts the user to enter the name of the output file."
         },
         {
           "name": "Collate",
@@ -1909,7 +1909,7 @@
           "name": "PrToFileName",
           "type": "Variant",
           "optional": true,
-          "description": "If _PrintToFile_ is set to True, this argument specifies the name of the file that you want to print to."
+          "description": "If PrintToFile is set to True, this argument specifies the name of the file that you want to print to."
         },
         {
           "name": "IgnorePrintAreas",
@@ -2126,13 +2126,13 @@
           "name": "TextCodepage",
           "type": "Variant",
           "optional": true,
-          "description": "Ignored for all languages in Microsoft Excel. NOTE: When Excel saves a workbook to one of the CSV or text formats, which are specified by using the _FileFormat_ parameter, it uses the code page that corresponds to the language for the system locale in use on the current computer. This system setting is available in the Control Panel > Region and Language > Location tab under Current location."
+          "description": "Ignored for all languages in Microsoft Excel. NOTE: When Excel saves a workbook to one of the CSV or text formats, which are specified by using the FileFormat parameter, it uses the code page that corresponds to the language for the system locale in use on the current computer. This system setting is available in the Control Panel > Region and Language > Location tab under Current location."
         },
         {
           "name": "TextVisualLayout",
           "type": "Variant",
           "optional": true,
-          "description": "Ignored for all languages in Microsoft Excel. NOTE: When Excel saves a workbook to one of the CSV or text formats, which are specified by using the _FileFormat_ parameter, it saves these formats in logical layout. If left-to-right (LTR) text is embedded within right-to-left (RTL) text in the file, or vice versa, logical layout saves the contents of the file in the correct reading order for all languages in the file without regard to direction. When an application opens the file, each run of LTR or RTL characters are rendered in the correct direction according to the character value ranges within the code page (unless an application that is designed to display the exact memory layout of the file, such as a debugger or editor, is used to open the file)."
+          "description": "Ignored for all languages in Microsoft Excel. NOTE: When Excel saves a workbook to one of the CSV or text formats, which are specified by using the FileFormat parameter, it saves these formats in logical layout. If left-to-right (LTR) text is embedded within right-to-left (RTL) text in the file, or vice versa, logical layout saves the contents of the file in the correct reading order for all languages in the file without regard to direction. When an application opens the file, each run of LTR or RTL characters are rendered in the correct direction according to the character value ranges within the code page (unless an application that is designed to display the exact memory layout of the file, such as a debugger or editor, is used to open the file)."
         },
         {
           "name": "Local",

@@ -6,7 +6,7 @@
 
 A collection of PageNumber objects that represent the page numbers in a single header or footer.
 
-**Remarks:** Use the PageNumbers property to return the PageNumbers collection. The following example starts page numbering at 3 for the first section in the active document. Use the Add method to add page numbers to a header or footer. The following example adds a page number to the primary footer in the first section. To add or change page numbers in a document with multiple sections, modify the page numbers in each section or set the LinkToPrevious property to True. Use PageNumbers (_index_), where _index_ is the index number, to return a single PageNumber object. In most cases, a header or footer contains only one page number, which is index number 1. The following example centers the first page number in the primary header in the first section.
+**Remarks:** Use the PageNumbers property to return the PageNumbers collection. The following example starts page numbering at 3 for the first section in the active document. Use the Add method to add page numbers to a header or footer. The following example adds a page number to the primary footer in the first section. To add or change page numbers in a document with multiple sections, modify the page numbers in each section or set the LinkToPrevious property to True. Use PageNumbers (index), where index is the index number, to return a single PageNumber object. In most cases, a header or footer contains only one page number, which is index number 1. The following example centers the first page number in the primary header in the first section.
 
 ## Properties (13)
 

@@ -58,4 +58,4 @@ End Sub
 - `Modify(newtype As XlConditionValueTypes, [newvalue As Variant])`  
   Modifies how the longest bar or shortest bar is evaluated for a data bar conditional formatting rule.
     - `newtype As XlConditionValueTypes` (required): Specifies how the shortest bar or longest bar is evaluated. The default value is xlConditionLowestValue for the shortest bar and xlConditionHighestValue for the longest bar.
-    - `newvalue As Variant` (optional): The value assigned to the shortest or longest data bar. Depending on the _NewType_ argument, this can be a number or a formula that evaluates to a number.
+    - `newvalue As Variant` (optional): The value assigned to the shortest or longest data bar. Depending on the NewType argument, this can be a number or a formula that evaluates to a number.
