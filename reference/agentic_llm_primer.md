@@ -238,11 +238,11 @@ at `reference/<library>/json/<type>.json` for the full signature and parameter d
 application: `excel`, `powerpoint`, `word`, `access`, and `shared` for the
 libraries every host can reference. Each set is three pairs of files:
 
-| File                            | Contents                                    |
-| ------------------------------- | ------------------------------------------- |
-| `<app>.json` / `.md`            | every type of the application                |
-| `<app>_constants.json` / `.md`  | every enumeration and module constant        |
-| `<app>_properties.json` / `.md` | every property of every object               |
+| File                                     | Contents                      |
+| ---------------------------------------- | ----------------------------- |
+| `<app>.json` / `.md`                     | every type of the application |
+| `<app>_constants.json` / `.md`           | every enumeration and module constant |
+| `<app>_properties.json` / `.md` / `.csv` | every property of every object |
 
 Use these when you want a whole object model in one read; use the per-type files
 when you know the type and want the smallest possible read. The type, constant,
@@ -276,6 +276,17 @@ enum constants (`{ "name", "value", "description" }`).
 The properties export (`schema: "pyvbareference/properties/1"`) keeps only types
 that have at least one property, each with `property_count` and the source
 `properties` array.
+
+`<app>_properties.csv` is the same property list as a flat table, for loading
+into a spreadsheet or a dataframe. Columns are `Object`, `Property`,
+`Property split` (the name split at capitals, for reading rather than calling),
+`Type`, and `Access` - `R_O` read-only, `V` settable, `W_O` write-only.
+
+```
+Object,Property,Property split,Type,Access
+Application,ActiveCell,Active Cell,Range,R_O
+Worksheet,Name,Name,String,V
+```
 
 ```python
 import json

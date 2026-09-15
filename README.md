@@ -83,7 +83,20 @@ four have in common. Each set is three pairs of files:
 | ------------------------- | ------------------------------------------------- |
 | `<app>.json` / `.md`      | every type, with methods, events and parameter docs |
 | `<app>_constants.json` / `.md`  | every enumeration and module constant, with values |
-| `<app>_properties.json` / `.md` | every property of every object, with type and access |
+| `<app>_properties.json` / `.md` / `.csv` | every property of every object, with type and access |
+
+The property CSV is a flat table for importing into a spreadsheet, one row per
+property - `Object,Property,Property split,Type,Access`:
+
+```
+Application,ActiveCell,Active Cell,Range,R_O
+Worksheet,UsedRange,Used Range,Range,R_O
+Worksheet,Name,Name,String,V
+```
+
+`Property split` is the same name split at capitals, for reading rather than
+calling. `Access` is `R_O` read-only, `V` settable, `W_O` write-only. 26,543
+rows across the five files.
 
 So the whole Word object model is one 3.6 MB JSON file or one 1.8 MB Markdown
 file; every Excel constant is a 175 KB Markdown file. Nothing here is new data -

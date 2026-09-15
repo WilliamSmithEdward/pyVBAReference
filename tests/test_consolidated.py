@@ -7,6 +7,7 @@ entries are identical to their source).
 
 from __future__ import annotations
 
+import csv
 import json
 import os
 from functools import lru_cache
@@ -19,6 +20,8 @@ HOSTS = ("excel", "powerpoint", "word", "access")
 SHARED = "shared"
 KEYS = HOSTS + (SHARED,)
 SUFFIXES = ("", "_constants", "_properties")
+CSV_HEADER = ["Object", "Property", "Property split", "Type", "Access"]
+ACCESS_CODES = {"R_O", "V", "W_O"}
 
 
 def consolidated_dir() -> str:
@@ -40,6 +43,13 @@ def markdown(name: str) -> str:
     with open(os.path.join(consolidated_dir(), name + ".md"),
               encoding="utf-8") as fh:
         return fh.read()
+
+
+@lru_cache(maxsize=None)
+def rows(name: str) -> tuple:
+    with open(os.path.join(consolidated_dir(), name + ".csv"),
+              encoding="utf-8", newline="") as fh:
+        return tuple(tuple(row) for row in csv.reader(fh))
 
 
 def test_every_file_of_every_set_exists():
@@ -133,6 +143,55 @@ def test_markdown_headings_and_content():
     assert "`Paragraphs As Paragraphs  (read-only)`" in markdown(
         "word_properties")
     assert "`wdFormatPDF` = 17" in markdown("word_constants")
+
+
+def test_property_csv_exists_for_every_application():
+    for key in KEYS:
+        table = rows(key + "_properties")
+        assert list(table[0]) == CSV_HEADER
+        assert len(table) > 1
+
+
+def test_property_csv_matches_the_properties_export():
+    for key in KEYS:
+        table = rows(key + "_properties")
+        doc = export(key + "_properties")
+        assert len(table) - 1 == doc["property_count"]
+        from_json = [(t["name"], p["name"])
+                     for lib in doc["libraries"] for t in lib["types"]
+                     for p in t["properties"]]
+        assert [(r[0], r[1]) for r in table[1:]] == from_json
+
+
+def test_property_csv_row_shape():
+    # The row the request asked for: Application | ActiveCell | Range | R_O,
+    # with the name also split at capitals.
+    table = rows("excel_properties")
+    active_cell = next(r for r in table
+                       if r[0] == "Application" and r[1] == "ActiveCell")
+    assert active_cell == ("Application", "ActiveCell", "Active Cell",
+                           "Range", "R_O")
+    used_range = next(r for r in table
+                      if r[0] == "Worksheet" and r[1] == "UsedRange")
+    assert used_range[2] == "Used Range"
+
+
+def test_property_csv_access_codes():
+    seen = set()
+    for key in KEYS:
+        for row in rows(key + "_properties")[1:]:
+            assert row[4] in ACCESS_CODES, row
+            seen.add(row[4])
+    assert {"R_O", "V"} <= seen
+
+
+def test_property_csv_is_safe_to_open_in_a_spreadsheet():
+    # A leading =, +, - or @ makes a spreadsheet evaluate the cell as a
+    # formula. Identifiers never start that way; assert it rather than assume.
+    for key in KEYS:
+        for row in rows(key + "_properties")[1:]:
+            for field in row:
+                assert field[:1] not in ("=", "+", "-", "@"), row
 
 
 def test_markdown_covers_every_type():

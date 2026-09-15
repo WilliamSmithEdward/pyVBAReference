@@ -22,6 +22,7 @@ Usage:
 
 from __future__ import annotations
 
+import csv
 import json
 import os
 import re
@@ -63,10 +64,26 @@ SHARED_DESCRIPTION = (
 # file names on both sides.
 _INVALID = re.compile(r'[<>:"/\\|?*]')
 
+# Property access in the spreadsheet vocabulary: read-only properties are R_O,
+# settable ones are V(ariable). Write-only is rare but real (33 of 26,543).
+ACCESS_CODES = {"read-only": "R_O", "read/write": "V", "write-only": "W_O"}
+
+CSV_HEADER = ("Object", "Property", "Property split", "Type", "Access")
+
+# Word boundaries inside a CamelCase identifier: ActiveCell -> Active Cell,
+# XMLDocument -> XML Document. Leaves an acronym intact rather than splitting
+# every capital.
+_CAPS_SPLIT_RE = re.compile(r"(?<=[a-z0-9])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])")
+
 
 def safe_filename(name: str) -> str:
     """Return the on-disk file stem used for a type ``name``."""
     return _INVALID.sub("_", name)
+
+
+def split_at_caps(name: str) -> str:
+    """``"ActiveCell"`` -> ``"Active Cell"``, for reading rather than calling."""
+    return _CAPS_SPLIT_RE.sub(" ", name)
 
 
 # --------------------------------------------------------------------------- #
@@ -399,6 +416,25 @@ def build_properties(group: dict, loaded: dict) -> tuple:
     return doc, md
 
 
+def build_properties_csv(group: dict, loaded: dict) -> list:
+    """The property table as flat rows, for import into a spreadsheet.
+
+    One row per property: the object that owns it, the property name as it is
+    written in code, the same name split at capitals for reading, the type it
+    returns, and whether it is read-only or settable.
+    """
+    rows = [list(CSV_HEADER)]
+    for lib in group["libraries"]:
+        for data in loaded[lib["folder"]]:
+            for prop in data.get("properties", []):
+                access = prop.get("access", "")
+                rows.append([data["name"], prop["name"],
+                             split_at_caps(prop["name"]),
+                             prop.get("type", ""),
+                             ACCESS_CODES.get(access, access)])
+    return rows
+
+
 BUILDERS = (("", build_full), ("_constants", build_constants),
             ("_properties", build_properties))
 
@@ -423,14 +459,25 @@ def _write_md(path: str, lines) -> int:
     return os.path.getsize(path)
 
 
+def _write_csv(path: str, rows) -> int:
+    # newline="" is required so the csv module's RFC 4180 line endings are not
+    # translated a second time on Windows.
+    with open(path, "w", encoding="utf-8", newline="") as fh:
+        csv.writer(fh).writerows(rows)
+    return os.path.getsize(path)
+
+
 def _size(num: int) -> str:
     return f"{num / 1048576:.1f} MB" if num >= 1048576 else f"{num // 1024} KB"
 
 
 def _write_index(out_dir: str, rows) -> None:
-    def cell(key: str, suffix: str) -> str:
-        return (f"[{key}{suffix}.md]({key}{suffix}.md) / "
+    def cell(key: str, suffix: str, with_csv: bool = False) -> str:
+        text = (f"[{key}{suffix}.md]({key}{suffix}.md) / "
                 f"[json]({key}{suffix}.json)")
+        if with_csv:
+            text += f" / [csv]({key}{suffix}.csv)"
+        return text
 
     lines = [
         "# Consolidated exports", "",
@@ -443,7 +490,7 @@ def _write_index(out_dir: str, rows) -> None:
         key = row["key"]
         lines.append(f"| {row['title']} | {cell(key, '')} | "
                      f"{cell(key, '_constants')} | "
-                     f"{cell(key, '_properties')} |")
+                     f"{cell(key, '_properties', with_csv=True)} |")
     lines.append("")
     lines.append("Counts:")
     lines.append("")
@@ -451,6 +498,21 @@ def _write_index(out_dir: str, rows) -> None:
         lines.append(f"- **{row['title']}** - {row['type_count']:,} types, "
                      f"{row['constant_count']:,} constants, "
                      f"{row['property_count']:,} properties")
+    lines.append("")
+    lines.append("## The property CSV")
+    lines.append("")
+    lines.append("`<app>_properties.csv` is the same property list as a flat "
+                 "table, for importing into a spreadsheet:")
+    lines.append("")
+    lines.append("| Column | Meaning |")
+    lines.append("| ------ | ------- |")
+    lines.append("| `Object` | the type that owns the property |")
+    lines.append("| `Property` | the property name, as written in code |")
+    lines.append("| `Property split` | the same name split at capitals, "
+                 "`ActiveCell` -> `Active Cell` |")
+    lines.append("| `Type` | what the property returns |")
+    lines.append("| `Access` | `R_O` read-only, `V` settable, `W_O` "
+                 "write-only |")
     lines.append("")
     with open(os.path.join(out_dir, "_index.md"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(lines))
@@ -479,6 +541,15 @@ def build(data_dir: str = DATA_DIR, quiet: bool = False) -> int:
             if not quiet:
                 print(f"  {group['key']}{suffix}.json ({_size(json_bytes)}), "
                       f"{group['key']}{suffix}.md ({_size(md_bytes)})")
+
+        csv_rows = build_properties_csv(group, loaded)
+        csv_bytes = _write_csv(
+            os.path.join(out_dir, group["key"] + "_properties.csv"), csv_rows)
+        written += 1
+        if not quiet:
+            print(f"  {group['key']}_properties.csv ({_size(csv_bytes)}, "
+                  f"{len(csv_rows) - 1:,} rows)")
+
         rows.append({
             "key": group["key"], "title": group["title"],
             "type_count": docs[""]["type_count"],
