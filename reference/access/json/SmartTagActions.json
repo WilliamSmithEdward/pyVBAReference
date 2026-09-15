@@ -1,0 +1,41 @@
+{
+  "name": "SmartTagActions",
+  "kind": "Class",
+  "guid": "{AA533187-6399-4E6C-B6EC-6FC999E1C855}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "Represents a collection of actions for an individual smart tag or a type of smart tag.",
+  "remarks": "Smart tag actions are processes that are programmed into smart tags; they allow users to perform certain functions related to the smart tag. For example, one action for a smart tag might be to access a website, while another action inserts contact information from Microsoft Outlook, while yet another action displays a map and driving directions. To return the collection of actions related to a smart tag, use the SmartTagActions property of the SmartTag object.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Use the Application property to access the active Microsoft Access Application object and its related properties. Read-only Application object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Use the Count property to determine the number of items in a specified collection. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "_SmartTagAction",
+      "access": "read-only",
+      "description": "The Item property returns a specific member of a collection either by position or by index. Read-only SmartTagAction."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

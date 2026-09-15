@@ -1,0 +1,79 @@
+{
+  "name": "CategoryCollection",
+  "kind": "Dispatch Interface",
+  "guid": "{04124C2D-039D-4442-9C68-8FA38D11DDD6}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the collection of visible chart categories in the document.",
+  "remarks": "Categories are visible if they have not been filtered out of a chart.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified CategoryCollection object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of categories in the collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As ChartCategory",
+      "description": "Returns an individual chart category.",
+      "returns": "ChartCategory",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number for the object."
+        }
+      ]
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "method",
+      "signature": "_NewEnum() As IUnknown",
+      "description": "",
+      "returns": "IUnknown"
+    },
+    {
+      "name": "_Default",
+      "kind": "method",
+      "signature": "_Default(Index As Variant) As ChartCategory",
+      "description": "",
+      "returns": "ChartCategory",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

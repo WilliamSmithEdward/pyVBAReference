@@ -1,0 +1,294 @@
+{
+  "name": "InlineShape",
+  "kind": "Dispatch Interface",
+  "guid": "{000209A8-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents an object in the text layer of a document. An inline shape can only be a picture, an OLE object, or an ActiveX control. The InlineShape object is a member of the InlineShapes collection. The InlineShapes collection contains all the shapes that appear inline in a document, range, or selection.",
+  "remarks": "InlineShape objects are treated like characters and are positioned as characters within a line of text. Use InlineShapes (Index), where Index is the index number, to return a single InlineShape object. Inline shapes don't have names. The following example activates the first inline shape in the active document. Shape objects are anchored to a range of text but are free-floating and can be positioned anywhere on the page. Use the ConvertToInlineShape method and the ConvertToShape method to convert shapes from one type to the other. You can convert only pictures, OLE objects, and ActiveX controls to inline shapes. Use the Type property to return the type of inline shape: picture, linked picture, embedded OLE object, linked OLE object, or ActiveX control.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified InlineShape object."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read/write",
+      "description": "Returns a Borders collection that represents all the borders for the specified shape."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the portion of a document that is contained within an inline shape."
+    },
+    {
+      "name": "LinkFormat",
+      "kind": "property",
+      "type": "LinkFormat",
+      "access": "read-only",
+      "description": "Returns a LinkFormat object that represents the link options of the specified inline shape that is linked to a file. Read/only."
+    },
+    {
+      "name": "Field",
+      "kind": "property",
+      "type": "Field",
+      "access": "read-only",
+      "description": "Returns a Field object that represents the field associated with the specified inline shape. Read-only."
+    },
+    {
+      "name": "OLEFormat",
+      "kind": "property",
+      "type": "OLEFormat",
+      "access": "read-only",
+      "description": "Returns an OLEFormat object that represents the OLE characteristics (other than linking) for the specified inline shape. Read-only."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "WdInlineShapeType",
+      "access": "read-only",
+      "description": "Returns the type of inline shape. Read-only WdInlineShapeType."
+    },
+    {
+      "name": "Hyperlink",
+      "kind": "property",
+      "type": "Hyperlink",
+      "access": "read-only",
+      "description": "Returns a Hyperlink object that represents the hyperlink associated with the specified inline shape. Read-only."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the height of an inline shape. Read/write Single."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the width, in points, of the specified inline shape. Read/write Long."
+    },
+    {
+      "name": "ScaleHeight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Scales the height of the specified inline shape relative to its original size. Read/write Single."
+    },
+    {
+      "name": "ScaleWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Scales the width of the specified inline shape relative to its original size. Read/write Single."
+    },
+    {
+      "name": "LockAspectRatio",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "MsoTrue if the specified shape retains its original proportions when you resize it. MsoFalse if you can change the height and width of the shape independently of one another when you resize it. Read/write MsoTriState."
+    },
+    {
+      "name": "Line",
+      "kind": "property",
+      "type": "LineFormat",
+      "access": "read-only",
+      "description": "Returns a LineFormat object that contains line formatting properties for the specified shape. Read-only."
+    },
+    {
+      "name": "Fill",
+      "kind": "property",
+      "type": "FillFormat",
+      "access": "read-only",
+      "description": "Returns a FillFormat object that contains fill formatting properties for the specified shape. Read-only."
+    },
+    {
+      "name": "PictureFormat",
+      "kind": "property",
+      "type": "PictureFormat",
+      "access": "read/write",
+      "description": "Returns a PictureFormat object that contains picture formatting properties for the inline shape. Read-only."
+    },
+    {
+      "name": "HorizontalLineFormat",
+      "kind": "property",
+      "type": "HorizontalLineFormat",
+      "access": "read-only",
+      "description": "Returns a HorizontalLineFormat object that contains the horizontal line formatting for the specified InlineShape object. Read-only."
+    },
+    {
+      "name": "Script",
+      "kind": "property",
+      "type": "Script",
+      "access": "read-only",
+      "description": "Returns a Script object, which represents a block of script or code associated with an image on the specified Web page."
+    },
+    {
+      "name": "TextEffect",
+      "kind": "property",
+      "type": "TextEffectFormat",
+      "access": "read/write",
+      "description": "Returns a TextEffectFormat object that contains text-effect formatting properties for the specified inline shape. Read-only."
+    },
+    {
+      "name": "AlternativeText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String that represents the alternative text associated with a shape in a webpage. Read/write."
+    },
+    {
+      "name": "IsPictureBullet",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True indicates that an InlineShape object is a picture bullet. Read-only Boolean."
+    },
+    {
+      "name": "GroupItems",
+      "kind": "property",
+      "type": "GroupShapes",
+      "access": "read-only",
+      "description": "Returns a GroupShapes collection that represents the shapes that are grouped together for an inline shape. Read-only."
+    },
+    {
+      "name": "HasChart",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "True if the specified shape is a chart. Read-only."
+    },
+    {
+      "name": "Chart",
+      "kind": "property",
+      "type": "Chart",
+      "access": "read-only",
+      "description": "Returns a Chart object that represents a chart within the collection of inline shapes in a document. Read-only."
+    },
+    {
+      "name": "SoftEdge",
+      "kind": "property",
+      "type": "SoftEdgeFormat",
+      "access": "read-only",
+      "description": "Returns a SoftEdgeFormat object that represents the soft edge formatting for a shape. Read-only."
+    },
+    {
+      "name": "Glow",
+      "kind": "property",
+      "type": "GlowFormat",
+      "access": "read-only",
+      "description": "Returns a GlowFormat object that represents the formatting properties for a glow effect. Read-only."
+    },
+    {
+      "name": "Reflection",
+      "kind": "property",
+      "type": "ReflectionFormat",
+      "access": "read-only",
+      "description": "Returns a ReflectionFormat object that represents the reflection formatting for a shape. Read-only."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "ShadowFormat",
+      "access": "read-only",
+      "description": "Returns a ShadowFormat object that represents the shadow formatting for the specified shape. Read-only."
+    },
+    {
+      "name": "HasSmartArt",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Returns True if there is a SmartArt diagram present on the shape. Read-only."
+    },
+    {
+      "name": "SmartArt",
+      "kind": "property",
+      "type": "SmartArt",
+      "access": "read-only",
+      "description": "Returns a SmartArt object that provides a way to work with the SmartArt associated with the specified inline shape. Read-only."
+    },
+    {
+      "name": "Title",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String that contains a title for the specified inline shape. Read/write."
+    },
+    {
+      "name": "GraphicStyle",
+      "kind": "property",
+      "type": "MsoGraphicStyleIndex",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Model3D",
+      "kind": "property",
+      "type": "Model3DFormat",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Decorative",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Reset",
+      "kind": "method",
+      "signature": "Reset()",
+      "description": "Removes changes that were made to an inline shape.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified inline shape.",
+      "returns": "void"
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects the specified inline shape.",
+      "returns": "void"
+    },
+    {
+      "name": "ConvertToShape",
+      "kind": "method",
+      "signature": "ConvertToShape() As Shape",
+      "description": "Converts an inline shape to a free-floating shape. Returns a Shape object that represents the new shape.",
+      "returns": "Shape"
+    }
+  ],
+  "events": []
+}

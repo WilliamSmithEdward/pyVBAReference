@@ -1,0 +1,373 @@
+{
+  "name": "WdCompatibility",
+  "kind": "Enumeration",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Specifies a compatibility option.",
+  "constants": [
+    {
+      "name": "wdNoTabHangIndent",
+      "value": 1,
+      "description": "Do not add automatic tab stop for hanging indent."
+    },
+    {
+      "name": "wdNoSpaceRaiseLower",
+      "value": 2,
+      "description": "Do not add extra space for raised/lowered characters."
+    },
+    {
+      "name": "wdPrintColBlack",
+      "value": 3,
+      "description": "Print colors as black on noncolor printers."
+    },
+    {
+      "name": "wdWrapTrailSpaces",
+      "value": 4,
+      "description": "Wrap trailing spaces to next line."
+    },
+    {
+      "name": "wdNoColumnBalance",
+      "value": 5,
+      "description": "Do not balance columns for continuous section starts."
+    },
+    {
+      "name": "wdConvMailMergeEsc",
+      "value": 6,
+      "description": "Treat \\\" as \"\" in mail merge data sources."
+    },
+    {
+      "name": "wdSuppressSpBfAfterPgBrk",
+      "value": 7,
+      "description": "Suppress Space Before after a hard page or column break."
+    },
+    {
+      "name": "wdSuppressTopSpacing",
+      "value": 8,
+      "description": "Suppress extra line spacing at top of page."
+    },
+    {
+      "name": "wdOrigWordTableRules",
+      "value": 9,
+      "description": "Combine table borders like Word 5.x for the Macintosh."
+    },
+    {
+      "name": "wdTransparentMetafiles",
+      "value": 10,
+      "description": "Do not blank the area behind metafile pictures."
+    },
+    {
+      "name": "wdShowBreaksInFrames",
+      "value": 11,
+      "description": "Show hard page or column breaks in frames."
+    },
+    {
+      "name": "wdSwapBordersFacingPages",
+      "value": 12,
+      "description": "Swap left and right borders on odd facing pages."
+    },
+    {
+      "name": "wdLeaveBackslashAlone",
+      "value": 13,
+      "description": "Convert backslash characters into yen signs."
+    },
+    {
+      "name": "wdExpandShiftReturn",
+      "value": 14,
+      "description": "Do not expand character spaces on the line ending Shift+Return."
+    },
+    {
+      "name": "wdDontULTrailSpace",
+      "value": 15,
+      "description": "Draw underline on trailing spaces."
+    },
+    {
+      "name": "wdDontBalanceSingleByteDoubleByteWidth",
+      "value": 16,
+      "description": "Balance SBCS characters and DBCS characters."
+    },
+    {
+      "name": "wdSuppressTopSpacingMac5",
+      "value": 17,
+      "description": "Suppress extra line spacing at top of page like Word 5.x for the Macintosh."
+    },
+    {
+      "name": "wdSpacingInWholePoints",
+      "value": 18,
+      "description": "Expand/condense by whole number of points."
+    },
+    {
+      "name": "wdPrintBodyTextBeforeHeader",
+      "value": 19,
+      "description": "Print body text before header/footer."
+    },
+    {
+      "name": "wdNoLeading",
+      "value": 20,
+      "description": "Do not add leading (extra space) between rows of text."
+    },
+    {
+      "name": "wdNoSpaceForUL",
+      "value": 21,
+      "description": "Add space for underline."
+    },
+    {
+      "name": "wdMWSmallCaps",
+      "value": 22,
+      "description": "Use larger small caps like Word 5.x for the Macintosh."
+    },
+    {
+      "name": "wdNoExtraLineSpacing",
+      "value": 23,
+      "description": "Suppress extra line spacing like WordPerfect 5.x."
+    },
+    {
+      "name": "wdTruncateFontHeight",
+      "value": 24,
+      "description": "Truncate font height."
+    },
+    {
+      "name": "wdSubFontBySize",
+      "value": 25,
+      "description": "Substitute fonts based on font size."
+    },
+    {
+      "name": "wdUsePrinterMetrics",
+      "value": 26,
+      "description": "Use printer metrics to lay out document."
+    },
+    {
+      "name": "wdWW6BorderRules",
+      "value": 27,
+      "description": "Use Word 6.x/95 border rules."
+    },
+    {
+      "name": "wdExactOnTop",
+      "value": 28,
+      "description": "Do not center \"exact line height\" lines."
+    },
+    {
+      "name": "wdSuppressBottomSpacing",
+      "value": 29,
+      "description": "Suppress extra line spacing at bottom of page."
+    },
+    {
+      "name": "wdWPSpaceWidth",
+      "value": 30,
+      "description": "Set the width of a space like WordPerfect 5.x."
+    },
+    {
+      "name": "wdWPJustification",
+      "value": 31,
+      "description": "Do full justification like WordPerfect 6.x for Windows."
+    },
+    {
+      "name": "wdLineWrapLikeWord6",
+      "value": 32,
+      "description": "Line wrap like Word 6.0."
+    },
+    {
+      "name": "wdShapeLayoutLikeWW8",
+      "value": 33,
+      "description": "Lay out autoshapes like Word 97."
+    },
+    {
+      "name": "wdFootnoteLayoutLikeWW8",
+      "value": 34,
+      "description": "Lay out footnotes like Word 6.x/95/97."
+    },
+    {
+      "name": "wdDontUseHTMLParagraphAutoSpacing",
+      "value": 35,
+      "description": "Do not use HTML paragraph auto spacing."
+    },
+    {
+      "name": "wdDontAdjustLineHeightInTable",
+      "value": 36,
+      "description": "Adjust line height to grid height in the table."
+    },
+    {
+      "name": "wdForgetLastTabAlignment",
+      "value": 37,
+      "description": "Forget last tab alignment."
+    },
+    {
+      "name": "wdAutospaceLikeWW7",
+      "value": 38,
+      "description": "Autospace like Microsoft Word 95."
+    },
+    {
+      "name": "wdAlignTablesRowByRow",
+      "value": 39,
+      "description": "Align table rows independently."
+    },
+    {
+      "name": "wdLayoutRawTableWidth",
+      "value": 40,
+      "description": "Lay out tables with raw width."
+    },
+    {
+      "name": "wdLayoutTableRowsApart",
+      "value": 41,
+      "description": "Allow table rows to lay out apart."
+    },
+    {
+      "name": "wdUseWord97LineBreakingRules",
+      "value": 42,
+      "description": "Use Microsoft Word 97 line breaking rules for Asian text."
+    },
+    {
+      "name": "wdDontBreakWrappedTables",
+      "value": 43,
+      "description": "Do not break wrapped tables across pages."
+    },
+    {
+      "name": "wdDontSnapTextToGridInTableWithObjects",
+      "value": 44,
+      "description": "Do not snap text to grid inside table with inline objects."
+    },
+    {
+      "name": "wdSelectFieldWithFirstOrLastCharacter",
+      "value": 45,
+      "description": "Select entire field with first or last character."
+    },
+    {
+      "name": "wdApplyBreakingRules",
+      "value": 46,
+      "description": "Use line-breaking rules."
+    },
+    {
+      "name": "wdDontWrapTextWithPunctuation",
+      "value": 47,
+      "description": "Do not allow hanging punctuation with character grid."
+    },
+    {
+      "name": "wdDontUseAsianBreakRulesInGrid",
+      "value": 48,
+      "description": "Do not use Asian rules for line breaks with character grid."
+    },
+    {
+      "name": "wdUseWord2002TableStyleRules",
+      "value": 49,
+      "description": "Use Microsoft Word 2002 table style rules."
+    },
+    {
+      "name": "wdGrowAutofit",
+      "value": 50,
+      "description": "Allow tables to extend into margins."
+    },
+    {
+      "name": "wdUseNormalStyleForList",
+      "value": 51,
+      "description": "Use the Normal style instead of the List Paragraph style for bulleted or numbered lists."
+    },
+    {
+      "name": "wdDontUseIndentAsNumberingTabStop",
+      "value": 52,
+      "description": "Do not use hanging indent as tab stop for bullets and numbering."
+    },
+    {
+      "name": "wdFELineBreak11",
+      "value": 53,
+      "description": "Use Word 2003 hanging-punctuation rules in Asian languages."
+    },
+    {
+      "name": "wdAllowSpaceOfSameStyleInTable",
+      "value": 54,
+      "description": "Allow space between paragraphs of the same style in a table."
+    },
+    {
+      "name": "wdWW11IndentRules",
+      "value": 55,
+      "description": "Use Word 2003 indent rules for text next to wrapped objects."
+    },
+    {
+      "name": "wdDontAutofitConstrainedTables",
+      "value": 56,
+      "description": "Do not autofit tables next to wrapped objects."
+    },
+    {
+      "name": "wdAutofitLikeWW11",
+      "value": 57,
+      "description": "Use Microsoft Word 2003 table autofit rules."
+    },
+    {
+      "name": "wdUnderlineTabInNumList",
+      "value": 58,
+      "description": "Underline the tab character between the number and the text in numbered lists."
+    },
+    {
+      "name": "wdHangulWidthLikeWW11",
+      "value": 59,
+      "description": "Do not use proportional width for Korean characters."
+    },
+    {
+      "name": "wdSplitPgBreakAndParaMark",
+      "value": 60,
+      "description": "Split apart page break and paragraph mark."
+    },
+    {
+      "name": "wdDontVertAlignCellWithShape",
+      "value": 61,
+      "description": ""
+    },
+    {
+      "name": "wdDontBreakConstrainedForcedTables",
+      "value": 62,
+      "description": ""
+    },
+    {
+      "name": "wdDontVertAlignInTextbox",
+      "value": 63,
+      "description": ""
+    },
+    {
+      "name": "wdWord11KerningPairs",
+      "value": 64,
+      "description": ""
+    },
+    {
+      "name": "wdCachedColBalance",
+      "value": 65,
+      "description": ""
+    },
+    {
+      "name": "wdDisableOTKerning",
+      "value": 66,
+      "description": ""
+    },
+    {
+      "name": "wdFlipMirrorIndents",
+      "value": 67,
+      "description": ""
+    },
+    {
+      "name": "wdDontOverrideTableStyleFontSzAndJustification",
+      "value": 68,
+      "description": ""
+    },
+    {
+      "name": "wdUseWord2010TableStyleRules",
+      "value": 69,
+      "description": "Use Microsoft Word 2010 table style rules."
+    },
+    {
+      "name": "wdDelayableFloatingTable",
+      "value": 70,
+      "description": ""
+    },
+    {
+      "name": "wdAllowHyphenationAtTrackBottom",
+      "value": 71,
+      "description": ""
+    },
+    {
+      "name": "wdUseWord2013TrackBottomHyphenation",
+      "value": 72,
+      "description": ""
+    },
+    {
+      "name": "wdUsePre2018iOSMacLayout",
+      "value": 73,
+      "description": ""
+    }
+  ]
+}

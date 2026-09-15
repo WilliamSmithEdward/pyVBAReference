@@ -1,0 +1,69 @@
+{
+  "name": "Screen",
+  "kind": "Dispatch Interface",
+  "guid": "{DC6B66C0-6128-101B-AF4E-00AA003F0F07}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "The Screen object refers to the particular form, report, or control that currently has the focus.",
+  "remarks": "Use the Screen object together with its properties to refer to a particular form, report, or control that has the focus. For example, you can use the Screen object with the ActiveForm property to refer to the form in the active window without knowing the form's name. The following example displays the name of the form in the active window. Referring to the Screen object doesn't make a form, report, or control active. To make a form, report, or control active, you must use the SelectObject method of the DoCmd object. If you refer to the Screen object when there's no active form, report, or control, Microsoft Access returns a run-time error. For example, if a standard module is in the active window, the code in the preceding example would return an error.",
+  "example": "Sub ActiveObjects()\n Dim frm As Form, ctl As Control\n\n ' Return Form object pointing to active form.\n Set frm = Screen.ActiveForm\n MsgBox frm.Name & \" is the active form.\"\n ' Return Control object pointing to active control.\n Set ctl = Screen.ActiveControl\n MsgBox ctl.Name & \" is the active control \" _\n & \"on this form.\"\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Use the Application property to access the active Microsoft Access Application object and its related properties. Read-only Application object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "ActiveDatasheet",
+      "kind": "property",
+      "type": "Form",
+      "access": "read-only",
+      "description": "Use the ActiveDatasheet property together with the Screen object to identify or refer to the datasheet that has the focus. Read-only Form object."
+    },
+    {
+      "name": "ActiveControl",
+      "kind": "property",
+      "type": "Control",
+      "access": "read-only",
+      "description": "Use the ActiveControl property together with the Screen object to identify or refer to the control that has the focus. Read-only Control object."
+    },
+    {
+      "name": "PreviousControl",
+      "kind": "property",
+      "type": "Control",
+      "access": "read-only",
+      "description": "Use the PreviousControl property together with the Screen object to return a reference to the control that last received the focus. Read-only."
+    },
+    {
+      "name": "ActiveForm",
+      "kind": "property",
+      "type": "Form",
+      "access": "read-only",
+      "description": "Use the ActiveForm property together with the Screen object to identify or refer to the form that has the focus. Read-only Form object."
+    },
+    {
+      "name": "ActiveReport",
+      "kind": "property",
+      "type": "Report",
+      "access": "read-only",
+      "description": "Use the ActiveReport property together with the Screen object to identify or refer to the report that has the focus. Read-only Report object."
+    },
+    {
+      "name": "MousePointer",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the MousePointer property together with the Screen object to specify or determine the type of mouse pointer currently displayed. Read/write Integer."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

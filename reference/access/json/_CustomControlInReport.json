@@ -1,0 +1,544 @@
+{
+  "name": "_CustomControlInReport",
+  "kind": "Class",
+  "guid": "{300471E0-7426-11CE-AB63-00AA0042B7CE}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "OldValue",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Object",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ObjectVerbs",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Properties",
+      "kind": "property",
+      "type": "Properties",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Controls",
+      "kind": "property",
+      "type": "Children",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "EventProcPrefix",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ControlType",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ControlSource",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OLEClass",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Verb",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Class",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayWhen",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Locked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TabStop",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TabIndex",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SpecialEffect",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderStyle",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OldBorderStyle",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderWidth",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ControlTipText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HelpContextId",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Section",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Tag",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ObjectPalette",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ObjectVerbsCount",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "IsVisible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "InSelection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnUpdated",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnEnter",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnExit",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnGotFocus",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnLostFocus",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Default",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Cancel",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Custom",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "About",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Layout",
+      "kind": "property",
+      "type": "AcLayoutType",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "LeftPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TopPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "RightPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BottomPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineStyleLeft",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineStyleTop",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineStyleRight",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineStyleBottom",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineWidthLeft",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineWidthTop",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineWidthRight",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineWidthBottom",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HorizontalAnchor",
+      "kind": "property",
+      "type": "AcHorizontalAnchor",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "VerticalAnchor",
+      "kind": "property",
+      "type": "AcVerticalAnchor",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LayoutID",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "VarOleObject",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "SizeToFit",
+      "kind": "method",
+      "signature": "SizeToFit()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Requery",
+      "kind": "method",
+      "signature": "Requery()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "SetFocus",
+      "kind": "method",
+      "signature": "SetFocus()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move(Left As Variant, [Top As Variant], [Width As Variant], [Height As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

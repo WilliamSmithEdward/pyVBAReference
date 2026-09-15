@@ -1,0 +1,113 @@
+{
+  "name": "DataAccessPage",
+  "kind": "Class",
+  "guid": "{493D8A73-1DB1-11D1-98A2-006008197D41}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "WindowWidth",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "WindowHeight",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "CurrentView",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Document",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ConnectionString",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "MailEnvelope",
+      "kind": "property",
+      "type": "MsoEnvelope",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "MSODSC",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "RemovePersonalInformation",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "ApplyTheme",
+      "kind": "method",
+      "signature": "ApplyTheme(ThemeName As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ThemeName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

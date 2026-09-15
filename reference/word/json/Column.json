@@ -1,0 +1,230 @@
+{
+  "name": "Column",
+  "kind": "Dispatch Interface",
+  "guid": "{0002094F-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single table column. The Column object is a member of the Columns collection. The Columns collection includes all the columns in a table, selection, or range.",
+  "remarks": "Use Columns (Index), where Index is the index number, to return a single Column object. The index number represents the position of the column in the Columns collection (counting from left to right). The following example selects column one in table one in the active document. Use the Column property with a Cell object to return a Column object. The following example deletes the text in cell one, inserts new text, and then sorts the entire column. Use the Add method to add a column to a table. The following example adds a column to the first table in the active document, and then it makes the column widths equal. Remarks Use the Information property with a Selection object to return the current column number. The following example selects the current column and then displays the column number in a message box.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Column object."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the width of the specified column, in points. Read/write Long."
+    },
+    {
+      "name": "IsFirst",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified column or row is the first one in the table. Read-only Boolean."
+    },
+    {
+      "name": "IsLast",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified column or row is the last one in the table. Read-only Boolean."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the position of an item in a collection. Read-only."
+    },
+    {
+      "name": "Cells",
+      "kind": "property",
+      "type": "Cells",
+      "access": "read-only",
+      "description": "Returns a Cells collection that represents the table cells in a table column. Read-only."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read/write",
+      "description": "Returns a Borders collection that represents all the borders for the specified object."
+    },
+    {
+      "name": "Shading",
+      "kind": "property",
+      "type": "Shading",
+      "access": "read-only",
+      "description": "Returns a Shading object that refers to the shading formatting for the specified column."
+    },
+    {
+      "name": "Next",
+      "kind": "property",
+      "type": "Column",
+      "access": "read-only",
+      "description": "Returns the next column in a collection of table columns. Read-only."
+    },
+    {
+      "name": "Previous",
+      "kind": "property",
+      "type": "Column",
+      "access": "read-only",
+      "description": "Returns the previous column in a collection of table columns. Read-only."
+    },
+    {
+      "name": "NestingLevel",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the nesting level of the specified column. Read-only Long."
+    },
+    {
+      "name": "PreferredWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the preferred width (in points or as a percentage of the window width) for the specified column. Read/write Single."
+    },
+    {
+      "name": "PreferredWidthType",
+      "kind": "property",
+      "type": "WdPreferredWidthType",
+      "access": "read/write",
+      "description": "Returns or sets the preferred unit of measurement to use for the width of the specified table column. Read/write WdPreferredWidthType."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects the specified table column.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified column.",
+      "returns": "void"
+    },
+    {
+      "name": "SetWidth",
+      "kind": "method",
+      "signature": "SetWidth(ColumnWidth As Single, RulerStyle As WdRulerStyle)",
+      "description": "Sets the width of a column in a table.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ColumnWidth",
+          "type": "Single",
+          "optional": false,
+          "description": "The width of the specified column or columns, in points."
+        },
+        {
+          "name": "RulerStyle",
+          "type": "WdRulerStyle",
+          "optional": false,
+          "description": "Controls the way Word adjusts cell widths."
+        }
+      ]
+    },
+    {
+      "name": "AutoFit",
+      "kind": "method",
+      "signature": "AutoFit()",
+      "description": "Changes the width of a table column to accommodate the width of the text without changing the way text wraps in the cells.",
+      "returns": "void"
+    },
+    {
+      "name": "Sort",
+      "kind": "method",
+      "signature": "Sort([ExcludeHeader As Variant], [SortFieldType As Variant], [SortOrder As Variant], [CaseSensitive As Variant], [BidiSort As Variant], [IgnoreThe As Variant], [IgnoreKashida As Variant], [IgnoreDiacritics As Variant], [IgnoreHe As Variant], [LanguageID As Variant])",
+      "description": "Sorts the specified table column.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ExcludeHeader",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to exclude the first row or paragraph header from the sort operation. The default value is False."
+        },
+        {
+          "name": "SortFieldType",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sort type for the column. Can be one of the WdSortFieldType constants."
+        },
+        {
+          "name": "SortOrder",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sorting order to use for the column. Can be one WdSortOrder constant."
+        },
+        {
+          "name": "CaseSensitive",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to sort with case sensitivity. The default value is False."
+        },
+        {
+          "name": "BidiSort",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to sort based on right-to-left language rules. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "IgnoreThe",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore the Arabic character alef lam when sorting right-to-left language text. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "IgnoreKashida",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore kashidas when sorting right-to-left language text. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "IgnoreDiacritics",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore bidirectional control characters when sorting right-to-left language text. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "IgnoreHe",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore the Hebrew character he when sorting right-to-left language text. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "LanguageID",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the sorting language. Can be one of the WdLanguageID constants."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

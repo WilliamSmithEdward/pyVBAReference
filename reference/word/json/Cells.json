@@ -1,0 +1,254 @@
+{
+  "name": "Cells",
+  "kind": "Dispatch Interface",
+  "guid": "{0002094A-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of Cell objects in a table column, table row, selection, or range.",
+  "remarks": "Use the Cells property to return the Cells collection. The following example formats the cells in the first row in table one in the active document to be 30 points wide. The following example returns the number of cells in the current row. Use the Add method to add a Cell object to the Cells collection. You can also use the InsertCells method of the Selection object to insert new cells. The following example adds a cell before the first cell in myTable. Use Cell (row, column), where row is the row number and column is the column number, or Cells (_index_), where _index_ is the index number, to return a Cell object. The following example applies shading to the second cell in the first row in table one. The following example applies shading to the first cell in the first row. Remarks Use the Add method with the Rows or Columns collection to add a row or column of cells. The following example adds a column to the first table in the active document and then inserts numbers into the first column.",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of items in the Cells collection. Read-only Long."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Cells object."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the width of the table cells, in points. Read/write Single."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the height of the specified table cells. Read/write Single."
+    },
+    {
+      "name": "HeightRule",
+      "kind": "property",
+      "type": "WdRowHeightRule",
+      "access": "read/write",
+      "description": "Returns or sets a WdRowHeightRule constant that represents the rule for determining the height of the specified cells. Read/write ."
+    },
+    {
+      "name": "VerticalAlignment",
+      "kind": "property",
+      "type": "WdCellVerticalAlignment",
+      "access": "read/write",
+      "description": "Returns or sets the vertical alignment of text in one or more cells of a table. Read/write WdCellVerticalAlignment."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read/write",
+      "description": "Returns a Borders collection that represents all the borders for the specified object."
+    },
+    {
+      "name": "Shading",
+      "kind": "property",
+      "type": "Shading",
+      "access": "read-only",
+      "description": "Returns a Shading object that refers to the shading formatting for the specified object."
+    },
+    {
+      "name": "NestingLevel",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the nesting level of the specified cells. Read-only Long."
+    },
+    {
+      "name": "PreferredWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the preferred width (in points or as a percentage of the window width) for the specified cells. Read/write Single."
+    },
+    {
+      "name": "PreferredWidthType",
+      "kind": "property",
+      "type": "WdPreferredWidthType",
+      "access": "read/write",
+      "description": "Returns or sets the preferred unit of measurement to use for the width of the specified cells. Read-only WdPreferredWidthType."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Cell",
+      "description": "Returns an individual Cell object in a collection.",
+      "returns": "Cell",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([BeforeCell As Variant]) As Cell",
+      "description": "Returns a Cell object that represents a cell added to a table.",
+      "returns": "Cell",
+      "parameters": [
+        {
+          "name": "BeforeCell",
+          "type": "Variant",
+          "optional": true,
+          "description": "A Cell object that represents the cell that will appear immediately to the right of the new cell or cells."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete([ShiftCells As Variant])",
+      "description": "Deletes a table cell or cells and optionally controls how the remaining cells are shifted.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ShiftCells",
+          "type": "Variant",
+          "optional": true,
+          "description": "The direction in which the remaining cells are to be shifted. Can be any WdDeleteCells constant. If omitted, cells to the right of the last deleted cell are shifted left."
+        }
+      ]
+    },
+    {
+      "name": "SetWidth",
+      "kind": "method",
+      "signature": "SetWidth(ColumnWidth As Single, RulerStyle As WdRulerStyle)",
+      "description": "Sets the width of columns or cells in a table.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ColumnWidth",
+          "type": "Single",
+          "optional": false,
+          "description": "The width of the specified column or columns, in points."
+        },
+        {
+          "name": "RulerStyle",
+          "type": "WdRulerStyle",
+          "optional": false,
+          "description": "Controls the way Word adjusts cell widths."
+        }
+      ]
+    },
+    {
+      "name": "SetHeight",
+      "kind": "method",
+      "signature": "SetHeight(RowHeight As Variant, HeightRule As WdRowHeightRule)",
+      "description": "Sets the height of table cells.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "RowHeight",
+          "type": "Variant",
+          "optional": false,
+          "description": "The height of the row or rows, in points."
+        },
+        {
+          "name": "HeightRule",
+          "type": "WdRowHeightRule",
+          "optional": false,
+          "description": "The rule for determining the height of the specified cells."
+        }
+      ]
+    },
+    {
+      "name": "Merge",
+      "kind": "method",
+      "signature": "Merge()",
+      "description": "Merges the specified table cells with one another. The result is a single table cell.",
+      "returns": "void"
+    },
+    {
+      "name": "Split",
+      "kind": "method",
+      "signature": "Split([NumRows As Variant], [NumColumns As Variant], [MergeBeforeSplit As Variant])",
+      "description": "Splits a range of table cells.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "NumRows",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of rows that the cell or group of cells is to be split into."
+        },
+        {
+          "name": "NumColumns",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of columns that the cell or group of cells is to be split into."
+        },
+        {
+          "name": "MergeBeforeSplit",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to merge the cells with one another before splitting them."
+        }
+      ]
+    },
+    {
+      "name": "DistributeHeight",
+      "kind": "method",
+      "signature": "DistributeHeight()",
+      "description": "Adjusts the height of the specified cells so that they are equal.",
+      "returns": "void"
+    },
+    {
+      "name": "DistributeWidth",
+      "kind": "method",
+      "signature": "DistributeWidth()",
+      "description": "Adjusts the width of the specified cells so that they are equal.",
+      "returns": "void"
+    },
+    {
+      "name": "AutoFit",
+      "kind": "method",
+      "signature": "AutoFit()",
+      "description": "Changes the width of a table column to accommodate the width of the text without changing the way text wraps in the cells.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

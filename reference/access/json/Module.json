@@ -1,0 +1,277 @@
+{
+  "name": "Module",
+  "kind": "Dispatch Interface",
+  "guid": "{331FDCFE-CF31-11CD-8701-00AA003F0F07}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "A Module object refers to a standard module or a class module.",
+  "remarks": "Microsoft Access includes class modules that are not associated with any object, and form modules and report modules, which are associated with a form or report. To determine whether a Module object represents a standard module or a class module from code, check the Module object's Type property. The Modules collection contains all open Module objects, regardless of their type. Modules in the Modules collection can be compiled or uncompiled. To return a reference to a particular standard or class Module object in the Modules collection, use any of the following syntax forms. The following example returns a reference to a standard Module object and assigns it to an object variable. Note that the brackets enclosing the name of the Module object are necessary only if the name of the Module object includes spaces. The next example returns a reference to a form Module object and assigns it to an object variable. To refer to a specific form or report module, you can also use the Form or Report object's Module property. The following example also returns a reference to the Module object associated with an Employees form and assigns it to an object variable.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Use the Application property to access the active Microsoft Access Application object and its related properties. Read-only Application object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the Name property to specify or determine the string expression that identifies the name of an object. Read/write String."
+    },
+    {
+      "name": "Lines",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "The Lines property returns a string containing the contents of a specified line or lines in a standard module or a class module. Read-only String."
+    },
+    {
+      "name": "CountOfLines",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "The CountOfLines property returns a Long value indicating the number of lines of code in a standard module or class module. Read-only Long."
+    },
+    {
+      "name": "ProcStartLine",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "The ProcStartLine property returns a value identifying the line at which a specified procedure begins in a standard module or a class module. Read-only Long."
+    },
+    {
+      "name": "ProcCountLines",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "The ProcCountLines property returns the number of lines in a specified procedure in a standard module or a class module. Read-only Long."
+    },
+    {
+      "name": "ProcBodyLine",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "The ProcBodyLine property returns the number of the line at which the body of a specified procedure begins in a standard module or a class module. Read-only Long."
+    },
+    {
+      "name": "ProcOfLine",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "The ProcOfLine property returns the name of the procedure that contains a specified line in a standard module or a class module. Read-only string."
+    },
+    {
+      "name": "CountOfDeclarationLines",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "The CountOfDeclarationLines property returns a Long value indicating the number of lines of code in the Declarations section in a standard module or class module. Read-only Long."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "AcModuleType",
+      "access": "read-only",
+      "description": "Indicates whether a module is a standard module or a class module. Read-only AcModuleType."
+    }
+  ],
+  "methods": [
+    {
+      "name": "InsertText",
+      "kind": "method",
+      "signature": "InsertText(Text As String)",
+      "description": "The InsertText method inserts a specified string of text into a standard module or a class module.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Text",
+          "type": "String",
+          "optional": false,
+          "description": "The text to be inserted into the module."
+        }
+      ]
+    },
+    {
+      "name": "AddFromString",
+      "kind": "method",
+      "signature": "AddFromString(String As String)",
+      "description": "The AddFromString method adds a string to a Module object. The Module object may represent a standard module or a class module.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "String",
+          "type": "String",
+          "optional": false,
+          "description": "The information that you want to add to the module."
+        }
+      ]
+    },
+    {
+      "name": "AddFromFile",
+      "kind": "method",
+      "signature": "AddFromFile(FileName As String)",
+      "description": "The AddFromFile method adds the contents of a text file to a Module object. The Module object may represent a standard module or a class module.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The name and full path of a text (.txt) file or another file that stores text in an ANSI format."
+        }
+      ]
+    },
+    {
+      "name": "InsertLines",
+      "kind": "method",
+      "signature": "InsertLines(Line As Long, String As String)",
+      "description": "The InsertLines method inserts a line or group of lines of code in a standard module or a class module.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Line",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of the line at which to begin inserting."
+        },
+        {
+          "name": "String",
+          "type": "String",
+          "optional": false,
+          "description": "The text to be inserted into the module."
+        }
+      ]
+    },
+    {
+      "name": "DeleteLines",
+      "kind": "method",
+      "signature": "DeleteLines(StartLine As Long, Count As Long)",
+      "description": "The DeleteLines method deletes lines from a standard module or a class module.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "StartLine",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of the line from which to begin deleting."
+        },
+        {
+          "name": "Count",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of lines to delete."
+        }
+      ]
+    },
+    {
+      "name": "ReplaceLine",
+      "kind": "method",
+      "signature": "ReplaceLine(Line As Long, String As String)",
+      "description": "The ReplaceLine method replaces a specified line in a standard module or a class module.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Line",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of the line to be replaced."
+        },
+        {
+          "name": "String",
+          "type": "String",
+          "optional": false,
+          "description": "The text that is to replace the existing line."
+        }
+      ]
+    },
+    {
+      "name": "CreateEventProc",
+      "kind": "method",
+      "signature": "CreateEventProc(EventName As String, ObjectName As String) As Long",
+      "description": "The CreateEventProc method creates an event procedure in a class module.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "EventName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of an event."
+        },
+        {
+          "name": "ObjectName",
+          "type": "String",
+          "optional": false,
+          "description": "An object that has the event specified by the _EventName_ argument. If the event procedure is being added to a Form, the word \"Form\" should be specified for this argument. If the event procedure is being added to a Report, the word \"Report\" should be specified for this argument. If the event procedure is being added to a Control, the name of the control should be specified for this argument."
+        }
+      ]
+    },
+    {
+      "name": "Find",
+      "kind": "method",
+      "signature": "Find(Target As String, StartLine As Long, StartColumn As Long, EndLine As Long, EndColumn As Long, [WholeWord As Boolean], [MatchCase As Boolean], [PatternSearch As Boolean]) As Boolean",
+      "description": "Finds specified text in a standard module or class module.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "Target",
+          "type": "String",
+          "optional": false,
+          "description": "The text that you want to find."
+        },
+        {
+          "name": "StartLine",
+          "type": "Long",
+          "optional": false,
+          "description": "The line on which to begin searching. If a match is found, the value of the _StartLine_ argument is set to the line on which the beginning character of the matching text is found."
+        },
+        {
+          "name": "StartColumn",
+          "type": "Long",
+          "optional": false,
+          "description": "The column on which to begin searching. Each character in a line is in a separate column, beginning with zero on the left side of the module. If a match is found, the value of the _StartColumn_ argument is set to the column in which the beginning character of the matching text is found."
+        },
+        {
+          "name": "EndLine",
+          "type": "Long",
+          "optional": false,
+          "description": "The line on which to stop searching. If a match is found, the value of the _EndLine_ argument is set to the line on which the ending character of the matching text is found."
+        },
+        {
+          "name": "EndColumn",
+          "type": "Long",
+          "optional": false,
+          "description": "The column on which to stop searching. If a match is found, the value of the _EndColumn_ argument is set to the column in which the beginning character of the matching text is found."
+        },
+        {
+          "name": "WholeWord",
+          "type": "Boolean",
+          "optional": true,
+          "description": "True results in a search for whole words only. The default is False."
+        },
+        {
+          "name": "MatchCase",
+          "type": "Boolean",
+          "optional": true,
+          "description": "True results in a search for words with case matching the _Target_ argument. The default is False."
+        },
+        {
+          "name": "PatternSearch",
+          "type": "Boolean",
+          "optional": true,
+          "description": "True results in a search in which the _Target_ argument may contain wildcard characters such as an asterisk () or a question mark (?). The default is False**."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

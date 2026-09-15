@@ -1,0 +1,78 @@
+{
+  "name": "Sentences",
+  "kind": "Dispatch Interface",
+  "guid": "{0002095B-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of Range objects that represent all the sentences in a selection, range, or document. There is no Sentence object.",
+  "remarks": "Use the Sentences property to return the Sentences collection. The following example displays the number of sentences selected. Use Sentences (Index), where Index is the index number, to return a Range object that represents a sentence. The index number represents the position of a sentence in the Sentences collection. The following example formats the first sentence in the active document. The Count property for this collection in a document returns the number of items in the main story only. To count items in other stories use the collection with the Range object. The Add method isn't available for the Sentences collection. Instead, use the InsertAfter or InsertBefore method to add a sentence to a Range object. The following example inserts a sentence after the first sentence in the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of sentences in the collection. Read-only."
+    },
+    {
+      "name": "First",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the first sentence in a collection of sentences within a document, range, or selection."
+    },
+    {
+      "name": "Last",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the last sentence in a document, selection, or range."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Sentences object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Range",
+      "description": "Returns an individual Range object in a collection.",
+      "returns": "Range",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position of the individual object."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

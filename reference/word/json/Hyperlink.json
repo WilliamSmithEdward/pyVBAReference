@@ -1,0 +1,192 @@
+{
+  "name": "Hyperlink",
+  "kind": "Dispatch Interface",
+  "guid": "{0002099D-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a hyperlink. The Hyperlink object is a member of the Hyperlinks collection.",
+  "remarks": "Use the Hyperlink property to return a Hyperlink object associated with a shape (a shape can have only one hyperlink). The following example activates the hyperlink associated with the first shape in the active document. Use Hyperlinks (Index), where Index is the index number, to return a single Hyperlink object from a document, range, or selection. The following example activates the first hyperlink in the selection.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Hyperlink object."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the specified object. Read-only String."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoHyperlinkType",
+      "access": "read-only",
+      "description": "Returns the hyperlink type. Read-only MsoHyperlinkType."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the portion of a document that is contained within a hyperlink."
+    },
+    {
+      "name": "Shape",
+      "kind": "property",
+      "type": "Shape",
+      "access": "read-only",
+      "description": "Returns a Shape object for the specified hyperlink or diagram node."
+    },
+    {
+      "name": "ExtraInfoRequired",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if extra information is required to resolve the specified hyperlink. Read-only Boolean."
+    },
+    {
+      "name": "Address",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the address (for example, a file name or URL) of the specified hyperlink. Read/write String."
+    },
+    {
+      "name": "SubAddress",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a named location in the destination of the specified hyperlink. Read/write String."
+    },
+    {
+      "name": "EmailSubject",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the text string for the specified hyperlink's subject line. Read/write String."
+    },
+    {
+      "name": "ScreenTip",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the text that appears as a ScreenTip when the mouse pointer is positioned over the specified hyperlink. Read/write String."
+    },
+    {
+      "name": "TextToDisplay",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the specified hyperlink's visible text in a document. Read/write String."
+    },
+    {
+      "name": "Target",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the frame or window in which to load the hyperlink. Read/write String."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified hyperlink.",
+      "returns": "void"
+    },
+    {
+      "name": "Follow",
+      "kind": "method",
+      "signature": "Follow([NewWindow As Variant], [AddHistory As Variant], [ExtraInfo As Variant], [Method As Variant], [HeaderInfo As Variant])",
+      "description": "Displays a cached document associated with the specified Hyperlink object, if it has already been downloaded. Otherwise, this method resolves the hyperlink, downloads the target document, and displays the document in the appropriate application.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "NewWindow",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to display the target document in a new window. The default value is False."
+        },
+        {
+          "name": "AddHistory",
+          "type": "Variant",
+          "optional": true,
+          "description": "This argument is reserved for future use."
+        },
+        {
+          "name": "ExtraInfo",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string or byte array that specifies additional information for HTTP to use to resolve the hyperlink. For example, you can use ExtraInfo to specify the coordinates of an image map, the contents of a form, or a FAT file name. The string is either posted or appended, depending on the value of Method. Use the ExtraInfoRequired property to determine whether extra information is required."
+        },
+        {
+          "name": "Method",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the way additional information for HTTP is handled. Can be any MsoExtraInfoMethod constant."
+        },
+        {
+          "name": "HeaderInfo",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that specifies header information for the HTTP request. The default value is an empty string. You can combine several header lines into a single string by using the following syntax: \"string1\" & vbCr & \"string2\". The specified string is automatically converted into ANSI characters. Note that the HeaderInfo argument may overwrite default HTTP header fields."
+        }
+      ]
+    },
+    {
+      "name": "AddToFavorites",
+      "kind": "method",
+      "signature": "AddToFavorites()",
+      "description": "Creates a shortcut to the document or hyperlink and adds it to the Favorites folder.",
+      "returns": "void"
+    },
+    {
+      "name": "CreateNewDocument",
+      "kind": "method",
+      "signature": "CreateNewDocument(FileName As String, EditNow As Boolean, Overwrite As Boolean)",
+      "description": "Creates a new document linked to the specified hyperlink.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The file name of the specified document."
+        },
+        {
+          "name": "EditNow",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True to have the specified document open immediately in its associated editing environment. The default value is True."
+        },
+        {
+          "name": "Overwrite",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True to overwrite any existing file of the same name in the same folder. False if any existing file of the same name is preserved and the FileName argument specifies a new file name. The default value is False."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

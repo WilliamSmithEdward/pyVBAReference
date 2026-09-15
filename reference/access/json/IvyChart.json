@@ -1,0 +1,978 @@
+{
+  "name": "IvyChart",
+  "kind": "Dispatch Interface",
+  "guid": "{3B06E998-E47C-11CD-8701-00AA003F0F07}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Properties",
+      "kind": "property",
+      "type": "Properties",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "EventProcPrefix",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ControlType",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "RowSource",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LinkChildFields",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LinkMasterFields",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayWhen",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "StatusBarText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TabStop",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TabIndex",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BackStyle",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BackColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SpecialEffect",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderStyle",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OldBorderStyle",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderWidth",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ShortcutMenuBar",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ControlTipText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HelpContextId",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Section",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Tag",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "IsVisible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "InSelection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnEnter",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnExit",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnGotFocus",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnLostFocus",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnClick",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnDblClick",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnMouseDown",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnMouseMove",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnMouseUp",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnKeyDown",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnKeyUp",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnKeyPress",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Layout",
+      "kind": "property",
+      "type": "AcLayoutType",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "LeftPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TopPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "RightPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BottomPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineStyleLeft",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineStyleTop",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineStyleRight",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineStyleBottom",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineWidthLeft",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineWidthTop",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineWidthRight",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineWidthBottom",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HorizontalAnchor",
+      "kind": "property",
+      "type": "AcHorizontalAnchor",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "VerticalAnchor",
+      "kind": "property",
+      "type": "AcVerticalAnchor",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LayoutID",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "BackThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BackTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BackShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartAxis",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartLegend",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartValues",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HasLegend",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HasTitle",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartTitle",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HasAxisTitles",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CategoryAxisTitle",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PrimaryValuesAxisTitle",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SecondaryValuesAxisTitle",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TransformedRowSource",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ChartType",
+      "kind": "property",
+      "type": "AcChartType",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LegendPosition",
+      "kind": "property",
+      "type": "AcLegendPosition",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PrimaryValuesAxisMinimum",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PrimaryValuesAxisMaximum",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SecondaryValuesAxisMinimum",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SecondaryValuesAxisMaximum",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PrimaryValuesAxisRange",
+      "kind": "property",
+      "type": "AcAxisRange",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SecondaryValuesAxisRange",
+      "kind": "property",
+      "type": "AcAxisRange",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PrimaryValuesAxisFontSize",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PrimaryValuesAxisFontColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PrimaryValuesAxisThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PrimaryValuesAxisFontTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PrimaryValuesAxisFontShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SecondaryValuesAxisFontSize",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SecondaryValuesAxisThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SecondaryValuesAxisFontTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SecondaryValuesAxisFontShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SecondaryValuesAxisFontColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CategoryAxisFontSize",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CategoryAxisFontColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CategoryAxisThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CategoryAxisFontTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CategoryAxisFontShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartTitleFontColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartTitleThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartTitleFontTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartTitleFontShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartTitleFontSize",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartSeriesCollection",
+      "kind": "property",
+      "type": "ChartSeriesCollection",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ChartAxisCollection",
+      "kind": "property",
+      "type": "ChartAxisCollection",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ChartValuesCollection",
+      "kind": "property",
+      "type": "ChartValuesCollection",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "PrimaryValuesAxisFormat",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SecondaryValuesAxisFormat",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PrimaryValuesAxisDisplayUnits",
+      "kind": "property",
+      "type": "AcAxisUnits",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SecondaryValuesAxisDisplayUnits",
+      "kind": "property",
+      "type": "AcAxisUnits",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartTitleFontName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LegendTextFontSize",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LegendTextFontColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LegendTextThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LegendTextFontTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LegendTextFontShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HasSubtitle",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartSubtitle",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartSubtitleFontSize",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartSubtitleFontColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartSubtitleThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartSubtitleFontTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartSubtitleFontShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "SizeToFit",
+      "kind": "method",
+      "signature": "SizeToFit()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Requery",
+      "kind": "method",
+      "signature": "Requery()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "SetFocus",
+      "kind": "method",
+      "signature": "SetFocus()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move(Left As Variant, [Top As Variant], [Width As Variant], [Height As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

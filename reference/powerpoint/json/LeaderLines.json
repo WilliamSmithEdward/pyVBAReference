@@ -1,0 +1,63 @@
+{
+  "name": "LeaderLines",
+  "kind": "Dispatch Interface",
+  "guid": "{92D41A6D-F07E-4CA4-AF6F-BEF486AA4E6F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents leader lines on a chart. Leader lines connect data labels to data points.",
+  "remarks": "This object is not a collection; there is no object that represents a single leader line. This object applies only to pie charts.",
+  "example": "With ActiveDocument.InlineShapes(1)\n\n    If .HasChart Then\n\n        With .Chart.SeriesCollection(1)\n\n            .HasDataLabels = True\n\n            .DataLabels.Position = xlLabelPositionBestFit\n\n            .HasLeaderLines = True\n\n            .LeaderLines.Border.ColorIndex = 5\n\n        End With\n\n    End If\n\nEnd With",
+  "properties": [
+    {
+      "name": "Border",
+      "kind": "property",
+      "type": "ChartBorder",
+      "access": "read-only",
+      "description": "Returns the border of the object. Read-only ChartBorder."
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "ChartFormat",
+      "access": "read-only",
+      "description": "Returns the line, fill, and effect formatting for the object. Read-only ChartFormat."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the Microsoft PowerPoint application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects the object.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

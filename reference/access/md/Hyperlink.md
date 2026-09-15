@@ -1,0 +1,39 @@
+# Hyperlink
+
+**Type:** Class  
+**Library:** Microsoft Access 16.0 Object Library  
+**GUID:** {50D56610-60AC-11CF-82C9-00AA004B9FE6}  
+
+The Hyperlink object represents a hyperlink associated with a control on a form, report, or data access page.
+
+**Remarks:** Use the Hyperlink property to return a reference to a hyperlink object.
+
+## Properties (5)
+
+- `SubAddress As String  (read/write)`  
+  Use the SubAddress property to specify or determine a location within the target document specified by the Address property. Read/write String.
+- `Address As String  (read/write)`  
+  Use the Address property to specify or determine the path to an object, document, webpage, or other destination for a Hyperlink object associated with a command button, image control, or label control. Read/write String.
+- `EmailSubject As String  (read/write)`  
+  Use the EmailSubject property to specify or return the email subject line of a hyperlink to an object, document, webpage, or other destination for a command button, image control, or label control. Read/write String.
+- `ScreenTip As String  (read/write)`  
+  Use the ScreenTip property to specify or determine the text that is displayed when you move the cursor over a hyperlink control. Read/write String.
+- `TextToDisplay As String  (read/write)`  
+  Use the TextToDisplay property to specify or determine the display text for a hyperlink. Read/write String.
+
+## Methods (3)
+
+- `AddToFavorites()`  
+  The AddToFavorites method adds a hyperlink address to the Favorites folder.
+- `Follow([NewWindow As Boolean], [AddHistory As Boolean], [ExtraInfo As Variant], [Method As MsoExtraInfoMethod], [HeaderInfo As String])`  
+  The Follow method opens the document or webpage specified by a hyperlink address associated with a control on a form or report.
+    - `NewWindow As Boolean` (optional): True (1) opens the document in a new window and False (0) opens the document in the current window. The default is False.
+    - `AddHistory As Boolean` (optional): True adds the hyperlink to the History folder and False doesn't add the hyperlink to the History folder. The default is True.
+    - `ExtraInfo As Variant` (optional): A string or an array of Byte data that specifies additional information for navigating to a hyperlink. For example, this argument may be used to specify a search parameter for an .ASP or .IDC file. In your web browser, the _ExtraInfo_ argument may appear after the hyperlink address, separated from the address by a question mark (?). You don't need to include the question mark when you specify the _ExtraInfo_ argument.
+    - `Method As MsoExtraInfoMethod` (optional): An MsoExtraInfoMethod constant that specifies how the _ExtraInfo_ argument is attached. The default is msoMethodGet.
+    - `HeaderInfo As String` (optional): Specifies header information. By default, the _HeaderInfo_ argument is a zero-length string (" ").
+- `CreateNewDocument(FileName As String, EditNow As Boolean, Overwrite As Boolean)`  
+  Use the CreateNewDocument method to create a new document associated with a specified hyperlink.
+    - `FileName As String` (required): The name and path of the document. The type of document format that you want to use can be determined by the extension used with the file name to output the data. You can create the following:<ul><li>HTML (\.htm)</li><li>Microsoft Active Server Pages (\.asp)</li><li>Microsoft Excel (\.xls)</li><li>Microsoft IIS (\.htx, \.idc)</li><li>MS-DOS Text (\.txt)</li><li>Rich Text Format (\*.rtf)</li></ul>Modules can be output only to MS-DOS text format. Microsoft Internet Information Server and Microsoft Active Server formats are available only for tables, queries, and forms.
+    - `EditNow As Boolean` (required): True opens the document in Design view, and False stores the new document in the specified database directory. The default is True.
+    - `Overwrite As Boolean` (required): True overwrites an existing document if the _FileName_ argument identifies an existing document, and False requires that the _FileName_ argument specify a new file name. The default is False.

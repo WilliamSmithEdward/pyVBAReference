@@ -1,0 +1,176 @@
+{
+  "name": "Table",
+  "kind": "Dispatch Interface",
+  "guid": "{914934C3-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a table shape on a slide. The Table object is a member of the Shapes collection. The Table object contains the Columns collection and the Rows collection.",
+  "remarks": "",
+  "example": "With ActivePresentation.Slides(2).Shapes\n\n    For i = 1 To .Count\n\n        If .Item(i).HasTable Then\n\n            .Item(i).ActionSettings(ppMouseClick) _\n\n                .Action = ppActionNextSlide\n\n        End If\n\n    Next\n\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Columns",
+      "kind": "property",
+      "type": "Columns",
+      "access": "read-only",
+      "description": "Returns a Columns collection that represents all the columns in a table. Read-only."
+    },
+    {
+      "name": "Rows",
+      "kind": "property",
+      "type": "Rows",
+      "access": "read-only",
+      "description": "Returns a Rows collection that represents all the rows in a table. Read-only."
+    },
+    {
+      "name": "TableDirection",
+      "kind": "property",
+      "type": "PpDirection",
+      "access": "read/write",
+      "description": "Returns or sets the direction in which the table cells are ordered. Read/write."
+    },
+    {
+      "name": "FirstRow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Determine whether to display special formatting for the first row of the specified table. Read/write."
+    },
+    {
+      "name": "LastRow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Determines whether to display special formatting for the last row of the specified table. Read/write."
+    },
+    {
+      "name": "FirstCol",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Determines whether to display special formatting for the first column of the specified table. Read/write."
+    },
+    {
+      "name": "LastCol",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Determines whether to display special formatting for the last column of the specified table. Read/write."
+    },
+    {
+      "name": "HorizBanding",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Determines whether to display banded rows, in which even rows are formatted differently from odd rows. Read/write."
+    },
+    {
+      "name": "VertBanding",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Determines whether to display banded columns, in which even columns are formatted differently from odd columns. Read/write."
+    },
+    {
+      "name": "Style",
+      "kind": "property",
+      "type": "TableStyle",
+      "access": "read-only",
+      "description": "Returns a TableStyle object that contains information about the specified table's current table style. Read-only."
+    },
+    {
+      "name": "Background",
+      "kind": "property",
+      "type": "TableBackground",
+      "access": "read-only",
+      "description": "Returns the TableBackground object associated with the specified table. Read-only."
+    },
+    {
+      "name": "AlternativeText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the alternative text associated with a shape in a Web presentation. Read/write."
+    },
+    {
+      "name": "Title",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the title of the Table object. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Cell",
+      "kind": "method",
+      "signature": "Cell(Row As Long, Column As Long) As Cell",
+      "description": "Returns a Cell object that represents a cell in a table.",
+      "returns": "Cell",
+      "parameters": [
+        {
+          "name": "Row",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of the row in the table to return. Can be an integer between 1 and the number of rows in the table."
+        },
+        {
+          "name": "Column",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of the column in the table to return. Can be an integer between 1 and the number of columns in the table."
+        }
+      ]
+    },
+    {
+      "name": "ScaleProportionally",
+      "kind": "method",
+      "signature": "ScaleProportionally(scale As Single)",
+      "description": "Scales all cell heights and widths, font sizes, and internal margins in the table by a specified proportion.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "scale",
+          "type": "Single",
+          "optional": false,
+          "description": "The proportion to scale the table, between 0.01 and 100. For example, a scale value of 1 keeps the table layout unchanged; a value of 2 makes it twice as large; a value of 0.5 makes it half the size."
+        }
+      ]
+    },
+    {
+      "name": "ApplyStyle",
+      "kind": "method",
+      "signature": "ApplyStyle([StyleID As String], [SaveFormatting As Boolean])",
+      "description": "Applies a table style to the specified table.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "StyleID",
+          "type": "String",
+          "optional": true,
+          "description": "The identifier of the table style to apply."
+        },
+        {
+          "name": "SaveFormatting",
+          "type": "Boolean",
+          "optional": true,
+          "description": "True preserves table formatting."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

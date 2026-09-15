@@ -1,0 +1,479 @@
+{
+  "name": "CanvasShapes",
+  "kind": "Dispatch Interface",
+  "guid": "{396F9073-F9FD-11D3-8EA0-0050049A1A01}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Use the CanvasItems property of either a Shape or ShapeRange object to return a CanvasShapes collection.",
+  "remarks": "To add shapes to a drawing canvas, use the following methods of the CanvasShapes collection: AddCallout, AddConnector, AddCurve, AddLabel, AddLine, AddPicture, AddPolyline, AddShape, AddTextbox, AddTextEffect, or BuildFreeform. The following example adds a drawing canvas to the active document and then adds three shapes to the drawing canvas. Use CanvasItems (_index_), where _index_ is the name or the index number, to return a single shape in the CanvasShapes collection. The following example sets the Line and Fill properties and vertically flips the third shape in a drawing canvas. Each shape is assigned a default name when it is created. For example, if you add three different shapes to a document, they might be named Rectangle 2, TextBox 3, and Oval 4. Use the Name property to reference the default name or to assign a more meaningful name to a shape.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified CanvasShapes object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of canvas shapes in the specified collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Shape",
+      "description": "Returns an individual Shape object in a collection.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position or a String representing the name of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "AddCallout",
+      "kind": "method",
+      "signature": "AddCallout(Type As MsoCalloutType, Left As Single, Top As Single, Width As Single, Height As Single) As Shape",
+      "description": "Adds a borderless line callout to a drawing canvas. Returns a Shape object that represents the callout.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "MsoCalloutType",
+          "optional": false,
+          "description": "The type of callout."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, in points, of the left edge of the callout's bounding box."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, in points, of the top edge of the callout's bounding box."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": "The width, in points, of the callout's bounding box."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": "The height, in points, of the callout's bounding box."
+        }
+      ]
+    },
+    {
+      "name": "AddConnector",
+      "kind": "method",
+      "signature": "AddConnector(Type As MsoConnectorType, BeginX As Single, BeginY As Single, EndX As Single, EndY As Single) As Shape",
+      "description": "Returns a Shape object that represents a connecting line between two shapes in a drawing canvas.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "MsoConnectorType",
+          "optional": false,
+          "description": "The type of connector."
+        },
+        {
+          "name": "BeginX",
+          "type": "Single",
+          "optional": false,
+          "description": "The horizontal position that marks the beginning of the connector."
+        },
+        {
+          "name": "BeginY",
+          "type": "Single",
+          "optional": false,
+          "description": "The vertical position that marks the beginning of the connector."
+        },
+        {
+          "name": "EndX",
+          "type": "Single",
+          "optional": false,
+          "description": "The horizontal position that marks the end of the connector."
+        },
+        {
+          "name": "EndY",
+          "type": "Single",
+          "optional": false,
+          "description": "The vertical position that marks the end of the connector."
+        }
+      ]
+    },
+    {
+      "name": "AddCurve",
+      "kind": "method",
+      "signature": "AddCurve(SafeArrayOfPoints As Variant) As Shape",
+      "description": "Returns a Shape object that represents a Bzier curve in a drawing canvas.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "SafeArrayOfPoints",
+          "type": "Variant",
+          "optional": false,
+          "description": "An array of coordinate pairs that specifies the vertices and control points of the curve. The first point you specify is the starting vertex, and the next two points are control points for the first Bzier segment. Then, for each additional segment of the curve, you specify a vertex and two control points. The last point you specify is the ending vertex for the curve. Note that you must always specify 3n + 1 points, where n is the number of segments in the curve."
+        }
+      ]
+    },
+    {
+      "name": "AddLabel",
+      "kind": "method",
+      "signature": "AddLabel(Orientation As MsoTextOrientation, Left As Single, Top As Single, Width As Single, Height As Single) As Shape",
+      "description": "Adds a text label to a drawing canvas. Returns a Shapes object that represents the text label.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Orientation",
+          "type": "MsoTextOrientation",
+          "optional": false,
+          "description": "The orientation of the text."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the left edge of the label relative to the left edge of the drawing canvas."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the top edge of the label relative to the top edge of the drawing canvas."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": "The width of the label, in points."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": "The height of the label, in points."
+        }
+      ]
+    },
+    {
+      "name": "AddLine",
+      "kind": "method",
+      "signature": "AddLine(BeginX As Single, BeginY As Single, EndX As Single, EndY As Single) As Shape",
+      "description": "Adds a line to a drawing canvas. Returns a Shape object that represents the line and adds it to the CanvasShapes collection.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "BeginX",
+          "type": "Single",
+          "optional": false,
+          "description": "The horizontal position, measured in points, of the line's starting point, relative to the drawing canvas."
+        },
+        {
+          "name": "BeginY",
+          "type": "Single",
+          "optional": false,
+          "description": "The vertical position, measured in points, of the line's starting point, relative to the drawing canvas."
+        },
+        {
+          "name": "EndX",
+          "type": "Single",
+          "optional": false,
+          "description": "The horizontal position, measured in points, of the line's endpoint, relative to the drawing canvas."
+        },
+        {
+          "name": "EndY",
+          "type": "Single",
+          "optional": false,
+          "description": "The vertical position, measured in points, of the line's endpoint, relative to the drawing canvas."
+        }
+      ]
+    },
+    {
+      "name": "AddPicture",
+      "kind": "method",
+      "signature": "AddPicture(FileName As String, [LinkToFile As Variant], [SaveWithDocument As Variant], [Left As Variant], [Top As Variant], [Width As Variant], [Height As Variant]) As Shape",
+      "description": "Adds a picture to a drawing canvas. Returns a Shape object that represents the picture and adds it to the CanvasShapes collection.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The path and file name of the picture."
+        },
+        {
+          "name": "LinkToFile",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to link the picture to the file from which it was created. False to make the picture an independent copy of the file. The default value is False."
+        },
+        {
+          "name": "SaveWithDocument",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to save the linked picture with the document. The default value is False."
+        },
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": true,
+          "description": "The position, measured in points, of the left edge of the new picture relative to the drawing canvas."
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": "The position, measured in points, of the top edge of the new picture relative to the drawing canvas."
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": "The width of the picture, in points."
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": "The height of the picture, in points."
+        }
+      ]
+    },
+    {
+      "name": "AddPolyline",
+      "kind": "method",
+      "signature": "AddPolyline(SafeArrayOfPoints As Variant) As Shape",
+      "description": "Adds an open or closed polygon to a drawing canvas. Returns a Shape object that represents the polygon.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "SafeArrayOfPoints",
+          "type": "Variant",
+          "optional": false,
+          "description": "An array of coordinate pairs that specifies the polyline drawing's vertices."
+        }
+      ]
+    },
+    {
+      "name": "AddShape",
+      "kind": "method",
+      "signature": "AddShape(Type As Long, Left As Single, Top As Single, Width As Single, Height As Single) As Shape",
+      "description": "Adds an AutoShape to a drawing canvas. Returns a Shape object that represents the AutoShape.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "Long",
+          "optional": false,
+          "description": "The type of shape to be returned. Can be any MsoAutoShape constant."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the left edge of the AutoShape."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the top edge of the AutoShape."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": "The width, measured in points, of the AutoShape."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": "The height, measured in points, of the AutoShape."
+        }
+      ]
+    },
+    {
+      "name": "AddTextEffect",
+      "kind": "method",
+      "signature": "AddTextEffect(PresetTextEffect As MsoPresetTextEffect, Text As String, FontName As String, FontSize As Single, FontBold As MsoTriState, FontItalic As MsoTriState, Left As Single, Top As Single) As Shape",
+      "description": "Adds a WordArt shape to a drawing canvas. Returns a Shape object that represents the WordArt.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "PresetTextEffect",
+          "type": "MsoPresetTextEffect",
+          "optional": false,
+          "description": "A preset text effect. The values of the MsoPresetTextEffect constants correspond to the formats listed in the WordArt Gallery dialog box (numbered from left to right and from top to bottom)."
+        },
+        {
+          "name": "Text",
+          "type": "String",
+          "optional": false,
+          "description": "The text in the WordArt."
+        },
+        {
+          "name": "FontName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the font used in the WordArt."
+        },
+        {
+          "name": "FontSize",
+          "type": "Single",
+          "optional": false,
+          "description": "The size (in points) of the font used in the WordArt."
+        },
+        {
+          "name": "FontBold",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "msoTrue to bold the WordArt font. msoFalse to set the font used in the WordArt to regular."
+        },
+        {
+          "name": "FontItalic",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "msoTrue to italicize the WordArt font. msoFalse to set the font used in the WordArt to regular."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the left edge of the WordArt shape relative to the left edge of the drawing canvas."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the top edge of the WordArt shape relative to the top edge of the drawing canvas."
+        }
+      ]
+    },
+    {
+      "name": "AddTextbox",
+      "kind": "method",
+      "signature": "AddTextbox(Orientation As MsoTextOrientation, Left As Single, Top As Single, Width As Single, Height As Single) As Shape",
+      "description": "Adds a text box to a drawing canvas. Returns a Shape object that represents the text box.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Orientation",
+          "type": "MsoTextOrientation",
+          "optional": false,
+          "description": "The orientation of the text. Some of the MsoTextOrientation constants may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the left edge of the text box."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the top edge of the text box."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": "The width, measured in points, of the text box."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": "The height, measured in points, of the text box."
+        }
+      ]
+    },
+    {
+      "name": "BuildFreeform",
+      "kind": "method",
+      "signature": "BuildFreeform(EditingType As MsoEditingType, X1 As Single, Y1 As Single) As FreeformBuilder",
+      "description": "Builds a freeform object. Returns a FreeformBuilder object that represents the freeform as it is being built. .",
+      "returns": "FreeformBuilder",
+      "parameters": [
+        {
+          "name": "EditingType",
+          "type": "MsoEditingType",
+          "optional": false,
+          "description": "The EditingType parameter can be either msoEditingAuto or msoEditingCorner; cannot be msoEditingSmooth or msoEditingSymmetric."
+        },
+        {
+          "name": "X1",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the first node in the freeform drawing relative to the left edge of the document."
+        },
+        {
+          "name": "Y1",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the first node in the freeform drawing relative to the top of the document."
+        }
+      ]
+    },
+    {
+      "name": "Range",
+      "kind": "method",
+      "signature": "Range(Index As Variant) As ShapeRange",
+      "description": "Returns a ShapeRange object.",
+      "returns": "ShapeRange",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "Specifies which shapes are to be included in the specified range. Can be an integer that specifies the index number of a shape within the Shapes collection, a string that specifies the name of a shape, or a array that contains integers or strings."
+        }
+      ]
+    },
+    {
+      "name": "SelectAll",
+      "kind": "method",
+      "signature": "SelectAll()",
+      "description": "Selects all the shapes in a canvas.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

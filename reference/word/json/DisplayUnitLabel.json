@@ -1,0 +1,225 @@
+{
+  "name": "DisplayUnitLabel",
+  "kind": "Dispatch Interface",
+  "guid": "{C04865A3-9F8A-486C-BB58-B4C3E6563136}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a unit label on an axis in the specified chart.",
+  "remarks": "Unit labels are useful for charting large values (for example, in the millions or billions). You can make the chart more readable by using a single unit label instead of large numbers at each tick mark.",
+  "example": "With ActiveDocument.InlineShapes(1)\n If .HasChart Then\n With .Chart.Axes(xlValue)\n .DisplayUnit = xlMillions\n .HasDisplayUnitLabel = True\n With .DisplayUnitLabel\n .Caption = \"Millions\"\n .AutoScaleFont = False\n End With\n End With\n End If\nEnd With",
+  "properties": [
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the display unit label text. Read/write String."
+    },
+    {
+      "name": "Characters",
+      "kind": "property",
+      "type": "ChartCharacters",
+      "access": "read-only",
+      "description": "Returns a ChartCharacters object that represents a range of characters within the object text. Use the ChartCharacters object to format characters within a text string."
+    },
+    {
+      "name": "HorizontalAlignment",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the horizontal alignment for the specified object. Read/write Variant."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the distance, in points, from the left edge of the object to the left edge of the chart area. Read/write Double."
+    },
+    {
+      "name": "Orientation",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the text orientation. Read/write Long."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a value that indicates whether the object has a shadow. Read/write Boolean."
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the text for the specified object. Read/write String."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the distance, in points, from the top edge of the object to the top of the first row (on a worksheet) or the top of the chart area (on a chart). Read/write Double."
+    },
+    {
+      "name": "VerticalAlignment",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the vertical alignment of the specified object. Read/write Variant."
+    },
+    {
+      "name": "ReadingOrder",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets an XlReadingOrder constant that represents the reading order for the specified object. Read/write Long."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the object. Read-only String."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "IncludeInLayout",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a display unit label will occupy the chart layout space when a chart layout is being determined. The default is True. Read/write Boolean."
+    },
+    {
+      "name": "Position",
+      "kind": "property",
+      "type": "XlChartElementPosition",
+      "access": "read/write",
+      "description": "Returns or sets the position of the unit label on an axis in the chart. Read/write XlChartElementPosition."
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "ChartFormat",
+      "access": "read-only",
+      "description": "Returns the line, fill, and effect formatting for the object. Read-only ChartFormat."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the Microsoft Word application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": "Returns the height, in points, of the object. Read-only."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": "Returns the width, in points, of the object. Read-only."
+    },
+    {
+      "name": "Formula",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets a String value that represents the formula of the object using A1-style notation, in English. Read/write."
+    },
+    {
+      "name": "FormulaR1C1",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the formula for the object, using R1C1-style notation in the language of the macro. Read/write String."
+    },
+    {
+      "name": "FormulaLocal",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the formula for the object, using A1-style references in the language of the user. Read/write String."
+    },
+    {
+      "name": "FormulaR1C1Local",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the formula for the object, using R1C1-style notation in the language of the user. Read/write String."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select() As Variant",
+      "description": "Selects the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "SetProperty",
+      "kind": "method",
+      "signature": "SetProperty(ID As String, Value As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Value",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetProperty",
+      "kind": "method",
+      "signature": "GetProperty(ID As String) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "ID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

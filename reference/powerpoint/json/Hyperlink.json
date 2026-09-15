@@ -1,0 +1,125 @@
+{
+  "name": "Hyperlink",
+  "kind": "Dispatch Interface",
+  "guid": "{91493465-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a hyperlink associated with a non-placeholder shape or text.",
+  "remarks": "Use a hyperlink to jump to an Internet or intranet site, to another file, or to a slide within the active presentation. The Hyperlink object is a member of the Hyperlinks collection. The Hyperlinks collection contains all the hyperlinks on a slide or a master.",
+  "example": "With ActivePresentation.Slides(1).Shapes(3) _\n\n        .ActionSettings(ppMouseClick)\n\n    .Action = ppActionHyperlink\n\n    .Hyperlink.Address = \"https://www.microsoft.com\"\n\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoHyperlinkType",
+      "access": "read-only",
+      "description": "Represents the type of hyperlink. Read-only."
+    },
+    {
+      "name": "Address",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the Internet address (URL) to the target document. Read/write."
+    },
+    {
+      "name": "SubAddress",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the location within a document - such as a bookmark in a word document, a range in a Microsoft Office Excel worksheet, or a slide in a Microsoft PowerPoint presentation - associated with the specified hyperlink. Read/write."
+    },
+    {
+      "name": "EmailSubject",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the text string of the hyperlink subject line. The subject line is appended to the Internet address (URL) of the hyperlink. Read/write."
+    },
+    {
+      "name": "ScreenTip",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the ScreenTip text of a hyperlink. Read/write."
+    },
+    {
+      "name": "TextToDisplay",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the display text for a hyperlink not associated with a graphic. Read/write."
+    },
+    {
+      "name": "ShowAndReturn",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines if and under what circumstances Microsoft PowerPoint returns to the initiating slide show. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "AddToFavorites",
+      "kind": "method",
+      "signature": "AddToFavorites()",
+      "description": "Adds a shortcut that represents the specified hyperlink's target document to the Favorites folder in the Windows folder.",
+      "returns": "void"
+    },
+    {
+      "name": "Follow",
+      "kind": "method",
+      "signature": "Follow()",
+      "description": "Displays the HTML document associated with the specified hyperlink in a new web browser window.",
+      "returns": "void"
+    },
+    {
+      "name": "CreateNewDocument",
+      "kind": "method",
+      "signature": "CreateNewDocument(FileName As String, EditNow As MsoTriState, Overwrite As MsoTriState)",
+      "description": "Creates a new Web presentation associated with the specified hyperlink.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The path and file name of the document."
+        },
+        {
+          "name": "EditNow",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "Determines whether the document is opened immediately in its associated editor."
+        },
+        {
+          "name": "Overwrite",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "Determines whether any existing file of the same name in the same folder is overwritten."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified Hyperlink object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

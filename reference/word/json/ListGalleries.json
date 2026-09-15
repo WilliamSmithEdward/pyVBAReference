@@ -1,0 +1,64 @@
+{
+  "name": "ListGalleries",
+  "kind": "Dispatch Interface",
+  "guid": "{00020995-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of ListGallery objects that represent the three tabs in the Bullets and Numbering dialog box.",
+  "remarks": "Use the ListGalleries property to return the ListGalleries collection. The following code example enumerates the collection of list galleries and sets each of the seven list templates (formats) back to the list template format built into Word. Use ListGalleries (Index), where Index is wdBulletGallery, wdNumberGallery, or wdOutlineNumberGallery, to return a single ListGallery object. The following code example returns the third list format (excluding None) on the Bulleted tab in the Bullets and Numbering dialog box and then applies it to the selection. To see whether the specified list template contains the formatting built into Word, use the Modified property with the ListGallery object. To reset formatting to the original list format, use the Reset method for the ListGallery object.",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of list galleries in the collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified ListGalleries object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As WdListGalleryType) As ListGallery",
+      "description": "Returns an individual ListGalleries object in a collection.",
+      "returns": "ListGallery",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "WdListGalleryType",
+          "optional": false,
+          "description": "The individual object to be returned."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

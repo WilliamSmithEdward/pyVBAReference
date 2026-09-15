@@ -1,0 +1,76 @@
+{
+  "name": "Interior",
+  "kind": "Dispatch Interface",
+  "guid": "{B184502B-587A-4C6A-8DC4-ECE4354883C6}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the interior of an object.",
+  "remarks": "",
+  "example": "With ActiveDocument.InlineShapes(1)\n If .HasChart Then\n With .Chart.ChartGroups(1)\n .HasUpDownBars = True\n .UpBars.Interior.ColorIndex = 4\n End With\n End If\nEnd With",
+  "properties": [
+    {
+      "name": "Color",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the primary color of the object. Read/write Variant."
+    },
+    {
+      "name": "ColorIndex",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the color of the interior. Read/write Variant."
+    },
+    {
+      "name": "InvertIfNegative",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "True if Microsoft Word inverts the pattern in the object when it corresponds to a negative number. Read/write Variant."
+    },
+    {
+      "name": "Pattern",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a Variant value, containing an XlPattern constant, that represents the interior pattern."
+    },
+    {
+      "name": "PatternColor",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the color of the interior pattern as an RGB value. Read/write Variant."
+    },
+    {
+      "name": "PatternColorIndex",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the color of the interior pattern as an index into the current color palette, or as one of the following XlColorIndex constants: xlColorIndexAutomatic or xlColorIndexNone. Read/write Long."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the Microsoft Word application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

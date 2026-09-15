@@ -1,0 +1,1181 @@
+{
+  "name": "Chart",
+  "kind": "Class",
+  "guid": "{3B06E997-E47C-11CD-8701-00AA003F0F07}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "A customizable visualization of data that can be included in a report.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Properties",
+      "kind": "property",
+      "type": "Properties",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "EventProcPrefix",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ControlType",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "RowSource",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the table/query that supplies data for the chart. Read/write String."
+    },
+    {
+      "name": "LinkChildFields",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LinkMasterFields",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "DisplayWhen",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "StatusBarText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TabStop",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TabIndex",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BackStyle",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BackColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SpecialEffect",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderStyle",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OldBorderStyle",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderWidth",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ShortcutMenuBar",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ControlTipText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HelpContextId",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Section",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Tag",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "IsVisible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "InSelection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnEnter",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnExit",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnGotFocus",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnLostFocus",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnClick",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnDblClick",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnMouseDown",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnMouseMove",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnMouseUp",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnKeyDown",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnKeyUp",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OnKeyPress",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "Layout",
+      "kind": "property",
+      "type": "AcLayoutType",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "LeftPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TopPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "RightPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BottomPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineStyleLeft",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineStyleTop",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineStyleRight",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineStyleBottom",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineWidthLeft",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineWidthTop",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineWidthRight",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineWidthBottom",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HorizontalAnchor",
+      "kind": "property",
+      "type": "AcHorizontalAnchor",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "VerticalAnchor",
+      "kind": "property",
+      "type": "AcVerticalAnchor",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LayoutID",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "BackThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BackTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BackShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BorderShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartAxis",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the semicolon-separated field name(s) that are used by the chart axis. Read/write String."
+    },
+    {
+      "name": "ChartLegend",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the field name that is used by the chart legend. Read/write String."
+    },
+    {
+      "name": "ChartValues",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the semicolon-separated list of field(s) used to determine the data series plotted on the value axis. Read/write String."
+    },
+    {
+      "name": "HasLegend",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the chart has a legend. Read/write Boolean."
+    },
+    {
+      "name": "HasTitle",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the title is visible for the specified chart. Read/write Boolean."
+    },
+    {
+      "name": "ChartTitle",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the title for the specified chart. Read/write String."
+    },
+    {
+      "name": "HasAxisTitles",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the axis titles are visible for the specified chart. Read/write Boolean."
+    },
+    {
+      "name": "CategoryAxisTitle",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the title for the category axis. Read/write String."
+    },
+    {
+      "name": "PrimaryValuesAxisTitle",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the title for the primary values axis. Read/write String."
+    },
+    {
+      "name": "SecondaryValuesAxisTitle",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the title for the secondary values axis. Read/write String."
+    },
+    {
+      "name": "TransformedRowSource",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the auto-generated SQL string that is used to support aggregation, pivoting, and ordering of chart data. Read-only String."
+    },
+    {
+      "name": "ChartType",
+      "kind": "property",
+      "type": "AcChartType",
+      "access": "read/write",
+      "description": "Returns or sets the chart type. Read/write AcChartType."
+    },
+    {
+      "name": "LegendPosition",
+      "kind": "property",
+      "type": "AcLegendPosition",
+      "access": "read/write",
+      "description": "Returns or sets the position of the legend for the specified chart. Read/write AcLegendPosition."
+    },
+    {
+      "name": "PrimaryValuesAxisMinimum",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the minimum value that can be represented on the primary values axis. Read/write Single."
+    },
+    {
+      "name": "PrimaryValuesAxisMaximum",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the maximum value that can be represented on the primary values axis. Read/write Single."
+    },
+    {
+      "name": "SecondaryValuesAxisMinimum",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the minimum value that can be represented on the secondary values axis. Read/write Single."
+    },
+    {
+      "name": "SecondaryValuesAxisMaximum",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the maximum value that can be represented on the secondary values axis. Read/write Single."
+    },
+    {
+      "name": "PrimaryValuesAxisRange",
+      "kind": "property",
+      "type": "AcAxisRange",
+      "access": "read/write",
+      "description": "Returns or sets the behavior for representing minimum and maximum values on the primary values axis. Read/write AcAxisRange."
+    },
+    {
+      "name": "SecondaryValuesAxisRange",
+      "kind": "property",
+      "type": "AcAxisRange",
+      "access": "read/write",
+      "description": "Returns or sets the behavior for representing minimum and maximum values on the secondary values axis. Read/write AcAxisRange."
+    },
+    {
+      "name": "PrimaryValuesAxisFontSize",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Returns or sets the font size used by the primary values axis. Read/write Integer."
+    },
+    {
+      "name": "PrimaryValuesAxisFontColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the font color used by the primary values axis. Read/write Long."
+    },
+    {
+      "name": "PrimaryValuesAxisThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PrimaryValuesAxisFontTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "PrimaryValuesAxisFontShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SecondaryValuesAxisFontSize",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Returns or sets the font size used by the secondary values axis. Read/write Integer."
+    },
+    {
+      "name": "SecondaryValuesAxisThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SecondaryValuesAxisFontTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SecondaryValuesAxisFontShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SecondaryValuesAxisFontColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the font color used by the secondary values axis. Read/write Long."
+    },
+    {
+      "name": "CategoryAxisFontSize",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Returns or sets the font size used by the category axis. Read/write Integer."
+    },
+    {
+      "name": "CategoryAxisFontColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the font color used by the category axis. Read/write Long."
+    },
+    {
+      "name": "CategoryAxisThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CategoryAxisFontTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "CategoryAxisFontShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartTitleFontColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the font color used by the chart subtitle. Read/write Long."
+    },
+    {
+      "name": "ChartTitleThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartTitleFontTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartTitleFontShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartTitleFontSize",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Returns or sets the font size used by the chart title. Read/write Integer."
+    },
+    {
+      "name": "ChartSeriesCollection",
+      "kind": "property",
+      "type": "ChartSeriesCollection",
+      "access": "read-only",
+      "description": "A collection of all the ChartSeries objects in the specified chart."
+    },
+    {
+      "name": "ChartAxisCollection",
+      "kind": "property",
+      "type": "ChartAxisCollection",
+      "access": "read-only",
+      "description": "A collection of all the ChartAxis objects in the specified chart."
+    },
+    {
+      "name": "ChartValuesCollection",
+      "kind": "property",
+      "type": "ChartValuesCollection",
+      "access": "read-only",
+      "description": "A collection of all the ChartValues objects in the specified chart."
+    },
+    {
+      "name": "PrimaryValuesAxisFormat",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the format of the values on the primary values axis. Read/write String."
+    },
+    {
+      "name": "SecondaryValuesAxisFormat",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the format of the values on the secondary values axis. Read/write String."
+    },
+    {
+      "name": "PrimaryValuesAxisDisplayUnits",
+      "kind": "property",
+      "type": "AcAxisUnits",
+      "access": "read/write",
+      "description": "Returns or sets the unit of measurement applied to the primary values axis. Read/write AcAxisUnits."
+    },
+    {
+      "name": "SecondaryValuesAxisDisplayUnits",
+      "kind": "property",
+      "type": "AcAxisUnits",
+      "access": "read/write",
+      "description": "Returns or sets the unit of measurement applied to the secondary values axis. Read/write AcAxisUnits."
+    },
+    {
+      "name": "ChartTitleFontName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the font used by the chart title. Read/write String."
+    },
+    {
+      "name": "LegendTextFontSize",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Returns or sets the font size used by the chart legend. Read/write Integer."
+    },
+    {
+      "name": "LegendTextFontColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the font color used by the chart legend. Read/write Long."
+    },
+    {
+      "name": "LegendTextThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LegendTextFontTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LegendTextFontShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HasSubtitle",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the subtitle is visible for the specified chart. Read/write Boolean."
+    },
+    {
+      "name": "ChartSubtitle",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the subtitle for the specified chart. Read/write String."
+    },
+    {
+      "name": "ChartSubtitleFontSize",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Returns or sets the font size used by the chart subtitle. Read/write Integer."
+    },
+    {
+      "name": "ChartSubtitleFontColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the font color used by the chart subtitle. Read/write Long."
+    },
+    {
+      "name": "ChartSubtitleThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartSubtitleFontTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "ChartSubtitleFontShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "SizeToFit",
+      "kind": "method",
+      "signature": "SizeToFit()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Requery",
+      "kind": "method",
+      "signature": "Requery()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "SetFocus",
+      "kind": "method",
+      "signature": "SetFocus()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move(Left As Variant, [Top As Variant], [Width As Variant], [Height As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "Enter",
+      "kind": "event",
+      "signature": "Enter()",
+      "description": ""
+    },
+    {
+      "name": "Exit",
+      "kind": "event",
+      "signature": "Exit(Cancel As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GotFocus",
+      "kind": "event",
+      "signature": "GotFocus()",
+      "description": ""
+    },
+    {
+      "name": "LostFocus",
+      "kind": "event",
+      "signature": "LostFocus()",
+      "description": ""
+    },
+    {
+      "name": "Click",
+      "kind": "event",
+      "signature": "Click()",
+      "description": ""
+    },
+    {
+      "name": "DblClick",
+      "kind": "event",
+      "signature": "DblClick(Cancel As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseDown",
+      "kind": "event",
+      "signature": "MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseMove",
+      "kind": "event",
+      "signature": "MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseUp",
+      "kind": "event",
+      "signature": "MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyDown",
+      "kind": "event",
+      "signature": "KeyDown(KeyCode As Integer, Shift As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyPress",
+      "kind": "event",
+      "signature": "KeyPress(KeyAscii As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "KeyAscii",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyUp",
+      "kind": "event",
+      "signature": "KeyUp(KeyCode As Integer, Shift As Integer)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ]
+}

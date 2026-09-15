@@ -1,0 +1,133 @@
+{
+  "name": "TableOfAuthorities",
+  "kind": "Dispatch Interface",
+  "guid": "{00020911-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single table of authorities in a document (a TOA field). The TableOfAuthorities object is a member of the TablesOfAuthorities collection. The TablesOfAuthorities collection includes all the tables of authorities in a document.",
+  "remarks": "Use TablesOfAuthorities (Index), where Index is the index number, to return a single TableOfAuthorities object. The index number represents the position of the table of authorities in the document. The following example includes category headers in the first table of authorities in the active document and then updates the table. Use the Add method to add a table of authorities to a document. The following example adds a table of authorities that includes all categories at the beginning of the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified TableOfAuthorities object."
+    },
+    {
+      "name": "Passim",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if five or more page references to the same authority are replaced with \"Passim.\" Read/write Boolean."
+    },
+    {
+      "name": "KeepEntryFormatting",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if formatting from table of authorities entries is applied to the entries in the specified table of authorities. Read/write Boolean."
+    },
+    {
+      "name": "Category",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the category of entries to be included in a table of authorities. Read/write Long."
+    },
+    {
+      "name": "Bookmark",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the bookmark from which to collect table of authorities entries. Read/write String."
+    },
+    {
+      "name": "Separator",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets up to five characters that appear between the sequence number and the page number in a table of authorities. Read/write String."
+    },
+    {
+      "name": "IncludeSequenceName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the Sequence (SEQ) field identifier for a table of authorities. Read/write String."
+    },
+    {
+      "name": "EntrySeparator",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the characters (up to five) that separate a table of authorities entry and its page number. Read/write String."
+    },
+    {
+      "name": "PageRangeSeparator",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the characters (up to five) that separate a range of pages in a table of authorities. Read/write String."
+    },
+    {
+      "name": "IncludeCategoryHeader",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the category name for a group of entries appears in the table of authorities. Read/write Boolean."
+    },
+    {
+      "name": "PageNumberSeparator",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the characters (up to five) that separate individual page references in a table of authorities. Read/write String."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the portion of a document that is contained within a table of authorities."
+    },
+    {
+      "name": "TabLeader",
+      "kind": "property",
+      "type": "WdTabLeader",
+      "access": "read/write",
+      "description": "Returns or sets the leader character that appears between entries and their associated page numbers in a table of authorities. Read/write WdTabLeader."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified table of authorities.",
+      "returns": "void"
+    },
+    {
+      "name": "Update",
+      "kind": "method",
+      "signature": "Update()",
+      "description": "Updates the entries shown in a table of authorities.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

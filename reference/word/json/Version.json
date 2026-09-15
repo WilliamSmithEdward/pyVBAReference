@@ -1,0 +1,77 @@
+{
+  "name": "Version",
+  "kind": "Dispatch Interface",
+  "guid": "{000209B4-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single version of a document. The Version object is a member of the Versions collection. The Versions collection includes all the versions of the specified document.",
+  "remarks": "Use Versions (Index), where Index is the index number, to return a single Version object. The index number represents the position of the version in the Versions collection. The first version added to the Versions collection is index number 1. The following example displays the comment, author, and date of the first version of the active document. Use the Save method to add an item to the Versions collection. The following example adds a version of the active document with the specified comment.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Version object."
+    },
+    {
+      "name": "SavedBy",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the user who saved the specified version of the document. Read-only String."
+    },
+    {
+      "name": "Comment",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the comment associated with the specified version of a document. Read-only String."
+    },
+    {
+      "name": "Date",
+      "kind": "property",
+      "type": "Date",
+      "access": "read-only",
+      "description": "The date and time that the document version was saved. Read-only Date."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the position of an item in a collection. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified version.",
+      "returns": "void"
+    },
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open() As Document",
+      "description": "Opens the specified version of a document. Returns a Document object representing the opened document.",
+      "returns": "Document"
+    }
+  ],
+  "events": []
+}

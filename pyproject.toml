@@ -4,11 +4,12 @@ build-backend = "hatchling.build"
 
 [project]
 name = "vba-reference"
-version = "1.0.0"
-description = "Programmatic, typed reference of the VBA object models for common COM type libraries (Excel, Office, ADO, MSXML, and more)."
+version = "1.1.0"
+description = "Programmatic, typed reference of the VBA object models for Excel, PowerPoint, Word, Access and the common shared COM type libraries (Office, ADO, MSXML, and more)."
 readme = "README.md"
 requires-python = ">=3.9"
-keywords = ["vba", "excel", "office", "com", "reference", "typelib", "macro"]
+keywords = ["vba", "excel", "word", "powerpoint", "access", "office", "com",
+            "reference", "typelib", "macro"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "Topic :: Software Development :: Documentation",
@@ -32,13 +33,17 @@ vba-ref = "vba_reference.cli:main"
 [tool.hatch.build.targets.wheel]
 packages = ["vba_reference"]
 
-# Bundle the generated JSON (not the Markdown) inside the wheel so the package
-# is self-contained once installed. The repository root keeps the canonical
-# copy used in development.
+# Bundle the generated per-type JSON (not the Markdown, and not the
+# consolidated exports, which are the same data again) inside the wheel so the
+# package is self-contained once installed. The repository root keeps the
+# canonical copy used in development.
 [tool.hatch.build.targets.wheel.force-include]
 "reference/index.json" = "vba_reference/data/index.json"
 "reference/members.json" = "vba_reference/data/members.json"
 "reference/excel/json" = "vba_reference/data/excel/json"
+"reference/powerpoint/json" = "vba_reference/data/powerpoint/json"
+"reference/word/json" = "vba_reference/data/word/json"
+"reference/access/json" = "vba_reference/data/access/json"
 "reference/office/json" = "vba_reference/data/office/json"
 "reference/vba/json" = "vba_reference/data/vba/json"
 "reference/stdole/json" = "vba_reference/data/stdole/json"
@@ -54,6 +59,7 @@ packages = ["vba_reference"]
 include = [
     "vba_reference",
     "scrape_excel_object_model.py",
+    "consolidate_reference.py",
     "mslearn_docs.py",
     "tests",
     "README.md",

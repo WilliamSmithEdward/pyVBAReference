@@ -1,0 +1,55 @@
+{
+  "name": "DependencyInfo",
+  "kind": "Class",
+  "guid": "{F8C9DCB3-4063-490E-A73C-3533207CBC26}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "Represents the dependency information for an AccessObject object.",
+  "remarks": "To return the dependency information for an AccessObject object, use the GetDependencyInfo method of the AccessObject object.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Dependants",
+      "kind": "property",
+      "type": "_DependencyObjects",
+      "access": "read-only",
+      "description": "Returns a DependencyObjects collection that represents the objects that depend on the specified AccessObject object. Read-only."
+    },
+    {
+      "name": "Dependencies",
+      "kind": "property",
+      "type": "_DependencyObjects",
+      "access": "read-only",
+      "description": "Returns a DependencyObjects collection that represents the objects that the specified AccessObject object depends on. Read-only."
+    },
+    {
+      "name": "OutOfDateObjects",
+      "kind": "property",
+      "type": "_DependencyObjects",
+      "access": "read-only",
+      "description": "Returns a DependencyObjects collection that represents the AccessObject objects for which the dependency information is outdated. Read-only."
+    },
+    {
+      "name": "InsufficientPermissions",
+      "kind": "property",
+      "type": "_DependencyObjects",
+      "access": "read-only",
+      "description": "Returns a DependencyObjects collection that contains a collection of objects to which you don't have sufficient permissions to check for dependencies. Read-only."
+    },
+    {
+      "name": "UnsupportedObjects",
+      "kind": "property",
+      "type": "_DependencyObjects",
+      "access": "read-only",
+      "description": "Returns a DependencyObjects collection that contains objects that cannot be searched for dependency. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

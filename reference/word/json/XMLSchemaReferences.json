@@ -1,0 +1,125 @@
+{
+  "name": "XMLSchemaReferences",
+  "kind": "Dispatch Interface",
+  "guid": "{356B06EC-4908-42A4-81FC-4B5A51F3483B}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of XMLSchemaReference objects that represent the unique namespaces that are attached to a document.",
+  "remarks": "Use the XMLSchemaReferences property to return a collection of schemas attached to a document. The following example loops through the schemas attached to a document. If it finds the specified schema, it reloads it; if it doesn't find the specified schema, it attaches the schema to the document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of XML schemas in the collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified XMLSchemaReferences object."
+    },
+    {
+      "name": "HideValidationErrors",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns a Boolean indicating whether Word displays schema validation errors for the current XML document. Read/write."
+    },
+    {
+      "name": "IgnoreMixedContent",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns a Boolean that represents whether Microsoft Word preforms validation on text nodes that have element siblings and specifies whether these text nodes are saved in XML when the XMLSaveDataOnly property is True. Read/write."
+    },
+    {
+      "name": "ShowPlaceholderText",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether automatic placeholder text is displayed for XML elements in a document. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As XMLSchemaReference",
+      "description": "Returns an individual XMLSchemaReference object in a collection.",
+      "returns": "XMLSchemaReference",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position or a String representing the name of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "Validate",
+      "kind": "method",
+      "signature": "Validate()",
+      "description": "Validates all the XML schemas that are attached to a document.",
+      "returns": "void"
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([NamespaceURI As Variant], [Alias As Variant], [FileName As Variant], [InstallForAllUsers As Boolean]) As XMLSchemaReference",
+      "description": "Returns an XMLSchemaReference that represents a schema applied to a document.",
+      "returns": "XMLSchemaReference",
+      "parameters": [
+        {
+          "name": "NamespaceURI",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the schema as defined in the schema. The Namespace parameter is case-sensitive and must be spelled exactly as it appears in the schema. If the specified namespace cannot be found in any of the schemas attached to the document, an error is displayed."
+        },
+        {
+          "name": "Alias",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the schema as it appears on the Schemas tab in the Templates and Add-ins dialog box."
+        },
+        {
+          "name": "FileName",
+          "type": "Variant",
+          "optional": true,
+          "description": "The path and file name of the schema. This may be a local file path, a network path, or an Internet address."
+        },
+        {
+          "name": "InstallForAllUsers",
+          "type": "Boolean",
+          "optional": true,
+          "description": "True if all users that log on to a computer can access and use the new schema. The default is False."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

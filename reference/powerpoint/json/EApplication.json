@@ -1,0 +1,586 @@
+{
+  "name": "EApplication",
+  "kind": "Interface",
+  "guid": "{914934C2-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "WindowSelectionChange",
+      "kind": "method",
+      "signature": "WindowSelectionChange(Sel As Selection)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Sel",
+          "type": "Selection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WindowBeforeRightClick",
+      "kind": "method",
+      "signature": "WindowBeforeRightClick(Sel As Selection, Cancel As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Sel",
+          "type": "Selection",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WindowBeforeDoubleClick",
+      "kind": "method",
+      "signature": "WindowBeforeDoubleClick(Sel As Selection, Cancel As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Sel",
+          "type": "Selection",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PresentationClose",
+      "kind": "method",
+      "signature": "PresentationClose(Pres As Presentation)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PresentationSave",
+      "kind": "method",
+      "signature": "PresentationSave(Pres As Presentation)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PresentationOpen",
+      "kind": "method",
+      "signature": "PresentationOpen(Pres As Presentation)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "NewPresentation",
+      "kind": "method",
+      "signature": "NewPresentation(Pres As Presentation)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PresentationNewSlide",
+      "kind": "method",
+      "signature": "PresentationNewSlide(Sld As Slide)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Sld",
+          "type": "Slide",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WindowActivate",
+      "kind": "method",
+      "signature": "WindowActivate(Pres As Presentation, Wn As DocumentWindow)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Wn",
+          "type": "DocumentWindow",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WindowDeactivate",
+      "kind": "method",
+      "signature": "WindowDeactivate(Pres As Presentation, Wn As DocumentWindow)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Wn",
+          "type": "DocumentWindow",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SlideShowBegin",
+      "kind": "method",
+      "signature": "SlideShowBegin(Wn As SlideShowWindow)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Wn",
+          "type": "SlideShowWindow",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SlideShowNextBuild",
+      "kind": "method",
+      "signature": "SlideShowNextBuild(Wn As SlideShowWindow)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Wn",
+          "type": "SlideShowWindow",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SlideShowNextSlide",
+      "kind": "method",
+      "signature": "SlideShowNextSlide(Wn As SlideShowWindow)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Wn",
+          "type": "SlideShowWindow",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SlideShowEnd",
+      "kind": "method",
+      "signature": "SlideShowEnd(Pres As Presentation)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PresentationPrint",
+      "kind": "method",
+      "signature": "PresentationPrint(Pres As Presentation)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SlideSelectionChanged",
+      "kind": "method",
+      "signature": "SlideSelectionChanged(SldRange As SlideRange)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "SldRange",
+          "type": "SlideRange",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ColorSchemeChanged",
+      "kind": "method",
+      "signature": "ColorSchemeChanged(SldRange As SlideRange)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "SldRange",
+          "type": "SlideRange",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PresentationBeforeSave",
+      "kind": "method",
+      "signature": "PresentationBeforeSave(Pres As Presentation, Cancel As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SlideShowNextClick",
+      "kind": "method",
+      "signature": "SlideShowNextClick(Wn As SlideShowWindow, nEffect As Effect)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Wn",
+          "type": "SlideShowWindow",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "nEffect",
+          "type": "Effect",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AfterNewPresentation",
+      "kind": "method",
+      "signature": "AfterNewPresentation(Pres As Presentation)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AfterPresentationOpen",
+      "kind": "method",
+      "signature": "AfterPresentationOpen(Pres As Presentation)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PresentationSync",
+      "kind": "method",
+      "signature": "PresentationSync(Pres As Presentation, SyncEventType As MsoSyncEventType)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "SyncEventType",
+          "type": "MsoSyncEventType",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SlideShowOnNext",
+      "kind": "method",
+      "signature": "SlideShowOnNext(Wn As SlideShowWindow)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Wn",
+          "type": "SlideShowWindow",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SlideShowOnPrevious",
+      "kind": "method",
+      "signature": "SlideShowOnPrevious(Wn As SlideShowWindow)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Wn",
+          "type": "SlideShowWindow",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PresentationBeforeClose",
+      "kind": "method",
+      "signature": "PresentationBeforeClose(Pres As Presentation, Cancel As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowOpen",
+      "kind": "method",
+      "signature": "ProtectedViewWindowOpen(ProtViewWindow As ProtectedViewWindow)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ProtViewWindow",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowBeforeEdit",
+      "kind": "method",
+      "signature": "ProtectedViewWindowBeforeEdit(ProtViewWindow As ProtectedViewWindow, Cancel As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ProtViewWindow",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowBeforeClose",
+      "kind": "method",
+      "signature": "ProtectedViewWindowBeforeClose(ProtViewWindow As ProtectedViewWindow, ProtectedViewCloseReason As PpProtectedViewCloseReason, Cancel As Boolean)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ProtViewWindow",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ProtectedViewCloseReason",
+          "type": "PpProtectedViewCloseReason",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowActivate",
+      "kind": "method",
+      "signature": "ProtectedViewWindowActivate(ProtViewWindow As ProtectedViewWindow)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ProtViewWindow",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowDeactivate",
+      "kind": "method",
+      "signature": "ProtectedViewWindowDeactivate(ProtViewWindow As ProtectedViewWindow)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ProtViewWindow",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PresentationCloseFinal",
+      "kind": "method",
+      "signature": "PresentationCloseFinal(Pres As Presentation)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AfterDragDropOnSlide",
+      "kind": "method",
+      "signature": "AfterDragDropOnSlide(Sld As Slide, X As Single, Y As Single)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Sld",
+          "type": "Slide",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AfterShapeSizeChange",
+      "kind": "method",
+      "signature": "AfterShapeSizeChange(shp As Shape)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "shp",
+          "type": "Shape",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

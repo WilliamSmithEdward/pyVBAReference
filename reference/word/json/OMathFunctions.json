@@ -1,0 +1,97 @@
+{
+  "name": "OMathFunctions",
+  "kind": "Dispatch Interface",
+  "guid": "{497142A4-16FD-42C6-BC58-15D89345FC21}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a collection of functions or structures that Microsoft Word supports, such as fractions, integrals, sums, and radicals.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathFunctions object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of items in the OMathFunctions collection. Read-only Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As OMathFunction",
+      "description": "Returns an OMathFunction object that represents the specified item in the collection.",
+      "returns": "OMathFunction",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "Specifies the ordinal position of the object within the collection."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Range As Range, Type As WdOMathFunctionType, [NumArgs As Variant], [NumCols As Variant]) As OMathFunction",
+      "description": "Inserts a new structure, such as a fraction, into an equation at the specified position and returns an OMathFunction object that represents the structure.",
+      "returns": "OMathFunction",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The place at which to insert an equation."
+        },
+        {
+          "name": "Type",
+          "type": "WdOMathFunctionType",
+          "optional": false,
+          "description": "The type of equation to insert."
+        },
+        {
+          "name": "NumArgs",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of arguments in the equation."
+        },
+        {
+          "name": "NumCols",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of columns in the equation."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

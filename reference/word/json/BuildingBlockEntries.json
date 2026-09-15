@@ -1,0 +1,102 @@
+{
+  "name": "BuildingBlockEntries",
+  "kind": "Dispatch Interface",
+  "guid": "{39709229-56A0-4E29-9112-B31DD067EBFD}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a collection of all BuildingBlock objects in a template.",
+  "remarks": "Use the Add method to create a new building block and add it to a template. The following example adds the selected text to the watermarks building block gallery of the first template in the Templates collection. Unlike the Add method for the BuildingBlocks collection, you need to specify the type and category when you add a building block using the Add method of the BuildingBlockEntries collection. This is because building blocks are organized by using types and categories. When you use the BuildingBlockEntries collection, you are accessing the entire collection of building blocks in a template; however, when you use the BuildingBlocks collection, you are accessing the collection of building blocks for a specific type and category in a template. For more information about building blocks, see Working with Building Blocks.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified BuildingBlockEntries object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of items in the BuildingBlockEntries collection. Read-only Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As BuildingBlock",
+      "description": "Returns a BuildingBlock object that represents the specified item in the collection.",
+      "returns": "BuildingBlock",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "Specifies a String or Integer that represents the name or ordinal position of the object in the collection."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String, Type As WdBuildingBlockTypes, Category As String, Range As Range, [Description As Variant], [InsertOptions As WdDocPartInsertOptions]) As BuildingBlock",
+      "description": "Creates a new building block entry in a template and returns a BuildingBlock object that represents the new building block entry.",
+      "returns": "BuildingBlock",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies the name of the building block entry. Corresponds to the Name property of the BuildingBlock object."
+        },
+        {
+          "name": "Type",
+          "type": "WdBuildingBlockTypes",
+          "optional": false,
+          "description": "Specifies the type of building block to create. Corresponds to the Type property of the BuildingBlock object."
+        },
+        {
+          "name": "Category",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies the category of the new building block entry. Corresponds to the Category property of the BuildingBlock object."
+        },
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "Specifies the value of the buildling block entry. Corresponds to the Value property of the BuildingBlock object."
+        },
+        {
+          "name": "Description",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the description of the buildling block entry. Corresponds to the Description property of the BuildingBlock object."
+        },
+        {
+          "name": "InsertOptions",
+          "type": "WdDocPartInsertOptions",
+          "optional": true,
+          "description": "Specifies whether the building block entry is inserted as a page, a paragraph, or inline. If omitted, the default value is wdInsertContent. Corresponds to the InsertOptions property for the BuildingBlock object."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

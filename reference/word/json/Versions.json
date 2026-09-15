@@ -1,0 +1,86 @@
+{
+  "name": "Versions",
+  "kind": "Dispatch Interface",
+  "guid": "{000209B3-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "AutoVersion",
+      "kind": "property",
+      "type": "WdAutoVersions",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Version",
+      "description": "",
+      "returns": "Version",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Save",
+      "kind": "method",
+      "signature": "Save([Comment As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Comment",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

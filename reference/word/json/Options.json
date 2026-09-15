@@ -1,0 +1,1749 @@
+{
+  "name": "Options",
+  "kind": "Dispatch Interface",
+  "guid": "{000209B7-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents application and document options in Word. Many of the properties for the Options object correspond to items in the Options dialog box.",
+  "remarks": "Use the Options property to return the Options object. The following example sets three application options for Word.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Options object."
+    },
+    {
+      "name": "AllowAccentedUppercase",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if accents are retained when a French language character is changed to uppercase. Read/write Boolean."
+    },
+    {
+      "name": "Pagination",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word repaginates documents in the background. Read/write Boolean."
+    },
+    {
+      "name": "EnableSound",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word makes the computer respond with a sound whenever an error occurs. Read/write Boolean."
+    },
+    {
+      "name": "ConfirmConversions",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word displays the Convert File dialog box before it opens or inserts a file that isn't a Word document or template. In the Convert File dialog box, the user chooses the format to convert the file from. Read/write Boolean."
+    },
+    {
+      "name": "UpdateLinksAtOpen",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word automatically updates all embedded OLE links in a document when it is opened. Read/write Boolean."
+    },
+    {
+      "name": "SendMailAttach",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the Send To command on the File menu inserts the active document as an attachment to a mail message. Read/write Boolean."
+    },
+    {
+      "name": "MeasurementUnit",
+      "kind": "property",
+      "type": "WdMeasurementUnits",
+      "access": "read/write",
+      "description": "Returns or sets the standard measurement unit for Microsoft Word. Read/write WdMeasurementUnits."
+    },
+    {
+      "name": "ButtonFieldClicks",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the number of clicks (either one or two) required to run a GOTOBUTTON or MACROBUTTON field. Read/write Long."
+    },
+    {
+      "name": "ShortMenuNames",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "RTFInClipboard",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "You have requested Help for a Visual Basic keyword used only on the Macintosh. For information about the RTFInClipboard property for the Options object, consult the language reference Help included with Microsoft Office Macintosh Edition."
+    },
+    {
+      "name": "UpdateFieldsAtPrint",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word updates fields automatically before printing a document. Read/write Boolean."
+    },
+    {
+      "name": "PrintProperties",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word prints document summary information on a separate page at the end of the document. Read/write Boolean."
+    },
+    {
+      "name": "PrintFieldCodes",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word prints field codes instead of field results. Read/write Boolean."
+    },
+    {
+      "name": "PrintComments",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word prints comments, starting on a new page at the end of the document. Read/write Boolean."
+    },
+    {
+      "name": "PrintHiddenText",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if hidden text is printed. Read/write Boolean."
+    },
+    {
+      "name": "EnvelopeFeederInstalled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the current printer has a special feeder for envelopes. Read-only Boolean."
+    },
+    {
+      "name": "UpdateLinksAtPrint",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word updates embedded links to other files before printing a document. Read/write Boolean."
+    },
+    {
+      "name": "PrintBackground",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word prints in the background. Read/write Boolean."
+    },
+    {
+      "name": "PrintDrawingObjects",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word prints drawing objects. Read/write Boolean."
+    },
+    {
+      "name": "DefaultTray",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the default tray your printer uses to print documents. Read/write String."
+    },
+    {
+      "name": "DefaultTrayID",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the default tray your printer uses to print documents. Read/write WdPaperTray."
+    },
+    {
+      "name": "CreateBackup",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word creates a backup copy each time a document is saved. Read/write Boolean."
+    },
+    {
+      "name": "SavePropertiesPrompt",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word prompts for document property information when saving a new document. Read/write Boolean."
+    },
+    {
+      "name": "SaveNormalPrompt",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word prompts the user for confirmation to save changes to the Normal template before it closes. Read/write Boolean."
+    },
+    {
+      "name": "SaveInterval",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the time interval in minutes for saving AutoRecover information. Read/write Long."
+    },
+    {
+      "name": "BackgroundSave",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word saves documents in the background. When Word is saving in the background, users can continue to type and to choose commands. Read/write Boolean."
+    },
+    {
+      "name": "InsertedTextMark",
+      "kind": "property",
+      "type": "WdInsertedTextMark",
+      "access": "read/write",
+      "description": "Returns or sets how Microsoft Word formats inserted text while change tracking is enabled (the TrackRevisions property is True). Read/write WdInsertedTextMark."
+    },
+    {
+      "name": "DeletedTextMark",
+      "kind": "property",
+      "type": "WdDeletedTextMark",
+      "access": "read/write",
+      "description": "Returns or sets the format of text that is deleted while change tracking is enabled. Read/write WdDeletedTextMark."
+    },
+    {
+      "name": "RevisedLinesMark",
+      "kind": "property",
+      "type": "WdRevisedLinesMark",
+      "access": "read/write",
+      "description": "Returns or sets the placement of changed lines in a document with tracked changes. Read/write WdRevisedLinesMark."
+    },
+    {
+      "name": "InsertedTextColor",
+      "kind": "property",
+      "type": "WdColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the color of text that is inserted while change tracking is enabled. Read/write WdColorIndex."
+    },
+    {
+      "name": "DeletedTextColor",
+      "kind": "property",
+      "type": "WdColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the color of text that is deleted while change tracking is enabled. Read/write WdColorIndex."
+    },
+    {
+      "name": "RevisedLinesColor",
+      "kind": "property",
+      "type": "WdColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the color of changed lines in a document with tracked changes. Read/write WdColorIndex."
+    },
+    {
+      "name": "DefaultFilePath",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets default folders for items such as documents, templates, and graphics. Read/write String."
+    },
+    {
+      "name": "Overtype",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Overtype mode is active. Read/write Boolean."
+    },
+    {
+      "name": "ReplaceSelection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the result of typing or pasting replaces the selection. Read/write Boolean."
+    },
+    {
+      "name": "AllowDragAndDrop",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if dragging can be used to move or copy a selection. Read/write Boolean."
+    },
+    {
+      "name": "AutoWordSelection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if dragging selects one word at a time instead of one character at a time. Read/write Boolean."
+    },
+    {
+      "name": "INSKeyForPaste",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the INS key can be used for pasting the Clipboard contents. Read/write Boolean."
+    },
+    {
+      "name": "SmartCutPaste",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word automatically adjusts the spacing between words and punctuation when cutting and pasting occurs. Read/write Boolean."
+    },
+    {
+      "name": "TabIndentKey",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the TAB and BACKSPACE keys can be used to increase and decrease, respectively, the left indent of paragraphs and if the BACKSPACE key can be used to change right-aligned paragraphs to centered paragraphs and centered paragraphs to left-aligned paragraphs. Read/write Boolean."
+    },
+    {
+      "name": "PictureEditor",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the application to use to edit pictures. Read/write String."
+    },
+    {
+      "name": "AnimateScreenMovements",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word animates mouse movements, uses animated cursors, and animates actions such as background saving and find and replace operations. Read/write Boolean."
+    },
+    {
+      "name": "RevisedPropertiesMark",
+      "kind": "property",
+      "type": "WdRevisedPropertiesMark",
+      "access": "read/write",
+      "description": "Returns or sets the mark used to show formatting changes while change tracking is enabled. Read/write WdRevisedPropertiesMark."
+    },
+    {
+      "name": "RevisedPropertiesColor",
+      "kind": "property",
+      "type": "WdColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the color used to mark formatting changes while change tracking is enabled. Read/write WdColorIndex."
+    },
+    {
+      "name": "SnapToGrid",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if AutoShapes or East Asian characters are automatically aligned with an invisible grid when they are drawn, moved, or resized. Read/write Boolean."
+    },
+    {
+      "name": "SnapToShapes",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word automatically aligns AutoShapes or East Asian characters with invisible gridlines that go through the vertical and horizontal edges of other AutoShapes or East Asian characters. Read/write Boolean."
+    },
+    {
+      "name": "GridDistanceHorizontal",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the amount of horizontal space between the invisible gridlines that Word uses when you draw, move, and resize AutoShapes or East Asian characters in new documents. Read/write Single."
+    },
+    {
+      "name": "GridDistanceVertical",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the amount of vertical space between the invisible gridlines that Word uses when you draw, move, and resize AutoShapes or East Asian characters in new documents. Read/write Single."
+    },
+    {
+      "name": "GridOriginHorizontal",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the point, relative to the left edge of the page, where you want the invisible grid for drawing, moving, and resizing AutoShapes or East Asian characters to begin in new documents. Read/write Single."
+    },
+    {
+      "name": "GridOriginVertical",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the point, relative to the top of the page, where you want the invisible grid for drawing, moving, and resizing AutoShapes or East Asian characters to begin in new documents. Read/write Single."
+    },
+    {
+      "name": "InlineConversion",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word displays an unconfirmed character string in the Japanese Input Method Editor (IME) as an insertion between existing (confirmed) character strings. Read/write Boolean."
+    },
+    {
+      "name": "IMEAutomaticControl",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word is set to automatically open and close the Japanese Input Method Editor (IME). Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatApplyHeadings",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if styles are automatically applied to headings when Word formats a document or range automatically. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatApplyLists",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if styles are automatically applied to lists when Word formats a document or range automatically. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatApplyBulletedLists",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if characters (such as asterisks, hyphens, and greater-than signs) at the beginning of list paragraphs are replaced with bullets from the Bullets and Numbering dialog box (Format menu) when Word formats a document or range automatically. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatApplyOtherParas",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if styles are automatically applied to paragraphs that aren't headings or list items when Word formats a document or range automatically. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatReplaceQuotes",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if straight quotation marks are automatically changed to smart (curly) quotation marks when Word formats a document or range automatically. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatReplaceSymbols",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if two consecutive hyphens (--) are replaced by an en dash (-) or an em dash (-) when Word formats a document or range automatically. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatReplaceOrdinals",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the ordinal number suffixes \"st\", \"nd\", \"rd\", and \"th\" are replaced with the same letters in superscript when Word formats a document or range automatically. For example, \"1st\" is replaced with \"1\" followed by \"st\" formatted as superscript. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatReplaceFractions",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if typed fractions are replaced with fractions from the current character set when Word formats a document or range automatically. For example, \"1/2\" is replaced with \".\" Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatReplacePlainTextEmphasis",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if manual emphasis characters are replaced with character formatting when Word formats a document or range automatically. For example, \"bold\" is changed to \"bold\" and \"_underline_\" is changed to \"underline.\" Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatPreserveStyles",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if previously applied styles are preserved when Word formats a document or range automatically. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeApplyHeadings",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if styles are automatically applied to headings as you type. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeApplyBorders",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a series of three or more hyphens (-), equal signs (=), or underscore characters (_) are automatically replaced by a specific border line when the ENTER key is pressed. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeApplyBulletedLists",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if bullet characters (such as asterisks, hyphens, and greater-than signs) are replaced with bullets from the Bullets And Numbering dialog box (Format menu) as you type. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeApplyNumberedLists",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if paragraphs are automatically formatted as numbered lists with a numbering scheme from the Bullets and Numbering dialog box (Format menu), according to what's typed. For example, if a paragraph starts with \"1.1\" and a tab character, Word automatically inserts \"1.2\" and a tab character after the ENTER key is pressed. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeReplaceQuotes",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if straight quotation marks are automatically changed to smart (curly) quotation marks as you type. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeReplaceSymbols",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if two consecutive hyphens (--) are replaced with an en dash (-) or an em dash (-) as you type. Read/write Boolean.If the hyphens are typed with leading and trailing spaces, Word replaces the hyphens with an en dash; if there are no trailing spaces, the hyphens are replaced with an em dash."
+    },
+    {
+      "name": "AutoFormatAsYouTypeReplaceOrdinals",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the ordinal number suffixes \"st\", \"nd\", \"rd\", and \"th\" are replaced with the same letters in superscript as you type. For example, \"1st\" is replaced with \"1\" followed by \"st\" formatted as superscript. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeReplaceFractions",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if typed fractions are replaced with fractions from the current character set as you type. For example, \"1/2\" is replaced with \".\" Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeReplacePlainTextEmphasis",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if manual emphasis characters are automatically replaced with character formatting as you type. For example, \"bold\" is changed to \" bold \" and \"_underline_\" is changed to \"underline.\" Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeFormatListItemBeginning",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word repeats character formatting applied to the beginning of a list item to the next list item. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeDefineStyles",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word automatically creates new styles based on manual formatting. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatPlainTextWordMail",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word automatically formats plain-text email messages when you open them in Word. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeReplaceHyperlinks",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if email addresses, server and share names (also known as UNC paths), and Internet addresses (also known as URLs) are automatically changed to hyperlinks as you type. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatReplaceHyperlinks",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if email addresses, server and share names (also known as UNC paths), and Internet addresses (also known as URLs) are automatically formatted whenever Word AutoFormats a document or range. Read/write Boolean."
+    },
+    {
+      "name": "DefaultHighlightColorIndex",
+      "kind": "property",
+      "type": "WdColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the color used to highlight text formatted with the Highlight button (Formatting toolbar). Read/write WdColorIndex."
+    },
+    {
+      "name": "DefaultBorderLineStyle",
+      "kind": "property",
+      "type": "WdLineStyle",
+      "access": "read/write",
+      "description": "Returns or sets the default border line style. Read/write WdLineStyle."
+    },
+    {
+      "name": "CheckSpellingAsYouType",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word checks spelling and marks errors automatically as you type. Read/write Boolean."
+    },
+    {
+      "name": "CheckGrammarAsYouType",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word checks grammar and marks errors automatically as you type. Read/write Boolean."
+    },
+    {
+      "name": "IgnoreInternetAndFileAddresses",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if file name extensions, MS-DOS paths, email addresses, server and share names (also known as UNC paths), and Internet addresses (also known as URLs) are ignored while checking spelling. Read/write Boolean."
+    },
+    {
+      "name": "ShowReadabilityStatistics",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word displays a list of summary statistics, including measures of readability, when it has finished checking grammar. Read/write Boolean."
+    },
+    {
+      "name": "IgnoreUppercase",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if words in all uppercase letters are ignored while checking spelling. Read/write Boolean."
+    },
+    {
+      "name": "IgnoreMixedDigits",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if words that contain numbers are ignored while checking spelling. Read/write Boolean."
+    },
+    {
+      "name": "SuggestFromMainDictionaryOnly",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word draws spelling suggestions from the main dictionary only. Read/write Boolean."
+    },
+    {
+      "name": "SuggestSpellingCorrections",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word always suggests alternative spellings for each misspelled word when checking spelling. Read/write Boolean."
+    },
+    {
+      "name": "DefaultBorderLineWidth",
+      "kind": "property",
+      "type": "WdLineWidth",
+      "access": "read/write",
+      "description": "Returns or sets the default line width of borders. Read/write WdLineWidth."
+    },
+    {
+      "name": "CheckGrammarWithSpelling",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word checks grammar while checking spelling. Read/write Boolean."
+    },
+    {
+      "name": "DefaultOpenFormat",
+      "kind": "property",
+      "type": "WdOpenFormat",
+      "access": "read/write",
+      "description": "Returns or sets the default file converter used to open documents. Can be a number returned by the OpenFormat property, or one of the following WdOpenFormat constants."
+    },
+    {
+      "name": "PrintDraft",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word prints using minimal formatting. Read/write Boolean."
+    },
+    {
+      "name": "PrintReverse",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word prints pages in reverse order. Read/write Boolean."
+    },
+    {
+      "name": "MapPaperSize",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if documents formatted for another country's/region's standard paper size (for example, A4) are automatically adjusted so that they're printed correctly on your country's/region's standard paper size (for example, Letter). Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeApplyTables",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word automatically creates a table when you type a plus sign, a series of hyphens, another plus sign, and so on, and then press ENTER. The plus signs become the column borders, and the hyphens become the column widths. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatApplyFirstIndents",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word replaces a space entered at the beginning of a paragraph with a first-line indent when Word formats a document or range automatically. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatMatchParentheses",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if improperly paired parentheses are corrected when Microsoft Word formats a document or range automatically. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatReplaceFarEastDashes",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if long vowel sound and dash use is corrected when Microsoft Word formats a document or range automatically. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatDeleteAutoSpaces",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if spaces inserted between Japanese and Latin text will be deleted when Microsoft Word formats a document or range automatically. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeApplyFirstIndents",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to automatically replace a space entered at the beginning of a paragraph with a first-line indent. Read/write."
+    },
+    {
+      "name": "AutoFormatAsYouTypeApplyDates",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to automatically apply the Date style to dates as you type. Read/write."
+    },
+    {
+      "name": "AutoFormatAsYouTypeApplyClosings",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to automatically apply the Closing style to letter closings as you type. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeMatchParentheses",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to automatically correct improperly paired parentheses. Read/write."
+    },
+    {
+      "name": "AutoFormatAsYouTypeReplaceFarEastDashes",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to automatically correct long vowel sounds and dashes. Read/write."
+    },
+    {
+      "name": "AutoFormatAsYouTypeDeleteAutoSpaces",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to automatically delete spaces inserted between Japanese and Latin text as you type. Read/write."
+    },
+    {
+      "name": "AutoFormatAsYouTypeInsertClosings",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to automatically insert the corresponding memo closing when the user enters a memo heading. Read/write."
+    },
+    {
+      "name": "AutoFormatAsYouTypeAutoLetterWizard",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to automatically start the Letter Wizard when the user enters a letter salutation or closing. Read/write."
+    },
+    {
+      "name": "AutoFormatAsYouTypeInsertOvers",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to automatically insert \"\" when the user enters \"\" or \"\". Read/write Boolean."
+    },
+    {
+      "name": "DisplayGridLines",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word displays the document grid. This property is the equivalent of the Gridlines command on the View menu. Read/write Boolean."
+    },
+    {
+      "name": "MatchFuzzyCase",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores the distinction between uppercase and lowercase letters during a search. Read/write Boolean."
+    },
+    {
+      "name": "MatchFuzzyByte",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores the distinction between full-width and half-width characters (Latin or Japanese) during a search. Read/write Boolean."
+    },
+    {
+      "name": "MatchFuzzyHiragana",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores the distinction between hiragana and katakana during a search. Read/write Boolean."
+    },
+    {
+      "name": "MatchFuzzySmallKana",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores the distinction between diphthongs and double consonants during a search. Read/write Boolean."
+    },
+    {
+      "name": "MatchFuzzyDash",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores the distinction between minus signs, long vowel sounds, and dashes during a search. Read/write Boolean."
+    },
+    {
+      "name": "MatchFuzzyIterationMark",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores the distinction between types of repetition marks during a search. Read/write Boolean."
+    },
+    {
+      "name": "MatchFuzzyKanji",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores the distinction between standard and nonstandard kanji ideography during a search. Read/write Boolean."
+    },
+    {
+      "name": "MatchFuzzyOldKana",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores the distinction between new kana and old kana characters during a search. Read/write Boolean."
+    },
+    {
+      "name": "MatchFuzzyProlongedSoundMark",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores the distinction between short and long vowel sounds during a search. Read/write Boolean."
+    },
+    {
+      "name": "MatchFuzzyDZ",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores the distinction between \" !Screenshot of the first symbol in the example.\" and \" !Screenshot of the second symbol in the example.\" and between \" !Screenshot of the third symbol in the example.\" and \" !Screenshot of the fourth symbol in the example.\" during a search. Read/write Boolean."
+    },
+    {
+      "name": "MatchFuzzyBV",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores the distinction between \" !Screenshot of symbol #1 in the example.\" and \" !Screenshot of symbol #2 in the example. !Screenshot of symbol #3 in the example.\" and between \" !Screenshot of symbol #4 in the example.\" and \" !Screenshot of symbol #5 in the example. !Screenshot of symbol #6 in the example.\" during a search. Read/write Boolean."
+    },
+    {
+      "name": "MatchFuzzyTC",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores the distinction between \" !Screenshot of the first symbol in the example. !Screenshot of the second symbol in the example.\", \" !Screenshot of the third symbol in the example. !Screenshot of the fourth symbol in the example.\", and \" !Screenshot of the fifth symbol in the example.\", and between \" !Screenshot of the sixth symbol in the example. !Screenshot of the seventh symbol in the example.\" and \" !Screenshot of the eighth symbol in the example.\" during a search. Read/write Boolean."
+    },
+    {
+      "name": "MatchFuzzyHF",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores the distinction between \" !Screenshot of the first symbol in the example. !Screenshot of the second symbol in the example.\" and \" !Screenshot of the third symbol in the example. !Screenshot of the fourth symbol in the example.\" and between \" !Screenshot of the fifth symbol in the example. !Screenshot of the sixth symbol in the example.\" and \" !Screenshot of the seventh symbol in the example. !Screenshot of the eighth symbol in the example.\" during a search. Read/write Boolean."
+    },
+    {
+      "name": "MatchFuzzyZJ",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores the distinction between \" !Screenshot of symbol #1 in the example.\" and \" !Screenshot of symbol #2 in the example. !Screenshot of symbol #3 in the example.\" and between \" !Screenshot of symbol #4 in the example.\" and \" !Screenshot of symbol #5 in the example. !Screenshot of symbol #6 in the example.\" during a search. Read/write Boolean."
+    },
+    {
+      "name": "MatchFuzzyAY",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores the distinction between \" !Screenshot of the first symbol in the example.\" and \" !Screenshot of the second symbol in the example.\" following !Screenshot of the third symbol in the example.-row and !Screenshot of the fourth symbol in the example.-row characters during a search. Read/write Boolean."
+    },
+    {
+      "name": "MatchFuzzyKiKu",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores the distinction between \" !Screenshot of symbol #1 in the example.\" and \" !Screenshot of symbol #2 in the example.\" before !Screenshot of symbol #3 in the example.-row characters during a search. Read/write Boolean."
+    },
+    {
+      "name": "MatchFuzzyPunctuation",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores the distinction between types of punctuation marks during a search. Read/write Boolean."
+    },
+    {
+      "name": "MatchFuzzySpace",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores the distinction between space markers used during a search. Read/write Boolean."
+    },
+    {
+      "name": "ApplyFarEastFontsToAscii",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word applies East Asian fonts to Latin text. Read/write Boolean."
+    },
+    {
+      "name": "ConvertHighAnsiToFarEast",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word converts text that is associated with an East Asian font to the appropriate font when it opens a document. Read/write Boolean."
+    },
+    {
+      "name": "PrintOddPagesInAscendingOrder",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word prints odd pages in ascending order during manual duplex printing. Read/write Boolean."
+    },
+    {
+      "name": "PrintEvenPagesInAscendingOrder",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word prints even pages in ascending order during manual duplex printing. Read/write Boolean."
+    },
+    {
+      "name": "DefaultBorderColorIndex",
+      "kind": "property",
+      "type": "WdColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the default line color for borders. Read/write WdColorIndex."
+    },
+    {
+      "name": "EnableMisusedWordsDictionary",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word checks for misused words when checking the spelling and grammar in a document. Read/write Boolean."
+    },
+    {
+      "name": "AllowCombinedAuxiliaryForms",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores auxiliary verb forms when checking spelling in a Korean language document. Read/write Boolean."
+    },
+    {
+      "name": "HangulHanjaFastConversion",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word automatically converts a word with only one suggestion during conversion between Hangul and Hanja. Read/write Boolean."
+    },
+    {
+      "name": "CheckHangulEndings",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word automatically detects Hangul endings and ignores them during conversion from Hangul to Hanja. Read/write Boolean."
+    },
+    {
+      "name": "EnableHangulHanjaRecentOrdering",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word displays the most recently used words at the top of the suggestions list during conversion between Hangul and Hanja. Read/write Boolean."
+    },
+    {
+      "name": "MultipleWordConversionsMode",
+      "kind": "property",
+      "type": "WdMultipleWordConversionsMode",
+      "access": "read/write",
+      "description": "Returns or sets the direction for conversion between Hangul and Hanja. Read/write WdMultipleWordConversionsMode."
+    },
+    {
+      "name": "DefaultBorderColor",
+      "kind": "property",
+      "type": "WdColor",
+      "access": "read/write",
+      "description": "Returns or sets the default 24-bit color to use for new Border objects. Read/write."
+    },
+    {
+      "name": "AllowPixelUnits",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word uses pixels as the default unit of measurement for HTML features that support measurements. Read/write Boolean."
+    },
+    {
+      "name": "UseCharacterUnit",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word uses characters as the default measurement unit for the current document. Read/write Boolean."
+    },
+    {
+      "name": "AllowCompoundNounProcessing",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores compound nouns when checking spelling in a Korean language document. Read/write Boolean."
+    },
+    {
+      "name": "AutoKeyboardSwitching",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word automatically switches the keyboard language to match what you are typing at any given time. Read/write Boolean."
+    },
+    {
+      "name": "DocumentViewDirection",
+      "kind": "property",
+      "type": "WdDocumentViewDirection",
+      "access": "read/write",
+      "description": "Returns or sets the alignment and reading order for the entire document. Read/write WdDocumentViewDirection."
+    },
+    {
+      "name": "ArabicNumeral",
+      "kind": "property",
+      "type": "WdArabicNumeral",
+      "access": "read/write",
+      "description": "Returns or sets the numeral style for an Arabic language document. Read/write WdArabicNumeral."
+    },
+    {
+      "name": "MonthNames",
+      "kind": "property",
+      "type": "WdMonthNames",
+      "access": "read/write",
+      "description": "Returns or sets the direction for conversion between Hangul and Hanja. Read/write WdMonthNames."
+    },
+    {
+      "name": "CursorMovement",
+      "kind": "property",
+      "type": "WdCursorMovement",
+      "access": "read/write",
+      "description": "Returns or sets how the insertion point progresses within bidirectional text. Read/write WdCursorMovement."
+    },
+    {
+      "name": "VisualSelection",
+      "kind": "property",
+      "type": "WdVisualSelection",
+      "access": "read/write",
+      "description": "Returns or sets the selection behavior based on visual cursor movement in a right-to-left language document. Read/write WdVisualSelection."
+    },
+    {
+      "name": "ShowDiacritics",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if diacritics are visible in a right-to-left language document. Read/write Boolean."
+    },
+    {
+      "name": "ShowControlCharacters",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if bidirectional control characters are visible in the current document. Read/write Boolean."
+    },
+    {
+      "name": "AddControlCharacters",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word adds bidirectional control characters when cutting and copying text. Read/write Boolean."
+    },
+    {
+      "name": "AddBiDirectionalMarksWhenSavingTextFile",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word adds bidirectional control characters when saving a document as a text file. Read/write Boolean."
+    },
+    {
+      "name": "StrictInitialAlefHamza",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the spelling checker uses spelling rules regarding Arabic words beginning with an alef hamza. Read/write Boolean."
+    },
+    {
+      "name": "StrictFinalYaa",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the spelling checker uses spelling rules regarding Arabic words ending with the letter yaa. Read/write Boolean."
+    },
+    {
+      "name": "HebrewMode",
+      "kind": "property",
+      "type": "WdHebSpellStart",
+      "access": "read/write",
+      "description": "Returns or sets the mode for the Hebrew spelling checker. Read/write WdHebSpellStart."
+    },
+    {
+      "name": "ArabicMode",
+      "kind": "property",
+      "type": "WdAraSpeller",
+      "access": "read/write",
+      "description": "Returns or sets the mode for the Arabic spelling checker. Read/write WdAraSpeller."
+    },
+    {
+      "name": "AllowClickAndTypeMouse",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Click and Type functionality is enabled. Read/write Boolean."
+    },
+    {
+      "name": "UseGermanSpellingReform",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word uses the German post-reform spelling rules when checking spelling. Read/write Boolean."
+    },
+    {
+      "name": "InterpretHighAnsi",
+      "kind": "property",
+      "type": "WdHighAnsiText",
+      "access": "read/write",
+      "description": "Returns or sets the high-ANSI text interpretation behavior. Read/write WdHighAnsiText."
+    },
+    {
+      "name": "AddHebDoubleQuote",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word encloses number formats in double quotation marks (\"). Read/write Boolean."
+    },
+    {
+      "name": "UseDiffDiacColor",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if you can set the color of diacritics in the current document. Read/write Boolean."
+    },
+    {
+      "name": "DiacriticColorVal",
+      "kind": "property",
+      "type": "WdColor",
+      "access": "read/write",
+      "description": "Returns or sets the 24-bit color to be used for diacritics in a right-to-left language document. Read/write."
+    },
+    {
+      "name": "OptimizeForWord97byDefault",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word optimizes all new documents for viewing in Word 97 by disabling any incompatible formatting. Read/write Boolean."
+    },
+    {
+      "name": "LocalNetworkFile",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word creates a local copy of a file on the user's computer when editing a file stored on a network server. Read/write Boolean."
+    },
+    {
+      "name": "TypeNReplace",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to replace illegal South Asian characters. Read/write Boolean."
+    },
+    {
+      "name": "SequenceCheck",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True to check the sequence of independent characters for South Asian text. Read/write Boolean."
+    },
+    {
+      "name": "DisableFeaturesbyDefault",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to disable in all documents all features introduced after the version of Word specified in the DisableFeaturesIntroducedAfterbyDefault. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "PasteAdjustWordSpacing",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word automatically adjusts the spacing of words when cutting and pasting selections. Read/write Boolean."
+    },
+    {
+      "name": "PasteAdjustParagraphSpacing",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word automatically adjusts the spacing of paragraphs when cutting and pasting selections. Read/write Boolean."
+    },
+    {
+      "name": "PasteAdjustTableFormatting",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word automatically adjusts the formatting of tables when cutting and pasting selections. Read/write Boolean."
+    },
+    {
+      "name": "PasteSmartStyleBehavior",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word intelligently merges styles when pasting a selection from a different document. Read/write Boolean."
+    },
+    {
+      "name": "PasteMergeFromPPT",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True to merge text formatting when pasting from Microsoft PowerPoint. Read/write Boolean."
+    },
+    {
+      "name": "PasteMergeFromXL",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True to merge table formatting when pasting from Microsoft Excel. Read/write Boolean."
+    },
+    {
+      "name": "CtrlClickHyperlinkToOpen",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word requires holding down the Ctrl key while clicking to open a hyperlink. Read/write Boolean."
+    },
+    {
+      "name": "PictureWrapType",
+      "kind": "property",
+      "type": "WdWrapTypeMerged",
+      "access": "read/write",
+      "description": "Sets or returns a WdWrapTypeMerged that indicates how Microsoft Word wraps text around pictures. Read/write."
+    },
+    {
+      "name": "DisableFeaturesIntroducedAfterbyDefault",
+      "kind": "property",
+      "type": "WdDisableFeaturesIntroducedAfter",
+      "access": "read/write",
+      "description": "Disables all features introduced after a the specified version for all documents. Read/write WdDisableFeaturesIntroducedAfter."
+    },
+    {
+      "name": "PasteSmartCutPaste",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word intelligently pastes selections into a document. Read/write Boolean."
+    },
+    {
+      "name": "DisplayPasteOptions",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to display the Paste Options button, which displays directly under newly pasted text. Read/write Boolean."
+    },
+    {
+      "name": "PromptUpdateStyle",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True displays a message asking the user to verify whether they want to reformat a style or reapply the original style formatting when changing the formatting of styles. Read/write Boolean."
+    },
+    {
+      "name": "DefaultEPostageApp",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns a String that represents the path and file name of the default electronic postage application. Read/write."
+    },
+    {
+      "name": "DefaultTextEncoding",
+      "kind": "property",
+      "type": "MsoEncoding",
+      "access": "read/write",
+      "description": "Returns or sets an MsoEncoding constant representing the code page, or character set, that Microsoft Word uses for all documents saved as encoded text files. Read/write."
+    },
+    {
+      "name": "WarnBeforeSavingPrintingSendingMarkup",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to display a warning when saving, printing, or sending as email a document containing comments or tracked changes. Read/write Boolean."
+    },
+    {
+      "name": "StoreRSIDOnSave",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to assign a random number to changes in a document, each time a document is saved, to facilitate comparing and merging documents. Read/write Boolean."
+    },
+    {
+      "name": "ShowFormatError",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to mark inconsistencies in formatting by placing a squiggly underline beneath text formatted similarly to other formatting that is used more frequently in a document. Read/write Boolean."
+    },
+    {
+      "name": "FormatScanning",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to keep track of all formatting in a document. Read/write Boolean."
+    },
+    {
+      "name": "PasteMergeLists",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True to merge the formatting of pasted lists with surrounding lists. Read/write Boolean."
+    },
+    {
+      "name": "AutoCreateNewDrawings",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to draw newly created shapes in a drawing canvas. Read/write Boolean."
+    },
+    {
+      "name": "SmartParaSelection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to include the paragraph mark in a selection when selecting most or all of a paragraph. Read/write Boolean."
+    },
+    {
+      "name": "RevisionsBalloonPrintOrientation",
+      "kind": "property",
+      "type": "WdRevisionsBalloonPrintOrientation",
+      "access": "read/write",
+      "description": "Returns or sets a WdRevisionsBalloonPrintOrientation constant that represents the direction of revision and comment balloons when they are printed. Read/write."
+    },
+    {
+      "name": "CommentsColor",
+      "kind": "property",
+      "type": "WdColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets a WdColorIndex constant that represents the color of comments in a document. Read/write."
+    },
+    {
+      "name": "PrintXMLTag",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns a Boolean that represents whether to print the XML tags when printing a document. Corresponds to the XML tags check box on the Print tab in the Options dialog box. ."
+    },
+    {
+      "name": "PrintBackgrounds",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns a Boolean that represents whether background colors and images are printed when a document is printed."
+    },
+    {
+      "name": "AllowReadingMode",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True indicates that Microsoft Word opens documents in Reading Layout view. Read/write Boolean."
+    },
+    {
+      "name": "ShowMarkupOpenSave",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether Microsoft Word displays hidden markup when opening or saving a file."
+    },
+    {
+      "name": "SmartCursoring",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether smart cursoring is enabled. True enables smart cursoring."
+    },
+    {
+      "name": "MoveToTextMark",
+      "kind": "property",
+      "type": "WdMoveToTextMark",
+      "access": "read/write",
+      "description": "Returns or sets a WdMoveToTextMark constant that represents the type of revision mark to use for moved text. Read/write."
+    },
+    {
+      "name": "MoveFromTextMark",
+      "kind": "property",
+      "type": "WdMoveFromTextMark",
+      "access": "read/write",
+      "description": "Returns or sets a WdMoveFromTextMark constant that represents the type of revision mark to use for moved text. Read/write."
+    },
+    {
+      "name": "BibliographyStyle",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String that represents the name of the style to use for formatting bibliographies. Read/write."
+    },
+    {
+      "name": "BibliographySort",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String that represents the order in which to display sources in the Source Manager dialog box. Read/write."
+    },
+    {
+      "name": "InsertedCellColor",
+      "kind": "property",
+      "type": "WdCellColor",
+      "access": "read/write",
+      "description": "Returns or sets a WdCellColor constant that represents the color for an inserted table cell. Read/write."
+    },
+    {
+      "name": "DeletedCellColor",
+      "kind": "property",
+      "type": "WdCellColor",
+      "access": "read/write",
+      "description": "Returns or sets a WdCellColor constant that represents the color for a deleted cell. Read/write."
+    },
+    {
+      "name": "MergedCellColor",
+      "kind": "property",
+      "type": "WdCellColor",
+      "access": "read/write",
+      "description": "Returns or sets a WdCellColor constant that represents the color for merged table cells. Read/write."
+    },
+    {
+      "name": "SplitCellColor",
+      "kind": "property",
+      "type": "WdCellColor",
+      "access": "read/write",
+      "description": "Returns or sets a WdCellColor that represents the color for split table cells. Read/write."
+    },
+    {
+      "name": "ShowSelectionFloaties",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether mini toolbars display when a user selects text. Read/write."
+    },
+    {
+      "name": "ShowMenuFloaties",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether to display mini toolbars when the user right-clicks in the document window. Read/write."
+    },
+    {
+      "name": "ShowDevTools",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether the Developer tab is displayed in the ribbon. Read/write."
+    },
+    {
+      "name": "EnableLivePreview",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Sets or returns a Boolean that represents whether to show or hide gallery previews that appear when using galleries that support previewing. True shows a preview in your document before applying the command. Read/write."
+    },
+    {
+      "name": "OMathAutoBuildUp",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether Microsoft Word automatically converts equations to professional format. True indicates that Word automatically converts equations to professional format. Read/write."
+    },
+    {
+      "name": "PasteFormatWithinDocument",
+      "kind": "property",
+      "type": "WdPasteOptions",
+      "access": "read/write",
+      "description": "Returns or sets a WdPasteOptions constant that represents how text is pasted when text is copied or cut and then pasted in the same document. Read/write."
+    },
+    {
+      "name": "PasteFormatBetweenDocuments",
+      "kind": "property",
+      "type": "WdPasteOptions",
+      "access": "read/write",
+      "description": "Returns or sets a WdPasteOptions constant that represents how text is pasted when text is copied from another Microsoft Office Word document. Read/write."
+    },
+    {
+      "name": "PasteFormatBetweenStyledDocuments",
+      "kind": "property",
+      "type": "WdPasteOptions",
+      "access": "read/write",
+      "description": "Returns or sets a WdPasteOptions constant that represents how text is pasted when text is copied from a document that uses styles. Read/write."
+    },
+    {
+      "name": "PasteFormatFromExternalSource",
+      "kind": "property",
+      "type": "WdPasteOptions",
+      "access": "read/write",
+      "description": "Returns or sets a WdPasteOptions constant that represents how text is pasted when text is copied from an external source, such as a webpage. Read/write."
+    },
+    {
+      "name": "PasteOptionKeepBulletsAndNumbers",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether to keep bullets and numbering when selecting Keep text only from the Paste Options context menu. Read/write."
+    },
+    {
+      "name": "INSKeyForOvertype",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the INS key can be used for switching Overtype on and off. Read/write Boolean."
+    },
+    {
+      "name": "RepeatWord",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether to mark words that are repeated when spelling is checked. True flags repeated words. Read/write."
+    },
+    {
+      "name": "FrenchReform",
+      "kind": "property",
+      "type": "WdFrenchSpeller",
+      "access": "read/write",
+      "description": "Returns or sets a WdFrenchSpeller constant that represents which spelling dictionary to use for regions of text with language formatting set to French. Read/write."
+    },
+    {
+      "name": "ContextualSpeller",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether to use the contextual speller to check spelling based on the context of a word and the words around it. Read/write."
+    },
+    {
+      "name": "MoveToTextColor",
+      "kind": "property",
+      "type": "WdColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets a WdColorIndex constant that represents the color of moved text. Read/write."
+    },
+    {
+      "name": "MoveFromTextColor",
+      "kind": "property",
+      "type": "WdColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets a WdColorIndex constant that represents the color of moved text. Read/write."
+    },
+    {
+      "name": "OMathCopyLF",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents how equations are represented in plain text. True indicates equations are represented in Linear Format. False indicates equations are represented in MathML. Read/write."
+    },
+    {
+      "name": "UseNormalStyleForList",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether Microsoft Word uses the Normal style for bullets and numbering. Read/write."
+    },
+    {
+      "name": "AllowOpenInDraftView",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether to allow users to open documents in draft view. Read/write."
+    },
+    {
+      "name": "EnableLegacyIMEMode",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether to enable legacy IME mode. Read/write."
+    },
+    {
+      "name": "DoNotPromptForConvert",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Sets or returns a Boolean that represents whether to prompt a warning dialog when the Convert command is invoked for documents that are in compatibility mode. Read/write."
+    },
+    {
+      "name": "PrecisePositioning",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether Word optimizes character positioning for print layout rather than on-screen readability. True disables the default setting that compresses character spacing to facilitate on-screen readability and enables character spacing for print media. Read/write."
+    },
+    {
+      "name": "UpdateStyleListBehavior",
+      "kind": "property",
+      "type": "WdUpdateStyleListBehavior",
+      "access": "read/write",
+      "description": "Returns or sets a WdUpdateStyleListBehavior constant that specifies the behavior Word should take when updating a style to match a selection that contains numbering or bullets. Read/write."
+    },
+    {
+      "name": "StrictTaaMarboota",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the spelling checker uses spelling rules to flag Arabic words ending with haa instead of taa marboota. Read/write."
+    },
+    {
+      "name": "StrictRussianE",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the spelling checker uses spelling rules regarding Russian words that use the strict  character. Read/write."
+    },
+    {
+      "name": "SpanishMode",
+      "kind": "property",
+      "type": "WdSpanishSpeller",
+      "access": "read/write",
+      "description": "Returns or sets the mode for the Spanish speller. Read/write WdSpanishSpeller."
+    },
+    {
+      "name": "PortugalReform",
+      "kind": "property",
+      "type": "WdPortugueseReform",
+      "access": "read/write",
+      "description": "Returns or sets the mode for the European Portuguese speller. Read/write WdPortugueseReform."
+    },
+    {
+      "name": "BrazilReform",
+      "kind": "property",
+      "type": "WdPortugueseReform",
+      "access": "read/write",
+      "description": "Returns or sets the mode for the Brazilian Portuguese speller. Read/write WdPortugueseReform."
+    },
+    {
+      "name": "UpdateFieldsWithTrackedChangesAtPrint",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word allows fields containing tracked changes to update before printing. Read/write."
+    },
+    {
+      "name": "DisplayAlignmentGuides",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that specifies whether alignment guides are enabled in the user interface. Read/write."
+    },
+    {
+      "name": "PageAlignmentGuides",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that specifies whether page alignment guides are displayed in the user interface. Read/write."
+    },
+    {
+      "name": "MarginAlignmentGuides",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that specifies whether margin alignment guides are displayed in the user interface. Read/write."
+    },
+    {
+      "name": "ParagraphAlignmentGuides",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that specifies whether paragraph alignment guides are displayed in the user interface. Read/write."
+    },
+    {
+      "name": "EnableLiveDrag",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that is True if live drag is enabled. Read/write."
+    },
+    {
+      "name": "UseSubPixelPositioning",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that specifies whether sub-pixel positioning is enabled. Read/write."
+    },
+    {
+      "name": "AlertIfNotDefault",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that is True if users are notified if Word is not the default program for viewing and editing documents. Read/write."
+    },
+    {
+      "name": "EnableProofingToolsAdvertisement",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that, when True, specifies that users be notified when additional proofing tools are available for download. Read/write."
+    },
+    {
+      "name": "PreferCloudSaveLocations",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True to save new documents in web locations by default. Read/write Boolean."
+    },
+    {
+      "name": "ExpandHeadingsOnOpen",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True to expand all headings in the document when the document opens. Read/write Boolean."
+    },
+    {
+      "name": "UseLocalUserInfo",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean; True if Microsoft Word identifies the document author based upon the User name and Initials settings on the General tab of the Options dialog box, and False if Word identifies the author based on the account information with which the user signed in to Office. Read/write."
+    },
+    {
+      "name": "CloudSignInOption",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True to give users the option to sign in to Microsoft OneDrive and other cloud locations. Read/write Boolean."
+    },
+    {
+      "name": "ShowPopupAddRowColToTable",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LiveWordCount",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "AllowCoAuthoringOnFilesWithMacros",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [],
+  "events": []
+}

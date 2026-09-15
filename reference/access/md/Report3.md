@@ -1,0 +1,163 @@
+# Report3
+
+**Type:** Dispatch Interface  
+**Library:** Microsoft Access 16.0 Object Library  
+**GUID:** {B0E35B78-55B0-47FB-8951-CA616F25CEAF}  
+
+## Properties (143)
+
+- `RecordSource As String  (read/write)`
+- `Filter As String  (read/write)`
+- `FilterOn As Boolean  (read/write)`
+- `OrderBy As String  (read/write)`
+- `OrderByOn As Boolean  (read/write)`
+- `ServerFilter As String  (read/write)`
+- `Caption As String  (read/write)`
+- `RecordLocks As Byte  (read/write)`
+- `PageHeader As Byte  (read/write)`
+- `PageFooter As Byte  (read/write)`
+- `DateGrouping As Byte  (read/write)`
+- `GrpKeepTogether As Byte  (read/write)`
+- `Width As Integer  (read/write)`
+- `Picture As String  (read/write)`
+- `PictureType As Byte  (read/write)`
+- `PictureSizeMode As Byte  (read/write)`
+- `PictureAlignment As Byte  (read/write)`
+- `PictureTiling As Boolean  (read/write)`
+- `PicturePages As Byte  (read/write)`
+- `MenuBar As String  (read/write)`
+- `Toolbar As String  (read/write)`
+- `ShortcutMenuBar As String  (read/write)`
+- `GridX As Integer  (read/write)`
+- `GridY As Integer  (read/write)`
+- `LayoutForPrint As Boolean  (read/write)`
+- `FastLaserPrinting As Boolean  (read/write)`
+- `HelpFile As String  (read/write)`
+- `HelpContextId As Long  (read/write)`
+- `Hwnd As Long  (read/write)`
+- `Count As Integer  (read/write)`
+- `Page As Long  (read/write)`
+- `Pages As Integer  (read/write)`
+- `HasData As Long  (read/write)`
+- `Left As Long  (read/write)`
+- `Top As Long  (read/write)`
+- `Height As Long  (read/write)`
+- `PrintSection As Boolean  (read/write)`
+- `NextRecord As Boolean  (read/write)`
+- `MoveLayout As Boolean  (read/write)`
+- `FormatCount As Integer  (read/write)`
+- `PrintCount As Integer  (read/write)`
+- `Visible As Boolean  (read/write)`
+- `Painting As Boolean  (read/write)`
+- `PrtMip As Variant  (read/write)`
+- `PrtDevMode As Variant  (read/write)`
+- `PrtDevNames As Variant  (read/write)`
+- `ForeColor As Long  (read/write)`
+- `CurrentX As Single  (read/write)`
+- `CurrentY As Single  (read/write)`
+- `ScaleHeight As Single  (read/write)`
+- `ScaleLeft As Single  (read/write)`
+- `ScaleMode As Integer  (read/write)`
+- `ScaleTop As Single  (read/write)`
+- `ScaleWidth As Single  (read/write)`
+- `FontBold As Integer  (read/write)`
+- `FontItalic As Integer  (read/write)`
+- `FontName As String  (read/write)`
+- `FontSize As Integer  (read/write)`
+- `FontUnderline As Integer  (read/write)`
+- `DrawMode As Integer  (read/write)`
+- `DrawStyle As Integer  (read/write)`
+- `DrawWidth As Integer  (read/write)`
+- `FillColor As Long  (read/write)`
+- `FillStyle As Integer  (read/write)`
+- `PaletteSource As String  (read/write)`
+- `Tag As String  (read/write)`
+- `PaintPalette As Variant  (read/write)`
+- `OnOpen As String  (read/write)`
+- `OnClose As String  (read/write)`
+- `OnActivate As String  (read/write)`
+- `OnDeactivate As String  (read/write)`
+- `OnNoData As String  (read/write)`
+- `OnPage As String  (read/write)`
+- `OnError As String  (read/write)`
+- `Dirty As Boolean  (read/write)`
+- `CurrentRecord As Long  (read/write)`
+- `PictureData As Variant  (read/write)`
+- `PicturePalette As Variant  (read/write)`
+- `HasModule As Boolean  (read/write)`
+- `Orientation As Byte  (read/write)`
+- `InputParameters As String  (read/write)`
+- `Application As Application  (read-only)`
+- `Parent As Object  (read-only)`
+- `ActiveControl As Control  (read-only)`
+- `DefaultControl As Control  (read-only)`
+- `GroupLevel As GroupLevel  (read-only)`
+- `Report As Report  (read-only)`
+- `Module As Module  (read-only)`
+- `Properties As Properties  (read-only)`
+- `Controls As Controls  (read-only)`
+- `Name As String  (read/write)`
+- `AutoResize As Boolean  (read/write)`
+- `AutoCenter As Boolean  (read/write)`
+- `PopUp As Boolean  (read/write)`
+- `Modal As Boolean  (read/write)`
+- `BorderStyle As Byte  (read/write)`
+- `ControlBox As Boolean  (read/write)`
+- `MinMaxButtons As Byte  (read/write)`
+- `CloseButton As Boolean  (read/write)`
+- `WindowWidth As Integer  (read/write)`
+- `WindowHeight As Integer  (read/write)`
+- `WindowTop As Integer  (read-only)`
+- `WindowLeft As Integer  (read-only)`
+- `OpenArgs As Variant  (read/write)`
+- `Printer As _Printer  (read/write)`
+- `Moveable As Boolean  (read/write)`
+- `UseDefaultPrinter As Boolean  (read/write)`
+- `Recordset As Object  (read/write)`
+- `RecordSourceQualifier As String  (read/write)`
+- `Shape As String  (read-only)`
+- `FilterOnLoad As Boolean  (read/write)`
+- `OrderByOnLoad As Boolean  (read/write)`
+- `DefaultView As Byte  (read/write)`
+- `AllowReportView As Boolean  (read/write)`
+- `ScrollBars As Byte  (read/write)`
+- `Cycle As Byte  (read/write)`
+- `OnCurrent As String  (read/write)`
+- `KeyPreview As Boolean  (read/write)`
+- `TimerInterval As Long  (read/write)`
+- `CurrentView As Integer  (read/write)`
+- `ShowPageMargins As Boolean  (read/write)`
+- `FitToPage As Boolean  (read/write)`
+- `AllowLayoutView As Boolean  (read/write)`
+- `OnLoad As String  (read/write)`
+- `OnResize As String  (read/write)`
+- `OnUnload As String  (read/write)`
+- `OnGotFocus As String  (read/write)`
+- `OnLostFocus As String  (read/write)`
+- `OnClick As String  (read/write)`
+- `OnDblClick As String  (read/write)`
+- `OnMouseDown As String  (read/write)`
+- `OnMouseMove As String  (read/write)`
+- `OnMouseUp As String  (read/write)`
+- `OnKeyDown As String  (read/write)`
+- `OnKeyUp As String  (read/write)`
+- `OnKeyPress As String  (read/write)`
+- `OnFilter As String  (read/write)`
+- `OnApplyFilter As String  (read/write)`
+- `OnTimer As String  (read/write)`
+- `MouseWheel As String  (read/write)`
+- `DisplayOnSharePointSite As Byte  (read/write)`
+- `Section As _Section  (read-only)`
+- `RibbonName As String  (read/write)`
+
+## Methods (9)
+
+- `Circle(flags As Integer, X As Single, Y As Single, radius As Single, color As Long, start As Single, end As Single, aspect As Single)`
+- `Line(flags As Integer, x1 As Single, y1 As Single, x2 As Single, y2 As Single, color As Long)`
+- `PSet(flags As Integer, X As Single, Y As Single, color As Long)`
+- `Scale(flags As Integer, x1 As Single, y1 As Single, x2 As Single, y2 As Single)`
+- `TextWidth(Expr As String) As Single`
+- `TextHeight(Expr As String) As Single`
+- `Print(Expr As String)`
+- `Move(Left As Variant, [Top As Variant], [Width As Variant], [Height As Variant])`
+- `Requery()`

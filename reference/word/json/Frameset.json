@@ -1,0 +1,176 @@
+{
+  "name": "Frameset",
+  "kind": "Dispatch Interface",
+  "guid": "{000209E2-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents an entire frames page or a single frame on a frames page.",
+  "remarks": "Use the Frameset property of a Document or Pane object to return a Frameset object. - For properties or methods that affect all frames on a frames page, use the Frameset object from the Document object ( ActiveWindow.Document.Frameset). - For properties or methods that affect individual frames on a frames page, use the Frameset object from the Pane object ( ActiveWindow.ActivePane.Frameset). This example opens a file named \"Proposal.doc,\" creates a frames page based on the file, and adds a frame (on the left side of the page) containing a table of contents for the file. This example adds a new frame to the right of the specified frame. This example sets the name of the third child Frameset object of the frames page to \"BottomFrame.\" This example links the specified frame to a local file called \"Order.htm.\" It sets the frame to be resizable, to appear with scrollbars in a web browser, and to be 25% as high as the active window. This example sets Microsoft Word to display frame borders in the specified frames page. This example sets the frame borders on the frames page to be 6 points wide and tan.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Frameset object."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ParentFrameset",
+      "kind": "property",
+      "type": "Frameset",
+      "access": "read-only",
+      "description": "Returns a Frameset object that represents the parent of the specified Frameset object on a frames page."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "WdFramesetType",
+      "access": "read-only",
+      "description": "Returns the Frameset object type. Read-only WdFramesetType."
+    },
+    {
+      "name": "WidthType",
+      "kind": "property",
+      "type": "WdFramesetSizeType",
+      "access": "read/write",
+      "description": "Returns or sets the width type for the specified Frameset object. Read/write WdFramesetSizeType."
+    },
+    {
+      "name": "HeightType",
+      "kind": "property",
+      "type": "WdFramesetSizeType",
+      "access": "read/write",
+      "description": "Returns or sets the width type for the specified frame on a frames page. Read/write WdFramesetSizeType."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the width (in points) of the specified Frameset object. Read/write Long."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Float that represents the height (in points) of the specified Frameset object. Read/write."
+    },
+    {
+      "name": "ChildFramesetCount",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of child Frameset objects associated with the specified Frameset object. Read-only Long."
+    },
+    {
+      "name": "ChildFramesetItem",
+      "kind": "property",
+      "type": "Frameset",
+      "access": "read-only",
+      "description": "Returns the Frameset object that represents the child Frameset object specified by the Index argument. Read-only."
+    },
+    {
+      "name": "FramesetBorderWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the width (in points) of the borders surrounding the frames on the specified frames page. Read/write Single."
+    },
+    {
+      "name": "FramesetBorderColor",
+      "kind": "property",
+      "type": "WdColor",
+      "access": "read/write",
+      "description": "Returns or sets the color of the frame borders on the specified frames page. Read/write."
+    },
+    {
+      "name": "FrameScrollbarType",
+      "kind": "property",
+      "type": "WdScrollbarType",
+      "access": "read/write",
+      "description": "Returns or sets when scroll bars are available for the specified frame when viewing its frames page in a web browser. Read/write WdScrollbarType."
+    },
+    {
+      "name": "FrameResizable",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the user can resize the specified frame when the frames page is viewed in a web browser. Read/write Boolean."
+    },
+    {
+      "name": "FrameName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the specified frame on a frames page. Read/write String."
+    },
+    {
+      "name": "FrameDisplayBorders",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the frame borders on the specified frames page are displayed. Read/write Boolean."
+    },
+    {
+      "name": "FrameDefaultURL",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the webpage or other document to be displayed in the specified frame when the frames page is opened. Read/write String."
+    },
+    {
+      "name": "FrameLinkToFile",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the webpage or other document specified by the FrameDefaultURL property is an external file to which Microsoft Word maintains only a link from the specified frame. Read/write Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "AddNewFrame",
+      "kind": "method",
+      "signature": "AddNewFrame(Where As WdFramesetNewFrameLocation) As Frameset",
+      "description": "Adds a new frame to a frames page.",
+      "returns": "Frameset",
+      "parameters": [
+        {
+          "name": "Where",
+          "type": "WdFramesetNewFrameLocation",
+          "optional": false,
+          "description": "Sets the location where the new frame is to be added in relation to the specified frame."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified Frameset object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

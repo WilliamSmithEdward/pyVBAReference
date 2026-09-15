@@ -1,0 +1,168 @@
+{
+  "name": "Frame",
+  "kind": "Dispatch Interface",
+  "guid": "{0002092A-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a frame. The Frame object is a member of the Frames collection. The Frames collection includes all frames in a selection, range, or document.",
+  "remarks": "Use Frames (Index), where Index is the index number, to return a single Frame object. The index number represents the position of the frame in the selection, range, or document. The following example allows text to wrap around the first frame in the active document. Use the Add method to add a frame around a range. The following example adds a frame around the first paragraph in the active document. You can wrap text around Shape or ShapeRange objects by using the WrapFormat property. You can position a Shape or ShapeRange object by using the Top and Left properties.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Frame object."
+    },
+    {
+      "name": "HeightRule",
+      "kind": "property",
+      "type": "WdFrameSizeRule",
+      "access": "read/write",
+      "description": "Returns or sets a WdFrameSizeRule that represents the rule for determining the height of the specified frame. Read/write."
+    },
+    {
+      "name": "WidthRule",
+      "kind": "property",
+      "type": "WdFrameSizeRule",
+      "access": "read/write",
+      "description": "Returns or sets the rule used to determine the width of a frame. Read/write WdFrameSizeRule."
+    },
+    {
+      "name": "HorizontalDistanceFromText",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the horizontal distance between a frame and the surrounding text, in points. Read/write Single."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the height (in points) of the specified frame. Read/write ."
+    },
+    {
+      "name": "HorizontalPosition",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the horizontal distance between the edge of the frame and the item specified by the RelativeHorizontalPosition property. Read/write Single."
+    },
+    {
+      "name": "LockAnchor",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified frame is locked. Read/write Boolean."
+    },
+    {
+      "name": "RelativeHorizontalPosition",
+      "kind": "property",
+      "type": "WdRelativeHorizontalPosition",
+      "access": "read/write",
+      "description": "Specifies the relative horizontal position of a frame. Read/write WdRelativeHorizontalPosition."
+    },
+    {
+      "name": "RelativeVerticalPosition",
+      "kind": "property",
+      "type": "WdRelativeVerticalPosition",
+      "access": "read/write",
+      "description": "Specifies the relative vertical position of a frame. Read/write WdRelativeVerticalPosition."
+    },
+    {
+      "name": "VerticalDistanceFromText",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the vertical distance (in points) between a frame and the surrounding text. Read/write Single."
+    },
+    {
+      "name": "VerticalPosition",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the vertical distance between the edge of the frame and the item specified by the RelativeVerticalPosition property. Read/write Single."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the width (in points) of the frame, in points. Read/write Long."
+    },
+    {
+      "name": "TextWrap",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if document text wraps around the specified frame. Read/write Boolean."
+    },
+    {
+      "name": "Shading",
+      "kind": "property",
+      "type": "Shading",
+      "access": "read-only",
+      "description": "Returns a Shading object that refers to the shading formatting for the specified object."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read/write",
+      "description": "Returns a Borders collection that represents all the borders for the specified frame."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the portion of a document that's contained within the frame."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified frame.",
+      "returns": "void"
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects the specified object.",
+      "returns": "void"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy()",
+      "description": "Copies the specified frame to the Clipboard.",
+      "returns": "void"
+    },
+    {
+      "name": "Cut",
+      "kind": "method",
+      "signature": "Cut()",
+      "description": "Removes the specified frame from the document and places it on the Clipboard.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

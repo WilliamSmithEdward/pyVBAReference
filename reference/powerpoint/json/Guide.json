@@ -1,0 +1,56 @@
+{
+  "name": "Guide",
+  "kind": "Dispatch Interface",
+  "guid": "{3D2F865B-E2DB-4896-BC35-6A006DF896DC}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a drawing guide in the presentation or custom layout.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the PowerPoint application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "Orientation",
+      "kind": "property",
+      "type": "PpGuideOrientation",
+      "access": "read-only",
+      "description": "Returns the orientation of the drawing guide (horizontal or vertical) as a constant from the PpGuideOrientation enumeration. Read-only."
+    },
+    {
+      "name": "Position",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the position of the drawing guide along the x- or y-axis. Read/write."
+    },
+    {
+      "name": "Color",
+      "kind": "property",
+      "type": "ColorFormat",
+      "access": "read-only",
+      "description": "Returns a ColorFormat object that represents the color of the drawing guide. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Removes the drawing guide from the presentation or custom layout.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,56 @@
+{
+  "name": "LinkFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{91493489-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Contains properties and methods that apply to linked OLE objects, linked pictures, and IIRC media objects.",
+  "remarks": "",
+  "example": "For Each sld In ActivePresentation.Slides\n\n    For Each sh In sld.Shapes\n\n        If sh.Type = msoLinkedOLEObject Then\n\n            If sh.OLEFormat.ProgID = \"Excel.Sheet.12\" Then\n\n                sh.LinkFormat.AutoUpdate = ppUpdateOptionManual\n\n            End If\n\n        End If\n\n    Next\n\nNext",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "SourceFullName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name and path of the source file for the linked OLE object. Read/write."
+    },
+    {
+      "name": "AutoUpdate",
+      "kind": "property",
+      "type": "PpUpdateOption",
+      "access": "read/write",
+      "description": "Returns or sets the way the link will be updated. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Update",
+      "kind": "method",
+      "signature": "Update()",
+      "description": "Updates the specified linked OLE object.",
+      "returns": "void"
+    },
+    {
+      "name": "BreakLink",
+      "kind": "method",
+      "signature": "BreakLink()",
+      "description": "Breaks the link between the source file and the specified OLE object, picture, or linked field.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

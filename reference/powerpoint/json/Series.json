@@ -1,0 +1,581 @@
+{
+  "name": "Series",
+  "kind": "Dispatch Interface",
+  "guid": "{92D41A75-F07E-4CA4-AF6F-BEF486AA4E6F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a series in a chart.",
+  "remarks": "The Series object is a member of the SeriesCollection collection.",
+  "example": "With ActiveDocument.InlineShapes(1)\n\n    If .HasChart Then\n\n        .Chart.SeriesCollection(1).Interior.Color = RGB(255, 0, 0)\n\n    End If\n\nEnd With",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "AxisGroup",
+      "kind": "property",
+      "type": "XlAxisGroup",
+      "access": "read/write",
+      "description": "Returns the type of axis group. Read/write XlAxisGroup."
+    },
+    {
+      "name": "ErrorBars",
+      "kind": "property",
+      "type": "ErrorBars",
+      "access": "read-only",
+      "description": "Returns the error bars for the series. Read-only ErrorBars."
+    },
+    {
+      "name": "Explosion",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the explosion value for a pie-chart or doughnut-chart slice. Read/write Long."
+    },
+    {
+      "name": "Formula",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the object's formula in A1-style notation and in the language of the macro. Read/write String."
+    },
+    {
+      "name": "FormulaLocal",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the formula for the object, using A1-style references in the language of the user. Read/write String."
+    },
+    {
+      "name": "FormulaR1C1",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the formula for the object, using R1C1-style notation in the language of the macro. Read/write String."
+    },
+    {
+      "name": "FormulaR1C1Local",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the formula for the object, using R1C1-style notation in the language of the user. Read/write String."
+    },
+    {
+      "name": "HasDataLabels",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the series has data labels. Read/write Boolean."
+    },
+    {
+      "name": "HasErrorBars",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the series has error bars. Read/write Boolean."
+    },
+    {
+      "name": "InvertIfNegative",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word inverts the pattern in the object when it corresponds to a negative number. Read/write Variant."
+    },
+    {
+      "name": "MarkerBackgroundColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Sets the marker background color as an RGB value or returns the corresponding color index value. Read/write Long."
+    },
+    {
+      "name": "MarkerBackgroundColorIndex",
+      "kind": "property",
+      "type": "XlColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the marker background color as an index into the current color palette, or as one of the following XlColorIndex constants: xlColorIndexAutomatic or xlColorIndexNone. Read/write Long."
+    },
+    {
+      "name": "MarkerForegroundColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Sets the marker foreground color as an RGB value or returns the corresponding color index value. Read/write Long."
+    },
+    {
+      "name": "MarkerForegroundColorIndex",
+      "kind": "property",
+      "type": "XlColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the marker foreground color as an index into the current color palette, or as one of the following XlColorIndex constants: xlColorIndexAutomatic or xlColorIndexNone. Read/write Long."
+    },
+    {
+      "name": "MarkerSize",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the data-marker size, in points. Read/write Long."
+    },
+    {
+      "name": "MarkerStyle",
+      "kind": "property",
+      "type": "XlMarkerStyle",
+      "access": "read/write",
+      "description": "Returns or sets the marker style for a point or series in a line chart, scatter chart, or radar chart. Read/write XlMarkerStyle."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the object. Read/write String."
+    },
+    {
+      "name": "PictureType",
+      "kind": "property",
+      "type": "XlChartPictureType",
+      "access": "read/write",
+      "description": "Returns or sets a value that specifies how pictures are displayed on a column or bar picture chart. Read/write XlChartPictureType."
+    },
+    {
+      "name": "PlotOrder",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the plot order for the selected series within the chart group. Read/write Long."
+    },
+    {
+      "name": "Smooth",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if curve smoothing is enabled for the line chart or scatter chart. Read/write Boolean."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the series type. Read/write Long."
+    },
+    {
+      "name": "ChartType",
+      "kind": "property",
+      "type": "XlChartType",
+      "access": "read/write",
+      "description": "Returns or sets the chart type. Read/write XlChartType."
+    },
+    {
+      "name": "Values",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a collection of all the values in the series. Read/write Variant."
+    },
+    {
+      "name": "XValues",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets an array of x values for a chart series. Read/write Variant."
+    },
+    {
+      "name": "BubbleSizes",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a string that refers to the worksheet cells that contain the x-value, y-value, and size data for the bubble chart. Read/write Variant."
+    },
+    {
+      "name": "BarShape",
+      "kind": "property",
+      "type": "XlBarShape",
+      "access": "read/write",
+      "description": "Returns or sets the shape used for a single series in a 3D bar or column chart. Read/write XlBarShape."
+    },
+    {
+      "name": "ApplyPictToSides",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a picture is applied to the sides of the point or all points in the series. Read/write Boolean."
+    },
+    {
+      "name": "ApplyPictToFront",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a picture is applied to the front of the point or all points in the series. Read/write Boolean."
+    },
+    {
+      "name": "ApplyPictToEnd",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a picture is applied to the end of the point or all points in the series. Read/write Boolean."
+    },
+    {
+      "name": "Has3DEffect",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the series has a three-dimensional appearance. Read/write Boolean."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a value that indicates whether the object has a shadow. Read/write Boolean."
+    },
+    {
+      "name": "HasLeaderLines",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the series has leader lines. Read/write Boolean."
+    },
+    {
+      "name": "LeaderLines",
+      "kind": "property",
+      "type": "LeaderLines",
+      "access": "read-only",
+      "description": "Returns the leader lines for the series. Read-only LeaderLines."
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "ChartFormat",
+      "access": "read-only",
+      "description": "Returns the line, fill, and effect formatting for the object. Read-only ChartFormat."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "PictureUnit2",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the unit for each picture on the chart if the PictureType property is set to xlStackScale; otherwise, this property is ignored. Read/write Double."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the Microsoft PowerPoint application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    },
+    {
+      "name": "PlotColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns an index value that is used internally to associate series formatting with chart elements. Read-only."
+    },
+    {
+      "name": "InvertColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the fill color for negative data points in a series. Read/write."
+    },
+    {
+      "name": "InvertColorIndex",
+      "kind": "property",
+      "type": "XlColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the fill color for negative data points in a series. Read/write."
+    },
+    {
+      "name": "IsFiltered",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that determines whether the specified chart series is filtered out from the chart. Read/write."
+    },
+    {
+      "name": "ParentDataLabelOption",
+      "kind": "property",
+      "type": "XlParentDataLabelOptions",
+      "access": "read/write",
+      "description": "Specifies the parent data label option (banner, overlapping, or none) for the specified series within the chart group. Read/write XlParentDataLabelOptions enumeration (PowerPoint)."
+    },
+    {
+      "name": "QuartileCalculationInclusiveMedian",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the series uses an inclusive median quartile calculation method. Read/write Boolean."
+    },
+    {
+      "name": "ValueSortOrder",
+      "kind": "property",
+      "type": "XlValueSortOrder",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GeoProjectionType",
+      "kind": "property",
+      "type": "XlGeoProjectionType",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GeoMappingLevel",
+      "kind": "property",
+      "type": "XlGeoMappingLevel",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "RegionLabelOption",
+      "kind": "property",
+      "type": "XlRegionLabelOptions",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "SeriesColorGradientStyle",
+      "kind": "property",
+      "type": "XlSeriesColorGradientStyle",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "ClearFormats",
+      "kind": "method",
+      "signature": "ClearFormats() As Variant",
+      "description": "Clears the formatting of the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy() As Variant",
+      "description": "If the series has a picture fill, copies the picture to the Clipboard.",
+      "returns": "Variant"
+    },
+    {
+      "name": "DataLabels",
+      "kind": "method",
+      "signature": "DataLabels([Index As Variant]) As Object",
+      "description": "Returns an object that represents either a single data label (a DataLabel object) or a collection of all the data labels for the series (a DataLabels collection).",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of the data label."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "ErrorBar",
+      "kind": "method",
+      "signature": "ErrorBar(Direction As XlErrorBarDirection, Include As XlErrorBarInclude, Type As XlErrorBarType, [Amount As Variant], [MinusValues As Variant]) As Variant",
+      "description": "Applies error bars to the series.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Direction",
+          "type": "XlErrorBarDirection",
+          "optional": false,
+          "description": "One of the enumeration values that specifies the error bar direction."
+        },
+        {
+          "name": "Include",
+          "type": "XlErrorBarInclude",
+          "optional": false,
+          "description": "One of the enumeration values that specifies the error bar parts to include."
+        },
+        {
+          "name": "Type",
+          "type": "XlErrorBarType",
+          "optional": false,
+          "description": "One of the enumeration values that specifies the error bar type."
+        },
+        {
+          "name": "Amount",
+          "type": "Variant",
+          "optional": true,
+          "description": "The error amount. Used for only the positive error amount when Type is xlErrorBarTypeCustom."
+        },
+        {
+          "name": "MinusValues",
+          "type": "Variant",
+          "optional": true,
+          "description": "The negative error amount when Type is xlErrorBarTypeCustom."
+        }
+      ]
+    },
+    {
+      "name": "Paste",
+      "kind": "method",
+      "signature": "Paste() As Variant",
+      "description": "Pastes a picture from the Clipboard as the marker on the selected series.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Points",
+      "kind": "method",
+      "signature": "Points([Index As Variant]) As Object",
+      "description": "Returns a collection of all the points in the series.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name or number of the point."
+        }
+      ]
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select() As Variant",
+      "description": "Selects the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Trendlines",
+      "kind": "method",
+      "signature": "Trendlines([Index As Variant]) As Object",
+      "description": "Returns a collection of all the trendlines for the series.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ApplyDataLabels",
+      "kind": "method",
+      "signature": "ApplyDataLabels([Type As XlDataLabelsType], [LegendKey As Variant], [AutoText As Variant], [HasLeaderLines As Variant], [ShowSeriesName As Variant], [ShowCategoryName As Variant], [ShowValue As Variant], [ShowPercentage As Variant], [ShowBubbleSize As Variant], [Separator As Variant]) As Variant",
+      "description": "Applies data labels to a series.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "XlDataLabelsType",
+          "optional": true,
+          "description": "The type of data label to apply."
+        },
+        {
+          "name": "LegendKey",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to show the legend key next to the point. The default is False."
+        },
+        {
+          "name": "AutoText",
+          "type": "Variant",
+          "optional": true,
+          "description": "True if the object automatically generates appropriate text based on content."
+        },
+        {
+          "name": "HasLeaderLines",
+          "type": "Variant",
+          "optional": true,
+          "description": "For the Chart and Series objects, True if the series has leader lines."
+        },
+        {
+          "name": "ShowSeriesName",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to enable the series name for the data label; otherwise, False."
+        },
+        {
+          "name": "ShowCategoryName",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to enable the category name for the data label; otherwise, False."
+        },
+        {
+          "name": "ShowValue",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to enable the value for the data label; otherwise, False."
+        },
+        {
+          "name": "ShowPercentage",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to enable the percentage for the data label; otherwise, False."
+        },
+        {
+          "name": "ShowBubbleSize",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to enable the bubble size for the data label; otherwise, False."
+        },
+        {
+          "name": "Separator",
+          "type": "Variant",
+          "optional": true,
+          "description": "The separator for the data label."
+        }
+      ]
+    },
+    {
+      "name": "GetProperty",
+      "kind": "method",
+      "signature": "GetProperty(Id As String) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Id",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetProperty",
+      "kind": "method",
+      "signature": "SetProperty(Id As String, Value As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Id",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Value",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

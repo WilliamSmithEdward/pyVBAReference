@@ -1,0 +1,98 @@
+{
+  "name": "CaptionLabel",
+  "kind": "Dispatch Interface",
+  "guid": "{00020979-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single caption label. The CaptionLabel object is a member of the CaptionLabels collection. The items in the CaptionLabels collection are listed in the Label box in the Caption dialog box.",
+  "remarks": "Use CaptionLabels (_index_), where _index_ is the caption label name or index number, to return a single CaptionLabel object. The following example sets the numbering style for the Figure caption label. The index number represents the position of the caption label in the CaptionLabels collection. The following example displays the first caption label. Use the Add method to add a custom caption label. The following example adds a caption label named \"Photo.\"",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified CaptionLabel object."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the specified object. Read-only String."
+    },
+    {
+      "name": "BuiltIn",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified caption label is one of the built-in caption labels in Word. Read-only Boolean."
+    },
+    {
+      "name": "ID",
+      "kind": "property",
+      "type": "WdCaptionLabelID",
+      "access": "read-only",
+      "description": "Returns a WdCaptionLabelID constant that represents the type for the specified caption label if the BuiltIn property of the CaptionLabel object is True. Read-only."
+    },
+    {
+      "name": "IncludeChapterNumber",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a chapter number is included with page numbers or a caption label. Read/write Boolean."
+    },
+    {
+      "name": "NumberStyle",
+      "kind": "property",
+      "type": "WdCaptionNumberStyle",
+      "access": "read/write",
+      "description": "Returns or sets the number style for the CaptionLabel object. Read/write WdCaptionNumberStyle."
+    },
+    {
+      "name": "ChapterStyleLevel",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the heading style that marks a new chapter when chapter numbers are included with the specified caption label. Read/write Long."
+    },
+    {
+      "name": "Separator",
+      "kind": "property",
+      "type": "WdSeparatorType",
+      "access": "read/write",
+      "description": "Returns or sets the character between the chapter number and the sequence number. Read/write WdSeparatorType."
+    },
+    {
+      "name": "Position",
+      "kind": "property",
+      "type": "WdCaptionPosition",
+      "access": "read/write",
+      "description": "Returns or sets the position of caption label text. Read/write WdCaptionPosition."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified caption label.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,48 @@
+{
+  "name": "CommandEffect",
+  "kind": "Dispatch Interface",
+  "guid": "{914934EF-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a command effect for an animation behavior. You can send events, call functions, and send OLE verbs to embedded objects using this object.",
+  "remarks": "Use the CommandEffect property of the AnimationBehavior object to return a CommandEffect object. Command effects can be changed using the CommandEffect object's Command and Type properties.",
+  "example": "Set bhvEffect = effectNew.Behaviors.Add(msoAnimTypeCommand)\n\n\n\n    With bhvEffect.CommandEffect\n\n         .Type = msoAnimCommandTypeVerb\n\n         .Command = Play\n\n    End With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoAnimCommandType",
+      "access": "read/write",
+      "description": "Represents the type of animation. Read/write."
+    },
+    {
+      "name": "Command",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Represents the command to be executed for the command effect. Read/write."
+    },
+    {
+      "name": "bookmark",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the bookmark of the specified object. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

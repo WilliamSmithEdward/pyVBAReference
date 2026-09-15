@@ -1,0 +1,79 @@
+{
+  "name": "OMathRecognizedFunctions",
+  "kind": "Dispatch Interface",
+  "guid": "{44FEE887-6600-41AB-95A5-DE33C605116C}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a collection of recognized functions. Use the OMathRecognizedFunction object to access individual members of the collection.",
+  "remarks": "The OMathRecognizedFunctions collection is a collection of the names that are contained in the Recognized Functions dialog box.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathRecognizedFunctions object."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of items in the OMathRecognizedFunctions collection. Read-only Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As OMathRecognizedFunction",
+      "description": "Returns an OMathRecognizedFunction object that represents the specified item in the collection.",
+      "returns": "OMathRecognizedFunction",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "Specifies a String or Integer that represents the name or ordinal position of the object in the collection."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String) As OMathRecognizedFunction",
+      "description": "Creates a new recognized function and returns an OMathRecognizedFunction object.",
+      "returns": "OMathRecognizedFunction",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the recognized function."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

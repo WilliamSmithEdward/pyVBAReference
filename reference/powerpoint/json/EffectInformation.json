@@ -1,0 +1,83 @@
+{
+  "name": "EffectInformation",
+  "kind": "Dispatch Interface",
+  "guid": "{914934E2-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents various animation options for an Effect object.",
+  "remarks": "Use the members of the EffectInformation object to return the current state of an Effect object, such as the after effect, whether the background animates along with its corresponding text, whether text animates in reverse, play settings, sound effects, text building behavior. All of the members of the EffectInformation object are read-only. To change any effect information properties, you must use the methods of the corresponding Sequence object. Use the EffectInformationproperty of the Effect object to return an EffectInformation object.",
+  "example": "Sub HideEffect()\n    ActiveWindow.Selection.SlideRange(1).TimeLine _\n        .MainSequence(1).EffectInformation.PlaySettings _\n        .HideWhileNotPlaying = msoTrue\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "AfterEffect",
+      "kind": "property",
+      "type": "MsoAnimAfterEffect",
+      "access": "read-only",
+      "description": "Returns an PpAfterEffect constant that indicates whether an after effect appears dimmed, hidden, or unchanged after it runs. Read-only."
+    },
+    {
+      "name": "AnimateBackground",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Returns msoTrue if the specified effect is a background animation. Read-only."
+    },
+    {
+      "name": "AnimateTextInReverse",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Determines whether the specified shape is built in reverse order. Applies only to shapes (such as shapes containing lists) that can be built in more than one step. Read/write."
+    },
+    {
+      "name": "BuildByLevelEffect",
+      "kind": "property",
+      "type": "MsoAnimateByLevel",
+      "access": "read-only",
+      "description": "Determines the level of the animation build effect. Read-only."
+    },
+    {
+      "name": "Dim",
+      "kind": "property",
+      "type": "ColorFormat",
+      "access": "read-only",
+      "description": "Returns a ColorFormat object that represents the color to dim to after an animation is finished."
+    },
+    {
+      "name": "PlaySettings",
+      "kind": "property",
+      "type": "PlaySettings",
+      "access": "read-only",
+      "description": "Returns a PlaySettings object that contains information about how the specified media clip plays during a slide show. Read-only."
+    },
+    {
+      "name": "SoundEffect",
+      "kind": "property",
+      "type": "SoundEffect",
+      "access": "read-only",
+      "description": "Returns a SoundEffect object that represents the sound to be played during the transition to the specified slide. Read-only."
+    },
+    {
+      "name": "TextUnitEffect",
+      "kind": "property",
+      "type": "MsoAnimTextUnitEffect",
+      "access": "read-only",
+      "description": "Indicates whether the text in the specified shape is animated paragraph by paragraph, word by word, or letter by letter. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -1,0 +1,86 @@
+{
+  "name": "Frames",
+  "kind": "Dispatch Interface",
+  "guid": "{0002092B-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Frames object."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of frames in the collection. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Frame",
+      "description": "Returns an individual Frames object in a collection.",
+      "returns": "Frame",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Range As Range) As Frame",
+      "description": "Returns a Frame object that represents a new frame added to a range, selection, or document.",
+      "returns": "Frame",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The range that you want the frame to surround."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified Frames collection.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

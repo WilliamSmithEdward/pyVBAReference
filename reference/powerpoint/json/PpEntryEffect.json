@@ -1,0 +1,968 @@
+{
+  "name": "PpEntryEffect",
+  "kind": "Enumeration",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Specifies the special effect applied to the animation for the specified shape or to the specified slide transition.",
+  "constants": [
+    {
+      "name": "ppEffectMixed",
+      "value": -2,
+      "description": "Mixed"
+    },
+    {
+      "name": "ppEffectNone",
+      "value": 0,
+      "description": "None"
+    },
+    {
+      "name": "ppEffectCut",
+      "value": 257,
+      "description": "Cut"
+    },
+    {
+      "name": "ppEffectCutThroughBlack",
+      "value": 258,
+      "description": "Cut Through Black"
+    },
+    {
+      "name": "ppEffectRandom",
+      "value": 513,
+      "description": "Random"
+    },
+    {
+      "name": "ppEffectBlindsHorizontal",
+      "value": 769,
+      "description": "Blinds Horizontal"
+    },
+    {
+      "name": "ppEffectBlindsVertical",
+      "value": 770,
+      "description": "Blinds Vertical"
+    },
+    {
+      "name": "ppEffectCheckerboardAcross",
+      "value": 1025,
+      "description": "Checkerboard Across"
+    },
+    {
+      "name": "ppEffectCheckerboardDown",
+      "value": 1026,
+      "description": "Checkerboard Down"
+    },
+    {
+      "name": "ppEffectCoverLeft",
+      "value": 1281,
+      "description": "Cover Left"
+    },
+    {
+      "name": "ppEffectCoverUp",
+      "value": 1282,
+      "description": "Cover Up"
+    },
+    {
+      "name": "ppEffectCoverRight",
+      "value": 1283,
+      "description": ""
+    },
+    {
+      "name": "ppEffectCoverDown",
+      "value": 1284,
+      "description": "Cover Down"
+    },
+    {
+      "name": "ppEffectCoverLeftUp",
+      "value": 1285,
+      "description": "Cover Left Up"
+    },
+    {
+      "name": "ppEffectCoverRightUp",
+      "value": 1286,
+      "description": "Cover Right Up"
+    },
+    {
+      "name": "ppEffectCoverLeftDown",
+      "value": 1287,
+      "description": "Cover Left Down"
+    },
+    {
+      "name": "ppEffectCoverRightDown",
+      "value": 1288,
+      "description": "Cover Right Down"
+    },
+    {
+      "name": "ppEffectDissolve",
+      "value": 1537,
+      "description": "Dissolve"
+    },
+    {
+      "name": "ppEffectFade",
+      "value": 1793,
+      "description": "Fade"
+    },
+    {
+      "name": "ppEffectUncoverLeft",
+      "value": 2049,
+      "description": "Uncover Left"
+    },
+    {
+      "name": "ppEffectUncoverUp",
+      "value": 2050,
+      "description": "Uncover Up"
+    },
+    {
+      "name": "ppEffectUncoverRight",
+      "value": 2051,
+      "description": "Effect Uncover Right"
+    },
+    {
+      "name": "ppEffectUncoverDown",
+      "value": 2052,
+      "description": "Uncover Down"
+    },
+    {
+      "name": "ppEffectUncoverLeftUp",
+      "value": 2053,
+      "description": "Uncover Left Up"
+    },
+    {
+      "name": "ppEffectUncoverRightUp",
+      "value": 2054,
+      "description": "Uncover Right Up"
+    },
+    {
+      "name": "ppEffectUncoverLeftDown",
+      "value": 2055,
+      "description": "Uncover Left Down"
+    },
+    {
+      "name": "ppEffectUncoverRightDown",
+      "value": 2056,
+      "description": "Uncover Right Down"
+    },
+    {
+      "name": "ppEffectRandomBarsHorizontal",
+      "value": 2305,
+      "description": "Random Bars Horizontal"
+    },
+    {
+      "name": "ppEffectRandomBarsVertical",
+      "value": 2306,
+      "description": "Random Bars Vertical"
+    },
+    {
+      "name": "ppEffectStripsUpLeft",
+      "value": 2561,
+      "description": "Strips Up Left"
+    },
+    {
+      "name": "ppEffectStripsUpRight",
+      "value": 2562,
+      "description": "Strips Up Right"
+    },
+    {
+      "name": "ppEffectStripsDownLeft",
+      "value": 2563,
+      "description": "Strips Down Left"
+    },
+    {
+      "name": "ppEffectStripsDownRight",
+      "value": 2564,
+      "description": "Strips Down Right"
+    },
+    {
+      "name": "ppEffectStripsLeftUp",
+      "value": 2565,
+      "description": "Strips Left Up"
+    },
+    {
+      "name": "ppEffectStripsRightUp",
+      "value": 2566,
+      "description": "Strips Right Up"
+    },
+    {
+      "name": "ppEffectStripsLeftDown",
+      "value": 2567,
+      "description": "Strips Left Down"
+    },
+    {
+      "name": "ppEffectStripsRightDown",
+      "value": 2568,
+      "description": "Strips Right Down"
+    },
+    {
+      "name": "ppEffectWipeLeft",
+      "value": 2817,
+      "description": "Wipe Left"
+    },
+    {
+      "name": "ppEffectWipeUp",
+      "value": 2818,
+      "description": "Wipe Up"
+    },
+    {
+      "name": "ppEffectWipeRight",
+      "value": 2819,
+      "description": "Wipe Right"
+    },
+    {
+      "name": "ppEffectWipeDown",
+      "value": 2820,
+      "description": "Wipe Down"
+    },
+    {
+      "name": "ppEffectBoxOut",
+      "value": 3073,
+      "description": "Box Out"
+    },
+    {
+      "name": "ppEffectBoxIn",
+      "value": 3074,
+      "description": "Box In"
+    },
+    {
+      "name": "ppEffectFlyFromLeft",
+      "value": 3329,
+      "description": "Fly From Left"
+    },
+    {
+      "name": "ppEffectFlyFromTop",
+      "value": 3330,
+      "description": "Fly From Top"
+    },
+    {
+      "name": "ppEffectFlyFromRight",
+      "value": 3331,
+      "description": "Fly From Right"
+    },
+    {
+      "name": "ppEffectFlyFromBottom",
+      "value": 3332,
+      "description": "Fly From Bottom"
+    },
+    {
+      "name": "ppEffectFlyFromTopLeft",
+      "value": 3333,
+      "description": "Fly From Top Left"
+    },
+    {
+      "name": "ppEffectFlyFromTopRight",
+      "value": 3334,
+      "description": "Fly From Top Right"
+    },
+    {
+      "name": "ppEffectFlyFromBottomLeft",
+      "value": 3335,
+      "description": "From Bottom Left"
+    },
+    {
+      "name": "ppEffectFlyFromBottomRight",
+      "value": 3336,
+      "description": "From Bottom Right"
+    },
+    {
+      "name": "ppEffectPeekFromLeft",
+      "value": 3337,
+      "description": "Peek From Left"
+    },
+    {
+      "name": "ppEffectPeekFromDown",
+      "value": 3338,
+      "description": "Peek From Down"
+    },
+    {
+      "name": "ppEffectPeekFromRight",
+      "value": 3339,
+      "description": "Peek From Right"
+    },
+    {
+      "name": "ppEffectPeekFromUp",
+      "value": 3340,
+      "description": "Peek From Up"
+    },
+    {
+      "name": "ppEffectCrawlFromLeft",
+      "value": 3341,
+      "description": "Crawl From Left"
+    },
+    {
+      "name": "ppEffectCrawlFromUp",
+      "value": 3342,
+      "description": "Crawl From Up"
+    },
+    {
+      "name": "ppEffectCrawlFromRight",
+      "value": 3343,
+      "description": "Crawl From Right"
+    },
+    {
+      "name": "ppEffectCrawlFromDown",
+      "value": 3344,
+      "description": "Crawl From Down"
+    },
+    {
+      "name": "ppEffectZoomIn",
+      "value": 3345,
+      "description": "Zoom In"
+    },
+    {
+      "name": "ppEffectZoomInSlightly",
+      "value": 3346,
+      "description": "Zoom In Slightly"
+    },
+    {
+      "name": "ppEffectZoomOut",
+      "value": 3347,
+      "description": "Zoom Out"
+    },
+    {
+      "name": "ppEffectZoomOutSlightly",
+      "value": 3348,
+      "description": "Zoom Out Slightly"
+    },
+    {
+      "name": "ppEffectZoomCenter",
+      "value": 3349,
+      "description": "Zoom Center"
+    },
+    {
+      "name": "ppEffectZoomBottom",
+      "value": 3350,
+      "description": "Zoom Bottom"
+    },
+    {
+      "name": "ppEffectStretchAcross",
+      "value": 3351,
+      "description": "Stretch Across"
+    },
+    {
+      "name": "ppEffectStretchLeft",
+      "value": 3352,
+      "description": "Stretch Left"
+    },
+    {
+      "name": "ppEffectStretchUp",
+      "value": 3353,
+      "description": "Stretch Up"
+    },
+    {
+      "name": "ppEffectStretchRight",
+      "value": 3354,
+      "description": "Stretch Right"
+    },
+    {
+      "name": "ppEffectStretchDown",
+      "value": 3355,
+      "description": "Stretch Down"
+    },
+    {
+      "name": "ppEffectSwivel",
+      "value": 3356,
+      "description": "Swivel"
+    },
+    {
+      "name": "ppEffectSpiral",
+      "value": 3357,
+      "description": "Spiral"
+    },
+    {
+      "name": "ppEffectSplitHorizontalOut",
+      "value": 3585,
+      "description": "Split Horizontal Out"
+    },
+    {
+      "name": "ppEffectSplitHorizontalIn",
+      "value": 3586,
+      "description": "Split Horizontal In"
+    },
+    {
+      "name": "ppEffectSplitVerticalOut",
+      "value": 3587,
+      "description": "Split Vertical Out"
+    },
+    {
+      "name": "ppEffectSplitVerticalIn",
+      "value": 3588,
+      "description": "Split Vertical In"
+    },
+    {
+      "name": "ppEffectFlashOnceFast",
+      "value": 3841,
+      "description": "Flash Once Fast"
+    },
+    {
+      "name": "ppEffectFlashOnceMedium",
+      "value": 3842,
+      "description": "Flash Once Medium"
+    },
+    {
+      "name": "ppEffectFlashOnceSlow",
+      "value": 3843,
+      "description": "Flash Once Slow"
+    },
+    {
+      "name": "ppEffectAppear",
+      "value": 3844,
+      "description": "Appear"
+    },
+    {
+      "name": "ppEffectCircleOut",
+      "value": 3845,
+      "description": "Circle Out"
+    },
+    {
+      "name": "ppEffectDiamondOut",
+      "value": 3846,
+      "description": "Diamond Out"
+    },
+    {
+      "name": "ppEffectCombHorizontal",
+      "value": 3847,
+      "description": "Comb Horizontal"
+    },
+    {
+      "name": "ppEffectCombVertical",
+      "value": 3848,
+      "description": "Comb Vertical"
+    },
+    {
+      "name": "ppEffectFadeSmoothly",
+      "value": 3849,
+      "description": "Fade Smoothly"
+    },
+    {
+      "name": "ppEffectNewsflash",
+      "value": 3850,
+      "description": "Newsflash"
+    },
+    {
+      "name": "ppEffectPlusOut",
+      "value": 3851,
+      "description": "Plus Out"
+    },
+    {
+      "name": "ppEffectPushDown",
+      "value": 3852,
+      "description": "Push Down"
+    },
+    {
+      "name": "ppEffectPushLeft",
+      "value": 3853,
+      "description": "Push Left"
+    },
+    {
+      "name": "ppEffectPushRight",
+      "value": 3854,
+      "description": "Push Right"
+    },
+    {
+      "name": "ppEffectPushUp",
+      "value": 3855,
+      "description": "Push Up"
+    },
+    {
+      "name": "ppEffectWedge",
+      "value": 3856,
+      "description": "Wedge"
+    },
+    {
+      "name": "ppEffectWheel1Spoke",
+      "value": 3857,
+      "description": "Wheel1 Spoke"
+    },
+    {
+      "name": "ppEffectWheel2Spokes",
+      "value": 3858,
+      "description": "Wheel2 Spokes"
+    },
+    {
+      "name": "ppEffectWheel3Spokes",
+      "value": 3859,
+      "description": "Wheel3 Spokes"
+    },
+    {
+      "name": "ppEffectWheel4Spokes",
+      "value": 3860,
+      "description": "Wheel4 Spokes"
+    },
+    {
+      "name": "ppEffectWheel8Spokes",
+      "value": 3861,
+      "description": "Wheel8 Spokes"
+    },
+    {
+      "name": "ppEffectWheelReverse1Spoke",
+      "value": 3862,
+      "description": "Wheel Reverse 1 Spoke"
+    },
+    {
+      "name": "ppEffectVortexLeft",
+      "value": 3863,
+      "description": "Vortex Left"
+    },
+    {
+      "name": "ppEffectVortexUp",
+      "value": 3864,
+      "description": "Vortex Up"
+    },
+    {
+      "name": "ppEffectVortexRight",
+      "value": 3865,
+      "description": "Vortex Right"
+    },
+    {
+      "name": "ppEffectVortexDown",
+      "value": 3866,
+      "description": "VortexDown"
+    },
+    {
+      "name": "ppEffectRippleCenter",
+      "value": 3867,
+      "description": "Ripple Center"
+    },
+    {
+      "name": "ppEffectRippleRightUp",
+      "value": 3868,
+      "description": "Ripple Right Up"
+    },
+    {
+      "name": "ppEffectRippleLeftUp",
+      "value": 3869,
+      "description": "Ripple Left Up"
+    },
+    {
+      "name": "ppEffectRippleLeftDown",
+      "value": 3870,
+      "description": "Ripple Left Down"
+    },
+    {
+      "name": "ppEffectRippleRightDown",
+      "value": 3871,
+      "description": "Ripple Right Down"
+    },
+    {
+      "name": "ppEffectGlitterDiamondLeft",
+      "value": 3872,
+      "description": "Glitter Diamond Left"
+    },
+    {
+      "name": "ppEffectGlitterDiamondUp",
+      "value": 3873,
+      "description": "Glitter Diamond Up"
+    },
+    {
+      "name": "ppEffectGlitterDiamondRight",
+      "value": 3874,
+      "description": "Glitter Diamond Right"
+    },
+    {
+      "name": "ppEffectGlitterDiamondDown",
+      "value": 3875,
+      "description": "Glitter Diamond Down"
+    },
+    {
+      "name": "ppEffectGlitterHexagonLeft",
+      "value": 3876,
+      "description": "Glitter Hexagon Left"
+    },
+    {
+      "name": "ppEffectGlitterHexagonUp",
+      "value": 3877,
+      "description": "Glitter Hexagon Up"
+    },
+    {
+      "name": "ppEffectGlitterHexagonRight",
+      "value": 3878,
+      "description": "Glitter Hexagon Right"
+    },
+    {
+      "name": "ppEffectGlitterHexagonDown",
+      "value": 3879,
+      "description": "Glitter Hexagon Down"
+    },
+    {
+      "name": "ppEffectGalleryLeft",
+      "value": 3880,
+      "description": "Gallery Left"
+    },
+    {
+      "name": "ppEffectGalleryRight",
+      "value": 3881,
+      "description": "Gallery Right"
+    },
+    {
+      "name": "ppEffectConveyorLeft",
+      "value": 3882,
+      "description": "Conveyor Left"
+    },
+    {
+      "name": "ppEffectConveyorRight",
+      "value": 3883,
+      "description": "Conveyor Right"
+    },
+    {
+      "name": "ppEffectDoorsVertical",
+      "value": 3884,
+      "description": "Doors Vertical"
+    },
+    {
+      "name": "ppEffectDoorsHorizontal",
+      "value": 3885,
+      "description": "Doors Horizontal"
+    },
+    {
+      "name": "ppEffectWindowVertical",
+      "value": 3886,
+      "description": "Window Vertical"
+    },
+    {
+      "name": "ppEffectWindowHorizontal",
+      "value": 3887,
+      "description": "Window Horizontal"
+    },
+    {
+      "name": "ppEffectWarpIn",
+      "value": 3888,
+      "description": "Warp In"
+    },
+    {
+      "name": "ppEffectWarpOut",
+      "value": 3889,
+      "description": "Warp Out"
+    },
+    {
+      "name": "ppEffectFlyThroughIn",
+      "value": 3890,
+      "description": "Fly Through In"
+    },
+    {
+      "name": "ppEffectFlyThroughOut",
+      "value": 3891,
+      "description": "Fly Through Out"
+    },
+    {
+      "name": "ppEffectFlyThroughInBounce",
+      "value": 3892,
+      "description": "Fly Through In Bounce"
+    },
+    {
+      "name": "ppEffectFlyThroughOutBounce",
+      "value": 3893,
+      "description": "Fly Through Out Bounce"
+    },
+    {
+      "name": "ppEffectRevealSmoothLeft",
+      "value": 3894,
+      "description": "Reveal Smooth Left"
+    },
+    {
+      "name": "ppEffectRevealSmoothRight",
+      "value": 3895,
+      "description": "Reveal Smooth Right"
+    },
+    {
+      "name": "ppEffectRevealBlackLeft",
+      "value": 3896,
+      "description": "Reveal Black Left"
+    },
+    {
+      "name": "ppEffectRevealBlackRight",
+      "value": 3897,
+      "description": "Reveal Black Right"
+    },
+    {
+      "name": "ppEffectHoneycomb",
+      "value": 3898,
+      "description": "Honeycomb"
+    },
+    {
+      "name": "ppEffectFerrisWheelLeft",
+      "value": 3899,
+      "description": "Ferris Wheel Left"
+    },
+    {
+      "name": "ppEffectFerrisWheelRight",
+      "value": 3900,
+      "description": "Ferris Wheel Rightt"
+    },
+    {
+      "name": "ppEffectSwitchLeft",
+      "value": 3901,
+      "description": "Switch Left"
+    },
+    {
+      "name": "ppEffectSwitchUp",
+      "value": 3902,
+      "description": "Switch Up"
+    },
+    {
+      "name": "ppEffectSwitchRight",
+      "value": 3903,
+      "description": "Switch Right"
+    },
+    {
+      "name": "ppEffectSwitchDown",
+      "value": 3904,
+      "description": "Switch Down"
+    },
+    {
+      "name": "ppEffectFlipLeft",
+      "value": 3905,
+      "description": "Flip Left"
+    },
+    {
+      "name": "ppEffectFlipUp",
+      "value": 3906,
+      "description": "Flip Up"
+    },
+    {
+      "name": "ppEffectFlipRight",
+      "value": 3907,
+      "description": "Flip Right"
+    },
+    {
+      "name": "ppEffectFlipDown",
+      "value": 3908,
+      "description": "Flip Down"
+    },
+    {
+      "name": "ppEffectFlashbulb",
+      "value": 3909,
+      "description": "Flashbulb"
+    },
+    {
+      "name": "ppEffectShredStripsIn",
+      "value": 3910,
+      "description": "Shred Strips In"
+    },
+    {
+      "name": "ppEffectShredStripsOut",
+      "value": 3911,
+      "description": "Shred Strips Out"
+    },
+    {
+      "name": "ppEffectShredRectangleIn",
+      "value": 3912,
+      "description": "Shred Rectangle In"
+    },
+    {
+      "name": "ppEffectShredRectangleOut",
+      "value": 3913,
+      "description": "Shred Rectangle Out"
+    },
+    {
+      "name": "ppEffectCubeLeft",
+      "value": 3914,
+      "description": "Effect Cube Left"
+    },
+    {
+      "name": "ppEffectCubeUp",
+      "value": 3915,
+      "description": "Effect Cube Up"
+    },
+    {
+      "name": "ppEffectCubeRight",
+      "value": 3916,
+      "description": "Effect Cube Right"
+    },
+    {
+      "name": "ppEffectCubeDown",
+      "value": 3917,
+      "description": "Effect Cube Down"
+    },
+    {
+      "name": "ppEffectRotateLeft",
+      "value": 3918,
+      "description": "Rotate Left"
+    },
+    {
+      "name": "ppEffectRotateUp",
+      "value": 3919,
+      "description": "Rotate Up"
+    },
+    {
+      "name": "ppEffectRotateRight",
+      "value": 3920,
+      "description": "Rotate Right"
+    },
+    {
+      "name": "ppEffectRotateDown",
+      "value": 3921,
+      "description": "Rotate Down"
+    },
+    {
+      "name": "ppEffectBoxLeft",
+      "value": 3922,
+      "description": "Box Left"
+    },
+    {
+      "name": "ppEffectBoxUp",
+      "value": 3923,
+      "description": "Box Up"
+    },
+    {
+      "name": "ppEffectBoxRight",
+      "value": 3924,
+      "description": "Box Right"
+    },
+    {
+      "name": "ppEffectBoxDown",
+      "value": 3925,
+      "description": "Box Down"
+    },
+    {
+      "name": "ppEffectOrbitLeft",
+      "value": 3926,
+      "description": "Orbit Left"
+    },
+    {
+      "name": "ppEffectOrbitUp",
+      "value": 3927,
+      "description": "Orbit Up"
+    },
+    {
+      "name": "ppEffectOrbitRight",
+      "value": 3928,
+      "description": "Orbit Right"
+    },
+    {
+      "name": "ppEffectOrbitDown",
+      "value": 3929,
+      "description": "Orbit Down"
+    },
+    {
+      "name": "ppEffectPanLeft",
+      "value": 3930,
+      "description": "Pan Left"
+    },
+    {
+      "name": "ppEffectPanUp",
+      "value": 3931,
+      "description": "Pan Up"
+    },
+    {
+      "name": "ppEffectPanRight",
+      "value": 3932,
+      "description": "Pan Right"
+    },
+    {
+      "name": "ppEffectPanDown",
+      "value": 3933,
+      "description": "Pan Down"
+    },
+    {
+      "name": "ppEffectFallOverLeft",
+      "value": 3934,
+      "description": ""
+    },
+    {
+      "name": "ppEffectFallOverRight",
+      "value": 3935,
+      "description": ""
+    },
+    {
+      "name": "ppEffectDrapeLeft",
+      "value": 3936,
+      "description": ""
+    },
+    {
+      "name": "ppEffectDrapeRight",
+      "value": 3937,
+      "description": ""
+    },
+    {
+      "name": "ppEffectCurtains",
+      "value": 3938,
+      "description": ""
+    },
+    {
+      "name": "ppEffectWindLeft",
+      "value": 3939,
+      "description": ""
+    },
+    {
+      "name": "ppEffectWindRight",
+      "value": 3940,
+      "description": ""
+    },
+    {
+      "name": "ppEffectPrestige",
+      "value": 3941,
+      "description": ""
+    },
+    {
+      "name": "ppEffectFracture",
+      "value": 3942,
+      "description": ""
+    },
+    {
+      "name": "ppEffectCrush",
+      "value": 3943,
+      "description": ""
+    },
+    {
+      "name": "ppEffectPeelOffLeft",
+      "value": 3944,
+      "description": ""
+    },
+    {
+      "name": "ppEffectPeelOffRight",
+      "value": 3945,
+      "description": ""
+    },
+    {
+      "name": "ppEffectPageCurlSingleLeft",
+      "value": 3946,
+      "description": ""
+    },
+    {
+      "name": "ppEffectPageCurlSingleRight",
+      "value": 3947,
+      "description": ""
+    },
+    {
+      "name": "ppEffectPageCurlDoubleLeft",
+      "value": 3948,
+      "description": ""
+    },
+    {
+      "name": "ppEffectPageCurlDoubleRight",
+      "value": 3949,
+      "description": ""
+    },
+    {
+      "name": "ppEffectAirplaneLeft",
+      "value": 3950,
+      "description": ""
+    },
+    {
+      "name": "ppEffectAirplaneRight",
+      "value": 3951,
+      "description": ""
+    },
+    {
+      "name": "ppEffectOrigamiLeft",
+      "value": 3952,
+      "description": ""
+    },
+    {
+      "name": "ppEffectOrigamiRight",
+      "value": 3953,
+      "description": ""
+    },
+    {
+      "name": "ppEffectMorphByObject",
+      "value": 3954,
+      "description": ""
+    },
+    {
+      "name": "ppEffectMorphByWord",
+      "value": 3955,
+      "description": ""
+    },
+    {
+      "name": "ppEffectMorphByChar",
+      "value": 3956,
+      "description": ""
+    }
+  ]
+}

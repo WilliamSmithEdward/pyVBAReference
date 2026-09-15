@@ -1,0 +1,63 @@
+{
+  "name": "Footnote",
+  "kind": "Dispatch Interface",
+  "guid": "{0002093F-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a footnote positioned at the bottom of the page or beneath text. The Footnote object is a member of the Footnotes collection. The Footnotes collection represents the footnotes in a selection, range, or document.",
+  "remarks": "Use Footnotes (Index), where Index is the index number, to return a single Footnote object. The index number represents the position of the footnote in the selection, range, or document. The following example applies red formatting to the first footnote in the selection. Use the Add method to add a footnote to the Footnotes collection. The following example inserts an automatically numbered footnote immediately after the selection.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Footnote object."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the portion of a document that's contained within the footnote."
+    },
+    {
+      "name": "Reference",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents a footnote reference mark."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the position of an item in a collection. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified footnote.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

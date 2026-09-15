@@ -1,0 +1,271 @@
+{
+  "name": "DocumentEvents2",
+  "kind": "Dispatch Interface",
+  "guid": "{00020A02-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "New",
+      "kind": "method",
+      "signature": "New()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Sync",
+      "kind": "method",
+      "signature": "Sync(SyncEventType As MsoSyncEventType)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SyncEventType",
+          "type": "MsoSyncEventType",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "XMLAfterInsert",
+      "kind": "method",
+      "signature": "XMLAfterInsert(NewXMLNode As XMLNode, InUndoRedo As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "NewXMLNode",
+          "type": "XMLNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "InUndoRedo",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "XMLBeforeDelete",
+      "kind": "method",
+      "signature": "XMLBeforeDelete(DeletedRange As Range, OldXMLNode As XMLNode, InUndoRedo As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "DeletedRange",
+          "type": "Range",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "OldXMLNode",
+          "type": "XMLNode",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "InUndoRedo",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ContentControlAfterAdd",
+      "kind": "method",
+      "signature": "ContentControlAfterAdd(NewContentControl As ContentControl, InUndoRedo As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "NewContentControl",
+          "type": "ContentControl",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "InUndoRedo",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ContentControlBeforeDelete",
+      "kind": "method",
+      "signature": "ContentControlBeforeDelete(OldContentControl As ContentControl, InUndoRedo As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "OldContentControl",
+          "type": "ContentControl",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "InUndoRedo",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ContentControlOnExit",
+      "kind": "method",
+      "signature": "ContentControlOnExit(ContentControl As ContentControl, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ContentControl",
+          "type": "ContentControl",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ContentControlOnEnter",
+      "kind": "method",
+      "signature": "ContentControlOnEnter(ContentControl As ContentControl)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ContentControl",
+          "type": "ContentControl",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ContentControlBeforeStoreUpdate",
+      "kind": "method",
+      "signature": "ContentControlBeforeStoreUpdate(ContentControl As ContentControl, Content As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ContentControl",
+          "type": "ContentControl",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Content",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ContentControlBeforeContentUpdate",
+      "kind": "method",
+      "signature": "ContentControlBeforeContentUpdate(ContentControl As ContentControl, Content As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ContentControl",
+          "type": "ContentControl",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Content",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BuildingBlockInsert",
+      "kind": "method",
+      "signature": "BuildingBlockInsert(Range As Range, Name As String, Category As String, BlockType As String, Template As String)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Category",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "BlockType",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Template",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ContentControlNonContentChange",
+      "kind": "method",
+      "signature": "ContentControlNonContentChange(ContentControl As ContentControl)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ContentControl",
+          "type": "ContentControl",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

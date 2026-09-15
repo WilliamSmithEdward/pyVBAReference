@@ -1,0 +1,169 @@
+{
+  "name": "Master",
+  "kind": "Class",
+  "guid": "{91493447-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a slide master, title master, handout master, notes master, or design master.",
+  "remarks": "",
+  "example": "ActivePresentation.SlideMaster.Background.Fill _\n\n    .PresetGradient msoGradientHorizontal, 1, msoGradientBrass",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Shapes",
+      "kind": "property",
+      "type": "Shapes",
+      "access": "read-only",
+      "description": "Returns a Shapes collection that represents all the elements that have been placed or inserted on the specified slide, slide master, or range of slides. Read-only."
+    },
+    {
+      "name": "HeadersFooters",
+      "kind": "property",
+      "type": "HeadersFooters",
+      "access": "read-only",
+      "description": "Returns a HeadersFooters collection that represents the header, footer, date and time, and slide number associated with the slide, slide master, or range of slides. Read-only."
+    },
+    {
+      "name": "ColorScheme",
+      "kind": "property",
+      "type": "ColorScheme",
+      "access": "read/write",
+      "description": "Returns or sets the ColorScheme object that represents the scheme colors for the specified slide, slide range, or slide master. Read/write."
+    },
+    {
+      "name": "Background",
+      "kind": "property",
+      "type": "ShapeRange",
+      "access": "read-only",
+      "description": "Returns a ShapeRange object that represents the slide background."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the specified object. Read/write."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns or sets the height of the specified object, in points. Read-only."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns the width of the specified object, in points. Read-only."
+    },
+    {
+      "name": "TextStyles",
+      "kind": "property",
+      "type": "TextStyles",
+      "access": "read-only",
+      "description": "Returns a TextStyles collection that represents three text styles - title text, body text, and default text - for the specified slide master. Read-only."
+    },
+    {
+      "name": "Hyperlinks",
+      "kind": "property",
+      "type": "Hyperlinks",
+      "access": "read-only",
+      "description": "Returns a Hyperlinks collection that represents all the hyperlinks on the specified slide. Read-only."
+    },
+    {
+      "name": "Design",
+      "kind": "property",
+      "type": "Design",
+      "access": "read-only",
+      "description": "Returns a Design object representing a design."
+    },
+    {
+      "name": "TimeLine",
+      "kind": "property",
+      "type": "TimeLine",
+      "access": "read-only",
+      "description": "Returns a TimeLine object that represents the animation timeline for the slide. Read-only."
+    },
+    {
+      "name": "SlideShowTransition",
+      "kind": "property",
+      "type": "SlideShowTransition",
+      "access": "read-only",
+      "description": "Returns a SlideShowTransition object that represents the special effects for the specified slide transition. Read-only."
+    },
+    {
+      "name": "CustomLayouts",
+      "kind": "property",
+      "type": "CustomLayouts",
+      "access": "read-only",
+      "description": "Returns a CustomLayouts object that represents the custom layouts associated with the presentation design of the specified Master object. Read-only."
+    },
+    {
+      "name": "Theme",
+      "kind": "property",
+      "type": "OfficeTheme",
+      "access": "read-only",
+      "description": "Returns a Theme object that represents the theme used by the specified slide master, title master, handout master, notes master, or design master. Read-only."
+    },
+    {
+      "name": "BackgroundStyle",
+      "kind": "property",
+      "type": "MsoBackgroundStyleIndex",
+      "access": "read/write",
+      "description": "Sets or returns the background style of the specified object. Read/write."
+    },
+    {
+      "name": "CustomerData",
+      "kind": "property",
+      "type": "CustomerData",
+      "access": "read-only",
+      "description": "Returns a CustomerData object. Read-only."
+    },
+    {
+      "name": "Guides",
+      "kind": "property",
+      "type": "Guides",
+      "access": "read-only",
+      "description": "Returns a Guides collection that represents all of the drawing guides associated with the slide master, title master, handout master, notes master, or design master."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified Master object.",
+      "returns": "void"
+    },
+    {
+      "name": "ApplyTheme",
+      "kind": "method",
+      "signature": "ApplyTheme(themeName As String)",
+      "description": "Applies a theme or design template to the specified slide master, title master, handout master, notes master, or design master.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "themeName",
+          "type": "String",
+          "optional": false,
+          "description": "The path and name of the theme file (.thmx) or design template file (.pot) to apply to the Master object."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

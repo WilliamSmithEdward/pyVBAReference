@@ -1,0 +1,320 @@
+{
+  "name": "_ControlInReportEvents",
+  "kind": "Class",
+  "guid": "{90B322A4-F1D9-11CD-8701-00AA003F0F07}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Column",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Selected",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "OldValue",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Form",
+      "kind": "property",
+      "type": "Form",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Report",
+      "kind": "property",
+      "type": "Report",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ItemData",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Object",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ObjectVerbs",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Properties",
+      "kind": "property",
+      "type": "Properties",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "ItemsSelected",
+      "kind": "property",
+      "type": "_ItemsSelected",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Pages",
+      "kind": "property",
+      "type": "Pages",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Controls",
+      "kind": "property",
+      "type": "Children",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Hyperlink",
+      "kind": "property",
+      "type": "_Hyperlink",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "SmartTags",
+      "kind": "property",
+      "type": "_SmartTags",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Layout",
+      "kind": "property",
+      "type": "AcLayoutType",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "LeftPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "TopPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "RightPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "BottomPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineStyleLeft",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineStyleTop",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineStyleRight",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineStyleBottom",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineWidthLeft",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineWidthTop",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineWidthRight",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineWidthBottom",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "GridlineColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "HorizontalAnchor",
+      "kind": "property",
+      "type": "AcHorizontalAnchor",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "VerticalAnchor",
+      "kind": "property",
+      "type": "AcVerticalAnchor",
+      "access": "read/write",
+      "description": ""
+    },
+    {
+      "name": "LayoutID",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Undo",
+      "kind": "method",
+      "signature": "Undo()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Dropdown",
+      "kind": "method",
+      "signature": "Dropdown()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Requery",
+      "kind": "method",
+      "signature": "Requery()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "SizeToFit",
+      "kind": "method",
+      "signature": "SizeToFit()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "SetFocus",
+      "kind": "method",
+      "signature": "SetFocus()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move(Left As Variant, [Top As Variant], [Width As Variant], [Height As Variant])",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

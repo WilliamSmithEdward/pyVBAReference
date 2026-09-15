@@ -1,0 +1,71 @@
+{
+  "name": "AnimationBehaviors",
+  "kind": "Dispatch Interface",
+  "guid": "{914934E3-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a collection of AnimationBehavior objects.",
+  "remarks": "",
+  "example": "Sub AnimationObject()\n\n    Dim timeMain As TimeLine\n\n\n\n    'Reference the main animation timeline\n\n    Set timeMain = ActivePresentation.Slides(1).TimeLine\n\n\n\n    'Add a five-second animated rotation behavior\n\n    'as the first animation in the main animation sequence\n\n    timeMain.MainSequence(1).Behaviors.Add Type:=msoAnimTypeRotation, Index:=1\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As AnimationBehavior",
+      "description": "Returns a single AnimationBehavior object from the specified AnimationBehaviors collection.",
+      "returns": "AnimationBehavior",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the single AnimationBehavior object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Type As MsoAnimType, [Index As Long]) As AnimationBehavior",
+      "description": "Returns an AnimationBehavior object that represents a new animation behavior.",
+      "returns": "AnimationBehavior",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "MsoAnimType",
+          "optional": false,
+          "description": "The type of the animation behavior."
+        },
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": true,
+          "description": "The position of the animation behavior in relation to other animation behaviors. The default value is -1, which means that if you omit the _Index_ parameter, the new animation behavior is added at the end of the existing animation behaviors."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

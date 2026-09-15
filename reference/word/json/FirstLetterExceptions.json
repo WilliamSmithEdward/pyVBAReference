@@ -1,0 +1,79 @@
+{
+  "name": "FirstLetterExceptions",
+  "kind": "Dispatch Interface",
+  "guid": "{00020946-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of FirstLetterException objects that represent the abbreviations excluded from automatic correction.",
+  "remarks": "The first character following a period is automatically capitalized when the CorrectSentenceCaps property is set to True. The FirstLetterExceptions collection includes exceptions to this behavior (for example, abbreviations such as \"addr.\" and \"apt.\"). Use the FirstLetterExceptions property to return the FirstLetterExceptions collection. The following example deletes the abbreviation \"addr.\" if it is included in the FirstLetterExceptions collection. The following example creates a new document and inserts all the AutoCorrect first-letter exceptions into it. Use the Add method to add an abbreviation to the list of first-letter exceptions. The following example adds the abbreviation \"addr.\" to this list. Use FirstLetterExceptions (Index), where Index is the abbreviation or the index number, to return a single FirstLetterException object. The following example deletes the abbreviation \"appt.\" from the FirstLetterExceptions collection. The following example displays the name of the first item in the FirstLetterExceptions collection.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified FirstLetterExceptions object."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of first letter exceptions in the collection. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As FirstLetterException",
+      "description": "Returns an individual FirstLetterException object in a collection.",
+      "returns": "FirstLetterException",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position or a String representing the name of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String) As FirstLetterException",
+      "description": "Returns a FirstLetterException object that represents a new exception added to the list of AutoCorrect exceptions.",
+      "returns": "FirstLetterException",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The word with two initial capital letters that you want Microsoft Word to overlook."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

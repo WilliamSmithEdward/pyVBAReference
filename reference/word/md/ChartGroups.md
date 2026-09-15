@@ -1,0 +1,27 @@
+# ChartGroups
+
+**Type:** Dispatch Interface  
+**Library:** Microsoft Word 16.0 Object Library  
+**GUID:** {F8DDB497-CA6C-4711-9BA4-2718FA3BB6FE}  
+
+Represents one or more series plotted in a chart with the same format.
+
+**Remarks:** A ChartGroups collection is a collection of all the ChartGroup objects in the specified chart. A chart contains one or more chart groups, each chart group contains one or more series, and each series contains one or more points. For example, a single chart might contain both a line chart group, containing all the series plotted with the line chart format, and a bar chart group, containing all the series plotted with the bar chart format. The following example displays the number of chart groups on the first chart of the active document. Use the ChartGroups property to return the ChartGroups collection. The following example adds drop lines to chart group 1 on chart sheet 1. Use ChartGroups (_index_), where _index_ is the chart group index number, to return a single ChartGroup object.
+
+## Properties (4)
+
+- `Parent As Object  (read-only)`  
+  Returns the parent for the specified object. Read-only Object.
+- `Count As Long  (read-only)`  
+  Returns the number of objects in the collection. Read-only Long.
+- `Application As Object  (read-only)`  
+  When used without an object qualifier, returns an Application object that represents the Microsoft Word application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only.
+- `Creator As Long  (read-only)`  
+  Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long.
+
+## Methods (2)
+
+- `Item(Index As Variant) As ChartGroup`  
+  Returns a single object from a collection.
+    - `Index As Variant` (required): The index number for the object.
+- `_NewEnum() As IUnknown`

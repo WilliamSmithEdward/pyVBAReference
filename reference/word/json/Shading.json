@@ -1,0 +1,69 @@
+{
+  "name": "Shading",
+  "kind": "Dispatch Interface",
+  "guid": "{0002093A-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Contains shading attributes for an object.",
+  "remarks": "Use the Shading property to return the Shading object. The following example applies fine gray shading to the first paragraph in the active document. The following example applies shading with different foreground and background colors to the selection. The following example applies a vertical line texture to the first row in the first table in the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Shading object."
+    },
+    {
+      "name": "ForegroundPatternColorIndex",
+      "kind": "property",
+      "type": "WdColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the color that's applied to the foreground of the Shading object. This color is applied to the dots and lines in the shading pattern. Read/write WdColorIndex."
+    },
+    {
+      "name": "BackgroundPatternColorIndex",
+      "kind": "property",
+      "type": "WdColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the color that's applied to the background of the Shading object. Read/write WdColorIndex."
+    },
+    {
+      "name": "Texture",
+      "kind": "property",
+      "type": "WdTextureIndex",
+      "access": "read/write",
+      "description": "Returns or sets the shading texture for the specified object. Read/write WdTextureIndex."
+    },
+    {
+      "name": "ForegroundPatternColor",
+      "kind": "property",
+      "type": "WdColor",
+      "access": "read/write",
+      "description": "Returns or sets the 24-bit color that's applied to the foreground of the Shading object. This color is applied to the dots and lines in the shading pattern. Read/write."
+    },
+    {
+      "name": "BackgroundPatternColor",
+      "kind": "property",
+      "type": "WdColor",
+      "access": "read/write",
+      "description": "Returns or sets the 24-bit color that's applied to the background of the Shading object. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

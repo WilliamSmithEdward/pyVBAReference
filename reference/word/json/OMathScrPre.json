@@ -1,0 +1,63 @@
+{
+  "name": "OMathScrPre",
+  "kind": "Dispatch Interface",
+  "guid": "{AFAF0C0E-8603-40F6-8FD1-42726CAC21E3}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents an equation that contains a superscript or subscript to the left of the base.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathScrPre object."
+    },
+    {
+      "name": "Sub",
+      "kind": "property",
+      "type": "OMath",
+      "access": "read-only",
+      "description": "Returns an OMath object that represents the subscript for a pre-sub-superscript object. Read-only."
+    },
+    {
+      "name": "Sup",
+      "kind": "property",
+      "type": "OMath",
+      "access": "read-only",
+      "description": "Returns an OMath object that represents the superscript for a pre-sub-superscript object. Read-only."
+    },
+    {
+      "name": "E",
+      "kind": "property",
+      "type": "OMath",
+      "access": "read-only",
+      "description": "Returns an OMath object that represents the base of the specified equation object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "ToScrSubSup",
+      "kind": "method",
+      "signature": "ToScrSubSup() As OMathFunction",
+      "description": "Converts an equation with a superscript or subscript to the left of the base of the equation to an equation with a base of a superscript or subscript.",
+      "returns": "OMathFunction"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,98 @@
+{
+  "name": "SlideShowWindow",
+  "kind": "Dispatch Interface",
+  "guid": "{91493453-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a window in which a slide show runs.",
+  "remarks": "",
+  "example": "SlideShowWindows(2).Activate",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "View",
+      "kind": "property",
+      "type": "SlideShowView",
+      "access": "read-only",
+      "description": "Returns a SlideShowView object. Read-only."
+    },
+    {
+      "name": "Presentation",
+      "kind": "property",
+      "type": "Presentation",
+      "access": "read-only",
+      "description": "Returns a Presentation object that represents the presentation in which the specified document window or slide show window was created. Read-only."
+    },
+    {
+      "name": "IsFullScreen",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Returns whether the specified slide show window occupies the entire screen. Read-only."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the distance in points from the left edge of the document, application, and slide show windows to the left edge of the application window's client area. Setting this property to a very large positive or negative value may position the window completely off the desktop. Read/write."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the distance in points from the top edge of the document, application, and slide show window to the top edge of the application window's client area. Read/write."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the width of the specified object, in points. Read/write."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the height of the specified object, in points. Read/write."
+    },
+    {
+      "name": "Active",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Returns whether the specified pane or window is active. Read-only."
+    },
+    {
+      "name": "SlideNavigation",
+      "kind": "property",
+      "type": "SlideNavigation",
+      "access": "read-only",
+      "description": "Returns a SlideNavigation object that represents the slide navigation screen in slide show view. Read-only"
+    }
+  ],
+  "methods": [
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate()",
+      "description": "Activates the specified object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,42 @@
+{
+  "name": "RevisionsFilter",
+  "kind": "Dispatch Interface",
+  "guid": "{D523C26B-7278-4FA9-AA0B-0827DC8B41CE}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the current settings related to display of reviewers' comments and revision marks in the document.",
+  "remarks": "Use the View.RevisionsFilter property to return a RevisionsFilter object.",
+  "example": "",
+  "properties": [
+    {
+      "name": "View",
+      "kind": "property",
+      "type": "WdRevisionsView",
+      "access": "read/write",
+      "description": "Sets or returns a WdRevisionsView constant that represents the global option that specifies whether Word displays the original version of a document or the final version, which might have revisions and formatting changes applied. Read/write."
+    },
+    {
+      "name": "Markup",
+      "kind": "property",
+      "type": "WdRevisionsMarkup",
+      "access": "read/write",
+      "description": "Returns or sets a WdRevisionsMarkup constant that specifies the extent of reviewer markup displayed in the document. Read/write."
+    },
+    {
+      "name": "Reviewers",
+      "kind": "property",
+      "type": "Reviewers",
+      "access": "read-only",
+      "description": "Returns a Reviewers object that represents the collection of reviewers of one or more documents."
+    }
+  ],
+  "methods": [
+    {
+      "name": "ToggleShowAllReviewers",
+      "kind": "method",
+      "signature": "ToggleShowAllReviewers()",
+      "description": "Shows or hides all revisions in a document that contains comments and tracked changes.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

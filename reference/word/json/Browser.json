@@ -1,0 +1,56 @@
+{
+  "name": "Browser",
+  "kind": "Dispatch Interface",
+  "guid": "{0002092E-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the browser tool used to move the insertion point to objects in a document. This tool is composed of the three buttons at the bottom of the vertical scroll bar.",
+  "remarks": "Use the Browser property to return the Browser object. The following example moves the insertion point just before the next field in the active document. The following example moves the insertion point to the previous table and selects it.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Browser object."
+    },
+    {
+      "name": "Target",
+      "kind": "property",
+      "type": "WdBrowseTarget",
+      "access": "read/write",
+      "description": "Returns or sets the document item that the Previous and Next methods locate. Read/write WdBrowseTarget."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Next",
+      "kind": "method",
+      "signature": "Next()",
+      "description": "Moves the selection to the next item indicated by the browser target. Use the Target property to change the browser target.",
+      "returns": "void"
+    },
+    {
+      "name": "Previous",
+      "kind": "method",
+      "signature": "Previous()",
+      "description": "Moves the selection to the previous item indicated by the browser target. Use the Target property to change the browser target.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

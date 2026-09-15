@@ -1,0 +1,345 @@
+{
+  "name": "FillFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{000209C8-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents fill formatting for a shape. A shape can have a solid, gradient, texture, pattern, picture, or semi-transparent fill.",
+  "remarks": "Use the Fill property to return a FillFormat object. The following example adds a rectangle to the active document and then sets the gradient and color for the rectangle's fill. Many of the properties of the FillFormat object are read-only. To set one of these properties, you have to apply the corresponding method.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified FillFormat object."
+    },
+    {
+      "name": "BackColor",
+      "kind": "property",
+      "type": "ColorFormat",
+      "access": "read-only",
+      "description": "Returns or sets a ColorFormat object that represents the background color for the fill Read/write."
+    },
+    {
+      "name": "ForeColor",
+      "kind": "property",
+      "type": "ColorFormat",
+      "access": "read-only",
+      "description": "Returns or sets a ColorFormat object that represents the foreground color for the fill. Read/write."
+    },
+    {
+      "name": "GradientColorType",
+      "kind": "property",
+      "type": "MsoGradientColorType",
+      "access": "read-only",
+      "description": "Returns the gradient color type for the specified fill. Read-only MsoGradientColorType."
+    },
+    {
+      "name": "GradientDegree",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns a value that indicates how dark or light a one-color gradient fill is. Read-only Single."
+    },
+    {
+      "name": "GradientStyle",
+      "kind": "property",
+      "type": "MsoGradientStyle",
+      "access": "read-only",
+      "description": "Returns the gradient style for the specified fill. Read-only MsoGradientStyle."
+    },
+    {
+      "name": "GradientVariant",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the gradient variant for the specified fill as an integer value from 1 to 4 for most gradient fills. Read-only Long."
+    },
+    {
+      "name": "Pattern",
+      "kind": "property",
+      "type": "MsoPatternType",
+      "access": "read-only",
+      "description": "Returns or sets a MsoPatternType constant that represents the pattern applied to the specified fill or line. Read-only."
+    },
+    {
+      "name": "PresetGradientType",
+      "kind": "property",
+      "type": "MsoPresetGradientType",
+      "access": "read-only",
+      "description": "Returns the preset gradient type for the specified fill. Read-only MsoPresetGradientType."
+    },
+    {
+      "name": "PresetTexture",
+      "kind": "property",
+      "type": "MsoPresetTexture",
+      "access": "read-only",
+      "description": "Returns the preset texture for the specified fill. Read-only MsoPresetTexture."
+    },
+    {
+      "name": "TextureName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the custom texture file for the specified fill. Read-only String."
+    },
+    {
+      "name": "TextureType",
+      "kind": "property",
+      "type": "MsoTextureType",
+      "access": "read-only",
+      "description": "Returns the texture type for the specified fill. Read-only MsoTextureType."
+    },
+    {
+      "name": "Transparency",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the degree of transparency of the specified fillfor a shape as a value between 0.0 (opaque) and 1.0 (clear). Read/write Single."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoFillType",
+      "access": "read-only",
+      "description": "Returns the shape fill format type. Read-only MsoFillType."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "True if the specified object, or the formatting applied to it, is visible. Read/write MsoTriState."
+    },
+    {
+      "name": "GradientStops",
+      "kind": "property",
+      "type": "GradientStops",
+      "access": "read-only",
+      "description": "Returns the GradientStops collection associated with the specified fill format. Read-only."
+    },
+    {
+      "name": "TextureOffsetX",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Long that specifies the horizontal offset of the texture from the origin in points. Read/write."
+    },
+    {
+      "name": "TextureOffsetY",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Long that specifies the vertical offset of the texture from the origin in points. Read/write."
+    },
+    {
+      "name": "TextureAlignment",
+      "kind": "property",
+      "type": "MsoTextureAlignment",
+      "access": "read/write",
+      "description": "Returns or sets the alignment (the origin of the coordinate grid) for the tiling of the texture fill. Read/write."
+    },
+    {
+      "name": "TextureHorizontalScale",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that specifies the horizontal scaling factor for the texture fill. Read/write."
+    },
+    {
+      "name": "TextureVerticalScale",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that specifies the vertical scaling factor for the texture fill. Read/write."
+    },
+    {
+      "name": "TextureTile",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Returns or sets whether the texture fill is tiled or centered. Read/write."
+    },
+    {
+      "name": "RotateWithObject",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Returns or sets whether the fill rotates with the specified shape. Read/write."
+    },
+    {
+      "name": "PictureEffects",
+      "kind": "property",
+      "type": "PictureEffects",
+      "access": "read-only",
+      "description": "Returns a PictureEffects object that can be used to apply picture effects to the specified fill formatting. Read-only."
+    },
+    {
+      "name": "GradientAngle",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the angle of the gradient fill for the specified fill format. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "OneColorGradient",
+      "kind": "method",
+      "signature": "OneColorGradient(Style As MsoGradientStyle, Variant As Long, Degree As Single)",
+      "description": "Sets the specified fill to a one-color gradient.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Style",
+          "type": "MsoGradientStyle",
+          "optional": false,
+          "description": "The gradient style. Can be any MsoGradientStyle constant except msoGradientFromTitle which applies only to Microsoft PowerPoint."
+        },
+        {
+          "name": "Variant",
+          "type": "Long",
+          "optional": false,
+          "description": "The gradient variant. Can be a value from 1 to 4, corresponding to the four variants on the Gradient tab in the Fill Effects dialog box. If Style is msoGradientFromCenter, this argument can be either 1 or 2."
+        },
+        {
+          "name": "Degree",
+          "type": "Single",
+          "optional": false,
+          "description": "The gradient degree. Can be a value from 0.0 (dark) to 1.0 (light)."
+        }
+      ]
+    },
+    {
+      "name": "Patterned",
+      "kind": "method",
+      "signature": "Patterned(Pattern As MsoPatternType)",
+      "description": "Sets the specified fill to a pattern.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Pattern",
+          "type": "MsoPatternType",
+          "optional": false,
+          "description": "The pattern to be used for the specified fill."
+        }
+      ]
+    },
+    {
+      "name": "PresetGradient",
+      "kind": "method",
+      "signature": "PresetGradient(Style As MsoGradientStyle, Variant As Long, PresetGradientType As MsoPresetGradientType)",
+      "description": "Sets the specified fill to a preset gradient.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Style",
+          "type": "MsoGradientStyle",
+          "optional": false,
+          "description": "The gradient style. Can be any MsoGradientStyle constant except msoGradientFromTitle, which applies only to Microsoft PowerPoint."
+        },
+        {
+          "name": "Variant",
+          "type": "Long",
+          "optional": false,
+          "description": "The gradient variant. Can be a value from 1 to 4, corresponding to the four variants on the Gradient tab in the Fill Effects dialog box. If _Style_ is msoGradientFromCenter, this argument can be either 1 or 2."
+        },
+        {
+          "name": "PresetGradientType",
+          "type": "MsoPresetGradientType",
+          "optional": false,
+          "description": "The gradient type."
+        }
+      ]
+    },
+    {
+      "name": "PresetTextured",
+      "kind": "method",
+      "signature": "PresetTextured(PresetTexture As MsoPresetTexture)",
+      "description": "Sets the specified fill to a preset texture.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "PresetTexture",
+          "type": "MsoPresetTexture",
+          "optional": false,
+          "description": "The preset texture."
+        }
+      ]
+    },
+    {
+      "name": "Solid",
+      "kind": "method",
+      "signature": "Solid()",
+      "description": "Sets the specified fill to a uniform color.",
+      "returns": "void"
+    },
+    {
+      "name": "TwoColorGradient",
+      "kind": "method",
+      "signature": "TwoColorGradient(Style As MsoGradientStyle, Variant As Long)",
+      "description": "Sets the specified fill to a two-color gradient.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Style",
+          "type": "MsoGradientStyle",
+          "optional": false,
+          "description": "The gradient style. Can be any MsoGradientStyle constant except msoGradientFromTitle which applies only to Microsoft PowerPoint."
+        },
+        {
+          "name": "Variant",
+          "type": "Long",
+          "optional": false,
+          "description": "The gradient variant. Can be a value from 1 to 4, corresponding to the four variants on the Gradient tab in the Fill Effects dialog box. If _Style_ is msoGradientFromCenter, this argument can be either 1 or 2."
+        }
+      ]
+    },
+    {
+      "name": "UserPicture",
+      "kind": "method",
+      "signature": "UserPicture(PictureFile As String)",
+      "description": "Fills the specified shape with one large image.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "PictureFile",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the picture file."
+        }
+      ]
+    },
+    {
+      "name": "UserTextured",
+      "kind": "method",
+      "signature": "UserTextured(TextureFile As String)",
+      "description": "Fills the specified shape with small tiles of an image.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "TextureFile",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

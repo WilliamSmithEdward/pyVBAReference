@@ -1,0 +1,83 @@
+{
+  "name": "OMathPhantom",
+  "kind": "Dispatch Interface",
+  "guid": "{DB77D541-85C3-42E8-8649-AFBD7CF87866}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a phantom object, which has two primary uses: (1) adding the spacing of the phantom base without displaying that base or (2) suppressing part of the glyph from spacing considerations.",
+  "remarks": "Use the OMathPhantom object to display the spacing of part of an equation without displaying it, or to remove the spacing for part of a glyph from spacing considerations.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathPhantom object."
+    },
+    {
+      "name": "E",
+      "kind": "property",
+      "type": "OMath",
+      "access": "read-only",
+      "description": "Returns an OMath object that represents the base of the specified equation object. Read-only."
+    },
+    {
+      "name": "Show",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether the contents of a phantom object are visible. Read/write."
+    },
+    {
+      "name": "ZeroWid",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether the width of a phantom object is ignored in the spacing of the layout. Read/write."
+    },
+    {
+      "name": "ZeroAsc",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether the ascent of the phantom contents is ignored in the spacing of the layout. Read/write."
+    },
+    {
+      "name": "ZeroDesc",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether the descent of the phantom contents is ignored in the spacing of the layout. Read/write."
+    },
+    {
+      "name": "Transp",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether a phantom object is transparent. Read/write."
+    },
+    {
+      "name": "Smash",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents that the contents of the phantom are visible but that the height is not taken into account in the spacing of the layout. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

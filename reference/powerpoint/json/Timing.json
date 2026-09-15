@@ -1,0 +1,146 @@
+{
+  "name": "Timing",
+  "kind": "Dispatch Interface",
+  "guid": "{914934E0-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents timing properties for an animation effect.",
+  "remarks": "Use the following read/write properties of the Timing object to manipulate animation timing effects.",
+  "example": "ActiveWindow.Selection.SlideRange(1).TimeLine.MainSequence(1).Timing.Duration = 5",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Duration",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the length of an animation in seconds. Read/write."
+    },
+    {
+      "name": "TriggerType",
+      "kind": "property",
+      "type": "MsoAnimTriggerType",
+      "access": "read/write",
+      "description": "Represents the trigger that starts an animation. Read/write."
+    },
+    {
+      "name": "TriggerDelayTime",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Sets or returns the delay, in seconds, from when an animation trigger is enabled. Read/write."
+    },
+    {
+      "name": "TriggerShape",
+      "kind": "property",
+      "type": "Shape",
+      "access": "read/write",
+      "description": "Sets or returns a Shape object that represents the shape associated with an animation trigger. Read/write."
+    },
+    {
+      "name": "RepeatCount",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Sets or returns the number of times to repeat an animation. Read/write."
+    },
+    {
+      "name": "RepeatDuration",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Sets or returns how long repeated animations should last, in seconds. Read/write."
+    },
+    {
+      "name": "Speed",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the speed, in seconds, of the specified animation. Read/write."
+    },
+    {
+      "name": "Accelerate",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the percentage of the duration over which a timing acceleration should take place. Read/write."
+    },
+    {
+      "name": "Decelerate",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Sets or returns the percentage of the duration over which a timing deceleration should take place. Read/write."
+    },
+    {
+      "name": "AutoReverse",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether an effect should play forward and then in reverse, thereby doubling its duration. Read/write."
+    },
+    {
+      "name": "SmoothStart",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether an animation should accelerate when it starts. Read/write."
+    },
+    {
+      "name": "SmoothEnd",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether an animation should decelerate as it ends. Read/write."
+    },
+    {
+      "name": "RewindAtEnd",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Represents whether an object returns to its beginning position after an animation has ended. Read/write."
+    },
+    {
+      "name": "Restart",
+      "kind": "property",
+      "type": "MsoAnimEffectRestart",
+      "access": "read/write",
+      "description": "Represents whether the animation effect restarts after the effect has started once. Read/write."
+    },
+    {
+      "name": "BounceEnd",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Read/write"
+    },
+    {
+      "name": "BounceEndIntensity",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Read/write"
+    },
+    {
+      "name": "TriggerBookmark",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Read/write"
+    }
+  ],
+  "methods": [],
+  "events": []
+}

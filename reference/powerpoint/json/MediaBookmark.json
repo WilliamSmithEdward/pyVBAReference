@@ -1,0 +1,42 @@
+{
+  "name": "MediaBookmark",
+  "kind": "Dispatch Interface",
+  "guid": "{BA72E555-4FF5-48F4-8215-5505F990966F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Contains properties and methods that specify information about the bookmark of the media.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the index position of the bookmark. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the bookmark. Read-only."
+    },
+    {
+      "name": "Position",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the time that is associated with the bookmark. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the bookmark from the collection.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

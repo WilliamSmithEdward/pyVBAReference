@@ -1,0 +1,167 @@
+{
+  "name": "ProtectedViewWindow",
+  "kind": "Dispatch Interface",
+  "guid": "{F743EDD0-9B97-4B09-89CC-77BE19B51481}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a Protected View window.",
+  "remarks": "Documents displayed in a Protected View window cannot be edited and are restricted from running active content such as Visual Basic for Applications macros and Data Connections. Use ProtectedViewWindows (_index_), where _index_ is the index number to return a single ProtectedViewWindow object.",
+  "example": "Dim pvWindow As ProtectedViewWindow\n\nSet pvWindow = ProtectedViewWindows(1)",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified ProtectedViewWindow object."
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the caption text that is displayed in the title bar of the document or Protected View window. Read/write String."
+    },
+    {
+      "name": "Document",
+      "kind": "property",
+      "type": "Document",
+      "access": "read-only",
+      "description": "Returns a Document object associated with the Protected View window. Read-only."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long, in points, that represents the horizontal position of the specified Protected View window. Read/write."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the vertical position, in points, of the specified Protected View window. Read/write Long"
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the width, in points, of the specified Protected View window. Read/write Long."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the height of the Protected View window. Read/write Long."
+    },
+    {
+      "name": "WindowState",
+      "kind": "property",
+      "type": "WdWindowState",
+      "access": "read/write",
+      "description": "Returns or sets the state of the specified Protected View window. Read/write WdWindowState."
+    },
+    {
+      "name": "Active",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified Protected View window is active. Read-only Boolean."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the position of an item in a collection. Read-only."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified Protected View window is visible. Read/write. Boolean."
+    },
+    {
+      "name": "SourceName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the source file for the specified Protected View window. Read-only String."
+    },
+    {
+      "name": "SourcePath",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the path of the source file for the specified Protected View window. Read-only String."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate()",
+      "description": "Activates the specified Protected View window.",
+      "returns": "void"
+    },
+    {
+      "name": "Edit",
+      "kind": "method",
+      "signature": "Edit([PasswordTemplate As Variant], [WritePasswordDocument As Variant], [WritePasswordTemplate As Variant]) As Document",
+      "description": "",
+      "returns": "Document",
+      "parameters": [
+        {
+          "name": "PasswordTemplate",
+          "type": "Variant",
+          "optional": true,
+          "description": "The password for opening the template."
+        },
+        {
+          "name": "WritePasswordDocument",
+          "type": "Variant",
+          "optional": true,
+          "description": "The password for saving changes to the document."
+        },
+        {
+          "name": "WritePasswordTemplate",
+          "type": "Variant",
+          "optional": true,
+          "description": "The password for saving changes to the template."
+        }
+      ]
+    },
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close()",
+      "description": "Closes the specified Protected View window.",
+      "returns": "void"
+    },
+    {
+      "name": "ToggleRibbon",
+      "kind": "method",
+      "signature": "ToggleRibbon()",
+      "description": "Shows or hides the ribbon.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

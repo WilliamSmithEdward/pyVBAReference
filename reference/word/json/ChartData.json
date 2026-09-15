@@ -1,0 +1,49 @@
+{
+  "name": "ChartData",
+  "kind": "Dispatch Interface",
+  "guid": "{4A304B59-31FF-42DD-B436-7FC9C5DB7559}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents access to the linked or embedded data associated with a chart.",
+  "remarks": "Use the ChartData property to return the ChartData object.",
+  "example": "With ActiveDocument.InlineShapes(1).Chart.ChartData\n .Activate\nEnd With",
+  "properties": [
+    {
+      "name": "Workbook",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the workbook that contains the chart data associated with the chart. Read-only Object."
+    },
+    {
+      "name": "IsLinked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the data for the chart is linked to an external Microsoft Excel workbook. Read-only Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate()",
+      "description": "Activates the first window of the workbook associated with the chart.",
+      "returns": "void"
+    },
+    {
+      "name": "BreakLink",
+      "kind": "method",
+      "signature": "BreakLink()",
+      "description": "Removes the link between the data for a chart and a Microsoft Excel workbook.",
+      "returns": "void"
+    },
+    {
+      "name": "ActivateChartDataWindow",
+      "kind": "method",
+      "signature": "ActivateChartDataWindow()",
+      "description": "Opens a Excel data grid window that contains the full source data for the specified chart.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

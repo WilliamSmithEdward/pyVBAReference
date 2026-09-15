@@ -1,0 +1,104 @@
+{
+  "name": "ChartFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{B66D3C1A-4541-4961-B35B-A353C03F6A99}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Provides access to the OfficeArt formatting for chart elements.",
+  "remarks": "Using a property or method that does not apply to the type of object the ChartFormat object is attached to will result in a run-time error.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Fill",
+      "kind": "property",
+      "type": "FillFormat",
+      "access": "read-only",
+      "description": "Returns a FillFormat object for the parent chart element that contains fill formatting properties for the chart element. Read-only."
+    },
+    {
+      "name": "Glow",
+      "kind": "property",
+      "type": "GlowFormat",
+      "access": "read-only",
+      "description": "Returns the glow formatting properties for the chart element. Read-only GlowFormat."
+    },
+    {
+      "name": "Line",
+      "kind": "property",
+      "type": "LineFormat",
+      "access": "read-only",
+      "description": "Returns the line formatting properties for the specified chart element. Read-only LineFormat."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "PictureFormat",
+      "kind": "property",
+      "type": "PictureFormat",
+      "access": "read-only",
+      "description": "Returns a PictureFormat object for a specified chart that contains pictures. Read-only."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "ShadowFormat",
+      "access": "read-only",
+      "description": "Returns shadow formatting properties for the chart element. Read-only ShadowFormat."
+    },
+    {
+      "name": "SoftEdge",
+      "kind": "property",
+      "type": "SoftEdgeFormat",
+      "access": "read-only",
+      "description": "Returns the soft edge formatting for a shape. Read-only SoftEdgeFormat."
+    },
+    {
+      "name": "TextFrame2",
+      "kind": "property",
+      "type": "TextFrame2",
+      "access": "read-only",
+      "description": "Returns the text formatting for the specified chart element. Read-only TextFrame2."
+    },
+    {
+      "name": "ThreeD",
+      "kind": "property",
+      "type": "ThreeDFormat",
+      "access": "read-only",
+      "description": "Returns the 3D-effect formatting properties for the specified chart. Read-only ThreeDFormat."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the Microsoft Word application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Adjustments",
+      "kind": "property",
+      "type": "Adjustments",
+      "access": "read-only",
+      "description": "Returns an Adjustments object that contains a collection of adjustment values for the specified Chart Format object."
+    },
+    {
+      "name": "AutoShapeType",
+      "kind": "property",
+      "type": "MsoAutoShapeType",
+      "access": "read/write",
+      "description": "Returns or sets the auto shape type of the specified object. Read/write MSOAutoShapeType."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

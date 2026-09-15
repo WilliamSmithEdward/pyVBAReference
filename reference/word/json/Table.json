@@ -1,0 +1,533 @@
+{
+  "name": "Table",
+  "kind": "Dispatch Interface",
+  "guid": "{00020951-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single table. The Table object is a member of the Tables collection. The Tables collection includes all the tables in the specified selection, range, or document.",
+  "remarks": "Use Tables (Index), where Index is the index number, to return a single Table object. The index number represents the position of the table in the selection, range, or document. The following example converts the first table in the active document to text. Use the Add method to add a table at the specified range. The following example adds a 3x4 table at the beginning of the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the portion of a document that is contained within the specified table."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Table object."
+    },
+    {
+      "name": "Columns",
+      "kind": "property",
+      "type": "Columns",
+      "access": "read-only",
+      "description": "Returns a Columns collection that represents all the table columns in the table. Read-only."
+    },
+    {
+      "name": "Rows",
+      "kind": "property",
+      "type": "Rows",
+      "access": "read-only",
+      "description": "Returns a Rows collection that represents all the table rows within a table. Read-only."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read/write",
+      "description": "Returns a Borders collection that represents all the borders for the specified object."
+    },
+    {
+      "name": "Shading",
+      "kind": "property",
+      "type": "Shading",
+      "access": "read-only",
+      "description": "Returns a Shading object that refers to the shading formatting for the specified object."
+    },
+    {
+      "name": "Uniform",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if all the rows in a table have the same number of columns. Read-only Boolean."
+    },
+    {
+      "name": "AutoFormatType",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the type of automatic formatting that's been applied to the specified table. Read-only Long."
+    },
+    {
+      "name": "Tables",
+      "kind": "property",
+      "type": "Tables",
+      "access": "read-only",
+      "description": "Returns a Tables collection that represents all the tables nested within the specified table. Read-only."
+    },
+    {
+      "name": "NestingLevel",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the nesting level of the specified table. Read-only Long."
+    },
+    {
+      "name": "AllowAutoFit",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Allows Microsoft Word to automatically resize cells in a table to fit their contents. Read/write Boolean."
+    },
+    {
+      "name": "PreferredWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the preferred width (in points or as a percentage of the window width) for the specified table. Read/write Single."
+    },
+    {
+      "name": "PreferredWidthType",
+      "kind": "property",
+      "type": "WdPreferredWidthType",
+      "access": "read/write",
+      "description": "Returns or sets the preferred unit of measurement to use for the width of the specified table. Read/write WdPreferredWidthType."
+    },
+    {
+      "name": "TopPadding",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the amount of space (in points) to add above the contents of all the cells in a table. Read/write Single."
+    },
+    {
+      "name": "BottomPadding",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the amount of space (in points) to add below the contents of a single cell or all the cells in a table. Read/write Single."
+    },
+    {
+      "name": "LeftPadding",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the amount of space (in points) to add to the left of the contents of all the cells in a table. Read/write Single."
+    },
+    {
+      "name": "RightPadding",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the amount of space (in points) to add to the right of the contents of all the cells in a table. Read/write Single."
+    },
+    {
+      "name": "Spacing",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the spacing (in points) between the cells in a table. Read/write Single."
+    },
+    {
+      "name": "TableDirection",
+      "kind": "property",
+      "type": "WdTableDirection",
+      "access": "read/write",
+      "description": "Returns or sets the direction in which Microsoft Word orders cells in the specified table. Read/write WdTableDirection."
+    },
+    {
+      "name": "ID",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the identifying label for the specified table when the document is saved as a webpage. Read/write String."
+    },
+    {
+      "name": "Style",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the style for the specified table. Read/write Variant."
+    },
+    {
+      "name": "ApplyStyleHeadingRows",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to apply heading-row formatting to the first row of the selected table. Read/write Boolean."
+    },
+    {
+      "name": "ApplyStyleLastRow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to apply last-row formatting to the last row of the specified table. Read/write Boolean."
+    },
+    {
+      "name": "ApplyStyleFirstColumn",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to apply first-column formatting to the first column of the specified table. Read/write Boolean."
+    },
+    {
+      "name": "ApplyStyleLastColumn",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to apply last-column formatting to the last column of the specified table. Read/write Boolean."
+    },
+    {
+      "name": "ApplyStyleRowBands",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether to apply style bands to the rows in a table if an applied preset table style provides style banding for rows. Read/write."
+    },
+    {
+      "name": "ApplyStyleColumnBands",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether to apply style bands to the columns in a table if an applied preset table style provides style banding for columns. Read/write."
+    },
+    {
+      "name": "Title",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String that contains a title for the specified table. Read/write."
+    },
+    {
+      "name": "Descr",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String that contains a description for the specified table. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects the specified table.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified table.",
+      "returns": "void"
+    },
+    {
+      "name": "SortAscending",
+      "kind": "method",
+      "signature": "SortAscending()",
+      "description": "Sorts paragraphs or table rows in ascending alphanumeric order.",
+      "returns": "void"
+    },
+    {
+      "name": "SortDescending",
+      "kind": "method",
+      "signature": "SortDescending()",
+      "description": "Sorts table rows in descending alphanumeric order.",
+      "returns": "void"
+    },
+    {
+      "name": "AutoFormat",
+      "kind": "method",
+      "signature": "AutoFormat([Format As Variant], [ApplyBorders As Variant], [ApplyShading As Variant], [ApplyFont As Variant], [ApplyColor As Variant], [ApplyHeadingRows As Variant], [ApplyLastRow As Variant], [ApplyFirstColumn As Variant], [ApplyLastColumn As Variant], [AutoFit As Variant])",
+      "description": "Applies a predefined look to a table.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Format",
+          "type": "Variant",
+          "optional": true,
+          "description": "The format to apply. This parameter can be a WdTableFormat constant, a WdTableFormatApply constant, or a TableStyle object."
+        },
+        {
+          "name": "ApplyBorders",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to apply the border properties of the specified format. The default value is True."
+        },
+        {
+          "name": "ApplyShading",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to apply the shading properties of the specified format. The default value is True."
+        },
+        {
+          "name": "ApplyFont",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to apply the font properties of the specified format. The default value is True."
+        },
+        {
+          "name": "ApplyColor",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to apply the color properties of the specified format. The default value is True."
+        },
+        {
+          "name": "ApplyHeadingRows",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to apply the heading-row properties of the specified format. The default value is True."
+        },
+        {
+          "name": "ApplyLastRow",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to apply the last-row properties of the specified format. The default value is False."
+        },
+        {
+          "name": "ApplyFirstColumn",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to apply the first-column properties of the specified format. The default value is True."
+        },
+        {
+          "name": "ApplyLastColumn",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to apply the last-column properties of the specified format. The default value is False."
+        },
+        {
+          "name": "AutoFit",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to decrease the width of the table columns as much as possible without changing the way text wraps in the cells. The default value is True."
+        }
+      ]
+    },
+    {
+      "name": "UpdateAutoFormat",
+      "kind": "method",
+      "signature": "UpdateAutoFormat()",
+      "description": "Updates the table with the characteristics of a predefined table format.",
+      "returns": "void"
+    },
+    {
+      "name": "Cell",
+      "kind": "method",
+      "signature": "Cell(Row As Long, Column As Long) As Cell",
+      "description": "Returns a Cell object that represents a cell in a table.",
+      "returns": "Cell",
+      "parameters": [
+        {
+          "name": "Row",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of the row in the table to return. Can be an integer between 1 and the number of rows in the table."
+        },
+        {
+          "name": "Column",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of the cell in the table to return. Can be an integer between 1 and the number of columns in the table."
+        }
+      ]
+    },
+    {
+      "name": "Split",
+      "kind": "method",
+      "signature": "Split(BeforeRow As Variant) As Table",
+      "description": "Inserts an empty paragraph immediately above the specified row in the table, and returns a Table object that contains both the specified row and the rows that follow it.",
+      "returns": "Table",
+      "parameters": [
+        {
+          "name": "BeforeRow",
+          "type": "Variant",
+          "optional": false,
+          "description": "The row that the table is to be split before. Can be a row number or a Row object."
+        }
+      ]
+    },
+    {
+      "name": "ConvertToText",
+      "kind": "method",
+      "signature": "ConvertToText([Separator As Variant], [NestedTables As Variant]) As Range",
+      "description": "Converts a table to text and returns a Range object that represents the delimited text.",
+      "returns": "Range",
+      "parameters": [
+        {
+          "name": "Separator",
+          "type": "Variant",
+          "optional": true,
+          "description": "The character that delimits the converted columns (paragraph marks delimit the converted rows). Can be any WdTableFieldSeparator constants."
+        },
+        {
+          "name": "NestedTables",
+          "type": "Variant",
+          "optional": true,
+          "description": "True if nested tables are converted to text. This argument is ignored if Separator is not wdSeparateByParagraphs. The default value is True."
+        }
+      ]
+    },
+    {
+      "name": "AutoFitBehavior",
+      "kind": "method",
+      "signature": "AutoFitBehavior(Behavior As WdAutoFitBehavior)",
+      "description": "Determines how Microsoft Word resizes a table when the AutoFit feature is used.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Behavior",
+          "type": "WdAutoFitBehavior",
+          "optional": false,
+          "description": "How Word resizes the specified table with the AutoFit feature is used."
+        }
+      ]
+    },
+    {
+      "name": "Sort",
+      "kind": "method",
+      "signature": "Sort([ExcludeHeader As Variant], [FieldNumber As Variant], [SortFieldType As Variant], [SortOrder As Variant], [FieldNumber2 As Variant], [SortFieldType2 As Variant], [SortOrder2 As Variant], [FieldNumber3 As Variant], [SortFieldType3 As Variant], [SortOrder3 As Variant], [CaseSensitive As Variant], [BidiSort As Variant], [IgnoreThe As Variant], [IgnoreKashida As Variant], [IgnoreDiacritics As Variant], [IgnoreHe As Variant], [LanguageID As Variant])",
+      "description": "Sorts the specified table.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ExcludeHeader",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to exclude the first row from the sort operation. The default value is False."
+        },
+        {
+          "name": "FieldNumber",
+          "type": "Variant",
+          "optional": true,
+          "description": "The first field by which to sort. Microsoft Word sorts by FieldNumber, then by FieldNumber2, and then by FieldNumber3."
+        },
+        {
+          "name": "SortFieldType",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sort type for FieldNumber. Can be one of the WdSortFieldType constants. Some of these constants may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed. The default value is wdSortFieldAlphanumeric."
+        },
+        {
+          "name": "SortOrder",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sorting order to use when sorting FieldNumber. Can be a WdSortOrder constant."
+        },
+        {
+          "name": "FieldNumber2",
+          "type": "Variant",
+          "optional": true,
+          "description": "The second field by which to sort."
+        },
+        {
+          "name": "SortFieldType2",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sort type for FieldNumber2. Can be one of the WdSortFieldType constants. Some of these constants may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed. The default value is wdSortFieldAlphanumeric."
+        },
+        {
+          "name": "SortOrder2",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sorting order to use when sorting FieldNumber2. Can be one WdSortOrder constant."
+        },
+        {
+          "name": "FieldNumber3",
+          "type": "Variant",
+          "optional": true,
+          "description": "The third field by which to sort."
+        },
+        {
+          "name": "SortFieldType3",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sort type for FieldNumber3. Can be one of the WdSortFieldType constants. Some of these constants may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed. The default value is wdSortFieldAlphanumeric."
+        },
+        {
+          "name": "SortOrder3",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sorting order to use when sorting FieldNumber3. Can be one WdSortOrder constant."
+        },
+        {
+          "name": "CaseSensitive",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to sort with case sensitivity. The default value is False."
+        },
+        {
+          "name": "BidiSort",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to sort based on right-to-left language rules. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "IgnoreThe",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore the Arabic character alef lam when sorting right-to-left language text. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "IgnoreKashida",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore kashidas when sorting right-to-left language text. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "IgnoreDiacritics",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore bidirectional control characters when sorting right-to-left language text. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "IgnoreHe",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore the Hebrew character he when sorting right-to-left language text. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "LanguageID",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the sorting language. Can be one of the WdLanguageID constants. Refer to the Object Browser for a list of the WdLanguageID constants."
+        }
+      ]
+    },
+    {
+      "name": "ApplyStyleDirectFormatting",
+      "kind": "method",
+      "signature": "ApplyStyleDirectFormatting(StyleName As String)",
+      "description": "Applies the specified style but maintains any formatting that a user directly applies.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "StyleName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the style to apply."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

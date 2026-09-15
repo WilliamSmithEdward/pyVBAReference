@@ -1,0 +1,159 @@
+{
+  "name": "FormatCondition",
+  "kind": "Class",
+  "guid": "{E27A992D-A330-11D0-81DD-00C04FC2F51B}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "The FormatCondition object represents a conditional format of a combo box or text box control and is a member of the FormatConditions collection.",
+  "remarks": "Use the FormatConditions (_index_), where _index_ is the index number of the conditional format, to return a FormatCondition object. Use the Add method to create a new conditional format. Use the Modify method to change one of the formats, or the Delete method to delete a format. Use the BackColor, Enabled, FontBold, FontItalic, FontUnderline, and ForeColor properties of the FormatCondition object to control the appearance of formatted combo box and text box controls.",
+  "example": "",
+  "properties": [
+    {
+      "name": "ForeColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Use the ForeColor property to specify the color for text in a control. Read/write Long."
+    },
+    {
+      "name": "BackColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the interior color of the specified object. Read/write Long."
+    },
+    {
+      "name": "FontBold",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the FontBold property to specify whether a font appears in a bold style in the following situations:"
+    },
+    {
+      "name": "FontItalic",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the FontItalic property to specify whether text is italic in the following situations:"
+    },
+    {
+      "name": "FontUnderline",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the FontUnderline property to specify whether text is underlined in the following situations:"
+    },
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the Enabled property to set or return the status of the conditional format in the FormatCondition object. Read/write Boolean."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "AcFormatConditionType",
+      "access": "read-only",
+      "description": "Returns the value of a FormatCondition object type. Read-only AcFormatConditionType."
+    },
+    {
+      "name": "Operator",
+      "kind": "property",
+      "type": "AcFormatConditionOperator",
+      "access": "read-only",
+      "description": "Use the Operator property to return the operator value for the conditional format or data validation of a FormatCondition object. Read-only AcFormatConditionOperator."
+    },
+    {
+      "name": "Expression1",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Use the Expression1 property to return the values of a conditional format within a FormatCondition object. Read-only String."
+    },
+    {
+      "name": "Expression2",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Use the Expression2 property to return the values of a conditional format within a FormatCondition object. Read-only String."
+    },
+    {
+      "name": "ShortestBarLimit",
+      "kind": "property",
+      "type": "AcFormatBarLimits",
+      "access": "read/write",
+      "description": "Gets or sets how the shortest data bar is evaluated for the specified FormatCondition. Read/write AcFormatBarLimits."
+    },
+    {
+      "name": "ShortestBarValue",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets a numeric expression that specifies the value of the shortest bar of a FormatCondition. Read/write String."
+    },
+    {
+      "name": "LongestBarLimit",
+      "kind": "property",
+      "type": "AcFormatBarLimits",
+      "access": "read/write",
+      "description": "Gets or sets how the longest data bar is evaluated for the specified FormatCondition. Read/write AcFormatBarLimits."
+    },
+    {
+      "name": "LongestBarValue",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets a numeric expression that specifies the value of the longest bar of a FormatCondition. Read/write String."
+    },
+    {
+      "name": "ShowBarOnly",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Gets or sets whether the data bar or the data bar and its value are displayed. Set to True to display only the data bar. Read/write Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Modify",
+      "kind": "method",
+      "signature": "Modify(Type As AcFormatConditionType, [Operator As AcFormatConditionOperator], [Expression1 As Variant], [Expression2 As Variant])",
+      "description": "Use the Modify method to change the format conditions of a FormatCondition object in the FormatConditions collection of a combo box or text box control.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "AcFormatConditionType",
+          "optional": false,
+          "description": "An AcFormatConditionType constant that specifies the type of condition to be modified."
+        },
+        {
+          "name": "Operator",
+          "type": "AcFormatConditionOperator",
+          "optional": true,
+          "description": "An AcFormatConditionOperator constant that specifies the type of operator to be used. NOTE: If the type argument is acExpression, the operator argument is ignored. If you leave this argument blank, the default constant (acBetween) is assumed."
+        },
+        {
+          "name": "Expression1",
+          "type": "Variant",
+          "optional": true,
+          "description": "A value or expression associated with the first part of the conditional format. Can be a constant value or a string value."
+        },
+        {
+          "name": "Expression2",
+          "type": "Variant",
+          "optional": true,
+          "description": "A value or expression associated with the second part of the conditional format when the operator argument is acBetween or acNotBetween (otherwise, this argument is ignored). Can be a constant value or a string value."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

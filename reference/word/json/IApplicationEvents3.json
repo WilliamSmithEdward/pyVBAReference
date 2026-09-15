@@ -1,0 +1,450 @@
+{
+  "name": "IApplicationEvents3",
+  "kind": "Dispatch Interface",
+  "guid": "{00020A00-0001-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "Quit",
+      "kind": "method",
+      "signature": "Quit()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "DocumentChange",
+      "kind": "method",
+      "signature": "DocumentChange()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "DocumentOpen",
+      "kind": "method",
+      "signature": "DocumentOpen(Doc As Document)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DocumentBeforeClose",
+      "kind": "method",
+      "signature": "DocumentBeforeClose(Doc As Document, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DocumentBeforePrint",
+      "kind": "method",
+      "signature": "DocumentBeforePrint(Doc As Document, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DocumentBeforeSave",
+      "kind": "method",
+      "signature": "DocumentBeforeSave(Doc As Document, SaveAsUI As Boolean, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "SaveAsUI",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "NewDocument",
+      "kind": "method",
+      "signature": "NewDocument(Doc As Document)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WindowActivate",
+      "kind": "method",
+      "signature": "WindowActivate(Doc As Document, Wn As Window)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Wn",
+          "type": "Window",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WindowDeactivate",
+      "kind": "method",
+      "signature": "WindowDeactivate(Doc As Document, Wn As Window)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Wn",
+          "type": "Window",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WindowSelectionChange",
+      "kind": "method",
+      "signature": "WindowSelectionChange(Sel As Selection)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sel",
+          "type": "Selection",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WindowBeforeRightClick",
+      "kind": "method",
+      "signature": "WindowBeforeRightClick(Sel As Selection, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sel",
+          "type": "Selection",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WindowBeforeDoubleClick",
+      "kind": "method",
+      "signature": "WindowBeforeDoubleClick(Sel As Selection, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Sel",
+          "type": "Selection",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "EPostagePropertyDialog",
+      "kind": "method",
+      "signature": "EPostagePropertyDialog(Doc As Document)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "EPostageInsert",
+      "kind": "method",
+      "signature": "EPostageInsert(Doc As Document)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MailMergeAfterMerge",
+      "kind": "method",
+      "signature": "MailMergeAfterMerge(Doc As Document, DocResult As Document)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "DocResult",
+          "type": "Document",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MailMergeAfterRecordMerge",
+      "kind": "method",
+      "signature": "MailMergeAfterRecordMerge(Doc As Document)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MailMergeBeforeMerge",
+      "kind": "method",
+      "signature": "MailMergeBeforeMerge(Doc As Document, StartRecord As Long, EndRecord As Long, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "StartRecord",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "EndRecord",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MailMergeBeforeRecordMerge",
+      "kind": "method",
+      "signature": "MailMergeBeforeRecordMerge(Doc As Document, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MailMergeDataSourceLoad",
+      "kind": "method",
+      "signature": "MailMergeDataSourceLoad(Doc As Document)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MailMergeDataSourceValidate",
+      "kind": "method",
+      "signature": "MailMergeDataSourceValidate(Doc As Document, Handled As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Handled",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MailMergeWizardSendToCustom",
+      "kind": "method",
+      "signature": "MailMergeWizardSendToCustom(Doc As Document)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MailMergeWizardStateChange",
+      "kind": "method",
+      "signature": "MailMergeWizardStateChange(Doc As Document, FromState As Long, ToState As Long, Handled As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "FromState",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ToState",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Handled",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "WindowSize",
+      "kind": "method",
+      "signature": "WindowSize(Doc As Document, Wn As Window)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Wn",
+          "type": "Window",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

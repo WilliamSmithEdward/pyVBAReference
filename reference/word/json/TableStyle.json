@@ -1,0 +1,148 @@
+{
+  "name": "TableStyle",
+  "kind": "Dispatch Interface",
+  "guid": "{B7564E97-0519-4C68-B400-3803E7C63242}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single style that can be applied to a table.",
+  "remarks": "Use the Table property of the Styles object to return a TableStyle object. Use the Borders property to apply borders to an entire table. Use the Condition method to apply borders or shading only to specified sections of a table. This example creates a new table style and formats the table with a surrounding border. Special borders and shading are applied to the first and last rows and the last column.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified TableStyle object."
+    },
+    {
+      "name": "AllowPageBreaks",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Allows Microsoft Word to break the specified table across pages. Read/write Boolean."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read/write",
+      "description": "Returns a Borders collection that represents all the borders for the specified object."
+    },
+    {
+      "name": "BottomPadding",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the amount of space (in points) to add below the contents of a single cell or all the cells in a table. Read/write Single."
+    },
+    {
+      "name": "LeftPadding",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the amount of space (in points) to add to the left of the contents of all the cells in a table. Read/write Single."
+    },
+    {
+      "name": "TopPadding",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the amount of space (in points) to add above the contents of all the cells in a table. Read/write Single."
+    },
+    {
+      "name": "RightPadding",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the amount of space (in points) to add to the right of the contents of all the cells in a table. Read/write Single."
+    },
+    {
+      "name": "Alignment",
+      "kind": "property",
+      "type": "WdRowAlignment",
+      "access": "read/write",
+      "description": "Returns or sets a WdRowAlignment constant that represents the alignment for the specified table style. Read/write."
+    },
+    {
+      "name": "Spacing",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the spacing (in points) between the cells in a table style. Read/write Single."
+    },
+    {
+      "name": "TableDirection",
+      "kind": "property",
+      "type": "WdTableDirection",
+      "access": "read/write",
+      "description": "Returns or sets the direction in which Microsoft Word orders cells in the specified table style. Read/write WdTableDirection."
+    },
+    {
+      "name": "AllowBreakAcrossPage",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Sets or returns a Long indicating whether lines in the rows of tables formatted with a specified style break across pages. Read/write."
+    },
+    {
+      "name": "LeftIndent",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the left indent value (in points) for the rows in the specified table style. Read/write."
+    },
+    {
+      "name": "Shading",
+      "kind": "property",
+      "type": "Shading",
+      "access": "read-only",
+      "description": "Returns a Shading object that refers to the shading formatting for the specified table style."
+    },
+    {
+      "name": "RowStripe",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long that represents the number of rows to include in the banding when a style specifies odd- or even-row banding. Read/write."
+    },
+    {
+      "name": "ColumnStripe",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long that represents the number of columns in the banding when a style specifies odd- or even-column banding. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Condition",
+      "kind": "method",
+      "signature": "Condition(ConditionCode As WdConditionCode) As ConditionalStyle",
+      "description": "Returns a ConditionalStyle object that represents special style formatting for a portion of a table.",
+      "returns": "ConditionalStyle",
+      "parameters": [
+        {
+          "name": "ConditionCode",
+          "type": "WdConditionCode",
+          "optional": false,
+          "description": "The area of the table to which to apply the formatting."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

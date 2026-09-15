@@ -1,0 +1,64 @@
+{
+  "name": "SoundEffect",
+  "kind": "Dispatch Interface",
+  "guid": "{91493472-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents the sound effect that accompanies an animation or slide transition in a slide show.",
+  "remarks": "",
+  "example": "With ActivePresentation.Slides(1).Shapes(1).AnimationSettings\n\n    .TextLevelEffect = ppAnimateByAllLevels\n\n    .SoundEffect.ImportFromFile \"c:\\sndsys\\bass.wav\"\n\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the specified object. Read/write."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "PpSoundEffectType",
+      "access": "read/write",
+      "description": "Represents the type of sound effect. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "ImportFromFile",
+      "kind": "method",
+      "signature": "ImportFromFile(FileName As String)",
+      "description": "Specifies the sound that will be played whenever the specified shape is clicked or animated or whenever the specified slide transition occurs.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Play",
+      "kind": "method",
+      "signature": "Play()",
+      "description": "Plays the specified sound effect.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

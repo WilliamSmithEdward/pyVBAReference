@@ -1,0 +1,84 @@
+{
+  "name": "OMathScrSubSup",
+  "kind": "Dispatch Interface",
+  "guid": "{DC489AD4-23C4-4F4B-990F-45A51C7C0C4F}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents an equation with a base that contains a superscript or subscript.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathScrSubSup object."
+    },
+    {
+      "name": "E",
+      "kind": "property",
+      "type": "OMath",
+      "access": "read-only",
+      "description": "Returns an OMath object that represents the base of the specified equation object. Read-only."
+    },
+    {
+      "name": "Sub",
+      "kind": "property",
+      "type": "OMath",
+      "access": "read-only",
+      "description": "Returns an OMath object that represents the subscript for a subscript-superscript object. Read-only."
+    },
+    {
+      "name": "Sup",
+      "kind": "property",
+      "type": "OMath",
+      "access": "read-only",
+      "description": "Returns an OMath object that represents the superscript for a subscript-superscript object. Read-only."
+    },
+    {
+      "name": "AlignScripts",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether to horizontally align subscripts and superscripts in the sub-superscript object. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "RemoveSub",
+      "kind": "method",
+      "signature": "RemoveSub() As OMathFunction",
+      "description": "Removes the subscript for an equation and returns an OMathFunction object that represents the updated equation without the subscript.",
+      "returns": "OMathFunction"
+    },
+    {
+      "name": "RemoveSup",
+      "kind": "method",
+      "signature": "RemoveSup() As OMathFunction",
+      "description": "Removes the superscript for an equation and returns an OMathFunction object that represents the updated equation without the superscript.",
+      "returns": "OMathFunction"
+    },
+    {
+      "name": "ToScrPre",
+      "kind": "method",
+      "signature": "ToScrPre() As OMathFunction",
+      "description": "Converts an equation with a base superscript or subscript to an equation with a superscript or subscript to the left of the base.",
+      "returns": "OMathFunction"
+    }
+  ],
+  "events": []
+}

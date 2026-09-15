@@ -1,0 +1,92 @@
+{
+  "name": "Cell",
+  "kind": "Dispatch Interface",
+  "guid": "{914934C9-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a table cell. The Cell object is a member of the CellRange collection. The CellRange collection represents all the cells in the specified column or row. To use the CellRange collection, use the Cells keyword.",
+  "remarks": "You cannot programmatically add cells to or delete cells from a PowerPoint table. Use the Add method of the Columns or Rows collections to add a column or row to a table. Use the Delete method of the Columns or Rows collections to delete a column or row from a table.",
+  "example": "With ActivePresentation.Slides(2).Shapes(5).Table\n\n    .Cell(1, 1).Merge MergeTo:=.Cell(1, 2)\n\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Shape",
+      "kind": "property",
+      "type": "Shape",
+      "access": "read-only",
+      "description": "Returns a Shape object that represents a shape in a table cell. Read-only."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read-only",
+      "description": "Returns a Borders collection that represents the borders and diagonal lines for the specified Cell object or CellRange collection. Read-only."
+    },
+    {
+      "name": "Selected",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns True if the specified table cell is selected. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Merge",
+      "kind": "method",
+      "signature": "Merge(MergeTo As Cell)",
+      "description": "Merges one table cell with another. The result is a single table cell.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "MergeTo",
+          "type": "Cell",
+          "optional": false,
+          "description": "The Cell object to be merged with."
+        }
+      ]
+    },
+    {
+      "name": "Split",
+      "kind": "method",
+      "signature": "Split(NumRows As Long, NumColumns As Long)",
+      "description": "Splits a single table cell into multiple cells.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "NumRows",
+          "type": "Long",
+          "optional": false,
+          "description": "Number of rows that the cell is being split into."
+        },
+        {
+          "name": "NumColumns",
+          "type": "Long",
+          "optional": false,
+          "description": "Number of columns that the cell is being split into."
+        }
+      ]
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects the specified object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

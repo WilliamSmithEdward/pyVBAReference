@@ -1,0 +1,64 @@
+{
+  "name": "FontNames",
+  "kind": "Dispatch Interface",
+  "guid": "{0002096F-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a list of the names of all the available fonts.",
+  "remarks": "Use the FontNames, LandscapeFontNames, or PortraitFontNames property to return the FontNames object. The following example displays the number of portrait fonts available. This example lists all the font names in the FontNames object at the end of the active document. Use FontNames (Index), where Index is the index number, to return the name of a font. The following example displays the first font name in the FontNames object.",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of font names in the collection. Read-only Long."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified FontNames object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As String",
+      "description": "Returns a String that represents the name of a font.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position of the individual object."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

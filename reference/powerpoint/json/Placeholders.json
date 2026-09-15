@@ -1,0 +1,65 @@
+{
+  "name": "Placeholders",
+  "kind": "Dispatch Interface",
+  "guid": "{91493476-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of all the Shape objects that represent placeholders on the specified slide.",
+  "remarks": "Each Shape object in the Placeholders collection represents a placeholder for text, a chart, a table, an organizational chart, or some other type of object. If the slide has a title, the title is the first placeholder in the collection. You can delete individual placeholders by using the Deletemethod, and you can restore deleted placeholders by using the AddPlaceholder method, but you cannot add any more placeholders to a slide than it had when it was created. To change the number of placeholders on a given slide, set the Layout property.",
+  "example": "Set sObj = ActivePresentation.Slides.Add(1, ppLayoutText).Shapes\nsObj.Title.TextFrame.TextRange.Text = \"This is the title text\"\nsObj.Placeholders(2).TextFrame.TextRange.Text = _\n    \"Item 1\" & Chr(13) & \"Item 2\"",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Shape",
+      "description": "Returns a single Shape object from the specified Placeholders collection.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the single Shape object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "FindByName",
+      "kind": "method",
+      "signature": "FindByName(Index As Variant) As Shape",
+      "description": "Finds the placeholder in the Placeholders collection at the specified index location or with the specified name.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The index of the placeholder to be found."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

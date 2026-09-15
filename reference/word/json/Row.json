@@ -1,0 +1,238 @@
+{
+  "name": "Row",
+  "kind": "Dispatch Interface",
+  "guid": "{00020950-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a row in a table. The Row object is a member of the Rows collection. The Rows collection includes all the rows in the specified selection, range, or table.",
+  "remarks": "Use Rows (Index), where Index is the index number, to return a single Row object. The index number represents the position of the row in the selection, range, or table. The following example deletes the first row in the first table in the active document. Use the Add method to add a row to a table. The following example inserts a row before the first row in the selection. Use the Cells property to modify the individual cells in a Row object. The following example adds a table to the selection and then inserts numbers into each cell in the second row of the table.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the portion of a document that is contained within the specified table row."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Row object."
+    },
+    {
+      "name": "AllowBreakAcrossPages",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the text in a table row or rows are allowed to split across a page break. Read/write Long."
+    },
+    {
+      "name": "Alignment",
+      "kind": "property",
+      "type": "WdRowAlignment",
+      "access": "read/write",
+      "description": "Returns or sets a WdRowAlignment constant that represents the alignment for the specified rows. Read/write."
+    },
+    {
+      "name": "HeadingFormat",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the specified row or rows are formatted as a table heading. Rows formatted as table headings are repeated when a table spans more than one page. Can be True, False or wdUndefined. Read/write Long."
+    },
+    {
+      "name": "SpaceBetweenColumns",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between text in adjacent columns of the specified row or rows. Read/write Single."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the height (in points) of the specified row in a table. Read/write Single."
+    },
+    {
+      "name": "HeightRule",
+      "kind": "property",
+      "type": "WdRowHeightRule",
+      "access": "read/write",
+      "description": "Returns or sets the rule for determining the height of the specified cells or rows. Read/write WdRowHeightRule."
+    },
+    {
+      "name": "LeftIndent",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the left indent value (in points) for the specified table row. Read/write."
+    },
+    {
+      "name": "IsLast",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified row is the last one in the table. Read-only Boolean."
+    },
+    {
+      "name": "IsFirst",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified row is the first one in the table. Read-only Boolean."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the position of an item in a collection. Read-only."
+    },
+    {
+      "name": "Cells",
+      "kind": "property",
+      "type": "Cells",
+      "access": "read-only",
+      "description": "Returns a Cells collection that represents the table cells in a column, row, selection, or range. Read-only."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read/write",
+      "description": "Returns a Borders collection that represents all the borders for the specified object."
+    },
+    {
+      "name": "Shading",
+      "kind": "property",
+      "type": "Shading",
+      "access": "read-only",
+      "description": "Returns a Shading object that refers to the shading formatting for the specified object."
+    },
+    {
+      "name": "Next",
+      "kind": "property",
+      "type": "Row",
+      "access": "read-only",
+      "description": "Returns a Row object that represents the table row that is next in the collection of rows in a table. Read-only."
+    },
+    {
+      "name": "Previous",
+      "kind": "property",
+      "type": "Row",
+      "access": "read-only",
+      "description": "Returns a Row object that represents the table row that is previous to the specified row. Read-only."
+    },
+    {
+      "name": "NestingLevel",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the nesting level of the specified table row. Read-only Long."
+    },
+    {
+      "name": "ID",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the identifying label for the specified table row when the document is saved as a webpage. Read/write String."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects the specified table row.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified table row.",
+      "returns": "void"
+    },
+    {
+      "name": "SetLeftIndent",
+      "kind": "method",
+      "signature": "SetLeftIndent(LeftIndent As Single, RulerStyle As WdRulerStyle)",
+      "description": "Sets the indentation for a row in a table.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "LeftIndent",
+          "type": "Single",
+          "optional": false,
+          "description": "The distance (in points) between the current left edge of the specified row or rows and the desired left edge."
+        },
+        {
+          "name": "RulerStyle",
+          "type": "WdRulerStyle",
+          "optional": false,
+          "description": "Controls the way Word adjusts the table when the left indent is changed."
+        }
+      ]
+    },
+    {
+      "name": "SetHeight",
+      "kind": "method",
+      "signature": "SetHeight(RowHeight As Single, HeightRule As WdRowHeightRule)",
+      "description": "Sets the height of a table row.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "RowHeight",
+          "type": "Single",
+          "optional": false,
+          "description": "The height of the row, in points."
+        },
+        {
+          "name": "HeightRule",
+          "type": "WdRowHeightRule",
+          "optional": false,
+          "description": "The rule for determining the height of the specified rows."
+        }
+      ]
+    },
+    {
+      "name": "ConvertToText",
+      "kind": "method",
+      "signature": "ConvertToText([Separator As Variant], [NestedTables As Variant]) As Range",
+      "description": "Converts a table to text and returns a Range object that represents the delimited text.",
+      "returns": "Range",
+      "parameters": [
+        {
+          "name": "Separator",
+          "type": "Variant",
+          "optional": true,
+          "description": "The character that delimits the converted columns (paragraph marks delimit the converted rows). Can be any following WdTableFieldSeparator constants: wdSeparateByCommas, wdSeparateByDefaultListSeparator, wdSeparateByParagraphs, or wdSeparateByTabs (Default)."
+        },
+        {
+          "name": "NestedTables",
+          "type": "Variant",
+          "optional": true,
+          "description": "True if nested tables are converted to text. This argument is ignored if Separator is not wdSeparateByParagraphs. The default value is True."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

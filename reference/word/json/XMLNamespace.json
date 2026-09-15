@@ -1,0 +1,92 @@
+{
+  "name": "XMLNamespace",
+  "kind": "Dispatch Interface",
+  "guid": "{B140A023-4850-4DA6-BC5F-CC459C4507BC}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents an individual schema within the Schema Library.",
+  "remarks": "You can access the Schema Library from within Microsoft Word from the XML Schema tab in the Templates and Add-ins dialog box. The Schema Library represents schemas installed on a user's computer that a user has applied to a Word document or that a user has explicitly added to the Schema Library by using the Schema Library dialog box. Use the Item method of the XMLNamespaces collection to return an individual XMLNameSpace object. The index value of the Item method can be either a Long, which indicates the position of the schema in the Schema Library, or a String, which represents the name of the schema as returned using the URI property (the TargetNamespace setting defined in the schema). The following example attaches a schema named SimpleSample to the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified XMLNamespace object."
+    },
+    {
+      "name": "URI",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Location",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String that represents the physical location of the namespace of an XML schema in the Schema Library. Read/write."
+    },
+    {
+      "name": "Alias",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns a String that represents the display name for the specified object."
+    },
+    {
+      "name": "XSLTransforms",
+      "kind": "property",
+      "type": "XSLTransforms",
+      "access": "read-only",
+      "description": "Returns an XSLTransforms collection that represents the Extensible Stylesheet Language Transformation (XSLT) files specified for use with a schema."
+    },
+    {
+      "name": "DefaultTransform",
+      "kind": "property",
+      "type": "XSLTransform",
+      "access": "read/write",
+      "description": "Returns an XSLTransform object that represents the default Extensible Stylesheet Language Transformation (XSLT) file to use when opening a document from an XML schema for a particular namespace."
+    }
+  ],
+  "methods": [
+    {
+      "name": "AttachToDocument",
+      "kind": "method",
+      "signature": "AttachToDocument(Document As Variant)",
+      "description": "Attaches an XML schema to a document.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Document",
+          "type": "Variant",
+          "optional": false,
+          "description": "The document to which to attach the specified XML schema."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified XML schema from the list of available XML schemas.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

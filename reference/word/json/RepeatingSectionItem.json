@@ -1,0 +1,63 @@
+{
+  "name": "RepeatingSectionItem",
+  "kind": "Dispatch Interface",
+  "guid": "{4265ED97-A922-4CA4-8CD8-99684CCA9CDB}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a repeating section item in a content control.",
+  "remarks": "To get a RepeatingSectionItem object, use the Item method of the RepeatingSectionItemColl collection. You can insert additional repeating section items before or after the specified repeating section item by using the InsertItemBefore or InsertItemAfter methods. To delete the specified repeating section item, use the Delete method. To get the range of the specified repeating section item, use the Range property.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified RepeatingSectionItem object."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns the range of the specified repeating section item, excluding the start and end tags. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "InsertItemBefore",
+      "kind": "method",
+      "signature": "InsertItemBefore() As RepeatingSectionItem",
+      "description": "Adds a repeating section item before the specified item and returns the new item.",
+      "returns": "RepeatingSectionItem"
+    },
+    {
+      "name": "InsertItemAfter",
+      "kind": "method",
+      "signature": "InsertItemAfter() As RepeatingSectionItem",
+      "description": "Adds a repeating section item after the specified item and returns the new item.",
+      "returns": "RepeatingSectionItem"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified repeating section item.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

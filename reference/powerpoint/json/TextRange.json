@@ -1,0 +1,589 @@
+{
+  "name": "TextRange",
+  "kind": "Dispatch Interface",
+  "guid": "{9149348F-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Contains the text that's attached to a shape, and properties and methods for manipulating the text.",
+  "remarks": "The following examples describe how to: - Return the text range in any shape you specify. - Return a text range from the selection. - Return particular characters, words, lines, sentences, or paragraphs from a text range. - Find and replace text in a text range. - Insert text, the date and time, or the slide number into a text range. - Position the cursor wherever you want in a text range.",
+  "example": "Set myDocument = ActivePresentation.Slides(1)\n\nmyDocument.Shapes.AddShape(msoShapeRectangle, 0, 0, 250, 140) _\n\n    .TextFrame.TextRange.Text = \"Here is some test text\"",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "ActionSettings",
+      "kind": "property",
+      "type": "ActionSettings",
+      "access": "read-only",
+      "description": "Returns an ActionSettings object that contains information about what action occurs when the user clicks or moves the mouse over the specified shape or text range during a slide show. Read-only."
+    },
+    {
+      "name": "Start",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the position of the first character in the specified text range relative to the first character in the shape that contains the text. Read-only."
+    },
+    {
+      "name": "Length",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the length of the specified text range, in characters. Read-only."
+    },
+    {
+      "name": "BoundLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns the distance (in points) from the left edge of the text bounding box for the specified text frame to the left edge of the slide. Read-only."
+    },
+    {
+      "name": "BoundTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns the distance (in points) from the top of the of the text bounding box for the specified text frame to the top of the slide. Read-only."
+    },
+    {
+      "name": "BoundWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns the width (in points) of the text bounding box for the specified text frame. Read-only."
+    },
+    {
+      "name": "BoundHeight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns the height (in points) of the text bounding box for the specified text frame. Read-only."
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String that represents the text contained in the specified object. Read/write."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read-only",
+      "description": "Returns a Font object that represents character formatting. Read-only."
+    },
+    {
+      "name": "ParagraphFormat",
+      "kind": "property",
+      "type": "ParagraphFormat",
+      "access": "read-only",
+      "description": "Returns a ParagraphFormat object that represents paragraph formatting for the specified text. Read-only."
+    },
+    {
+      "name": "IndentLevel",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the indent level for the specified text as an integer from 1 to 5, where 1 indicates a first-level paragraph with no indentation. Read/write."
+    },
+    {
+      "name": "LanguageID",
+      "kind": "property",
+      "type": "MsoLanguageID",
+      "access": "read/write",
+      "description": "Returns or sets the language for the specified text range. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Paragraphs",
+      "kind": "method",
+      "signature": "Paragraphs([Start As Long], [Length As Long]) As TextRange",
+      "description": "Returns a TextRange object that represents the specified subset of text paragraphs.",
+      "returns": "TextRange",
+      "parameters": [
+        {
+          "name": "Start",
+          "type": "Long",
+          "optional": true,
+          "description": "The first paragraph in the returned range."
+        },
+        {
+          "name": "Length",
+          "type": "Long",
+          "optional": true,
+          "description": "The number of paragraphs to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Sentences",
+      "kind": "method",
+      "signature": "Sentences([Start As Long], [Length As Long]) As TextRange",
+      "description": "Returns a TextRange object that represents the specified subset of text sentences.",
+      "returns": "TextRange",
+      "parameters": [
+        {
+          "name": "Start",
+          "type": "Long",
+          "optional": true,
+          "description": "The first sentence in the returned range."
+        },
+        {
+          "name": "Length",
+          "type": "Long",
+          "optional": true,
+          "description": "The number of sentences to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Words",
+      "kind": "method",
+      "signature": "Words([Start As Long], [Length As Long]) As TextRange",
+      "description": "Returns a TextRange object that represents the specified subset of text words.",
+      "returns": "TextRange",
+      "parameters": [
+        {
+          "name": "Start",
+          "type": "Long",
+          "optional": true,
+          "description": "The first word in the returned range."
+        },
+        {
+          "name": "Length",
+          "type": "Long",
+          "optional": true,
+          "description": "The number of words to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Characters",
+      "kind": "method",
+      "signature": "Characters([Start As Long], [Length As Long]) As TextRange",
+      "description": "Returns a TextRange object that represents the specified subset of text characters. For information about counting or looping through the characters in a text range, see the TextRange object.",
+      "returns": "TextRange",
+      "parameters": [
+        {
+          "name": "Start",
+          "type": "Long",
+          "optional": true,
+          "description": "The first character in the returned range."
+        },
+        {
+          "name": "Length",
+          "type": "Long",
+          "optional": true,
+          "description": "The number of characters to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Lines",
+      "kind": "method",
+      "signature": "Lines([Start As Long], [Length As Long]) As TextRange",
+      "description": "Returns a TextRange object that represents the specified subset of text lines. For information about counting or looping through the lines in a text range, see the TextRange object.",
+      "returns": "TextRange",
+      "parameters": [
+        {
+          "name": "Start",
+          "type": "Long",
+          "optional": true,
+          "description": "The first line in the returned range."
+        },
+        {
+          "name": "Length",
+          "type": "Long",
+          "optional": true,
+          "description": "The number of lines to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Runs",
+      "kind": "method",
+      "signature": "Runs([Start As Long], [Length As Long]) As TextRange",
+      "description": "Returns a TextRange object that represents the specified subset of text runs. A text run consists of a range of characters that share the same font attributes.",
+      "returns": "TextRange",
+      "parameters": [
+        {
+          "name": "Start",
+          "type": "Long",
+          "optional": true,
+          "description": "The first run in the returned range."
+        },
+        {
+          "name": "Length",
+          "type": "Long",
+          "optional": true,
+          "description": "The number of runs to be returned."
+        }
+      ]
+    },
+    {
+      "name": "TrimText",
+      "kind": "method",
+      "signature": "TrimText() As TextRange",
+      "description": "Returns a TextRange object that represents the specified text minus any trailing spaces.",
+      "returns": "TextRange"
+    },
+    {
+      "name": "InsertAfter",
+      "kind": "method",
+      "signature": "InsertAfter([NewText As String]) As TextRange",
+      "description": "Appends a string to the end of the specified text range. Returns a TextRange object that represents the appended text. When used without an argument, this method returns a zero-length string at the end of the specified range.",
+      "returns": "TextRange",
+      "parameters": [
+        {
+          "name": "NewText",
+          "type": "String",
+          "optional": true,
+          "description": "The text to be inserted. The default value is an empty string."
+        }
+      ]
+    },
+    {
+      "name": "InsertBefore",
+      "kind": "method",
+      "signature": "InsertBefore([NewText As String]) As TextRange",
+      "description": "Appends a string to the beginning of the specified text range. Returns a TextRange object that represents the appended text. When used without an argument, this method returns a zero-length string at the end of the specified range.",
+      "returns": "TextRange",
+      "parameters": [
+        {
+          "name": "NewText",
+          "type": "String",
+          "optional": true,
+          "description": "The text to be appended. The default value is an empty string."
+        }
+      ]
+    },
+    {
+      "name": "InsertDateTime",
+      "kind": "method",
+      "signature": "InsertDateTime(DateTimeFormat As PpDateTimeFormat, [InsertAsField As MsoTriState]) As TextRange",
+      "description": "Inserts the date and time in the specified text range. Returns a TextRange object that represents the inserted text.",
+      "returns": "TextRange",
+      "parameters": [
+        {
+          "name": "DateTimeFormat",
+          "type": "PpDateTimeFormat",
+          "optional": false,
+          "description": "A format for the date and time."
+        },
+        {
+          "name": "InsertAsField",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Determines whether the inserted date and time will be updated each time the presentation is opened."
+        }
+      ]
+    },
+    {
+      "name": "InsertSlideNumber",
+      "kind": "method",
+      "signature": "InsertSlideNumber() As TextRange",
+      "description": "Inserts the slide number of the current slide into the specified text range. Returns a TextRange object that represents the slide number.",
+      "returns": "TextRange"
+    },
+    {
+      "name": "InsertSymbol",
+      "kind": "method",
+      "signature": "InsertSymbol(FontName As String, CharNumber As Long, [Unicode As MsoTriState]) As TextRange",
+      "description": "Returns a TextRange object that represents a symbol inserted into the specified text range.",
+      "returns": "TextRange",
+      "parameters": [
+        {
+          "name": "FontName",
+          "type": "String",
+          "optional": false,
+          "description": "The font name."
+        },
+        {
+          "name": "CharNumber",
+          "type": "Long",
+          "optional": false,
+          "description": "The Unicode or ASCII character number."
+        },
+        {
+          "name": "Unicode",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Specifies whether the CharNumber argument represents an ASCII or Unicode character."
+        }
+      ]
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects the specified object.",
+      "returns": "void"
+    },
+    {
+      "name": "Cut",
+      "kind": "method",
+      "signature": "Cut()",
+      "description": "Deletes the specified object and places it on the Clipboard.",
+      "returns": "void"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy()",
+      "description": "Copies the specified object to the Clipboard.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified TextRange object.",
+      "returns": "void"
+    },
+    {
+      "name": "Paste",
+      "kind": "method",
+      "signature": "Paste() As TextRange",
+      "description": "Pastes the text on the Clipboard into the specified text range, and returns a TextRange object that represents the pasted text.",
+      "returns": "TextRange"
+    },
+    {
+      "name": "ChangeCase",
+      "kind": "method",
+      "signature": "ChangeCase(Type As PpChangeCase)",
+      "description": "Changes the case of the specified text.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "PpChangeCase",
+          "optional": false,
+          "description": "Specifies the way the case will be changed."
+        }
+      ]
+    },
+    {
+      "name": "AddPeriods",
+      "kind": "method",
+      "signature": "AddPeriods()",
+      "description": "Adds a period at the end of each paragraph in the specified text.",
+      "returns": "void"
+    },
+    {
+      "name": "RemovePeriods",
+      "kind": "method",
+      "signature": "RemovePeriods()",
+      "description": "Removes the period at the end of each paragraph in the specified text.",
+      "returns": "void"
+    },
+    {
+      "name": "Find",
+      "kind": "method",
+      "signature": "Find(FindWhat As String, [After As Long], [MatchCase As MsoTriState], [WholeWords As MsoTriState]) As TextRange",
+      "description": "Finds the specified text in a text range, and returns a TextRange object that represents the first text range where the text is found. Returns Nothing if no match is found.",
+      "returns": "TextRange",
+      "parameters": [
+        {
+          "name": "FindWhat",
+          "type": "String",
+          "optional": false,
+          "description": "The text to search for."
+        },
+        {
+          "name": "After",
+          "type": "Long",
+          "optional": true,
+          "description": "The position of the character (in the specified text range) after which you want to search for the next occurrence of FindWhat. For example, if you want to search from the fifth character of the text range, specify 4 for After. If this argument is omitted, the first character of the text range is used as the starting point for the search."
+        },
+        {
+          "name": "MatchCase",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "msoTrue for the search to distinguish between uppercase and lowercase characters."
+        },
+        {
+          "name": "WholeWords",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "msoTrue for the search to find only whole words and not parts of larger words as well."
+        }
+      ]
+    },
+    {
+      "name": "Replace",
+      "kind": "method",
+      "signature": "Replace(FindWhat As String, ReplaceWhat As String, [After As Long], [MatchCase As MsoTriState], [WholeWords As MsoTriState]) As TextRange",
+      "description": "Finds specific text in a text range, replaces the found text with a specified string, and returns a TextRange object that represents the first occurrence of the found text. Returns Nothing if no match is found.",
+      "returns": "TextRange",
+      "parameters": [
+        {
+          "name": "FindWhat",
+          "type": "String",
+          "optional": false,
+          "description": "The text to search for."
+        },
+        {
+          "name": "ReplaceWhat",
+          "type": "String",
+          "optional": false,
+          "description": "The text you want to replace the found text with."
+        },
+        {
+          "name": "After",
+          "type": "Long",
+          "optional": true,
+          "description": "The position of the character (in the specified text range) after which you want to search for the next occurrence of FindWhat. For example, if you want to search from the fifth character of the text range, specify 4 for After. If this argument is omitted, the first character of the text range is used as the starting point for the search."
+        },
+        {
+          "name": "MatchCase",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Determines whether a distinction is made on the basis of case."
+        },
+        {
+          "name": "WholeWords",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Determines whether only whole words are found."
+        }
+      ]
+    },
+    {
+      "name": "RotatedBounds",
+      "kind": "method",
+      "signature": "RotatedBounds(X1 As Single, Y1 As Single, X2 As Single, Y2 As Single, X3 As Single, Y3 As Single, x4 As Single, y4 As Single)",
+      "description": "Returns the coordinates of the vertices of the text bounding box for the specified text range.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "X1",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y1",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X2",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y2",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X3",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y3",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "x4",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "y4",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "RtlRun",
+      "kind": "method",
+      "signature": "RtlRun()",
+      "description": "Sets the direction of text in a text range to read from right to left.",
+      "returns": "void"
+    },
+    {
+      "name": "LtrRun",
+      "kind": "method",
+      "signature": "LtrRun()",
+      "description": "Sets the direction of text in a text range to read from left to right.",
+      "returns": "void"
+    },
+    {
+      "name": "PasteSpecial",
+      "kind": "method",
+      "signature": "PasteSpecial([DataType As PpPasteDataType], [DisplayAsIcon As MsoTriState], [IconFileName As String], [IconIndex As Long], [IconLabel As String], [Link As MsoTriState]) As TextRange",
+      "description": "Replaces the text range with the contents of the Clipboard in the format specified.",
+      "returns": "TextRange",
+      "parameters": [
+        {
+          "name": "DataType",
+          "type": "PpPasteDataType",
+          "optional": true,
+          "description": "A format for the Clipboard contents when they're inserted into the document. The default value varies, depending on the contents in the Clipboard. An error occurs if the specified data type in the DataType argument is not supported by the clipboard contents."
+        },
+        {
+          "name": "DisplayAsIcon",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "MsoTrue to display the embedded object (or link) as an icon."
+        },
+        {
+          "name": "IconFileName",
+          "type": "String",
+          "optional": true,
+          "description": "If DisplayAsIcon is set to msoTrue, this argument is the path and file name for the file in which the icon to be displayed is stored. If DisplayAsIcon is set to msoFalse, this argument is ignored."
+        },
+        {
+          "name": "IconIndex",
+          "type": "Long",
+          "optional": true,
+          "description": "If DisplayAsIcon is set to msoTrue, this argument is a number that corresponds to the icon you want to use in the program file specified by IconFilename. For example, 0 (zero) corresponds to the first icon, 1 corresponds to the second icon. If this argument is omitted, the first (default) icon is used. If DisplayAsIcon is set to msoFalse, then this argument is ignored. If IconIndex is outside the valid range, then the default icon (index 0) is used."
+        },
+        {
+          "name": "IconLabel",
+          "type": "String",
+          "optional": true,
+          "description": "If DisplayAsIcon is set to msoTrue, this argument is the text that appears below the icon. If this label is missing, Microsoft PowerPoint generates an icon label based on the Clipboard contents. If DisplayAsIcon is set to msoFalse, then this argument is ignored."
+        },
+        {
+          "name": "Link",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Determines whether to create a link to the source file of the Clipboard contents. An error occurs if the Clipboard contents don't support a link."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

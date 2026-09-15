@@ -1,0 +1,65 @@
+{
+  "name": "Sequences",
+  "kind": "Dispatch Interface",
+  "guid": "{914934DD-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a collection of Sequence objects. Use a Sequence object to add, find, modify, and clone animation effects.",
+  "remarks": "",
+  "example": "Sub AddNewSequence()\n\n    Dim shp1 As Shape\n    Dim shp2 As Shape\n    Dim interEffect As Effect\n\n    Set shp1 = ActivePresentation.Slides(1).Shapes.AddShape _\n        (Type:=msoShape32pointStar, Left:=100, _\n        Top:=100, Width:=200, Height:=200)\n\n    Set shp2 = ActivePresentation.Slides(1).Shapes.AddShape _\n        (Type:=msoShapeBevel, Left:=400, _\n        Top:=200, Width:=150, Height:=100)\n\n    With ActivePresentation.Slides(1).TimeLine.InteractiveSequences.Add(1)\n        Set interEffect = .AddEffect(shp2, msoAnimEffectBlinds, _\n            trigger:=msoAnimTriggerOnShapeClick)\n        interEffect.Shape = shp1\n    End With\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Sequence",
+      "description": "Returns a single Sequence object from the specified Sequences collection.",
+      "returns": "Sequence",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the single Sequence object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([Index As Long]) As Sequence",
+      "description": "Returns a Sequence object that represents a new sequence.",
+      "returns": "Sequence",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": true,
+          "description": "The position of the sequence in relation to other sequences. The default value is -1, which means that if you omit the Index parameter, the new sequence is added to the end of the existing sequences."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

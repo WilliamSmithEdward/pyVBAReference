@@ -1,0 +1,50 @@
+{
+  "name": "SlideShowWindows",
+  "kind": "Dispatch Interface",
+  "guid": "{91493456-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of all the SlideShowWindow objects that represent the open slide shows in Microsoft PowerPoint.",
+  "remarks": "",
+  "example": "With SlideShowWindows(1)\n\n    If .IsFullScreen Then\n\n        .Height = .Height - 20\n\n    End If\n\nEnd With",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As SlideShowWindow",
+      "description": "Returns a single SlideShowWindow object from the specified SlideShowWindows collection.",
+      "returns": "SlideShowWindow",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the single SlideShowWindow object in the collection to be returned."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

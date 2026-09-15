@@ -1,0 +1,79 @@
+{
+  "name": "OMathMatRows",
+  "kind": "Dispatch Interface",
+  "guid": "{1B426348-607D-433C-9216-C5D2BF0EF31F}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a collection of matrix rows. Use the OMathMatRow object to access individual members of the collection.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathMatRows object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of items in the OMathMatRows collection. Read-only Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As OMathMatRow",
+      "description": "Returns an OMathMatRow object that represents the specified item in the collection.",
+      "returns": "OMathMatRow",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "Specifies the ordinal position of the object within the collection."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([BeforeRow As Variant]) As OMathMatRow",
+      "description": "Creates an equation row and adds it to a matrix and returns an OMathMatRow object.",
+      "returns": "OMathMatRow",
+      "parameters": [
+        {
+          "name": "BeforeRow",
+          "type": "Variant",
+          "optional": true,
+          "description": "An existing row in the matrix before which to place the new row."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

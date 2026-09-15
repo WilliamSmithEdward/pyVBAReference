@@ -1,0 +1,1198 @@
+{
+  "name": "WdWordDialog",
+  "kind": "Enumeration",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Indicates the Microsoft Word dialog boxes with which you can work and specifies arguments, if applicable, that you can use to get or set values in a dialog box.",
+  "constants": [
+    {
+      "name": "wdDialogHelpAbout",
+      "value": 9,
+      "description": "APPNAME, APPCOPYRIGHT, APPUSERNAME, APPORGANIZATION, APPSERIALNUMBER"
+    },
+    {
+      "name": "wdDialogHelpWordPerfectHelp",
+      "value": 10,
+      "description": "WPCommand, HelpText, DemoGuidance"
+    },
+    {
+      "name": "wdDialogDocumentStatistics",
+      "value": 78,
+      "description": "FileName, Directory, Template, Title, Created, LastSaved, LastSavedBy, Revision, Time, Printed, Pages, Words, Characters, Paragraphs, Lines, FileSize"
+    },
+    {
+      "name": "wdDialogFileNew",
+      "value": 79,
+      "description": "Template, NewTemplate, DocumentType, Visible"
+    },
+    {
+      "name": "wdDialogFileOpen",
+      "value": 80,
+      "description": "Name, ConfirmConversions, ReadOnly, LinkToSource, AddToMru, PasswordDoc, PasswordDot, Revert, WritePasswordDoc, WritePasswordDot, Connection, SQLStatement, SQLStatement1, Format, Encoding, Visible, OpenExclusive, OpenAndRepair, SubType, DocumentDirection, NoEncodingDialog, XMLTransform"
+    },
+    {
+      "name": "wdDialogMailMergeOpenDataSource",
+      "value": 81,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogMailMergeOpenHeaderSource",
+      "value": 82,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFileSaveAs",
+      "value": 84,
+      "description": "Name, Format, LockAnnot, Password, AddToMru, WritePassword, RecommendReadOnly, EmbedFonts, NativePictureFormat, FormsData, SaveAsAOCELetter, WriteVersion, VersionDesc, InsertLineBreaks, AllowSubstitutions, LineEnding, AddBiDiMarks"
+    },
+    {
+      "name": "wdDialogFileSummaryInfo",
+      "value": 86,
+      "description": "Title, Subject, Author, Keywords, Comments, FileName, Directory, Template, CreateDate, LastSavedDate, LastSavedBy, RevisionNumber, EditTime, LastPrintedDate, NumPages, NumWords, NumChars, NumParas, NumLines, Update, FileSize"
+    },
+    {
+      "name": "wdDialogToolsTemplates",
+      "value": 87,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFilePrint",
+      "value": 88,
+      "description": "Background, AppendPrFile, Range, PrToFileName, From, To, Type, NumCopies, Pages, Order, PrintToFile, Collate, FileName, Printer, OutputPrinter, DuplexPrint, PrintZoomColumn, PrintZoomRow, PrintZoomPaperWidth, PrintZoomPaperHeight, ZoomPaper"
+    },
+    {
+      "name": "wdDialogFilePrintSetup",
+      "value": 97,
+      "description": "Printer, Options, Network, DoNotSetAsSysDefault"
+    },
+    {
+      "name": "wdDialogFileFind",
+      "value": 99,
+      "description": "SearchName, SearchPath, Name, SubDir, Title, Author, Keywords, Subject, Options, MatchCase, Text, PatternMatch, DateSavedFrom, DateSavedTo, SavedBy, DateCreatedFrom, DateCreatedTo, View, SortBy, ListBy, SelectedFile, Add, Delete, ShowFolders, MatchByte"
+    },
+    {
+      "name": "wdDialogFormatAddrFonts",
+      "value": 103,
+      "description": "Points, Underline, Color, StrikeThrough, Superscript, Subscript, Hidden, SmallCaps, AllCaps, Spacing, Position, Kerning, KerningMin, Default, Tab, Font, Bold, Italic, DoubleStrikeThrough, Shadow, Outline, Emboss, Engrave, Scale, Animations, CharAccent, FontMajor, FontLowAnsi, FontHighAnsi, CharacterWidthGrid, ColorRGB, UnderlineColor, PointsBi, ColorBi, FontNameBi, BoldBi, ItalicBi, DiacColor"
+    },
+    {
+      "name": "wdDialogEditPasteSpecial",
+      "value": 111,
+      "description": "IconNumber, Link, DisplayIcon, Class, DataType, IconFileName, Caption, Floating"
+    },
+    {
+      "name": "wdDialogEditFind",
+      "value": 112,
+      "description": "Find, Replace, Direction, MatchCase, WholeWord, PatternMatch, SoundsLike, FindNext, ReplaceOne, ReplaceAll, Format, Wrap, FindAllWordForms, MatchByte, FuzzyFind, Destination, CorrectEnd, MatchKashida, MatchDiacritics, MatchAlefHamza, MatchControl"
+    },
+    {
+      "name": "wdDialogEditReplace",
+      "value": 117,
+      "description": "Find, Replace, Direction, MatchCase, WholeWord, PatternMatch, SoundsLike, FindNext, ReplaceOne, ReplaceAll, Format, Wrap, FindAllWordForms, MatchByte, FuzzyFind, Destination, CorrectEnd, MatchKashida, MatchDiacritics, MatchAlefHamza, MatchControl"
+    },
+    {
+      "name": "wdDialogEditStyle",
+      "value": 120,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogEditLinks",
+      "value": 124,
+      "description": "UpdateMode, Locked, SavePictureInDoc, UpdateNow, OpenSource, KillLink, Link, Application, Item, FileName, PreserveFormatLinkUpdate"
+    },
+    {
+      "name": "wdDialogEditObject",
+      "value": 125,
+      "description": "Verb"
+    },
+    {
+      "name": "wdDialogTableToText",
+      "value": 128,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogTextToTable",
+      "value": 127,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogTableInsertTable",
+      "value": 129,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogTableInsertCells",
+      "value": 130,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogTableInsertRow",
+      "value": 131,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogTableDeleteCells",
+      "value": 133,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogTableSplitCells",
+      "value": 137,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogTableRowHeight",
+      "value": 142,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogTableColumnWidth",
+      "value": 143,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsCustomize",
+      "value": 152,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogInsertBreak",
+      "value": 159,
+      "description": "Type"
+    },
+    {
+      "name": "wdDialogInsertSymbol",
+      "value": 162,
+      "description": "Font, Tab, CharNum, CharNumLow, Unicode, Hint"
+    },
+    {
+      "name": "wdDialogInsertPicture",
+      "value": 163,
+      "description": "Name, LinkToFile, New, FloatOverText"
+    },
+    {
+      "name": "wdDialogInsertFile",
+      "value": 164,
+      "description": "Name, Range, ConfirmConversions, Link, Attachment"
+    },
+    {
+      "name": "wdDialogInsertDateTime",
+      "value": 165,
+      "description": "DateTimePic, InsertAsField, DbCharField, DateLanguage, CalendarType"
+    },
+    {
+      "name": "wdDialogInsertField",
+      "value": 166,
+      "description": "Field"
+    },
+    {
+      "name": "wdDialogInsertMergeField",
+      "value": 167,
+      "description": "MergeField, WordField"
+    },
+    {
+      "name": "wdDialogInsertBookmark",
+      "value": 168,
+      "description": "Name, SortBy, Add, Delete, Goto, Hidden"
+    },
+    {
+      "name": "wdDialogMarkIndexEntry",
+      "value": 169,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogInsertIndex",
+      "value": 170,
+      "description": "Outline, Fields, From, To, TableId, AddedStyles, Caption, HeadingSeparator, Replace, MarkEntry, AutoMark, MarkCitation, Type, RightAlignPageNumbers, Passim, KeepFormatting, Columns, Category, Label, ShowPageNumbers, AccentedLetters, Filter, SortBy, Leader, TOCUseHyperlinks, TOCHidePageNumInWeb, IndexLanguage, UseOutlineLevel"
+    },
+    {
+      "name": "wdDialogInsertTableOfContents",
+      "value": 171,
+      "description": "Outline, Fields, From, To, TableId, AddedStyles, Caption, HeadingSeparator, Replace, MarkEntry, AutoMark, MarkCitation, Type, RightAlignPageNumbers, Passim, KeepFormatting, Columns, Category, Label, ShowPageNumbers, AccentedLetters, Filter, SortBy, Leader, TOCUseHyperlinks, TOCHidePageNumInWeb, IndexLanguage, UseOutlineLevel"
+    },
+    {
+      "name": "wdDialogInsertObject",
+      "value": 172,
+      "description": "IconNumber, FileName, Link, DisplayIcon, Tab, Class, IconFileName, Caption, Floating"
+    },
+    {
+      "name": "wdDialogToolsCreateEnvelope",
+      "value": 173,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFormatFont",
+      "value": 174,
+      "description": "Points, Underline, Color, StrikeThrough, Superscript, Subscript, Hidden, SmallCaps, AllCaps, Spacing, Position, Kerning, KerningMin, Default, Tab, Font, Bold, Italic, DoubleStrikeThrough, Shadow, Outline, Emboss, Engrave, Scale, Animations, CharAccent, FontMajor, FontLowAnsi, FontHighAnsi, CharacterWidthGrid, ColorRGB, UnderlineColor, PointsBi, ColorBi, FontNameBi, BoldBi, ItalicBi, DiacColor"
+    },
+    {
+      "name": "wdDialogFormatParagraph",
+      "value": 175,
+      "description": "LeftIndent, RightIndent, Before, After, LineSpacingRule, LineSpacing, Alignment, WidowControl, KeepWithNext, KeepTogether, PageBreak, NoLineNum, DontHyphen, Tab, FirstIndent, OutlineLevel, Kinsoku, WordWrap, OverflowPunct, TopLinePunct, AutoSpaceDE, LineHeightGrid, AutoSpaceDN, CharAlign, CharacterUnitLeftIndent, AdjustRight, CharacterUnitFirstIndent, CharacterUnitRightIndent, LineUnitBefore, LineUnitAfter, NoSpaceBetweenParagraphsOfSameStyle, OrientationBi"
+    },
+    {
+      "name": "wdDialogFormatSectionLayout",
+      "value": 176,
+      "description": "SectionStart, VertAlign, Endnotes, LineNum, StartingNum, FromText, CountBy, NumMode, SectionType"
+    },
+    {
+      "name": "wdDialogFormatColumns",
+      "value": 177,
+      "description": "Columns, ColumnNo, ColumnWidth, ColumnSpacing, EvenlySpaced, ApplyColsTo, ColLine, StartNewCol, FlowColumnsRtl"
+    },
+    {
+      "name": "wdDialogFileDocumentLayout",
+      "value": 178,
+      "description": "Tab, PaperSize, TopMargin, BottomMargin, LeftMargin, RightMargin, Gutter, PageWidth, PageHeight, Orientation, FirstPage, OtherPages, VertAlign, ApplyPropsTo, Default, FacingPages, HeaderDistance, FooterDistance, SectionStart, OddAndEvenPages, DifferentFirstPage, Endnotes, LineNum, StartingNum, FromText, CountBy, NumMode, TwoOnOne, GutterPosition, LayoutMode, CharsLine, LinesPage, CharPitch, LinePitch, DocFontName, DocFontSize, PageColumns, TextFlow, FirstPageOnLeft, SectionType, RTLAlignment"
+    },
+    {
+      "name": "wdDialogFilePageSetup",
+      "value": 178,
+      "description": "Tab, PaperSize, TopMargin, BottomMargin, LeftMargin, RightMargin, Gutter, PageWidth, PageHeight, Orientation, FirstPage, OtherPages, VertAlign, ApplyPropsTo, Default, FacingPages, HeaderDistance, FooterDistance, SectionStart, OddAndEvenPages, DifferentFirstPage, Endnotes, LineNum, StartingNum, FromText, CountBy, NumMode, TwoOnOne, GutterPosition, LayoutMode, CharsLine, LinesPage, CharPitch, LinePitch, DocFontName, DocFontSize, PageColumns, TextFlow, FirstPageOnLeft, SectionType, RTLAlignment, FolioPrint"
+    },
+    {
+      "name": "wdDialogFormatTabs",
+      "value": 179,
+      "description": "Position, DefTabs, Align, Leader, Set, Clear, ClearAll"
+    },
+    {
+      "name": "wdDialogFormatStyle",
+      "value": 180,
+      "description": "Name, Delete, Merge, NewName, BasedOn, NextStyle, Type, FileName, Source, AddToTemplate, Define, Rename, Apply, New, Link"
+    },
+    {
+      "name": "wdDialogFormatDefineStyleFont",
+      "value": 181,
+      "description": "Points, Underline, Color, StrikeThrough, Superscript, Subscript, Hidden, SmallCaps, AllCaps, Spacing, Position, Kerning, KerningMin, Default, Tab, Font, Bold, Italic, DoubleStrikeThrough, Shadow, Outline, Emboss, Engrave, Scale, Animations, CharAccent, FontMajor, FontLowAnsi, FontHighAnsi, CharacterWidthGrid, ColorRGB, UnderlineColor, PointsBi, ColorBi, FontNameBi, BoldBi, ItalicBi, DiacColor"
+    },
+    {
+      "name": "wdDialogFormatDefineStylePara",
+      "value": 182,
+      "description": "LeftIndent, RightIndent, Before, After, LineSpacingRule, LineSpacing, Alignment, WidowControl, KeepWithNext, KeepTogether, PageBreak, NoLineNum, DontHyphen, Tab, FirstIndent, OutlineLevel, Kinsoku, WordWrap, OverflowPunct, TopLinePunct, AutoSpaceDE, LineHeightGrid, AutoSpaceDN, CharAlign, CharacterUnitLeftIndent, AdjustRight, CharacterUnitFirstIndent, CharacterUnitRightIndent, LineUnitBefore, LineUnitAfter, NoSpaceBetweenParagraphsOfSameStyle, OrientationBi"
+    },
+    {
+      "name": "wdDialogFormatDefineStyleTabs",
+      "value": 183,
+      "description": "Position, DefTabs, Align, Leader, Set, Clear, ClearAll"
+    },
+    {
+      "name": "wdDialogFormatDefineStyleFrame",
+      "value": 184,
+      "description": "Wrap, WidthRule, FixedWidth, HeightRule, FixedHeight, PositionHorz, PositionHorzRel, DistFromText, PositionVert, PositionVertRel, DistVertFromText, MoveWithText, LockAnchor, RemoveFrame"
+    },
+    {
+      "name": "wdDialogFormatDefineStyleBorders",
+      "value": 185,
+      "description": "ApplyTo, Shadow, TopBorder, LeftBorder, BottomBorder, RightBorder, HorizBorder, VertBorder, TopColor, LeftColor, BottomColor, RightColor, HorizColor, VertColor, FromText, Shading, Foreground, Background, Tab, FineShading, TopStyle, LeftStyle, BottomStyle, RightStyle, HorizStyle, VertStyle, TopWeight, LeftWeight, BottomWeight, RightWeight, HorizWeight, VertWeight, BorderObjectType, BorderArtWeight, BorderArt, FromTextTop, FromTextBottom, FromTextLeft, FromTextRight, OffsetFrom, InFront, SurroundHeader, SurroundFooter, JoinBorder, LineColor, WhichPages, TL2BRBorder, TR2BLBorder, TL2BRColor, TR2BLColor, TL2BRStyle, TR2BLStyle, TL2BRWeight, TR2BLWeight, ForegroundRGB, BackgroundRGB, TopColorRGB, LeftColorRGB, BottomColorRGB, RightColorRGB, HorizColorRGB, VertColorRGB, TL2BRColorRGB, TR2BLColorRGB, LineColorRGB"
+    },
+    {
+      "name": "wdDialogFormatDefineStyleLang",
+      "value": 186,
+      "description": "Language, CheckLanguage, Default, NoProof"
+    },
+    {
+      "name": "wdDialogFormatPicture",
+      "value": 187,
+      "description": "SetSize, CropLeft, CropRight, CropTop, CropBottom, ScaleX, ScaleY, SizeX, SizeY"
+    },
+    {
+      "name": "wdDialogToolsLanguage",
+      "value": 188,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFormatBordersAndShading",
+      "value": 189,
+      "description": "ApplyTo, Shadow, TopBorder, LeftBorder, BottomBorder, RightBorder, HorizBorder, VertBorder, TopColor, LeftColor, BottomColor, RightColor, HorizColor, VertColor, FromText, Shading, Foreground, Background, Tab, FineShading, TopStyle, LeftStyle, BottomStyle, RightStyle, HorizStyle, VertStyle, TopWeight, LeftWeight, BottomWeight, RightWeight, HorizWeight, VertWeight, BorderObjectType, BorderArtWeight, BorderArt, FromTextTop, FromTextBottom, FromTextLeft, FromTextRight, OffsetFrom, InFront, SurroundHeader, SurroundFooter, JoinBorder, LineColor, WhichPages, TL2BRBorder, TR2BLBorder, TL2BRColor, TR2BLColor, TL2BRStyle, TR2BLStyle, TL2BRWeight, TR2BLWeight, ForegroundRGB, BackgroundRGB, TopColorRGB, LeftColorRGB, BottomColorRGB, RightColorRGB, HorizColorRGB, VertColorRGB, TL2BRColorRGB, TR2BLColorRGB, LineColorRGB"
+    },
+    {
+      "name": "wdDialogFormatFrame",
+      "value": 190,
+      "description": "Wrap, WidthRule, FixedWidth, HeightRule, FixedHeight, PositionHorz, PositionHorzRel, DistFromText, PositionVert, PositionVertRel, DistVertFromText, MoveWithText, LockAnchor, RemoveFrame"
+    },
+    {
+      "name": "wdDialogToolsThesaurus",
+      "value": 194,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsHyphenation",
+      "value": 195,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsBulletsNumbers",
+      "value": 196,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsHighlightChanges",
+      "value": 197,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsRevisions",
+      "value": 197,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsCompareDocuments",
+      "value": 198,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogTableSort",
+      "value": 199,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsOptionsGeneral",
+      "value": 203,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsOptionsView",
+      "value": 204,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsAdvancedSettings",
+      "value": 206,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsOptionsPrint",
+      "value": 208,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsOptionsSave",
+      "value": 209,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsOptionsSpellingAndGrammar",
+      "value": 211,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsOptionsUserInfo",
+      "value": 213,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsMacroRecord",
+      "value": 214,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsMacro",
+      "value": 215,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogWindowActivate",
+      "value": 220,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFormatRetAddrFonts",
+      "value": 221,
+      "description": "Points, Underline, Color, StrikeThrough, Superscript, Subscript, Hidden, SmallCaps, AllCaps, Spacing, Position, Kerning, KerningMin, Default, Tab, Font, Bold, Italic, DoubleStrikeThrough, Shadow, Outline, Emboss, Engrave, Scale, Animations, CharAccent, FontMajor, FontLowAnsi, FontHighAnsi, CharacterWidthGrid, ColorRGB, UnderlineColor, PointsBi, ColorBi, FontNameBi, BoldBi, ItalicBi, DiacColor"
+    },
+    {
+      "name": "wdDialogOrganizer",
+      "value": 222,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsOptionsEdit",
+      "value": 224,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsOptionsFileLocations",
+      "value": 225,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsWordCount",
+      "value": 228,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogControlRun",
+      "value": 235,
+      "description": "Application"
+    },
+    {
+      "name": "wdDialogInsertPageNumbers",
+      "value": 294,
+      "description": "Type, Position, FirstPage"
+    },
+    {
+      "name": "wdDialogFormatPageNumber",
+      "value": 298,
+      "description": "ChapterNumber, NumRestart, NumFormat, StartingNum, Level, Separator, DoubleQuote, PgNumberingStyle"
+    },
+    {
+      "name": "wdDialogCopyFile",
+      "value": 300,
+      "description": "FileName, Directory"
+    },
+    {
+      "name": "wdDialogFormatChangeCase",
+      "value": 322,
+      "description": "Type"
+    },
+    {
+      "name": "wdDialogUpdateTOC",
+      "value": 331,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogInsertDatabase",
+      "value": 341,
+      "description": "Format, Style, LinkToSource, Connection, SQLStatement, SQLStatement1, PasswordDoc, PasswordDot, DataSource, From, To, IncludeFields, WritePasswordDoc, WritePasswordDot"
+    },
+    {
+      "name": "wdDialogTableFormula",
+      "value": 348,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFormFieldOptions",
+      "value": 353,
+      "description": "Entry, Exit, Name, Enable, TextType, TextWidth, TextDefault, TextFormat, CheckSize, CheckWidth, CheckDefault, Type, OwnHelp, HelpText, OwnStat, StatText, Calculate"
+    },
+    {
+      "name": "wdDialogInsertCaption",
+      "value": 357,
+      "description": "Label, TitleAutoText, Title, Delete, Position, AutoCaption, ExcludeLabel"
+    },
+    {
+      "name": "wdDialogInsertCaptionNumbering",
+      "value": 358,
+      "description": "Label, FormatNumber, ChapterNumber, Level, Separator, CapNumberingStyle"
+    },
+    {
+      "name": "wdDialogInsertAutoCaption",
+      "value": 359,
+      "description": "Clear, ClearAll, Object, Label, Position"
+    },
+    {
+      "name": "wdDialogFormFieldHelp",
+      "value": 361,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogInsertCrossReference",
+      "value": 367,
+      "description": "ReferenceType, ReferenceKind, ReferenceItem, InsertAsHyperLink, InsertPosition, SeparateNumbers, SeparatorCharacters"
+    },
+    {
+      "name": "wdDialogInsertFootnote",
+      "value": 370,
+      "description": "Reference, NoteType, Symbol, FootNumberAs, EndNumberAs, FootnotesAt, EndnotesAt, FootNumberingStyle, EndNumberingStyle, FootStartingNum, FootRestartNum, EndStartingNum, EndRestartNum, ApplyPropsTo"
+    },
+    {
+      "name": "wdDialogNoteOptions",
+      "value": 373,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsAutoCorrect",
+      "value": 378,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsOptionsTrackChanges",
+      "value": 386,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogConvertObject",
+      "value": 392,
+      "description": "IconNumber, ActivateAs, IconFileName, Caption, Class, DisplayIcon, Floating"
+    },
+    {
+      "name": "wdDialogInsertAddCaption",
+      "value": 402,
+      "description": "Name"
+    },
+    {
+      "name": "wdDialogConnect",
+      "value": 420,
+      "description": "Drive, Path, Password"
+    },
+    {
+      "name": "wdDialogToolsCustomizeKeyboard",
+      "value": 432,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsCustomizeMenus",
+      "value": 433,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsMergeDocuments",
+      "value": 435,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogMarkTableOfContentsEntry",
+      "value": 442,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFileMacPageSetupGX",
+      "value": 444,
+      "description": "Macintosh-only. For information about this constant, consult the language reference Help included with Microsoft Office Macintosh Edition."
+    },
+    {
+      "name": "wdDialogFilePrintOneCopy",
+      "value": 445,
+      "description": "Macintosh-only. For information about this constant, consult the language reference Help included with Microsoft Office Macintosh Edition."
+    },
+    {
+      "name": "wdDialogEditFrame",
+      "value": 458,
+      "description": "Wrap, WidthRule, FixedWidth, HeightRule, FixedHeight, PositionHorz, PositionHorzRel, DistFromText, PositionVert, PositionVertRel, DistVertFromText, MoveWithText, LockAnchor, RemoveFrame"
+    },
+    {
+      "name": "wdDialogMarkCitation",
+      "value": 463,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogTableOfContentsOptions",
+      "value": 470,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogInsertTableOfAuthorities",
+      "value": 471,
+      "description": "Outline, Fields, From, To, TableId, AddedStyles, Caption, HeadingSeparator, Replace, MarkEntry, AutoMark, MarkCitation, Type, RightAlignPageNumbers, Passim, KeepFormatting, Columns, Category, Label, ShowPageNumbers, AccentedLetters, Filter, SortBy, Leader, TOCUseHyperlinks, TOCHidePageNumInWeb, IndexLanguage, UseOutlineLevel"
+    },
+    {
+      "name": "wdDialogInsertTableOfFigures",
+      "value": 472,
+      "description": "Outline, Fields, From, To, TableId, AddedStyles, Caption, HeadingSeparator, Replace, MarkEntry, AutoMark, MarkCitation, Type, RightAlignPageNumbers, Passim, KeepFormatting, Columns, Category, Label, ShowPageNumbers, AccentedLetters, Filter, SortBy, Leader, TOCUseHyperlinks, TOCHidePageNumInWeb, IndexLanguage, UseOutlineLevel"
+    },
+    {
+      "name": "wdDialogInsertIndexAndTables",
+      "value": 473,
+      "description": "Outline, Fields, From, To, TableId, AddedStyles, Caption, HeadingSeparator, Replace, MarkEntry, AutoMark, MarkCitation, Type, RightAlignPageNumbers, Passim, KeepFormatting, Columns, Category, Label, ShowPageNumbers, AccentedLetters, Filter, SortBy, Leader, TOCUseHyperlinks, TOCHidePageNumInWeb, IndexLanguage, UseOutlineLevel"
+    },
+    {
+      "name": "wdDialogInsertFormField",
+      "value": 483,
+      "description": "Entry, Exit, Name, Enable, TextType, TextWidth, TextDefault, TextFormat, CheckSize, CheckWidth, CheckDefault, Type, OwnHelp, HelpText, OwnStat, StatText, Calculate"
+    },
+    {
+      "name": "wdDialogFormatDropCap",
+      "value": 488,
+      "description": "Position, Font, DropHeight, DistFromText"
+    },
+    {
+      "name": "wdDialogToolsCreateLabels",
+      "value": 489,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsProtectDocument",
+      "value": 503,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFormatStyleGallery",
+      "value": 505,
+      "description": "Template, Preview"
+    },
+    {
+      "name": "wdDialogToolsAcceptRejectChanges",
+      "value": 506,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogHelpWordPerfectHelpOptions",
+      "value": 511,
+      "description": "CommandKeyHelp, DocNavKeys, MouseSimulation, DemoGuidance, DemoSpeed, HelpType"
+    },
+    {
+      "name": "wdDialogToolsUnprotectDocument",
+      "value": 521,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsOptionsCompatibility",
+      "value": 525,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogTableOfCaptionsOptions",
+      "value": 551,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogTableAutoFormat",
+      "value": 563,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogMailMergeFindRecord",
+      "value": 569,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogReviewAfmtRevisions",
+      "value": 570,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogViewZoom",
+      "value": 577,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsProtectSection",
+      "value": 578,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFontSubstitution",
+      "value": 581,
+      "description": "UnavailableFont, SubstituteFont"
+    },
+    {
+      "name": "wdDialogInsertSubdocument",
+      "value": 583,
+      "description": "Name, ConfirmConversions, ReadOnly, LinkToSource, AddToMru, PasswordDoc, PasswordDot, Revert, WritePasswordDoc, WritePasswordDot, Connection, SQLStatement, SQLStatement1, Format, Encoding, Visible, OpenExclusive, OpenAndRepair, SubType, DocumentDirection, NoEncodingDialog, XMLTransform"
+    },
+    {
+      "name": "wdDialogNewToolbar",
+      "value": 586,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsEnvelopesAndLabels",
+      "value": 607,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFormatCallout",
+      "value": 610,
+      "description": "Type, Gap, Angle, Drop, Length, Border, AutoAttach, Accent"
+    },
+    {
+      "name": "wdDialogTableFormatCell",
+      "value": 612,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsCustomizeMenuBar",
+      "value": 615,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFileRoutingSlip",
+      "value": 624,
+      "description": "Subject, Message, AllAtOnce, ReturnWhenDone, TrackStatus, Protect, AddSlip, RouteDocument, AddRecipient, OldRecipient, ResetSlip, ClearSlip, ClearRecipients, Address"
+    },
+    {
+      "name": "wdDialogEditTOACategory",
+      "value": 625,
+      "description": "Category, CategoryName"
+    },
+    {
+      "name": "wdDialogToolsManageFields",
+      "value": 631,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogDrawSnapToGrid",
+      "value": 633,
+      "description": "SnapToGrid, XGrid, YGrid, XOrigin, YOrigin, SnapToShapes, XGridDisplay, YGridDisplay, FollowMargins, ViewGridLines, DefineLineBasedOnGrid"
+    },
+    {
+      "name": "wdDialogDrawAlign",
+      "value": 634,
+      "description": "Horizontal, Vertical, RelativeTo"
+    },
+    {
+      "name": "wdDialogMailMergeCreateDataSource",
+      "value": 642,
+      "description": "FileName, PasswordDoc, PasswordDot, HeaderRecord, MSQuery, SQLStatement, SQLStatement1, Connection, LinkToSource, WritePasswordDoc"
+    },
+    {
+      "name": "wdDialogMailMergeCreateHeaderSource",
+      "value": 643,
+      "description": "FileName, PasswordDoc, PasswordDot, HeaderRecord, MSQuery, SQLStatement, SQLStatement1, Connection, LinkToSource, WritePasswordDoc"
+    },
+    {
+      "name": "wdDialogMailMerge",
+      "value": 676,
+      "description": "CheckErrors, Destination, MergeRecords, From, To, Suppression, MailMerge, QueryOptions, MailSubject, MailAsAttachment, MailAddress"
+    },
+    {
+      "name": "wdDialogMailMergeCheck",
+      "value": 677,
+      "description": "CheckErrors"
+    },
+    {
+      "name": "wdDialogMailMergeHelper",
+      "value": 680,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogMailMergeQueryOptions",
+      "value": 681,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFileMacPageSetup",
+      "value": 685,
+      "description": "Macintosh-only. For information about this constant, consult the language reference Help included with Microsoft Office Macintosh Edition."
+    },
+    {
+      "name": "wdDialogListCommands",
+      "value": 723,
+      "description": "ListType"
+    },
+    {
+      "name": "wdDialogEditCreatePublisher",
+      "value": 732,
+      "description": "Macintosh-only. For information about this constant, consult the language reference Help included with Microsoft Office Macintosh Edition."
+    },
+    {
+      "name": "wdDialogEditSubscribeTo",
+      "value": 733,
+      "description": "Macintosh-only. For information about this constant, consult the language reference Help included with Microsoft Office Macintosh Edition."
+    },
+    {
+      "name": "wdDialogEditPublishOptions",
+      "value": 735,
+      "description": "Macintosh-only. For information about this constant, consult the language reference Help included with Microsoft Office Macintosh Edition."
+    },
+    {
+      "name": "wdDialogEditSubscribeOptions",
+      "value": 736,
+      "description": "Macintosh-only. For information about this constant, consult the language reference Help included with Microsoft Office Macintosh Edition."
+    },
+    {
+      "name": "wdDialogFileMacCustomPageSetupGX",
+      "value": 737,
+      "description": "Macintosh-only. For information about this constant, consult the language reference Help included with Microsoft Office Macintosh Edition."
+    },
+    {
+      "name": "wdDialogToolsOptionsTypography",
+      "value": 739,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsAutoCorrectExceptions",
+      "value": 762,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsOptionsAutoFormatAsYouType",
+      "value": 778,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogMailMergeUseAddressBook",
+      "value": 779,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsHangulHanjaConversion",
+      "value": 784,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsOptionsFuzzy",
+      "value": 790,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogEditGoToOld",
+      "value": 811,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogInsertNumber",
+      "value": 812,
+      "description": "NumPic"
+    },
+    {
+      "name": "wdDialogLetterWizard",
+      "value": 821,
+      "description": "SenderCity, DateFormat, IncludeHeaderFooter, LetterStyle, Letterhead, LetterheadLocation, LetterheadSize, RecipientName, RecipientAddress, Salutation, SalutationType, RecipientGender, RecipientReference, MailingInstructions, AttentionLine, LetterSubject, CCList, SenderName, ReturnAddress, Closing, SenderJobTitle, SenderCompany, SenderInitials, EnclosureNumber, PageDesign, InfoBlock, SenderGender, ReturnAddressSF, RecipientCode, SenderCode, SenderReference"
+    },
+    {
+      "name": "wdDialogFormatBulletsAndNumbering",
+      "value": 824,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsSpellingAndGrammar",
+      "value": 828,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsCreateDirectory",
+      "value": 833,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogTableWrapping",
+      "value": 854,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFormatTheme",
+      "value": 855,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogTableProperties",
+      "value": 861,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogEmailOptions",
+      "value": 863,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogCreateAutoText",
+      "value": 872,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsAutoSummarize",
+      "value": 874,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsGrammarSettings",
+      "value": 885,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogEditGoTo",
+      "value": 896,
+      "description": "Find, Replace, Direction, MatchCase, WholeWord, PatternMatch, SoundsLike, FindNext, ReplaceOne, ReplaceAll, Format, Wrap, FindAllWordForms, MatchByte, FuzzyFind, Destination, CorrectEnd, MatchKashida, MatchDiacritics, MatchAlefHamza, MatchControl"
+    },
+    {
+      "name": "wdDialogWebOptions",
+      "value": 898,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogInsertHyperlink",
+      "value": 925,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsAutoManager",
+      "value": 915,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFileVersions",
+      "value": 945,
+      "description": "AutoVersion, VersionDesc"
+    },
+    {
+      "name": "wdDialogToolsOptionsAutoFormat",
+      "value": 959,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFormatDrawingObject",
+      "value": 960,
+      "description": "Left, PositionHorzRel, Top, PositionVertRel, LockAnchor, FloatOverText, LayoutInCell, WrapSide, TopDistanceFromText, BottomDistanceFromText, LeftDistanceFromText, RightDistanceFromText, Wrap, WordWrap, AutoSize, HRWidthType, HRHeight, HRNoshade, HRAlign, Text, AllowOverlap, HorizRule"
+    },
+    {
+      "name": "wdDialogToolsOptions",
+      "value": 974,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFitText",
+      "value": 983,
+      "description": "FitTextWidth"
+    },
+    {
+      "name": "wdDialogEditAutoText",
+      "value": 985,
+      "description": "Name, Context, InsertAs, Insert, Add, Define, InsertAsText, Delete, CompleteAT"
+    },
+    {
+      "name": "wdDialogPhoneticGuide",
+      "value": 986,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsDictionary",
+      "value": 989,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFileSaveVersion",
+      "value": 1007,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsOptionsBidi",
+      "value": 1029,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFrameSetProperties",
+      "value": 1074,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogTableTableOptions",
+      "value": 1080,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogTableCellOptions",
+      "value": 1081,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogIMESetDefault",
+      "value": 1094,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogTCSCTranslator",
+      "value": 1156,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogHorizontalInVertical",
+      "value": 1160,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogTwoLinesInOne",
+      "value": 1161,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFormatEncloseCharacters",
+      "value": 1162,
+      "description": "Style, Text, Enclosure"
+    },
+    {
+      "name": "wdDialogConsistencyChecker",
+      "value": 1121,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsOptionsSmartTag",
+      "value": 1395,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFormatStylesCustom",
+      "value": 1248,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogCSSLinks",
+      "value": 1261,
+      "description": "LinkStyles"
+    },
+    {
+      "name": "wdDialogInsertWebComponent",
+      "value": 1324,
+      "description": "IconNumber, FileName, Link, DisplayIcon, Tab, Class, IconFileName, Caption, Floating"
+    },
+    {
+      "name": "wdDialogToolsOptionsEditCopyPaste",
+      "value": 1356,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogToolsOptionsSecurity",
+      "value": 1361,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogSearch",
+      "value": 1363,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogShowRepairs",
+      "value": 1381,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogMailMergeInsertAsk",
+      "value": 4047,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogMailMergeInsertFillIn",
+      "value": 4048,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogMailMergeInsertIf",
+      "value": 4049,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogMailMergeInsertNextIf",
+      "value": 4053,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogMailMergeInsertSet",
+      "value": 4054,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogMailMergeInsertSkipIf",
+      "value": 4055,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogMailMergeFieldMapping",
+      "value": 1304,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogMailMergeInsertAddressBlock",
+      "value": 1305,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogMailMergeInsertGreetingLine",
+      "value": 1306,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogMailMergeInsertFields",
+      "value": 1307,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogMailMergeRecipients",
+      "value": 1308,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogMailMergeFindRecipient",
+      "value": 1326,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogMailMergeSetDocumentType",
+      "value": 1339,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogLabelOptions",
+      "value": 1367,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogXMLElementAttributes",
+      "value": 1460,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogSchemaLibrary",
+      "value": 1417,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogPermission",
+      "value": 1469,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogMyPermission",
+      "value": 1437,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogXMLOptions",
+      "value": 1425,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogFormattingRestrictions",
+      "value": 1427,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogSourceManager",
+      "value": 1920,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogCreateSource",
+      "value": 1922,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogDocumentInspector",
+      "value": 1482,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogStyleManagement",
+      "value": 1948,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogInsertSource",
+      "value": 2120,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogOMathRecognizedFunctions",
+      "value": 2165,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogInsertPlaceholder",
+      "value": 2348,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogBuildingBlockOrganizer",
+      "value": 2067,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogContentControlProperties",
+      "value": 2394,
+      "description": "(none)"
+    },
+    {
+      "name": "wdDialogCompatibilityChecker",
+      "value": 2439,
+      "description": ""
+    },
+    {
+      "name": "wdDialogExportAsFixedFormat",
+      "value": 2349,
+      "description": ""
+    },
+    {
+      "name": "wdDialogFileNew2007",
+      "value": 1116,
+      "description": ""
+    }
+  ]
+}

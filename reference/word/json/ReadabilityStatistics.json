@@ -1,0 +1,64 @@
+{
+  "name": "ReadabilityStatistics",
+  "kind": "Dispatch Interface",
+  "guid": "{000209AE-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of ReadabilityStatistic objects for a document or range.",
+  "remarks": "Use the ReadabilityStatistics property to return the ReadabilityStatistics collection. The following example enumerates the readability statistics for the selection and displays each one in a message box. Use ReadabilityStatistics (Index), where Index is the index number, to return a single ReadabilityStatistic object. The statistics are ordered as follows: Words, Characters, Paragraphs, Sentences, Sentences per Paragraph, Words per Sentence, Characters per Word, Passive Sentences, Flesch Reading Ease, and Flesch-Kincaid Grade Level. The following example returns the word count for the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified ReadabilityStatistics object."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of readability statistics in the collection. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As ReadabilityStatistic",
+      "description": "Returns an individual ReadabilityStatistic object in a collection.",
+      "returns": "ReadabilityStatistic",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position or a String representing the name of the individual object."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

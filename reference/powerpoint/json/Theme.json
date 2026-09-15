@@ -1,0 +1,34 @@
+{
+  "name": "Theme",
+  "kind": "Dispatch Interface",
+  "guid": "{D9D60EB3-D4B4-4991-9C16-75585B3346BB}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a theme (a collection of colors, fonts, and effects).",
+  "remarks": "",
+  "example": "Sub IterateThemeVariants()\n\n    Dim pptTheme As Theme\n    Dim pptThemeVariants As ThemeVariants\n    Dim pptThemeVariant As ThemeVariant\n    Dim path As String\n\n    ' Get a reference to the currently active theme.\n    path = \"C:\\Program Files (x86)\\Microsoft Office\\Document Themes 15\\\" & _\n        ActivePresentation.TemplateName & \".thmx\"\n    Set pptTheme = Application.OpenThemeFile(path)\n\n    ' Get a reference to all of the variations in the theme.\n    Set pptThemeVariants = pptTheme.ThemeVariants\n\n    ' Iterate over each variation of the theme and print\n    ' its ID.\n    For Each pptThemeVariant In pptThemeVariants\n\n        Debug.Print \"Variation id: \" & pptThemeVariant.Id\n\n    Next pptThemeVariant\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the PowerPoint application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "ThemeVariants",
+      "kind": "property",
+      "type": "ThemeVariants",
+      "access": "read-only",
+      "description": "Returns a ThemeVariants collection that represents the variations in the theme."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

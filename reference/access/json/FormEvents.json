@@ -1,0 +1,757 @@
+{
+  "name": "FormEvents",
+  "kind": "Interface",
+  "guid": "{331FDCFB-CF31-11CD-8701-00AA003F0F07}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "Load",
+      "kind": "method",
+      "signature": "Load()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "Current",
+      "kind": "method",
+      "signature": "Current()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "BeforeInsert",
+      "kind": "method",
+      "signature": "BeforeInsert(Cancel As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AfterInsert",
+      "kind": "method",
+      "signature": "AfterInsert()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "BeforeUpdate",
+      "kind": "method",
+      "signature": "BeforeUpdate(Cancel As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AfterUpdate",
+      "kind": "method",
+      "signature": "AfterUpdate()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete(Cancel As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeDelConfirm",
+      "kind": "method",
+      "signature": "BeforeDelConfirm(Cancel As Integer, Response As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Response",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AfterDelConfirm",
+      "kind": "method",
+      "signature": "AfterDelConfirm(Status As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Status",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open(Cancel As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Resize",
+      "kind": "method",
+      "signature": "Resize()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "Unload",
+      "kind": "method",
+      "signature": "Unload(Cancel As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "Deactivate",
+      "kind": "method",
+      "signature": "Deactivate()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "GotFocus",
+      "kind": "method",
+      "signature": "GotFocus()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "LostFocus",
+      "kind": "method",
+      "signature": "LostFocus()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "Click",
+      "kind": "method",
+      "signature": "Click()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "DblClick",
+      "kind": "method",
+      "signature": "DblClick(Cancel As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseDown",
+      "kind": "method",
+      "signature": "MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseMove",
+      "kind": "method",
+      "signature": "MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseUp",
+      "kind": "method",
+      "signature": "MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyDown",
+      "kind": "method",
+      "signature": "KeyDown(KeyCode As Integer, Shift As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyPress",
+      "kind": "method",
+      "signature": "KeyPress(KeyAscii As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "KeyAscii",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyUp",
+      "kind": "method",
+      "signature": "KeyUp(KeyCode As Integer, Shift As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Error",
+      "kind": "method",
+      "signature": "Error(DataErr As Integer, Response As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "DataErr",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Response",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Timer",
+      "kind": "method",
+      "signature": "Timer()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "Filter",
+      "kind": "method",
+      "signature": "Filter(Cancel As Integer, FilterType As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "FilterType",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ApplyFilter",
+      "kind": "method",
+      "signature": "ApplyFilter(Cancel As Integer, ApplyType As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ApplyType",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Dirty",
+      "kind": "method",
+      "signature": "Dirty(Cancel As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Undo",
+      "kind": "method",
+      "signature": "Undo(Cancel As Integer)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "OnConnect",
+      "kind": "method",
+      "signature": "OnConnect()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "OnDisconnect",
+      "kind": "method",
+      "signature": "OnDisconnect()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "PivotTableChange",
+      "kind": "method",
+      "signature": "PivotTableChange(Reason As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Reason",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Query",
+      "kind": "method",
+      "signature": "Query()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "BeforeQuery",
+      "kind": "method",
+      "signature": "BeforeQuery()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "SelectionChange",
+      "kind": "method",
+      "signature": "SelectionChange()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "CommandBeforeExecute",
+      "kind": "method",
+      "signature": "CommandBeforeExecute(Command As Variant, Cancel As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Command",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CommandChecked",
+      "kind": "method",
+      "signature": "CommandChecked(Command As Variant, Checked As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Command",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Checked",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CommandEnabled",
+      "kind": "method",
+      "signature": "CommandEnabled(Command As Variant, Enabled As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Command",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Enabled",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CommandExecute",
+      "kind": "method",
+      "signature": "CommandExecute(Command As Variant)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Command",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DataSetChange",
+      "kind": "method",
+      "signature": "DataSetChange()",
+      "description": "",
+      "returns": "HRESULT"
+    },
+    {
+      "name": "BeforeScreenTip",
+      "kind": "method",
+      "signature": "BeforeScreenTip(ScreenTipText As Object, SourceObject As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "ScreenTipText",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "SourceObject",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeRender",
+      "kind": "method",
+      "signature": "BeforeRender(drawObject As Object, chartObject As Object, Cancel As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "drawObject",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "chartObject",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AfterRender",
+      "kind": "method",
+      "signature": "AfterRender(drawObject As Object, chartObject As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "drawObject",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "chartObject",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AfterFinalRender",
+      "kind": "method",
+      "signature": "AfterFinalRender(drawObject As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "drawObject",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AfterLayout",
+      "kind": "method",
+      "signature": "AfterLayout(drawObject As Object)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "drawObject",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseWheel",
+      "kind": "method",
+      "signature": "MouseWheel(Page As Boolean, Count As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Page",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Count",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ViewChange",
+      "kind": "method",
+      "signature": "ViewChange(Reason As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Reason",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DataChange",
+      "kind": "method",
+      "signature": "DataChange(Reason As Long)",
+      "description": "",
+      "returns": "HRESULT",
+      "parameters": [
+        {
+          "name": "Reason",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

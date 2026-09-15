@@ -1,0 +1,396 @@
+{
+  "name": "SlideRange",
+  "kind": "Dispatch Interface",
+  "guid": "{9149346B-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection that represents a notes page or a slide range, which is a set of slides that can contain as little as a single slide or as much as all the slides in a presentation.",
+  "remarks": "You can include whichever slides you want - chosen from all the slides in the presentation or from all the slides in the selection - to construct a slide range. For example, you could construct a SlideRange collection that contains the first three slides in a presentation, all the selected slides in the presentation, or all the title slides in the presentation. Just as you can work with several slides at the same time in the user interface by selecting them and applying a command, you can work with several slides at the same time programmatically by constructing a SlideRange collection and applying properties or methods to it. And just as some commands in the user interface that work on single slides aren't valid when multiple slides are selected, some properties and methods that work on a Slide object or on a SlideRange collection that contains only one slide will fail if they're applied to a SlideRange collection that contains more than one slide.",
+  "example": "With ActivePresentation.Slides.Range(Array(1, 3))\n\n    .FollowMasterBackground = False\n    .Background.Fill.PresetGradient msoGradientHorizontal, _\n         1, msoGradientLateSunset\n\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Shapes",
+      "kind": "property",
+      "type": "Shapes",
+      "access": "read-only",
+      "description": "Returns a Shapes collection that represents all the elements that have been placed or inserted on the specified slide, slide master, or range of slides. Read-only."
+    },
+    {
+      "name": "HeadersFooters",
+      "kind": "property",
+      "type": "HeadersFooters",
+      "access": "read-only",
+      "description": "Returns a HeadersFooters collection that represents the header, footer, date and time, and slide number associated with the slide, slide master, or range of slides. Read-only."
+    },
+    {
+      "name": "SlideShowTransition",
+      "kind": "property",
+      "type": "SlideShowTransition",
+      "access": "read-only",
+      "description": "Returns a SlideShowTransition object that represents the special effects for the specified slide transition. Read-only."
+    },
+    {
+      "name": "ColorScheme",
+      "kind": "property",
+      "type": "ColorScheme",
+      "access": "read/write",
+      "description": "Returns or sets the ColorScheme object that represents the scheme colors for the specified slide, slide range, or slide master. Read/write."
+    },
+    {
+      "name": "Background",
+      "kind": "property",
+      "type": "ShapeRange",
+      "access": "read-only",
+      "description": "Returns a ShapeRange object that represents the slide background."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "When a slide is inserted into a presentation, Microsoft PowerPoint automatically assigns it a name in the form Slide _n_, where _n_ is an integer that represents the order in which the slide was created in the presentation. For example, the first slide inserted into a presentation is automatically named Slide1. If you copy a slide from one presentation to another, the slide loses the name it had in the first presentation and is automatically assigned a new name in the second presentation. A slide range must contain exactly one slide. Read/write."
+    },
+    {
+      "name": "SlideID",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a unique ID number for the specified slide. Read-only."
+    },
+    {
+      "name": "PrintSteps",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of slides you'd need to print to simulate the builds on the specified slide, slide master, or range of slides. Read-only."
+    },
+    {
+      "name": "Layout",
+      "kind": "property",
+      "type": "PpSlideLayout",
+      "access": "read/write",
+      "description": "Returns or sets a PpSlideLayout constant that represents the slide layout. Read/write."
+    },
+    {
+      "name": "Tags",
+      "kind": "property",
+      "type": "Tags",
+      "access": "read-only",
+      "description": "Returns a Tags object that represents the tags for the specified object. Read-only."
+    },
+    {
+      "name": "SlideIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the index number of the specified slide within the Slides collection. Read-only."
+    },
+    {
+      "name": "SlideNumber",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the slide number. Read-only."
+    },
+    {
+      "name": "DisplayMasterShapes",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the specified range of slides displays the background objects on the slide master. Read/write."
+    },
+    {
+      "name": "FollowMasterBackground",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the range of slides follows the slide master background. Read/write."
+    },
+    {
+      "name": "NotesPage",
+      "kind": "property",
+      "type": "SlideRange",
+      "access": "read-only",
+      "description": "Returns a SlideRange object that represents the notes pages for the specified slide or range of slides. Read-only."
+    },
+    {
+      "name": "Master",
+      "kind": "property",
+      "type": "_Master",
+      "access": "read-only",
+      "description": "Returns a Master object that represents the slide master. Read-only."
+    },
+    {
+      "name": "Hyperlinks",
+      "kind": "property",
+      "type": "Hyperlinks",
+      "access": "read-only",
+      "description": "Returns a Hyperlinks collection that represents all the hyperlinks on the specified slide. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Comments",
+      "kind": "property",
+      "type": "Comments",
+      "access": "read-only",
+      "description": "Returns a Comments object that represents a collection of comments. Read-only."
+    },
+    {
+      "name": "Design",
+      "kind": "property",
+      "type": "Design",
+      "access": "read/write",
+      "description": "Returns a Design object representing a design."
+    },
+    {
+      "name": "TimeLine",
+      "kind": "property",
+      "type": "TimeLine",
+      "access": "read-only",
+      "description": "Returns a TimeLine object that represents the animation timeline for the slide. Read-only."
+    },
+    {
+      "name": "CustomLayout",
+      "kind": "property",
+      "type": "CustomLayout",
+      "access": "read/write",
+      "description": "Returns a CustomLayout object that represents the custom layout associated with the specified range of slides. Read-only."
+    },
+    {
+      "name": "ThemeColorScheme",
+      "kind": "property",
+      "type": "ThemeColorScheme",
+      "access": "read-only",
+      "description": "Returns a ThemeColorScheme object that represents the color scheme associated with the specified range of slides. Read-only."
+    },
+    {
+      "name": "BackgroundStyle",
+      "kind": "property",
+      "type": "MsoBackgroundStyleIndex",
+      "access": "read/write",
+      "description": "Sets or returns the background style of the specified object. Read/write."
+    },
+    {
+      "name": "CustomerData",
+      "kind": "property",
+      "type": "CustomerData",
+      "access": "read-only",
+      "description": "Returns a CustomerData object. Read-only."
+    },
+    {
+      "name": "sectionIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the index of the selected section in the SlideRange. Read-only."
+    },
+    {
+      "name": "HasNotesPage",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Indicates whether the selected SlideRange has media that resides on a notes page. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects the specified object.",
+      "returns": "void"
+    },
+    {
+      "name": "Cut",
+      "kind": "method",
+      "signature": "Cut()",
+      "description": "Deletes the specified object and places it on the Clipboard.",
+      "returns": "void"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy()",
+      "description": "Copies the specified object to the Clipboard.",
+      "returns": "void"
+    },
+    {
+      "name": "Duplicate",
+      "kind": "method",
+      "signature": "Duplicate() As SlideRange",
+      "description": "Creates a duplicate of the specified SlideRange object, adds the new range of slides to the Slides collection immediately after the slide range specified originally, and then returns a SlideRange object that represents the duplicate slides.",
+      "returns": "SlideRange"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified SlideRange object.",
+      "returns": "void"
+    },
+    {
+      "name": "Export",
+      "kind": "method",
+      "signature": "Export(FileName As String, FilterName As String, [ScaleWidth As Long], [ScaleHeight As Long])",
+      "description": "Exports a range of slides, using the specified graphics filter, and saves the exported file under the specified file name.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the file to be exported and saved to disk. You can include a full path; if you don't, Microsoft PowerPoint creates a file in the current folder."
+        },
+        {
+          "name": "FilterName",
+          "type": "String",
+          "optional": false,
+          "description": "The graphics format in which you want to export slides. The specified graphics format must have an export filter registered in the Windows registry. You can specify either the registered extension or the registered filter name. Microsoft PowerPoint will first search for a matching extension in the registry. If no extension that matches the specified string is found, PowerPoint will look for a filter name that matches."
+        },
+        {
+          "name": "ScaleWidth",
+          "type": "Long",
+          "optional": true,
+          "description": "The width in pixels of an exported slide."
+        },
+        {
+          "name": "ScaleHeight",
+          "type": "Long",
+          "optional": true,
+          "description": "The height in pixels of an exported slide."
+        }
+      ]
+    },
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Slide",
+      "description": "Returns a single Slide object from the specified SlideRange collection.",
+      "returns": "Slide",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number of the single Slide object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "MoveTo",
+      "kind": "method",
+      "signature": "MoveTo(toPos As Long)",
+      "description": "Moves the specified object to a specific location within the same collection, renumbering all other items in the collection appropriately.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "toPos",
+          "type": "Long",
+          "optional": false,
+          "description": "The index position to which to move the animation effect."
+        }
+      ]
+    },
+    {
+      "name": "ApplyTemplate",
+      "kind": "method",
+      "signature": "ApplyTemplate(FileName As String)",
+      "description": "Applies a design template to the specified slide range.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies the name of the design template."
+        }
+      ]
+    },
+    {
+      "name": "ApplyTheme",
+      "kind": "method",
+      "signature": "ApplyTheme(themeName As String)",
+      "description": "Applies a theme or design template to the specified range of slides.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "themeName",
+          "type": "String",
+          "optional": false,
+          "description": "The path and name of the theme file (.thmx) or design template file (.pot) to apply to the SlideRange object."
+        }
+      ]
+    },
+    {
+      "name": "ApplyThemeColorScheme",
+      "kind": "method",
+      "signature": "ApplyThemeColorScheme(themeColorSchemeName As String)",
+      "description": "Applies a color scheme to the specified range of slides.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "themeColorSchemeName",
+          "type": "String",
+          "optional": false,
+          "description": "The path and name of the color scheme file to apply to the range of slides."
+        }
+      ]
+    },
+    {
+      "name": "MoveToSectionStart",
+      "kind": "method",
+      "signature": "MoveToSectionStart(toSection As Long)",
+      "description": "Moves the current position to the start of the specified section in the SlideRange object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "toSection",
+          "type": "Long",
+          "optional": false,
+          "description": "The section to move to."
+        }
+      ]
+    },
+    {
+      "name": "ApplyTemplate2",
+      "kind": "method",
+      "signature": "ApplyTemplate2(FileName As String, VariantGUID As String)",
+      "description": "Applies a design template and theme variant to the slide range.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "VariantGUID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

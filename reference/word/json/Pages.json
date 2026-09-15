@@ -1,0 +1,64 @@
+{
+  "name": "Pages",
+  "kind": "Dispatch Interface",
+  "guid": "{91807402-6C6F-47CD-B8FA-C42FEE8EE924}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of pages in a document. Use the Pages collection and the related objects and properties for programmatically defining page layout in a document.",
+  "remarks": "Use the Pages property to return a Pages collection. The following example accesses all pages in the active document. Use the Item method to access an individual Page object that represents an individual page in a document. The following example accesses the first page in the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of pages in the collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Pages object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Page",
+      "description": "Returns an individual Page object in a collection.",
+      "returns": "Page",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position of the individual object."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

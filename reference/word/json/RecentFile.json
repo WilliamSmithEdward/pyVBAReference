@@ -1,0 +1,77 @@
+{
+  "name": "RecentFile",
+  "kind": "Dispatch Interface",
+  "guid": "{00020964-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a recently used file. The RecentFile object is a member of the RecentFiles collection.",
+  "remarks": "The RecentFiles collection includes all the files that have been used recently. The items in the RecentFiles collection are displayed at the bottom of the File menu. Use RecentFiles (Index), where Index is the index number, to return a single RecentFile object. The index number represents the position of the file on the File menu. The following example opens the first document in the RecentFiles collection. Use the Add method to add a file to the RecentFiles collection. The following example adds the active document to the list of recently-used files. The SaveAs and Open methods include an AddToRecentFiles argument that controls whether or not a file is added to the recently-used-files list when the file is opened or saved.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified RecentFile object."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the specified object. Read-only String."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the position of an item in a collection. Read-only."
+    },
+    {
+      "name": "ReadOnly",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if changes to the document cannot be saved to the original document. Read/write Boolean."
+    },
+    {
+      "name": "Path",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the disk or Web path to the specified object. Read-only String."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open() As Document",
+      "description": "Opens the specified object. Returns a Document object representing the opened document.",
+      "returns": "Document"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified file on the list of recent files.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

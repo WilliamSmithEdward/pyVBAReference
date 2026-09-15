@@ -1,0 +1,141 @@
+{
+  "name": "ListLevel",
+  "kind": "Dispatch Interface",
+  "guid": "{0002098D-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single list level, either the only level for a bulleted or numbered list or one of the nine levels of an outline numbered list. The ListLevel object is a member of the ListLevels collection.",
+  "remarks": "Use ListLevels (Index), where Index is a number from 1 through 9, to return a single ListLevel object. The following example sets list level one of list template one in the active document to start at 4. The ListLevel object gives you access to all the formatting properties for the specified list level, such as the Alignment, Font, NumberFormat, NumberPosition, NumberStyle, and TrailingCharacter properties. To apply a list level, first identify the range or list, and then use the ApplyListTemplate method. Each tab at the beginning of the paragraph is translated into a list level. For example, a paragraph that begins with three tabs will become a level-three list paragraph after the ApplyListTemplate method is used.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the position of an item in a collection. Read-only."
+    },
+    {
+      "name": "NumberFormat",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the number format for the specified list level. Read/write String."
+    },
+    {
+      "name": "TrailingCharacter",
+      "kind": "property",
+      "type": "WdTrailingCharacter",
+      "access": "read/write",
+      "description": "Returns or sets the character inserted after the number for the specified list level. Read/write WdTrailingCharacter."
+    },
+    {
+      "name": "NumberStyle",
+      "kind": "property",
+      "type": "WdListNumberStyle",
+      "access": "read/write",
+      "description": "Returns or sets the number style for the ListLevel object. Read/write WdListNumberStyle."
+    },
+    {
+      "name": "NumberPosition",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the position (in points) of the number or bullet for the specified ListLevel object. Read/write Single."
+    },
+    {
+      "name": "Alignment",
+      "kind": "property",
+      "type": "WdListLevelAlignment",
+      "access": "read/write",
+      "description": "Returns or sets a WdListLevelAlignment constant that represents the alignment for the list level of the list template. Read/write."
+    },
+    {
+      "name": "TextPosition",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the position (in points) for the second line of wrapping text for the specified ListLevel object. Read/write Single."
+    },
+    {
+      "name": "TabPosition",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the tab position for the specified ListLevel object. Read/write Single."
+    },
+    {
+      "name": "StartAt",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the starting number for the specified ListLevel object. Read/write Long."
+    },
+    {
+      "name": "LinkedStyle",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the style that's linked to the specified ListLevel object. Read/write String."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read/write",
+      "description": "Returns or sets a Font object that represents the character formatting of the specified object. Read/write Font."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified ListLevel object."
+    },
+    {
+      "name": "ResetOnHigher",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Sets or returns the list level that must appear before the specified list level restarts numbering at 1. Read/write Long."
+    },
+    {
+      "name": "PictureBullet",
+      "kind": "property",
+      "type": "InlineShape",
+      "access": "read-only",
+      "description": "Returns an InlineShape object that represents a picture bullet."
+    }
+  ],
+  "methods": [
+    {
+      "name": "ApplyPictureBullet",
+      "kind": "method",
+      "signature": "ApplyPictureBullet(FileName As String) As InlineShape",
+      "description": "Formats a paragraph or range of paragraphs with a picture bullet.",
+      "returns": "InlineShape",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The path and file name of the picture file."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

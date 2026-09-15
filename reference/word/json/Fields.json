@@ -1,0 +1,132 @@
+{
+  "name": "Fields",
+  "kind": "Dispatch Interface",
+  "guid": "{00020930-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of Field objects that represent all the fields in a selection, range, or document.",
+  "remarks": "Use the Fields property to return the Fields collection. The following example updates all the fields in the selection. Use the Add method to add a field to the Fields collection. The following example inserts a DATE field at the beginning of the selection and then displays the result. Use Fields (Index), where Index is the index number, to return a single Field object. The index number represents the position of the field in the selection, range, or document. The following example displays the field code and the result of the first field in the active document. The Count property for this collection in a document returns the number of items in the main story only. To count items in other stories use the collection with the Range object.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Fields object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of fields in the collection. Read-only."
+    },
+    {
+      "name": "Locked",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if all fields in the Fields collection are locked. Read/write Long."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Field",
+      "description": "Returns an individual Field object in a collection.",
+      "returns": "Field",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "ToggleShowCodes",
+      "kind": "method",
+      "signature": "ToggleShowCodes()",
+      "description": "Switches the display of the fields between field codes and field results. Use the ShowCodes property to control the display of an individual field.",
+      "returns": "void"
+    },
+    {
+      "name": "Update",
+      "kind": "method",
+      "signature": "Update() As Long",
+      "description": "Updates the result of the fields object.",
+      "returns": "Long"
+    },
+    {
+      "name": "Unlink",
+      "kind": "method",
+      "signature": "Unlink()",
+      "description": "Replaces all the fields in the Fields collection with their most recent results.",
+      "returns": "void"
+    },
+    {
+      "name": "UpdateSource",
+      "kind": "method",
+      "signature": "UpdateSource()",
+      "description": "Saves the changes made to the results of an INCLUDETEXT field back to the source document.",
+      "returns": "void"
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Range As Range, [Type As Variant], [Text As Variant], [PreserveFormatting As Variant]) As Field",
+      "description": "Adds a Field object to the Fields collection. Returns the Field object at the specified range.",
+      "returns": "Field",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The range where you want to add the field. If the range isn't collapsed, the field replaces the range."
+        },
+        {
+          "name": "Type",
+          "type": "Variant",
+          "optional": true,
+          "description": "Can be any WdFieldType constant. For a list of valid constants, consult the Object Browser. The default value is wdFieldEmpty."
+        },
+        {
+          "name": "Text",
+          "type": "Variant",
+          "optional": true,
+          "description": "Additional text needed for the field. For example, if you want to specify a switch for the field, you would add it here."
+        },
+        {
+          "name": "PreserveFormatting",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have the formatting that's applied to the field preserved during updates."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,69 @@
+{
+  "name": "FootnoteOptions",
+  "kind": "Dispatch Interface",
+  "guid": "{BEA85A24-D7DA-4F3D-B58C-ED90FB01D615}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the properties assigned to a range or selection of footnotes in a document.",
+  "remarks": "Use the Range or Selection object to return a FootnoteOptions object. Using the FootnoteOptions object, you can assign different footnote properties to different areas of a document. For example, you may want footnotes in the introduction of a long document to be displayed as lowercase letters, while in the rest of your document they are displayed as asterisks. The following example uses the NumberingRule, NumberStyle, and StartingNumber properties to format the footnotes in the first section of the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified FootnoteOptions object."
+    },
+    {
+      "name": "Location",
+      "kind": "property",
+      "type": "WdFootnoteLocation",
+      "access": "read/write",
+      "description": "Returns or sets the position of all footnotes. Read/write WdFootnoteLocation."
+    },
+    {
+      "name": "NumberStyle",
+      "kind": "property",
+      "type": "WdNoteNumberStyle",
+      "access": "read/write",
+      "description": "Returns or sets the number style for the footnotes. Read/write WdNoteNumberStyle."
+    },
+    {
+      "name": "StartingNumber",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the starting footnote number. Read/write Long."
+    },
+    {
+      "name": "NumberingRule",
+      "kind": "property",
+      "type": "WdNumberingRule",
+      "access": "read/write",
+      "description": "Returns or sets the way footnotes or endnotes are numbered after page breaks or section breaks. Read/write WdNumberingRule."
+    },
+    {
+      "name": "LayoutColumns",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the way footnotes are laid out in columns when the section containing the reference mark has multiple columns. Read-Write Long."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

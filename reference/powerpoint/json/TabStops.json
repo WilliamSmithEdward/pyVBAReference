@@ -1,0 +1,78 @@
+{
+  "name": "TabStops",
+  "kind": "Dispatch Interface",
+  "guid": "{91493493-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of all the TabStop objects on one ruler.",
+  "remarks": "",
+  "example": "With ActivePresentation.Slides(1).Shapes(2) _\n        .TextFrame.Ruler.TabStops\n    For t = .Count To 1 Step -1\n        .Item(t).Clear\n    Next\nEnd With",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "DefaultSpacing",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the default tab-stop spacing for the specified text, in points. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As TabStop",
+      "description": "Returns a single tab stop from the specified TabStops collection.",
+      "returns": "TabStop",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the single TabStop object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Type As PpTabStopType, Position As Single) As TabStop",
+      "description": "Creates a tab stop and adds it to the TabStops collection.",
+      "returns": "TabStop",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "PpTabStopType",
+          "optional": false,
+          "description": "The type of the tab stop to be added."
+        },
+        {
+          "name": "Position",
+          "type": "Single",
+          "optional": false,
+          "description": "The position of the tab stop in the tab stops collection."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,218 @@
+{
+  "name": "MailMergeDataSource",
+  "kind": "Dispatch Interface",
+  "guid": "{0002091D-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the mail merge data source in a mail merge operation.",
+  "remarks": "Use the DataSource property to return the MailMergeDataSource object. The following example displays the name of the data source associated with the active document. The following example displays the field names in the data source associated with the active document. The following example opens the data source associated with Form letter.doc and determines whether the FirstName field includes the name \"Kate.\"",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified MailMergeDataSource object."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns name of the specified object. Read-only String."
+    },
+    {
+      "name": "HeaderSourceName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the path and file name of the header source attached to the specified mail merge main document. Read-only String."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "WdMailMergeDataSource",
+      "access": "read-only",
+      "description": "Returns the type of mail merge data source. Read-only WdMailMergeDataSource."
+    },
+    {
+      "name": "HeaderSourceType",
+      "kind": "property",
+      "type": "WdMailMergeDataSource",
+      "access": "read-only",
+      "description": "Returns a value that indicates the way the header source is being supplied for the mail merge operation. Read-only WdMailMergeDataSource."
+    },
+    {
+      "name": "ConnectString",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the connection string for the specified mail merge data source. Read-only String."
+    },
+    {
+      "name": "QueryString",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the query string (SQL statement) used to retrieve a subset of the data in a mail merge data source. Read/write String."
+    },
+    {
+      "name": "ActiveRecord",
+      "kind": "property",
+      "type": "WdMailMergeActiveRecord",
+      "access": "read/write",
+      "description": "Returns or sets the active mail merge record. Can be either a valid record number in the query result or one of the WdMailMergeActiveRecord constants."
+    },
+    {
+      "name": "FirstRecord",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the number of the first record to be merged in a mail merge operation. Read/write Long."
+    },
+    {
+      "name": "LastRecord",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the number of the last record to be merged in a mail merge operation. Read/write Long."
+    },
+    {
+      "name": "FieldNames",
+      "kind": "property",
+      "type": "MailMergeFieldNames",
+      "access": "read-only",
+      "description": "Returns a MailMergeFieldNames collection that represents the names of all the fields in the specified mail merge data source. Read-only."
+    },
+    {
+      "name": "DataFields",
+      "kind": "property",
+      "type": "MailMergeDataFields",
+      "access": "read-only",
+      "description": "Returns a MailMergeDataFields collection that represents the fields in the specified mail merge data source. Read-only."
+    },
+    {
+      "name": "RecordCount",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of records in the data source. Read-only."
+    },
+    {
+      "name": "Included",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a record is included in a mail merge. Read/write Boolean."
+    },
+    {
+      "name": "InvalidAddress",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to mark a record in a mail merge data source if it contains invalid data in an address field. Read/write Boolean."
+    },
+    {
+      "name": "InvalidComments",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "If the InvalidAddress property is True, returns or sets a String that describes an invalid address error. Read/write."
+    },
+    {
+      "name": "MappedDataFields",
+      "kind": "property",
+      "type": "MappedDataFields",
+      "access": "read-only",
+      "description": "Returns a MappedDataFields collection that represents the mapped data fields available in Microsoft Word."
+    },
+    {
+      "name": "TableName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String with the SQL query used to retrieve the records from the data source file attached to a mail merge document. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "FindRecord",
+      "kind": "method",
+      "signature": "FindRecord(FindText As String, [Field As Variant]) As Boolean",
+      "description": "Searches the contents of the specified mail merge data source for text in a particular field. Returns True if the search text is found. Boolean.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "FindText",
+          "type": "String",
+          "optional": false,
+          "description": "The text to be looked for."
+        },
+        {
+          "name": "Field",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the field to be searched."
+        }
+      ]
+    },
+    {
+      "name": "SetAllIncludedFlags",
+      "kind": "method",
+      "signature": "SetAllIncludedFlags(Included As Boolean)",
+      "description": "Includes or excludes flagged records in a data source from a mail merge.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Included",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True to include all data source records in a mail merge. False to exclude all data source records from a mail merge."
+        }
+      ]
+    },
+    {
+      "name": "SetAllErrorFlags",
+      "kind": "method",
+      "signature": "SetAllErrorFlags(Invalid As Boolean, InvalidComment As String)",
+      "description": "Marks all records in a mail merge data source as containing invalid data in an address field.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Invalid",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True marks all records in the data source of a mail merge as invalid."
+        },
+        {
+          "name": "InvalidComment",
+          "type": "String",
+          "optional": false,
+          "description": "Text describing the invalid setting."
+        }
+      ]
+    },
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close()",
+      "description": "Closes the specified Mail Merge data source.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

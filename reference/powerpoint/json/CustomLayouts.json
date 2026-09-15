@@ -1,0 +1,80 @@
+{
+  "name": "CustomLayouts",
+  "kind": "Dispatch Interface",
+  "guid": "{914934F2-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a set of custom layouts associated with a presentation design.",
+  "remarks": "Use the CustomLayouts property of the slide Master object to return a CustomLayouts collection. Use CustomLayouts (_index_), where index is the custom layout index number, to return a single CustomLayout object. Use the Add method to create a new custom layout and add it to the CustomLayouts collection. Use the Paste method to past slides from the Clipboard as a CustomLayout object into the CustomLayouts collection. Use the CustomLayout property of a Slide or SlideRange object to return a custom layout for a slide or set of slides.",
+  "example": "Sub AddCustomLayout()\n\n    With ActivePresentation.SlideMaster\n\n        .CustomLayouts.Add (1)\n\n        .CustomLayouts(1).Name = \"MyLayout\"\n\n    End With\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As CustomLayout",
+      "description": "Returns a single object from the specified collection.",
+      "returns": "CustomLayout",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number of the single object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Index As Long) As CustomLayout",
+      "description": "Returns a CustomLayout object that represents a new custom layout.",
+      "returns": "CustomLayout",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the custom layout. The default value is -1, which means that if the Index argument is omitted, the new custom layout is added at the end of existing custom layouts."
+        }
+      ]
+    },
+    {
+      "name": "Paste",
+      "kind": "method",
+      "signature": "Paste([Index As Long]) As CustomLayout",
+      "description": "Pastes the slides on the Clipboard into a custom layout and adds the custom layout to the CustomLayouts collection.",
+      "returns": "CustomLayout",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": true,
+          "description": "The index number of the custom layout before which the new custom layout is pasted. If this argument is omitted, the new custom layout is pasted at the end of the CustomLayouts collection."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

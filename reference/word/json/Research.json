@@ -1,0 +1,117 @@
+{
+  "name": "Research",
+  "kind": "Dispatch Interface",
+  "guid": "{E6AAEC05-E543-4085-BA92-9BF7D2474F51}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Provides access to the research service feature of Microsoft Word.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Research object."
+    },
+    {
+      "name": "FavoriteService",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String that specifies the favorite research service."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Query",
+      "kind": "method",
+      "signature": "Query(ServiceID As String, [QueryString As String], [QueryLanguage As WdLanguageID], [UseSelection As Boolean], [LaunchQuery As Boolean]) As Variant",
+      "description": "Specifies a research query.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "ServiceID",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies a GUID that identifies the research service."
+        },
+        {
+          "name": "QueryString",
+          "type": "String",
+          "optional": true,
+          "description": "Specifies the query string."
+        },
+        {
+          "name": "QueryLanguage",
+          "type": "WdLanguageID",
+          "optional": true,
+          "description": "Specifies the query language of the query string."
+        },
+        {
+          "name": "UseSelection",
+          "type": "Boolean",
+          "optional": true,
+          "description": "True to use the current selection as the query string. This overrides the QueryString parameter if set. Default value is False."
+        },
+        {
+          "name": "LaunchQuery",
+          "type": "Boolean",
+          "optional": true,
+          "description": "True launches the query. False displays the Research task pane scoped to search the specified research service."
+        }
+      ]
+    },
+    {
+      "name": "SetLanguagePair",
+      "kind": "method",
+      "signature": "SetLanguagePair(LanguageFrom As WdLanguageID, LanguageTo As WdLanguageID) As Variant",
+      "description": "Sets the languages for the translation service.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "LanguageFrom",
+          "type": "WdLanguageID",
+          "optional": false,
+          "description": "Specifies the language to translate from."
+        },
+        {
+          "name": "LanguageTo",
+          "type": "WdLanguageID",
+          "optional": false,
+          "description": "Specifies the language to translate to."
+        }
+      ]
+    },
+    {
+      "name": "IsResearchService",
+      "kind": "method",
+      "signature": "IsResearchService(ServiceID As String) As Boolean",
+      "description": "Indicates whether the GUID specified in the ServiceID parameter corresponds to a currently configured service.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "ServiceID",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies a GUID that identifies the research service."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

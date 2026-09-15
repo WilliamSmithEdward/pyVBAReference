@@ -1,0 +1,152 @@
+{
+  "name": "SeriesCollection",
+  "kind": "Dispatch Interface",
+  "guid": "{8FEB78F7-35C6-4871-918C-193C3CDD886D}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a collection of all the Series objects in the specified chart or chart group.",
+  "remarks": "Use the SeriesCollection method to return the SeriesCollection collection.",
+  "example": "With ActiveDocument.InlineShapes(1)\n If .HasChart Then\n .Chart.SeriesCollection.Extend \"='Sheet1'!$C$6:$C$10\"\n End If\nEnd With",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the collection. Read-only Long."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the Microsoft Word application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Source As Variant, [Rowcol As XlRowCol], [SeriesLabels As Variant], [CategoryLabels As Variant], [Replace As Variant]) As Series",
+      "description": "Adds one or more new series to the collection.",
+      "returns": "Series",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "Variant",
+          "optional": false,
+          "description": "The new data as a string representation of a range contained in the Workbook property of the ChartData object for the chart."
+        },
+        {
+          "name": "Rowcol",
+          "type": "XlRowCol",
+          "optional": true,
+          "description": "One of the enumeration values that specifies whether the new values are in the rows or columns of the specified range."
+        },
+        {
+          "name": "SeriesLabels",
+          "type": "Variant",
+          "optional": true,
+          "description": "True if the first row or column contains the name of the data series. False if the first row or column contains the first data point of the series. If this argument is omitted, Microsoft Word attempts to determine the location of the series name from the contents of the first row or column."
+        },
+        {
+          "name": "CategoryLabels",
+          "type": "Variant",
+          "optional": true,
+          "description": "True if the first row or column contains the name of the category labels. False if the first row or column contains the first data point of the series. If this argument is omitted, Word attempts to determine the location of the category label from the contents of the first row or column."
+        },
+        {
+          "name": "Replace",
+          "type": "Variant",
+          "optional": true,
+          "description": "If CategoryLabels is True and Replace is True, the specified categories replace the categories that currently exist for the series. If Replace is False, the existing categories will not be replaced. The default is False."
+        }
+      ]
+    },
+    {
+      "name": "Extend",
+      "kind": "method",
+      "signature": "Extend(Source As Variant, [Rowcol As Variant], [CategoryLabels As Variant]) As Variant",
+      "description": "Adds new data points to an existing series collection.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "Variant",
+          "optional": false,
+          "description": "The new data to be added to the SeriesCollection object, represented as an A1-style range reference."
+        },
+        {
+          "name": "Rowcol",
+          "type": "Variant",
+          "optional": true,
+          "description": "One of the XlRowCol enumeration values that specifies whether the new values are in the rows or columns of the given range source. If this argument is omitted, Microsoft Word attempts to determine where the values are by the size and orientation of the selected range or by the dimensions of the array."
+        },
+        {
+          "name": "CategoryLabels",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have the first row or column contain the name of the category labels. False to have the first row or column contain the first data point of the series. If this argument is omitted, Word attempts to determine the location of the category label from the contents of the first row or column."
+        }
+      ]
+    },
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Series",
+      "description": "Returns a single object from a collection.",
+      "returns": "Series",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number for the object."
+        }
+      ]
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "method",
+      "signature": "_NewEnum() As IUnknown",
+      "description": "",
+      "returns": "IUnknown"
+    },
+    {
+      "name": "NewSeries",
+      "kind": "method",
+      "signature": "NewSeries() As Series",
+      "description": "Creates a new series.",
+      "returns": "Series"
+    },
+    {
+      "name": "_Default",
+      "kind": "method",
+      "signature": "_Default(Index As Variant) As Series",
+      "description": "",
+      "returns": "Series",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

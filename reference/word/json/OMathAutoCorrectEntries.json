@@ -1,0 +1,85 @@
+{
+  "name": "OMathAutoCorrectEntries",
+  "kind": "Dispatch Interface",
+  "guid": "{18CD5EC8-8B7B-42C8-992A-2A407468642C}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a collection of math AutoCorrect entries. Use the OMathAutoCorrectEntry object to access individual AutoCorrect entries.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathAutoCorrectEntries object."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of items in the OMathAutoCorrectEntries collection. Read-only Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As OMathAutoCorrectEntry",
+      "description": "Returns an OMathAutoCorrectEntry object that represents the specified item in the collection.",
+      "returns": "OMathAutoCorrectEntry",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "Specifies a String or Integer that represents the name or ordinal position of the object in the collection."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String, Value As String) As OMathAutoCorrectEntry",
+      "description": "Creates an equation auto correct entry and returns an OMathAutoCorrectEntry object.",
+      "returns": "OMathAutoCorrectEntry",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the autocorrect entry. Corresponds to the Name property of the OMathAutoCorrectEntry object."
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "optional": false,
+          "description": "The value of the autocorrect entry. Corresponds to the Value property of the OMathAutoCorrectEntry object."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

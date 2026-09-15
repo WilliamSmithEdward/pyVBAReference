@@ -1,0 +1,63 @@
+{
+  "name": "OMathAutoCorrectEntry",
+  "kind": "Dispatch Interface",
+  "guid": "{D8779F01-4869-4403-B334-D60C5F9C9175}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents an individual entry in the OMathAutoCorrectEntry collection.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathAutoCorrectEntry object."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the position of an item in a collection. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String that represents the name of an equation auto correct entry. Read/write."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String that represents the contents of an equation auto correct entry. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified equation auto correct entry.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

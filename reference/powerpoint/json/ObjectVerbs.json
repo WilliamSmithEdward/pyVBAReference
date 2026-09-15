@@ -1,0 +1,50 @@
+{
+  "name": "ObjectVerbs",
+  "kind": "Dispatch Interface",
+  "guid": "{9149348A-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents the collection of OLE verbs for the specified OLE object. OLE verbs are the operations supported by an OLE object. Commonly used OLE verbs are \"play\" and \"edit.\"",
+  "remarks": "",
+  "example": "With ActivePresentation.Slides(2).Shapes(1).OLEFormat\n\n    For Each v In .ObjectVerbs\n\n        MsgBox v\n\n    Next\n\nEnd With",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As String",
+      "description": "Returns a single object from the specified ObjectVerbs collection.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the single object in the collection to be returned."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

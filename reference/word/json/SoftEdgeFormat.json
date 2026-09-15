@@ -1,0 +1,48 @@
+{
+  "name": "SoftEdgeFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{D040DAF9-6CE4-4BE8-839D-F4538A4301CF}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the soft edge formatting for a shape or range of shapes.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoSoftEdgeType",
+      "access": "read/write",
+      "description": "Returns or sets an MsoBevelType constant that represents the bevel type for the edges of images that use soft edge formatting. Read/write."
+    },
+    {
+      "name": "Radius",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the length of the radius for a soft edge effect. Read/write."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Word application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified SoftEdgeFormat object."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

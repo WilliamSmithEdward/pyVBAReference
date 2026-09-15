@@ -1,0 +1,337 @@
+{
+  "name": "SlideShowView",
+  "kind": "Dispatch Interface",
+  "guid": "{91493459-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents the view in a slide show window.",
+  "remarks": "",
+  "example": "SlideShowWindows(1).View.First",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Zoom",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the zoom setting of the specified slide show window view as a percentage of normal size. Read-only."
+    },
+    {
+      "name": "Slide",
+      "kind": "property",
+      "type": "Slide",
+      "access": "read-only",
+      "description": "Returns a Slide object that represents the slide that's currently displayed in the specified slide show window view. Read-only."
+    },
+    {
+      "name": "PointerType",
+      "kind": "property",
+      "type": "PpSlideShowPointerType",
+      "access": "read/write",
+      "description": "Returns or sets the type of pointer used in the slide show. Read/write."
+    },
+    {
+      "name": "State",
+      "kind": "property",
+      "type": "PpSlideShowState",
+      "access": "read/write",
+      "description": "Returns or sets the state of the slide show. Read/write."
+    },
+    {
+      "name": "AcceleratorsEnabled",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether shortcut keys are enabled during a slide show. Read/write."
+    },
+    {
+      "name": "PresentationElapsedTime",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns the number of seconds that have elapsed since the beginning of the specified slide show. Read-only."
+    },
+    {
+      "name": "SlideElapsedTime",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns the number of seconds that the current slide has been displayed. Read/write."
+    },
+    {
+      "name": "LastSlideViewed",
+      "kind": "property",
+      "type": "Slide",
+      "access": "read-only",
+      "description": "Returns a Slide object that represents the slide viewed immediately before the current slide in the specified slide show view."
+    },
+    {
+      "name": "AdvanceMode",
+      "kind": "property",
+      "type": "PpSlideShowAdvanceMode",
+      "access": "read-only",
+      "description": "Returns a value that indicates how the slide show in the specified view advances. Read-only."
+    },
+    {
+      "name": "PointerColor",
+      "kind": "property",
+      "type": "ColorFormat",
+      "access": "read-only",
+      "description": "Returns a ColorFormat object that represents the pointer color for the specified presentation during one slide show. Read-only."
+    },
+    {
+      "name": "IsNamedShow",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Determines whether a custom (named) slide show is displayed in the specified slide show view. Read-only."
+    },
+    {
+      "name": "SlideShowName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the custom slide show that's currently running in the specified slide show view. Read-only."
+    },
+    {
+      "name": "CurrentShowPosition",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the position of the current slide within the slide show that is showing in the specified view. Read-only."
+    },
+    {
+      "name": "MediaControlsVisible",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Indicates whether the media controls are visible. Read-only."
+    },
+    {
+      "name": "MediaControlsLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns the distance, in points, from the left edge of the media control bounding box to the left edge of the Slide. Read-only."
+    },
+    {
+      "name": "MediaControlsTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns the distance, in points, from the top edge of the media control bounding box to the top edge of the Slide object. Read-only."
+    },
+    {
+      "name": "MediaControlsWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns the width, in points, of the media control bounding box. Read-only."
+    },
+    {
+      "name": "MediaControlsHeight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns the height of the media control bounding box. Read-only."
+    },
+    {
+      "name": "LaserPointerEnabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns True if the current slide show pointer is a laser pointer. This property is applicable only while the slide show is running. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "DrawLine",
+      "kind": "method",
+      "signature": "DrawLine(BeginX As Single, BeginY As Single, EndX As Single, EndY As Single)",
+      "description": "Draws a line in the specified slide show view.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "BeginX",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the line's starting point relative to the upper-left corner of the slide."
+        },
+        {
+          "name": "BeginY",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the line's starting point relative to the upper-left corner of the slide."
+        },
+        {
+          "name": "EndX",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the line's ending point relative to the upper-left corner of the slide."
+        },
+        {
+          "name": "EndY",
+          "type": "Single",
+          "optional": false,
+          "description": "The position (in points) of the line's ending point relative to the upper-left corner of the slide."
+        }
+      ]
+    },
+    {
+      "name": "EraseDrawing",
+      "kind": "method",
+      "signature": "EraseDrawing()",
+      "description": "Removes lines drawn during a slide show by using either the DrawLine method or the pen tool.",
+      "returns": "void"
+    },
+    {
+      "name": "First",
+      "kind": "method",
+      "signature": "First()",
+      "description": "Sets the specified slide show view to display the first slide in the presentation.",
+      "returns": "void"
+    },
+    {
+      "name": "Last",
+      "kind": "method",
+      "signature": "Last()",
+      "description": "Sets the specified slide show view to display the last slide in the presentation.",
+      "returns": "void"
+    },
+    {
+      "name": "Next",
+      "kind": "method",
+      "signature": "Next()",
+      "description": "Displays the slide immediately following the slide that's currently displayed.",
+      "returns": "void"
+    },
+    {
+      "name": "Previous",
+      "kind": "method",
+      "signature": "Previous()",
+      "description": "Shows the slide immediately preceding the slide that's currently displayed.",
+      "returns": "void"
+    },
+    {
+      "name": "GotoSlide",
+      "kind": "method",
+      "signature": "GotoSlide(Index As Long, [ResetSlide As MsoTriState])",
+      "description": "Switches to the specified slide during a slide show. You can specify whether you want the animation effects to be rerun.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of the slide to switch to."
+        },
+        {
+          "name": "ResetSlide",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Whether animation effects should be rerun when returning to the first slide. See Remarks for more information."
+        }
+      ]
+    },
+    {
+      "name": "GotoNamedShow",
+      "kind": "method",
+      "signature": "GotoNamedShow(SlideShowName As String)",
+      "description": "Switches to the specified custom, or named, slide show during another slide show. When the slide show advances from the current slide, the next slide displayed will be the next one in the specified custom slide show, not the next one in current slide show.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SlideShowName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the custom slide show to be switched to."
+        }
+      ]
+    },
+    {
+      "name": "EndNamedShow",
+      "kind": "method",
+      "signature": "EndNamedShow()",
+      "description": "Switches from running a custom, or named, slide show to running the entire presentation of which the custom show is a subset. When the slide show advances from the current slide, the next slide displayed will be the next one in the entire presentation, not the next one in the custom slide show.",
+      "returns": "void"
+    },
+    {
+      "name": "ResetSlideTime",
+      "kind": "method",
+      "signature": "ResetSlideTime()",
+      "description": "Resets the elapsed time (represented by the SlideElapsedTime property) for the slide that's currently displayed to 0 (zero).",
+      "returns": "void"
+    },
+    {
+      "name": "Exit",
+      "kind": "method",
+      "signature": "Exit()",
+      "description": "Ends the specified slide show.",
+      "returns": "void"
+    },
+    {
+      "name": "GotoClick",
+      "kind": "method",
+      "signature": "GotoClick(Index As Long)",
+      "description": "Plays an animation associated with a specified mouse click and any animations that follow on the slide.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the mouse click that initiates an animation."
+        }
+      ]
+    },
+    {
+      "name": "GetClickIndex",
+      "kind": "method",
+      "signature": "GetClickIndex() As Long",
+      "description": "Returns the index number of the current mouse click for an animation that is actively playing on a slide or has just finished.",
+      "returns": "Long"
+    },
+    {
+      "name": "GetClickCount",
+      "kind": "method",
+      "signature": "GetClickCount() As Long",
+      "description": "Returns the number of mouse clicks that are defined for a slide.",
+      "returns": "Long"
+    },
+    {
+      "name": "FirstAnimationIsAutomatic",
+      "kind": "method",
+      "signature": "FirstAnimationIsAutomatic() As Boolean",
+      "description": "Returns True if the current slide has an initial animation that runs automatically.",
+      "returns": "Boolean"
+    },
+    {
+      "name": "Player",
+      "kind": "method",
+      "signature": "Player(ShapeId As Variant) As Player",
+      "description": "Allows access to playback controls for the associated view in the current window.",
+      "returns": "Player",
+      "parameters": [
+        {
+          "name": "ShapeId",
+          "type": "Variant",
+          "optional": false,
+          "description": "The playback control."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

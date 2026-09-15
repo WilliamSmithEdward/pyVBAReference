@@ -1,0 +1,146 @@
+{
+  "name": "PrintOptions",
+  "kind": "Dispatch Interface",
+  "guid": "{9149345D-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Contains print options for a presentation.",
+  "remarks": "",
+  "example": "With ActivePresentation\n    With .PrintOptions\n        .NumberOfCopies = 2\n        .Collate = False\n        .PrintColorType = ppPrintColor\n        .PrintHiddenSlides = True\n        .FitToPage = True\n        .FrameSlides = True\n        .OutputType = ppPrintOutputSlides\n    End With\n    .PrintOut\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "PrintColorType",
+      "kind": "property",
+      "type": "PpPrintColorType",
+      "access": "read/write",
+      "description": "Returns or sets the way the specified document will be printed: in black and white, in pure black and white (also referred to as high contrast), or in color. Read/write."
+    },
+    {
+      "name": "Collate",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether a complete copy of the specified presentation is printed before the first page of the next copy is printed. Read/write."
+    },
+    {
+      "name": "FitToPage",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the slides will be scaled to fill the page they're printed on. Read/write."
+    },
+    {
+      "name": "FrameSlides",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether a thin frame is placed around the border of the printed slides. Read/write."
+    },
+    {
+      "name": "NumberOfCopies",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the number of copies of a presentation to be printed. Read/write."
+    },
+    {
+      "name": "OutputType",
+      "kind": "property",
+      "type": "PpPrintOutputType",
+      "access": "read/write",
+      "description": "Returns or sets a value that indicates which component (slides, handouts, notes pages, or an outline) of the presentation is to be printed. Read/write."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "PrintHiddenSlides",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether hidden slides in the specified presentation will be printed. Read/write."
+    },
+    {
+      "name": "PrintInBackground",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the specified presentation is printed in the background. Read/write."
+    },
+    {
+      "name": "RangeType",
+      "kind": "property",
+      "type": "PpPrintRangeType",
+      "access": "read/write",
+      "description": "Returns or sets the type of print range for the presentation. Read/write."
+    },
+    {
+      "name": "Ranges",
+      "kind": "property",
+      "type": "PrintRanges",
+      "access": "read-only",
+      "description": "Returns the PrintRanges object, which represents the ranges of slides in the presentation to be printed. Read-only."
+    },
+    {
+      "name": "PrintFontsAsGraphics",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether TrueType fonts are printed as graphics. Read/write."
+    },
+    {
+      "name": "SlideShowName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the custom slide show to print. Read/write ."
+    },
+    {
+      "name": "ActivePrinter",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns the name of the active printer. Read-only."
+    },
+    {
+      "name": "HandoutOrder",
+      "kind": "property",
+      "type": "PpPrintHandoutOrder",
+      "access": "read/write",
+      "description": "Returns or sets the page layout order in which slides appear on printed handouts that show multiple slides on one page. Read/write."
+    },
+    {
+      "name": "PrintComments",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Sets or returns whether comments will be printed. Read/write."
+    },
+    {
+      "name": "sectionIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns the index of the selected section in the PrintOptions object. Read/write."
+    },
+    {
+      "name": "HighQuality",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Indicates whether to print in high quality. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

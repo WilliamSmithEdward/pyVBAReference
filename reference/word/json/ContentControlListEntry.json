@@ -1,0 +1,84 @@
+{
+  "name": "ContentControlListEntry",
+  "kind": "Dispatch Interface",
+  "guid": "{0C6FA8CA-E65F-4FC7-AB8F-20729EECBB14}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A ContentControlListEntry object represents a list item in a drop-down list or combo box content control. A ContentControlListEntry object is a member of the ContentControlListEntries collection for a ContentControl object.",
+  "remarks": "Use the Add method of the ContentControlListEntries collection to create a new ContentControlListEntry object. Use the Item method, or DropdownListEntries (Index), where Index is the ordinal position of the content control list item, to access an individual list item within the ContentControlListEntries collection. The following code example uses the Add method to add several list items to a new drop-down list content control, and then uses the Item method to access the third item in the list and change the display text. Use the MoveUp and MoveDown methods to reposition items in a drop-down list. The following code example moves the first item down, so that it becomes the last item in the list, and moves the last item up, so that it becomes the first item in the list. Use the Select method to programmatically select a content control list item. The following code example inserts a drop-down list content control into the active document, sets the title and placeholder text and adds several items to the list, and then selects the last item entered.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified ContentControlListEntry object."
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String that represents the display text of a list item for a drop-down list or combo box content control. Read/write."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String that represents the programmatic value of an item in a drop-down list or combo box content control. Read/write."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long that represents the ordinal position of a content control list item in the collection of list items. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified item in a combo box or drop-down list content control.",
+      "returns": "void"
+    },
+    {
+      "name": "MoveUp",
+      "kind": "method",
+      "signature": "MoveUp()",
+      "description": "Moves an item in a drop-down list or combo box content control up one item, so that it is before the item that originally preceded it.",
+      "returns": "void"
+    },
+    {
+      "name": "MoveDown",
+      "kind": "method",
+      "signature": "MoveDown()",
+      "description": "Moves an item in a drop-down list or combo box content control down one item, so that it is after the item that originally followed it.",
+      "returns": "void"
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects the list entry in a drop-down list or combo box content control and sets the text of the content control to the value of the item.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

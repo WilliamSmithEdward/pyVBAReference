@@ -1,0 +1,142 @@
+{
+  "name": "ShadowFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{000209CC-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents shadow formatting for a shape.",
+  "remarks": "Use the Shadow property to return a ShadowFormat object. The following example adds a shadowed rectangle to the active document. The semitransparent, blue shadow is offset 5 points to the right of the rectangle and 3 points above it.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified ShadowFormat object."
+    },
+    {
+      "name": "ForeColor",
+      "kind": "property",
+      "type": "ColorFormat",
+      "access": "read-only",
+      "description": "Returns or sets a ColorFormat object that represents the foreground color for the fill, line, or shadow. Read/write."
+    },
+    {
+      "name": "Obscured",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "MsoTrue if the shadow of the specified shape appears filled in and is obscured by the shape, even if the shape has no fill. MsoFalse if the shadow has no fill and the outline of the shadow is visible through the shape if the shape has no fill. Read/write MsoTriState."
+    },
+    {
+      "name": "OffsetX",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the horizontal offset (in points) of the shadow from the specified shape. A positive value offsets the shadow to the right of the shape; a negative value offsets it to the left. Read/write Single."
+    },
+    {
+      "name": "OffsetY",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the vertical offset (in points) of the shadow from the specified shape. Read/write Single."
+    },
+    {
+      "name": "Transparency",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the degree of transparency of the specified shadow as a value between 0.0 (opaque) and 1.0 (clear). Read/write Single."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoShadowType",
+      "access": "read/write",
+      "description": "Returns or sets the shape shadow type. Read/write MsoShadowType."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "True if the specified object, or the formatting applied to it, is visible. Read/write MsoTriState."
+    },
+    {
+      "name": "Style",
+      "kind": "property",
+      "type": "MsoShadowStyle",
+      "access": "read/write",
+      "description": "Returns or sets a MsoShadowType that represents the type of shadow formatting to apply to a shape. Read/write."
+    },
+    {
+      "name": "Blur",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the blur level for a shadow format. Read/write."
+    },
+    {
+      "name": "Size",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the width of the shadow. Read/write."
+    },
+    {
+      "name": "RotateWithShape",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Returns or sets an MsoTriState that represents whether to rotate the shadow when rotating the shape. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "IncrementOffsetX",
+      "kind": "method",
+      "signature": "IncrementOffsetX(Increment As Single)",
+      "description": "Changes the horizontal offset of the shadow by the specified number of points.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": "Specifies how far the shadow offset is to be moved horizontally, in points. A positive value moves the shadow to the right; a negative value moves it to the left."
+        }
+      ]
+    },
+    {
+      "name": "IncrementOffsetY",
+      "kind": "method",
+      "signature": "IncrementOffsetY(Increment As Single)",
+      "description": "Changes the vertical offset of the shadow by the specified number of points.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": "Specifies how far the shadow offset is to be moved vertically, in points. A positive value moves the shadow down; a negative value moves it up."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

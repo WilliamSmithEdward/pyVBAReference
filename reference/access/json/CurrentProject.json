@@ -1,0 +1,237 @@
+{
+  "name": "CurrentProject",
+  "kind": "Class",
+  "guid": "{08F6C811-3CFD-11D1-98BC-006008197D41}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "The CurrentProject object refers to the project for the current Microsoft Access project (.adp) or Access database.",
+  "remarks": "The CurrentProject object has several collections that contain specific AccessObject objects within the current database. The following table lists the name of each collection and the types of objects it contains. For example, an AccessObject object representing a form is a member of the AllForms collection, which is a collection of AccessObject objects within the current database. Within the AllForms collection, individual members of the collection are indexed beginning with zero. Refer to an individual AccessObject object in the AllForms collection either by referring to the form by name, or by referring to its index within the collection. If you want to refer to a specific object in the AllForms collection, it's better to refer to it by name because an item's collection index may change. If the object name includes a space, the name must be surrounded by brackets ([ ]).",
+  "example": "Sub ApplicationInformation()\n ' Print name and type of current object.\n Debug.Print Application.CurrentProject.FullName\n Debug.Print Application.CurrentProject.ProjectType\n ' Set Hidden Objects option under Show on View Tab\n 'of the Options dialog box.\n Application.SetOption \"Show Hidden Objects\", True\nEnd Sub",
+  "properties": [
+    {
+      "name": "AllForms",
+      "kind": "property",
+      "type": "AllForms",
+      "access": "read-only",
+      "description": "Use the AllForms property to reference the AllForms collection and its related properties. Read-only AllForms object."
+    },
+    {
+      "name": "AllReports",
+      "kind": "property",
+      "type": "AllReports",
+      "access": "read-only",
+      "description": "Use the AllReports property to reference the AllReports collection and its related properties. Read-only AllReports object."
+    },
+    {
+      "name": "AllMacros",
+      "kind": "property",
+      "type": "AllMacros",
+      "access": "read-only",
+      "description": "Use the AllMacros property to reference the AllMacros collection and its related properties. Read-only AllMacros object."
+    },
+    {
+      "name": "AllModules",
+      "kind": "property",
+      "type": "AllModules",
+      "access": "read-only",
+      "description": "Use the AllModules property to reference the AllModules collection and its related properties. Read-only AllModules object."
+    },
+    {
+      "name": "ProjectType",
+      "kind": "property",
+      "type": "AcProjectType",
+      "access": "read-only",
+      "description": "Use the ProjectType property to determine the type of project that is currently open. Read-only AcProjectType."
+    },
+    {
+      "name": "BaseConnectionString",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Use the BaseConnectionString property to return the base connection string for the specified object. Read-only String."
+    },
+    {
+      "name": "IsConnected",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Use the IsConnected property to determine if the CurrentProject object is currently connected. Read-only Boolean."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Use the Name property to determine the string expression that identifies the name of an object. Read-only String."
+    },
+    {
+      "name": "Path",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Use the Path property to determine the location where data is stored for a Microsoft Access project (.adp) or Microsoft Access database. Read-only String."
+    },
+    {
+      "name": "FullName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Sets or returns the full path (including the file name) of a specific object. Read-only String."
+    },
+    {
+      "name": "Connection",
+      "kind": "property",
+      "type": "Connection",
+      "access": "read-only",
+      "description": "Use the Connection property to return a reference to the current ActiveX Data Objects (ADO) Connection object and its related properties. Read-only Connection."
+    },
+    {
+      "name": "Properties",
+      "kind": "property",
+      "type": "AccessObjectProperties",
+      "access": "read-only",
+      "description": "Returns a reference to a CurrentProject object's AccessObjectProperties collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Use the Application property to access the active Microsoft Access Application object and its related properties. Read-only Application object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "RemovePersonalInformation",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean indicating whether personal information about the user is stored in the specified project. True if personal information is removed. Read/write."
+    },
+    {
+      "name": "FileFormat",
+      "kind": "property",
+      "type": "AcFileFormat",
+      "access": "read-only",
+      "description": "Returns an AcFileFormat constant indicating the Microsoft Access version format of the specified project. Read-only."
+    },
+    {
+      "name": "AccessConnection",
+      "kind": "property",
+      "type": "Connection",
+      "access": "read-only",
+      "description": "Use the AccessConnection property to return a reference to the current Microsoft ActiveX Data Objects (ADO) Connection object and its related properties. Read-only Connection."
+    },
+    {
+      "name": "ImportExportSpecifications",
+      "kind": "property",
+      "type": "ImportExportSpecifications",
+      "access": "read-only",
+      "description": "Returns an ImportExportSpecifications collection that represents the collection of saved import or export operations for the specified object. Read-only."
+    },
+    {
+      "name": "IsTrusted",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets whether macros and Visual Basic for Applications (VBA) code have been enabled in the current project. Read-only Boolean."
+    },
+    {
+      "name": "WebSite",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Gets the Uniform Resource Locator (URL) of the website to which the database has been published. Read-only String."
+    },
+    {
+      "name": "IsWeb",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets whether the database is a web database. Read-only Boolean."
+    },
+    {
+      "name": "Resources",
+      "kind": "property",
+      "type": "SharedResources",
+      "access": "read-only",
+      "description": "Gets the SharedResources collection for the specified object. Read-only SharedResources."
+    },
+    {
+      "name": "IsSQLBackend",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "OpenConnection",
+      "kind": "method",
+      "signature": "OpenConnection([BaseConnectionString As Variant], [UserID As Variant], [Password As Variant])",
+      "description": "Use the OpenConnection method to open an ADO connection to an existing Microsoft Access project (.adp) or Access database as the current Access project or database in the Microsoft Access window.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "BaseConnectionString",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string expression that is the base connection string of the database."
+        },
+        {
+          "name": "UserID",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string expression that is the name of the existing Access project, including the path name and the file name extension. If your network supports it, you can also specify a network path in the following form: \\\\Server\\Share\\Folder\\Filename.adp"
+        },
+        {
+          "name": "Password",
+          "type": "Variant",
+          "optional": true,
+          "description": "If you don't supply the file name extension, .adp is appended to the filename. Use this method or the OpenCurrentDatabase method to open .adp files."
+        }
+      ]
+    },
+    {
+      "name": "CloseConnection",
+      "kind": "method",
+      "signature": "CloseConnection()",
+      "description": "Use the CloseConnection method to close the current connection between the CurrentProject object in a Microsoft Access project (.adp) or Access database and the database specified in the project's base connection string.",
+      "returns": "void"
+    },
+    {
+      "name": "UpdateDependencyInfo",
+      "kind": "method",
+      "signature": "UpdateDependencyInfo()",
+      "description": "Updates the dependency information for the database.",
+      "returns": "void"
+    },
+    {
+      "name": "AddSharedImage",
+      "kind": "method",
+      "signature": "AddSharedImage(SharedImageName As String, FileName As String)",
+      "description": "Imports the specified image into the database and adds it to the SharedResources collection.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SharedImageName",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies the string used to identify the image in the collection."
+        },
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies the full name and path to the image file."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

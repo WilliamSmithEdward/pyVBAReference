@@ -1,0 +1,50 @@
+{
+  "name": "Zooms",
+  "kind": "Dispatch Interface",
+  "guid": "{000209A7-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of Zoom objects that represents the magnification options for each view (such as outline, normal, or print layout).",
+  "remarks": "Use the Zooms property to return the Zooms collection. The following example sets the zoom percentage for the active window to 100 percent in Normal view. The Add method isn't available for the Zooms collection. The Zooms collection includes a single Zoom object for each of the various view types (such as outline, normal, or page layout). You cannot enumerate the Zooms collection by using a For Each loop. Use Zooms (index), where index identifies the view type, to return a single Zoom object. The view type specified by index can be one of the following WdViewType constants: wdMasterView, wdNormalView, wdOutlineView, wdPrintPreview, wdPrintView, or wdWebView. The following example sets the magnification for the active window so that an entire page is visible. You can also use the Zoom property of the View object to return a single Zoom object. The following example sets the zoom percentage for the active window to 110 percent.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Zooms object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As WdViewType) As Zoom",
+      "description": "Returns the specified Zoom object.",
+      "returns": "Zoom",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "WdViewType",
+          "optional": false,
+          "description": "The specified zoom type."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,64 @@
+{
+  "name": "CoAuthors",
+  "kind": "Dispatch Interface",
+  "guid": "{256B6ABA-6A38-4D39-971C-91FDA9922814}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of all the CoAuthor objects in the document.",
+  "remarks": "The CoAuthors collection contains all the co authors in the document (authors that are actively editing the document).",
+  "example": "Dim i As Integer\n\ni = ActiveDocument.CoAuthoring.Authors.Count\n\nMsgBox \"The number of co authors is \" & i",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified CoAuthors object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of items in the CoAuthors collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As CoAuthor",
+      "description": "Returns an individual CoAuthor object in a collection.",
+      "returns": "CoAuthor",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The individual object to be returned."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

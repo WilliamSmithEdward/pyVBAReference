@@ -1,0 +1,64 @@
+{
+  "name": "Dialogs",
+  "kind": "Dispatch Interface",
+  "guid": "{00020910-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of Dialog objects in Word. Each Dialog object represents a built-in Word dialog box.",
+  "remarks": "Use the Dialogs property to return the Dialogs collection. The following example displays the number of available built-in dialog boxes. You cannot create a new built-in dialog box or add one to the Dialogs collection. Use Dialogs (Index), where Index is the WdWordDialog constant that identifies the dialog box, to return a single Dialog object. The following example displays the built-in Open dialog box. For more information, see Displaying built-in Word dialog boxes.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Dialogs object."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of dialog boxes in the collection. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As WdWordDialog) As Dialog",
+      "description": "Returns a dialog in Microsoft Word.",
+      "returns": "Dialog",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "WdWordDialog",
+          "optional": false,
+          "description": "A constant that specifies the dialog."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,80 @@
+{
+  "name": "AddIns",
+  "kind": "Dispatch Interface",
+  "guid": "{91493460-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of AddIn objects that represent all the Microsoft PowerPoint-specific add-ins available to PowerPoint, regardless of whether or not they are loaded. This does not include Component Object Model (COM) add-ins.",
+  "remarks": "",
+  "example": "For Each ad In AddIns\n\n    If ad.Loaded Then MsgBox ad.Name\n\nNext",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As AddIn",
+      "description": "Returns a single Addin object from the specified Addins collection.",
+      "returns": "AddIn",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number of the single Addin object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(FileName As String) As AddIn",
+      "description": "Returns an AddIn object that represents an add-in file added to the list of add-ins.",
+      "returns": "AddIn",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The full name of the file (including the path and file name extension) that contains the add-in you want to add to the list of add-ins."
+        }
+      ]
+    },
+    {
+      "name": "Remove",
+      "kind": "method",
+      "signature": "Remove(Index As Variant)",
+      "description": "Removes an add-in from the collection of add-ins.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number of the add-in to be removed from the collection."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,78 @@
+{
+  "name": "UndoRecord",
+  "kind": "Dispatch Interface",
+  "guid": "{E598E358-2852-42D4-8775-160BD91B7244}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Provides an entry point into the undo stack.",
+  "remarks": "Use the UndoRecord object to create and modify custom undo records in the Word undo stack.",
+  "example": "Dim objUndo As UndoRecord\nSet objUndo = Application.UndoRecord",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Word application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified UndoRecord object."
+    },
+    {
+      "name": "IsRecordingCustomRecord",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean that specifies whether a custom undo action is being recorded. Read-only."
+    },
+    {
+      "name": "CustomRecordName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String that specifies the entry that appears on the undo stack when all custom undo actions have completed. Read-only."
+    },
+    {
+      "name": "CustomRecordLevel",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that specifies the number of custom undo action calls that are currently active. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "StartCustomRecord",
+      "kind": "method",
+      "signature": "StartCustomRecord([Name As String])",
+      "description": "Initiates the creation of a custom undo record.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": true,
+          "description": "Specifies the name of the custom undo record. This string is limited to 64 characters. If a longer string is supplied, the string is truncated to 64 characters."
+        }
+      ]
+    },
+    {
+      "name": "EndCustomRecord",
+      "kind": "method",
+      "signature": "EndCustomRecord()",
+      "description": "Completes the creation of a custom undo record.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

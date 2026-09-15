@@ -1,0 +1,41 @@
+{
+  "name": "TableBackground",
+  "kind": "Dispatch Interface",
+  "guid": "{914934F8-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents the background associated with a Table object.",
+  "remarks": "Use the Background property of a Table object to return the TableBackground object associated with the table. To get a Table object from an existing shape, use the Table property of the Shape or ShapeRange object that contains the table. You can create a shape that contains a table by using the AddTable method of the Shapes collection. The properties of the TableBackground object return objects that represent various aspects of the formatting associated with a table. - Use the Fill property to return a FillFormat object. - Use the Picture property to return a PictureFormat object. - Use the Reflection property to return an ReflectionFormat object. - Use the Shadow property to return a ShadowFormat object.",
+  "example": "Public Sub TableBackground_Example()\n\n    Dim pptShape As PowerPoint.Shape\n    Dim pptTable As PowerPoint.Table\n    Dim pptTableBackground As PowerPoint.TableBackground\n    Dim pptFillFormat As PowerPoint.FillFormat\n\n    Set pptShape = ActivePresentation.Slides(2).Shapes.AddTable(3, 3)\n    Set pptTable = pptShape.Table\n    Set pptTableBackground = pptTable.Background\n    Set pptFillFormat = pptTableBackground.Fill\n\n    ' Add a patterned fill to the table background\n    pptFillFormat.Patterned (msoPatternSmallGrid)\n\n    ' Add a shadow to the table background\n    pptTableBackground.Shadow.Visible = msoTrue\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Fill",
+      "kind": "property",
+      "type": "FillFormat",
+      "access": "read-only",
+      "description": "Returns a FillFormat object that represents the formatting of the fill associated with the table background. Read-only."
+    },
+    {
+      "name": "Picture",
+      "kind": "property",
+      "type": "PictureFormat",
+      "access": "read-only",
+      "description": "Returns a PictureFormat object that represents the formatting of the picture associated with the table background. Read-only."
+    },
+    {
+      "name": "Reflection",
+      "kind": "property",
+      "type": "ReflectionFormat",
+      "access": "read-only",
+      "description": "Returns an ReflectionFormat object that represents the reflection effect associated with the table background. Read-only."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "ShadowFormat",
+      "access": "read-only",
+      "description": "Returns a ShadowFormat object that represents the formatting of the shadow associated with the table background. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

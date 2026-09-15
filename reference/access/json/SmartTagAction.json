@@ -1,0 +1,42 @@
+{
+  "name": "SmartTagAction",
+  "kind": "Class",
+  "guid": "{0D944D89-82BC-43DE-9659-699DD3FBCD72}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "Represents a single action for a smart tag.",
+  "remarks": "Smart tag actions are processes that are programmed into smart tags that allow users to perform certain functions related to the smart tag. For example, one action for a smart tag might be to access a website, while another action inserts contact information from Microsoft Outlook, while yet another action displays a map and driving directions. To perform an action represented by a SmartTagAction object, use the Execute method. To return the parent control of the SmartTag object, use the Parent property.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Use the Application property to access the active Microsoft Access Application object and its related properties. Read-only Application object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Use the Name property to determine the string expression that identifies the name of an object. Read-only String."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Execute",
+      "kind": "method",
+      "signature": "Execute()",
+      "description": "The Execute method performs the specified smart tag action.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,48 @@
+{
+  "name": "ReadabilityStatistic",
+  "kind": "Dispatch Interface",
+  "guid": "{000209AF-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents one of the readability statistics for a document or range. The ReadabilityStatistic object is a member of the ReadabilityStatistics collection.",
+  "remarks": "Use ReadabilityStatistics (Index), where Index is the index number, to return a single ReadabilityStatistic object. The statistics are ordered as follows: Words, Characters, Paragraphs, Sentences, Sentences per Paragraph, Words per Sentence, Characters per Word, Passive Sentences, Flesch Reading Ease, and Flesch-Kincaid Grade Level. The following example returns the character count for the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified ReadabilityStatistic object."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the specified object. Read-only String."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns the value of the grammar statistic. Read-only Long."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

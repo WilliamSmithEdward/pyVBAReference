@@ -1,0 +1,486 @@
+{
+  "name": "View",
+  "kind": "Dispatch Interface",
+  "guid": "{000209A5-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Contains the view attributes (such as show all, field shading, and table gridlines) for a window or pane.",
+  "remarks": "Use the View property to return the View object. The following example sets view options for the active window. Use the Type property to change the view. The following example switches the active window to normal view. Use the Percentage property to change the size of the text on-screen. The following example enlarges the on-screen text to 120 percent. Use the SeekView property to view comments, endnotes, footnotes, or the document header or footer. The following example displays the current footer in the active window in print layout view.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified View object."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "WdViewType",
+      "access": "read/write",
+      "description": "Returns or sets the view type. Read/write WdViewType."
+    },
+    {
+      "name": "FullScreen",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the window is in full-screen view. Read/write Boolean."
+    },
+    {
+      "name": "Draft",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if all the text in a window is displayed in the same sans-serif font with minimal formatting to speed up display. Read/write Boolean."
+    },
+    {
+      "name": "ShowAll",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if all nonprinting characters (such as hidden text, tab marks, space marks, and paragraph marks) are displayed. Read/write Boolean."
+    },
+    {
+      "name": "ShowFieldCodes",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if field codes are displayed. Read/write Boolean."
+    },
+    {
+      "name": "MailMergeDataView",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if mail merge data is displayed instead of mail merge fields in the specified window. Read/write Boolean."
+    },
+    {
+      "name": "Magnifier",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the pointer is displayed as a magnifying glass in print preview, indicating that the user can click to zoom in on a particular area of the page or zoom out to see an entire page or spread of pages. Read/write Boolean."
+    },
+    {
+      "name": "ShowFirstLineOnly",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if only the first line of body text is shown in outline view. Read/write Boolean."
+    },
+    {
+      "name": "ShowFormat",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if character formatting is visible in outline view. Read/write Boolean."
+    },
+    {
+      "name": "Zoom",
+      "kind": "property",
+      "type": "Zoom",
+      "access": "read-only",
+      "description": "Returns a Zoom object that represents the magnification for the specified view."
+    },
+    {
+      "name": "ShowObjectAnchors",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if object anchors are displayed next to items that can be positioned in print layout view. Read/write Boolean."
+    },
+    {
+      "name": "ShowTextBoundaries",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if dotted lines are displayed around page margins, text columns, objects, and frames in print layout view. Read/write Boolean."
+    },
+    {
+      "name": "ShowHighlight",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if highlight formatting is displayed and printed with a document. Read/write Boolean."
+    },
+    {
+      "name": "ShowDrawings",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if objects created with the drawing tools are displayed in print layout view. Read/write Boolean."
+    },
+    {
+      "name": "ShowTabs",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if tab characters are displayed. Read/write Boolean."
+    },
+    {
+      "name": "ShowSpaces",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if space characters are displayed. Read/write Boolean."
+    },
+    {
+      "name": "ShowParagraphs",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if paragraph marks are displayed. Read/write Boolean."
+    },
+    {
+      "name": "ShowHyphens",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if optional hyphens are displayed. An optional hyphen indicates where to break a word when it falls at the end of a line. Read/write Boolean."
+    },
+    {
+      "name": "ShowHiddenText",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if text formatted as hidden text is displayed. Read/write Boolean."
+    },
+    {
+      "name": "WrapToWindow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if lines wrap at the right edge of the document window rather than at the right margin or the right column boundary. Read/write Boolean."
+    },
+    {
+      "name": "ShowPicturePlaceHolders",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if blank boxes are displayed as placeholders for pictures. Read/write Boolean."
+    },
+    {
+      "name": "ShowBookmarks",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if square brackets are displayed at the beginning and end of each bookmark. Read/write Boolean."
+    },
+    {
+      "name": "FieldShading",
+      "kind": "property",
+      "type": "WdFieldShading",
+      "access": "read/write",
+      "description": "Returns or sets on-screen shading for fields. Read/write WdFieldShading."
+    },
+    {
+      "name": "TableGridlines",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if table gridlines are displayed. Read/write Boolean."
+    },
+    {
+      "name": "ShowMainTextLayer",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the text in the specified document is visible when the header and footer areas are displayed. This property is equivalent to the Show/Hide Document Text button on the Header and Footer toolbar. Read/write Boolean."
+    },
+    {
+      "name": "SeekView",
+      "kind": "property",
+      "type": "WdSeekView",
+      "access": "read/write",
+      "description": "Returns or sets the document element displayed in print layout view. The property may be set to any of the WdSeekView constants. Read/write WdSeekView."
+    },
+    {
+      "name": "SplitSpecial",
+      "kind": "property",
+      "type": "WdSpecialPane",
+      "access": "read/write",
+      "description": "Returns or sets the active window pane. Read/write WdSpecialPane."
+    },
+    {
+      "name": "ShowOptionalBreaks",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word displays optional line breaks. Read/write Boolean."
+    },
+    {
+      "name": "DisplayPageBoundaries",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True to display the top and bottom margins (white space) and the gray area (gray space) between pages in a document. Read/write Boolean."
+    },
+    {
+      "name": "ShowRevisionsAndComments",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to display revisions and comments that were made to a document with Track Changes enabled. Read/write Boolean."
+    },
+    {
+      "name": "ShowComments",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to display the comments in a document. Read/write Boolean."
+    },
+    {
+      "name": "ShowInsertionsAndDeletions",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to display insertions and deletions that were made to a document with Track Changes enabled. Read/write Boolean."
+    },
+    {
+      "name": "ShowFormatChanges",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to display formatting changes made to a document with Track Changes enabled. Read/write Boolean."
+    },
+    {
+      "name": "RevisionsBalloonWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Sets or returns a Single representing the global setting in Microsoft Word that specifies the width of the revision balloons. Read/write."
+    },
+    {
+      "name": "RevisionsBalloonWidthType",
+      "kind": "property",
+      "type": "WdRevisionsBalloonWidthType",
+      "access": "read/write",
+      "description": "Sets or returns a WdRevisionsBalloonWidthType constant representing the global setting that specifies how Microsoft Word measures the width of revision balloons. Read/write."
+    },
+    {
+      "name": "RevisionsBalloonSide",
+      "kind": "property",
+      "type": "WdRevisionsBalloonMargin",
+      "access": "read/write",
+      "description": "Sets or returns a WdRevisionsBalloonMargin constant that specifies whether Word displays revision balloons in the left or right margin in a document."
+    },
+    {
+      "name": "RevisionsBalloonShowConnectingLines",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to display connecting lines from the text to the revision and comment balloons. Read/write Boolean."
+    },
+    {
+      "name": "ReadingLayout",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Sets or returns a Boolean that represents whether a document is being viewed in reading layout view. ."
+    },
+    {
+      "name": "ShowXMLMarkup",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns a Long that represents whether XML tags are visible in a document."
+    },
+    {
+      "name": "ShadeEditableRanges",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long that represents whether shading is applied to the ranges in a document for which users have permission to modify. ."
+    },
+    {
+      "name": "ShowInkAnnotations",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets Boolean that shows or hides handwritten ink annotations. True displays ink annotations. False hides ink annotations."
+    },
+    {
+      "name": "DisplayBackgrounds",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether background colors and images are shown when a document is displayed in print layout view. ."
+    },
+    {
+      "name": "ReadingLayoutActualView",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Sets or returns a Boolean that represents whether pages displayed in reading layout view are displayed using the same layout as printed pages."
+    },
+    {
+      "name": "ReadingLayoutTruncateMargins",
+      "kind": "property",
+      "type": "WdReadingLayoutMargin",
+      "access": "read/write",
+      "description": "Returns or sets a WdReadingLayoutMargin constant that represents whether margins are visible or hidden when a document is viewed in Full Screen Reading view. Read/write."
+    },
+    {
+      "name": "Panning",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether Microsoft Word is in Panning mode. Read/write."
+    },
+    {
+      "name": "ShowCropMarks",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether to show crop marks in the corners of pages to indicate where margins are located. Read/write."
+    },
+    {
+      "name": "MarkupMode",
+      "kind": "property",
+      "type": "WdRevisionsMode",
+      "access": "read/write",
+      "description": "Returns or sets a WdRevisionsMode constant that represents the display mode for tracked changes. Read/write."
+    },
+    {
+      "name": "ConflictMode",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the document is in conflict mode view. Read/write."
+    },
+    {
+      "name": "ShowOtherAuthors",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if other authors' presence should be visible in the document. Read/write Boolean."
+    },
+    {
+      "name": "RevisionsFilter",
+      "kind": "property",
+      "type": "RevisionsFilter",
+      "access": "read-only",
+      "description": "Returns an instance of a RevisionsFilter object. Read-only."
+    },
+    {
+      "name": "PageColor",
+      "kind": "property",
+      "type": "WdPageColor",
+      "access": "read/write",
+      "description": "Returns and sets the page color in Reading mode. Read/write WdPageColor."
+    },
+    {
+      "name": "ColumnWidth",
+      "kind": "property",
+      "type": "WdColumnWidth",
+      "access": "read/write",
+      "description": "Returns or gets a constant that determines the column width in reading mode. Read/write WdColumnWidth"
+    },
+    {
+      "name": "PageMovementType",
+      "kind": "property",
+      "type": "WdPageMovementType",
+      "access": "read/write",
+      "description": "Returns or sets the page movement type. Read/write WdPageMovementType."
+    }
+  ],
+  "methods": [
+    {
+      "name": "CollapseOutline",
+      "kind": "method",
+      "signature": "CollapseOutline([Range As Variant])",
+      "description": "Collapses the text under the selection or the specified range by one heading level.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Variant",
+          "optional": true,
+          "description": "The range of paragraphs to be collapsed. If this argument is omitted, the entire selection is collapsed."
+        }
+      ]
+    },
+    {
+      "name": "ExpandOutline",
+      "kind": "method",
+      "signature": "ExpandOutline([Range As Variant])",
+      "description": "Expands the text under the selection by one heading level.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Variant",
+          "optional": true,
+          "description": "The range of paragraphs to be expanded. If this argument is omitted, the entire selection is expanded."
+        }
+      ]
+    },
+    {
+      "name": "ShowAllHeadings",
+      "kind": "method",
+      "signature": "ShowAllHeadings()",
+      "description": "Switches between showing all text (headings and body text) and showing only headings.",
+      "returns": "void"
+    },
+    {
+      "name": "ShowHeading",
+      "kind": "method",
+      "signature": "ShowHeading(Level As Long)",
+      "description": "Shows all headings up to the specified heading level and hides subordinate headings and body text.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Level",
+          "type": "Long",
+          "optional": false,
+          "description": "The outline heading level (a number from 1 to 9)."
+        }
+      ]
+    },
+    {
+      "name": "PreviousHeaderFooter",
+      "kind": "method",
+      "signature": "PreviousHeaderFooter()",
+      "description": "Moves to the previous header or footer, depending on whether a header or footer is displayed in the view.",
+      "returns": "void"
+    },
+    {
+      "name": "NextHeaderFooter",
+      "kind": "method",
+      "signature": "NextHeaderFooter()",
+      "description": "Moves to the next header or footer, depending on whether a header or footer is displayed in the view.",
+      "returns": "void"
+    },
+    {
+      "name": "ExpandAllHeadings",
+      "kind": "method",
+      "signature": "ExpandAllHeadings()",
+      "description": "Expands all the headings in the document.",
+      "returns": "void"
+    },
+    {
+      "name": "CollapseAllHeadings",
+      "kind": "method",
+      "signature": "CollapseAllHeadings()",
+      "description": "Collapses all the headings in the document.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,56 @@
+{
+  "name": "AnimationPoint",
+  "kind": "Dispatch Interface",
+  "guid": "{914934EB-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents an individual animation point for an animation behavior. The AnimationPoint object is a member of the AnimationPoints collection. The AnimationPoints collection contains all the animation points for an animation behavior.",
+  "remarks": "",
+  "example": "Sub AniPoint()\n\n    Dim sldNewSlide As Slide\n    Dim shpHeart As Shape\n    Dim effCustom As Effect\n    Dim aniBehavior As AnimationBehavior\n    Dim aptNewPoint As AnimationPoint\n\n    Set sldNewSlide = ActivePresentation.Slides.Add _\n        (Index:=1, Layout:=ppLayoutBlank)\n\n    Set shpHeart = sldNewSlide.Shapes.AddShape _\n        (Type:=msoShapeHeart, Left:=100, Top:=100, _\n        Width:=200, Height:=200)\n\n    Set effCustom = sldNewSlide.TimeLine.MainSequence _\n        .AddEffect(shpHeart, msoAnimEffectCustom)\n\n    Set aniBehavior = effCustom.Behaviors.Add(msoAnimTypeProperty)\n\n    With aniBehavior.PropertyEffect\n        .Property = msoAnimShapeFillColor\n        Set aptNewPoint = .Points.Add\n        aptNewPoint.Time = 0.2\n        aptNewPoint.Value = RGB(0, 0, 0)\n        Set aptNewPoint = .Points.Add\n        aptNewPoint.Time = 0.5\n        aptNewPoint.Value = RGB(0, 255, 0)\n        Set aptNewPoint = .Points.Add\n        aptNewPoint.Time = 1\n        aptNewPoint.Value = RGB(0, 255, 255)\n    End With\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Time",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Sets or returns the time at a given animation point. Read/write."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Sets or returns the value of a property for an animation point. Read/write."
+    },
+    {
+      "name": "Formula",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String that represents a formula to use for calculating an animation. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified AnimationPoint object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,161 @@
+{
+  "name": "LegendKey",
+  "kind": "Dispatch Interface",
+  "guid": "{92D41A71-F07E-4CA4-AF6F-BEF486AA4E6F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a legend key in a chart legend.",
+  "remarks": "Each legend key is a graphic that visually links a legend entry with its associated series or trendline in the chart. The legend key is linked to its associated series or trendline in such a way that changing the formatting of one simultaneously changes the formatting of the other.",
+  "example": "With ActiveDocument.InlineShapes(1)\n    If .HasChart Then\n        .Chart.Legend.LegendEntries(1).LegendKey _\n            .MarkerBackgroundColorIndex = 5\n    End If\nEnd With",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "InvertIfNegative",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word inverts the pattern in the object when it corresponds to a negative number. Read/write Variant."
+    },
+    {
+      "name": "MarkerBackgroundColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Sets the marker background color as an RGB value or returns the corresponding color index value. Read/write Long."
+    },
+    {
+      "name": "MarkerBackgroundColorIndex",
+      "kind": "property",
+      "type": "XlColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the marker background color as an index into the current color palette, or as one of the following XlColorIndex constants: xlColorIndexAutomatic or xlColorIndexNone. Read/write Long."
+    },
+    {
+      "name": "MarkerForegroundColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Sets the marker foreground color as an RGB value or returns the corresponding color index value. Read/write Long."
+    },
+    {
+      "name": "MarkerForegroundColorIndex",
+      "kind": "property",
+      "type": "XlColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the marker foreground color as an index into the current color palette, or as one of the following XlColorIndex constants: xlColorIndexAutomatic or xlColorIndexNone. Read/write Long."
+    },
+    {
+      "name": "MarkerSize",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the data-marker size, in points. Read/write Long."
+    },
+    {
+      "name": "MarkerStyle",
+      "kind": "property",
+      "type": "XlMarkerStyle",
+      "access": "read/write",
+      "description": "Returns or sets the marker style for a point or series in a line chart, scatter chart, or radar chart. Read/write XlMarkerStyle."
+    },
+    {
+      "name": "PictureType",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the way pictures are displayed on a legend key. Read/write XlChartPictureType."
+    },
+    {
+      "name": "Smooth",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if curve smoothing is turned on for the legend key. Read/write Boolean."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": "Returns the distance, in points, from the left edge of the object to the left edge of the chart area. Read-only Double."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": "Returns the distance, in points, from the top edge of the object to the top of the first row (on a worksheet) or the top of the chart area (on a chart). Read-only Double."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": "Returns the width, in points, of the object. Read-only Double."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Double",
+      "access": "read-only",
+      "description": "Returns the height, in points, of the object. Read-only Double."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a value that indicates whether the object has a shadow. Read/write Boolean."
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "ChartFormat",
+      "access": "read-only",
+      "description": "Returns the line, fill, and effect formatting for the object. Read-only ChartFormat."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "PictureUnit2",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the unit for each picture on the chart if the PictureType property is set to xlStackScale; otherwise, this property is ignored. Read/write Double."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the Microsoft PowerPoint application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "ClearFormats",
+      "kind": "method",
+      "signature": "ClearFormats() As Variant",
+      "description": "Clears the formatting of the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant"
+    }
+  ],
+  "events": []
+}

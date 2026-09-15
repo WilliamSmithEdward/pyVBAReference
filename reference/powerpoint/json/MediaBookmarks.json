@@ -1,0 +1,57 @@
+{
+  "name": "MediaBookmarks",
+  "kind": "Dispatch Interface",
+  "guid": "{BA72E556-4FF5-48F4-8215-5505F990966F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of MediaBookmark objects.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of bookmarks. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As MediaBookmark",
+      "description": "Returns the specified MediaBookmark.",
+      "returns": "MediaBookmark",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The position of the MediaBookmark."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Position As Long, Name As String) As MediaBookmark",
+      "description": "Adds a new MediaBookmark at the specified time and using the specified name.",
+      "returns": "MediaBookmark",
+      "parameters": [
+        {
+          "name": "Position",
+          "type": "Long",
+          "optional": false,
+          "description": "The position of the MediaBookmark."
+        },
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the MediaBookmark."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,237 @@
+{
+  "name": "MediaFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{BA72E550-4FF5-48F4-8215-5505F990966F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Contains methods and properties that allow access to and control over audio and video media.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Volume",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the volume of the media. Read/write."
+    },
+    {
+      "name": "Muted",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns whether audio playback of the media is muted. Read/write"
+    },
+    {
+      "name": "Length",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the total length of the media in milliseconds. Read-only."
+    },
+    {
+      "name": "StartPoint",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the start point of the trim region. Read/write."
+    },
+    {
+      "name": "EndPoint",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the time of the end point of the trim region of the media. Read/write."
+    },
+    {
+      "name": "FadeInDuration",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the duration of the fade in of the media, in milliseconds. Read/write."
+    },
+    {
+      "name": "FadeOutDuration",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the duration of the fadeout of the media, in milliseconds. Read/write."
+    },
+    {
+      "name": "MediaBookmarks",
+      "kind": "property",
+      "type": "MediaBookmarks",
+      "access": "read-only",
+      "description": "Returns a MediaBookmarks collection that represents the media bookmarks associated with the specified object. Read-only."
+    },
+    {
+      "name": "ResamplingStatus",
+      "kind": "property",
+      "type": "PpMediaTaskStatus",
+      "access": "read-only",
+      "description": "Returns the resampling task status. Read-only."
+    },
+    {
+      "name": "IsLinked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns whether the media file is linked. Read-only."
+    },
+    {
+      "name": "IsEmbedded",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns whether the media file is embedded. Read-only."
+    },
+    {
+      "name": "AudioSamplingRate",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the audio sampling rate per second for the media. Read-only."
+    },
+    {
+      "name": "VideoFrameRate",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the video frame rate per second of the media. Read-only."
+    },
+    {
+      "name": "SampleHeight",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the resolution height of the sample media. Read-only."
+    },
+    {
+      "name": "SampleWidth",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the resolution width of the media sample. Read-only."
+    },
+    {
+      "name": "VideoCompressionType",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String that represents the video compression format of the media. Read-only."
+    },
+    {
+      "name": "AudioCompressionType",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the audio compression format. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "SetDisplayPicture",
+      "kind": "method",
+      "signature": "SetDisplayPicture(Position As Long)",
+      "description": "Sets the display picture at the specified time position.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Position",
+          "type": "Long",
+          "optional": false,
+          "description": "The time position in the media to set the display picture."
+        }
+      ]
+    },
+    {
+      "name": "SetDisplayPictureFromFile",
+      "kind": "method",
+      "signature": "SetDisplayPictureFromFile(FilePath As String)",
+      "description": "Sets the display picture from a picture file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FilePath",
+          "type": "String",
+          "optional": false,
+          "description": "The path to the display picture file."
+        }
+      ]
+    },
+    {
+      "name": "Resample",
+      "kind": "method",
+      "signature": "Resample([Trim As Boolean], [SampleHeight As Long], [SampleWidth As Long], [VideoFrameRate As Long], [AudioSamplingRate As Long], [VideoBitRate As Long])",
+      "description": "Adds the current media object to the queue and begins resampling, based on the specified parameters.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Trim",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Whether to trim the sample."
+        },
+        {
+          "name": "SampleHeight",
+          "type": "Long",
+          "optional": true,
+          "description": "The sample resolution height."
+        },
+        {
+          "name": "SampleWidth",
+          "type": "Long",
+          "optional": true,
+          "description": "The sample resolution width."
+        },
+        {
+          "name": "VideoFrameRate",
+          "type": "Long",
+          "optional": true,
+          "description": "The video frame rate, in frames per second."
+        },
+        {
+          "name": "AudioSamplingRate",
+          "type": "Long",
+          "optional": true,
+          "description": "The audio sampling rate, in bits per second."
+        },
+        {
+          "name": "VideoBitRate",
+          "type": "Long",
+          "optional": true,
+          "description": "The video bit rate, in bits per second."
+        }
+      ]
+    },
+    {
+      "name": "ResampleFromProfile",
+      "kind": "method",
+      "signature": "ResampleFromProfile([profile As PpResampleMediaProfile])",
+      "description": "Adds the current media object to the queue and begins resampling base on the specified profile.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "profile",
+          "type": "PpResampleMediaProfile",
+          "optional": true,
+          "description": "The resample media profile to use."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,48 @@
+{
+  "name": "OMathFunc",
+  "kind": "Dispatch Interface",
+  "guid": "{0D951ADF-10A6-4C9B-BCD9-0FB8CBAD9A87}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the application of a function or an argument in an equation that consists of a function name, such as sin or cos, and an argument.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathFunc object."
+    },
+    {
+      "name": "FName",
+      "kind": "property",
+      "type": "OMath",
+      "access": "read-only",
+      "description": "Returns an OMath object that represents the name of a mathematical function, such as sin or cos. Read-only."
+    },
+    {
+      "name": "E",
+      "kind": "property",
+      "type": "OMath",
+      "access": "read-only",
+      "description": "Returns an OMath object that represents the base of the specified equation object. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

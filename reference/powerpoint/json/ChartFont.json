@@ -1,0 +1,118 @@
+{
+  "name": "ChartFont",
+  "kind": "Dispatch Interface",
+  "guid": "{92D41A69-F07E-4CA4-AF6F-BEF486AA4E6F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Contains the font attributes (font name, font size, color, and so on) for an object chart.",
+  "remarks": "If you don't want to format all the text in an AxisTitle, ChartTitle, DataLabel, or DisplayUnitLabel object the same way, use the Characters property of that object to first return a subset of the text as a ChartCharacters object. Then use the Font property of the ChartCharacters object to return a ChartFont object you can use to format the subset of text, as needed.",
+  "example": "With ActiveDocument.InlineShapes(1).Chart\n\n    .AxisTitle.Font.Bold = True\n\nEnd With",
+  "properties": [
+    {
+      "name": "Background",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the type of background for text used in charts. Read/write Variant that is set to one of the constants of XlBackground."
+    },
+    {
+      "name": "Bold",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "True if the font is bold. Read/write Variant."
+    },
+    {
+      "name": "Color",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the primary color of the object. Read/write Variant."
+    },
+    {
+      "name": "ColorIndex",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the color of the font. Read/write Variant."
+    },
+    {
+      "name": "FontStyle",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the font style. Read/write String."
+    },
+    {
+      "name": "Italic",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "True if the font style is italic. Read/write Boolean."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the name of the object. Read/write String."
+    },
+    {
+      "name": "Size",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the size of the font. Read/write Variant."
+    },
+    {
+      "name": "Strikethrough",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "True if the font is struck through with a horizontal line. Read/write Boolean."
+    },
+    {
+      "name": "Subscript",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "True if the font is formatted as subscript. The default is False. Read/write Variant."
+    },
+    {
+      "name": "Superscript",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "True if the font is formatted as superscript. The default is False. Read/write Variant."
+    },
+    {
+      "name": "Underline",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the type of underline applied to the font. Can be one of the XlUnderlineStyle constants. Read/write Variant."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the Microsoft PowerPoint application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

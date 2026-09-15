@@ -1,0 +1,91 @@
+{
+  "name": "XSLTransforms",
+  "kind": "Dispatch Interface",
+  "guid": "{C774F5EA-A539-4284-A1BE-30AEC052D899}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of XSLTransforms in the collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified XSLTransforms object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As XSLTransform",
+      "description": "Returns an XSLTransform object in a collection.",
+      "returns": "XSLTransform",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position or a String representing the name of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Location As String, [Alias As Variant], [InstallForAllUsers As Boolean]) As XSLTransform",
+      "description": "Returns an XSLTransform object that represents an Extensible Stylesheet Language Transformation (XSLT) added to the collection of XSLTs for a specified schema.",
+      "returns": "XSLTransform",
+      "parameters": [
+        {
+          "name": "Location",
+          "type": "String",
+          "optional": false,
+          "description": "The path and file name of the XSLT. This may be a local file path, a network path, or an Internet address."
+        },
+        {
+          "name": "Alias",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the XSLT as it appears in the Schema Library."
+        },
+        {
+          "name": "InstallForAllUsers",
+          "type": "Boolean",
+          "optional": true,
+          "description": "True if all users that log on to a computer can access and use the new schema. The default is False."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

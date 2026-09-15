@@ -1,0 +1,41 @@
+{
+  "name": "RulerLevel",
+  "kind": "Dispatch Interface",
+  "guid": "{91493492-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Contains first-line indent and hanging indent information for an outline level.",
+  "remarks": "The RulerLevel object is a member of the RulerLevels collection. The RulerLevels collection contains a RulerLevel object for each of the five available outline levels.",
+  "example": "With ActivePresentation.SlideMaster _\n        .TextStyles(ppBodyStyle).Ruler.Levels(1)\n    .FirstMargin = 9\n    .LeftMargin = 54\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "FirstMargin",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the first-line indent for the specified outline level, in points. Read/write."
+    },
+    {
+      "name": "LeftMargin",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the left indent for the specified outline level, in points. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

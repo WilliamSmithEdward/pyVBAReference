@@ -1,0 +1,25 @@
+# WdMailMergeComparison
+
+**Type:** Enumeration  
+**Library:** Microsoft Word 16.0 Object Library  
+
+Specifies the type of comparison to use when a condition is added to a mail merge process.
+
+## Constants (8)
+
+- `wdMergeIfEqual` = 0  
+  A value is output if the mail merge field is equal to a value.
+- `wdMergeIfNotEqual` = 1  
+  A value is output if the mail merge field is not equal to a value.
+- `wdMergeIfLessThan` = 2  
+  A value is output if the mail merge field is less than a value.
+- `wdMergeIfGreaterThan` = 3  
+  A value is output if the mail merge field is greater than a value.
+- `wdMergeIfLessThanOrEqual` = 4  
+  A value is output if the mail merge field is less than or equal to a value.
+- `wdMergeIfGreaterThanOrEqual` = 5  
+  A value is output if the mail merge field is greater than or equal to a value.
+- `wdMergeIfIsBlank` = 6  
+  A value is output if the mail merge field is blank.
+- `wdMergeIfIsNotBlank` = 7  
+  A value is output if the mail merge field is not blank.

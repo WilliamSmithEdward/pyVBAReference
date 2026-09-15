@@ -1,0 +1,948 @@
+{
+  "name": "Global",
+  "kind": "Class",
+  "guid": "{000209F0-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Contains top-level properties and methods that don't need to be preceded by the Application property.",
+  "remarks": "The following two statements have the same result. One statement uses the Application property to access the Documents collection, and one does not. Both statements are equal and achieve the same result.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Global object."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns name of the specified object. Read-only String."
+    },
+    {
+      "name": "Documents",
+      "kind": "property",
+      "type": "Documents",
+      "access": "read-only",
+      "description": "Returns a Documents collection that represents all the open documents. Read-only."
+    },
+    {
+      "name": "Windows",
+      "kind": "property",
+      "type": "Windows",
+      "access": "read-only",
+      "description": "Returns a Windows collection that represents all open document windows. Read-only."
+    },
+    {
+      "name": "ActiveDocument",
+      "kind": "property",
+      "type": "Document",
+      "access": "read-only",
+      "description": "Returns a Document object that represents the active document (the document with the focus). Read-only."
+    },
+    {
+      "name": "ActiveWindow",
+      "kind": "property",
+      "type": "Window",
+      "access": "read-only",
+      "description": "Returns a Window object that represents the active window (the window with the focus). Read-only."
+    },
+    {
+      "name": "Selection",
+      "kind": "property",
+      "type": "Selection",
+      "access": "read-only",
+      "description": "Returns a Selection object that represents a selected range or the insertion point. Read-only."
+    },
+    {
+      "name": "WordBasic",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Automation object (Word.Basic) that includes methods for all the WordBasic statements and functions available in Word version 6.0 and Word for Windows 95. Read-only."
+    },
+    {
+      "name": "PrintPreview",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if print preview is the current view. Read/write Boolean."
+    },
+    {
+      "name": "RecentFiles",
+      "kind": "property",
+      "type": "RecentFiles",
+      "access": "read-only",
+      "description": "Returns a RecentFiles collection that represents the most recently accessed files."
+    },
+    {
+      "name": "NormalTemplate",
+      "kind": "property",
+      "type": "Template",
+      "access": "read-only",
+      "description": "Returns a Template object that represents the Normal template."
+    },
+    {
+      "name": "System",
+      "kind": "property",
+      "type": "System",
+      "access": "read-only",
+      "description": "Returns a System object, which can be used to return system-related information and perform system-related tasks."
+    },
+    {
+      "name": "AutoCorrect",
+      "kind": "property",
+      "type": "AutoCorrect",
+      "access": "read-only",
+      "description": "Returns an AutoCorrect object that contains the current AutoCorrect options, entries, and exceptions. Read-only."
+    },
+    {
+      "name": "FontNames",
+      "kind": "property",
+      "type": "FontNames",
+      "access": "read-only",
+      "description": "Returns a FontNames object that includes the names of all the available fonts. Read-only."
+    },
+    {
+      "name": "LandscapeFontNames",
+      "kind": "property",
+      "type": "FontNames",
+      "access": "read-only",
+      "description": "Returns a FontNames object that includes the names of all the available landscape fonts."
+    },
+    {
+      "name": "PortraitFontNames",
+      "kind": "property",
+      "type": "FontNames",
+      "access": "read-only",
+      "description": "Returns a FontNames object that includes the names of all the available portrait fonts."
+    },
+    {
+      "name": "Languages",
+      "kind": "property",
+      "type": "Languages",
+      "access": "read-only",
+      "description": "Returns a Languages collection that represents the proofing languages listed in the Language dialog box."
+    },
+    {
+      "name": "FileConverters",
+      "kind": "property",
+      "type": "FileConverters",
+      "access": "read-only",
+      "description": "Returns a FileConverters collection that represents all the file converters available to Microsoft Word. Read-only."
+    },
+    {
+      "name": "Dialogs",
+      "kind": "property",
+      "type": "Dialogs",
+      "access": "read-only",
+      "description": "Returns a Dialogs collection that represents all the built-in dialog boxes in Word. Read-only."
+    },
+    {
+      "name": "CaptionLabels",
+      "kind": "property",
+      "type": "CaptionLabels",
+      "access": "read-only",
+      "description": "Returns a CaptionLabels collection that represents all the available caption labels. Read-only."
+    },
+    {
+      "name": "AutoCaptions",
+      "kind": "property",
+      "type": "AutoCaptions",
+      "access": "read-only",
+      "description": "Returns an AutoCaptions collection that represents the captions that are automatically added when items such as tables and pictures are inserted into a document. Read-only."
+    },
+    {
+      "name": "AddIns",
+      "kind": "property",
+      "type": "AddIns",
+      "access": "read-only",
+      "description": "Returns an AddIns collection that represents all available add-ins, regardless of whether they're currently loaded. Read-only."
+    },
+    {
+      "name": "Tasks",
+      "kind": "property",
+      "type": "Tasks",
+      "access": "read-only",
+      "description": "Returns a Tasks collection that represents all the applications that are running."
+    },
+    {
+      "name": "MacroContainer",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns a Template or Document object that represents the template or document in which the module that contains the running procedure is stored."
+    },
+    {
+      "name": "CommandBars",
+      "kind": "property",
+      "type": "CommandBars",
+      "access": "read-only",
+      "description": "Returns a CommandBars collection that represents the menu bar and all the toolbars in Microsoft Word."
+    },
+    {
+      "name": "SynonymInfo",
+      "kind": "property",
+      "type": "SynonymInfo",
+      "access": "read-only",
+      "description": "Returns a SynonymInfo object that contains information from the thesaurus on synonyms, antonyms, or related words and expressions for the specified word or phrase."
+    },
+    {
+      "name": "VBE",
+      "kind": "property",
+      "type": "VBE",
+      "access": "read-only",
+      "description": "Returns a VBE object that represents the Visual Basic Editor."
+    },
+    {
+      "name": "ListGalleries",
+      "kind": "property",
+      "type": "ListGalleries",
+      "access": "read-only",
+      "description": "Returns a ListGalleries collection that represents the three list template galleries (Bulleted, Numbered, and Outline Numbered)."
+    },
+    {
+      "name": "ActivePrinter",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the active printer. Read/write String."
+    },
+    {
+      "name": "Templates",
+      "kind": "property",
+      "type": "Templates",
+      "access": "read-only",
+      "description": "Returns a Templates collection that represents all the available templates-global templates and those attached to open documents."
+    },
+    {
+      "name": "CustomizationContext",
+      "kind": "property",
+      "type": "Object",
+      "access": "read/write",
+      "description": "Returns or sets a Template or Document object that represents the template or document in which changes to menu bars, toolbars, and key bindings are stored. Read/write. ."
+    },
+    {
+      "name": "KeyBindings",
+      "kind": "property",
+      "type": "KeyBindings",
+      "access": "read-only",
+      "description": "Returns a KeyBindings collection that represents customized key assignments, which include a key code, a key category, and a command."
+    },
+    {
+      "name": "KeysBoundTo",
+      "kind": "property",
+      "type": "KeysBoundTo",
+      "access": "read-only",
+      "description": "Returns a KeysBoundTo object that represents all the key combinations assigned to the specified item."
+    },
+    {
+      "name": "FindKey",
+      "kind": "property",
+      "type": "KeyBinding",
+      "access": "read-only",
+      "description": "Returns a KeyBinding object that represents the specified key combination. Read-only."
+    },
+    {
+      "name": "Options",
+      "kind": "property",
+      "type": "Options",
+      "access": "read-only",
+      "description": "Returns an Options object that represents application settings in Microsoft Word."
+    },
+    {
+      "name": "CustomDictionaries",
+      "kind": "property",
+      "type": "Dictionaries",
+      "access": "read-only",
+      "description": "Returns a Dictionaries object that represents the collection of active custom dictionaries. Read-only."
+    },
+    {
+      "name": "StatusBar",
+      "kind": "property",
+      "type": "String",
+      "access": "write-only",
+      "description": "This property is no longer supported in Microsoft Word Visual Basic for Applications."
+    },
+    {
+      "name": "ShowVisualBasicEditor",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the Visual Basic Editor window is visible. Read/write Boolean."
+    },
+    {
+      "name": "IsObjectValid",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified variable that references an object is valid. Read-only Boolean."
+    },
+    {
+      "name": "HangulHanjaDictionaries",
+      "kind": "property",
+      "type": "HangulHanjaConversionDictionaries",
+      "access": "read-only",
+      "description": "Returns a HangulHanjaConversionDictionaries collection that represents all the active custom conversion dictionaries."
+    },
+    {
+      "name": "LanguageSettings",
+      "kind": "property",
+      "type": "LanguageSettings",
+      "access": "read-only",
+      "description": "Returns a LanguageSettings object, which contains information about the language settings in Microsoft Word."
+    },
+    {
+      "name": "AutoCorrectEmail",
+      "kind": "property",
+      "type": "AutoCorrect",
+      "access": "read-only",
+      "description": "Returns an AutoCorrect object that represents automatic corrections made to email messages."
+    },
+    {
+      "name": "ProtectedViewWindows",
+      "kind": "property",
+      "type": "ProtectedViewWindows",
+      "access": "read-only",
+      "description": "Returns a ProtectedViewWindows object that represents the open Protected View windows. Read-only."
+    },
+    {
+      "name": "ActiveProtectedViewWindow",
+      "kind": "property",
+      "type": "ProtectedViewWindow",
+      "access": "read-only",
+      "description": "Returns a ProtectedViewWindow object that represents the active Protected View window (the Protected View window with the focus). Read-only."
+    },
+    {
+      "name": "IsSandboxed",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the application window is a Protected View window. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Repeat",
+      "kind": "method",
+      "signature": "Repeat([Times As Variant]) As Boolean",
+      "description": "Repeats the most recent editing action one or more times. Returns True if the commands were repeated successfully.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "Times",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of times you want to repeat the last command."
+        }
+      ]
+    },
+    {
+      "name": "DDEExecute",
+      "kind": "method",
+      "signature": "DDEExecute(Channel As Long, Command As String)",
+      "description": "Sends a command or series of commands to an application through the specified dynamic data exchange (DDE) channel.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Channel",
+          "type": "Long",
+          "optional": false,
+          "description": "The channel number returned by the DDEInitiate method."
+        },
+        {
+          "name": "Command",
+          "type": "String",
+          "optional": false,
+          "description": "A command or series of commands recognized by the receiving application (the DDE server). If the receiving application cannot perform the specified command, an error occurs."
+        }
+      ]
+    },
+    {
+      "name": "DDEInitiate",
+      "kind": "method",
+      "signature": "DDEInitiate(App As String, Topic As String) As Long",
+      "description": "Opens a dynamic data exchange (DDE) channel to another application, and returns the channel number.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "App",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the application."
+        },
+        {
+          "name": "Topic",
+          "type": "String",
+          "optional": false,
+          "description": "The name of a DDE topic&mdash;for example, the name of an open document&mdash;recognized by the application to which you are opening a channel."
+        }
+      ]
+    },
+    {
+      "name": "DDEPoke",
+      "kind": "method",
+      "signature": "DDEPoke(Channel As Long, Item As String, Data As String)",
+      "description": "Uses an open dynamic data exchange (DDE) channel to send data to an application.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Channel",
+          "type": "Long",
+          "optional": false,
+          "description": "The channel number returned by the DDEInitiate method."
+        },
+        {
+          "name": "Item",
+          "type": "String",
+          "optional": false,
+          "description": "The item within a DDE topic to which the specified data is to be sent."
+        },
+        {
+          "name": "Data",
+          "type": "String",
+          "optional": false,
+          "description": "The data to be sent to the receiving application (the DDE server)."
+        }
+      ]
+    },
+    {
+      "name": "DDERequest",
+      "kind": "method",
+      "signature": "DDERequest(Channel As Long, Item As String) As String",
+      "description": "Uses an open dynamic data exchange (DDE) channel to request information from the receiving application, and returns the information as a string.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Channel",
+          "type": "Long",
+          "optional": false,
+          "description": "The channel number returned by the DDEInitiate method."
+        },
+        {
+          "name": "Item",
+          "type": "String",
+          "optional": false,
+          "description": "The item to be requested."
+        }
+      ]
+    },
+    {
+      "name": "DDETerminate",
+      "kind": "method",
+      "signature": "DDETerminate(Channel As Long)",
+      "description": "Closes the specified dynamic data exchange (DDE) channel to another application.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Channel",
+          "type": "Long",
+          "optional": false,
+          "description": "The channel number returned by the DDEInitiate method."
+        }
+      ]
+    },
+    {
+      "name": "DDETerminateAll",
+      "kind": "method",
+      "signature": "DDETerminateAll()",
+      "description": "Closes all dynamic data exchange (DDE) channels opened by Microsoft Word. .",
+      "returns": "void"
+    },
+    {
+      "name": "BuildKeyCode",
+      "kind": "method",
+      "signature": "BuildKeyCode(Arg1 As WdKey, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant]) As Long",
+      "description": "Returns a unique number for the specified key combination.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Arg1",
+          "type": "WdKey",
+          "optional": false,
+          "description": "A key you specify by using one of the WdKey constants."
+        },
+        {
+          "name": "Arg2",
+          "type": "Variant",
+          "optional": true,
+          "description": "A key you specify by using one of the WdKey constants."
+        },
+        {
+          "name": "Arg3",
+          "type": "Variant",
+          "optional": true,
+          "description": "A key you specify by using one of the WdKey constants."
+        },
+        {
+          "name": "Arg4",
+          "type": "Variant",
+          "optional": true,
+          "description": "A key you specify by using one of the WdKey constants."
+        }
+      ]
+    },
+    {
+      "name": "KeyString",
+      "kind": "method",
+      "signature": "KeyString(KeyCode As Long, [KeyCode2 As Variant]) As String",
+      "description": "Returns the key combination string for the specified keys (for example, CTRL+SHIFT+A).",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "Long",
+          "optional": false,
+          "description": "A key you specify by using one of the WdKey constants."
+        },
+        {
+          "name": "KeyCode2",
+          "type": "Variant",
+          "optional": true,
+          "description": "A second key you specify by using one of the WdKey constants."
+        }
+      ]
+    },
+    {
+      "name": "CheckSpelling",
+      "kind": "method",
+      "signature": "CheckSpelling(Word As String, [CustomDictionary As Variant], [IgnoreUppercase As Variant], [MainDictionary As Variant], [CustomDictionary2 As Variant], [CustomDictionary3 As Variant], [CustomDictionary4 As Variant], [CustomDictionary5 As Variant], [CustomDictionary6 As Variant], [CustomDictionary7 As Variant], [CustomDictionary8 As Variant], [CustomDictionary9 As Variant], [CustomDictionary10 As Variant]) As Boolean",
+      "description": "Checks a string for spelling errors. Returns a Boolean to indicate whether the string contains spelling errors. True if the string has no spelling errors.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "Word",
+          "type": "String",
+          "optional": false,
+          "description": "The text whose spelling is to be checked."
+        },
+        {
+          "name": "CustomDictionary",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of the custom dictionary."
+        },
+        {
+          "name": "IgnoreUppercase",
+          "type": "Variant",
+          "optional": true,
+          "description": "True if capitalization is ignored. If this argument is omitted, the current value of the IgnoreUppercase property is used."
+        },
+        {
+          "name": "MainDictionary",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of the main dictionary."
+        },
+        {
+          "name": "CustomDictionary2",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of an additional custom dictionary."
+        },
+        {
+          "name": "CustomDictionary3",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of an additional custom dictionary."
+        },
+        {
+          "name": "CustomDictionary4",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of an additional custom dictionary."
+        },
+        {
+          "name": "CustomDictionary5",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of an additional custom dictionary."
+        },
+        {
+          "name": "CustomDictionary6",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of an additional custom dictionary."
+        },
+        {
+          "name": "CustomDictionary7",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of an additional custom dictionary."
+        },
+        {
+          "name": "CustomDictionary8",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of an additional custom dictionary."
+        },
+        {
+          "name": "CustomDictionary9",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of an additional custom dictionary."
+        },
+        {
+          "name": "CustomDictionary10",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of an additional custom dictionary."
+        }
+      ]
+    },
+    {
+      "name": "GetSpellingSuggestions",
+      "kind": "method",
+      "signature": "GetSpellingSuggestions(Word As String, [CustomDictionary As Variant], [IgnoreUppercase As Variant], [MainDictionary As Variant], [SuggestionMode As Variant], [CustomDictionary2 As Variant], [CustomDictionary3 As Variant], [CustomDictionary4 As Variant], [CustomDictionary5 As Variant], [CustomDictionary6 As Variant], [CustomDictionary7 As Variant], [CustomDictionary8 As Variant], [CustomDictionary9 As Variant], [CustomDictionary10 As Variant]) As SpellingSuggestions",
+      "description": "Returns a SpellingSuggestions collection that represents the words suggested as spelling replacements for a given word.",
+      "returns": "SpellingSuggestions",
+      "parameters": [
+        {
+          "name": "Word",
+          "type": "String",
+          "optional": false,
+          "description": "The word whose spelling is to be checked."
+        },
+        {
+          "name": "CustomDictionary",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "IgnoreUppercase",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore words in all uppercase letters. If this argument is omitted, the current value of the IgnoreUppercase property is used."
+        },
+        {
+          "name": "MainDictionary",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "SuggestionMode",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the way Word makes spelling suggestions. Can be one of the following WdSpellingWordType constants: wdAnagram, wdSpellword, or wdWildcard. The default value is WdSpellword."
+        },
+        {
+          "name": "CustomDictionary2",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary3",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary4",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary5",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary6",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary7",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary8",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary9",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary10",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Help",
+      "kind": "method",
+      "signature": "Help(HelpType As Variant)",
+      "description": "Displays on-line Help information.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "HelpType",
+          "type": "Variant",
+          "optional": false,
+          "description": "The on-line Help topic or window. Can be any of these WdHelpType constants."
+        }
+      ]
+    },
+    {
+      "name": "NewWindow",
+      "kind": "method",
+      "signature": "NewWindow() As Window",
+      "description": "Opens a new window with the same document as the specified window. Returns a Window object.",
+      "returns": "Window"
+    },
+    {
+      "name": "CleanString",
+      "kind": "method",
+      "signature": "CleanString(String As String) As String",
+      "description": "Removes nonprinting characters (character codes 1&ndash;29) and special Word characters from the specified string or changes them to spaces (character code 32), as described in the \"Remarks\" section. Returns the result as a String.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "String",
+          "type": "String",
+          "optional": false,
+          "description": "The source string."
+        }
+      ]
+    },
+    {
+      "name": "ChangeFileOpenDirectory",
+      "kind": "method",
+      "signature": "ChangeFileOpenDirectory(Path As String)",
+      "description": "Sets the folder in which Word searches for documents. .",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Path",
+          "type": "String",
+          "optional": false,
+          "description": "The path to the folder in which Word searches for documents."
+        }
+      ]
+    },
+    {
+      "name": "InchesToPoints",
+      "kind": "method",
+      "signature": "InchesToPoints(Inches As Single) As Single",
+      "description": "Converts a measurement from inches to points (1 inch = 72 points). Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Inches",
+          "type": "Single",
+          "optional": false,
+          "description": "The inch value to be converted to points."
+        }
+      ]
+    },
+    {
+      "name": "CentimetersToPoints",
+      "kind": "method",
+      "signature": "CentimetersToPoints(Centimeters As Single) As Single",
+      "description": "Converts a measurement from centimeters to points (1 cm = 28.35 points). Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Centimeters",
+          "type": "Single",
+          "optional": false,
+          "description": "The centimeter value to be converted to points."
+        }
+      ]
+    },
+    {
+      "name": "MillimetersToPoints",
+      "kind": "method",
+      "signature": "MillimetersToPoints(Millimeters As Single) As Single",
+      "description": "Converts a measurement from millimeters to points (1 mm = 2.85 points). Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Millimeters",
+          "type": "Single",
+          "optional": false,
+          "description": "The millimeter value to be converted to points."
+        }
+      ]
+    },
+    {
+      "name": "PicasToPoints",
+      "kind": "method",
+      "signature": "PicasToPoints(Picas As Single) As Single",
+      "description": "Converts a measurement from picas to points (1 pica = 12 points). Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Picas",
+          "type": "Single",
+          "optional": false,
+          "description": "The pica value to be converted to points."
+        }
+      ]
+    },
+    {
+      "name": "LinesToPoints",
+      "kind": "method",
+      "signature": "LinesToPoints(Lines As Single) As Single",
+      "description": "Converts a measurement from lines to points (1 line = 12 points). Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Lines",
+          "type": "Single",
+          "optional": false,
+          "description": "The line value to be converted to points."
+        }
+      ]
+    },
+    {
+      "name": "PointsToInches",
+      "kind": "method",
+      "signature": "PointsToInches(Points As Single) As Single",
+      "description": "Converts a measurement from points to inches (1 inch = 72 points). Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Single",
+          "optional": false,
+          "description": "The measurement, in points."
+        }
+      ]
+    },
+    {
+      "name": "PointsToCentimeters",
+      "kind": "method",
+      "signature": "PointsToCentimeters(Points As Single) As Single",
+      "description": "Converts a measurement from points to centimeters (1 centimeter = 28.35 points). Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Single",
+          "optional": false,
+          "description": "The measurement, in points."
+        }
+      ]
+    },
+    {
+      "name": "PointsToMillimeters",
+      "kind": "method",
+      "signature": "PointsToMillimeters(Points As Single) As Single",
+      "description": "Converts a measurement from points to millimeters (1 millimeter = 2.835 points). Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Single",
+          "optional": false,
+          "description": "The measurement, in points."
+        }
+      ]
+    },
+    {
+      "name": "PointsToPicas",
+      "kind": "method",
+      "signature": "PointsToPicas(Points As Single) As Single",
+      "description": "Converts a measurement from points to picas (1 pica = 12 points). Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Single",
+          "optional": false,
+          "description": "The measurement, in points."
+        }
+      ]
+    },
+    {
+      "name": "PointsToLines",
+      "kind": "method",
+      "signature": "PointsToLines(Points As Single) As Single",
+      "description": "Converts a measurement from points to lines (1 line = 12 points). Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Single",
+          "optional": false,
+          "description": "The measurement, in points."
+        }
+      ]
+    },
+    {
+      "name": "PointsToPixels",
+      "kind": "method",
+      "signature": "PointsToPixels(Points As Single, [fVertical As Variant]) As Single",
+      "description": "Converts a measurement from points to pixels. Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Single",
+          "optional": false,
+          "description": "The point value to be converted to pixels."
+        },
+        {
+          "name": "fVertical",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to return the result as vertical pixels; False to return the result as horizontal pixels."
+        }
+      ]
+    },
+    {
+      "name": "PixelsToPoints",
+      "kind": "method",
+      "signature": "PixelsToPoints(Pixels As Single, [fVertical As Variant]) As Single",
+      "description": "Converts a measurement from pixels to points. Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Pixels",
+          "type": "Single",
+          "optional": false,
+          "description": "The pixel value to be converted to points."
+        },
+        {
+          "name": "fVertical",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to convert vertical pixels; False to convert horizontal pixels."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

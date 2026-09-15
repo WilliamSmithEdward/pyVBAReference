@@ -1,0 +1,127 @@
+{
+  "name": "ProtectedViewWindow",
+  "kind": "Dispatch Interface",
+  "guid": "{BA72E55A-4FF5-48F4-8215-5505F990966F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a presentation window that is in protected view.",
+  "remarks": "Documents displayed in a Protected View window cannot be edited and are restricted from running active content such as Visual Basic for Applications macros and data connections. Use ProtectedViewWindows (_index_), where _index_ is the index number to return a single ProtectedViewWindow object. The index number represents the position of the Protected View window in the ProtectedViewWindows collection.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Presentation",
+      "kind": "property",
+      "type": "Presentation",
+      "access": "read-only",
+      "description": "Returns a Presentation object that represents the presentation in which the specified window was created. Read-only."
+    },
+    {
+      "name": "Active",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Returns whether the specified window is active. Read-only."
+    },
+    {
+      "name": "WindowState",
+      "kind": "property",
+      "type": "PpWindowState",
+      "access": "read/write",
+      "description": "Returns or sets the state of the specified window. Read/write."
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the text that appears in the title bar of the specified window. Read-only."
+    },
+    {
+      "name": "SourcePath",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the source path of the current ProtectedViewWindow object. Read-only."
+    },
+    {
+      "name": "SourceName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the source name of the current ProtectedViewWindow object. Read-only."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance in points from the left edge of the specified window to the left edge of the application window's client area. Read/write."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance in points from the top edge of the specified window to the top edge of the application window's client area. Read/write."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the width of the specified object, in points. Read/write."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the height of the specified object, in points. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate()",
+      "description": "Activates the specified window.",
+      "returns": "void"
+    },
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close()",
+      "description": "Closes the specified window.",
+      "returns": "void"
+    },
+    {
+      "name": "Edit",
+      "kind": "method",
+      "signature": "Edit([ModifyPassword As String]) As Presentation",
+      "description": "Provides the password of the ProtectedViewWindow object to make editing possible.",
+      "returns": "Presentation",
+      "parameters": [
+        {
+          "name": "ModifyPassword",
+          "type": "String",
+          "optional": true,
+          "description": "The modification password as set in the file."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,119 @@
+{
+  "name": "AnimationBehavior",
+  "kind": "Dispatch Interface",
+  "guid": "{914934E4-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents the behavior of an animation effect, the main animation sequence, or an interactive animation sequence. The AnimationBehavior object is a member of the AnimationBehaviors collection.",
+  "remarks": "",
+  "example": "Sub Change()\n    With ActivePresentation.Slides(1).TimeLine.MainSequence(1) _\n            .Behaviors(1).RotationEffect\n        .From = 1\n        .To = 180\n    End With\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Additive",
+      "kind": "property",
+      "type": "MsoAnimAdditive",
+      "access": "read/write",
+      "description": "Sets or returns whether the current animation behavior is combined with other running animations. Read/write."
+    },
+    {
+      "name": "Accumulate",
+      "kind": "property",
+      "type": "MsoAnimAccumulate",
+      "access": "read/write",
+      "description": "Determines whether animation behaviors accumulate. Read/write."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoAnimType",
+      "access": "read/write",
+      "description": "Represents the type of animation. Read/write."
+    },
+    {
+      "name": "MotionEffect",
+      "kind": "property",
+      "type": "MotionEffect",
+      "access": "read-only",
+      "description": "Returns a MotionEffect object that represents the properties of a motion animation."
+    },
+    {
+      "name": "ColorEffect",
+      "kind": "property",
+      "type": "ColorEffect",
+      "access": "read-only",
+      "description": "Returns a ColorEffect object that represents the color properties for a specified animation behavior."
+    },
+    {
+      "name": "ScaleEffect",
+      "kind": "property",
+      "type": "ScaleEffect",
+      "access": "read-only",
+      "description": "Returns a ScaleEffect object for a given animation behavior. Read-only."
+    },
+    {
+      "name": "RotationEffect",
+      "kind": "property",
+      "type": "RotationEffect",
+      "access": "read-only",
+      "description": "Returns a RotationEffect object for an animation behavior. Read-only."
+    },
+    {
+      "name": "PropertyEffect",
+      "kind": "property",
+      "type": "PropertyEffect",
+      "access": "read-only",
+      "description": "Returns a PropertyEffect object for a given animation behavior. Read-only."
+    },
+    {
+      "name": "Timing",
+      "kind": "property",
+      "type": "Timing",
+      "access": "read-only",
+      "description": "Returns a Timing object that represents the timing properties for an animation sequence."
+    },
+    {
+      "name": "CommandEffect",
+      "kind": "property",
+      "type": "CommandEffect",
+      "access": "read-only",
+      "description": "Returns a CommandEffect object for the specified animation behavior. Read-only."
+    },
+    {
+      "name": "FilterEffect",
+      "kind": "property",
+      "type": "FilterEffect",
+      "access": "read-only",
+      "description": "Returns a FilterEffect object that represents a filter effect for an animation behavior. Read-only."
+    },
+    {
+      "name": "SetEffect",
+      "kind": "property",
+      "type": "SetEffect",
+      "access": "read-only",
+      "description": "Returns a SetEffect object for the animation behavior. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified AnimationBehavior object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

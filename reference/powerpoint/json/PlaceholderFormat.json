@@ -1,0 +1,55 @@
+{
+  "name": "PlaceholderFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{91493477-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Contains properties that apply specifically to placeholders, such as placeholder type.",
+  "remarks": "",
+  "example": "With ActivePresentation.Slides(1).Shapes.Placeholders\n    If .Count > 0 Then\n        With .Item(1)\n            Select Case .PlaceholderFormat.Type\n                Case ppPlaceholderTitle\n                    .TextFrame.TextRange = \"Title Text\"\n\n                Case ppPlaceholderCenterTitle\n                    .TextFrame.TextRange = \"Centered Title Text\"\n\n                Case Else\n                    MsgBox \"There's no horizontal \" _\n                        \"title on this slide\"\n            End Select\n        End With\n    End If\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "PpPlaceholderType",
+      "access": "read-only",
+      "description": "Represents the type of placeholder. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the specified object. Read/write."
+    },
+    {
+      "name": "ContainedType",
+      "kind": "property",
+      "type": "MsoShapeType",
+      "access": "read-only",
+      "description": "Returns the type of the shape that contains the specified placeholder format. Read-only."
+    },
+    {
+      "name": "Position",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [],
+  "events": []
+}

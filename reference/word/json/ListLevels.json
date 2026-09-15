@@ -1,0 +1,64 @@
+{
+  "name": "ListLevels",
+  "kind": "Dispatch Interface",
+  "guid": "{0002098E-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of ListLevel objects that represents all the list levels of a list template, either the only level for a bulleted or numbered list or one of the nine levels of an outline numbered list.",
+  "remarks": "Use the ListLevels property to return the ListLevels collection. The following example sets the variable _mytemp_ to the first list template in the active document and then modifies each level to use lowercase letters for its number style. Use ListLevels (Index), where Index is a number from 1 through 9, to return a single ListLevel object. The following example sets list level one of list template one in the active document to start at four. To apply a list level, first identify the range or list, and then use the ApplyListTemplate method. Each tab at the beginning of the paragraph is translated into a list level. For example, a paragraph that begins with three tabs will become a level-three list paragraph after the ApplyListTemplate method is used.",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of list levels in the collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified ListLevels object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As ListLevel",
+      "description": "Returns an individual ListLevel object in a collection.",
+      "returns": "ListLevel",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position of the individual object."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

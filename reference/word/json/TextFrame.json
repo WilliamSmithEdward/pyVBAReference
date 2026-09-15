@@ -1,0 +1,204 @@
+{
+  "name": "TextFrame",
+  "kind": "Dispatch Interface",
+  "guid": "{000209B2-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the text frame in a Shape object. The TextFrame object contains the text in the text frame and the properties that control the margins and orientation of the text frame.",
+  "remarks": "Use the TextFrame property to return the TextFrame object for a shape. The TextRange property returns a Range object that represents the range of text inside the specified text frame. The following example adds text to the text frame of shape one in the active document. Use the HasText property to determine whether the text frame contains text, as shown in the following example. Text frames can be linked together so that the text flows from the text frame of one shape into the text frame of another shape. Use the Next and Previous properties to link text frames. The following example creates a text box (a rectangle with a text frame) and adds some text to it. It then creates another text box and links the two text frames together so that the text flows from the first text frame into the second one. Use the ContainingRange property to return a Range object that represents the entire story that flows between linked text frames. The following example checks the spelling of the text in TextBox 3 and of any other text that is linked to TextBox 3.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Shape",
+      "access": "read-only",
+      "description": "Returns a Shape object that represents the parent shape of the text frame."
+    },
+    {
+      "name": "MarginBottom",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the bottom of the text frame and the bottom of the inscribed rectangle of the shape that contains the text. Read/write Single."
+    },
+    {
+      "name": "MarginLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the left edge of the text frame and the left edge of the inscribed rectangle of the shape that contains the text. Read/write Single."
+    },
+    {
+      "name": "MarginRight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the right edge of the text frame and the right edge of the inscribed rectangle of the shape that contains the text. Read/write Single."
+    },
+    {
+      "name": "MarginTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the top of the text frame and the top of the inscribed rectangle of the shape that contains the text. Read/write Single."
+    },
+    {
+      "name": "Orientation",
+      "kind": "property",
+      "type": "MsoTextOrientation",
+      "access": "read/write",
+      "description": "Returns or sets the orientation of the text inside the frame. Read/write MsoTextOrientation."
+    },
+    {
+      "name": "TextRange",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the text in the specified text frame."
+    },
+    {
+      "name": "ContainingRange",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the entire story in a series of shapes with linked text frames that the specified text frame belongs to. Read-only."
+    },
+    {
+      "name": "Next",
+      "kind": "property",
+      "type": "TextFrame",
+      "access": "read/write",
+      "description": "Returns a TextFrame object that represents the next text frame in a collection of shapes. Read-only."
+    },
+    {
+      "name": "Previous",
+      "kind": "property",
+      "type": "TextFrame",
+      "access": "read/write",
+      "description": "Returns a TextFrame object that represents the previous text frame in a collection of shapes. Read-only."
+    },
+    {
+      "name": "Overflowing",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the text inside the specified text frame doesn't all fit within the frame. Read-only Boolean."
+    },
+    {
+      "name": "HasText",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "True if the specified shape has text associated with it. Read-only Boolean."
+    },
+    {
+      "name": "AutoSize",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long that represents whether a text frame is sized automatically. Read/write."
+    },
+    {
+      "name": "WordWrap",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if Microsoft Word wraps Latin text in the middle of a word in the specified text frames. Read/write Long. ."
+    },
+    {
+      "name": "VerticalAnchor",
+      "kind": "property",
+      "type": "MsoVerticalAnchor",
+      "access": "read/write",
+      "description": "Returns or sets an MsoVerticalAnchor constant that represents the vertical alignment of the text within a shape. Read/write."
+    },
+    {
+      "name": "HorizontalAnchor",
+      "kind": "property",
+      "type": "MsoHorizontalAnchor",
+      "access": "read/write",
+      "description": "Returns or sets the horizontal alignment of text in a text frame. Read/write MsoHorizontalAnchor."
+    },
+    {
+      "name": "PathFormat",
+      "kind": "property",
+      "type": "MsoPathFormat",
+      "access": "read/write",
+      "description": "Returns or sets the path type for the specified text frame. Read/write MsoPathType."
+    },
+    {
+      "name": "WarpFormat",
+      "kind": "property",
+      "type": "MsoWarpFormat",
+      "access": "read/write",
+      "description": "Returns or sets the warp format (how the text is warped) for the specified text frame. Read/write MsoWarpFormat."
+    },
+    {
+      "name": "Column",
+      "kind": "property",
+      "type": "TextColumn2",
+      "access": "read-only",
+      "description": "This object, member, or enumeration is deprecated and is not intended to be used in your code."
+    },
+    {
+      "name": "ThreeD",
+      "kind": "property",
+      "type": "ThreeDFormat",
+      "access": "read-only",
+      "description": "Returns a ThreeDFormat object that contains 3D effect formatting properties for the specified text frame. Read-only."
+    },
+    {
+      "name": "NoTextRotation",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "True if text in the text frame should not rotate when the shape is rotated. Read/write MsoTriState."
+    }
+  ],
+  "methods": [
+    {
+      "name": "BreakForwardLink",
+      "kind": "method",
+      "signature": "BreakForwardLink()",
+      "description": "Breaks the forward link for the specified text frame, if such a link exists.",
+      "returns": "void"
+    },
+    {
+      "name": "ValidLinkTarget",
+      "kind": "method",
+      "signature": "ValidLinkTarget(TargetTextFrame As TextFrame) As Boolean",
+      "description": "Determines whether the text frame of one shape can be linked to the text frame of another shape. .",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "TargetTextFrame",
+          "type": "TextFrame",
+          "optional": false,
+          "description": "The target text frame to which you want to link the text frame returned by expression."
+        }
+      ]
+    },
+    {
+      "name": "DeleteText",
+      "kind": "method",
+      "signature": "DeleteText()",
+      "description": "Deletes the text from a text frame and all the associated properties of the text, including font attributes.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

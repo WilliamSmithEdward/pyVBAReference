@@ -1,0 +1,149 @@
+{
+  "name": "Slides",
+  "kind": "Dispatch Interface",
+  "guid": "{91493469-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of all the Slide objects in the specified presentation.",
+  "remarks": "If your Visual Studio solution includes the Microsoft.Office.Interop.PowerPoint reference, this collection maps to the following types: - Microsoft.Office.Interop.PowerPoint.Slides.GetEnumerator (to enumerate the Slide objects.) The following examples describe how to: - Create a slide and add it to the collection - Return a single slide that you specify by name, index number, or slide ID number - Return a subset of the slides in the presentation - Apply a property or method to all the slides in the presentation at the same time",
+  "example": "ActivePresentation.Slides.Add 2, ppLayoutBlank",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Slide",
+      "description": "Returns a single Slide object from the specified Slides collection.",
+      "returns": "Slide",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number of the single Slide object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "FindBySlideID",
+      "kind": "method",
+      "signature": "FindBySlideID(SlideID As Long) As Slide",
+      "description": "Returns a Slide object that represents the slide with the specified slide ID number. Each slide is automatically assigned a unique slide ID number when it is created. Use the SlideID property to return a slide's ID number.",
+      "returns": "Slide",
+      "parameters": [
+        {
+          "name": "SlideID",
+          "type": "Long",
+          "optional": false,
+          "description": "Specifies the ID number of the slide you want to return. Microsoft PowerPoint assigns this number when the slide is created."
+        }
+      ]
+    },
+    {
+      "name": "InsertFromFile",
+      "kind": "method",
+      "signature": "InsertFromFile(FileName As String, Index As Long, [SlideStart As Long], [SlideEnd As Long]) As Long",
+      "description": "Inserts slides from a file into a presentation, at the specified location. Returns an Integer that represents the number of slides inserted.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the file that contains the slides you want to insert."
+        },
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the Slide object in the specified Slides collection you want to insert the new slides after."
+        },
+        {
+          "name": "SlideStart",
+          "type": "Long",
+          "optional": true,
+          "description": "The index number of the first Slide object in the Slides collection in the file denoted by FileName."
+        },
+        {
+          "name": "SlideEnd",
+          "type": "Long",
+          "optional": true,
+          "description": "The index number of the last Slide object in the Slides collection in the file denoted by FileName."
+        }
+      ]
+    },
+    {
+      "name": "Range",
+      "kind": "method",
+      "signature": "Range([Index As Variant]) As SlideRange",
+      "description": "Returns a SlideRange object that represents a subset of the slides in a Slides collection.",
+      "returns": "SlideRange",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": "The individual slides that are to be included in the range. Can be an Integer that specifies the index number of the slide, a String that specifies the name of the slide, or an array that contains either integers or strings. If this argument is omitted, the Range method returns all the objects in the specified collection."
+        }
+      ]
+    },
+    {
+      "name": "Paste",
+      "kind": "method",
+      "signature": "Paste([Index As Long]) As SlideRange",
+      "description": "Pastes the slides on the Clipboard into the Slides collection for the presentation. Specify where you want to insert the slides with the Index argument. Returns a SlideRange object that represents the pasted objects. Each pasted slide becomes a member of the specified Slides collection.",
+      "returns": "SlideRange",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": true,
+          "description": "The index number of the slide that the slides on the Clipboard are to be pasted before. If this argument is omitted, the slides on the Clipboard are pasted after the last slide in the presentation."
+        }
+      ]
+    },
+    {
+      "name": "AddSlide",
+      "kind": "method",
+      "signature": "AddSlide(Index As Long, pCustomLayout As CustomLayout) As Slide",
+      "description": "Creates a new slide, adds it to the Slides collection, and returns the slide.",
+      "returns": "Slide",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index of the slide to be added."
+        },
+        {
+          "name": "pCustomLayout",
+          "type": "CustomLayout",
+          "optional": false,
+          "description": "The layout of the slide."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

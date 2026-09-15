@@ -1,0 +1,48 @@
+{
+  "name": "Break",
+  "kind": "Dispatch Interface",
+  "guid": "{79635BF1-BD1D-4B3F-A520-C1106F1AAAD8}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents individual page, column, and section breaks in a page. Use the Break object and the related methods and properties for programmatically defining page layout in a document.",
+  "remarks": "Use the Item method of the Breaks collection to return a specific Break object. The following example returns the first break in the first page of the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Break object."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the portion of a document that's contained in the specified object."
+    },
+    {
+      "name": "PageIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the page number on which the specified break occurs."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

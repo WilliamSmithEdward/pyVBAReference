@@ -1,0 +1,50 @@
+{
+  "name": "Hyperlinks",
+  "kind": "Dispatch Interface",
+  "guid": "{91493464-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of all the Hyperlink objects on a slide or master.",
+  "remarks": "",
+  "example": "For Each hl In ActivePresentation.Slides(1).Hyperlinks\n\n    If hl.Address = \"c:\\current work\\sales.ppt\" Then\n\n        hl.Address = \"c:\\new\\newsales.ppt\"\n\n    End If\n\nNext",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Hyperlink",
+      "description": "Returns a single Hyperlink object from the specified Hyperlinks collection.",
+      "returns": "Hyperlink",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the single Hyperlink object in the collection to be returned."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

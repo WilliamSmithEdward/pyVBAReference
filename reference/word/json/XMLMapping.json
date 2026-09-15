@@ -1,0 +1,119 @@
+{
+  "name": "XMLMapping",
+  "kind": "Dispatch Interface",
+  "guid": "{0C1FABE7-F737-406F-9CA3-B07661F9D1A2}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the XML mapping on a ContentControl object between custom XML and a content control. An XML mapping is a link between the text in a content control and an XML element in the custom XML data store for this document.",
+  "remarks": "Use the SetMapping method to add or change the XML mapping for a content control using an XPath string. The following example sets the built-in document property for the document author, inserts a new content control into the active document, and then sets the XML mapping for the control to the built-in document property. Use the SetMappingByNode method to add or change the XML mapping for a content control using a CustomXMLNode object. The following example does the same thing as the previous example, but uses the SetMappingByNode method. The following example creates a new CustomXMLPart object, loads custom XML into it, and then creates two new content controls and maps each to a different XML element within the custom XML. Use the Delete method to remove the XML mapping for a content control. Deleting the XML mapping for a content control deletes only the connection between the content control and the XML data. Both the content control and the XML data remain in the document. The following example deletes the XML mapping for all content controls in the active document that are currently mapped.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified XMLMapping object."
+    },
+    {
+      "name": "IsMapped",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean that represents whether the content control in the document is mapped to an XML node in the document's XML data store. Read-only."
+    },
+    {
+      "name": "CustomXMLPart",
+      "kind": "property",
+      "type": "CustomXMLPart",
+      "access": "read-only",
+      "description": "Returns a CustomXMLPart object that represents the custom XML part to which the content control in the document maps."
+    },
+    {
+      "name": "CustomXMLNode",
+      "kind": "property",
+      "type": "CustomXMLNode",
+      "access": "read-only",
+      "description": "Returns a CustomXMLNode object that represents the custom XML node in the data store to which the content control in the document maps."
+    },
+    {
+      "name": "XPath",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String that represents the XPath for the XML mapping, which evaluates to the currently mapped XML node. Read-only."
+    },
+    {
+      "name": "PrefixMappings",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String that represents the prefix mappings used to evaluate the XPath for the current XML mapping. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "SetMapping",
+      "kind": "method",
+      "signature": "SetMapping(XPath As String, [PrefixMapping As String], [Source As CustomXMLPart]) As Boolean",
+      "description": "Allows creating or changing the XML mapping on a content control. Returns True if Microsoft Word maps the content control to a custom XML node in the document's custom XML data store.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "XPath",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies an XPath string that represents the XML node to which to map the content control. An invalid XPath string causes a run-time error."
+        },
+        {
+          "name": "PrefixMapping",
+          "type": "String",
+          "optional": true,
+          "description": "Specifies the prefix mappings to use when querying the expression provided in the XPath parameter. If omitted, Word uses the set of prefix mappings for the specified custom XML part in the current document."
+        },
+        {
+          "name": "Source",
+          "type": "CustomXMLPart",
+          "optional": true,
+          "description": "Specifies the desired custom XML data to which to map the content control. If this parameter is omitted, the XPath is evaluated against all custom XML in the current document, and the mapping is established with the first CustomXMLPart in which the XPath resolves to an XML node."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the XML mapping from the parent content control.",
+      "returns": "void"
+    },
+    {
+      "name": "SetMappingByNode",
+      "kind": "method",
+      "signature": "SetMappingByNode(Node As CustomXMLNode) As Boolean",
+      "description": "Allows creating or changing the XML data mapping on a content control. Returns True if Microsoft Word maps the content control to a custom XML node in the document's custom XML data store.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "Node",
+          "type": "CustomXMLNode",
+          "optional": false,
+          "description": "Specifies the XML node to which to map the current content control."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

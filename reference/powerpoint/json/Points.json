@@ -1,0 +1,79 @@
+{
+  "name": "Points",
+  "kind": "Dispatch Interface",
+  "guid": "{92D41A74-F07E-4CA4-AF6F-BEF486AA4E6F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of all the Point objects in the specified series in a chart.",
+  "remarks": "Use Points (_index_), where _index_ is the point index number, to return a single Point object. Points are numbered from left to right on the series. Points(1) is the leftmost point, and Points(Points.Count) is the rightmost point.",
+  "example": "With ActiveDocument.InlineShapes(1)\n\n    If .HasChart Then\n\n        With .Chart.SeriesCollection(1).Points\n\n            .Item(.Count).ApplyDataLabels Type:=xlShowValue\n\n        End With\n\n    End If\n\nEnd With",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the collection. Read-only Long."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the Microsoft PowerPoint application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Point",
+      "description": "Returns a single object from a collection.",
+      "returns": "Point",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number for the object."
+        }
+      ]
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "method",
+      "signature": "_NewEnum() As IUnknown",
+      "description": "",
+      "returns": "IUnknown"
+    },
+    {
+      "name": "_Default",
+      "kind": "method",
+      "signature": "_Default(Index As Long) As Point",
+      "description": "",
+      "returns": "Point",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,113 @@
+{
+  "name": "Designs",
+  "kind": "Dispatch Interface",
+  "guid": "{914934D6-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a collection of slide design templates.",
+  "remarks": "Use the Designs property of the Presentation object to reference a design template. To add or clone an individual design template, use the Designs collection's Add or Clone methods, respectively. To refer to an individual design template, use the Item method. To load a design template, use the Load method.",
+  "example": "Sub AddDesignMaster()\n\n    With ActivePresentation.Designs\n\n        .Add designName:=\"MyDesignName\"\n\n        MsgBox .Item(\"MyDesignName\").Name\n\n    End With\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Design",
+      "description": "Returns a single Design object from the specified Designs collection.",
+      "returns": "Design",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number of the single Design object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(designName As String, [Index As Long]) As Design",
+      "description": "Returns a Design object that represents a new slide design.",
+      "returns": "Design",
+      "parameters": [
+        {
+          "name": "designName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the design."
+        },
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": true,
+          "description": "The index number of the design in the Designs collection. The default value is -1, which means that if you omit the Index parameter, the new slide design is added at the end of existing slide designs."
+        }
+      ]
+    },
+    {
+      "name": "Load",
+      "kind": "method",
+      "signature": "Load(TemplateName As String, [Index As Long]) As Design",
+      "description": "Returns a Design object that represents a design loaded into the master list of the specified presentation.",
+      "returns": "Design",
+      "parameters": [
+        {
+          "name": "TemplateName",
+          "type": "String",
+          "optional": false,
+          "description": "The path to the design template."
+        },
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": true,
+          "description": "The index number of the design template in the collection of design templates. The default is -1, which means the design template is added to the end of the list of designs in the presentation."
+        }
+      ]
+    },
+    {
+      "name": "Clone",
+      "kind": "method",
+      "signature": "Clone(pOriginal As Design, [Index As Long]) As Design",
+      "description": "Creates a copy of a Design object.",
+      "returns": "Design",
+      "parameters": [
+        {
+          "name": "pOriginal",
+          "type": "Design",
+          "optional": false,
+          "description": "Design object. The original design."
+        },
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": true,
+          "description": "The index location in the Designs collection into which the design will be copied. If Index is omitted, the cloned design is added to the end of the Designs collection."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

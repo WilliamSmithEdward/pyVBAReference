@@ -1,0 +1,79 @@
+{
+  "name": "GroupShapes",
+  "kind": "Dispatch Interface",
+  "guid": "{000209B6-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the individual shapes within a grouped shape. Each shape contained within a group of shapes is represented by a Shape object.",
+  "remarks": "Use the GroupItems property to return the GroupShapes collection. Use GroupItems (Index), where Index is the number of the individual shape within the grouped shape, to return a single shape from the GroupShapes collection. The following example adds three triangles to the active document, groups them, sets a color for the entire group, and then changes the color for the second triangle only.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified GroupShapes object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of shapes in the collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Shape",
+      "description": "Returns an individual Shape object in a collection.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position or a String representing the name of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "Range",
+      "kind": "method",
+      "signature": "Range(Index As Variant) As ShapeRange",
+      "description": "Returns a ShapeRange object.",
+      "returns": "ShapeRange",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "Specifies which shapes are to be included in the specified range. Can be an integer that specifies the index number of a shape within the Shapes collection, a string that specifies the name of a shape, or a array that contains integers or strings."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

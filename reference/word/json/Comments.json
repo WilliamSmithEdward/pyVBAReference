@@ -1,0 +1,92 @@
+{
+  "name": "Comments",
+  "kind": "Dispatch Interface",
+  "guid": "{00020940-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of Comment objects that represent the comments in a selection, range, or document.",
+  "remarks": "Use the Comments property to return the Comments collection. The following example displays comments made by Don Funk in the active document. Use the Add method to add a comment at the specified range. The following example adds a comment immediately after the selection. Use Comments (Index), where Index is the index number, to return a single Comment object. The index number represents the position of the comment in the specified selection, range, or document. The following example displays the author of the first comment in the active document. The following example displays the initials of the author of the first comment in the selection.",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of items in the Comments collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Comments object."
+    },
+    {
+      "name": "ShowBy",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the reviewer whose comments are shown in the comments pane. Read/write String."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Comment",
+      "description": "Returns an individual Comment object in a collection.",
+      "returns": "Comment",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Range As Range, [Text As Variant]) As Comment",
+      "description": "Returns a Comment object that represents a comment added to a range.",
+      "returns": "Comment",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The range to have a comment added to it."
+        },
+        {
+          "name": "Text",
+          "type": "Variant",
+          "optional": true,
+          "description": "The text of the comment."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

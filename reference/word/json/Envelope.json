@@ -1,0 +1,578 @@
+{
+  "name": "Envelope",
+  "kind": "Dispatch Interface",
+  "guid": "{00020918-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents an envelope attached to a document.",
+  "remarks": "Use the Envelope property to return the Envelope object. The following example adds an envelope to a new document and sets the distance between the top of the envelope and the address to 2.25 inches. Remarks The Envelope object is available regardless of whether an envelope has been added to the specified document. However, an error occurs if you use one of the following properties when an envelope has not been added to the document: Address, AddressFromLeft, AddressFromTop, FeedSource, ReturnAddress, ReturnAddressFromLeft, ReturnAddressFromTop, and UpdateDocument. The following example demonstrates how to use the On Error GoTo statement to trap the error that occurs if an envelope has not been added to the active document. If, however, an envelope has been added to the document, the recipient address is displayed. Use the Insert method to add an envelope to the specified document. Use the PrintOut method to set the properties of an envelope and print it without adding it to the document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Envelope object."
+    },
+    {
+      "name": "Address",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns the envelope delivery address as a Range object. Read-only."
+    },
+    {
+      "name": "ReturnAddress",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the envelope return address."
+    },
+    {
+      "name": "DefaultPrintFIMA",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True to add a Facing Identification Mark (FIM-A) to envelopes by default. Read/write Boolean."
+    },
+    {
+      "name": "DefaultHeight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the default envelope height, in points. Read/write Single."
+    },
+    {
+      "name": "DefaultWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the default envelope width, in points. Read/write Single."
+    },
+    {
+      "name": "DefaultSize",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the default envelope size. Read/write String."
+    },
+    {
+      "name": "DefaultOmitReturnAddress",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the return address is omitted from envelopes by default. Read/write Boolean."
+    },
+    {
+      "name": "FeedSource",
+      "kind": "property",
+      "type": "WdPaperTray",
+      "access": "read/write",
+      "description": "Returns or sets the paper tray for the envelope. Read/write WdPaperTray."
+    },
+    {
+      "name": "AddressFromLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the left edge of the envelope and the delivery address. Read/write Single."
+    },
+    {
+      "name": "AddressFromTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the top edge of the envelope and the delivery address. Read/write Single."
+    },
+    {
+      "name": "ReturnAddressFromLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the left edge of the envelope and the return address. Read/write Single."
+    },
+    {
+      "name": "ReturnAddressFromTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the top edge of the envelope and the return address. Read/write Single."
+    },
+    {
+      "name": "AddressStyle",
+      "kind": "property",
+      "type": "Style",
+      "access": "read-only",
+      "description": "Returns a Style object that represents the delivery address style for the envelope. Read-only."
+    },
+    {
+      "name": "ReturnAddressStyle",
+      "kind": "property",
+      "type": "Style",
+      "access": "read-only",
+      "description": "Returns a Style object that represents the return address style for the envelope."
+    },
+    {
+      "name": "DefaultOrientation",
+      "kind": "property",
+      "type": "WdEnvelopeOrientation",
+      "access": "read/write",
+      "description": "Returns or sets the default orientation for feeding envelopes. Read/write WdEnvelopeOrientation."
+    },
+    {
+      "name": "DefaultFaceUp",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if envelopes are fed face up by default. Read/write Boolean."
+    },
+    {
+      "name": "Vertical",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True vertically orients text on Asian envelopes. Read/write Boolean."
+    },
+    {
+      "name": "RecipientNamefromLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the position, measured in points, of the recipient's name from the left edge of the envelope. Read/write."
+    },
+    {
+      "name": "RecipientNamefromTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the position, measured in points, of the recipient's name from the top edge of the envelope. Read/write."
+    },
+    {
+      "name": "RecipientPostalfromLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the position, measured in points, of the recipient's postal code from the left edge of the envelope. Read/write."
+    },
+    {
+      "name": "RecipientPostalfromTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the position, measured in points, of the recipient's postal code from the top edge of the envelope. Read/write."
+    },
+    {
+      "name": "SenderNamefromLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the position, measured in points, of the sender's name from the left edge of the envelope. Read/write."
+    },
+    {
+      "name": "SenderNamefromTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the position, measured in points, of the sender's name from the top edge of the envelope. Read/write."
+    },
+    {
+      "name": "SenderPostalfromLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the position, measured in points, of the sender's postal code from the left edge of the envelope. Read/write."
+    },
+    {
+      "name": "SenderPostalfromTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the position, measured in points, of the sender's postal code from the top edge of the envelope. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "UpdateDocument",
+      "kind": "method",
+      "signature": "UpdateDocument()",
+      "description": "Updates the envelope in the document with the current envelope settings.",
+      "returns": "void"
+    },
+    {
+      "name": "Options",
+      "kind": "method",
+      "signature": "Options()",
+      "description": "Displays the Envelope Options dialog box.",
+      "returns": "void"
+    },
+    {
+      "name": "Insert",
+      "kind": "method",
+      "signature": "Insert([ExtractAddress As Variant], [Address As Variant], [AutoText As Variant], [OmitReturnAddress As Variant], [ReturnAddress As Variant], [ReturnAutoText As Variant], [PrintBarCode As Variant], [PrintFIMA As Variant], [Size As Variant], [Height As Variant], [Width As Variant], [FeedSource As Variant], [AddressFromLeft As Variant], [AddressFromTop As Variant], [ReturnAddressFromLeft As Variant], [ReturnAddressFromTop As Variant], [DefaultFaceUp As Variant], [DefaultOrientation As Variant], [PrintEPostage As Variant], [Vertical As Variant], [RecipientNamefromLeft As Variant], [RecipientNamefromTop As Variant], [RecipientPostalfromLeft As Variant], [RecipientPostalfromTop As Variant], [SenderNamefromLeft As Variant], [SenderNamefromTop As Variant], [SenderPostalfromLeft As Variant], [SenderPostalfromTop As Variant])",
+      "description": "Inserts an envelope as a separate section at the beginning of the specified document.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ExtractAddress",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to use the text marked by the EnvelopeAddress bookmark (a user-defined bookmark) as the recipient's address."
+        },
+        {
+          "name": "Address",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that specifies the recipient's address (ignored if ExtractAddress is True)."
+        },
+        {
+          "name": "AutoText",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that specifies an AutoText entry to use for the address. If specified, Address is ignored."
+        },
+        {
+          "name": "OmitReturnAddress",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to not insert a return address."
+        },
+        {
+          "name": "ReturnAddress",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that specifies the return address."
+        },
+        {
+          "name": "ReturnAutoText",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that specifies an AutoText entry to use for the return address. If specified, ReturnAddress is ignored."
+        },
+        {
+          "name": "PrintBarCode",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to add a POSTNET bar code. For U.S. mail only."
+        },
+        {
+          "name": "PrintFIMA",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to add a Facing Identification Mark (FIMA) for use in presorting courtesy reply mail. For U.S. mail only."
+        },
+        {
+          "name": "Size",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that specifies the envelope size. The string must match one of the sizes listed in the Envelope size box in the Envelope Options dialog box (for example, \"Size 10\" or \"C4\")."
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": "The height of the envelope, measured in points, when the Size argument is set to \"Custom size.\""
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": "The width of the envelope, measured in points, when the Size argument is set to \"Custom size.\""
+        },
+        {
+          "name": "FeedSource",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to use the FeedSource property of the Envelope object to specify which paper tray to use when printing the envelope."
+        },
+        {
+          "name": "AddressFromLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": "The distance, measured in points, between the left edge of the envelope and the recipient's address."
+        },
+        {
+          "name": "AddressFromTop",
+          "type": "Variant",
+          "optional": true,
+          "description": "The distance, measured in points, between the top edge of the envelope and the recipient's address."
+        },
+        {
+          "name": "ReturnAddressFromLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": "The distance, measured in points, between the left edge of the envelope and the return address."
+        },
+        {
+          "name": "ReturnAddressFromTop",
+          "type": "Variant",
+          "optional": true,
+          "description": "The distance, measured in points, between the top edge of the envelope and the return address."
+        },
+        {
+          "name": "DefaultFaceUp",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to print the envelope face up, False to print it face down."
+        },
+        {
+          "name": "DefaultOrientation",
+          "type": "Variant",
+          "optional": true,
+          "description": "The orientation for the envelope. Can be any WdEnvelopeOrientation constant."
+        },
+        {
+          "name": "PrintEPostage",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to insert postage from an Internet postage vendor."
+        },
+        {
+          "name": "Vertical",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to print vertical text on the envelope. Used for Asian envelopes. Default is False."
+        },
+        {
+          "name": "RecipientNamefromLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": "Position of the recipient's name, measured in points from the left edge of the envelope. Used for Asian envelopes."
+        },
+        {
+          "name": "RecipientNamefromTop",
+          "type": "Variant",
+          "optional": true,
+          "description": "Position of the recipient's name, measured in points from the top edge of the envelope. Used for Asian envelopes."
+        },
+        {
+          "name": "RecipientPostalfromLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": "Position of the recipient's postal code, measured in points from the left edge of the envelope. Used for Asian envelopes."
+        },
+        {
+          "name": "RecipientPostalfromTop",
+          "type": "Variant",
+          "optional": true,
+          "description": "Position of the recipient's postal code, measured in points from the top edge of the envelope. Used for Asian envelopes."
+        },
+        {
+          "name": "SenderNamefromLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": "Position of the sender's name, measured in points from the left edge of the envelope. Used for Asian envelopes."
+        },
+        {
+          "name": "SenderNamefromTop",
+          "type": "Variant",
+          "optional": true,
+          "description": "Position of the sender's name, measured in points from the top edge of the envelope. Used for Asian envelopes."
+        },
+        {
+          "name": "SenderPostalfromLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": "Position of the sender's postal code, measured in points from the left edge of the envelope. Used for Asian envelopes."
+        },
+        {
+          "name": "SenderPostalfromTop",
+          "type": "Variant",
+          "optional": true,
+          "description": "Position of the sender's postal code, measured in points from the top edge of the envelope. Used for Asian envelopes."
+        }
+      ]
+    },
+    {
+      "name": "PrintOut",
+      "kind": "method",
+      "signature": "PrintOut([ExtractAddress As Variant], [Address As Variant], [AutoText As Variant], [OmitReturnAddress As Variant], [ReturnAddress As Variant], [ReturnAutoText As Variant], [PrintBarCode As Variant], [PrintFIMA As Variant], [Size As Variant], [Height As Variant], [Width As Variant], [FeedSource As Variant], [AddressFromLeft As Variant], [AddressFromTop As Variant], [ReturnAddressFromLeft As Variant], [ReturnAddressFromTop As Variant], [DefaultFaceUp As Variant], [DefaultOrientation As Variant], [PrintEPostage As Variant], [Vertical As Variant], [RecipientNamefromLeft As Variant], [RecipientNamefromTop As Variant], [RecipientPostalfromLeft As Variant], [RecipientPostalfromTop As Variant], [SenderNamefromLeft As Variant], [SenderNamefromTop As Variant], [SenderPostalfromLeft As Variant], [SenderPostalfromTop As Variant])",
+      "description": "Prints an envelope without adding the envelope to the active document.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ExtractAddress",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to use the text marked by the \"EnvelopeAddress\" bookmark (a user-defined bookmark) as the recipient's address."
+        },
+        {
+          "name": "Address",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that specifies the recipient's address (ignored if ExtractAddress is True)."
+        },
+        {
+          "name": "AutoText",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the AutoText entry that includes a recipient's address."
+        },
+        {
+          "name": "OmitReturnAddress",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to omit the return address."
+        },
+        {
+          "name": "ReturnAddress",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that specifies the return address."
+        },
+        {
+          "name": "ReturnAutoText",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the AutoText entry that includes a return address."
+        },
+        {
+          "name": "PrintBarCode",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to add a POSTNET bar code. For U.S. mail only."
+        },
+        {
+          "name": "PrintFIMA",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to add a Facing Identification Mark (FIM-A) for use in presorting courtesy reply mail. For U.S. mail only."
+        },
+        {
+          "name": "Size",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string that specifies the envelope size. The string should match one of the sizes listed on the left side of the Envelope size box in the Envelope Options dialog box (for example, \"Size 10\")."
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": "The height of the envelope (in points) when the Size argument is set to \"Custom size\"."
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": "The width of the envelope (in points) when the Size argument is set to \"Custom size\"."
+        },
+        {
+          "name": "FeedSource",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to use the FeedSource property of the Envelope object to specify which paper tray to use when printing the envelope."
+        },
+        {
+          "name": "AddressFromLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": "The distance (in points) between the left edge of the envelope and the recipient's address."
+        },
+        {
+          "name": "AddressFromTop",
+          "type": "Variant",
+          "optional": true,
+          "description": "The distance (in points) between the top edge of the envelope and the recipient's address."
+        },
+        {
+          "name": "ReturnAddressFromLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": "The distance (in points) between the left edge of the envelope and the return address."
+        },
+        {
+          "name": "ReturnAddressFromTop",
+          "type": "Variant",
+          "optional": true,
+          "description": "The distance (in points) between the top edge of the envelope and the return address."
+        },
+        {
+          "name": "DefaultFaceUp",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to print the envelope face up; False to print it face down."
+        },
+        {
+          "name": "DefaultOrientation",
+          "type": "Variant",
+          "optional": true,
+          "description": "The orientation of the envelope. Can be any WdEnvelopeOrientation constant."
+        },
+        {
+          "name": "PrintEPostage",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to print postage using an Internet e-postage vendor."
+        },
+        {
+          "name": "Vertical",
+          "type": "Variant",
+          "optional": true,
+          "description": "True prints text vertically on the envelope. Used for Asian-language envelopes."
+        },
+        {
+          "name": "RecipientNamefromLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": "The position of the recipient's name, measured in points, from the left edge of the envelope. Used for Asian-language envelopes."
+        },
+        {
+          "name": "RecipientNamefromTop",
+          "type": "Variant",
+          "optional": true,
+          "description": "The position of the recipient's name, measured in points, from the top edge of the envelope. Used for Asian-language envelopes."
+        },
+        {
+          "name": "RecipientPostalfromLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": "The position of the recipient's postal code, measured in points, from the left edge of the envelope. Used for Asian-language envelopes."
+        },
+        {
+          "name": "RecipientPostalfromTop",
+          "type": "Variant",
+          "optional": true,
+          "description": "The position of the recipient's postal code, measured in points, from the top edge of the envelope. Used for Asian-language envelopes."
+        },
+        {
+          "name": "SenderNamefromLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": "The position of the sender's name, measured in points, from the left edge of the envelope. Used for Asian-language envelopes."
+        },
+        {
+          "name": "SenderNamefromTop",
+          "type": "Variant",
+          "optional": true,
+          "description": "The position of the sender's name, measured in points, from the top edge of the envelope. Used for Asian-language envelopes."
+        },
+        {
+          "name": "SenderPostalfromLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": "The position of the sender's postal code, measured in points, from the left edge of the envelope. Used for Asian-language envelopes."
+        },
+        {
+          "name": "SenderPostalfromTop",
+          "type": "Variant",
+          "optional": true,
+          "description": "The position of the sender's postal code, measured in points, from the top edge of the envelope. Used for Asian-language envelopes."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

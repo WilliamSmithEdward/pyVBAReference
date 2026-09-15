@@ -1,0 +1,184 @@
+{
+  "name": "Columns",
+  "kind": "Dispatch Interface",
+  "guid": "{0002094B-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of Column objects that represent the columns in a table.",
+  "remarks": "Use the Columns property of a Range, Selection, or Table object to return a Columns collection. The following example displays the number of Column objects in the Columns collection for the first table in the active document. The following example creates a table with six columns and three rows and then formats each column with a progressively larger (darker) shading percentage. Use the Add method to add a column to a table. The following example adds a column to the first table in the active document, and then it makes the column widths equal. Use Columns (Index), where Index is the index number, to return a single Column object. The index number represents the position of the column in the Columns collection (counting from left to right). The following example selects the first column in the first table.",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of columns in the collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Columns object."
+    },
+    {
+      "name": "First",
+      "kind": "property",
+      "type": "Column",
+      "access": "read-only",
+      "description": "Returns a Column object that represents the first item in the Columns collection."
+    },
+    {
+      "name": "Last",
+      "kind": "property",
+      "type": "Column",
+      "access": "read-only",
+      "description": "Returns a Column object that represents the last column in a table."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the width of the specified columns, in points. Read/write Long."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read/write",
+      "description": "Returns a Borders collection that represents all the borders for the specified columns."
+    },
+    {
+      "name": "Shading",
+      "kind": "property",
+      "type": "Shading",
+      "access": "read-only",
+      "description": "Returns a Shading object that refers to the shading formatting for the specified table columns."
+    },
+    {
+      "name": "NestingLevel",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the nesting level of the specified columns. Read-only Long."
+    },
+    {
+      "name": "PreferredWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the preferred width (in points or as a percentage of the window width) for the specified columns. Read/write Single."
+    },
+    {
+      "name": "PreferredWidthType",
+      "kind": "property",
+      "type": "WdPreferredWidthType",
+      "access": "read/write",
+      "description": "Returns or sets the preferred unit of measurement to use for the width of the specified cells, columns, or table. Read/write WdPreferredWidthType."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Column",
+      "description": "Returns an individual Column object in a collection.",
+      "returns": "Column",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([BeforeColumn As Variant]) As Column",
+      "description": "Returns a Column object that represents a column added to a table.",
+      "returns": "Column",
+      "parameters": [
+        {
+          "name": "BeforeColumn",
+          "type": "Variant",
+          "optional": true,
+          "description": "A Column object that represents the column that will appear immediately to the right of the new column."
+        }
+      ]
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects the specified table columns.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified columns.",
+      "returns": "void"
+    },
+    {
+      "name": "SetWidth",
+      "kind": "method",
+      "signature": "SetWidth(ColumnWidth As Single, RulerStyle As WdRulerStyle)",
+      "description": "Sets the width of columns in a table.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ColumnWidth",
+          "type": "Single",
+          "optional": false,
+          "description": "The width of the specified column or columns, in points."
+        },
+        {
+          "name": "RulerStyle",
+          "type": "WdRulerStyle",
+          "optional": false,
+          "description": "Controls the way Word adjusts cell widths."
+        }
+      ]
+    },
+    {
+      "name": "AutoFit",
+      "kind": "method",
+      "signature": "AutoFit()",
+      "description": "Changes the width of a table column to accommodate the width of the text without changing the way text wraps in the cells.",
+      "returns": "void"
+    },
+    {
+      "name": "DistributeWidth",
+      "kind": "method",
+      "signature": "DistributeWidth()",
+      "description": "Adjusts the width of the specified columns so that they are equal.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

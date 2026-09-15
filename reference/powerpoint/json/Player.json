@@ -1,0 +1,77 @@
+{
+  "name": "Player",
+  "kind": "Dispatch Interface",
+  "guid": "{BA72E552-4FF5-48F4-8215-5505F990966F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Allows access to playback controls for the associated shape in the current window.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "CurrentPosition",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets a Long that represents the current position of the player in the media. Read/write."
+    },
+    {
+      "name": "State",
+      "kind": "property",
+      "type": "PpPlayerState",
+      "access": "read-only",
+      "description": "Returns the current state of the player. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Play",
+      "kind": "method",
+      "signature": "Play()",
+      "description": "Begins playback for the specified media.",
+      "returns": "void"
+    },
+    {
+      "name": "Pause",
+      "kind": "method",
+      "signature": "Pause()",
+      "description": "Pauses the media.",
+      "returns": "void"
+    },
+    {
+      "name": "Stop",
+      "kind": "method",
+      "signature": "Stop()",
+      "description": "Stops the media playing in the specified object.",
+      "returns": "void"
+    },
+    {
+      "name": "GoToNextBookmark",
+      "kind": "method",
+      "signature": "GoToNextBookmark()",
+      "description": "Goes to the next bookmark.",
+      "returns": "void"
+    },
+    {
+      "name": "GoToPreviousBookmark",
+      "kind": "method",
+      "signature": "GoToPreviousBookmark()",
+      "description": "Goes to the previous bookmark.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

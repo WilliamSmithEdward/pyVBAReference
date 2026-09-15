@@ -1,0 +1,72 @@
+{
+  "name": "ExtraColors",
+  "kind": "Dispatch Interface",
+  "guid": "{91493468-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents the extra colors in a presentation. The object can contain up to eight colors, each of which is represented by an red-green-blue (RGB) value.",
+  "remarks": "",
+  "example": "With ActivePresentation\n    Set rect = .Slides(1).Shapes _\n        .AddShape(msoShapeRectangle, 50, 50, 100, 200)\n    rect.Fill.ForeColor.RGB = .ExtraColors(1)\nEnd With",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As MsoRGBType",
+      "description": "Returns a single color from the specified ExtraColors collection.",
+      "returns": "MsoRGBType",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the single object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Type As MsoRGBType)",
+      "description": "Adds a color to the extra colors available to a presentation, if the color hasn't already been added.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "MsoRGBType",
+          "optional": false,
+          "description": "The red-green-blue (RGB) value of the color to be added."
+        }
+      ]
+    },
+    {
+      "name": "Clear",
+      "kind": "method",
+      "signature": "Clear()",
+      "description": "Clears the extra colors in a presentation.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

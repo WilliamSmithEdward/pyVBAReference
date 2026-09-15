@@ -1,0 +1,90 @@
+{
+  "name": "HeaderFooter",
+  "kind": "Dispatch Interface",
+  "guid": "{00020985-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single header or footer. The HeaderFooter object is a member of the HeadersFooters collection. The HeadersFooters collection includes all headers and footers in the specified document section.",
+  "remarks": "Use Headers (Index) or Footers (Index), where index is one of the WdHeaderFooterIndex constants (wdHeaderFooterEvenPages, wdHeaderFooterFirstPage, or wdHeaderFooterPrimary), to return a single HeaderFooter object. The following example changes the text of both the primary header and the primary footer in the first section of the active document. You can also return a single HeaderFooter object by using the HeaderFooter property with a Selection object. Use the DifferentFirstPageHeaderFooter property with the PageSetup object to specify a different first page. The following example inserts text into the first page footer in the active document. Use the OddAndEvenPagesHeaderFooter property with the PageSetup object to specify different odd and even page headers and footers. If the OddAndEvenPagesHeaderFooter property is True, you can return an odd header or footer by using wdHeaderFooterPrimary, and you can return an even header or footer by using wdHeaderFooterEvenPages. Use the Add method with the PageNumbers object to add a page number to a header or footer. The following example adds page numbers to the primary footer in the first section of the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified HeaderFooter object."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the portion of a document that is contained within the specified header or footer."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "WdHeaderFooterIndex",
+      "access": "read-only",
+      "description": "Returns a WdHeaderFooterIndex that represents the specified header or footer in a document or section. Read-only."
+    },
+    {
+      "name": "IsHeader",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified HeaderFooter object is a header. Read-only Boolean."
+    },
+    {
+      "name": "Exists",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified HeaderFooter object exists. Read/write Boolean."
+    },
+    {
+      "name": "PageNumbers",
+      "kind": "property",
+      "type": "PageNumbers",
+      "access": "read-only",
+      "description": "Returns a PageNumbers collection that represents all the page number fields included in the specified header or footer."
+    },
+    {
+      "name": "LinkToPrevious",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified header or footer is linked to the corresponding header or footer in the previous section. Read/write Boolean."
+    },
+    {
+      "name": "Shapes",
+      "kind": "property",
+      "type": "Shapes",
+      "access": "read-only",
+      "description": "Returns a Shapes collection that represents all the Shape objects in a header or footer. Read-only."
+    },
+    {
+      "name": "IsEmpty",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [],
+  "events": []
+}

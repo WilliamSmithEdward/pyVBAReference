@@ -1,0 +1,57 @@
+{
+  "name": "ColorScheme",
+  "kind": "Dispatch Interface",
+  "guid": "{9149346F-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a color scheme, which is a set of eight colors used for the different elements of a slide, notes page, or handout, such as the title or background. (Note that the color schemes for slides, notes pages, and handouts in a presentation can be set independently.)",
+  "remarks": "Each color is represented by an RGBColor object. The ColorScheme object is a member of the ColorSchemes collection. The ColorSchemes collection contains all the color schemes in a presentation. The following examples describe how to do the following: - Return a ColorScheme object from the collection of all the color schemes in the presentation - Return the ColorScheme object attached to a specific slide or master - Return the color of a single slide element from a ColorScheme object",
+  "example": "ActivePresentation.ColorSchemes(2).Delete",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Colors",
+      "kind": "method",
+      "signature": "Colors(SchemeColor As PpColorSchemeIndex) As RGBColor",
+      "description": "Returns an RGBColor object that represents a single color in a color scheme.",
+      "returns": "RGBColor",
+      "parameters": [
+        {
+          "name": "SchemeColor",
+          "type": "PpColorSchemeIndex",
+          "optional": false,
+          "description": "The individual color in the specified color scheme."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified ColorScheme object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

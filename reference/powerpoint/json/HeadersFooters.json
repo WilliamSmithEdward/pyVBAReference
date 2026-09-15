@@ -1,0 +1,70 @@
+{
+  "name": "HeadersFooters",
+  "kind": "Dispatch Interface",
+  "guid": "{91493474-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Contains all the HeaderFooter objects on the specified slide, notes page, handout, or master.",
+  "remarks": "Each HeaderFooter object represents a header, footer, date and time, or slide number.",
+  "example": "ActivePresentation.Slides(1).HeadersFooters.Footer _\n    .Text = \"Volcano Coffee\"",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "DateAndTime",
+      "kind": "property",
+      "type": "HeaderFooter",
+      "access": "read-only",
+      "description": "Returns a HeaderFooter object that represents the date and time item that appears in the lower-left corner of a slide or in the upper-right corner of a notes page, handout, or outline. Read-only."
+    },
+    {
+      "name": "SlideNumber",
+      "kind": "property",
+      "type": "HeaderFooter",
+      "access": "read-only",
+      "description": "Returns a HeaderFooter object that represents the slide number in the lower-right corner of a slide, or the page number in the lower-right corner of a notes page or a page of a printed handout or outline. Read-only."
+    },
+    {
+      "name": "Header",
+      "kind": "property",
+      "type": "HeaderFooter",
+      "access": "read-only",
+      "description": "Returns a HeaderFooter object that represents the header that appears at the top of a slide or in the upper-left corner of a notes page, handout, or outline. Read-only."
+    },
+    {
+      "name": "Footer",
+      "kind": "property",
+      "type": "HeaderFooter",
+      "access": "read-only",
+      "description": "Returns a HeaderFooter object that represents the footer that appears at the bottom of a slide or in the lower-left corner of a notes page, handout, or outline. Read-only."
+    },
+    {
+      "name": "DisplayOnTitleSlide",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the footer, date and time, and slide number appear on the title slide. Applies to slide masters. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Clear",
+      "kind": "method",
+      "signature": "Clear()",
+      "description": "Clears the header and footer from the specified slide or slides.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

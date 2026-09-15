@@ -1,0 +1,16 @@
+# ReturnVar
+
+**Type:** Class  
+**Library:** Microsoft Access 16.0 Object Library  
+**GUID:** {27B378D1-DAE2-48A5-BB40-A1C2BA02631D}  
+
+Represents a variable that was initialized by the SetReturnVar function in a Data Macro.
+
+**Remarks:** A ReturnVar object provides a convenient way to use values set in a Data Macro. Although a ReturnVar object can be used to store information for use in VBA procedures, it does not have the same functionality as a VBA variable. By default, a ReturnVar object remains in memory until the next time the RunDataMacro method is used. A ReturnVar object can store only text or numeric data. ReturnVar objects cannot store objects. To refer to a TempVar object in a collection by its ordinal number or by its Name property setting, use the following syntax form.
+
+## Properties (2)
+
+- `Name As String  (read-only)`  
+  Gets the name of the specified ReturnVar. Read-only String.
+- `Value As Variant  (read-only)`  
+  Gets the value of the specified ReturnVar object. Read-only Variant.

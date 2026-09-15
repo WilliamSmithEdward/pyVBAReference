@@ -1,0 +1,55 @@
+{
+  "name": "ShapeNode",
+  "kind": "Dispatch Interface",
+  "guid": "{000209CD-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the geometry and the geometry-editing properties of the nodes in a user-defined freeform. Nodes include the vertices between the segments of the freeform and the control points for curved segments. The ShapeNode object is a member of the ShapeNodes collection. The ShapeNodes collection contains all the nodes in a freeform.",
+  "remarks": "Use Nodes (Index), where Index is the node index number, to return a single ShapeNode object. If node one in shape three on the active document is a corner point, the following example makes it a smooth point. For this example to work, shape three must be a freeform.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified ShapeNode object."
+    },
+    {
+      "name": "EditingType",
+      "kind": "property",
+      "type": "MsoEditingType",
+      "access": "read-only",
+      "description": "If the specified node is a vertex, this property returns a value that indicates how changes made to the node affect the two segments connected to the node. Read-only MsoEditingType. ."
+    },
+    {
+      "name": "Points",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns the position of the specified node as a coordinate pair. Read-only Variant."
+    },
+    {
+      "name": "SegmentType",
+      "kind": "property",
+      "type": "MsoSegmentType",
+      "access": "read-only",
+      "description": "Returns a value that indicates whether the segment associated with the specified node is straight or curved. Read-only MsoSegmentType."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

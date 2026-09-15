@@ -1,0 +1,79 @@
+{
+  "name": "OMathMatCols",
+  "kind": "Dispatch Interface",
+  "guid": "{EFC71F9C-7F42-4CD4-A7A7-970D7A48CD27}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a collection of matrix columns. Use the OMathMatCol object to access individual members of the collection.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathMatCols object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of items in the OMathMatCols collection. Read-only Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As OMathMatCol",
+      "description": "Returns an OMathMatCol object that represents the specified item in the collection.",
+      "returns": "OMathMatCol",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "Specifies the ordinal position of the object within the collection."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([BeforeCol As Variant]) As OMathMatCol",
+      "description": "Creates an equation column and adds it to a matrix and returns an OMathMatCol object.",
+      "returns": "OMathMatCol",
+      "parameters": [
+        {
+          "name": "BeforeCol",
+          "type": "Variant",
+          "optional": true,
+          "description": "An existing column in the matrix before which to place the new column."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

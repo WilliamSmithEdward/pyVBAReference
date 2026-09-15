@@ -1,0 +1,76 @@
+{
+  "name": "PlaySettings",
+  "kind": "Dispatch Interface",
+  "guid": "{9149348E-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Contains information about how the specified media clip will be played during a slide show.",
+  "remarks": "",
+  "example": "Set clockMovie = ActivePresentation.Slides(1).Shapes _\n    .AddMediaObject(FileName:=\"C:\\WINNT\\clock.avi\", _\n    Left:=20, Top:=20)\nWith clockMovie.AnimationSettings.PlaySettings\n    .PlayOnEntry = True\n    .PauseAnimation = False\n    .HideWhileNotPlaying = True\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "ActionVerb",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a string that contains the OLE verb that will be run when the specified OLE object is animated during a slide show. Read/write."
+    },
+    {
+      "name": "HideWhileNotPlaying",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the specified media clip is hidden during a slide show except when it is playing. Read/write."
+    },
+    {
+      "name": "LoopUntilStopped",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the specified movie or sound loops continuously until either the next movie or sound starts, the user clicks the slide, or a slide transition occurs. Read/write."
+    },
+    {
+      "name": "PlayOnEntry",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the specified movie or sound is played automatically when it is animated. Read/write."
+    },
+    {
+      "name": "RewindMovie",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the first frame of the specified movie is automatically redisplayed as soon as the movie has finished playing. Read/write."
+    },
+    {
+      "name": "PauseAnimation",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the slide show pauses until the specified media clip is finished playing. Read/write."
+    },
+    {
+      "name": "StopAfterSlides",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the number of slides to be displayed before the media clip stops playing. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -1,0 +1,97 @@
+{
+  "name": "FileConverter",
+  "kind": "Dispatch Interface",
+  "guid": "{00020999-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a file converter that's used to open or save files. The FileConverter object is a member of the FileConverters collection. The FileConverters collection contains all the installed file converters for opening and saving files.",
+  "remarks": "Use FileConverters (Index), where Index is a class name or index number, to return a single FileConverter object. The following example displays the extensions associated with the Microsoft Excel worksheet converter. The index number represents the position of the file converter in the FileConverters collection. The following example displays the format name of the first file converter. You cannot create a new file converter or add one to the FileConverters collection. FileConverter objects are added during installation of Microsoft Office or by installing supplemental file converters. Use either the CanSave or CanOpen property to determine whether a FileConverter object can be used to open or save document. File converters for saving documents are listed in the Save As dialog box. File converters for opening documents appear in a dialog box if the Confirm conversion at Open check box is selected on the General tab in the Options dialog box (Tools menu).",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified FileConverter object."
+    },
+    {
+      "name": "FormatName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the specified file converter. Read-only String."
+    },
+    {
+      "name": "ClassName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a unique name that identifies the file converter. Read-only String."
+    },
+    {
+      "name": "SaveFormat",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the file format of the specified document or file converter. Read-only Long."
+    },
+    {
+      "name": "OpenFormat",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the file format of the specified file converter. Read-only Long."
+    },
+    {
+      "name": "CanSave",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified file converter is designed to save files. Read-only Boolean."
+    },
+    {
+      "name": "CanOpen",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified file converter is designed to open files. Read-only Boolean."
+    },
+    {
+      "name": "Path",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the disk or Web path to the specified object. Read-only String."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns name of the specified object. Read-only String."
+    },
+    {
+      "name": "Extensions",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the file name extensions associated with the specified FileConverter object. Read-only String."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

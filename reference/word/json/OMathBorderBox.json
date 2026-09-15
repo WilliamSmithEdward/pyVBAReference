@@ -1,0 +1,97 @@
+{
+  "name": "OMathBorderBox",
+  "kind": "Dispatch Interface",
+  "guid": "{2503B6EE-0889-44DF-B920-6D6F9659DEA3}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents an invisible box around an equation or part of an equation to which you can assign properties that affect the layout or mathematical formatting of the entire box. For example, a box can serve as an operator emulator with or without an alignment point, serve as a like breakpoint, have an associated argument size (argSz), or be grouped so as not to allow line breaks.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathBorderBox object."
+    },
+    {
+      "name": "E",
+      "kind": "property",
+      "type": "OMath",
+      "access": "read-only",
+      "description": "Returns an OMath object that represents the base of the specified equation object. Read-only."
+    },
+    {
+      "name": "HideTop",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether to hide the top border of an equation's bounding box. Read/write."
+    },
+    {
+      "name": "HideBot",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether to hide the bottom border of an equation's bounding box. Read/write."
+    },
+    {
+      "name": "HideLeft",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether to hide the left border of an equation's bounding box. Read/write."
+    },
+    {
+      "name": "HideRight",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether to hide the right border of an equation's bounding box. Read/write."
+    },
+    {
+      "name": "StrikeH",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents a horizontal strikethrough. Read/write."
+    },
+    {
+      "name": "StrikeV",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents a vertical strikethrough. Read/write."
+    },
+    {
+      "name": "StrikeBLTR",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents a diagonal strikethrough from lower left to upper right. Read/write."
+    },
+    {
+      "name": "StrikeTLBR",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents a diagonal strikethrough from upper left to lower right. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -1,0 +1,71 @@
+{
+  "name": "NamedSlideShows",
+  "kind": "Dispatch Interface",
+  "guid": "{9149345B-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of all the NamedSlideShow objects in the presentation. Each NamedSlideShow object represents a custom slide show.",
+  "remarks": "",
+  "example": "ActivePresentation.SlideShowSettings _\n    .NamedSlideShows(\"Quick Show\").Delete",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As NamedSlideShow",
+      "description": "Returns a single NamedSlideShow object from the specified NamedSlideShows collection.",
+      "returns": "NamedSlideShow",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number of the single NamedSlideShow object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String, safeArrayOfSlideIDs As Variant) As NamedSlideShow",
+      "description": "Creates a new named slide show and adds it to the collection of named slide shows in the specified presentation. Returns a NamedSlideShow object that represents the new named slide show.",
+      "returns": "NamedSlideShow",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the slide show."
+        },
+        {
+          "name": "safeArrayOfSlideIDs",
+          "type": "Variant",
+          "optional": false,
+          "description": "Contains the unique slide IDs of the slides to be displayed in a slide show."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

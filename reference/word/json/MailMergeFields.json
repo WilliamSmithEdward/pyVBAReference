@@ -1,0 +1,358 @@
+{
+  "name": "MailMergeFields",
+  "kind": "Dispatch Interface",
+  "guid": "{0002091F-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of MailMergeField objects that represent the mail merge related fields in a document.",
+  "remarks": "Use the Fields property to return the MailMergeFields collection. The following example adds an ASK field after the last mail merge field in the active document. Use the Add method to add a merge field to the MailMergeFields collection. The following example replaces the selection with a MiddleInitial merge field. Use Fields (Index), where Index is the index number, to return a single MailMergeField object. The following example displays the field code of the first mail merge field in the active document. The MailMergeFields collection has additional methods, such as AddAsk and AddFillIn, for adding fields related to a mail merge operation.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified MailMergeFields object."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of mail merge fields in the collection. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As MailMergeField",
+      "description": "Returns an individual MailMergeField object in a collection.",
+      "returns": "MailMergeField",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Range As Range, Name As String) As MailMergeField",
+      "description": "Returns a MailMergeField object that represents a mail merge field added to the data source document.",
+      "returns": "MailMergeField",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The range where you want the field to appear. This field replaces the range, if the range isn't collapsed."
+        },
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the field."
+        }
+      ]
+    },
+    {
+      "name": "AddAsk",
+      "kind": "method",
+      "signature": "AddAsk(Range As Range, Name As String, [Prompt As Variant], [DefaultAskText As Variant], [AskOnce As Variant]) As MailMergeField",
+      "description": "Adds an ASK field to a mail merge main document. Returns a MailMergeField object.",
+      "returns": "MailMergeField",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The location for the ASK field."
+        },
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The bookmark name that the response or default text is assigned to. Use a REF field with the bookmark name to display the result in a document."
+        },
+        {
+          "name": "Prompt",
+          "type": "Variant",
+          "optional": true,
+          "description": "The text that's displayed in the dialog box."
+        },
+        {
+          "name": "DefaultAskText",
+          "type": "Variant",
+          "optional": true,
+          "description": "The default response, which appears in the text box when the dialog box is displayed. Corresponds to the \\d switch for an ASK field."
+        },
+        {
+          "name": "AskOnce",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to display the dialog box only once instead of each time a new record is merged. Corresponds to the \\o switch for an ASK field."
+        }
+      ]
+    },
+    {
+      "name": "AddFillIn",
+      "kind": "method",
+      "signature": "AddFillIn(Range As Range, [Prompt As Variant], [DefaultFillInText As Variant], [AskOnce As Variant]) As MailMergeField",
+      "description": "Adds a FILLIN field to a mail merge main document. Returns a MailMergeField object.",
+      "returns": "MailMergeField",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The location for the FILLIN field."
+        },
+        {
+          "name": "Prompt",
+          "type": "Variant",
+          "optional": true,
+          "description": "The text that's displayed in the dialog box."
+        },
+        {
+          "name": "DefaultFillInText",
+          "type": "Variant",
+          "optional": true,
+          "description": "The default response, which appears in the text box when the dialog box is displayed. Corresponds to the \\d switch for an FILLIN field."
+        },
+        {
+          "name": "AskOnce",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to display the prompt only once instead of each time a new record is merged. Corresponds to the \\o switch for a FILLIN field. The default value is False."
+        }
+      ]
+    },
+    {
+      "name": "AddIf",
+      "kind": "method",
+      "signature": "AddIf(Range As Range, MergeField As String, Comparison As WdMailMergeComparison, [CompareTo As Variant], [TrueAutoText As Variant], [TrueText As Variant], [FalseAutoText As Variant], [FalseText As Variant]) As MailMergeField",
+      "description": "Adds an IF field to a mail merge main document. Returns a MailMergeField object.",
+      "returns": "MailMergeField",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The location for the IF field."
+        },
+        {
+          "name": "MergeField",
+          "type": "String",
+          "optional": false,
+          "description": "The merge field name."
+        },
+        {
+          "name": "Comparison",
+          "type": "WdMailMergeComparison",
+          "optional": false,
+          "description": "The operator used in the comparison."
+        },
+        {
+          "name": "CompareTo",
+          "type": "Variant",
+          "optional": true,
+          "description": "The text to compare with the contents of MergeField."
+        },
+        {
+          "name": "TrueAutoText",
+          "type": "Variant",
+          "optional": true,
+          "description": "The AutoText entry that's inserted if the comparison is true. If this argument is specified, TrueText is ignored."
+        },
+        {
+          "name": "TrueText",
+          "type": "Variant",
+          "optional": true,
+          "description": "The text that's inserted if the comparison is true."
+        },
+        {
+          "name": "FalseAutoText",
+          "type": "Variant",
+          "optional": true,
+          "description": "The AutoText entry that's inserted if the comparison is false. If this argument is specified, FalseText is ignored."
+        },
+        {
+          "name": "FalseText",
+          "type": "Variant",
+          "optional": true,
+          "description": "The text that's inserted if the comparison is false."
+        }
+      ]
+    },
+    {
+      "name": "AddMergeRec",
+      "kind": "method",
+      "signature": "AddMergeRec(Range As Range) As MailMergeField",
+      "description": "Adds a MERGEREC field to a mail merge main document. Returns a MailMergeField object.",
+      "returns": "MailMergeField",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The location for the MERGEREC field."
+        }
+      ]
+    },
+    {
+      "name": "AddMergeSeq",
+      "kind": "method",
+      "signature": "AddMergeSeq(Range As Range) As MailMergeField",
+      "description": "Adds a MERGESEQ field to a mail merge main document. Returns a MailMergeField object.",
+      "returns": "MailMergeField",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The location for the MERGESEQ field."
+        }
+      ]
+    },
+    {
+      "name": "AddNext",
+      "kind": "method",
+      "signature": "AddNext(Range As Range) As MailMergeField",
+      "description": "Adds a NEXT field to a mail merge main document. Returns a MailMergeField object.",
+      "returns": "MailMergeField",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The location for the NEXT field."
+        }
+      ]
+    },
+    {
+      "name": "AddNextIf",
+      "kind": "method",
+      "signature": "AddNextIf(Range As Range, MergeField As String, Comparison As WdMailMergeComparison, [CompareTo As Variant]) As MailMergeField",
+      "description": "Adds a NEXTIF field to a mail merge main document. Returns a MailMergeField object.",
+      "returns": "MailMergeField",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The location for the NEXTIF field."
+        },
+        {
+          "name": "MergeField",
+          "type": "String",
+          "optional": false,
+          "description": "The merge field name."
+        },
+        {
+          "name": "Comparison",
+          "type": "WdMailMergeComparison",
+          "optional": false,
+          "description": "The operator used in the comparison."
+        },
+        {
+          "name": "CompareTo",
+          "type": "Variant",
+          "optional": true,
+          "description": "The text to compare with the contents of MergeField."
+        }
+      ]
+    },
+    {
+      "name": "AddSet",
+      "kind": "method",
+      "signature": "AddSet(Range As Range, Name As String, [ValueText As Variant], [ValueAutoText As Variant]) As MailMergeField",
+      "description": "Adds a SET field to a mail merge main document. Returns a MailMergeField object.",
+      "returns": "MailMergeField",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The location for the SET field."
+        },
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The bookmark name that ValueText is assigned to."
+        },
+        {
+          "name": "ValueText",
+          "type": "Variant",
+          "optional": true,
+          "description": "The text associated with the bookmark specified by the Name argument."
+        },
+        {
+          "name": "ValueAutoText",
+          "type": "Variant",
+          "optional": true,
+          "description": "The AutoText entry that includes text associated with the bookmark specified by the Name argument. If this argument is specified, ValueText is ignored."
+        }
+      ]
+    },
+    {
+      "name": "AddSkipIf",
+      "kind": "method",
+      "signature": "AddSkipIf(Range As Range, MergeField As String, Comparison As WdMailMergeComparison, [CompareTo As Variant]) As MailMergeField",
+      "description": "Adds a SKIPIF field to a mail merge main document. Returns a MailMergeField object. .",
+      "returns": "MailMergeField",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The location for the SKIPIF field."
+        },
+        {
+          "name": "MergeField",
+          "type": "String",
+          "optional": false,
+          "description": "The merge field name."
+        },
+        {
+          "name": "Comparison",
+          "type": "WdMailMergeComparison",
+          "optional": false,
+          "description": "The operator used in the comparison."
+        },
+        {
+          "name": "CompareTo",
+          "type": "Variant",
+          "optional": true,
+          "description": "The text to compare with the contents of MergeField."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

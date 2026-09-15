@@ -1,0 +1,56 @@
+{
+  "name": "OMathBreak",
+  "kind": "Dispatch Interface",
+  "guid": "{65E515D5-F50B-4951-8F38-FA6AC8707387}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents individual line breaks in an equation. Each OMathBreak object is a member of the OMathBreaks collection.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathBreak object."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the portion of a document that is contained in the specified object. Read-only."
+    },
+    {
+      "name": "AlignAt",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long that represents the operator in one line, to which Microsoft Word aligns consecutive lines in an equation. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified equation break.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

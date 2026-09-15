@@ -1,0 +1,141 @@
+# ReportOldV10
+
+**Type:** Class  
+**Library:** Microsoft Access 16.0 Object Library  
+**GUID:** {ECD1EADA-D373-11D3-8D21-0050048383FB}  
+
+## Properties (112)
+
+- `RecordSource As String  (read/write)`
+- `Filter As String  (read/write)`
+- `FilterOn As Boolean  (read/write)`
+- `OrderBy As String  (read/write)`
+- `OrderByOn As Boolean  (read/write)`
+- `ServerFilter As String  (read/write)`
+- `Caption As String  (read/write)`
+- `RecordLocks As Byte  (read/write)`
+- `PageHeader As Byte  (read/write)`
+- `PageFooter As Byte  (read/write)`
+- `DateGrouping As Byte  (read/write)`
+- `GrpKeepTogether As Byte  (read/write)`
+- `Width As Integer  (read/write)`
+- `Picture As String  (read/write)`
+- `PictureType As Byte  (read/write)`
+- `PictureSizeMode As Byte  (read/write)`
+- `PictureAlignment As Byte  (read/write)`
+- `PictureTiling As Boolean  (read/write)`
+- `PicturePages As Byte  (read/write)`
+- `MenuBar As String  (read/write)`
+- `Toolbar As String  (read/write)`
+- `ShortcutMenuBar As String  (read/write)`
+- `GridX As Integer  (read/write)`
+- `GridY As Integer  (read/write)`
+- `LayoutForPrint As Boolean  (read/write)`
+- `FastLaserPrinting As Boolean  (read/write)`
+- `HelpFile As String  (read/write)`
+- `HelpContextId As Long  (read/write)`
+- `Hwnd As Long  (read/write)`
+- `Count As Integer  (read/write)`
+- `Page As Long  (read/write)`
+- `Pages As Integer  (read/write)`
+- `HasData As Long  (read/write)`
+- `Left As Long  (read/write)`
+- `Top As Long  (read/write)`
+- `Height As Long  (read/write)`
+- `PrintSection As Boolean  (read/write)`
+- `NextRecord As Boolean  (read/write)`
+- `MoveLayout As Boolean  (read/write)`
+- `FormatCount As Integer  (read/write)`
+- `PrintCount As Integer  (read/write)`
+- `Visible As Boolean  (read/write)`
+- `Painting As Boolean  (read/write)`
+- `PrtMip As Variant  (read/write)`
+- `PrtDevMode As Variant  (read/write)`
+- `PrtDevNames As Variant  (read/write)`
+- `ForeColor As Long  (read/write)`
+- `CurrentX As Single  (read/write)`
+- `CurrentY As Single  (read/write)`
+- `ScaleHeight As Single  (read/write)`
+- `ScaleLeft As Single  (read/write)`
+- `ScaleMode As Integer  (read/write)`
+- `ScaleTop As Single  (read/write)`
+- `ScaleWidth As Single  (read/write)`
+- `FontBold As Integer  (read/write)`
+- `FontItalic As Integer  (read/write)`
+- `FontName As String  (read/write)`
+- `FontSize As Integer  (read/write)`
+- `FontUnderline As Integer  (read/write)`
+- `DrawMode As Integer  (read/write)`
+- `DrawStyle As Integer  (read/write)`
+- `DrawWidth As Integer  (read/write)`
+- `FillColor As Long  (read/write)`
+- `FillStyle As Integer  (read/write)`
+- `PaletteSource As String  (read/write)`
+- `Tag As String  (read/write)`
+- `PaintPalette As Variant  (read/write)`
+- `OnMenu As String  (read/write)`
+- `OnOpen As String  (read/write)`
+- `OnClose As String  (read/write)`
+- `OnActivate As String  (read/write)`
+- `OnDeactivate As String  (read/write)`
+- `OnNoData As String  (read/write)`
+- `OnPage As String  (read/write)`
+- `OnError As String  (read/write)`
+- `Dirty As Boolean  (read/write)`
+- `CurrentRecord As Long  (read/write)`
+- `PictureData As Variant  (read/write)`
+- `PicturePalette As Variant  (read/write)`
+- `HasModule As Boolean  (read/write)`
+- `Orientation As Byte  (read/write)`
+- `InputParameters As String  (read/write)`
+- `Application As Application  (read-only)`
+- `Parent As Object  (read-only)`
+- `ActiveControl As Control  (read-only)`
+- `DefaultControl As Control  (read-only)`
+- `Section As Section  (read-only)`
+- `GroupLevel As GroupLevel  (read-only)`
+- `Report As Report  (read-only)`
+- `Module As Module  (read-only)`
+- `Properties As Properties  (read-only)`
+- `Controls As Controls  (read-only)`
+- `Name As String  (read/write)`
+- `AutoResize As Boolean  (read/write)`
+- `AutoCenter As Boolean  (read/write)`
+- `PopUp As Boolean  (read/write)`
+- `Modal As Boolean  (read/write)`
+- `BorderStyle As Byte  (read/write)`
+- `ControlBox As Boolean  (read/write)`
+- `MinMaxButtons As Byte  (read/write)`
+- `CloseButton As Boolean  (read/write)`
+- `WindowWidth As Integer  (read/write)`
+- `WindowHeight As Integer  (read/write)`
+- `WindowTop As Integer  (read-only)`
+- `WindowLeft As Integer  (read-only)`
+- `OpenArgs As Variant  (read/write)`
+- `Printer As _Printer  (read/write)`
+- `Moveable As Boolean  (read/write)`
+- `UseDefaultPrinter As Boolean  (read/write)`
+- `Recordset As Object  (read/write)`
+- `RecordSourceQualifier As String  (read/write)`
+- `Shape As String  (read-only)`
+
+## Methods (8)
+
+- `Circle(flags As Integer, X As Single, Y As Single, radius As Single, color As Long, start As Single, end As Single, aspect As Single)`
+- `Line(flags As Integer, x1 As Single, y1 As Single, x2 As Single, y2 As Single, color As Long)`
+- `PSet(flags As Integer, X As Single, Y As Single, color As Long)`
+- `Scale(flags As Integer, x1 As Single, y1 As Single, x2 As Single, y2 As Single)`
+- `TextWidth(Expr As String) As Single`
+- `TextHeight(Expr As String) As Single`
+- `Print(Expr As String)`
+- `Move(Left As Variant, [Top As Variant], [Width As Variant], [Height As Variant])`
+
+## Events (7)
+
+- `Open(Cancel As Integer)`
+- `Close()`
+- `Activate()`
+- `Deactivate()`
+- `Error(DataErr As Integer, Response As Integer)`
+- `NoData(Cancel As Integer)`
+- `Page()`

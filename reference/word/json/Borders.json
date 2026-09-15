@@ -1,0 +1,232 @@
+{
+  "name": "Borders",
+  "kind": "Dispatch Interface",
+  "guid": "{0002093C-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of Border objects that represent the borders of an object.",
+  "remarks": "Use the Borders property to return the Borders collection. The following example applies the default border around the first paragraph in the active document. Border objects cannot be added to the Borders collection. The number of members in the Borders collection is finite and varies depending on the type of object. For example, a table has six elements in the Borders collection, whereas a paragraph has four. Use Borders (index), where index identifies the border, to return a single Border object. Index can be one of the WdBorderType constants. Some of the WdBorderType constants may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed. Use the LineStyle property to apply a border line to a Border object. The following example applies a double-line border below the first paragraph in the active document. The following example applies a single-line border around the first character in the selection. The following example adds an art border around each page in the first section.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Borders collection."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of items in the Borders collection. Read-only Long."
+    },
+    {
+      "name": "Enable",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets border formatting for the specified object. Read/write Long."
+    },
+    {
+      "name": "DistanceFromTop",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the space (in points) between the text and the top border. Read/write Long."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified border is formatted as shadowed. Read/write Boolean."
+    },
+    {
+      "name": "InsideLineStyle",
+      "kind": "property",
+      "type": "WdLineStyle",
+      "access": "read/write",
+      "description": "Returns or sets the inside border for the specified object. ."
+    },
+    {
+      "name": "OutsideLineStyle",
+      "kind": "property",
+      "type": "WdLineStyle",
+      "access": "read/write",
+      "description": "Returns or sets the outside border for the specified object. ."
+    },
+    {
+      "name": "InsideLineWidth",
+      "kind": "property",
+      "type": "WdLineWidth",
+      "access": "read/write",
+      "description": "Returns or sets the line width of the inside border of an object. ."
+    },
+    {
+      "name": "OutsideLineWidth",
+      "kind": "property",
+      "type": "WdLineWidth",
+      "access": "read/write",
+      "description": "Returns or sets the line width of the outside border of an object. Read/write."
+    },
+    {
+      "name": "InsideColorIndex",
+      "kind": "property",
+      "type": "WdColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the color of the inside borders. Read/write WdColorIndex."
+    },
+    {
+      "name": "OutsideColorIndex",
+      "kind": "property",
+      "type": "WdColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the color of the outside borders. Read/write WdColorIndex."
+    },
+    {
+      "name": "DistanceFromLeft",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the space (in points) between the text and the left border. Read/write Long."
+    },
+    {
+      "name": "DistanceFromBottom",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the space (in points) between the text and the bottom border. Read/write Long."
+    },
+    {
+      "name": "DistanceFromRight",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the space (in points) between the right edge of the text and the right border. Read/write Long."
+    },
+    {
+      "name": "AlwaysInFront",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if page borders are displayed in front of the document text. Read/write Boolean."
+    },
+    {
+      "name": "SurroundHeader",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a page border encompasses the document header. Read/write Boolean."
+    },
+    {
+      "name": "SurroundFooter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a page border encompasses the document footer. Read/write Boolean."
+    },
+    {
+      "name": "JoinBorders",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if vertical borders at the edges of paragraphs and tables are removed so that the horizontal borders can connect to the page border. Read/write Boolean."
+    },
+    {
+      "name": "HasHorizontal",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if a horizontal border can be applied to the object. Read-only Boolean."
+    },
+    {
+      "name": "HasVertical",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if a vertical border can be applied to the specified object. Read-only Boolean."
+    },
+    {
+      "name": "DistanceFrom",
+      "kind": "property",
+      "type": "WdBorderDistanceFrom",
+      "access": "read/write",
+      "description": "Returns or sets a value that indicates whether the specified page border is measured from the edge of the page or from the text it surrounds. Read/write WdBorderDistanceFrom."
+    },
+    {
+      "name": "EnableFirstPageInSection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if page borders are enabled for the first page in the section. Read/write Boolean."
+    },
+    {
+      "name": "EnableOtherPagesInSection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if page borders are enabled for all pages in the section except for the first page. Read/write Boolean."
+    },
+    {
+      "name": "InsideColor",
+      "kind": "property",
+      "type": "WdColor",
+      "access": "read/write",
+      "description": "Returns or sets the 24-bit color of the inside borders. Read/write."
+    },
+    {
+      "name": "OutsideColor",
+      "kind": "property",
+      "type": "WdColor",
+      "access": "read/write",
+      "description": "Returns or sets the 24-bit color of the outside borders. ."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As WdBorderType) As Border",
+      "description": "Returns a border in a range or selection.",
+      "returns": "Border",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "WdBorderType",
+          "optional": false,
+          "description": "The border to be returned."
+        }
+      ]
+    },
+    {
+      "name": "ApplyPageBordersToAllSections",
+      "kind": "method",
+      "signature": "ApplyPageBordersToAllSections()",
+      "description": "Applies the specified page-border formatting to all sections in a document.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

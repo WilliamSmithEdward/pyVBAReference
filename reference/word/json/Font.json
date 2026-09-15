@@ -1,0 +1,399 @@
+{
+  "name": "Font",
+  "kind": "Class",
+  "guid": "{000209F5-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Contains font attributes (such as font name, font size and color) for an object.",
+  "remarks": "Use the Font property to return the Font object. The following instruction applies bold formatting to the selection. The following example formats the first paragraph in the active document as 24point Arial and italic. The following example changes the formatting of the Heading 2 style in the active document to Arial and bold. Use the New keyword to create a new, stand-alone Font object. The following example creates a Font object, sets some formatting properties, and then applies the Font object to the first paragraph in the active document. You can also duplicate a Font object by using the Duplicate property. The following example creates a new character style with the character formatting from the selection and italic formatting. The formatting of the selection is not changed.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Font object."
+    },
+    {
+      "name": "Duplicate",
+      "kind": "property",
+      "type": "Font",
+      "access": "read-only",
+      "description": "Returns a copy of a Font object that represents the character formatting of the specified font."
+    },
+    {
+      "name": "Bold",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the font is formatted as bold. Read/write Long."
+    },
+    {
+      "name": "Italic",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the font or range is formatted as italic. Read/write Long."
+    },
+    {
+      "name": "Hidden",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the font is formatted as hidden text. Read/write Long."
+    },
+    {
+      "name": "SmallCaps",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the font is formatted as small capital letters. Read/write Long."
+    },
+    {
+      "name": "AllCaps",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the font is formatted as all capital letters. Read/write Long."
+    },
+    {
+      "name": "StrikeThrough",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the font is formatted as strikethrough text. Read/write Long."
+    },
+    {
+      "name": "DoubleStrikeThrough",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the specified font is formatted as double strikethrough text. ."
+    },
+    {
+      "name": "ColorIndex",
+      "kind": "property",
+      "type": "WdColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets a WdColorIndex constant that represents the color for the specified font. Read/write ."
+    },
+    {
+      "name": "Subscript",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the font is formatted as subscript. Read/write Long."
+    },
+    {
+      "name": "Superscript",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the font is formatted as superscript. Read/write Long."
+    },
+    {
+      "name": "Underline",
+      "kind": "property",
+      "type": "WdUnderline",
+      "access": "read/write",
+      "description": "Returns or sets the type of underline applied to the font. Read/write WdUnderline."
+    },
+    {
+      "name": "Size",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the font size, in points. Read/write Single."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the specified object. Read/write String."
+    },
+    {
+      "name": "Position",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the position of text (in points) relative to the base line. Read/write Long."
+    },
+    {
+      "name": "Spacing",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the spacing (in points) between characters. Read/write Single."
+    },
+    {
+      "name": "Scaling",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the scaling percentage applied to the font. Read/write Long."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the specified font is formatted as shadowed. Read/write Long."
+    },
+    {
+      "name": "Outline",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the font is formatted as outline. Read/write Long."
+    },
+    {
+      "name": "Emboss",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the specified font is formatted as embossed. Read/write Long."
+    },
+    {
+      "name": "Kerning",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the minimum font size for which Microsoft Word will adjust kerning automatically. Read/write Single."
+    },
+    {
+      "name": "Engrave",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the font is formatted as engraved. Read/write Long."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read/write",
+      "description": "Returns a Borders collection that represents all the borders for the specified font."
+    },
+    {
+      "name": "Shading",
+      "kind": "property",
+      "type": "Shading",
+      "access": "read-only",
+      "description": "Returns a Shading object that refers to the shading formatting for the specified font."
+    },
+    {
+      "name": "EmphasisMark",
+      "kind": "property",
+      "type": "WdEmphasisMark",
+      "access": "read/write",
+      "description": "Returns or sets a WdEmphasisMark constant that represents the emphasis mark for a character or designated character string. Read/write."
+    },
+    {
+      "name": "DisableCharacterSpaceGrid",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores the number of characters per line for the corresponding Font object. Read/write Boolean."
+    },
+    {
+      "name": "NameFarEast",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets an East Asian font name. Read/write String."
+    },
+    {
+      "name": "NameAscii",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the font used for Latin text (characters with character codes from 0 (zero) through 127). Read/write String."
+    },
+    {
+      "name": "NameOther",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the font used for characters with character codes from 128 through 255. Read/write String."
+    },
+    {
+      "name": "BoldBi",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the font is formatted as bold. Read/write Long."
+    },
+    {
+      "name": "ItalicBi",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the font or range is formatted as italic. Read/write Long."
+    },
+    {
+      "name": "SizeBi",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the font size in points. Read/write Single."
+    },
+    {
+      "name": "NameBi",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the font in a right-to-left language document. Read/write String."
+    },
+    {
+      "name": "ColorIndexBi",
+      "kind": "property",
+      "type": "WdColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the color for the specified Font object in a right-to-left language document. Read/write WdColorIndex."
+    },
+    {
+      "name": "DiacriticColor",
+      "kind": "property",
+      "type": "WdColor",
+      "access": "read/write",
+      "description": "Returns or sets the 24-bit color to be used for diacritics for the specified Font object. Read/write."
+    },
+    {
+      "name": "UnderlineColor",
+      "kind": "property",
+      "type": "WdColor",
+      "access": "read/write",
+      "description": "Returns or sets the 24-bit color of the underline for the specified Font object. ."
+    },
+    {
+      "name": "Glow",
+      "kind": "property",
+      "type": "GlowFormat",
+      "access": "read/write",
+      "description": "Returns a GlowFormat object that represents the glow formatting for the font used by the specified range of text. Read-only."
+    },
+    {
+      "name": "Reflection",
+      "kind": "property",
+      "type": "ReflectionFormat",
+      "access": "read/write",
+      "description": "Returns a ReflectionFormat object that represents the reflection formatting for a shape. Read-only."
+    },
+    {
+      "name": "TextShadow",
+      "kind": "property",
+      "type": "ShadowFormat",
+      "access": "read/write",
+      "description": "Returns a ShadowFormat object that specifies the shadow formatting for the specified font."
+    },
+    {
+      "name": "Fill",
+      "kind": "property",
+      "type": "FillFormat",
+      "access": "read/write",
+      "description": "Returns a FillFormat object that contains fill formatting properties for the font used by the specified range of text. Read-only."
+    },
+    {
+      "name": "Line",
+      "kind": "property",
+      "type": "LineFormat",
+      "access": "read/write",
+      "description": "Returns a LineFormat object that specifies the formatting for a line. Read/write."
+    },
+    {
+      "name": "ThreeD",
+      "kind": "property",
+      "type": "ThreeDFormat",
+      "access": "read/write",
+      "description": "Returns a ThreeDFormat object that contains 3D effect formatting properties for the specified font. Read-only."
+    },
+    {
+      "name": "TextColor",
+      "kind": "property",
+      "type": "ColorFormat",
+      "access": "read-only",
+      "description": "Returns a ColorFormat object that represents the color for the specified font. Read-only."
+    },
+    {
+      "name": "Ligatures",
+      "kind": "property",
+      "type": "WdLigatures",
+      "access": "read/write",
+      "description": "Returns or sets the ligatures setting for the specified Font object. Read/writeWdLigatures."
+    },
+    {
+      "name": "NumberForm",
+      "kind": "property",
+      "type": "WdNumberForm",
+      "access": "read/write",
+      "description": "Returns or sets the number form setting for an OpenType font. Read/write WdNumberForm."
+    },
+    {
+      "name": "NumberSpacing",
+      "kind": "property",
+      "type": "WdNumberSpacing",
+      "access": "read/write",
+      "description": "Returns or sets the number spacing setting for a font. Read/write WdNumberSpacing."
+    },
+    {
+      "name": "ContextualAlternates",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Specifies whether or not contextual alternates are enabled for the specified font. Read/write Long."
+    },
+    {
+      "name": "StylisticSet",
+      "kind": "property",
+      "type": "WdStylisticSet",
+      "access": "read/write",
+      "description": "Specifies the stylistic set for the specified font. Read/write WdStylisticSet."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Grow",
+      "kind": "method",
+      "signature": "Grow()",
+      "description": "Increases the font size to the next available size.",
+      "returns": "void"
+    },
+    {
+      "name": "Shrink",
+      "kind": "method",
+      "signature": "Shrink()",
+      "description": "Decreases the font size to the next available size.",
+      "returns": "void"
+    },
+    {
+      "name": "Reset",
+      "kind": "method",
+      "signature": "Reset()",
+      "description": "Removes manual character formatting (formatting not applied using a style). For example, if you manually format a word as bold and the underlying style is plain text (not bold), the Reset method removes the bold format.",
+      "returns": "void"
+    },
+    {
+      "name": "SetAsTemplateDefault",
+      "kind": "method",
+      "signature": "SetAsTemplateDefault()",
+      "description": "Sets the specified font formatting as the default for the active document and all new documents based on the active template.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,56 @@
+{
+  "name": "OMathMatRow",
+  "kind": "Dispatch Interface",
+  "guid": "{5DAA8BB6-054E-48F6-BEAC-EAAD02BE0CC7}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a matrix row. The OMathMatRow is a member of the OMathMatRows collection.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathMatRow object."
+    },
+    {
+      "name": "Args",
+      "kind": "property",
+      "type": "OMathArgs",
+      "access": "read-only",
+      "description": "Returns an OMathArgs object that represents the arguments in a matrix row. Read-only."
+    },
+    {
+      "name": "RowIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns or sets a Long that represents the ordinal position of a matrix row within the collection of matrix rows. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified matrix row.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

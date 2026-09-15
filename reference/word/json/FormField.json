@@ -1,0 +1,182 @@
+{
+  "name": "FormField",
+  "kind": "Dispatch Interface",
+  "guid": "{00020928-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single form field. The FormField object is a member of the FormFields collection.",
+  "remarks": "Use FormFields (_index_), where _index_ is a bookmark name or index number, to return a single FormField object. The following example sets the result of the Text1 form field to \"Don Funk.\" The index number represents the position of the form field in the selection, range, or document. The following example displays the name of the first form field in the selection. Use the Add method with the FormFields object to add a form field. The following example adds a check box at the beginning of the active document and then selects the check box. Use the CheckBox, DropDown, and TextInput properties with the FormField object to return the CheckDown, DropDown, and TextInput objects. The following example selects the check box named \"Check1.\"",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified FormField object."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "WdFieldType",
+      "access": "read-only",
+      "description": "Returns the field type. Read-only WdFieldType."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the specified object. Read/write String."
+    },
+    {
+      "name": "EntryMacro",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets an entry macro name for the specified form field (CheckBox, DropDown, or TextInput). Read/write String."
+    },
+    {
+      "name": "ExitMacro",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets an exit macro name for the specified form field (CheckBox, DropDown, or TextInput). Read/write String."
+    },
+    {
+      "name": "OwnHelp",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Specifies the source of the text that's displayed in a message box when a form field has the focus and the user presses F1. Read/write Boolean."
+    },
+    {
+      "name": "OwnStatus",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Specifies the source of the text that's displayed in the status bar when a form field has the focus. Read/write Boolean."
+    },
+    {
+      "name": "HelpText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the text that's displayed in a message box when the form field has the focus and the user presses F1. Read/write String."
+    },
+    {
+      "name": "StatusText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the text that is displayed in the status bar when a form field has the focus. Read/write String."
+    },
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a form field is enabled. Read/write Boolean."
+    },
+    {
+      "name": "Result",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns a String that represents the result of the specified form field. Read/write."
+    },
+    {
+      "name": "TextInput",
+      "kind": "property",
+      "type": "TextInput",
+      "access": "read-only",
+      "description": "Returns a TextInput object that represents a text form field."
+    },
+    {
+      "name": "CheckBox",
+      "kind": "property",
+      "type": "CheckBox",
+      "access": "read-only",
+      "description": "Returns a CheckBox object that represents a check box form field. Read-only."
+    },
+    {
+      "name": "DropDown",
+      "kind": "property",
+      "type": "DropDown",
+      "access": "read-only",
+      "description": "Returns a DropDown object that represents a drop-down form field. Read-only."
+    },
+    {
+      "name": "Next",
+      "kind": "property",
+      "type": "FormField",
+      "access": "read-only",
+      "description": "Returns the next form field in the collection. Read-only."
+    },
+    {
+      "name": "Previous",
+      "kind": "property",
+      "type": "FormField",
+      "access": "read-only",
+      "description": "Returns the previous form field in the collection. Read-only."
+    },
+    {
+      "name": "CalculateOnExit",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if references to the specified form field are automatically updated whenever the field is exited. Read/write Boolean."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the portion of a document that is contained within the form field."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects the specified object.",
+      "returns": "void"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy()",
+      "description": "Copies the specified form field to the Clipboard.",
+      "returns": "void"
+    },
+    {
+      "name": "Cut",
+      "kind": "method",
+      "signature": "Cut()",
+      "description": "Removes the specified form field from the document and places it on the Clipboard.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified form field.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

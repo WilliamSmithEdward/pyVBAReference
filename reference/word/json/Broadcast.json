@@ -1,0 +1,120 @@
+{
+  "name": "Broadcast",
+  "kind": "Dispatch Interface",
+  "guid": "{B67DE22C-BC01-4A73-A99B-070D1B5A795D}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a Windows Live Broadcast Service broadcast session.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Broadcast object."
+    },
+    {
+      "name": "AttendeeUrl",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "If a broadcast is in progress, returns a String that represents the URL of the attendee link. Read-only."
+    },
+    {
+      "name": "State",
+      "kind": "property",
+      "type": "MsoBroadcastState",
+      "access": "read-only",
+      "description": "Returns an MSOBroadcastState constant that describes the current broadcast state. Read-only."
+    },
+    {
+      "name": "Capabilities",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the capabilities of the specified broadcast. Read-only."
+    },
+    {
+      "name": "PresenterServiceUrl",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "If a broadcast is in progress, returns a String that represents the URL of the presenter service hosting the broadcast. Read-only."
+    },
+    {
+      "name": "SessionID",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "If a broadcast is in progress, returns a String that specifies the ID of the session. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Start",
+      "kind": "method",
+      "signature": "Start(serverUrl As String)",
+      "description": "Initiates the specified broadcast session.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "serverUrl",
+          "type": "String",
+          "optional": false,
+          "description": "The URL of the broadcast server."
+        }
+      ]
+    },
+    {
+      "name": "Pause",
+      "kind": "method",
+      "signature": "Pause()",
+      "description": "Pauses the specified broadcast.",
+      "returns": "void"
+    },
+    {
+      "name": "Resume",
+      "kind": "method",
+      "signature": "Resume()",
+      "description": "Resumes the specified broadcast.",
+      "returns": "void"
+    },
+    {
+      "name": "End",
+      "kind": "method",
+      "signature": "End()",
+      "description": "Ends the specified broadcast session.",
+      "returns": "void"
+    },
+    {
+      "name": "AddMeetingNotes",
+      "kind": "method",
+      "signature": "AddMeetingNotes(notesUrl As String, notesWacUrl As String)",
+      "description": "Adds shared meeting notes for the specified broadcast that are accessible to attendees who use either Microsoft OneNote 2013 rich client or web app.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "notesUrl",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies the URL where the shared meeting notes are stored, for attendees using the Microsoft OneNote 2013 rich client."
+        },
+        {
+          "name": "notesWacUrl",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies the URL where the shared meeting notes are stored, for attendees using the Microsoft OneNote 2013 web access client."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

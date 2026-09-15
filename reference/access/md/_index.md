@@ -1,0 +1,295 @@
+# Microsoft Access 16.0 Object Library
+
+Scraped object model: 289 entries.
+
+One Markdown file per type in this folder; matching machine-readable JSON in `../json/`.
+
+- [_CheckBoxInOption](_CheckBoxInOption.md) - Class
+- [_ChildLabel](_ChildLabel.md) - Class
+- [_ControlInReportEvents](_ControlInReportEvents.md) - Class
+- [_CustomControlInReport](_CustomControlInReport.md) - Class
+- [_Help](_Help.md) - Interface
+- [_OptionButtonInOption](_OptionButtonInOption.md) - Class
+- [_PageHdrFtrInReport](_PageHdrFtrInReport.md) - Class
+- [_SectionInReport](_SectionInReport.md) - Class
+- [_ToggleButtonInOption](_ToggleButtonInOption.md) - Class
+- [AcAggregateType](AcAggregateType.md) - Enumeration
+- [AcAxisRange](AcAxisRange.md) - Enumeration
+- [AcAxisUnits](AcAxisUnits.md) - Enumeration
+- [AcBrowseToObjectType](AcBrowseToObjectType.md) - Enumeration
+- [AccessField](AccessField.md) - Class
+- [AccessObject](AccessObject.md) - Dispatch Interface
+- [AccessObjectProperties](AccessObjectProperties.md) - Dispatch Interface
+- [AccessObjectProperty](AccessObjectProperty.md) - Dispatch Interface
+- [AccessProperty](AccessProperty.md) - Dispatch Interface
+- [AcChartType](AcChartType.md) - Enumeration
+- [AcCloseSave](AcCloseSave.md) - Enumeration
+- [AcColorIndex](AcColorIndex.md) - Enumeration
+- [AcCommand](AcCommand.md) - Enumeration
+- [AcControlType](AcControlType.md) - Enumeration
+- [AcCurrentView](AcCurrentView.md) - Enumeration
+- [AcCursorOnHover](AcCursorOnHover.md) - Enumeration
+- [AcDashType](AcDashType.md) - Enumeration
+- [AcDataLabelDisplayFormat](AcDataLabelDisplayFormat.md) - Enumeration
+- [AcDataLabelPosition](AcDataLabelPosition.md) - Enumeration
+- [AcDataObjectType](AcDataObjectType.md) - Enumeration
+- [AcDataTransferType](AcDataTransferType.md) - Enumeration
+- [AcDateGroupType](AcDateGroupType.md) - Enumeration
+- [AcDefReportView](AcDefReportView.md) - Enumeration
+- [AcDefView](AcDefView.md) - Enumeration
+- [AcDisplayAs](AcDisplayAs.md) - Enumeration
+- [AcDisplayAsHyperlink](AcDisplayAsHyperlink.md) - Enumeration
+- [AcExportQuality](AcExportQuality.md) - Enumeration
+- [AcExportXMLEncoding](AcExportXMLEncoding.md) - Enumeration
+- [AcExportXMLObjectType](AcExportXMLObjectType.md) - Enumeration
+- [AcExportXMLOtherFlags](AcExportXMLOtherFlags.md) - Enumeration
+- [AcExportXMLSchemaFormat](AcExportXMLSchemaFormat.md) - Enumeration
+- [AcFileFormat](AcFileFormat.md) - Enumeration
+- [AcFilterType](AcFilterType.md) - Enumeration
+- [AcFindField](AcFindField.md) - Enumeration
+- [AcFindMatch](AcFindMatch.md) - Enumeration
+- [AcFormatBarLimits](AcFormatBarLimits.md) - Enumeration
+- [AcFormatConditionOperator](AcFormatConditionOperator.md) - Enumeration
+- [AcFormatConditionType](AcFormatConditionType.md) - Enumeration
+- [AcFormOpenDataMode](AcFormOpenDataMode.md) - Enumeration
+- [AcFormView](AcFormView.md) - Enumeration
+- [AcGridlineType](AcGridlineType.md) - Enumeration
+- [AcHorizontalAnchor](AcHorizontalAnchor.md) - Enumeration
+- [AcHyperlinkPart](AcHyperlinkPart.md) - Enumeration
+- [AcImeMode](AcImeMode.md) - Enumeration
+- [AcImeSentenceMode](AcImeSentenceMode.md) - Enumeration
+- [AcImportXMLOption](AcImportXMLOption.md) - Enumeration
+- [AcLayoutType](AcLayoutType.md) - Enumeration
+- [AcLegendPosition](AcLegendPosition.md) - Enumeration
+- [AcMarkerType](AcMarkerType.md) - Enumeration
+- [AcMissingDataPolicy](AcMissingDataPolicy.md) - Enumeration
+- [AcModuleType](AcModuleType.md) - Enumeration
+- [AcNavigationSpan](AcNavigationSpan.md) - Enumeration
+- [AcNewDatabaseFormat](AcNewDatabaseFormat.md) - Enumeration
+- [AcObjectType](AcObjectType.md) - Enumeration
+- [AcOpenDataMode](AcOpenDataMode.md) - Enumeration
+- [AcOutputObjectType](AcOutputObjectType.md) - Enumeration
+- [AcPercentageDataLabelDecimalPlaces](AcPercentageDataLabelDecimalPlaces.md) - Enumeration
+- [AcPictureCaptionArrangement](AcPictureCaptionArrangement.md) - Enumeration
+- [AcPrintColor](AcPrintColor.md) - Enumeration
+- [AcPrintDuplex](AcPrintDuplex.md) - Enumeration
+- [AcPrintItemLayout](AcPrintItemLayout.md) - Enumeration
+- [AcPrintObjQuality](AcPrintObjQuality.md) - Enumeration
+- [AcPrintOrientation](AcPrintOrientation.md) - Enumeration
+- [AcPrintPaperBin](AcPrintPaperBin.md) - Enumeration
+- [AcPrintPaperSize](AcPrintPaperSize.md) - Enumeration
+- [AcPrintQuality](AcPrintQuality.md) - Enumeration
+- [AcPrintRange](AcPrintRange.md) - Enumeration
+- [AcProjectType](AcProjectType.md) - Enumeration
+- [AcProperty](AcProperty.md) - Enumeration
+- [AcQuitOption](AcQuitOption.md) - Enumeration
+- [AcRecord](AcRecord.md) - Enumeration
+- [AcResourceType](AcResourceType.md) - Enumeration
+- [AcSearchDirection](AcSearchDirection.md) - Enumeration
+- [AcSection](AcSection.md) - Enumeration
+- [AcSendObjectType](AcSendObjectType.md) - Enumeration
+- [AcSeparatorCharacters](AcSeparatorCharacters.md) - Enumeration
+- [AcSharePointListTransferType](AcSharePointListTransferType.md) - Enumeration
+- [AcShowToolbar](AcShowToolbar.md) - Enumeration
+- [AcSortOrderType](AcSortOrderType.md) - Enumeration
+- [AcSplitFormDatasheet](AcSplitFormDatasheet.md) - Enumeration
+- [AcSplitFormOrientation](AcSplitFormOrientation.md) - Enumeration
+- [AcSplitFormPrinting](AcSplitFormPrinting.md) - Enumeration
+- [AcSpreadSheetType](AcSpreadSheetType.md) - Enumeration
+- [AcSysCmdAction](AcSysCmdAction.md) - Enumeration
+- [AcTextFormat](AcTextFormat.md) - Enumeration
+- [AcTextTransferType](AcTextTransferType.md) - Enumeration
+- [AcTransformXMLScriptOption](AcTransformXMLScriptOption.md) - Enumeration
+- [AcTrendlineOptions](AcTrendlineOptions.md) - Enumeration
+- [AcValueAxis](AcValueAxis.md) - Enumeration
+- [AcVerticalAnchor](AcVerticalAnchor.md) - Enumeration
+- [AcView](AcView.md) - Enumeration
+- [AcWebBrowserScrollBars](AcWebBrowserScrollBars.md) - Enumeration
+- [AcWebBrowserState](AcWebBrowserState.md) - Enumeration
+- [AcWebUserDisplay](AcWebUserDisplay.md) - Enumeration
+- [AcWebUserGroupsDisplay](AcWebUserGroupsDisplay.md) - Enumeration
+- [AcWindowMode](AcWindowMode.md) - Enumeration
+- [AcWordCloudShape](AcWordCloudShape.md) - Enumeration
+- [AcWordCloudWordOrientation](AcWordCloudWordOrientation.md) - Enumeration
+- [AdditionalData](AdditionalData.md) - Class
+- [AllDataAccessPages](AllDataAccessPages.md) - Class
+- [AllDatabaseDiagrams](AllDatabaseDiagrams.md) - Class
+- [AllForms](AllForms.md) - Class
+- [AllFunctions](AllFunctions.md) - Class
+- [AllMacros](AllMacros.md) - Class
+- [AllModules](AllModules.md) - Class
+- [AllObjects](AllObjects.md) - Dispatch Interface
+- [AllQueries](AllQueries.md) - Class
+- [AllReports](AllReports.md) - Class
+- [AllStoredProcedures](AllStoredProcedures.md) - Class
+- [AllTables](AllTables.md) - Class
+- [AllViews](AllViews.md) - Class
+- [Application](Application.md) - Class
+- [Attachment](Attachment.md) - Class
+- [AutoCorrect](AutoCorrect.md) - Class
+- [BoundObjectFrame](BoundObjectFrame.md) - Class
+- [BoundObjectFrameEvents](BoundObjectFrameEvents.md) - Interface
+- [Chart](Chart.md) - Class
+- [ChartAxis](ChartAxis.md) - Class
+- [ChartAxisCollection](ChartAxisCollection.md) - Dispatch Interface
+- [ChartSeries](ChartSeries.md) - Class
+- [ChartSeriesCollection](ChartSeriesCollection.md) - Dispatch Interface
+- [ChartValues](ChartValues.md) - Class
+- [ChartValuesCollection](ChartValuesCollection.md) - Dispatch Interface
+- [CheckBox](CheckBox.md) - Class
+- [CheckBoxEvents](CheckBoxEvents.md) - Interface
+- [CheckBoxInOptionEvents](CheckBoxInOptionEvents.md) - Interface
+- [Children](Children.md) - Dispatch Interface
+- [Class](Class.md) - Class
+- [CodeData](CodeData.md) - Class
+- [CodeProject](CodeProject.md) - Class
+- [ComboBox](ComboBox.md) - Class
+- [ComboBoxEvents](ComboBoxEvents.md) - Interface
+- [CommandButton](CommandButton.md) - Class
+- [CommandButtonEvents](CommandButtonEvents.md) - Interface
+- [Constants](Constants.md) - Module
+- [Control](Control.md) - Class
+- [Controls](Controls.md) - Dispatch Interface
+- [CurrentData](CurrentData.md) - Class
+- [CurrentProject](CurrentProject.md) - Class
+- [CustomControl](CustomControl.md) - Class
+- [CustomControlEvents](CustomControlEvents.md) - Interface
+- [DataAccessPage](DataAccessPage.md) - Class
+- [DataAccessPages](DataAccessPages.md) - Dispatch Interface
+- [DefaultWebOptions](DefaultWebOptions.md) - Class
+- [DependencyInfo](DependencyInfo.md) - Class
+- [DependencyObjects](DependencyObjects.md) - Class
+- [DispAttachmentEvents](DispAttachmentEvents.md) - Dispatch Interface
+- [DispBoundObjectFrameEvents](DispBoundObjectFrameEvents.md) - Dispatch Interface
+- [DispCheckBoxEvents](DispCheckBoxEvents.md) - Dispatch Interface
+- [DispComboBoxEvents](DispComboBoxEvents.md) - Dispatch Interface
+- [DispCommandButtonEvents](DispCommandButtonEvents.md) - Dispatch Interface
+- [DispCustomControlEvents](DispCustomControlEvents.md) - Dispatch Interface
+- [DispEdgeEvents](DispEdgeEvents.md) - Dispatch Interface
+- [DispImageEvents](DispImageEvents.md) - Dispatch Interface
+- [DispIvyChartEvents](DispIvyChartEvents.md) - Dispatch Interface
+- [DispLabelEvents](DispLabelEvents.md) - Dispatch Interface
+- [DispListBoxEvents](DispListBoxEvents.md) - Dispatch Interface
+- [DispNavigationButtonEvents](DispNavigationButtonEvents.md) - Dispatch Interface
+- [DispNavigationControlEvents](DispNavigationControlEvents.md) - Dispatch Interface
+- [DispObjectFrameEvents](DispObjectFrameEvents.md) - Dispatch Interface
+- [DispOptionButtonEvents](DispOptionButtonEvents.md) - Dispatch Interface
+- [DispOptionGroupEvents](DispOptionGroupEvents.md) - Dispatch Interface
+- [DispPageEvents](DispPageEvents.md) - Dispatch Interface
+- [DispPageHdrFtrInReportEvents](DispPageHdrFtrInReportEvents.md) - Dispatch Interface
+- [DispPaletteButtonEvents](DispPaletteButtonEvents.md) - Dispatch Interface
+- [DispRectangleEvents](DispRectangleEvents.md) - Dispatch Interface
+- [DispSectionEvents](DispSectionEvents.md) - Dispatch Interface
+- [DispSectionInReportEvents](DispSectionInReportEvents.md) - Dispatch Interface
+- [DispSubFormEvents](DispSubFormEvents.md) - Dispatch Interface
+- [DispSubReportEvents](DispSubReportEvents.md) - Dispatch Interface
+- [DispTabControlEvents](DispTabControlEvents.md) - Dispatch Interface
+- [DispTextBoxEvents](DispTextBoxEvents.md) - Dispatch Interface
+- [DispToggleButtonEvents](DispToggleButtonEvents.md) - Dispatch Interface
+- [DispWebBrowserControlEvents](DispWebBrowserControlEvents.md) - Dispatch Interface
+- [DoCmd](DoCmd.md) - Dispatch Interface
+- [DummyEvents](DummyEvents.md) - Interface
+- [Edge](Edge.md) - Class
+- [EmptyCell](EmptyCell.md) - Class
+- [Entities](Entities.md) - Dispatch Interface
+- [Entity](Entity.md) - Dispatch Interface
+- [Form](Form.md) - Class
+- [Form2](Form2.md) - Dispatch Interface
+- [Form3](Form3.md) - Dispatch Interface
+- [FormatCondition](FormatCondition.md) - Class
+- [FormatConditions](FormatConditions.md) - Dispatch Interface
+- [FormEvents](FormEvents.md) - Interface
+- [FormEvents2](FormEvents2.md) - Dispatch Interface
+- [FormOld](FormOld.md) - Class
+- [FormOldV10](FormOldV10.md) - Class
+- [Forms](Forms.md) - Dispatch Interface
+- [GroupLevel](GroupLevel.md) - Class
+- [Hyperlink](Hyperlink.md) - Class
+- [Image](Image.md) - Class
+- [ImageEvents](ImageEvents.md) - Interface
+- [ImportExportSpecification](ImportExportSpecification.md) - Dispatch Interface
+- [ImportExportSpecifications](ImportExportSpecifications.md) - Dispatch Interface
+- [ItemsSelected](ItemsSelected.md) - Dispatch Interface
+- [IvyChart](IvyChart.md) - Dispatch Interface
+- [Label](Label.md) - Class
+- [LabelEvents](LabelEvents.md) - Interface
+- [Line](Line.md) - Class
+- [ListBox](ListBox.md) - Class
+- [ListBoxEvents](ListBoxEvents.md) - Interface
+- [LocalVar](LocalVar.md) - Class
+- [LocalVars](LocalVars.md) - Class
+- [MacroError](MacroError.md) - Class
+- [Module](Module.md) - Dispatch Interface
+- [Modules](Modules.md) - Dispatch Interface
+- [NavigationButton](NavigationButton.md) - Class
+- [NavigationControl](NavigationControl.md) - Class
+- [ObjectFrame](ObjectFrame.md) - Class
+- [ObjectFrameEvents](ObjectFrameEvents.md) - Interface
+- [OldConstants](OldConstants.md) - Module
+- [Operation](Operation.md) - Dispatch Interface
+- [Operations](Operations.md) - Dispatch Interface
+- [OptionButton](OptionButton.md) - Class
+- [OptionButtonEvents](OptionButtonEvents.md) - Interface
+- [OptionButtonInOptionEvents](OptionButtonInOptionEvents.md) - Interface
+- [OptionGroup](OptionGroup.md) - Class
+- [OptionGroupEvents](OptionGroupEvents.md) - Interface
+- [Page](Page.md) - Class
+- [PageBreak](PageBreak.md) - Class
+- [PageEvents](PageEvents.md) - Interface
+- [PageHdrFtrInReportEvents](PageHdrFtrInReportEvents.md) - Interface
+- [Pages](Pages.md) - Dispatch Interface
+- [PaletteButton](PaletteButton.md) - Class
+- [PaletteButtonEvents](PaletteButtonEvents.md) - Interface
+- [Printer](Printer.md) - Class
+- [Printers](Printers.md) - Dispatch Interface
+- [ProcKind](ProcKind.md) - Enumeration
+- [Properties](Properties.md) - Dispatch Interface
+- [RecordsetEvents](RecordsetEvents.md) - Dispatch Interface
+- [Rectangle](Rectangle.md) - Class
+- [RectangleEvents](RectangleEvents.md) - Interface
+- [Reference](Reference.md) - Dispatch Interface
+- [References](References.md) - Class
+- [References_Events](References_Events.md) - Dispatch Interface
+- [RefKind](RefKind.md) - Enumeration
+- [Report](Report.md) - Class
+- [Report2](Report2.md) - Dispatch Interface
+- [Report3](Report3.md) - Dispatch Interface
+- [ReportEvents](ReportEvents.md) - Interface
+- [ReportEvents2](ReportEvents2.md) - Dispatch Interface
+- [ReportOld](ReportOld.md) - Class
+- [ReportOldV10](ReportOldV10.md) - Class
+- [Reports](Reports.md) - Dispatch Interface
+- [ReturnVar](ReturnVar.md) - Class
+- [ReturnVars](ReturnVars.md) - Class
+- [Screen](Screen.md) - Dispatch Interface
+- [Section](Section.md) - Class
+- [SectionEvents](SectionEvents.md) - Interface
+- [SectionInReportEvents](SectionInReportEvents.md) - Interface
+- [SharedResource](SharedResource.md) - Dispatch Interface
+- [SharedResources](SharedResources.md) - Dispatch Interface
+- [SmartTag](SmartTag.md) - Class
+- [SmartTagAction](SmartTagAction.md) - Class
+- [SmartTagActions](SmartTagActions.md) - Class
+- [SmartTagProperties](SmartTagProperties.md) - Class
+- [SmartTagProperty](SmartTagProperty.md) - Class
+- [SmartTags](SmartTags.md) - Class
+- [SubForm](SubForm.md) - Class
+- [SubFormEvents](SubFormEvents.md) - Interface
+- [SubReport](SubReport.md) - Class
+- [SubReportEvents](SubReportEvents.md) - Interface
+- [TabControl](TabControl.md) - Class
+- [TabControlEvents](TabControlEvents.md) - Interface
+- [TempVar](TempVar.md) - Class
+- [TempVars](TempVars.md) - Class
+- [TextBox](TextBox.md) - Class
+- [TextBoxEvents](TextBoxEvents.md) - Interface
+- [ToggleButton](ToggleButton.md) - Class
+- [ToggleButtonEvents](ToggleButtonEvents.md) - Interface
+- [ToggleButtonInOptionEvents](ToggleButtonInOptionEvents.md) - Interface
+- [WebBrowserControl](WebBrowserControl.md) - Class
+- [WebOptions](WebOptions.md) - Class
+- [WebService](WebService.md) - Dispatch Interface
+- [WebServices](WebServices.md) - Dispatch Interface
+- [WizHook](WizHook.md) - Class
+- [WSParameter](WSParameter.md) - Dispatch Interface
+- [WSParameters](WSParameters.md) - Dispatch Interface

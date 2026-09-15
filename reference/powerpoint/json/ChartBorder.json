@@ -1,0 +1,62 @@
+{
+  "name": "ChartBorder",
+  "kind": "Dispatch Interface",
+  "guid": "{92D41A56-F07E-4CA4-AF6F-BEF486AA4E6F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents the border of an object.",
+  "remarks": "Most bordered objects have a border that is treated as a single entity, regardless of how many sides it has. The entire border must be returned as a unit. To return a Border object, use the Border property for the particular bordered object (for example, the Border property of a TrendLine object).",
+  "example": "With ActiveDocument.InlineShapes(1).Chart.SeriesCollection(1).Trendlines(1)\n\n    .Type = xlLinear\n\n    .Border.LineStyle = xlDash\n\nEnd With",
+  "properties": [
+    {
+      "name": "Color",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the primary color of the object. Read/write Variant."
+    },
+    {
+      "name": "ColorIndex",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the color of the border. Read/write Variant."
+    },
+    {
+      "name": "LineStyle",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the line style for the border. Read/write XlLineStyle, xlGray25, xlGray50, xlGray75, or xlAutomatic."
+    },
+    {
+      "name": "Weight",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the weight of the border. Read/write XlBorderWeight."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the Microsoft PowerPoint application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

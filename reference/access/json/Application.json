@@ -1,0 +1,2311 @@
+{
+  "name": "Application",
+  "kind": "Class",
+  "guid": "{73A4C9C1-D68D-11D0-98BF-00A0C90DC8D9}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "The Application object refers to the active Microsoft Access application.",
+  "remarks": "The Application object contains all Access objects and collections. Use the Application object to apply methods or property settings to the entire Access application. For example, you can use the SetOption method of the Application object to set database options from Visual Basic. The following example shows how you can set the Display Status Bar check box on the Current Database tab of the Access Options dialog box. Access is a COM component that supports Automation, formerly called OLE Automation. You can manipulate Access objects from another application that also supports Automation. To do this, you use the Application object. For example, Microsoft Visual Basic is a COM component. You can open an Access database from Visual Basic and work with its objects.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Use the Application property to access the active Microsoft Access Application object and its related properties. Read-only Application object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "CodeContextObject",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Use the CodeContextObject property to determine the object in which a macro or Visual Basic code is executing. Read-only Object."
+    },
+    {
+      "name": "MenuBar",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Specifies a custom menu to display for a Microsoft Access database. Read/write String."
+    },
+    {
+      "name": "CurrentObjectType",
+      "kind": "property",
+      "type": "AcObjectType",
+      "access": "read-only",
+      "description": "Use the CurrentObjectType property together with the Application object to determine the type of the active database object (table, query, form, report, macro, module, server view, database diagram, or stored procedure). The active database object is the object that has the focus or in which code is running. Read-only AcObjectType."
+    },
+    {
+      "name": "CurrentObjectName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Use the CurrentObjectName property with the Application object to determine the name of the active database object. The active database object is the object that has the focus or in which code is running. Read-only String."
+    },
+    {
+      "name": "Forms",
+      "kind": "property",
+      "type": "Forms",
+      "access": "read-only",
+      "description": "Use the Forms property to return a read-only reference to the Forms collection and its related properties."
+    },
+    {
+      "name": "Reports",
+      "kind": "property",
+      "type": "Reports",
+      "access": "read-only",
+      "description": "Use the Reports property to access the read-only Reports collection and its related properties."
+    },
+    {
+      "name": "Screen",
+      "kind": "property",
+      "type": "Screen",
+      "access": "read-only",
+      "description": "Use the Screen property to return a reference the Screen object and its related properties. Read-only."
+    },
+    {
+      "name": "DoCmd",
+      "kind": "property",
+      "type": "DoCmd",
+      "access": "read-only",
+      "description": "Use the DoCmd property to access the read-only DoCmd object and its related methods. Read-only DoCmd."
+    },
+    {
+      "name": "ShortcutMenuBar",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the ShortcutMenuBar property to specify the shortcut menu that appears when you right-click the specified object. Read/write String."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that determines whether the object is visible. Read/write."
+    },
+    {
+      "name": "UserControl",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the UserControl property to determine whether the current Microsoft Access application was started by the user or by another application with Automation, formerly called OLE Automation. Read/write Boolean."
+    },
+    {
+      "name": "DBEngine",
+      "kind": "property",
+      "type": "DBEngine",
+      "access": "read-only",
+      "description": "Use the DBEngine property in Visual Basic to access the current DBEngine object and its related properties. Read-only DBEngine."
+    },
+    {
+      "name": "CommandBars",
+      "kind": "property",
+      "type": "CommandBars",
+      "access": "read-only",
+      "description": "Use the CommandBars property to return a reference to the CommandBars collection object. Read-only CommandBars object."
+    },
+    {
+      "name": "References",
+      "kind": "property",
+      "type": "References",
+      "access": "read-only",
+      "description": "Use the References property to access the References collection and its related properties, methods, and events. Read-only References collection."
+    },
+    {
+      "name": "Modules",
+      "kind": "property",
+      "type": "Modules",
+      "access": "read-only",
+      "description": "Use the Modules property to access the Modules collection and its related properties. Read-only Modules object."
+    },
+    {
+      "name": "IsCompiled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "The IsCompiled property returns a Boolean value indicating whether the Visual Basic project is in a compiled state. Read-only Boolean."
+    },
+    {
+      "name": "VBE",
+      "kind": "property",
+      "type": "VBE",
+      "access": "read-only",
+      "description": "Use the VBE property to return a reference to the current VBE object and its related properties. The VBE property of the Application object represents the Microsoft Visual Basic for Applications editor. Read-only VBE object."
+    },
+    {
+      "name": "CurrentProject",
+      "kind": "property",
+      "type": "CurrentProject",
+      "access": "read-only",
+      "description": "Use the CurrentProject property to access the CurrentProject object and its related collections, properties, and methods. Read-only CurrentProject object."
+    },
+    {
+      "name": "CurrentData",
+      "kind": "property",
+      "type": "CurrentData",
+      "access": "read-only",
+      "description": "Use the CurrentData property to access the CurrentData object and its related collections. Read-only CurrentData object."
+    },
+    {
+      "name": "CodeProject",
+      "kind": "property",
+      "type": "CodeProject",
+      "access": "read-only",
+      "description": "Use the CodeProject property to access the CodeProject object and its related collections, properties, and methods. Read-only CodeProject object."
+    },
+    {
+      "name": "CodeData",
+      "kind": "property",
+      "type": "CodeData",
+      "access": "read-only",
+      "description": "Use the CodeData property to access the CodeData object and its related collections. Read-only CodeData object."
+    },
+    {
+      "name": "ProductCode",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Use the ProductCode property to determine the Microsoft Access globally unique identifier (GUID). Read-only String."
+    },
+    {
+      "name": "COMAddIns",
+      "kind": "property",
+      "type": "COMAddIns",
+      "access": "read-only",
+      "description": "Use the COMAddIns property to return a reference to the current COMAddIns collection object and its related properties. Read-only COMAddIns object."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Use the Name property to determine the string expression that identifies the name of an object. Read-only String."
+    },
+    {
+      "name": "LanguageSettings",
+      "kind": "property",
+      "type": "LanguageSettings",
+      "access": "read-only",
+      "description": "Use the LanguageSettings property to return a read-only reference to the current LanguageSettings object and its related properties."
+    },
+    {
+      "name": "FeatureInstall",
+      "kind": "property",
+      "type": "MsoFeatureInstall",
+      "access": "read/write",
+      "description": "Use the FeatureInstall property to specify or determine how Microsoft Access handles calls to methods and properties that require features not yet installed. Read/write MsoFeatureInstall."
+    },
+    {
+      "name": "FileDialog",
+      "kind": "property",
+      "type": "FileDialog",
+      "access": "read-only",
+      "description": "Returns a FileDialog object that represents a single instance of a file dialog box. Read-only."
+    },
+    {
+      "name": "BrokenReference",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean indicating whether the current database has any broken references to databases or type libraries. True if there are any broken references. Read-only."
+    },
+    {
+      "name": "Printers",
+      "kind": "property",
+      "type": "Printers",
+      "access": "read-only",
+      "description": "Returns the Printers collection representing all the available printers on the current system. Read-only Printers collection."
+    },
+    {
+      "name": "Printer",
+      "kind": "property",
+      "type": "_Printer",
+      "access": "read/write",
+      "description": "Returns or sets a Printer object representing the default printer on the current system. Read/write."
+    },
+    {
+      "name": "Version",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String indicating the version number of the currently installed copy of Microsoft Access. Read-only."
+    },
+    {
+      "name": "Build",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns as a Long representing the build number of the currently installed copy of Microsoft Access. Read-only."
+    },
+    {
+      "name": "NewFileTaskPane",
+      "kind": "property",
+      "type": "NewFile",
+      "access": "read-only",
+      "description": "Returns a NewFile object that represents a document listed on the New File task pane. Read-only NewFile object."
+    },
+    {
+      "name": "AutoCorrect",
+      "kind": "property",
+      "type": "_AutoCorrect",
+      "access": "read-only",
+      "description": "Returns an AutoCorrect object that represents the AutoCorrect settings for Microsoft Access. Read-only."
+    },
+    {
+      "name": "AutomationSecurity",
+      "kind": "property",
+      "type": "MsoAutomationSecurity",
+      "access": "read/write",
+      "description": "Returns or sets an MsoAutomationSecurity constant that represents the security mode that Microsoft Access uses when it is programmatically opening files. Read/write."
+    },
+    {
+      "name": "MacroError",
+      "kind": "property",
+      "type": "MacroError",
+      "access": "read-only",
+      "description": "Returns a MacroError object that contains information about the latest error to occur in a macro. Read-only."
+    },
+    {
+      "name": "TempVars",
+      "kind": "property",
+      "type": "TempVars",
+      "access": "read-only",
+      "description": "Returns the collection of TempVar objects. Read-only TempVars."
+    },
+    {
+      "name": "Assistance",
+      "kind": "property",
+      "type": "IAssistance",
+      "access": "read-only",
+      "description": "Returns an IAssistance object that represents the Microsoft Office Help Viewer. Read-only."
+    },
+    {
+      "name": "WebServices",
+      "kind": "property",
+      "type": "WebServices",
+      "access": "read-only",
+      "description": "Gets the collection of installed Data Service data connections. Read-only WebServices."
+    },
+    {
+      "name": "ReturnVars",
+      "kind": "property",
+      "type": "ReturnVars",
+      "access": "read-only",
+      "description": "Returns the ReturnVars collection representing all the available ReturnVar variables. Read-only ReturnVars collection."
+    }
+  ],
+  "methods": [
+    {
+      "name": "GetOption",
+      "kind": "method",
+      "signature": "GetOption(OptionName As String) As Variant",
+      "description": "The GetOption method returns the current value of an option in the Access Options dialog box, available by choosing the Microsoft Office button, and then choosing Access Options. Variant.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "OptionName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the option. For a list of option name argument strings, see Set options from Visual Basic."
+        }
+      ]
+    },
+    {
+      "name": "SetOption",
+      "kind": "method",
+      "signature": "SetOption(OptionName As String, Setting As Variant)",
+      "description": "The SetOption method sets the current value of an option in the Access Options dialog box.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "OptionName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the option. For a list of option name argument strings, see Set options from Visual Basic."
+        },
+        {
+          "name": "Setting",
+          "type": "Variant",
+          "optional": false,
+          "description": "A value corresponding to the option setting. The value of the setting argument depends on the possible settings for a particular option."
+        }
+      ]
+    },
+    {
+      "name": "Echo",
+      "kind": "method",
+      "signature": "Echo(EchoOn As Integer, [bstrStatusBarText As String])",
+      "description": "The Echo method specifies whether Microsoft Access repaints the display screen.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "EchoOn",
+          "type": "Integer",
+          "optional": false,
+          "description": "True (default) indicates that the screen is repainted."
+        },
+        {
+          "name": "bstrStatusBarText",
+          "type": "String",
+          "optional": true,
+          "description": "A string expression that specifies the text to display in the status bar when repainting is turned on or off."
+        }
+      ]
+    },
+    {
+      "name": "CloseCurrentDatabase",
+      "kind": "method",
+      "signature": "CloseCurrentDatabase()",
+      "description": "Use the CloseCurrentDatabase method to close the current database, either a Microsoft Access database or an Access project (.adp) from another application that has opened a database through Automation.",
+      "returns": "void"
+    },
+    {
+      "name": "Quit",
+      "kind": "method",
+      "signature": "Quit([Option As AcQuitOption])",
+      "description": "The Quit method quits Microsoft Access. You can select one of several options for saving a database object before quitting.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Option",
+          "type": "AcQuitOption",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SysCmd",
+      "kind": "method",
+      "signature": "SysCmd(Action As AcSysCmdAction, [Argument2 As Variant], [Argument3 As Variant]) As Variant",
+      "description": "Use the SysCmd method to display a progress meter or optional specified text in the status bar, return information about Microsoft Access and its associated files, or return the state of a specified database object (to indicate whether the object is open, is a new object, or has been changed but not saved). Variant.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Action",
+          "type": "AcSysCmdAction",
+          "optional": false,
+          "description": "An AcSysCmdAction constant that identifies the type of action to take. This set of constants applies to a progress meter. The SysCmd method returns a Null if these actions are successful. Otherwise, Access generates a run-time error."
+        },
+        {
+          "name": "Argument2",
+          "type": "Variant",
+          "optional": true,
+          "description": "The text to be displayed left-aligned in the status bar. This argument is required when the _Action_ argument is acSysCmdInitMeter, acSysCmdUpdateMeter, or acSysCmdSetStatus; this argument isn't valid for other _Action_ argument values. NOTE: When you specify the acSysCmdGetObjectState value for the _Action_ parameter, you must specify the appropriate AcObjectType constant."
+        },
+        {
+          "name": "Argument3",
+          "type": "Variant",
+          "optional": true,
+          "description": "A numeric expression that controls the display of the progress meter. This argument is required when the _Action_ argument is acSysCmdInitMeter; this argument isn't valid for other _Action_ argument values. NOTE: When you specify the acSysCmdGetObjectState value for the _Action_ parameter, you must specify the name of the database object."
+        }
+      ]
+    },
+    {
+      "name": "CreateForm",
+      "kind": "method",
+      "signature": "CreateForm([Database As Variant], [FormTemplate As Variant]) As Form",
+      "description": "The CreateForm method creates a form and returns a Form object.",
+      "returns": "Form",
+      "parameters": [
+        {
+          "name": "Database",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the database that contains the form template that you want to use to create a form. If you want the current database, omit this argument. If you want to use an open library database, specify the library database with this argument."
+        },
+        {
+          "name": "FormTemplate",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the form that you want to use as a template to create a new form."
+        }
+      ]
+    },
+    {
+      "name": "CreateReport",
+      "kind": "method",
+      "signature": "CreateReport([Database As Variant], [ReportTemplate As Variant]) As Report",
+      "description": "The CreateReport method creates a report and returns a Report object. For example, suppose you are building a custom wizard to create a sales report. Use the CreateReport method in your wizard to create a new report based on a specified report template.",
+      "returns": "Report",
+      "parameters": [
+        {
+          "name": "Database",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the database that contains the report template that you want to use to create a report. If you want the current database, omit this argument. If you want to use an open library database, specify the library database with this argument."
+        },
+        {
+          "name": "ReportTemplate",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the report that you want to use as a template to create a new report."
+        }
+      ]
+    },
+    {
+      "name": "DeleteControl",
+      "kind": "method",
+      "signature": "DeleteControl(FormName As String, ControlName As String)",
+      "description": "The DeleteControl method deletes a specified control from a form.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FormName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the form containing the control that you want to delete."
+        },
+        {
+          "name": "ControlName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the control that you want to delete."
+        }
+      ]
+    },
+    {
+      "name": "DeleteReportControl",
+      "kind": "method",
+      "signature": "DeleteReportControl(ReportName As String, ControlName As String)",
+      "description": "The DeleteReportControl method deletes a specified control from a report.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ReportName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the report containing the control that you want to delete."
+        },
+        {
+          "name": "ControlName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the control that you want to delete."
+        }
+      ]
+    },
+    {
+      "name": "CreateGroupLevel",
+      "kind": "method",
+      "signature": "CreateGroupLevel(ReportName As String, Expression As String, Header As Integer, Footer As Integer) As Long",
+      "description": "Use the CreateGroupLevel method to specify a field or expression on which to group or sort data in a report.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "ReportName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the report that will contain the new group level."
+        },
+        {
+          "name": "Expression",
+          "type": "String",
+          "optional": false,
+          "description": "The field or expression to sort or group on."
+        },
+        {
+          "name": "Header",
+          "type": "Integer",
+          "optional": false,
+          "description": "Indicates that a field or expression will have an associated group header. If the _Header_ argument is True (1), the field or expression will have a group header. If the _Header_ argument is False (0), the field or expression won't. You can create a header by setting the argument to True."
+        },
+        {
+          "name": "Footer",
+          "type": "Integer",
+          "optional": false,
+          "description": "Indicates a field or expression will have an associated group footer. If the _Footer_ argument is True (1), the field or expression will have a group footer. If the _Footer_ argument is False (0), the field or expression won't. You can create a footer by setting the argument to True."
+        }
+      ]
+    },
+    {
+      "name": "DMin",
+      "kind": "method",
+      "signature": "DMin(Expr As String, Domain As String, [Criteria As Variant]) As Variant",
+      "description": "Use the DMin function to determine the minimum value in a specified set of records (a domain).",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Expr",
+          "type": "String",
+          "optional": false,
+          "description": "An expression that identifies the field for which you want to find the minimum or maximum value. It can be a string expression identifying a field in a table or query, or it can be an expression that performs calculation on data in that field. In _expr_, you can include the name of a field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
+        },
+        {
+          "name": "Domain",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression identifying the set of records that constitutes the domain. It can be a table name or a query name for a query that does not require a parameter."
+        },
+        {
+          "name": "Criteria",
+          "type": "Variant",
+          "optional": true,
+          "description": "An optional string expression used to restrict the range of data on which the DMin function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If _criteria_ is omitted, the DMin function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DMin function returns a Null."
+        }
+      ]
+    },
+    {
+      "name": "DMax",
+      "kind": "method",
+      "signature": "DMax(Expr As String, Domain As String, [Criteria As Variant]) As Variant",
+      "description": "Use the DMax function to determine the maximum value in a specified set of records (a domain).",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Expr",
+          "type": "String",
+          "optional": false,
+          "description": "An expression that identifies the field for which you want to find the minimum or maximum value. It can be a string expression identifying a field in a table or query, or it can be an expression that performs calculation on data in that field. In _expr_, you can include the name of a field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
+        },
+        {
+          "name": "Domain",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression identifying the set of records that constitutes the domain. It can be a table name or a query name for a query that does not require a parameter."
+        },
+        {
+          "name": "Criteria",
+          "type": "Variant",
+          "optional": true,
+          "description": "An optional string expression used to restrict the range of data on which the DMax function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If _criteria_ is omitted, the DMax function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DMax function returns a Null."
+        }
+      ]
+    },
+    {
+      "name": "DSum",
+      "kind": "method",
+      "signature": "DSum(Expr As String, Domain As String, [Criteria As Variant]) As Variant",
+      "description": "Use the DSum function to calculate the sum of a set of values in a specified set of records (a domain).",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Expr",
+          "type": "String",
+          "optional": false,
+          "description": "An expression that identifies the numeric field whose values you want to total. It can be a string expression identifying a field in a table or query, or it can be an expression that performs a calculation on data in that field. In _expr_, you can include the name of a field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
+        },
+        {
+          "name": "Domain",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression identifying the set of records that constitutes the domain. It can be a table name or a query name for a query that does not require a parameter."
+        },
+        {
+          "name": "Criteria",
+          "type": "Variant",
+          "optional": true,
+          "description": "An optional string expression used to restrict the range of data on which the DSum function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If _criteria_ is omitted, the DSum function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DSum function returns a Null."
+        }
+      ]
+    },
+    {
+      "name": "DAvg",
+      "kind": "method",
+      "signature": "DAvg(Expr As String, Domain As String, [Criteria As Variant]) As Variant",
+      "description": "Use the DAvg function to calculate the average of a set of values in a specified set of records (a domain).",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Expr",
+          "type": "String",
+          "optional": false,
+          "description": "An expression that identifies the field containing the numeric data that you want to average. It can be a string expression identifying a field in a table or query, or it can be an expression that performs a calculation on data in that field. In _Expr__, you can include the name of a field in a table, a control on a form, a constant, or a function. If _Expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
+        },
+        {
+          "name": "Domain",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression identifying the set of records that constitutes the domain. It can be a table name or a query name for a query that does not require a parameter."
+        },
+        {
+          "name": "Criteria",
+          "type": "Variant",
+          "optional": true,
+          "description": "An optional string expression used to restrict the range of data on which the DAvg function is performed. For example, _Criteria_ is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If _Criteria_ is omitted, the DAvg function evaluates _Expr_ against the entire domain. Any field that is included in _Criteria_ must also be a field in _Domain_; otherwise, the DAvg function returns a Null."
+        }
+      ]
+    },
+    {
+      "name": "DLookup",
+      "kind": "method",
+      "signature": "DLookup(Expr As String, Domain As String, [Criteria As Variant]) As Variant",
+      "description": "Use the DLookup function to get the value of a particular field from a specified set of records (a domain).",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Expr",
+          "type": "String",
+          "optional": false,
+          "description": "An expression that identifies the field whose value you want to return. It can be a string expression identifying a field in a table or query, or it can be an expression that performs a calculation on data in that field. In _expr_, you can include the name of a field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
+        },
+        {
+          "name": "Domain",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression identifying the set of records that constitutes the domain. It can be a table name or a query name for a query that does not require a parameter."
+        },
+        {
+          "name": "Criteria",
+          "type": "Variant",
+          "optional": true,
+          "description": "An optional string expression used to restrict the range of data on which the DLookup function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If _criteria_ is omitted, the DLookup function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DLookup function returns a Null."
+        }
+      ]
+    },
+    {
+      "name": "DLast",
+      "kind": "method",
+      "signature": "DLast(Expr As String, Domain As String, [Criteria As Variant]) As Variant",
+      "description": "Use the DLast function to return a random record from a particular field in a table or query when you need any value from that field.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Expr",
+          "type": "String",
+          "optional": false,
+          "description": "An expression that identifies the field from which you want to find the first or last value. It can be either a string expression identifying a field in a table or query, or an expression that performs a calculation on data in that field. In _expr_, you can include the name of a field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
+        },
+        {
+          "name": "Domain",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression identifying the set of records that constitutes the domain."
+        },
+        {
+          "name": "Criteria",
+          "type": "Variant",
+          "optional": true,
+          "description": "An optional string expression used to restrict the range of data on which the DLast function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the wrd WHERE. If _criteria_ is omitted, the DLast function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DLast function returns a Null."
+        }
+      ]
+    },
+    {
+      "name": "DVar",
+      "kind": "method",
+      "signature": "DVar(Expr As String, Domain As String, [Criteria As Variant]) As Variant",
+      "description": "Estimates the variance across a sample in a specified set of records (a domain).",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Expr",
+          "type": "String",
+          "optional": false,
+          "description": "An expression that identifies the numeric field on which you want to find the variance. It can be a string expression identifying a field from a table or query, or it can be an expression that performs a calculation on data in that field. In _expr_, you can include the name field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function. Any field included in _expr_ must be a numeric field."
+        },
+        {
+          "name": "Domain",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression identifying the set of records that constitutes the domain. It can be a table name or a query name for a query that does not require a parameter."
+        },
+        {
+          "name": "Criteria",
+          "type": "Variant",
+          "optional": true,
+          "description": "An optional string expression used to restrict the range of data on which the DVar function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If _criteria_ is omitted, the DVar function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DVar function returns a Null."
+        }
+      ]
+    },
+    {
+      "name": "DVarP",
+      "kind": "method",
+      "signature": "DVarP(Expr As String, Domain As String, [Criteria As Variant]) As Variant",
+      "description": "Calculates the variance of a population in a specified set of records (a domain).",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Expr",
+          "type": "String",
+          "optional": false,
+          "description": "An expression that identifies the numeric field on which you want to find the variance. It can be a string expression identifying a field from a table or query, or it can be an expression that performs a calculation on data in that field. In _expr_, you can include the name field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function. Any field included in _expr_ must be a numeric field."
+        },
+        {
+          "name": "Domain",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression identifying the set of records that constitutes the domain. It can be a table name or a query name for a query that does not require a parameter."
+        },
+        {
+          "name": "Criteria",
+          "type": "Variant",
+          "optional": true,
+          "description": "An optional string expression used to restrict the range of data on which the DVarP function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If _criteria_ is omitted, the DVarP function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DVarP function returns a Null."
+        }
+      ]
+    },
+    {
+      "name": "DStDev",
+      "kind": "method",
+      "signature": "DStDev(Expr As String, Domain As String, [Criteria As Variant]) As Variant",
+      "description": "Estimates the standard deviation across a population sample in a specified set of records (a domain).",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Expr",
+          "type": "String",
+          "optional": false,
+          "description": "An expression that identifies the numeric field on which you want to find the standard deviation. It can be a string expression identifying a field from a table or query, or it can be an expression that performs a calculation on data in that field. In _expr_, you can include the name of a field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
+        },
+        {
+          "name": "Domain",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression identifying the set of records that constitutes the domain. It can be a table name or a query name for a query that does not require a parameter."
+        },
+        {
+          "name": "Criteria",
+          "type": "Variant",
+          "optional": true,
+          "description": "An optional string expression used to restrict the range of data on which the DStDev function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If _criteria_ is omitted, the DStDev function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DStDev function will return a Null."
+        }
+      ]
+    },
+    {
+      "name": "DStDevP",
+      "kind": "method",
+      "signature": "DStDevP(Expr As String, Domain As String, [Criteria As Variant]) As Variant",
+      "description": "Estimates the standard deviation across a population in a specified set of records (a domain).",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Expr",
+          "type": "String",
+          "optional": false,
+          "description": "An expression that identifies the numeric field on which you want to find the standard deviation. It can be a string expression identifying a field from a table or query, or it can be an expression that performs a calculation on data in that field. In _expr_, you can include the name of a field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
+        },
+        {
+          "name": "Domain",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression identifying the set of records that constitutes the domain. It can be a table name or a query name for a query that does not require a parameter."
+        },
+        {
+          "name": "Criteria",
+          "type": "Variant",
+          "optional": true,
+          "description": "An optional string expression used to restrict the range of data on which the DStDevP function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If _criteria_ is omitted, the DStDevP function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DStDevP function will return a Null."
+        }
+      ]
+    },
+    {
+      "name": "DFirst",
+      "kind": "method",
+      "signature": "DFirst(Expr As String, Domain As String, [Criteria As Variant]) As Variant",
+      "description": "Use the DFirst function to return a random record from a particular field in a table or query when you need any value from that field.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Expr",
+          "type": "String",
+          "optional": false,
+          "description": "An expression that identifies the field from which you want to find the first or last value. It can be either a string expression identifying a field in a table or query, or an expression that performs a calculation on data in that field. In _expr_, you can include the name of a field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
+        },
+        {
+          "name": "Domain",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression identifying the set of records that constitutes the domain."
+        },
+        {
+          "name": "Criteria",
+          "type": "Variant",
+          "optional": true,
+          "description": "An optional string expression used to restrict the range of data on which the DFirst function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the wrd WHERE. If _criteria_ is omitted, the DFirst function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DFirst function returns a Null."
+        }
+      ]
+    },
+    {
+      "name": "DCount",
+      "kind": "method",
+      "signature": "DCount(Expr As String, Domain As String, [Criteria As Variant]) As Variant",
+      "description": "Use the DCount function to determine the number of records that are in a specified set of records (a domain).",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Expr",
+          "type": "String",
+          "optional": false,
+          "description": "An expression that identifies the field for which you want to count records. It can be a string expression identifying a field in a table or query, or it can be an expression that performs a calculation on data in that field. In _expr_, you can include the name of a field in a table, a control on a form, a constant, or a function. If _expr_ includes a function, it can be either built-in or user-defined, but not another domain aggregate or SQL aggregate function."
+        },
+        {
+          "name": "Domain",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression that identifies the set of records that constitutes the domain. It can be a table name or a query name for a query that does not require a parameter."
+        },
+        {
+          "name": "Criteria",
+          "type": "Variant",
+          "optional": true,
+          "description": "An optional string expression used to restrict the range of data on which the DCount function is performed. For example, _criteria_ is often equivalent to the WHERE clause in an SQL expression, without the word WHERE. If _criteria_ is omitted, the DCount function evaluates _expr_ against the entire domain. Any field that is included in _criteria_ must also be a field in _domain_; otherwise, the DCount function returns a Null."
+        }
+      ]
+    },
+    {
+      "name": "Eval",
+      "kind": "method",
+      "signature": "Eval(StringExpr As String) As Variant",
+      "description": "Use the Eval function to evaluate an expression that results in a text string or a numeric value.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "StringExpr",
+          "type": "String",
+          "optional": false,
+          "description": "An expression that evaluates to an alphanumeric text string. For example, _stringexpr_ can be a function that returns a string or a numeric value, or it can be a reference to a control on a form. The _stringexpr_ argument must evaluate to a string or numeric value; it can't evaluate to a Microsoft Access object."
+        }
+      ]
+    },
+    {
+      "name": "CurrentUser",
+      "kind": "method",
+      "signature": "CurrentUser() As String",
+      "description": "Use the CurrentUser method to return the name of the current user of the database.",
+      "returns": "String"
+    },
+    {
+      "name": "DDEInitiate",
+      "kind": "method",
+      "signature": "DDEInitiate(Application As String, Topic As String) As Variant",
+      "description": "Use the DDEInitiate function to begin a dynamic data exchange (DDE) conversation with another application. The DDEInitiate function opens a DDE channel for transfer of data between a DDE server and a client application.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Application",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression identifying an application that can participate in a DDE conversation. Usually, the _application_ argument is the name of an .exe file (without the .exe extension) for a Microsoft Windows-based application, such as Microsoft Excel."
+        },
+        {
+          "name": "Topic",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression that is the name of a topic recognized by the _application_ argument. Check the application's documentation for a list of topics."
+        }
+      ]
+    },
+    {
+      "name": "DDEExecute",
+      "kind": "method",
+      "signature": "DDEExecute(ChanNum As Variant, Command As String)",
+      "description": "Use the DDEExecute statement to send a command from a client application to a server application over an open dynamic data exchange (DDE) channel.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ChanNum",
+          "type": "Variant",
+          "optional": false,
+          "description": "A channel number, the long integer returned by the DDEInitiate function."
+        },
+        {
+          "name": "Command",
+          "type": "String",
+          "optional": false,
+          "description": "A command recognized by the server application. Check the server application's documentation for a list of these commands."
+        }
+      ]
+    },
+    {
+      "name": "DDEPoke",
+      "kind": "method",
+      "signature": "DDEPoke(ChanNum As Variant, Item As String, Data As String)",
+      "description": "Use the DDEPoke statement to supply text data from a client application to a server application over an open dynamic data exchange (DDE) channel.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ChanNum",
+          "type": "Variant",
+          "optional": false,
+          "description": "A channel number, an integer returned by the DDEInitiate function."
+        },
+        {
+          "name": "Item",
+          "type": "String",
+          "optional": false,
+          "description": "The name of a data item recognized by the application specified by the DDEInitiate function. Check the application's documentation for a list of possible items."
+        },
+        {
+          "name": "Data",
+          "type": "String",
+          "optional": false,
+          "description": "The data to be supplied to the other application."
+        }
+      ]
+    },
+    {
+      "name": "DDERequest",
+      "kind": "method",
+      "signature": "DDERequest(ChanNum As Variant, Item As String) As String",
+      "description": "Use the DDERequest function over an open dynamic data exchange (DDE) channel to request an item of information from a DDE server application.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "ChanNum",
+          "type": "Variant",
+          "optional": false,
+          "description": "A channel number, the integer returned by the DDEInitiate function."
+        },
+        {
+          "name": "Item",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression that's the name of a data item recognized by the application specified by the DDEInitiate function. Check the application's documentation for a list of possible items."
+        }
+      ]
+    },
+    {
+      "name": "DDETerminate",
+      "kind": "method",
+      "signature": "DDETerminate(ChanNum As Variant)",
+      "description": "Use the DDETerminate statement to close a specified dynamic data exchange (DDE) channel.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ChanNum",
+          "type": "Variant",
+          "optional": false,
+          "description": "A channel number to close; refers to a channel opened by the DDEInitiate function."
+        }
+      ]
+    },
+    {
+      "name": "DDETerminateAll",
+      "kind": "method",
+      "signature": "DDETerminateAll()",
+      "description": "Use the DDETerminateAll statement to close all open dynamic data exchange (DDE) channels.",
+      "returns": "void"
+    },
+    {
+      "name": "CurrentDb",
+      "kind": "method",
+      "signature": "CurrentDb() As Database",
+      "description": "The CurrentDb method returns an object variable of type Database that represents the database currently open in the Microsoft Access window.",
+      "returns": "Database"
+    },
+    {
+      "name": "CodeDb",
+      "kind": "method",
+      "signature": "CodeDb() As Database",
+      "description": "Use the CodeDb method in a code module to determine the name of the Database object that refers to the database in which code is currently running. Use the CodeDb method to access Data Access Objects (DAO) that are part of a library database.",
+      "returns": "Database"
+    },
+    {
+      "name": "BuildCriteria",
+      "kind": "method",
+      "signature": "BuildCriteria(Field As String, FieldType As Integer, Expression As String) As String",
+      "description": "The BuildCriteria method returns a parsed criteria string as it would appear in the query design grid, in Filter By Form or Server Filter By Form mode. For example, you may want to set a form's Filter or ServerFilter property based on varying criteria from the user. Use the BuildCriteria method to construct the string expression argument for the Filter or ServerFilter property. String.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Field",
+          "type": "String",
+          "optional": false,
+          "description": "The field for which you wish to define criteria."
+        },
+        {
+          "name": "FieldType",
+          "type": "Integer",
+          "optional": false,
+          "description": "An intrinsic constant denoting the data type of the field. Can be set to one of the DAO DataTypeEnum values."
+        },
+        {
+          "name": "Expression",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression identifying the criteria to be parsed."
+        }
+      ]
+    },
+    {
+      "name": "DefaultWorkspaceClone",
+      "kind": "method",
+      "signature": "DefaultWorkspaceClone() As Workspace",
+      "description": "Use the DefaultWorkspaceClone method to create a new Workspace object without requiring the user to sign in again. For example, if you need to conduct two sets of transactions simultaneously in separate workspaces, you can use the DefaultWorkspaceClone method to create a second Workspace object with the same user name and password without prompting the user for this information again.",
+      "returns": "Workspace"
+    },
+    {
+      "name": "RefreshTitleBar",
+      "kind": "method",
+      "signature": "RefreshTitleBar()",
+      "description": "The RefreshTitleBar method refreshes the Microsoft Access title bar after the AppTitle or AppIcon property has been set in Visual Basic.",
+      "returns": "void"
+    },
+    {
+      "name": "hWndAccessApp",
+      "kind": "method",
+      "signature": "hWndAccessApp() As Long",
+      "description": "Use the hWndAccessApp method to determine the handle assigned by Windows to the main Microsoft Access window.",
+      "returns": "Long"
+    },
+    {
+      "name": "Run",
+      "kind": "method",
+      "signature": "Run(Procedure As String, [Arg1 As Variant], [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant], [Arg5 As Variant], [Arg6 As Variant], [Arg7 As Variant], [Arg8 As Variant], [Arg9 As Variant], [Arg10 As Variant], [Arg11 As Variant], [Arg12 As Variant], [Arg13 As Variant], [Arg14 As Variant], [Arg15 As Variant], [Arg16 As Variant], [Arg17 As Variant], [Arg18 As Variant], [Arg19 As Variant], [Arg20 As Variant], [Arg21 As Variant], [Arg22 As Variant], [Arg23 As Variant], [Arg24 As Variant], [Arg25 As Variant], [Arg26 As Variant], [Arg27 As Variant], [Arg28 As Variant], [Arg29 As Variant], [Arg30 As Variant]) As Variant",
+      "description": "Use the Run method to carry out a specified Microsoft Access or user-defined Function or Sub procedure. Variant.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Procedure",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the Function or Sub procedure to be run. If you are calling a procedure in another database, use the project name and the procedure name separated by a dot in the form: \"_projectname_._procedurename_\" If you execute Visual Basic code containing the Run method in a library database, Access looks for the procedure first in the library database, and then in the current database."
+        },
+        {
+          "name": "Arg1",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg2",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg3",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg4",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg5",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg6",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg7",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg8",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg9",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg10",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg11",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg12",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg13",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg14",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg15",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg16",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg17",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg18",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg19",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg20",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg21",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg22",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg23",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg24",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg25",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg26",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg27",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg28",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg29",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg30",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Nz",
+      "kind": "method",
+      "signature": "Nz(Value As Variant, [ValueIfNull As Variant]) As Variant",
+      "description": "Use the Nz function to return zero (0), a zero-length string (\"\"), or another specified value when a Variant is Null. For example, you can use this function to convert a Null value to another value and prevent it from propagating through an expression.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Value",
+          "type": "Variant",
+          "optional": false,
+          "description": "A variable of data type Variant."
+        },
+        {
+          "name": "ValueIfNull",
+          "type": "Variant",
+          "optional": true,
+          "description": "Optional. A Variant that supplies a value to be returned if the variant argument is Null. This argument enables you to return a value other than zero or a zero-length string. NOTE: If you use the Nz function in an expression in a query without using the _ValueIfNull_ argument, the results will be a zero-length string in the fields that contain Null values."
+        }
+      ]
+    },
+    {
+      "name": "LoadPicture",
+      "kind": "method",
+      "signature": "LoadPicture(FileName As String) As Object",
+      "description": "The LoadPicture method loads a graphic into an ActiveX control.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The file name of the graphic to be loaded. The graphic can be a bitmap file (.bmp), icon file (.ico), run-length encoded file (.rle), or metafile (.wmf)."
+        }
+      ]
+    },
+    {
+      "name": "AccessError",
+      "kind": "method",
+      "signature": "AccessError(ErrorNumber As Variant) As Variant",
+      "description": "Use the AccessError method to return the descriptive string associated with a Microsoft Access or Data Access Objects (DAO) error.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "ErrorNumber",
+          "type": "Variant",
+          "optional": false,
+          "description": "The number of the error for which you wish to return a descriptive string."
+        }
+      ]
+    },
+    {
+      "name": "StringFromGUID",
+      "kind": "method",
+      "signature": "StringFromGUID(Guid As Variant) As Variant",
+      "description": "The StringFromGUID function converts a GUID, which is an array of type Byte, to a string.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Guid",
+          "type": "Variant",
+          "optional": false,
+          "description": "An array of Byte data used to uniquely identify an application, component, or item of data to the operating system."
+        }
+      ]
+    },
+    {
+      "name": "GUIDFromString",
+      "kind": "method",
+      "signature": "GUIDFromString(String As Variant) As Variant",
+      "description": "The GUIDFromString function converts a string to a GUID, which is an array of type Byte.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "String",
+          "type": "Variant",
+          "optional": false,
+          "description": "A string expression that evaluates to a GUID in string form."
+        }
+      ]
+    },
+    {
+      "name": "FollowHyperlink",
+      "kind": "method",
+      "signature": "FollowHyperlink(Address As String, [SubAddress As String], [NewWindow As Boolean], [AddHistory As Boolean], [ExtraInfo As Variant], [Method As MsoExtraInfoMethod], [HeaderInfo As String])",
+      "description": "The FollowHyperlink method opens the document or webpage specified by a hyperlink address.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Address",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression that evaluates to a valid hyperlink address."
+        },
+        {
+          "name": "SubAddress",
+          "type": "String",
+          "optional": true,
+          "description": "A string expression that evaluates to a named location in the document specified by the _address_ argument. The default is a zero-length string (\" \")."
+        },
+        {
+          "name": "NewWindow",
+          "type": "Boolean",
+          "optional": true,
+          "description": "A Boolean value where True (1) opens the document in a new window and False (0) opens the document in the current window. The default is False."
+        },
+        {
+          "name": "AddHistory",
+          "type": "Boolean",
+          "optional": true,
+          "description": "A Boolean value where True adds the hyperlink to the History folder and False doesn't add the hyperlink to the History folder. The default is True."
+        },
+        {
+          "name": "ExtraInfo",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string or an array of Byte data that specifies additional information for navigating to a hyperlink. For example, this argument may be used to specify a search parameter for an .asp or .idc file. In your web browser, the _extrainfo_ argument may appear after the hyperlink address, separated from the address by a question mark (?). You don't need to include the question mark when you specify the _extrainfo_ argument."
+        },
+        {
+          "name": "Method",
+          "type": "MsoExtraInfoMethod",
+          "optional": true,
+          "description": "An MsoExtraInfoMethod constant that specifies how the _extrainfo_ argument is attached."
+        },
+        {
+          "name": "HeaderInfo",
+          "type": "String",
+          "optional": true,
+          "description": "A string that specifies header information. By default, the _headerinfo_ argument is a zero-length string."
+        }
+      ]
+    },
+    {
+      "name": "AddToFavorites",
+      "kind": "method",
+      "signature": "AddToFavorites()",
+      "description": "The AddToFavorites method adds a hyperlink address to the Favorites folder.",
+      "returns": "void"
+    },
+    {
+      "name": "RefreshDatabaseWindow",
+      "kind": "method",
+      "signature": "RefreshDatabaseWindow()",
+      "description": "The RefreshDatabaseWindow method updates the Database window after a database object has been created, deleted, or renamed.",
+      "returns": "void"
+    },
+    {
+      "name": "RunCommand",
+      "kind": "method",
+      "signature": "RunCommand(Command As AcCommand)",
+      "description": "The RunCommand method runs a built-in command.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Command",
+          "type": "AcCommand",
+          "optional": false,
+          "description": "An AcCommand constant that specifies the command to run."
+        }
+      ]
+    },
+    {
+      "name": "HyperlinkPart",
+      "kind": "method",
+      "signature": "HyperlinkPart(Hyperlink As Variant, [Part As AcHyperlinkPart]) As String",
+      "description": "The HyperlinkPart method returns information about data stored as a Hyperlink data type.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Hyperlink",
+          "type": "Variant",
+          "optional": false,
+          "description": "The data stored in a Hyperlink field."
+        },
+        {
+          "name": "Part",
+          "type": "AcHyperlinkPart",
+          "optional": true,
+          "description": "An AcHyperlinkPart constant representing the information that you want returned by the HyperlinkPart method."
+        }
+      ]
+    },
+    {
+      "name": "GetHiddenAttribute",
+      "kind": "method",
+      "signature": "GetHiddenAttribute(ObjectType As AcObjectType, ObjectName As String) As Boolean",
+      "description": "The GetHiddenAttribute method returns the value of a hidden attribute of a Microsoft Access object in the object's Properties dialog box, available by selecting the object in the Database window and choosing Properties on the View menu.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "ObjectType",
+          "type": "AcObjectType",
+          "optional": false,
+          "description": "An AcObjectType constant that specifies the type of Access object."
+        },
+        {
+          "name": "ObjectName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the Access object."
+        }
+      ]
+    },
+    {
+      "name": "SetHiddenAttribute",
+      "kind": "method",
+      "signature": "SetHiddenAttribute(ObjectType As AcObjectType, ObjectName As String, fHidden As Boolean)",
+      "description": "The SetHiddenAttribute method sets the hidden attribute of an Access object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ObjectType",
+          "type": "AcObjectType",
+          "optional": false,
+          "description": "An AcObjectType constant that specifies the type of Access object."
+        },
+        {
+          "name": "ObjectName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the Access object."
+        },
+        {
+          "name": "fHidden",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True sets the hidden attribute, and False clears the attribute."
+        }
+      ]
+    },
+    {
+      "name": "NewAccessProject",
+      "kind": "method",
+      "signature": "NewAccessProject(filepath As String, [Connect As Variant])",
+      "description": "Use the NewAccessProject method to create and open a new Microsoft Access project (.adp) as the current Access project in the Access window.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "filepath",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the new Access project, including the path name and the file name extension."
+        },
+        {
+          "name": "Connect",
+          "type": "Variant",
+          "optional": true,
+          "description": "The connection string for the Access project. See the ADO ConnectionString property for details about this string."
+        }
+      ]
+    },
+    {
+      "name": "OpenAccessProject",
+      "kind": "method",
+      "signature": "OpenAccessProject(filepath As String, [Exclusive As Boolean])",
+      "description": "Use the OpenAccessProject method to open an existing Microsoft Access project (.adp) as the current Access project in the Access window.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "filepath",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the existing Access project, including the path name and the file name extension."
+        },
+        {
+          "name": "Exclusive",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether you want to open the Access project in exclusive mode. The default value is False, which specifies that the Access project should be opened in shared mode."
+        }
+      ]
+    },
+    {
+      "name": "CreateAccessProject",
+      "kind": "method",
+      "signature": "CreateAccessProject(filepath As String, [Connect As Variant])",
+      "description": "Use the CreateAccessProject method to create a new Microsoft Access project (.adp) on disk.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "filepath",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression that is the name of the new Access project, including the path name and the file name extension. If your network supports it, you can also specify a network path in the following form: \\\\Server\\Share\\Folder\\Filename.adp"
+        },
+        {
+          "name": "Connect",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string expression that's the valid connection string for the Access project. See the ADO ConnectionString property for details about this string."
+        }
+      ]
+    },
+    {
+      "name": "EuroConvert",
+      "kind": "method",
+      "signature": "EuroConvert(Number As Double, SourceCurrency As String, TargetCurrency As String, [FullPrecision As Variant], [TriangulationPrecision As Variant]) As Double",
+      "description": "Use the EuroConvert function to convert a number to euro, or from euro to a participating currency. You can also use it to convert a number from one participating currency to another by using the euro as an intermediary (triangulation). The EuroConvert function uses fixed conversion rates established by the European Union.",
+      "returns": "Double",
+      "parameters": [
+        {
+          "name": "Number",
+          "type": "Double",
+          "optional": false,
+          "description": "The number you want to convert, or a reference to a field containing the number."
+        },
+        {
+          "name": "SourceCurrency",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression, or reference to a field containing the string, corresponding to the International Standards Organization (ISO) acronym for the currency you want to convert. Can be one of the ISO codes listed in the Remarks section."
+        },
+        {
+          "name": "TargetCurrency",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression, or reference to a field containing the string, corresponding to the ISO code of the currency to which you want to convert the number. For a list of ISO codes, see the Remarks section."
+        },
+        {
+          "name": "FullPrecision",
+          "type": "Variant",
+          "optional": true,
+          "description": "A Boolean value where True (1) ignores the currency-specific rounding rules (called display precision in the _sourcecurrency_ argument description) and uses the 6-significant-digit conversion factor with no follow-up rounding. False (0) uses the currency-specific rounding rules to display the result. If the parameter is omitted, the default value is False."
+        },
+        {
+          "name": "TriangulationPrecision",
+          "type": "Variant",
+          "optional": true,
+          "description": "An Integer value greater than or equal to 3 that specifies the number of significant digits in the calculation precision used for the intermediate euro value when converting between two national/regional currencies."
+        }
+      ]
+    },
+    {
+      "name": "SetDefaultWorkgroupFile",
+      "kind": "method",
+      "signature": "SetDefaultWorkgroupFile(Path As String)",
+      "description": "Sets the default workgroup file to the specified file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Path",
+          "type": "String",
+          "optional": false,
+          "description": "The full path and file name of the workgroup file to use as the default."
+        }
+      ]
+    },
+    {
+      "name": "ConvertAccessProject",
+      "kind": "method",
+      "signature": "ConvertAccessProject(SourceFilename As String, DestinationFilename As String, DestinationFileFormat As AcFileFormat)",
+      "description": "Converts the specified Microsoft Access file from one version to another.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SourceFilename",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the Access file to convert. If a path isn't specified, Access looks for the file in the current directory."
+        },
+        {
+          "name": "DestinationFilename",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the file where Access saves the converted file. If a path isn't specified, Access saves the file in the current directory."
+        },
+        {
+          "name": "DestinationFileFormat",
+          "type": "AcFileFormat",
+          "optional": false,
+          "description": "An AcFileFormat constant that specifies the format of the converted file."
+        }
+      ]
+    },
+    {
+      "name": "OpenCurrentDatabase",
+      "kind": "method",
+      "signature": "OpenCurrentDatabase(filepath As String, [Exclusive As Boolean], [bstrPassword As String])",
+      "description": "Use the OpenCurrentDatabase method to open an existing Microsoft Access database as the current database.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "filepath",
+          "type": "String",
+          "optional": false,
+          "description": "The name of an existing database file, including the path name and the file name extension."
+        },
+        {
+          "name": "Exclusive",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether you want to open the database in exclusive mode. The default value is False, which specifies that the database should be opened in shared mode."
+        },
+        {
+          "name": "bstrPassword",
+          "type": "String",
+          "optional": true,
+          "description": "The password to open the specified database."
+        }
+      ]
+    },
+    {
+      "name": "CompactRepair",
+      "kind": "method",
+      "signature": "CompactRepair(SourceFile As String, DestinationFile As String, [LogFile As Boolean]) As Boolean",
+      "description": "",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "SourceFile",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "DestinationFile",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "LogFile",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ImportXML",
+      "kind": "method",
+      "signature": "ImportXML(DataSource As String, [ImportOptions As AcImportXMLOption])",
+      "description": "The ImportXML method allows developers to import XML data and/or schema information into Microsoft SQL Server 2000 Desktop Engine (MSDE 2000), Microsoft SQL Server 7.0 or later, or the Microsoft Access database engine.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "DataSource",
+          "type": "String",
+          "optional": false,
+          "description": "The name and path of the XML file to import."
+        },
+        {
+          "name": "ImportOptions",
+          "type": "AcImportXMLOption",
+          "optional": true,
+          "description": "An AcImportXMLOption constant that specifies the option to use when importing XML files. The default value is acStructureAndData."
+        }
+      ]
+    },
+    {
+      "name": "TransformXML",
+      "kind": "method",
+      "signature": "TransformXML(DataSource As String, TransformSource As String, OutputTarget As String, [WellFormedXMLOutput As Boolean], [ScriptOption As AcTransformXMLScriptOption])",
+      "description": "Applies an Extensible Stylesheet Language (XSL) stylesheet to an XML data file and writes the resulting XML to an XML data file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "DataSource",
+          "type": "String",
+          "optional": false,
+          "description": "The name and path of the XML file to import."
+        },
+        {
+          "name": "TransformSource",
+          "type": "String",
+          "optional": false,
+          "description": "The name and path to the XSL file to apply to the XML data file."
+        },
+        {
+          "name": "OutputTarget",
+          "type": "String",
+          "optional": false,
+          "description": "The file name and path for the resulting XML data file after applying the XSL file."
+        },
+        {
+          "name": "WellFormedXMLOutput",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Setting this argument to True will create a well-formed XML file. Setting this argument to False will encode the resulting XML file in UTF-16 format. The default value is False."
+        },
+        {
+          "name": "ScriptOption",
+          "type": "AcTransformXMLScriptOption",
+          "optional": true,
+          "description": "An AcTransformXMLScriptOption constant that specifies the action taken if the XSL file contains scripting code. The default value is acPromptScript."
+        }
+      ]
+    },
+    {
+      "name": "CreateAdditionalData",
+      "kind": "method",
+      "signature": "CreateAdditionalData() As _AdditionalData",
+      "description": "Creates an AdditionalData object that can be used to add additional tables and queries to the parent table that is being exported by the ExportXML method.",
+      "returns": "_AdditionalData"
+    },
+    {
+      "name": "ExportXML",
+      "kind": "method",
+      "signature": "ExportXML(ObjectType As AcExportXMLObjectType, DataSource As String, [DataTarget As String], [SchemaTarget As String], [PresentationTarget As String], [ImageTarget As String], [Encoding As AcExportXMLEncoding], [OtherFlags As AcExportXMLOtherFlags], [WhereCondition As String], [AdditionalData As Variant])",
+      "description": "The ExportXML method allows developers to export XML data, schemas, and presentation information from Microsoft SQL Server 2000 Desktop Engine (MSDE 2000), Microsoft SQL Server 6.5 or later, or the Microsoft Access database engine.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ObjectType",
+          "type": "AcExportXMLObjectType",
+          "optional": false,
+          "description": "An AcExportXMLObjectType that represents the type of AccessObject object to export."
+        },
+        {
+          "name": "DataSource",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the AccessObject object to export. The default is the currently open object of the type specified by the _ObjectType_ argument."
+        },
+        {
+          "name": "DataTarget",
+          "type": "String",
+          "optional": true,
+          "description": "The file name and path for the exported data. If this argument is omitted, data is not exported."
+        },
+        {
+          "name": "SchemaTarget",
+          "type": "String",
+          "optional": true,
+          "description": "The file name and path for the exported schema information. If this argument is omitted, schema information is not exported to a separate XML file."
+        },
+        {
+          "name": "PresentationTarget",
+          "type": "String",
+          "optional": true,
+          "description": "The file name and path for the exported presentation information. If this argument is omitted, presentation information is not exported."
+        },
+        {
+          "name": "ImageTarget",
+          "type": "String",
+          "optional": true,
+          "description": "The path for exported images. If this argument is omitted, images are not exported."
+        },
+        {
+          "name": "Encoding",
+          "type": "AcExportXMLEncoding",
+          "optional": true,
+          "description": "An AcExportXMLEncoding constant that specifies the text encoding to use for the exported XML. The default value is acUTF8."
+        },
+        {
+          "name": "OtherFlags",
+          "type": "AcExportXMLOtherFlags",
+          "optional": true,
+          "description": "A bit mask that specifies other behaviors associated with exporting to XML. Can be a combination of AcExportXMLOtherFlags constants."
+        },
+        {
+          "name": "WhereCondition",
+          "type": "String",
+          "optional": true,
+          "description": "Specifies a subset of records to be exported."
+        },
+        {
+          "name": "AdditionalData",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies additional tables to export. This argument is ignored if the _OtherFlags_ argument is set to acLiveReportSource."
+        }
+      ]
+    },
+    {
+      "name": "NewCurrentDatabase",
+      "kind": "method",
+      "signature": "NewCurrentDatabase(filepath As String, [FileFormat As AcNewDatabaseFormat], [Template As Variant], [SiteAddress As String], [ListID As String])",
+      "description": "Creates a new Microsoft Access database.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "filepath",
+          "type": "String",
+          "optional": false,
+          "description": "A string expression that is the name of a new database file, including the path name and the file name extension. If your network supports it, you can also specify a network path in the following form: \\\\Server\\Share\\Folder\\Filename"
+        },
+        {
+          "name": "FileFormat",
+          "type": "AcNewDatabaseFormat",
+          "optional": true,
+          "description": "An AcNewDatabaseFormat constant that specifies the file format to use for the newly created database."
+        },
+        {
+          "name": "Template",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the template to be used for the new database."
+        },
+        {
+          "name": "SiteAddress",
+          "type": "String",
+          "optional": true,
+          "description": "Uniform Resource Locator (URL) of the Windows SharePoint Services 3.0 site to link to."
+        },
+        {
+          "name": "ListID",
+          "type": "String",
+          "optional": true,
+          "description": "Globally Unique Identifer (GUID) or the name of the Windows SharePoint Services 3.0 list to link to."
+        }
+      ]
+    },
+    {
+      "name": "PlainText",
+      "kind": "method",
+      "signature": "PlainText(RichText As Variant, [Length As Variant]) As String",
+      "description": "Strips the rich text formatting from a string and returns an unformatted text string.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "RichText",
+          "type": "Variant",
+          "optional": false,
+          "description": "The rich text string that you want to remove the formatting of."
+        },
+        {
+          "name": "Length",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of characters to return."
+        }
+      ]
+    },
+    {
+      "name": "HtmlEncode",
+      "kind": "method",
+      "signature": "HtmlEncode(PlainText As Variant, [Length As Variant]) As String",
+      "description": "Converts a string to an HTML-encoded string.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "PlainText",
+          "type": "Variant",
+          "optional": false,
+          "description": "The text string to encode."
+        },
+        {
+          "name": "Length",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of characters to return."
+        }
+      ]
+    },
+    {
+      "name": "LoadCustomUI",
+      "kind": "method",
+      "signature": "LoadCustomUI(CustomUIName As String, CustomUIXML As String)",
+      "description": "Loads XML markup that represents a customized ribbon.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "CustomUIName",
+          "type": "String",
+          "optional": false,
+          "description": "The name that will be used to identify the customized ribbon."
+        },
+        {
+          "name": "CustomUIXML",
+          "type": "String",
+          "optional": false,
+          "description": "The XML markup code that defines the customized ribbon."
+        }
+      ]
+    },
+    {
+      "name": "ExportNavigationPane",
+      "kind": "method",
+      "signature": "ExportNavigationPane(Path As String)",
+      "description": "Saves the current configuration of the navigation pane to an XML file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Path",
+          "type": "String",
+          "optional": false,
+          "description": "The path and name of the XML file that you want to save the configuration of the navigation pane to."
+        }
+      ]
+    },
+    {
+      "name": "ImportNavigationPane",
+      "kind": "method",
+      "signature": "ImportNavigationPane(Path As String, [fAppendOnly As Boolean])",
+      "description": "Loads a saved navigation pane configuration from disk.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Path",
+          "type": "String",
+          "optional": false,
+          "description": "The path and name of the XML file that contains the navigation pane configuration to load."
+        },
+        {
+          "name": "fAppendOnly",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Set to True to append the imported categories to the existing categories. The default value is False."
+        }
+      ]
+    },
+    {
+      "name": "ColumnHistory",
+      "kind": "method",
+      "signature": "ColumnHistory(TableName As String, ColumnName As String, queryString As String) As String",
+      "description": "Gets the history of values that have been stored in a Memo field.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "TableName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the table that contains the Append Only field."
+        },
+        {
+          "name": "ColumnName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the field to display the history for."
+        },
+        {
+          "name": "queryString",
+          "type": "String",
+          "optional": false,
+          "description": "A String used to locate the record. It's like the WHERE clause in an SQL statement, but without the word WHERE."
+        }
+      ]
+    },
+    {
+      "name": "CreateControl",
+      "kind": "method",
+      "signature": "CreateControl(FormName As String, ControlType As AcControlType, [Section As AcSection], [Parent As Variant], [ColumnName As Variant], [Left As Variant], [Top As Variant], [Width As Variant], [Height As Variant]) As _Control",
+      "description": "The CreateControl method creates a control on a specified open form. For example, suppose you are building a custom wizard that allows users to easily construct a particular form. Use the CreateControl method in your wizard to add the appropriate controls to the form.",
+      "returns": "_Control",
+      "parameters": [
+        {
+          "name": "FormName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the open form or report on which you want to create the control."
+        },
+        {
+          "name": "ControlType",
+          "type": "AcControlType",
+          "optional": false,
+          "description": "An AcControlType constant that represents the type of control that you want to create."
+        },
+        {
+          "name": "Section",
+          "type": "AcSection",
+          "optional": true,
+          "description": "An AcSection constant that identifies the section that will contain the new control."
+        },
+        {
+          "name": "Parent",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the parent control of an attached control. For controls that have no parent control, use a zero-length string for this argument or omit it."
+        },
+        {
+          "name": "ColumnName",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the field to which the control will be bound if it is to be a data-bound control."
+        },
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CreateReportControl",
+      "kind": "method",
+      "signature": "CreateReportControl(ReportName As String, ControlType As AcControlType, [Section As AcSection], [Parent As Variant], [ColumnName As Variant], [Left As Variant], [Top As Variant], [Width As Variant], [Height As Variant]) As _Control",
+      "description": "The CreateReportControl method creates a control on a specified open report. For more information, see the CreateControl method.",
+      "returns": "_Control",
+      "parameters": [
+        {
+          "name": "ReportName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the open report on which you want to create the control."
+        },
+        {
+          "name": "ControlType",
+          "type": "AcControlType",
+          "optional": false,
+          "description": "An AcControlType constant that represents the type of control that you want to create."
+        },
+        {
+          "name": "Section",
+          "type": "AcSection",
+          "optional": true,
+          "description": "An AcSection constant that identifies the section that will contain the new control."
+        },
+        {
+          "name": "Parent",
+          "type": "Variant",
+          "optional": true,
+          "description": "A string expression that identifies the name of the parent control of an attached control. For controls that have no parent control, use a zero-length string for this argument or omit it."
+        },
+        {
+          "name": "ColumnName",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the field to which the control will be bound if it is to be a data-bound control."
+        },
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SaveAsAXL",
+      "kind": "method",
+      "signature": "SaveAsAXL(ObjectType As AcObjectType, ObjectName As String, FileName As String)",
+      "description": "Exports the specified object to an Application XML (AXL) file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ObjectType",
+          "type": "AcObjectType",
+          "optional": false,
+          "description": "Specifies the type of object to export."
+        },
+        {
+          "name": "ObjectName",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies the name of the object to export."
+        },
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies the full path and file name of the AXL file to create."
+        }
+      ]
+    },
+    {
+      "name": "LoadFromAXL",
+      "kind": "method",
+      "signature": "LoadFromAXL(ObjectType As AcObjectType, ObjectName As String, FileName As String)",
+      "description": "Imports the object defined in an Application XML (AXL) file into the database.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ObjectType",
+          "type": "AcObjectType",
+          "optional": false,
+          "description": "Specifies the type of object to create."
+        },
+        {
+          "name": "ObjectName",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies the name of the object."
+        },
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies the full path and file name of the AXL file to import."
+        }
+      ]
+    },
+    {
+      "name": "SaveAsTemplate",
+      "kind": "method",
+      "signature": "SaveAsTemplate(Path As String, Title As String, IconPath As String, CoreTable As String, Category As String, [PreviewPath As Variant], [Description As Variant], [InstantiationForm As Variant], [ApplicationPart As Variant], [IncludeData As Variant], [Variation As Variant])",
+      "description": "Converts an existing Microsoft Access database file to a database template (*.accdt) format file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Path",
+          "type": "String",
+          "optional": false,
+          "description": "The full path and file name of the database template to create."
+        },
+        {
+          "name": "Title",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the database that is created when the user instantiates the template."
+        },
+        {
+          "name": "IconPath",
+          "type": "String",
+          "optional": false,
+          "description": "An image file to be used as an icon for the database template."
+        },
+        {
+          "name": "CoreTable",
+          "type": "String",
+          "optional": false,
+          "description": "The table that contains the data that users would most want to create a relationship with when they instantiate the template. The _ApplicationPart_ argument must be set to True if you use this argument."
+        },
+        {
+          "name": "Category",
+          "type": "String",
+          "optional": false,
+          "description": "The template category under which the database template will appear on the Available Templates page."
+        },
+        {
+          "name": "PreviewPath",
+          "type": "Variant",
+          "optional": true,
+          "description": "An image file to be used as a preview for the database template on the Available Templates page."
+        },
+        {
+          "name": "Description",
+          "type": "Variant",
+          "optional": true,
+          "description": "A description to be displayed when the user selects the database template on the Available Templates page."
+        },
+        {
+          "name": "InstantiationForm",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the name of the form to be displayed when the template is instantiated."
+        },
+        {
+          "name": "ApplicationPart",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies whether the template will be displayed when the user chooses Application Parts in the Templates group of the Create ribbon tab. Set to True to display the template when the user chooses Application Parts."
+        },
+        {
+          "name": "IncludeData",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies whether the table data is included in the template. Set to True to include the table data."
+        },
+        {
+          "name": "Variation",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "InstantiateTemplate",
+      "kind": "method",
+      "signature": "InstantiateTemplate(Path As String)",
+      "description": "Opens a new database and applies the specified template.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Path",
+          "type": "String",
+          "optional": false,
+          "description": "The full path and file name of the template to apply to the new database."
+        }
+      ]
+    },
+    {
+      "name": "CurrentWebUser",
+      "kind": "method",
+      "signature": "CurrentWebUser(DisplayOption As AcWebUserDisplay) As Variant",
+      "description": "Gets information about the current user of a web database on Microsoft SharePoint Foundation 2010 and later.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "DisplayOption",
+          "type": "AcWebUserDisplay",
+          "optional": false,
+          "description": "Specifies the type of information to return about the user."
+        }
+      ]
+    },
+    {
+      "name": "CurrentWebUserGroups",
+      "kind": "method",
+      "signature": "CurrentWebUserGroups(DisplayOption As AcWebUserGroupsDisplay) As Variant",
+      "description": "Gets the collection of Microsoft SharePoint Foundation groups of which the user is a member.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "DisplayOption",
+          "type": "AcWebUserGroupsDisplay",
+          "optional": false,
+          "description": "Specifies the type of information to return about the user's groups."
+        }
+      ]
+    },
+    {
+      "name": "IsCurrentWebUserInGroup",
+      "kind": "method",
+      "signature": "IsCurrentWebUserInGroup(GroupNameOrID As Variant) As Boolean",
+      "description": "Gets whether or not the current user of a web database is a member of the specified Microsoft SharePoint Foundation 2010 group.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "GroupNameOrID",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or identifier (ID) of the group."
+        }
+      ]
+    },
+    {
+      "name": "DirtyObject",
+      "kind": "method",
+      "signature": "DirtyObject(ObjectType As AcObjectType, ObjectName As String)",
+      "description": "Marks a form or report as dirty.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ObjectType",
+          "type": "AcObjectType",
+          "optional": false,
+          "description": "Specifies the type of object to mark as dirty. This argument should be set to acForm or acReport."
+        },
+        {
+          "name": "ObjectName",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies the name of the object to mark as dirty."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

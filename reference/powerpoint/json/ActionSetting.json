@@ -1,0 +1,83 @@
+{
+  "name": "ActionSetting",
+  "kind": "Dispatch Interface",
+  "guid": "{9149348D-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Contains information about how the specified shape or text range reacts to mouse actions during a slide show.",
+  "remarks": "The ActionSetting object is a member of the ActionSettings collection. The ActionSettings collection contains one ActionSetting object that represents how the specified object reacts when the user clicks it during a slide show and one ActionSetting object that represents how the specified object reacts when the user moves the mouse pointer over it during a slide show. If you've set properties of the ActionSetting object that don't seem to be taking effect, make sure that you've set the Action property to the appropriate value.",
+  "example": "With ActivePresentation.Slides(1).Shapes(3) _\n        .TextFrame.TextRange.ActionSettings(ppMouseClick)\n    .Action = ppActionHyperlink\n    .Hyperlink.Address = \"https://www.microsoft.com\"\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Action",
+      "kind": "property",
+      "type": "PpActionType",
+      "access": "read/write",
+      "description": "Returns or sets the type of action that will occur when the specified shape is clicked or the mouse pointer is positioned over the shape during a slide show. Read/write."
+    },
+    {
+      "name": "ActionVerb",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a string that contains the OLE verb that will be run when the user clicks the specified shape or passes the mouse pointer over it during a slide show. Read/write."
+    },
+    {
+      "name": "AnimateAction",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Specifies whether the color of the specified shape is momentarily inverted when the specified mouse action occurs. Read/write."
+    },
+    {
+      "name": "Run",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the presentation or macro to be run when the specified shape is clicked or the mouse pointer passes over the shape during a slide show. Read/write."
+    },
+    {
+      "name": "SlideShowName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the custom slide show to run in response to a mouse action on the shape during a slide show. Read/write."
+    },
+    {
+      "name": "Hyperlink",
+      "kind": "property",
+      "type": "Hyperlink",
+      "access": "read-only",
+      "description": "Returns a Hyperlink object that represents the hyperlink for the specified shape. Read-only."
+    },
+    {
+      "name": "SoundEffect",
+      "kind": "property",
+      "type": "SoundEffect",
+      "access": "read-only",
+      "description": "Returns a SoundEffect object that represents the sound to be played during the transition to the specified slide. Read-only."
+    },
+    {
+      "name": "ShowAndReturn",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines if and under what circumstances Microsoft PowerPoint returns to the initiating slide show. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

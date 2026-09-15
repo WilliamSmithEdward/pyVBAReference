@@ -1,0 +1,41 @@
+{
+  "name": "ChartAxisCollection",
+  "kind": "Dispatch Interface",
+  "guid": "{1657FD90-05DB-4B82-BA9C-ED9CDFC8A676}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "A collection of all the ChartAxis objects in the specified chart.",
+  "remarks": "",
+  "example": "With myChart\n MsgBox (.ChartAxisCollection.Count)\n  For Each axis In .ChartAxisCollection\n    MsgBox (axis.Name)\n  Next\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "_ChartAxis",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -1,0 +1,140 @@
+{
+  "name": "TableOfContents",
+  "kind": "Dispatch Interface",
+  "guid": "{00020913-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single table of contents in a document. The TableOfContents object is a member of the TablesOfContents collection. The TablesOfContents collection includes all the tables of contents in a document.",
+  "remarks": "Use TablesOfContents (Index), where Index is the index number, to return a single TableOfContents object. The index number represents the position of the table of contents in the document. The following example updates the page numbers of the items in the first table of figures in the active document. Use the Add method to add a table of contents to a document. The following example adds a table of contents at the beginning of the active document. The example builds the table of contents from all paragraphs styled as either Heading 1, Heading 2, or Heading 3.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified TableOfContents object."
+    },
+    {
+      "name": "UseHeadingStyles",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if built-in heading styles are used to create a table of contents. Read/write Boolean."
+    },
+    {
+      "name": "UseFields",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Table of Contents Entry (TC) fields are used to create a table of contents or a table of figures. Read/write Boolean."
+    },
+    {
+      "name": "UpperHeadingLevel",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the starting heading level for a table of contents. Read/write Long."
+    },
+    {
+      "name": "LowerHeadingLevel",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the ending heading level for a table of contents or table of figures. Read/write Long."
+    },
+    {
+      "name": "TableID",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a one-letter identifier that's used to build a table of contents from TOC fields. Read/write String."
+    },
+    {
+      "name": "HeadingStyles",
+      "kind": "property",
+      "type": "HeadingStyles",
+      "access": "read-only",
+      "description": "Returns a HeadingStyles object that represents additional styles used to compile a table of contents or table of figures (styles other than the Heading 1 - Heading 9 styles). Read-only."
+    },
+    {
+      "name": "RightAlignPageNumbers",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if page numbers are aligned with the right margin in a table of contents. Read/write Boolean."
+    },
+    {
+      "name": "IncludePageNumbers",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if page numbers are included in the table of contents. Read/write Boolean."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the portion of a document that is contained within the specified table of contents."
+    },
+    {
+      "name": "TabLeader",
+      "kind": "property",
+      "type": "WdTabLeader",
+      "access": "read/write",
+      "description": "Returns or sets the character between entries and their page numbers in an index, table of authorities, table of contents, or table of figures. Read/write WdTabLeader."
+    },
+    {
+      "name": "UseHyperlinks",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether entries in a table of contents should be formatted as hyperlinks when publishing to the Web. Read/write Boolean."
+    },
+    {
+      "name": "HidePageNumbersInWeb",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether page numbers in a table of contents or a table of figures should be hidden when publishing to the Web. Read/write Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified table of contents.",
+      "returns": "void"
+    },
+    {
+      "name": "UpdatePageNumbers",
+      "kind": "method",
+      "signature": "UpdatePageNumbers()",
+      "description": "Updates the page numbers for items in the specified table of contents.",
+      "returns": "void"
+    },
+    {
+      "name": "Update",
+      "kind": "method",
+      "signature": "Update()",
+      "description": "Updates the entries shown in a table of contents.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

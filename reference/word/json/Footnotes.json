@@ -1,0 +1,175 @@
+{
+  "name": "Footnotes",
+  "kind": "Dispatch Interface",
+  "guid": "{00020942-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of Footnote objects that represent all the footnotes in a selection, range, or document.",
+  "remarks": "Use the Footnotes property to return the Footnotes collection. The following example changes all of the footnotes in the active document to endnotes. Use the Add method to add a footnote to the Footnotes collection. The following example adds a footnote immediately after the selection. Use Footnotes (_index_), where _index_ is the index number, to return a single Footnote object. The index number represents the position of the footnote in the selection, range, or document. The following example applies red formatting to the first footnote in the selection.",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of footnotes in the collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Footnotes object."
+    },
+    {
+      "name": "Location",
+      "kind": "property",
+      "type": "WdFootnoteLocation",
+      "access": "read/write",
+      "description": "Returns or sets the position of all footnotes. Read/write WdFootnoteLocation."
+    },
+    {
+      "name": "NumberStyle",
+      "kind": "property",
+      "type": "WdNoteNumberStyle",
+      "access": "read/write",
+      "description": "Returns or sets the number style for the footnotes. Read/write WdNoteNumberStyle."
+    },
+    {
+      "name": "StartingNumber",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the starting note number, line number, or page number. Read/write Long."
+    },
+    {
+      "name": "NumberingRule",
+      "kind": "property",
+      "type": "WdNumberingRule",
+      "access": "read/write",
+      "description": "Returns or sets the way footnotes or endnotes are numbered after page breaks or section breaks. Read/write WdNumberingRule."
+    },
+    {
+      "name": "Separator",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the footnote separator."
+    },
+    {
+      "name": "ContinuationSeparator",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the footnote continuation separator. Read-only."
+    },
+    {
+      "name": "ContinuationNotice",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the footnote continuation notice. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Footnote",
+      "description": "Returns an individual Footnote object in a collection.",
+      "returns": "Footnote",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Range As Range, [Reference As Variant], [Text As Variant]) As Footnote",
+      "description": "Returns a Footnote object that represents a footnote added to a range.",
+      "returns": "Footnote",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The range marked for the endnote or footnote. This can be a collapsed range."
+        },
+        {
+          "name": "Reference",
+          "type": "Variant",
+          "optional": true,
+          "description": "The text for the custom reference mark. If this argument is omitted, Microsoft Word inserts an automatically-numbered reference mark."
+        },
+        {
+          "name": "Text",
+          "type": "Variant",
+          "optional": true,
+          "description": "The text of the endnote or footnote."
+        }
+      ]
+    },
+    {
+      "name": "Convert",
+      "kind": "method",
+      "signature": "Convert()",
+      "description": "Converts endnotes to footnotes, or vice versa.",
+      "returns": "void"
+    },
+    {
+      "name": "SwapWithEndnotes",
+      "kind": "method",
+      "signature": "SwapWithEndnotes()",
+      "description": "Converts all footnotes in a document to endnotes and vice versa.To convert a range of footnotes to endnotes, use the Convert method.",
+      "returns": "void"
+    },
+    {
+      "name": "ResetSeparator",
+      "kind": "method",
+      "signature": "ResetSeparator()",
+      "description": "Resets the footnote separator to the default separator.",
+      "returns": "void"
+    },
+    {
+      "name": "ResetContinuationSeparator",
+      "kind": "method",
+      "signature": "ResetContinuationSeparator()",
+      "description": "Resets the footnote or endnote continuation separator to the default separator.",
+      "returns": "void"
+    },
+    {
+      "name": "ResetContinuationNotice",
+      "kind": "method",
+      "signature": "ResetContinuationNotice()",
+      "description": "Resets the footnote or endnote continuation notice to the default notice.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

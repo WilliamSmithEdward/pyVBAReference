@@ -1,0 +1,50 @@
+{
+  "name": "TextStyleLevels",
+  "kind": "Dispatch Interface",
+  "guid": "{9149349A-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of all the outline text levels. This collection always contains five members, each of which is represented by a TextStyleLevel object.",
+  "remarks": "",
+  "example": "With ActivePresentation.SlideMaster _\n        .TextStyles(ppBodyStyle).Levels(1)\n    With .Font\n        .Name = \"Arial\"\n        .Size = 36\n    End With\nEnd With",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Level As Long) As TextStyleLevel",
+      "description": "Returns a single text style level from the specified TextStyleLevels collection.",
+      "returns": "TextStyleLevel",
+      "parameters": [
+        {
+          "name": "Level",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the text style level in the collection to be returned."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,71 @@
+{
+  "name": "Fonts",
+  "kind": "Dispatch Interface",
+  "guid": "{91493467-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of all the Font objects in the specified presentation.",
+  "remarks": "Each Font object represents a font that's used in the presentation.",
+  "example": "MsgBox ActivePresentation.Fonts.Count",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Font",
+      "description": "Returns a single Font object from the specified Fonts collection.",
+      "returns": "Font",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number of the single Font object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Replace",
+      "kind": "method",
+      "signature": "Replace(Original As String, Replacement As String)",
+      "description": "Replaces a font in the Fonts collection.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Original",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the font to replace."
+        },
+        {
+          "name": "Replacement",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the replacement font."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

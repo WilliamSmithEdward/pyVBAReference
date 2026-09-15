@@ -1,0 +1,72 @@
+{
+  "name": "Editors",
+  "kind": "Dispatch Interface",
+  "guid": "{AED7E08C-14F0-4F33-921D-4C5353137BF6}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of Editor objects that represents a collection of users or groups of users who have been given specific permissions to edit portions of a document.",
+  "remarks": "Use the Add method to give a specified user or group permission to modify a range or selection within a document. The following example gives the current user editing permission to modify the active selection.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Editors object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a the Long that represents the number of Editor objects in the collection. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Editor",
+      "description": "Returns an Editor object that represents a specific user or a group of users who have been given permission to edit a portion of a document.",
+      "returns": "Editor",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "Can be either a String that represents the user's email alias (if in the same domain), an email address, or a WdEditorType constant that represents a group of users."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(EditorID As Variant) As Editor",
+      "description": "Returns an Editor object that represents a new permission for a specified user to modify a range or selection within a document. .",
+      "returns": "Editor",
+      "parameters": [
+        {
+          "name": "EditorID",
+          "type": "Variant",
+          "optional": false,
+          "description": "Can be either a String that represents the user's email alias (if in the same domain), an email address, or a WdEditorType that represents a group of users."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

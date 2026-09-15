@@ -1,0 +1,118 @@
+{
+  "name": "ParagraphFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{91493496-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents the paragraph formatting of a text range.",
+  "remarks": "",
+  "example": "ActivePresentation.Slides(1).Shapes(2).TextFrame.TextRange _\n\n    .ParagraphFormat.Alignment = ppAlignLeft",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Alignment",
+      "kind": "property",
+      "type": "PpParagraphAlignment",
+      "access": "read/write",
+      "description": "Returns or sets the alignment for each paragraph in the specified paragraph format. Read/write."
+    },
+    {
+      "name": "Bullet",
+      "kind": "property",
+      "type": "BulletFormat",
+      "access": "read-only",
+      "description": "Returns a BulletFormat object that represents bullet formatting for the specified paragraph format. Read-only."
+    },
+    {
+      "name": "LineRuleBefore",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether line spacing before the first line in each paragraph is set to a specific number of points or lines. Read/write."
+    },
+    {
+      "name": "LineRuleAfter",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether line spacing after the last line in each paragraph is set to a specific number of points or lines. Read/write."
+    },
+    {
+      "name": "LineRuleWithin",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether line spacing between base lines is set to a specific number of points or lines. Read/write."
+    },
+    {
+      "name": "SpaceBefore",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the amount of space before the first line in each paragraph of the specified text, in points or lines. Read/write."
+    },
+    {
+      "name": "SpaceAfter",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the amount of space after the last line in each paragraph of the specified text, in points or lines. Read/write."
+    },
+    {
+      "name": "SpaceWithin",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the amount of space between base lines in the specified text, in points or lines. Read/write."
+    },
+    {
+      "name": "BaseLineAlignment",
+      "kind": "property",
+      "type": "PpBaselineAlignment",
+      "access": "read/write",
+      "description": "Returns or sets the base line alignment for the specified paragraph. Read/write."
+    },
+    {
+      "name": "FarEastLineBreakControl",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Returns or sets the line break control option if you have an Asian language setting specified. Read/write."
+    },
+    {
+      "name": "WordWrap",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Used only with Kanji characters. Read/write."
+    },
+    {
+      "name": "HangingPunctuation",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Returns or sets the hanging punctuation option if you have an Asian language setting specified. Read/write."
+    },
+    {
+      "name": "TextDirection",
+      "kind": "property",
+      "type": "PpDirection",
+      "access": "read/write",
+      "description": "Returns or sets the text direction for the specified paragraph. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

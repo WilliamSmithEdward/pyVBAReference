@@ -1,0 +1,50 @@
+{
+  "name": "Operation",
+  "kind": "Dispatch Interface",
+  "guid": "{96EFA5B6-F286-4590-96B5-F944707646A1}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "Represents an operation defined for an Entity object.",
+  "remarks": "Use the WSParameters property to return the parameters defined for the specified operation. Use the Execute method to execute the operation.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Use the Name property to specify or determine the string expression that identifies the name of an object. Read/write String."
+    },
+    {
+      "name": "WSParameters",
+      "kind": "property",
+      "type": "WSParameters",
+      "access": "read-only",
+      "description": "Gets the collection of parameters defined for the specified operation. Read-only WSParameters."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Execute",
+      "kind": "method",
+      "signature": "Execute([bstrParameters As String]) As Variant",
+      "description": "Executes the specified operation.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "bstrParameters",
+          "type": "String",
+          "optional": true,
+          "description": "Specifies values for the parameters of the operation."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

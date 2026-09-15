@@ -1,0 +1,126 @@
+{
+  "name": "TextEffectFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{000209CF-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Contains properties and methods that apply to WordArt objects.",
+  "remarks": "Use the TextEffect property to return a TextEffectFormat object. The following example sets the font name and formatting for shape one on the active document. For this example to work, shape one must be a WordArt object.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified TextEffectFormat object."
+    },
+    {
+      "name": "Alignment",
+      "kind": "property",
+      "type": "MsoTextEffectAlignment",
+      "access": "read/write",
+      "description": "Returns or sets an MsoTextEffectAlignment constant that represents the alignment for the specified text effect. Read/write."
+    },
+    {
+      "name": "FontBold",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Sets the font to bold for the specified Word Art shape. Read/write MsoTriState."
+    },
+    {
+      "name": "FontItalic",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Italicizes WordArt text. Read/write MsoTriState."
+    },
+    {
+      "name": "FontName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the font for the dropped capital letter. Read/write String."
+    },
+    {
+      "name": "FontSize",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the font size for the specified WordArt, in points. Read/write Single."
+    },
+    {
+      "name": "KernedPairs",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Indicates that character pairs in a WordArt object have been kerned. Read/write MsoTriState."
+    },
+    {
+      "name": "NormalizedHeight",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "MsoTrue if all characters (both uppercase and lowercase) in the specified WordArt are the same height. Read/write MsoTriState."
+    },
+    {
+      "name": "PresetShape",
+      "kind": "property",
+      "type": "MsoPresetTextEffectShape",
+      "access": "read/write",
+      "description": "Returns or sets the shape of the specified WordArt. Read/write MsoPresetTextEffectShape."
+    },
+    {
+      "name": "PresetTextEffect",
+      "kind": "property",
+      "type": "MsoPresetTextEffect",
+      "access": "read/write",
+      "description": "Returns or sets the style of the specified WordArt. The values for this property correspond to the formats in the WordArt Gallery dialog box (Insert menu), numbered from left to right, top to bottom. Read/write MsoPresetTextEffect."
+    },
+    {
+      "name": "RotatedChars",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "MsoTrue if characters in the specified WordArt are rotated 90 degrees relative to the WordArt's bounding shape. MsoFalse if characters in the specified WordArt retain their original orientation relative to the bounding shape. Read/write MsoTriState."
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the text in the specified object. Read/write String."
+    },
+    {
+      "name": "Tracking",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the ratio of the horizontal space allotted to each character in the specified WordArt in relation to the width of the character. Read/write Single."
+    }
+  ],
+  "methods": [
+    {
+      "name": "ToggleVerticalText",
+      "kind": "method",
+      "signature": "ToggleVerticalText()",
+      "description": "Switches the text flow in the specified WordArt from horizontal to vertical, or vice versa.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

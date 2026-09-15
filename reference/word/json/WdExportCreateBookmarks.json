@@ -1,0 +1,23 @@
+{
+  "name": "WdExportCreateBookmarks",
+  "kind": "Enumeration",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Specifies what bookmarks to include when exporting a document.",
+  "constants": [
+    {
+      "name": "wdExportCreateNoBookmarks",
+      "value": 0,
+      "description": "Do not create bookmarks in the exported document."
+    },
+    {
+      "name": "wdExportCreateHeadingBookmarks",
+      "value": 1,
+      "description": "Create a bookmark in the exported document for each Microsoft Word heading, which includes only headings within the main document and text boxes not within headers, footers, endnotes, footnotes, or comments."
+    },
+    {
+      "name": "wdExportCreateWordBookmarks",
+      "value": 2,
+      "description": "Create a bookmark in the exported document for each Word bookmark, which includes all bookmarks except those contained within headers and footers."
+    }
+  ]
+}

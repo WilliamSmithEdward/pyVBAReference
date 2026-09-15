@@ -1,0 +1,55 @@
+{
+  "name": "PropertyEffect",
+  "kind": "Dispatch Interface",
+  "guid": "{914934E9-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a property effect for an AnimationBehavior object.",
+  "remarks": "",
+  "example": "ActivePresentation.Slides(1).TimeLine.MainSequence.Item(1) _\n   .Behaviors(1).PropertyEffect",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Property",
+      "kind": "property",
+      "type": "MsoAnimProperty",
+      "access": "read/write",
+      "description": "Sets or returns an MsoAnimProperty constant that represents an animation property. Read/write."
+    },
+    {
+      "name": "Points",
+      "kind": "property",
+      "type": "AnimationPoints",
+      "access": "read-only",
+      "description": "Returns an AnimationPoints object that represents a point in an animation."
+    },
+    {
+      "name": "From",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Sets or returns a Variant that represents the starting value of an object's property. Read/write."
+    },
+    {
+      "name": "To",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Sets or returns a Variant that represents the ending value of an object's property. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

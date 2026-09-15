@@ -1,0 +1,167 @@
+{
+  "name": "AutoCorrect",
+  "kind": "Dispatch Interface",
+  "guid": "{00020949-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the AutoCorrect functionality in Word.",
+  "remarks": "Use the AutoCorrect property to return the AutoCorrect object. The following example enables the AutoCorrect options and creates an AutoCorrect entry. The Entries property returns the Entries object that represents the AutoCorrect entries in the AutoCorrect dialog box.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified AutoCorrect object."
+    },
+    {
+      "name": "CorrectDays",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word automatically capitalizes the first letter of days of the week. Read/write Boolean."
+    },
+    {
+      "name": "CorrectInitialCaps",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word automatically makes the second letter lowercase if the first two letters of a word are typed in uppercase. For example, \"WOrd\" is corrected to \"Word.\" Read/write Boolean."
+    },
+    {
+      "name": "CorrectSentenceCaps",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word automatically capitalizes the first letter in each sentence. Read/write Boolean."
+    },
+    {
+      "name": "ReplaceText",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word automatically replaces specified text with entries from the AutoCorrect list. Read/write Boolean."
+    },
+    {
+      "name": "Entries",
+      "kind": "property",
+      "type": "AutoCorrectEntries",
+      "access": "read-only",
+      "description": "Returns an AutoCorrectEntries collection that represents the current list of AutoCorrect entries."
+    },
+    {
+      "name": "FirstLetterExceptions",
+      "kind": "property",
+      "type": "FirstLetterExceptions",
+      "access": "read-only",
+      "description": "Returns a FirstLetterExceptions collection that represents the list of abbreviations after which Word won't automatically capitalize the next letter. Read-only."
+    },
+    {
+      "name": "FirstLetterAutoAdd",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word automatically adds abbreviations to the list of AutoCorrect First Letter exceptions. Read/write Boolean."
+    },
+    {
+      "name": "TwoInitialCapsExceptions",
+      "kind": "property",
+      "type": "TwoInitialCapsExceptions",
+      "access": "read-only",
+      "description": "Returns a TwoInitialCapsExceptions collection that represents the list of terms containing mixed capitalization that Word won't correct automatically."
+    },
+    {
+      "name": "TwoInitialCapsAutoAdd",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word automatically adds words to the list of AutoCorrect Initial Caps exceptions. A word is added to this list if you delete and then retype the uppercase letter (following the initial uppercase letter) that Word changed to lowercase. Read/write Boolean."
+    },
+    {
+      "name": "CorrectCapsLock",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word automatically corrects instances in which you use the CAPS LOCK key inadvertently as you type. Read/write Boolean."
+    },
+    {
+      "name": "CorrectHangulAndAlphabet",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word automatically applies the correct font to Latin words typed in the middle of Hangul text or vice versa. Read/write Boolean."
+    },
+    {
+      "name": "HangulAndAlphabetExceptions",
+      "kind": "property",
+      "type": "HangulAndAlphabetExceptions",
+      "access": "read-only",
+      "description": "Returns a HangulAndAlphabetExceptions collection that represents the list of Hangul and alphabet AutoCorrect exceptions."
+    },
+    {
+      "name": "HangulAndAlphabetAutoAdd",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word automatically adds words to the list of Hangul and alphabet AutoCorrect exceptions. Read/write Boolean."
+    },
+    {
+      "name": "ReplaceTextFromSpellingChecker",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word automatically replaces misspelled text with suggestions from the spelling checker as the user types. Word only replaces words that contain a single misspelling and for which the spelling dictionary only lists one alternative. Read/write Boolean."
+    },
+    {
+      "name": "OtherCorrectionsAutoAdd",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word automatically adds words to the list of AutoCorrect exceptions on the Other Corrections tab in the AutoCorrect Exceptions dialog box (AutoCorrect Options command, Tools menu). Word adds a word to this list if you delete and then retype a word that you didn't want Word to correct. Read/write Boolean."
+    },
+    {
+      "name": "OtherCorrectionsExceptions",
+      "kind": "property",
+      "type": "OtherCorrectionsExceptions",
+      "access": "read-only",
+      "description": "Returns an OtherCorrectionsExceptions collection that represents the list of words that Microsoft Word won't correct automatically."
+    },
+    {
+      "name": "CorrectKeyboardSetting",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word automatically transposes words to their native alphabet if you type text in a language other than the current keyboard language. Read/write Boolean."
+    },
+    {
+      "name": "CorrectTableCells",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True to automatically capitalize the first letter of table cells. Read/write Boolean."
+    },
+    {
+      "name": "DisplayAutoCorrectOptions",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to display the AutoCorrect Options button. Read/write Boolean."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -1,0 +1,72 @@
+{
+  "name": "CustomerData",
+  "kind": "Dispatch Interface",
+  "guid": "{914934F6-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Stores information about a customer (such as name, address, telephone number, and so on) or other information in XML form, as a collection of CustomXMLPart objects associated with a Microsoft PowerPoint object.",
+  "remarks": "You can store customer data in CustomLayout, Master, Presentation, Shape, and Slide objects. You can associate one or more CustomXMLPart objects with the same object. - Customer data persists from one instance to the next in a PowerPoint document only when you save the document in XML file format, as a PowerPoint XML presentation. Customer data does not persist in documents saved in .ppt, .htm, or .mht formats. - There is no user interface associated with customer data in PowerPoint. The only way that you can assign and manipulate customer data is programmatically. Use the Add method to add a new CustomXMLPart object to the CustomerData collection. Use the Delete method to delete a CustomXMLPart object from the CustomerData collection. Use the Item method to get a specific CustomXMLPart object from the collection. Individual items in the collection are represented by GUIDs (globally unique identifiers). Use customer data in the same way that you used Tags objects in versions of PowerPoint previous to Microsoft Office PowerPoint 2007--that is, to associate data with objects.",
+  "example": "Public Sub CustomerData_Example()\n\n    Dim pptCustomXMLPart As CustomXMLPart\n\n    Set pptCustomXMLPart = ActivePresentation.Slides(1).Shapes(1).customerData.Add\n\n    Debug.Print pptCustomXMLPart.Id\n\n    pptCustomXMLPart.LoadXML (\"<Customer><CustomerID>Customer #1</CustomerID></Customer>\")\n\n    Debug.Print pptCustomXMLPart.xml\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of CustomXMLPart objects in the CustomerData collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified CustomerData object. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object of the specified CustomerData object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Id As String) As CustomXMLPart",
+      "description": "Returns the specified CustomXMLPart object from the CustomerData collection. Read-only.",
+      "returns": "CustomXMLPart",
+      "parameters": [
+        {
+          "name": "Id",
+          "type": "String",
+          "optional": false,
+          "description": "The ID of the CustomXMLPart object."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add() As CustomXMLPart",
+      "description": "Adds a CustomXMLPart to the CustomerData collection of a CustomLayout, Master, Presentation, Shape, or Slide object and returns the CustomXMLPart object created.",
+      "returns": "CustomXMLPart"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete(Id As String)",
+      "description": "Deletes the specified CustomXMLPart object from the CustomerData collection of a CustomLayout, Master, Presentation, Shape, or Slide object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Id",
+          "type": "String",
+          "optional": false,
+          "description": "The ID of the CustomXMLPart object to be deleted."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

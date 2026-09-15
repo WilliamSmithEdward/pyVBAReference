@@ -1,0 +1,196 @@
+{
+  "name": "Template",
+  "kind": "Dispatch Interface",
+  "guid": "{0002096A-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a document template. The Template object is a member of the Templates collection. The Templates collection includes all the available Template objects.",
+  "remarks": "Use Templates (Index), where Index is the template name or the index number, to return a single Template object. The following example saves the Memo2.dot template if it is in the Templates collection. The index number represents the position of the template in the Templates collection. The following example opens the first template in the Templates collection. The Add method is not available for the Templates collection. Instead, you can add a template to the Templates collection by doing any of the following: - Using the Open method with the Documents collection to open a document based on a template or a template - Using the Add method with the Documents collection to open a new document based on a template - Using the Add method with the Addins collection to load a global template - Using the AttachedTemplate property with the Document object to attach a template to a document Use the NormalTemplate property to return a template object that refers to the Normal template. Use the AttachedTemplate property to return the template attached to the specified document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the specified object. Read-only String."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Template object."
+    },
+    {
+      "name": "Path",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the path to the specified document template. Read-only String."
+    },
+    {
+      "name": "LanguageID",
+      "kind": "property",
+      "type": "WdLanguageID",
+      "access": "read/write",
+      "description": "Returns or sets a WdLanguageID constant that represents the language for the specified range. Read/write."
+    },
+    {
+      "name": "Saved",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified template has not changed since it was last saved. False if Microsoft Word displays a prompt to save changes when the document is closed. Read/write Boolean."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "WdTemplateType",
+      "access": "read-only",
+      "description": "Returns the template type. Read-only WdTemplateType."
+    },
+    {
+      "name": "FullName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Specifies the name of a template, including the drive or Web path. Read-only String."
+    },
+    {
+      "name": "BuiltInDocumentProperties",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns a DocumentProperties collection that represents all the built-in document properties for the specified document."
+    },
+    {
+      "name": "CustomDocumentProperties",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns a DocumentProperties collection that represents all the custom document properties for the specified document."
+    },
+    {
+      "name": "ListTemplates",
+      "kind": "property",
+      "type": "ListTemplates",
+      "access": "read-only",
+      "description": "Returns a ListTemplates collection that represents all the list formats for the specified template. Read-only."
+    },
+    {
+      "name": "LanguageIDFarEast",
+      "kind": "property",
+      "type": "WdLanguageID",
+      "access": "read/write",
+      "description": "Returns or sets an East Asian language for the specified object. Read/write WdLanguageID."
+    },
+    {
+      "name": "VBProject",
+      "kind": "property",
+      "type": "VBProject",
+      "access": "read-only",
+      "description": "Returns the VBProject object for the specified template."
+    },
+    {
+      "name": "KerningByAlgorithm",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word kerns half-width Latin characters and punctuation marks in the specified document. Read/write Boolean."
+    },
+    {
+      "name": "JustificationMode",
+      "kind": "property",
+      "type": "WdJustificationMode",
+      "access": "read/write",
+      "description": "Returns or sets the character spacing adjustment for the specified template. Read/write WdJustificationMode."
+    },
+    {
+      "name": "FarEastLineBreakLevel",
+      "kind": "property",
+      "type": "WdFarEastLineBreakLevel",
+      "access": "read/write",
+      "description": "Returns or sets the line break control level for the specified document. Read/write WdFarEastLineBreakLevel."
+    },
+    {
+      "name": "NoLineBreakBefore",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the kinsoku characters before which Microsoft Word will not break a line. Read/write String."
+    },
+    {
+      "name": "NoLineBreakAfter",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the kinsoku characters after which Microsoft Word will not break a line. Read/write String."
+    },
+    {
+      "name": "NoProofing",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the spelling and grammar checker ignores documents based on this template. Read/write Long."
+    },
+    {
+      "name": "FarEastLineBreakLanguage",
+      "kind": "property",
+      "type": "WdFarEastLineBreakLanguageID",
+      "access": "read/write",
+      "description": "Returns or sets the East Asian language to use when breaking lines of text in the specified document or template. Read/write WdFarEastLineBreakLanguageID."
+    },
+    {
+      "name": "BuildingBlockEntries",
+      "kind": "property",
+      "type": "BuildingBlockEntries",
+      "access": "read-only",
+      "description": "Returns a BuildingBlockEntries collection that represents the collection of building block entries in a template. Read-only."
+    },
+    {
+      "name": "BuildingBlockTypes",
+      "kind": "property",
+      "type": "BuildingBlockTypes",
+      "access": "read-only",
+      "description": "Returns a BuildingBlockTypes collection that represents the collection of building block types that are contained in a template. Read-only."
+    },
+    {
+      "name": "AutoSaveOn",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "OpenAsDocument",
+      "kind": "method",
+      "signature": "OpenAsDocument() As Document",
+      "description": "Opens the specified template as a document and returns a Document object.",
+      "returns": "Document"
+    },
+    {
+      "name": "Save",
+      "kind": "method",
+      "signature": "Save()",
+      "description": "Saves the specified template.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

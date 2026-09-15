@@ -1,0 +1,65 @@
+{
+  "name": "DocumentWindows",
+  "kind": "Dispatch Interface",
+  "guid": "{91493455-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of all the DocumentWindow objects that are currently open in Microsoft PowerPoint. This collection doesn't include open slide show windows, which are included in the SlideShowWindows collection.",
+  "remarks": "If your Visual Studio solution includes the Microsoft.Office.Interop.PowerPoint reference, this collection maps to the following types: - Microsoft.Office.Interop.PowerPoint.DocumentWindows",
+  "example": "Windows.Arrange ppArrangeTiled",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As DocumentWindow",
+      "description": "Returns a single DocumentWindow object from the specified DocumentWindows collection.",
+      "returns": "DocumentWindow",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the single DocumentWindow object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Arrange",
+      "kind": "method",
+      "signature": "Arrange([arrangeStyle As PpArrangeStyle])",
+      "description": "Arranges all open document windows in the workspace.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "arrangeStyle",
+          "type": "PpArrangeStyle",
+          "optional": true,
+          "description": "Specifies whether to cascade or tile the windows."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

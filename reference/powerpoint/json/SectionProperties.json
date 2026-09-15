@@ -1,0 +1,200 @@
+{
+  "name": "SectionProperties",
+  "kind": "Dispatch Interface",
+  "guid": "{BA72E551-4FF5-48F4-8215-5505F990966F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Contains properties and methods for manipulating sections in a presentation.",
+  "remarks": "Use the SectionProperties property of the Presentation object to get a SectionProperties object.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Name",
+      "kind": "method",
+      "signature": "Name(sectionIndex As Long) As String",
+      "description": "Returns the name of the specified section as a String.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "sectionIndex",
+          "type": "Long",
+          "optional": false,
+          "description": "The index of the section in the SectionProperties collection."
+        }
+      ]
+    },
+    {
+      "name": "Rename",
+      "kind": "method",
+      "signature": "Rename(sectionIndex As Long, sectionName As String)",
+      "description": "Renames the specified section with the specified name.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "sectionIndex",
+          "type": "Long",
+          "optional": false,
+          "description": "The index of the section to rename."
+        },
+        {
+          "name": "sectionName",
+          "type": "String",
+          "optional": false,
+          "description": "The new name of the section."
+        }
+      ]
+    },
+    {
+      "name": "SlidesCount",
+      "kind": "method",
+      "signature": "SlidesCount(sectionIndex As Long) As Long",
+      "description": "Returns the number of slides in the specified section.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "sectionIndex",
+          "type": "Long",
+          "optional": false,
+          "description": "The index of the section."
+        }
+      ]
+    },
+    {
+      "name": "FirstSlide",
+      "kind": "method",
+      "signature": "FirstSlide(sectionIndex As Long) As Long",
+      "description": "Returns the index of the first slide in the specified section, or returns -1 if the section is empty.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "sectionIndex",
+          "type": "Long",
+          "optional": false,
+          "description": "The index of the section."
+        }
+      ]
+    },
+    {
+      "name": "AddBeforeSlide",
+      "kind": "method",
+      "signature": "AddBeforeSlide(SlideIndex As Long, sectionName As String) As Long",
+      "description": "Adds a section immediately before the specified slide index, and returns the index of the new section.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "SlideIndex",
+          "type": "Long",
+          "optional": false,
+          "description": "The index of the slide before which to add the section."
+        },
+        {
+          "name": "sectionName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the new section."
+        }
+      ]
+    },
+    {
+      "name": "AddSection",
+      "kind": "method",
+      "signature": "AddSection(sectionIndex As Long, [sectionName As Variant]) As Long",
+      "description": "Adds a new section at the specified index position and returns the index of the newly created section.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "sectionIndex",
+          "type": "Long",
+          "optional": false,
+          "description": "The index of the section before which to add the section."
+        },
+        {
+          "name": "sectionName",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the new section."
+        }
+      ]
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move(sectionIndex As Long, toPos As Long)",
+      "description": "Moves the specified section to the specified index position, moving the slides in the section along with the section break.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "sectionIndex",
+          "type": "Long",
+          "optional": false,
+          "description": "The index of the section to move."
+        },
+        {
+          "name": "toPos",
+          "type": "Long",
+          "optional": false,
+          "description": "The index position to which to move the section."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete(sectionIndex As Long, deleteSlides As Boolean)",
+      "description": "Deletes the section break that sets off the specified section, and optionally deletes all the slides in the section.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "sectionIndex",
+          "type": "Long",
+          "optional": false,
+          "description": "The index of the section to delete."
+        },
+        {
+          "name": "deleteSlides",
+          "type": "Boolean",
+          "optional": false,
+          "description": "Whether to delete all the slides in the section. True, to delete all the slides within the section; False not to delete them."
+        }
+      ]
+    },
+    {
+      "name": "SectionID",
+      "kind": "method",
+      "signature": "SectionID(sectionIndex As Long) As String",
+      "description": "Returns a string that represents the unique identifier of the specified section.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "sectionIndex",
+          "type": "Long",
+          "optional": false,
+          "description": "The index of the section."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

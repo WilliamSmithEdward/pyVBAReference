@@ -1,0 +1,62 @@
+{
+  "name": "OMathGroupChar",
+  "kind": "Dispatch Interface",
+  "guid": "{02B17CB4-7D55-4B34-B38B-10381433441F}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a group character object, consisting of a character drawn above or below text, often with the purpose of visually grouping items.",
+  "remarks": "Generally, this character is a curly brace, bracket, or arrow but it can be any character.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathGroupChar object."
+    },
+    {
+      "name": "E",
+      "kind": "property",
+      "type": "OMath",
+      "access": "read-only",
+      "description": "Returns an OMath object that represents the base of the specified equation object. Read-only."
+    },
+    {
+      "name": "Char",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Returns or sets an Integer that represents the character placed above or below text in a group character object. Read/write."
+    },
+    {
+      "name": "CharTop",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether the grouping character is placed above the base text of the group character object. False displays the group character under the base text. Read/write."
+    },
+    {
+      "name": "AlignTop",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether the grouping character is aligned vertically with the surrounding text or whether the base text that is either above or below the grouping character is aligned vertically with the surrounding text. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

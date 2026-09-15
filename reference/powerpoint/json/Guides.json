@@ -1,0 +1,71 @@
+{
+  "name": "Guides",
+  "kind": "Dispatch Interface",
+  "guid": "{1641E775-2277-46DE-A06D-8C49C3C5D5E7}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of Guide objects in a presentation or custom layout.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the PowerPoint application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Guide",
+      "description": "Returns a Guide object from the collection.",
+      "returns": "Guide",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Orientation As PpGuideOrientation, Position As Single) As Guide",
+      "description": "Adds a new drawing guide to the presentation, slide master, or custom layout.",
+      "returns": "Guide",
+      "parameters": [
+        {
+          "name": "Orientation",
+          "type": "PpGuideOrientation",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Position",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

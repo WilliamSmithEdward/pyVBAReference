@@ -1,0 +1,84 @@
+{
+  "name": "PublishObject",
+  "kind": "Dispatch Interface",
+  "guid": "{914934D0-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a complete or partial loaded presentation that is available for publishing to HTML. The PublishObject object is a member of the PublishObjects collection.",
+  "remarks": "You can specify the content and attributes of the published presentation by setting various properties of the PublishObject object. For example, the SourceTypeproperty defines the portion of a loaded presentation to be published. The RangeStartproperty and the RangeEndproperty specify the range of slides to publish, and the SpeakerNotesproperty designates whether or not to publish the speaker's notes.",
+  "example": "With Presentations(2).PublishObjects(1)\n\n    .FileName = \"C:\\Test\\Mallard.htm\"\n\n    .SourceType = ppPublishSlideRange\n\n    .RangeStart = 3\n\n    .RangeEnd = 5\n\n    .Publish\n\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "HTMLVersion",
+      "kind": "property",
+      "type": "PpHTMLVersion",
+      "access": "read/write",
+      "description": "Returns or sets the version of HTML for a published presentation. Read/write."
+    },
+    {
+      "name": "SourceType",
+      "kind": "property",
+      "type": "PpPublishSourceType",
+      "access": "read/write",
+      "description": "Returns or sets the source type of the presentation to be published to HTML. Read/write."
+    },
+    {
+      "name": "RangeStart",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the number of the first slide in a range of slides you are publishing as a Web presentation. Read/write."
+    },
+    {
+      "name": "RangeEnd",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the number of the last slide in a range of slides you are publishing as a Web presentation. Read/write."
+    },
+    {
+      "name": "SlideShowName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the custom slide show to be published as a Web presentation. Read/write."
+    },
+    {
+      "name": "SpeakerNotes",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether speaker notes are to be published with the presentation. Read/write."
+    },
+    {
+      "name": "FileName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the path and file name of the Web presentation created when all or part of the active presentation is published. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Publish",
+      "kind": "method",
+      "signature": "Publish()",
+      "description": "Creates a Web presentation (HTML format) from any loaded presentation. You can view the published presentation in a web browser.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

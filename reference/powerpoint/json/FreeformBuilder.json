@@ -1,0 +1,99 @@
+{
+  "name": "FreeformBuilder",
+  "kind": "Dispatch Interface",
+  "guid": "{91493478-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents the geometry of a freeform while it is being built.",
+  "remarks": "",
+  "example": "Set myDocument = ActivePresentation.Slides(1)\n\nWith myDocument.Shapes.BuildFreeform(msoEditingCorner, 360, 200)\n    .AddNodes msoSegmentCurve, msoEditingCorner, _\n        380, 230, 400, 250, 450, 300\n    .AddNodes msoSegmentCurve, msoEditingAuto, 480, 200\n    .AddNodes msoSegmentLine, msoEditingAuto, 480, 40\n    .AddNodes msoSegmentLine, msoEditingAuto, 360, 200\n    .ConvertToShape\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the four-character creator code for the application in which the specified object was created. For example, if the object was created in Microsoft PowerPoint, this property returns the hexadecimal number 50575054. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "AddNodes",
+      "kind": "method",
+      "signature": "AddNodes(SegmentType As MsoSegmentType, EditingType As MsoEditingType, X1 As Single, Y1 As Single, [X2 As Single], [Y2 As Single], [X3 As Single], [Y3 As Single])",
+      "description": "Inserts a new segment at the end of the freeform that's being created, and adds the nodes that define the segment. Use this method as many times as you want to add nodes to the freeform you are creating. When you finish adding nodes, use the ConvertToShape method to create the freeform you've just defined. To add nodes to a freeform after it is been created, use the Insert method of the ShapeNodes collection.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SegmentType",
+          "type": "MsoSegmentType",
+          "optional": false,
+          "description": "The type of segment to be added."
+        },
+        {
+          "name": "EditingType",
+          "type": "MsoEditingType",
+          "optional": false,
+          "description": "The editing property of the vertex. If SegmentType is msoSegmentLine, EditingType must be msoEditingAuto."
+        },
+        {
+          "name": "X1",
+          "type": "Single",
+          "optional": false,
+          "description": "If the EditingType of the new segment is msoEditingAuto, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the endpoint of the new segment. If the EditingType of the new node is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the first control point for the new segment."
+        },
+        {
+          "name": "Y1",
+          "type": "Single",
+          "optional": false,
+          "description": "If the EditingType of the new segment is msoEditingAuto, this argument specifies the vertical distance (in points) from the upper-left corner of the document to the endpoint of the new segment. If the EditingType of the new node is msoEditingCorner, this argument specifies the vertical distance (in points) from the upper-left corner of the document to the first control point for the new segment."
+        },
+        {
+          "name": "X2",
+          "type": "Single",
+          "optional": true,
+          "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
+        },
+        {
+          "name": "Y2",
+          "type": "Single",
+          "optional": true,
+          "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the vertical distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
+        },
+        {
+          "name": "X3",
+          "type": "Single",
+          "optional": true,
+          "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the endpoint of the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
+        },
+        {
+          "name": "Y3",
+          "type": "Single",
+          "optional": true,
+          "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the vertical distance (in points) from the upper-left corner of the document to the endpoint of the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
+        }
+      ]
+    },
+    {
+      "name": "ConvertToShape",
+      "kind": "method",
+      "signature": "ConvertToShape() As Shape",
+      "description": "Creates a shape that has the geometric characteristics of the specified FreeformBuilder object. Returns a Shape object that represents the new shape.",
+      "returns": "Shape"
+    }
+  ],
+  "events": []
+}

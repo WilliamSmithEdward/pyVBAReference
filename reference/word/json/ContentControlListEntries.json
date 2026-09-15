@@ -1,0 +1,98 @@
+{
+  "name": "ContentControlListEntries",
+  "kind": "Dispatch Interface",
+  "guid": "{54F46DC4-F6A6-48CC-BD66-46C1DDEADD22}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "The ContentControlListEntries collection contains ContentControlListEntry objects that represent the items in a drop-down list or combo box content control.",
+  "remarks": "Use the Add method to add an item to a drop-down list or combo box. The following code example uses the Add method to add several list items to a new drop-down list content control. Use the Item method or the DropdownListEntries property of a ContentControl object to access an individual list item within a collection. The following code example uses the Item method to access the third item in a list and change the display text. Use the Clear method to remove all items from a drop-down list or combo box. The following code example clears all items from the first content control in the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified ContentControlListEntries object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of items in the ContentControlListEntries collection. Read-only Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Clear",
+      "kind": "method",
+      "signature": "Clear()",
+      "description": "Clears all items from a drop-down list or combo box content control.",
+      "returns": "void"
+    },
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As ContentControlListEntry",
+      "description": "Returns a ContentControlListEntry object that represents the specified item in the collection.",
+      "returns": "ContentControlListEntry",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "Specifies the ordinal position of the object within the collection."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Text As String, [Value As String], [Index As Long]) As ContentControlListEntry",
+      "description": "Adds a new list item to a drop-down list or combo box content control and returns a ContentControlListEntry object.",
+      "returns": "ContentControlListEntry",
+      "parameters": [
+        {
+          "name": "Text",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies the display text for the list item. Corresponds to the Text property for a ContentControlListEntry object."
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "optional": true,
+          "description": "Specifies the value of the list item. Corresponds to the Value property for a ContentControlListEntry object. If omitted, the Value property is equal to the Text property."
+        },
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": true,
+          "description": "Specifies the ordinal position of the new item in the list. If an item exists at the position specified, the existing item is pushed down in the list. If omitted, the new item is added to the end of the list."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

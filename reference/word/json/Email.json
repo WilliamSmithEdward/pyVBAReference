@@ -1,0 +1,41 @@
+{
+  "name": "Email",
+  "kind": "Dispatch Interface",
+  "guid": "{000209DD-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents an email message.",
+  "remarks": "Use the Email property to return the Email object. The Email object and its properties are valid only if the active document is an unsent forward, reply, or new email message. This example displays the name of the style associated with the current email author. The author style name is the same as the value returned by the UserName property.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Email object."
+    },
+    {
+      "name": "CurrentEmailAuthor",
+      "kind": "property",
+      "type": "EmailAuthor",
+      "access": "read-only",
+      "description": "Returns an EmailAuthor object that represents the author of the current email message. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

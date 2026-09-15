@@ -1,0 +1,113 @@
+{
+  "name": "KeysBoundTo",
+  "kind": "Dispatch Interface",
+  "guid": "{00020997-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of KeyBinding objects assigned to a command, style, macro, or other item in the current context.",
+  "remarks": "Use the KeysBoundTo property to return the KeysBoundTo collection. The following example displays the key combinations assigned to the FileNew command in the Normal template. The following example displays the name of the document or template where the keys for the macro named \"Macro1\" are stored.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified KeysBoundTo object."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of keys in the collection. Read-only."
+    },
+    {
+      "name": "KeyCategory",
+      "kind": "property",
+      "type": "WdKeyCategory",
+      "access": "read-only",
+      "description": "Returns the type of item assigned to the specified key binding. Read-only WdKeyCategory."
+    },
+    {
+      "name": "Command",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String that represents the command assigned to the specified key combination. Read-only."
+    },
+    {
+      "name": "CommandParameter",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the command parameter assigned to the specified shortcut key. Read-only String."
+    },
+    {
+      "name": "Context",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the storage location of the specified key binding. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As KeyBinding",
+      "description": "Returns an individual KeyBinding object in a collection.",
+      "returns": "KeyBinding",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "Key",
+      "kind": "method",
+      "signature": "Key(KeyCode As Long, [KeyCode2 As Variant]) As KeyBinding",
+      "description": "Returns a KeyBinding object that represents the specified custom key combination.",
+      "returns": "KeyBinding",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "Long",
+          "optional": false,
+          "description": "A key you specify by using one of the WdKey constants."
+        },
+        {
+          "name": "KeyCode2",
+          "type": "Variant",
+          "optional": true,
+          "description": "A second key you specify by using one of the WdKey constants."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

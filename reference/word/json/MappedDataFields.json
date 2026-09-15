@@ -1,0 +1,64 @@
+{
+  "name": "MappedDataFields",
+  "kind": "Dispatch Interface",
+  "guid": "{799A6814-EA41-11D3-87CC-00105AA31A34}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of MappedDataField objects that represents all the mapped data fields available in Microsoft Word.",
+  "remarks": "Use the MappedDataFields property of the MailMergeDataSource object to return the MappedDataFields collection. This example creates a tabbed list of the mapped data fields available in Word and the fields in the data source to which they are mapped. This example assumes that the current document is a mail merge document and that the data source fields have corresponding mapped data fields.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified MappedDataFields object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of mapped data fields in the collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As WdMappedDataFields) As MappedDataField",
+      "description": "Returns an individual MappedDataField object.",
+      "returns": "MappedDataField",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "WdMappedDataFields",
+          "optional": false,
+          "description": "The specified mapped data field."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

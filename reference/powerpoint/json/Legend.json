@@ -1,0 +1,170 @@
+{
+  "name": "Legend",
+  "kind": "Dispatch Interface",
+  "guid": "{92D41A6E-F07E-4CA4-AF6F-BEF486AA4E6F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents the legend in a chart. Each chart can have only one legend.",
+  "remarks": "The Legend object contains one or more LegendEntry objects; each LegendEntry object contains a LegendKey object. The chart legend is not visible unless the HasLegend property is True. If this property is False, properties and methods of the Legend object will fail.",
+  "example": "With ActiveDocument.InlineShapes(1)\n\n    If .HasChart Then\n\n        .Chart.Legend.Font.Bold = True\n\n    End If\n\nEnd With",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the object. Read-only String."
+    },
+    {
+      "name": "Position",
+      "kind": "property",
+      "type": "XlLegendPosition",
+      "access": "read/write",
+      "description": "Returns or sets the position of the legend on the chart. Read/write XlLegendPosition."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a value that indicates whether the object has a shadow. Read/write Boolean."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the height, in points, of the object. Read/write Double."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns the distance, in points, from the left edge of the object to the left edge of the chart area. Read-only Double."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the distance, in points, from the top edge of the object to the top of the first row (on a worksheet) or the top of the chart area (on a chart). Read/write Double."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the width, in points, of the object. Read/write Double."
+    },
+    {
+      "name": "IncludeInLayout",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a legend will occupy the chart layout space when a chart layout is being determined. The default is True. Read/write Boolean."
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "ChartFormat",
+      "access": "read-only",
+      "description": "Returns the line, fill, and effect formatting for the object. Read-only ChartFormat."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the Microsoft PowerPoint application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select() As Variant",
+      "description": "Selects the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "LegendEntries",
+      "kind": "method",
+      "signature": "LegendEntries([Index As Variant]) As Object",
+      "description": "Returns a collection of legend entries for the legend.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Clear",
+      "kind": "method",
+      "signature": "Clear() As Variant",
+      "description": "Clears the entire object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "GetProperty",
+      "kind": "method",
+      "signature": "GetProperty(Id As String) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Id",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetProperty",
+      "kind": "method",
+      "signature": "SetProperty(Id As String, Value As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Id",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Value",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

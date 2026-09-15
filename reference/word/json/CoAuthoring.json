@@ -1,0 +1,90 @@
+{
+  "name": "CoAuthoring",
+  "kind": "Dispatch Interface",
+  "guid": "{65DF9F31-B1E3-4651-87E8-51D55F302161}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Provides the primary entry point to the co authoring object model.",
+  "remarks": "The CoAuthoring object provides information about co authoring at the document level. For example, the CoAuthoring object can provide information about whether there are any locks in the document, which users have current locks in the document, or whether or not updates to the document content is available from the server. Use the CoAuthoring property to return the CoAuthoring object.",
+  "example": "Sub CountLocks()\nDim i As Integer\n\ni = ActiveDocument.CoAuthoring.Locks.Count\n\nMsgBox i\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified CoAuthoring object."
+    },
+    {
+      "name": "Authors",
+      "kind": "property",
+      "type": "CoAuthors",
+      "access": "read-only",
+      "description": "Returns a CoAuthors collection that represents all the co authors currently editing the document. Read-only."
+    },
+    {
+      "name": "Me",
+      "kind": "property",
+      "type": "CoAuthor",
+      "access": "read-only",
+      "description": "Returns a CoAuthor object that represents the current user. Read-only."
+    },
+    {
+      "name": "PendingUpdates",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns True if the document has pending updates that have not been accepted. Read-only."
+    },
+    {
+      "name": "Locks",
+      "kind": "property",
+      "type": "CoAuthLocks",
+      "access": "read-only",
+      "description": "Returns a CoAuthLocks collection that represents the locks in the document. Read-only."
+    },
+    {
+      "name": "Updates",
+      "kind": "property",
+      "type": "CoAuthUpdates",
+      "access": "read-only",
+      "description": "Returns a CoAuthUpdates collection that represents the most recent updates that were merged into the document. Read-only."
+    },
+    {
+      "name": "Conflicts",
+      "kind": "property",
+      "type": "Conflicts",
+      "access": "read-only",
+      "description": "Returns a Conflicts collection that represents all the conflicts in a document. Read-only."
+    },
+    {
+      "name": "CanShare",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean that specifies whether this document can be co authored. Read-only."
+    },
+    {
+      "name": "CanMerge",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean that specifies whether the document can be auto-merged. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

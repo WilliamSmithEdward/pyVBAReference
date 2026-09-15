@@ -1,0 +1,56 @@
+{
+  "name": "CustomProperty",
+  "kind": "Dispatch Interface",
+  "guid": "{B923FDE0-F08C-11D3-91B0-00105A0A19FD}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single instance of a custom property for a smart tag. The CustomProperty object is a member of the CustomProperties collection.",
+  "remarks": "Use the Item methodor Properties (Index), where Index is the number of the propertyof the CustomProperties collection to return a CustomProperty object. Use the Name and Value properties to return the information related to a custom property for a smart tag. This example displays a message containing the name and value of the first custom property of the first smart tag in the current document. This example assumes that the current document contains at least one smart tag and that the first smart tag has at least one custom property.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the specified object. Read-only String."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the value of a custom property. Read/write String."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified CustomProperty object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified custom property.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

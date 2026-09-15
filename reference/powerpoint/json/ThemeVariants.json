@@ -1,0 +1,50 @@
+{
+  "name": "ThemeVariants",
+  "kind": "Dispatch Interface",
+  "guid": "{9E116A3C-2C6D-4D07-93AF-8675D452FCA2}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of ThemeVariant objects that represent variations in the theme.",
+  "remarks": "",
+  "example": "Sub IterateThemeVariants()\n\n    Dim pptTheme As Theme\n    Dim pptThemeVariants As ThemeVariants\n    Dim pptThemeVariant As ThemeVariant\n    Dim path As String\n\n    ' Get a reference to the currently active theme.\n    path = \"C:\\Program Files (x86)\\Microsoft Office\\Document Themes 15\\\" & _\n        ActivePresentation.TemplateName & \".thmx\"\n    Set pptTheme = Application.OpenThemeFile(path)\n\n    ' Get a reference to all of the variations in the theme.\n    Set pptThemeVariants = pptTheme.ThemeVariants\n\n    ' Iterate over each variation of the theme and print\n    ' its name and ID.\n    For Each pptThemeVariant In pptThemeVariants\n\n        Debug.Print \"Variation \" & pptThemeVariant.name & \" id: \" & pptThemeVariant.Id\n\n    Next pptThemeVariant\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the PowerPoint application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As ThemeVariant",
+      "description": "Returns a single ThemeVariant object from the collection.",
+      "returns": "ThemeVariant",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

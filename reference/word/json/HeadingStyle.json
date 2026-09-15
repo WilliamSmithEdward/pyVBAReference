@@ -1,0 +1,56 @@
+{
+  "name": "HeadingStyle",
+  "kind": "Dispatch Interface",
+  "guid": "{0002098B-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a style used to build a table of contents or figures. The HeadingStyle object is a member of the HeadingStyles collection.",
+  "remarks": "Use HeadingStyles (Index), where Index is the index number, to return a single HeadingStyle object. The index number represents the position of the style in the HeadingStyles collection. The following example adds (at the beginning of the active document) a table of figures built from the Title style, and then displays the name of the first style in the HeadingStyles collection. Use the Add method to add a style to the HeadingStyles collection. The following example adds a table of contents at the beginning of the active document and then adds the Title style to the list of styles used to build a table of contents.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified HeadingStyle object."
+    },
+    {
+      "name": "Style",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the style for a heading. Read/write Variant."
+    },
+    {
+      "name": "Level",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Returns or sets the level for the heading style in a table of contents or table of figures. Read/write Integer."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified heading style.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

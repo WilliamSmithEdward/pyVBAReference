@@ -1,0 +1,70 @@
+{
+  "name": "DropLines",
+  "kind": "Dispatch Interface",
+  "guid": "{9F1DF642-3CCE-4D83-A770-D2634A05D278}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the drop lines in a chart group.",
+  "remarks": "Drop lines connect the points in the chart with the x-axis. Only line and area chart groups can have drop lines. This object is not a collection. There is no object that represents a single drop line; you either enable drop lines for all points in a chart group or you disable them. If the HasDropLines property is False, most properties of the DropLines object are disabled.",
+  "example": "With ActiveDocument.InlineShapes(1)\n If .HasChart Then\n With .Chart.ChartGroups(1)\n .HasDropLines = True\n .DropLines.Border.ColorIndex = 3\n End With\n End If\nEnd With",
+  "properties": [
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the object. Read-only String."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "Border",
+      "kind": "property",
+      "type": "ChartBorder",
+      "access": "read-only",
+      "description": "Returns the border of the object. Read-only ChartBorder."
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "ChartFormat",
+      "access": "read-only",
+      "description": "Returns the line, fill, and effect formatting for the object. Read-only ChartFormat."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the Microsoft Word application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects the object.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

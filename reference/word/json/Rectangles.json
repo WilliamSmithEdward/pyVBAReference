@@ -1,0 +1,64 @@
+{
+  "name": "Rectangles",
+  "kind": "Dispatch Interface",
+  "guid": "{7D0F7985-68D9-4D93-91CB-8109280E76CC}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of Rectangle objects in a page that represent portions of text and graphics. Use the Rectangles collection and related objects and properties for programmatically defining page layout in a document.",
+  "remarks": "Use the Rectangles property to return a Rectangles collection. The following example returns the Rectangles collection for the first page in the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of rectangles in the collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Rectangles object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Rectangle",
+      "description": "Returns an individual Rectangle object in a collection.",
+      "returns": "Rectangle",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position of the individual object."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

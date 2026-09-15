@@ -1,0 +1,41 @@
+{
+  "name": "Properties",
+  "kind": "Dispatch Interface",
+  "guid": "{331FDD02-CF31-11CD-8701-00AA003F0F07}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "The Properties collection contains all the built-in properties in an instance of an open form, report, or control. These properties uniquely characterize that instance of the object.",
+  "remarks": "Use the Properties collection in Visual Basic or in an expression to refer to form, report, or control properties on forms or reports that are currently open. Use the Properties collection of an object to enumerate the object's built-in properties. You don't need to know beforehand exactly which properties exist or what their characteristics (Name and Value properties) are to manipulate them.",
+  "example": "Sub AllOpenForms()\n Dim frm As Form, prp As Property\n\n ' Enumerate Forms collection.\n For Each frm In Forms\n ' Print name of form.\n Debug.Print frm.Name\n ' Enumerate Properties collection of each form.\n For Each prp In frm.Properties\n ' Print name of each property.\n Debug.Print prp.Name; \" = \"; prp.Value\n Next prp\n Next frm\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Use the Application property to access the active Microsoft Access Application object and its related properties. Read-only Application object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "The Item property returns a specific member of a collection either by position or by index. Read-only Object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

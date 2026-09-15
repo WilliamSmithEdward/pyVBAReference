@@ -1,0 +1,175 @@
+{
+  "name": "OMath",
+  "kind": "Dispatch Interface",
+  "guid": "{E4442A83-F623-459C-8E95-8BFB44DCF23A}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents an equation. OMath objects are members of the OMaths collection.",
+  "remarks": "Use the Add method of the OMaths collection to create an equation and add it to a document, selection, or range. The following example creates an equation and uses the BuildUp method to convert the equation to professional format.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMath object."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the portion of a document that is contained in the specified object. Read-only."
+    },
+    {
+      "name": "Functions",
+      "kind": "property",
+      "type": "OMathFunctions",
+      "access": "read-only",
+      "description": "Returns an OMathFunctions collection that represents the functions contained within an equation. Read-only."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "WdOMathType",
+      "access": "read/write",
+      "description": "Returns or sets a WdOMathType constant that represents whether an equation is displayed inline with the text around it or displayed on its own line. Read/write."
+    },
+    {
+      "name": "ParentOMath",
+      "kind": "property",
+      "type": "OMath",
+      "access": "read-only",
+      "description": "Returns an OMath object that represents the parent element. Read-only."
+    },
+    {
+      "name": "ParentFunction",
+      "kind": "property",
+      "type": "OMathFunction",
+      "access": "read-only",
+      "description": "Returns an OMathFunction object that represents the parent, or containing, function. Read-only."
+    },
+    {
+      "name": "ParentRow",
+      "kind": "property",
+      "type": "OMathMatRow",
+      "access": "read-only",
+      "description": "Returns an OMathMatRow object that represents the parent row in a matrix. Read-only."
+    },
+    {
+      "name": "ParentCol",
+      "kind": "property",
+      "type": "OMathMatCol",
+      "access": "read-only",
+      "description": "Returns an OMathMatCol object that represents the parent column in a matrix. Read-only."
+    },
+    {
+      "name": "ParentArg",
+      "kind": "property",
+      "type": "OMath",
+      "access": "read-only",
+      "description": "Returns an OMath object that represents the parent, or containing, argument. Read-only."
+    },
+    {
+      "name": "ArgIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the argument index of this component relative to the containing math object. Read-only."
+    },
+    {
+      "name": "NestingLevel",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the nesting level for an OMath object. Read-only."
+    },
+    {
+      "name": "ArgSize",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long that represents the script size of an argument, for example, text, script, or script-script. Read/write."
+    },
+    {
+      "name": "Breaks",
+      "kind": "property",
+      "type": "OMathBreaks",
+      "access": "read-only",
+      "description": "Returns an OMathBreaks collection that represents the line breaks in an equation. Read-only."
+    },
+    {
+      "name": "Justification",
+      "kind": "property",
+      "type": "WdOMathJc",
+      "access": "read/write",
+      "description": "Returns or sets a WdOMathJc that represents the justification for an equation. Read/write."
+    },
+    {
+      "name": "AlignPoint",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long that represents the character position of the alignment point in the equation. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Linearize",
+      "kind": "method",
+      "signature": "Linearize()",
+      "description": "Converts an equation to linear format.",
+      "returns": "void"
+    },
+    {
+      "name": "BuildUp",
+      "kind": "method",
+      "signature": "BuildUp()",
+      "description": "Converts an equation to professional format.",
+      "returns": "void"
+    },
+    {
+      "name": "Remove",
+      "kind": "method",
+      "signature": "Remove()",
+      "description": "Removes an equation from the collection of equations in a document, range, or selection.",
+      "returns": "void"
+    },
+    {
+      "name": "ConvertToMathText",
+      "kind": "method",
+      "signature": "ConvertToMathText()",
+      "description": "Converts an equation to math text.",
+      "returns": "void"
+    },
+    {
+      "name": "ConvertToNormalText",
+      "kind": "method",
+      "signature": "ConvertToNormalText()",
+      "description": "Converts an equation to normal text.",
+      "returns": "void"
+    },
+    {
+      "name": "ConvertToLiteralText",
+      "kind": "method",
+      "signature": "ConvertToLiteralText()",
+      "description": "Converts an equation to literal text.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

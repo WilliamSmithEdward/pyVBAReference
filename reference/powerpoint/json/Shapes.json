@@ -1,0 +1,1045 @@
+{
+  "name": "Shapes",
+  "kind": "Dispatch Interface",
+  "guid": "{91493475-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of all the Shape objects on the specified slide.",
+  "remarks": "Each Shape object represents an object in the drawing layer, such as an AutoShape, freeform, OLE object, or picture.",
+  "example": "ActivePresentation.Slides(1).Shapes.SelectAll",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the four-character creator code for the application in which the specified object was created. For example, if the object was created in Microsoft PowerPoint, this property returns the hexadecimal number 50575054. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "HasTitle",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Returns whether the collection of objects on the specified slide contains a title placeholder. Read-only."
+    },
+    {
+      "name": "Title",
+      "kind": "property",
+      "type": "Shape",
+      "access": "read-only",
+      "description": "Returns a Shape object that represents the slide title. Read-only."
+    },
+    {
+      "name": "Placeholders",
+      "kind": "property",
+      "type": "Placeholders",
+      "access": "read-only",
+      "description": "Returns a Placeholders collection that represents the collection of all the placeholders on a slide. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Shape",
+      "description": "Returns a single Shape object from the specified Shapes collection.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number of the single Shape object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "AddCallout",
+      "kind": "method",
+      "signature": "AddCallout(Type As MsoCalloutType, Left As Single, Top As Single, Width As Single, Height As Single) As Shape",
+      "description": "Creates a borderless line callout. Returns a Shape object that represents the new callout.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "MsoCalloutType",
+          "optional": false,
+          "description": "The type of callout line."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the left edge of the callout's bounding box relative to the left edge of the slide."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the top edge of the callout's bounding box relative to the top edge of the slide."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": "The width of the callout's bounding box, measured in points."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": "The height of the callout's bounding box, measured in points."
+        }
+      ]
+    },
+    {
+      "name": "AddConnector",
+      "kind": "method",
+      "signature": "AddConnector(Type As MsoConnectorType, BeginX As Single, BeginY As Single, EndX As Single, EndY As Single) As Shape",
+      "description": "Creates a connector. Returns a Shape object that represents the new connector. When a connector is added, it is not connected to anything. Use the BeginConnect and EndConnect methods to attach the beginning and end of a connector to other shapes in the document.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "MsoConnectorType",
+          "optional": false,
+          "description": "The type of connector."
+        },
+        {
+          "name": "BeginX",
+          "type": "Single",
+          "optional": false,
+          "description": "The horizontal position, measured in points, of the connector's starting point relative to the left edge of the slide."
+        },
+        {
+          "name": "BeginY",
+          "type": "Single",
+          "optional": false,
+          "description": "The vertical position, measured in points, of the connector's starting point relative to the top edge of the slide."
+        },
+        {
+          "name": "EndX",
+          "type": "Single",
+          "optional": false,
+          "description": "The horizontal position, measured in points, of the connector's ending point relative to the left edge of the slide."
+        },
+        {
+          "name": "EndY",
+          "type": "Single",
+          "optional": false,
+          "description": "The vertical position, measured in points, of the connector's ending point relative to the top edge of the slide."
+        }
+      ]
+    },
+    {
+      "name": "AddCurve",
+      "kind": "method",
+      "signature": "AddCurve(SafeArrayOfPoints As Variant) As Shape",
+      "description": "Creates a Bzier curve. Returns a Shape object that represents the new curve.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "SafeArrayOfPoints",
+          "type": "Variant",
+          "optional": false,
+          "description": "An array of coordinate pairs that specifies the vertices and control points of the curve. The first point you specify is the starting vertex, and the next two points are control points for the first Bzier segment. Then, for each additional segment of the curve, you specify a vertex and two control points. The last point you specify is the ending vertex for the curve. Note that you must always specify 3n + 1 points, where n is the number of segments in the curve."
+        }
+      ]
+    },
+    {
+      "name": "AddLabel",
+      "kind": "method",
+      "signature": "AddLabel(Orientation As MsoTextOrientation, Left As Single, Top As Single, Width As Single, Height As Single) As Shape",
+      "description": "Creates a label. Returns a Shape object that represents the new label.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Orientation",
+          "type": "MsoTextOrientation",
+          "optional": false,
+          "description": "The text orientation. Some of these constants may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the left edge of the label relative to the left edge of the slide."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the top edge of the label relative to the top edge of the slide."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": "The width of the label, measured in points."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": "The height of the label, measured in points."
+        }
+      ]
+    },
+    {
+      "name": "AddLine",
+      "kind": "method",
+      "signature": "AddLine(BeginX As Single, BeginY As Single, EndX As Single, EndY As Single) As Shape",
+      "description": "Creates a line. Returns a Shape object that represents the new line.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "BeginX",
+          "type": "Single",
+          "optional": false,
+          "description": "The horizontal position, measured in points, of the line's starting point relative to the left edge of the slide."
+        },
+        {
+          "name": "BeginY",
+          "type": "Single",
+          "optional": false,
+          "description": "The vertical position, measured in points, of the line's starting point relative to the top edge of the slide."
+        },
+        {
+          "name": "EndX",
+          "type": "Single",
+          "optional": false,
+          "description": "The horizontal position, measured in points, of the line's ending point relative to the left edge of the slide."
+        },
+        {
+          "name": "EndY",
+          "type": "Single",
+          "optional": false,
+          "description": "The vertical position, measured in points, of the line's ending point relative to the top edge of the slide."
+        }
+      ]
+    },
+    {
+      "name": "AddPicture",
+      "kind": "method",
+      "signature": "AddPicture(FileName As String, LinkToFile As MsoTriState, SaveWithDocument As MsoTriState, Left As Single, Top As Single, [Width As Single], [Height As Single]) As Shape",
+      "description": "Creates a picture from an existing file. Returns a Shape object that represents the new picture.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The file from which the OLE object is to be created."
+        },
+        {
+          "name": "LinkToFile",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "Determines whether the picture will be linked to the file from which it was created."
+        },
+        {
+          "name": "SaveWithDocument",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "Determines whether the linked picture will be saved with the document into which it is inserted. This argument must be msoTrue if LinkToFile is msoFalse."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the left edge of the picture relative to the left edge of the slide."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the top edge of the picture relative to the top edge of the slide."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": true,
+          "description": "The width of the picture, measured in points."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": true,
+          "description": "The height of the picture, measured in points."
+        }
+      ]
+    },
+    {
+      "name": "AddPolyline",
+      "kind": "method",
+      "signature": "AddPolyline(SafeArrayOfPoints As Variant) As Shape",
+      "description": "Creates an open polyline or a closed polygon drawing. Returns a Shape object that represents the new polyline or polygon.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "SafeArrayOfPoints",
+          "type": "Variant",
+          "optional": false,
+          "description": "An array of coordinate pairs that specifies the polyline drawing's vertices."
+        }
+      ]
+    },
+    {
+      "name": "AddShape",
+      "kind": "method",
+      "signature": "AddShape(Type As MsoAutoShapeType, Left As Single, Top As Single, Width As Single, Height As Single) As Shape",
+      "description": "Creates an AutoShape. Returns a Shape object that represents the new AutoShape.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "MsoAutoShapeType",
+          "optional": false,
+          "description": "Specifies the type of AutoShape to create."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the left edge of the AutoShape relative to the left edge of the slide."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the top edge of the AutoShape relative to the top edge of the slide."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": "The width of the AutoShape, measured in points."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": "The height of the AutoShape, measured in points."
+        }
+      ]
+    },
+    {
+      "name": "AddTextEffect",
+      "kind": "method",
+      "signature": "AddTextEffect(PresetTextEffect As MsoPresetTextEffect, Text As String, FontName As String, FontSize As Single, FontBold As MsoTriState, FontItalic As MsoTriState, Left As Single, Top As Single) As Shape",
+      "description": "Creates a WordArt object. Returns a Shape object that represents the new WordArt object.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "PresetTextEffect",
+          "type": "MsoPresetTextEffect",
+          "optional": false,
+          "description": "The preset text effect."
+        },
+        {
+          "name": "Text",
+          "type": "String",
+          "optional": false,
+          "description": "The text in the WordArt."
+        },
+        {
+          "name": "FontName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the font used in the WordArt."
+        },
+        {
+          "name": "FontSize",
+          "type": "Single",
+          "optional": false,
+          "description": "The size (in points) of the font used in the WordArt."
+        },
+        {
+          "name": "FontBold",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "Determines whether the font used in the WordArt is set to bold."
+        },
+        {
+          "name": "FontItalic",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "Determines whether the font used in the WordArt is set to italic."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the left edge of the WordArt's bounding box relative to the left edge of the slide."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the top edge of the WordArt's bounding box relative to the top edge of the slide."
+        }
+      ]
+    },
+    {
+      "name": "AddTextbox",
+      "kind": "method",
+      "signature": "AddTextbox(Orientation As MsoTextOrientation, Left As Single, Top As Single, Width As Single, Height As Single) As Shape",
+      "description": "Creates a text box. Returns a Shape object that represents the new text box.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Orientation",
+          "type": "MsoTextOrientation",
+          "optional": false,
+          "description": "The text orientation. Some of these constants may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the left edge of the text box relative to the left edge of the slide."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the top edge of the text box relative to the top edge of the slide."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": "The width of the text box, measured in points."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": "The height of the text box, measured in points."
+        }
+      ]
+    },
+    {
+      "name": "BuildFreeform",
+      "kind": "method",
+      "signature": "BuildFreeform(EditingType As MsoEditingType, X1 As Single, Y1 As Single) As FreeformBuilder",
+      "description": "Builds a freeform object. Returns a FreeformBuilder object that represents the freeform as it is being built.",
+      "returns": "FreeformBuilder",
+      "parameters": [
+        {
+          "name": "EditingType",
+          "type": "MsoEditingType",
+          "optional": false,
+          "description": "The editing property of the first node."
+        },
+        {
+          "name": "X1",
+          "type": "Single",
+          "optional": false,
+          "description": "The horizontal position, measured in points, of the first node in the freeform drawing relative to the left edge of the slide."
+        },
+        {
+          "name": "Y1",
+          "type": "Single",
+          "optional": false,
+          "description": "The vertical position, measured in points, of the first node in the freeform drawing relative to the top edge of the slide."
+        }
+      ]
+    },
+    {
+      "name": "SelectAll",
+      "kind": "method",
+      "signature": "SelectAll()",
+      "description": "Selects all the shapes in a Shapes collection.",
+      "returns": "void"
+    },
+    {
+      "name": "Range",
+      "kind": "method",
+      "signature": "Range([Index As Variant]) As ShapeRange",
+      "description": "Returns a ShapeRange object that represents a subset of the shapes in a Shapes collection.",
+      "returns": "ShapeRange",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": "The individual shapes that are to be included in the range. Can be an Integer that specifies the index number of the shape, a String that specifies the name of the shape, or an array that contains either integers or strings. If this argument is omitted, the Range method returns all the objects in the specified collection."
+        }
+      ]
+    },
+    {
+      "name": "AddTitle",
+      "kind": "method",
+      "signature": "AddTitle() As Shape",
+      "description": "Restores a previously deleted title placeholder to a slide. Returns a Shape object that represents the restored title.",
+      "returns": "Shape"
+    },
+    {
+      "name": "AddOLEObject",
+      "kind": "method",
+      "signature": "AddOLEObject([Left As Single], [Top As Single], [Width As Single], [Height As Single], [ClassName As String], [FileName As String], [DisplayAsIcon As MsoTriState], [IconFileName As String], [IconIndex As Long], [IconLabel As String], [Link As MsoTriState]) As Shape",
+      "description": "Creates an OLE object. Returns a Shape object that represents the new OLE object.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": true,
+          "description": "The position (in points) of the upper-left corner of the new object relative to the upper-left corner of the slide. The default value is 0 (zero)."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": true,
+          "description": "The position (in points) of the upper-left corner of the new object relative to the upper-left corner of the slide. The default value is 0 (zero)."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": true,
+          "description": "The initial width of the OLE object, in points."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": true,
+          "description": "The initial height of the OLE object, in points."
+        },
+        {
+          "name": "ClassName",
+          "type": "String",
+          "optional": true,
+          "description": "The OLE long class name or the ProgID for the object that's to be created. You must specify either the ClassName or FileName argument for the object, but not both."
+        },
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": true,
+          "description": "The file from which the object is to be created. If the path isn't specified, the current working folder is used. You must specify either the ClassName or FileName argument for the object, but not both."
+        },
+        {
+          "name": "DisplayAsIcon",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Determines whether the OLE object will be displayed as an icon."
+        },
+        {
+          "name": "IconFileName",
+          "type": "String",
+          "optional": true,
+          "description": "The file that contains the icon to be displayed."
+        },
+        {
+          "name": "IconIndex",
+          "type": "Long",
+          "optional": true,
+          "description": "The index of the icon within IconFileName. The first icon in the file has the index number 0 (zero). If an icon with the given index number doesn't exist in IconFileName, the icon with the index number 1 (the second icon in the file) is used. The default value is 0 (zero)."
+        },
+        {
+          "name": "IconLabel",
+          "type": "String",
+          "optional": true,
+          "description": "A label (caption) to be displayed beneath the icon."
+        },
+        {
+          "name": "Link",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Determines whether the OLE object will be linked to the file from which it was created. If you specified a value for ClassName, this argument must be msoFalse."
+        }
+      ]
+    },
+    {
+      "name": "AddPlaceholder",
+      "kind": "method",
+      "signature": "AddPlaceholder(Type As PpPlaceholderType, [Left As Single], [Top As Single], [Width As Single], [Height As Single]) As Shape",
+      "description": "Restores a previously deleted placeholder on a slide. Returns a Shape object that represents the restored placeholder.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "PpPlaceholderType",
+          "optional": false,
+          "description": "The type of placeholder. Placeholders of type ppPlaceholderVerticalBody or ppPlaceholderVerticalTitle are found only on slides of layout type ppLayoutVerticalText, ppLayoutClipArtAndVerticalText, ppLayoutVerticalTitleAndText, or ppLayoutVerticalTitleAndTextOverChart. You cannot create slides with any of these layouts from the user interface; you must create them programmatically by using the Add method or by setting the Layout property of an existing slide."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": true,
+          "description": "The position (in points) of the upper-left corner of the placeholder relative to the upper-left corner of the document."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": true,
+          "description": "The position (in points) of the upper-left corner of the placeholder relative to the upper-left corner of the document."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": true,
+          "description": "The width of the placeholder, in points."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": true,
+          "description": "The height of the placeholder, in points."
+        }
+      ]
+    },
+    {
+      "name": "Paste",
+      "kind": "method",
+      "signature": "Paste() As ShapeRange",
+      "description": "Pastes the shapes, slides, or text on the Clipboard into the specified Shapes collection, at the top of the z-order. Each pasted object becomes a member of the specified Shapes collection. If the Clipboard contains entire slides, the slides will be pasted as shapes that contain the images of the slides. If the Clipboard contains a text range, the text will be pasted into a newly created TextFrame shape. Returns a ShapeRange object that represents the pasted objects.",
+      "returns": "ShapeRange"
+    },
+    {
+      "name": "AddTable",
+      "kind": "method",
+      "signature": "AddTable(NumRows As Long, NumColumns As Long, [Left As Single], [Top As Single], [Width As Single], [Height As Single]) As Shape",
+      "description": "Adds a table shape to a slide.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "NumRows",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of rows in the table."
+        },
+        {
+          "name": "NumColumns",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of columns in the table."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": true,
+          "description": "The distance (in points) from the left edge of the slide to the left edge of the table."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": true,
+          "description": "The distance (in points) from the top edge of the slide to the top edge of the table."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": true,
+          "description": "The width (in points) of the new table."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": true,
+          "description": "The height (in points) of the new table."
+        }
+      ]
+    },
+    {
+      "name": "PasteSpecial",
+      "kind": "method",
+      "signature": "PasteSpecial([DataType As PpPasteDataType], [DisplayAsIcon As MsoTriState], [IconFileName As String], [IconIndex As Long], [IconLabel As String], [Link As MsoTriState]) As ShapeRange",
+      "description": "Pastes the contents of the Clipboard, using a special format.",
+      "returns": "ShapeRange",
+      "parameters": [
+        {
+          "name": "DataType",
+          "type": "PpPasteDataType",
+          "optional": true,
+          "description": "A format for the Clipboard contents when they're inserted into the document. The default value varies, depending on the contents in the Clipboard. An error occurs if the specified data type in the DataType argument is not supported by the clipboard contents."
+        },
+        {
+          "name": "DisplayAsIcon",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "MsoTrue to display the embedded object (or link) as an icon."
+        },
+        {
+          "name": "IconFileName",
+          "type": "String",
+          "optional": true,
+          "description": "If DisplayAsIcon is set to msoTrue, this argument is the path and file name for the file in which the icon to be displayed is stored. If DisplayAsIcon is set to msoFalse, this argument is ignored."
+        },
+        {
+          "name": "IconIndex",
+          "type": "Long",
+          "optional": true,
+          "description": "If DisplayAsIcon is set to msoTrue, this argument is a number that corresponds to the icon you want to use in the program file specified by IconFilename. For example, 0 (zero) corresponds to the first icon, and 1 corresponds to the second icon. If this argument is omitted, the first (default) icon is used. If DisplayAsIcon is set to msoFalse, then this argument is ignored. If IconIndex is outside the valid range, then the default icon (index 0) is used."
+        },
+        {
+          "name": "IconLabel",
+          "type": "String",
+          "optional": true,
+          "description": "If DisplayAsIcon is set to msoTrue, this argument is the text that appears below the icon. If this label is missing, Microsoft PowerPoint generates an icon label based on the Clipboard contents. If DisplayAsIcon is set to msoFalse, then this argument is ignored."
+        },
+        {
+          "name": "Link",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Determines whether to create a link to the source file of the Clipboard contents. An error occurs if the Clipboard contents don't support a link."
+        }
+      ]
+    },
+    {
+      "name": "AddMediaObject2",
+      "kind": "method",
+      "signature": "AddMediaObject2(FileName As String, [LinkToFile As MsoTriState], [SaveWithDocument As MsoTriState], [Left As Single], [Top As Single], [Width As Single], [Height As Single]) As Shape",
+      "description": "Replaces deprecated Shapes.AddMediaObject method (PowerPoint). Adds a new media object.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the file to be added."
+        },
+        {
+          "name": "LinkToFile",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Indicates whether to link to the file."
+        },
+        {
+          "name": "SaveWithDocument",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Indicates whether to save the media with the document."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": true,
+          "description": "The distance, in points, from the left edge of the slide to the left edge of the media object."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": true,
+          "description": "The distance, in points, from the top edge of the slide to the top edge of the media object."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": true,
+          "description": "The width, in points, of the media object. Default value is -1."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": true,
+          "description": "The height, in points, of the media object. Default value is -1."
+        }
+      ]
+    },
+    {
+      "name": "AddMediaObjectFromEmbedTag",
+      "kind": "method",
+      "signature": "AddMediaObjectFromEmbedTag(EmbedTag As String, [Left As Single], [Top As Single], [Width As Single], [Height As Single]) As Shape",
+      "description": "Adds a media object from an embedded tag to a Shapes object.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "EmbedTag",
+          "type": "String",
+          "optional": false,
+          "description": "The embed tag."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": true,
+          "description": "The distance, in points, from the left edge of the slide to the left edge of the media object."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": true,
+          "description": "The distance, in points, from the top edge of the slide to the top edge of the media object."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": true,
+          "description": "The width, in points, of the media object."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": true,
+          "description": "The height, in points, of the media object."
+        }
+      ]
+    },
+    {
+      "name": "AddSmartArt",
+      "kind": "method",
+      "signature": "AddSmartArt(Layout As SmartArtLayout, [Left As Single], [Top As Single], [Width As Single], [Height As Single]) As Shape",
+      "description": "Adds a SmartArt diagram to the Shapes object.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Layout",
+          "type": "SmartArtLayout",
+          "optional": false,
+          "description": "The SmartArt diagram to add."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": true,
+          "description": "The distance, in points, from the left edge of the slide to the left edge of the SmartArt diagram."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": true,
+          "description": "The distance, in points, from the top edge of the slide to the top edge of the SmartArt diagram."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": true,
+          "description": "The width of the SmartArt diagram."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": true,
+          "description": "The height of the SmartArt diagram."
+        }
+      ]
+    },
+    {
+      "name": "AddChart2",
+      "kind": "method",
+      "signature": "AddChart2([Style As Long], [Type As XlChartType], [Left As Single], [Top As Single], [Width As Single], [Height As Single], [NewLayout As Boolean]) As Shape",
+      "description": "Adds a chart to the document. Returns a Shape object that represents a chart and adds it to the specified collection.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Style",
+          "type": "Long",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Type",
+          "type": "XlChartType",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "NewLayout",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AddPicture2",
+      "kind": "method",
+      "signature": "AddPicture2(FileName As String, LinkToFile As MsoTriState, SaveWithDocument As MsoTriState, Left As Single, Top As Single, [Width As Single], [Height As Single], [compress As MsoPictureCompress]) As Shape",
+      "description": "Creates a picture from an existing file. Returns a Shape object that represents the new picture.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The file from which the OLE object is to be created."
+        },
+        {
+          "name": "LinkToFile",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "Determines whether the picture will be linked to the file from which it was created."
+        },
+        {
+          "name": "SaveWithDocument",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "Determines whether the linked picture will be saved with the document into which it is inserted. This argument must be msoTrue if _LinkToFile_ is msoFalse."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the left edge of the picture relative to the left edge of the slide."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the top edge of the picture relative to the top edge of the slide."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": true,
+          "description": "The width of the picture, measured in points."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": true,
+          "description": "The height of the picture, measured in points."
+        },
+        {
+          "name": "compress",
+          "type": "MsoPictureCompress",
+          "optional": true,
+          "description": "Determines whether the picture should be compressed when inserted."
+        }
+      ]
+    },
+    {
+      "name": "AddInkShapeFromXML",
+      "kind": "method",
+      "signature": "AddInkShapeFromXML(InkXML As String, Left As Single, Top As Single, [Width As Single], [Height As Single]) As Shape",
+      "description": "Creates an ink shape. Returns a Shape object that represents the new ink shape.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "InkXML",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the left edge of the ink shape relative to the left edge of the slide."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the top edge of the ink shape relative to the top edge of the slide."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": true,
+          "description": "The width of the ink shape, measured in points. If this parameter is not specified, the width is calculated based off of the InkActionML."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": true,
+          "description": "The height of the ink shape, measured in points. If this parameter is not specified, the hight is calculated based off of the InkActionML."
+        }
+      ]
+    },
+    {
+      "name": "Add3DModel",
+      "kind": "method",
+      "signature": "Add3DModel(FileName As String, LinkToFile As MsoTriState, SaveWithDocument As MsoTriState, Left As Single, Top As Single, [Width As Single], [Height As Single]) As Shape",
+      "description": "Creates a Model3DFormat object from an existing file. Returns a Shape object that represents the new 3D model.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The file from which the 3D model object is to be created."
+        },
+        {
+          "name": "LinkToFile",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "Determines whether the 3D model will be linked to the file from which it was created."
+        },
+        {
+          "name": "SaveWithDocument",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "Determines whether the linked 3D model will be saved with the document into which it is inserted. This argument must be msoTrue if LinkToFile is msoFalse."
+        },
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the left edge of the 3D model relative to the left edge of the slide."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the top edge of the 3D model relative to the top edge of the slide."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": true,
+          "description": "The width of the 3D model, measured in points (enter -1 to auto-calculate a width based on the 3D model dimensions)."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": true,
+          "description": "The height of the 3D model, measured in points (enter -1 to auto-calculate a height based on the 3D model dimensions)."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

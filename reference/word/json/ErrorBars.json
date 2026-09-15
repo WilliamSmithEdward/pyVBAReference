@@ -1,0 +1,120 @@
+{
+  "name": "ErrorBars",
+  "kind": "Dispatch Interface",
+  "guid": "{194F8476-B79D-4572-A609-294207DE77C1}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the error bars on a chart series.",
+  "remarks": "Error bars indicate the degree of uncertainty for chart data. Only series in area, bar, column, line, and scatter groups on a 2D chart can have error bars. Only series in scatter groups can have x and y error bars. This object is not a collection. There is no object that represents a single error bar; you either enable x error bars or y error bars for all points in a series or you disable them. The ErrorBar method changes the error bar format and type.",
+  "example": "With ActiveDocument.InlineShapes(1)\n If .HasChart Then\n .Chart.SeriesCollection(1).HasErrorBars = True\n .Chart.SeriesCollection(1).ErrorBars.EndStyle = xlNoCap\n End If\nEnd With",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the object. Read-only String."
+    },
+    {
+      "name": "Border",
+      "kind": "property",
+      "type": "ChartBorder",
+      "access": "read-only",
+      "description": "Returns the border of the object. Read-only ChartBorder."
+    },
+    {
+      "name": "EndStyle",
+      "kind": "property",
+      "type": "XlEndStyleCap",
+      "access": "read/write",
+      "description": "Returns or sets the end style for the error bars. Read/write Long."
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "ChartFormat",
+      "access": "read-only",
+      "description": "Returns the line, fill, and effect formatting for the object. Read-only ChartFormat."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the Microsoft Word application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select() As Variant",
+      "description": "Selects the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "ClearFormats",
+      "kind": "method",
+      "signature": "ClearFormats() As Variant",
+      "description": "Clears the formatting of the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "SetProperty",
+      "kind": "method",
+      "signature": "SetProperty(ID As String, Value As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Value",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetProperty",
+      "kind": "method",
+      "signature": "GetProperty(ID As String) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "ID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

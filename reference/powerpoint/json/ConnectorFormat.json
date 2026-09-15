@@ -1,0 +1,140 @@
+{
+  "name": "ConnectorFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{91493481-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Contains properties and methods that apply to connectors.",
+  "remarks": "A connector is a line that attaches two other shapes at points called connection sites. If you rearrange shapes that are connected, the geometry of the connector will be automatically adjusted so that the shapes remain connected. Use the ConnectorFormat property to return a ConnectorFormat object. Use the BeginConnect and EndConnect methods to attach the ends of the connector to other shapes in the document. Use the RerouteConnections method to automatically find the shortest path between the two shapes connected by the connector. Use the Connector property to see whether a shape is a connector. Note that you assign a size and a position when you add a connector to the Shapes collection, but the size and position are automatically adjusted when you attach the beginning and end of the connector to other shapes in the collection. Therefore, if you intend to attach a connector to other shapes, the initial size and position you specify are irrelevant.",
+  "example": "Set myDocument = ActivePresentation.Slides(1)\n\nSet s = myDocument.Shapes\n\nSet firstRect = s.AddShape(msoShapeRectangle, 100, 50, 200, 100)\n\nSet secondRect = s.AddShape(msoShapeRectangle, 300, 300, 200, 100)\n\nWith s.AddConnector(msoConnectorCurve, 0, 0, 0, 0).ConnectorFormat\n\n    .BeginConnect ConnectedShape:=firstRect, ConnectionSite:=1\n\n    .EndConnect ConnectedShape:=secondRect, ConnectionSite:=1\n\n    .Parent.RerouteConnections\n\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the four-character creator code for the application in which the specified object was created. For example, if the object was created in Microsoft PowerPoint, this property returns the hexadecimal number 50575054. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "BeginConnected",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Determines whether the beginning of the specified connector is connected to a shape. Read/write."
+    },
+    {
+      "name": "BeginConnectedShape",
+      "kind": "property",
+      "type": "Shape",
+      "access": "read-only",
+      "description": "Returns a Shape object that represents the shape that the beginning of the specified connector is attached to. Read-only."
+    },
+    {
+      "name": "BeginConnectionSite",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns an integer that specifies the connection site that the beginning of a connector is connected to. Read-only."
+    },
+    {
+      "name": "EndConnected",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Determines whether the end of the specified connector is connected to a shape. Read-only."
+    },
+    {
+      "name": "EndConnectedShape",
+      "kind": "property",
+      "type": "Shape",
+      "access": "read-only",
+      "description": "Returns a Shape object that represents the shape that the end of the specified connector is attached to. Read-only."
+    },
+    {
+      "name": "EndConnectionSite",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns an integer that specifies the connection site that the end of a connector is connected to. Read-only."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoConnectorType",
+      "access": "read/write",
+      "description": "Represents the type of connector. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "BeginConnect",
+      "kind": "method",
+      "signature": "BeginConnect(ConnectedShape As Shape, ConnectionSite As Long)",
+      "description": "Attaches the beginning of the specified connector to a specified shape.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ConnectedShape",
+          "type": "Shape",
+          "optional": false,
+          "description": "The shape to attach the beginning of the connector to. The specified Shape object must be in the same Shapes collection as the connector."
+        },
+        {
+          "name": "ConnectionSite",
+          "type": "Long",
+          "optional": false,
+          "description": "A connection site on the shape specified by ConnectedShape. Must be an integer between 1 and the integer returned by the ConnectionSiteCount property of the specified shape. If you want the connector to automatically find the shortest path between the two shapes it connects, specify any valid integer for this argument and then use the RerouteConnections method after the connector is attached to shapes at both ends."
+        }
+      ]
+    },
+    {
+      "name": "BeginDisconnect",
+      "kind": "method",
+      "signature": "BeginDisconnect()",
+      "description": "Detaches the beginning of the specified connector from the shape it is attached to.",
+      "returns": "void"
+    },
+    {
+      "name": "EndConnect",
+      "kind": "method",
+      "signature": "EndConnect(ConnectedShape As Shape, ConnectionSite As Long)",
+      "description": "Attaches the end of the specified connector to a specified shape.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ConnectedShape",
+          "type": "Shape",
+          "optional": false,
+          "description": "The shape to attach the end of the connector to. The specified Shape object must be in the same Shapes collection as the connector."
+        },
+        {
+          "name": "ConnectionSite",
+          "type": "Long",
+          "optional": false,
+          "description": "A connection site on the shape specified by ConnectedShape. Must be an integer between 1 and the integer returned by the ConnectionSiteCount property of the specified shape. If you want the connector to automatically find the shortest path between the two shapes it connects, specify any valid integer for this argument and then use the RerouteConnections method after the connector is attached to shapes at both ends."
+        }
+      ]
+    },
+    {
+      "name": "EndDisconnect",
+      "kind": "method",
+      "signature": "EndDisconnect()",
+      "description": "Detaches the end of the specified connector from the shape it is attached to. This method doesn't alter the size or position of the connector: the end of the connector remains positioned at a connection site but is no longer connected. Use the BeginDisconnect method to detach the beginning of the connector from a shape.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

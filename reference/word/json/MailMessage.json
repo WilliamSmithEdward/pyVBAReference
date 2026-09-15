@@ -1,0 +1,112 @@
+{
+  "name": "MailMessage",
+  "kind": "Dispatch Interface",
+  "guid": "{000209BA-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the active email message if you are using Microsoft Word as your email editor.",
+  "remarks": "Use the MailMessage property to return the MailMessage object. The following example validates the email addresses that appear in the active email message. The methods of the MailMessage object require that you are using Word as your email editor and that an email message is active. If either of these conditions is not true, an error occurs.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified MailMessage object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "CheckName",
+      "kind": "method",
+      "signature": "CheckName()",
+      "description": "Validates the email addresses that appear in the To, Cc, and Bcc lines in the active email message.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified mail message.",
+      "returns": "void"
+    },
+    {
+      "name": "DisplayMoveDialog",
+      "kind": "method",
+      "signature": "DisplayMoveDialog()",
+      "description": "Displays the Move dialog box, in which the user can specify a new location for the active email message in an available message store.",
+      "returns": "void"
+    },
+    {
+      "name": "DisplayProperties",
+      "kind": "method",
+      "signature": "DisplayProperties()",
+      "description": "Displays the Properties dialog box for the active email message.",
+      "returns": "void"
+    },
+    {
+      "name": "DisplaySelectNamesDialog",
+      "kind": "method",
+      "signature": "DisplaySelectNamesDialog()",
+      "description": "Displays the Select Names dialog box, in which the user can add addresses to the To, Cc, and Bcc lines in the active, unsent email message.",
+      "returns": "void"
+    },
+    {
+      "name": "Forward",
+      "kind": "method",
+      "signature": "Forward()",
+      "description": "Opens a new email message with an empty To line for forwarding the active message.",
+      "returns": "void"
+    },
+    {
+      "name": "GoToNext",
+      "kind": "method",
+      "signature": "GoToNext()",
+      "description": "Displays the next mail message if you are using Word as your email editor.",
+      "returns": "void"
+    },
+    {
+      "name": "GoToPrevious",
+      "kind": "method",
+      "signature": "GoToPrevious()",
+      "description": "Displays the previous mail message if you are using Word as your email editor.",
+      "returns": "void"
+    },
+    {
+      "name": "Reply",
+      "kind": "method",
+      "signature": "Reply()",
+      "description": "Opens a new email message - with the sender's address on the To line - for replying to the active message.",
+      "returns": "void"
+    },
+    {
+      "name": "ReplyAll",
+      "kind": "method",
+      "signature": "ReplyAll()",
+      "description": "Opens a new email message - with the sender's and all other recipients' addresses on the To and Cc lines, as appropriate - for replying to the active message.",
+      "returns": "void"
+    },
+    {
+      "name": "ToggleHeader",
+      "kind": "method",
+      "signature": "ToggleHeader()",
+      "description": "Toggles the display of the header in the active email message.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

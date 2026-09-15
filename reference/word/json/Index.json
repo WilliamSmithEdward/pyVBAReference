@@ -1,0 +1,119 @@
+{
+  "name": "Index",
+  "kind": "Dispatch Interface",
+  "guid": "{0002097D-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single index. The Index object is a member of the Indexes collection. The Indexes collection includes all the indexes in the specified document.",
+  "remarks": "Use Indexes (Index), where Index is the index number, to return a single Index object. The index number represents the position of the Index object in the document. The following example updates the first index in the active document. Use the Add method to create an index and add it to the Indexes collection. The following example creates an index at the end of the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Index object."
+    },
+    {
+      "name": "HeadingSeparator",
+      "kind": "property",
+      "type": "WdHeadingSeparator",
+      "access": "read/write",
+      "description": "Returns or sets the text between alphabetical groups (entries that start with the same letter) in the index. Corresponds to the \\h switch for an INDEX field. Read/write WdHeadingSeparator."
+    },
+    {
+      "name": "RightAlignPageNumbers",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if page numbers are aligned with the right margin in an index. Read/write Boolean."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "WdIndexType",
+      "access": "read/write",
+      "description": "Returns or sets the index type. Read/write WdIndexType."
+    },
+    {
+      "name": "NumberOfColumns",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Sets or returns the number of columns for each page of an index. Read/write Long."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the portion of a document that is contained within an index."
+    },
+    {
+      "name": "TabLeader",
+      "kind": "property",
+      "type": "WdTabLeader",
+      "access": "read/write",
+      "description": "Returns or sets the leader character between entries in an index and their associated page numbers. Read/write WdTabLeader."
+    },
+    {
+      "name": "AccentedLetters",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified index contains separate headings for accented letters (for example, words that begin with \"\" are under one heading and words that begin with \"A\" are under another). Read/write Boolean."
+    },
+    {
+      "name": "SortBy",
+      "kind": "property",
+      "type": "WdIndexSortBy",
+      "access": "read/write",
+      "description": "Returns or sets the sorting criteria for the specified index. Read/write WdIndexSortBy."
+    },
+    {
+      "name": "Filter",
+      "kind": "property",
+      "type": "WdIndexFilter",
+      "access": "read/write",
+      "description": "Returns or sets a value that specifies how Microsoft Word classifies the first character of entries in the specified index.read/write Long. Can be one of the following wdIndexFilter constants."
+    },
+    {
+      "name": "IndexLanguage",
+      "kind": "property",
+      "type": "WdLanguageID",
+      "access": "read/write",
+      "description": "Returns or sets a WdLanguageID constant that represents the sorting language to use for the specified index. Read/write ."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified index.",
+      "returns": "void"
+    },
+    {
+      "name": "Update",
+      "kind": "method",
+      "signature": "Update()",
+      "description": "Updates the entries shown in specified index.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

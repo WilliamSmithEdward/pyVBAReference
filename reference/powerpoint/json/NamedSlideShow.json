@@ -1,0 +1,56 @@
+{
+  "name": "NamedSlideShow",
+  "kind": "Dispatch Interface",
+  "guid": "{9149345C-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a custom slide show, which is a named subset of slides in a presentation.",
+  "remarks": "The NamedSlideShow object is a member of the NamedSlideShows collection. The NamedSlideShows collection contains all the named slide shows in the presentation.",
+  "example": "ActivePresentation.SlideShowSettings _\n    .NamedSlideShows(\"Quick Show\").Delete",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "You cannot use this property to set the name for a custom slide show. Use the Add method to redefine a custom slide show under a new name. Read-only."
+    },
+    {
+      "name": "SlideIDs",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns an array of slide IDs for the specified named slide show. Read-only."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified NamedSlideShow object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

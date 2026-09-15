@@ -1,0 +1,799 @@
+{
+  "name": "Chart",
+  "kind": "Dispatch Interface",
+  "guid": "{6FFA84BB-A350-4442-BB53-A43653459A84}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a chart in a document.",
+  "remarks": "The Example section describes the following properties and methods for returning a Chart object: - The Chart property. - The AddChart method.",
+  "example": "With ActiveDocument.InlineShapes(1)\n If .HasChart Then\n .Chart.SeriesCollection(1).Format.Fill.ForeColor.RGB = rgbRed\n End If\nEnd With",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "HasTitle",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the axis or chart has a visible title. Read/write Boolean."
+    },
+    {
+      "name": "ChartTitle",
+      "kind": "property",
+      "type": "ChartTitle",
+      "access": "read-only",
+      "description": "Returns the title of the specified chart. Read-only ChartTitle."
+    },
+    {
+      "name": "DepthPercent",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the depth of a 3D chart as a percentage of the chart width (between 20 and 2000 percent). Read/write Long."
+    },
+    {
+      "name": "Elevation",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the elevation, in degrees, of the 3D chart view. Read/write Long."
+    },
+    {
+      "name": "GapDepth",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the distance, as a percentage of the marker width, between the data series in a 3D chart. Read/write Long."
+    },
+    {
+      "name": "HeightPercent",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the height of a 3D chart as a percentage of the chart width (from 5 through 500 percent). Read/write Long."
+    },
+    {
+      "name": "Perspective",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the perspective for the 3D chart view. Read/write Long."
+    },
+    {
+      "name": "RightAngleAxes",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "True if the chart axes are at right angles, independent of chart rotation or elevation. Read/write Boolean."
+    },
+    {
+      "name": "Rotation",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the rotation, in degrees, of the 3D chart view (the rotation of the plot area around the z-axis). Read/write Variant."
+    },
+    {
+      "name": "DisplayBlanksAs",
+      "kind": "property",
+      "type": "XlDisplayBlanksAs",
+      "access": "read/write",
+      "description": "Returns or sets the way that blank cells are plotted on a chart. Can be one of the XlDisplayBlanksAs constants. Read/write Long."
+    },
+    {
+      "name": "ChartGroups",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an object that represents either a single chart group or a collection of all the chart groups in the chart."
+    },
+    {
+      "name": "ChartType",
+      "kind": "property",
+      "type": "XlChartType",
+      "access": "read/write",
+      "description": "Returns or sets the chart type. Read/write XlChartType."
+    },
+    {
+      "name": "HasDataTable",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the chart has a data table. Read/write Boolean."
+    },
+    {
+      "name": "PlotBy",
+      "kind": "property",
+      "type": "XlRowCol",
+      "access": "read/write",
+      "description": "Returns or sets the way columns or rows are used as data series on the chart. Read/write Long."
+    },
+    {
+      "name": "HasLegend",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the chart has a legend. Read/write Boolean."
+    },
+    {
+      "name": "Legend",
+      "kind": "property",
+      "type": "Legend",
+      "access": "read-only",
+      "description": "Returns the legend for the chart. Read-only Legend."
+    },
+    {
+      "name": "HasAxis",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets which axes exist on the chart. Read/write Variant."
+    },
+    {
+      "name": "Walls",
+      "kind": "property",
+      "type": "Walls",
+      "access": "read-only",
+      "description": "Returns the walls of the 3D chart. Read-only Walls."
+    },
+    {
+      "name": "Floor",
+      "kind": "property",
+      "type": "Floor",
+      "access": "read-only",
+      "description": "Returns the floor of the 3D chart. Read-only Floor."
+    },
+    {
+      "name": "PlotArea",
+      "kind": "property",
+      "type": "PlotArea",
+      "access": "read-only",
+      "description": "Returns the plot area of a chart. Read-only PlotArea."
+    },
+    {
+      "name": "PlotVisibleOnly",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if only visible cells are plotted. False if both visible and hidden cells are plotted. Read/write Boolean."
+    },
+    {
+      "name": "ChartArea",
+      "kind": "property",
+      "type": "ChartArea",
+      "access": "read-only",
+      "description": "Returns the complete chart area for the chart. Read-only ChartArea."
+    },
+    {
+      "name": "AutoScaling",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word scales a 3D chart so that it is closer in size to the equivalent 2D chart. The RightAngleAxes property must be True. Read/write Boolean."
+    },
+    {
+      "name": "DataTable",
+      "kind": "property",
+      "type": "DataTable",
+      "access": "read-only",
+      "description": "Returns the chart data table. Read-only DataTable."
+    },
+    {
+      "name": "BarShape",
+      "kind": "property",
+      "type": "XlBarShape",
+      "access": "read/write",
+      "description": "Returns or sets the shape used for every series in a 3D bar or column chart. Read/write XlBarShape."
+    },
+    {
+      "name": "SideWall",
+      "kind": "property",
+      "type": "Walls",
+      "access": "read-only",
+      "description": "Returns a Walls object that allows the user to individually format the side wall of a 3D chart. Read-only."
+    },
+    {
+      "name": "BackWall",
+      "kind": "property",
+      "type": "Walls",
+      "access": "read-only",
+      "description": "Returns an object that allows the user to individually format the back wall of a 3D chart. Read-only Walls."
+    },
+    {
+      "name": "ChartStyle",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the chart style for the chart. Read/write Variant."
+    },
+    {
+      "name": "PivotLayout",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Not supported for this object."
+    },
+    {
+      "name": "ShowDataLabelsOverMaximum",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a value that indicates whether to show the data labels when the value is greater than the maximum value on the value axis. Read/write Boolean."
+    },
+    {
+      "name": "ChartData",
+      "kind": "property",
+      "type": "ChartData",
+      "access": "read-only",
+      "description": "Returns information about the linked or embedded data associated with a chart. Read-only ChartData."
+    },
+    {
+      "name": "Shapes",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns a collection that represents all the shapes on the chart sheet. Read-only Shapes."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the Microsoft Word application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "ShowReportFilterFieldButtons",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether to display the report filter field buttons on a PivotChart. Read/write. Deprecated."
+    },
+    {
+      "name": "ShowLegendFieldButtons",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether to display legend field buttons on a PivotChart. Read/write. Deprecated."
+    },
+    {
+      "name": "ShowAxisFieldButtons",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether to display axis field buttons on a PivotChart. Read/write. Deprecated."
+    },
+    {
+      "name": "ShowValueFieldButtons",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether to display the value field buttons on a PivotChart. Read/write. Deprecated."
+    },
+    {
+      "name": "ShowAllFieldButtons",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether to display all field buttons on a PivotChart. Read/write. Deprecated."
+    },
+    {
+      "name": "CategoryLabelLevel",
+      "kind": "property",
+      "type": "XlCategoryLabelLevel",
+      "access": "read/write",
+      "description": "Returns or sets an XlCategoryLabel constant that specifies the source level of the chart category labels. Read/write."
+    },
+    {
+      "name": "SeriesNameLevel",
+      "kind": "property",
+      "type": "XlSeriesNameLevel",
+      "access": "read/write",
+      "description": "Returns or sets an XlSeriesNameLevel constant that specifies the source level of the series names. Read/write."
+    },
+    {
+      "name": "ChartColor",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets an integer that represents the color scheme for the chart. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "SeriesCollection",
+      "kind": "method",
+      "signature": "SeriesCollection([Index As Variant]) As Object",
+      "description": "Returns all the series in the chart.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ApplyDataLabels",
+      "kind": "method",
+      "signature": "ApplyDataLabels([Type As XlDataLabelsType], [LegendKey As Variant], [AutoText As Variant], [HasLeaderLines As Variant], [ShowSeriesName As Variant], [ShowCategoryName As Variant], [ShowValue As Variant], [ShowPercentage As Variant], [ShowBubbleSize As Variant], [Separator As Variant])",
+      "description": "Applies data labels to all the series in a chart.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "XlDataLabelsType",
+          "optional": true,
+          "description": "One of the enumeration values that specifies the type of data label to apply. Can be one of the xlDataLabelsType constants."
+        },
+        {
+          "name": "LegendKey",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to show the legend key next to the point. The default is False."
+        },
+        {
+          "name": "AutoText",
+          "type": "Variant",
+          "optional": true,
+          "description": "True if the object automatically generates appropriate text based on content."
+        },
+        {
+          "name": "HasLeaderLines",
+          "type": "Variant",
+          "optional": true,
+          "description": "For the Chart and Series objects, True if the series has leader lines."
+        },
+        {
+          "name": "ShowSeriesName",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to enable the series name for the data label; otherwise, False."
+        },
+        {
+          "name": "ShowCategoryName",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to enable the category name for the data label; otherwise, False."
+        },
+        {
+          "name": "ShowValue",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to enable the value for the data label; otherwise, False."
+        },
+        {
+          "name": "ShowPercentage",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to enable the percentage for the data label; otherwise, False."
+        },
+        {
+          "name": "ShowBubbleSize",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to enable the bubble size for the data label; otherwise, False."
+        },
+        {
+          "name": "Separator",
+          "type": "Variant",
+          "optional": true,
+          "description": "The separator for the data label."
+        }
+      ]
+    },
+    {
+      "name": "GetChartElement",
+      "kind": "method",
+      "signature": "GetChartElement(x As Long, y As Long, ElementID As Long, Arg1 As Long, Arg2 As Long)",
+      "description": "Returns information about the chart element at the specified x-coordinate and y-coordinate.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "x",
+          "type": "Long",
+          "optional": false,
+          "description": "The x-coordinate of the chart element."
+        },
+        {
+          "name": "y",
+          "type": "Long",
+          "optional": false,
+          "description": "The y-coordinate of the chart element."
+        },
+        {
+          "name": "ElementID",
+          "type": "Long",
+          "optional": false,
+          "description": "When the method returns, this argument contains the XlChartItem value of the chart element at the specified coordinates. For more information, see the Remarks section."
+        },
+        {
+          "name": "Arg1",
+          "type": "Long",
+          "optional": false,
+          "description": "When the method returns, this argument contains information related to the chart element. For more information, see the Remarks section."
+        },
+        {
+          "name": "Arg2",
+          "type": "Long",
+          "optional": false,
+          "description": "When the method returns, this argument contains information related to the chart element. For more information, see the Remarks section."
+        }
+      ]
+    },
+    {
+      "name": "SetSourceData",
+      "kind": "method",
+      "signature": "SetSourceData(Source As String, [PlotBy As Variant])",
+      "description": "Sets the source data range for the chart.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "String",
+          "optional": false,
+          "description": "The address of the chart data range that contains the source data."
+        },
+        {
+          "name": "PlotBy",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the way the data will be plotted. Can be either of the following XlRowCol constants: xlColumns or xlRows."
+        }
+      ]
+    },
+    {
+      "name": "Axes",
+      "kind": "method",
+      "signature": "Axes([Type As Variant], [AxisGroup As XlAxisGroup]) As Object",
+      "description": "Returns a collection of axes on the chart.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "Variant",
+          "optional": true,
+          "description": "The axis to return. Can be one of the following XlAxisType constants: xlValue, xlCategory, or xlSeriesAxis (xlSeriesAxis is valid only for 3D charts)."
+        },
+        {
+          "name": "AxisGroup",
+          "type": "XlAxisGroup",
+          "optional": true,
+          "description": "One of the enumeration values that specifies the axis group. The default is xlPrimary."
+        }
+      ]
+    },
+    {
+      "name": "SetBackgroundPicture",
+      "kind": "method",
+      "signature": "SetBackgroundPicture(FileName As String)",
+      "description": "Sets the background graphic for a chart.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the file for the graphic."
+        }
+      ]
+    },
+    {
+      "name": "ChartWizard",
+      "kind": "method",
+      "signature": "ChartWizard([Source As Variant], [Gallery As Variant], [Format As Variant], [PlotBy As Variant], [CategoryLabels As Variant], [SeriesLabels As Variant], [HasLegend As Variant], [Title As Variant], [CategoryTitle As Variant], [ValueTitle As Variant], [ExtraTitle As Variant])",
+      "description": "Modifies the properties of the given chart. Use this method to quickly format a chart without setting all the individual properties. This method is noninteractive, and it changes only the specified properties.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "Variant",
+          "optional": true,
+          "description": "The range that contains the source data for the new chart. If this argument is omitted, Word edits the active chart sheet or the selected chart on the active worksheet."
+        },
+        {
+          "name": "Gallery",
+          "type": "Variant",
+          "optional": true,
+          "description": "One of the XlChartType constants that specifies the chart type."
+        },
+        {
+          "name": "Format",
+          "type": "Variant",
+          "optional": true,
+          "description": "The option number for the built-in autoformats. Can be a number from 1 through 10, depending on the gallery type. If this argument is omitted, Word chooses a default value based on the gallery type and data source."
+        },
+        {
+          "name": "PlotBy",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies whether the data for each series is in rows or columns. Can be one of the following XlRowCol constants: xlRows or xlColumns."
+        },
+        {
+          "name": "CategoryLabels",
+          "type": "Variant",
+          "optional": true,
+          "description": "An integer that specifies the number of rows or columns within the source range that contain category labels. Allowed values are from 0 (zero) through one less than the maximum number of the corresponding categories or series."
+        },
+        {
+          "name": "SeriesLabels",
+          "type": "Variant",
+          "optional": true,
+          "description": "An integer that specifies the number of rows or columns within the source range that contain series labels. Allowed values are from 0 (zero) through one less than the maximum number of the corresponding categories or series."
+        },
+        {
+          "name": "HasLegend",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to include a legend."
+        },
+        {
+          "name": "Title",
+          "type": "Variant",
+          "optional": true,
+          "description": "The chart title text."
+        },
+        {
+          "name": "CategoryTitle",
+          "type": "Variant",
+          "optional": true,
+          "description": "The category axis title text."
+        },
+        {
+          "name": "ValueTitle",
+          "type": "Variant",
+          "optional": true,
+          "description": "The value axis title text."
+        },
+        {
+          "name": "ExtraTitle",
+          "type": "Variant",
+          "optional": true,
+          "description": "The series axis title for 3D charts or the second value axis title for 2D charts."
+        }
+      ]
+    },
+    {
+      "name": "CopyPicture",
+      "kind": "method",
+      "signature": "CopyPicture([Appearance As XlPictureAppearance], [Format As XlCopyPictureFormat], [Size As XlPictureAppearance])",
+      "description": "Copies the selected object to the Clipboard as a picture.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Appearance",
+          "type": "XlPictureAppearance",
+          "optional": true,
+          "description": "One of the enumeration values that specifies how the picture should be copied. The default is xlScreen."
+        },
+        {
+          "name": "Format",
+          "type": "XlCopyPictureFormat",
+          "optional": true,
+          "description": "One of the enumeration values that specifies the format of the picture. The default is xlPicture."
+        },
+        {
+          "name": "Size",
+          "type": "XlPictureAppearance",
+          "optional": true,
+          "description": "One of the enumeration values that specifies the size of the copied picture when the object is a chart on a chart sheet (not embedded on a worksheet). The default is xlPrinter."
+        }
+      ]
+    },
+    {
+      "name": "Paste",
+      "kind": "method",
+      "signature": "Paste([Type As Variant])",
+      "description": "Pastes chart data from the Clipboard into the chart.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the chart information to paste if a chart is on the Clipboard. Can be one of the following values: 4104 Everything will be pasted. This is the default value. 4122 Copied source formats are pasted. 4123 Formulas are pasted."
+        }
+      ]
+    },
+    {
+      "name": "Export",
+      "kind": "method",
+      "signature": "Export(FileName As String, [FilterName As Variant], [Interactive As Variant]) As Boolean",
+      "description": "Exports the chart in a graphic format.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the exported file."
+        },
+        {
+          "name": "FilterName",
+          "type": "Variant",
+          "optional": true,
+          "description": "The language-independent name of the graphic filter as it appears in the registry."
+        },
+        {
+          "name": "Interactive",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to display the dialog box that contains the filter-specific options. False to indicate that Word should use the default values for the filter. The default is False."
+        }
+      ]
+    },
+    {
+      "name": "SetDefaultChart",
+      "kind": "method",
+      "signature": "SetDefaultChart(Name As Variant)",
+      "description": "Specifies the name of the chart template that Microsoft Word uses when it creates new charts.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "Variant",
+          "optional": false,
+          "description": "Specifies the name of the default chart template that Word uses when it creates new charts. This name can be set to either the name of a user-defined chart template in the gallery or a special XlChartGallery constant, xlBuiltIn, to specify a built-in chart template."
+        }
+      ]
+    },
+    {
+      "name": "ApplyChartTemplate",
+      "kind": "method",
+      "signature": "ApplyChartTemplate(FileName As String)",
+      "description": "Applies a standard or custom chart type to a chart.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The file name for a chart template."
+        }
+      ]
+    },
+    {
+      "name": "SaveChartTemplate",
+      "kind": "method",
+      "signature": "SaveChartTemplate(FileName As String)",
+      "description": "Saves a custom chart template to the list of available chart templates.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the chart template."
+        }
+      ]
+    },
+    {
+      "name": "ClearToMatchStyle",
+      "kind": "method",
+      "signature": "ClearToMatchStyle()",
+      "description": "Clears the chart elements formatting to automatic.",
+      "returns": "void"
+    },
+    {
+      "name": "ApplyLayout",
+      "kind": "method",
+      "signature": "ApplyLayout(Layout As Long, [ChartType As Variant])",
+      "description": "Applies the layouts shown in the ribbon.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Layout",
+          "type": "Long",
+          "optional": false,
+          "description": "The type of layout. The type of layout is denoted by a number from 1 to 10."
+        },
+        {
+          "name": "ChartType",
+          "type": "Variant",
+          "optional": true,
+          "description": "An XlChartType constant that represents the type of chart."
+        }
+      ]
+    },
+    {
+      "name": "Refresh",
+      "kind": "method",
+      "signature": "Refresh()",
+      "description": "Causes the specified chart to be redrawn immediately.",
+      "returns": "void"
+    },
+    {
+      "name": "SetElement",
+      "kind": "method",
+      "signature": "SetElement(Element As MsoChartElementType)",
+      "description": "Sets chart elements on a chart. Read/write MsoChartElementType.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Element",
+          "type": "MsoChartElementType",
+          "optional": false,
+          "description": "One of the enumeration values that specifies the chart element type."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy([Before As Variant], [After As Variant])",
+      "description": "Not supported for this object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Before",
+          "type": "Variant",
+          "optional": true,
+          "description": "Not supported for this object."
+        },
+        {
+          "name": "After",
+          "type": "Variant",
+          "optional": true,
+          "description": "Not supported for this object."
+        }
+      ]
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select([Replace As Variant]) As Variant",
+      "description": "Selects the object.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Replace",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to replace the current selection with the specified object. False to extend the current selection to include any previously selected objects and the specified object. This parameter is used only with sheets."
+        }
+      ]
+    },
+    {
+      "name": "FullSeriesCollection",
+      "kind": "method",
+      "signature": "FullSeriesCollection([Index As Variant]) As Object",
+      "description": "Returns the collection of all the series in the specified chart, or the specified series.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": true,
+          "description": "The index number in the series collection of the series to return."
+        }
+      ]
+    },
+    {
+      "name": "ClearToMatchColorStyle",
+      "kind": "method",
+      "signature": "ClearToMatchColorStyle()",
+      "description": "Clears all colors on the specified chart that don't follow the color style applied to the chart.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

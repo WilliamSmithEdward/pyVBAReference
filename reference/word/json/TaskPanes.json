@@ -1,0 +1,64 @@
+{
+  "name": "TaskPanes",
+  "kind": "Dispatch Interface",
+  "guid": "{E6AAEC05-E543-4085-BA92-9BF7D2474F5C}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of TaskPane objects that contains commonly performed tasks in Microsoft Word.",
+  "remarks": "Use the TaskPanes property to return the TaskPanes collection. Use the Item method with a WdTaskPanes constant to refer to a specific task pane. The example below displays the formatting task pane.",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of task panes in the collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified TaskPanes object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As WdTaskPanes) As TaskPane",
+      "description": "Returns the specified task pane as a TaskPane object.",
+      "returns": "TaskPane",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "WdTaskPanes",
+          "optional": false,
+          "description": "The specified task pane."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

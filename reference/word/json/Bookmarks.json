@@ -1,0 +1,114 @@
+{
+  "name": "Bookmarks",
+  "kind": "Dispatch Interface",
+  "guid": "{00020967-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of Bookmark objects that represent the bookmarks in the specified selection, range, or document.",
+  "remarks": "Use the Bookmarks property to return the Bookmarks collection for a document, range, or selection. The following example ensures that the bookmark named \"temp\" exists in the active document before selecting the bookmark. Use the Add method to set a bookmark for a range in a document. The following example marks the selection by adding a bookmark named \"temp\". Use Bookmarks (_index_), where _index_ is the bookmark name or index number, to return a single Bookmark object. You must exactly match the spelling (but not necessarily the capitalization) of the bookmark name. The following example selects the bookmark named \"temp\" in the active document. The index number represents the position of the bookmark in the Selection or Range object. For the Document object, the index number represents the position of the bookmark in the alphabetical list of bookmarks in the Bookmarks dialog box (click Name to sort the list of bookmarks alphabetically). The following example displays the name of the second bookmark in the Bookmarks collection. Remarks The ShowHidden property effects the number of elements in the Bookmarks collection.",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of items in the Bookmarks collection. Read-only Long."
+    },
+    {
+      "name": "DefaultSorting",
+      "kind": "property",
+      "type": "WdBookmarkSortBy",
+      "access": "read/write",
+      "description": "Returns or sets the sorting option for bookmark names displayed in the Bookmark dialog box (Insert menu). Read/write WdBookmarkSortBy."
+    },
+    {
+      "name": "ShowHidden",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if hidden bookmarks are included in the Bookmarks collection. Read/write Boolean."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Bookmarks collection."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Bookmark",
+      "description": "Returns an individual Bookmark object in a collection.",
+      "returns": "Bookmark",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position or a String representing the name of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String, [Range As Variant]) As Bookmark",
+      "description": "Returns a Bookmark object that represents a bookmark added to a range.",
+      "returns": "Bookmark",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the bookmark. The name cannot be more than 40 characters or include more than one word."
+        },
+        {
+          "name": "Range",
+          "type": "Variant",
+          "optional": true,
+          "description": "The range of text marked by the bookmark. A bookmark can be set to a collapsed range (the insertion point)."
+        }
+      ]
+    },
+    {
+      "name": "Exists",
+      "kind": "method",
+      "signature": "Exists(Name As String) As Boolean",
+      "description": "Determines whether the specified bookmark exists. Returns True if the bookmark exists.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "A bookmark name than can not include more than 40 characters or more than one word."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

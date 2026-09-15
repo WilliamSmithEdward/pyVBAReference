@@ -1,0 +1,71 @@
+{
+  "name": "ImportExportSpecification",
+  "kind": "Dispatch Interface",
+  "guid": "{55B0E0C9-C75D-4F42-AD20-6939C1D05B70}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "Represents a saved import or export operation.",
+  "remarks": "An ImportExportSpecification object contains all the information that Microsoft Access needs to repeat an import or export operation without your having to provide any input. For example, an import specification that imports data from a Microsoft Office Excel 2007 workbook stores the name of the source Excel file, the name of the destination database, and other details, such as whether you appended to or created a new table, primary key information, field names, and so on. Use the Add method of the ImportExportSpecifications collection to create a new ImportExportSpecification object. Use the Execute method to run a saved import or export operation.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Use the Application property to access the active Microsoft Access Application object and its related properties. Read-only Application object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only Object."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the name of the specified ImportExportSpecification object. Read/write String."
+    },
+    {
+      "name": "XML",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the Extensible Markup Language (XML) string that defines an ImportExportSpecification object. Read/write String."
+    },
+    {
+      "name": "Description",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets a String that describes the specified ImportExportSpecification object. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Execute",
+      "kind": "method",
+      "signature": "Execute([Prompt As Variant])",
+      "description": "Executes the specified import or export specification.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Prompt",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified ImportExportSpecification object from the ImportExportSpecifications collection.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

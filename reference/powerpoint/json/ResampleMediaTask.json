@@ -1,0 +1,90 @@
+{
+  "name": "ResampleMediaTask",
+  "kind": "Dispatch Interface",
+  "guid": "{BA72E553-4FF5-48F4-8215-5505F990966F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "profile",
+      "kind": "property",
+      "type": "PpResampleMediaProfile",
+      "access": "read-only",
+      "description": "Returns the media mobilization profile for the specified media asset. Read-only."
+    },
+    {
+      "name": "IsLinked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns whether the sample is linked. Read-only."
+    },
+    {
+      "name": "IsEmbedded",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns whether the sample is embedded. Read-only."
+    },
+    {
+      "name": "AudioSamplingRate",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the audio sampling rate per second. Read-only."
+    },
+    {
+      "name": "VideoFrameRate",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the video frame rate per second of the sample. Read-only."
+    },
+    {
+      "name": "SampleHeight",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the resolution height of the sample. Read-only."
+    },
+    {
+      "name": "SampleWidth",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the resolution width of the sample. Read-only."
+    },
+    {
+      "name": "ContainerType",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the format type of the container of the sample. Read-only."
+    },
+    {
+      "name": "VideoCompressionType",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the video compression format of the sample. Read-only."
+    },
+    {
+      "name": "AudioCompressionType",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the audio compression type. Read-only."
+    },
+    {
+      "name": "Shape",
+      "kind": "property",
+      "type": "Shape",
+      "access": "read-only",
+      "description": "Returns the shape that is associated with the specified media asset. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

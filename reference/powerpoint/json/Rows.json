@@ -1,0 +1,65 @@
+{
+  "name": "Rows",
+  "kind": "Dispatch Interface",
+  "guid": "{914934C6-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of Row objects that represent the rows in a table.",
+  "remarks": "",
+  "example": "Dim i As Integer\n\nWith ActivePresentation.Slides(2).Shapes(4).Table\n\n    For i = 1 To .Rows.Count\n\n        .Rows.Height = 160\n\n    Next i\n\nEnd With",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Row",
+      "description": "Returns a single Row object from the specified Rows collection.",
+      "returns": "Row",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the single Row object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([BeforeRow As Long]) As Row",
+      "description": "Returns a Row object that represents a row being added to a table.",
+      "returns": "Row",
+      "parameters": [
+        {
+          "name": "BeforeRow",
+          "type": "Long",
+          "optional": true,
+          "description": "The row before which the row is to be added."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,83 @@
+{
+  "name": "Rectangle",
+  "kind": "Dispatch Interface",
+  "guid": "{ADD4EDF3-2F33-4734-9CE6-D476097C5ADA}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a portion of text or a graphic in a page. Use the Rectangle object and related methods and properties for programmatically defining page layout in a document.",
+  "remarks": "Use the Item method to return a specific Rectangle object. The following example accesses the first rectangle in the first page of the active document. Use the RectangleType property to determine the type of rectangle. The following example creates a ShapeRange object if the specified rectangle is a shape.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Rectangle object."
+    },
+    {
+      "name": "RectangleType",
+      "kind": "property",
+      "type": "WdRectangleType",
+      "access": "read-only",
+      "description": "Returns a WdRectangleType constant that represents the type for the specified rectangle."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of pixels from the left edge of the page to the left edge of a rectangle."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of pixels from the top of the page to the top of a rectangle."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns or sets a Long that represents the width, in points, of a rectangle. Read/write Long."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the height of a rectangle, in pixels."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the portion of a document that is contained within a rectangle."
+    },
+    {
+      "name": "Lines",
+      "kind": "property",
+      "type": "Lines",
+      "access": "read-only",
+      "description": "Returns a Lines collection that represents the lines in a specified portion of text in a page."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

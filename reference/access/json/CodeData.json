@@ -1,0 +1,55 @@
+{
+  "name": "CodeData",
+  "kind": "Class",
+  "guid": "{08F6C81A-3CFD-11D1-98BC-006008197D41}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "The CodeData object refers to objects stored within the code database by the source (server) application.",
+  "remarks": "The CodeData object has several collections that contain specific object types within the code database. The following table lists the name of each collection defined by the database and the types of objects it contains. For example, an AccessObject representing a table is a member of the AllTables collection, which is a collection of AccessObject objects within the current database. Within the AllTables collection, individual tables are indexed beginning with zero. Refer to an individual AccessObject object in the AllTables collection either by referring to the table by name, or by referring to its index within the collection. If you want to refer to a specific item in the AllTables collection, it's better to refer to it by name because the item's index may change. If the object name includes a space, the name must be surrounded by brackets ([ ]).",
+  "example": "",
+  "properties": [
+    {
+      "name": "AllTables",
+      "kind": "property",
+      "type": "AllTables",
+      "access": "read-only",
+      "description": "Use the AllTables property to reference the AllTables collection and its related properties. Read-only AllTables object."
+    },
+    {
+      "name": "AllQueries",
+      "kind": "property",
+      "type": "AllQueries",
+      "access": "read-only",
+      "description": "Use the AllQueries property to reference the AllQueries collection and its related properties. Read-only AllQueries object."
+    },
+    {
+      "name": "AllViews",
+      "kind": "property",
+      "type": "AllViews",
+      "access": "read-only",
+      "description": "Use the AllViews property to reference the AllViews collection and its related properties. Read-only AllViews object."
+    },
+    {
+      "name": "AllStoredProcedures",
+      "kind": "property",
+      "type": "AllStoredProcedures",
+      "access": "read-only",
+      "description": "Use the AllStoredProcedures property to reference the AllStoredProcedures collection and its related properties. Read-only AllStoredProcedures object."
+    },
+    {
+      "name": "AllDatabaseDiagrams",
+      "kind": "property",
+      "type": "AllDatabaseDiagrams",
+      "access": "read-only",
+      "description": "Use the AllDatabaseDiagrams property to reference the AllDatabaseDiagrams collection and its related properties. Read-only AllDatabaseDiagrams object."
+    },
+    {
+      "name": "AllFunctions",
+      "kind": "property",
+      "type": "AllFunctions",
+      "access": "read-only",
+      "description": "Use the AllFunctions property to reference the AllFunctions collection and its related properties. Read-only AllFunctions object."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

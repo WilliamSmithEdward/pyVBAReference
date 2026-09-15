@@ -1,0 +1,145 @@
+# IvyChart
+
+**Type:** Dispatch Interface  
+**Library:** Microsoft Access 16.0 Object Library  
+**GUID:** {3B06E998-E47C-11CD-8701-00AA003F0F07}  
+
+## Properties (130)
+
+- `Application As Application  (read-only)`
+- `Parent As Object  (read-only)`
+- `Properties As Properties  (read-only)`
+- `EventProcPrefix As String  (read/write)`
+- `ControlType As Byte  (read/write)`
+- `RowSource As String  (read/write)`
+- `LinkChildFields As String  (read/write)`
+- `LinkMasterFields As String  (read/write)`
+- `Visible As Boolean  (read/write)`
+- `DisplayWhen As Byte  (read/write)`
+- `Enabled As Boolean  (read/write)`
+- `StatusBarText As String  (read/write)`
+- `TabStop As Boolean  (read/write)`
+- `TabIndex As Integer  (read/write)`
+- `Left As Integer  (read/write)`
+- `Top As Integer  (read/write)`
+- `Width As Integer  (read/write)`
+- `Height As Integer  (read/write)`
+- `BackStyle As Byte  (read/write)`
+- `BackColor As Long  (read/write)`
+- `SpecialEffect As Byte  (read/write)`
+- `BorderStyle As Byte  (read/write)`
+- `OldBorderStyle As Byte  (read/write)`
+- `BorderColor As Long  (read/write)`
+- `BorderWidth As Byte  (read/write)`
+- `ShortcutMenuBar As String  (read/write)`
+- `ControlTipText As String  (read/write)`
+- `HelpContextId As Long  (read/write)`
+- `Section As Integer  (read/write)`
+- `Tag As String  (read/write)`
+- `IsVisible As Boolean  (read/write)`
+- `InSelection As Boolean  (read/write)`
+- `OnEnter As String  (read/write)`
+- `OnExit As String  (read/write)`
+- `OnGotFocus As String  (read/write)`
+- `OnLostFocus As String  (read/write)`
+- `OnClick As String  (read/write)`
+- `OnDblClick As String  (read/write)`
+- `OnMouseDown As String  (read/write)`
+- `OnMouseMove As String  (read/write)`
+- `OnMouseUp As String  (read/write)`
+- `OnKeyDown As String  (read/write)`
+- `OnKeyUp As String  (read/write)`
+- `OnKeyPress As String  (read/write)`
+- `Name As String  (read/write)`
+- `Layout As AcLayoutType  (read-only)`
+- `LeftPadding As Integer  (read/write)`
+- `TopPadding As Integer  (read/write)`
+- `RightPadding As Integer  (read/write)`
+- `BottomPadding As Integer  (read/write)`
+- `GridlineStyleLeft As Byte  (read/write)`
+- `GridlineStyleTop As Byte  (read/write)`
+- `GridlineStyleRight As Byte  (read/write)`
+- `GridlineStyleBottom As Byte  (read/write)`
+- `GridlineWidthLeft As Byte  (read/write)`
+- `GridlineWidthTop As Byte  (read/write)`
+- `GridlineWidthRight As Byte  (read/write)`
+- `GridlineWidthBottom As Byte  (read/write)`
+- `GridlineColor As Long  (read/write)`
+- `HorizontalAnchor As AcHorizontalAnchor  (read/write)`
+- `VerticalAnchor As AcVerticalAnchor  (read/write)`
+- `LayoutID As Long  (read-only)`
+- `BackThemeColorIndex As Long  (read/write)`
+- `BackTint As Single  (read/write)`
+- `BackShade As Single  (read/write)`
+- `BorderThemeColorIndex As Long  (read/write)`
+- `BorderTint As Single  (read/write)`
+- `BorderShade As Single  (read/write)`
+- `GridlineThemeColorIndex As Long  (read/write)`
+- `GridlineTint As Single  (read/write)`
+- `GridlineShade As Single  (read/write)`
+- `ChartAxis As String  (read/write)`
+- `ChartLegend As String  (read/write)`
+- `ChartValues As String  (read/write)`
+- `HasLegend As Boolean  (read/write)`
+- `HasTitle As Boolean  (read/write)`
+- `ChartTitle As String  (read/write)`
+- `HasAxisTitles As Boolean  (read/write)`
+- `CategoryAxisTitle As String  (read/write)`
+- `PrimaryValuesAxisTitle As String  (read/write)`
+- `SecondaryValuesAxisTitle As String  (read/write)`
+- `TransformedRowSource As String  (read-only)`
+- `ChartType As AcChartType  (read/write)`
+- `LegendPosition As AcLegendPosition  (read/write)`
+- `PrimaryValuesAxisMinimum As Single  (read/write)`
+- `PrimaryValuesAxisMaximum As Single  (read/write)`
+- `SecondaryValuesAxisMinimum As Single  (read/write)`
+- `SecondaryValuesAxisMaximum As Single  (read/write)`
+- `PrimaryValuesAxisRange As AcAxisRange  (read/write)`
+- `SecondaryValuesAxisRange As AcAxisRange  (read/write)`
+- `PrimaryValuesAxisFontSize As Integer  (read/write)`
+- `PrimaryValuesAxisFontColor As Long  (read/write)`
+- `PrimaryValuesAxisThemeColorIndex As Long  (read/write)`
+- `PrimaryValuesAxisFontTint As Single  (read/write)`
+- `PrimaryValuesAxisFontShade As Single  (read/write)`
+- `SecondaryValuesAxisFontSize As Integer  (read/write)`
+- `SecondaryValuesAxisThemeColorIndex As Long  (read/write)`
+- `SecondaryValuesAxisFontTint As Single  (read/write)`
+- `SecondaryValuesAxisFontShade As Single  (read/write)`
+- `SecondaryValuesAxisFontColor As Long  (read/write)`
+- `CategoryAxisFontSize As Integer  (read/write)`
+- `CategoryAxisFontColor As Long  (read/write)`
+- `CategoryAxisThemeColorIndex As Long  (read/write)`
+- `CategoryAxisFontTint As Single  (read/write)`
+- `CategoryAxisFontShade As Single  (read/write)`
+- `ChartTitleFontColor As Long  (read/write)`
+- `ChartTitleThemeColorIndex As Long  (read/write)`
+- `ChartTitleFontTint As Single  (read/write)`
+- `ChartTitleFontShade As Single  (read/write)`
+- `ChartTitleFontSize As Integer  (read/write)`
+- `ChartSeriesCollection As ChartSeriesCollection  (read-only)`
+- `ChartAxisCollection As ChartAxisCollection  (read-only)`
+- `ChartValuesCollection As ChartValuesCollection  (read-only)`
+- `PrimaryValuesAxisFormat As String  (read/write)`
+- `SecondaryValuesAxisFormat As String  (read/write)`
+- `PrimaryValuesAxisDisplayUnits As AcAxisUnits  (read/write)`
+- `SecondaryValuesAxisDisplayUnits As AcAxisUnits  (read/write)`
+- `ChartTitleFontName As String  (read/write)`
+- `LegendTextFontSize As Integer  (read/write)`
+- `LegendTextFontColor As Long  (read/write)`
+- `LegendTextThemeColorIndex As Long  (read/write)`
+- `LegendTextFontTint As Single  (read/write)`
+- `LegendTextFontShade As Single  (read/write)`
+- `HasSubtitle As Boolean  (read/write)`
+- `ChartSubtitle As String  (read/write)`
+- `ChartSubtitleFontSize As Integer  (read/write)`
+- `ChartSubtitleFontColor As Long  (read/write)`
+- `ChartSubtitleThemeColorIndex As Long  (read/write)`
+- `ChartSubtitleFontTint As Single  (read/write)`
+- `ChartSubtitleFontShade As Single  (read/write)`
+
+## Methods (4)
+
+- `SizeToFit()`
+- `Requery()`
+- `SetFocus()`
+- `Move(Left As Variant, [Top As Variant], [Width As Variant], [Height As Variant])`

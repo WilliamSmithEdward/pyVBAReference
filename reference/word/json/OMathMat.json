@@ -1,0 +1,104 @@
+{
+  "name": "OMathMat",
+  "kind": "Dispatch Interface",
+  "guid": "{3E061A7E-67AD-4EAA-BC1E-55057D5E596F}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents an equation matrix.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathMat object."
+    },
+    {
+      "name": "Rows",
+      "kind": "property",
+      "type": "OMathMatRows",
+      "access": "read-only",
+      "description": "Returns an OMathMatRows object that represents the rows in a matrix. Read-only."
+    },
+    {
+      "name": "Cols",
+      "kind": "property",
+      "type": "OMathMatCols",
+      "access": "read-only",
+      "description": "Returns an OMathMatCols collection that represents the columns in a matrix. Read-only."
+    },
+    {
+      "name": "Cell",
+      "kind": "property",
+      "type": "OMath",
+      "access": "read-only",
+      "description": "Returns an OMath object that represents a cell in a matrix. Read-only."
+    },
+    {
+      "name": "Align",
+      "kind": "property",
+      "type": "WdOMathVertAlignType",
+      "access": "read/write",
+      "description": "Returns or sets a WdOMathVertAlignType constant that represents the vertical alignment for a matrix. Read/write."
+    },
+    {
+      "name": "PlcHoldHidden",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether placeholders in a matrix are hidden from display. True hides placeholder text. Read/write."
+    },
+    {
+      "name": "RowSpacingRule",
+      "kind": "property",
+      "type": "WdOMathSpacingRule",
+      "access": "read/write",
+      "description": "Returns or sets a WdOMathSpacingRule constant that represents the spacing rule for rows in a matrix. Read/write."
+    },
+    {
+      "name": "RowSpacing",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long that represents the spacing for rows in a matrix. Read/write."
+    },
+    {
+      "name": "ColSpacing",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long that represents the spacing for columns in a matrix. Read/write."
+    },
+    {
+      "name": "ColGapRule",
+      "kind": "property",
+      "type": "WdOMathSpacingRule",
+      "access": "read/write",
+      "description": "Returns or sets a WdOMathSpacingRule constant that represents the spacing rule for the space that appears between columns in a matrix. Read/write."
+    },
+    {
+      "name": "ColGap",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long that represents the spacing between columns in a matrix. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

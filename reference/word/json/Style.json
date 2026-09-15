@@ -1,0 +1,252 @@
+{
+  "name": "Style",
+  "kind": "Dispatch Interface",
+  "guid": "{0002092C-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single built-in or user-defined style. The Style object includes style attributes (such as font, font style, and paragraph spacing) as properties of the Style object. The Style object is a member of the Styles collection. The Styles collection includes all the styles in the specified document.",
+  "remarks": "Use Styles (Index), where Index is the style name, a WdBuiltinStyle constant or index number, to return a single Style object. You must exactly match the spelling and spacing of the style name, but not necessarily its capitalization. The following example modifies the font name of the user-defined style named \"Color\" in the active document. The following example sets the built-in Heading 1 style to not be bold. The style index number represents the position of the style in the alphabetically sorted list of style names. Note that Styles(1) is the first style in the alphabetical list. The following example displays the base style and style name of the first style in the Styles collection. To apply a style to a range, paragraph, or multiple paragraphs, set the Style property to a user-defined or built-in style name. The following example applies the Normal style to the first four paragraphs in the active document. The following example applies the Heading 1 style to the first paragraph in the selection. The following example creates a character style named \"Bolded\" and applies it to the selection. Use the OrganizerCopy method to copy styles between documents and templates.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Style object."
+    },
+    {
+      "name": "NameLocal",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns the name of a built-in style in the language of the user. Read/write String."
+    },
+    {
+      "name": "BaseStyle",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets an existing style on which you can base the formatting of another style. Read/write Variant."
+    },
+    {
+      "name": "Description",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the description of the specified style. Read-only String."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "WdStyleType",
+      "access": "read-only",
+      "description": "Returns the style type. Read-only WdStyleType."
+    },
+    {
+      "name": "BuiltIn",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified object is one of the built-in styles or caption labels in Word. Read-only Boolean."
+    },
+    {
+      "name": "NextParagraphStyle",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the style to be applied automatically to a new paragraph that is inserted after a paragraph formatted with the specified style. Read/write Variant."
+    },
+    {
+      "name": "InUse",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified style is a built-in style that has been modified or applied in the document or a new style that has been created in the document. Read-only Boolean."
+    },
+    {
+      "name": "Shading",
+      "kind": "property",
+      "type": "Shading",
+      "access": "read-only",
+      "description": "Returns a Shading object that refers to the shading formatting for the specified object."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read/write",
+      "description": "Returns a Borders collection that represents all the borders for the specified style."
+    },
+    {
+      "name": "ParagraphFormat",
+      "kind": "property",
+      "type": "ParagraphFormat",
+      "access": "read/write",
+      "description": "Returns or sets a ParagraphFormat object that represents the paragraph settings for the specified style. Read/write."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read/write",
+      "description": "Returns or sets a Font object that represents the character formatting of the specified style. Read/write Font."
+    },
+    {
+      "name": "Frame",
+      "kind": "property",
+      "type": "Frame",
+      "access": "read-only",
+      "description": "Returns a Frame object that represents the frame formatting for the specified style. Read-only."
+    },
+    {
+      "name": "LanguageID",
+      "kind": "property",
+      "type": "WdLanguageID",
+      "access": "read/write",
+      "description": "Returns or sets a WdLanguageID constant that represents the language for the specified range. Read/write."
+    },
+    {
+      "name": "AutomaticallyUpdate",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the style is automatically redefined based on the selection. Read/write Boolean."
+    },
+    {
+      "name": "ListTemplate",
+      "kind": "property",
+      "type": "ListTemplate",
+      "access": "read-only",
+      "description": "Returns a ListTemplate object that represents the list formatting for the specified Style object."
+    },
+    {
+      "name": "ListLevelNumber",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the list level for the specified style. Read-only Long."
+    },
+    {
+      "name": "LanguageIDFarEast",
+      "kind": "property",
+      "type": "WdLanguageID",
+      "access": "read/write",
+      "description": "Returns or sets an East Asian language for the specified object. Read/write WdLanguageID."
+    },
+    {
+      "name": "NoProofing",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the spelling and grammar checker ignores text formatted with this style. Read/write Long."
+    },
+    {
+      "name": "LinkStyle",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Sets or returns a Variant that represents a link between a paragraph and a character style. Read/write."
+    },
+    {
+      "name": "Visibility",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified style is visible as a recommended style in the Styles gallery and in the Styles task pane. Read/write."
+    },
+    {
+      "name": "NoSpaceBetweenParagraphsOfSameStyle",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to remove spacing between paragraphs that are formatted using the same style. Read/write Boolean."
+    },
+    {
+      "name": "Table",
+      "kind": "property",
+      "type": "TableStyle",
+      "access": "read-only",
+      "description": "Returns a TableStyle object representing properties that can be applied to a table using a table style."
+    },
+    {
+      "name": "Locked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a style cannot be changed or edited. Read/write Boolean."
+    },
+    {
+      "name": "Priority",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long that represents the priority for sorting styles in the Styles task pane. Read/write."
+    },
+    {
+      "name": "UnhideWhenUsed",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified style is made visible as a recommended style in the Styles and in the Styles task pane in Word after it is used in the document. Read/write."
+    },
+    {
+      "name": "QuickStyle",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether the style corresponds to an available quick style. Read/write."
+    },
+    {
+      "name": "Linked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean that represents whether a style is a linked style that can be used for both paragraph and character formatting. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified style.",
+      "returns": "void"
+    },
+    {
+      "name": "LinkToListTemplate",
+      "kind": "method",
+      "signature": "LinkToListTemplate(ListTemplate As ListTemplate, [ListLevelNumber As Variant])",
+      "description": "Links the specified style to a list template so that the style's formatting can be applied to lists.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ListTemplate",
+          "type": "ListTemplate",
+          "optional": false,
+          "description": "The list template that the style is to be linked to."
+        },
+        {
+          "name": "ListLevelNumber",
+          "type": "Variant",
+          "optional": true,
+          "description": "An integer corresponding to the list level that the style is to be linked to. If this argument is omitted, then the level of the style is used."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

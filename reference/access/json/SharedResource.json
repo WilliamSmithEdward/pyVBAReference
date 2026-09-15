@@ -1,0 +1,42 @@
+{
+  "name": "SharedResource",
+  "kind": "Dispatch Interface",
+  "guid": "{4DCF0AC2-53CC-45E5-B417-01F3DDD387E5}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "Represents a Microsoft Office theme or image that is available as a shared resource in the database.",
+  "remarks": "A shared resource is stored once in the database, but can be used many times. For example, you may want to display your company logo on every form that you create. In earlier versions of Access, you had to import the logo into every form. In Access, you can add the logo as a shared image. It will then be displayed in the Image Gallery that appears when you choose the Insert Image menu for the Controls group on the Design tab. To import an image as a SharedResource object, use the AddSharedImage method of the CodeProject object or the AddSharedImage method of the CurrentProject object.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the Name property to specify or determine the string expression that identifies the name of an object. Read/write String."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "AcResourceType",
+      "access": "read-only",
+      "description": "Gets the type of the SharedResource object. Read-only AcResourceType."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

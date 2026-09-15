@@ -7,9 +7,10 @@ import vba_reference as vba
 
 def test_libraries_present():
     names = vba.library_names()
-    assert "excel" in names
+    for host in ("excel", "powerpoint", "word", "access"):
+        assert host in names
     assert "vba" in names
-    assert len(names) == 10
+    assert len(names) == 13
 
 
 def test_master_catalog_counts():
@@ -55,6 +56,57 @@ def test_enum_constant_value_and_description():
     assert csv is not None
     assert csv.value == 6
     assert csv.description
+
+
+def test_word_document_type():
+    doc = vba.get_type("Document", "word")
+    assert doc.kind == "Class"
+    assert doc.library.startswith("Microsoft Word")
+    assert any(p.name == "Paragraphs" for p in doc.properties)
+
+
+def test_powerpoint_presentation_type():
+    pres = vba.get_type("Presentation")
+    assert pres.library.startswith("Microsoft PowerPoint")
+    assert any(m.name == "SaveAs" for m in pres.methods)
+
+
+def test_access_docmd_parameters_enriched():
+    open_form = vba.get_member("DoCmd", "OpenForm", "access")
+    assert open_form is not None
+    names = [p.name for p in open_form.parameters]
+    assert names[:2] == ["FormName", "View"]
+    assert open_form.parameters[0].description
+
+
+def test_host_application_enum_constants():
+    assert vba.get_constant("WdSaveFormat", "wdFormatPDF").value == 17
+    assert vba.get_constant("PpSaveAsFileType", "ppSaveAsPDF").value == 32
+    assert vba.get_constant("AcFormView", "acNormal").description
+
+
+def test_shared_type_name_resolves_to_excel_first():
+    # Application, Font and Range exist in several hosts; catalog order puts
+    # Excel first so the unqualified lookup stays stable.
+    assert vba.get_type("Application").library.startswith("Microsoft Excel")
+    libs = {r.library for r in vba.locate_type("Application")}
+    assert {"excel", "powerpoint", "word", "access"} <= libs
+
+
+def test_type_names_are_unique_per_library_ignoring_case():
+    # A type name is also its file name, so two types in one library whose
+    # names differ only in case would overwrite each other on Windows.
+    for lib in vba.libraries():
+        lowered = [t["name"].lower() for t in lib["types"]]
+        assert len(lowered) == len(set(lowered)), lib["folder"]
+
+
+def test_coclass_wins_over_same_name_interface():
+    # Access declares the CheckBox coclass and a Checkbox dispatch interface;
+    # the coclass is the richer entry and the one the Object Browser shows.
+    check_box = vba.get_type("CheckBox", "access")
+    assert check_box.kind == "Class"
+    assert check_box.events
 
 
 def test_find_members_msgbox_is_vba_builtin():

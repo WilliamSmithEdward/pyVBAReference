@@ -1,0 +1,48 @@
+{
+  "name": "ColorEffect",
+  "kind": "Dispatch Interface",
+  "guid": "{914934E6-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a color effect for an animation behavior.",
+  "remarks": "",
+  "example": "Sub ChangeColorEffect()\n\n    Dim sldFirst As Slide\n    Dim shpHeart As Shape\n    Dim effNew As Effect\n    Dim bhvEffect As AnimationBehavior\n\n    Set sldFirst = ActivePresentation.Slides(1)\n\n    Set shpHeart = sldFirst.Shapes.AddShape(Type:=msoShapeHeart, _\n        Left:=100, Top:=100, Width:=100, Height:=100)\n\n    Set effNew = sldFirst.TimeLine.MainSequence.AddEffect _\n        (Shape:=shpHeart, EffectID:=msoAnimEffectChangeFillColor, _\n        Trigger:=msoAnimTriggerAfterPrevious)\n\n    Set bhvEffect = effNew.Behaviors.Add(Type:=msoAnimTypeColor)\n\n    With bhvEffect.ColorEffect\n        .From.RGB = RGB(Red:=255, Green:=0, Blue:=0)\n        .To.RGB = RGB(Red:=0, Green:=0, Blue:=255)\n    End With\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "By",
+      "kind": "property",
+      "type": "ColorFormat",
+      "access": "read-only",
+      "description": "Returns a ColorFormat object that represents a change to the color of the object by the specified number, expressed in RGB format. Read-only."
+    },
+    {
+      "name": "From",
+      "kind": "property",
+      "type": "ColorFormat",
+      "access": "read-only",
+      "description": "Sets or returns a ColorFormat object that represents the starting RGB color value of an animation behavior."
+    },
+    {
+      "name": "To",
+      "kind": "property",
+      "type": "ColorFormat",
+      "access": "read-only",
+      "description": "Sets or returns a ColorFormat object that represents the RGB color value of an animation behavior. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

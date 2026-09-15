@@ -1,0 +1,214 @@
+# FormOld
+
+**Type:** Class  
+**Library:** Microsoft Access 16.0 Object Library  
+**GUID:** {483615A0-74BE-101B-AF4E-00AA003F0F07}  
+
+## Properties (143)
+
+- `RecordSource As String  (read/write)`
+- `Filter As String  (read/write)`
+- `FilterOn As Boolean  (read/write)`
+- `OrderBy As String  (read/write)`
+- `OrderByOn As Boolean  (read/write)`
+- `AllowFilters As Boolean  (read/write)`
+- `Caption As String  (read/write)`
+- `DefaultView As Byte  (read/write)`
+- `ViewsAllowed As Byte  (read/write)`
+- `AllowEdits As Boolean  (read/write)`
+- `AllowDeletions As Boolean  (read/write)`
+- `AllowAdditions As Boolean  (read/write)`
+- `DataEntry As Boolean  (read/write)`
+- `RecordsetType As Byte  (read/write)`
+- `RecordLocks As Byte  (read/write)`
+- `ScrollBars As Byte  (read/write)`
+- `RecordSelectors As Boolean  (read/write)`
+- `NavigationButtons As Boolean  (read/write)`
+- `DividingLines As Boolean  (read/write)`
+- `AutoResize As Boolean  (read/write)`
+- `AutoCenter As Boolean  (read/write)`
+- `PopUp As Boolean  (read/write)`
+- `Modal As Boolean  (read/write)`
+- `BorderStyle As Byte  (read/write)`
+- `ControlBox As Boolean  (read/write)`
+- `MinMaxButtons As Byte  (read/write)`
+- `CloseButton As Boolean  (read/write)`
+- `Width As Integer  (read/write)`
+- `Picture As String  (read/write)`
+- `PictureType As Byte  (read/write)`
+- `PictureSizeMode As Byte  (read/write)`
+- `PictureAlignment As Byte  (read/write)`
+- `PictureTiling As Boolean  (read/write)`
+- `Cycle As Byte  (read/write)`
+- `MenuBar As String  (read/write)`
+- `Toolbar As String  (read/write)`
+- `ShortcutMenu As Boolean  (read/write)`
+- `ShortcutMenuBar As String  (read/write)`
+- `GridX As Integer  (read/write)`
+- `GridY As Integer  (read/write)`
+- `LayoutForPrint As Boolean  (read/write)`
+- `FastLaserPrinting As Boolean  (read/write)`
+- `HelpFile As String  (read/write)`
+- `HelpContextId As Long  (read/write)`
+- `RowHeight As Integer  (read/write)`
+- `DatasheetFontName As String  (read/write)`
+- `DatasheetFontHeight As Integer  (read/write)`
+- `DatasheetFontWeight As Integer  (read/write)`
+- `DatasheetFontItalic As Boolean  (read/write)`
+- `DatasheetFontUnderline As Boolean  (read/write)`
+- `DatasheetGridlinesBehavior As Byte  (read/write)`
+- `DatasheetGridlinesColor As Long  (read/write)`
+- `DatasheetCellsEffect As Byte  (read/write)`
+- `DatasheetForeColor As Long  (read/write)`
+- `DatasheetBackColor As Long  (read/write)`
+- `Hwnd As Long  (read/write)`
+- `Count As Integer  (read/write)`
+- `Page As Long  (read/write)`
+- `Pages As Integer  (read/write)`
+- `Visible As Boolean  (read/write)`
+- `Painting As Boolean  (read/write)`
+- `PrtMip As Variant  (read/write)`
+- `PrtDevMode As Variant  (read/write)`
+- `PrtDevNames As Variant  (read/write)`
+- `FrozenColumns As Integer  (read/write)`
+- `Bookmark As Variant  (read/write)`
+- `PaletteSource As String  (read/write)`
+- `Tag As String  (read/write)`
+- `PaintPalette As Variant  (read/write)`
+- `OnMenu As String  (read/write)`
+- `OpenArgs As Variant  (read/write)`
+- `OnCurrent As String  (read/write)`
+- `OnInsert As String  (read/write)`
+- `BeforeInsert As String  (read/write)`
+- `AfterInsert As String  (read/write)`
+- `BeforeUpdate As String  (read/write)`
+- `AfterUpdate As String  (read/write)`
+- `OnDirty As String  (read/write)`
+- `OnDelete As String  (read/write)`
+- `BeforeDelConfirm As String  (read/write)`
+- `AfterDelConfirm As String  (read/write)`
+- `OnOpen As String  (read/write)`
+- `OnLoad As String  (read/write)`
+- `OnResize As String  (read/write)`
+- `OnUnload As String  (read/write)`
+- `OnClose As String  (read/write)`
+- `OnActivate As String  (read/write)`
+- `OnDeactivate As String  (read/write)`
+- `OnGotFocus As String  (read/write)`
+- `OnLostFocus As String  (read/write)`
+- `OnClick As String  (read/write)`
+- `OnDblClick As String  (read/write)`
+- `OnMouseDown As String  (read/write)`
+- `OnMouseMove As String  (read/write)`
+- `OnMouseUp As String  (read/write)`
+- `OnKeyDown As String  (read/write)`
+- `OnKeyUp As String  (read/write)`
+- `OnKeyPress As String  (read/write)`
+- `KeyPreview As Boolean  (read/write)`
+- `OnError As String  (read/write)`
+- `OnFilter As String  (read/write)`
+- `OnApplyFilter As String  (read/write)`
+- `OnTimer As String  (read/write)`
+- `TimerInterval As Long  (read/write)`
+- `Dirty As Boolean  (read/write)`
+- `WindowWidth As Integer  (read/write)`
+- `WindowHeight As Integer  (read/write)`
+- `CurrentView As Integer  (read/write)`
+- `CurrentSectionTop As Integer  (read/write)`
+- `CurrentSectionLeft As Integer  (read/write)`
+- `SelLeft As Long  (read/write)`
+- `SelTop As Long  (read/write)`
+- `SelWidth As Long  (read/write)`
+- `SelHeight As Long  (read/write)`
+- `CurrentRecord As Long  (read/write)`
+- `PictureData As Variant  (read/write)`
+- `InsideHeight As Long  (read/write)`
+- `InsideWidth As Long  (read/write)`
+- `PicturePalette As Variant  (read/write)`
+- `HasModule As Boolean  (read/write)`
+- `Orientation As Byte  (read/write)`
+- `ServerFilter As String  (read/write)`
+- `ServerFilterByForm As Boolean  (read/write)`
+- `MaxRecords As Long  (read/write)`
+- `UniqueTable As String  (read/write)`
+- `ResyncCommand As String  (read/write)`
+- `InputParameters As String  (read/write)`
+- `MaxRecButton As Boolean  (read/write)`
+- `Application As Application  (read-only)`
+- `Parent As Object  (read-only)`
+- `NewRecord As Integer  (read-only)`
+- `ActiveControl As Control  (read-only)`
+- `DefaultControl As Control  (read-only)`
+- `RecordsetClone As Object  (read-only)`
+- `Recordset As Object  (read/write)`
+- `Section As Section  (read-only)`
+- `Form As Form  (read-only)`
+- `Module As Module  (read-only)`
+- `Properties As Properties  (read-only)`
+- `Controls As Controls  (read-only)`
+- `Name As String  (read/write)`
+- `SubdatasheetHeight As Integer  (read/write)`
+- `SubdatasheetExpanded As Boolean  (read/write)`
+
+## Methods (7)
+
+- `Undo()`
+- `Recalc()`
+- `Requery()`
+- `Refresh()`
+- `Repaint()`
+- `GoToPage(PageNumber As Long, [Right As Long], [Down As Long])`
+- `SetFocus()`
+
+## Events (50)
+
+- `Load()`
+- `Current()`
+- `BeforeInsert(Cancel As Integer)`
+- `AfterInsert()`
+- `BeforeUpdate(Cancel As Integer)`
+- `AfterUpdate()`
+- `Delete(Cancel As Integer)`
+- `BeforeDelConfirm(Cancel As Integer, Response As Integer)`
+- `AfterDelConfirm(Status As Integer)`
+- `Open(Cancel As Integer)`
+- `Resize()`
+- `Unload(Cancel As Integer)`
+- `Close()`
+- `Activate()`
+- `Deactivate()`
+- `GotFocus()`
+- `LostFocus()`
+- `Click()`
+- `DblClick(Cancel As Integer)`
+- `MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)`
+- `MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)`
+- `MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)`
+- `KeyDown(KeyCode As Integer, Shift As Integer)`
+- `KeyPress(KeyAscii As Integer)`
+- `KeyUp(KeyCode As Integer, Shift As Integer)`
+- `Error(DataErr As Integer, Response As Integer)`
+- `Timer()`
+- `Filter(Cancel As Integer, FilterType As Integer)`
+- `ApplyFilter(Cancel As Integer, ApplyType As Integer)`
+- `Dirty(Cancel As Integer)`
+- `Undo(Cancel As Integer)`
+- `OnConnect()`
+- `OnDisconnect()`
+- `PivotTableChange(Reason As Long)`
+- `Query()`
+- `BeforeQuery()`
+- `SelectionChange()`
+- `CommandBeforeExecute(Command As Variant, Cancel As Object)`
+- `CommandChecked(Command As Variant, Checked As Object)`
+- `CommandEnabled(Command As Variant, Enabled As Object)`
+- `CommandExecute(Command As Variant)`
+- `DataSetChange()`
+- `BeforeScreenTip(ScreenTipText As Object, SourceObject As Object)`
+- `BeforeRender(drawObject As Object, chartObject As Object, Cancel As Object)`
+- `AfterRender(drawObject As Object, chartObject As Object)`
+- `AfterFinalRender(drawObject As Object)`
+- `AfterLayout(drawObject As Object)`
+- `MouseWheel(Page As Boolean, Count As Long)`
+- `ViewChange(Reason As Long)`
+- `DataChange(Reason As Long)`

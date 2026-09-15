@@ -1,0 +1,2739 @@
+{
+  "name": "Range",
+  "kind": "Dispatch Interface",
+  "guid": "{0002095E-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a contiguous area in a document. Each Range object is defined by a starting and ending character position.",
+  "remarks": "Similar to the way bookmarks are used in a document, Range objects are used in Visual Basic procedures to identify specific portions of a document. However, unlike a bookmark, a Range object only exists while the procedure that defined it is running. Range objects are independent of the selection. That is, you can define and manipulate a range without changing the selection. You can also define multiple ranges in a document, while there can be only one selection per pane. Use the Range method to return a Range object defined by the given starting and ending character positions. The following example returns a Range object that refers to the first 10 characters in the active document. Use the Range property to return a Range object defined by the beginning and end of another object. The Range property applies to many objects (for example, Paragraph, Bookmark, and Cell). The following example returns a Range object that refers to the first paragraph in the active document. The following example returns a Range object that refers to the second through fourth paragraphs in the active document. For more information about working with Range objects, see Working with Range objects.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the text in the specified range or selection. Read/write String. Read/write String."
+    },
+    {
+      "name": "FormattedText",
+      "kind": "property",
+      "type": "Range",
+      "access": "read/write",
+      "description": "Returns or sets a Range object that includes the formatted text in the specified range or selection. Read/write."
+    },
+    {
+      "name": "Start",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the starting character position of a range. Read/write Long."
+    },
+    {
+      "name": "End",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the ending character position of a range. Read/write Long."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read/write",
+      "description": "Returns or sets a Font object that represents the character formatting of the specified object. Read/write Font."
+    },
+    {
+      "name": "Duplicate",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a read-only Range object that represents all the properties of the specified range."
+    },
+    {
+      "name": "StoryType",
+      "kind": "property",
+      "type": "WdStoryType",
+      "access": "read-only",
+      "description": "Returns the story type for the specified range, selection, or bookmark. Read-only WdStoryType."
+    },
+    {
+      "name": "Tables",
+      "kind": "property",
+      "type": "Tables",
+      "access": "read-only",
+      "description": "Returns a Tables collection that represents all the tables in the specified range. Read-only."
+    },
+    {
+      "name": "Words",
+      "kind": "property",
+      "type": "Words",
+      "access": "read-only",
+      "description": "Returns a Words collection that represents all the words in a range. Read-only."
+    },
+    {
+      "name": "Sentences",
+      "kind": "property",
+      "type": "Sentences",
+      "access": "read-only",
+      "description": "Returns a Sentences collection that represents all the sentences in the range. Read-only."
+    },
+    {
+      "name": "Characters",
+      "kind": "property",
+      "type": "Characters",
+      "access": "read-only",
+      "description": "Returns a Characters collection that represents the characters in a range. Read-only."
+    },
+    {
+      "name": "Footnotes",
+      "kind": "property",
+      "type": "Footnotes",
+      "access": "read-only",
+      "description": "Returns a Footnotes collection that represents all the footnotes in a range. Read-only."
+    },
+    {
+      "name": "Endnotes",
+      "kind": "property",
+      "type": "Endnotes",
+      "access": "read-only",
+      "description": "Returns an Endnotes collection that represents all the endnotes in a range. Read-only."
+    },
+    {
+      "name": "Comments",
+      "kind": "property",
+      "type": "Comments",
+      "access": "read-only",
+      "description": "Returns a Comments collection that represents all the comments in the specified document, selection, or range. Read-only."
+    },
+    {
+      "name": "Cells",
+      "kind": "property",
+      "type": "Cells",
+      "access": "read-only",
+      "description": "Returns a Cells collection that represents the table cells in a range. Read-only."
+    },
+    {
+      "name": "Sections",
+      "kind": "property",
+      "type": "Sections",
+      "access": "read-only",
+      "description": "Returns a Sections collection that represents the sections in the specified range. Read-only."
+    },
+    {
+      "name": "Paragraphs",
+      "kind": "property",
+      "type": "Paragraphs",
+      "access": "read-only",
+      "description": "Returns a Paragraphs collection that represents all the paragraphs in the specified range. Read-only."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read/write",
+      "description": "Returns a Borders collection that represents all the borders for the specified object."
+    },
+    {
+      "name": "Shading",
+      "kind": "property",
+      "type": "Shading",
+      "access": "read-only",
+      "description": "Returns a Shading object that refers to the shading formatting for the specified object."
+    },
+    {
+      "name": "TextRetrievalMode",
+      "kind": "property",
+      "type": "TextRetrievalMode",
+      "access": "read/write",
+      "description": "Returns a TextRetrievalMode object that controls how text is retrieved from the specified Range. Read/write."
+    },
+    {
+      "name": "Fields",
+      "kind": "property",
+      "type": "Fields",
+      "access": "read-only",
+      "description": "Returns a Fields collection that represents all the fields in the range. Read-only."
+    },
+    {
+      "name": "FormFields",
+      "kind": "property",
+      "type": "FormFields",
+      "access": "read-only",
+      "description": "Returns a FormFields collection that represents all the form fields in the range. Read-only."
+    },
+    {
+      "name": "Frames",
+      "kind": "property",
+      "type": "Frames",
+      "access": "read-only",
+      "description": "Returns a Frames collection that represents all the frames in a range. Read-only."
+    },
+    {
+      "name": "ParagraphFormat",
+      "kind": "property",
+      "type": "ParagraphFormat",
+      "access": "read/write",
+      "description": "Returns or sets a ParagraphFormat object that represents the paragraph settings for the specified range. Read/write."
+    },
+    {
+      "name": "ListFormat",
+      "kind": "property",
+      "type": "ListFormat",
+      "access": "read-only",
+      "description": "Returns a ListFormat object that represents all the list formatting characteristics of a range. Read-only."
+    },
+    {
+      "name": "Bookmarks",
+      "kind": "property",
+      "type": "Bookmarks",
+      "access": "read-only",
+      "description": "Returns a Bookmarks collection that represents all the bookmarks in a document, range, or selection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Range object."
+    },
+    {
+      "name": "Bold",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the range is formatted as bold. Read/write Long."
+    },
+    {
+      "name": "Italic",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the font or range is formatted as italic. Read/write Long."
+    },
+    {
+      "name": "Underline",
+      "kind": "property",
+      "type": "WdUnderline",
+      "access": "read/write",
+      "description": "Returns or sets the type of underline applied to a range. Read/write WdUnderline."
+    },
+    {
+      "name": "EmphasisMark",
+      "kind": "property",
+      "type": "WdEmphasisMark",
+      "access": "read/write",
+      "description": "Returns or sets the emphasis mark for a character or designated character string. Read/write WdEmphasisMark."
+    },
+    {
+      "name": "DisableCharacterSpaceGrid",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word ignores the number of characters per line for the corresponding Range object. Read/write Boolean."
+    },
+    {
+      "name": "Revisions",
+      "kind": "property",
+      "type": "Revisions",
+      "access": "read-only",
+      "description": "Returns a Revisions collection that represents the tracked changes in the range. Read-only."
+    },
+    {
+      "name": "Style",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the style for the specified object. Read/write Variant."
+    },
+    {
+      "name": "StoryLength",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of characters in the story that contains the specified range. Read-only Long."
+    },
+    {
+      "name": "LanguageID",
+      "kind": "property",
+      "type": "WdLanguageID",
+      "access": "read/write",
+      "description": "Returns or sets a WdLanguageID constant that represents the language for the specified range. Read/write."
+    },
+    {
+      "name": "SynonymInfo",
+      "kind": "property",
+      "type": "SynonymInfo",
+      "access": "read-only",
+      "description": "Returns a SynonymInfo object that contains information from the thesaurus on synonyms, antonyms, or related words and expressions for the contents of a range."
+    },
+    {
+      "name": "Hyperlinks",
+      "kind": "property",
+      "type": "Hyperlinks",
+      "access": "read-only",
+      "description": "Returns a Hyperlinks collection that represents all the hyperlinks in the specified range. Read-only."
+    },
+    {
+      "name": "ListParagraphs",
+      "kind": "property",
+      "type": "ListParagraphs",
+      "access": "read-only",
+      "description": "Returns a ListParagraphs collection that represents all the numbered paragraphs in the range. Read-only."
+    },
+    {
+      "name": "Subdocuments",
+      "kind": "property",
+      "type": "Subdocuments",
+      "access": "read-only",
+      "description": "Returns a Subdocuments collection that represents all the subdocuments in the specified range or document. Read-only."
+    },
+    {
+      "name": "GrammarChecked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a grammar check has been run on the specified range or document. Read/write Boolean."
+    },
+    {
+      "name": "SpellingChecked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if spelling has been checked throughout the specified range or document. False if all or some of the range or document has not been checked for spelling. Read/write Boolean."
+    },
+    {
+      "name": "HighlightColorIndex",
+      "kind": "property",
+      "type": "WdColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the highlight color for the specified range. Read/write WdColorIndex."
+    },
+    {
+      "name": "Columns",
+      "kind": "property",
+      "type": "Columns",
+      "access": "read-only",
+      "description": "Returns a Columns collection that represents all the table columns in the range. Read-only."
+    },
+    {
+      "name": "Rows",
+      "kind": "property",
+      "type": "Rows",
+      "access": "read-only",
+      "description": "Returns a Rows collection that represents all the table rows in a range. Read-only."
+    },
+    {
+      "name": "IsEndOfRowMark",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified range is collapsed and is located at the end-of-row mark in a table. Read-only Boolean."
+    },
+    {
+      "name": "BookmarkID",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of the bookmark that encloses the beginning of the specified range; returns 0 (zero) if there is no corresponding bookmark. Read-only Long."
+    },
+    {
+      "name": "PreviousBookmarkID",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of the last bookmark that starts before or at the same place as the specified range. Read-only Long."
+    },
+    {
+      "name": "Find",
+      "kind": "property",
+      "type": "Find",
+      "access": "read-only",
+      "description": "Returns a Find object that contains the criteria for a find operation. Read-only."
+    },
+    {
+      "name": "PageSetup",
+      "kind": "property",
+      "type": "PageSetup",
+      "access": "read/write",
+      "description": "Returns a PageSetup object that's associated with the specified range."
+    },
+    {
+      "name": "ShapeRange",
+      "kind": "property",
+      "type": "ShapeRange",
+      "access": "read-only",
+      "description": "Returns a ShapeRange collection that represents all the Shape objects in the specified range. Read-only."
+    },
+    {
+      "name": "Case",
+      "kind": "property",
+      "type": "WdCharacterCase",
+      "access": "read/write",
+      "description": "Returns or sets a WdCharacterCase constant that represents the case of the text in the specified range. Read/write."
+    },
+    {
+      "name": "Information",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns information about the specified range. Read-only Variant."
+    },
+    {
+      "name": "ReadabilityStatistics",
+      "kind": "property",
+      "type": "ReadabilityStatistics",
+      "access": "read-only",
+      "description": "Returns a ReadabilityStatistics collection that represents the readability statistics for the specified document or range. Read-only."
+    },
+    {
+      "name": "GrammaticalErrors",
+      "kind": "property",
+      "type": "ProofreadingErrors",
+      "access": "read-only",
+      "description": "Returns a ProofreadingErrors collection that represents the sentences that failed the grammar check on the specified document or range. Read-only."
+    },
+    {
+      "name": "SpellingErrors",
+      "kind": "property",
+      "type": "ProofreadingErrors",
+      "access": "read-only",
+      "description": "Returns a ProofreadingErrors collection that represents the words identified as spelling errors in the specified range. Read-only."
+    },
+    {
+      "name": "Orientation",
+      "kind": "property",
+      "type": "WdTextOrientation",
+      "access": "read/write",
+      "description": "Returns or sets the orientation of text in a range when the Text Direction feature is enabled. Read/write WdTextOrientation."
+    },
+    {
+      "name": "InlineShapes",
+      "kind": "property",
+      "type": "InlineShapes",
+      "access": "read-only",
+      "description": "Returns an InlineShapes collection that represents all the InlineShape objects in a range. Read-only."
+    },
+    {
+      "name": "NextStoryRange",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that refers to the next story. Read-only Range."
+    },
+    {
+      "name": "LanguageIDFarEast",
+      "kind": "property",
+      "type": "WdLanguageID",
+      "access": "read/write",
+      "description": "Returns or sets an East Asian language for the specified object. Read/write WdLanguageID."
+    },
+    {
+      "name": "LanguageIDOther",
+      "kind": "property",
+      "type": "WdLanguageID",
+      "access": "read/write",
+      "description": "Returns or sets the language for the specified range. Read/write WdLanguageID."
+    },
+    {
+      "name": "LanguageDetected",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a value that specifies whether Microsoft Word has detected the language of the specified text. Read/write Boolean."
+    },
+    {
+      "name": "FitTextWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the width (in the current measurement units) in which Microsoft Word fits the text in the current selection or range. Read/write Single."
+    },
+    {
+      "name": "HorizontalInVertical",
+      "kind": "property",
+      "type": "WdHorizontalInVerticalType",
+      "access": "read/write",
+      "description": "Returns or sets the formatting for horizontal text set within vertical text. Read/write WdHorizontalInVerticalType."
+    },
+    {
+      "name": "TwoLinesInOne",
+      "kind": "property",
+      "type": "WdTwoLinesInOneType",
+      "access": "read/write",
+      "description": "Returns or sets whether Microsoft Word sets two lines of text in one and specifies the characters that enclose the text, if any. Read/write WdTwoLinesInOneType."
+    },
+    {
+      "name": "CombineCharacters",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified range contains combined characters. Read/write Boolean."
+    },
+    {
+      "name": "NoProofing",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the spelling and grammar checker ignores the specified text. Read/write Long."
+    },
+    {
+      "name": "TopLevelTables",
+      "kind": "property",
+      "type": "Tables",
+      "access": "read-only",
+      "description": "Returns a Tables collection that represents the tables at the outermost nesting level in the current range. Read-only."
+    },
+    {
+      "name": "Scripts",
+      "kind": "property",
+      "type": "Scripts",
+      "access": "read-only",
+      "description": "Returns a Scripts collection that represents the collection of HTML scripts in the specified object."
+    },
+    {
+      "name": "CharacterWidth",
+      "kind": "property",
+      "type": "WdCharacterWidth",
+      "access": "read/write",
+      "description": "Returns or sets the character width of the specified range. Read/write WdCharacterWidth."
+    },
+    {
+      "name": "Kana",
+      "kind": "property",
+      "type": "WdKana",
+      "access": "read/write",
+      "description": "Returns or sets whether the specified range of Japanese language text is hiragana or katakana. Read/write WdKana."
+    },
+    {
+      "name": "BoldBi",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the font or range is formatted as bold. Returns True, False, or wdUndefined (for a mixture of bold and non-bold text). Can be set to True, False, or wdToggle. Read/write Long."
+    },
+    {
+      "name": "ItalicBi",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the font or range is formatted as italic. Read/write Long."
+    },
+    {
+      "name": "ID",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the identification name for the specified range. Read/write String."
+    },
+    {
+      "name": "HTMLDivisions",
+      "kind": "property",
+      "type": "HTMLDivisions",
+      "access": "read-only",
+      "description": "Returns an HTMLDivisions object that represents an HTML division in a web document."
+    },
+    {
+      "name": "ShowAll",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if all nonprinting characters (such as hidden text, tab marks, space marks, and paragraph marks) are displayed. Read/write Boolean."
+    },
+    {
+      "name": "Document",
+      "kind": "property",
+      "type": "Document",
+      "access": "read-only",
+      "description": "Returns a Document object associated with the specified range. Read-only."
+    },
+    {
+      "name": "FootnoteOptions",
+      "kind": "property",
+      "type": "FootnoteOptions",
+      "access": "read-only",
+      "description": "Returns FootnoteOptions object that represents the footnotes in a selection or range."
+    },
+    {
+      "name": "EndnoteOptions",
+      "kind": "property",
+      "type": "EndnoteOptions",
+      "access": "read-only",
+      "description": "Returns an EndnoteOptions object that represents the endnotes in a range."
+    },
+    {
+      "name": "Editors",
+      "kind": "property",
+      "type": "Editors",
+      "access": "read-only",
+      "description": "Returns an Editors object that represents all the users authorized to modify a selection or range within a document."
+    },
+    {
+      "name": "XML",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String that represents the XML text in the specified object. ."
+    },
+    {
+      "name": "EnhMetaFileBits",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns a Variant that represents a picture representation of how a range of text appears."
+    },
+    {
+      "name": "OMaths",
+      "kind": "property",
+      "type": "OMaths",
+      "access": "read-only",
+      "description": "Returns an OMaths collection that represents the OMath objects within the specified range. Read-only."
+    },
+    {
+      "name": "CharacterStyle",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns a Variant that represents the style used to format one or more characters. Read-only."
+    },
+    {
+      "name": "ParagraphStyle",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns a Variant that represents the style used to format a paragraph. Read-only."
+    },
+    {
+      "name": "ListStyle",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns a Variant that represents the style used to format a bulleted list or numbered list. Read-only."
+    },
+    {
+      "name": "TableStyle",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns a Variant that represents the style used to format a table. Read-only."
+    },
+    {
+      "name": "ContentControls",
+      "kind": "property",
+      "type": "ContentControls",
+      "access": "read-only",
+      "description": "Returns a ContentControls collection that represents the content controls contained within a range. Read-only."
+    },
+    {
+      "name": "WordOpenXML",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String that represents the XML contained within the range in the Microsoft Word Open XML format. Read-only."
+    },
+    {
+      "name": "ParentContentControl",
+      "kind": "property",
+      "type": "ContentControl",
+      "access": "read-only",
+      "description": "Returns a ContentControl object that represents the parent content control for the specified range. Read-only."
+    },
+    {
+      "name": "Locks",
+      "kind": "property",
+      "type": "CoAuthLocks",
+      "access": "read-only",
+      "description": "Returns a CoAuthLocks collection object that represents all the locks in the range. Read-only."
+    },
+    {
+      "name": "Updates",
+      "kind": "property",
+      "type": "CoAuthUpdates",
+      "access": "read-only",
+      "description": "Returns a CoAuthUpdates collection object that represents all updates that were merged into the specified range at the last explicit save. Read-only."
+    },
+    {
+      "name": "Conflicts",
+      "kind": "property",
+      "type": "Conflicts",
+      "access": "read-only",
+      "description": "Returns a Conflicts collection object that contains all the conflict objects in the range. Read-only."
+    },
+    {
+      "name": "TextVisibleOnScreen",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that indicates whether the text in the specified range is visible on the screen. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects the specified range.",
+      "returns": "void"
+    },
+    {
+      "name": "SetRange",
+      "kind": "method",
+      "signature": "SetRange(Start As Long, End As Long)",
+      "description": "Sets the starting and ending character positions for an existing range.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Start",
+          "type": "Long",
+          "optional": false,
+          "description": "The starting character position of the range."
+        },
+        {
+          "name": "End",
+          "type": "Long",
+          "optional": false,
+          "description": "The ending character position of the range."
+        }
+      ]
+    },
+    {
+      "name": "Collapse",
+      "kind": "method",
+      "signature": "Collapse([Direction As Variant])",
+      "description": "Collapses a range or selection to the starting or ending position. After a range or selection is collapsed, the starting and ending points are equal.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Direction",
+          "type": "Variant",
+          "optional": true,
+          "description": "The direction in which to collapse the range or selection. Can be either of the following WdCollapseDirection constants: wdCollapseEnd or wdCollapseStart. The default value is wdCollapseStart."
+        }
+      ]
+    },
+    {
+      "name": "InsertBefore",
+      "kind": "method",
+      "signature": "InsertBefore(Text As String)",
+      "description": "Inserts the specified text before the specified range.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Text",
+          "type": "String",
+          "optional": false,
+          "description": "The text to be inserted."
+        }
+      ]
+    },
+    {
+      "name": "InsertAfter",
+      "kind": "method",
+      "signature": "InsertAfter(Text As String)",
+      "description": "Inserts the specified text at the end of a range.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Text",
+          "type": "String",
+          "optional": false,
+          "description": "The text to be inserted."
+        }
+      ]
+    },
+    {
+      "name": "Next",
+      "kind": "method",
+      "signature": "Next([Unit As Variant], [Count As Variant]) As Range",
+      "description": "Returns a Range object that represents the specified unit relative to the specified range.",
+      "returns": "Range",
+      "parameters": [
+        {
+          "name": "Unit",
+          "type": "Variant",
+          "optional": true,
+          "description": "The type of units by which to count. Can be any WdUnits constant."
+        },
+        {
+          "name": "Count",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of units by which you want to move ahead. The default value is one."
+        }
+      ]
+    },
+    {
+      "name": "Previous",
+      "kind": "method",
+      "signature": "Previous([Unit As Variant], [Count As Variant]) As Range",
+      "description": "Returns the previous range a relative to the specified range.",
+      "returns": "Range",
+      "parameters": [
+        {
+          "name": "Unit",
+          "type": "Variant",
+          "optional": true,
+          "description": "The type of units by which to count. Can be any WdUnits constant."
+        },
+        {
+          "name": "Count",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of units by which you want to move back. The default value is 1."
+        }
+      ]
+    },
+    {
+      "name": "StartOf",
+      "kind": "method",
+      "signature": "StartOf([Unit As Variant], [Extend As Variant]) As Long",
+      "description": "Moves or extends the start position of the specified range or selection to the beginning of the nearest specified text unit. This method returns a Long that indicates the number of characters by which the range or selection was moved or extended. The method returns a negative number if the movement is backward through the document.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Unit",
+          "type": "Variant",
+          "optional": true,
+          "description": "The unit by which the start position of the specified range or selection is to be moved. Can be any WdUnits constant except wdLine. The default value is wdWord."
+        },
+        {
+          "name": "Extend",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies whether to move or extend the start of the range. If you use wdMove, both ends of the range or selection are moved to the beginning of the specified unit. If you use wdExtend, the beginning of the range or selection is extended to the beginning of the specified unit. The default value is wdMove."
+        }
+      ]
+    },
+    {
+      "name": "EndOf",
+      "kind": "method",
+      "signature": "EndOf([Unit As Variant], [Extend As Variant]) As Long",
+      "description": "Moves or extends the ending character position of a range to the end of the nearest specified text unit.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Unit",
+          "type": "Variant",
+          "optional": true,
+          "description": "The unit by which to move the ending character position. Can be any WdUnits, except wdLine. The default value is wdWord."
+        },
+        {
+          "name": "Extend",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies whether to move or extend the end of the range. If the value is wdMove, both ends of the range or selection object are moved to the end of the specified unit. If wdExtend is used, the end of the range or selection is extended to the end of the specified unit. The default value is wdMove."
+        }
+      ]
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move([Unit As Variant], [Count As Variant]) As Long",
+      "description": "Collapses the specified range to its start or end position and then moves the collapsed object by the specified number of units.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Unit",
+          "type": "Variant",
+          "optional": true,
+          "description": "The unit by which to move the range."
+        },
+        {
+          "name": "Count",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of units by which the specified range is to be moved. If Count is a positive number, the object is collapsed to its end position and moved backward in the document by the specified number of units. If Count is a negative number, the object is collapsed to its start position and moved forward by the specified number of units. The default value is 1. You can also control the collapse direction by using the Collapse method before using the Move method. If the range is in the middle of a unit or isn't collapsed, moving it to the beginning or end of the unit counts as moving it one full unit."
+        }
+      ]
+    },
+    {
+      "name": "MoveStart",
+      "kind": "method",
+      "signature": "MoveStart([Unit As Variant], [Count As Variant]) As Long",
+      "description": "Moves the start position of the specified range.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Unit",
+          "type": "Variant",
+          "optional": true,
+          "description": "The unit by which start position of the specified range is to be moved."
+        },
+        {
+          "name": "Count",
+          "type": "Variant",
+          "optional": true,
+          "description": "The maximum number of units by which the specified range is to be moved. If Count is a positive number, the start position of the range is moved forward in the document. If it is a negative number, the start position is moved backward. If the start position is moved forward to a position beyond the end position, the range is collapsed and both the start and end positions are moved together. The default value is 1."
+        }
+      ]
+    },
+    {
+      "name": "MoveEnd",
+      "kind": "method",
+      "signature": "MoveEnd([Unit As Variant], [Count As Variant]) As Long",
+      "description": "Moves the ending character position of a range. .",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Unit",
+          "type": "Variant",
+          "optional": true,
+          "description": "The unit by which to move the ending character position."
+        },
+        {
+          "name": "Count",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of units to move. If this number is positive, the ending character position is moved forward in the document. If this number is negative, the end is moved backward. If the ending position overtakes the starting position, the range collapses and both character positions move together. The default value is 1."
+        }
+      ]
+    },
+    {
+      "name": "MoveWhile",
+      "kind": "method",
+      "signature": "MoveWhile(Cset As Variant, [Count As Variant]) As Long",
+      "description": "Moves the specified range while any of the specified characters are found in the document.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Cset",
+          "type": "Variant",
+          "optional": false,
+          "description": "One or more characters. This argument is case-sensitive."
+        },
+        {
+          "name": "Count",
+          "type": "Variant",
+          "optional": true,
+          "description": "The maximum number of characters by which the specified range is to be moved. Can be a number or either the wdForward or wdBackward constant. If Count is a positive number, the specified range is moved forward in the document, beginning at the end position. If it is a negative number, the range is moved backward, beginning at the start position. The default value is wdForward."
+        }
+      ]
+    },
+    {
+      "name": "MoveStartWhile",
+      "kind": "method",
+      "signature": "MoveStartWhile(Cset As Variant, [Count As Variant]) As Long",
+      "description": "Moves the start position of the specified range while any of the specified characters are found in the document.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Cset",
+          "type": "Variant",
+          "optional": false,
+          "description": "One or more characters. This argument is case-sensitive."
+        },
+        {
+          "name": "Count",
+          "type": "Variant",
+          "optional": true,
+          "description": "The maximum number of characters by which the specified range is to be moved. Can be a number or either the wdForward or wdBackward constant. If Count is a positive number, the range is moved forward in the document. If it is a negative number, the range is moved backward. The default value is wdForward."
+        }
+      ]
+    },
+    {
+      "name": "MoveEndWhile",
+      "kind": "method",
+      "signature": "MoveEndWhile(Cset As Variant, [Count As Variant]) As Long",
+      "description": "Moves the ending character position of a range while any of the specified characters are found in the document.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Cset",
+          "type": "Variant",
+          "optional": false,
+          "description": "One or more characters. This argument is case-sensitive."
+        },
+        {
+          "name": "Count",
+          "type": "Variant",
+          "optional": true,
+          "description": "The maximum number of characters by which the range is to be moved. Can be a number or either the wdForward or wdBackward constant. If Count is a positive number, the range is moved forward in the document. If it is a negative number, the range is moved backward. The default value is wdForward."
+        }
+      ]
+    },
+    {
+      "name": "MoveUntil",
+      "kind": "method",
+      "signature": "MoveUntil(Cset As Variant, [Count As Variant]) As Long",
+      "description": "Moves the specified range until one of the specified characters is found in the document.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Cset",
+          "type": "Variant",
+          "optional": false,
+          "description": "One or more characters. If any character in Cset is found before the Count value expires, the specified range is positioned as an insertion point immediately before that character. This argument is case-sensitive."
+        },
+        {
+          "name": "Count",
+          "type": "Variant",
+          "optional": true,
+          "description": "The maximum number of characters by which the specified range is to be moved. Can be a number or either the wdForward or wdBackward constant. If Count is a positive number, the range is moved forward in the document, beginning at the end position. If it is a negative number, the range is moved backward, beginning at the start position. The default value is wdForward."
+        }
+      ]
+    },
+    {
+      "name": "MoveStartUntil",
+      "kind": "method",
+      "signature": "MoveStartUntil(Cset As Variant, [Count As Variant]) As Long",
+      "description": "Moves the start position of the specified range until one of the specified characters is found in the document.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Cset",
+          "type": "Variant",
+          "optional": false,
+          "description": "One or more characters. This argument is case-sensitive."
+        },
+        {
+          "name": "Count",
+          "type": "Variant",
+          "optional": true,
+          "description": "The maximum number of characters by which the specified range is to be moved. Can be a number or either the wdForward or wdBackward constant. If Count is a positive number, the range is moved forward in the document. If it is a negative number, the range is moved backward. The default value is wdForward."
+        }
+      ]
+    },
+    {
+      "name": "MoveEndUntil",
+      "kind": "method",
+      "signature": "MoveEndUntil(Cset As Variant, [Count As Variant]) As Long",
+      "description": "Moves the end position of the specified range until any of the specified characters are found in the document. If the movement is forward in the document, the range is expanded.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Cset",
+          "type": "Variant",
+          "optional": false,
+          "description": "One or more characters. This argument is case-sensitive."
+        },
+        {
+          "name": "Count",
+          "type": "Variant",
+          "optional": true,
+          "description": "The maximum number of characters by which the specified range is to be moved. Can be a number or either the wdForward or wdBackward constant. If Count is a positive number, the range is moved forward in the document. If it is a negative number, the range is moved backward. The default value is wdForward."
+        }
+      ]
+    },
+    {
+      "name": "Cut",
+      "kind": "method",
+      "signature": "Cut()",
+      "description": "Removes the specified object from the document and places it on the Clipboard.",
+      "returns": "void"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy()",
+      "description": "Copies the specified range to the Clipboard.",
+      "returns": "void"
+    },
+    {
+      "name": "Paste",
+      "kind": "method",
+      "signature": "Paste()",
+      "description": "Inserts the contents of the Clipboard at the specified range.",
+      "returns": "void"
+    },
+    {
+      "name": "InsertBreak",
+      "kind": "method",
+      "signature": "InsertBreak([Type As Variant])",
+      "description": "Inserts a page, column, or section break.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "Variant",
+          "optional": true,
+          "description": "The type of break to be inserted.Can be one of the WdBreakType constants. If omitted, the default value is wdPageBreak."
+        }
+      ]
+    },
+    {
+      "name": "InsertFile",
+      "kind": "method",
+      "signature": "InsertFile(FileName As String, [Range As Variant], [ConfirmConversions As Variant], [Link As Variant], [Attachment As Variant])",
+      "description": "Inserts all or part of the specified file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The path and file name of the file to be inserted. If you don't specify a path, Word assumes the file is in the current folder."
+        },
+        {
+          "name": "Range",
+          "type": "Variant",
+          "optional": true,
+          "description": "If the specified file is a Word document, this parameter refers to a bookmark. If the file is another type (for example, a Microsoft Excel worksheet), this parameter refers to a named range or a cell range (for example, R1C1:R3C4)."
+        },
+        {
+          "name": "ConfirmConversions",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have Word prompt you to confirm conversion when inserting files in formats other than the Word Document format."
+        },
+        {
+          "name": "Link",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to insert the file by using an INCLUDETEXT field."
+        },
+        {
+          "name": "Attachment",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to insert the file as an attachment to an email message."
+        }
+      ]
+    },
+    {
+      "name": "InStory",
+      "kind": "method",
+      "signature": "InStory(Range As Range) As Boolean",
+      "description": "True if the range to which this method is applied is in the same story as the range specified by the Range argument.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "Specifies the range that this method uses to determine if it is contained within the specified Range object."
+        }
+      ]
+    },
+    {
+      "name": "InRange",
+      "kind": "method",
+      "signature": "InRange(Range As Range) As Boolean",
+      "description": "Returns True if the range to which the method is applied is contained in the range specified by the Range argument.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "Specifies the range that this method uses to determine if it is contained within the specified Range object."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete([Unit As Variant], [Count As Variant]) As Long",
+      "description": "Deletes the specified number of characters or words.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Unit",
+          "type": "Variant",
+          "optional": true,
+          "description": "The unit by which the collapsed range is to be deleted. Can be one of the WdUnits constants."
+        },
+        {
+          "name": "Count",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of units to be deleted. To delete units after the range, collapse the range and use a positive number. To delete units before the range, collapse the range and use a negative number."
+        }
+      ]
+    },
+    {
+      "name": "WholeStory",
+      "kind": "method",
+      "signature": "WholeStory()",
+      "description": "Expands a range to include the entire story.",
+      "returns": "void"
+    },
+    {
+      "name": "Expand",
+      "kind": "method",
+      "signature": "Expand([Unit As Variant]) As Long",
+      "description": "Expands the specified range or selection. Returns the number of characters added to the range or selection. Long.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Unit",
+          "type": "Variant",
+          "optional": true,
+          "description": "The unit by which to expand the range. Can be one of the following WdUnits constants: wdCharacter, wdWord, wdSentence, wdParagraph, wdSection, wdStory, wdCell wdColumn, wdRow, or wdTable."
+        }
+      ]
+    },
+    {
+      "name": "InsertParagraph",
+      "kind": "method",
+      "signature": "InsertParagraph()",
+      "description": "Replaces the specified range with a new paragraph.",
+      "returns": "void"
+    },
+    {
+      "name": "InsertParagraphAfter",
+      "kind": "method",
+      "signature": "InsertParagraphAfter()",
+      "description": "Inserts a paragraph mark after a range.",
+      "returns": "void"
+    },
+    {
+      "name": "InsertSymbol",
+      "kind": "method",
+      "signature": "InsertSymbol(CharacterNumber As Long, [Font As Variant], [Unicode As Variant], [Bias As Variant])",
+      "description": "Inserts a symbol in place of the specified range.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "CharacterNumber",
+          "type": "Long",
+          "optional": false,
+          "description": "The character number for the specified symbol. This value will always be the sum of 31 and the number that corresponds to the position of the symbol in the table of symbols (counting from left to right). For example, to specify a delta character at position 37 in the table of symbols in the Symbol font, set CharacterNumber to 68."
+        },
+        {
+          "name": "Font",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the font that contains the symbol."
+        },
+        {
+          "name": "Unicode",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to insert the unicode character specified by CharacterNumber; False to insert the ANSI character specified by CharacterNumber. The default value is False."
+        },
+        {
+          "name": "Bias",
+          "type": "Variant",
+          "optional": true,
+          "description": "Sets the font bias for symbols. This argument is useful for setting the correct font bias for East Asian characters. Can be one of the WdFontBias constants. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        }
+      ]
+    },
+    {
+      "name": "CopyAsPicture",
+      "kind": "method",
+      "signature": "CopyAsPicture()",
+      "description": "The CopyAsPicture method works the same way as the Copy method.",
+      "returns": "void"
+    },
+    {
+      "name": "SortAscending",
+      "kind": "method",
+      "signature": "SortAscending()",
+      "description": "Sorts paragraphs or table rows in ascending alphanumeric order.",
+      "returns": "void"
+    },
+    {
+      "name": "SortDescending",
+      "kind": "method",
+      "signature": "SortDescending()",
+      "description": "Sorts paragraphs in descending alphanumeric order.",
+      "returns": "void"
+    },
+    {
+      "name": "IsEqual",
+      "kind": "method",
+      "signature": "IsEqual(Range As Range) As Boolean",
+      "description": "True if the range to which this method is applied is equal to the range specified by the Range argument.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The range to compare with the Range object defined by expression."
+        }
+      ]
+    },
+    {
+      "name": "Calculate",
+      "kind": "method",
+      "signature": "Calculate() As Single",
+      "description": "Calculates a mathematical expression within a range or selection. Returns the result as a Single.",
+      "returns": "Single"
+    },
+    {
+      "name": "GoTo",
+      "kind": "method",
+      "signature": "GoTo([What As Variant], [Which As Variant], [Count As Variant], [Name As Variant]) As Range",
+      "description": "Returns a Range object that represents the start position of the specified item, such as a page, bookmark, or field.",
+      "returns": "Range",
+      "parameters": [
+        {
+          "name": "What",
+          "type": "Variant",
+          "optional": true,
+          "description": "The kind of item to which the range is moved. Can be one of the wdGoToItem constants."
+        },
+        {
+          "name": "Which",
+          "type": "Variant",
+          "optional": true,
+          "description": "The item to which the range is moved. Can be one of the wdGoToDirection constants."
+        },
+        {
+          "name": "Count",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of the item in the document. The default value is 1. Only positive values are valid. To specify an item that precedes the range, use wdGoToPrevious as the Which argument and specify a Count value."
+        },
+        {
+          "name": "Name",
+          "type": "Variant",
+          "optional": true,
+          "description": "If the What argument is wdGoToBookmark, wdGoToComment, wdGoToField, or wdGoToObject, this argument specifies a name. Only positive values are valid. To specify an item that precedes the range, use wdGoToPrevious as the Which argument and specify a Count value."
+        }
+      ]
+    },
+    {
+      "name": "GoToNext",
+      "kind": "method",
+      "signature": "GoToNext(What As WdGoToItem) As Range",
+      "description": "Returns a Range object that refers to the start position of the next item or location specified by the What argument. .",
+      "returns": "Range",
+      "parameters": [
+        {
+          "name": "What",
+          "type": "WdGoToItem",
+          "optional": false,
+          "description": "The item to where the specified range or selection is to be moved."
+        }
+      ]
+    },
+    {
+      "name": "GoToPrevious",
+      "kind": "method",
+      "signature": "GoToPrevious(What As WdGoToItem) As Range",
+      "description": "Returns a Range object that refers to the start position of the previous item or location specified by the What argument.",
+      "returns": "Range",
+      "parameters": [
+        {
+          "name": "What",
+          "type": "WdGoToItem",
+          "optional": false,
+          "description": "The item to where the specified range or selection is to be moved."
+        }
+      ]
+    },
+    {
+      "name": "PasteSpecial",
+      "kind": "method",
+      "signature": "PasteSpecial([IconIndex As Variant], [Link As Variant], [Placement As Variant], [DisplayAsIcon As Variant], [DataType As Variant], [IconFileName As Variant], [IconLabel As Variant])",
+      "description": "Inserts the contents of the Clipboard. .",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "IconIndex",
+          "type": "Variant",
+          "optional": true,
+          "description": "If DisplayAsIcon is True, this argument is a number that corresponds to the icon you want to use in the program file specified by IconFilename. Icons appear in the Change Icon dialog box: 0 (zero) corresponds to the first icon, 1 corresponds to the second icon, and so on. If this argument is omitted, the first (default) icon is used."
+        },
+        {
+          "name": "Link",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to create a link to the source file of the Clipboard contents. The default value is False."
+        },
+        {
+          "name": "Placement",
+          "type": "Variant",
+          "optional": true,
+          "description": "Can be either of the following WdOLEPlacement constants: wdFloatOverText or wdInLine. The default value is wdInLine."
+        },
+        {
+          "name": "DisplayAsIcon",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to display the link as an icon. The default value is False."
+        },
+        {
+          "name": "DataType",
+          "type": "Variant",
+          "optional": true,
+          "description": "A format for the Clipboard contents when they're inserted into the document. Can be any WdPasteDataType constant."
+        },
+        {
+          "name": "IconFileName",
+          "type": "Variant",
+          "optional": true,
+          "description": "If DisplayAsIcon is True, this argument is the path and file name for the file in which the icon to be displayed is stored."
+        },
+        {
+          "name": "IconLabel",
+          "type": "Variant",
+          "optional": true,
+          "description": "If DisplayAsIcon is True, this argument is the text that appears below the icon."
+        }
+      ]
+    },
+    {
+      "name": "LookupNameProperties",
+      "kind": "method",
+      "signature": "LookupNameProperties()",
+      "description": "Looks up a name in the global address book list and displays the Properties dialog box, which includes information about the specified name.",
+      "returns": "void"
+    },
+    {
+      "name": "ComputeStatistics",
+      "kind": "method",
+      "signature": "ComputeStatistics(Statistic As WdStatistic) As Long",
+      "description": "Returns a Long that represents a statistic based on the contents of the specified range.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Statistic",
+          "type": "WdStatistic",
+          "optional": false,
+          "description": "The type of statistic to compute."
+        }
+      ]
+    },
+    {
+      "name": "Relocate",
+      "kind": "method",
+      "signature": "Relocate(Direction As Long)",
+      "description": "In outline view, moves the paragraphs within the specified range after the next visible paragraph or before the previous visible paragraph.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Direction",
+          "type": "Long",
+          "optional": false,
+          "description": "The direction of the move."
+        }
+      ]
+    },
+    {
+      "name": "CheckSynonyms",
+      "kind": "method",
+      "signature": "CheckSynonyms()",
+      "description": "Displays the Thesaurus dialog box, which lists alternative word choices, or synonyms, for the text in the specified range.",
+      "returns": "void"
+    },
+    {
+      "name": "InsertAutoText",
+      "kind": "method",
+      "signature": "InsertAutoText()",
+      "description": "Attempts to match the text in the specified range or the text surrounding the range with an existing AutoText entry name.",
+      "returns": "void"
+    },
+    {
+      "name": "InsertDatabase",
+      "kind": "method",
+      "signature": "InsertDatabase([Format As Variant], [Style As Variant], [LinkToSource As Variant], [Connection As Variant], [SQLStatement As Variant], [SQLStatement1 As Variant], [PasswordDocument As Variant], [PasswordTemplate As Variant], [WritePasswordDocument As Variant], [WritePasswordTemplate As Variant], [DataSource As Variant], [From As Variant], [To As Variant], [IncludeFields As Variant])",
+      "description": "Retrieves data from a data source (for example, a separate Microsoft Word document, a Microsoft Excel worksheet, or a Microsoft Access database) and inserts the data as a table in place of the specified range.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Format",
+          "type": "Variant",
+          "optional": true,
+          "description": "A format listed in the Formats box in the Table AutoFormat dialog box (Table menu). Can be any of the WdTableFormat constants. A border is applied to the cells in the table by default."
+        },
+        {
+          "name": "Style",
+          "type": "Variant",
+          "optional": true,
+          "description": "The attributes of the AutoFormat specified by Format that are applied to the table."
+        },
+        {
+          "name": "LinkToSource",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to establish a link between the new table and the data source."
+        },
+        {
+          "name": "Connection",
+          "type": "Variant",
+          "optional": true,
+          "description": "A range within which to perform the query specified by _SQLStatement_."
+        },
+        {
+          "name": "SQLStatement",
+          "type": "Variant",
+          "optional": true,
+          "description": "An optional query string that retrieves a subset of the data in a primary data source to be inserted into the document."
+        },
+        {
+          "name": "SQLStatement1",
+          "type": "Variant",
+          "optional": true,
+          "description": "If the query string is longer than 255 characters, _SQLStatement_ denotes the first portion of the string and _SQLStatement1_ denotes the second portion."
+        },
+        {
+          "name": "PasswordDocument",
+          "type": "Variant",
+          "optional": true,
+          "description": "The password (if any) required to open the data source. (See Remarks below.)"
+        },
+        {
+          "name": "PasswordTemplate",
+          "type": "Variant",
+          "optional": true,
+          "description": "If the data source is a Word document, this argument is the password (if any) required to open the attached template. (See Remarks below.)"
+        },
+        {
+          "name": "WritePasswordDocument",
+          "type": "Variant",
+          "optional": true,
+          "description": "The password required to save changes to the document. (See Remarks below.)"
+        },
+        {
+          "name": "WritePasswordTemplate",
+          "type": "Variant",
+          "optional": true,
+          "description": "The password required to save changes to the template. (See Remarks below.)"
+        },
+        {
+          "name": "DataSource",
+          "type": "Variant",
+          "optional": true,
+          "description": "The path and file name of the data source."
+        },
+        {
+          "name": "From",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of the first record in the range of records to be inserted."
+        },
+        {
+          "name": "To",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of the last record in the range of records to be inserted."
+        },
+        {
+          "name": "IncludeFields",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to include field names from the data source in the first row of the new table."
+        }
+      ]
+    },
+    {
+      "name": "AutoFormat",
+      "kind": "method",
+      "signature": "AutoFormat()",
+      "description": "Automatically formats a document. Use the Kind property to specify a document type.",
+      "returns": "void"
+    },
+    {
+      "name": "CheckGrammar",
+      "kind": "method",
+      "signature": "CheckGrammar()",
+      "description": "Begins a spelling and grammar check for the specified range.",
+      "returns": "void"
+    },
+    {
+      "name": "CheckSpelling",
+      "kind": "method",
+      "signature": "CheckSpelling([CustomDictionary As Variant], [IgnoreUppercase As Variant], [AlwaysSuggest As Variant], [CustomDictionary2 As Variant], [CustomDictionary3 As Variant], [CustomDictionary4 As Variant], [CustomDictionary5 As Variant], [CustomDictionary6 As Variant], [CustomDictionary7 As Variant], [CustomDictionary8 As Variant], [CustomDictionary9 As Variant], [CustomDictionary10 As Variant])",
+      "description": "Begins a spelling check for the specified document or range.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "CustomDictionary",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of the custom dictionary."
+        },
+        {
+          "name": "IgnoreUppercase",
+          "type": "Variant",
+          "optional": true,
+          "description": "True if capitalization is ignored. If this argument is omitted, the current value of the IgnoreUppercase property is used."
+        },
+        {
+          "name": "AlwaysSuggest",
+          "type": "Variant",
+          "optional": true,
+          "description": "True for Microsoft Word to always suggest alternative spellings. If this argument is omitted, the current value of the SuggestSpellingCorrections property is used."
+        },
+        {
+          "name": "CustomDictionary2",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of the custom dictionary. You can specify as many as nine additional dictionaries."
+        },
+        {
+          "name": "CustomDictionary3",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of the custom dictionary. You can specify as many as nine additional dictionaries."
+        },
+        {
+          "name": "CustomDictionary4",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of the custom dictionary. You can specify as many as nine additional dictionaries."
+        },
+        {
+          "name": "CustomDictionary5",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of the custom dictionary. You can specify as many as nine additional dictionaries."
+        },
+        {
+          "name": "CustomDictionary6",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of the custom dictionary. You can specify as many as nine additional dictionaries."
+        },
+        {
+          "name": "CustomDictionary7",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of the custom dictionary. You can specify as many as nine additional dictionaries."
+        },
+        {
+          "name": "CustomDictionary8",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of the custom dictionary. You can specify as many as nine additional dictionaries."
+        },
+        {
+          "name": "CustomDictionary9",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of the custom dictionary. You can specify as many as nine additional dictionaries."
+        },
+        {
+          "name": "CustomDictionary10",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of the custom dictionary. You can specify as many as nine additional dictionaries."
+        }
+      ]
+    },
+    {
+      "name": "GetSpellingSuggestions",
+      "kind": "method",
+      "signature": "GetSpellingSuggestions([CustomDictionary As Variant], [IgnoreUppercase As Variant], [MainDictionary As Variant], [SuggestionMode As Variant], [CustomDictionary2 As Variant], [CustomDictionary3 As Variant], [CustomDictionary4 As Variant], [CustomDictionary5 As Variant], [CustomDictionary6 As Variant], [CustomDictionary7 As Variant], [CustomDictionary8 As Variant], [CustomDictionary9 As Variant], [CustomDictionary10 As Variant]) As SpellingSuggestions",
+      "description": "Returns a SpellingSuggestions collection that represents the words suggested as spelling replacements for the first word in the specified range.",
+      "returns": "SpellingSuggestions",
+      "parameters": [
+        {
+          "name": "CustomDictionary",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of the custom dictionary."
+        },
+        {
+          "name": "IgnoreUppercase",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore words in all uppercase letters. If this argument is omitted, the current value of the IgnoreUppercase property is used."
+        },
+        {
+          "name": "MainDictionary",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of the main dictionary. If you don't specify a main dictionary, Microsoft Word uses the main dictionary that corresponds to the language formatting of the first word in the range."
+        },
+        {
+          "name": "SuggestionMode",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the way Word makes spelling suggestions. Can be one of the following WdSpellingWordType constants. The default value is wdSpellword."
+        },
+        {
+          "name": "CustomDictionary2",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary3",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary4",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary5",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary6",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary7",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary8",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary9",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary10",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "InsertParagraphBefore",
+      "kind": "method",
+      "signature": "InsertParagraphBefore()",
+      "description": "Inserts a new paragraph before the specified range.",
+      "returns": "void"
+    },
+    {
+      "name": "NextSubdocument",
+      "kind": "method",
+      "signature": "NextSubdocument()",
+      "description": "Moves the range to the next subdocument.",
+      "returns": "void"
+    },
+    {
+      "name": "PreviousSubdocument",
+      "kind": "method",
+      "signature": "PreviousSubdocument()",
+      "description": "Moves the range to the previous subdocument.",
+      "returns": "void"
+    },
+    {
+      "name": "ConvertHangulAndHanja",
+      "kind": "method",
+      "signature": "ConvertHangulAndHanja([ConversionsMode As Variant], [FastConversion As Variant], [CheckHangulEnding As Variant], [EnableRecentOrdering As Variant], [CustomDictionary As Variant])",
+      "description": "Converts the specified range from hangul to hanja or vice versa.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ConversionsMode",
+          "type": "Variant",
+          "optional": true,
+          "description": "Sets the direction for the conversion between hangul and hanja. Can be either of the following WdMultipleWordConversionsMode constants: wdHangulToHanja or wdHanjaToHangul. The default value is the current value of the MultipleWordConversionsMode property."
+        },
+        {
+          "name": "FastConversion",
+          "type": "Variant",
+          "optional": true,
+          "description": "True if Microsoft Word automatically converts a word with only one suggestion for conversion. The default value is the current value of the HangulHanjaFastConversion property."
+        },
+        {
+          "name": "CheckHangulEnding",
+          "type": "Variant",
+          "optional": true,
+          "description": "True if Word automatically detects hangul endings and ignores them. The default value is the current value of the CheckHangulEndings property. This argument is ignored if the ConversionsMode argument is set to wdHanjaToHangul."
+        },
+        {
+          "name": "EnableRecentOrdering",
+          "type": "Variant",
+          "optional": true,
+          "description": "True if Word displays the most recently used words at the top of the suggestions list. The default value is the current value of the EnableHangulHanjaRecentOrdering property."
+        },
+        {
+          "name": "CustomDictionary",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of a custom hangul-hanja conversion dictionary. Use this argument to use a custom dictionary with hangul-hanja conversions not contained in the main dictionary."
+        }
+      ]
+    },
+    {
+      "name": "PasteAsNestedTable",
+      "kind": "method",
+      "signature": "PasteAsNestedTable()",
+      "description": "Pastes a cell or group of cells as a nested table into the selected range.",
+      "returns": "void"
+    },
+    {
+      "name": "ModifyEnclosure",
+      "kind": "method",
+      "signature": "ModifyEnclosure(Style As Variant, [Symbol As Variant], [EnclosedText As Variant])",
+      "description": "Adds, modifies, or removes an enclosure around the specified character or characters.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Style",
+          "type": "Variant",
+          "optional": false,
+          "description": "The style of the enclosure. Can be any WdEncloseStyle constant."
+        },
+        {
+          "name": "Symbol",
+          "type": "Variant",
+          "optional": true,
+          "description": "The symbol in which to enclose the specified range. Can be any WdEnclosureType constant."
+        },
+        {
+          "name": "EnclosedText",
+          "type": "Variant",
+          "optional": true,
+          "description": "The characters that you want to enclose. If you include this argument, Microsoft Word replaces the specified range with the enclosed characters. If you don't specify text to enclose, Microsoft Word encloses all text in the specified range."
+        }
+      ]
+    },
+    {
+      "name": "PhoneticGuide",
+      "kind": "method",
+      "signature": "PhoneticGuide(Text As String, [Alignment As WdPhoneticGuideAlignmentType], [Raise As Long], [FontSize As Long], [FontName As String])",
+      "description": "Adds phonetic guides to the specified range.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Text",
+          "type": "String",
+          "optional": false,
+          "description": "The phonetic text to add."
+        },
+        {
+          "name": "Alignment",
+          "type": "WdPhoneticGuideAlignmentType",
+          "optional": true,
+          "description": "The alignment of the added phonetic text."
+        },
+        {
+          "name": "Raise",
+          "type": "Long",
+          "optional": true,
+          "description": "The distance (in points) from the top of the text in the specified range to the top of the phonetic text. If no value is specified, Microsoft Word automatically sets the phonetic text at an optimum distance above the specified range."
+        },
+        {
+          "name": "FontSize",
+          "type": "Long",
+          "optional": true,
+          "description": "The font size to use for the phonetic text. If no value is specified, Word uses a font size 50 percent smaller than the text in the specified range."
+        },
+        {
+          "name": "FontName",
+          "type": "String",
+          "optional": true,
+          "description": "The name of the font to use for the phonetic text. If no value is specified, Word uses the same font as the text in the specified range."
+        }
+      ]
+    },
+    {
+      "name": "InsertDateTime",
+      "kind": "method",
+      "signature": "InsertDateTime([DateTimeFormat As Variant], [InsertAsField As Variant], [InsertAsFullWidth As Variant], [DateLanguage As Variant], [CalendarType As Variant])",
+      "description": "Inserts the current date or time, or both, either as text or as a TIME field.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "DateTimeFormat",
+          "type": "Variant",
+          "optional": true,
+          "description": "The format to be used for displaying the date or time, or both. If this argument is omitted, Microsoft Word uses the short-date style from the Windows Control Panel (Regional Settings icon)."
+        },
+        {
+          "name": "InsertAsField",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to insert the specified information as a TIME field. The default value is True."
+        },
+        {
+          "name": "InsertAsFullWidth",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to insert the specified information as double-byte digits. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "DateLanguage",
+          "type": "Variant",
+          "optional": true,
+          "description": "Sets the language in which to display the date or time. Can be either of the WdDateLanguage constants. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "CalendarType",
+          "type": "Variant",
+          "optional": true,
+          "description": "Sets the calendar type to use when displaying the date or time. Can be either of the WdCalendarTypeBi constants. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        }
+      ]
+    },
+    {
+      "name": "Sort",
+      "kind": "method",
+      "signature": "Sort([ExcludeHeader As Variant], [FieldNumber As Variant], [SortFieldType As Variant], [SortOrder As Variant], [FieldNumber2 As Variant], [SortFieldType2 As Variant], [SortOrder2 As Variant], [FieldNumber3 As Variant], [SortFieldType3 As Variant], [SortOrder3 As Variant], [SortColumn As Variant], [Separator As Variant], [CaseSensitive As Variant], [BidiSort As Variant], [IgnoreThe As Variant], [IgnoreKashida As Variant], [IgnoreDiacritics As Variant], [IgnoreHe As Variant], [LanguageID As Variant])",
+      "description": "Sorts the paragraphs in the specified range.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ExcludeHeader",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to exclude the first row or paragraph header from the sort operation. The default value is False."
+        },
+        {
+          "name": "FieldNumber",
+          "type": "Variant",
+          "optional": true,
+          "description": "The fields by which to sort. Microsoft Word sorts by FieldNumber, then by FieldNumber2, and then by FieldNumber3."
+        },
+        {
+          "name": "SortFieldType",
+          "type": "Variant",
+          "optional": true,
+          "description": "The respective sort types for FieldNumber. Can be one of the WdSortFieldType constants. The default value is wdSortFieldAlphanumeric. Some of these constants may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "SortOrder",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sorting order to use when sorting FieldNumber. Can be any WdSortOrder constant."
+        },
+        {
+          "name": "FieldNumber2",
+          "type": "Variant",
+          "optional": true,
+          "description": "The fields by which to sort."
+        },
+        {
+          "name": "SortFieldType2",
+          "type": "Variant",
+          "optional": true,
+          "description": "The respective sort types for FieldNumber2. Can be one of the WdSortFieldType constants. The default value is wdSortFieldAlphanumeric. Some of these constants may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "SortOrder2",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sorting order to use when sorting FieldNumber2. Can be any WdSortOrder constant."
+        },
+        {
+          "name": "FieldNumber3",
+          "type": "Variant",
+          "optional": true,
+          "description": "The fields by which to sort."
+        },
+        {
+          "name": "SortFieldType3",
+          "type": "Variant",
+          "optional": true,
+          "description": "Some of these constants may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed. The default value is wdSortFieldAlphanumeric."
+        },
+        {
+          "name": "SortOrder3",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sorting order to use when sorting FieldNumber3. Can be any WdSortOrder constant."
+        },
+        {
+          "name": "SortColumn",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to sort only the column specified by the Range object."
+        },
+        {
+          "name": "Separator",
+          "type": "Variant",
+          "optional": true,
+          "description": "The type of field separator. Can be one of the WdSortSeparator constants."
+        },
+        {
+          "name": "CaseSensitive",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to sort with case sensitivity. The default value is False."
+        },
+        {
+          "name": "BidiSort",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to sort based on right-to-left language rules. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "IgnoreThe",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore the Arabic character alef lam when sorting right-to-left language text. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "IgnoreKashida",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore kashidas when sorting right-to-left language text. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "IgnoreDiacritics",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore bidirectional control characters when sorting right-to-left language text. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "IgnoreHe",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore the Hebrew character he when sorting right-to-left language text. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "LanguageID",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the sorting language. Can be one of the WdLanguageID constants. Refer to the Object Browser for a list of the WdLanguageID constants."
+        }
+      ]
+    },
+    {
+      "name": "DetectLanguage",
+      "kind": "method",
+      "signature": "DetectLanguage()",
+      "description": "Analyzes the specified text to determine the language that it is written in.",
+      "returns": "void"
+    },
+    {
+      "name": "ConvertToTable",
+      "kind": "method",
+      "signature": "ConvertToTable([Separator As Variant], [NumRows As Variant], [NumColumns As Variant], [InitialColumnWidth As Variant], [Format As Variant], [ApplyBorders As Variant], [ApplyShading As Variant], [ApplyFont As Variant], [ApplyColor As Variant], [ApplyHeadingRows As Variant], [ApplyLastRow As Variant], [ApplyFirstColumn As Variant], [ApplyLastColumn As Variant], [AutoFit As Variant], [AutoFitBehavior As Variant], [DefaultTableBehavior As Variant]) As Table",
+      "description": "Converts text within a range to a table. Returns the table as a Table object.",
+      "returns": "Table",
+      "parameters": [
+        {
+          "name": "Separator",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the character used to separate text into cells. Can be a character or one of the following WdTableFieldSeparator constant. If this argument is omitted, the value of the DefaultTableSeparator property is used."
+        },
+        {
+          "name": "NumRows",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of rows in the table. If this argument is omitted, Microsoft Word sets the number of rows, based on the contents of the range."
+        },
+        {
+          "name": "NumColumns",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of columns in the table. If this argument is omitted, Word sets the number of columns, based on the contents of the range."
+        },
+        {
+          "name": "InitialColumnWidth",
+          "type": "Variant",
+          "optional": true,
+          "description": "The initial width of each column, in points. If this argument is omitted, Word calculates and adjusts the column width so that the table stretches from margin to margin."
+        },
+        {
+          "name": "Format",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies one of the predefined formats listed in the Table AutoFormat dialog box. Can be one of the WdTableFormat constants."
+        },
+        {
+          "name": "ApplyBorders",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to apply the border properties of the specified format."
+        },
+        {
+          "name": "ApplyShading",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to apply the shading properties of the specified format."
+        },
+        {
+          "name": "ApplyFont",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to apply the font properties of the specified format."
+        },
+        {
+          "name": "ApplyColor",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to apply the color properties of the specified format."
+        },
+        {
+          "name": "ApplyHeadingRows",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to apply the heading-row properties of the specified format."
+        },
+        {
+          "name": "ApplyLastRow",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to apply the last-row properties of the specified format."
+        },
+        {
+          "name": "ApplyFirstColumn",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to apply the first-column properties of the specified format."
+        },
+        {
+          "name": "ApplyLastColumn",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to apply the last-column properties of the specified format."
+        },
+        {
+          "name": "AutoFit",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to decrease the width of the table columns as much as possible without changing the way text wraps in the cells."
+        },
+        {
+          "name": "AutoFitBehavior",
+          "type": "Variant",
+          "optional": true,
+          "description": "Sets the AutoFit rules for how Word sizes a table. Can be one of the following WdAutoFitBehavior constant. If DefaultTableBehavior is wdWord8TableBehavior, this argument is ignored."
+        },
+        {
+          "name": "DefaultTableBehavior",
+          "type": "Variant",
+          "optional": true,
+          "description": "Sets a value that specifies whether Microsoft Word automatically resizes cells in a table to fit the contents (AutoFit). Can be one of the WdDefaultTableBehavior constant."
+        }
+      ]
+    },
+    {
+      "name": "TCSCConverter",
+      "kind": "method",
+      "signature": "TCSCConverter([WdTCSCConverterDirection As WdTCSCConverterDirection], [CommonTerms As Boolean], [UseVariants As Boolean])",
+      "description": "Converts the specified range from Traditional Chinese to Simplified Chinese or vice versa.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "WdTCSCConverterDirection",
+          "type": "WdTCSCConverterDirection",
+          "optional": true,
+          "description": "Specifies the direction in which text is converted. If omitted, the default value is wdTCSCConverterDirectionAuto, which converts in the appropriate direction based on the detected language of the specified range."
+        },
+        {
+          "name": "CommonTerms",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "UseVariants",
+          "type": "Boolean",
+          "optional": true,
+          "description": "True if Word uses Taiwan, Hong Kong SAR, and Macao SAR character variants. Can only be used if translating from Simplified Chinese to Traditional Chinese."
+        }
+      ]
+    },
+    {
+      "name": "PasteAndFormat",
+      "kind": "method",
+      "signature": "PasteAndFormat(Type As WdRecoveryType)",
+      "description": "Pastes the selected table cells and formats them as specified.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "WdRecoveryType",
+          "optional": false,
+          "description": "The type of formatting to use when pasting the selected table cells."
+        }
+      ]
+    },
+    {
+      "name": "PasteExcelTable",
+      "kind": "method",
+      "signature": "PasteExcelTable(LinkedToExcel As Boolean, WordFormatting As Boolean, RTF As Boolean)",
+      "description": "Pastes and formats a Microsoft Excel table.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "LinkedToExcel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True links the pasted table to the original Excel file so that changes made to the Excel file are reflected in Microsoft Word."
+        },
+        {
+          "name": "WordFormatting",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True formats the table using the formatting in the Word document. False formats the table according to the original Excel file."
+        },
+        {
+          "name": "RTF",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True pastes the Excel table using Rich Text Format (RTF). False pastes the Excel table as HTML."
+        }
+      ]
+    },
+    {
+      "name": "PasteAppendTable",
+      "kind": "method",
+      "signature": "PasteAppendTable()",
+      "description": "Merges pasted cells into an existing table by inserting the pasted rows between the selected rows. No cells are overwritten.",
+      "returns": "void"
+    },
+    {
+      "name": "GoToEditableRange",
+      "kind": "method",
+      "signature": "GoToEditableRange([EditorID As Variant]) As Range",
+      "description": "Returns a Range object that represents an area of a document that can be modified by the specified user or group of users.",
+      "returns": "Range",
+      "parameters": [
+        {
+          "name": "EditorID",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "InsertXML",
+      "kind": "method",
+      "signature": "InsertXML(XML As String, [Transform As Variant])",
+      "description": "Inserts the specified XML into the document at the specified range, replacing any text contained within the range.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "XML",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies the XML to insert. This can be any valid custom XML."
+        },
+        {
+          "name": "Transform",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the XML Transformation (XSLT) used to transform the XML. If omitted, the XML is inserted as custom XML without applying a transform."
+        }
+      ]
+    },
+    {
+      "name": "InsertCaption",
+      "kind": "method",
+      "signature": "InsertCaption(Label As Variant, [Title As Variant], [TitleAutoText As Variant], [Position As Variant], [ExcludeLabel As Variant])",
+      "description": "Inserts a caption immediately preceding or following the specified range.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Label",
+          "type": "Variant",
+          "optional": false,
+          "description": "The caption label to be inserted. Can be a String or one of the WdCaptionLabelID constants. If the label has not yet been defined, an error occurs. Use the Add method with the CaptionLabels object to define new caption labels."
+        },
+        {
+          "name": "Title",
+          "type": "Variant",
+          "optional": true,
+          "description": "The string to be inserted immediately following the label in the caption (ignored if TitleAutoText is specified)."
+        },
+        {
+          "name": "TitleAutoText",
+          "type": "Variant",
+          "optional": true,
+          "description": "The AutoText entry whose contents you want to insert immediately following the label in the caption (overrides any text specified by Title)."
+        },
+        {
+          "name": "Position",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies whether the caption will be inserted above or below the range. Can be either one of the WdCaptionPosition constants."
+        },
+        {
+          "name": "ExcludeLabel",
+          "type": "Variant",
+          "optional": true,
+          "description": "True does not include the text label, as defined in the Label parameter. False includes the specified label."
+        }
+      ]
+    },
+    {
+      "name": "InsertCrossReference",
+      "kind": "method",
+      "signature": "InsertCrossReference(ReferenceType As Variant, ReferenceKind As WdReferenceKind, ReferenceItem As Variant, [InsertAsHyperlink As Variant], [IncludePosition As Variant], [SeparateNumbers As Variant], [SeparatorString As Variant])",
+      "description": "Inserts a cross-reference to a heading, bookmark, footnote, or endnote, or to an item for which a caption label is defined (for example, an equation, figure, or table).",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ReferenceType",
+          "type": "Variant",
+          "optional": false,
+          "description": "The type of item for which a cross-reference is to be inserted. Can be any WdReferenceType or WdCaptionLabelID constant or a user defined caption label."
+        },
+        {
+          "name": "ReferenceKind",
+          "type": "WdReferenceKind",
+          "optional": false,
+          "description": "The information to be included in the cross-reference."
+        },
+        {
+          "name": "ReferenceItem",
+          "type": "Variant",
+          "optional": false,
+          "description": "If ReferenceType is wdRefTypeBookmark, this argument specifies a bookmark name. For all other ReferenceType values, this argument specifies the item number or name in the Reference type option in the Cross-reference dialog box. Use the GetCrossReferenceItems method to return a list of item names that can be used with this argument."
+        },
+        {
+          "name": "InsertAsHyperlink",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to insert the cross-reference as a hyperlink to the referenced item."
+        },
+        {
+          "name": "IncludePosition",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to insert \"above\" or \"below,\" depending on the location of the reference item in relation to the cross-reference."
+        },
+        {
+          "name": "SeparateNumbers",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to use a separator to separate the numbers from the associated text. (Use only if the ReferenceType parameter is set to wdRefTypeNumberedItem and the ReferenceKind parameter is set to wdNumberFullContext.)"
+        },
+        {
+          "name": "SeparatorString",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the string to use as a separator if the SeparateNumbers parameter is set to True."
+        }
+      ]
+    },
+    {
+      "name": "ExportFragment",
+      "kind": "method",
+      "signature": "ExportFragment(FileName As String, Format As WdSaveFormat)",
+      "description": "Exports the selected range into a document for use as a document fragment.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies the path and file name of the file in which to save the document fragment."
+        },
+        {
+          "name": "Format",
+          "type": "WdSaveFormat",
+          "optional": false,
+          "description": "Specifies the file format of the document fragment file."
+        }
+      ]
+    },
+    {
+      "name": "SetListLevel",
+      "kind": "method",
+      "signature": "SetListLevel(Level As Integer)",
+      "description": "Sets the list level for one or more items in a numbered list.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Level",
+          "type": "Integer",
+          "optional": false,
+          "description": "A number that indicates the new list level."
+        }
+      ]
+    },
+    {
+      "name": "InsertAlignmentTab",
+      "kind": "method",
+      "signature": "InsertAlignmentTab(Alignment As Long, [RelativeTo As Long])",
+      "description": "Inserts an absolute tab that is always positioned in the same spot, relative to either the margins or indents.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Alignment",
+          "type": "Long",
+          "optional": false,
+          "description": "Indicates the type of alignment&mdash;left, center, or right&mdash;for the tab stop. Can be one of the WdAlignmentTabAlignment constants."
+        },
+        {
+          "name": "RelativeTo",
+          "type": "Long",
+          "optional": true,
+          "description": "Indicates whether the tab stop is relative to the margins or to the paragraph indents. Can be one of the WdAlignmentTabRelative constants."
+        }
+      ]
+    },
+    {
+      "name": "ImportFragment",
+      "kind": "method",
+      "signature": "ImportFragment(FileName As String, [MatchDestination As Boolean])",
+      "description": "Imports a document fragment into the document at the specified range.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies the path and file name where the document fragment is stored."
+        },
+        {
+          "name": "MatchDestination",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to match the destination formatting. If False, the imported document fragment retains the formatting in the original document. Default value is False."
+        }
+      ]
+    },
+    {
+      "name": "ExportAsFixedFormat",
+      "kind": "method",
+      "signature": "ExportAsFixedFormat(OutputFileName As String, ExportFormat As WdExportFormat, [OpenAfterExport As Boolean], [OptimizeFor As WdExportOptimizeFor], [ExportCurrentPage As Boolean], [Item As WdExportItem], [IncludeDocProps As Boolean], [KeepIRM As Boolean], [CreateBookmarks As WdExportCreateBookmarks], [DocStructureTags As Boolean], [BitmapMissingFonts As Boolean], [UseISO19005_1 As Boolean], [FixedFormatExtClassPtr As Variant])",
+      "description": "Saves a portion of a document as PDF or XPS format.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "OutputFileName",
+          "type": "String",
+          "optional": false,
+          "description": "The path and file name of the new PDF or XPS file."
+        },
+        {
+          "name": "ExportFormat",
+          "type": "WdExportFormat",
+          "optional": false,
+          "description": "Specifies either PDF or XPS format."
+        },
+        {
+          "name": "OpenAfterExport",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Opens the new file after exporting the contents."
+        },
+        {
+          "name": "OptimizeFor",
+          "type": "WdExportOptimizeFor",
+          "optional": true,
+          "description": "Specifies whether to optimize for screen or print."
+        },
+        {
+          "name": "ExportCurrentPage",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to export the current page. True exports the entire page. False exports only the current selection."
+        },
+        {
+          "name": "Item",
+          "type": "WdExportItem",
+          "optional": true,
+          "description": "Specifies whether the export process includes text only or includes text with markup."
+        },
+        {
+          "name": "IncludeDocProps",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to include document properties in the newly exported file."
+        },
+        {
+          "name": "KeepIRM",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to copy IRM permissions to an XPS document if the source document has IRM protections. Default value is True."
+        },
+        {
+          "name": "CreateBookmarks",
+          "type": "WdExportCreateBookmarks",
+          "optional": true,
+          "description": "Specifies whether to export bookmarks and the type of bookmarks to export."
+        },
+        {
+          "name": "DocStructureTags",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to include extra data to help screen readers, for example information about the flow and logical organization of the content. Default value is True."
+        },
+        {
+          "name": "BitmapMissingFonts",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to include a bitmap of the text. Set this parameter to True when font licenses don't permit a font to be embedded in the PDF file. If False, the font is referenced, and the viewer's computer substitutes an appropriate font if the authored one is not available. Default value is True."
+        },
+        {
+          "name": "UseISO19005_1",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "FixedFormatExtClassPtr",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies a pointer to an add-in that allows calls to an alternate implementation of code. The alternate implementation of code interprets the EMF and EMF+ page descriptions that are generated by the applications to make their own PDF or XPS. For more information, see Extend the fixed-format export feature in Word Automation Services."
+        }
+      ]
+    },
+    {
+      "name": "SortByHeadings",
+      "kind": "method",
+      "signature": "SortByHeadings([SortFieldType As Variant], [SortOrder As Variant], [CaseSensitive As Variant], [BidiSort As Variant], [IgnoreThe As Variant], [IgnoreKashida As Variant], [IgnoreDiacritics As Variant], [IgnoreHe As Variant], [LanguageID As Variant])",
+      "description": "Sorts the headings in the specified range.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SortFieldType",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sort field type to use. Can be one of the WdSortFieldType constants. The default value is wdSortFieldAlphanumeric. Depending on the language support (U.S. English, for example) that you have selected or installed, some of these constants may not be available to you."
+        },
+        {
+          "name": "SortOrder",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sorting order to use. Can be one of the WdSortOrder constants."
+        },
+        {
+          "name": "CaseSensitive",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to sort with case sensitivity. The default value is False."
+        },
+        {
+          "name": "BidiSort",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to sort based on right-to-left language rules. Depending on the language support (U.S. English, for example) that you have selected or installed, this parameter may not be available to you."
+        },
+        {
+          "name": "IgnoreThe",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore the Arabic character alef lam when sorting right-to-left language text. Depending on the language support (U.S. English, for example) that you have selected or installed, this parameter may not be available to you."
+        },
+        {
+          "name": "IgnoreKashida",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore kashidas when sorting right-to-left language text. Depending on the language support (U.S. English, for example) that you have selected or installed, this parameter may not be available to you."
+        },
+        {
+          "name": "IgnoreDiacritics",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore bidirectional control characters when sorting right-to-left language text. Depending on the language support (U.S. English, for example) that you have selected or installed, this parameter may not be available to you."
+        },
+        {
+          "name": "IgnoreHe",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore the Hebrew character he when sorting right-to-left language text. Depending on the language support (U.S. English, for example) that you have selected or installed, this parameter may not be available to you."
+        },
+        {
+          "name": "LanguageID",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the sorting language. Can be one of the WdLanguageID constants."
+        }
+      ]
+    },
+    {
+      "name": "ExportAsFixedFormat2",
+      "kind": "method",
+      "signature": "ExportAsFixedFormat2(OutputFileName As String, ExportFormat As WdExportFormat, [OpenAfterExport As Boolean], [OptimizeFor As WdExportOptimizeFor], [ExportCurrentPage As Boolean], [Item As WdExportItem], [IncludeDocProps As Boolean], [KeepIRM As Boolean], [CreateBookmarks As WdExportCreateBookmarks], [DocStructureTags As Boolean], [BitmapMissingFonts As Boolean], [UseISO19005_1 As Boolean], [OptimizeForImageQuality As Boolean], [FixedFormatExtClassPtr As Variant])",
+      "description": "Saves a portion of a document as PDF or XPS format.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "OutputFileName",
+          "type": "String",
+          "optional": false,
+          "description": "The path and file name of the new PDF or XPS file."
+        },
+        {
+          "name": "ExportFormat",
+          "type": "WdExportFormat",
+          "optional": false,
+          "description": "Specifies either PDF or XPS format."
+        },
+        {
+          "name": "OpenAfterExport",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Opens the new file after exporting the contents."
+        },
+        {
+          "name": "OptimizeFor",
+          "type": "WdExportOptimizeFor",
+          "optional": true,
+          "description": "Specifies whether to optimize for screen or print."
+        },
+        {
+          "name": "ExportCurrentPage",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to export the current page. True exports the entire page. False exports only the current selection."
+        },
+        {
+          "name": "Item",
+          "type": "WdExportItem",
+          "optional": true,
+          "description": "Specifies whether the export process includes text only or includes text with markup."
+        },
+        {
+          "name": "IncludeDocProps",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to include document properties in the newly exported file."
+        },
+        {
+          "name": "KeepIRM",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to copy IRM permissions to an XPS document if the source document has IRM protections. Default value is True."
+        },
+        {
+          "name": "CreateBookmarks",
+          "type": "WdExportCreateBookmarks",
+          "optional": true,
+          "description": "Specifies whether to export bookmarks and the type of bookmarks to export."
+        },
+        {
+          "name": "DocStructureTags",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to include extra data to help screen readers, for example information about the flow and logical organization of the content. Default value is True."
+        },
+        {
+          "name": "BitmapMissingFonts",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to include a bitmap of the text. Set this parameter to True when font licenses don't permit a font to be embedded in the PDF file. If False, the font is referenced, and the viewer's computer substitutes an appropriate font if the authored one is not available. Default value is True."
+        },
+        {
+          "name": "UseISO19005_1",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to limit PDF usage to the PDF subset standardized as ISO 19005-1. If True, the resulting files are more reliably self-contained but may be larger or show more visual artifacts due to the restrictions of the format. Default value is False."
+        },
+        {
+          "name": "OptimizeForImageQuality",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to downsample images or keep their original quality. If True, the resulting files will have better image quality but may be larger. Default value is False."
+        },
+        {
+          "name": "FixedFormatExtClassPtr",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies a pointer to an add-in that allows calls to an alternate implementation of code. The alternate implementation of code interprets the EMF and EMF+ page descriptions that are generated by the applications to make their own PDF or XPS. For more information, see Extend the fixed-format export feature in Word Automation Services."
+        }
+      ]
+    },
+    {
+      "name": "ExportAsFixedFormat3",
+      "kind": "method",
+      "signature": "ExportAsFixedFormat3(OutputFileName As String, ExportFormat As WdExportFormat, [OpenAfterExport As Boolean], [OptimizeFor As WdExportOptimizeFor], [ExportCurrentPage As Boolean], [Item As WdExportItem], [IncludeDocProps As Boolean], [KeepIRM As Boolean], [CreateBookmarks As WdExportCreateBookmarks], [DocStructureTags As Boolean], [BitmapMissingFonts As Boolean], [UseISO19005_1 As Boolean], [OptimizeForImageQuality As Boolean], [ImproveExportTagging As Boolean], [FixedFormatExtClassPtr As Variant])",
+      "description": "Saves a portion of a document as PDF or XPS format.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "OutputFileName",
+          "type": "String",
+          "optional": false,
+          "description": "The path and file name of the new PDF or XPS file."
+        },
+        {
+          "name": "ExportFormat",
+          "type": "WdExportFormat",
+          "optional": false,
+          "description": "Specifies either PDF or XPS format."
+        },
+        {
+          "name": "OpenAfterExport",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Opens the new file after exporting the contents."
+        },
+        {
+          "name": "OptimizeFor",
+          "type": "WdExportOptimizeFor",
+          "optional": true,
+          "description": "Specifies whether to optimize for screen or print."
+        },
+        {
+          "name": "ExportCurrentPage",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to export the current page. True exports the entire page. False exports only the current selection."
+        },
+        {
+          "name": "Item",
+          "type": "WdExportItem",
+          "optional": true,
+          "description": "Specifies whether the export process includes text only or includes text with markup."
+        },
+        {
+          "name": "IncludeDocProps",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to include document properties in the newly exported file."
+        },
+        {
+          "name": "KeepIRM",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to copy IRM permissions to an XPS document if the source document has IRM protections. Default value is True."
+        },
+        {
+          "name": "CreateBookmarks",
+          "type": "WdExportCreateBookmarks",
+          "optional": true,
+          "description": "Specifies whether to export bookmarks and the type of bookmarks to export."
+        },
+        {
+          "name": "DocStructureTags",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to include extra data to help screen readers, for example information about the flow and logical organization of the content. Default value is True."
+        },
+        {
+          "name": "BitmapMissingFonts",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to include a bitmap of the text. Set this parameter to True when font licenses don't permit a font to be embedded in the PDF file. If False, the font is referenced, and the viewer's computer substitutes an appropriate font if the authored one is not available. Default value is True."
+        },
+        {
+          "name": "UseISO19005_1",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "OptimizeForImageQuality",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to downsample images or keep their original quality. If True, the resulting files will have better image quality but may be larger. Default value is False."
+        },
+        {
+          "name": "ImproveExportTagging",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to enable improved accessbility tagging. For more information, see the Remarks section. Default value is False."
+        },
+        {
+          "name": "FixedFormatExtClassPtr",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies a pointer to an add-in that allows calls to an alternate implementation of code. The alternate implementation of code interprets the EMF and EMF+ page descriptions that are generated by the applications to make their own PDF or XPS."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

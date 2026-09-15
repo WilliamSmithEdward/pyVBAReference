@@ -1,0 +1,69 @@
+{
+  "name": "ScaleEffect",
+  "kind": "Dispatch Interface",
+  "guid": "{914934E7-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a scaling effect for an AnimationBehavior object.",
+  "remarks": "",
+  "example": "ActivePresentation.Slides(1).TimeLine.MainSequence.Item.Behaviors(1).ScaleEffect",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "ByX",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Sets or returns a Single that represents scaling or moving an object horizontally by a specified percentage of the screen width, depending on whether it used in conjunction with a ScaleEffect or MotionEffect object, respectively. For example, a value of 50 for a motion effect means to move the object half the screen width to the right. Read/write."
+    },
+    {
+      "name": "ByY",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Sets or returns a Single that represents scaling or moving an object vertically by a specified percentage of the screen width, depending on whether it is used in conjunction with a ScaleEffect or MotionEffect object, respectively. Read/write."
+    },
+    {
+      "name": "FromX",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Sets or returns a Single that represents the starting width or horizontal position of a ScaleEffect object, specified as a percent of the screen width. Read/write."
+    },
+    {
+      "name": "FromY",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the starting height of a ScaleEffect object, specified as a percentage of the screen width. Read/write."
+    },
+    {
+      "name": "ToX",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Sets or returns a Single that represents the ending width of a ScaleEffect object, specified as a percent of the screen width. Read/write."
+    },
+    {
+      "name": "ToY",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the ending height of a ScaleEffect object, specified as a percentage of the screen width. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

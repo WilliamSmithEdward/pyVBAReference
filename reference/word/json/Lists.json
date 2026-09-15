@@ -1,0 +1,64 @@
+{
+  "name": "Lists",
+  "kind": "Dispatch Interface",
+  "guid": "{00020993-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of List objects that represent all the lists in the specified document.",
+  "remarks": "Use the Lists property to return the Lists collection. The following example displays the number of items in each list in the active document. Use Lists (Index), where Index is the index number, to return a single List object. The following example applies the first list format (excluding None) on the Numbered tab in the Bullets and Numbering dialog box to the second list in the active document. When you use a For Each loop to enumerate the Lists collection, the lists in a document are returned in reverse order. The following example counts the items for each list in the active document, from the bottom of the document upward. To add a new list to a document, use the ApplyListTemplate method with the ListFormat object for a specified range. You can manipulate the individual List objects within a document, but for more precise control you should work with the ListFormat object.",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of lists in the collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Lists object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As List",
+      "description": "Returns an individual List object in a collection.",
+      "returns": "List",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position of the individual object."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

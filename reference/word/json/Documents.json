@@ -1,0 +1,418 @@
+{
+  "name": "Documents",
+  "kind": "Dispatch Interface",
+  "guid": "{0002096C-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of all the Document objects that are currently open in Word.",
+  "remarks": "Use the Documents property to return the Documents collection. The following example displays the names of the open documents. Use the Add method to create a new empty document and add it to the Documents collection. The following example creates a new document based on the Normal template. Use the Open method to open a file. The following example opens the document named \"Sales.doc.\" Use Documents (Index), where Index is the document name or index number to return a single Document object. The following instruction closes the document named \"Report.doc\" without saving changes. The index number represents the position of the document in the Documents collection. The following example activates the first document in the Documents collection. The following example enumerates the Documents collection to determine whether the document named \"Report.doc\" is open. If this document is contained in the Documents collection, the document is activated; otherwise, it is opened.",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of documents in the collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Documents object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Document",
+      "description": "Returns an individual Document object in a collection.",
+      "returns": "Document",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "One-based index of the object to be returned (Long), or the name of the object (String)."
+        }
+      ]
+    },
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close([SaveChanges As Variant], [OriginalFormat As Variant], [RouteDocument As Variant])",
+      "description": "Closes the specified documents.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SaveChanges",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the save action for the document. Can be one of the following WdSaveOptions constants: wdDoNotSaveChanges, wdPromptToSaveChanges, or wdSaveChanges."
+        },
+        {
+          "name": "OriginalFormat",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the save format for the document. Can be one of the following WdOriginalFormat constants: wdOriginalDocumentFormat, wdPromptUser, or wdWordDocument."
+        },
+        {
+          "name": "RouteDocument",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to route the document to the next recipient. If the document doesn't have a routing slip attached, this argument is ignored."
+        }
+      ]
+    },
+    {
+      "name": "Save",
+      "kind": "method",
+      "signature": "Save([NoPrompt As Variant], [OriginalFormat As Variant])",
+      "description": "Saves all the documents in the Documents collection.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "NoPrompt",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have Word automatically save all documents. False to have Word prompt the user to save each document that has changed since it was last saved."
+        },
+        {
+          "name": "OriginalFormat",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the way the documents are saved. Can be one of the WdOriginalFormat constants."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([Template As Variant], [NewTemplate As Variant], [DocumentType As Variant], [Visible As Variant]) As Document",
+      "description": "Returns a Document object that represents a new, empty document added to the collection of open documents.",
+      "returns": "Document",
+      "parameters": [
+        {
+          "name": "Template",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the template to be used for the new document. If this argument is omitted, the Normal template is used."
+        },
+        {
+          "name": "NewTemplate",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to open the document as a template. The default value is False."
+        },
+        {
+          "name": "DocumentType",
+          "type": "Variant",
+          "optional": true,
+          "description": "Can be one of the following WdNewDocumentType constants: wdNewBlankDocument, wdNewEmailMessage, wdNewFrameset, or wdNewWebPage. The default constant is wdNewBlankDocument."
+        },
+        {
+          "name": "Visible",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to open the document in a visible window. If this value is False, Microsoft Word opens the document but sets the Visible property of the document window to False. The default value is True."
+        }
+      ]
+    },
+    {
+      "name": "CheckOut",
+      "kind": "method",
+      "signature": "CheckOut(FileName As String)",
+      "description": "Copies a specified document from a server to a local computer for editing.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the file to check out."
+        }
+      ]
+    },
+    {
+      "name": "CanCheckOut",
+      "kind": "method",
+      "signature": "CanCheckOut(FileName As String) As Boolean",
+      "description": "True if Microsoft Word can check out a specified document from a server. Read/write Boolean.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The server path and name of the document."
+        }
+      ]
+    },
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open(FileName As Variant, [ConfirmConversions As Variant], [ReadOnly As Variant], [AddToRecentFiles As Variant], [PasswordDocument As Variant], [PasswordTemplate As Variant], [Revert As Variant], [WritePasswordDocument As Variant], [WritePasswordTemplate As Variant], [Format As Variant], [Encoding As Variant], [Visible As Variant], [OpenAndRepair As Variant], [DocumentDirection As Variant], [NoEncodingDialog As Variant], [XMLTransform As Variant]) As Document",
+      "description": "Opens the specified document and adds it to the Documents collection. Returns a Document object.",
+      "returns": "Document",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name of the document (paths are accepted)."
+        },
+        {
+          "name": "ConfirmConversions",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to display the Convert File dialog box if the file isn't in Microsoft Word format."
+        },
+        {
+          "name": "ReadOnly",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to open the document as read-only. This argument doesn't override the read-only recommended setting on a saved document. For example, if a document has been saved with read-only recommended turned on, setting the ReadOnly argument to False will not cause the file to be opened as read/write."
+        },
+        {
+          "name": "AddToRecentFiles",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to add the file name to the list of recently used files at the bottom of the File menu."
+        },
+        {
+          "name": "PasswordDocument",
+          "type": "Variant",
+          "optional": true,
+          "description": "The password for opening the document."
+        },
+        {
+          "name": "PasswordTemplate",
+          "type": "Variant",
+          "optional": true,
+          "description": "The password for opening the template."
+        },
+        {
+          "name": "Revert",
+          "type": "Variant",
+          "optional": true,
+          "description": "Controls what happens if FileName is the name of an open document. True to discard any unsaved changes to the open document and reopen the file. False to activate the open document."
+        },
+        {
+          "name": "WritePasswordDocument",
+          "type": "Variant",
+          "optional": true,
+          "description": "The password for saving changes to the document."
+        },
+        {
+          "name": "WritePasswordTemplate",
+          "type": "Variant",
+          "optional": true,
+          "description": "The password for saving changes to the template."
+        },
+        {
+          "name": "Format",
+          "type": "Variant",
+          "optional": true,
+          "description": "The file converter to be used to open the document. Can be one of the WdOpenFormat constants. The default value is wdOpenFormatAuto. To specify an external file format, apply the OpenFormat property to a FileConverter object to determine the value to use with this argument."
+        },
+        {
+          "name": "Encoding",
+          "type": "Variant",
+          "optional": true,
+          "description": "The document encoding (code page or character set) to be used by Microsoft Word when you view the saved document. Can be any valid MsoEncoding constant. For the list of valid MsoEncoding constants, see the Object Browser in the Visual Basic Editor. The default value is the system code page."
+        },
+        {
+          "name": "Visible",
+          "type": "Variant",
+          "optional": true,
+          "description": "True if the document is opened in a visible window. The default value is True."
+        },
+        {
+          "name": "OpenAndRepair",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to repair the document to prevent document corruption."
+        },
+        {
+          "name": "DocumentDirection",
+          "type": "Variant",
+          "optional": true,
+          "description": "Indicates the horizontal flow of text in a document. The default value is wdLeftToRight."
+        },
+        {
+          "name": "NoEncodingDialog",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to skip displaying the Encoding dialog box that Word displays if the text encoding cannot be recognized. The default value is False."
+        },
+        {
+          "name": "XMLTransform",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "OpenNoRepairDialog",
+      "kind": "method",
+      "signature": "OpenNoRepairDialog(FileName As Variant, [ConfirmConversions As Variant], [ReadOnly As Variant], [AddToRecentFiles As Variant], [PasswordDocument As Variant], [PasswordTemplate As Variant], [Revert As Variant], [WritePasswordDocument As Variant], [WritePasswordTemplate As Variant], [Format As Variant], [Encoding As Variant], [Visible As Variant], [OpenAndRepair As Variant], [DocumentDirection As Variant], [NoEncodingDialog As Variant], [XMLTransform As Variant]) As Document",
+      "description": "Opens the specified document and adds it to the Documents collection.",
+      "returns": "Document",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name of the document (paths are accepted)."
+        },
+        {
+          "name": "ConfirmConversions",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to display the Convert File dialog box if the file is not in Microsoft Word format."
+        },
+        {
+          "name": "ReadOnly",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to open the document as read-only. This argument does not override the read-only recommended setting on a saved document. For example, if a document has been saved with read-only recommended turned on, setting the ReadOnly argument to False will not cause the file to be opened as read/write."
+        },
+        {
+          "name": "AddToRecentFiles",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to add the file name to the list of recently used files at the bottom of the File menu."
+        },
+        {
+          "name": "PasswordDocument",
+          "type": "Variant",
+          "optional": true,
+          "description": "The password for opening the document."
+        },
+        {
+          "name": "PasswordTemplate",
+          "type": "Variant",
+          "optional": true,
+          "description": "The password for opening the template."
+        },
+        {
+          "name": "Revert",
+          "type": "Variant",
+          "optional": true,
+          "description": "Controls what happens if FileName is the name of an open document. True to discard any unsaved changes to the open document and reopen the file. False to activate the open document."
+        },
+        {
+          "name": "WritePasswordDocument",
+          "type": "Variant",
+          "optional": true,
+          "description": "The password for saving changes to the document."
+        },
+        {
+          "name": "WritePasswordTemplate",
+          "type": "Variant",
+          "optional": true,
+          "description": "The password for saving changes to the template."
+        },
+        {
+          "name": "Format",
+          "type": "Variant",
+          "optional": true,
+          "description": "The file converter to be used to open the document. Can be one of the WdOpenFormat constants. The default is wdOpenFormatAuto."
+        },
+        {
+          "name": "Encoding",
+          "type": "Variant",
+          "optional": true,
+          "description": "The document encoding (code page or character set) to be used by Word when you view the saved document. Can be any valid MsoEncoding constant. For the list of valid MsoEncoding constants, see the Object Browser in the Visual Basic Editor. The default is the system code page."
+        },
+        {
+          "name": "Visible",
+          "type": "Variant",
+          "optional": true,
+          "description": "True if the document is opened in a visible window. The default is True."
+        },
+        {
+          "name": "OpenAndRepair",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to repair the document to prevent document corruption."
+        },
+        {
+          "name": "DocumentDirection",
+          "type": "Variant",
+          "optional": true,
+          "description": "Indicates the horizontal flow of text in a document. Can be any valid WdDocumentDirection constant. The default is wdLeftToRight."
+        },
+        {
+          "name": "NoEncodingDialog",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to skip displaying the Encoding dialog box that Word displays if the text encoding cannot be recognized. The default is False."
+        },
+        {
+          "name": "XMLTransform",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies a transform to use."
+        }
+      ]
+    },
+    {
+      "name": "AddBlogDocument",
+      "kind": "method",
+      "signature": "AddBlogDocument(ProviderID As String, PostURL As String, BlogName As String, [PostID As String]) As Document",
+      "description": "Returns a Document object that represents a new blog document that Microsoft Word publishes to the account described by the first three parameters.",
+      "returns": "Document",
+      "parameters": [
+        {
+          "name": "ProviderID",
+          "type": "String",
+          "optional": false,
+          "description": "A GUID that is the unique value a provider uses when they register themselves with Word."
+        },
+        {
+          "name": "PostURL",
+          "type": "String",
+          "optional": false,
+          "description": "The URL that is used to add posts to the blog."
+        },
+        {
+          "name": "BlogName",
+          "type": "String",
+          "optional": false,
+          "description": "A display name for the blog that will be used in Word."
+        },
+        {
+          "name": "PostID",
+          "type": "String",
+          "optional": true,
+          "description": "The ID for an existing post with which to populate the document created by using the AddBlogDocument method."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

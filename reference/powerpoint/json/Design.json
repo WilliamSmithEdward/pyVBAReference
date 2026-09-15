@@ -1,0 +1,78 @@
+{
+  "name": "Design",
+  "kind": "Dispatch Interface",
+  "guid": "{914934D7-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents an individual slide design template. The Design object is a member of the Designs and SlideRange collections and the Master and Slide objects.",
+  "remarks": "Use the Design property of the Master, Slide, or SlideRange objects to access a Design object, for example: - ActivePresentation.SlideMaster.Design - ActivePresentation.Slides(1).Design - ActivePresentation.Slides.Range.Design Use the Add, Item, Clone, or Loadmethods of the Designs collection to add, refer to, clone, or load a Design object, respectively. For example, to add a design template, use ActivePresentation.Designs.Add designName:=\"MyDesign\"",
+  "example": "Sub AddQueryTitleMaster(dsn As Design)\n\n    dsn.AddTitleMaster\n\n    MsgBox dsn.HasTitleMaster\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "SlideMaster",
+      "kind": "property",
+      "type": "_Master",
+      "access": "read-only",
+      "description": "Returns a Master object that represents the slide master. Read-only."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the index number for an animation effect or design. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the specified object. Read/write."
+    },
+    {
+      "name": "Preserved",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Represents whether a design master is preserved from changes. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "MoveTo",
+      "kind": "method",
+      "signature": "MoveTo(toPos As Long)",
+      "description": "Moves the specified object to a specific location within the same collection, renumbering all other items in the collection appropriately.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "toPos",
+          "type": "Long",
+          "optional": false,
+          "description": "The index position to which to move the animation effect."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified Design object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

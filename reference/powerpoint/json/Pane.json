@@ -1,0 +1,49 @@
+{
+  "name": "Pane",
+  "kind": "Dispatch Interface",
+  "guid": "{914934CC-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "An object representing one of the three panes in normal view or the single pane of any other view in the document window.",
+  "remarks": "Use Panes (_index_), where _index_ is the index number for a pane, to return a single Pane object. The following table lists the names of the panes in normal view with their corresponding index numbers. When using a document window view other than normal view, use Panes (1) to reference the single Pane object. Use the Activatemethod to make the specified pane active. Use the ViewTypeproperty to determine which pane is active. Normal view is the only view with multiple panes. All other document window views have only a single pane, which is the document window.",
+  "example": "With ActiveWindow\n\n    If .ActivePane.ViewType = ppViewSlide Then\n\n        .Panes(3).Activate\n\n    End If\n\nEnd With",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Active",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Returns whether the specified pane or window is active. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "ViewType",
+      "kind": "property",
+      "type": "PpViewType",
+      "access": "read-only",
+      "description": "Returns the type of view for the specified pane. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate()",
+      "description": "Activates the specified object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

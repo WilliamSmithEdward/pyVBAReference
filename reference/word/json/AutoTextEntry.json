@@ -1,0 +1,91 @@
+{
+  "name": "AutoTextEntry",
+  "kind": "Dispatch Interface",
+  "guid": "{00020936-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single AutoText entry. The AutoTextEntry object is a member of the AutoTextEntries collection. The AutoTextEntries collection contains all the AutoText entries in the specified template. The entries are listed on the AutoText tab in the AutoCorrect dialog box.",
+  "remarks": "Use AutoTextEntries (_index_), where _index_ is the AutoText entry name or index number, to return a single AutoTextEntry object. You must exactly match the spelling (but not necessarily the capitalization) of the name, as it is shown on the AutoText tab in the AutoCorrect dialog box. The following example sets the value of an existing AutoText entry named \"cName.\" The following example displays the name and value of the first AutoText entry in the template attached to the active document. The following example inserts the global AutoText entry named \"TheWorld\" at the insertion point. Use the Add method to add an AutoTextEntry object to the AutoTextEntries collection. The following example adds an AutoText entry named \"Blue\" based on the text of the selection.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified AutoTextEntries collection."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the position of an item in a collection. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the specified object.Read/write String."
+    },
+    {
+      "name": "StyleName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the style applied to the specified AutoText entry. Read-only String."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the value of the AutoText entry. Read/write String."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified object.",
+      "returns": "void"
+    },
+    {
+      "name": "Insert",
+      "kind": "method",
+      "signature": "Insert(Where As Range, [RichText As Variant]) As Range",
+      "description": "Inserts the AutoText entry in place of the specified range. Returns a Range object that represents the AutoText entry.",
+      "returns": "Range",
+      "parameters": [
+        {
+          "name": "Where",
+          "type": "Range",
+          "optional": false,
+          "description": "The location for the AutoText entry."
+        },
+        {
+          "name": "RichText",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to insert the AutoText entry with its original formatting."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,107 @@
+{
+  "name": "FreeformBuilder",
+  "kind": "Dispatch Interface",
+  "guid": "{000209C9-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the geometry of a freeform while it is being built.",
+  "remarks": "Use the BuildFreeform method of the Shapes or CanvasShapes object to return a FreeformBuilder object. Use the AddNodes method to add nodes to the freeform. Use the ConvertToShape method to create the shape defined in the FreeformBuilder object and add it to the Shapes collection. The following example adds a freeform with four segments to the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified FreeformBuilder object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "AddNodes",
+      "kind": "method",
+      "signature": "AddNodes(SegmentType As MsoSegmentType, EditingType As MsoEditingType, X1 As Single, Y1 As Single, [X2 As Single], [Y2 As Single], [X3 As Single], [Y3 As Single])",
+      "description": "Inserts a new segment at the end of the freeform that's being created, and adds the nodes that define the segment.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SegmentType",
+          "type": "MsoSegmentType",
+          "optional": false,
+          "description": "The type of segment to be added."
+        },
+        {
+          "name": "EditingType",
+          "type": "MsoEditingType",
+          "optional": false,
+          "description": "The editing property of the vertex. If SegmentType is msoSegmentLine, EditingType must be msoEditingAuto."
+        },
+        {
+          "name": "X1",
+          "type": "Single",
+          "optional": false,
+          "description": "If the EditingType of the new segment is msoEditingAuto, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the endpoint of the new segment. If the EditingType of the new node is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the first control point for the new segment."
+        },
+        {
+          "name": "Y1",
+          "type": "Single",
+          "optional": false,
+          "description": "If the EditingType of the new segment is msoEditingAuto, this argument specifies the vertical distance (in points) from the upper-left corner of the document to the endpoint of the new segment. If the EditingType of the new node is msoEditingCorner, this argument specifies the vertical distance (in points) from the upper-left corner of the document to the first control point for the new segment."
+        },
+        {
+          "name": "X2",
+          "type": "Single",
+          "optional": true,
+          "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
+        },
+        {
+          "name": "Y2",
+          "type": "Single",
+          "optional": true,
+          "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the vertical distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
+        },
+        {
+          "name": "X3",
+          "type": "Single",
+          "optional": true,
+          "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the endpoint of the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
+        },
+        {
+          "name": "Y3",
+          "type": "Single",
+          "optional": true,
+          "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the vertical distance (in points) from the upper-left corner of the document to the endpoint of the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
+        }
+      ]
+    },
+    {
+      "name": "ConvertToShape",
+      "kind": "method",
+      "signature": "ConvertToShape([Anchor As Variant]) As Shape",
+      "description": "Creates a shape that has the geometric characteristics of the specified object. Returns a Shape object that represents the new shape.",
+      "returns": "Shape",
+      "parameters": [
+        {
+          "name": "Anchor",
+          "type": "Variant",
+          "optional": true,
+          "description": "A Range object that represents the text to which the shape is bound. If Anchor is specified, the anchor is positioned at the beginning of the first paragraph in the anchoring range. If this argument is omitted, the anchoring range is selected automatically and the shape is positioned relative to the top and left edges of the page."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

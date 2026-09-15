@@ -1,0 +1,116 @@
+{
+  "name": "Tags",
+  "kind": "Dispatch Interface",
+  "guid": "{914934B9-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a tag or a custom property that you can create for a shape, slide, or presentation.",
+  "remarks": "Each Tags object contains the name of a custom property and a value for that property. Create tags when you want to be able to selectively work with specific members of a collection, based on an attribute that isn't already represented by a built-in property. For example, if you want to be able to categorize slides in a presentation based on what region of the country/region they apply to, you could create a Region tag and assign a Region value to each slide in the presentation. You could then selectively perform an operation on some of the slides, based on the values of their Region tags, such as hiding all the slides with the Region value \"East.\"",
+  "example": "ActivePresentation.Slides(1).Tags.Add \"Region\", \"East\"",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Name As String) As String",
+      "description": "Returns a single tag from the specified Tags collection.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the single tag in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String, Value As String)",
+      "description": "Adds a tag to the Tags collection of an object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the tag."
+        },
+        {
+          "name": "Value",
+          "type": "String",
+          "optional": false,
+          "description": "The value of the tag."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete(Name As String)",
+      "description": "Deletes a tag.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "Tthe name of the tag to be deleted."
+        }
+      ]
+    },
+    {
+      "name": "Name",
+      "kind": "method",
+      "signature": "Name(Index As Long) As String",
+      "description": "Returns the name of the specified tag as a String.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The tag number."
+        }
+      ]
+    },
+    {
+      "name": "Value",
+      "kind": "method",
+      "signature": "Value(Index As Long) As String",
+      "description": "Returns the value of the specified tag as a String.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The tag number."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,69 @@
+{
+  "name": "EffectParameters",
+  "kind": "Dispatch Interface",
+  "guid": "{914934E1-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents various animation parameters for an Effect object, such as colors, fonts, sizes, and directions.",
+  "remarks": "",
+  "example": "Sub effParam()\n\n    Dim shpNew As Shape\n    Dim effNew As Effect\n\n    Set shpNew = ActivePresentation.Slides(1).Shapes _\n        .AddShape(Type:=msoShapeHeart, Left:=100, _\n        Top:=100, Width:=150, Height:=150)\n\n    Set effNew = ActivePresentation.Slides(1).TimeLine.MainSequence _\n        .AddEffect(Shape:=shpNew, EffectID:=msoAnimEffectChangeFillColor, _\n        Trigger:=msoAnimTriggerAfterPrevious)\n\n    With effNew.EffectParameters\n        .Color1.RGB = RGB(Red:=0, Green:=0, Blue:=255)\n        .Color2.RGB = RGB(Red:=255, Green:=0, Blue:=0)\n    End With\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Direction",
+      "kind": "property",
+      "type": "MsoAnimDirection",
+      "access": "read/write",
+      "description": "Determines the direction used for an animation effect. This property can be used only if the effect uses a direction. Read/write."
+    },
+    {
+      "name": "Amount",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the number of degrees an animated shape is rotated around the z-axis. A positive value indicates clockwise rotation; a negative value indicates counterclockwise rotation. Read/write."
+    },
+    {
+      "name": "Size",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the character size, in points. Read/write."
+    },
+    {
+      "name": "Color2",
+      "kind": "property",
+      "type": "ColorFormat",
+      "access": "read-only",
+      "description": "Returns a ColorFormat object that represents the color on which to end a color-cycle animation."
+    },
+    {
+      "name": "Relative",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether to set the motion position relative to the position of the shape. Read/write."
+    },
+    {
+      "name": "FontName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the font in the specified WordArt. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -1,0 +1,295 @@
+{
+  "name": "ListFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{000209C0-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the list formatting attributes that can be applied to the paragraphs in a range.",
+  "remarks": "Use the ListFormat property to return the ListFormat object for a range. The following example applies the default bulleted list format to the selection. An easy way to apply list formatting is to use the ApplyBulletDefault, ApplyNumberDefault, and ApplyOutlineNumberDefault methods, which correspond, respectively, to the first list format (excluding None) on each tab in the Bullets and Numbering dialog box. To apply a format other than the default format, use the ApplyListTemplate method, which allows you to specify the list format (list template) you want to apply. Use the List or ListTemplate property to return the list or list template from the first paragraph in the specified range. Use the ListFormat property with a Range object to access the list formatting properties and methods available for the specified range. The following example applies the default bulleted list format to the second paragraph in the active document. However, if there is already a list defined in your document, you can access a List object by using the Lists property.",
+  "example": "",
+  "properties": [
+    {
+      "name": "ListLevelNumber",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the list level for the first paragraph in the specified ListFormat object. Read/write Long."
+    },
+    {
+      "name": "List",
+      "kind": "property",
+      "type": "List",
+      "access": "read-only",
+      "description": "Returns a List object that represents the first formatted list contained in the specified ListFormat object."
+    },
+    {
+      "name": "ListTemplate",
+      "kind": "property",
+      "type": "ListTemplate",
+      "access": "read-only",
+      "description": "Returns a ListTemplate object that represents the list formatting for the specified ListFormat object."
+    },
+    {
+      "name": "ListValue",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the numeric value of the first paragraph in the range for the specified ListFormat object. Read-only Long."
+    },
+    {
+      "name": "SingleList",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified ListFormat object contains only one list. Read-only Boolean."
+    },
+    {
+      "name": "SingleListTemplate",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the entire ListFormat object uses the same list template. Read-only Boolean."
+    },
+    {
+      "name": "ListType",
+      "kind": "property",
+      "type": "WdListType",
+      "access": "read-only",
+      "description": "Returns the type of lists that are contained in the range for the specified ListFormat object. Read-only WdListType."
+    },
+    {
+      "name": "ListString",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String that represents the appearance of the list value of the first paragraph in the range for the specified ListFormat object. For example, the second paragraph in an alphabetical list would return B. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified ListFormat object."
+    },
+    {
+      "name": "ListPictureBullet",
+      "kind": "property",
+      "type": "InlineShape",
+      "access": "read-only",
+      "description": "Returns the InlineShape object that represents the picture used as a bullet in a picture bulleted list."
+    }
+  ],
+  "methods": [
+    {
+      "name": "CanContinuePreviousList",
+      "kind": "method",
+      "signature": "CanContinuePreviousList(ListTemplate As ListTemplate) As WdContinue",
+      "description": "Returns a WdContinue constant (wdContinueDisabled, wdResetList, or wdContinueList) that indicates whether the formatting from the previous list can be continued.",
+      "returns": "WdContinue",
+      "parameters": [
+        {
+          "name": "ListTemplate",
+          "type": "ListTemplate",
+          "optional": false,
+          "description": "A list template that's been applied to previous paragraphs in the document."
+        }
+      ]
+    },
+    {
+      "name": "RemoveNumbers",
+      "kind": "method",
+      "signature": "RemoveNumbers([NumberType As Variant])",
+      "description": "Removes numbers or bullets from the specified list.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "NumberType",
+          "type": "Variant",
+          "optional": true,
+          "description": "The type of number to be removed."
+        }
+      ]
+    },
+    {
+      "name": "ConvertNumbersToText",
+      "kind": "method",
+      "signature": "ConvertNumbersToText([NumberType As Variant])",
+      "description": "Changes the list numbers and LISTNUM fields in the specified ListFormat object to text.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "NumberType",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "CountNumberedItems",
+      "kind": "method",
+      "signature": "CountNumberedItems([NumberType As Variant], [Level As Variant]) As Long",
+      "description": "Returns the number of bulleted or numbered items and LISTNUM fields in the specified ListFormat object.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "NumberType",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Level",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ListOutdent",
+      "kind": "method",
+      "signature": "ListOutdent()",
+      "description": "Decreases the list level of the paragraphs in the range for the specified ListFormat object, in increments of one level.",
+      "returns": "void"
+    },
+    {
+      "name": "ListIndent",
+      "kind": "method",
+      "signature": "ListIndent()",
+      "description": "Increases the list level of the paragraphs in the range for the specified ListFormat object, in increments of one level.",
+      "returns": "void"
+    },
+    {
+      "name": "ApplyBulletDefault",
+      "kind": "method",
+      "signature": "ApplyBulletDefault([DefaultListBehavior As Variant])",
+      "description": "Adds bullets and formatting to the paragraphs in the range for the specified ListFormat object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "DefaultListBehavior",
+          "type": "Variant",
+          "optional": true,
+          "description": "Sets a value that specifies whether Microsoft Word uses new Web-oriented formatting for better list display. Can be either of the following constants: wdWord8ListBehavior (use formatting compatible with Microsoft Word 97) or wdWord9ListBehavior (use Web-oriented formatting). For compatibility reasons, the default constant is wdWord8ListBehavior, but in new procedures you should use wdWord9ListBehavior to take advantage of improved Web-oriented formatting with respect to indenting and multilevel lists."
+        }
+      ]
+    },
+    {
+      "name": "ApplyNumberDefault",
+      "kind": "method",
+      "signature": "ApplyNumberDefault([DefaultListBehavior As Variant])",
+      "description": "Adds the default numbering scheme to the paragraphs in the range for the specified ListFormat object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "DefaultListBehavior",
+          "type": "Variant",
+          "optional": true,
+          "description": "Sets a value that specifies whether Microsoft Word uses new Web-oriented formatting for better list display. Can be either of the following constants: wdWord8ListBehavior (use formatting compatible with Microsoft Word 97) or wdWord9ListBehavior (use Web-oriented formatting). For compatibility reasons, the default constant is wdWord8ListBehavior, but in new procedures you should use wdWord9ListBehavior to take advantage of improved Web-oriented formatting with respect to indenting and multilevel lists."
+        }
+      ]
+    },
+    {
+      "name": "ApplyOutlineNumberDefault",
+      "kind": "method",
+      "signature": "ApplyOutlineNumberDefault([DefaultListBehavior As Variant])",
+      "description": "Adds the default outline-numbering scheme to the paragraphs in the range for the specified ListFormat object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "DefaultListBehavior",
+          "type": "Variant",
+          "optional": true,
+          "description": "Sets a value that specifies whether Microsoft Word uses new Web-oriented formatting for better list display. Can be either of the following constants: wdWord8ListBehavior (use formatting compatible with Microsoft Word 97) or wdWord9ListBehavior (use Web-oriented formatting). For compatibility reasons, the default constant is wdWord8ListBehavior, but in new procedures you should use wdWord9ListBehavior to take advantage of improved Web-oriented formatting with respect to indenting and multilevel lists."
+        }
+      ]
+    },
+    {
+      "name": "ApplyListTemplate",
+      "kind": "method",
+      "signature": "ApplyListTemplate(ListTemplate As ListTemplate, [ContinuePreviousList As Variant], [ApplyTo As Variant], [DefaultListBehavior As Variant])",
+      "description": "Applies a set of list-formatting characteristics to the specified ListFormat object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ListTemplate",
+          "type": "ListTemplate",
+          "optional": false,
+          "description": "The list template to be applied."
+        },
+        {
+          "name": "ContinuePreviousList",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to continue the numbering from the previous list; False to start a new list."
+        },
+        {
+          "name": "ApplyTo",
+          "type": "Variant",
+          "optional": true,
+          "description": "The portion of the list that the list template is to be applied to. Can be one of the following WdListApplyTo constants: wdListSelection, wdListWholeList, or wdListThisPointForward."
+        },
+        {
+          "name": "DefaultListBehavior",
+          "type": "Variant",
+          "optional": true,
+          "description": "Sets a value that specifies whether Microsoft Word uses new Web-oriented formatting for better list display. Can be either of the following WdDefaultListBehavior constants: wdWord8ListBehavior (use formatting compatible with Microsoft Word 97) or wdWord9ListBehavior (use Web-oriented formatting). For compatibility reasons, the default constant is wdWord8ListBehavior, but in new procedures you should use wdWord9ListBehavior to take advantage of improved Web-oriented formatting with respect to indenting and multilevel lists."
+        }
+      ]
+    },
+    {
+      "name": "ApplyListTemplateWithLevel",
+      "kind": "method",
+      "signature": "ApplyListTemplateWithLevel(ListTemplate As ListTemplate, [ContinuePreviousList As Variant], [ApplyTo As Variant], [DefaultListBehavior As Variant], [ApplyLevel As Variant])",
+      "description": "Applies a set of list-formatting characteristics, optionally for a specified level.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ListTemplate",
+          "type": "ListTemplate",
+          "optional": false,
+          "description": "The list template to be applied."
+        },
+        {
+          "name": "ContinuePreviousList",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to continue the numbering from the previous list; False to start a new list."
+        },
+        {
+          "name": "ApplyTo",
+          "type": "Variant",
+          "optional": true,
+          "description": "One of the WdListApplyTo constants that specifies the portion of the list that the list template will be applied to."
+        },
+        {
+          "name": "DefaultListBehavior",
+          "type": "Variant",
+          "optional": true,
+          "description": "Sets a value that specifies whether Microsoft Word uses new Web-oriented formatting for better list display. Can be either of the following WdDefaultListBehavior constants: wdWord8ListBehavior (use formatting compatible with Microsoft Word 97) or wdWord9ListBehavior (use Web-oriented formatting). For compatibility reasons, the default constant is wdWord8ListBehavior, but in new procedures you should use wdWord9ListBehavior to take advantage of improved Web-oriented formatting for indenting and multiple-level lists."
+        },
+        {
+          "name": "ApplyLevel",
+          "type": "Variant",
+          "optional": true,
+          "description": "The level to which the list template is to be applied."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

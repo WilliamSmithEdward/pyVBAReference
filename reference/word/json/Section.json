@@ -1,0 +1,83 @@
+{
+  "name": "Section",
+  "kind": "Dispatch Interface",
+  "guid": "{00020959-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single section in a selection, range, or document. The Section object is a member of the Sections collection. The Sections collection includes all the sections in a selection, range, or document.",
+  "remarks": "Use Sections (Index), where Index is the index number, to return a single Section object. The following example changes the left and right page margins for the first section in the active document. Use the Add method or the InsertBreak method to add a new section to a document. The following example adds a new section at the beginning of the active document. The following example adds a section break above the first paragraph in the selection.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the portion of a document that's contained in the specified object."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Section object."
+    },
+    {
+      "name": "PageSetup",
+      "kind": "property",
+      "type": "PageSetup",
+      "access": "read/write",
+      "description": "Returns a PageSetup object that is associated with the specified section."
+    },
+    {
+      "name": "Headers",
+      "kind": "property",
+      "type": "HeadersFooters",
+      "access": "read-only",
+      "description": "Returns a HeadersFooters collection that represents the headers for the specified section. Read-only."
+    },
+    {
+      "name": "Footers",
+      "kind": "property",
+      "type": "HeadersFooters",
+      "access": "read-only",
+      "description": "Returns a HeadersFooters collection that represents the footers in the specified section. Read-only."
+    },
+    {
+      "name": "ProtectedForForms",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified section is protected for forms. Read/write Boolean."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the position of an item in a collection. Read-only."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read/write",
+      "description": "Returns a Borders collection that represents all the borders in the section."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

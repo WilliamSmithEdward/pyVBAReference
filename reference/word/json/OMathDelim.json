@@ -1,0 +1,90 @@
+{
+  "name": "OMathDelim",
+  "kind": "Dispatch Interface",
+  "guid": "{C94688A6-A2A7-4133-A26D-726CD569D5F3}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a delimiter object, consisting of opening and closing delimiters (such as parentheses, braces, brackets, or vertical bars), and one or more elements contained inside the delimiters.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathDelim object."
+    },
+    {
+      "name": "E",
+      "kind": "property",
+      "type": "OMathArgs",
+      "access": "read-only",
+      "description": "Returns an OMathArgs object that represents the list of arguments for the specified equation object. Read-only."
+    },
+    {
+      "name": "BegChar",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Returns or sets an Integer that represents the beginning delimiter character in a delimiter object. Read/write."
+    },
+    {
+      "name": "SepChar",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Returns or sets an Integer that represents the separator character in a delimiter object when the delimiter object contains two or more arguments. Read/write."
+    },
+    {
+      "name": "EndChar",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Returns or sets an Integer that represents the ending delimiter character in a delimiter object. Read/write."
+    },
+    {
+      "name": "Grow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether delimiter characters grow to the full height of the arguments that they contain. Read/write."
+    },
+    {
+      "name": "Shape",
+      "kind": "property",
+      "type": "WdOMathShapeType",
+      "access": "read/write",
+      "description": "Returns or sets a WdOMathShapeType constant that represents the appearance of delimiters (for example, parentheses, braces, and brackets) in relationship to the content that they surround. Read/write."
+    },
+    {
+      "name": "NoLeftChar",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether to hide the opening delimiter in a delimiter object. Read/write."
+    },
+    {
+      "name": "NoRightChar",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether to hide the closing delimiter in a delimiter object. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -6,7 +6,8 @@ well-grounded VBA (Visual Basic for Applications) code.
 ## What this repository is
 
 This repository is a **machine-generated reference of the VBA object models** for
-ten commonly referenced COM type libraries. All generated data lives under the
+four host applications (Excel, PowerPoint, Word, Access) and the nine shared COM
+type libraries any of them can reference. All generated data lives under the
 `reference/` folder. Every public type (class, interface, enumeration, and module)
 is exported in two parallel forms:
 
@@ -17,6 +18,11 @@ The two folders contain the same information. **Prefer the JSON when reasoning
 programmatically** (stable schema, easy to parse); use the Markdown when you only
 need to read or quote documentation.
 
+A third form, `reference/consolidated/`, holds the same data folded into one set
+of files per application - useful when you want to load a whole object model in
+one read instead of opening a file per type. See
+[Consolidated exports](#consolidated-exports) below.
+
 Member signatures, return types, parameter lists, property access modes, enum
 values, remarks, and examples are introspected directly from the registered COM
 type libraries and then enriched with descriptions scraped from the official
@@ -24,18 +30,28 @@ Microsoft Learn VBA documentation.
 
 ## Libraries available
 
-| Folder      | Library                                              | Types |
-| ----------- | ---------------------------------------------------- | ----- |
-| `excel`     | Microsoft Excel 16.0 Object Library                  | 1028  |
-| `office`    | Microsoft Office 16.0 Object Library                 | 510   |
-| `msforms`   | Microsoft Forms 2.0 Object Library                   | 166   |
-| `adodb`     | Microsoft ActiveX Data Objects 6.1 Library           | 110   |
-| `msxml`     | Microsoft XML, v6.0                                  | 101   |
-| `vbide`     | Microsoft Visual Basic for Applications Extensibility | 46    |
-| `scripting` | Microsoft Scripting Runtime                          | 28    |
-| `vba`       | Visual Basic For Applications                        | 26    |
-| `stdole`    | OLE Automation                                       | 11    |
-| `winhttp`   | Microsoft WinHTTP Services, version 5.1              | 7     |
+| Folder       | Library                                              | Types | Host       |
+| ------------ | ---------------------------------------------------- | ----- | ---------- |
+| `excel`      | Microsoft Excel 16.0 Object Library                  | 1028  | Excel      |
+| `word`       | Microsoft Word 16.0 Object Library                   | 750   | Word       |
+| `powerpoint` | Microsoft PowerPoint 16.0 Object Library             | 339   | PowerPoint |
+| `access`     | Microsoft Access 16.0 Object Library                 | 289   | Access     |
+| `office`     | Microsoft Office 16.0 Object Library                 | 510   | shared     |
+| `msforms`    | Microsoft Forms 2.0 Object Library                   | 166   | shared     |
+| `adodb`      | Microsoft ActiveX Data Objects 6.1 Library           | 110   | shared     |
+| `msxml`      | Microsoft XML, v6.0                                  | 101   | shared     |
+| `vbide`      | Microsoft Visual Basic for Applications Extensibility | 45   | shared     |
+| `scripting`  | Microsoft Scripting Runtime                          | 28    | shared     |
+| `vba`        | Visual Basic For Applications                        | 26    | shared     |
+| `stdole`     | OLE Automation                                       | 11    | shared     |
+| `winhttp`    | Microsoft WinHTTP Services, version 5.1              | 7     | shared     |
+
+**Pick the host library that matches the code you are writing.** Many type names
+exist in more than one host - `Application`, `Range`, `Font`, `Shape`, `Window`
+- and they are different types with different members. `Range` in `excel` is a
+cell range; `Range` in `word` is a span of text. An unqualified lookup resolves
+to Excel first, so always qualify with the library when the target host is not
+Excel.
 
 The `vba` library holds the **language built-ins** - global functions like
 `MsgBox`, `Format`, `CStr`, `Left`, and intrinsic constants like `vbCrLf` - grouped
@@ -47,6 +63,9 @@ on an object; they are callable from anywhere in VBA.
 
 All paths below are relative to the `reference/` folder.
 
+0. **Know which host you are writing for.** Excel, PowerPoint, Word and Access
+   each have their own library folder, and a name found in one is not evidence
+   about another. Every step below takes the library as an input, not a guess.
 1. **Don't know which type defines a member?** Read `reference/members.json`
    (see below). It maps every member name to the types that define it across all
    libraries - the fastest way to answer "where is `SaveAs`?".
@@ -62,7 +81,11 @@ All paths below are relative to the `reference/` folder.
    `members.json` will point you straight to it.
 6. **Looking for a constant value** (e.g. what number is `xlCSV`)? Open the relevant
    enumeration file, e.g. `reference/excel/json/XlFileFormat.json`, and read its
-   `constants`.
+   `constants`. To scan every constant of a host at once, read
+   `reference/consolidated/<app>_constants.json`.
+7. **Want a whole object model in one read?** Read
+   `reference/consolidated/<app>.json` - `excel`, `powerpoint`, `word`, `access`
+   or `shared`.
 
 ## JSON schema
 
@@ -171,8 +194,8 @@ the rest of the data.
 
 ```json
 {
-  "total_libraries": 10,
-  "total_types": 2033,
+  "total_libraries": 13,
+  "total_types": 3410,
   "libraries": [
     {
       "folder": "excel",
@@ -192,21 +215,80 @@ in one read.
 
 ```json
 {
-  "total_names": 9948,
+  "total_names": 18510,
   "members": {
     "SaveAs": [
-      { "library": "excel", "type": "Chart",     "kind": "method" },
-      { "library": "excel", "type": "Workbook",  "kind": "method" }
+      { "library": "excel",      "type": "Chart",        "kind": "method" },
+      { "library": "excel",      "type": "Workbook",     "kind": "method" },
+      { "library": "powerpoint", "type": "Presentation", "kind": "method" }
     ]
   }
 }
 ```
 
+A member name usually resolves to several libraries. Filter the hits by the
+`library` of the host you are writing for before reading the type file.
+
 Keys are the exact member names; resolve `library` + `type` to the per-type file
 at `reference/<library>/json/<type>.json` for the full signature and parameter docs.
 
+## Consolidated exports
+
+`reference/consolidated/` carries the same data folded into one set of files per
+application: `excel`, `powerpoint`, `word`, `access`, and `shared` for the
+libraries every host can reference. Each set is three pairs of files:
+
+| File                            | Contents                                    |
+| ------------------------------- | ------------------------------------------- |
+| `<app>.json` / `.md`            | every type of the application                |
+| `<app>_constants.json` / `.md`  | every enumeration and module constant        |
+| `<app>_properties.json` / `.md` | every property of every object               |
+
+Use these when you want a whole object model in one read; use the per-type files
+when you know the type and want the smallest possible read. The type, constant,
+member, and parameter objects are **byte-identical** to the per-type files, so
+every schema above applies unchanged.
+
+```json
+{
+  "schema": "pyvbareference/application/1",
+  "application": "Word",
+  "key": "word",
+  "library_count": 1,
+  "type_count": 750,
+  "libraries": [
+    {
+      "folder": "word",
+      "library": "Microsoft Word 16.0 Object Library",
+      "type_count": 750,
+      "types": [ /* the per-type entries, in catalog order */ ]
+    }
+  ]
+}
+```
+
+The constants export (`schema: "pyvbareference/constants/1"`) replaces `types`
+with `enumerations`; each entry adds `constant_count` and keeps the source
+`constants` array. Entries whose `kind` is `"Module"` carry module constants
+(`{ "name", "value", "type" }`); entries whose `kind` is `"Enumeration"` carry
+enum constants (`{ "name", "value", "description" }`).
+
+The properties export (`schema: "pyvbareference/properties/1"`) keeps only types
+that have at least one property, each with `property_count` and the source
+`properties` array.
+
+```python
+import json
+word = json.load(open("reference/consolidated/word.json", encoding="utf-8"))
+types = {t["name"]: t for lib in word["libraries"] for t in lib["types"]}
+print(types["Document"]["methods"][0]["signature"])
+```
+
 ## Rules of engagement for agents
 
+- **Resolve the host library first.** Word VBA is grounded against `word`, not
+  `excel`. Shared types (`office`, `vba`, `msforms`, ...) apply everywhere; host
+  types do not carry across, even when the name matches.
 - **Ground every API call.** Before emitting VBA that calls a method, property, or
   function, verify the exact name, parameter order, optionality, and return type
   against the relevant JSON file. Do not rely on memory for signatures.
@@ -283,7 +365,12 @@ and enriches them from the Microsoft Learn VBA-Docs corpus. To rebuild:
 .venv\Scripts\python.exe scrape_excel_object_model.py
 ```
 
-Useful flags: `--no-enrich` (skip Microsoft Learn descriptions; signatures only) and
-`--refresh-docs` (force re-download of the documentation corpus). Regenerating
-overwrites the `md/` and `json/` folders and removes any stale flat files from
-earlier layouts.
+Useful flags: `--no-enrich` (skip Microsoft Learn descriptions; signatures only),
+`--refresh-docs` (force re-download of the documentation corpus), and
+`--only word,powerpoint` (rebuild just those libraries). Regenerating overwrites
+the `md/` and `json/` folders and removes any stale flat files from earlier
+layouts.
+
+The consolidated exports are rebuilt at the end of every run, or on their own
+with `python consolidate_reference.py` - that step reads the generated JSON only,
+so it needs neither Office nor `pywin32`.

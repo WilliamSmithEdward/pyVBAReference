@@ -1,0 +1,65 @@
+{
+  "name": "Columns",
+  "kind": "Dispatch Interface",
+  "guid": "{914934C4-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of Column objects that represent the columns in a table.",
+  "remarks": "",
+  "example": "Dim ColCount, sl, sh As Integer\n\nWith ActivePresentation\n    For sl = 1 To .Slides.Count\n        For sh = 1 To .Slides(sl).Shapes.Count\n            If .Slides(sl).Shapes(sh).HasTable Then\n                ColCount = .Slides(sl).Shapes(sh) _\n                    .Table.Columns.Count\n                MsgBox \"Shape \" & sh & \" on slide \" & sl & _\n                    \" contains the first table and has \" & _\n                    ColCount & \" columns.\"\n                Exit Sub\n            End If\n        Next\n    Next\nEnd With",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Column",
+      "description": "Returns a single Column object from the specified Columns collection.",
+      "returns": "Column",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the single Column object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([BeforeColumn As Long]) As Column",
+      "description": "Adds a new column to an existing table. Returns a Column object that represents the new table column.",
+      "returns": "Column",
+      "parameters": [
+        {
+          "name": "BeforeColumn",
+          "type": "Long",
+          "optional": true,
+          "description": "The index number that specifies the table column before which the new column will be inserted."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

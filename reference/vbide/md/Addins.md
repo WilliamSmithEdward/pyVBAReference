@@ -1,8 +1,8 @@
-# AddIns
+# Addins
 
-**Type:** Dispatch Interface  
+**Type:** Class  
 **Library:** Microsoft Visual Basic for Applications Extensibility 5.3  
-**GUID:** {DA936B62-AC8B-11D1-B6E5-00A0C90F2744}  
+**GUID:** {DA936B63-AC8B-11D1-B6E5-00A0C90F2744}  
 
 ## Properties (3)
 

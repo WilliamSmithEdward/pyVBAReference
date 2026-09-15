@@ -1,0 +1,279 @@
+{
+  "name": "EmailOptions",
+  "kind": "Dispatch Interface",
+  "guid": "{000209DB-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Contains global application-level attributes used by Microsoft Word when you create and edit email messages and replies.",
+  "remarks": "Use the EmailOptions property to return the EmailOptions object. This example changes the font color of the default style used to compose new email messages. This example sets Word to mark comments in email messages with the initials \"WK.\" This example changes the signatures Word appends to new outgoing email messages and email message replies.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified EmailOptions object."
+    },
+    {
+      "name": "UseThemeStyle",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if new email messages use the character style defined by the default email message theme. Read/write Boolean."
+    },
+    {
+      "name": "MarkCommentsWith",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the string with which Microsoft Word marks comments in email messages. Read/write String."
+    },
+    {
+      "name": "MarkComments",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word marks the user's comments in email messages. Read/write Boolean."
+    },
+    {
+      "name": "EmailSignature",
+      "kind": "property",
+      "type": "EmailSignature",
+      "access": "read-only",
+      "description": "Returns an EmailSignature object that represents the signatures Microsoft Word appends to outgoing email messages. Read-only."
+    },
+    {
+      "name": "ComposeStyle",
+      "kind": "property",
+      "type": "Style",
+      "access": "read-only",
+      "description": "Returns a Style object that represents the style used to compose new email messages. Read-only."
+    },
+    {
+      "name": "ReplyStyle",
+      "kind": "property",
+      "type": "Style",
+      "access": "read-only",
+      "description": "Returns a Style object that represents the style used when replying to email messages."
+    },
+    {
+      "name": "ThemeName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the theme plus any theme formatting options to use for new email messages. Read/write String."
+    },
+    {
+      "name": "NewColorOnReply",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True specifies whether a user needs to choose a new color for reply text when replying to email. Read/write Boolean."
+    },
+    {
+      "name": "PlainTextStyle",
+      "kind": "property",
+      "type": "Style",
+      "access": "read-only",
+      "description": "Returns the Style object that represents the text attributes for email messages that are sent or received using plain text."
+    },
+    {
+      "name": "UseThemeStyleOnReply",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to use a theme when replying to email. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeApplyHeadings",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if styles are automatically applied to headings as you type. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeApplyBorders",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a series of three or more hyphens (-), equal signs (=), or underscore characters (_) are automatically replaced by a specific border line when the ENTER key is pressed. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeApplyBulletedLists",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if bullet characters (such as asterisks, hyphens, and greater-than signs) are replaced with bullets. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeApplyNumberedLists",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if paragraphs are automatically formatted as numbered lists. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeReplaceQuotes",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if straight quotation marks are automatically changed to smart (curly) quotation marks as you type. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeReplaceSymbols",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if two consecutive hyphens (--) are replaced with an en dash (-) or an em dash (-) as you type. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeReplaceOrdinals",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the ordinal number suffixes \"st\", \"nd\", \"rd\", and \"th\" are replaced with the same letters in superscript as you type; for example, \"1st\" is replaced with \"1\" followed by \"st\" formatted as superscript. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeReplaceFractions",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if typed fractions are replaced with fractions from the current character set as you type; for example, \"1/2\" is replaced with \".\" Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeReplacePlainTextEmphasis",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if manual emphasis characters are automatically replaced with character formatting as you type; for example, \"bold\" is changed to \" bold \". Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeFormatListItemBeginning",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word repeats character formatting applied to the beginning of a list item to the next list item. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeDefineStyles",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word automatically creates new styles based on manual formatting. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeReplaceHyperlinks",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if email addresses, server and share names (also known as UNC paths), and Internet addresses (also known as URLs) are automatically changed to hyperlinks as you type. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeApplyTables",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word automatically creates a table when you type a plus sign, a series of hyphens, another plus sign, and so on, and then press ENTER. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeApplyFirstIndents",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to automatically replace a space entered at the beginning of a paragraph with a first-line indent. Read/write."
+    },
+    {
+      "name": "AutoFormatAsYouTypeApplyDates",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to automatically apply the Date style to dates as you type. Read/write."
+    },
+    {
+      "name": "AutoFormatAsYouTypeApplyClosings",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to automatically apply the Closing style to letter closings as you type. Read/write Boolean."
+    },
+    {
+      "name": "AutoFormatAsYouTypeMatchParentheses",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to automatically correct improperly paired parentheses. Read/write."
+    },
+    {
+      "name": "AutoFormatAsYouTypeReplaceFarEastDashes",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to automatically correct long vowel sounds and dashes. Read/write."
+    },
+    {
+      "name": "AutoFormatAsYouTypeDeleteAutoSpaces",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to automatically delete spaces inserted between Japanese and Latin text as you type. Read/write."
+    },
+    {
+      "name": "AutoFormatAsYouTypeInsertClosings",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to automatically insert the corresponding memo closing when the user enters a memo heading. Read/write."
+    },
+    {
+      "name": "AutoFormatAsYouTypeAutoLetterWizard",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to automatically start the Letter Wizard when the user enters a letter salutation or closing. Read/write."
+    },
+    {
+      "name": "AutoFormatAsYouTypeInsertOvers",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to automatically insert \"\" when the user enters \"\" or \"\". Read/write Boolean."
+    },
+    {
+      "name": "RelyOnCSS",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if cascading style sheets (CSS) are used for font formatting when you view a saved document in a web browser. Read/write Boolean."
+    },
+    {
+      "name": "HTMLFidelity",
+      "kind": "property",
+      "type": "WdEmailHTMLFidelity",
+      "access": "read/write",
+      "description": "Strips HTML tags used for opening HTML files in Word but not required for display. Read/write WdEmailHTMLFidelity."
+    },
+    {
+      "name": "TabIndentKey",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the TAB and BACKSPACE keys can be used to increase and decrease, respectively, the left indent of paragraphs and if the BACKSPACE key can be used to change right-aligned paragraphs to centered paragraphs and centered paragraphs to left-aligned paragraphs. Read/write Boolean."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -1,0 +1,167 @@
+{
+  "name": "Printer",
+  "kind": "Class",
+  "guid": "{DBC5175E-A8ED-11D3-A0DD-00C04F68712B}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "A Printer object corresponds to a printer available on your system.",
+  "remarks": "A Printer object is a member of the Printers collection. To return a reference to a particular Printer object in the Printers collection, use any of the following syntax forms. Use the properties of the Printer object to set the printing characteristics for any of the printers available on your system. Use the ColorMode, Copies, Duplex, Orientation, PaperBin, PaperSize, and PrintQuality properties to specify print settings for a particular printer. Use the LeftMargin, RightMargin, TopMargin, BottomMargin, ColumnSpacing, RowSpacing, DataOnly, DefaultSize, ItemLayout, ItemsAcross, ItemSizeHeight, and ItemSizeWidth properties to specify how Microsoft Access should format the appearance of data on printed pages. Use the DeviceName, DriverName, and Port properties to return system information about a particular printer.",
+  "example": "Dim prtFirst As Printer\n\nSet prtFirst = Application.Printers(0)\n\nWith prtFirst\n MsgBox \"Device name: \" & .DeviceName & vbCr _\n & \"Driver name: \" & .DriverName & vbCr _\n & \"Port: \" & .Port\nEnd With",
+  "properties": [
+    {
+      "name": "ColorMode",
+      "kind": "property",
+      "type": "AcPrintColor",
+      "access": "read/write",
+      "description": "Returns or sets an AcPrintColor constant representing whether the specified printer should print output in color or monochrome. Read/write."
+    },
+    {
+      "name": "Copies",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long indicating the number of copies to be printed. Read/write."
+    },
+    {
+      "name": "DeviceName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String indicating the name of the specified printer device. Read-only."
+    },
+    {
+      "name": "DriverName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String indicating the name of the driver used by the specified printer. Read-only."
+    },
+    {
+      "name": "Duplex",
+      "kind": "property",
+      "type": "AcPrintDuplex",
+      "access": "read/write",
+      "description": "Returns or sets an AcPrintDuplex constant indicating how the specified printer handles duplex printing. Read/write."
+    },
+    {
+      "name": "Orientation",
+      "kind": "property",
+      "type": "AcPrintOrientation",
+      "access": "read/write",
+      "description": "Gets or sets an AcPrintOrientation constant that represents the print orientation. Read/write."
+    },
+    {
+      "name": "PaperBin",
+      "kind": "property",
+      "type": "AcPrintPaperBin",
+      "access": "read/write",
+      "description": "Returns or sets an AcPrintPaperBin constant indicating which paper bin the specified printer should use. Read/write."
+    },
+    {
+      "name": "PaperSize",
+      "kind": "property",
+      "type": "AcPrintPaperSize",
+      "access": "read/write",
+      "description": "Returns or sets an AcPrintPaperSize constant indicating the paper size to use when printing. Read/write."
+    },
+    {
+      "name": "Port",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String indicating the port name of the specified printer. Read-only."
+    },
+    {
+      "name": "PrintQuality",
+      "kind": "property",
+      "type": "AcPrintObjQuality",
+      "access": "read/write",
+      "description": "Returns or sets an AcPrintObjQuality constant indicating the resolution at which the specified printer should print jobs. Read/write."
+    },
+    {
+      "name": "LeftMargin",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Along with the TopMargin, RightMargin, and BottomMargin properties, specifies the margins for a printed page. Read/write Long."
+    },
+    {
+      "name": "RightMargin",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Along with the TopMargin, LeftMargin, and BottomMargin properties, specifies the margins for a printed page. Read/write Long."
+    },
+    {
+      "name": "TopMargin",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Along with the LeftMargin, RightMargin, and BottomMargin properties, specifies the margins for a printed page. Read/write Long."
+    },
+    {
+      "name": "BottomMargin",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Along with the TopMargin, RightMargin, and LeftMargin properties, specifies the margins for a printed page. Read/write Long."
+    },
+    {
+      "name": "DataOnly",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Access prints only the data from a table or query in Datasheet view and not the labels, control borders, gridlines, and display graphics. Read/write Boolean."
+    },
+    {
+      "name": "ItemsAcross",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long indicating the number of columns to print across a page for multiple-column reports or labels. Read/write."
+    },
+    {
+      "name": "RowSpacing",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long indicating the horizontal space between detail sections in twips. Read/write."
+    },
+    {
+      "name": "ColumnSpacing",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long representing the vertical space between detail sections in twips. Read/write."
+    },
+    {
+      "name": "DefaultSize",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the size of the detail section in Design view is used for printing; otherwise, the values of the ItemSizeHeight and ItemSizeWidth properties are used. Read/write Boolean."
+    },
+    {
+      "name": "ItemSizeWidth",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long indicating the width of the detail section of a form or report in twips. Read/write."
+    },
+    {
+      "name": "ItemSizeHeight",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long indicating the height of the detail section of a form or report in twips. Read/write."
+    },
+    {
+      "name": "ItemLayout",
+      "kind": "property",
+      "type": "AcPrintItemLayout",
+      "access": "read/write",
+      "description": "Returns or sets an AcPrintItemLayout constant indicating whether the printer lays columns across, then down, or down, then across. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

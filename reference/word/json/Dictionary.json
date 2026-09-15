@@ -1,0 +1,84 @@
+{
+  "name": "Dictionary",
+  "kind": "Dispatch Interface",
+  "guid": "{000209AD-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a dictionary. Dictionary objects that represent custom dictionaries are members of the Dictionaries collection. Other dictionary objects are returned by properties of the Languages collection; these include the ActiveSpellingDictionary, ActiveGrammarDictionary, ActiveThesaurusDictionary, and ActiveHyphenationDictionary properties.",
+  "remarks": "Use CustomDictionaries (Index), where Index is an index number or the string name for the dictionary, to return a single Dictionary object that represents a custom dictionary. The following example returns the first dictionary in the collection. The following example returns the dictionary named \"MyDictionary.\" Use the ActiveCustomDictionary property to set the custom spelling dictionary in the collection to which new words are added. If you try to set this property to a dictionary that's not a custom dictionary, an error occurs. Use the Add method to add a new dictionary to the collection of active custom dictionaries. If there is no file with the name specified by FileName, Word creates it. The following example adds \"MyCustom.dic\" to the collection of custom dictionaries. Remarks Use the Name and Path properties to locate any of the dictionaries. The following example displays a message box that contains the full path for each dictionary. Use the LanguageSpecific property to determine whether the specified custom dictionary can have a specific language assigned to it with the LanguageID property.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Dictionary object."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the specified object. Read-only String."
+    },
+    {
+      "name": "Path",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the path to the specified dictionary. Read-only String."
+    },
+    {
+      "name": "LanguageID",
+      "kind": "property",
+      "type": "WdLanguageID",
+      "access": "read/write",
+      "description": "Returns or sets a WdLanguageID constant that represents the language for the specified object. Read/write."
+    },
+    {
+      "name": "ReadOnly",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified dictionary cannot be changed. Read-only Boolean."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "WdDictionaryType",
+      "access": "read-only",
+      "description": "Returns the dictionary type. Read-only WdDictionaryType."
+    },
+    {
+      "name": "LanguageSpecific",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the custom dictionary is to be used only with text formatted for a specific language. Read/write Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified dictionary.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,48 @@
+{
+  "name": "FilterEffect",
+  "kind": "Dispatch Interface",
+  "guid": "{914934F0-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a filter effect for an animation behavior.",
+  "remarks": "Use the FilterEffect property of the AnimationBehavior object to return a FilterEffect object. Filter effects can be changed using the FilterEffect object's Reveal, SubType, and Type properties.",
+  "example": "Sub ChangeFilterEffect()\n\n    Dim sldFirst As Slide\n    Dim shpHeart As Shape\n    Dim effNew As Effect\n    Dim bhvEffect As AnimationBehavior\n\n    Set sldFirst = ActivePresentation.Slides(1)\n\n    Set shpHeart = sldFirst.Shapes.AddShape(Type:=msoShapeHeart, _\n        Left:=100, Top:=100, Width:=100, Height:=100)\n\n    Set effNew = sldFirst.TimeLine.MainSequence.AddEffect _\n        (Shape:=shpHeart, EffectID:=msoAnimEffectChangeFillColor, _\n        Trigger:=msoAnimTriggerAfterPrevious)\n\n    Set bhvEffect = effNew.Behaviors.Add(msoAnimTypeFilter)\n\n    With bhvEffect.FilterEffect\n         .Type = msoAnimFilterEffectTypeWipe\n         .Subtype = msoAnimFilterEffectSubtypeUp\n         .Reveal = msoTrue\n    End With\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoAnimFilterEffectType",
+      "access": "read/write",
+      "description": "Represents the type of animation. Read/write."
+    },
+    {
+      "name": "Subtype",
+      "kind": "property",
+      "type": "MsoAnimFilterEffectSubtype",
+      "access": "read/write",
+      "description": "Sets or returns the subtype of the filter effect. Read/write."
+    },
+    {
+      "name": "Reveal",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines how the embedded objects will be revealed. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

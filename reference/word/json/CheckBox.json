@@ -1,0 +1,69 @@
+{
+  "name": "CheckBox",
+  "kind": "Dispatch Interface",
+  "guid": "{00020926-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single check box form field.",
+  "remarks": "Use FormFields (Index), where Index is index number or the bookmark name associated with the check box, to return a single FormField object. Use the CheckBox property with the FormField object to return a CheckBox object. The following example selects the check box form field named \"Check1\" in the active document. The index number represents the position of the form field in the FormFields collection. The following example checks the type of the first form field; if it is a check box, the check box is selected. The following example determines whether the _ffield_ object is valid before changing the check box size to 14 points. Use the Add method with the FormFields object to add a check box form field. The following example adds a check box at the beginning of the active document, sets the name to \"Color\", and then selects the check box.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified CheckBox object."
+    },
+    {
+      "name": "Valid",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified form field object is a valid check box form field. Read-only Boolean."
+    },
+    {
+      "name": "AutoSize",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True sizes the check box or text frame according to the font size of the surrounding text. False sizes the check box or text frame according to the Size property. Read/write Boolean."
+    },
+    {
+      "name": "Size",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the size of a check box, in points. Read/write Single."
+    },
+    {
+      "name": "Default",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets the default check box value. True if the default value is checked. Read/write Boolean."
+    },
+    {
+      "name": "Value",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the check box is selected. Read/write Boolean."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

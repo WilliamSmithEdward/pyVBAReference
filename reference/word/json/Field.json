@@ -1,0 +1,182 @@
+{
+  "name": "Field",
+  "kind": "Dispatch Interface",
+  "guid": "{0002092F-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a field. The Field object is a member of the Fields collection. The Fields collection represents the fields in a selection, range, or document.",
+  "remarks": "Use Fields (Index), where Index is the index number, to return a single Field object. The index number represents the position of the field in the selection, range, or document. The following example displays the field code and the result of the first field in the active document. Use the Add method to add a field to the Fields collection. The following example inserts a DATE field at the beginning of the selection and then displays the result.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Field object."
+    },
+    {
+      "name": "Code",
+      "kind": "property",
+      "type": "Range",
+      "access": "read/write",
+      "description": "Returns a Range object that represents a field's code. Read/write."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "WdFieldType",
+      "access": "read-only",
+      "description": "Returns the field type. Read-only WdFieldType."
+    },
+    {
+      "name": "Locked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified field is locked. Read/write Boolean."
+    },
+    {
+      "name": "Kind",
+      "kind": "property",
+      "type": "WdFieldKind",
+      "access": "read-only",
+      "description": "Returns the type of link for a Field object. Read-only WdFieldKind."
+    },
+    {
+      "name": "Result",
+      "kind": "property",
+      "type": "Range",
+      "access": "read/write",
+      "description": "Returns a Range object that represents a field's result. Read/write."
+    },
+    {
+      "name": "Data",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets data in an ADDIN field. Read/write String."
+    },
+    {
+      "name": "Next",
+      "kind": "property",
+      "type": "Field",
+      "access": "read-only",
+      "description": "Returns the next object in the collection. Read-only."
+    },
+    {
+      "name": "Previous",
+      "kind": "property",
+      "type": "Field",
+      "access": "read-only",
+      "description": "Returns the previous object in the collection. Read-only."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the position of an item in a collection. Read-only."
+    },
+    {
+      "name": "ShowCodes",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if field codes are displayed for the specified field instead of field results. Read/write Boolean."
+    },
+    {
+      "name": "LinkFormat",
+      "kind": "property",
+      "type": "LinkFormat",
+      "access": "read-only",
+      "description": "Returns a LinkFormat object that represents the link options of the specified field. Read/only."
+    },
+    {
+      "name": "OLEFormat",
+      "kind": "property",
+      "type": "OLEFormat",
+      "access": "read-only",
+      "description": "Returns an OLEFormat object that represents the OLE characteristics (other than linking) for the specified field. Read-only."
+    },
+    {
+      "name": "InlineShape",
+      "kind": "property",
+      "type": "InlineShape",
+      "access": "read-only",
+      "description": "Returns an InlineShape object that represents the picture, OLE object, or ActiveX control that is the result of an INCLUDEPICTURE or EMBED field."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects the specified field.",
+      "returns": "void"
+    },
+    {
+      "name": "Update",
+      "kind": "method",
+      "signature": "Update() As Boolean",
+      "description": "Updates the result of the field. Returns True if the field is updated successfully.",
+      "returns": "Boolean"
+    },
+    {
+      "name": "Unlink",
+      "kind": "method",
+      "signature": "Unlink()",
+      "description": "Replaces the specified field with its most recent result.",
+      "returns": "void"
+    },
+    {
+      "name": "UpdateSource",
+      "kind": "method",
+      "signature": "UpdateSource()",
+      "description": "Saves the changes made to the results of an INCLUDETEXT field back to the source document.",
+      "returns": "void"
+    },
+    {
+      "name": "DoClick",
+      "kind": "method",
+      "signature": "DoClick()",
+      "description": "Clicks the specified field.",
+      "returns": "void"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy()",
+      "description": "Copies the specified field to the Clipboard.",
+      "returns": "void"
+    },
+    {
+      "name": "Cut",
+      "kind": "method",
+      "signature": "Cut()",
+      "description": "Removes the specified field from the document and places it on the Clipboard.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified field.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

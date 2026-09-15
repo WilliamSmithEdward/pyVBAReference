@@ -1,0 +1,100 @@
+{
+  "name": "AutoTextEntries",
+  "kind": "Dispatch Interface",
+  "guid": "{00020937-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of AutoCorrectEntry objects that represent the AutoText entries in a template. The AutoTextEntries collection includes all the entries listed on the AutoText tab in the AutoCorrect dialog box.",
+  "remarks": "Use the AutoTextEntries property to return the AutoTextEntries collection. The following example determines whether an AutoTextEntry object named \"test\" is in the AutoTextEntries collection. Use the Add method to add an AutoText entry to the AutoTextEntries collection. The following example adds an AutoText entry named \"Blue\" based on the text of the selection. Use AutoTextEntries (_index_), where _index_ is the AutoText entry name or index number, to return a single AutoTextEntry object. You must exactly match the spelling (but not necessarily the capitalization) of the name, as it is shown on the AutoText tab in the AutoCorrect dialog box. The following example sets the value of an existing AutoText entry named \"cName.\" The following example displays the name and value of the first AutoText entry in the template attached to the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified AutoTextEntries collection."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of items in the AutoTextEntries collection. Read-only Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As AutoTextEntry",
+      "description": "Returns an individual AutoTextEntry object in a collection.",
+      "returns": "AutoTextEntry",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position or a String representing the name of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String, Range As Range) As AutoTextEntry",
+      "description": "Returns an AutoTextEntry object that represents an AutoText entry added to the list of available AutoText entries.",
+      "returns": "AutoTextEntry",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The text that, when typed, initiates an AutoText entry."
+        },
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "A range of text that will be inserted whenever Name is typed."
+        }
+      ]
+    },
+    {
+      "name": "AppendToSpike",
+      "kind": "method",
+      "signature": "AppendToSpike(Range As Range) As AutoTextEntry",
+      "description": "Deletes the specified range and adds the contents of the range to the Spike (a built-in AutoText entry). This method returns the Spike as an AutoTextEntry object.",
+      "returns": "AutoTextEntry",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The range that's deleted and appended to the Spike."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

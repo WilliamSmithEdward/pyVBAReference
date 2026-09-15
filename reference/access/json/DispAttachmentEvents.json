@@ -1,0 +1,278 @@
+{
+  "name": "DispAttachmentEvents",
+  "kind": "Dispatch Interface",
+  "guid": "{3B06E981-E47C-11CD-8701-00AA003F0F07}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "BeforeUpdate",
+      "kind": "method",
+      "signature": "BeforeUpdate(Cancel As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AfterUpdate",
+      "kind": "method",
+      "signature": "AfterUpdate()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Enter",
+      "kind": "method",
+      "signature": "Enter()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Exit",
+      "kind": "method",
+      "signature": "Exit(Cancel As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Dirty",
+      "kind": "method",
+      "signature": "Dirty(Cancel As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Change",
+      "kind": "method",
+      "signature": "Change()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "GotFocus",
+      "kind": "method",
+      "signature": "GotFocus()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "LostFocus",
+      "kind": "method",
+      "signature": "LostFocus()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Click",
+      "kind": "method",
+      "signature": "Click()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "DblClick",
+      "kind": "method",
+      "signature": "DblClick(Cancel As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseDown",
+      "kind": "method",
+      "signature": "MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseMove",
+      "kind": "method",
+      "signature": "MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseUp",
+      "kind": "method",
+      "signature": "MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyDown",
+      "kind": "method",
+      "signature": "KeyDown(KeyCode As Integer, Shift As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyPress",
+      "kind": "method",
+      "signature": "KeyPress(KeyAscii As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "KeyAscii",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyUp",
+      "kind": "method",
+      "signature": "KeyUp(KeyCode As Integer, Shift As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AttachmentCurrent",
+      "kind": "method",
+      "signature": "AttachmentCurrent()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

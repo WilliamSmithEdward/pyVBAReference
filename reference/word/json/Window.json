@@ -1,0 +1,635 @@
+{
+  "name": "Window",
+  "kind": "Dispatch Interface",
+  "guid": "{00020962-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a window. Many document characteristics, such as scroll bars and rulers, are actually properties of the window.",
+  "remarks": "The Window object is a member of the Windows collection. The Windows collection for the Application object contains all the windows in the application, whereas the Windows collection for the Document object contains only the windows that display the specified document. Use Windows (Index), where Index is the window name or the index number, to return a single Window object. The following example maximizes the Document1 window. The index number is the number to the left of the window name on the Window menu. The following example displays the caption of the first window in the Windows collection. Use the Add method or the NewWindow method to add a new window to the Windows collection. Each of the following statements creates a new window for the document in the active window. A colon (:) and a number appear in the window caption when more than one window is open for a document. When you switch the view to print preview, a new window is created. This window is removed from the Windows collection when you close print preview.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft OfficeWord application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Window object."
+    },
+    {
+      "name": "ActivePane",
+      "kind": "property",
+      "type": "Pane",
+      "access": "read-only",
+      "description": "Returns a Pane object that represents the active pane for the specified window. Read-only."
+    },
+    {
+      "name": "Document",
+      "kind": "property",
+      "type": "Document",
+      "access": "read-only",
+      "description": "Returns a Document object associated with the specified pane, window, or selection. Read-only."
+    },
+    {
+      "name": "Panes",
+      "kind": "property",
+      "type": "Panes",
+      "access": "read-only",
+      "description": "Returns a Panes collection that represents all the window panes for the specified window."
+    },
+    {
+      "name": "Selection",
+      "kind": "property",
+      "type": "Selection",
+      "access": "read-only",
+      "description": "Returns the Selection object that represents a selected range or the insertion point. Read-only."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long that represents the horizontal position of the specified window, measured in points. Read/write."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the vertical position of the specified document window, in points. Read/write Long."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the width of the specified document window, in points. Read/write Long."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the height of the window (in points). Read/write Long."
+    },
+    {
+      "name": "Split",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the window is split into multiple panes. Read/write Boolean."
+    },
+    {
+      "name": "SplitVertical",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the vertical split percentage for the specified window. Read/write Long."
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the caption text for the window that is displayed in the title bar of the document or application window. Read/write String."
+    },
+    {
+      "name": "WindowState",
+      "kind": "property",
+      "type": "WdWindowState",
+      "access": "read/write",
+      "description": "Returns or sets the state of the specified document window or task window. Read/write WdWindowState."
+    },
+    {
+      "name": "DisplayRulers",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if rulers are displayed for the specified window or pane. Read/write Boolean."
+    },
+    {
+      "name": "DisplayVerticalRuler",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a vertical ruler is displayed for the specified window or pane. Read/write Boolean."
+    },
+    {
+      "name": "View",
+      "kind": "property",
+      "type": "View",
+      "access": "read-only",
+      "description": "Returns a View object that represents the view for the specified window or pane."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "WdWindowType",
+      "access": "read-only",
+      "description": "Returns the window type. Read-only WdWindowType."
+    },
+    {
+      "name": "Next",
+      "kind": "property",
+      "type": "Window",
+      "access": "read-only",
+      "description": "Returns the next document window in the collection of open document windows. Read-only."
+    },
+    {
+      "name": "Previous",
+      "kind": "property",
+      "type": "Window",
+      "access": "read-only",
+      "description": "Returns the previous document window in the collection open document windows. Read-only."
+    },
+    {
+      "name": "WindowNumber",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "DisplayVerticalScrollBar",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a vertical scroll bar is displayed for the specified window. Read/write Boolean."
+    },
+    {
+      "name": "DisplayHorizontalScrollBar",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a horizontal scroll bar is displayed for the specified window. Read/write Boolean."
+    },
+    {
+      "name": "StyleAreaWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the width of the style area in points. Read/write Single."
+    },
+    {
+      "name": "DisplayScreenTips",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if comments, footnotes, endnotes, and hyperlinks are displayed as tips. Read/write Boolean."
+    },
+    {
+      "name": "HorizontalPercentScrolled",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the horizontal scroll position as a percentage of the document width. Read/write Long."
+    },
+    {
+      "name": "VerticalPercentScrolled",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the vertical scroll position as a percentage of the document length. Read/write Long."
+    },
+    {
+      "name": "DocumentMap",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the document map is visible. Read/write Boolean."
+    },
+    {
+      "name": "Active",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified window is active. Read-only Boolean."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the position of an item in a collection. Read-only."
+    },
+    {
+      "name": "IMEMode",
+      "kind": "property",
+      "type": "WdIMEMode",
+      "access": "read/write",
+      "description": "Returns or sets the default start-up mode for the Japanese Input Method Editor (IME). Read/write WdIMEMode."
+    },
+    {
+      "name": "UsableWidth",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the width (in points) of the active working area in the specified document window. Read-only Long."
+    },
+    {
+      "name": "UsableHeight",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the height (in points) of the active working area in the specified document window. Read-only Long. ."
+    },
+    {
+      "name": "EnvelopeVisible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the email message header is visible in the document window. The default value is False. Read/write Boolean."
+    },
+    {
+      "name": "DisplayRightRuler",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the vertical ruler appears on the right side of the document window in print layout view. Read/write Boolean."
+    },
+    {
+      "name": "DisplayLeftScrollBar",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the vertical scroll bar appears on the left side of the document window. Read/write Boolean."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified object is visible. Read/write Boolean."
+    },
+    {
+      "name": "Thumbnails",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Sets or returns a Boolean that represents whether thumbnail images of the pages in a document are displayed along the left side of the Microsoft Word document window."
+    },
+    {
+      "name": "ShowSourceDocuments",
+      "kind": "property",
+      "type": "WdShowSourceDocuments",
+      "access": "read/write",
+      "description": "Returns or sets a WdShowSourceDocuments constant that represents how Microsoft Word displays source documents after a compare and merge process. Read/write."
+    },
+    {
+      "name": "Hwnd",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that indicates the window handle of the specified window. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate()",
+      "description": "Activates the specified window.",
+      "returns": "void"
+    },
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close([SaveChanges As Variant], [RouteDocument As Variant])",
+      "description": "Closes the specified window.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SaveChanges",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the save action for the document. Can be one of the following WdSaveOptions constants: wdDoNotSaveChanges, wdPromptToSaveChanges, or wdSaveChanges."
+        },
+        {
+          "name": "RouteDocument",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to route the document to the next recipient. If the document doesn't have a routing slip attached, this argument is ignored."
+        }
+      ]
+    },
+    {
+      "name": "LargeScroll",
+      "kind": "method",
+      "signature": "LargeScroll([Down As Variant], [Up As Variant], [ToRight As Variant], [ToLeft As Variant])",
+      "description": "Scrolls a window or pane by the specified number of screens.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Down",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of screens to scroll the window down."
+        },
+        {
+          "name": "Up",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of screens to scroll the window up."
+        },
+        {
+          "name": "ToRight",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of screens to scroll the window to the right."
+        },
+        {
+          "name": "ToLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of screens to scroll the window to the left."
+        }
+      ]
+    },
+    {
+      "name": "SmallScroll",
+      "kind": "method",
+      "signature": "SmallScroll([Down As Variant], [Up As Variant], [ToRight As Variant], [ToLeft As Variant])",
+      "description": "Scrolls a window or pane by the specified number of lines.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Down",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of lines to scroll the window down. A \"line\" corresponds to the distance scrolled by clicking the down scroll arrow on the vertical scroll bar once."
+        },
+        {
+          "name": "Up",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of lines to scroll the window up. A \"line\" corresponds to the distance scrolled by clicking the up scroll arrow on the vertical scroll bar once."
+        },
+        {
+          "name": "ToRight",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of lines to scroll the window to the right. A \"line\" corresponds to the distance scrolled by clicking the right scroll arrow on the horizontal scroll bar once."
+        },
+        {
+          "name": "ToLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of lines to scroll the window to the left. A \"line\" corresponds to the distance scrolled by clicking the left scroll arrow on the horizontal scroll bar once."
+        }
+      ]
+    },
+    {
+      "name": "NewWindow",
+      "kind": "method",
+      "signature": "NewWindow() As Window",
+      "description": "Opens a new window with the same document as the specified window. Returns a Window object.",
+      "returns": "Window"
+    },
+    {
+      "name": "PageScroll",
+      "kind": "method",
+      "signature": "PageScroll([Down As Variant], [Up As Variant])",
+      "description": "Scrolls through the specified pane or window page by page.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Down",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of pages to be scrolled down. If this argument is omitted, this value is assumed to be 1."
+        },
+        {
+          "name": "Up",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of pages to be scrolled up."
+        }
+      ]
+    },
+    {
+      "name": "SetFocus",
+      "kind": "method",
+      "signature": "SetFocus()",
+      "description": "Sets the focus of the specified document window to the body of an email message.",
+      "returns": "void"
+    },
+    {
+      "name": "RangeFromPoint",
+      "kind": "method",
+      "signature": "RangeFromPoint(x As Long, y As Long) As Object",
+      "description": "Returns the Range or Shape object that is located at the point specified by the screen position coordinate pair.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "x",
+          "type": "Long",
+          "optional": false,
+          "description": "The horizontal distance (in pixels) from the left edge of the screen to the point."
+        },
+        {
+          "name": "y",
+          "type": "Long",
+          "optional": false,
+          "description": "The vertical distance (in pixels) from the top of the screen to the point."
+        }
+      ]
+    },
+    {
+      "name": "ScrollIntoView",
+      "kind": "method",
+      "signature": "ScrollIntoView(obj As Object, [Start As Variant])",
+      "description": "Scrolls through the document window so the specified range or shape is displayed in the document window.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "obj",
+          "type": "Object",
+          "optional": false,
+          "description": "A Range or Shape object."
+        },
+        {
+          "name": "Start",
+          "type": "Variant",
+          "optional": true,
+          "description": "True if the upper-left corner of the range or shape appears at the upper-left corner of the document window. False if the lower-right corner of the range or shape appears at the lower-right corner of the document window. The default value is True."
+        }
+      ]
+    },
+    {
+      "name": "GetPoint",
+      "kind": "method",
+      "signature": "GetPoint(ScreenPixelsLeft As Long, ScreenPixelsTop As Long, ScreenPixelsWidth As Long, ScreenPixelsHeight As Long, obj As Object)",
+      "description": "Returns the screen coordinates of the specified range or shape.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ScreenPixelsLeft",
+          "type": "Long",
+          "optional": false,
+          "description": "The variable name to which you want Microsoft Word to return the value for the left edge of the object."
+        },
+        {
+          "name": "ScreenPixelsTop",
+          "type": "Long",
+          "optional": false,
+          "description": "The variable name to which you want Word to return the value for the top edge of the object."
+        },
+        {
+          "name": "ScreenPixelsWidth",
+          "type": "Long",
+          "optional": false,
+          "description": "The variable name to which you want Word to return the value for the width of the object."
+        },
+        {
+          "name": "ScreenPixelsHeight",
+          "type": "Long",
+          "optional": false,
+          "description": "The variable name to which you want Word to return the value for the height of the object."
+        },
+        {
+          "name": "obj",
+          "type": "Object",
+          "optional": false,
+          "description": "A Range or Shape object."
+        }
+      ]
+    },
+    {
+      "name": "PrintOut",
+      "kind": "method",
+      "signature": "PrintOut([Background As Variant], [Append As Variant], [Range As Variant], [OutputFileName As Variant], [From As Variant], [To As Variant], [Item As Variant], [Copies As Variant], [Pages As Variant], [PageType As Variant], [PrintToFile As Variant], [Collate As Variant], [ActivePrinterMacGX As Variant], [ManualDuplexPrint As Variant], [PrintZoomColumn As Variant], [PrintZoomRow As Variant], [PrintZoomPaperWidth As Variant], [PrintZoomPaperHeight As Variant])",
+      "description": "Prints all or part of the document displayed in the specified window.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Background",
+          "type": "Variant",
+          "optional": true,
+          "description": "Set to True to have the macro continue while Microsoft Word prints the document."
+        },
+        {
+          "name": "Append",
+          "type": "Variant",
+          "optional": true,
+          "description": "Set to True to append the specified document to the file name specified by the OutputFileName argument. False to overwrite the contents of OutputFileName."
+        },
+        {
+          "name": "Range",
+          "type": "Variant",
+          "optional": true,
+          "description": "The page range. Can be any WdPrintOutRange constant."
+        },
+        {
+          "name": "OutputFileName",
+          "type": "Variant",
+          "optional": true,
+          "description": "If PrintToFile is True, this argument specifies the path and file name of the output file."
+        },
+        {
+          "name": "From",
+          "type": "Variant",
+          "optional": true,
+          "description": "The starting page number when Range is set to wdPrintFromTo."
+        },
+        {
+          "name": "To",
+          "type": "Variant",
+          "optional": true,
+          "description": "The ending page number when Range is set to wdPrintFromTo."
+        },
+        {
+          "name": "Item",
+          "type": "Variant",
+          "optional": true,
+          "description": "The item to be printed. Can be any WdPrintOutItem constant."
+        },
+        {
+          "name": "Copies",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of copies to be printed."
+        },
+        {
+          "name": "Pages",
+          "type": "Variant",
+          "optional": true,
+          "description": "The page numbers and page ranges to be printed, separated by commas. For example, \"2, 6-10\" prints page 2 and pages 6 through 10."
+        },
+        {
+          "name": "PageType",
+          "type": "Variant",
+          "optional": true,
+          "description": "The type of pages to be printed. Can be any WdPrintOutPages constant."
+        },
+        {
+          "name": "PrintToFile",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to send printer instructions to a file. Make sure to specify a file name with OutputFileName."
+        },
+        {
+          "name": "Collate",
+          "type": "Variant",
+          "optional": true,
+          "description": "When printing multiple copies of a document, True to print all pages of the document before printing the next copy."
+        },
+        {
+          "name": "ActivePrinterMacGX",
+          "type": "Variant",
+          "optional": true,
+          "description": "This argument is available only in Microsoft Office Macintosh Edition. For additional information about this argument, consult the language reference Help included with Microsoft Office Macintosh Edition."
+        },
+        {
+          "name": "ManualDuplexPrint",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to print a two-sided document on a printer without a duplex printing kit. If this argument is True, the PrintBackground and PrintReverse properties are ignored. Use the PrintOddPagesInAscendingOrder and PrintEvenPagesInAscendingOrder properties to control the output during manual duplex printing. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "PrintZoomColumn",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of pages you want Word to fit horizontally on one page. Can be 1, 2, 3, or 4. Use with the PrintZoomRow argument to print multiple pages on a single sheet."
+        },
+        {
+          "name": "PrintZoomRow",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of pages you want Word to fit vertically on one page. Can be 1, 2, or 4. Use with the PrintZoomColumn argument to print multiple pages on a single sheet."
+        },
+        {
+          "name": "PrintZoomPaperWidth",
+          "type": "Variant",
+          "optional": true,
+          "description": "The width to which you want Word to scale printed pages, in twips (20 twips = 1 point; 72 points = 1 inch)."
+        },
+        {
+          "name": "PrintZoomPaperHeight",
+          "type": "Variant",
+          "optional": true,
+          "description": "The height to which you want Word to scale printed pages, in twips (20 twips = 1 point; 72 points = 1 inch)."
+        }
+      ]
+    },
+    {
+      "name": "ToggleRibbon",
+      "kind": "method",
+      "signature": "ToggleRibbon()",
+      "description": "Shows or hides the ribbon.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

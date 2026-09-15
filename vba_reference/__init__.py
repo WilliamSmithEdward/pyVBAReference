@@ -4,8 +4,9 @@ Quick start::
 
     import vba_reference as vba
 
-    vba.library_names()                 # ['excel', 'office', ...]
+    vba.library_names()                 # ['excel', 'powerpoint', 'word', ...]
     ws = vba.get_type("Worksheet")      # TypeDoc
+    vba.get_type("Document", "word")    # pass a library to disambiguate
     ws.member("Protect").parameters     # tuple[Parameter, ...]
     vba.find_members("MsgBox")          # [MemberRef(library='vba', type='Interaction', ...)]
     vba.get_constant("XlFileFormat", "xlCSV").value  # 6
@@ -28,7 +29,7 @@ from .api import (
 )
 from .models import Constant, Member, MemberRef, Parameter, TypeDoc
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 
 __all__ = [
     "__version__",

@@ -1,0 +1,204 @@
+{
+  "name": "CustomLayout",
+  "kind": "Dispatch Interface",
+  "guid": "{914934F3-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a custom layout associated with a presentation design. The CustomLayout object is a member of the CustomLayouts collection.",
+  "remarks": "Use the CustomLayout property of the Slide or SlideRange objects to access a CustomLayout object, for example: Use the Add method of the CustomLayouts collection to add a new custom layout to the presentation design's custom layouts. Use the Item method to refer to a custom layout. Use the Paste method to paste the slides on the Clipboard into a custom layout and add the custom layout to the CustomLayouts collection.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns a reference to the slide master object that is the parent of the specified CustomLayout object. Read-only."
+    },
+    {
+      "name": "Shapes",
+      "kind": "property",
+      "type": "Shapes",
+      "access": "read-only",
+      "description": "Returns a Shapes collection representing all the layout elements included in the specified custom layout. Read-only."
+    },
+    {
+      "name": "HeadersFooters",
+      "kind": "property",
+      "type": "HeadersFooters",
+      "access": "read-only",
+      "description": "Returns a HeadersFooters collection that represents the header, footer, date and time, and slide number associated with the specified custom layout."
+    },
+    {
+      "name": "Background",
+      "kind": "property",
+      "type": "ShapeRange",
+      "access": "read-only",
+      "description": "Returns a ShapeRange object that represents the slide background. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Represents the display name of the specified custom layout. Read/write."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns the height of the specified object, in points. Read-only."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns the width of the specified custom layout, in points. Read-only."
+    },
+    {
+      "name": "Hyperlinks",
+      "kind": "property",
+      "type": "Hyperlinks",
+      "access": "read-only",
+      "description": "Returns a Hyperlinks collection that represents all hyperlinks on the slide associated with the specified custom layout. Read-only."
+    },
+    {
+      "name": "Design",
+      "kind": "property",
+      "type": "Design",
+      "access": "read-only",
+      "description": "Returns a Design object that represents the design template associated with the specified custom layout."
+    },
+    {
+      "name": "TimeLine",
+      "kind": "property",
+      "type": "TimeLine",
+      "access": "read-only",
+      "description": "Returns a TimeLine object that represents the animation timeline for the slide associated with the specified custom layout. Read-only."
+    },
+    {
+      "name": "SlideShowTransition",
+      "kind": "property",
+      "type": "SlideShowTransition",
+      "access": "read-only",
+      "description": "Returns a SlideShowTransition object that represents the special effects for the specified custom layout. Read-only."
+    },
+    {
+      "name": "MatchingName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Represents the internal name of the specified custom layout. Read/write."
+    },
+    {
+      "name": "Preserved",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the specified custom layout is preserved from changes. Read/write."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the index position of the specified custom layout in the CustomLayouts collection. Read-only."
+    },
+    {
+      "name": "DisplayMasterShapes",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the specified custom layout displays background objects on the slide master. Read/write."
+    },
+    {
+      "name": "FollowMasterBackground",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the specified custom layout follows the slide master background. Read/write."
+    },
+    {
+      "name": "ThemeColorScheme",
+      "kind": "property",
+      "type": "ThemeColorScheme",
+      "access": "read-only",
+      "description": "Returns a ThemeColorScheme object that represents the color scheme of the theme associated with the specified custom layout. Read-only."
+    },
+    {
+      "name": "CustomerData",
+      "kind": "property",
+      "type": "CustomerData",
+      "access": "read-only",
+      "description": "Returns a CustomerData object."
+    },
+    {
+      "name": "Guides",
+      "kind": "property",
+      "type": "Guides",
+      "access": "read-only",
+      "description": "Returns the Guides collection associated with a custom layout. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified object.",
+      "returns": "void"
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects the specified CustomLayout object.",
+      "returns": "void"
+    },
+    {
+      "name": "Cut",
+      "kind": "method",
+      "signature": "Cut()",
+      "description": "Deletes the specified object and places it on the Clipboard.",
+      "returns": "void"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy()",
+      "description": "Copies the specified object to the Clipboard.",
+      "returns": "void"
+    },
+    {
+      "name": "Duplicate",
+      "kind": "method",
+      "signature": "Duplicate() As CustomLayout",
+      "description": "Creates a duplicate of the specified custom layout, adds the new custom layout to the CustomLayouts collection immediately after the original custom layout, and returns a CustomLayout object that represents the duplicate layout.",
+      "returns": "CustomLayout"
+    },
+    {
+      "name": "MoveTo",
+      "kind": "method",
+      "signature": "MoveTo(toPos As Long)",
+      "description": "Moves the specified CustomLayout object to a different position in the CustomLayouts collection.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "toPos",
+          "type": "Long",
+          "optional": false,
+          "description": "The index position in the CustomLayouts collection to which the CustomLayout object will be moved."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,85 @@
+{
+  "name": "CustomLabels",
+  "kind": "Dispatch Interface",
+  "guid": "{00020916-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of CustomLabel objects available in the Label Options dialog box. This collection includes custom labels of all printer types (dot-matrix, laser, and ink-jet printers).",
+  "remarks": "Use the CustomLabels property to return the CustomLabels collection. The following example displays the number of available custom labels. Use the Add method to create a custom label. The following example adds a custom mailing label named \"My Label\" and sets the page size. Use CustomLabels (Index), where Index is the custom label name or index number, to return a single CustomLabel object. The following example creates a new document with an existing custom label layout named \"My Labels.\" The index number represents the position of the custom mailing label in the CustomLabels collection. The following example displays the name of the first custom mailing label.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified CustomLabels object."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of items in the collection. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As CustomLabel",
+      "description": "Returns a CustomLabel object in a collection.",
+      "returns": "CustomLabel",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position or a String representing the name of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String, [DotMatrix As Variant]) As CustomLabel",
+      "description": "Adds a custom mailing label to the CustomLabels collection. Returns a CustomLabel object that represents the custom mailing label.",
+      "returns": "CustomLabel",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name for the custom mailing labels."
+        },
+        {
+          "name": "DotMatrix",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to have the mailing labels printed on a dot-matrix printer."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

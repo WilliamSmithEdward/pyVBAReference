@@ -22,8 +22,9 @@ from importlib import resources
 from pathlib import Path
 from typing import Optional
 
-# Mirrors ``_INVALID`` / ``safe_filename`` in scrape_excel_object_model.py so
-# type names map to the same file names.
+# Mirrors ``_INVALID`` / ``safe_filename`` in consolidate_reference.py so type
+# names map to the same file names. Kept as a copy because the generator is not
+# shipped inside the installed package.
 _INVALID = re.compile(r'[<>:"/\\|?*]')
 
 

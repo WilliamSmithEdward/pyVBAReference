@@ -1,0 +1,105 @@
+{
+  "name": "Selection",
+  "kind": "Dispatch Interface",
+  "guid": "{91493454-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents the selection in the specified document window. The Selection object is deleted whenever you change slides in an active slide view (the Type property will return ppSelectionNone).",
+  "remarks": "",
+  "example": "ActiveWindow.Selection.Copy",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "PpSelectionType",
+      "access": "read-only",
+      "description": "Represents the type of objects in a selection. Read-only."
+    },
+    {
+      "name": "SlideRange",
+      "kind": "property",
+      "type": "SlideRange",
+      "access": "read-only",
+      "description": "Returns a SlideRange object that represents a range of selected slides. Read-only."
+    },
+    {
+      "name": "ShapeRange",
+      "kind": "property",
+      "type": "ShapeRange",
+      "access": "read-only",
+      "description": "Returns a ShapeRange object that represents all the slide objects that have been selected on the specified slide. Read-only."
+    },
+    {
+      "name": "TextRange",
+      "kind": "property",
+      "type": "TextRange",
+      "access": "read-only",
+      "description": "Returns a TextRange object that represents the selected text. Read-only."
+    },
+    {
+      "name": "ChildShapeRange",
+      "kind": "property",
+      "type": "ShapeRange",
+      "access": "read-only",
+      "description": "Returns a ShapeRange object that represents the child shapes of a selection."
+    },
+    {
+      "name": "HasChildShapeRange",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the selection contains child shapes. Read-only."
+    },
+    {
+      "name": "TextRange2",
+      "kind": "property",
+      "type": "TextRange2",
+      "access": "read-only",
+      "description": "Returns the TextRange2 object of the current Selection object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Cut",
+      "kind": "method",
+      "signature": "Cut()",
+      "description": "Deletes the specified object and places it on the Clipboard.",
+      "returns": "void"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy()",
+      "description": "Copies the specified object to the Clipboard.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified Selection object.",
+      "returns": "void"
+    },
+    {
+      "name": "Unselect",
+      "kind": "method",
+      "signature": "Unselect()",
+      "description": "Cancels the current selection.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

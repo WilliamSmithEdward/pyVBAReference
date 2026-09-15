@@ -1,0 +1,83 @@
+{
+  "name": "WrapFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{000209C3-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents all the properties for wrapping text around a shape or shape range.",
+  "remarks": "Use the WrapFormat property to return the WrapFormat object. The following example adds an oval to the active document and specifies that document text wrap around the left and right sides of the square that circumscribes the oval. There will be a 0.1-inch margin between the document text and the top, bottom, left side, and right side of the square.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified WrapFormat object."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "WdWrapType",
+      "access": "read/write",
+      "description": "Returns the wrap type for the specified shape. Read/write WdWrapType."
+    },
+    {
+      "name": "Side",
+      "kind": "property",
+      "type": "WdWrapSideType",
+      "access": "read/write",
+      "description": "Returns or sets a value that indicates whether the document text should wrap on both sides of the specified shape, on either the left or right side only, or on the side of the shape that's farthest from the page margin.Read/write WdWrapSideType."
+    },
+    {
+      "name": "DistanceTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the document text and the top edge of the text-free area surrounding the specified shape. Read/write Single."
+    },
+    {
+      "name": "DistanceBottom",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the document text and the bottom edge of the text-free area surrounding the specified shape. Read/write Single."
+    },
+    {
+      "name": "DistanceLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the document text and the left edge of the text-free area surrounding the specified shape. Read/write Single."
+    },
+    {
+      "name": "DistanceRight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the document text and the right edge of the text-free area surrounding the specified shape. Read/write Single."
+    },
+    {
+      "name": "AllowOverlap",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a value that specifies whether a given shape can overlap other shapes. Read/write Long."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

@@ -1,0 +1,27 @@
+{
+  "name": "AutoCorrect",
+  "kind": "Dispatch Interface",
+  "guid": "{914934ED-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents the AutoCorrect functionality in Microsoft PowerPoint.",
+  "remarks": "",
+  "example": "Sub HideAutoCorrectOpButton()\n\n    With Application.AutoCorrect\n\n        .DisplayAutoCorrectOptions = msoFalse\n\n        .DisplayAutoLayoutOptions = msoFalse\n\n    End With\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "DisplayAutoCorrectOptions",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Determines whether Microsoft PowerPoint should display the AutoCorrect Options button. Read/write."
+    },
+    {
+      "name": "DisplayAutoLayoutOptions",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Determines whether Microsoft PowerPoint should display the AutoLayout Options button. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

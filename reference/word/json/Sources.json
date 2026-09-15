@@ -1,0 +1,79 @@
+{
+  "name": "Sources",
+  "kind": "Dispatch Interface",
+  "guid": "{FA02A26B-6550-45C5-B6F0-80E757CD3482}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a collection of Source objects.",
+  "remarks": "For more information, see Working with Bibliographies.",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of items in the Sources collection. Read-only Long."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Sources object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Source",
+      "description": "Returns a Source object that represents the specified item in the collection.",
+      "returns": "Source",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "Specifies the ordinal position of the object within the collection."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Data As String)",
+      "description": "Add a new source to the sources listed in the Source Manager dialog box.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Data",
+          "type": "String",
+          "optional": false,
+          "description": "An XML string that represents the field values for the new source."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

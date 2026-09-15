@@ -1,0 +1,92 @@
+{
+  "name": "ChartCharacters",
+  "kind": "Dispatch Interface",
+  "guid": "{92D41A57-F07E-4CA4-AF6F-BEF486AA4E6F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents characters in an object that contains text.",
+  "remarks": "The ChartCharacters object lets you modify any sequence of characters contained in the full text string. Use Characters ( _Start_, _Length_ ), where _Start_ is the start character number and _Length_ is the number of characters, to return a ChartCharacters object.",
+  "example": "With ActiveDocument.InlineShapes(1).Chart\n\n    .ChartTitle.Characters.Font.Italic = True\n\nEnd With",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns the text of this range of characters. Read-only String."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the collection. Read-only Long."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "ChartFont",
+      "access": "read-only",
+      "description": "Returns the font of the specified object. Read-only ChartFont."
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the text for the specified object. Read/write String."
+    },
+    {
+      "name": "PhoneticCharacters",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the phonetic text for the object. Read/write String."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the Microsoft PowerPoint application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Insert",
+      "kind": "method",
+      "signature": "Insert(String As String) As Variant",
+      "description": "Inserts a string preceding the selected characters.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "String",
+          "type": "String",
+          "optional": false,
+          "description": "The string to insert."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,98 @@
+{
+  "name": "LinkFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{00020931-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the linking characteristics for an OLE object or picture.",
+  "remarks": "Use the LinkFormat property for a shape, inline shape, or field to return the LinkFormat object. The following example breaks the link for the first shape on the active document. Not all types of shapes, inline shapes, and fields can be linked to a source. Use the Type property for the Shape and InlineShape objects to determine whether a particular shape can be linked. The Type property for a Field object returns the type of field. Use both the Update method and the AutoUpdate property to update links. To return or set the full path for a particular link's source file, use the SourceFullName property.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified LinkFormat object."
+    },
+    {
+      "name": "AutoUpdate",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified link is updated automatically when the container file is opened or when the source file is changed. Read/write Boolean."
+    },
+    {
+      "name": "SourceName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the source file for the specified linked OLE object, picture, or field. Read-only String."
+    },
+    {
+      "name": "SourcePath",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the path of the source file for the specified linked OLE object, picture, or field. Read-only String."
+    },
+    {
+      "name": "Locked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a Field, InlineShape, or Shape object is locked to prevent automatic updating. Read/write Boolean."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "WdLinkType",
+      "access": "read-only",
+      "description": "Returns the link type. Read-only WdLinkType."
+    },
+    {
+      "name": "SourceFullName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the path and name of the source file for the specified linked OLE object, picture, or field. Read/write String."
+    },
+    {
+      "name": "SavePictureWithDocument",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified picture is saved with the document. Read/write Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "BreakLink",
+      "kind": "method",
+      "signature": "BreakLink()",
+      "description": "Breaks the link between the source file and the specified OLE object, picture, or linked field.",
+      "returns": "void"
+    },
+    {
+      "name": "Update",
+      "kind": "method",
+      "signature": "Update()",
+      "description": "Updates the specified link format.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

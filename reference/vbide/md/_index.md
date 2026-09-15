@@ -1,12 +1,11 @@
 # Microsoft Visual Basic for Applications Extensibility 5.3
 
-Scraped object model: 46 entries.
+Scraped object model: 45 entries.
 
 One Markdown file per type in this folder; matching machine-readable JSON in `../json/`.
 
 - [AddIn](AddIn.md) - Dispatch Interface
 - [Addins](Addins.md) - Class
-- [AddIns](AddIns.md) - Dispatch Interface
 - [Application](Application.md) - Dispatch Interface
 - [CodeModule](CodeModule.md) - Class
 - [CodePane](CodePane.md) - Class

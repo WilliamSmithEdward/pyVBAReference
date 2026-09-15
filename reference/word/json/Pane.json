@@ -1,0 +1,270 @@
+{
+  "name": "Pane",
+  "kind": "Dispatch Interface",
+  "guid": "{00020960-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a window pane. The Pane object is a member of the Panes collection. The Panes collection includes all the window panes for a single window.",
+  "remarks": "Use Panes (Index), where Index is the index number, to return a single Pane object. The following example closes the active pane. Use the Add method or the Split property to add a window pane. The following example splits the active window at 20 percent of the current window size. The following example splits the active window in half. Use the SplitSpecial property to show comments, footnotes, or endnotes in a separate pane. A window has more than one pane if the window is split or the view is not print layout view and information such as footnotes or comments are displayed. The following example displays the comments pane in normal view and then prompts to close the pane.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Pane object."
+    },
+    {
+      "name": "Document",
+      "kind": "property",
+      "type": "Document",
+      "access": "read-only",
+      "description": "Returns a Document object associated with the specified pane. Read-only."
+    },
+    {
+      "name": "Selection",
+      "kind": "property",
+      "type": "Selection",
+      "access": "read-only",
+      "description": "Returns the Selection object that represents a selection or the insertion point within a document pane. Read-only."
+    },
+    {
+      "name": "DisplayRulers",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if rulers are displayed for the specified pane. Read/write Boolean."
+    },
+    {
+      "name": "DisplayVerticalRuler",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a vertical ruler is displayed for the specified pane. Read/write Boolean."
+    },
+    {
+      "name": "Zooms",
+      "kind": "property",
+      "type": "Zooms",
+      "access": "read-only",
+      "description": "Returns a Zooms collection that represents the magnification options for each view (such as normal view, outline view or print layout view)."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the position of an item in a collection. Read-only."
+    },
+    {
+      "name": "View",
+      "kind": "property",
+      "type": "View",
+      "access": "read-only",
+      "description": "Returns a View object that represents the view for the specified pane."
+    },
+    {
+      "name": "Next",
+      "kind": "property",
+      "type": "Pane",
+      "access": "read-only",
+      "description": "Returns a Pane object that represents the next document pane in the collection. Read-only."
+    },
+    {
+      "name": "Previous",
+      "kind": "property",
+      "type": "Pane",
+      "access": "read-only",
+      "description": "Returns a Pane object that represents the previous document pane in the collection. Read-only."
+    },
+    {
+      "name": "HorizontalPercentScrolled",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the horizontal scroll position as a percentage of the document width. Read/write Long."
+    },
+    {
+      "name": "VerticalPercentScrolled",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the vertical scroll position as a percentage of the document length. Read/write Long."
+    },
+    {
+      "name": "MinimumFontSize",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the minimum font size (in points) displayed for the specified pane. Read/write Long."
+    },
+    {
+      "name": "BrowseWidth",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the width (in points) of the area in which text wraps in the specified pane. Read-only Long."
+    },
+    {
+      "name": "Frameset",
+      "kind": "property",
+      "type": "Frameset",
+      "access": "read-only",
+      "description": "Returns a Frameset object that represents an entire frames page or a single frame on a frames page. Read-only."
+    },
+    {
+      "name": "Pages",
+      "kind": "property",
+      "type": "Pages",
+      "access": "read-only",
+      "description": "Returns a Pages collection that represents the pages in a document."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate()",
+      "description": "Activates the specified pane.",
+      "returns": "void"
+    },
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close()",
+      "description": "Closes the specified Mail Merge data source, pane, or task.",
+      "returns": "void"
+    },
+    {
+      "name": "LargeScroll",
+      "kind": "method",
+      "signature": "LargeScroll([Down As Variant], [Up As Variant], [ToRight As Variant], [ToLeft As Variant])",
+      "description": "Scrolls a window or pane by the specified number of screens.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Down",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of screens to scroll the window down."
+        },
+        {
+          "name": "Up",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of screens to scroll the window up."
+        },
+        {
+          "name": "ToRight",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of screens to scroll the window to the right."
+        },
+        {
+          "name": "ToLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of screens to scroll the window to the left."
+        }
+      ]
+    },
+    {
+      "name": "SmallScroll",
+      "kind": "method",
+      "signature": "SmallScroll([Down As Variant], [Up As Variant], [ToRight As Variant], [ToLeft As Variant])",
+      "description": "Scrolls a window by the specified number of lines.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Down",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of lines to scroll the window down. A \"line\" corresponds to the distance scrolled by clicking the down scroll arrow on the vertical scroll bar once."
+        },
+        {
+          "name": "Up",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of lines to scroll the window up. A \"line\" corresponds to the distance scrolled by clicking the up scroll arrow on the vertical scroll bar once."
+        },
+        {
+          "name": "ToRight",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of lines to scroll the window to the right. A \"line\" corresponds to the distance scrolled by clicking the right scroll arrow on the horizontal scroll bar once."
+        },
+        {
+          "name": "ToLeft",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of lines to scroll the window to the left. A \"line\" corresponds to the distance scrolled by clicking the left scroll arrow on the horizontal scroll bar once."
+        }
+      ]
+    },
+    {
+      "name": "AutoScroll",
+      "kind": "method",
+      "signature": "AutoScroll(Velocity As Long)",
+      "description": "Scrolls automatically through the specified pane.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Velocity",
+          "type": "Long",
+          "optional": false,
+          "description": "The speed for scrolling. Can be a number from -100 through 100. Use -100 for full-speed backward scrolling, and use 100 for full-speed forward scrolling."
+        }
+      ]
+    },
+    {
+      "name": "PageScroll",
+      "kind": "method",
+      "signature": "PageScroll([Down As Variant], [Up As Variant])",
+      "description": "Scrolls through the specified window page by page.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Down",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of pages to be scrolled down. If this argument is omitted, this value is assumed to be 1."
+        },
+        {
+          "name": "Up",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of pages to be scrolled up."
+        }
+      ]
+    },
+    {
+      "name": "NewFrameset",
+      "kind": "method",
+      "signature": "NewFrameset()",
+      "description": "Creates a new frames page based on the specified pane.",
+      "returns": "void"
+    },
+    {
+      "name": "TOCInFrameset",
+      "kind": "method",
+      "signature": "TOCInFrameset()",
+      "description": "Creates a table of contents based on the specified document and puts it in a new frame on the left side of the frames page.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

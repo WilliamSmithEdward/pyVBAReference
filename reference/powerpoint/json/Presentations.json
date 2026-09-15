@@ -1,0 +1,167 @@
+{
+  "name": "Presentations",
+  "kind": "Dispatch Interface",
+  "guid": "{91493462-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of all the Presentation objects in Microsoft PowerPoint. Each Presentation object represents a presentation that's currently open in PowerPoint.",
+  "remarks": "The Presentations collection doesn't include open add-ins, which are a special kind of hidden presentation. You can, however, return a single open add-in if you know its file name. For example Presentations(\"oscar.ppa\") will return the open add-in named \"Oscar.ppa\" as a Presentation object. However, it is recommended that the AddIns collection be used to return open add-ins. If your Visual Studio solution includes the Microsoft.Office.Interop.PowerPoint reference, this collection maps to the following types: - Microsoft.Office.Interop.PowerPoint.Presentations.GetEnumerator (to enumerate the Presentation objects.)",
+  "example": "Set newPres = Presentations.Add(True)\nnewPres.Slides.Add 1, 1\nnewPres.SaveAs \"Sample\"",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As Presentation",
+      "description": "Returns a single Presentation object from the specified Presentations collection.",
+      "returns": "Presentation",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number of the single Presentation object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([WithWindow As MsoTriState]) As Presentation",
+      "description": "Creates a presentation. Returns a Presentation object that represents the new presentation.",
+      "returns": "Presentation",
+      "parameters": [
+        {
+          "name": "WithWindow",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Whether the presentation appears in a visible window."
+        }
+      ]
+    },
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open(FileName As String, [ReadOnly As MsoTriState], [Untitled As MsoTriState], [WithWindow As MsoTriState]) As Presentation",
+      "description": "Opens the specified presentation. Returns a Presentation object that represents the opened presentation.",
+      "returns": "Presentation",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the file to open."
+        },
+        {
+          "name": "ReadOnly",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Specifies whether the file is opened with read/write or read-only status."
+        },
+        {
+          "name": "Untitled",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Specifies whether the file has a title."
+        },
+        {
+          "name": "WithWindow",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Specifies whether the file is visible."
+        }
+      ]
+    },
+    {
+      "name": "CheckOut",
+      "kind": "method",
+      "signature": "CheckOut(FileName As String)",
+      "description": "Copies a specified presentation from a server to a local computer for editing. Returns a String that represents the local path and file name of the presentation checked out.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The server path and name of the presentation."
+        }
+      ]
+    },
+    {
+      "name": "CanCheckOut",
+      "kind": "method",
+      "signature": "CanCheckOut(FileName As String) As Boolean",
+      "description": "Returns True if Microsoft PowerPoint can check out a specified presentation from a server.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The server path and name of the presentation."
+        }
+      ]
+    },
+    {
+      "name": "Open2007",
+      "kind": "method",
+      "signature": "Open2007(FileName As String, [ReadOnly As MsoTriState], [Untitled As MsoTriState], [WithWindow As MsoTriState], [OpenAndRepair As MsoTriState]) As Presentation",
+      "description": "Opens the specified presentation and provides the option to repair the presentation file. Returns a Presentation object that represents the opened presentation.",
+      "returns": "Presentation",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the file to open."
+        },
+        {
+          "name": "ReadOnly",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Specifies whether the file is opened with read/write or read-only status."
+        },
+        {
+          "name": "Untitled",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Specifies whether the file has a title."
+        },
+        {
+          "name": "WithWindow",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Specifies whether the file is visible."
+        },
+        {
+          "name": "OpenAndRepair",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Specifies whether to repair the file before it is opened to prevent corruption."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

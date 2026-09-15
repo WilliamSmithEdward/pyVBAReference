@@ -1,0 +1,113 @@
+{
+  "name": "AcSysCmdAction",
+  "kind": "Enumeration",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "Used with the SysCmd method to specify an action to take.",
+  "constants": [
+    {
+      "name": "acSysCmdInitMeter",
+      "value": 1,
+      "description": "Initializes the progress meter. You must specify the argument1 and argument2 arguments when you use this action."
+    },
+    {
+      "name": "acSysCmdUpdateMeter",
+      "value": 2,
+      "description": "Updates the progress meter with the specified value. You must specify the text argument when you use this action."
+    },
+    {
+      "name": "acSysCmdRemoveMeter",
+      "value": 3,
+      "description": "Removes the progress meter."
+    },
+    {
+      "name": "acSysCmdSetStatus",
+      "value": 4,
+      "description": "Sets the status bar text to the text argument."
+    },
+    {
+      "name": "acSysCmdClearStatus",
+      "value": 5,
+      "description": "Provides information on the state of a database object."
+    },
+    {
+      "name": "acSysCmdRuntime",
+      "value": 6,
+      "description": "Returns True (1) if a run-time version of Microsoft Access is running."
+    },
+    {
+      "name": "acSysCmdAccessVer",
+      "value": 7,
+      "description": "Returns the version number of Microsoft Access."
+    },
+    {
+      "name": "acSysCmdIniFile",
+      "value": 8,
+      "description": "Returns the name of the .ini file associated with Microsoft Access."
+    },
+    {
+      "name": "acSysCmdAccessDir",
+      "value": 9,
+      "description": "Returns the name of the directory where Msaccess.exe is located."
+    },
+    {
+      "name": "acSysCmdGetObjectState",
+      "value": 10,
+      "description": "Returns the state of the specified database object. You must specify argument1 and argument2 when you use this action value."
+    },
+    {
+      "name": "acSysCmdClearHelpTopic",
+      "value": 11,
+      "description": "Resets default help topic."
+    },
+    {
+      "name": "acSysCmdProfile",
+      "value": 12,
+      "description": "Returns the \\/profile setting specified by the user when starting Microsoft Access from the command line."
+    },
+    {
+      "name": "acSysCmdGetWorkgroupFile",
+      "value": 13,
+      "description": "Returns the path to the workgroup file (System.mdw)."
+    },
+    {
+      "name": "acSysCmdCompile",
+      "value": 603,
+      "description": "Compiles the Visual Basic code modules in the current database. Equivalent to the Debug > Compile menu command."
+    },
+    {
+      "name": "acSysCmdGetMsoBuildNumber",
+      "value": 715,
+      "description": "Returns the build number of the shared MSO component as a Long. This is the same value returned by Application.Build, and it may differ from the Access application build. Use acSysCmdGetBuildNumber (725) in new code to get the Access build number."
+    },
+    {
+      "name": "acSysCmdGetFullVersion",
+      "value": 720,
+      "description": "Returns a display string containing version, build, channel, and bitness (for example, \"Microsoft Access (Version 2601) Build 16.0.19628.20000 Current Channel 64-bit\"). Version 2604 and later."
+    },
+    {
+      "name": "acSysCmdGetVersion",
+      "value": 721,
+      "description": "Returns the short YYMM marketing version (for example, \"2601\"). Version 2604 and later."
+    },
+    {
+      "name": "acSysCmdGetFullBuildNumber",
+      "value": 722,
+      "description": "Returns the full four-part build string (for example, \"16.0.19916.30000\"). Version 2604 and later."
+    },
+    {
+      "name": "acSysCmdGetChannelName",
+      "value": 723,
+      "description": "Returns the update channel name (for example, \"Current Channel\", \"Monthly Enterprise Channel\", or \"LTSC 2024\"). Version 2604 and later."
+    },
+    {
+      "name": "acSysCmdGetBitness",
+      "value": 724,
+      "description": "Returns \"32-bit\" or \"64-bit\" as a string matching the bitness of the running binary. Version 2604 and later."
+    },
+    {
+      "name": "acSysCmdGetBuildNumber",
+      "value": 725,
+      "description": "Returns the major build number (for example, 19916) as a Long. Version 2604 and later."
+    }
+  ]
+}

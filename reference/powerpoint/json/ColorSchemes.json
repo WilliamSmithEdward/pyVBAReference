@@ -1,0 +1,65 @@
+{
+  "name": "ColorSchemes",
+  "kind": "Dispatch Interface",
+  "guid": "{9149346E-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of all the ColorScheme objects in the specified presentation. Each ColorScheme object represents a color scheme, which is a set of colors that are used together on a slide.",
+  "remarks": "",
+  "example": "ActivePresentation.ColorSchemes(2).Delete",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As ColorScheme",
+      "description": "Returns a single ColorScheme object from the specified ColorSchemes collection.",
+      "returns": "ColorScheme",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the single ColorScheme object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([Scheme As ColorScheme]) As ColorScheme",
+      "description": "Adds a color scheme to the collection of available schemes. Returns a ColorScheme object that represents the added color scheme.",
+      "returns": "ColorScheme",
+      "parameters": [
+        {
+          "name": "Scheme",
+          "type": "ColorScheme",
+          "optional": true,
+          "description": "The color scheme to add. Can be a ColorScheme object from any slide or master or an item in the ColorSchemes collection from any open presentation. If you omit this parameter, the first ColorScheme object (the first standard color scheme) in the specified presentation's ColorSchemes collection is used."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

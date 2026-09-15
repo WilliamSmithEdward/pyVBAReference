@@ -1,0 +1,708 @@
+{
+  "name": "Shape",
+  "kind": "Dispatch Interface",
+  "guid": "{000209A0-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents an object in the drawing layer, such as an AutoShape, freeform, OLE object, ActiveX control, or picture. The Shape object is a member of the Shapes collection, which includes all the shapes in the main story of a document or in all the headers and footers of a document.",
+  "remarks": "A shape is always attached to an anchoring range. You can position the shape anywhere on the page that contains the anchor. There are three objects that represent shapes: the Shapes collection, which represents all the shapes on a document; the ShapeRange object, which represents a specified subset of the shapes on a document (for example, a ShapeRange object could represent shapes one and four on the document, or it could represent all the selected shapes on the document); and the Shape object, which represents a single shape on a document. If you want to work with several shapes at the same time or with shapes within the selection, use a ShapeRange collection. Use Shapes (_index_), where _index_ is the name or the index number, to return a single Shape object. The following example horizontally flips shape one on the active document. The following example horizontally flips the shape named Rectangle 1 on the active document. Each shape is assigned a default name when it is created. For example, if you add three different shapes to a document, they might be named Rectangle 2, TextBox 3, and Oval 4. To give a shape a more meaningful name, set the Name property.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Shape object."
+    },
+    {
+      "name": "Adjustments",
+      "kind": "property",
+      "type": "Adjustments",
+      "access": "read-only",
+      "description": "Returns an Adjustments object that contains adjustment values for all the adjustments in the specified Shape object that represents an AutoShape or WordArt. Read-only."
+    },
+    {
+      "name": "AutoShapeType",
+      "kind": "property",
+      "type": "MsoAutoShapeType",
+      "access": "read/write",
+      "description": "Returns or sets the shape type for the specified Shape object, which must represent an AutoShape other than a line or freeform drawing. Read/write MsoAutoShapeType."
+    },
+    {
+      "name": "Callout",
+      "kind": "property",
+      "type": "CalloutFormat",
+      "access": "read-only",
+      "description": "Returns a CalloutFormat object that contains callout formatting properties for the specified shape. Read-only."
+    },
+    {
+      "name": "Fill",
+      "kind": "property",
+      "type": "FillFormat",
+      "access": "read-only",
+      "description": "Returns a FillFormat object that contains fill formatting properties for the specified shape. Read-only."
+    },
+    {
+      "name": "GroupItems",
+      "kind": "property",
+      "type": "GroupShapes",
+      "access": "read-only",
+      "description": "Returns a GroupShapes object that represents the individual shapes in the specified group. Read-only."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the height (in points) of the specified shape. Read/write Single."
+    },
+    {
+      "name": "HorizontalFlip",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Indicates that a shape has been flipped horizontally. Read-only MsoTriState."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the horizontal position, measured in points, of the specified shape or shape range. Can also be any valid WdShapePosition constant. Read/write."
+    },
+    {
+      "name": "Line",
+      "kind": "property",
+      "type": "LineFormat",
+      "access": "read-only",
+      "description": "Returns a LineFormat object that contains line formatting properties for the specified shape. Read-only."
+    },
+    {
+      "name": "LockAspectRatio",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "MsoTrue if the specified shape retains its original proportions when you resize it. MsoFalse if you can change the height and width of the shape independently of one another when you resize it. Read/write MsoTriState."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the specified object. Read/write String."
+    },
+    {
+      "name": "Nodes",
+      "kind": "property",
+      "type": "ShapeNodes",
+      "access": "read-only",
+      "description": "Returns a ShapeNodes collection that represents the geometric description of the specified shape."
+    },
+    {
+      "name": "Rotation",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the number of degrees the specified shape is rotated around the z-axis. A positive value indicates clockwise rotation; a negative value indicates counterclockwise rotation. Read/write Single."
+    },
+    {
+      "name": "PictureFormat",
+      "kind": "property",
+      "type": "PictureFormat",
+      "access": "read-only",
+      "description": "Returns a PictureFormat object that contains picture formatting properties for the specified object. Read-only."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "ShadowFormat",
+      "access": "read-only",
+      "description": "Returns a ShadowFormat object that represents the shadow formatting for the specified shape."
+    },
+    {
+      "name": "TextEffect",
+      "kind": "property",
+      "type": "TextEffectFormat",
+      "access": "read-only",
+      "description": "Returns a TextEffectFormat object that contains text-effect formatting properties for the specified shape. Read-only."
+    },
+    {
+      "name": "TextFrame",
+      "kind": "property",
+      "type": "TextFrame",
+      "access": "read-only",
+      "description": "Returns a TextFrame object that contains the text for the specified shape."
+    },
+    {
+      "name": "ThreeD",
+      "kind": "property",
+      "type": "ThreeDFormat",
+      "access": "read-only",
+      "description": "Returns a ThreeDFormat object that contains 3D formatting properties for the specified shape. Read-only."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the vertical position of the specified shape or shape range in points. Read/write Single."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "MsoShapeType",
+      "access": "read-only",
+      "description": "Returns the type of inline shape. Read-only MsoShapeType."
+    },
+    {
+      "name": "VerticalFlip",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "True if the specified shape is flipped around the vertical axis. Read-only MsoTriState."
+    },
+    {
+      "name": "Vertices",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns the coordinates of the specified freeform drawing's vertices (and control points for Bzier curves) as a series of coordinate pairs. Read-only Variant."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "True if the specified object, or the formatting applied to it, is visible. Read/write MsoTriState."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the width, in points, of the specified shape. Read/write Long."
+    },
+    {
+      "name": "ZOrderPosition",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the position of the specified shape in the z-order. Read-only."
+    },
+    {
+      "name": "Hyperlink",
+      "kind": "property",
+      "type": "Hyperlink",
+      "access": "read-only",
+      "description": "Returns a Hyperlink object that represents the hyperlink associated with a Shape object. Read-only."
+    },
+    {
+      "name": "RelativeHorizontalPosition",
+      "kind": "property",
+      "type": "WdRelativeHorizontalPosition",
+      "access": "read/write",
+      "description": "Specifies to the relative horizontal position of a shape. Read/write WdRelativeHorizontalPosition."
+    },
+    {
+      "name": "RelativeVerticalPosition",
+      "kind": "property",
+      "type": "WdRelativeVerticalPosition",
+      "access": "read/write",
+      "description": "Specifies the relative vertical position of a shape. Read/write WdRelativeVerticalPosition."
+    },
+    {
+      "name": "LockAnchor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the anchor of a Shape object is locked to the anchoring range. Read/write Long."
+    },
+    {
+      "name": "WrapFormat",
+      "kind": "property",
+      "type": "WrapFormat",
+      "access": "read-only",
+      "description": "Returns a WrapFormat object that contains the properties for wrapping text around the specified shape. Read-only."
+    },
+    {
+      "name": "OLEFormat",
+      "kind": "property",
+      "type": "OLEFormat",
+      "access": "read-only",
+      "description": "Returns an OLEFormat object that represents the OLE characteristics (other than linking) for the specified shape, inline shape, or field. Read-only."
+    },
+    {
+      "name": "Anchor",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the anchoring range for the specified shape or shape range. Read-only."
+    },
+    {
+      "name": "LinkFormat",
+      "kind": "property",
+      "type": "LinkFormat",
+      "access": "read-only",
+      "description": "Returns a LinkFormat object that represents the link options of a shape that is linked to a file. Read/only."
+    },
+    {
+      "name": "AlternativeText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the alternative text associated with a shape in a webpage. Read/write String."
+    },
+    {
+      "name": "Script",
+      "kind": "property",
+      "type": "Script",
+      "access": "read-only",
+      "description": "Returns a Script object, which represents a block of script or code for an image on a webpage."
+    },
+    {
+      "name": "Child",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "True if the shape is a child shape or if all shapes in a shape range are child shapes of the same parent. Read-only MsoTriState."
+    },
+    {
+      "name": "ParentGroup",
+      "kind": "property",
+      "type": "Shape",
+      "access": "read-only",
+      "description": "Returns a Shape object that represents the common parent shape of a child shape or a range of child shapes."
+    },
+    {
+      "name": "CanvasItems",
+      "kind": "property",
+      "type": "CanvasShapes",
+      "access": "read-only",
+      "description": "Returns a CanvasShapes object that represents a collection of shapes in a drawing canvas."
+    },
+    {
+      "name": "ID",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the identification type for the specified shape. Read-only Long."
+    },
+    {
+      "name": "LayoutInCell",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns a Long that represents whether a shape in a table is displayed inside or outside the table."
+    },
+    {
+      "name": "HasChart",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "True if the specified shape has a chart. Read-only."
+    },
+    {
+      "name": "Chart",
+      "kind": "property",
+      "type": "Chart",
+      "access": "read-only",
+      "description": "Returns a Chart object that represents a chart within the collection of shapes in a document. Read-only."
+    },
+    {
+      "name": "LeftRelative",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the relative left position of a shape. Read/write."
+    },
+    {
+      "name": "TopRelative",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the relative top position of a shape. Read/write."
+    },
+    {
+      "name": "WidthRelative",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the relative width of a shape. Read/write."
+    },
+    {
+      "name": "HeightRelative",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the percentage of the relative height of a shape. Read/write."
+    },
+    {
+      "name": "RelativeHorizontalSize",
+      "kind": "property",
+      "type": "WdRelativeHorizontalSize",
+      "access": "read/write",
+      "description": "Returns or sets a WdRelativeVerticalSize constant that represents the object to which a range of shapes is relative. Read/write."
+    },
+    {
+      "name": "RelativeVerticalSize",
+      "kind": "property",
+      "type": "WdRelativeVerticalSize",
+      "access": "read/write",
+      "description": "Returns or sets a WdRelativeVerticalSize constant that represents the relative vertical size of a shape. Read/write."
+    },
+    {
+      "name": "SoftEdge",
+      "kind": "property",
+      "type": "SoftEdgeFormat",
+      "access": "read-only",
+      "description": "Returns a SoftEdgeFormat object that represents the soft edge formatting for a shape. Read-only."
+    },
+    {
+      "name": "Glow",
+      "kind": "property",
+      "type": "GlowFormat",
+      "access": "read-only",
+      "description": "Returns a GlowFormat object that represents the glow formatting for a shape. Read-only."
+    },
+    {
+      "name": "Reflection",
+      "kind": "property",
+      "type": "ReflectionFormat",
+      "access": "read-only",
+      "description": "Returns a ReflectionFormat object that represents the reflection formatting for a shape. Read-only."
+    },
+    {
+      "name": "TextFrame2",
+      "kind": "property",
+      "type": "TextFrame2",
+      "access": "read-only",
+      "description": "Returns a TextFrame2 object that contains the text for the specified shape. Read-only."
+    },
+    {
+      "name": "HasSmartArt",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Returns True if there is a SmartArt diagram present on the shape. Read-only."
+    },
+    {
+      "name": "SmartArt",
+      "kind": "property",
+      "type": "SmartArt",
+      "access": "read-only",
+      "description": "Returns a SmartArt object that provides a way to work with the SmartArt associated with the specified shape. Read-only."
+    },
+    {
+      "name": "ShapeStyle",
+      "kind": "property",
+      "type": "MsoShapeStyleIndex",
+      "access": "read/write",
+      "description": "Returns or sets the shape style for the specified shape. Read/write MsoShapeStyleIndex."
+    },
+    {
+      "name": "BackgroundStyle",
+      "kind": "property",
+      "type": "MsoBackgroundStyleIndex",
+      "access": "read/write",
+      "description": "Sets or returns the background style of the specified shape. Read/write MsoBackgroundStyleIndex."
+    },
+    {
+      "name": "Title",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String that contains a title for the specified shape. Read/write."
+    },
+    {
+      "name": "GraphicStyle",
+      "kind": "property",
+      "type": "MsoGraphicStyleIndex",
+      "access": "read/write",
+      "description": "Returns or sets an MsoGraphicStyleIndex constant that represents the style of an SVG graphic. Read/write."
+    },
+    {
+      "name": "Model3D",
+      "kind": "property",
+      "type": "Model3DFormat",
+      "access": "read-only",
+      "description": "Returns a Model3DFormat object that contains Model3D properties. Read-only."
+    },
+    {
+      "name": "Decorative",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Sets or returns the decorative flag for the specified object. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Apply",
+      "kind": "method",
+      "signature": "Apply()",
+      "description": "Applies to the specified shape formatting that has been copied using the PickUp method.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified shape node.",
+      "returns": "void"
+    },
+    {
+      "name": "Duplicate",
+      "kind": "method",
+      "signature": "Duplicate() As Shape",
+      "description": "Creates a duplicate of the specified Shape object, adds the new shape to the Shapes collection at a standard offset from the original shapes, and then returns the new Shape object.",
+      "returns": "Shape"
+    },
+    {
+      "name": "Flip",
+      "kind": "method",
+      "signature": "Flip(FlipCmd As MsoFlipCmd)",
+      "description": "Flips a shape horizontally or vertically.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FlipCmd",
+          "type": "MsoFlipCmd",
+          "optional": false,
+          "description": "The flip orientation."
+        }
+      ]
+    },
+    {
+      "name": "IncrementLeft",
+      "kind": "method",
+      "signature": "IncrementLeft(Increment As Single)",
+      "description": "Moves the specified shape horizontally by the specified number of points.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": "Specifies how far the shape is to be moved horizontally, in points. A positive value moves the shape to the right; a negative value moves it to the left."
+        }
+      ]
+    },
+    {
+      "name": "IncrementRotation",
+      "kind": "method",
+      "signature": "IncrementRotation(Increment As Single)",
+      "description": "Changes the rotation of the specified shape around the z-axis by the specified number of degrees.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": "Specifies how far the shape is to be rotated horizontally, in degrees. A positive value rotates the shape clockwise; a negative value rotates it counterclockwise."
+        }
+      ]
+    },
+    {
+      "name": "IncrementTop",
+      "kind": "method",
+      "signature": "IncrementTop(Increment As Single)",
+      "description": "Moves the specified shape vertically by the specified number of points.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": "Specifies how far the shape object is to be moved vertically, in points. A positive value moves the shape down; a negative value moves it up."
+        }
+      ]
+    },
+    {
+      "name": "PickUp",
+      "kind": "method",
+      "signature": "PickUp()",
+      "description": "Copies the formatting of the specified shape.",
+      "returns": "void"
+    },
+    {
+      "name": "ScaleHeight",
+      "kind": "method",
+      "signature": "ScaleHeight(Factor As Single, RelativeToOriginalSize As MsoTriState, [Scale As MsoScaleFrom])",
+      "description": "Scales the height of the shape by a specified factor.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Factor",
+          "type": "Single",
+          "optional": false,
+          "description": "Specifies the ratio between the height of the shape after you resize it and the current or original height. For example, to make a rectangle 50 percent larger, specify 1.5 for this argument."
+        },
+        {
+          "name": "RelativeToOriginalSize",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "True to scale the shape relative to its original size. False to scale it relative to its current size. You can specify True for this argument only if the specified shape is a picture or an OLE object."
+        },
+        {
+          "name": "Scale",
+          "type": "MsoScaleFrom",
+          "optional": true,
+          "description": "The part of the shape that retains its position when the shape is scaled."
+        }
+      ]
+    },
+    {
+      "name": "ScaleWidth",
+      "kind": "method",
+      "signature": "ScaleWidth(Factor As Single, RelativeToOriginalSize As MsoTriState, [Scale As MsoScaleFrom])",
+      "description": "Scales the width of the shape by a specified factor.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Factor",
+          "type": "Single",
+          "optional": false,
+          "description": "Specifies the ratio between the width of the shape after you resize it and the current or original width. For example, to make a rectangle 50 percent larger, specify 1.5 for this argument."
+        },
+        {
+          "name": "RelativeToOriginalSize",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "True to scale the shape relative to its original size. False to scale it relative to its current size. You can specify True for this argument only if the specified shape is a picture or an OLE object."
+        },
+        {
+          "name": "Scale",
+          "type": "MsoScaleFrom",
+          "optional": true,
+          "description": "The part of the shape that retains its position when the shape is scaled."
+        }
+      ]
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select([Replace As Variant])",
+      "description": "Selects the specified shape.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Replace",
+          "type": "Variant",
+          "optional": true,
+          "description": "If adding a shape, True replaces the selection. False adds the new shape to the selection."
+        }
+      ]
+    },
+    {
+      "name": "SetShapesDefaultProperties",
+      "kind": "method",
+      "signature": "SetShapesDefaultProperties()",
+      "description": "Applies the formatting of the default shape for a document to the specified shape.",
+      "returns": "void"
+    },
+    {
+      "name": "Ungroup",
+      "kind": "method",
+      "signature": "Ungroup() As ShapeRange",
+      "description": "Ungroups any grouped shapes in the specified shape.",
+      "returns": "ShapeRange"
+    },
+    {
+      "name": "ZOrder",
+      "kind": "method",
+      "signature": "ZOrder(ZOrderCmd As MsoZOrderCmd)",
+      "description": "Moves the specified shape in front of or behind other shapes in the collection (that is, changes the shape's position in the z-order).",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ZOrderCmd",
+          "type": "MsoZOrderCmd",
+          "optional": false,
+          "description": "Specifies where to move the specified shape relative to the other shapes."
+        }
+      ]
+    },
+    {
+      "name": "ConvertToInlineShape",
+      "kind": "method",
+      "signature": "ConvertToInlineShape() As InlineShape",
+      "description": "Converts the specified shape in the drawing layer of a document to an inline shape in the text layer. You can convert only shapes that represent pictures, OLE objects, or ActiveX controls. This method returns an InlineShape object that represents the picture or OLE object.",
+      "returns": "InlineShape"
+    },
+    {
+      "name": "CanvasCropLeft",
+      "kind": "method",
+      "signature": "CanvasCropLeft(Increment As Single)",
+      "description": "Crops a percentage of the width of a drawing canvas from the left side of the canvas.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": "The amount in percentage points of the drawing canvas's width that you want remaining after the canvas is cropped. Entering 0.9 as the increment crops ten percent of the canvas's width from the left. Entering 0.1 crops ninety percent of the canvas's width from the left."
+        }
+      ]
+    },
+    {
+      "name": "CanvasCropTop",
+      "kind": "method",
+      "signature": "CanvasCropTop(Increment As Single)",
+      "description": "Crops a percentage of the height of a drawing canvas from the top of the canvas.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": "The amount in percentage points of a canvas's height that you want remaining after the canvas is cropped. Entering 0.9 as the increment crops ten percent of the canvas's height from the top. Entering 0.1 crops ninety percent of the canvas's height from the top."
+        }
+      ]
+    },
+    {
+      "name": "CanvasCropRight",
+      "kind": "method",
+      "signature": "CanvasCropRight(Increment As Single)",
+      "description": "Crops a percentage of the width of a drawing canvas from the right side of the canvas.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": "The amount in percentage points of the canvas's width that you want remaining after the canvas is cropped. Entering 0.9 as the increment crops ten percent of the canvas's width from the right. Entering 0.1 crops ninety percent of the canvas's width from the right."
+        }
+      ]
+    },
+    {
+      "name": "CanvasCropBottom",
+      "kind": "method",
+      "signature": "CanvasCropBottom(Increment As Single)",
+      "description": "Crops a percentage of the height of a drawing canvas from the bottom of the canvas.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Increment",
+          "type": "Single",
+          "optional": false,
+          "description": "The amount in percentage points of a drawing canvas's height that you want remaining after the canvas is cropped. Entering 0.9 as the increment crops ten percent of the canvas's height from the bottom. Entering 0.1 crops ninety percent of the canvas's height from the bottom."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

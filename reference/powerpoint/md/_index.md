@@ -1,0 +1,345 @@
+# Microsoft PowerPoint 16.0 Object Library
+
+Scraped object model: 339 entries.
+
+One Markdown file per type in this folder; matching machine-readable JSON in `../json/`.
+
+- [ActionSetting](ActionSetting.md) - Dispatch Interface
+- [ActionSettings](ActionSettings.md) - Dispatch Interface
+- [AddIn](AddIn.md) - Dispatch Interface
+- [AddIns](AddIns.md) - Dispatch Interface
+- [Adjustments](Adjustments.md) - Dispatch Interface
+- [AnimationBehavior](AnimationBehavior.md) - Dispatch Interface
+- [AnimationBehaviors](AnimationBehaviors.md) - Dispatch Interface
+- [AnimationPoint](AnimationPoint.md) - Dispatch Interface
+- [AnimationPoints](AnimationPoints.md) - Dispatch Interface
+- [AnimationSettings](AnimationSettings.md) - Dispatch Interface
+- [Application](Application.md) - Class
+- [AutoCorrect](AutoCorrect.md) - Dispatch Interface
+- [Axes](Axes.md) - Dispatch Interface
+- [Axis](Axis.md) - Dispatch Interface
+- [AxisTitle](AxisTitle.md) - Dispatch Interface
+- [Borders](Borders.md) - Dispatch Interface
+- [Broadcast](Broadcast.md) - Dispatch Interface
+- [BulletFormat](BulletFormat.md) - Dispatch Interface
+- [CalloutFormat](CalloutFormat.md) - Dispatch Interface
+- [CanvasShapes](CanvasShapes.md) - Dispatch Interface
+- [CategoryCollection](CategoryCollection.md) - Dispatch Interface
+- [Cell](Cell.md) - Dispatch Interface
+- [CellRange](CellRange.md) - Dispatch Interface
+- [Chart](Chart.md) - Dispatch Interface
+- [ChartArea](ChartArea.md) - Dispatch Interface
+- [ChartBorder](ChartBorder.md) - Dispatch Interface
+- [ChartCategory](ChartCategory.md) - Dispatch Interface
+- [ChartCharacters](ChartCharacters.md) - Dispatch Interface
+- [ChartColorFormat](ChartColorFormat.md) - Dispatch Interface
+- [ChartData](ChartData.md) - Dispatch Interface
+- [ChartFillFormat](ChartFillFormat.md) - Dispatch Interface
+- [ChartFont](ChartFont.md) - Dispatch Interface
+- [ChartFormat](ChartFormat.md) - Dispatch Interface
+- [ChartGroup](ChartGroup.md) - Dispatch Interface
+- [ChartGroups](ChartGroups.md) - Dispatch Interface
+- [ChartTitle](ChartTitle.md) - Dispatch Interface
+- [Coauthoring](Coauthoring.md) - Dispatch Interface
+- [Collection](Collection.md) - Dispatch Interface
+- [ColorEffect](ColorEffect.md) - Dispatch Interface
+- [ColorFormat](ColorFormat.md) - Dispatch Interface
+- [ColorScheme](ColorScheme.md) - Dispatch Interface
+- [ColorSchemes](ColorSchemes.md) - Dispatch Interface
+- [Column](Column.md) - Dispatch Interface
+- [Columns](Columns.md) - Dispatch Interface
+- [CommandEffect](CommandEffect.md) - Dispatch Interface
+- [Comment](Comment.md) - Dispatch Interface
+- [Comments](Comments.md) - Dispatch Interface
+- [ConnectorFormat](ConnectorFormat.md) - Dispatch Interface
+- [Corners](Corners.md) - Dispatch Interface
+- [CustomerData](CustomerData.md) - Dispatch Interface
+- [CustomLayout](CustomLayout.md) - Dispatch Interface
+- [CustomLayouts](CustomLayouts.md) - Dispatch Interface
+- [DataLabel](DataLabel.md) - Dispatch Interface
+- [DataLabels](DataLabels.md) - Dispatch Interface
+- [DataTable](DataTable.md) - Dispatch Interface
+- [DefaultWebOptions](DefaultWebOptions.md) - Dispatch Interface
+- [Design](Design.md) - Dispatch Interface
+- [Designs](Designs.md) - Dispatch Interface
+- [Diagram](Diagram.md) - Dispatch Interface
+- [DiagramNode](DiagramNode.md) - Dispatch Interface
+- [DiagramNodeChildren](DiagramNodeChildren.md) - Dispatch Interface
+- [DiagramNodes](DiagramNodes.md) - Dispatch Interface
+- [DisplayUnitLabel](DisplayUnitLabel.md) - Dispatch Interface
+- [DocumentWindow](DocumentWindow.md) - Dispatch Interface
+- [DocumentWindows](DocumentWindows.md) - Dispatch Interface
+- [DownBars](DownBars.md) - Dispatch Interface
+- [DropLines](DropLines.md) - Dispatch Interface
+- [EApplication](EApplication.md) - Interface
+- [Effect](Effect.md) - Dispatch Interface
+- [EffectInformation](EffectInformation.md) - Dispatch Interface
+- [EffectParameters](EffectParameters.md) - Dispatch Interface
+- [ErrorBars](ErrorBars.md) - Dispatch Interface
+- [ExtraColors](ExtraColors.md) - Dispatch Interface
+- [FileConverter](FileConverter.md) - Dispatch Interface
+- [FileConverters](FileConverters.md) - Dispatch Interface
+- [FillFormat](FillFormat.md) - Dispatch Interface
+- [FilterEffect](FilterEffect.md) - Dispatch Interface
+- [Floor](Floor.md) - Dispatch Interface
+- [Font](Font.md) - Dispatch Interface
+- [Fonts](Fonts.md) - Dispatch Interface
+- [FreeformBuilder](FreeformBuilder.md) - Dispatch Interface
+- [FullSeriesCollection](FullSeriesCollection.md) - Dispatch Interface
+- [Global](Global.md) - Class
+- [Gridlines](Gridlines.md) - Dispatch Interface
+- [GroupShapes](GroupShapes.md) - Dispatch Interface
+- [Guide](Guide.md) - Dispatch Interface
+- [Guides](Guides.md) - Dispatch Interface
+- [HeaderFooter](HeaderFooter.md) - Dispatch Interface
+- [HeadersFooters](HeadersFooters.md) - Dispatch Interface
+- [HiLoLines](HiLoLines.md) - Dispatch Interface
+- [Hyperlink](Hyperlink.md) - Dispatch Interface
+- [Hyperlinks](Hyperlinks.md) - Dispatch Interface
+- [Interior](Interior.md) - Dispatch Interface
+- [LeaderLines](LeaderLines.md) - Dispatch Interface
+- [Legend](Legend.md) - Dispatch Interface
+- [LegendEntries](LegendEntries.md) - Dispatch Interface
+- [LegendEntry](LegendEntry.md) - Dispatch Interface
+- [LegendKey](LegendKey.md) - Dispatch Interface
+- [LineFormat](LineFormat.md) - Dispatch Interface
+- [LinkFormat](LinkFormat.md) - Dispatch Interface
+- [Master](Master.md) - Class
+- [MediaBookmark](MediaBookmark.md) - Dispatch Interface
+- [MediaBookmarks](MediaBookmarks.md) - Dispatch Interface
+- [MediaFormat](MediaFormat.md) - Dispatch Interface
+- [Model3DFormat](Model3DFormat.md) - Dispatch Interface
+- [MotionEffect](MotionEffect.md) - Dispatch Interface
+- [MouseDownHandler](MouseDownHandler.md) - Interface
+- [MouseTracker](MouseTracker.md) - Interface
+- [MsoAnimAccumulate](MsoAnimAccumulate.md) - Enumeration
+- [MsoAnimAdditive](MsoAnimAdditive.md) - Enumeration
+- [MsoAnimAfterEffect](MsoAnimAfterEffect.md) - Enumeration
+- [MsoAnimateByLevel](MsoAnimateByLevel.md) - Enumeration
+- [MsoAnimCommandType](MsoAnimCommandType.md) - Enumeration
+- [MsoAnimDirection](MsoAnimDirection.md) - Enumeration
+- [MsoAnimEffect](MsoAnimEffect.md) - Enumeration
+- [MsoAnimEffectAfter](MsoAnimEffectAfter.md) - Enumeration
+- [MsoAnimEffectRestart](MsoAnimEffectRestart.md) - Enumeration
+- [MsoAnimFilterEffectSubtype](MsoAnimFilterEffectSubtype.md) - Enumeration
+- [MsoAnimFilterEffectType](MsoAnimFilterEffectType.md) - Enumeration
+- [MsoAnimProperty](MsoAnimProperty.md) - Enumeration
+- [MsoAnimTextUnitEffect](MsoAnimTextUnitEffect.md) - Enumeration
+- [MsoAnimTriggerType](MsoAnimTriggerType.md) - Enumeration
+- [MsoAnimType](MsoAnimType.md) - Enumeration
+- [MsoClickState](MsoClickState.md) - Enumeration
+- [NamedSlideShow](NamedSlideShow.md) - Dispatch Interface
+- [NamedSlideShows](NamedSlideShows.md) - Dispatch Interface
+- [ObjectVerbs](ObjectVerbs.md) - Dispatch Interface
+- [OCXExtender](OCXExtender.md) - Dispatch Interface
+- [OCXExtenderEvents](OCXExtenderEvents.md) - Interface
+- [OLEControl](OLEControl.md) - Class
+- [OLEFormat](OLEFormat.md) - Dispatch Interface
+- [Options](Options.md) - Dispatch Interface
+- [PageSetup](PageSetup.md) - Dispatch Interface
+- [Pane](Pane.md) - Dispatch Interface
+- [Panes](Panes.md) - Dispatch Interface
+- [ParagraphFormat](ParagraphFormat.md) - Dispatch Interface
+- [PictureFormat](PictureFormat.md) - Dispatch Interface
+- [PlaceholderFormat](PlaceholderFormat.md) - Dispatch Interface
+- [Placeholders](Placeholders.md) - Dispatch Interface
+- [Player](Player.md) - Dispatch Interface
+- [PlaySettings](PlaySettings.md) - Dispatch Interface
+- [PlotArea](PlotArea.md) - Dispatch Interface
+- [Point](Point.md) - Dispatch Interface
+- [Points](Points.md) - Dispatch Interface
+- [PowerRex](PowerRex.md) - Class
+- [PpActionType](PpActionType.md) - Enumeration
+- [PpAdvanceMode](PpAdvanceMode.md) - Enumeration
+- [PpAfterEffect](PpAfterEffect.md) - Enumeration
+- [PpAlertLevel](PpAlertLevel.md) - Enumeration
+- [PpArrangeStyle](PpArrangeStyle.md) - Enumeration
+- [PpAutoSize](PpAutoSize.md) - Enumeration
+- [PpBaselineAlignment](PpBaselineAlignment.md) - Enumeration
+- [PpBorderType](PpBorderType.md) - Enumeration
+- [PpBulletType](PpBulletType.md) - Enumeration
+- [PpChangeCase](PpChangeCase.md) - Enumeration
+- [PpChartUnitEffect](PpChartUnitEffect.md) - Enumeration
+- [PpCheckInVersionType](PpCheckInVersionType.md) - Enumeration
+- [PpColorSchemeIndex](PpColorSchemeIndex.md) - Enumeration
+- [PpDateTimeFormat](PpDateTimeFormat.md) - Enumeration
+- [PpDirection](PpDirection.md) - Enumeration
+- [PpEntryEffect](PpEntryEffect.md) - Enumeration
+- [PpExportMode](PpExportMode.md) - Enumeration
+- [PpFarEastLineBreakLevel](PpFarEastLineBreakLevel.md) - Enumeration
+- [PpFileDialogType](PpFileDialogType.md) - Enumeration
+- [PpFixedFormatIntent](PpFixedFormatIntent.md) - Enumeration
+- [PpFixedFormatType](PpFixedFormatType.md) - Enumeration
+- [PpFollowColors](PpFollowColors.md) - Enumeration
+- [PpFrameColors](PpFrameColors.md) - Enumeration
+- [PpGuideOrientation](PpGuideOrientation.md) - Enumeration
+- [PpHTMLVersion](PpHTMLVersion.md) - Enumeration
+- [PpIndentControl](PpIndentControl.md) - Enumeration
+- [PpMediaTaskStatus](PpMediaTaskStatus.md) - Enumeration
+- [PpMediaType](PpMediaType.md) - Enumeration
+- [PpMouseActivation](PpMouseActivation.md) - Enumeration
+- [PpNumberedBulletStyle](PpNumberedBulletStyle.md) - Enumeration
+- [PpParagraphAlignment](PpParagraphAlignment.md) - Enumeration
+- [PpPasteDataType](PpPasteDataType.md) - Enumeration
+- [PpPlaceholderType](PpPlaceholderType.md) - Enumeration
+- [PpPlayerState](PpPlayerState.md) - Enumeration
+- [PpPrintColorType](PpPrintColorType.md) - Enumeration
+- [PpPrintHandoutOrder](PpPrintHandoutOrder.md) - Enumeration
+- [PpPrintOutputType](PpPrintOutputType.md) - Enumeration
+- [PpPrintRangeType](PpPrintRangeType.md) - Enumeration
+- [PpProtectedViewCloseReason](PpProtectedViewCloseReason.md) - Enumeration
+- [PpPublishSourceType](PpPublishSourceType.md) - Enumeration
+- [PpRemoveDocInfoType](PpRemoveDocInfoType.md) - Enumeration
+- [PpResampleMediaProfile](PpResampleMediaProfile.md) - Enumeration
+- [PpRevisionInfo](PpRevisionInfo.md) - Enumeration
+- [PpSaveAsFileType](PpSaveAsFileType.md) - Enumeration
+- [PpSelectionType](PpSelectionType.md) - Enumeration
+- [PpShapeFormat](PpShapeFormat.md) - Enumeration
+- [PpSlideLayout](PpSlideLayout.md) - Enumeration
+- [PpSlideShowAdvanceMode](PpSlideShowAdvanceMode.md) - Enumeration
+- [PpSlideShowPointerType](PpSlideShowPointerType.md) - Enumeration
+- [PpSlideShowRangeType](PpSlideShowRangeType.md) - Enumeration
+- [PpSlideShowState](PpSlideShowState.md) - Enumeration
+- [PpSlideShowType](PpSlideShowType.md) - Enumeration
+- [PpSlideSizeType](PpSlideSizeType.md) - Enumeration
+- [PpSoundEffectType](PpSoundEffectType.md) - Enumeration
+- [PpSoundFormatType](PpSoundFormatType.md) - Enumeration
+- [PpTabStopType](PpTabStopType.md) - Enumeration
+- [PpTextLevelEffect](PpTextLevelEffect.md) - Enumeration
+- [PpTextStyleType](PpTextStyleType.md) - Enumeration
+- [PpTextUnitEffect](PpTextUnitEffect.md) - Enumeration
+- [PpTransitionSpeed](PpTransitionSpeed.md) - Enumeration
+- [PpUpdateOption](PpUpdateOption.md) - Enumeration
+- [PpViewType](PpViewType.md) - Enumeration
+- [PpWindowState](PpWindowState.md) - Enumeration
+- [Presentation](Presentation.md) - Class
+- [Presentations](Presentations.md) - Dispatch Interface
+- [PrintOptions](PrintOptions.md) - Dispatch Interface
+- [PrintRange](PrintRange.md) - Dispatch Interface
+- [PrintRanges](PrintRanges.md) - Dispatch Interface
+- [PropertyEffect](PropertyEffect.md) - Dispatch Interface
+- [ProtectedViewWindow](ProtectedViewWindow.md) - Dispatch Interface
+- [ProtectedViewWindows](ProtectedViewWindows.md) - Dispatch Interface
+- [PublishObject](PublishObject.md) - Dispatch Interface
+- [PublishObjects](PublishObjects.md) - Dispatch Interface
+- [ResampleMediaTask](ResampleMediaTask.md) - Dispatch Interface
+- [ResampleMediaTasks](ResampleMediaTasks.md) - Dispatch Interface
+- [Research](Research.md) - Dispatch Interface
+- [RGBColor](RGBColor.md) - Dispatch Interface
+- [RotationEffect](RotationEffect.md) - Dispatch Interface
+- [Row](Row.md) - Dispatch Interface
+- [Rows](Rows.md) - Dispatch Interface
+- [Ruler](Ruler.md) - Dispatch Interface
+- [RulerLevel](RulerLevel.md) - Dispatch Interface
+- [RulerLevels](RulerLevels.md) - Dispatch Interface
+- [ScaleEffect](ScaleEffect.md) - Dispatch Interface
+- [SectionProperties](SectionProperties.md) - Dispatch Interface
+- [Selection](Selection.md) - Dispatch Interface
+- [Sequence](Sequence.md) - Dispatch Interface
+- [Sequences](Sequences.md) - Dispatch Interface
+- [Series](Series.md) - Dispatch Interface
+- [SeriesCollection](SeriesCollection.md) - Dispatch Interface
+- [SeriesLines](SeriesLines.md) - Dispatch Interface
+- [SetEffect](SetEffect.md) - Dispatch Interface
+- [ShadowFormat](ShadowFormat.md) - Dispatch Interface
+- [Shape](Shape.md) - Dispatch Interface
+- [ShapeNode](ShapeNode.md) - Dispatch Interface
+- [ShapeNodes](ShapeNodes.md) - Dispatch Interface
+- [ShapeRange](ShapeRange.md) - Dispatch Interface
+- [Shapes](Shapes.md) - Dispatch Interface
+- [Slide](Slide.md) - Class
+- [SlideNavigation](SlideNavigation.md) - Dispatch Interface
+- [SlideRange](SlideRange.md) - Dispatch Interface
+- [Slides](Slides.md) - Dispatch Interface
+- [SlideShowSettings](SlideShowSettings.md) - Dispatch Interface
+- [SlideShowTransition](SlideShowTransition.md) - Dispatch Interface
+- [SlideShowView](SlideShowView.md) - Dispatch Interface
+- [SlideShowWindow](SlideShowWindow.md) - Dispatch Interface
+- [SlideShowWindows](SlideShowWindows.md) - Dispatch Interface
+- [SoundEffect](SoundEffect.md) - Dispatch Interface
+- [SoundFormat](SoundFormat.md) - Dispatch Interface
+- [Table](Table.md) - Dispatch Interface
+- [TableBackground](TableBackground.md) - Dispatch Interface
+- [TableStyle](TableStyle.md) - Dispatch Interface
+- [TabStop](TabStop.md) - Dispatch Interface
+- [TabStops](TabStops.md) - Dispatch Interface
+- [Tags](Tags.md) - Dispatch Interface
+- [TextEffectFormat](TextEffectFormat.md) - Dispatch Interface
+- [TextFrame](TextFrame.md) - Dispatch Interface
+- [TextFrame2](TextFrame2.md) - Dispatch Interface
+- [TextRange](TextRange.md) - Dispatch Interface
+- [TextStyle](TextStyle.md) - Dispatch Interface
+- [TextStyleLevel](TextStyleLevel.md) - Dispatch Interface
+- [TextStyleLevels](TextStyleLevels.md) - Dispatch Interface
+- [TextStyles](TextStyles.md) - Dispatch Interface
+- [Theme](Theme.md) - Dispatch Interface
+- [ThemeVariant](ThemeVariant.md) - Dispatch Interface
+- [ThemeVariants](ThemeVariants.md) - Dispatch Interface
+- [ThreeDFormat](ThreeDFormat.md) - Dispatch Interface
+- [TickLabels](TickLabels.md) - Dispatch Interface
+- [TimeLine](TimeLine.md) - Dispatch Interface
+- [Timing](Timing.md) - Dispatch Interface
+- [Trendline](Trendline.md) - Dispatch Interface
+- [Trendlines](Trendlines.md) - Dispatch Interface
+- [UpBars](UpBars.md) - Dispatch Interface
+- [View](View.md) - Dispatch Interface
+- [Walls](Walls.md) - Dispatch Interface
+- [WebOptions](WebOptions.md) - Dispatch Interface
+- [XlAxisCrosses](XlAxisCrosses.md) - Enumeration
+- [XlAxisGroup](XlAxisGroup.md) - Enumeration
+- [XlAxisType](XlAxisType.md) - Enumeration
+- [XlBackground](XlBackground.md) - Enumeration
+- [XlBarShape](XlBarShape.md) - Enumeration
+- [XlBinsType](XlBinsType.md) - Enumeration
+- [XlBorderWeight](XlBorderWeight.md) - Enumeration
+- [XlCategoryLabelLevel](XlCategoryLabelLevel.md) - Enumeration
+- [XlCategorySortOrder](XlCategorySortOrder.md) - Enumeration
+- [XlCategoryType](XlCategoryType.md) - Enumeration
+- [XlChartElementPosition](XlChartElementPosition.md) - Enumeration
+- [XlChartGallery](XlChartGallery.md) - Enumeration
+- [XlChartItem](XlChartItem.md) - Enumeration
+- [XlChartPicturePlacement](XlChartPicturePlacement.md) - Enumeration
+- [XlChartPictureType](XlChartPictureType.md) - Enumeration
+- [XlChartSplitType](XlChartSplitType.md) - Enumeration
+- [XlColorIndex](XlColorIndex.md) - Enumeration
+- [XlConstants](XlConstants.md) - Enumeration
+- [XlCopyPictureFormat](XlCopyPictureFormat.md) - Enumeration
+- [XlDataLabelPosition](XlDataLabelPosition.md) - Enumeration
+- [XlDataLabelSeparator](XlDataLabelSeparator.md) - Enumeration
+- [XlDataLabelsType](XlDataLabelsType.md) - Enumeration
+- [XlDisplayBlanksAs](XlDisplayBlanksAs.md) - Enumeration
+- [XlDisplayUnit](XlDisplayUnit.md) - Enumeration
+- [XlEndStyleCap](XlEndStyleCap.md) - Enumeration
+- [XlErrorBarDirection](XlErrorBarDirection.md) - Enumeration
+- [XlErrorBarInclude](XlErrorBarInclude.md) - Enumeration
+- [XlErrorBarType](XlErrorBarType.md) - Enumeration
+- [XlGeoMappingLevel](XlGeoMappingLevel.md) - Enumeration
+- [XlGeoProjectionType](XlGeoProjectionType.md) - Enumeration
+- [XlGradientStopPositionType](XlGradientStopPositionType.md) - Enumeration
+- [XlHAlign](XlHAlign.md) - Enumeration
+- [XlLegendPosition](XlLegendPosition.md) - Enumeration
+- [XlLineStyle](XlLineStyle.md) - Enumeration
+- [XlMarkerStyle](XlMarkerStyle.md) - Enumeration
+- [XlOrientation](XlOrientation.md) - Enumeration
+- [XlParentDataLabelOptions](XlParentDataLabelOptions.md) - Enumeration
+- [XlPattern](XlPattern.md) - Enumeration
+- [XlPictureAppearance](XlPictureAppearance.md) - Enumeration
+- [XlPieSliceIndex](XlPieSliceIndex.md) - Enumeration
+- [XlPieSliceLocation](XlPieSliceLocation.md) - Enumeration
+- [XlPivotFieldOrientation](XlPivotFieldOrientation.md) - Enumeration
+- [XlReadingOrder](XlReadingOrder.md) - Enumeration
+- [XlRegionLabelOptions](XlRegionLabelOptions.md) - Enumeration
+- [XlRgbColor](XlRgbColor.md) - Enumeration
+- [XlRowCol](XlRowCol.md) - Enumeration
+- [XlScaleType](XlScaleType.md) - Enumeration
+- [XlSeriesColorGradientStyle](XlSeriesColorGradientStyle.md) - Enumeration
+- [XlSeriesNameLevel](XlSeriesNameLevel.md) - Enumeration
+- [XlSizeRepresents](XlSizeRepresents.md) - Enumeration
+- [XlTickLabelOrientation](XlTickLabelOrientation.md) - Enumeration
+- [XlTickLabelPosition](XlTickLabelPosition.md) - Enumeration
+- [XlTickMark](XlTickMark.md) - Enumeration
+- [XlTimeUnit](XlTimeUnit.md) - Enumeration
+- [XlTrendlineType](XlTrendlineType.md) - Enumeration
+- [XlUnderlineStyle](XlUnderlineStyle.md) - Enumeration
+- [XlVAlign](XlVAlign.md) - Enumeration
+- [XlValueSortOrder](XlValueSortOrder.md) - Enumeration

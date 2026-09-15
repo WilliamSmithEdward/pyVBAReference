@@ -1,0 +1,79 @@
+{
+  "name": "LegendEntries",
+  "kind": "Dispatch Interface",
+  "guid": "{92D41A6F-F07E-4CA4-AF6F-BEF486AA4E6F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of all the LegendEntry objects in the specified chart legend.",
+  "remarks": "Each legend entry has two parts: - The text of the entry, which is the name of the series or trendline associated with the legend entry. - The entry marker, which visually links the legend entry with its associated series or trendline in the chart. The formatting properties for the entry marker and its associated series or trendline are contained in the LegendKey object.",
+  "example": "With ActiveDocument.InlineShapes(1)\n\n    If .HasChart Then\n\n        With .Chart.Legend\n\n            For i = 1 To .LegendEntries.Count\n\n                .LegendEntries(i).Font.ColorIndex = 5\n\n            Next\n\n        End With\n\n    End If\n\nEnd With",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the collection. Read-only Long."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the Microsoft PowerPoint application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As LegendEntry",
+      "description": "Returns a single object from a collection.",
+      "returns": "LegendEntry",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The index number for the object."
+        }
+      ]
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "method",
+      "signature": "_NewEnum() As IUnknown",
+      "description": "",
+      "returns": "IUnknown"
+    },
+    {
+      "name": "_Default",
+      "kind": "method",
+      "signature": "_Default(Index As Variant) As LegendEntry",
+      "description": "",
+      "returns": "LegendEntry",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

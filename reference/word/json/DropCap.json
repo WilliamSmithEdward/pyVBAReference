@@ -1,0 +1,77 @@
+{
+  "name": "DropCap",
+  "kind": "Dispatch Interface",
+  "guid": "{00020956-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a dropped capital letter at the beginning of a paragraph. There is no DropCaps collection; each Paragraph object contains only one DropCap object.",
+  "remarks": "Use the DropCap property to return a DropCap object. The following example sets a dropped capital letter for the first letter in the first paragraph in the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified DropCap object."
+    },
+    {
+      "name": "Position",
+      "kind": "property",
+      "type": "WdDropPosition",
+      "access": "read/write",
+      "description": "Returns or sets the position of a dropped capital letter. Read/write WdDropPosition."
+    },
+    {
+      "name": "FontName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String that represents the name of the font for the dropped capital letter. Read/write."
+    },
+    {
+      "name": "LinesToDrop",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the height (in lines) of the specified dropped capital letter. Read/write Long."
+    },
+    {
+      "name": "DistanceFromText",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the distance (in points) between the dropped capital letter and the paragraph text. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Clear",
+      "kind": "method",
+      "signature": "Clear()",
+      "description": "Removes the dropped capital letter formatting.",
+      "returns": "void"
+    },
+    {
+      "name": "Enable",
+      "kind": "method",
+      "signature": "Enable()",
+      "description": "Formats the first character in the specified paragraph as a dropped capital letter.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

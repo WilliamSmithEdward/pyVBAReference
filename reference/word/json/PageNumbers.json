@@ -1,0 +1,141 @@
+{
+  "name": "PageNumbers",
+  "kind": "Dispatch Interface",
+  "guid": "{00020986-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of PageNumber objects that represent the page numbers in a single header or footer.",
+  "remarks": "Use the PageNumbers property to return the PageNumbers collection. The following example starts page numbering at 3 for the first section in the active document. Use the Add method to add page numbers to a header or footer. The following example adds a page number to the primary footer in the first section. To add or change page numbers in a document with multiple sections, modify the page numbers in each section or set the LinkToPrevious property to True. Use PageNumbers (_index_), where _index_ is the index number, to return a single PageNumber object. In most cases, a header or footer contains only one page number, which is index number 1. The following example centers the first page number in the primary header in the first section.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified PageNumbers object."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of page numbers in the collection. Read-only."
+    },
+    {
+      "name": "NumberStyle",
+      "kind": "property",
+      "type": "WdPageNumberStyle",
+      "access": "read/write",
+      "description": "Returns or sets a WdPageNumberStyle constant that represents the number style. Read/write."
+    },
+    {
+      "name": "IncludeChapterNumber",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if a chapter number is included with page numbers or a caption label. Read/write Boolean."
+    },
+    {
+      "name": "HeadingLevelForChapter",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the heading level style that's applied to the chapter titles in the document. Read/write Long."
+    },
+    {
+      "name": "ChapterPageSeparator",
+      "kind": "property",
+      "type": "WdSeparatorType",
+      "access": "read/write",
+      "description": "Returns or sets the separator character used between the chapter number and the page number. Read/write WdSeparatorType."
+    },
+    {
+      "name": "RestartNumberingAtSection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if page numbering starts at 1 again at the beginning of the specified section. Read/write Boolean."
+    },
+    {
+      "name": "StartingNumber",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the starting note number, line number, or page number. Read/write Long."
+    },
+    {
+      "name": "ShowFirstPageNumber",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the page number appears on the first page in the section. Read/write Boolean."
+    },
+    {
+      "name": "DoubleQuote",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word encloses the specified PageNumbers object in double quotation marks (\"). Read/write Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As PageNumber",
+      "description": "Returns an individual PageNumber object in a collection.",
+      "returns": "PageNumber",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([PageNumberAlignment As Variant], [FirstPage As Variant]) As PageNumber",
+      "description": "Returns a PageNumber object that represents page numbers added to a header or footer in a section.",
+      "returns": "PageNumber",
+      "parameters": [
+        {
+          "name": "PageNumberAlignment",
+          "type": "Variant",
+          "optional": true,
+          "description": "Can be any WdPageNumberAlignment constant."
+        },
+        {
+          "name": "FirstPage",
+          "type": "Variant",
+          "optional": true,
+          "description": "False to make the first-page header and the first-page footer different from the headers and footers on all subsequent pages in the document. If FirstPage is set to False, a page number isn't added to the first page. If this argument is omitted, the setting is controlled by the DifferentFirstPageHeaderFooter property."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

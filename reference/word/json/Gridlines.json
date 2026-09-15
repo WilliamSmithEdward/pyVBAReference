@@ -1,0 +1,106 @@
+{
+  "name": "Gridlines",
+  "kind": "Dispatch Interface",
+  "guid": "{FC9090AF-0DDB-4EC1-86E8-8751F2199F2C}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents major or minor gridlines on a chart axis.",
+  "remarks": "Gridlines extend the tick marks on a chart axis to make it easier to see the values associated with the data markers. This object is not a collection. There is no object that represents a single gridline; you either enable all gridlines for an axis or disable all of them. Use the MajorGridlines property to return the GridLines object that represents the major gridlines for the axis. Use the MinorGridlines property to return the GridLines object that represents the minor gridlines. It is possible to return both major and minor gridlines at the same time.",
+  "example": "With ActiveDocument.InlineShapes(1)\n If .HasChart Then\n With .Chart.Axes(xlCategory)\n .HasMajorGridlines = True\n .MajorGridlines.Border.Color = RGB(0, 0, 255)\n .MajorGridlines.Border.LineStyle = xlDash\n End With\n End If\nEnd With",
+  "properties": [
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the object. Read-only String."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "Border",
+      "kind": "property",
+      "type": "ChartBorder",
+      "access": "read-only",
+      "description": "Returns the border of the object. Read-only ChartBorder."
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "ChartFormat",
+      "access": "read-only",
+      "description": "Returns the line, fill, and effect formatting for the object. Read-only ChartFormat."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the Microsoft Word application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select() As Variant",
+      "description": "Selects the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "SetProperty",
+      "kind": "method",
+      "signature": "SetProperty(ID As String, Value As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Value",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GetProperty",
+      "kind": "method",
+      "signature": "GetProperty(ID As String) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "ID",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

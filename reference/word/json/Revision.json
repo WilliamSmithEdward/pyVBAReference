@@ -1,0 +1,112 @@
+{
+  "name": "Revision",
+  "kind": "Dispatch Interface",
+  "guid": "{00020981-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a change marked with a revision mark. The Revision object is a member of the Revisions collection. The Revisions collection includes all the revision marks in a range or document.",
+  "remarks": "Use Revisions (Index), where Index is the index number, to return a single Revision object. The index number represents the position of the revision in the range or document. The following example displays the author name for the first revision in section one of the active document. The Add method isn't available for the Revisions collection. Revision objects are added when change tracking is enabled. Set the TrackRevisions property to True to track revisions made to the document text. The following example enables revision tracking and then inserts \"Action \" before the selection.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Revision object."
+    },
+    {
+      "name": "Author",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the user who made the specified tracked change. Read-only String."
+    },
+    {
+      "name": "Date",
+      "kind": "property",
+      "type": "Date",
+      "access": "read-only",
+      "description": "The date and time that the tracked change was made. Read-only Date."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the portion of a document that's contained within a revision mark."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "WdRevisionType",
+      "access": "read-only",
+      "description": "Returns the revision type. Read-only WdRevisionType."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the position of an item in a collection. Read-only."
+    },
+    {
+      "name": "Style",
+      "kind": "property",
+      "type": "Style",
+      "access": "read-only",
+      "description": "Returns a Style object that represents the style associated with a revision mark."
+    },
+    {
+      "name": "FormatDescription",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String representing a description of tracked formatting changes in a revision. Read-only."
+    },
+    {
+      "name": "MovedRange",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents a range of text that was moved from one place to another in a document with tracked changes. Read-only."
+    },
+    {
+      "name": "Cells",
+      "kind": "property",
+      "type": "Cells",
+      "access": "read-only",
+      "description": "Returns a Cells collection that represents the table cells that have been marked with revision marks. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Accept",
+      "kind": "method",
+      "signature": "Accept()",
+      "description": "Accepts the specified tracked change, removes the revision mark, and incorporates the change into the document.",
+      "returns": "void"
+    },
+    {
+      "name": "Reject",
+      "kind": "method",
+      "signature": "Reject()",
+      "description": "Rejects the specified tracked change. The revision marks are removed, leaving the original text intact.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

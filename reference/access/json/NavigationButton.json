@@ -1,0 +1,1153 @@
+{
+  "name": "NavigationButton",
+  "kind": "Class",
+  "guid": "{3B06E993-E47C-11CD-8701-00AA003F0F07}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "This object represents a navigation button in a navigation control on a form.",
+  "remarks": "When you choose a navigation button, the form or report specified in the NavigationTargetName is displayed. Use the NavigationWhereClause to filter the records displayed on the form. Use the Tabs property of the NavigationControl object to return the collection of navigation buttons for a navigation control. Use the SelectedTab property of the NavigationControl object to return the navigation button that is currently selected.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Use the Application property to access the active Microsoft Access Application object and its related properties. Read-only Application object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "OldValue",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Use the OldValue property to determine the unedited value of a bound control. Read-only Variant."
+    },
+    {
+      "name": "Properties",
+      "kind": "property",
+      "type": "Properties",
+      "access": "read-only",
+      "description": "Returns a reference to a control's Properties collection object. Read-only."
+    },
+    {
+      "name": "Controls",
+      "kind": "property",
+      "type": "Children",
+      "access": "read-only",
+      "description": "Returns the Controls collection of a form, subform, report, or section. Read-only Controls."
+    },
+    {
+      "name": "Hyperlink",
+      "kind": "property",
+      "type": "_Hyperlink",
+      "access": "read-only",
+      "description": "Use the Hyperlink property to return a reference to a Hyperlink object and to access the properties and methods of a control's hyperlink. Read-only."
+    },
+    {
+      "name": "EventProcPrefix",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the prefix portion of an event procedure name. Read/write String."
+    },
+    {
+      "name": "ControlType",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the ControlType property in Visual Basic to determine the type of control on a form or report. Read/write Byte."
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the text that appears in the control. Read/write String."
+    },
+    {
+      "name": "Picture",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the Picture property to specify a bitmap or other type of graphic to be displayed on the specified control. Read/write String."
+    },
+    {
+      "name": "PictureType",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the PictureType property to specify whether Microsoft Access stores an object's picture as a linked or an embedded object. Read/write Byte."
+    },
+    {
+      "name": "PictureData",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Use the PictureData property to copy the picture to another object that supports the Picture property. Read/write Variant."
+    },
+    {
+      "name": "Transparent",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the Transparent property to specify whether a command button is solid or transparent. Read/write Boolean."
+    },
+    {
+      "name": "AutoRepeat",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the AutoRepeat property to specify whether an event procedure or macro runs repeatedly while a command button on a form remains pressed in. Read/write Boolean."
+    },
+    {
+      "name": "StatusBarText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the StatusBarText property to specify the text that is displayed in the status bar when a control is selected. Read/write String."
+    },
+    {
+      "name": "OnPush",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Click box in the Properties window of a command button. Read/write String."
+    },
+    {
+      "name": "HyperlinkAddress",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the HyperlinkAddress property to specify or determine the path to an object, document, webpage, or other destination for a hyperlink associated with the specified control. Read/write String."
+    },
+    {
+      "name": "HyperlinkSubAddress",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the HyperlinkSubAddress property to specify or determine a location within the target document specified by the HyperlinkAddress property. Read/write String."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether the object is visible. Read/write Boolean."
+    },
+    {
+      "name": "DisplayWhen",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the DisplayWhen property to specify which of a form's controls you want displayed on screen and in print. Read/write Byte."
+    },
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the Enabled property to set or return the status of the conditional format in the FormatCondition object. Read/write Boolean."
+    },
+    {
+      "name": "TabStop",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the TabStop property to specify whether you can use the Tab key to move the focus to a control. Read/write Boolean."
+    },
+    {
+      "name": "TabIndex",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the TabIndex property to specify a control's place in the tab order on a form or report. Read/write Integer."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read-only",
+      "description": "Use the Left property to specify an object's location on a form or report. Read/write Integer."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read-only",
+      "description": "Use the Top property to specify an object's location on a form or report. Read/write Integer."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Gets or sets the width of the specified object in twips. Read/write Integer."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Gets or sets the height of the specified object in twips. Read/write Integer."
+    },
+    {
+      "name": "ForeColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Use the ForeColor property to specify the color for text in a control. Read/write Long."
+    },
+    {
+      "name": "FontName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the FontName property to specify the font for text in the following situations:"
+    },
+    {
+      "name": "FontSize",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the FontSize property to specify the point size for text in the following situations:"
+    },
+    {
+      "name": "FontWeight",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the FontWeight property to specify the line width that Windows uses to display and print characters in a control. Read/write Integer."
+    },
+    {
+      "name": "FontItalic",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the FontItalic property to specify whether text is italic in the following situations:"
+    },
+    {
+      "name": "FontUnderline",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the FontUnderline property to specify whether text is underlined in the following situations:"
+    },
+    {
+      "name": "FontBold",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the FontBold property to specify whether a font appears in a bold style in the following situations:"
+    },
+    {
+      "name": "ShortcutMenuBar",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the ShortcutMenuBar property to specify the shortcut menu that appears when you right-click the specified object. Read/write String."
+    },
+    {
+      "name": "ControlTipText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the ControlTipText property to specify the text that appears in a ScreenTip when you hold the mouse pointer over a control. Read/write String."
+    },
+    {
+      "name": "HelpContextId",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "The HelpContextID property specifies the context ID of a topic in the custom Help file specified by the HelpFile property setting. Read/write Long."
+    },
+    {
+      "name": "AutoLabel",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Specifies whether labels are automatically created and attached to new controls. Read/write Boolean."
+    },
+    {
+      "name": "AddColon",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Specifies whether a colon follows the text in labels for new controls. Read/write Boolean."
+    },
+    {
+      "name": "LabelX",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "The LabelX property (along with the LabelY property) specifies the placement of the label for a new control. Read/write Integer."
+    },
+    {
+      "name": "LabelY",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "The LabelY property (along with the LabelX property) specifies the placement of the label for a new control. Read/write Integer."
+    },
+    {
+      "name": "LabelAlign",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "The LabelAlign property specifies the text alignment within attached labels on new controls. Read/write Byte."
+    },
+    {
+      "name": "Section",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "You can identify these controls by the section of a form or report where the control appears. Read/write Integer."
+    },
+    {
+      "name": "Tag",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Stores extra information about a form, report, section, or control needed by a Microsoft Access application. Read/write String."
+    },
+    {
+      "name": "ObjectPalette",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "The ObjectPalette property specifies the palette in the application used to create a bitmap or other graphic that is loaded into the specified control by using the Picture property. Read/write Variant."
+    },
+    {
+      "name": "IsVisible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the IsVisible property to determine whether a control on a report is visible. Read/write Boolean."
+    },
+    {
+      "name": "InSelection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the InSelection property to determine or specify whether a control on a form in Design view is selected. Read/write Boolean."
+    },
+    {
+      "name": "OnEnter",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Enter box in the Properties window of specified object. Read/write String."
+    },
+    {
+      "name": "OnExit",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Exit box in the Properties window of specified object. Read/write String."
+    },
+    {
+      "name": "OnGotFocus",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Got Focus box in the Properties window of the specified object. Read/write String."
+    },
+    {
+      "name": "OnLostFocus",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Lost Focus box in the Properties window of the specified object. Read/write String."
+    },
+    {
+      "name": "OnClick",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Click box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnDblClick",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Dbl Click box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnMouseDown",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Mouse Down box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnMouseMove",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Mouse Move box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnMouseUp",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Mouse Up box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnKeyDown",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Key Down box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnKeyUp",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Key Up box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnKeyPress",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Key Press box in the Properties window. Read/write String."
+    },
+    {
+      "name": "ReadingOrder",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the ReadingOrder property to specify or determine the reading order of words in text. Read/write Byte."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the Name property to specify or determine the string expression that identifies the name of an object. Read/write String."
+    },
+    {
+      "name": "Layout",
+      "kind": "property",
+      "type": "AcLayoutType",
+      "access": "read-only",
+      "description": "Returns the type of layout for the specified button. Read-only AcLayoutType."
+    },
+    {
+      "name": "LeftPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Gets or sets the amount of space (in inches) between the button and its left gridline. Read/write Integer."
+    },
+    {
+      "name": "TopPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Gets or sets the amount of space (in inches) between the button and its top gridline. Read/write Integer."
+    },
+    {
+      "name": "RightPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Gets or sets the amount of space (in inches) between the button and its right gridline. Read/write Integer."
+    },
+    {
+      "name": "BottomPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Gets or sets the amount of space (in inches) between the button and its bottom gridline. Read/write Integer."
+    },
+    {
+      "name": "GridlineStyleLeft",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Gets or sets the left gridline style of the specified button. Read/write Byte."
+    },
+    {
+      "name": "GridlineStyleTop",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Gets or sets the top gridline style of the specified button. Read/write Byte."
+    },
+    {
+      "name": "GridlineStyleRight",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Gets or sets the right gridline style of the specified button. Read/write Byte."
+    },
+    {
+      "name": "GridlineStyleBottom",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Gets or sets the bottom gridline style of the specified button. Read/write Byte."
+    },
+    {
+      "name": "GridlineWidthLeft",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Gets or sets the width of the left gridline for the specified button. Read/write Byte."
+    },
+    {
+      "name": "GridlineWidthTop",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Gets or sets the width of the top gridline for the specified button. Read/write Byte."
+    },
+    {
+      "name": "GridlineWidthRight",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Gets or sets the width of the right gridline for the specified button. Read/write Byte."
+    },
+    {
+      "name": "GridlineWidthBottom",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Gets or sets the width of the bottom gridline for the specified button. Read/write Byte."
+    },
+    {
+      "name": "GridlineColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the color of the gridline for the specified button. Read/write Long."
+    },
+    {
+      "name": "HorizontalAnchor",
+      "kind": "property",
+      "type": "AcHorizontalAnchor",
+      "access": "read/write",
+      "description": "Gets or sets an AcHorizontalAnchor constant that indicates how the button is anchored horizontally within its layout. Read/write."
+    },
+    {
+      "name": "VerticalAnchor",
+      "kind": "property",
+      "type": "AcVerticalAnchor",
+      "access": "read/write",
+      "description": "Gets or sets an AcVerticalAnchor constant that indicates how the specified button is anchored vertically within its layout. Read/write."
+    },
+    {
+      "name": "LayoutID",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the unique identifier for the layout that contains the specified button. Read-only Long."
+    },
+    {
+      "name": "BackStyle",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the BackStyle property to specify whether a control will be transparent. Read/write Byte."
+    },
+    {
+      "name": "CursorOnHover",
+      "kind": "property",
+      "type": "AcCursorOnHover",
+      "access": "read/write",
+      "description": "Gets or sets the type of mouse cursor displayed when the user rests the pointer on a button. Read/write AcCursorOnHover."
+    },
+    {
+      "name": "PictureCaptionArrangement",
+      "kind": "property",
+      "type": "AcPictureCaptionArrangement",
+      "access": "read/write",
+      "description": "Gets or sets how the specified button's caption is arranged in relation to its picture. Read/write AcPictureCaptionArrangement."
+    },
+    {
+      "name": "Alignment",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Gets or sets how the specified button's caption and picture are aligned. Read/write Byte."
+    },
+    {
+      "name": "ForeThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets a value that represents a color in the applied color theme associated with the ForeColor property of the specified object. Read/write Long."
+    },
+    {
+      "name": "ForeTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the tint that is applied to the theme color in the ForeColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "ForeShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the shade that is applied to the theme color in the ForeColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "ThemeFontIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the font index that represents a font in the applied theme associated with the FontName property of the specified object. Read/write Long."
+    },
+    {
+      "name": "GridlineThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the theme color index that represents a color in the applied color theme associated with the GridlineColor property of the specified object. Read/write Long."
+    },
+    {
+      "name": "GridlineTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the tint applied to the theme color in the GridlineColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "GridlineShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the shade applied to the theme color in the GridlineColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "NavigationTargetName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the name of the form or report to be displayed when the user chooses the specified navigation button. Read/write String."
+    },
+    {
+      "name": "NavigationWhereClause",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the filter criteria applied when opening the form or report associated with the specified navigation button. Read/write String."
+    },
+    {
+      "name": "ParentTab",
+      "kind": "property",
+      "type": "NavigationButton",
+      "access": "read-only",
+      "description": "Gets the top-level navigation button associated with the specified navigation button. Read-only NavigationButton."
+    },
+    {
+      "name": "BackThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets a value that represents a color in the applied color theme associated with the BackColor property of the specified object. Read/write Long."
+    },
+    {
+      "name": "BackTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the tint that is applied to the theme color in the BackColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "BackShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the shade applied to the theme color in the BackColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "BorderThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets a value that represents a color in the applied color theme associated with the BorderColor property of the specified object. Read/write Long."
+    },
+    {
+      "name": "BorderTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the tint that is applied to the theme color in the BorderColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "BorderShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the shade applied to the theme color in the BorderColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "BorderWidth",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the BorderWidth property to specify the width of a control's border. Read/write Byte."
+    },
+    {
+      "name": "BorderStyle",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Specifies how a control's border appears. Read/write Byte."
+    },
+    {
+      "name": "HoverColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the color displayed on the control when the user rests the mouse cursor over it. Read/write Long."
+    },
+    {
+      "name": "HoverThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the theme color index that represents a color in the applied color theme associated with the HoverColor property of the specified object. Read/write Long."
+    },
+    {
+      "name": "HoverTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the tint applied to the theme color in the HoverColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "HoverShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the shade that is applied to the theme color in the HoverColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "HoverForeColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the color of the text displayed on the control when the user rests the mouse cursor over it. Read/write Long."
+    },
+    {
+      "name": "HoverForeThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the theme color index that represents a color in the applied color theme associated with the HoverForeColor property of the specified object. Read/write Long."
+    },
+    {
+      "name": "HoverForeTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the tint applied to the theme color in the HoverForeColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "HoverForeShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the shade applied to the theme color in the HoverForeColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "PressedColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the color displayed on the control when the user chooses it. Read/write Long."
+    },
+    {
+      "name": "PressedThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the theme color index that represents a color in the applied color theme associated with the PressedColor property of the specified object. Read/write Long."
+    },
+    {
+      "name": "PressedTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the tint applied to the theme color in the PressedColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "PressedShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the shade that is applied to the theme color in the PressedColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "PressedForeColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the color of the text displayed on the control when the user chooses it. Read/write Long."
+    },
+    {
+      "name": "PressedForeThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the theme color index that represents a color in the applied color theme associated with the PressedForeColor property of the specified object. Read/write Long."
+    },
+    {
+      "name": "PressedForeTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the tint applied to the theme color in the PressedForeColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "PressedForeShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the shade applied to the theme color in the PressedForeColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "Shape",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the shape of the specified navigation button. Read/write Long."
+    },
+    {
+      "name": "Bevel",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the bevel effect applied to the specified object. Read/write Long."
+    },
+    {
+      "name": "Glow",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the glow effect applied to the specified object. Read/write Long."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the shadow effect applied to the specified object. Read/write Long."
+    },
+    {
+      "name": "SoftEdges",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the soft edges effect applied to the specified object. Read/write Long."
+    },
+    {
+      "name": "QuickStyle",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the quick style that is applied to the specified object. Read/write Long."
+    },
+    {
+      "name": "QuickStyleMask",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets modifications to the quick style that is applied to the specified object. Read/write Long."
+    },
+    {
+      "name": "Gradient",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the gradient fill applied to the specified object. Read/write Long."
+    },
+    {
+      "name": "BackColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the interior color of the specified object. Read/write Long."
+    },
+    {
+      "name": "BorderColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Use the BorderColor property to specify the color of a control's border. Read/write Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "SizeToFit",
+      "kind": "method",
+      "signature": "SizeToFit()",
+      "description": "Use the SizeToFit method to size a control so that it fits the text or image that it contains.",
+      "returns": "void"
+    },
+    {
+      "name": "Requery",
+      "kind": "method",
+      "signature": "Requery()",
+      "description": "The Requery method updates the data underlying a specified control that's on the active form by requerying the source of data for the control.",
+      "returns": "void"
+    },
+    {
+      "name": "SetFocus",
+      "kind": "method",
+      "signature": "SetFocus()",
+      "description": "The SetFocus method moves the focus to the specified form, the specified control on the active form, or the specified field on the active datasheet.",
+      "returns": "void"
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move(Left As Variant, [Top As Variant], [Width As Variant], [Height As Variant])",
+      "description": "Moves the specified object to the coordinates specified by the argument values.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": false,
+          "description": "The screen position in twips for the left edge of the object relative to the left edge of the Microsoft Access window."
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": "The screen position in twips for the top edge of the object relative to the top edge of the Access window."
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": "The desired width of the object in twips."
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": "The desired height of the object in twips."
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "Click",
+      "kind": "event",
+      "signature": "Click()",
+      "description": "The Click event occurs when the user presses and then releases a mouse button over an object."
+    },
+    {
+      "name": "Enter",
+      "kind": "event",
+      "signature": "Enter()",
+      "description": "The Enter event occurs before a control actually receives the focus from a control on the same form or report."
+    },
+    {
+      "name": "Exit",
+      "kind": "event",
+      "signature": "Exit(Cancel As Integer)",
+      "description": "The Exit event occurs just before a control loses the focus to another control on the same form or report.",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": "Set to True to cancel the event."
+        }
+      ]
+    },
+    {
+      "name": "GotFocus",
+      "kind": "event",
+      "signature": "GotFocus()",
+      "description": "The GotFocus event occurs when the specified object receives the focus."
+    },
+    {
+      "name": "LostFocus",
+      "kind": "event",
+      "signature": "LostFocus()",
+      "description": "The LostFocus event occurs when the specified object loses the focus."
+    },
+    {
+      "name": "DblClick",
+      "kind": "event",
+      "signature": "DblClick(Cancel As Integer)",
+      "description": "The DblClick event occurs when the user presses and releases the left mouse button twice over an object within the double-click time limit of the system.",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": "The setting determines if the DblClick event occurs. Setting the _Cancel_ argument to True (1) cancels the DblClick event."
+        }
+      ]
+    },
+    {
+      "name": "MouseDown",
+      "kind": "event",
+      "signature": "MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "The MouseDown event occurs when the user presses a mouse button.",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": "The button that was pressed to trigger the event. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>"
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": "The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": "The _x_ coordinate for the current location of the mouse pointer, in twips."
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": "The _y_ coordinate for the current location of the mouse pointer, in twips."
+        }
+      ]
+    },
+    {
+      "name": "MouseMove",
+      "kind": "event",
+      "signature": "MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "The MouseMove event occurs when the user moves the mouse.",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": "The button that was pressed or released when the event was triggered. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>"
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": "The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": "The _x_ coordinate for the current location of the mouse pointer, in twips."
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": "The _y_ coordinate for the current location of the mouse pointer, in twips."
+        }
+      ]
+    },
+    {
+      "name": "MouseUp",
+      "kind": "event",
+      "signature": "MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "The MouseUp event occurs when the user releases a mouse button.",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": "The button that was released to trigger the event. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>"
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": "The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": "The _x_ coordinate for the current location of the mouse pointer, in twips."
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": "The _y_ coordinate for the current location of the mouse pointer, in twips."
+        }
+      ]
+    },
+    {
+      "name": "KeyDown",
+      "kind": "event",
+      "signature": "KeyDown(KeyCode As Integer, Shift As Integer)",
+      "description": "The KeyDown event occurs when the user presses a key while a form or control has the focus. This event also occurs if you send a keystroke to a form or control by using the SendKeys action in a macro or the SendKeys statement in Visual Basic.",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "Integer",
+          "optional": false,
+          "description": "A key code, such as vbKeyF1 (the F1 key) or vbKeyHome (the Home key). To specify key codes, use the intrinsic constants shown in the Object Browser. You can prevent an object from receiving a keystroke by setting _KeyCode_ to 0."
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": "The state of the Shift, Ctrl, and Alt keys at the time of the event. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+        }
+      ]
+    },
+    {
+      "name": "KeyPress",
+      "kind": "event",
+      "signature": "KeyPress(KeyAscii As Integer)",
+      "description": "The KeyPress event occurs when the user presses and releases a key or key combination that corresponds to an ANSI code while a form or control has the focus. This event also occurs if you send an ANSI keystroke to a form or control by using the SendKeys action in a macro or the SendKeys statement in Visual Basic.",
+      "parameters": [
+        {
+          "name": "KeyAscii",
+          "type": "Integer",
+          "optional": false,
+          "description": "Returns a numeric ANSI key code. The _KeyAscii_ argument is passed by reference; changing it sends a different character to the object. Setting the _KeyAscii_ argument to 0 cancels the keystroke so that the object doesn't recognize that a key was pressed."
+        }
+      ]
+    },
+    {
+      "name": "KeyUp",
+      "kind": "event",
+      "signature": "KeyUp(KeyCode As Integer, Shift As Integer)",
+      "description": "The KeyUp event occurs when the user releases a key while a form or control has the focus. This event also occurs if you send a keystroke to a form or control by using the SendKeys action in a macro or the SendKeys statement in Visual Basic.",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "Integer",
+          "optional": false,
+          "description": "A key code, such as vbKeyF1 (the F1 key) or vbKeyHome (the Home key). To specify key codes, use the intrinsic constants shown in the Object Browser. You can prevent an object from receiving a keystroke by setting _KeyCode_ to 0."
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": "The state of the Shift, Ctrl, and Alt keys at the time of the event. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+        }
+      ]
+    }
+  ]
+}

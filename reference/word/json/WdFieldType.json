@@ -1,0 +1,493 @@
+{
+  "name": "WdFieldType",
+  "kind": "Enumeration",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Specifies a Microsoft Word field. Unless otherwise specified, the field types described in this enumeration can be added interactively to a Word document by using the Field dialog box. See the Word Help for more information about specific field codes.",
+  "constants": [
+    {
+      "name": "wdFieldEmpty",
+      "value": -1,
+      "description": "Empty field. Acts as a placeholder for field content that has not yet been added. A field added by pressing Ctrl+F9 in the user interface is an Empty field."
+    },
+    {
+      "name": "wdFieldRef",
+      "value": 3,
+      "description": "Ref field."
+    },
+    {
+      "name": "wdFieldIndexEntry",
+      "value": 4,
+      "description": "XE (Index Entry) field."
+    },
+    {
+      "name": "wdFieldFootnoteRef",
+      "value": 5,
+      "description": "FootnoteRef field. Not available through the Field dialog box. Inserted programmatically or interactively."
+    },
+    {
+      "name": "wdFieldSet",
+      "value": 6,
+      "description": "Set field."
+    },
+    {
+      "name": "wdFieldIf",
+      "value": 7,
+      "description": "If field."
+    },
+    {
+      "name": "wdFieldIndex",
+      "value": 8,
+      "description": "Index field."
+    },
+    {
+      "name": "wdFieldTOCEntry",
+      "value": 9,
+      "description": "TOC (Table of Contents Entry) field."
+    },
+    {
+      "name": "wdFieldStyleRef",
+      "value": 10,
+      "description": "StyleRef field."
+    },
+    {
+      "name": "wdFieldRefDoc",
+      "value": 11,
+      "description": "RD (Reference Document) field."
+    },
+    {
+      "name": "wdFieldSequence",
+      "value": 12,
+      "description": "Seq (Sequence) field."
+    },
+    {
+      "name": "wdFieldTOC",
+      "value": 13,
+      "description": "TOC (Table of Contents) field."
+    },
+    {
+      "name": "wdFieldInfo",
+      "value": 14,
+      "description": "Info field."
+    },
+    {
+      "name": "wdFieldTitle",
+      "value": 15,
+      "description": "Title field."
+    },
+    {
+      "name": "wdFieldSubject",
+      "value": 16,
+      "description": "Subject field."
+    },
+    {
+      "name": "wdFieldAuthor",
+      "value": 17,
+      "description": "Author field."
+    },
+    {
+      "name": "wdFieldKeyWord",
+      "value": 18,
+      "description": "Keywords field."
+    },
+    {
+      "name": "wdFieldComments",
+      "value": 19,
+      "description": "Comments field."
+    },
+    {
+      "name": "wdFieldLastSavedBy",
+      "value": 20,
+      "description": "LastSavedBy field."
+    },
+    {
+      "name": "wdFieldCreateDate",
+      "value": 21,
+      "description": "CreateDate field."
+    },
+    {
+      "name": "wdFieldSaveDate",
+      "value": 22,
+      "description": "SaveDate field."
+    },
+    {
+      "name": "wdFieldPrintDate",
+      "value": 23,
+      "description": "PrintDate field."
+    },
+    {
+      "name": "wdFieldRevisionNum",
+      "value": 24,
+      "description": "RevNum field."
+    },
+    {
+      "name": "wdFieldEditTime",
+      "value": 25,
+      "description": "EditTime field."
+    },
+    {
+      "name": "wdFieldNumPages",
+      "value": 26,
+      "description": "NumPages field."
+    },
+    {
+      "name": "wdFieldNumWords",
+      "value": 27,
+      "description": "NumWords field."
+    },
+    {
+      "name": "wdFieldNumChars",
+      "value": 28,
+      "description": "NumChars field."
+    },
+    {
+      "name": "wdFieldFileName",
+      "value": 29,
+      "description": "FileName field."
+    },
+    {
+      "name": "wdFieldTemplate",
+      "value": 30,
+      "description": "Template field."
+    },
+    {
+      "name": "wdFieldDate",
+      "value": 31,
+      "description": "Date field."
+    },
+    {
+      "name": "wdFieldTime",
+      "value": 32,
+      "description": "Time field."
+    },
+    {
+      "name": "wdFieldPage",
+      "value": 33,
+      "description": "Page field."
+    },
+    {
+      "name": "wdFieldExpression",
+      "value": 34,
+      "description": "= (Formula) field."
+    },
+    {
+      "name": "wdFieldQuote",
+      "value": 35,
+      "description": "Quote field."
+    },
+    {
+      "name": "wdFieldInclude",
+      "value": 36,
+      "description": "Include field. Cannot be added through the Field dialog box, but can be added interactively or through code."
+    },
+    {
+      "name": "wdFieldPageRef",
+      "value": 37,
+      "description": "PageRef field."
+    },
+    {
+      "name": "wdFieldAsk",
+      "value": 38,
+      "description": "Ask field."
+    },
+    {
+      "name": "wdFieldFillIn",
+      "value": 39,
+      "description": "Fill-In field."
+    },
+    {
+      "name": "wdFieldData",
+      "value": 40,
+      "description": "Data field."
+    },
+    {
+      "name": "wdFieldNext",
+      "value": 41,
+      "description": "Next field."
+    },
+    {
+      "name": "wdFieldNextIf",
+      "value": 42,
+      "description": "NextIf field."
+    },
+    {
+      "name": "wdFieldSkipIf",
+      "value": 43,
+      "description": "SkipIf field."
+    },
+    {
+      "name": "wdFieldMergeRec",
+      "value": 44,
+      "description": "MergeRec field."
+    },
+    {
+      "name": "wdFieldDDE",
+      "value": 45,
+      "description": "DDE field. No longer available through the Field dialog box, but supported for documents created in earlier versions of Word."
+    },
+    {
+      "name": "wdFieldDDEAuto",
+      "value": 46,
+      "description": "DDEAuto field. No longer available through the Field dialog box, but supported for documents created in earlier versions of Word."
+    },
+    {
+      "name": "wdFieldGlossary",
+      "value": 47,
+      "description": "Glossary field. No longer supported in Word."
+    },
+    {
+      "name": "wdFieldPrint",
+      "value": 48,
+      "description": "Print field."
+    },
+    {
+      "name": "wdFieldFormula",
+      "value": 49,
+      "description": "EQ (Equation) field."
+    },
+    {
+      "name": "wdFieldGoToButton",
+      "value": 50,
+      "description": "GoToButton field."
+    },
+    {
+      "name": "wdFieldMacroButton",
+      "value": 51,
+      "description": "MacroButton field."
+    },
+    {
+      "name": "wdFieldAutoNumOutline",
+      "value": 52,
+      "description": "AutoNumOut field."
+    },
+    {
+      "name": "wdFieldAutoNumLegal",
+      "value": 53,
+      "description": "AutoNumLgl field."
+    },
+    {
+      "name": "wdFieldAutoNum",
+      "value": 54,
+      "description": "AutoNum field."
+    },
+    {
+      "name": "wdFieldImport",
+      "value": 55,
+      "description": "Import field. Cannot be added through the Field dialog box, but can be added interactively or through code."
+    },
+    {
+      "name": "wdFieldLink",
+      "value": 56,
+      "description": "Link field."
+    },
+    {
+      "name": "wdFieldSymbol",
+      "value": 57,
+      "description": "Symbol field."
+    },
+    {
+      "name": "wdFieldEmbed",
+      "value": 58,
+      "description": "Embedded field."
+    },
+    {
+      "name": "wdFieldMergeField",
+      "value": 59,
+      "description": "MergeField field."
+    },
+    {
+      "name": "wdFieldUserName",
+      "value": 60,
+      "description": "UserName field."
+    },
+    {
+      "name": "wdFieldUserInitials",
+      "value": 61,
+      "description": "UserInitials field."
+    },
+    {
+      "name": "wdFieldUserAddress",
+      "value": 62,
+      "description": "UserAddress field."
+    },
+    {
+      "name": "wdFieldBarCode",
+      "value": 63,
+      "description": "BarCode field."
+    },
+    {
+      "name": "wdFieldDocVariable",
+      "value": 64,
+      "description": "DocVariable field."
+    },
+    {
+      "name": "wdFieldSection",
+      "value": 65,
+      "description": "Section field."
+    },
+    {
+      "name": "wdFieldSectionPages",
+      "value": 66,
+      "description": "SectionPages field."
+    },
+    {
+      "name": "wdFieldIncludePicture",
+      "value": 67,
+      "description": "IncludePicture field."
+    },
+    {
+      "name": "wdFieldIncludeText",
+      "value": 68,
+      "description": "IncludeText field."
+    },
+    {
+      "name": "wdFieldFileSize",
+      "value": 69,
+      "description": "FileSize field."
+    },
+    {
+      "name": "wdFieldFormTextInput",
+      "value": 70,
+      "description": "FormText field."
+    },
+    {
+      "name": "wdFieldFormCheckBox",
+      "value": 71,
+      "description": "FormCheckBox field."
+    },
+    {
+      "name": "wdFieldNoteRef",
+      "value": 72,
+      "description": "NoteRef field."
+    },
+    {
+      "name": "wdFieldTOA",
+      "value": 73,
+      "description": "TOA (Table of Authorities) field."
+    },
+    {
+      "name": "wdFieldTOAEntry",
+      "value": 74,
+      "description": "TOA (Table of Authorities Entry) field."
+    },
+    {
+      "name": "wdFieldMergeSeq",
+      "value": 75,
+      "description": "MergeSeq field."
+    },
+    {
+      "name": "wdFieldPrivate",
+      "value": 77,
+      "description": "Private field."
+    },
+    {
+      "name": "wdFieldDatabase",
+      "value": 78,
+      "description": "Database field."
+    },
+    {
+      "name": "wdFieldAutoText",
+      "value": 79,
+      "description": "AutoText field."
+    },
+    {
+      "name": "wdFieldCompare",
+      "value": 80,
+      "description": "Compare field."
+    },
+    {
+      "name": "wdFieldAddin",
+      "value": 81,
+      "description": "Add-in field. Not available through the Field dialog box. Used to store data that is hidden from the user interface."
+    },
+    {
+      "name": "wdFieldSubscriber",
+      "value": 82,
+      "description": "Macintosh only. For information about this constant, consult the language reference Help included with Microsoft Office Macintosh Edition."
+    },
+    {
+      "name": "wdFieldFormDropDown",
+      "value": 83,
+      "description": "FormDropDown field."
+    },
+    {
+      "name": "wdFieldAdvance",
+      "value": 84,
+      "description": "Advance field."
+    },
+    {
+      "name": "wdFieldDocProperty",
+      "value": 85,
+      "description": "DocProperty field."
+    },
+    {
+      "name": "wdFieldOCX",
+      "value": 87,
+      "description": "OCX field. Cannot be added through the Field dialog box, but can be added through code by using the AddOLEControl method of the Shapes collection or of the InlineShapes collection."
+    },
+    {
+      "name": "wdFieldHyperlink",
+      "value": 88,
+      "description": "Hyperlink field."
+    },
+    {
+      "name": "wdFieldAutoTextList",
+      "value": 89,
+      "description": "AutoTextList field."
+    },
+    {
+      "name": "wdFieldListNum",
+      "value": 90,
+      "description": "ListNum field."
+    },
+    {
+      "name": "wdFieldHTMLActiveX",
+      "value": 91,
+      "description": "HTMLActiveX field. Not currently supported."
+    },
+    {
+      "name": "wdFieldBidiOutline",
+      "value": 92,
+      "description": "BidiOutline field."
+    },
+    {
+      "name": "wdFieldAddressBlock",
+      "value": 93,
+      "description": "AddressBlock field."
+    },
+    {
+      "name": "wdFieldGreetingLine",
+      "value": 94,
+      "description": "GreetingLine field."
+    },
+    {
+      "name": "wdFieldShape",
+      "value": 95,
+      "description": "Shape field. Automatically created for any drawn picture."
+    },
+    {
+      "name": "wdFieldCitation",
+      "value": 96,
+      "description": "Citation field."
+    },
+    {
+      "name": "wdFieldBibliography",
+      "value": 97,
+      "description": "Bibliography field."
+    },
+    {
+      "name": "wdFieldMergeBarcode",
+      "value": 98,
+      "description": "MergeBarcode field."
+    },
+    {
+      "name": "wdFieldDisplayBarcode",
+      "value": 99,
+      "description": "DisplayBarcode field."
+    },
+    {
+      "name": "wdFieldCopilot",
+      "value": 100,
+      "description": ""
+    }
+  ]
+}

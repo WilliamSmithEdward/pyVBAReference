@@ -1,0 +1,56 @@
+{
+  "name": "Bibliography",
+  "kind": "Dispatch Interface",
+  "guid": "{3834F60F-EE8C-455D-A441-D766675D6D3B}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the list of sources available attached to the document (in the current list) or the list of sources available in the application (in the master list).",
+  "remarks": "Biblographies are composed of sources. Also see the Source object and the Sources collection. For more information, see Working with Bibliographies.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Bibliography object."
+    },
+    {
+      "name": "Sources",
+      "kind": "property",
+      "type": "Sources",
+      "access": "read-only",
+      "description": "Returns a Sources collection that represents all the sources contained in a bibliography. Read-only."
+    },
+    {
+      "name": "BibliographyStyle",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String that represents the name of the active style to use for a bibliography. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "GenerateUniqueTag",
+      "kind": "method",
+      "signature": "GenerateUniqueTag() As String",
+      "description": "Generates a unique identification tag for a bibliography source and returns a String that represents the tag.",
+      "returns": "String"
+    }
+  ],
+  "events": []
+}

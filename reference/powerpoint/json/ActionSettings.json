@@ -1,0 +1,50 @@
+{
+  "name": "ActionSettings",
+  "kind": "Dispatch Interface",
+  "guid": "{9149348C-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection that contains the two ActionSetting objects for a shape or text range. One ActionSetting object represents how the specified object reacts when the user clicks it during a slide show, and the other ActionSetting object represents how the specified object reacts when the user moves the mouse pointer over it during a slide show.",
+  "remarks": "",
+  "example": "With ActivePresentation.Slides(1).Shapes(3) _\n        .ActionSettings(ppMouseOver)\n    .Action = ppActionRunMacro\n    .Run = \"CalculateTotal\"\n    .AnimateAction = True\nEnd With",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As PpMouseActivation) As ActionSetting",
+      "description": "Returns a single action setting from the specified ActionSettings collection.",
+      "returns": "ActionSetting",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "PpMouseActivation",
+          "optional": false,
+          "description": "The action setting for a MouseClick or MouseOver event."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

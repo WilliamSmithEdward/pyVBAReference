@@ -1,0 +1,175 @@
+{
+  "name": "Task",
+  "kind": "Dispatch Interface",
+  "guid": "{00020982-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single task running on the system. The Task object is a member of the Tasks collection. The Tasks collection includes all the applications that are currently running on the system.",
+  "remarks": "Use Tasks (Index), where Index is the application name or the index number, to return a single Task object. The following example switches to and resizes the application window for the first visible task in the Tasks collection. The following example restores the Calculator application window if Calculator is in the Tasks collection. Use Visual Basic's Shell function to run an executable program and add the program to the Tasks collection.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Task object."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the specified object. Read-only String."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long that represents the horizontal position of the specified task, measured in points. Read/write."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the vertical position, in points, of the specified window. Read/write Long."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the width of the specified Task object, in points. Read/write Long."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the height of the specified task window. Read/write Long."
+    },
+    {
+      "name": "WindowState",
+      "kind": "property",
+      "type": "WdWindowState",
+      "access": "read/write",
+      "description": "Returns or sets the state of the specified document window or task window. Read/write WdWindowState."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified object is visible. Read/write Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate([Wait As Variant])",
+      "description": "Activates the Task object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Wait",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to wait until the user has activated Word before activating the task. False to immediately activate the task, even if Word isn't active."
+        }
+      ]
+    },
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close()",
+      "description": "Closes the specified task.",
+      "returns": "void"
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move(Left As Long, Top As Long)",
+      "description": "Positions a task window.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Long",
+          "optional": false,
+          "description": "The horizontal screen position of the specified window."
+        },
+        {
+          "name": "Top",
+          "type": "Long",
+          "optional": false,
+          "description": "The vertical screen position of the specified window."
+        }
+      ]
+    },
+    {
+      "name": "Resize",
+      "kind": "method",
+      "signature": "Resize(Width As Long, Height As Long)",
+      "description": "Sizes the specified task window.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Width",
+          "type": "Long",
+          "optional": false,
+          "description": "The width of the window, in points."
+        },
+        {
+          "name": "Height",
+          "type": "Long",
+          "optional": false,
+          "description": "The height of the window, in points."
+        }
+      ]
+    },
+    {
+      "name": "SendWindowMessage",
+      "kind": "method",
+      "signature": "SendWindowMessage(Message As Long, wParam As Long, lParam As Long)",
+      "description": "Sends a Windows message and its associated parameters to the specified task.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Message",
+          "type": "Long",
+          "optional": false,
+          "description": "A hexadecimal number that corresponds to the message you want to send. If you have the Microsoft Platform Software Development Kit, you can look up the name of the message in the header files (Winuser.h, for example) to find the associated hexadecimal number (precede the hexadecimal value with &h)."
+        },
+        {
+          "name": "wParam",
+          "type": "Long",
+          "optional": false,
+          "description": "Parameters appropriate for the message you are sending. For information about what these values represent, see the reference topic for that message in the documentation included with the Microsoft Platform Software Development Kit, available on MSDN. To retrieve the appropriate values, you may need to use the Spy tool (which comes with the kit)."
+        },
+        {
+          "name": "lParam",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

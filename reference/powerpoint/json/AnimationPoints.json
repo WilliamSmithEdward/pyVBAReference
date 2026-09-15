@@ -1,0 +1,72 @@
+{
+  "name": "AnimationPoints",
+  "kind": "Dispatch Interface",
+  "guid": "{914934EA-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a collection of animation points for a PropertyEffect object.",
+  "remarks": "",
+  "example": "Sub AddPoint()\n    ActivePresentation.Slides(1).TimeLine.MainSequence(1) _\n        .Behaviors(1).PropertyEffect.Points.Add\nEnd Sub",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Smooth",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the transition from one animation point to another is smoothed. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As AnimationPoint",
+      "description": "Returns a single AnimationPoint object from the specified AnimationPoints collection.",
+      "returns": "AnimationPoint",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the single AnimationPoint object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([Index As Long]) As AnimationPoint",
+      "description": "Returns an AnimationPoint object that represents a new animation point.",
+      "returns": "AnimationPoint",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": true,
+          "description": "The position of the animation point in relation to other animation points. The default value is -1, which means that if you omit the Index parameter, the new animation point is added to the end of existing animation points."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

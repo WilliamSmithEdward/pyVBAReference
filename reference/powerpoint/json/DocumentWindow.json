@@ -1,0 +1,375 @@
+{
+  "name": "DocumentWindow",
+  "kind": "Dispatch Interface",
+  "guid": "{91493457-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a document window. The DocumentWindow object is a member of the DocumentWindows collection. The DocumentWindows collection contains all the open document windows.",
+  "remarks": "Use the Presentation property to return the presentation that's currently running in the specified document window. Use the Selection property to return the selection. Use the SplitHorizontal property to return the percentage of the screen width that the outline pane occupies in normal view. Use the SplitVertical property to return the percentage of the screen height that the slide pane occupies in normal view. Use the View property to return the view in the specified document window.",
+  "example": "Windows(2).Activate",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Selection",
+      "kind": "property",
+      "type": "Selection",
+      "access": "read-only",
+      "description": "Returns a Selection object that represents the selection in the specified document window. Read-only."
+    },
+    {
+      "name": "View",
+      "kind": "property",
+      "type": "View",
+      "access": "read-only",
+      "description": "Returns a View object that represents the view in the specified document window. Read-only."
+    },
+    {
+      "name": "Presentation",
+      "kind": "property",
+      "type": "Presentation",
+      "access": "read-only",
+      "description": "Returns a Presentation object that represents the presentation in which the specified document window or slide show window was created. Read-only."
+    },
+    {
+      "name": "ViewType",
+      "kind": "property",
+      "type": "PpViewType",
+      "access": "read/write",
+      "description": "Returns or sets the type of the view contained in the specified document window. Read/write."
+    },
+    {
+      "name": "BlackAndWhite",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the document window display is black and white. Read/write."
+    },
+    {
+      "name": "Active",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Returns whether the specified pane or window is active. Read-only."
+    },
+    {
+      "name": "WindowState",
+      "kind": "property",
+      "type": "PpWindowState",
+      "access": "read/write",
+      "description": "Returns or sets the state of the specified window. Read/write."
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the text that appears in the title bar of the document window. Read-only."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the distance in points from the left edge of the document, application, and slide show windows to the left edge of the application window's client area. Setting this property to a very large positive or negative value may position the window completely off the desktop. Read/write."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the distance in points from the top edge of the document, application, and slide show window to the top edge of the application window's client area. Read/write."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the width of the specified object, in points. Read/write."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the height of the specified object, in points. Read/write."
+    },
+    {
+      "name": "ActivePane",
+      "kind": "property",
+      "type": "Pane",
+      "access": "read-only",
+      "description": "Returns a Pane object that represents the active pane in the document window. Read-only."
+    },
+    {
+      "name": "Panes",
+      "kind": "property",
+      "type": "Panes",
+      "access": "read-only",
+      "description": "Returns a Panes collection that represents the panes in the document window. Read-only."
+    },
+    {
+      "name": "SplitVertical",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the percentage of the document window height that the slide pane occupies in normal view. Corresponds to the pane divider position between the slide and notes panes. Read/write."
+    },
+    {
+      "name": "SplitHorizontal",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the percentage of the document window width that the outline pane occupies in normal view. Corresponds to the pane divider position between the slide and outline panes. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "FitToPage",
+      "kind": "method",
+      "signature": "FitToPage()",
+      "description": "Adjusts the size of the specified document window to accommodate the information that's currently displayed.",
+      "returns": "void"
+    },
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate()",
+      "description": "Activates the specified object.",
+      "returns": "void"
+    },
+    {
+      "name": "LargeScroll",
+      "kind": "method",
+      "signature": "LargeScroll([Down As Long], [Up As Long], [ToRight As Long], [ToLeft As Long])",
+      "description": "Scrolls through the specified document window by pages.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Down",
+          "type": "Long",
+          "optional": true,
+          "description": "Specifies the number of pages to scroll down."
+        },
+        {
+          "name": "Up",
+          "type": "Long",
+          "optional": true,
+          "description": "Specifies the number of pages to scroll up."
+        },
+        {
+          "name": "ToRight",
+          "type": "Long",
+          "optional": true,
+          "description": "Specifies the number of pages to scroll right."
+        },
+        {
+          "name": "ToLeft",
+          "type": "Long",
+          "optional": true,
+          "description": "Specifies the number of pages to scroll left."
+        }
+      ]
+    },
+    {
+      "name": "SmallScroll",
+      "kind": "method",
+      "signature": "SmallScroll([Down As Long], [Up As Long], [ToRight As Long], [ToLeft As Long])",
+      "description": "Scrolls through the specified document window by lines and columns.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Down",
+          "type": "Long",
+          "optional": true,
+          "description": "Specifies the number of lines to scroll down."
+        },
+        {
+          "name": "Up",
+          "type": "Long",
+          "optional": true,
+          "description": "Specifies the number of lines to scroll up."
+        },
+        {
+          "name": "ToRight",
+          "type": "Long",
+          "optional": true,
+          "description": "Specifies the number of columns to scroll right."
+        },
+        {
+          "name": "ToLeft",
+          "type": "Long",
+          "optional": true,
+          "description": "Specifies the number of columns to scroll left."
+        }
+      ]
+    },
+    {
+      "name": "NewWindow",
+      "kind": "method",
+      "signature": "NewWindow() As DocumentWindow",
+      "description": "Opens a new window that contains the same document that is displayed in the specified window. Returns a DocumentWindow object that represents the new window.",
+      "returns": "DocumentWindow"
+    },
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close()",
+      "description": "Closes the specified document window.",
+      "returns": "void"
+    },
+    {
+      "name": "RangeFromPoint",
+      "kind": "method",
+      "signature": "RangeFromPoint(X As Long, Y As Long) As Object",
+      "description": "Returns the Shape object that is located at the point specified by the screen position coordinate pair. If no shape is located at the coordinate pair specified, then the method returns Nothing.",
+      "returns": "Object",
+      "parameters": [
+        {
+          "name": "X",
+          "type": "Long",
+          "optional": false,
+          "description": "The horizontal distance (in pixels) from the left edge of the screen to the point."
+        },
+        {
+          "name": "Y",
+          "type": "Long",
+          "optional": false,
+          "description": "The vertical distance (in pixels) from the top of the screen to the point."
+        }
+      ]
+    },
+    {
+      "name": "PointsToScreenPixelsX",
+      "kind": "method",
+      "signature": "PointsToScreenPixelsX(Points As Single) As Long",
+      "description": "Converts a horizontal measurement from points to pixels. Used to return a horizontal screen location for a text frame or shape. Returns the converted measurement as a Single.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Single",
+          "optional": false,
+          "description": "The horizontal measurement (in points) to be converted to pixels."
+        }
+      ]
+    },
+    {
+      "name": "PointsToScreenPixelsY",
+      "kind": "method",
+      "signature": "PointsToScreenPixelsY(Points As Single) As Long",
+      "description": "Converts a vertical measurement from points to pixels. Used to return a vertical screen location for a text frame or shape. Returns the converted measurement as a Single.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Single",
+          "optional": false,
+          "description": "The vertical measurement (in points) to be converted to pixels."
+        }
+      ]
+    },
+    {
+      "name": "ScrollIntoView",
+      "kind": "method",
+      "signature": "ScrollIntoView(Left As Single, Top As Single, Width As Single, Height As Single, [Start As MsoTriState])",
+      "description": "Scrolls the document window so that items within a specified rectangular area are displayed in the document window or pane.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The horizontal distance (in points) from the left edge of the document window to the rectangle."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The vertical distance (in points) from the upper part of the document window to the rectangle."
+        },
+        {
+          "name": "Width",
+          "type": "Single",
+          "optional": false,
+          "description": "The width of the rectangle (in points)."
+        },
+        {
+          "name": "Height",
+          "type": "Single",
+          "optional": false,
+          "description": "The height of the rectangle (in points)."
+        },
+        {
+          "name": "Start",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Determines the starting position of the rectangle in relation to the document window."
+        }
+      ]
+    },
+    {
+      "name": "IsSectionExpanded",
+      "kind": "method",
+      "signature": "IsSectionExpanded(sectionIndex As Long) As Boolean",
+      "description": "Indicates whether the selected section is expanded in the DocumentWindow.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "sectionIndex",
+          "type": "Long",
+          "optional": false,
+          "description": "The index of the section."
+        }
+      ]
+    },
+    {
+      "name": "ExpandSection",
+      "kind": "method",
+      "signature": "ExpandSection(sectionIndex As Long, Expand As Boolean)",
+      "description": "Expands the section in the current DocumentWindow.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "sectionIndex",
+          "type": "Long",
+          "optional": false,
+          "description": "The index of the section to be expanded."
+        },
+        {
+          "name": "Expand",
+          "type": "Boolean",
+          "optional": false,
+          "description": "Indicates whether the section was expanded."
+        }
+      ]
+    },
+    {
+      "name": "ShowInsertAppDialog",
+      "kind": "method",
+      "signature": "ShowInsertAppDialog(Filter As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Filter",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

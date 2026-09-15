@@ -1,0 +1,55 @@
+{
+  "name": "HeaderFooter",
+  "kind": "Dispatch Interface",
+  "guid": "{9149349C-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a header, footer, date and time, slide number, or page number on a slide or master. All the HeaderFooter objects for a slide or master are contained in a HeadersFooters object.",
+  "remarks": "Use one of the properties listed in the following table to return the HeaderFooter object.",
+  "example": "ActivePresentation.Slides(1).HeadersFooters.Footer.Text = \"Volcano Coffee\"",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Returns or sets the visibility of the specified object or the formatting applied to the specified object. Read/write."
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String that represents the text contained in the specified object. Read/write."
+    },
+    {
+      "name": "UseFormat",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the date and time object contains automatically updated information. Read/write."
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "PpDateTimeFormat",
+      "access": "read/write",
+      "description": "Returns or sets the format for the automatically updated date and time. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

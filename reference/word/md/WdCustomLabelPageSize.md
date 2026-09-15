@@ -1,0 +1,37 @@
+# WdCustomLabelPageSize
+
+**Type:** Enumeration  
+**Library:** Microsoft Word 16.0 Object Library  
+
+Specifies the page size for a custom mailing label.
+
+## Constants (14)
+
+- `wdCustomLabelLetter` = 0  
+  Standard letter portrait label dimensions.
+- `wdCustomLabelLetterLS` = 1  
+  Standard letter landscape label dimensions.
+- `wdCustomLabelA4` = 2  
+  A4 portrait label dimensions.
+- `wdCustomLabelA4LS` = 3  
+  A4 landscape label dimensions.
+- `wdCustomLabelA5` = 4  
+  A5 portrait label dimensions.
+- `wdCustomLabelA5LS` = 5  
+  A5 landscape label dimensions.
+- `wdCustomLabelB5` = 6  
+  B5 label dimensions.
+- `wdCustomLabelMini` = 7  
+  Mini label dimensions.
+- `wdCustomLabelFanfold` = 8  
+  Fanfold label dimensions.
+- `wdCustomLabelVertHalfSheet` = 9  
+  Half-sheet portrait label dimensions.
+- `wdCustomLabelVertHalfSheetLS` = 10  
+  Half-sheet landscape label dimensions.
+- `wdCustomLabelHigaki` = 11  
+  Higaki portrait label dimensions.
+- `wdCustomLabelHigakiLS` = 12  
+  Higaki landscape label dimensions.
+- `wdCustomLabelB4JIS` = 13  
+  B4 JIS label dimensions.

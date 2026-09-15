@@ -1,0 +1,15 @@
+# AcQuitOption
+
+**Type:** Enumeration  
+**Library:** Microsoft Access 16.0 Object Library  
+
+Used with the Quit method to specify whether or not to save changes to the database when quitting Microsoft Access.
+
+## Constants (3)
+
+- `acQuitPrompt` = 0  
+  Displays a dialog box that asks whether you want to save any database objects that have been changed but not saved.
+- `acQuitSaveAll` = 1  
+  (Default) Saves all objects without displaying a dialog box.
+- `acQuitSaveNone` = 2  
+  Quits Microsoft Access without saving any objects.

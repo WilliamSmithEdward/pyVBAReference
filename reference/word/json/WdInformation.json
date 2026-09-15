@@ -1,0 +1,213 @@
+{
+  "name": "WdInformation",
+  "kind": "Enumeration",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Specifies the type of information returned about a specified selection or range.",
+  "constants": [
+    {
+      "name": "wdActiveEndAdjustedPageNumber",
+      "value": 1,
+      "description": "Returns the number of the page that contains the active end of the specified selection or range. If you set a starting page number or make other manual adjustments, returns the adjusted page number (unlike wdActiveEndPageNumber)."
+    },
+    {
+      "name": "wdActiveEndSectionNumber",
+      "value": 2,
+      "description": "Returns the number of the section that contains the active end of the specified selection or range."
+    },
+    {
+      "name": "wdActiveEndPageNumber",
+      "value": 3,
+      "description": "Returns the number of the page that contains the active end of the specified selection or range, counting from the beginning of the document. Any manual adjustments to page numbering are disregarded (unlike wdActiveEndAdjustedPageNumber)."
+    },
+    {
+      "name": "wdNumberOfPagesInDocument",
+      "value": 4,
+      "description": "Returns the number of pages in the document associated with the selection or range."
+    },
+    {
+      "name": "wdHorizontalPositionRelativeToPage",
+      "value": 5,
+      "description": "Returns the horizontal position of the specified selection or range; this is the distance from the left edge of the selection or range to the left edge of the page measured in points (1 point = 20 twips, 72 points = 1 inch). If the selection or range isn't within the screen area, returns -1."
+    },
+    {
+      "name": "wdVerticalPositionRelativeToPage",
+      "value": 6,
+      "description": "Returns the vertical position of the selection or range; this is the distance from the top edge of the selection to the top edge of the page measured in points (1 point = 20 twips, 72 points = 1 inch). If the selection isn't visible in the document window, returns -1."
+    },
+    {
+      "name": "wdHorizontalPositionRelativeToTextBoundary",
+      "value": 7,
+      "description": "Returns the horizontal position of the specified selection or range relative to the left edge of the nearest text boundary enclosing it, in points (1 point = 20 twips, 72 points = 1 inch). If the selection or range isn't within the screen area, returns -1."
+    },
+    {
+      "name": "wdVerticalPositionRelativeToTextBoundary",
+      "value": 8,
+      "description": "Returns the vertical position of the selection or range relative to the top edge of the nearest text boundary enclosing it, in points (1 point = 20 twips, 72 points = 1 inch). This is useful for determining the position of the insertion point within a frame or table cell. If the selection isn't visible, returns -1."
+    },
+    {
+      "name": "wdFirstCharacterColumnNumber",
+      "value": 9,
+      "description": "Returns the character position of the first character in the specified selection or range. If the selection or range is collapsed, the character number immediately to the right of the range or selection is returned (this is the same as the character column number displayed in the status bar after \"Col\")."
+    },
+    {
+      "name": "wdFirstCharacterLineNumber",
+      "value": 10,
+      "description": "Returns the character position of the first character in the specified selection or range. If the selection or range is collapsed, the character number immediately to the right of the range or selection is returned (this is the same as the character line number displayed in the status bar after \"Ln\")."
+    },
+    {
+      "name": "wdFrameIsSelected",
+      "value": 11,
+      "description": "Returns True if the selection or range is an entire frame or text box."
+    },
+    {
+      "name": "wdWithInTable",
+      "value": 12,
+      "description": "Returns True if the selection is in a table."
+    },
+    {
+      "name": "wdStartOfRangeRowNumber",
+      "value": 13,
+      "description": "Returns the table row number that contains the beginning of the selection or range."
+    },
+    {
+      "name": "wdEndOfRangeRowNumber",
+      "value": 14,
+      "description": "Returns the table row number that contains the end of the specified selection or range."
+    },
+    {
+      "name": "wdMaximumNumberOfRows",
+      "value": 15,
+      "description": "Returns the greatest number of table rows within the table in the specified selection or range."
+    },
+    {
+      "name": "wdStartOfRangeColumnNumber",
+      "value": 16,
+      "description": "Returns the table column number that contains the beginning of the selection or range."
+    },
+    {
+      "name": "wdEndOfRangeColumnNumber",
+      "value": 17,
+      "description": "Returns the table column number that contains the end of the specified selection or range."
+    },
+    {
+      "name": "wdMaximumNumberOfColumns",
+      "value": 18,
+      "description": "Returns the greatest number of table columns within any row in the selection or range."
+    },
+    {
+      "name": "wdZoomPercentage",
+      "value": 19,
+      "description": "Returns the current percentage of magnification as set by the Percentage property."
+    },
+    {
+      "name": "wdSelectionMode",
+      "value": 20,
+      "description": "Returns a value that indicates the current selection mode, as shown in the following table."
+    },
+    {
+      "name": "wdCapsLock",
+      "value": 21,
+      "description": "Returns True if Caps Lock is in effect."
+    },
+    {
+      "name": "wdNumLock",
+      "value": 22,
+      "description": "Returns True if Num Lock is in effect."
+    },
+    {
+      "name": "wdOverType",
+      "value": 23,
+      "description": "Returns True if Overtype mode is in effect. The Overtype property can be used to change the state of the Overtype mode."
+    },
+    {
+      "name": "wdRevisionMarking",
+      "value": 24,
+      "description": "Returns True if change tracking is in effect."
+    },
+    {
+      "name": "wdInFootnoteEndnotePane",
+      "value": 25,
+      "description": "Returns True if the specified selection or range is in the footnote or endnote pane in normal view or in a footnote or endnote area in print layout view. For more information, see the descriptions of wdInFootnote and wdInEndnote in the preceding paragraphs."
+    },
+    {
+      "name": "wdInCommentPane",
+      "value": 26,
+      "description": "Returns True if the specified selection or range is in a comment pane."
+    },
+    {
+      "name": "wdInHeaderFooter",
+      "value": 28,
+      "description": "Returns True if the selection or range is in the header or footer pane or in a header or footer in print layout view."
+    },
+    {
+      "name": "wdAtEndOfRowMarker",
+      "value": 31,
+      "description": "Returns True if the specified selection or range is at the end-of-row mark in a table."
+    },
+    {
+      "name": "wdReferenceOfType",
+      "value": 32,
+      "description": "Returns a value that indicates where the selection is in relation to a footnote, endnote, or comment reference, as shown in the table in the remarks section."
+    },
+    {
+      "name": "wdHeaderFooterType",
+      "value": 33,
+      "description": "Returns a value that indicates the type of header or footer that contains the specified selection or range. See the table in the remarks section for additional information."
+    },
+    {
+      "name": "wdInMasterDocument",
+      "value": 34,
+      "description": "Returns True if the selection or range is in a master document (that is, a document that contains at least one subdocument)."
+    },
+    {
+      "name": "wdInFootnote",
+      "value": 35,
+      "description": "Returns True if the specified selection or range is in a footnote area in print layout view or in the footnote pane in normal view."
+    },
+    {
+      "name": "wdInEndnote",
+      "value": 36,
+      "description": "Returns True if the specified selection or range is in an endnote area in print layout view or in the endnote pane in normal view."
+    },
+    {
+      "name": "wdInWordMail",
+      "value": 37,
+      "description": "Returns True if the selection or range is in the header or footer pane or in a header or footer in print layout view."
+    },
+    {
+      "name": "wdInClipboard",
+      "value": 38,
+      "description": "For information about this constant, consult the language reference Help included with Microsoft Office Macintosh Edition."
+    },
+    {
+      "name": "wdInCoverPage",
+      "value": 41,
+      "description": "Returns True if the specified selection or range is in a cover page."
+    },
+    {
+      "name": "wdInBibliography",
+      "value": 42,
+      "description": "Returns True if the specified selection or range is in a bibliography."
+    },
+    {
+      "name": "wdInCitation",
+      "value": 43,
+      "description": "Returns True if the specified selection or range is in a citation."
+    },
+    {
+      "name": "wdInFieldCode",
+      "value": 44,
+      "description": "Returns True if the specified selection or range is in a field code."
+    },
+    {
+      "name": "wdInFieldResult",
+      "value": 45,
+      "description": "Returns True if the specified selection or range is in a field result."
+    },
+    {
+      "name": "wdInContentControl",
+      "value": 46,
+      "description": "Returns True if the specified selection or range is in a content control."
+    }
+  ]
+}

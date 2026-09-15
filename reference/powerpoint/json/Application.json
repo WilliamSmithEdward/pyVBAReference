@@ -1,0 +1,983 @@
+{
+  "name": "Application",
+  "kind": "Class",
+  "guid": "{91493441-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents the entire Microsoft PowerPoint application.",
+  "remarks": "The Application object contains: - Application-wide settings and options (the name of the active printer, for example). - Properties that return top-level objects, such as ActivePresentation, and Windows. When you are writing code that will run from PowerPoint, you can use the following properties of the Application object without the object qualifier: ActivePresentation, ActiveWindow, AddIns, Presentations, SlideShowWindows, Windows. For example, instead of writing Application.ActiveWindow.Height = 200, you can write ActiveWindow.Height = 200.",
+  "example": "Dim MyPath As String\n\nMyPath = Application.Path",
+  "properties": [
+    {
+      "name": "Presentations",
+      "kind": "property",
+      "type": "Presentations",
+      "access": "read-only",
+      "description": "Returns a Presentations collection that represents all open presentations. Read-only."
+    },
+    {
+      "name": "Windows",
+      "kind": "property",
+      "type": "DocumentWindows",
+      "access": "read-only",
+      "description": "Returns a DocumentWindows collection that represents all open document windows. Read-only."
+    },
+    {
+      "name": "ActiveWindow",
+      "kind": "property",
+      "type": "DocumentWindow",
+      "access": "read-only",
+      "description": "Returns a DocumentWindow object that represents the active document window. Read-only."
+    },
+    {
+      "name": "ActivePresentation",
+      "kind": "property",
+      "type": "Presentation",
+      "access": "read-only",
+      "description": "Returns a Presentation object that represents the presentation open in the active window. Read-only."
+    },
+    {
+      "name": "SlideShowWindows",
+      "kind": "property",
+      "type": "SlideShowWindows",
+      "access": "read-only",
+      "description": "Returns a SlideShowWindows collection that represents all open slide show windows. Read-only."
+    },
+    {
+      "name": "CommandBars",
+      "kind": "property",
+      "type": "CommandBars",
+      "access": "read-only",
+      "description": "Returns a CommandBars collection that represents all the command bars in Microsoft PowerPoint. Read-only."
+    },
+    {
+      "name": "Path",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String that represents the path to the specified Application object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the string \"Microsoft PowerPoint.\" Read-only."
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns the text that appears in the title bar of the application window. Read/write."
+    },
+    {
+      "name": "Build",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the build number for the current instance of Microsoft PowerPoint. Read-only."
+    },
+    {
+      "name": "Version",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the Microsoft PowerPoint version number. Read-only."
+    },
+    {
+      "name": "OperatingSystem",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the operating system. Read-only."
+    },
+    {
+      "name": "ActivePrinter",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the active printer. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the four-character creator code for the application in which the specified object was created. For example, if the object was created in Microsoft PowerPoint, this property returns the hexadecimal number 50575054. Read-only."
+    },
+    {
+      "name": "AddIns",
+      "kind": "property",
+      "type": "AddIns",
+      "access": "read-only",
+      "description": "Returns the program-specific AddIns collection that represents all the add-ins listed in the Add-Ins dialog box (click the Office button, click PowerPoint Options, click Add-Ins, click PowerPoint Add-Ins on the Manage list). Read-only."
+    },
+    {
+      "name": "VBE",
+      "kind": "property",
+      "type": "VBE",
+      "access": "read-only",
+      "description": "Returns a VBE object that represents the Visual Basic Editor. Read-only."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the distance in points from the left edge of the document, application, and slide show windows to the left edge of the application window's client area. Setting this property to a very large positive or negative value may position the window completely off the desktop. Read/write."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the distance in points from the top edge of the document, application, and slide show window to the top edge of the application window's client area. Read/write."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the width of the specified object, in points. Read/write."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the height of the specified object, in points. Read/write."
+    },
+    {
+      "name": "WindowState",
+      "kind": "property",
+      "type": "PpWindowState",
+      "access": "read/write",
+      "description": "Returns or sets the state of the specified window. Read/write."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Returns or sets a MsoTriState value that determines whether the object is visible. Read/write."
+    },
+    {
+      "name": "Active",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Returns whether the specified pane or window is active. Read-only."
+    },
+    {
+      "name": "COMAddIns",
+      "kind": "property",
+      "type": "COMAddIns",
+      "access": "read-only",
+      "description": "Returns a reference to the Component Object Model (COM) add-ins currently loaded in Microsoft PowerPoint. These add-ins are listed on the Add-Ins tab in the PowerPoint Options dialog box. Read-only."
+    },
+    {
+      "name": "ProductCode",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the Microsoft PowerPoint globally unique identifier (GUID). Read-only."
+    },
+    {
+      "name": "LanguageSettings",
+      "kind": "property",
+      "type": "LanguageSettings",
+      "access": "read-only",
+      "description": "Returns a LanguageSettings object that contains information about the language settings in Microsoft PowerPoint. Read-only."
+    },
+    {
+      "name": "ShowWindowsInTaskbar",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether there is a separate Windows taskbar button for each open presentation. Read/write."
+    },
+    {
+      "name": "FeatureInstall",
+      "kind": "property",
+      "type": "MsoFeatureInstall",
+      "access": "read/write",
+      "description": "Returns or sets how Microsoft PowerPoint handles calls to methods and properties that require features not yet installed. Read/write."
+    },
+    {
+      "name": "FileDialog",
+      "kind": "property",
+      "type": "FileDialog",
+      "access": "read-only",
+      "description": "Returns a FileDialog object that represents a single instance of a file dialog box. Read-only."
+    },
+    {
+      "name": "DisplayGridLines",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether to display gridlines in Microsoft PowerPoint. Read/write."
+    },
+    {
+      "name": "AutomationSecurity",
+      "kind": "property",
+      "type": "MsoAutomationSecurity",
+      "access": "read/write",
+      "description": "Represents the security mode that Microsoft PowerPoint uses when it opens files programmatically. Read/write."
+    },
+    {
+      "name": "NewPresentation",
+      "kind": "property",
+      "type": "NewFile",
+      "access": "read-only",
+      "description": "Returns a NewFile object that represents a presentation listed on the New Presentation task pane. Read-only."
+    },
+    {
+      "name": "DisplayAlerts",
+      "kind": "property",
+      "type": "PpAlertLevel",
+      "access": "read/write",
+      "description": "Sets or returns whether Microsoft PowerPoint displays alerts while running a macro. Read/write."
+    },
+    {
+      "name": "ShowStartupDialog",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether to display the New Presentation task pane when Microsoft PowerPoint is started. Read/write."
+    },
+    {
+      "name": "AutoCorrect",
+      "kind": "property",
+      "type": "AutoCorrect",
+      "access": "read-only",
+      "description": "Returns an AutoCorrect object that represents the AutoCorrect functionality in Microsoft PowerPoint."
+    },
+    {
+      "name": "Options",
+      "kind": "property",
+      "type": "Options",
+      "access": "read-only",
+      "description": "Returns an Options object that represents application options in Microsoft PowerPoint."
+    },
+    {
+      "name": "DisplayDocumentInformationPanel",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether the Document Properties panel is displayed in the Microsoft PowerPoint user interface. Read/write."
+    },
+    {
+      "name": "Assistance",
+      "kind": "property",
+      "type": "IAssistance",
+      "access": "read-only",
+      "description": "Gets a reference to the Microsoft Office IAssistance object, which provides a means for developers to create a customized help experience for users within Microsoft Office. Read-only."
+    },
+    {
+      "name": "ActiveEncryptionSession",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Represents the encryption session associated with the active presentation. Read-only."
+    },
+    {
+      "name": "FileConverters",
+      "kind": "property",
+      "type": "FileConverters",
+      "access": "read-only",
+      "description": "Returns information about installed file converters. Returns null if there are no converters installed. Read-only Variant."
+    },
+    {
+      "name": "SmartArtLayouts",
+      "kind": "property",
+      "type": "SmartArtLayouts",
+      "access": "read-only",
+      "description": "Returns the SmartArt layout of the current Application object. Read-only."
+    },
+    {
+      "name": "SmartArtQuickStyles",
+      "kind": "property",
+      "type": "SmartArtQuickStyles",
+      "access": "read-only",
+      "description": "Returns the quick styles of the SmartArt diagram in the current Application object. Read-only."
+    },
+    {
+      "name": "SmartArtColors",
+      "kind": "property",
+      "type": "SmartArtColors",
+      "access": "read-only",
+      "description": "Returns the SmartArt colors of the current Application object. Read-only."
+    },
+    {
+      "name": "ProtectedViewWindows",
+      "kind": "property",
+      "type": "ProtectedViewWindows",
+      "access": "read-only",
+      "description": "Returns a ProtectedViewWindows collection that represents all the Protected View windows that are open in the application. Read-only"
+    },
+    {
+      "name": "ActiveProtectedViewWindow",
+      "kind": "property",
+      "type": "ProtectedViewWindow",
+      "access": "read-only",
+      "description": "Returns a ProtectedViewWindow object that represents the active Protected View window (the window on top). Read-only."
+    },
+    {
+      "name": "IsSandboxed",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns True if the specified presentation is open in a Protected View window. Read-only."
+    },
+    {
+      "name": "FileValidation",
+      "kind": "property",
+      "type": "MsoFileValidationMode",
+      "access": "read/write",
+      "description": "Returns or sets a value that indicates how PowerPoint will validate files before opening them. Read/write"
+    },
+    {
+      "name": "ChartDataPointTrack",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that specifies whether charts use cell-reference data-point tracking. Read/write."
+    },
+    {
+      "name": "DisplayGuides",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Gets or sets whether drawing guides are displayed in the application."
+    },
+    {
+      "name": "SensitivityLabelPolicy",
+      "kind": "property",
+      "type": "SensitivityLabelPolicy",
+      "access": "read-only",
+      "description": "Returns the SensitivityLabelPolicy object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Help",
+      "kind": "method",
+      "signature": "Help([HelpFile As String], [ContextID As Long])",
+      "description": "Displays a Help topic.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "HelpFile",
+          "type": "String",
+          "optional": true,
+          "description": "The name of the Help file you want to display. Can be either a .chm or an .hlp file. If this argument is not specified, Microsoft PowerPoint Help is used."
+        },
+        {
+          "name": "ContextID",
+          "type": "Long",
+          "optional": true,
+          "description": "The context ID number for the Help topic. If this argument is not specified or if it specifies a context ID number that is not associated with a Help topic, the Help Topics dialog box is displayed."
+        }
+      ]
+    },
+    {
+      "name": "Quit",
+      "kind": "method",
+      "signature": "Quit()",
+      "description": "Quits Microsoft PowerPoint. This is equivalent to clicking the Office button and then clicking Exit PowerPoint.",
+      "returns": "void"
+    },
+    {
+      "name": "Run",
+      "kind": "method",
+      "signature": "Run(MacroName As String, safeArrayOfParams As SAFEARRAY(Variant)) As Variant",
+      "description": "Runs a Visual Basic procedure.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "MacroName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the procedure to be run. The string can contain the following: a loaded presentation or add-in file name followed by an exclamation point (!), a valid module name followed by a period (.), and the procedure name. For example, the following is a valid MacroName value: \"MyPres.pptm!Module1.Test.\""
+        },
+        {
+          "name": "safeArrayOfParams",
+          "type": "SAFEARRAY(Variant)",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate()",
+      "description": "Activates the specified object.",
+      "returns": "void"
+    },
+    {
+      "name": "StartNewUndoEntry",
+      "kind": "method",
+      "signature": "StartNewUndoEntry()",
+      "description": "Starts a new undo entry in the Application object.",
+      "returns": "void"
+    },
+    {
+      "name": "OpenThemeFile",
+      "kind": "method",
+      "signature": "OpenThemeFile(themeFileName As String) As Theme",
+      "description": "Opens the specified theme file (*thmx).",
+      "returns": "Theme",
+      "parameters": [
+        {
+          "name": "themeFileName",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "WindowSelectionChange",
+      "kind": "event",
+      "signature": "WindowSelectionChange(Sel As Selection)",
+      "description": "Occurs when the selection of text, a shape, or a slide in the active document window changes, whether in the user interface or in code.",
+      "parameters": [
+        {
+          "name": "Sel",
+          "type": "Selection",
+          "optional": false,
+          "description": "Represents the object selected."
+        }
+      ]
+    },
+    {
+      "name": "WindowBeforeRightClick",
+      "kind": "event",
+      "signature": "WindowBeforeRightClick(Sel As Selection, Cancel As Boolean)",
+      "description": "Occurs when you right-click a shape, a slide, a notes page, or some text. This event is triggered by the MouseUp event.",
+      "parameters": [
+        {
+          "name": "Sel",
+          "type": "Selection",
+          "optional": false,
+          "description": "The selection below the mouse pointer when the right-click occurred."
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "False when the event occurs. If the event procedure sets this argument to True, the default context menu does not appear when the procedure is finished."
+        }
+      ]
+    },
+    {
+      "name": "WindowBeforeDoubleClick",
+      "kind": "event",
+      "signature": "WindowBeforeDoubleClick(Sel As Selection, Cancel As Boolean)",
+      "description": "Occurs when you double-click the items in the views listed in the following table.",
+      "parameters": [
+        {
+          "name": "Sel",
+          "type": "Selection",
+          "optional": false,
+          "description": "The selection below the mouse pointer when the double-click occurs."
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "False when the event occurs. If the event procedure sets this argument to True, the default double-click action isn't performed when the procedure is finished."
+        }
+      ]
+    },
+    {
+      "name": "PresentationClose",
+      "kind": "event",
+      "signature": "PresentationClose(Pres As Presentation)",
+      "description": "Occurs immediately before any open presentation closes, as it is removed from the Presentations collection.",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": "The presentation that is being closed."
+        }
+      ]
+    },
+    {
+      "name": "PresentationSave",
+      "kind": "event",
+      "signature": "PresentationSave(Pres As Presentation)",
+      "description": "Occurs before any open presentation is saved.",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": "The presentation to be saved."
+        }
+      ]
+    },
+    {
+      "name": "PresentationOpen",
+      "kind": "event",
+      "signature": "PresentationOpen(Pres As Presentation)",
+      "description": "Occurs after an existing presentation is opened, as it is added to the Presentations collection.",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": "The presentation that is opened."
+        }
+      ]
+    },
+    {
+      "name": "NewPresentation",
+      "kind": "event",
+      "signature": "NewPresentation(Pres As Presentation)",
+      "description": "Occurs after a presentation is created, as it is added to the Presentations collection.",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": "The new presentation."
+        }
+      ]
+    },
+    {
+      "name": "PresentationNewSlide",
+      "kind": "event",
+      "signature": "PresentationNewSlide(Sld As Slide)",
+      "description": "Occurs when a new slide is created in any open presentation, as the slide is added to the Slides collection.",
+      "parameters": [
+        {
+          "name": "Sld",
+          "type": "Slide",
+          "optional": false,
+          "description": "The new slide."
+        }
+      ]
+    },
+    {
+      "name": "WindowActivate",
+      "kind": "event",
+      "signature": "WindowActivate(Pres As Presentation, Wn As DocumentWindow)",
+      "description": "Occurs when the application window or any document window is activated.",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": "The presentation displayed in the activated window."
+        },
+        {
+          "name": "Wn",
+          "type": "DocumentWindow",
+          "optional": false,
+          "description": "The activated document window."
+        }
+      ]
+    },
+    {
+      "name": "WindowDeactivate",
+      "kind": "event",
+      "signature": "WindowDeactivate(Pres As Presentation, Wn As DocumentWindow)",
+      "description": "Occurs when the application window or any document window is deactivated.",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": "The presentation displayed in the deactivated window."
+        },
+        {
+          "name": "Wn",
+          "type": "DocumentWindow",
+          "optional": false,
+          "description": "The deactivated document window."
+        }
+      ]
+    },
+    {
+      "name": "SlideShowBegin",
+      "kind": "event",
+      "signature": "SlideShowBegin(Wn As SlideShowWindow)",
+      "description": "Occurs when you start a slide show.",
+      "parameters": [
+        {
+          "name": "Wn",
+          "type": "SlideShowWindow",
+          "optional": false,
+          "description": "The slide show window initialized prior to this event."
+        }
+      ]
+    },
+    {
+      "name": "SlideShowNextBuild",
+      "kind": "event",
+      "signature": "SlideShowNextBuild(Wn As SlideShowWindow)",
+      "description": "Occurs upon mouse-click or timing animation, but before the animated object becomes visible. .",
+      "parameters": [
+        {
+          "name": "Wn",
+          "type": "SlideShowWindow",
+          "optional": false,
+          "description": "The active slide show window."
+        }
+      ]
+    },
+    {
+      "name": "SlideShowNextSlide",
+      "kind": "event",
+      "signature": "SlideShowNextSlide(Wn As SlideShowWindow)",
+      "description": "Occurs immediately before the transition to the next slide. For the first slide, occurs immediately after the SlideShowBegin event.",
+      "parameters": [
+        {
+          "name": "Wn",
+          "type": "SlideShowWindow",
+          "optional": false,
+          "description": "The active slide show window."
+        }
+      ]
+    },
+    {
+      "name": "SlideShowEnd",
+      "kind": "event",
+      "signature": "SlideShowEnd(Pres As Presentation)",
+      "description": "Occurs after a slide show ends, immediately after the last SlideShowNextSlide event occurs.",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": "The presentation closed when this event occurs."
+        }
+      ]
+    },
+    {
+      "name": "PresentationPrint",
+      "kind": "event",
+      "signature": "PresentationPrint(Pres As Presentation)",
+      "description": "Occurs before a presentation is printed.",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": "The presentation to be printed."
+        }
+      ]
+    },
+    {
+      "name": "SlideSelectionChanged",
+      "kind": "event",
+      "signature": "SlideSelectionChanged(SldRange As SlideRange)",
+      "description": "Occurs at different times depending on the current view.",
+      "parameters": [
+        {
+          "name": "SldRange",
+          "type": "SlideRange",
+          "optional": false,
+          "description": "The selection of slides. In most cases this would be a single slide (for example, in Slide View you navigate to the next slide), but in some cases this could be multiple slides (for example, a marquee selection in Slide Sorter View)."
+        }
+      ]
+    },
+    {
+      "name": "ColorSchemeChanged",
+      "kind": "event",
+      "signature": "ColorSchemeChanged(SldRange As SlideRange)",
+      "description": "Occurs after a color scheme is changed.",
+      "parameters": [
+        {
+          "name": "SldRange",
+          "type": "SlideRange",
+          "optional": false,
+          "description": "The range of slides affected by the change."
+        }
+      ]
+    },
+    {
+      "name": "PresentationBeforeSave",
+      "kind": "event",
+      "signature": "PresentationBeforeSave(Pres As Presentation, Cancel As Boolean)",
+      "description": "Occurs before a presentation is saved.",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": "The presentation being saved."
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True to cancel the save process."
+        }
+      ]
+    },
+    {
+      "name": "SlideShowNextClick",
+      "kind": "event",
+      "signature": "SlideShowNextClick(Wn As SlideShowWindow, nEffect As Effect)",
+      "description": "Occurs on the next click of the slide.",
+      "parameters": [
+        {
+          "name": "Wn",
+          "type": "SlideShowWindow",
+          "optional": false,
+          "description": "The slide show window initialized prior to this event."
+        },
+        {
+          "name": "nEffect",
+          "type": "Effect",
+          "optional": false,
+          "description": "The effect to animate on next click."
+        }
+      ]
+    },
+    {
+      "name": "AfterNewPresentation",
+      "kind": "event",
+      "signature": "AfterNewPresentation(Pres As Presentation)",
+      "description": "Occurs after a presentation is created.",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": "Name of the presentation."
+        }
+      ]
+    },
+    {
+      "name": "AfterPresentationOpen",
+      "kind": "event",
+      "signature": "AfterPresentationOpen(Pres As Presentation)",
+      "description": "Occurs after an existing presentation is opened.",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": "The presentation that is opened."
+        }
+      ]
+    },
+    {
+      "name": "PresentationSync",
+      "kind": "event",
+      "signature": "PresentationSync(Pres As Presentation, SyncEventType As MsoSyncEventType)",
+      "description": "Occurs when the local copy of a presentation that is part of a Document Workspace is synchronized with the copy on the server. Provides important status information regarding the success or failure of the synchronization of the presentation.",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": "The presentation that is being synchronized."
+        },
+        {
+          "name": "SyncEventType",
+          "type": "MsoSyncEventType",
+          "optional": false,
+          "description": "The status of the synchronization."
+        }
+      ]
+    },
+    {
+      "name": "SlideShowOnNext",
+      "kind": "event",
+      "signature": "SlideShowOnNext(Wn As SlideShowWindow)",
+      "description": "Occurs when the user clicks Next to move within the current slide.",
+      "parameters": [
+        {
+          "name": "Wn",
+          "type": "SlideShowWindow",
+          "optional": false,
+          "description": "The active slideshow window."
+        }
+      ]
+    },
+    {
+      "name": "SlideShowOnPrevious",
+      "kind": "event",
+      "signature": "SlideShowOnPrevious(Wn As SlideShowWindow)",
+      "description": "Occurs when the user clicks Previous to move within the current slide.",
+      "parameters": [
+        {
+          "name": "Wn",
+          "type": "SlideShowWindow",
+          "optional": false,
+          "description": "The active slideshow window."
+        }
+      ]
+    },
+    {
+      "name": "PresentationBeforeClose",
+      "kind": "event",
+      "signature": "PresentationBeforeClose(Pres As Presentation, Cancel As Boolean)",
+      "description": "Represents a Presentation object before it closes.",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": "The Presentation object."
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "If set to True, the presentation will not close."
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowOpen",
+      "kind": "event",
+      "signature": "ProtectedViewWindowOpen(ProtViewWindow As ProtectedViewWindow)",
+      "description": "Occurs when a Protected View window is opened.",
+      "parameters": [
+        {
+          "name": "ProtViewWindow",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": "The Protected View window that is opened."
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowBeforeEdit",
+      "kind": "event",
+      "signature": "ProtectedViewWindowBeforeEdit(ProtViewWindow As ProtectedViewWindow, Cancel As Boolean)",
+      "description": "Occurs immediately before editing is enabled on the document in the specified Protected View window.",
+      "parameters": [
+        {
+          "name": "ProtViewWindow",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": "The Protected View window that contains the document that is enabled for editing."
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "False when the event occurs. If the event procedure sets this argument to True, editing is not enabled on the document."
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowBeforeClose",
+      "kind": "event",
+      "signature": "ProtectedViewWindowBeforeClose(ProtViewWindow As ProtectedViewWindow, ProtectedViewCloseReason As PpProtectedViewCloseReason, Cancel As Boolean)",
+      "description": "Occurs immediately before a Protected View window or a document in a Protected View window closes.",
+      "parameters": [
+        {
+          "name": "ProtViewWindow",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": "The Protected View window that is closed."
+        },
+        {
+          "name": "ProtectedViewCloseReason",
+          "type": "PpProtectedViewCloseReason",
+          "optional": false,
+          "description": "A constant that specifies the reason the Protected View window is closed."
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "False when the event occurs. If the event procedure sets this argument to True, the window does not close when the procedure is finished."
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowActivate",
+      "kind": "event",
+      "signature": "ProtectedViewWindowActivate(ProtViewWindow As ProtectedViewWindow)",
+      "description": "Occurs when any Protected View window is activated.",
+      "parameters": [
+        {
+          "name": "ProtViewWindow",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": "The Protected View window that is activated."
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowDeactivate",
+      "kind": "event",
+      "signature": "ProtectedViewWindowDeactivate(ProtViewWindow As ProtectedViewWindow)",
+      "description": "Occurs when a Protected View window is deactivated.",
+      "parameters": [
+        {
+          "name": "ProtViewWindow",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": "The deactivated Protected View window."
+        }
+      ]
+    },
+    {
+      "name": "PresentationCloseFinal",
+      "kind": "event",
+      "signature": "PresentationCloseFinal(Pres As Presentation)",
+      "description": "Represents closing the final Presentation object.",
+      "parameters": [
+        {
+          "name": "Pres",
+          "type": "Presentation",
+          "optional": false,
+          "description": "The Presentation object."
+        }
+      ]
+    },
+    {
+      "name": "AfterDragDropOnSlide",
+      "kind": "event",
+      "signature": "AfterDragDropOnSlide(Sld As Slide, X As Single, Y As Single)",
+      "description": "Occurs after an object with the clipboard format \"PowerPoint Drop Trigger\" has been dropped onto a slide in an open presentation.",
+      "parameters": [
+        {
+          "name": "Sld",
+          "type": "Slide",
+          "optional": false,
+          "description": "The slide that raised the event (that is, had a shape added to it)."
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AfterShapeSizeChange",
+      "kind": "event",
+      "signature": "AfterShapeSizeChange(shp As Shape)",
+      "description": "Occurs after an object (shape, picture, text box, chart, SmartArt as examples) has been resized on the slide.",
+      "parameters": [
+        {
+          "name": "shp",
+          "type": "Shape",
+          "optional": false,
+          "description": "The shape that was resized."
+        }
+      ]
+    }
+  ]
+}

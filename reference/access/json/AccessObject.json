@@ -1,0 +1,112 @@
+{
+  "name": "AccessObject",
+  "kind": "Dispatch Interface",
+  "guid": "{ABE316B1-3FF6-11D1-98BD-006008197D41}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "An AccessObject object refers to a particular Access object.",
+  "remarks": "An AccessObject object includes information about one instance of an object. The following table list the types of objects each AccessObject describes, the name of its collection, and what type of information AccessObject contains. Because an AccessObject object corresponds to an existing object, you can't create new AccessObject objects or delete existing ones. To refer to an AccessObject object in a collection by its ordinal number or by its Name property setting, use any of the following syntax forms: - AllForms (0) - AllForms (\"_name_\") - AllForms ![ _name_ ]",
+  "example": "",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Use the Name property to determine the string expression that identifies the name of an object. Read-only String."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "AcObjectType",
+      "access": "read-only",
+      "description": "Returns the value of an AccessObject object type. Read-only AcObjectType."
+    },
+    {
+      "name": "Properties",
+      "kind": "property",
+      "type": "AccessObjectProperties",
+      "access": "read-only",
+      "description": "Returns a reference to an AccessObject object's AccessObjectProperties collection. Read-only."
+    },
+    {
+      "name": "IsLoaded",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Use the IsLoaded property to determine if an AccessObject object is currently loaded. Read-only Boolean."
+    },
+    {
+      "name": "FullName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the full path (including the file name) of a specific object. Read/write String."
+    },
+    {
+      "name": "DateCreated",
+      "kind": "property",
+      "type": "Date",
+      "access": "read-only",
+      "description": "Returns a Date indicating the date and time when the design of the specified object was last modified. Read-only."
+    },
+    {
+      "name": "DateModified",
+      "kind": "property",
+      "type": "Date",
+      "access": "read-only",
+      "description": "Returns a Date indicating the date and time when the design of the specified object was last modified. Read-only."
+    },
+    {
+      "name": "CurrentView",
+      "kind": "property",
+      "type": "AcCurrentView",
+      "access": "read-only",
+      "description": "Returns the current view for the specified Access object. Read-only AcCurrentView."
+    },
+    {
+      "name": "IsWeb",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Gets whether the specified object is a web object. Read-only Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "IsDependentUpon",
+      "kind": "method",
+      "signature": "IsDependentUpon(ObjectType As AcObjectType, ObjectName As String) As Boolean",
+      "description": "Returns a Boolean value that indicates whether the specified object is dependent upon the database object specified in the _ObjectName_ argument.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "ObjectType",
+          "type": "AcObjectType",
+          "optional": false,
+          "description": "An AcObjectType constant that represents the type of database object to check for dependency."
+        },
+        {
+          "name": "ObjectName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the database object to check for dependency."
+        }
+      ]
+    },
+    {
+      "name": "GetDependencyInfo",
+      "kind": "method",
+      "signature": "GetDependencyInfo() As _DependencyInfo",
+      "description": "Returns a DependencyInfo object that represents the database objects that are dependent upon the specified object.",
+      "returns": "_DependencyInfo"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,99 @@
+{
+  "name": "StyleSheet",
+  "kind": "Dispatch Interface",
+  "guid": "{000209EF-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single cascading style sheet attached to a web document. The StyleSheet object is a member of the StyleSheets collection. The StyleSheets collection contains all the cascading style sheets attached to a specified document.",
+  "remarks": "Use the Item method or StyleSheets (Index), where Index is the name or number of the style sheet, of the StyleSheets collection to return a StyleSheet object. The following example removes the second style sheet from the StyleSheets collection. Use the Index property to determine the precedence of cascading style sheets. The following example creates a table of attached cascading style sheets, ordered and indexed according to which style sheet is most important. Use the Move method to reorder the precedence of attached style sheets. The following example moves the most important style sheet to the least important of all attached cascading style sheets.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified StyleSheet object."
+    },
+    {
+      "name": "FullName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Specifies the name of a cascading style sheet, including the drive or Web path. Read-only String."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the position of an item in a collection. Read-only."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the specified object. Read-only String."
+    },
+    {
+      "name": "Path",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the disk or Web path to the specified style sheet. Read-only String."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "WdStyleSheetLinkType",
+      "access": "read/write",
+      "description": "Returns or sets the style sheet type. Read/write WdStyleSheetLinkType."
+    },
+    {
+      "name": "Title",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String representing the title of a Web style sheet. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move(Precedence As WdStyleSheetPrecedence)",
+      "description": "Moves a style sheet's order of precedence.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Precedence",
+          "type": "WdStyleSheetPrecedence",
+          "optional": false,
+          "description": "The precedence level."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified cascading style sheet.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

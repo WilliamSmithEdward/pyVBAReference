@@ -1,0 +1,409 @@
+{
+  "name": "Page",
+  "kind": "Class",
+  "guid": "{3B06E973-E47C-11CD-8701-00AA003F0F07}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "A Page object corresponds to an individual page on a tab control.",
+  "remarks": "A Page object is a member of a tab control's Pages collection. To return a reference to a particular Page object in the Pages collection, use any of the following syntax forms. You can create, move, or delete Page objects and set their properties either in Visual Basic or in form Design view. To create a new Page object in Visual Basic, use the Add method of the Pages collection. To delete a Page object, use the Remove method of the Pages collection. To create a new Page object in form Design view, right-click the tab control and then choose Insert Page on the shortcut menu. You can also copy an existing page and paste it. You can set the properties of the new Page object in form Design view by using the property sheet. Each Page object has a PageIndex property that indicates its position within the Pages collection. The Value property of the tab control is equal to the PageIndex property of the current page. Use these properties to determine which page is currently selected after the user has switched from one page to another, or to change the order in which the pages appear in the control. A Page object is also a type of Control object.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Use the Application property to access the active Microsoft Access Application object and its related properties. Read-only Application object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Properties",
+      "kind": "property",
+      "type": "Properties",
+      "access": "read-only",
+      "description": "Returns a reference to a control's Properties collection object. Read-only."
+    },
+    {
+      "name": "Controls",
+      "kind": "property",
+      "type": "Children",
+      "access": "read-only",
+      "description": "Returns the Controls collection of a form, subform, report, or section. Read-only Controls."
+    },
+    {
+      "name": "EventProcPrefix",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the prefix portion of an event procedure name. Read/write String."
+    },
+    {
+      "name": "ControlType",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the ControlType property in Visual Basic to determine the type of control on a form or report. Read/write Byte."
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the text that appears at the top of the page. Read/write String."
+    },
+    {
+      "name": "Picture",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the Picture property to specify a bitmap or other type of graphic to be displayed on the specified control. Read/write String."
+    },
+    {
+      "name": "PictureType",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the PictureType property to specify whether Microsoft Access stores an object's picture as a linked or an embedded object. Read/write Byte."
+    },
+    {
+      "name": "PageIndex",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the PageIndex property to specify or determine the position of a Page object within a Pages collection. The PageIndex property specifies the order in which the pages on a tab control appear. Read/write Integer."
+    },
+    {
+      "name": "StatusBarText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the StatusBarText property to specify the text that is displayed in the status bar when a control is selected. Read/write String."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether the object is visible. Read/write Boolean."
+    },
+    {
+      "name": "Enabled",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the Enabled property to set or return the status of the conditional format in the FormatCondition object. Read/write Boolean."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the Left property to specify an object's location on a form or report. Read/write Integer."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the Top property to specify an object's location on a form or report. Read/write Integer."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Gets or sets the width of the specified object in twips. Read/write Integer."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Gets or sets the height of the specified object in twips. Read/write Integer."
+    },
+    {
+      "name": "ShortcutMenuBar",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the ShortcutMenuBar property to specify the shortcut menu that appears when you right-click the specified object. Read/write String."
+    },
+    {
+      "name": "ControlTipText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the ControlTipText property to specify the text that appears in a ScreenTip when you hold the mouse pointer over a control. Read/write String."
+    },
+    {
+      "name": "HelpContextId",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "The HelpContextID property specifies the context ID of a topic in the custom Help file specified by the HelpFile property setting. Read/write Long."
+    },
+    {
+      "name": "Section",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "You can identify these controls by the section of a form or report where the control appears. Read/write Integer."
+    },
+    {
+      "name": "Tag",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Stores extra information about a form, report, section, or control needed by a Microsoft Access application. Read/write String."
+    },
+    {
+      "name": "IsVisible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the IsVisible property to determine whether a control on a report is visible. Read/write Boolean."
+    },
+    {
+      "name": "InSelection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the InSelection property to determine or specify whether a control on a form in Design view is selected. Read/write Boolean."
+    },
+    {
+      "name": "OnClick",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Click box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnDblClick",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Dbl Click box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnMouseDown",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Mouse Down box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnMouseMove",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Mouse Move box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnMouseUp",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Mouse Up box in the Properties window. Read/write String."
+    },
+    {
+      "name": "PictureData",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Use the PictureData property to copy the picture to another object that supports the Picture property. Read/write Variant."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the Name property to specify or determine the string expression that identifies the name of an object. Read/write String."
+    }
+  ],
+  "methods": [
+    {
+      "name": "SizeToFit",
+      "kind": "method",
+      "signature": "SizeToFit()",
+      "description": "Use the SizeToFit method to size a control so that it fits the text or image that it contains.",
+      "returns": "void"
+    },
+    {
+      "name": "Requery",
+      "kind": "method",
+      "signature": "Requery()",
+      "description": "The Requery method updates the data underlying a specified control that's on the active form by requerying the source of data for the control.",
+      "returns": "void"
+    },
+    {
+      "name": "SetFocus",
+      "kind": "method",
+      "signature": "SetFocus()",
+      "description": "The SetFocus method moves the focus to the specified form, the specified control on the active form, or the specified field on the active datasheet.",
+      "returns": "void"
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move(Left As Variant, [Top As Variant], [Width As Variant], [Height As Variant])",
+      "description": "Moves the specified object to the coordinates specified by the argument values.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": false,
+          "description": "The screen position in twips for the left edge of the object relative to the left edge of the Microsoft Access window."
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": "The screen position in twips for the top edge of the object relative to the top edge of the Access window."
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": "The desired width of the object in twips."
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": "The desired height of the object in twips."
+        }
+      ]
+    },
+    {
+      "name": "SetTabOrder",
+      "kind": "method",
+      "signature": "SetTabOrder()",
+      "description": "Resets the tab order of the controls in the specified Page to their default values.",
+      "returns": "void"
+    }
+  ],
+  "events": [
+    {
+      "name": "Click",
+      "kind": "event",
+      "signature": "Click()",
+      "description": "The Click event occurs when the user presses and then releases a mouse button over an object."
+    },
+    {
+      "name": "DblClick",
+      "kind": "event",
+      "signature": "DblClick(Cancel As Integer)",
+      "description": "The DblClick event occurs when the user presses and releases the left mouse button twice over an object within the double-click time limit of the system.",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": "The setting determines if the DblClick event occurs. Setting the _Cancel_ argument to True (1) cancels the DblClick event."
+        }
+      ]
+    },
+    {
+      "name": "MouseDown",
+      "kind": "event",
+      "signature": "MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "The MouseDown event occurs when the user presses a mouse button.",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": "The button that was pressed to trigger the event. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>"
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": "The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": "The _x_ coordinate for the current location of the mouse pointer, in twips."
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": "The _y_ coordinate for the current location of the mouse pointer, in twips."
+        }
+      ]
+    },
+    {
+      "name": "MouseMove",
+      "kind": "event",
+      "signature": "MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "The MouseMove event occurs when the user moves the mouse.",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": "The button that was pressed or released when the event was triggered. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>"
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": "The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": "The _x_ coordinate for the current location of the mouse pointer, in twips."
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": "The _y_ coordinate for the current location of the mouse pointer, in twips."
+        }
+      ]
+    },
+    {
+      "name": "MouseUp",
+      "kind": "event",
+      "signature": "MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "The MouseUp event occurs when the user releases a mouse button.",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": "The button that was released to trigger the event. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>"
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": "The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": "The _x_ coordinate for the current location of the mouse pointer, in twips."
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": "The _y_ coordinate for the current location of the mouse pointer, in twips."
+        }
+      ]
+    }
+  ]
+}

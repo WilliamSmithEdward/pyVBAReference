@@ -1,0 +1,78 @@
+{
+  "name": "PrintRanges",
+  "kind": "Dispatch Interface",
+  "guid": "{9149345E-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of all the PrintRange objects in the specified presentation. Each PrintRange object represents a range of consecutive slides or pages to be printed.",
+  "remarks": "",
+  "example": "ActivePresentation.PrintOptions.Ranges.ClearAll",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Start As Long, End As Long) As PrintRange",
+      "description": "Returns a PrintRange object that represents a new print range to be added to the PrintRanges collection.",
+      "returns": "PrintRange",
+      "parameters": [
+        {
+          "name": "Start",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of the slide that is the starting slide in the range."
+        },
+        {
+          "name": "End",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of the slide that is the ending slide in the range."
+        }
+      ]
+    },
+    {
+      "name": "ClearAll",
+      "kind": "method",
+      "signature": "ClearAll()",
+      "description": "Clears all the print ranges from the PrintRanges collection. Use the Add method of the PrintRanges collection to add print ranges to the collection.",
+      "returns": "void"
+    },
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As PrintRange",
+      "description": "Returns a single PrintRange object from the specified PrintRanges collection.",
+      "returns": "PrintRange",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the single PrintRange object in the collection to be returned."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

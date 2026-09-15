@@ -1,0 +1,21 @@
+# AcRecord
+
+**Type:** Enumeration  
+**Library:** Microsoft Access 16.0 Object Library  
+
+Used with the GoToRecord method to specify which record to make the current record.
+
+## Constants (6)
+
+- `acPrevious` = 0  
+  Make the previous record the current record.
+- `acNext` = 1  
+  Make the next record the current record.
+- `acFirst` = 2  
+  Make the first record the current record.
+- `acLast` = 3  
+  Make the last record the current record.
+- `acGoTo` = 4  
+  Make the specified record the current record.
+- `acNewRec` = 5  
+  Make a new record the current record.

@@ -1,0 +1,62 @@
+{
+  "name": "OMathAutoCorrect",
+  "kind": "Dispatch Interface",
+  "guid": "{6F9D1F68-06F7-49EF-8902-185E54EB5E87}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the math AutoCorrect feature in Microsoft Word. To access the math AutoCorrect entries, use the OMathAutoCorrectEntries collection.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathAutoCorrect object."
+    },
+    {
+      "name": "ReplaceText",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether Microsoft Word automatically replaces strings in equations with the corresponding math AutoCorrect definitions. Read/write."
+    },
+    {
+      "name": "UseOutsideOMath",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether Microsoft Word uses math autocorrect rules outside equations in a document. Read/write."
+    },
+    {
+      "name": "Entries",
+      "kind": "property",
+      "type": "OMathAutoCorrectEntries",
+      "access": "read-only",
+      "description": "Returns an OMathAutoCorrectEntries collection that represents the collection of equation autocorrect entries within the equation autocorrect feature. Read-only."
+    },
+    {
+      "name": "Functions",
+      "kind": "property",
+      "type": "OMathRecognizedFunctions",
+      "access": "read-only",
+      "description": "Returns an OMathRecognizedFunctions collection that represents the recognized functions that are automatically corrected using the equation autocorrect feature. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

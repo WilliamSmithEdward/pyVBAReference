@@ -1,0 +1,62 @@
+{
+  "name": "EndnoteOptions",
+  "kind": "Dispatch Interface",
+  "guid": "{BF043168-F4DE-4E7C-B206-741A8B3EF71A}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the properties assigned to a range or selection of endnotes in a document.",
+  "remarks": "Use the EndnoteOptions property of the Range or Selection object to return an EndnoteOptions object. Using the EndnoteOptions object, you can assign different endnote properties to different areas of a document. For example, you may want endnotes in the introduction of a long document to be displayed as lowercase Roman numerals, while in the rest of your document they are displayed as Arabic numerals. The following example uses the NumberingRule, NumberStyle, and StartingNumber properties to format the endnotes in the first section ofthe active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified EndnoteOptions object."
+    },
+    {
+      "name": "Location",
+      "kind": "property",
+      "type": "WdEndnoteLocation",
+      "access": "read/write",
+      "description": "Returns or sets the position of all endnotes. Read/write WdEndnoteLocation."
+    },
+    {
+      "name": "NumberStyle",
+      "kind": "property",
+      "type": "WdNoteNumberStyle",
+      "access": "read/write",
+      "description": "Returns or sets the number style for the endnotes. Read/write WdNoteNumberStyle."
+    },
+    {
+      "name": "StartingNumber",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the starting endnote number. Read/write Long."
+    },
+    {
+      "name": "NumberingRule",
+      "kind": "property",
+      "type": "WdNumberingRule",
+      "access": "read/write",
+      "description": "Returns or sets the way footnotes or endnotes are numbered after page breaks or section breaks. Read/write WdNumberingRule."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

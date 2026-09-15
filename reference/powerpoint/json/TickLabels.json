@@ -1,0 +1,133 @@
+{
+  "name": "TickLabels",
+  "kind": "Dispatch Interface",
+  "guid": "{92D41A78-F07E-4CA4-AF6F-BEF486AA4E6F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents the tick-mark labels associated with tick marks on a chart axis.",
+  "remarks": "This object is not a collection. There is no object that represents a single tick-mark label; you must return all the tick-mark labels as a unit. Tick-mark label text for the category axis comes from the name of the associated category in the chart. The default tick-mark label text for the category axis is the number that indicates the position of the category relative to the left end of this axis. To change the number of unlabeled tick marks between tick-mark labels, you must change the TickLabelSpacing property for the category axis. Tick-mark label text for the value axis is calculated based on the MajorUnit, MinimumScale, and MaximumScale properties of the value axis. To change the tick-mark label text for the value axis, you must change the values of these properties.",
+  "example": "With ActiveDocument.InlineShapes(1)\n\n    If .HasChart Then\n\n        .Chart.Axes(xlValue).TickLabels.NumberFormat = \"0.00\"\n\n    End If\n\nEnd With",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "ChartFont",
+      "access": "read-only",
+      "description": "Returns the font of the specified object. Read-only ChartFont."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the object. Read-only String."
+    },
+    {
+      "name": "NumberFormat",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the format code for the object. Read/write String."
+    },
+    {
+      "name": "NumberFormatLinked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the number format is linked to the cells (so that the number format changes in the labels when it changes in the cells). Read/write Boolean."
+    },
+    {
+      "name": "NumberFormatLocal",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the format code for the object as a string in the language of the user. Read/write Variant."
+    },
+    {
+      "name": "Orientation",
+      "kind": "property",
+      "type": "XlTickLabelOrientation",
+      "access": "read/write",
+      "description": "Returns or sets the text orientation. Read/write Long."
+    },
+    {
+      "name": "Depth",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of levels of category tick labels. Read-only Long."
+    },
+    {
+      "name": "Offset",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the distance between the levels of labels, and the distance between the first level and the axis line. Read/write Long."
+    },
+    {
+      "name": "MultiLevel",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a value that indicates whether an axis is multilevel. Read/write Boolean."
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "ChartFormat",
+      "access": "read-only",
+      "description": "Returns the line, fill, and effect formatting for the object. Read-only ChartFormat."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the Microsoft PowerPoint application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    },
+    {
+      "name": "Alignment",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the alignment for the specified phonetic text or tick label. Read/write Long."
+    },
+    {
+      "name": "ReadingOrder",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets an XlReadingOrder constant that represents the reading order for the specified object. Read/write Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select() As Variant",
+      "description": "Selects the object.",
+      "returns": "Variant"
+    }
+  ],
+  "events": []
+}

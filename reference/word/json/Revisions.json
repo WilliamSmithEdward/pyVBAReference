@@ -1,0 +1,78 @@
+{
+  "name": "Revisions",
+  "kind": "Dispatch Interface",
+  "guid": "{00020980-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of Revision objects that represent the changes marked with revision marks in a range or document.",
+  "remarks": "Use the Revisions property to return the Revisions collection. The following code example displays the number of revisions in the main text story. The following code example accepts all the revisions in the selection. The following code example accepts all the revisions in the first paragraph in the selection. The Add method is not available for the Revisions collection. Revision objects are added when change tracking is enabled. Set the TrackRevisions property to True to track revisions made to the document text. The following code example enables revision tracking in the active document and then inserts \"The \" before the selection. Use Revisions (Index), where Index is the index number, to return a single Revision object. The index number represents the position of the revision in the range or document. The following code example displays the author name for the first revision in the first section. The Count property for this collection in a document returns the number of items in the main story only. To count items in other stories use the collection with the Range object.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application. Read-only."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Revisions object."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of revisions in the collection. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Revision",
+      "description": "Returns an individual Revisions object in a collection.",
+      "returns": "Revision",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned."
+        }
+      ]
+    },
+    {
+      "name": "AcceptAll",
+      "kind": "method",
+      "signature": "AcceptAll()",
+      "description": "Accepts all the tracked changes in a document or range, removes all revision marks, and incorporates the changes into the document.",
+      "returns": "void"
+    },
+    {
+      "name": "RejectAll",
+      "kind": "method",
+      "signature": "RejectAll()",
+      "description": "",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

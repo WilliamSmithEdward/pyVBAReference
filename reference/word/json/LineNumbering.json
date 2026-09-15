@@ -1,0 +1,69 @@
+{
+  "name": "LineNumbering",
+  "kind": "Dispatch Interface",
+  "guid": "{00020972-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents line numbers in the left margin or to the left of each newspaper-style column.",
+  "remarks": "Use the LineNumbering property to return the LineNumbering object. The following example applies line numbering to the text in the first section of the active document. The following example applies line numbering to the pages in the current section.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified LineNumbering object."
+    },
+    {
+      "name": "RestartMode",
+      "kind": "property",
+      "type": "WdNumberingRule",
+      "access": "read/write",
+      "description": "Returns or sets the way line numbering runs - that is, whether it starts over at the beginning of a new page or section or runs continuously. Read/write WdNumberingRule."
+    },
+    {
+      "name": "StartingNumber",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the starting line number. Read/write Long."
+    },
+    {
+      "name": "DistanceFromText",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the right edge of line numbers and the left edge of the document text. Read/write Single."
+    },
+    {
+      "name": "CountBy",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the numeric increment for line numbers. Read/write Long."
+    },
+    {
+      "name": "Active",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if line numbering is active for the specified document, section, or sections. Read/write Long."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

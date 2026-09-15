@@ -1,0 +1,98 @@
+{
+  "name": "MailMergeField",
+  "kind": "Dispatch Interface",
+  "guid": "{0002091E-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single mail merge field in a document. The MailMergeDataField object is a member of the MailMergeDataFields collection. The MailMergeDataFields collection includes all the mail merge related fields in a document.",
+  "remarks": "Use Fields (Index), where Index is the index number, to return a single MailMergeField object. The following example displays the field code of the first mail merge field in the active document. Use the Add method to add a merge field to the MailMergeFields collection. The following example replaces the selection with a MiddleInitial merge field. The MailMergeFields collection has additional methods, such as AddAsk and AddFillIn, for adding fields related to a mail merge operation.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified MailMergeField object."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "WdFieldType",
+      "access": "read-only",
+      "description": "Returns the field type. Read-only WdFieldType."
+    },
+    {
+      "name": "Locked",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified field is locked. Read/write Boolean."
+    },
+    {
+      "name": "Code",
+      "kind": "property",
+      "type": "Range",
+      "access": "read/write",
+      "description": "Returns a Range object that represents a field's code. Read/write."
+    },
+    {
+      "name": "Next",
+      "kind": "property",
+      "type": "MailMergeField",
+      "access": "read-only",
+      "description": "Returns the next mail merge field in the collection of mail merge fields. Read-only."
+    },
+    {
+      "name": "Previous",
+      "kind": "property",
+      "type": "MailMergeField",
+      "access": "read-only",
+      "description": "Returns the previous mail merge field in the collection of mail merge fields. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects the specified mail merge field.",
+      "returns": "void"
+    },
+    {
+      "name": "Copy",
+      "kind": "method",
+      "signature": "Copy()",
+      "description": "Copies the specified mail merge field to the Clipboard.",
+      "returns": "void"
+    },
+    {
+      "name": "Cut",
+      "kind": "method",
+      "signature": "Cut()",
+      "description": "Removes the specified mail merge field from the document and moves it to the Clipboard.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified mail merge field.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,127 @@
+{
+  "name": "Broadcast",
+  "kind": "Dispatch Interface",
+  "guid": "{BA72E558-4FF5-48F4-8215-5505F990966F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A Broadcast Documents library that is used to store documents being presented.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "AttendeeUrl",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Provides the attendee URL that the presenter must share with remote attendees. Read-only."
+    },
+    {
+      "name": "IsBroadcasting",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Indicates whether the file is in the Broadcast Documents library. Read-only."
+    },
+    {
+      "name": "State",
+      "kind": "property",
+      "type": "MsoBroadcastState",
+      "access": "read-only",
+      "description": "Returns an MSOBroadcastState constant that describes the current broadcast state. Read-only."
+    },
+    {
+      "name": "Capabilities",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the capabilities of the specified broadcast. Read-only."
+    },
+    {
+      "name": "SessionID",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "If a broadcast is in progress, returns a String that specifies the ID of the session. Read-only."
+    },
+    {
+      "name": "PresenterServiceUrl",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "If a broadcast is in progress, returns a String that represents the URL of the presenter service hosting the broadcast. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Start",
+      "kind": "method",
+      "signature": "Start(serverUrl As String)",
+      "description": "Returns a list of supported functionality and the maximum allowed file size.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "serverUrl",
+          "type": "String",
+          "optional": false,
+          "description": "The URL of the hosting Web service."
+        }
+      ]
+    },
+    {
+      "name": "End",
+      "kind": "method",
+      "signature": "End()",
+      "description": "Elevates to the system to delete the document from the Broadcast Documents library.",
+      "returns": "void"
+    },
+    {
+      "name": "Pause",
+      "kind": "method",
+      "signature": "Pause()",
+      "description": "Pauses the specified broadcast.",
+      "returns": "void"
+    },
+    {
+      "name": "Resume",
+      "kind": "method",
+      "signature": "Resume()",
+      "description": "Resumes the specified broadcast.",
+      "returns": "void"
+    },
+    {
+      "name": "AddMeetingNotes",
+      "kind": "method",
+      "signature": "AddMeetingNotes(notesUrl As String, notesWacUrl As String)",
+      "description": "Adds shared meeting notes for the specified broadcast that are accessible to attendees who use either Microsoft OneNote 2013 rich client or web app.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "notesUrl",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "notesWacUrl",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,369 @@
+{
+  "name": "EmptyCell",
+  "kind": "Class",
+  "guid": "{3B06E986-E47C-11CD-8701-00AA003F0F07}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "Represents an empty cell in a control layout.",
+  "remarks": "An EmptyCell object is created when a control layout contains an empty cell. You cannot explicitly create or delete an EmptyCell object. When you type inside an empty cell, Microsoft Access automatically inserts a Label control.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Use the Application property to access the active Microsoft Access Application object and its related properties. Read-only Application object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Properties",
+      "kind": "property",
+      "type": "Properties",
+      "access": "read-only",
+      "description": "Returns a reference to a control's Properties collection object. Read-only."
+    },
+    {
+      "name": "EventProcPrefix",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the prefix portion of an event procedure name. Read/write String."
+    },
+    {
+      "name": "ControlType",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the ControlType property in Visual Basic to determine the type of control on a form or report. Read/write Byte."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether the object is visible. Read/write Boolean."
+    },
+    {
+      "name": "DisplayWhen",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the DisplayWhen property to specify which of a form's controls you want displayed on screen and in print. Read/write Byte."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the Left property to specify an object's location on a form or report. Read/write Integer."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the Top property to specify an object's location on a form or report. Read/write Integer."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Gets or sets the width of the specified object in twips. Read/write Integer."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Gets or sets the height of the specified object in twips. Read/write Integer."
+    },
+    {
+      "name": "BackStyle",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the BackStyle property to specify whether a control will be transparent. Read/write Byte."
+    },
+    {
+      "name": "BackColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the interior color of the specified object. Read/write Long."
+    },
+    {
+      "name": "SpecialEffect",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the SpecialEffect property to specify whether special formatting will apply to the specified object. Read/write Byte."
+    },
+    {
+      "name": "HelpContextId",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "The HelpContextID property specifies the context ID of a topic in the custom Help file specified by the HelpFile property setting. Read/write Long."
+    },
+    {
+      "name": "Section",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "You can identify these controls by the section of a form or report where the control appears. Read/write Integer."
+    },
+    {
+      "name": "IsVisible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the IsVisible property to determine whether a control on a report is visible. Read/write Boolean."
+    },
+    {
+      "name": "ShortcutMenuBar",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the ShortcutMenuBar property to specify the shortcut menu that appears when you right-click the specified object. Read/write String."
+    },
+    {
+      "name": "InSelection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the InSelection property to determine or specify whether a control on a form in Design view is selected. Read/write Boolean."
+    },
+    {
+      "name": "Tag",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Stores extra information about a form, report, section, or control needed by a Microsoft Access application. Read/write String."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the Name property to specify or determine the string expression that identifies the name of an object. Read/write String."
+    },
+    {
+      "name": "HorizontalAnchor",
+      "kind": "property",
+      "type": "AcHorizontalAnchor",
+      "access": "read/write",
+      "description": "Gets or sets an AcHorizontalAnchor constant that indicates how the cell is anchored horizontally within its layout. Read/write."
+    },
+    {
+      "name": "VerticalAnchor",
+      "kind": "property",
+      "type": "AcVerticalAnchor",
+      "access": "read/write",
+      "description": "Gets or sets an AcVerticalAnchor constant that indicates how the specified cell is anchored vertically within its layout. Read/write."
+    },
+    {
+      "name": "Layout",
+      "kind": "property",
+      "type": "AcLayoutType",
+      "access": "read-only",
+      "description": "Returns the type of layout for the specified cell. Read-only AcLayoutType."
+    },
+    {
+      "name": "LeftPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Gets or sets the amount of space (in inches) between the cell and its left gridline. Read/write Integer."
+    },
+    {
+      "name": "TopPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Gets or sets the amount of space (in inches) between the cell and its top gridline. Read/write Integer."
+    },
+    {
+      "name": "RightPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Gets or sets the amount of space (in inches) between the cell and its right gridline. Read/write Integer."
+    },
+    {
+      "name": "BottomPadding",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Gets or sets the amount of space (in inches) between the cell and its bottom gridline. Read/write Integer."
+    },
+    {
+      "name": "GridlineStyleLeft",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Gets or sets the left gridline style of the specified cell. Read/write Byte."
+    },
+    {
+      "name": "GridlineStyleTop",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Gets or sets the top gridline style of the specified cell. Read/write Byte."
+    },
+    {
+      "name": "GridlineStyleRight",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Gets or sets the right gridline style of the specified cell. Read/write Byte."
+    },
+    {
+      "name": "GridlineStyleBottom",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Gets or sets the bottom gridline style of the specified cell. Read/write Byte."
+    },
+    {
+      "name": "GridlineWidthLeft",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Gets or sets the width of the left gridline for the specified cell. Read/write Byte."
+    },
+    {
+      "name": "GridlineWidthTop",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Gets or sets the width of the top gridline for the specified cell. Read/write Byte."
+    },
+    {
+      "name": "GridlineWidthRight",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Gets or sets the width of the right gridline for the specified cell. Read/write Byte."
+    },
+    {
+      "name": "GridlineWidthBottom",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Gets or sets the width of the bottom gridline for the specified cell. Read/write Byte."
+    },
+    {
+      "name": "GridlineColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the color of the gridline for the specified cell. Read/write Long."
+    },
+    {
+      "name": "LayoutID",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the unique identifier for the layout that contains the specified cell. Read-only Long."
+    },
+    {
+      "name": "StatusBarText",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the StatusBarText property to specify the text that is displayed in the status bar when a control is selected. Read/write String."
+    },
+    {
+      "name": "BackThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets a value that represents a color in the applied color theme associated with the BackColor property of the specified object. Read/write Long."
+    },
+    {
+      "name": "BackTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the tint that is applied to the theme color in the BackColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "BackShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the shade applied to the theme color in the BackColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "GridlineThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the theme color index that represents a color in the applied color theme associated with the GridlineColor property of the specified object. Read/write Long."
+    },
+    {
+      "name": "GridlineTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the tint applied to the theme color in the GridlineColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "GridlineShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the shade applied to the theme color in the GridlineColor property of the specified object. Read/write Single."
+    }
+  ],
+  "methods": [
+    {
+      "name": "SizeToFit",
+      "kind": "method",
+      "signature": "SizeToFit()",
+      "description": "Use the SizeToFit method to size a control so that it fits the text or image that it contains.",
+      "returns": "void"
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move(Left As Variant, [Top As Variant], [Width As Variant], [Height As Variant])",
+      "description": "Moves the specified object to the coordinates specified by the argument values.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": false,
+          "description": "The screen position in twips for the left edge of the object relative to the left edge of the Microsoft Access window."
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": "The screen position in twips for the top edge of the object relative to the top edge of the Access window."
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": "The desired width of the object in twips."
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": "The desired height of the object in twips."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

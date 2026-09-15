@@ -5,34 +5,34 @@ Mirrors what the VBA Object Browser shows for each library: classes
 (coclasses / dispatch interfaces), their properties / methods / events with
 return types and parameter signatures, plus enumerations and their constants.
 
-Libraries scraped (each into its own folder under reference/):
-    * Excel  -> reference/excel/   (Microsoft Excel Object Library)
-    * Office -> reference/office/   (Microsoft Office Object Library)
-    * VBA    -> reference/vba/      (Visual Basic For Applications)
-    * stdole -> reference/stdole/   (OLE Automation)
+Every library listed in ``LIBRARIES`` gets its own folder under reference/:
+the four host applications (Excel, PowerPoint, Word, Access) and the shared
+libraries every host can reference (Office, VBA, stdole, MSForms, ADO, ...).
 
-VBAProject (the open workbook's own project) is intentionally skipped: it is
-not a reusable reference library and is not registered for discovery.
+VBAProject (a document's own project) is intentionally skipped: it is not a
+reusable reference library and is not registered for discovery.
 
 Requirements:
-    * Windows with Microsoft Office installed
+    * Windows with the relevant Microsoft Office applications installed
     * pywin32  (pip install pywin32)
 
 Usage:
     python scrape_excel_object_model.py
+    python scrape_excel_object_model.py --only word,powerpoint
 """
 
 from __future__ import annotations
 
 import json
 import os
-import re
 import sys
 
 import pythoncom
 from win32com.client import selecttlb
 
+import consolidate_reference
 import mslearn_docs
+from consolidate_reference import render_type_md, safe_filename
 
 
 # --------------------------------------------------------------------------- #
@@ -51,8 +51,14 @@ DATA_DIR = os.path.join(ROOT_DIR, "reference")
 # for libraries that have no MS Learn VBA-API coverage; their files are still
 # written, just without external descriptions.
 LIBRARIES = [
-    # --- Default references in every Excel VBA project ---
+    # --- Host applications ---
     ("excel", ["microsoft excel", "object library"], [], "excel"),
+    ("powerpoint", ["microsoft powerpoint", "object library"], [],
+     "powerpoint"),
+    ("word", ["microsoft word", "object library"], [], "word"),
+    ("access", ["microsoft access", "object library"],
+     ["database engine"], "access"),
+    # --- Shared references available to every host ---
     ("office", ["microsoft office", "object library"],
      ["access database engine"], "office"),
     ("vba", ["visual basic for applications"], ["extensibility"], "vba"),
@@ -482,137 +488,7 @@ def resolve_coclass_interfaces(info):
 
 
 # --------------------------------------------------------------------------- #
-# Markdown writing
-# --------------------------------------------------------------------------- #
-
-_INVALID = re.compile(r'[<>:"/\\|?*]')
-
-
-def safe_filename(name: str) -> str:
-    return _INVALID.sub("_", name)
-
-
-def _emit_members(lines, members):
-    for m in members:
-        line = f"- `{m.text}`"
-        if m.doc:
-            line += f"  \n  {m.doc}"
-        lines.append(line)
-        for p in m.params:
-            if p.get("description"):
-                opt = "optional" if p["optional"] else "required"
-                t = f" As {p['type']}" if p["type"] else ""
-                lines.append(
-                    f"    - `{p['name']}{t}` ({opt}): {p['description']}")
-
-
-def _emit_remarks_example(lines, remarks, example):
-    if remarks:
-        lines.append(f"**Remarks:** {remarks}")
-        lines.append("")
-    if example:
-        lines.append("**Example:**")
-        lines.append("")
-        lines.append("```vba")
-        lines.append(example)
-        lines.append("```")
-        lines.append("")
-
-
-def write_class_file(output_dir: str, name: str, kind_label: str, guid: str,
-                     lib_desc: str, properties, methods, events,
-                     description: str = "", remarks: str = "",
-                     example: str = "") -> None:
-    lines = [f"# {name}", ""]
-    lines.append(f"**Type:** {kind_label}  ")
-    lines.append(f"**Library:** {lib_desc}  ")
-    if guid:
-        lines.append(f"**GUID:** {guid}  ")
-    lines.append("")
-    if description:
-        lines.append(description)
-        lines.append("")
-    _emit_remarks_example(lines, remarks, example)
-
-    if properties:
-        lines.append(f"## Properties ({len(properties)})")
-        lines.append("")
-        _emit_members(lines, properties)
-        lines.append("")
-
-    if methods:
-        lines.append(f"## Methods ({len(methods)})")
-        lines.append("")
-        _emit_members(lines, methods)
-        lines.append("")
-
-    if events:
-        lines.append(f"## Events ({len(events)})")
-        lines.append("")
-        _emit_members(lines, events)
-        lines.append("")
-
-    if not (properties or methods or events):
-        lines.append("_No public members._")
-        lines.append("")
-
-    path = os.path.join(output_dir, safe_filename(name) + ".md")
-    with open(path, "w", encoding="utf-8") as fh:
-        fh.write("\n".join(lines))
-
-
-def write_enum_file(output_dir: str, name: str, lib_desc: str, consts,
-                    description: str = "") -> None:
-    lines = [f"# {name}", "", "**Type:** Enumeration  ",
-             f"**Library:** {lib_desc}  ", ""]
-    if description:
-        lines.append(description)
-        lines.append("")
-    lines.append(f"## Constants ({len(consts)})")
-    lines.append("")
-    for cname, value, desc in consts:
-        line = f"- `{cname}`"
-        if value is not None:
-            line += f" = {value}"
-        if desc:
-            line += f"  \n  {desc}"
-        lines.append(line)
-    lines.append("")
-    path = os.path.join(output_dir, safe_filename(name) + ".md")
-    with open(path, "w", encoding="utf-8") as fh:
-        fh.write("\n".join(lines))
-
-
-def write_module_file(output_dir: str, name: str, lib_desc: str, funcs,
-                      consts, description: str = "") -> None:
-    lines = [f"# {name}", "", "**Type:** Module  ",
-             f"**Library:** {lib_desc}  ", ""]
-    if description:
-        lines.append(description)
-        lines.append("")
-
-    if consts:
-        lines.append(f"## Constants ({len(consts)})")
-        lines.append("")
-        for cname, value, ctype in consts:
-            t = f" As {ctype}" if ctype else ""
-            v = f" = {value}" if value is not None else ""
-            lines.append(f"- `{cname}{t}{v}`")
-        lines.append("")
-
-    if funcs:
-        lines.append(f"## Functions ({len(funcs)})")
-        lines.append("")
-        _emit_members(lines, funcs)
-        lines.append("")
-
-    path = os.path.join(output_dir, safe_filename(name) + ".md")
-    with open(path, "w", encoding="utf-8") as fh:
-        fh.write("\n".join(lines))
-
-
-# --------------------------------------------------------------------------- #
-# JSON writing (machine-readable, for IDE consumption)
+# Output writing
 # --------------------------------------------------------------------------- #
 
 def _member_json(m) -> dict:
@@ -631,12 +507,19 @@ def _member_json(m) -> dict:
     return d
 
 
-def write_type_json(json_dir: str, data: dict) -> None:
-    path = os.path.join(json_dir, safe_filename(data["name"]) + ".json")
-    with open(path, "w", encoding="utf-8") as fh:
+def write_type(md_dir: str, json_dir: str, data: dict) -> None:
+    """Write one type as JSON and as Markdown, both from the same dict.
+
+    The Markdown comes from ``consolidate_reference.render_type_md`` so the
+    per-type files and the consolidated exports cannot drift apart.
+    """
+    stem = safe_filename(data["name"])
+    with open(os.path.join(json_dir, stem + ".json"), "w",
+              encoding="utf-8") as fh:
         json.dump(data, fh, indent=2)
         fh.write("\n")
-
+    with open(os.path.join(md_dir, stem + ".md"), "w", encoding="utf-8") as fh:
+        fh.write("\n".join(render_type_md(data)))
 
 
 def _apply_params(member, entry) -> None:
@@ -703,6 +586,10 @@ def scrape_typelib(tlb, lib_desc: str, output_dir: str, doc_prefix=None,
     builtin_mode = (doc_prefix == "vba")
     api_prefix = None if builtin_mode else doc_prefix
 
+    # Lowercased, because a type name is also its file name: Access and VBIDE
+    # name a coclass and its dispatch interface identically except for case
+    # (CheckBox / Checkbox), and the coclass - emitted first, and the one the
+    # Object Browser shows - is the richer entry of the two.
     emitted: set[str] = set()
     written = 0
     index_entries: list[tuple[str, str]] = []
@@ -722,9 +609,7 @@ def scrape_typelib(tlb, lib_desc: str, output_dir: str, doc_prefix=None,
                 if entry.summary:
                     description = entry.summary
                 remarks, example = entry.remarks, entry.example
-        write_class_file(md_dir, name, kind_label, guid, lib_desc, props,
-                         methods, events, description, remarks, example)
-        write_type_json(json_dir, {
+        write_type(md_dir, json_dir, {
             "name": name, "kind": kind_label, "guid": guid,
             "library": lib_desc, "description": description,
             "remarks": remarks, "example": example,
@@ -753,7 +638,7 @@ def scrape_typelib(tlb, lib_desc: str, output_dir: str, doc_prefix=None,
             events = extract_events(source_iface)
         emit_class(name, TKIND_LABEL[TKIND_COCLASS], str(attr.iid),
                    props, methods, events, description)
-        emitted.add(name)
+        emitted.add(name.lower())
         index_entries.append((name, "Class"))
         written += 1
 
@@ -767,7 +652,7 @@ def scrape_typelib(tlb, lib_desc: str, output_dir: str, doc_prefix=None,
         if attr.typekind != TKIND_ENUM:
             continue
         name = tlb.GetDocumentation(i)[0]
-        if name in emitted:
+        if name.lower() in emitted:
             continue
         raw_consts = extract_enum_constants(info)
         if not raw_consts:
@@ -782,14 +667,13 @@ def scrape_typelib(tlb, lib_desc: str, output_dir: str, doc_prefix=None,
                 const_docs = entry.constants
         consts = [(cname, value, const_docs.get(cname.lower(), ""))
                   for cname, value in raw_consts]
-        write_enum_file(md_dir, name, lib_desc, consts, description)
-        write_type_json(json_dir, {
+        write_type(md_dir, json_dir, {
             "name": name, "kind": "Enumeration", "library": lib_desc,
             "description": description,
             "constants": [{"name": c, "value": v, "description": d}
                           for c, v, d in consts],
         })
-        emitted.add(name)
+        emitted.add(name.lower())
         index_entries.append((name, "Enumeration"))
         written += 1
 
@@ -804,7 +688,7 @@ def scrape_typelib(tlb, lib_desc: str, output_dir: str, doc_prefix=None,
         if attr.typekind != TKIND_MODULE:
             continue
         name = tlb.GetDocumentation(i)[0]
-        if name in emitted:
+        if name.lower() in emitted:
             continue
         description = tlb.GetDocumentation(i)[1] or ""
         funcs, consts = extract_module_members(info)
@@ -817,15 +701,14 @@ def scrape_typelib(tlb, lib_desc: str, output_dir: str, doc_prefix=None,
                 entry = _enrich_api(index, api_prefix, name, [], funcs, [])
                 if entry and entry.summary:
                     description = entry.summary
-        write_module_file(md_dir, name, lib_desc, funcs, consts, description)
-        write_type_json(json_dir, {
+        write_type(md_dir, json_dir, {
             "name": name, "kind": "Module", "library": lib_desc,
             "description": description,
             "functions": [_member_json(m) for m in funcs],
             "constants": [{"name": c, "value": v, "type": t}
                           for c, v, t in consts],
         })
-        emitted.add(name)
+        emitted.add(name.lower())
         index_entries.append((name, "Module"))
         written += 1
 
@@ -840,7 +723,7 @@ def scrape_typelib(tlb, lib_desc: str, output_dir: str, doc_prefix=None,
             continue
         raw = tlb.GetDocumentation(i)[0]
         name = display_name(raw)
-        if name in emitted:
+        if name.lower() in emitted:
             continue
         description = tlb.GetDocumentation(i)[1] or ""
         props, methods = extract_interface_members(info)
@@ -848,7 +731,7 @@ def scrape_typelib(tlb, lib_desc: str, output_dir: str, doc_prefix=None,
             continue
         emit_class(name, TKIND_LABEL[attr.typekind], str(attr.iid),
                    props, methods, [], description)
-        emitted.add(name)
+        emitted.add(name.lower())
         index_entries.append((name, TKIND_LABEL[attr.typekind]))
         written += 1
 
@@ -947,13 +830,50 @@ def _clean_stale_flat(output_dir: str) -> None:
             os.remove(full)
 
 
+def _parse_only(argv) -> set:
+    """Return the set of library folders named by ``--only a,b`` (or empty)."""
+    folders: set[str] = set()
+    for i, arg in enumerate(argv):
+        value = ""
+        if arg.startswith("--only="):
+            value = arg.split("=", 1)[1]
+        elif arg == "--only" and i + 1 < len(argv):
+            value = argv[i + 1]
+        folders.update(f.strip().lower() for f in value.split(",") if f.strip())
+    return folders
+
+
+def _existing_library(folder: str):
+    """Return the library description of an already-generated folder, or None.
+
+    Used with ``--only`` so the master indexes and consolidated exports still
+    cover every library, not just the ones scraped in this run.
+    """
+    path = os.path.join(DATA_DIR, folder, "json", "_index.json")
+    try:
+        with open(path, encoding="utf-8") as fh:
+            return json.load(fh).get("library") or folder
+    except (OSError, ValueError):
+        return None
+
+
 def main() -> int:
-    no_enrich = "--no-enrich" in sys.argv[1:]
-    force_dl = "--refresh-docs" in sys.argv[1:]
+    argv = sys.argv[1:]
+    no_enrich = "--no-enrich" in argv
+    force_dl = "--refresh-docs" in argv
+    only = _parse_only(argv)
+
+    unknown = only - {folder for (folder, _i, _e, _p) in LIBRARIES}
+    if unknown:
+        print(f"Unknown library folder(s) for --only: {sorted(unknown)}")
+        print(f"Known: {[f for (f, _i, _e, _p) in LIBRARIES]}")
+        return 2
+
+    selected = [lib for lib in LIBRARIES if not only or lib[0] in only]
 
     index = None
     if not no_enrich:
-        prefixes = {p for (_f, _i, _e, p) in LIBRARIES if p}
+        prefixes = {p for (_f, _i, _e, p) in selected if p}
         print("Building MS Learn description index...")
         index = mslearn_docs.build_index(prefixes, force_download=force_dl)
         if len(index) == 0:
@@ -963,6 +883,12 @@ def main() -> int:
     libs_done = 0
     done_libs: list[tuple[str, str]] = []
     for folder, include, exclude, doc_prefix in LIBRARIES:
+        if only and folder not in only:
+            # Keep previously generated output in the master indexes.
+            desc = _existing_library(folder)
+            if desc:
+                done_libs.append((folder, desc))
+            continue
         tlb, desc = load_typelib(include, exclude)
         if tlb is None:
             print(f"[skip] No registered type library matched '{folder}' "
@@ -988,6 +914,10 @@ def main() -> int:
     print("Building master indexes (index.json, members.json)...")
     names = write_master_indexes(DATA_DIR, done_libs)
     print(f"  Indexed {names} distinct member names.")
+
+    print(f"Building consolidated exports "
+          f"(reference/{consolidate_reference.OUTPUT_SUBDIR}/)...")
+    consolidate_reference.build(DATA_DIR)
 
     print(f"\nDone. {total} reference files written across "
           f"{libs_done} libraries.")

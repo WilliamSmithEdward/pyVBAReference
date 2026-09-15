@@ -1,0 +1,302 @@
+{
+  "name": "Sequence",
+  "kind": "Dispatch Interface",
+  "guid": "{914934DE-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a collection of Effect objects for a slide's interactive animation sequences. The Sequence collection is a member of the Sequences collection.",
+  "remarks": "",
+  "example": "Sub NewEffect()\n\n    Dim effNew As Effect\n    Dim shpFirst As Shape\n\n    Set shpFirst = ActivePresentation.Slides(1).Shapes(1)\n\n    Set effNew = ActivePresentation.Slides(1).TimeLine.MainSequence.AddEffect _\n        (Shape:=shpFirst, effectId:=msoAnimEffectBlinds)\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Effect",
+      "description": "Returns a single Effect object from the specified Sequence collection.",
+      "returns": "Effect",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the single Effect object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "AddEffect",
+      "kind": "method",
+      "signature": "AddEffect(Shape As Shape, effectId As MsoAnimEffect, [Level As MsoAnimateByLevel], [trigger As MsoAnimTriggerType], [Index As Long]) As Effect",
+      "description": "Returns an Effect object that represents a new animation effect added to a sequence of animation effects.",
+      "returns": "Effect",
+      "parameters": [
+        {
+          "name": "Shape",
+          "type": "Shape",
+          "optional": false,
+          "description": "The shape to which the animation effect is added."
+        },
+        {
+          "name": "effectId",
+          "type": "MsoAnimEffect",
+          "optional": false,
+          "description": "The animation effect to be applied."
+        },
+        {
+          "name": "Level",
+          "type": "MsoAnimateByLevel",
+          "optional": true,
+          "description": "For charts, diagrams, or text, the level to which the animation effect will be applied. The default value is msoAnimationLevelNone."
+        },
+        {
+          "name": "trigger",
+          "type": "MsoAnimTriggerType",
+          "optional": true,
+          "description": "The action that triggers the animation effect. The default value is msoAnimTriggerOnPageClick."
+        },
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": true,
+          "description": "The position at which the effect will be placed in the collection of animation effects. The default value is -1 (added to the end)."
+        }
+      ]
+    },
+    {
+      "name": "Clone",
+      "kind": "method",
+      "signature": "Clone(Effect As Effect, [Index As Long]) As Effect",
+      "description": "Creates a copy of an Effect object, and adds it to the Sequences collection at the specified index position.",
+      "returns": "Effect",
+      "parameters": [
+        {
+          "name": "Effect",
+          "type": "Effect",
+          "optional": false,
+          "description": "Effect object. The animation effect to be cloned."
+        },
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": true,
+          "description": "The position at which the cloned animation effect will be added to the Sequences collection. The default value is -1 (added to the end)."
+        }
+      ]
+    },
+    {
+      "name": "FindFirstAnimationFor",
+      "kind": "method",
+      "signature": "FindFirstAnimationFor(Shape As Shape) As Effect",
+      "description": "Returns an Effect object that represents the first animation for a given shape.",
+      "returns": "Effect",
+      "parameters": [
+        {
+          "name": "Shape",
+          "type": "Shape",
+          "optional": false,
+          "description": "The shape for which to find the first animation."
+        }
+      ]
+    },
+    {
+      "name": "FindFirstAnimationForClick",
+      "kind": "method",
+      "signature": "FindFirstAnimationForClick(click As Long) As Effect",
+      "description": "Returns an Effect object that represents the first animation started by the specified click number.",
+      "returns": "Effect",
+      "parameters": [
+        {
+          "name": "click",
+          "type": "Long",
+          "optional": false,
+          "description": "The specified click number."
+        }
+      ]
+    },
+    {
+      "name": "ConvertToBuildLevel",
+      "kind": "method",
+      "signature": "ConvertToBuildLevel(Effect As Effect, Level As MsoAnimateByLevel) As Effect",
+      "description": "Changes the build level information for a specified animation effect. Returns an Effect object that represents the build level information.",
+      "returns": "Effect",
+      "parameters": [
+        {
+          "name": "Effect",
+          "type": "Effect",
+          "optional": false,
+          "description": "The specified animation effect."
+        },
+        {
+          "name": "Level",
+          "type": "MsoAnimateByLevel",
+          "optional": false,
+          "description": "The animation build level."
+        }
+      ]
+    },
+    {
+      "name": "ConvertToAfterEffect",
+      "kind": "method",
+      "signature": "ConvertToAfterEffect(Effect As Effect, After As MsoAnimAfterEffect, [DimColor As MsoRGBType], [DimSchemeColor As PpColorSchemeIndex]) As Effect",
+      "description": "Specifies what an effect should do after it is finished. Returns an Effect object that represents an after effect.",
+      "returns": "Effect",
+      "parameters": [
+        {
+          "name": "Effect",
+          "type": "Effect",
+          "optional": false,
+          "description": "The effect to which the after effect will be added."
+        },
+        {
+          "name": "After",
+          "type": "MsoAnimAfterEffect",
+          "optional": false,
+          "description": "The behavior of the after effect."
+        },
+        {
+          "name": "DimColor",
+          "type": "MsoRGBType",
+          "optional": true,
+          "description": "A single color to apply the after effect."
+        },
+        {
+          "name": "DimSchemeColor",
+          "type": "PpColorSchemeIndex",
+          "optional": true,
+          "description": "A predefined color scheme to apply to the after effect."
+        }
+      ]
+    },
+    {
+      "name": "ConvertToAnimateBackground",
+      "kind": "method",
+      "signature": "ConvertToAnimateBackground(Effect As Effect, AnimateBackground As MsoTriState) As Effect",
+      "description": "Determines whether the background will be animated separately from, or in addition to, its accompanying text. Returns an Effect object representing the newly-modified animation effect.",
+      "returns": "Effect",
+      "parameters": [
+        {
+          "name": "Effect",
+          "type": "Effect",
+          "optional": false,
+          "description": "The animation effect to be applied to the background."
+        },
+        {
+          "name": "AnimateBackground",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "Determines whether the text will be animated separately from the background."
+        }
+      ]
+    },
+    {
+      "name": "ConvertToAnimateInReverse",
+      "kind": "method",
+      "signature": "ConvertToAnimateInReverse(Effect As Effect, animateInReverse As MsoTriState) As Effect",
+      "description": "Determines whether text will be animated in reverse order. Returns an Effect object representing the text animation.",
+      "returns": "Effect",
+      "parameters": [
+        {
+          "name": "Effect",
+          "type": "Effect",
+          "optional": false,
+          "description": "The animation effect to which the reversal will apply."
+        },
+        {
+          "name": "animateInReverse",
+          "type": "MsoTriState",
+          "optional": false,
+          "description": "Determines the text animation order."
+        }
+      ]
+    },
+    {
+      "name": "ConvertToTextUnitEffect",
+      "kind": "method",
+      "signature": "ConvertToTextUnitEffect(Effect As Effect, unitEffect As MsoAnimTextUnitEffect) As Effect",
+      "description": "Returns an Effect object that represents how text should be animated.",
+      "returns": "Effect",
+      "parameters": [
+        {
+          "name": "Effect",
+          "type": "Effect",
+          "optional": false,
+          "description": "The animation effect to which the text unit effect applies."
+        },
+        {
+          "name": "unitEffect",
+          "type": "MsoAnimTextUnitEffect",
+          "optional": false,
+          "description": "How the text should be animated."
+        }
+      ]
+    },
+    {
+      "name": "AddTriggerEffect",
+      "kind": "method",
+      "signature": "AddTriggerEffect(pShape As Shape, effectId As MsoAnimEffect, trigger As MsoAnimTriggerType, pTriggerShape As Shape, [bookmark As String], [Level As MsoAnimateByLevel]) As Effect",
+      "description": "Adds a trigger effect to the animation in a Sequence object.",
+      "returns": "Effect",
+      "parameters": [
+        {
+          "name": "pShape",
+          "type": "Shape",
+          "optional": false,
+          "description": "The Shape object with animation."
+        },
+        {
+          "name": "effectId",
+          "type": "MsoAnimEffect",
+          "optional": false,
+          "description": "The type of animation."
+        },
+        {
+          "name": "trigger",
+          "type": "MsoAnimTriggerType",
+          "optional": false,
+          "description": "The type of trigger effect to add."
+        },
+        {
+          "name": "pTriggerShape",
+          "type": "Shape",
+          "optional": false,
+          "description": "The Shape object that represents the trigger."
+        },
+        {
+          "name": "bookmark",
+          "type": "String",
+          "optional": true,
+          "description": "The bookmark."
+        },
+        {
+          "name": "Level",
+          "type": "MsoAnimateByLevel",
+          "optional": true,
+          "description": "The level of animation."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

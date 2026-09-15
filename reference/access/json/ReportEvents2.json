@@ -1,0 +1,390 @@
+{
+  "name": "ReportEvents2",
+  "kind": "Dispatch Interface",
+  "guid": "{D7281A87-4B30-41C5-AB7B-FABF9A35442A}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open(Cancel As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Close",
+      "kind": "method",
+      "signature": "Close()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Deactivate",
+      "kind": "method",
+      "signature": "Deactivate()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Error",
+      "kind": "method",
+      "signature": "Error(DataErr As Integer, Response As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "DataErr",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Response",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "NoData",
+      "kind": "method",
+      "signature": "NoData(Cancel As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Page",
+      "kind": "method",
+      "signature": "Page()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Current",
+      "kind": "method",
+      "signature": "Current()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Load",
+      "kind": "method",
+      "signature": "Load()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Resize",
+      "kind": "method",
+      "signature": "Resize()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Unload",
+      "kind": "method",
+      "signature": "Unload(Cancel As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GotFocus",
+      "kind": "method",
+      "signature": "GotFocus()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "LostFocus",
+      "kind": "method",
+      "signature": "LostFocus()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Click",
+      "kind": "method",
+      "signature": "Click()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "DblClick",
+      "kind": "method",
+      "signature": "DblClick(Cancel As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseDown",
+      "kind": "method",
+      "signature": "MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseMove",
+      "kind": "method",
+      "signature": "MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseUp",
+      "kind": "method",
+      "signature": "MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyDown",
+      "kind": "method",
+      "signature": "KeyDown(KeyCode As Integer, Shift As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyPress",
+      "kind": "method",
+      "signature": "KeyPress(KeyAscii As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "KeyAscii",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyUp",
+      "kind": "method",
+      "signature": "KeyUp(KeyCode As Integer, Shift As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Timer",
+      "kind": "method",
+      "signature": "Timer()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Filter",
+      "kind": "method",
+      "signature": "Filter(Cancel As Integer, FilterType As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "FilterType",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ApplyFilter",
+      "kind": "method",
+      "signature": "ApplyFilter(Cancel As Integer, ApplyType As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ApplyType",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseWheel",
+      "kind": "method",
+      "signature": "MouseWheel(Page As Boolean, Count As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Page",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Count",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

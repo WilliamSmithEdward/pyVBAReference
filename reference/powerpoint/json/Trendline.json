@@ -1,0 +1,197 @@
+{
+  "name": "Trendline",
+  "kind": "Dispatch Interface",
+  "guid": "{92D41A79-F07E-4CA4-AF6F-BEF486AA4E6F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a trendline in a chart.",
+  "remarks": "A trendline shows the trend, or direction, of data in a series. The Trendline object is a member of the Trendlines collection. The Trendlines collection contains all the Trendline objects for a single series.",
+  "example": "With ActiveDocument.InlineShapes(1)\n\n    If .HasChart Then\n\n        .Chart.SeriesCollection(1).Trendlines(1).Type = xlMovingAvg\n\n    End If\n\nEnd With",
+  "properties": [
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "Border",
+      "kind": "property",
+      "type": "ChartBorder",
+      "access": "read-only",
+      "description": "Returns the border of the object. Read-only ChartBorder."
+    },
+    {
+      "name": "DataLabel",
+      "kind": "property",
+      "type": "DataLabel",
+      "access": "read-only",
+      "description": "Returns the data label that is associated with the trendline. Read-only DataLabel."
+    },
+    {
+      "name": "DisplayEquation",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the equation for the trendline is displayed on the chart (in the same data label as the R-squared value). Read/write Boolean."
+    },
+    {
+      "name": "DisplayRSquared",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the R-squared value of the trendline is displayed on the chart (in the same data label as the equation). Read/write Boolean."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the index number of the object within the collection of similar objects. Read-only Long."
+    },
+    {
+      "name": "Intercept",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the point where the trendline crosses the value axis. Read/write Double."
+    },
+    {
+      "name": "InterceptIsAuto",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the point where the trendline crosses the value axis is automatically determined by the regression. Read/write Boolean."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets name of the object. Read/write String."
+    },
+    {
+      "name": "NameIsAuto",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word automatically determines the name of the trendline. Read/write Boolean."
+    },
+    {
+      "name": "Order",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the trendline order (an integer greater than 1) when the trendline type is xlPolynomial. Read/write Long."
+    },
+    {
+      "name": "Period",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the period for the moving-average trendline. Read/write Long."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "XlTrendlineType",
+      "access": "read/write",
+      "description": "Returns or sets the trendline type. Read/write XlTrendlineType."
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "ChartFormat",
+      "access": "read-only",
+      "description": "Returns the line, fill, and effect formatting for the object. Read-only ChartFormat."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Backward2",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the number of periods (or units on a scatter chart) that the trendline extends backward. Read/write Double."
+    },
+    {
+      "name": "Forward2",
+      "kind": "property",
+      "type": "Double",
+      "access": "read/write",
+      "description": "Returns or sets the number of periods (or units on a scatter chart) that the trendline extends forward. Read/write Double."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the Microsoft PowerPoint application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "ClearFormats",
+      "kind": "method",
+      "signature": "ClearFormats() As Variant",
+      "description": "Clears the formatting of the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete() As Variant",
+      "description": "Deletes the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select() As Variant",
+      "description": "Selects the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "GetProperty",
+      "kind": "method",
+      "signature": "GetProperty(Id As String) As Variant",
+      "description": "",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "Id",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "SetProperty",
+      "kind": "method",
+      "signature": "SetProperty(Id As String, Value As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Id",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Value",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

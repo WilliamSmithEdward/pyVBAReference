@@ -1,0 +1,324 @@
+{
+  "name": "Rows",
+  "kind": "Dispatch Interface",
+  "guid": "{0002094C-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of Row objects that represent the table rows in the specified selection, range, or table.",
+  "remarks": "Use the Rows property to return the Rows collection. The following example centers rows in the first table in the active document between the left and right margins. Use the Add method to add a row to a table. The following example inserts a row before the first row in the selection. Use Rows (Index), where Index is the index number, to return a single Row object. The index number represents the position of the row in the selection, range, or table. The following example deletes the first row in the first table in the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of rows in the collection. Read-only."
+    },
+    {
+      "name": "AllowBreakAcrossPages",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the text in a table row or rows are allowed to split across a page break. Read/write Long."
+    },
+    {
+      "name": "Alignment",
+      "kind": "property",
+      "type": "WdRowAlignment",
+      "access": "read/write",
+      "description": "Returns or sets a WdRowAlignment constant that represents the alignment for the specified rows. Read/write."
+    },
+    {
+      "name": "HeadingFormat",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if the specified row or rows are formatted as a table heading. Read/write Long."
+    },
+    {
+      "name": "SpaceBetweenColumns",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between text in adjacent columns of the specified row or rows. Read/write Single."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the height of the specified rows in a table. Read/write Single."
+    },
+    {
+      "name": "HeightRule",
+      "kind": "property",
+      "type": "WdRowHeightRule",
+      "access": "read/write",
+      "description": "Returns or sets the rule for determining the height of the specified cells or rows. Read/write WdRowHeightRule."
+    },
+    {
+      "name": "LeftIndent",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets a Single that represents the left indent value (in points) for the specified table rows. Read/write."
+    },
+    {
+      "name": "First",
+      "kind": "property",
+      "type": "Row",
+      "access": "read-only",
+      "description": "Returns a Row object that represents the first item in the Rows collection."
+    },
+    {
+      "name": "Last",
+      "kind": "property",
+      "type": "Row",
+      "access": "read-only",
+      "description": "Returns the last item in the Rows collection as a Row object."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Rows object."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read/write",
+      "description": "Returns a Borders collection that represents all the borders for the specified object."
+    },
+    {
+      "name": "Shading",
+      "kind": "property",
+      "type": "Shading",
+      "access": "read-only",
+      "description": "Returns a Shading object that refers to the shading formatting for the specified object."
+    },
+    {
+      "name": "WrapAroundText",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets whether text should wrap around the specified rows. Read/write Long."
+    },
+    {
+      "name": "DistanceTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the document text and the top edge of the specified table. Read/write Single."
+    },
+    {
+      "name": "DistanceBottom",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the document text and the bottom edge of the specified table. Read/write Single."
+    },
+    {
+      "name": "DistanceLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the document text and the left edge of the specified table. Read/write Single."
+    },
+    {
+      "name": "DistanceRight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the distance (in points) between the document text and the right edge of the specified table. Read/write Single."
+    },
+    {
+      "name": "HorizontalPosition",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the horizontal distance between the edge of the rows and the item specified by the RelativeHorizontalPosition property. Read/write Single."
+    },
+    {
+      "name": "VerticalPosition",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the vertical distance between the edge of the rows and the item specified by the RelativeVerticalPosition property. Read/write Single."
+    },
+    {
+      "name": "RelativeHorizontalPosition",
+      "kind": "property",
+      "type": "WdRelativeHorizontalPosition",
+      "access": "read/write",
+      "description": "Specifies the relative horizontal position of a group of rows. Read/write WdRelativeHorizontalPosition."
+    },
+    {
+      "name": "RelativeVerticalPosition",
+      "kind": "property",
+      "type": "WdRelativeVerticalPosition",
+      "access": "read/write",
+      "description": "Specifies the relative vertical position of a group of rows. Read/write WdRelativeVerticalPosition."
+    },
+    {
+      "name": "AllowOverlap",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a value that specifies whether the specified rows can overlap other rows."
+    },
+    {
+      "name": "NestingLevel",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the nesting level of the specified table rows. Read-only Long."
+    },
+    {
+      "name": "TableDirection",
+      "kind": "property",
+      "type": "WdTableDirection",
+      "access": "read/write",
+      "description": "Returns or sets the direction in which Microsoft Word orders cells in the specified table or row. Read/write WdTableDirection."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Row",
+      "description": "Returns an individual Row object in a collection.",
+      "returns": "Row",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([BeforeRow As Variant]) As Row",
+      "description": "Returns a Row object that represents a row added to a table.",
+      "returns": "Row",
+      "parameters": [
+        {
+          "name": "BeforeRow",
+          "type": "Variant",
+          "optional": true,
+          "description": "A Row object that represents the row that will appear immediately below the new row."
+        }
+      ]
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects a collection of rows in a table.",
+      "returns": "void"
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified table rows.",
+      "returns": "void"
+    },
+    {
+      "name": "SetLeftIndent",
+      "kind": "method",
+      "signature": "SetLeftIndent(LeftIndent As Single, RulerStyle As WdRulerStyle)",
+      "description": "Sets the indentation for a row or rows in a table.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "LeftIndent",
+          "type": "Single",
+          "optional": false,
+          "description": "The distance (in points) between the current left edge of the specified row or rows and the desired left edge."
+        },
+        {
+          "name": "RulerStyle",
+          "type": "WdRulerStyle",
+          "optional": false,
+          "description": "Controls the way Microsoft Word adjusts the table when the left indent is changed. The WdRulerStyle behavior applies to left-aligned tables. The WdRulerStyle behavior for center- and right-aligned tables can be unexpected; in these cases, use the SetLeftIndent method with care."
+        }
+      ]
+    },
+    {
+      "name": "SetHeight",
+      "kind": "method",
+      "signature": "SetHeight(RowHeight As Single, HeightRule As WdRowHeightRule)",
+      "description": "Sets the height of table rows.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "RowHeight",
+          "type": "Single",
+          "optional": false,
+          "description": "The height of the row or rows, in points."
+        },
+        {
+          "name": "HeightRule",
+          "type": "WdRowHeightRule",
+          "optional": false,
+          "description": "The rule for determining the height of the specified rows."
+        }
+      ]
+    },
+    {
+      "name": "DistributeHeight",
+      "kind": "method",
+      "signature": "DistributeHeight()",
+      "description": "Adjusts the height of the specified rows or cells so that they're equal.",
+      "returns": "void"
+    },
+    {
+      "name": "ConvertToText",
+      "kind": "method",
+      "signature": "ConvertToText([Separator As Variant], [NestedTables As Variant]) As Range",
+      "description": "Converts rows in a table to text and returns a Range object that represents the delimited text.",
+      "returns": "Range",
+      "parameters": [
+        {
+          "name": "Separator",
+          "type": "Variant",
+          "optional": true,
+          "description": "The character that delimits the converted columns (paragraph marks delimit the converted rows). Can be any following WdTableFieldSeparator constants: wdSeparateByCommas, wdSeparateByDefaultListSeparator, wdSeparateByParagraphs, or wdSeparateByTabs (Default)."
+        },
+        {
+          "name": "NestedTables",
+          "type": "Variant",
+          "optional": true,
+          "description": "True if nested tables are converted to text. This argument is ignored if Separator is not wdSeparateByParagraphs. The default value is True."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

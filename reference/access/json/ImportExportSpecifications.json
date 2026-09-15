@@ -1,0 +1,63 @@
+{
+  "name": "ImportExportSpecifications",
+  "kind": "Dispatch Interface",
+  "guid": "{77DC8648-F725-4371-88C3-6EB6C4894CA4}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "Represents the collection of available ImportExportSpecification objects.",
+  "remarks": "Use the Add method to create a new ImportExportSpecification object. Use the ImportExportSpecification property of the CodeProject or CurrentProject object to return the ImportExportSpecifications collection.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Use the Application property to access the active Microsoft Access Application object and its related properties. Read-only Application object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Use the Count property to determine the number of items in a specified collection. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only Object."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "ImportExportSpecification",
+      "access": "read-only",
+      "description": "The Item property returns a specific member of a collection either by position or by index. Read-only ImportExportSpecification."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String, SpecificationDefinition As String) As ImportExportSpecification",
+      "description": "Adds a new ImportExportSpecification object to the ImportExportSpecifications collection.",
+      "returns": "ImportExportSpecification",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name to use for the ImportExportSpecification."
+        },
+        {
+          "name": "SpecificationDefinition",
+          "type": "String",
+          "optional": false,
+          "description": "The XML markup that represents the settings to save for the import or export operation."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,178 @@
+{
+  "name": "Subdocuments",
+  "kind": "Dispatch Interface",
+  "guid": "{00020988-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of Subdocument objects that represent the subdocuments in a range or document.",
+  "remarks": "Use the Subdocuments property to return the Subdocuments collection. The following example expands all the subdocuments in the active document. Use the AddFromFile or AddFromRange method to add a subdocument to a document. The following example adds a subdocument named \"Setup.doc\" at the end of the active document. The following example applies the Heading 1 style to the first paragraph in the selection and then creates a subdocument for the contents of the selection. Use Subdocuments (Index), where Index is the index number, to return a single Subdocument object. The following example displays the path and file name of the first subdocument in the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Subdocuments object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of subdocuments in the collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Expanded",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the subdocuments in the specified document are expanded. Read/write Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Subdocument",
+      "description": "Returns an individual Subdocument object in a collection.",
+      "returns": "Subdocument",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "AddFromFile",
+      "kind": "method",
+      "signature": "AddFromFile(Name As Variant, [ConfirmConversions As Variant], [ReadOnly As Variant], [PasswordDocument As Variant], [PasswordTemplate As Variant], [Revert As Variant], [WritePasswordDocument As Variant], [WritePasswordTemplate As Variant]) As Subdocument",
+      "description": "Adds the specified subdocument to the master document at the start of the selection and returns a Subdocument object.",
+      "returns": "Subdocument",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "Variant",
+          "optional": false,
+          "description": "The file name of the subdocument to be inserted into the master document."
+        },
+        {
+          "name": "ConfirmConversions",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to confirm file conversion in the Convert File dialog box if the file isn't in Word format."
+        },
+        {
+          "name": "ReadOnly",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to insert the subdocument as a read-only document."
+        },
+        {
+          "name": "PasswordDocument",
+          "type": "Variant",
+          "optional": true,
+          "description": "The password required to open the subdocument if it is password protected."
+        },
+        {
+          "name": "PasswordTemplate",
+          "type": "Variant",
+          "optional": true,
+          "description": "The password required to open the template attached to the subdocument if the template is password protected."
+        },
+        {
+          "name": "Revert",
+          "type": "Variant",
+          "optional": true,
+          "description": "Controls what happens if Name is the file name of an open document. True to insert the saved version of the subdocument. False to insert the open version of the subdocument, which may contain unsaved changes."
+        },
+        {
+          "name": "WritePasswordDocument",
+          "type": "Variant",
+          "optional": true,
+          "description": "The password required to save changes to the document file if it is write-protected."
+        },
+        {
+          "name": "WritePasswordTemplate",
+          "type": "Variant",
+          "optional": true,
+          "description": "The password required to save changes to the template attached to the subdocument if the template is write-protected."
+        }
+      ]
+    },
+    {
+      "name": "AddFromRange",
+      "kind": "method",
+      "signature": "AddFromRange(Range As Range) As Subdocument",
+      "description": "Creates one or more subdocuments from the text in the specified range and returns a SubDocument object.",
+      "returns": "Subdocument",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The range used to create one or more subdocuments."
+        }
+      ]
+    },
+    {
+      "name": "Merge",
+      "kind": "method",
+      "signature": "Merge([FirstSubdocument As Variant], [LastSubdocument As Variant])",
+      "description": "Merges the specified subdocuments of a master document into a single subdocument.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FirstSubdocument",
+          "type": "Variant",
+          "optional": true,
+          "description": "The path and file name of the original document you want to merge revisions with."
+        },
+        {
+          "name": "LastSubdocument",
+          "type": "Variant",
+          "optional": true,
+          "description": "The last subdocument in a range of subdocuments to be merged."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the collection of subdocuments.",
+      "returns": "void"
+    },
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select()",
+      "description": "Selects the specified subdocument.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

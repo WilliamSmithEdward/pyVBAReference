@@ -1,0 +1,3174 @@
+{
+  "name": "Application",
+  "kind": "Class",
+  "guid": "{000209FF-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the Microsoft Word application. The Application object includes properties and methods that return top-level objects. For example, the ActiveDocument property returns a Document object.",
+  "remarks": "Use the Application property to return the Application object. The following example displays the user name for Word. Many of the properties and methods that return the most common user-interface objects-such as the active document (ActiveDocument property)-can be used without the Application object qualifier. For example, instead of writing Application.ActiveDocument.PrintOut, you can write ActiveDocument.PrintOut. Properties and methods that can be used without the Application object qualifier are considered \"global.\" To view the global properties and methods in the Object Browser, click <globals> at the top of the list in the Classes box. (Also see the Global object.) Remarks To use Automation (formerly OLE Automation) to control Word from another application, use the Microsoft Visual Basic CreateObject or GetObject function to return a Word Application object. The following Microsoft Excel example starts Word (if it is not already running) and opens an existing document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Application object."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the specified object. Read-only String."
+    },
+    {
+      "name": "Documents",
+      "kind": "property",
+      "type": "Documents",
+      "access": "read-only",
+      "description": "Returns a Documents collection that represents all the open documents. Read-only."
+    },
+    {
+      "name": "Windows",
+      "kind": "property",
+      "type": "Windows",
+      "access": "read-only",
+      "description": "Returns a Windows collection that represents all document windows. Read-only."
+    },
+    {
+      "name": "ActiveDocument",
+      "kind": "property",
+      "type": "Document",
+      "access": "read-only",
+      "description": "Returns a Document object that represents the active document (the document with the focus). If there are no documents open, an error occurs. Read-only."
+    },
+    {
+      "name": "ActiveWindow",
+      "kind": "property",
+      "type": "Window",
+      "access": "read-only",
+      "description": "Returns a Window object that represents the active window (the window with the focus). If there are no windows open, an error occurs. Read-only."
+    },
+    {
+      "name": "Selection",
+      "kind": "property",
+      "type": "Selection",
+      "access": "read-only",
+      "description": "Returns the Selection object that represents a selected range or the insertion point. Read-only."
+    },
+    {
+      "name": "WordBasic",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an automation object (WordBasic) that includes methods for all the WordBasic statements and functions available in Word version 6.0 and Word for Windows 95. Read-only."
+    },
+    {
+      "name": "RecentFiles",
+      "kind": "property",
+      "type": "RecentFiles",
+      "access": "read-only",
+      "description": "Returns a RecentFiles collection that represents the most recently accessed files."
+    },
+    {
+      "name": "NormalTemplate",
+      "kind": "property",
+      "type": "Template",
+      "access": "read-only",
+      "description": "Returns a Template object that represents the Normal template."
+    },
+    {
+      "name": "System",
+      "kind": "property",
+      "type": "System",
+      "access": "read-only",
+      "description": "Returns a System object, which can be used to return system-related information and perform system-related tasks."
+    },
+    {
+      "name": "AutoCorrect",
+      "kind": "property",
+      "type": "AutoCorrect",
+      "access": "read-only",
+      "description": "Returns an AutoCorrect object that contains the current AutoCorrect options, entries, and exceptions. Read-only."
+    },
+    {
+      "name": "FontNames",
+      "kind": "property",
+      "type": "FontNames",
+      "access": "read-only",
+      "description": "Returns a FontNames object that includes the names of all the available fonts. Read-only."
+    },
+    {
+      "name": "LandscapeFontNames",
+      "kind": "property",
+      "type": "FontNames",
+      "access": "read-only",
+      "description": "Returns a FontNames object that includes the names of all the available landscape fonts."
+    },
+    {
+      "name": "PortraitFontNames",
+      "kind": "property",
+      "type": "FontNames",
+      "access": "read-only",
+      "description": "Returns a FontNames object that includes the names of all the available portrait fonts."
+    },
+    {
+      "name": "Languages",
+      "kind": "property",
+      "type": "Languages",
+      "access": "read-only",
+      "description": "Returns a Languages collection that represents the proofing languages listed in the Language dialog box."
+    },
+    {
+      "name": "Browser",
+      "kind": "property",
+      "type": "Browser",
+      "access": "read-only",
+      "description": "Returns a Browser object that represents the Select Browse Object tool on the vertical scroll bar. Read-only."
+    },
+    {
+      "name": "FileConverters",
+      "kind": "property",
+      "type": "FileConverters",
+      "access": "read-only",
+      "description": "Returns a FileConverters collection that represents all the file converters available to Microsoft Word. Read-only."
+    },
+    {
+      "name": "MailingLabel",
+      "kind": "property",
+      "type": "MailingLabel",
+      "access": "read-only",
+      "description": "Returns a MailingLabel object that represents a mailing label."
+    },
+    {
+      "name": "Dialogs",
+      "kind": "property",
+      "type": "Dialogs",
+      "access": "read-only",
+      "description": "Returns a Dialogs collection that represents all the built-in dialog boxes in Word. Read-only."
+    },
+    {
+      "name": "CaptionLabels",
+      "kind": "property",
+      "type": "CaptionLabels",
+      "access": "read-only",
+      "description": "Returns a CaptionLabels collection that represents all the available caption labels. Read-only."
+    },
+    {
+      "name": "AutoCaptions",
+      "kind": "property",
+      "type": "AutoCaptions",
+      "access": "read-only",
+      "description": "Returns an AutoCaptions collection that represents the captions that are automatically added when items such as tables and pictures are inserted into a document. Read-only."
+    },
+    {
+      "name": "AddIns",
+      "kind": "property",
+      "type": "AddIns",
+      "access": "read-only",
+      "description": "Returns an AddIns collection that represents all available add-ins, regardless of whether they're currently loaded. Read-only."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean value that determines whether the object is visible. Read/write."
+    },
+    {
+      "name": "Version",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the Microsoft Word version number. Read-only String."
+    },
+    {
+      "name": "ScreenUpdating",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if screen updating is turned on. Read/write Boolean."
+    },
+    {
+      "name": "PrintPreview",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if print preview is the current view. Read/write Boolean."
+    },
+    {
+      "name": "Tasks",
+      "kind": "property",
+      "type": "Tasks",
+      "access": "read-only",
+      "description": "Returns a Tasks collection that represents all the applications that are running."
+    },
+    {
+      "name": "SpecialMode",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if Microsoft Word is in a special mode (for example, CopyText mode, or MoveText mode). Read-only Boolean."
+    },
+    {
+      "name": "UsableWidth",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the maximum width (in points) to which you can set the width of a Microsoft Word document window. Read-only Long."
+    },
+    {
+      "name": "UsableHeight",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the maximum height (in points) to which you can set the height of a Microsoft Word document window. Read-only Long."
+    },
+    {
+      "name": "MathCoprocessorAvailable",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if a math coprocessor is installed and available to Microsoft Word. Read-only Boolean."
+    },
+    {
+      "name": "MouseAvailable",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if there is a mouse available for the system. Read-only Boolean."
+    },
+    {
+      "name": "International",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read-only",
+      "description": "Returns information about the current country/region and international settings. Read-only Variant."
+    },
+    {
+      "name": "Build",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the version and build number of the Word application. Read-only String."
+    },
+    {
+      "name": "CapsLock",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the CAPS LOCK key is turned on. Read-only Boolean."
+    },
+    {
+      "name": "NumLock",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns the state of the NUM LOCK key. True if the keys on the numeric keypad insert numbers, False if the keys move the insertion point. Read-only Boolean."
+    },
+    {
+      "name": "UserName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the user's name, which is used on envelopes and for the Author document property. Read/write String."
+    },
+    {
+      "name": "UserInitials",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the user's initials, which Microsoft Word uses to construct comment marks. Read/write String."
+    },
+    {
+      "name": "UserAddress",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the user's mailing address. Read/write String."
+    },
+    {
+      "name": "MacroContainer",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns a Template or Document object that represents the template or document in which the module that contains the running procedure is stored."
+    },
+    {
+      "name": "DisplayRecentFiles",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the names of recently used files are displayed on the File menu. Read/write Boolean."
+    },
+    {
+      "name": "CommandBars",
+      "kind": "property",
+      "type": "CommandBars",
+      "access": "read-only",
+      "description": "Returns a CommandBars collection that represents the menu bar and all the toolbars in Microsoft Word."
+    },
+    {
+      "name": "SynonymInfo",
+      "kind": "property",
+      "type": "SynonymInfo",
+      "access": "read-only",
+      "description": "Returns a SynonymInfo object that contains information from the thesaurus on synonyms, antonyms, or related words and expressions for the specified word or phrase."
+    },
+    {
+      "name": "VBE",
+      "kind": "property",
+      "type": "VBE",
+      "access": "read-only",
+      "description": "Returns a VBE object that represents the Visual Basic Editor."
+    },
+    {
+      "name": "DefaultSaveFormat",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the default format that will appear in the Save as type box in the Save As dialog box. Read/write String."
+    },
+    {
+      "name": "ListGalleries",
+      "kind": "property",
+      "type": "ListGalleries",
+      "access": "read-only",
+      "description": "Returns a ListGalleries collection that represents the three list template galleries. ."
+    },
+    {
+      "name": "ActivePrinter",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the active printer. Read/write String."
+    },
+    {
+      "name": "Templates",
+      "kind": "property",
+      "type": "Templates",
+      "access": "read-only",
+      "description": "Returns a Templates collection that represents all the available templates-global templates and those attached to open documents."
+    },
+    {
+      "name": "CustomizationContext",
+      "kind": "property",
+      "type": "Object",
+      "access": "read/write",
+      "description": "Returns or sets a Template or Document object that represents the template or document in which changes to menu bars, toolbars, and key bindings are stored. Read/write."
+    },
+    {
+      "name": "KeyBindings",
+      "kind": "property",
+      "type": "KeyBindings",
+      "access": "read-only",
+      "description": "Returns a KeyBindings collection that represents customized key assignments, which include a key code, a key category, and a command."
+    },
+    {
+      "name": "KeysBoundTo",
+      "kind": "property",
+      "type": "KeysBoundTo",
+      "access": "read-only",
+      "description": "Returns a KeysBoundTo object that represents all the key combinations assigned to the specified item."
+    },
+    {
+      "name": "FindKey",
+      "kind": "property",
+      "type": "KeyBinding",
+      "access": "read-only",
+      "description": "Returns a KeyBinding object that represents the specified key combination. Read-only."
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the text displayed in the Title bar of the application window. Read/write String."
+    },
+    {
+      "name": "Path",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the disk or Web path to the specified object. Read-only String."
+    },
+    {
+      "name": "DisplayScrollBars",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word displays a scroll bar in at least one document window. False if there are no scroll bars displayed in any window. Read/write Boolean."
+    },
+    {
+      "name": "StartupPath",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the complete path of the startup folder, excluding the final separator. Read/write String."
+    },
+    {
+      "name": "BackgroundSavingStatus",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of files queued up to be saved in the background. Read-only Long."
+    },
+    {
+      "name": "BackgroundPrintingStatus",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of print jobs in the background printing queue. Read-only Long."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets a Long that represents the horizontal position of the active document, measured in points. Read/write."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the vertical position of the active document. Read/write Long."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the width of the application window, in points. Read/write Long."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the height of the active document window in pixels. Read/write Long."
+    },
+    {
+      "name": "WindowState",
+      "kind": "property",
+      "type": "WdWindowState",
+      "access": "read/write",
+      "description": "Returns or sets the state of the specified document window or task window. Read/write WdWindowState."
+    },
+    {
+      "name": "DisplayAutoCompleteTips",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Word displays tips that suggest text for completing words, dates, or phrases as you type. Read/write Boolean."
+    },
+    {
+      "name": "Options",
+      "kind": "property",
+      "type": "Options",
+      "access": "read-only",
+      "description": "Returns an Options object that represents application settings in Microsoft Word."
+    },
+    {
+      "name": "DisplayAlerts",
+      "kind": "property",
+      "type": "WdAlertLevel",
+      "access": "read/write",
+      "description": "Returns or sets the way certain alerts and messages are handled while a macro is running. Read/write WdAlertLevel."
+    },
+    {
+      "name": "CustomDictionaries",
+      "kind": "property",
+      "type": "Dictionaries",
+      "access": "read-only",
+      "description": "Returns a Dictionaries object that represents the collection of active custom dictionaries. Read-only."
+    },
+    {
+      "name": "PathSeparator",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the character used to separate folder names. This property returns a backslash (\\). Read-only String."
+    },
+    {
+      "name": "StatusBar",
+      "kind": "property",
+      "type": "String",
+      "access": "write-only",
+      "description": "This property is no longer supported in Microsoft Word Visual Basic for Applications."
+    },
+    {
+      "name": "MAPIAvailable",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if MAPI is installed. Read-only Boolean."
+    },
+    {
+      "name": "DisplayScreenTips",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if comments, footnotes, endnotes, and hyperlinks are displayed as tips. Text marked as having comments is highlighted. Read/write Boolean."
+    },
+    {
+      "name": "EnableCancelKey",
+      "kind": "property",
+      "type": "WdEnableCancelKey",
+      "access": "read/write",
+      "description": "Returns or sets the way that Word handles CTRL+BREAK user interruptions. Read/write WdEnableCancelKey."
+    },
+    {
+      "name": "UserControl",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the document or application was created or opened by the user. Read-only Boolean."
+    },
+    {
+      "name": "MailSystem",
+      "kind": "property",
+      "type": "WdMailSystem",
+      "access": "read-only",
+      "description": "Returns the mail system (or systems) installed on the host computer. Read-only WdMailSystem."
+    },
+    {
+      "name": "DefaultTableSeparator",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the single character used to separate text into cells when text is converted to a table. Read/write String."
+    },
+    {
+      "name": "ShowVisualBasicEditor",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the Visual Basic Editor window is visible. Read/write Boolean."
+    },
+    {
+      "name": "BrowseExtraFileTypes",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Set this property to \"text/html\" to allow hyperlinked HTML files to be opened in Microsoft Word (instead of the default Internet browser). Read/write String."
+    },
+    {
+      "name": "IsObjectValid",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified variable that references an object is valid. Read-only Boolean."
+    },
+    {
+      "name": "HangulHanjaDictionaries",
+      "kind": "property",
+      "type": "HangulHanjaConversionDictionaries",
+      "access": "read-only",
+      "description": "Returns a HangulHanjaConversionDictionaries collection that represents all the active custom conversion dictionaries."
+    },
+    {
+      "name": "MailMessage",
+      "kind": "property",
+      "type": "MailMessage",
+      "access": "read-only",
+      "description": "Returns a MailMessage object that represents the active email message."
+    },
+    {
+      "name": "FocusInMailHeader",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the insertion point is in an email header field (the To: field, for example). Read-only Boolean."
+    },
+    {
+      "name": "EmailOptions",
+      "kind": "property",
+      "type": "EmailOptions",
+      "access": "read-only",
+      "description": "Returns an EmailOptions object that represents the global preferences for email authoring. Read-only."
+    },
+    {
+      "name": "Language",
+      "kind": "property",
+      "type": "MsoLanguageID",
+      "access": "read-only",
+      "description": "Returns an MsoLanguageID constant that represents the language selected for the Microsoft Word user interface."
+    },
+    {
+      "name": "COMAddIns",
+      "kind": "property",
+      "type": "COMAddIns",
+      "access": "read-only",
+      "description": "Returns a reference to the COMAddIns collection that represents all the Component Object Model (COM) add-ins currently loaded in Microsoft Word."
+    },
+    {
+      "name": "CheckLanguage",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Microsoft Word automatically detects the language you are using as you type. Read/write Boolean."
+    },
+    {
+      "name": "LanguageSettings",
+      "kind": "property",
+      "type": "LanguageSettings",
+      "access": "read-only",
+      "description": "Returns a LanguageSettings object, which contains information about the language settings in Microsoft Word."
+    },
+    {
+      "name": "FeatureInstall",
+      "kind": "property",
+      "type": "MsoFeatureInstall",
+      "access": "read/write",
+      "description": "Returns or sets how Microsoft Word handles calls to methods and properties that require features not yet installed. Read/write MsoFeatureInstall."
+    },
+    {
+      "name": "AutomationSecurity",
+      "kind": "property",
+      "type": "MsoAutomationSecurity",
+      "access": "read/write",
+      "description": "Returns or sets an MsoAutomationSecurity constant that represents the security setting Microsoft Word uses when programmatically opening files. ."
+    },
+    {
+      "name": "FileDialog",
+      "kind": "property",
+      "type": "FileDialog",
+      "access": "read-only",
+      "description": "Returns a FileDialog object which represents a single instance of a file dialog box."
+    },
+    {
+      "name": "EmailTemplate",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String that represents the document template to use when sending email messages. Read/write."
+    },
+    {
+      "name": "NewDocument",
+      "kind": "property",
+      "type": "NewFile",
+      "access": "read-only",
+      "description": "Returns a NewFile object that represents a document listed on the New tab."
+    },
+    {
+      "name": "ShowStartupDialog",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True to display the Task Pane when starting Microsoft Word. Read/write Boolean."
+    },
+    {
+      "name": "AutoCorrectEmail",
+      "kind": "property",
+      "type": "AutoCorrect",
+      "access": "read-only",
+      "description": "Returns an AutoCorrect object that represents automatic corrections made to email messages."
+    },
+    {
+      "name": "TaskPanes",
+      "kind": "property",
+      "type": "TaskPanes",
+      "access": "read-only",
+      "description": "Returns a TaskPanes collection that represents the most commonly performed tasks in Microsoft Word."
+    },
+    {
+      "name": "DefaultLegalBlackline",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True for Microsoft Word to compare and merge documents using the Legal blackline option in the Compare and Merge Documents dialog box. Read/write Boolean."
+    },
+    {
+      "name": "XMLNamespaces",
+      "kind": "property",
+      "type": "XMLNamespaces",
+      "access": "read-only",
+      "description": "Returns an XMLNamespaces collection that represents the XML schemas in the Schema Library."
+    },
+    {
+      "name": "ArbitraryXMLSupportAvailable",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean that represents whether Microsoft Word accepts custom XML schemas. True indicates that Word accepts custom XML schemas."
+    },
+    {
+      "name": "Bibliography",
+      "kind": "property",
+      "type": "Bibliography",
+      "access": "read-only",
+      "description": "Returns a Bibliography object that represents the bibliography references sources stored in Microsoft Word. Read-only."
+    },
+    {
+      "name": "ShowStylePreviews",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether Microsoft Word shows a preview of the formatting for styles in the Styles dialog box. Read/write."
+    },
+    {
+      "name": "RestrictLinkedStyles",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether Microsoft Word allows linked styles. Read/write."
+    },
+    {
+      "name": "OMathAutoCorrect",
+      "kind": "property",
+      "type": "OMathAutoCorrect",
+      "access": "read-only",
+      "description": "Returns an OMathAutoCorrect object that represents the auto correct entries for equations. Read-only."
+    },
+    {
+      "name": "DisplayDocumentInformationPanel",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether the document properties panel is displayed. Read/write."
+    },
+    {
+      "name": "Assistance",
+      "kind": "property",
+      "type": "IAssistance",
+      "access": "read-only",
+      "description": "Returns an Assistance object that represents the Microsoft Office Help Viewer. Read-only."
+    },
+    {
+      "name": "OpenAttachmentsInFullScreen",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether Microsoft Word opens email attachments in Reading mode. Read/write."
+    },
+    {
+      "name": "ActiveEncryptionSession",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the encryption session associated with the active document. Read-only."
+    },
+    {
+      "name": "DontResetInsertionPointProperties",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether Microsoft Word maintains the formatting properties of the text at that position of the Insertion Point after running other code. Read/write."
+    },
+    {
+      "name": "SmartArtLayouts",
+      "kind": "property",
+      "type": "SmartArtLayouts",
+      "access": "read-only",
+      "description": "Returns a SmartArtLayouts object that represents the set of SmartArt layouts that are currently loaded in the application. Read-only."
+    },
+    {
+      "name": "SmartArtQuickStyles",
+      "kind": "property",
+      "type": "SmartArtQuickStyles",
+      "access": "read-only",
+      "description": "Returns a SmartArtQuickStyles object that represents the set of SmartArt styles that are currently loaded in the application. Read-only."
+    },
+    {
+      "name": "SmartArtColors",
+      "kind": "property",
+      "type": "SmartArtColors",
+      "access": "read-only",
+      "description": "Returns a SmartArtColors object that represents the set of color styles that are currently loaded in the application. Read-only."
+    },
+    {
+      "name": "UndoRecord",
+      "kind": "property",
+      "type": "UndoRecord",
+      "access": "read-only",
+      "description": "Returns an UndoRecord object that provides a custom entry point into the undo stack. Read-only."
+    },
+    {
+      "name": "PickerDialog",
+      "kind": "property",
+      "type": "PickerDialog",
+      "access": "read-only",
+      "description": "Returns a PickerDialog object that provides the functionality to select people or data in a dialog box. Read-only."
+    },
+    {
+      "name": "ProtectedViewWindows",
+      "kind": "property",
+      "type": "ProtectedViewWindows",
+      "access": "read-only",
+      "description": "Returns a ProtectedViewWindows collection that represents all Protected View windows. Read-only."
+    },
+    {
+      "name": "ActiveProtectedViewWindow",
+      "kind": "property",
+      "type": "ProtectedViewWindow",
+      "access": "read-only",
+      "description": "Returns a ProtectedViewWindow object that represents the active Protected View window. Read-only."
+    },
+    {
+      "name": "IsSandboxed",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the application window is a Protected View window. Read-only."
+    },
+    {
+      "name": "FileValidation",
+      "kind": "property",
+      "type": "MsoFileValidationMode",
+      "access": "read/write",
+      "description": "Returns or sets how Word will validate files before opening them. Read/write MsoFileValidationMode."
+    },
+    {
+      "name": "ChartDataPointTrack",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that specifies whether charts use cell-reference data-point tracking. Read/write."
+    },
+    {
+      "name": "ShowAnimation",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "This object or member is deprecated and is not intended to be used in your code."
+    },
+    {
+      "name": "SensitivityLabelPolicy",
+      "kind": "property",
+      "type": "SensitivityLabelPolicy",
+      "access": "read-only",
+      "description": "Returns the SensitivityLabelPolicy object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Quit",
+      "kind": "method",
+      "signature": "Quit([SaveChanges As Variant], [OriginalFormat As Variant], [RouteDocument As Variant])",
+      "description": "Quits Microsoft Word and optionally saves or routes the open documents.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "SaveChanges",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies whether Word saves changed documents before closing. Can be one of the WdSaveOptions constants."
+        },
+        {
+          "name": "OriginalFormat",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the way Word saves documents whose original format was not Word Document format. Can be one of the WdOriginalFormat constants."
+        },
+        {
+          "name": "RouteDocument",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to route the document to the next recipient. If the document does not have a routing slip attached, this argument is ignored."
+        }
+      ]
+    },
+    {
+      "name": "ScreenRefresh",
+      "kind": "method",
+      "signature": "ScreenRefresh()",
+      "description": "Updates the display on the monitor with the current information in the video memory buffer.",
+      "returns": "void"
+    },
+    {
+      "name": "LookupNameProperties",
+      "kind": "method",
+      "signature": "LookupNameProperties(Name As String)",
+      "description": "Looks up a name in the global address book list and displays the Properties dialog box, which includes information about the specified name.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "A name in the global address book."
+        }
+      ]
+    },
+    {
+      "name": "SubstituteFont",
+      "kind": "method",
+      "signature": "SubstituteFont(UnavailableFont As String, SubstituteFont As String)",
+      "description": "Sets font-mapping options.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "UnavailableFont",
+          "type": "String",
+          "optional": false,
+          "description": "The name of a font not available on your computer that you want to map to a different font for display and printing."
+        },
+        {
+          "name": "SubstituteFont",
+          "type": "String",
+          "optional": false,
+          "description": "The name of a font available on your computer that you want to substitute for the unavailable font."
+        }
+      ]
+    },
+    {
+      "name": "Repeat",
+      "kind": "method",
+      "signature": "Repeat([Times As Variant]) As Boolean",
+      "description": "Repeats the most recent editing action one or more times. Returns True if the commands were repeated successfully.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "Times",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of times you want to repeat the last command."
+        }
+      ]
+    },
+    {
+      "name": "DDEExecute",
+      "kind": "method",
+      "signature": "DDEExecute(Channel As Long, Command As String)",
+      "description": "Sends a command or series of commands to an application through the specified dynamic data exchange (DDE) channel.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Channel",
+          "type": "Long",
+          "optional": false,
+          "description": "The channel number returned by the DDEInitiate method."
+        },
+        {
+          "name": "Command",
+          "type": "String",
+          "optional": false,
+          "description": "A command or series of commands recognized by the receiving application (the DDE server). If the receiving application cannot perform the specified command, an error occurs."
+        }
+      ]
+    },
+    {
+      "name": "DDEInitiate",
+      "kind": "method",
+      "signature": "DDEInitiate(App As String, Topic As String) As Long",
+      "description": "Opens a dynamic data exchange (DDE) channel to another application, and returns the channel number.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "App",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the application."
+        },
+        {
+          "name": "Topic",
+          "type": "String",
+          "optional": false,
+          "description": "The name of a DDE topic&mdash;for example, the name of an open document&mdash;recognized by the application to which you are opening a channel."
+        }
+      ]
+    },
+    {
+      "name": "DDEPoke",
+      "kind": "method",
+      "signature": "DDEPoke(Channel As Long, Item As String, Data As String)",
+      "description": "Uses an open dynamic data exchange (DDE) channel to send data to an application.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Channel",
+          "type": "Long",
+          "optional": false,
+          "description": "The channel number returned by the DDEInitiate method."
+        },
+        {
+          "name": "Item",
+          "type": "String",
+          "optional": false,
+          "description": "The item within a DDE topic to which the specified data is to be sent."
+        },
+        {
+          "name": "Data",
+          "type": "String",
+          "optional": false,
+          "description": "The data to be sent to the receiving application (the DDE server)."
+        }
+      ]
+    },
+    {
+      "name": "DDERequest",
+      "kind": "method",
+      "signature": "DDERequest(Channel As Long, Item As String) As String",
+      "description": "Uses an open dynamic data exchange (DDE) channel to request information from the receiving application, and returns the information as a String.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Channel",
+          "type": "Long",
+          "optional": false,
+          "description": "The channel number returned by the DDEInitiate method."
+        },
+        {
+          "name": "Item",
+          "type": "String",
+          "optional": false,
+          "description": "The item to be requested."
+        }
+      ]
+    },
+    {
+      "name": "DDETerminate",
+      "kind": "method",
+      "signature": "DDETerminate(Channel As Long)",
+      "description": "Closes the specified dynamic data exchange (DDE) channel to another application.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Channel",
+          "type": "Long",
+          "optional": false,
+          "description": "The channel number returned by the DDEInitiate method."
+        }
+      ]
+    },
+    {
+      "name": "DDETerminateAll",
+      "kind": "method",
+      "signature": "DDETerminateAll()",
+      "description": "Closes all dynamic data exchange (DDE) channels opened by Microsoft Word.",
+      "returns": "void"
+    },
+    {
+      "name": "BuildKeyCode",
+      "kind": "method",
+      "signature": "BuildKeyCode(Arg1 As WdKey, [Arg2 As Variant], [Arg3 As Variant], [Arg4 As Variant]) As Long",
+      "description": "Returns a unique number for the specified key combination.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "Arg1",
+          "type": "WdKey",
+          "optional": false,
+          "description": "A key you specify by using one of the WdKey constants."
+        },
+        {
+          "name": "Arg2",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg3",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "Arg4",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyString",
+      "kind": "method",
+      "signature": "KeyString(KeyCode As Long, [KeyCode2 As Variant]) As String",
+      "description": "Returns the key combination string for the specified keys (for example, CTRL+SHIFT+A).",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "Long",
+          "optional": false,
+          "description": "A key you specify by using one of the WdKey constants."
+        },
+        {
+          "name": "KeyCode2",
+          "type": "Variant",
+          "optional": true,
+          "description": "A second key you specify by using one of the WdKey constants."
+        }
+      ]
+    },
+    {
+      "name": "OrganizerCopy",
+      "kind": "method",
+      "signature": "OrganizerCopy(Source As String, Destination As String, Name As String, Object As WdOrganizerObject)",
+      "description": "Copies the specified AutoText entry, toolbar, style, or macro project item from the source document or template to the destination document or template.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "String",
+          "optional": false,
+          "description": "The document or template file name that contains the item you want to copy."
+        },
+        {
+          "name": "Destination",
+          "type": "String",
+          "optional": false,
+          "description": "The document or template file name to which you want to copy an item."
+        },
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the AutoText entry, toolbar, style, or macro you want to copy."
+        },
+        {
+          "name": "Object",
+          "type": "WdOrganizerObject",
+          "optional": false,
+          "description": "The kind of item you want to copy."
+        }
+      ]
+    },
+    {
+      "name": "OrganizerDelete",
+      "kind": "method",
+      "signature": "OrganizerDelete(Source As String, Name As String, Object As WdOrganizerObject)",
+      "description": "Deletes the specified style, AutoText entry, toolbar, or macro project item from a document or template.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "String",
+          "optional": false,
+          "description": "The file name of the document or template that contains the item you want to delete."
+        },
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the style, AutoText entry, toolbar, or macro you want to delete."
+        },
+        {
+          "name": "Object",
+          "type": "WdOrganizerObject",
+          "optional": false,
+          "description": "The kind of item you want to copy."
+        }
+      ]
+    },
+    {
+      "name": "OrganizerRename",
+      "kind": "method",
+      "signature": "OrganizerRename(Source As String, Name As String, NewName As String, Object As WdOrganizerObject)",
+      "description": "Renames the specified style, AutoText entry, toolbar, or macro project item in a document or template.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Source",
+          "type": "String",
+          "optional": false,
+          "description": "The file name of the document or template that contains the item you want to rename."
+        },
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the style, AutoText entry, toolbar, or macro you want to rename."
+        },
+        {
+          "name": "NewName",
+          "type": "String",
+          "optional": false,
+          "description": "The new name for the item."
+        },
+        {
+          "name": "Object",
+          "type": "WdOrganizerObject",
+          "optional": false,
+          "description": "The kind of item you want to copy."
+        }
+      ]
+    },
+    {
+      "name": "AddAddress",
+      "kind": "method",
+      "signature": "AddAddress(TagID As SAFEARRAY(String), Value As SAFEARRAY(String))",
+      "description": "Adds an entry to the address book. Each entry has values for one or more tag IDs.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "TagID",
+          "type": "SAFEARRAY(String)",
+          "optional": false,
+          "description": "The tag ID values for the new address entry. Each element in the array can contain one of the strings listed in the following table. Only the display name is required; the remaining entries are optional."
+        },
+        {
+          "name": "Value",
+          "type": "SAFEARRAY(String)",
+          "optional": false,
+          "description": "The values for the new address entry. Each element corresponds to an element in the TagID array. For more information, see the example."
+        }
+      ]
+    },
+    {
+      "name": "GetAddress",
+      "kind": "method",
+      "signature": "GetAddress([Name As Variant], [AddressProperties As Variant], [UseAutoText As Variant], [DisplaySelectDialog As Variant], [SelectDialog As Variant], [CheckNamesDialog As Variant], [RecentAddressesChoice As Variant], [UpdateRecentAddresses As Variant]) As String",
+      "description": "Returns an address from the default address book.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the addressee, as specified in the Search Name dialog box in the address book."
+        },
+        {
+          "name": "AddressProperties",
+          "type": "Variant",
+          "optional": true,
+          "description": "If _UseAutoText_ is True, this argument denotes the name of an AutoText entry that defines a sequence of address book properties. If _UseAutoText_ is False or omitted, this argument defines a custom layout. Valid address book property names or sets of property names are surrounded by angle brackets (\"<\" and \">\") and separated by a space or a paragraph mark (for example, \"<PR_GIVEN_NAME> <PR_SURNAME>\" & vbCr & \"<PR_OFFICE_TELEPHONE_NUMBER>\"). If the _AddressProperties_ parameter is omitted, a default AutoText entry named \"AddressLayout\" is used. If \"AddressLayout\" hasn't been defined, the following address layout definition is used: \"<PR_GIVEN_NAME> <PR_SURNAME>\" & vbCr & \"<PR_STREET_ADDRESS>\" & vbCr & \"<PR_LOCALITY>\" & \", \" & \"<PR_STATE_OR_PROVINCE>\" & \" \" & \"<PR_POSTAL_CODE>\" & vbCr & \"<PR_COUNTRY>\". For a list of the valid address book property names, see the AddAddress method."
+        },
+        {
+          "name": "UseAutoText",
+          "type": "Variant",
+          "optional": true,
+          "description": "True if _AddressProperties_ specifies the name of an AutoText entry that defines a sequence of address book properties; False if it specifies a custom layout."
+        },
+        {
+          "name": "DisplaySelectDialog",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies whether the Select Name dialog box is displayed, as shown in the Results table."
+        },
+        {
+          "name": "SelectDialog",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies how the Select Name dialog box should be displayed (that is, in what mode), as shown in the Display mode table."
+        },
+        {
+          "name": "CheckNamesDialog",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to display the Check Names dialog box when the value of the _Name_ argument isn't specific enough."
+        },
+        {
+          "name": "RecentAddressesChoice",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to use the list of recently used return addresses."
+        },
+        {
+          "name": "UpdateRecentAddresses",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to add an address to the list of recently used addresses; False to not add the address. If _SelectDialog_ is set to 1 or 2, this argument is ignored."
+        }
+      ]
+    },
+    {
+      "name": "CheckGrammar",
+      "kind": "method",
+      "signature": "CheckGrammar(String As String) As Boolean",
+      "description": "Checks a string for grammatical errors. Returns a Boolean to indicate whether the string contains grammatical errors. True if the string contains no errors.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "String",
+          "type": "String",
+          "optional": false,
+          "description": "The string you want to check for grammatical errors."
+        }
+      ]
+    },
+    {
+      "name": "CheckSpelling",
+      "kind": "method",
+      "signature": "CheckSpelling(Word As String, [CustomDictionary As Variant], [IgnoreUppercase As Variant], [MainDictionary As Variant], [CustomDictionary2 As Variant], [CustomDictionary3 As Variant], [CustomDictionary4 As Variant], [CustomDictionary5 As Variant], [CustomDictionary6 As Variant], [CustomDictionary7 As Variant], [CustomDictionary8 As Variant], [CustomDictionary9 As Variant], [CustomDictionary10 As Variant]) As Boolean",
+      "description": "Checks a string for spelling errors. Returns a Boolean to indicate whether the string contains spelling errors. True if the string has no spelling errors.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "Word",
+          "type": "String",
+          "optional": false,
+          "description": "The text whose spelling is to be checked."
+        },
+        {
+          "name": "CustomDictionary",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of the custom dictionary."
+        },
+        {
+          "name": "IgnoreUppercase",
+          "type": "Variant",
+          "optional": true,
+          "description": "True if capitalization is ignored. If this argument is omitted, the current value of the IgnoreUppercase property is used."
+        },
+        {
+          "name": "MainDictionary",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of the main dictionary."
+        },
+        {
+          "name": "CustomDictionary2",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of an additional custom dictionary."
+        },
+        {
+          "name": "CustomDictionary3",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of an additional custom dictionary."
+        },
+        {
+          "name": "CustomDictionary4",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of an additional custom dictionary."
+        },
+        {
+          "name": "CustomDictionary5",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of an additional custom dictionary."
+        },
+        {
+          "name": "CustomDictionary6",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of an additional custom dictionary."
+        },
+        {
+          "name": "CustomDictionary7",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of an additional custom dictionary."
+        },
+        {
+          "name": "CustomDictionary8",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of an additional custom dictionary."
+        },
+        {
+          "name": "CustomDictionary9",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of an additional custom dictionary."
+        },
+        {
+          "name": "CustomDictionary10",
+          "type": "Variant",
+          "optional": true,
+          "description": "Either an expression that returns a Dictionary object or the file name of an additional custom dictionary."
+        }
+      ]
+    },
+    {
+      "name": "ResetIgnoreAll",
+      "kind": "method",
+      "signature": "ResetIgnoreAll()",
+      "description": "Clears the list of words that were previously ignored during a spelling check.",
+      "returns": "void"
+    },
+    {
+      "name": "GetSpellingSuggestions",
+      "kind": "method",
+      "signature": "GetSpellingSuggestions(Word As String, [CustomDictionary As Variant], [IgnoreUppercase As Variant], [MainDictionary As Variant], [SuggestionMode As Variant], [CustomDictionary2 As Variant], [CustomDictionary3 As Variant], [CustomDictionary4 As Variant], [CustomDictionary5 As Variant], [CustomDictionary6 As Variant], [CustomDictionary7 As Variant], [CustomDictionary8 As Variant], [CustomDictionary9 As Variant], [CustomDictionary10 As Variant]) As SpellingSuggestions",
+      "description": "Returns a SpellingSuggestions collection that represents the words suggested as spelling replacements for a given word.",
+      "returns": "SpellingSuggestions",
+      "parameters": [
+        {
+          "name": "Word",
+          "type": "String",
+          "optional": false,
+          "description": "The word whose spelling is to be checked."
+        },
+        {
+          "name": "CustomDictionary",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "IgnoreUppercase",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to ignore words in all uppercase letters. If this argument is omitted, the current value of the IgnoreUppercase property is used."
+        },
+        {
+          "name": "MainDictionary",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "SuggestionMode",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the way Word makes spelling suggestions. Can be one of the following WdSpellingWordType constants: wdAnagram, wdSpellword, or wdWildcard. The default value is WdSpellword."
+        },
+        {
+          "name": "CustomDictionary2",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary3",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary4",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary5",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary6",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary7",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary8",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary9",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "CustomDictionary10",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "GoBack",
+      "kind": "method",
+      "signature": "GoBack()",
+      "description": "Moves the insertion point among the last three locations where editing occurred in the active document (the same as pressing SHIFT+F5).",
+      "returns": "void"
+    },
+    {
+      "name": "Help",
+      "kind": "method",
+      "signature": "Help(HelpType As Variant)",
+      "description": "Displays installed Help information.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "HelpType",
+          "type": "Variant",
+          "optional": false,
+          "description": "The on-line Help topic or window. Can be any of these WdHelpType constants: wdHelp, wdHelpAbout, wdHelpActiveWindow, wdHelpContents, wdHelpHWP, wdHelpIchitaro, wdHelpIndex, wdHelpPE2, wdHelpPSSHelp, wdHelpSearch, wdHelpUsingHelp. (Some of the constants listed here may not be available to you, depending on the language that you have selected or installed.)"
+        }
+      ]
+    },
+    {
+      "name": "HelpTool",
+      "kind": "method",
+      "signature": "HelpTool()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "NewWindow",
+      "kind": "method",
+      "signature": "NewWindow() As Window",
+      "description": "Opens a new window with the same document as the specified window. Returns a Window object.",
+      "returns": "Window"
+    },
+    {
+      "name": "ListCommands",
+      "kind": "method",
+      "signature": "ListCommands(ListAllCommands As Boolean)",
+      "description": "Creates a new document and then inserts a table of Word commands along with their associated shortcut keys and menu assignments.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ListAllCommands",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True to include all Word commands and their assignments (whether customized or built-in). False to include only commands with customized assignments."
+        }
+      ]
+    },
+    {
+      "name": "ShowClipboard",
+      "kind": "method",
+      "signature": "ShowClipboard()",
+      "description": "Displays the Clipboard task pane.",
+      "returns": "void"
+    },
+    {
+      "name": "OnTime",
+      "kind": "method",
+      "signature": "OnTime(When As Variant, Name As String, [Tolerance As Variant])",
+      "description": "Starts a background timer that runs a macro at a specified time.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "When",
+          "type": "Variant",
+          "optional": false,
+          "description": "The time at which the macro is to be run."
+        },
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the macro to be run."
+        },
+        {
+          "name": "Tolerance",
+          "type": "Variant",
+          "optional": true,
+          "description": "The maximum time (in seconds) that can elapse before a macro that was not run at the time specified by When is canceled. Macros may not always run at the specified time. For example, if a sort operation is under way or a dialog box is being displayed, the macro will be delayed until Word has completed the task. If this argument is 0 (zero) or omitted, the macro is run regardless of how much time has elapsed since the time specified by When."
+        }
+      ]
+    },
+    {
+      "name": "NextLetter",
+      "kind": "method",
+      "signature": "NextLetter()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "CleanString",
+      "kind": "method",
+      "signature": "CleanString(String As String) As String",
+      "description": "Removes nonprinting characters (character codes 1&ndash;29) and special Word characters from the specified string or changes them to spaces (character code 32). Returns the result as a String.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "String",
+          "type": "String",
+          "optional": false,
+          "description": "The source string."
+        }
+      ]
+    },
+    {
+      "name": "ChangeFileOpenDirectory",
+      "kind": "method",
+      "signature": "ChangeFileOpenDirectory(Path As String)",
+      "description": "Sets the folder in which Word searches for documents.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Path",
+          "type": "String",
+          "optional": false,
+          "description": "The path to the folder in which Word searches for documents."
+        }
+      ]
+    },
+    {
+      "name": "GoForward",
+      "kind": "method",
+      "signature": "GoForward()",
+      "description": "Moves the insertion point forward among the last three locations where editing occurred in the active document.",
+      "returns": "void"
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move(Left As Long, Top As Long)",
+      "description": "Positions a task window or the active document window.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Long",
+          "optional": false,
+          "description": "The horizontal screen position of the specified window."
+        },
+        {
+          "name": "Top",
+          "type": "Long",
+          "optional": false,
+          "description": "The vertical screen position of the specified window."
+        }
+      ]
+    },
+    {
+      "name": "Resize",
+      "kind": "method",
+      "signature": "Resize(Width As Long, Height As Long)",
+      "description": "Sizes the Word application window or the specified task window.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Width",
+          "type": "Long",
+          "optional": false,
+          "description": "The width of the window, in points."
+        },
+        {
+          "name": "Height",
+          "type": "Long",
+          "optional": false,
+          "description": "The height of the window, in points."
+        }
+      ]
+    },
+    {
+      "name": "InchesToPoints",
+      "kind": "method",
+      "signature": "InchesToPoints(Inches As Single) As Single",
+      "description": "Converts a measurement from inches to points (1 inch = 72 points). Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Inches",
+          "type": "Single",
+          "optional": false,
+          "description": "The inch value to be converted to points."
+        }
+      ]
+    },
+    {
+      "name": "CentimetersToPoints",
+      "kind": "method",
+      "signature": "CentimetersToPoints(Centimeters As Single) As Single",
+      "description": "Converts a measurement from centimeters to points (1 cm = 28.35 points). Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Centimeters",
+          "type": "Single",
+          "optional": false,
+          "description": "The centimeter value to be converted to points."
+        }
+      ]
+    },
+    {
+      "name": "MillimetersToPoints",
+      "kind": "method",
+      "signature": "MillimetersToPoints(Millimeters As Single) As Single",
+      "description": "Converts a measurement from millimeters to points (1 mm = 2.85 points). Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Millimeters",
+          "type": "Single",
+          "optional": false,
+          "description": "The millimeter value to be converted to points."
+        }
+      ]
+    },
+    {
+      "name": "PicasToPoints",
+      "kind": "method",
+      "signature": "PicasToPoints(Picas As Single) As Single",
+      "description": "Converts a measurement from picas to points (1 pica = 12 points). Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Picas",
+          "type": "Single",
+          "optional": false,
+          "description": "The pica value to be converted to points."
+        }
+      ]
+    },
+    {
+      "name": "LinesToPoints",
+      "kind": "method",
+      "signature": "LinesToPoints(Lines As Single) As Single",
+      "description": "Converts a measurement from lines to points (1 line = 12 points). Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Lines",
+          "type": "Single",
+          "optional": false,
+          "description": "The line value to be converted to points."
+        }
+      ]
+    },
+    {
+      "name": "PointsToInches",
+      "kind": "method",
+      "signature": "PointsToInches(Points As Single) As Single",
+      "description": "Converts a measurement from points to inches (1 inch = 72 points). Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Single",
+          "optional": false,
+          "description": "The measurement, in points."
+        }
+      ]
+    },
+    {
+      "name": "PointsToCentimeters",
+      "kind": "method",
+      "signature": "PointsToCentimeters(Points As Single) As Single",
+      "description": "Converts a measurement from points to centimeters (1 centimeter = 28.35 points). Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Single",
+          "optional": false,
+          "description": "The measurement, in points."
+        }
+      ]
+    },
+    {
+      "name": "PointsToMillimeters",
+      "kind": "method",
+      "signature": "PointsToMillimeters(Points As Single) As Single",
+      "description": "Converts a measurement from points to millimeters (1 millimeter = 2.835 points). Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Single",
+          "optional": false,
+          "description": "The measurement, in points."
+        }
+      ]
+    },
+    {
+      "name": "PointsToPicas",
+      "kind": "method",
+      "signature": "PointsToPicas(Points As Single) As Single",
+      "description": "Converts a measurement from points to picas (1 pica = 12 points). Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Single",
+          "optional": false,
+          "description": "The measurement, in points."
+        }
+      ]
+    },
+    {
+      "name": "PointsToLines",
+      "kind": "method",
+      "signature": "PointsToLines(Points As Single) As Single",
+      "description": "Converts a measurement from points to lines (1 line = 12 points). Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Single",
+          "optional": false,
+          "description": "The measurement, in points."
+        }
+      ]
+    },
+    {
+      "name": "Activate",
+      "kind": "method",
+      "signature": "Activate()",
+      "description": "Activates the specified object.",
+      "returns": "void"
+    },
+    {
+      "name": "PointsToPixels",
+      "kind": "method",
+      "signature": "PointsToPixels(Points As Single, [fVertical As Variant]) As Single",
+      "description": "Converts a measurement from points to pixels. Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Points",
+          "type": "Single",
+          "optional": false,
+          "description": "The point value to be converted to pixels."
+        },
+        {
+          "name": "fVertical",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to return the result as vertical pixels; False to return the result as horizontal pixels."
+        }
+      ]
+    },
+    {
+      "name": "PixelsToPoints",
+      "kind": "method",
+      "signature": "PixelsToPoints(Pixels As Single, [fVertical As Variant]) As Single",
+      "description": "Converts a measurement from pixels to points. Returns the converted measurement as a Single.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Pixels",
+          "type": "Single",
+          "optional": false,
+          "description": "The pixel value to be converted to points."
+        },
+        {
+          "name": "fVertical",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to convert vertical pixels; False to convert horizontal pixels."
+        }
+      ]
+    },
+    {
+      "name": "KeyboardLatin",
+      "kind": "method",
+      "signature": "KeyboardLatin()",
+      "description": "Sets the keyboard language to a left-to-right language and the text entry direction to left-to-right.",
+      "returns": "void"
+    },
+    {
+      "name": "KeyboardBidi",
+      "kind": "method",
+      "signature": "KeyboardBidi()",
+      "description": "Sets the keyboard language to a right-to-left language and the text entry direction to right-to-left.",
+      "returns": "void"
+    },
+    {
+      "name": "ToggleKeyboard",
+      "kind": "method",
+      "signature": "ToggleKeyboard()",
+      "description": "Switches the keyboard language setting between right-to-left and left-to-right languages.",
+      "returns": "void"
+    },
+    {
+      "name": "Keyboard",
+      "kind": "method",
+      "signature": "Keyboard([LangId As Long]) As Long",
+      "description": "Returns or sets the keyboard language and layout settings.",
+      "returns": "Long",
+      "parameters": [
+        {
+          "name": "LangId",
+          "type": "Long",
+          "optional": true,
+          "description": "The language and layout combination to which Microsoft Word sets the keyboard. If this argument is omitted, the method returns the current language and layout setting."
+        }
+      ]
+    },
+    {
+      "name": "ProductCode",
+      "kind": "method",
+      "signature": "ProductCode() As String",
+      "description": "Returns the Microsoft Word globally unique identifier (GUID) as a String.",
+      "returns": "String"
+    },
+    {
+      "name": "DefaultWebOptions",
+      "kind": "method",
+      "signature": "DefaultWebOptions() As DefaultWebOptions",
+      "description": "Returns the DefaultWebOptions object that contains global application-level attributes used by Microsoft Word whenever you save a document as a webpage or open a webpage.",
+      "returns": "DefaultWebOptions"
+    },
+    {
+      "name": "SetDefaultTheme",
+      "kind": "method",
+      "signature": "SetDefaultTheme(Name As String, DocumentType As WdDocumentMedium)",
+      "description": "Sets a default theme for Word to use with new documents, email messages, or webpages.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the theme you want to assign as the default theme plus any theme formatting options you want to apply. The format of this string is \"themennn\" where _theme_ and _nnn_ are defined in the Themes table."
+        },
+        {
+          "name": "DocumentType",
+          "type": "WdDocumentMedium",
+          "optional": false,
+          "description": "The type of new document to which you are assigning a default theme."
+        }
+      ]
+    },
+    {
+      "name": "GetDefaultTheme",
+      "kind": "method",
+      "signature": "GetDefaultTheme(DocumentType As WdDocumentMedium) As String",
+      "description": "Returns a String that represents the name of the default theme plus the theme formatting options Microsoft Word uses for new documents, email messages, or Web pages.",
+      "returns": "String",
+      "parameters": [
+        {
+          "name": "DocumentType",
+          "type": "WdDocumentMedium",
+          "optional": false,
+          "description": "The type of new document for which you want to retrieve the default theme name."
+        }
+      ]
+    },
+    {
+      "name": "Run",
+      "kind": "method",
+      "signature": "Run(MacroName As String, [varg1 As Variant], [varg2 As Variant], [varg3 As Variant], [varg4 As Variant], [varg5 As Variant], [varg6 As Variant], [varg7 As Variant], [varg8 As Variant], [varg9 As Variant], [varg10 As Variant], [varg11 As Variant], [varg12 As Variant], [varg13 As Variant], [varg14 As Variant], [varg15 As Variant], [varg16 As Variant], [varg17 As Variant], [varg18 As Variant], [varg19 As Variant], [varg20 As Variant], [varg21 As Variant], [varg22 As Variant], [varg23 As Variant], [varg24 As Variant], [varg25 As Variant], [varg26 As Variant], [varg27 As Variant], [varg28 As Variant], [varg29 As Variant], [varg30 As Variant]) As Variant",
+      "description": "Runs a Visual Basic macro.",
+      "returns": "Variant",
+      "parameters": [
+        {
+          "name": "MacroName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the macro."
+        },
+        {
+          "name": "varg1",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg2",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg3",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg4",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg5",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg6",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg7",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg8",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg9",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg10",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg11",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg12",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg13",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg14",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg15",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg16",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg17",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg18",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg19",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg20",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg21",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg22",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg23",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg24",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg25",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg26",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg27",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg28",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg29",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "varg30",
+          "type": "Variant",
+          "optional": true,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "PrintOut",
+      "kind": "method",
+      "signature": "PrintOut([Background As Variant], [Append As Variant], [Range As Variant], [OutputFileName As Variant], [From As Variant], [To As Variant], [Item As Variant], [Copies As Variant], [Pages As Variant], [PageType As Variant], [PrintToFile As Variant], [Collate As Variant], [FileName As Variant], [ActivePrinterMacGX As Variant], [ManualDuplexPrint As Variant], [PrintZoomColumn As Variant], [PrintZoomRow As Variant], [PrintZoomPaperWidth As Variant], [PrintZoomPaperHeight As Variant])",
+      "description": "Prints all or part of the specified document.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Background",
+          "type": "Variant",
+          "optional": true,
+          "description": "Set to True to have the macro continue while Microsoft Word prints the document."
+        },
+        {
+          "name": "Append",
+          "type": "Variant",
+          "optional": true,
+          "description": "Set to True to append the specified document to the file name specified by the OutputFileName argument. False to overwrite the contents of OutputFileName."
+        },
+        {
+          "name": "Range",
+          "type": "Variant",
+          "optional": true,
+          "description": "The page range. Can be any WdPrintOutRange constant."
+        },
+        {
+          "name": "OutputFileName",
+          "type": "Variant",
+          "optional": true,
+          "description": "If PrintToFile is True, this argument specifies the path and file name of the output file."
+        },
+        {
+          "name": "From",
+          "type": "Variant",
+          "optional": true,
+          "description": "The starting page number when Range is set to wdPrintFromTo."
+        },
+        {
+          "name": "To",
+          "type": "Variant",
+          "optional": true,
+          "description": "The ending page number when Range is set to wdPrintFromTo."
+        },
+        {
+          "name": "Item",
+          "type": "Variant",
+          "optional": true,
+          "description": "The item to be printed. Can be any WdPrintOutItem constant."
+        },
+        {
+          "name": "Copies",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of copies to be printed."
+        },
+        {
+          "name": "Pages",
+          "type": "Variant",
+          "optional": true,
+          "description": "The page numbers and page ranges to be printed, separated by commas. For example, \"2, 6-10\" prints page 2 and pages 6 through 10."
+        },
+        {
+          "name": "PageType",
+          "type": "Variant",
+          "optional": true,
+          "description": "The type of pages to be printed. Can be any WdPrintOutPages constant."
+        },
+        {
+          "name": "PrintToFile",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to send printer instructions to a file. Make sure to specify a file name with OutputFileName."
+        },
+        {
+          "name": "Collate",
+          "type": "Variant",
+          "optional": true,
+          "description": "When printing multiple copies of a document, True to print all pages of the document before printing the next copy."
+        },
+        {
+          "name": "FileName",
+          "type": "Variant",
+          "optional": true,
+          "description": "The path and file name of the document to be printed. If this argument is omitted, Word prints the active document. (Available only with the Application object.)"
+        },
+        {
+          "name": "ActivePrinterMacGX",
+          "type": "Variant",
+          "optional": true,
+          "description": "This argument is available only in Microsoft Office Macintosh Edition. For additional information about this argument, consult the language reference Help included with Microsoft Office Macintosh Edition."
+        },
+        {
+          "name": "ManualDuplexPrint",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to print a two-sided document on a printer without a duplex printing kit. If this argument is True, the PrintBackground and PrintReverse properties are ignored. Use the PrintOddPagesInAscendingOrder and PrintEvenPagesInAscendingOrder properties to control the output during manual duplex printing. This argument may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed."
+        },
+        {
+          "name": "PrintZoomColumn",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of pages you want Word to fit horizontally on one page. Can be 1, 2, 3, or 4. Use with the PrintZoomRow argument to print multiple pages on a single sheet."
+        },
+        {
+          "name": "PrintZoomRow",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of pages you want Word to fit vertically on one page. Can be 1, 2, or 4. Use with the PrintZoomColumn argument to print multiple pages on a single sheet."
+        },
+        {
+          "name": "PrintZoomPaperWidth",
+          "type": "Variant",
+          "optional": true,
+          "description": "The width to which you want Word to scale printed pages, in twips (20 twips = 1 point; 72 points = 1 inch)."
+        },
+        {
+          "name": "PrintZoomPaperHeight",
+          "type": "Variant",
+          "optional": true,
+          "description": "The height to which you want Word to scale printed pages, in twips (20 twips = 1 point; 72 points = 1 inch)."
+        }
+      ]
+    },
+    {
+      "name": "PutFocusInMailHeader",
+      "kind": "method",
+      "signature": "PutFocusInMailHeader()",
+      "description": "Places the insertion point in the To line of the mail header if the document in the active window is an email document.",
+      "returns": "void"
+    },
+    {
+      "name": "LoadMasterList",
+      "kind": "method",
+      "signature": "LoadMasterList(FileName As String)",
+      "description": "Loads a bibliography source file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The path and file name of the bibliography source file."
+        }
+      ]
+    },
+    {
+      "name": "CompareDocuments",
+      "kind": "method",
+      "signature": "CompareDocuments(OriginalDocument As Document, RevisedDocument As Document, [Destination As WdCompareDestination], [Granularity As WdGranularity], [CompareFormatting As Boolean], [CompareCaseChanges As Boolean], [CompareWhitespace As Boolean], [CompareTables As Boolean], [CompareHeaders As Boolean], [CompareFootnotes As Boolean], [CompareTextboxes As Boolean], [CompareFields As Boolean], [CompareComments As Boolean], [CompareMoves As Boolean], [RevisedAuthor As String], [IgnoreAllComparisonWarnings As Boolean]) As Document",
+      "description": "Compares two documents and returns a Document object that represents the document that contains the differences between the two documents, marked using tracked changes.",
+      "returns": "Document",
+      "parameters": [
+        {
+          "name": "OriginalDocument",
+          "type": "Document",
+          "optional": false,
+          "description": "Specifies the path and file name of the original document."
+        },
+        {
+          "name": "RevisedDocument",
+          "type": "Document",
+          "optional": false,
+          "description": "Specifies the path and file name of the revised document to which to compare the original document."
+        },
+        {
+          "name": "Destination",
+          "type": "WdCompareDestination",
+          "optional": true,
+          "description": "Specifies whether to create a new file or whether to mark the differences between the two documents in the original document or in the revised document. Default value is wdCompareDestinationNew."
+        },
+        {
+          "name": "Granularity",
+          "type": "WdGranularity",
+          "optional": true,
+          "description": "Specifies whether changes are tracked by character or by word. Default value is wdGranularityWordLevel."
+        },
+        {
+          "name": "CompareFormatting",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to mark differences in formatting between the two documents. Default value is True."
+        },
+        {
+          "name": "CompareCaseChanges",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to mark differences in case between the two documents. Default value is True."
+        },
+        {
+          "name": "CompareWhitespace",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to mark differences in white space, such as paragraphs or spaces, between the two documents. Default value is True."
+        },
+        {
+          "name": "CompareTables",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to compare the differences in data contained in tables between the two documents. Default value is True."
+        },
+        {
+          "name": "CompareHeaders",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to compare differences in headers and footers between the two documents. Default value is True."
+        },
+        {
+          "name": "CompareFootnotes",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to compare differences in footnotes and endnotes between the two documents. Default value is True."
+        },
+        {
+          "name": "CompareTextboxes",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to compare differences in the data contained within text boxes between the two documents. Default value is True."
+        },
+        {
+          "name": "CompareFields",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to compare differences in fields between the two documents. Default value is True."
+        },
+        {
+          "name": "CompareComments",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to compare differences in comments between the two documents. Default value is True."
+        },
+        {
+          "name": "CompareMoves",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to compare differences in moves between the two documents. Default value is True."
+        },
+        {
+          "name": "RevisedAuthor",
+          "type": "String",
+          "optional": true,
+          "description": "Specifies the name of the person to whom to attribute changes when comparing the two documents."
+        },
+        {
+          "name": "IgnoreAllComparisonWarnings",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to ignore warnings when comparing the two documents."
+        }
+      ]
+    },
+    {
+      "name": "MergeDocuments",
+      "kind": "method",
+      "signature": "MergeDocuments(OriginalDocument As Document, RevisedDocument As Document, [Destination As WdCompareDestination], [Granularity As WdGranularity], [CompareFormatting As Boolean], [CompareCaseChanges As Boolean], [CompareWhitespace As Boolean], [CompareTables As Boolean], [CompareHeaders As Boolean], [CompareFootnotes As Boolean], [CompareTextboxes As Boolean], [CompareFields As Boolean], [CompareComments As Boolean], [CompareMoves As Boolean], [OriginalAuthor As String], [RevisedAuthor As String], [FormatFrom As WdMergeFormatFrom]) As Document",
+      "description": "Compares two documents and returns a Document object that represents the document that contains the differences between the two documents, marked using tracked changes.",
+      "returns": "Document",
+      "parameters": [
+        {
+          "name": "OriginalDocument",
+          "type": "Document",
+          "optional": false,
+          "description": "Specifies the path and file name of the original document."
+        },
+        {
+          "name": "RevisedDocument",
+          "type": "Document",
+          "optional": false,
+          "description": "Specifies the path and file name of the revised document to which to compare the original document."
+        },
+        {
+          "name": "Destination",
+          "type": "WdCompareDestination",
+          "optional": true,
+          "description": "Specifies whether to create a new file or whether to mark the differences between the two documents in the original document or in the revised document. Default value is wdCompareDestinationNew."
+        },
+        {
+          "name": "Granularity",
+          "type": "WdGranularity",
+          "optional": true,
+          "description": "Specifies whether changes are tracked by character or by word. Default value is wdGranularityWordLevel."
+        },
+        {
+          "name": "CompareFormatting",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to mark differences in formatting between the two documents. Default value is True."
+        },
+        {
+          "name": "CompareCaseChanges",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to mark differences in case between the two documents. Default value is True."
+        },
+        {
+          "name": "CompareWhitespace",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to mark differences in white space, such as paragraphs or spaces, between the two documents. Default value is True."
+        },
+        {
+          "name": "CompareTables",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to compare the differences in data contained in tables between the two documents. Default value is True."
+        },
+        {
+          "name": "CompareHeaders",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to compare differences in headers and footers between the two documents. Default value is True."
+        },
+        {
+          "name": "CompareFootnotes",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to compare differences in footnotes and endnotes between the two documents. Default value is True."
+        },
+        {
+          "name": "CompareTextboxes",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to compare differences in the data contained within text boxes between the two documents. Default value is True."
+        },
+        {
+          "name": "CompareFields",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to compare differences in fields between the two documents. Default value is True."
+        },
+        {
+          "name": "CompareComments",
+          "type": "Boolean",
+          "optional": true,
+          "description": "Specifies whether to compare differences in comments between the two documents. Default value is True."
+        },
+        {
+          "name": "CompareMoves",
+          "type": "Boolean",
+          "optional": true,
+          "description": ""
+        },
+        {
+          "name": "OriginalAuthor",
+          "type": "String",
+          "optional": true,
+          "description": "Specifies the name of the author of the original document."
+        },
+        {
+          "name": "RevisedAuthor",
+          "type": "String",
+          "optional": true,
+          "description": "Specifies the name of the person to use for unattributed changes after merging two documents."
+        },
+        {
+          "name": "FormatFrom",
+          "type": "WdMergeFormatFrom",
+          "optional": true,
+          "description": "Specifies the document from which to retain formatting."
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "Quit",
+      "kind": "event",
+      "signature": "Quit()",
+      "description": "Occurs when the user exits Microsoft Word."
+    },
+    {
+      "name": "DocumentChange",
+      "kind": "event",
+      "signature": "DocumentChange()",
+      "description": "Occurs when a new document is created, when an existing document is opened, or when another document is made the active document."
+    },
+    {
+      "name": "DocumentOpen",
+      "kind": "event",
+      "signature": "DocumentOpen(Doc As Document)",
+      "description": "Occurs when a document is opened.",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The document that's being opened."
+        }
+      ]
+    },
+    {
+      "name": "DocumentBeforeClose",
+      "kind": "event",
+      "signature": "DocumentBeforeClose(Doc As Document, Cancel As Boolean)",
+      "description": "Occurs immediately before any open document closes.",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The document that's being closed."
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "False when the event occurs. If the event procedure sets this argument to True, the document doesn't close when the procedure is finished."
+        }
+      ]
+    },
+    {
+      "name": "DocumentBeforePrint",
+      "kind": "event",
+      "signature": "DocumentBeforePrint(Doc As Document, Cancel As Boolean)",
+      "description": "Occurs before any open document is printed.",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The document that's being printed."
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "False when the event occurs. If the event procedure sets this argument to True, the document isn't printed when the procedure is finished."
+        }
+      ]
+    },
+    {
+      "name": "DocumentBeforeSave",
+      "kind": "event",
+      "signature": "DocumentBeforeSave(Doc As Document, SaveAsUI As Boolean, Cancel As Boolean)",
+      "description": "Occurs before any open document is saved.",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The document that is being saved."
+        },
+        {
+          "name": "SaveAsUI",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True if the Save As dialog box is displayed, whether to save a new document, in response to the Save command; or in response to the Save As command; or in response to the SaveAs or SaveAs2 method."
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "False when the event occurs. If the event procedure sets this argument to True, the document is not saved when the procedure is finished."
+        }
+      ]
+    },
+    {
+      "name": "NewDocument",
+      "kind": "event",
+      "signature": "NewDocument(Doc As Document)",
+      "description": "Occurs when a new document is created.",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The new document."
+        }
+      ]
+    },
+    {
+      "name": "WindowActivate",
+      "kind": "event",
+      "signature": "WindowActivate(Doc As Document, Wn As Window)",
+      "description": "Occurs when any document window is activated.",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The document displayed in the activated window."
+        },
+        {
+          "name": "Wn",
+          "type": "Window",
+          "optional": false,
+          "description": "The window that's being activated."
+        }
+      ]
+    },
+    {
+      "name": "WindowDeactivate",
+      "kind": "event",
+      "signature": "WindowDeactivate(Doc As Document, Wn As Window)",
+      "description": "Occurs when any document window is deactivated.",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The document displayed in the deactivated window."
+        },
+        {
+          "name": "Wn",
+          "type": "Window",
+          "optional": false,
+          "description": "The deactivated window."
+        }
+      ]
+    },
+    {
+      "name": "WindowSelectionChange",
+      "kind": "event",
+      "signature": "WindowSelectionChange(Sel As Selection)",
+      "description": "Occurs when the selection changes in the active document window.",
+      "parameters": [
+        {
+          "name": "Sel",
+          "type": "Selection",
+          "optional": false,
+          "description": "The text selected. If no text is selected, the Sel parameter returns either nothing or the first character to the right of the insertion point."
+        }
+      ]
+    },
+    {
+      "name": "WindowBeforeRightClick",
+      "kind": "event",
+      "signature": "WindowBeforeRightClick(Sel As Selection, Cancel As Boolean)",
+      "description": "Occurs when the editing area of a document window is right-clicked, before the default right-click action.",
+      "parameters": [
+        {
+          "name": "Sel",
+          "type": "Selection",
+          "optional": false,
+          "description": "The current selection."
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "False when the event occurs. If the event procedure sets this argument to True, the default right-click action does not occur when the procedure is finished."
+        }
+      ]
+    },
+    {
+      "name": "WindowBeforeDoubleClick",
+      "kind": "event",
+      "signature": "WindowBeforeDoubleClick(Sel As Selection, Cancel As Boolean)",
+      "description": "Occurs when the editing area of a document window is double-clicked, before the default double-click action.",
+      "parameters": [
+        {
+          "name": "Sel",
+          "type": "Selection",
+          "optional": false,
+          "description": "The current selection."
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "False when the event occurs. If the event procedure sets this argument to True, the default double-click action does not occur when the procedure is finished."
+        }
+      ]
+    },
+    {
+      "name": "EPostagePropertyDialog",
+      "kind": "event",
+      "signature": "EPostagePropertyDialog(Doc As Document)",
+      "description": "Occurs when a user clicks the E-postage Properties (Labels and Envelopes dialog box) button or Print Electronic Postage button.",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The name of the document to which to add electronic postage."
+        }
+      ]
+    },
+    {
+      "name": "EPostageInsert",
+      "kind": "event",
+      "signature": "EPostageInsert(Doc As Document)",
+      "description": "Occurs when a user inserts electronic postage into a document.",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The name of the document to which to add electronic postage."
+        }
+      ]
+    },
+    {
+      "name": "MailMergeAfterMerge",
+      "kind": "event",
+      "signature": "MailMergeAfterMerge(Doc As Document, DocResult As Document)",
+      "description": "Occurs after all records in a mail merge have merged successfully.",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The mail merge main document."
+        },
+        {
+          "name": "DocResult",
+          "type": "Document",
+          "optional": false,
+          "description": "The document created from the mail merge"
+        }
+      ]
+    },
+    {
+      "name": "MailMergeAfterRecordMerge",
+      "kind": "event",
+      "signature": "MailMergeAfterRecordMerge(Doc As Document)",
+      "description": "Occurs after each record in the data source successfully merges in a mail merge.",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The mail merge main document."
+        }
+      ]
+    },
+    {
+      "name": "MailMergeBeforeMerge",
+      "kind": "event",
+      "signature": "MailMergeBeforeMerge(Doc As Document, StartRecord As Long, EndRecord As Long, Cancel As Boolean)",
+      "description": "Occurs when a merge is executed before any records merge.",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The mail merge main document."
+        },
+        {
+          "name": "StartRecord",
+          "type": "Long",
+          "optional": false,
+          "description": "The first record in the data source to include in the mail merge."
+        },
+        {
+          "name": "EndRecord",
+          "type": "Long",
+          "optional": false,
+          "description": "The last record in the data source to include in the mail merge."
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True stops the mail merge process before it starts."
+        }
+      ]
+    },
+    {
+      "name": "MailMergeBeforeRecordMerge",
+      "kind": "event",
+      "signature": "MailMergeBeforeRecordMerge(Doc As Document, Cancel As Boolean)",
+      "description": "Occurs as a merge is executed for the individual records in a merge.",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The mail merge main document."
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True stops the mail merge process, for the current record only, before it starts."
+        }
+      ]
+    },
+    {
+      "name": "MailMergeDataSourceLoad",
+      "kind": "event",
+      "signature": "MailMergeDataSourceLoad(Doc As Document)",
+      "description": "Occurs when the data source is loaded for a mail merge.",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The mail merge main document."
+        }
+      ]
+    },
+    {
+      "name": "MailMergeDataSourceValidate",
+      "kind": "event",
+      "signature": "MailMergeDataSourceValidate(Doc As Document, Handled As Boolean)",
+      "description": "Occurs when a user validates mail merge recipients by clicking Validate in the Mail Merge Recipients dialog box.",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The mail merge main document."
+        },
+        {
+          "name": "Handled",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True if the add-in has handled the validation event. This is a forward-only parameter and cannot be set in code. To set this value, you must use the MailMergeDataSourceValidate2 event."
+        }
+      ]
+    },
+    {
+      "name": "MailMergeWizardSendToCustom",
+      "kind": "event",
+      "signature": "MailMergeWizardSendToCustom(Doc As Document)",
+      "description": "Occurs when the custom button is clicked during step six of the Mail Merge Wizard.",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The mail merge main document."
+        }
+      ]
+    },
+    {
+      "name": "MailMergeWizardStateChange",
+      "kind": "event",
+      "signature": "MailMergeWizardStateChange(Doc As Document, FromState As Long, ToState As Long, Handled As Boolean)",
+      "description": "Occurs when a user changes from a specified step to a specified step in the Mail Merge Wizard.",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The mail merge main document."
+        },
+        {
+          "name": "FromState",
+          "type": "Long",
+          "optional": false,
+          "description": "The Mail Merge Wizard step from which a user is moving."
+        },
+        {
+          "name": "ToState",
+          "type": "Long",
+          "optional": false,
+          "description": "The Mail Merge Wizard step to which a user is moving."
+        },
+        {
+          "name": "Handled",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True moves the user to the next step. False for the user to remain at the current step."
+        }
+      ]
+    },
+    {
+      "name": "WindowSize",
+      "kind": "event",
+      "signature": "WindowSize(Doc As Document, Wn As Window)",
+      "description": "Occurs when the application window is resized or moved.",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The document in the window being sized."
+        },
+        {
+          "name": "Wn",
+          "type": "Window",
+          "optional": false,
+          "description": "The window being sized."
+        }
+      ]
+    },
+    {
+      "name": "XMLSelectionChange",
+      "kind": "event",
+      "signature": "XMLSelectionChange(Sel As Selection, OldXMLNode As XMLNode, NewXMLNode As XMLNode, Reason As Long)",
+      "description": "Occurs when the parent XML node of the current selection changes.",
+      "parameters": [
+        {
+          "name": "Sel",
+          "type": "Selection",
+          "optional": false,
+          "description": "The text selected, including XML elements. If no text is selected, the Sel parameter returns either nothing or the first character to the right of the insertion point."
+        },
+        {
+          "name": "OldXMLNode",
+          "type": "XMLNode",
+          "optional": false,
+          "description": "The XML node from which the insertion point is moving."
+        },
+        {
+          "name": "NewXMLNode",
+          "type": "XMLNode",
+          "optional": false,
+          "description": "The XML node to which the insertion point is moving."
+        },
+        {
+          "name": "Reason",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "XMLValidationError",
+      "kind": "event",
+      "signature": "XMLValidationError(XMLNode As XMLNode)",
+      "description": "Occurs when there is a validation error in the document.",
+      "parameters": [
+        {
+          "name": "XMLNode",
+          "type": "XMLNode",
+          "optional": false,
+          "description": "The XML element that is invalid."
+        }
+      ]
+    },
+    {
+      "name": "DocumentSync",
+      "kind": "event",
+      "signature": "DocumentSync(Doc As Document, SyncEventType As MsoSyncEventType)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The document being synchronized."
+        },
+        {
+          "name": "SyncEventType",
+          "type": "MsoSyncEventType",
+          "optional": false,
+          "description": "The status of the document synchronization."
+        }
+      ]
+    },
+    {
+      "name": "EPostageInsertEx",
+      "kind": "event",
+      "signature": "EPostageInsertEx(Doc As Document, cpDeliveryAddrStart As Long, cpDeliveryAddrEnd As Long, cpReturnAddrStart As Long, cpReturnAddrEnd As Long, xaWidth As Long, yaHeight As Long, bstrPrinterName As String, bstrPaperFeed As String, fPrint As Boolean, fCancel As Boolean)",
+      "description": "Occurs when a user inserts electronic postage into a document.",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The document to which electronic postage is being added."
+        },
+        {
+          "name": "cpDeliveryAddrStart",
+          "type": "Long",
+          "optional": false,
+          "description": "The starting position in the document for the delivery address. Positioning corresponds to the value of the Start property for a Range object."
+        },
+        {
+          "name": "cpDeliveryAddrEnd",
+          "type": "Long",
+          "optional": false,
+          "description": "The ending position in the document for the delivery address. Positioning corresponds to the value of the End property for a Range object."
+        },
+        {
+          "name": "cpReturnAddrStart",
+          "type": "Long",
+          "optional": false,
+          "description": "The starting position in the document for the return address. Positioning corresponds to the value of the Start property for a Range object."
+        },
+        {
+          "name": "cpReturnAddrEnd",
+          "type": "Long",
+          "optional": false,
+          "description": "The ending position in the document for the return address. Positioning corresponds to the value of the End property for a Range object."
+        },
+        {
+          "name": "xaWidth",
+          "type": "Long",
+          "optional": false,
+          "description": "The width of the envelope in 1/1440-inch units."
+        },
+        {
+          "name": "yaHeight",
+          "type": "Long",
+          "optional": false,
+          "description": "The height of the envelope in 1/1440-inch units."
+        },
+        {
+          "name": "bstrPrinterName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the printer as specified on the Printing Options tab of the Envelope Options dialog box."
+        },
+        {
+          "name": "bstrPaperFeed",
+          "type": "String",
+          "optional": false,
+          "description": "The feed method as specified on the Printing Options tab of the Envelope Options dialog box."
+        },
+        {
+          "name": "fPrint",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True if the user has specified to print the envelope. False if the user has specified to insert the envelope into the document."
+        },
+        {
+          "name": "fCancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True cancels inserting the postage."
+        }
+      ]
+    },
+    {
+      "name": "MailMergeDataSourceValidate2",
+      "kind": "event",
+      "signature": "MailMergeDataSourceValidate2(Doc As Document, Handled As Boolean)",
+      "description": "Occurs when a user validates mail merge recipients by clicking the Validate addresses link button in the Mail Merge Recipients dialog box.",
+      "parameters": [
+        {
+          "name": "Doc",
+          "type": "Document",
+          "optional": false,
+          "description": "The mail merge main document."
+        },
+        {
+          "name": "Handled",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True if the add-in has handled the validation event."
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowOpen",
+      "kind": "event",
+      "signature": "ProtectedViewWindowOpen(PvWindow As ProtectedViewWindow)",
+      "description": "Occurs when a Protected View window is opened.",
+      "parameters": [
+        {
+          "name": "PvWindow",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": "The Protected View window that is opened."
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowBeforeEdit",
+      "kind": "event",
+      "signature": "ProtectedViewWindowBeforeEdit(PvWindow As ProtectedViewWindow, Cancel As Boolean)",
+      "description": "Occurs immediately before editing is enabled on the document in the specified Protected View window.",
+      "parameters": [
+        {
+          "name": "PvWindow",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": "The Protected View window that contains the document that is enabled for editing."
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "False when the event occurs. If the event procedure sets this argument to True, editing is not enabled on the document."
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowBeforeClose",
+      "kind": "event",
+      "signature": "ProtectedViewWindowBeforeClose(PvWindow As ProtectedViewWindow, CloseReason As Long, Cancel As Boolean)",
+      "description": "Occurs immediately before a Protected View window or a document in a Protected View window closes.",
+      "parameters": [
+        {
+          "name": "PvWindow",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": "The Protected View window that is closed."
+        },
+        {
+          "name": "CloseReason",
+          "type": "Long",
+          "optional": false,
+          "description": "A constant in the WdProtectedViewCloseReason enumeration that specifies the reason the Protected View window is closed."
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": "False when the event occurs. If the event procedure sets this argument to True, the window does not close when the procedure is finished."
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowSize",
+      "kind": "event",
+      "signature": "ProtectedViewWindowSize(PvWindow As ProtectedViewWindow)",
+      "description": "",
+      "parameters": [
+        {
+          "name": "PvWindow",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": "The Protected View window that is sized."
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowActivate",
+      "kind": "event",
+      "signature": "ProtectedViewWindowActivate(PvWindow As ProtectedViewWindow)",
+      "description": "Occurs when any Protected View window is activated.",
+      "parameters": [
+        {
+          "name": "PvWindow",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": "The Protected View window that is activated."
+        }
+      ]
+    },
+    {
+      "name": "ProtectedViewWindowDeactivate",
+      "kind": "event",
+      "signature": "ProtectedViewWindowDeactivate(PvWindow As ProtectedViewWindow)",
+      "description": "Occurs when a Protected View window is deactivated.",
+      "parameters": [
+        {
+          "name": "PvWindow",
+          "type": "ProtectedViewWindow",
+          "optional": false,
+          "description": "The deactivated Protected View window."
+        }
+      ]
+    }
+  ]
+}

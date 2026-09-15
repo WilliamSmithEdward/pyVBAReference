@@ -1,0 +1,164 @@
+{
+  "name": "Effect",
+  "kind": "Dispatch Interface",
+  "guid": "{914934DF-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents timing information about a slide animation.",
+  "remarks": "",
+  "example": "Sub NewShapeAndEffect()\n\n    Dim shpStar As Shape\n\n    Dim sldOne As Slide\n\n    Dim effNew As Effect\n\n\n\n    Set sldOne = ActivePresentation.Slides(1)\n\n    Set shpStar = sldOne.Shapes.AddShape(Type:=msoShape5pointStar, _\n\n        Left:=150, Top:=72, Width:=400, Height:=400)\n\n    Set effNew = sldOne.TimeLine.MainSequence.AddEffect(Shape:=shpStar, _\n\n        EffectId:=msoAnimEffectStretchy, Trigger:=msoAnimTriggerAfterPrevious)\n\n    With effNew\n\n        With .Behaviors.Add(msoAnimTypeScale).ScaleEffect\n\n            .FromX = 75\n\n            .FromY = 75\n\n            .ToX = 0\n\n            .ToY = 0\n\n        End With\n\n        .Timing.AutoReverse = msoTrue\n\n    End With\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Shape",
+      "kind": "property",
+      "type": "Shape",
+      "access": "read/write",
+      "description": "Returns a Shape object that represents an animated shape."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the index number for an animation effect or design. Read-only."
+    },
+    {
+      "name": "Timing",
+      "kind": "property",
+      "type": "Timing",
+      "access": "read-only",
+      "description": "Returns a Timing object that represents the timing properties for an animation sequence."
+    },
+    {
+      "name": "EffectType",
+      "kind": "property",
+      "type": "MsoAnimEffect",
+      "access": "read/write",
+      "description": "Sets or returns an MsoAnimEffect constant that represents an animation effect type. Read/write."
+    },
+    {
+      "name": "EffectParameters",
+      "kind": "property",
+      "type": "EffectParameters",
+      "access": "read-only",
+      "description": "Returns an EffectParameters object that represents animation effect properties."
+    },
+    {
+      "name": "TextRangeStart",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns or sets the start of a text range. Read-only."
+    },
+    {
+      "name": "TextRangeLength",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns or sets a Long that represents the length of a text range. Read-only."
+    },
+    {
+      "name": "Paragraph",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the paragraph in a text range to which to apply animation effects. Read/write."
+    },
+    {
+      "name": "DisplayName",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of an animation effect. Read-only."
+    },
+    {
+      "name": "Exit",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the animation effect is an exit effect. Read/write."
+    },
+    {
+      "name": "Behaviors",
+      "kind": "property",
+      "type": "AnimationBehaviors",
+      "access": "read-only",
+      "description": "Returns a specified slide animation behavior as an AnimationBehaviors collection."
+    },
+    {
+      "name": "EffectInformation",
+      "kind": "property",
+      "type": "EffectInformation",
+      "access": "read-only",
+      "description": "Returns an EffectInformation object that represents information for a specified animation effect."
+    }
+  ],
+  "methods": [
+    {
+      "name": "MoveTo",
+      "kind": "method",
+      "signature": "MoveTo(toPos As Long)",
+      "description": "Moves the specified object to a specific location within the same collection, renumbering all other items in the collection appropriately.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "toPos",
+          "type": "Long",
+          "optional": false,
+          "description": "The index position to which to move the animation effect."
+        }
+      ]
+    },
+    {
+      "name": "MoveBefore",
+      "kind": "method",
+      "signature": "MoveBefore(Effect As Effect)",
+      "description": "Moves one animation effect to before another animation effect.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Effect",
+          "type": "Effect",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MoveAfter",
+      "kind": "method",
+      "signature": "MoveAfter(Effect As Effect)",
+      "description": "Moves one animation effect to after another animation effect.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Effect",
+          "type": "Effect",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified Effect object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

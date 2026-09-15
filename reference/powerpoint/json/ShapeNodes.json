@@ -1,0 +1,211 @@
+{
+  "name": "ShapeNodes",
+  "kind": "Dispatch Interface",
+  "guid": "{91493486-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of all the ShapeNode objects in the specified freeform.",
+  "remarks": "Each ShapeNode object represents either a node between segments in a freeform or a control point for a curved segment of a freeform. You can create a freeform manually or by using the BuildFreeformand ConvertToShapemethods.",
+  "example": "Set myDocument = ActivePresentation.Slides(1)\n\nmyDocument.Shapes(3).Nodes.Delete 4",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the four-character creator code for the application in which the specified object was created. For example, if the object was created in Microsoft PowerPoint, this property returns the hexadecimal number 50575054. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Variant) As ShapeNode",
+      "description": "Returns a single ShapeNode object from the specified ShapeNodes collection.",
+      "returns": "ShapeNode",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Variant",
+          "optional": false,
+          "description": "The name or index number of the single ShapeNode object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete(Index As Long)",
+      "description": "Deletes a shape node.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "Specifies the node to be deleted."
+        }
+      ]
+    },
+    {
+      "name": "Insert",
+      "kind": "method",
+      "signature": "Insert(Index As Long, SegmentType As MsoSegmentType, EditingType As MsoEditingType, X1 As Single, Y1 As Single, [X2 As Single], [Y2 As Single], [X3 As Single], [Y3 As Single])",
+      "description": "Inserts a new segment after the specified node of the freeform.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The node that the new node is to be inserted after."
+        },
+        {
+          "name": "SegmentType",
+          "type": "MsoSegmentType",
+          "optional": false,
+          "description": "The type of segment to be added."
+        },
+        {
+          "name": "EditingType",
+          "type": "MsoEditingType",
+          "optional": false,
+          "description": "The editing property of the vertex."
+        },
+        {
+          "name": "X1",
+          "type": "Single",
+          "optional": false,
+          "description": "If the EditingType of the new segment is msoEditingAuto, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the endpoint of the new segment. If the EditingType of the new node is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the first control point for the new segment."
+        },
+        {
+          "name": "Y1",
+          "type": "Single",
+          "optional": false,
+          "description": "If the EditingType of the new segment is msoEditingAuto, this argument specifies the vertical distance (in points) from the upper-left corner of the document to the endpoint of the new segment. If the EditingType of the new node is msoEditingCorner, this argument specifies the vertical distance (in points) from the upper-left corner of the document to the first control point for the new segment."
+        },
+        {
+          "name": "X2",
+          "type": "Single",
+          "optional": true,
+          "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
+        },
+        {
+          "name": "Y2",
+          "type": "Single",
+          "optional": true,
+          "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the vertical distance (in points) from the upper-left corner of the document to the second control point for the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
+        },
+        {
+          "name": "X3",
+          "type": "Single",
+          "optional": true,
+          "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the horizontal distance (in points) from the upper-left corner of the document to the endpoint of the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
+        },
+        {
+          "name": "Y3",
+          "type": "Single",
+          "optional": true,
+          "description": "If the EditingType of the new segment is msoEditingCorner, this argument specifies the vertical distance (in points) from the upper-left corner of the document to the endpoint of the new segment. If the EditingType of the new segment is msoEditingAuto, don't specify a value for this argument."
+        }
+      ]
+    },
+    {
+      "name": "SetEditingType",
+      "kind": "method",
+      "signature": "SetEditingType(Index As Long, EditingType As MsoEditingType)",
+      "description": "Sets the editing type of the specified node.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The node whose editing type is to be set."
+        },
+        {
+          "name": "EditingType",
+          "type": "MsoEditingType",
+          "optional": false,
+          "description": "The editing type."
+        }
+      ]
+    },
+    {
+      "name": "SetPosition",
+      "kind": "method",
+      "signature": "SetPosition(Index As Long, X1 As Single, Y1 As Single)",
+      "description": "Sets the location of the node specified by Index. Note that, depending on the editing type of the node, this method may affect the position of adjacent nodes.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The node whose position is to be set."
+        },
+        {
+          "name": "X1",
+          "type": "Single",
+          "optional": false,
+          "description": "The x-position (in points) of the new node relative to the upper-left corner of the document."
+        },
+        {
+          "name": "Y1",
+          "type": "Single",
+          "optional": false,
+          "description": "The y-position (in points) of the new node relative to the upper-left corner of the document."
+        }
+      ]
+    },
+    {
+      "name": "SetSegmentType",
+      "kind": "method",
+      "signature": "SetSegmentType(Index As Long, SegmentType As MsoSegmentType)",
+      "description": "Sets the segment type of the segment that follows the specified node.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The node whose segment type is to be set."
+        },
+        {
+          "name": "SegmentType",
+          "type": "MsoSegmentType",
+          "optional": false,
+          "description": "Specifies if the segment is straight or curved."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

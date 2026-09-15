@@ -1,0 +1,110 @@
+{
+  "name": "TextInput",
+  "kind": "Dispatch Interface",
+  "guid": "{00020927-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single text form field.",
+  "remarks": "Use FormFields (Index), where Index is either the bookmark name associated with the text form field or the index number, to return a FormField object. Use the TextInput property with the FormField object to return a TextInput object. The following example deletes the contents of the text form field named \"Text1\" in the active document. The index number represents the position of the form field in the FormFields collection. The following example checks the type of the first form field in the active document. If the form field is a text form field, the example sets \"Mission Critical\" as the value of the field. The following example determines whether the _ffield_ variable represents a valid text form field in the active document before it sets the default text. Use the Add method with the FormFields object to add a text form field. The following example adds a text form field at the beginning of the active document and then sets the name of the form field to \"FirstName.\"",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified TextInput object."
+    },
+    {
+      "name": "Valid",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if the specified form field object is a valid check box form field. Read-only Boolean. ."
+    },
+    {
+      "name": "Default",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the text that represents the default text box contents. Read/write String. The string length is limited to 255 characters."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "WdTextFormFieldType",
+      "access": "read-only",
+      "description": "Returns the type of text form field. Read-only WdTextFormFieldType."
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the text formatting for the specified text box. Read-only String."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the width, in points, of the specified text input field. Read/write Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Clear",
+      "kind": "method",
+      "signature": "Clear()",
+      "description": "Deletes the text from the specified text form field.",
+      "returns": "void"
+    },
+    {
+      "name": "EditType",
+      "kind": "method",
+      "signature": "EditType(Type As WdTextFormFieldType, [Default As Variant], [Format As Variant], [Enabled As Variant])",
+      "description": "Sets options for the specified text form field.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Type",
+          "type": "WdTextFormFieldType",
+          "optional": false,
+          "description": "The text box type."
+        },
+        {
+          "name": "Default",
+          "type": "Variant",
+          "optional": true,
+          "description": "The default text that appears in the text box."
+        },
+        {
+          "name": "Format",
+          "type": "Variant",
+          "optional": true,
+          "description": "The formatting string used to format the text, number, or date (for example, \"0.00,\" \"Title Case,\" or \"M/d/yy\"). For more examples of formats, see the list of formats for the specified text form field type in the Text Form Field Options dialog box."
+        },
+        {
+          "name": "Enabled",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to enable the form field for text entry."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,103 @@
+{
+  "name": "Research",
+  "kind": "Dispatch Interface",
+  "guid": "{914934F7-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Provides access to the research service feature of Microsoft PowerPoint.",
+  "remarks": "The research service feature provides the ability to search multiple custom and third-party references from within PowerPoint. For more information, see the Office 2003 Research Services Software Development Kit (SDK).",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft PowerPoint application. Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Research object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Query",
+      "kind": "method",
+      "signature": "Query(ServiceID As String, [QueryString As Variant], [QueryLanguage As Variant], [UseSelection As Boolean], [LaunchQuery As Boolean])",
+      "description": "Specifies a research query.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ServiceID",
+          "type": "String",
+          "optional": false,
+          "description": "Specifies a GUID that identifies the research service."
+        },
+        {
+          "name": "QueryString",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the query string."
+        },
+        {
+          "name": "QueryLanguage",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies the query language of the query string."
+        },
+        {
+          "name": "UseSelection",
+          "type": "Boolean",
+          "optional": true,
+          "description": "True to use the current selection as the query string. This overrides the QueryString parameter if set. Default value is False."
+        },
+        {
+          "name": "LaunchQuery",
+          "type": "Boolean",
+          "optional": true,
+          "description": "True launches the query. False displays the Research task pane scoped to search the specified research service."
+        }
+      ]
+    },
+    {
+      "name": "SetLanguagePair",
+      "kind": "method",
+      "signature": "SetLanguagePair(Language1 As Variant, Language2 As Variant)",
+      "description": "Sets the languages for the translation service.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Language1",
+          "type": "Variant",
+          "optional": false,
+          "description": "Specifies the language to translate from."
+        },
+        {
+          "name": "Language2",
+          "type": "Variant",
+          "optional": false,
+          "description": "Specifies the language to translate to."
+        }
+      ]
+    },
+    {
+      "name": "IsResearchService",
+      "kind": "method",
+      "signature": "IsResearchService(ServiceID As String) As Boolean",
+      "description": "Indicates whether the GUID specified in the _ServiceID_ parameter corresponds to a currently configured research service.",
+      "returns": "Boolean",
+      "parameters": [
+        {
+          "name": "ServiceID",
+          "type": "String",
+          "optional": false,
+          "description": "A GUID that identifies the research service."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

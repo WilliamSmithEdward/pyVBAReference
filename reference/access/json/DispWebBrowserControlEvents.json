@@ -1,0 +1,418 @@
+{
+  "name": "DispWebBrowserControlEvents",
+  "kind": "Dispatch Interface",
+  "guid": "{EACB9075-68F8-4E3B-B865-E1CE6BE0447C}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "",
+  "remarks": "",
+  "example": "",
+  "properties": [],
+  "methods": [
+    {
+      "name": "Updated",
+      "kind": "method",
+      "signature": "Updated(Code As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Code",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeUpdate",
+      "kind": "method",
+      "signature": "BeforeUpdate(Cancel As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "AfterUpdate",
+      "kind": "method",
+      "signature": "AfterUpdate()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Enter",
+      "kind": "method",
+      "signature": "Enter()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Exit",
+      "kind": "method",
+      "signature": "Exit(Cancel As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Dirty",
+      "kind": "method",
+      "signature": "Dirty(Cancel As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Change",
+      "kind": "method",
+      "signature": "Change()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "GotFocus",
+      "kind": "method",
+      "signature": "GotFocus()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "LostFocus",
+      "kind": "method",
+      "signature": "LostFocus()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "Click",
+      "kind": "method",
+      "signature": "Click()",
+      "description": "",
+      "returns": "void"
+    },
+    {
+      "name": "DblClick",
+      "kind": "method",
+      "signature": "DblClick(Cancel As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseDown",
+      "kind": "method",
+      "signature": "MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseMove",
+      "kind": "method",
+      "signature": "MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "MouseUp",
+      "kind": "method",
+      "signature": "MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyDown",
+      "kind": "method",
+      "signature": "KeyDown(KeyCode As Integer, Shift As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyPress",
+      "kind": "method",
+      "signature": "KeyPress(KeyAscii As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "KeyAscii",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "KeyUp",
+      "kind": "method",
+      "signature": "KeyUp(KeyCode As Integer, Shift As Integer)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "BeforeNavigate2",
+      "kind": "method",
+      "signature": "BeforeNavigate2(pDisp As Object, URL As Variant, flags As Variant, TargetFrameName As Variant, PostData As Variant, Headers As Variant, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "pDisp",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "URL",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "flags",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "TargetFrameName",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "PostData",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Headers",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "DocumentComplete",
+      "kind": "method",
+      "signature": "DocumentComplete(pDisp As Object, URL As Variant)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "pDisp",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "URL",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "ProgressChange",
+      "kind": "method",
+      "signature": "ProgressChange(Progress As Long, ProgressMax As Long)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Progress",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "ProgressMax",
+          "type": "Long",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "NavigateError",
+      "kind": "method",
+      "signature": "NavigateError(pDisp As Object, URL As Variant, TargetFrameName As Variant, StatusCode As Variant, Cancel As Boolean)",
+      "description": "",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "pDisp",
+          "type": "Object",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "URL",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "TargetFrameName",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "StatusCode",
+          "type": "Variant",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Cancel",
+          "type": "Boolean",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

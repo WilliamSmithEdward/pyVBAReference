@@ -1,0 +1,138 @@
+{
+  "name": "KeyBindings",
+  "kind": "Dispatch Interface",
+  "guid": "{00020996-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of KeyBinding objects that represent the custom key assignments in the current context. Custom key assignments are made in the Customize Keyboard dialog box.",
+  "remarks": "Use the KeyBindings property to return the KeyBindings collection. The following example inserts after the selection the command name and key combination for each item in the KeyBindings collection. Use the Add method to add a KeyBinding object to the KeyBindings collection. The following example adds the CTRL+ALT+H key combination to the Heading 1 style in the active document. Use KeyBindings (Index), where Index is the index number, to return a single KeyBinding object. The following example displays the command associated with the first KeyBinding object in the KeyBindings collection.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified KeyBindings object."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of key bindings in the collection. Read-only."
+    },
+    {
+      "name": "Context",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the storage location of the specified key binding. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As KeyBinding",
+      "description": "Returns an individual KeyBinding object in a collection.",
+      "returns": "KeyBinding",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(KeyCategory As WdKeyCategory, Command As String, KeyCode As Long, [KeyCode2 As Variant], [CommandParameter As Variant]) As KeyBinding",
+      "description": "Returns a KeyBinding object that represents a new shortcut key for a macro, built-in command, font, AutoText entry, style, or symbol.",
+      "returns": "KeyBinding",
+      "parameters": [
+        {
+          "name": "KeyCategory",
+          "type": "WdKeyCategory",
+          "optional": false,
+          "description": "The category of the key assignment."
+        },
+        {
+          "name": "Command",
+          "type": "String",
+          "optional": false,
+          "description": "The command that the specified key combination executes."
+        },
+        {
+          "name": "KeyCode",
+          "type": "Long",
+          "optional": false,
+          "description": "A key you specify by using one of the WdKey constants."
+        },
+        {
+          "name": "KeyCode2",
+          "type": "Variant",
+          "optional": true,
+          "description": "A second key you specify by using one of the WdKey constants."
+        },
+        {
+          "name": "CommandParameter",
+          "type": "Variant",
+          "optional": true,
+          "description": "Additional text, if any, required for the command specified by Command. For details, see the Remarks section below."
+        }
+      ]
+    },
+    {
+      "name": "ClearAll",
+      "kind": "method",
+      "signature": "ClearAll()",
+      "description": "Clears all the customized key assignments and restores the original Microsoft Word shortcut key assignments.",
+      "returns": "void"
+    },
+    {
+      "name": "Key",
+      "kind": "method",
+      "signature": "Key(KeyCode As Long, [KeyCode2 As Variant]) As KeyBinding",
+      "description": "Returns a KeyBinding object that represents the specified custom key combination.",
+      "returns": "KeyBinding",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "Long",
+          "optional": false,
+          "description": "A key you specify by using one of the WdKey constants."
+        },
+        {
+          "name": "KeyCode2",
+          "type": "Variant",
+          "optional": true,
+          "description": "A second key you specify by using one of the WdKey constants."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

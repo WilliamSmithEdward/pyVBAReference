@@ -1,0 +1,50 @@
+{
+  "name": "AdditionalData",
+  "kind": "Class",
+  "guid": "{DBC51761-A8ED-11D3-A0DD-00C04F68712B}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "Represents the collection of tables and queries that will be included with the parent table that is exported by the ExportXML method.",
+  "remarks": "To create an AdditionalData object, use the CreateAdditionalData method of the Application object. To add a table to an existing AdditionalData object, use the Add method.",
+  "example": "Sub ExportCustomerOrderData()\n Dim objOrderInfo As AdditionalData\n\n Set objOrderInfo = Application.CreateAdditionalData\n\n ' Add the Orders and Order Details tables to the data to be exported.\n objOrderInfo.Add \"Orders\"\n objOrderInfo.Add \"Order Details\"\n\n ' Export the contents of the Customers table. The Orders and Order\n ' Details tables will be included in the XML file.\n Application.ExportXML ObjectType:=acExportTable, DataSource:=\"Customers\", _\n DataTarget:=\"Customer Orders.xml\", _\n AdditionalData:=objOrderInfo\nEnd Sub",
+  "properties": [
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the Name property to specify or determine the string expression that identifies the name of an object. Read/write String."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "_AdditionalData",
+      "access": "read-only",
+      "description": "The Item property returns a specific member of a collection either by position or by index. Read-only AdditionalData."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Use the Count property to determine the number of items in a specified collection. Read-only Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(var As String) As _AdditionalData",
+      "description": "Adds an add table or query that will be included when the ExportXML method is called.",
+      "returns": "_AdditionalData",
+      "parameters": [
+        {
+          "name": "var",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the table or query to add."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

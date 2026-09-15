@@ -1,0 +1,55 @@
+{
+  "name": "ThemeVariant",
+  "kind": "Dispatch Interface",
+  "guid": "{C9195677-B4F9-4228-BFD0-40C1F77D2F6A}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a variation (set of colors and fonts) in a theme.",
+  "remarks": "",
+  "example": "Sub IterateThemeVariants()\n\n    Dim pptTheme As Theme\n    Dim pptThemeVariants As ThemeVariants\n    Dim pptThemeVariant As ThemeVariant\n    Dim path As String\n\n    ' Get a reference to the currently active theme.\n    path = \"C:\\Program Files (x86)\\Microsoft Office\\Document Themes 15\\\" & _\n        ActivePresentation.TemplateName & \".thmx\"\n    Set pptTheme = Application.OpenThemeFile(path)\n\n    ' Get a reference to all of the variations in the theme.\n    Set pptThemeVariants = pptTheme.ThemeVariants\n\n    ' Iterate over each variation of the theme and print\n    ' its name and ID.\n    For Each pptThemeVariant In pptThemeVariants\n\n        Debug.Print \"Variation \" & pptThemeVariant.name & \" id: \" & pptThemeVariant.Id\n\n    Next pptThemeVariant\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the PowerPoint application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the theme variation. Read-only."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the height of the theme variation. Read-only."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the height of the theme variation. Read-only."
+    },
+    {
+      "name": "Id",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a string that represents the ID of the theme variation. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

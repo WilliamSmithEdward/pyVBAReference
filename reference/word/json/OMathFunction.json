@@ -1,0 +1,203 @@
+{
+  "name": "OMathFunction",
+  "kind": "Dispatch Interface",
+  "guid": "{F1F37152-1DB1-4901-AD9A-C740F99464B4}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a mathematical function or structure that Microsoft Word supports, such as fractions, integrals, sums, and radicals. The OMathFunction object is a member of the OMathFunctions collection.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "WdOMathFunctionType",
+      "access": "read-only",
+      "description": "Returns a WdOMathFunctionType constant that represents the type of function. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathFunction object."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the portion of a document that is contained in the specified object. Read-only."
+    },
+    {
+      "name": "Args",
+      "kind": "property",
+      "type": "OMathArgs",
+      "access": "read-only",
+      "description": "Returns an OMathArgs object that represents the arguments for an equation. Read-only."
+    },
+    {
+      "name": "Acc",
+      "kind": "property",
+      "type": "OMathAcc",
+      "access": "read-only",
+      "description": "Returns an OMathAcc object that represents a base character with a combining accent mark. Read-only."
+    },
+    {
+      "name": "Bar",
+      "kind": "property",
+      "type": "OMathBar",
+      "access": "read-only",
+      "description": "Returns an OMathBar object that represents the mathematical overbar for an object. Read-only."
+    },
+    {
+      "name": "Box",
+      "kind": "property",
+      "type": "OMathBox",
+      "access": "read-only",
+      "description": "Returns an OMathBox object that represents an invisible box around an equation or part of an equation to which you can apply properties that affect the mathematical or formatting properties, such as line breaks. Read-only."
+    },
+    {
+      "name": "BorderBox",
+      "kind": "property",
+      "type": "OMathBorderBox",
+      "access": "read-only",
+      "description": "Returns an OMathBorderBox object that represents a border drawn around an equation or part of an equation. The BorderBox object can also be used to draw horizontal, vertical, and diagonal strikethrough lines through the BorerBox arguments. Read-only."
+    },
+    {
+      "name": "Delim",
+      "kind": "property",
+      "type": "OMathDelim",
+      "access": "read-only",
+      "description": "Returns an OMathDelim object that represents the delimiter function. Read-only."
+    },
+    {
+      "name": "EqArray",
+      "kind": "property",
+      "type": "OMathEqArray",
+      "access": "read-only",
+      "description": "Returns an OMathEqArray object that represents an equation array function. Read-only."
+    },
+    {
+      "name": "Frac",
+      "kind": "property",
+      "type": "OMathFrac",
+      "access": "read-only",
+      "description": "Returns an OMathFrac object that represents a fraction. Read-only."
+    },
+    {
+      "name": "Func",
+      "kind": "property",
+      "type": "OMathFunc",
+      "access": "read-only",
+      "description": "Returns an OMathFunc object that represents a type of mathematical function that consists of a function name, such as sin or cos, and an argument. Read-only."
+    },
+    {
+      "name": "GroupChar",
+      "kind": "property",
+      "type": "OMathGroupChar",
+      "access": "read-only",
+      "description": "Returns an OMathGroupChar object that represents a horizontal character placed above or below text in an equation, often with the purpose of grouping the text visually. Read-only."
+    },
+    {
+      "name": "LimLow",
+      "kind": "property",
+      "type": "OMathLimLow",
+      "access": "read-only",
+      "description": "Returns an OMathLimLow object that represents the lower limit for a function. Read-only."
+    },
+    {
+      "name": "LimUpp",
+      "kind": "property",
+      "type": "OMathLimUpp",
+      "access": "read-only",
+      "description": "Returns an OMathLimUpp object that represents upper limit function. Read-only."
+    },
+    {
+      "name": "Mat",
+      "kind": "property",
+      "type": "OMathMat",
+      "access": "read-only",
+      "description": "Returns an OMathMat object that represents a mathematical matrix. Read-only."
+    },
+    {
+      "name": "Nary",
+      "kind": "property",
+      "type": "OMathNary",
+      "access": "read-only",
+      "description": "Returns an OMathNary object that represents the n-ary operation. Read-only."
+    },
+    {
+      "name": "Phantom",
+      "kind": "property",
+      "type": "OMathPhantom",
+      "access": "read-only",
+      "description": "Returns an OMathPhantom object that represents an object used for advanced layout of an equation. Read-only."
+    },
+    {
+      "name": "ScrPre",
+      "kind": "property",
+      "type": "OMathScrPre",
+      "access": "read-only",
+      "description": "Returns an OMathScrPre object that represents a superscript and subscript to the left of the base. Read-only."
+    },
+    {
+      "name": "Rad",
+      "kind": "property",
+      "type": "OMathRad",
+      "access": "read-only",
+      "description": "Returns an OMathRad object that represents the mathematical radical function. Read-only."
+    },
+    {
+      "name": "ScrSub",
+      "kind": "property",
+      "type": "OMathScrSub",
+      "access": "read-only",
+      "description": "Represents an OMathScrSub object that represents the mathematical subscript function. Read-only."
+    },
+    {
+      "name": "ScrSubSup",
+      "kind": "property",
+      "type": "OMathScrSubSup",
+      "access": "read-only",
+      "description": "Returns an OMathScrSubSup object that represents a mathematical subscript-superscript object that consists of a base, a subscript, and a superscript. Read-only."
+    },
+    {
+      "name": "ScrSup",
+      "kind": "property",
+      "type": "OMathScrSup",
+      "access": "read-only",
+      "description": "Returns an OMathScrSup object that represents the mathematical superscript function. Read-only."
+    },
+    {
+      "name": "OMath",
+      "kind": "property",
+      "type": "OMath",
+      "access": "read-only",
+      "description": "Returns an OMath object that represents the equation. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Remove",
+      "kind": "method",
+      "signature": "Remove() As OMathFunction",
+      "description": "Removes a function from the collection of functions contained within an equation and returns an OMathFunction object.",
+      "returns": "OMathFunction"
+    }
+  ],
+  "events": []
+}

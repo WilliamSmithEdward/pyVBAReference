@@ -1,0 +1,57 @@
+{
+  "name": "BuildingBlockTypes",
+  "kind": "Dispatch Interface",
+  "guid": "{B5828B50-0E3D-448A-962D-A40702A5868D}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a collection of BuildingBlockType objects.",
+  "remarks": "Building block types are represented by WdBuildingBlockTypes constants. Use the Item method to access a specific type in the BuildingBlockTypes collection. To loop through the different building block types, use a For loop with the Count property. The following example loops through the building block types and prints the name in the Immediate Window. (This example assumes that the Immediate Window is visible.) For more information about building blocks, see Working with Building Blocks.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified BuildingBlockTypes object."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of items in the BuildingBlockTypes collection. Read-only Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As WdBuildingBlockTypes) As BuildingBlockType",
+      "description": "Returns a BuildingBlockType object that represents the specified item in the collection.",
+      "returns": "BuildingBlockType",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "WdBuildingBlockTypes",
+          "optional": false,
+          "description": "Specifies the building block type of the item in the collection."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,153 @@
+{
+  "name": "Font",
+  "kind": "Dispatch Interface",
+  "guid": "{91493495-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents character formatting for text or a bullet. The Font object is a member of the Fonts collection. The Fonts collection contains all the fonts used in a presentation.",
+  "remarks": "",
+  "example": "With ActivePresentation.Slides(1).Shapes.Title _\n\n        .TextFrame.TextRange\n\n    .Text = \"Volcano Coffee\"\n\n    With .Font\n\n        .Italic = True\n\n        .Name = \"Palatino\"\n\n        .Color.RGB = RGB(0, 0, 255)\n\n    End With\n\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Color",
+      "kind": "property",
+      "type": "ColorFormat",
+      "access": "read-only",
+      "description": "Returns or sets the color of the current Font object. Read/write."
+    },
+    {
+      "name": "Bold",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the character format is bold. Read/write."
+    },
+    {
+      "name": "Italic",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "True if the font or range is formatted as italic. Read/write Long."
+    },
+    {
+      "name": "Shadow",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the specified text has a shadow. Read/write."
+    },
+    {
+      "name": "Emboss",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the character format is embossed. Read/write."
+    },
+    {
+      "name": "Underline",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the specified text (for the Font object) or the font style (for the FontInfo object) is underlined. Read/write."
+    },
+    {
+      "name": "Subscript",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the specified text is subscript. Read/write."
+    },
+    {
+      "name": "Superscript",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the specified text is superscript. Read/write."
+    },
+    {
+      "name": "BaselineOffset",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the baseline offset for the specified superscript or subscript characters. Read/write."
+    },
+    {
+      "name": "Embedded",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Determines whether the specified font is embedded in the presentation. Read-only."
+    },
+    {
+      "name": "Embeddable",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Determines whether the specified font can be embedded in the presentation. Read-only."
+    },
+    {
+      "name": "Size",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the character size, in points. Read/write."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the name of the specified object. Read/write."
+    },
+    {
+      "name": "NameFarEast",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the Asian font name. Read/write."
+    },
+    {
+      "name": "NameAscii",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the font used for ASCII characters (characters with character set numbers within the range of 0 to 127). Read/write."
+    },
+    {
+      "name": "AutoRotateNumbers",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Returns or sets lateral compression. Read/write."
+    },
+    {
+      "name": "NameOther",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the font used for characters whose character set numbers are greater than 127. Read/write."
+    },
+    {
+      "name": "NameComplexScript",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the complex script font name. Used for mixed language text. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

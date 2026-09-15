@@ -1,0 +1,49 @@
+{
+  "name": "PrintRange",
+  "kind": "Dispatch Interface",
+  "guid": "{9149345F-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a single range of consecutive slides or pages to be printed.",
+  "remarks": "The PrintRange object is a member of the PrintRanges collection. The PrintRanges collection contains all the print ranges that have been defined for the specified presentation. You can set print ranges in the PrintRanges collection independent of the RangeType setting; these ranges are retained as long as the presentation they're contained in is loaded. The ranges in the PrintRanges collection are applied when the RangeType property is set to ppPrintSlideRange.",
+  "example": "With ActivePresentation.PrintOptions.Ranges\n    If .Count > 0 Then\n        With .Item(1)\n            MsgBox \"Print range 1 starts on slide \" & .Start & _\n                \" and ends on slide \" & .End\n        End With\n    End If\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Start",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of the first slide in the range of slides to be printed. Read-only."
+    },
+    {
+      "name": "End",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of the last slide in the specified print range. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified PrintRange object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

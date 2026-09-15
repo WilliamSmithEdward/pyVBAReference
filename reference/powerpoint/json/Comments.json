@@ -1,0 +1,101 @@
+{
+  "name": "Comments",
+  "kind": "Dispatch Interface",
+  "guid": "{914934D4-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a collection of Comment objects.",
+  "remarks": "",
+  "example": "Sub CountComments()\n    MsgBox \"You have \" & ActiveWindow.Selection.SlideRange(1) _\n        .Comments.Count & \" comments on this slide.\"\nEnd Sub",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Comment",
+      "description": "Returns a single Comment object from the specified Comments collection.",
+      "returns": "Comment",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the single Comment object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Add2",
+      "kind": "method",
+      "signature": "Add2(Left As Single, Top As Single, Author As String, AuthorInitials As String, Text As String, ProviderID As String, UserID As String) As Comment",
+      "description": "Replaces hidden Add method. Returns a Comment object that represents a new comment added to a slide. For more infomation about modern comments, see Modern comments in PowerPoint.",
+      "returns": "Comment",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the left edge of the comment, relative to the left edge of the presentation."
+        },
+        {
+          "name": "Top",
+          "type": "Single",
+          "optional": false,
+          "description": "The position, measured in points, of the top edge of the comment, relative to the top edge of the presentation."
+        },
+        {
+          "name": "Author",
+          "type": "String",
+          "optional": false,
+          "description": "The author of the comment."
+        },
+        {
+          "name": "AuthorInitials",
+          "type": "String",
+          "optional": false,
+          "description": "The author's initials."
+        },
+        {
+          "name": "Text",
+          "type": "String",
+          "optional": false,
+          "description": "The comment's text."
+        },
+        {
+          "name": "ProviderID",
+          "type": "String",
+          "optional": false,
+          "description": "The service that provides contact information.Example: \"AD\" (Active Directory)"
+        },
+        {
+          "name": "UserID",
+          "type": "String",
+          "optional": false,
+          "description": "The ID of the user providing the comment."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

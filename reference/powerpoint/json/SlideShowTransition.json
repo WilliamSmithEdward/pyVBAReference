@@ -1,0 +1,90 @@
+{
+  "name": "SlideShowTransition",
+  "kind": "Dispatch Interface",
+  "guid": "{91493471-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Contains information about how the specified slide advances during a slide show.",
+  "remarks": "",
+  "example": "With ActivePresentation.Slides(1).SlideShowTransition\n\n    .Speed = ppTransitionSpeedFast\n\n    .EntryEffect = ppEffectStripsDownLeft\n\n    .SoundEffect.ImportFromFile \"c:\\sndsys\\bass.wav\"\n\n    .AdvanceOnTime = True\n\n    .AdvanceTime = 5\n\nEnd With\n\nActivePresentation.SlideShowSettings.AdvanceMode = _\n\n    ppSlideShowUseSlideTimings",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "AdvanceOnClick",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the specified slide advances when it is clicked during a slide show. Read/write."
+    },
+    {
+      "name": "AdvanceOnTime",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the specified slide advances automatically after a specified amount of time has elapsed. Read/write."
+    },
+    {
+      "name": "AdvanceTime",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the amount of time, in seconds, after which the specified slide transition will occur. Read/write."
+    },
+    {
+      "name": "EntryEffect",
+      "kind": "property",
+      "type": "PpEntryEffect",
+      "access": "read/write",
+      "description": "Returns or sets the special effect applied to the specified slide transition. Read/write."
+    },
+    {
+      "name": "Hidden",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the specified slide is hidden during a slide show. Read/write."
+    },
+    {
+      "name": "LoopSoundUntilNext",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Specifies whether the sound that's been set for the specified slide transition loops until the next sound starts. Read/write."
+    },
+    {
+      "name": "SoundEffect",
+      "kind": "property",
+      "type": "SoundEffect",
+      "access": "read-only",
+      "description": "Returns a SoundEffect object that represents the sound to be played during the transition to the specified slide. Read-only."
+    },
+    {
+      "name": "Speed",
+      "kind": "property",
+      "type": "PpTransitionSpeed",
+      "access": "read/write",
+      "description": "Represents the speed of the transition to the specified slide. Read/write."
+    },
+    {
+      "name": "Duration",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the length of an animation in seconds. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

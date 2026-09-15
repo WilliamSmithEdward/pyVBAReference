@@ -1,0 +1,55 @@
+{
+  "name": "OMathRad",
+  "kind": "Dispatch Interface",
+  "guid": "{67A7EEC5-285D-4024-B071-BD6B33B88547}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the mathematical radical object, consisting of a radical, a base, and an optional degree.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathRad object."
+    },
+    {
+      "name": "Deg",
+      "kind": "property",
+      "type": "OMath",
+      "access": "read-only",
+      "description": "Returns an OMath object that represents the degree for a radical. Read-only."
+    },
+    {
+      "name": "E",
+      "kind": "property",
+      "type": "OMath",
+      "access": "read-only",
+      "description": "Returns an OMath object that represents the base of the specified equation object. Read-only."
+    },
+    {
+      "name": "HideDeg",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean that represents whether to hide the degree for a radical. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

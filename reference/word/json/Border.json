@@ -1,0 +1,90 @@
+{
+  "name": "Border",
+  "kind": "Dispatch Interface",
+  "guid": "{0002093B-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a border of an object. The Border object is a member of the Borders collection.",
+  "remarks": "Use Borders (index), where index identifies the border, to return a single Border object. Index can be one of the WdBorderType constants. Some of the WdBorderType constants may not be available to you, depending on the language support (U.S. English, for example) that you have selected or installed. Use the LineStyle property to apply a border line to a Border object. The following example applies a double-line border below the first paragraph in the active document. The following example applies a single-line border around the first character in the selection. The following example adds an art border around each page in the first section. Border objects cannot be added to the Borders collection. The number of members in the Borders collection is finite and varies depending on the type of object. For example, a table has six elements in the Borders collection, whereas a paragraph has four.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Border object."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the specified object is visible. Read/write Boolean."
+    },
+    {
+      "name": "ColorIndex",
+      "kind": "property",
+      "type": "WdColorIndex",
+      "access": "read/write",
+      "description": "Returns or sets the color for the specified border or font object. Read/write WdColorIndex."
+    },
+    {
+      "name": "Inside",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if an inside border can be applied to the specified object. Read-only Boolean."
+    },
+    {
+      "name": "LineStyle",
+      "kind": "property",
+      "type": "WdLineStyle",
+      "access": "read/write",
+      "description": "Returns or sets the border line style for the specified object. Read/write WdLineStyle."
+    },
+    {
+      "name": "LineWidth",
+      "kind": "property",
+      "type": "WdLineWidth",
+      "access": "read/write",
+      "description": "Returns or sets the line width of an object's border. Read/write."
+    },
+    {
+      "name": "ArtStyle",
+      "kind": "property",
+      "type": "WdPageBorderArt",
+      "access": "read/write",
+      "description": "Returns or sets the graphical page-border design for a document. Read/write WdPageBorderArt."
+    },
+    {
+      "name": "ArtWidth",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the width (in points) of the specified graphical page border. Read/write Long."
+    },
+    {
+      "name": "Color",
+      "kind": "property",
+      "type": "WdColor",
+      "access": "read/write",
+      "description": "Returns or sets the 24-bit color for the specified Border object."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

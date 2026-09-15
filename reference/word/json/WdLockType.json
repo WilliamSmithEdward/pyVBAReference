@@ -1,0 +1,28 @@
+{
+  "name": "WdLockType",
+  "kind": "Enumeration",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Specifies the type of lock for a CoAuthLock object.",
+  "constants": [
+    {
+      "name": "wdLockNone",
+      "value": 0,
+      "description": "Reserved for future use."
+    },
+    {
+      "name": "wdLockReservation",
+      "value": 1,
+      "description": "Specifies a reservation lock. A reservation lock is explicitly created by a user through the Block Authors button on the Review tab in Word."
+    },
+    {
+      "name": "wdLockEphemeral",
+      "value": 2,
+      "description": "Specifies an ephemeral lock. Word implicitly places an ephemeral lock on a range when a user begins editing a range in a document with coauthoring enabled."
+    },
+    {
+      "name": "wdLockChanged",
+      "value": 3,
+      "description": "Specifies a placeholder lock. A placeholder lock indicates that another user has removed their lock from the range, but the current user has not updated their view of the document by saving."
+    }
+  ]
+}

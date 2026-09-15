@@ -1,0 +1,119 @@
+{
+  "name": "Comment",
+  "kind": "Dispatch Interface",
+  "guid": "{0002093D-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single comment. The Comment object is a member of the Comments collection. The Comments collection includes comments in a selection, range or document.",
+  "remarks": "Use Comments (Index), where Index is the index number, to return a single Comment object. The index number represents the position of the comment in the specified selection, range, or document. The following example displays the author of the first comment in the active document. Use the Add method to add a comment at the specified range. The following example adds a comment immediately after the selection. Use the Reference property to return the reference mark associated with the specified comment. Use the Range property to return the text associated with the specified comment. The following example displays the text associated with the first comment in the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Comment object."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the contents of a comment."
+    },
+    {
+      "name": "Reference",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents a reference mark for a comment."
+    },
+    {
+      "name": "Scope",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the range of text marked by the specified comment."
+    },
+    {
+      "name": "Index",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the position of an item in a collection. Read-only."
+    },
+    {
+      "name": "Date",
+      "kind": "property",
+      "type": "Date",
+      "access": "read-only",
+      "description": "Returns a Date that represents the date and time that a comment was inserted. Read-only."
+    },
+    {
+      "name": "IsInk",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns a Boolean that represents whether a comment is a handwritten comment."
+    },
+    {
+      "name": "Done",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean whose value is True if the specified comment has been marked closed. Read/write."
+    },
+    {
+      "name": "Ancestor",
+      "kind": "property",
+      "type": "Comment",
+      "access": "read-only",
+      "description": "For comments that are replies to existing comments, returns the parent Comment object; for new (top-level) comments, returns Nothing. Read-only."
+    },
+    {
+      "name": "Contact",
+      "kind": "property",
+      "type": "CoAuthor",
+      "access": "read-only",
+      "description": "Returns a CoAuthor object that represents the author of the specified comment. Read-only."
+    },
+    {
+      "name": "Replies",
+      "kind": "property",
+      "type": "Comments",
+      "access": "read-only",
+      "description": "Returns a Comments collection of Comment objects that are children of the specified comment. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Edit",
+      "kind": "method",
+      "signature": "Edit()",
+      "description": "Opens the specified OLE object for editing in the application it was created in.",
+      "returns": "void"
+    },
+    {
+      "name": "DeleteRecursively",
+      "kind": "method",
+      "signature": "DeleteRecursively()",
+      "description": "Deletes the specified comment and all replies associated with it.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

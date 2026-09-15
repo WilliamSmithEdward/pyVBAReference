@@ -1,0 +1,50 @@
+{
+  "name": "RulerLevels",
+  "kind": "Dispatch Interface",
+  "guid": "{91493491-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of all the RulerLevel objects on the specified ruler.",
+  "remarks": "Each RulerLevel object represents the first-line and left indent for text at a particular outline level. This collection always contains five members - one for each of the available outline levels.",
+  "example": "With ActivePresentation.SlideMaster.TextStyles(ppBodyStyle).Ruler\n\n    .Levels(1).FirstMargin = 0\n\n    .Levels(1).LeftMargin = 40\n\n    .Levels(2).FirstMargin = 60\n\n    .Levels(2).LeftMargin = 100\n\n    .Levels(3).FirstMargin = 120\n\n    .Levels(3).LeftMargin = 160\n\n    .Levels(4).FirstMargin = 180\n\n    .Levels(4).LeftMargin = 220\n\n    .Levels(5).FirstMargin = 240\n\n    .Levels(5).LeftMargin = 280\n\nEnd With",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As RulerLevel",
+      "description": "Returns a single RulerLevel object from the specified RulerLevels collection.",
+      "returns": "RulerLevel",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the single RulerLevel object in the collection to be returned."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

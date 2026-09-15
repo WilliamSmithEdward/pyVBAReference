@@ -1,0 +1,41 @@
+{
+  "name": "SetEffect",
+  "kind": "Dispatch Interface",
+  "guid": "{914934F1-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a set effect for an animation behavior. Use the SetEffect object to set the value of a property.",
+  "remarks": "Use the SetEffect property of the AnimationBehavior object to return a SetEffect object. Set effects can be changed using the SetEffect object's Property and To properties.",
+  "example": "Sub ChangeSetEffect()\n\n    Dim sldFirst As Slide\n    Dim shpHeart As Shape\n    Dim effNew As Effect\n    Dim bhvEffect As AnimationBehavior\n\n    Set sldFirst = ActivePresentation.Slides(1)\n\n    Set shpHeart = sldFirst.Shapes.AddShape(Type:=msoShapeHeart, _\n        Left:=100, Top:=100, Width:=100, Height:=100)\n\n    Set effNew = sldFirst.TimeLine.MainSequence.AddEffect _\n        (Shape:=shpHeart, EffectID:=msoAnimEffectChangeFillColor, _\n        Trigger:=msoAnimTriggerAfterPrevious)\n\n    Set bhvEffect = effNew.Behaviors.Add(msoAnimTypeSet)\n\n    With bhvEffect.SetEffect\n         .Property = msoAnimShapeFillColor\n         .To = RGB(Red:=0, Green:=255, Blue:=255)\n    End With\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Property",
+      "kind": "property",
+      "type": "MsoAnimProperty",
+      "access": "read/write",
+      "description": "Sets or returns an MsoAnimProperty constant that represents an animation property. Read/write."
+    },
+    {
+      "name": "To",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Sets or returns a Variant that represents the value or ending value of the SetEffect object's Type property. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

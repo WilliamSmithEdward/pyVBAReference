@@ -1,0 +1,50 @@
+{
+  "name": "Panes",
+  "kind": "Dispatch Interface",
+  "guid": "{914934CB-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of Pane objects that represent the slide, outline, and notes panes in the document window for normal view, or the single pane of any other view in the document window.",
+  "remarks": "In normal view, the Panes collection contains three members. All other document window views have only a single pane, resulting in a Panes collection with one member.",
+  "example": "With ActiveWindow\n\n    If .Panes.Count = 1 Then\n\n        .ViewType = ppViewNormal\n\n        .SplitHorizontal = 15\n\n    End If\n\nEnd With",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Pane",
+      "description": "Returns a single Pane object from the specified Panes collection.",
+      "returns": "Pane",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the single Pane object in the collection to be returned."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

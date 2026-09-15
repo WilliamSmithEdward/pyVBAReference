@@ -1,0 +1,139 @@
+{
+  "name": "KeyBinding",
+  "kind": "Dispatch Interface",
+  "guid": "{00020998-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a custom key assignment in the current context. The KeyBinding object is a member of the KeyBindings collection.",
+  "remarks": "Use KeyBindings (Index), where Index is the index number, to return a single KeyBinding object. The following example displays the command associated with the first KeyBinding object in the KeyBindings collection. You can also use the FindKey property and the Key method to return a KeyBinding object.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified KeyBinding object."
+    },
+    {
+      "name": "Command",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the command assigned to the specified key combination. Read-only String."
+    },
+    {
+      "name": "KeyString",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the key combination string for the specified keys (for example, CTRL+SHIFT+A). Read-only String."
+    },
+    {
+      "name": "Protected",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "True if you cannot change the specified key binding in the Customize Keyboard dialog box. Read-only Boolean."
+    },
+    {
+      "name": "KeyCategory",
+      "kind": "property",
+      "type": "WdKeyCategory",
+      "access": "read-only",
+      "description": "Returns the type of item assigned to the specified key binding. Read-only WdKeyCategory."
+    },
+    {
+      "name": "KeyCode",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a unique number for the first key in the specified key binding. Read-only Long."
+    },
+    {
+      "name": "KeyCode2",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a unique number for the second key in the specified key binding. Read-only Long."
+    },
+    {
+      "name": "CommandParameter",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the command parameter assigned to the specified shortcut key. Read-only String."
+    },
+    {
+      "name": "Context",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the storage location of the specified key binding. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Clear",
+      "kind": "method",
+      "signature": "Clear()",
+      "description": "Removes the specified key binding from the KeyBindings collection and resets a built-in command to its default key assignment.",
+      "returns": "void"
+    },
+    {
+      "name": "Disable",
+      "kind": "method",
+      "signature": "Disable()",
+      "description": "Removes the specified key combination if it is currently assigned to a command. After you use this method, the key combination has no effect.",
+      "returns": "void"
+    },
+    {
+      "name": "Execute",
+      "kind": "method",
+      "signature": "Execute()",
+      "description": "Runs the command associated with the specified key combination.",
+      "returns": "void"
+    },
+    {
+      "name": "Rebind",
+      "kind": "method",
+      "signature": "Rebind(KeyCategory As WdKeyCategory, Command As String, [CommandParameter As Variant])",
+      "description": "Changes the command assigned to the specified key binding.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "KeyCategory",
+          "type": "WdKeyCategory",
+          "optional": false,
+          "description": "The key category of the specified key binding."
+        },
+        {
+          "name": "Command",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the specified command."
+        },
+        {
+          "name": "CommandParameter",
+          "type": "Variant",
+          "optional": true,
+          "description": "Additional text, if any, required for the command specified by Command. For information about values for this argument, see the Add method."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

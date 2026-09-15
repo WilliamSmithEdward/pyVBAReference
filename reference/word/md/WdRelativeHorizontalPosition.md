@@ -1,0 +1,25 @@
+# WdRelativeHorizontalPosition
+
+**Type:** Enumeration  
+**Library:** Microsoft Word 16.0 Object Library  
+
+Specifies to what the horizontal position of a frame, a shape, or a group of rows is relative.
+
+## Constants (8)
+
+- `wdRelativeHorizontalPositionMargin` = 0  
+  Relative to margin.
+- `wdRelativeHorizontalPositionPage` = 1  
+  Relative to page.
+- `wdRelativeHorizontalPositionColumn` = 2  
+  Relative to column.
+- `wdRelativeHorizontalPositionCharacter` = 3  
+  Relative to character.
+- `wdRelativeHorizontalPositionLeftMarginArea` = 4  
+  Relative to left margin.
+- `wdRelativeHorizontalPositionRightMarginArea` = 5  
+  Relative to right margin.
+- `wdRelativeHorizontalPositionInnerMarginArea` = 6  
+  Relative to inner margin area.
+- `wdRelativeHorizontalPositionOuterMarginArea` = 7  
+  Relative to outer margin area.

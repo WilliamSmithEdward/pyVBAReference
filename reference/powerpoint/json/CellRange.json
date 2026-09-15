@@ -1,0 +1,57 @@
+{
+  "name": "CellRange",
+  "kind": "Dispatch Interface",
+  "guid": "{914934C8-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of Cell objects in a table column or row. The CellRange collection represents all the cells in the specified column or row. To use the CellRange collection, use the Cells keyword.",
+  "remarks": "Although the collection object is named CellRange and is shown in the Object Browser, this keyword is not used in programming the PowerPoint object model. The keyword Cells is used instead. You cannot programmatically add cells to or delete cells from a PowerPoint table. Use the AddTable method with the Table object to add a new table. Use the Add method of the Columns or Rows collections to add a column or row to a table. Use the Delete method of the Columns or Rows collections to delete a column or row from a table.",
+  "example": "With ActivePresentation.Slides(2).Shapes(5).Table.Columns(1).Cells\n\n    .Borders(ppBorderRight).DashStyle = msoLineDash\n\nEnd With",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Borders",
+      "kind": "property",
+      "type": "Borders",
+      "access": "read-only",
+      "description": "Returns a Borders collection that represents the borders and diagonal lines for the specified Cell object or CellRange collection. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Cell",
+      "description": "Returns a single Cell object from the specified CellRange collection.",
+      "returns": "Cell",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the single Cell object in the collection to be returned."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

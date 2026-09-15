@@ -1,0 +1,41 @@
+{
+  "name": "TextStyleLevel",
+  "kind": "Dispatch Interface",
+  "guid": "{9149349B-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Contains character and paragraph formatting information for an outline level.",
+  "remarks": "The TextStyleLevel object is a member of the TextStyleLevels collection. The TextStyleLevels collection contains one TextStyleLevel object for each of the five outline levels.",
+  "example": "With ActivePresentation.SlideMaster _\n        .TextStyles(ppBodyStyle).Levels(1)\n    With .Font\n        .Name = \"Arial\"\n        .Size = 36\n    End With\n    With .ParagraphFormat\n        .LineRuleBefore = False\n        .SpaceBefore = 14\n        .Alignment = ppAlignJustify\n    End With\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "ParagraphFormat",
+      "kind": "property",
+      "type": "ParagraphFormat",
+      "access": "read-only",
+      "description": "Returns a ParagraphFormat object that represents paragraph formatting for the specified text. Read-only."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read-only",
+      "description": "Returns a Font object that represents character formatting. Read-only."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

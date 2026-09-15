@@ -1,0 +1,410 @@
+{
+  "name": "Section",
+  "kind": "Class",
+  "guid": "{BC9E4355-F037-11CD-8701-00AA003F0F07}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "A form section is part of a form such as a header, footer, or detail section.",
+  "remarks": "You can set section properties, which are attributes of a form that affect the appearance or behavior of that section. For example, you can set the CanGrow property to specify whether the section will increase vertically to print all the data that the section contains. Section properties are set in form Design view.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Use the Application property to access the active Microsoft Access Application object and its related properties. Read-only Application object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Properties",
+      "kind": "property",
+      "type": "Properties",
+      "access": "read-only",
+      "description": "Returns a reference to a control's Properties collection object. Read-only."
+    },
+    {
+      "name": "Controls",
+      "kind": "property",
+      "type": "Children",
+      "access": "read-only",
+      "description": "Returns the Controls collection of a form, subform, report, or section. Read-only Controls."
+    },
+    {
+      "name": "EventProcPrefix",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the prefix portion of an event procedure name. Read/write String."
+    },
+    {
+      "name": "ForceNewPage",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the ForceNewPage property to specify whether form sections (detail, footer) or report sections (header, detail, footer) print on a separate page rather than on the current page. Read/write Byte."
+    },
+    {
+      "name": "NewRowOrCol",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the NewRowOrCol property to specify whether a section and its associated data is printed in a new row or column within a multiple-column report or multiple-column form. Read/write Byte."
+    },
+    {
+      "name": "KeepTogether",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the KeepTogether property for a section to print a form or report section all on one page. For example, you might have a group of related information that you don't want printed across two pages. The KeepTogether property applies only to form and report sections (except page headers and page footers). Read/write Boolean."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether the object is visible. Read/write Boolean."
+    },
+    {
+      "name": "DisplayWhen",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the DisplayWhen property to specify which of a form's sections you want displayed on screen and in print. Read/write Byte."
+    },
+    {
+      "name": "CanGrow",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Gets or sets whether the specified control automatically adjusts vertically to print or preview all the data that the control contains. Read/write Boolean."
+    },
+    {
+      "name": "CanShrink",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Gets or sets whether the specified control automatically adjusts vertically to print or preview all the data that the section or control contains. Read/write Boolean."
+    },
+    {
+      "name": "RepeatSection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the RepeatSection property to specify whether a group header is repeated on the next page or column when a group spans more than one page or column. Read/write Boolean."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Gets or sets the height of the specified object in twips. Read/write Integer."
+    },
+    {
+      "name": "BackColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the interior color of the specified object. Read/write Long."
+    },
+    {
+      "name": "SpecialEffect",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the SpecialEffect property to specify whether special formatting will apply to the specified object. Read/write Byte."
+    },
+    {
+      "name": "Tag",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Stores extra information about a form, report, section, or control needed by a Microsoft Access application. Read/write String."
+    },
+    {
+      "name": "OnFormat",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Format box in the Properties window of a report section. Read/write String."
+    },
+    {
+      "name": "OnPrint",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Print box in the Properties window of a report section. Read/write String."
+    },
+    {
+      "name": "OnRetreat",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Retreat box in the Properties window of a report section. Read/write String."
+    },
+    {
+      "name": "OnClick",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Click box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnDblClick",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Dbl Click box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnMouseDown",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Mouse Down box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnMouseMove",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Mouse Move box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnMouseUp",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Mouse Up box in the Properties window. Read/write String."
+    },
+    {
+      "name": "HasContinued",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the HasContinued property to determine if part of the current section begins on the previous page. Read/write Boolean."
+    },
+    {
+      "name": "WillContinue",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Determines if the current section will continue on the following page. Read/write Boolean."
+    },
+    {
+      "name": "InSelection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the InSelection property to determine or specify whether a control on a form in Design view is selected. Read/write Boolean."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the Name property to specify or determine the string expression that identifies the name of an object. Read/write String."
+    },
+    {
+      "name": "AutoHeight",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Gets or sets whether a section's height is adjusted automatically when controls are resized. Read/write Boolean."
+    },
+    {
+      "name": "AlternateBackColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the background color to display on alternate rows of the specified section. Read/write Long."
+    },
+    {
+      "name": "OnPaint",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Paint box in the Properties window of a form or report. Read/write String."
+    },
+    {
+      "name": "BackThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets a value that represents a color in the applied color theme associated with the BackColor property of the specified object. Read/write Long."
+    },
+    {
+      "name": "BackTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the tint that is applied to the theme color in the BackColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "BackShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the shade applied to the theme color in the BackColor property of the specified object. Read/write Single."
+    },
+    {
+      "name": "AlternateBackThemeColorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets a value that represents a color in the applied color theme associated with the AlternateBackColor property of the section. Read/write Long."
+    },
+    {
+      "name": "AlternateBackTint",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the tint applied to the theme color in the AlternateBackColor property of the section. Read/write Single."
+    },
+    {
+      "name": "AlternateBackShade",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Gets or sets the shade applied to the theme color in the AlternateBackColor property of the section. Read/write Single."
+    }
+  ],
+  "methods": [
+    {
+      "name": "SetTabOrder",
+      "kind": "method",
+      "signature": "SetTabOrder()",
+      "description": "Resets the tab order of the controls in the specified Section to their default values.",
+      "returns": "void"
+    }
+  ],
+  "events": [
+    {
+      "name": "Click",
+      "kind": "event",
+      "signature": "Click()",
+      "description": "The Click event occurs when the user presses and then releases a mouse button over an object."
+    },
+    {
+      "name": "DblClick",
+      "kind": "event",
+      "signature": "DblClick(Cancel As Integer)",
+      "description": "The DblClick event occurs when the user presses and releases the left mouse button twice over an object within the double-click time limit of the system.",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": "The setting determines if the DblClick event occurs. Setting the _Cancel_ argument to True (1) cancels the DblClick event."
+        }
+      ]
+    },
+    {
+      "name": "MouseDown",
+      "kind": "event",
+      "signature": "MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "The MouseDown event occurs when the user presses a mouse button.",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": "The button that was pressed to trigger the event. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>"
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": "The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": "The _x_ coordinate for the current location of the mouse pointer, in twips."
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": "The _y_ coordinate for the current location of the mouse pointer, in twips."
+        }
+      ]
+    },
+    {
+      "name": "MouseMove",
+      "kind": "event",
+      "signature": "MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "The MouseMove event occurs when the user moves the mouse.",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": "The button that was pressed or released when the event was triggered. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>"
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": "The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": "The _x_ coordinate for the current location of the mouse pointer, in twips."
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": "The _y_ coordinate for the current location of the mouse pointer, in twips."
+        }
+      ]
+    },
+    {
+      "name": "MouseUp",
+      "kind": "event",
+      "signature": "MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "The MouseUp event occurs when the user releases a mouse button.",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": "The button that was released to trigger the event. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>"
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": "The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": "The _x_ coordinate for the current location of the mouse pointer, in twips."
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": "The _y_ coordinate for the current location of the mouse pointer, in twips."
+        }
+      ]
+    },
+    {
+      "name": "Paint",
+      "kind": "event",
+      "signature": "Paint()",
+      "description": "Occurs when the specified section is redrawn."
+    }
+  ]
+}

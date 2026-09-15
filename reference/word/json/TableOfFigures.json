@@ -1,0 +1,154 @@
+{
+  "name": "TableOfFigures",
+  "kind": "Dispatch Interface",
+  "guid": "{00020921-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a single table of figures in a document. The TableOfFigures object is a member of the TablesOfFigures collection. The TablesOfFigures collection includes all the tables of figures in a document.",
+  "remarks": "Use TablesOfFigures (Index), where Index is the index number, to return a single TableOfFigures object. The index number represents the position of the table of figures in the document. The following example updates the page numbers of the items in the first table of figures in the active document. Use the Add method to add a table of figures to a document. A table of figures lists figure captions in the order in which they appear in the document. The following example replaces the selection in the active document with a table of figures that includes caption labels and page numbers.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified TableOfFigures object."
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the label that identifies the items to be included in a table of figures. Read/write String."
+    },
+    {
+      "name": "IncludeLabel",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if the caption label and caption number are included in a table of figures. Read/write Boolean."
+    },
+    {
+      "name": "RightAlignPageNumbers",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if page numbers are aligned with the right margin in an table of figures. Read/write Boolean."
+    },
+    {
+      "name": "UseHeadingStyles",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if built-in heading styles are used to create a table of figures. Read/write Boolean."
+    },
+    {
+      "name": "LowerHeadingLevel",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the ending heading level for a table of figures. Read/write Long."
+    },
+    {
+      "name": "UpperHeadingLevel",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the starting heading level for a table of figures. Read/write Long."
+    },
+    {
+      "name": "IncludePageNumbers",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if page numbers are included in the table of figures. Read/write Boolean."
+    },
+    {
+      "name": "Range",
+      "kind": "property",
+      "type": "Range",
+      "access": "read-only",
+      "description": "Returns a Range object that represents the portion of a document that is contained within the specified table of figures."
+    },
+    {
+      "name": "UseFields",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "True if Table of Contents Entry (TC) fields are used to create a table of figures. Read/write Boolean."
+    },
+    {
+      "name": "TableID",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a one-letter identifier that is used to build a table of figures from TOC fields. Read/write String."
+    },
+    {
+      "name": "HeadingStyles",
+      "kind": "property",
+      "type": "HeadingStyles",
+      "access": "read-only",
+      "description": "Returns a HeadingStyles object that represents additional styles used to compile a table of contents or table of figures (styles other than the Heading 1 - Heading 9 styles). Read-only."
+    },
+    {
+      "name": "TabLeader",
+      "kind": "property",
+      "type": "WdTabLeader",
+      "access": "read/write",
+      "description": "Returns or sets the character between entries and their page numbers in an table of figures. Read/write WdTabLeader."
+    },
+    {
+      "name": "UseHyperlinks",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether entries in a table of figures should be formatted as hyperlinks when publishing to the Web. Read/write Boolean."
+    },
+    {
+      "name": "HidePageNumbersInWeb",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether page numbers in a table of contents or a table of figures should be hidden when publishing to the Web. Read/write Boolean."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified table of figures.",
+      "returns": "void"
+    },
+    {
+      "name": "UpdatePageNumbers",
+      "kind": "method",
+      "signature": "UpdatePageNumbers()",
+      "description": "Updates the page numbers for items in a table of figures.",
+      "returns": "void"
+    },
+    {
+      "name": "Update",
+      "kind": "method",
+      "signature": "Update()",
+      "description": "Updates the entries shown in a table of figures.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

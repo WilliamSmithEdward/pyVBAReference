@@ -1,0 +1,105 @@
+{
+  "name": "Replacement",
+  "kind": "Dispatch Interface",
+  "guid": "{000209B1-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents the replace criteria for a find-and-replace operation. The properties and methods of the Replacement object correspond to the options in the Find and Replace dialog box.",
+  "remarks": "Use the Replacement property to return a Replacement object. The following example replaces the next occurrence of the word \"hi\" with the word \"hello.\" To find and replace formatting, set both the find text and the replace text to empty strings (\"\") and set the Format argument of the Execute method to True. The following example removes all the bold formatting in the active document. The Bold property is True for the Find object and False for the Replacement object.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Replacement object."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read/write",
+      "description": "Returns or sets a Font object that represents the character formatting of the specified object. Read/write Font."
+    },
+    {
+      "name": "ParagraphFormat",
+      "kind": "property",
+      "type": "ParagraphFormat",
+      "access": "read/write",
+      "description": "Returns or sets a ParagraphFormat object that represents the paragraph settings for the specified replacement operation. Read/write."
+    },
+    {
+      "name": "Style",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets the style for the specified object. To set this property, specify the local name of the style, an integer, a WdBuiltinStyle constant, or an object that represents the style. Read/write Variant."
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets the text to replace. Read/write String."
+    },
+    {
+      "name": "LanguageID",
+      "kind": "property",
+      "type": "WdLanguageID",
+      "access": "read/write",
+      "description": "Returns or sets a WdLanguageID constant that represents the language for the specified range. Read/write."
+    },
+    {
+      "name": "Highlight",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if highlight formatting is applied to the replacement text. Read/write Long."
+    },
+    {
+      "name": "Frame",
+      "kind": "property",
+      "type": "Frame",
+      "access": "read-only",
+      "description": "Returns a Frame object that represents the frame formatting for the specified style or find-and-replace operation. Read-only."
+    },
+    {
+      "name": "LanguageIDFarEast",
+      "kind": "property",
+      "type": "WdLanguageID",
+      "access": "read/write",
+      "description": "Returns or sets an East Asian language for the specified replacement. Read/write WdLanguageID."
+    },
+    {
+      "name": "NoProofing",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "True if Microsoft Word replaces text that the spelling and grammar checker ignores. Read/write Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "ClearFormatting",
+      "kind": "method",
+      "signature": "ClearFormatting()",
+      "description": "Removes text and paragraph formatting from the text specified in a replace operation.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,119 @@
+{
+  "name": "Comment",
+  "kind": "Dispatch Interface",
+  "guid": "{914934D5-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a comment on a given slide or slide range. The Comment object is a member of the Comments collection object.",
+  "remarks": "Use the following properties to access comment data:",
+  "example": "Sub ShowComment()\n\n    With ActivePresentation.Slides(1).Comments\n\n        If .Count > 0 Then\n\n            MsgBox \"The first comment on this slide is by \" & .Item(1).Author\n\n        Else\n\n            MsgBox \"There are no comments on this slide.\"\n\n        End If\n\n    End With\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Author",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String that represents the author as for a specified Comment object. Read-only."
+    },
+    {
+      "name": "AuthorInitials",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the author's initials as a read-only String for a specified Comment object. Read-only."
+    },
+    {
+      "name": "Text",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String that represents the text in a comment. Read-only."
+    },
+    {
+      "name": "DateTime",
+      "kind": "property",
+      "type": "Date",
+      "access": "read-only",
+      "description": "Returns the date and time a comment was created."
+    },
+    {
+      "name": "AuthorIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long representing the index number of a comment for a given author. The first comment for a given author has an index number of 1, their second comment has an index number of 2. Read-only."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns a Single that represents the distance in points from the left edge of the comment to the left edge of the slide. Read-only."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns a Single that represents the distance in points from the left edge of the comment to the left edge of the slide. Read-only."
+    },
+    {
+      "name": "ProviderID",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String that represents ID of the service providing contact information. Read-only."
+    },
+    {
+      "name": "UserID",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String that represents user ID of the contact. Read-only."
+    },
+    {
+      "name": "TimeZoneBias",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a String that specifies the local time zone adjustment for the contact. Read-only."
+    },
+    {
+      "name": "Replies",
+      "kind": "property",
+      "type": "Comments",
+      "access": "read-only",
+      "description": "Returns a Comments collection of Comment objects that are children of the specified comment. Read-only."
+    },
+    {
+      "name": "Collapsed",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read-only",
+      "description": "Returns whether the replies to a comment are shown (expanded) or hidden (collapsed). Ready-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified Comment object.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

@@ -1,0 +1,77 @@
+{
+  "name": "ProtectedViewWindows",
+  "kind": "Dispatch Interface",
+  "guid": "{BA72E559-4FF5-48F4-8215-5505F990966F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a collection of ProtectedViewWindow objects.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As ProtectedViewWindow",
+      "description": "Returns a single ProtectedViewWindow object from the specified ProtectedViewWindows collection.",
+      "returns": "ProtectedViewWindow",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The index number of the single ProtectedViewWindow object in the collection to be returned."
+        }
+      ]
+    },
+    {
+      "name": "Open",
+      "kind": "method",
+      "signature": "Open(FileName As String, [ReadPassword As String], [OpenAndRepair As MsoTriState]) As ProtectedViewWindow",
+      "description": "Open and return a ProtectedViewWindow object from the ProtectedViewWindows collection.",
+      "returns": "ProtectedViewWindow",
+      "parameters": [
+        {
+          "name": "FileName",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the file to open."
+        },
+        {
+          "name": "ReadPassword",
+          "type": "String",
+          "optional": true,
+          "description": "The password to use for the protected file."
+        },
+        {
+          "name": "OpenAndRepair",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Indicates whether to repair the file."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

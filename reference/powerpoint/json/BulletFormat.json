@@ -1,0 +1,106 @@
+{
+  "name": "BulletFormat",
+  "kind": "Dispatch Interface",
+  "guid": "{91493497-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents bullet formatting.",
+  "remarks": "",
+  "example": "With ActivePresentation.Slides(1).Shapes(2)\n\n    With .TextFrame.TextRange.ParagraphFormat.Bullet\n\n        .Visible = True\n\n        .RelativeSize = 1.25\n\n        .Character = 169\n\n        With .Font\n\n            .Color.RGB = RGB(255, 255, 0)\n\n            .Name = \"Symbol\"\n\n        End With\n\n    End With\n\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Character",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the Unicode character value that is used for bullets in the specified text. Read/write."
+    },
+    {
+      "name": "RelativeSize",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Returns or sets the bullet size relative to the size of the first text character in the paragraph. Read/write."
+    },
+    {
+      "name": "UseTextColor",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the specified bullets are set to the color of the first text character in the paragraph. Read/write."
+    },
+    {
+      "name": "UseTextFont",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the specified bullets are set to the font of the first text character in the paragraph. Read/write."
+    },
+    {
+      "name": "Font",
+      "kind": "property",
+      "type": "Font",
+      "access": "read-only",
+      "description": "Returns a Font object that represents character formatting. Read-only."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "PpBulletType",
+      "access": "read/write",
+      "description": "Represents the type of bullet. Read/write."
+    },
+    {
+      "name": "Style",
+      "kind": "property",
+      "type": "PpNumberedBulletStyle",
+      "access": "read/write",
+      "description": "Returns or sets the bullet style. Read/write."
+    },
+    {
+      "name": "StartValue",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the beginning value of a bulleted list when the Type property of the BulletFormat object is set to ppBulletNumbered. Read/write."
+    },
+    {
+      "name": "Number",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the bullet number of a paragraph when the Type property of the BulletFormat object is set to ppBulletNumbered. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Picture",
+      "kind": "method",
+      "signature": "Picture(Picture As String)",
+      "description": "Sets the graphics file to be used for bullets in a bulleted list when the Type property of the BulletFormat object is set to ppBulletPicture.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Picture",
+          "type": "String",
+          "optional": false,
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "events": []
+}

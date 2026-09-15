@@ -1,0 +1,106 @@
+{
+  "name": "Sections",
+  "kind": "Dispatch Interface",
+  "guid": "{0002095A-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of Section objects in a selection, range, or document.",
+  "remarks": "Use the Sections property to return the Sections collection. The following example inserts text at the end of the last section in the active document. Use the Add method or the InsertBreak method to add a new section to a document. The following example adds a new section at the beginning of the active document. The following example displays the number of sections in the active document, adds a section break above the first paragraph in the selection, and then displays the number of sections again. Use Sections (_index_), where _index_ is the index number, to return a single Section object. The following example changes the left and right page margins for the first section in the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of sections in the collection. Read-only."
+    },
+    {
+      "name": "First",
+      "kind": "property",
+      "type": "Section",
+      "access": "read-only",
+      "description": "Returns a Section object that represents the first item in the Sections collection."
+    },
+    {
+      "name": "Last",
+      "kind": "property",
+      "type": "Section",
+      "access": "read-only",
+      "description": "Returns the last item in the Sections collection as a Section object."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Sections object."
+    },
+    {
+      "name": "PageSetup",
+      "kind": "property",
+      "type": "PageSetup",
+      "access": "read/write",
+      "description": "Returns a PageSetup object that's associated with the specified document, range, section, sections, or selection."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Section",
+      "description": "Returns an individual Section object in a collection.",
+      "returns": "Section",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add([Range As Variant], [Start As Variant]) As Section",
+      "description": "Returns a Section object that represents a new section added to a document.",
+      "returns": "Section",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Variant",
+          "optional": true,
+          "description": "The range before which you want to insert the section break. If this argument is omitted, the section break is inserted at the end of the document."
+        },
+        {
+          "name": "Start",
+          "type": "Variant",
+          "optional": true,
+          "description": "The type of section break you want to add. Can be one of the WdSectionStart constants. If this argument is omitted, a Next Page section break is added."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

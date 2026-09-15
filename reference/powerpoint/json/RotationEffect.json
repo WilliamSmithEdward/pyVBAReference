@@ -1,0 +1,48 @@
+{
+  "name": "RotationEffect",
+  "kind": "Dispatch Interface",
+  "guid": "{914934E8-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents a rotation effect for an AnimationBehavior object.",
+  "remarks": "",
+  "example": "ActivePresentation.Slides(1).TimeLine.MainSequence.Item.Behaviors(1).RotationEffect",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "By",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Sets or returns a Single that represents the rotation of an object by the specified number of degrees; for example, a value of 180 means to rotate the object by 180 degrees. Read/write."
+    },
+    {
+      "name": "From",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Sets or returns a Single that represents the starting angle in degrees, specified relative to the screen (for example, 90 degrees is completely horizontal). Read/write."
+    },
+    {
+      "name": "To",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Sets or returns a Single that represents the ending rotation of an object in degrees, specified relative to the screen (for example, 90 degrees is completely horizontal). Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

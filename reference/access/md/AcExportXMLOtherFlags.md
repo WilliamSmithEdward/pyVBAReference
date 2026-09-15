@@ -1,0 +1,21 @@
+# AcExportXMLOtherFlags
+
+**Type:** Enumeration  
+**Library:** Microsoft Access 16.0 Object Library  
+
+Use with the ExportXML method to specify other behaviors associated with exporting to XML.
+
+## Constants (6)
+
+- `acEmbedSchema` = 1  
+  Writes schema information into the document specified by the DataTarget argument; this value takes precedence over the SchemaTarget argument.
+- `acExcludePrimaryKeyAndIndexes` = 2  
+  Does not export primary key and index schema properties.
+- `acRunFromServer` = 4  
+  Creates an Active Server Pages (ASP) wrapper; otherwise, default is an HTML wrapper. Applies only when you are exporting reports.
+- `acLiveReportSource` = 8  
+  Creates a live link to a remote Microsoft SQL Server 2000 database. Valid only when you are exporting reports that are bound to a Microsoft SQL Server 2000 database.
+- `acPersistReportML` = 16  
+  Persists the exported object's ReportML information.
+- `acExportAllTableAndFieldProperties` = 32  
+  The exported schema contains properties of the table and its fields.

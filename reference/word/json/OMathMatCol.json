@@ -1,0 +1,63 @@
+{
+  "name": "OMathMatCol",
+  "kind": "Dispatch Interface",
+  "guid": "{CAE36175-3818-4C60-BCBF-0645D51EB33B}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a matrix column. The OMathMatCol is a member of the OMathMatCols collection.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathMatCol object."
+    },
+    {
+      "name": "Args",
+      "kind": "property",
+      "type": "OMathArgs",
+      "access": "read-only",
+      "description": "Returns an OMathArgs object that represents the arguments in a matrix column. Read-only."
+    },
+    {
+      "name": "ColIndex",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the ordinal position of a column within the collection of columns in a matrix. Read-only."
+    },
+    {
+      "name": "Align",
+      "kind": "property",
+      "type": "WdOMathHorizAlignType",
+      "access": "read/write",
+      "description": "Returns or sets a WdOMathHorizAlignType constant that represents the horizontal alignment for arguments in a matrix column. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Delete",
+      "kind": "method",
+      "signature": "Delete()",
+      "description": "Deletes the specified matrix column.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}

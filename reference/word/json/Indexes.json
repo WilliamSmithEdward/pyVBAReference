@@ -1,0 +1,263 @@
+{
+  "name": "Indexes",
+  "kind": "Dispatch Interface",
+  "guid": "{0002097C-0000-0000-C000-000000000046}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "A collection of Index objects that represents all the indexes in the specified document.",
+  "remarks": "Use the Indexes property to return the Indexes collection. The following example formats indexes in the active document with the classic format. Use the Add method to create an index and add it to the Indexes collection. The following example creates an index at the end of the active document. Use Indexes (Index), where Index is the index number, to return a single Index object. The index number represents the position of the Index object in the document. The following example updates the first index in the active document.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified Indexes object."
+    },
+    {
+      "name": "_NewEnum",
+      "kind": "property",
+      "type": "IUnknown",
+      "access": "read-only",
+      "description": ""
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a Long that represents the number of indexes in the collection. Read-only."
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "WdIndexFormat",
+      "access": "read/write",
+      "description": "Returns or sets a WdIndexFormat that represents the formatting for the indexes in the specified document. Read/write."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(Index As Long) As Index",
+      "description": "Returns an individual Index object in a collection.",
+      "returns": "Index",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The individual object to be returned. Can be a Long indicating the ordinal position of the individual object."
+        }
+      ]
+    },
+    {
+      "name": "MarkEntry",
+      "kind": "method",
+      "signature": "MarkEntry(Range As Range, [Entry As Variant], [EntryAutoText As Variant], [CrossReference As Variant], [CrossReferenceAutoText As Variant], [BookmarkName As Variant], [Bold As Variant], [Italic As Variant], [Reading As Variant]) As Field",
+      "description": "Inserts an XE (Index Entry) field after the specified range. The method returns a Field object representing the XE field.",
+      "returns": "Field",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The location of the entry. The XE field is inserted after Range."
+        },
+        {
+          "name": "Entry",
+          "type": "Variant",
+          "optional": true,
+          "description": "The text that appears in the index. To indicate a subentry, include the main entry text and the subentry text, separated by a colon (:) (for example, \"Introduction:The Product\")."
+        },
+        {
+          "name": "EntryAutoText",
+          "type": "Variant",
+          "optional": true,
+          "description": "The AutoText entry name that includes text for the index, table of figures, or table of contents (Entry is ignored)."
+        },
+        {
+          "name": "CrossReference",
+          "type": "Variant",
+          "optional": true,
+          "description": "A cross-reference that will appear in the index (for example, \"See Apples\")."
+        },
+        {
+          "name": "CrossReferenceAutoText",
+          "type": "Variant",
+          "optional": true,
+          "description": "The AutoText entry name that contains the text for a cross-reference (CrossReference is ignored)."
+        },
+        {
+          "name": "BookmarkName",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the bookmark that marks the range of pages you want to appear in the index. If this argument is omitted, the number of the page containing the XE field appears in the index."
+        },
+        {
+          "name": "Bold",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to add bold formatting to the entry page numbers in the index."
+        },
+        {
+          "name": "Italic",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to add italic formatting to the entry page numbers in the index."
+        },
+        {
+          "name": "Reading",
+          "type": "Variant",
+          "optional": true,
+          "description": "True shows an index entry in the right location when indexes are sorted phonetically (East Asian languages only)."
+        }
+      ]
+    },
+    {
+      "name": "MarkAllEntries",
+      "kind": "method",
+      "signature": "MarkAllEntries(Range As Range, [Entry As Variant], [EntryAutoText As Variant], [CrossReference As Variant], [CrossReferenceAutoText As Variant], [BookmarkName As Variant], [Bold As Variant], [Italic As Variant])",
+      "description": "Inserts an XE (Index Entry) field after all instances of the text in Range.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The range whose text is marked with an XE field throughout the document."
+        },
+        {
+          "name": "Entry",
+          "type": "Variant",
+          "optional": true,
+          "description": "The text you want to appear in the index, in the form MainEntry[:Subentry]."
+        },
+        {
+          "name": "EntryAutoText",
+          "type": "Variant",
+          "optional": true,
+          "description": "The AutoText entry that contains the text you want to appear in the index (if this argument is specified, Entry is ignored)."
+        },
+        {
+          "name": "CrossReference",
+          "type": "Variant",
+          "optional": true,
+          "description": "A cross-reference that will appear in the index."
+        },
+        {
+          "name": "CrossReferenceAutoText",
+          "type": "Variant",
+          "optional": true,
+          "description": "The name of the AutoText entry that contains the text for a cross-reference (if this argument is specified, CrossReference is ignored)."
+        },
+        {
+          "name": "BookmarkName",
+          "type": "Variant",
+          "optional": true,
+          "description": "The bookmark name that marks the range of pages you want to appear in the index. If this argument is omitted, the number of the page that contains the XE field appears in the index."
+        },
+        {
+          "name": "Bold",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to add bold formatting to page numbers for index entries."
+        },
+        {
+          "name": "Italic",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to add italic formatting to page numbers for index entries."
+        }
+      ]
+    },
+    {
+      "name": "AutoMarkEntries",
+      "kind": "method",
+      "signature": "AutoMarkEntries(ConcordanceFileName As String)",
+      "description": "Automatically adds XE (Index Entry) fields to the specified document, using the entries from a concordance file.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "ConcordanceFileName",
+          "type": "String",
+          "optional": false,
+          "description": "The concordance file name that includes a list of items to be indexed."
+        }
+      ]
+    },
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Range As Range, [HeadingSeparator As Variant], [RightAlignPageNumbers As Variant], [Type As Variant], [NumberOfColumns As Variant], [AccentedLetters As Variant], [SortBy As Variant], [IndexLanguage As Variant]) As Index",
+      "description": "Returns an Index object that represents a new index added to a document.",
+      "returns": "Index",
+      "parameters": [
+        {
+          "name": "Range",
+          "type": "Range",
+          "optional": false,
+          "description": "The range where you want the index to appear. The index replaces the range, if the range is not collapsed."
+        },
+        {
+          "name": "HeadingSeparator",
+          "type": "Variant",
+          "optional": true,
+          "description": "The text between alphabetical groups (entries that start with the same letter) in the index. Can be one of the WdHeadingSeparator constants."
+        },
+        {
+          "name": "RightAlignPageNumbers",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to align page numbers with the right margin."
+        },
+        {
+          "name": "Type",
+          "type": "Variant",
+          "optional": true,
+          "description": "Specifies whether subentries are on the same line (run-in) as the main entry or on a separate line (indented) from the main entry. Can be either of the following WdIndexType constants: wdIndexIndent or wdIndexRunin."
+        },
+        {
+          "name": "NumberOfColumns",
+          "type": "Variant",
+          "optional": true,
+          "description": "The number of columns for each page of the index. Specifying 0 (zero) sets the number of columns in the index to the same number as in the document."
+        },
+        {
+          "name": "AccentedLetters",
+          "type": "Variant",
+          "optional": true,
+          "description": "True to include separate headings for accented letters in the index (for example, words that begin with \"?\" and words that begin with \"A\" are listed under separate headings)."
+        },
+        {
+          "name": "SortBy",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sorting criteria to be used for the specified index. Can be either of the following WdIndexSortBy constants: wdIndexSortByStroke or wdIndexSortBySyllable."
+        },
+        {
+          "name": "IndexLanguage",
+          "type": "Variant",
+          "optional": true,
+          "description": "The sorting language to be used for the specified index. Can be any of the WdLanguageID constants. For the list of valid WdLanguageID constants, see the Object Browser in the Visual Basic Editor."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

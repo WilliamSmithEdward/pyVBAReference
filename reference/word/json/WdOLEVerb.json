@@ -1,0 +1,43 @@
+{
+  "name": "WdOLEVerb",
+  "kind": "Enumeration",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Specifies the action associated with the verb that the OLE object should perform.",
+  "constants": [
+    {
+      "name": "wdOLEVerbPrimary",
+      "value": 0,
+      "description": "Performs the verb that is invoked when the user double-clicks the object."
+    },
+    {
+      "name": "wdOLEVerbShow",
+      "value": -1,
+      "description": "Shows the object to the user for editing or viewing. Use it to show a newly inserted object for initial editing."
+    },
+    {
+      "name": "wdOLEVerbOpen",
+      "value": -2,
+      "description": "Opens the object in a separate window."
+    },
+    {
+      "name": "wdOLEVerbHide",
+      "value": -3,
+      "description": "Removes the object's user interface from view."
+    },
+    {
+      "name": "wdOLEVerbUIActivate",
+      "value": -4,
+      "description": "Activates the object in place and displays any user-interface tools that the object needs, such as menus or toolbars."
+    },
+    {
+      "name": "wdOLEVerbInPlaceActivate",
+      "value": -5,
+      "description": "Runs the object and installs its window, but doesn't install any user-interface tools."
+    },
+    {
+      "name": "wdOLEVerbDiscardUndoState",
+      "value": -6,
+      "description": "Forces the object to discard any undo state that it might be maintaining; note that the object remains active, however."
+    }
+  ]
+}

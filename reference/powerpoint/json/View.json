@@ -1,0 +1,226 @@
+{
+  "name": "View",
+  "kind": "Dispatch Interface",
+  "guid": "{91493458-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents the current editing view in the specified document window.",
+  "remarks": "",
+  "example": "With Windows(1)\n\n    .Height = 200\n\n    .Width = 250\n\n    .View.ZoomToFit = True\n\nEnd With",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "PpViewType",
+      "access": "read-only",
+      "description": "Represents the type of view. Read-only."
+    },
+    {
+      "name": "Zoom",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the zoom setting of the specified view as a percentage of normal size. Read/write."
+    },
+    {
+      "name": "Slide",
+      "kind": "property",
+      "type": "Object",
+      "access": "read/write",
+      "description": "Returns or sets a Slide object that represents the slide that's currently displayed in the specified document window view. Read/write."
+    },
+    {
+      "name": "DisplaySlideMiniature",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines if and when the slide miniature window is displayed automatically. Read/write."
+    },
+    {
+      "name": "ZoomToFit",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read/write",
+      "description": "Determines whether the view is zoomed to fit the dimensions of the document window every time the document window is resized. Read/write."
+    },
+    {
+      "name": "PrintOptions",
+      "kind": "property",
+      "type": "PrintOptions",
+      "access": "read-only",
+      "description": "Returns a PrintOptions object that represents print options that are saved with the specified presentation. Read-only."
+    },
+    {
+      "name": "MediaControlsVisible",
+      "kind": "property",
+      "type": "MsoTriState",
+      "access": "read-only",
+      "description": "Indicates whether the media controls are currently visible. Read-only."
+    },
+    {
+      "name": "MediaControlsLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns the distance, in points, from the left edge of the media control bounding box to the left edge of the slide. Read-only."
+    },
+    {
+      "name": "MediaControlsTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns the distance, in points, from the top edge of the media control bounding box to the top edge of the slide. Read-only."
+    },
+    {
+      "name": "MediaControlsWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns the width, in points, of the media control bounding box. Read-only."
+    },
+    {
+      "name": "MediaControlsHeight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read-only",
+      "description": "Returns the height, in points, of the media controls. Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Paste",
+      "kind": "method",
+      "signature": "Paste()",
+      "description": "Pastes the contents of the Clipboard into the active view. Attempting to paste an object into a view that won't accept it causes an error.",
+      "returns": "void"
+    },
+    {
+      "name": "GotoSlide",
+      "kind": "method",
+      "signature": "GotoSlide(Index As Long)",
+      "description": "Switches to the specified slide.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Index",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of the slide to switch to."
+        }
+      ]
+    },
+    {
+      "name": "PasteSpecial",
+      "kind": "method",
+      "signature": "PasteSpecial([DataType As PpPasteDataType], [DisplayAsIcon As MsoTriState], [IconFileName As String], [IconIndex As Long], [IconLabel As String], [Link As MsoTriState])",
+      "description": "Pastes the current contents of the Clipboard into the view represented by the View object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "DataType",
+          "type": "PpPasteDataType",
+          "optional": true,
+          "description": "A format for the Clipboard contents when they're inserted into the document. The default value varies, depending on the contents in the Clipboard. An error occurs if the specified data type in the DataType argument is not supported by the clipboard contents."
+        },
+        {
+          "name": "DisplayAsIcon",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "msoTrue to display the embedded object (or link) as an icon."
+        },
+        {
+          "name": "IconFileName",
+          "type": "String",
+          "optional": true,
+          "description": "If DisplayAsIcon is set to msoTrue, this argument is the path and file name for the file in which the icon to be displayed is stored. If DisplayAsIcon is set to msoFalse, this argument is ignored."
+        },
+        {
+          "name": "IconIndex",
+          "type": "Long",
+          "optional": true,
+          "description": "If DisplayAsIcon is set to msoTrue, this argument is a number that corresponds to the icon you want to use in the program file specified by IconFilename. Icons appear in the Change Icon dialog box, accessed from the Insert tab (click Object, select Display as icon, click Change Icon): 0 (zero) corresponds to the first icon, 1 corresponds to the second icon. If this argument is omitted, the first (default) icon is used. If DisplayAsIcon is set to msoFalse, this argument is ignored. If IconIndex is outside the valid range, the default icon (index 0) is used."
+        },
+        {
+          "name": "IconLabel",
+          "type": "String",
+          "optional": true,
+          "description": "If DisplayAsIcon is set to msoTrue, this argument is the text that appears below the icon. If this label is missing, Microsoft PowerPoint generates an icon label based on the Clipboard contents. If DisplayAsIcon is set to msoFalse, this argument is ignored."
+        },
+        {
+          "name": "Link",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "Determines whether to create a link to the source file of the Clipboard contents. An error occurs if the Clipboard contents don't support a link."
+        }
+      ]
+    },
+    {
+      "name": "PrintOut",
+      "kind": "method",
+      "signature": "PrintOut([From As Long], [To As Long], [PrintToFile As String], [Copies As Long], [Collate As MsoTriState])",
+      "description": "Prints the specified presentation.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "From",
+          "type": "Long",
+          "optional": true,
+          "description": "The number of the first page to be printed. If this argument is omitted, printing starts at the beginning of the presentation. Specifying the To and From arguments sets the contents of the PrintRanges object and sets the value of the RangeType property for the presentation."
+        },
+        {
+          "name": "To",
+          "type": "Long",
+          "optional": true,
+          "description": "The number of the last page to be printed. If this argument is omitted, printing continues to the end of the presentation. Specifying the To and From arguments sets the contents of the PrintRanges object and sets the value of the RangeType property for the presentation."
+        },
+        {
+          "name": "PrintToFile",
+          "type": "String",
+          "optional": true,
+          "description": "The name of the file to print to. If you specify this argument, the file is printed to a file rather than sent to a printer. If this argument is omitted, the file is sent to a printer."
+        },
+        {
+          "name": "Copies",
+          "type": "Long",
+          "optional": true,
+          "description": "The number of copies to be printed. If this argument is omitted, only one copy is printed. Specifying this argument sets the value of the NumberOfCopies property."
+        },
+        {
+          "name": "Collate",
+          "type": "MsoTriState",
+          "optional": true,
+          "description": "If this argument is omitted, multiple copies are collated. Specifying this argument sets the value of the Collate property."
+        }
+      ]
+    },
+    {
+      "name": "Player",
+      "kind": "method",
+      "signature": "Player(ShapeId As Variant) As Player",
+      "description": "Allows access to playback controls for the associated view in the current window.",
+      "returns": "Player",
+      "parameters": [
+        {
+          "name": "ShapeId",
+          "type": "Variant",
+          "optional": false,
+          "description": "The playback control."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

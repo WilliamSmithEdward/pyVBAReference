@@ -1,0 +1,50 @@
+{
+  "name": "Borders",
+  "kind": "Dispatch Interface",
+  "guid": "{914934CA-5A91-11CF-8700-00AA0060263B}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "A collection of LineFormat objects that represent the borders and diagonal lines of a cell or range of cells in a table.",
+  "remarks": "Each Cell object or CellRange collection has six elements in the Borders collection. You cannot add objects to the Borders collection. Use Borders (index), where index identifies the cell border or diagonal line, to return a single Border object. The index value can be any PPBorderType constant.",
+  "example": "ActiveWindow.Selection.ShapeRange.Table.Rows(2).Cells.Borders(ppBorderBottom).DashStyle = msoLineDash",
+  "properties": [
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns the number of objects in the specified collection. Read-only."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the creator of the specified object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Item",
+      "kind": "method",
+      "signature": "Item(BorderType As PpBorderType) As LineFormat",
+      "description": "Returns a LineFormat object for the specified border from the Borders collection.",
+      "returns": "LineFormat",
+      "parameters": [
+        {
+          "name": "BorderType",
+          "type": "PpBorderType",
+          "optional": false,
+          "description": "Specifies which border of a cell or cell range is to be returned."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

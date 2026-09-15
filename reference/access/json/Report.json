@@ -1,0 +1,1627 @@
+{
+  "name": "Report",
+  "kind": "Class",
+  "guid": "{FF240263-AF0A-432D-A544-A721E75738F8}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "A Report object refers to a particular Microsoft Access report.",
+  "remarks": "A Report object is a member of the Reports collection, which is a collection of all currently open reports. Within the Reports collection, individual reports are indexed beginning with zero. Refer to an individual Report object in the Reports collection either by referring to the report by name, or by referring to its index within the collection. If the report name includes a space, the name must be surrounded by brackets ([ ]).",
+  "example": "Private Sub Report_NoData(Cancel As Integer)\n\n    'Add code here that will be executed if no data\n    'was returned by the Report's RecordSource\n    MsgBox \"No customers ordered this product this month. \" & _\n        \"The report will now close.\"\n    Cancel = True\n\nEnd Sub",
+  "properties": [
+    {
+      "name": "RecordSource",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the RecordSource property to specify the source of the data for a report. Read/write String."
+    },
+    {
+      "name": "Filter",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the Filter property to specify a subset of records to be displayed when a filter is applied to a form, report, query, or table. Read/write String."
+    },
+    {
+      "name": "FilterOn",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the FilterOn property to specify or determine whether the Filter property for a form or report is applied. Read/write Boolean."
+    },
+    {
+      "name": "OrderBy",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the OrderBy property to specify how you want to sort records in a report. Read/write String."
+    },
+    {
+      "name": "OrderByOn",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the OrderByOn property to specify whether an object's OrderBy property setting is applied. Read/write Boolean."
+    },
+    {
+      "name": "ServerFilter",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the ServerFilter property to specify a subset of records to be displayed when a server filter is applied to a report within a Microsoft Access project (.adp) or database. Read/write String."
+    },
+    {
+      "name": "Caption",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the title of the report in Print Preview. Read/write String."
+    },
+    {
+      "name": "RecordLocks",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the RecordLocks property to determine how records are locked and what happens when two users try to edit the same record at the same time. Read/write."
+    },
+    {
+      "name": "PageHeader",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the PageHeader property to specify whether a report's page header is printed on the same page as a report header. Read/write Byte."
+    },
+    {
+      "name": "PageFooter",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the PageFooter property to specify whether a report's page footer is printed on the same page as a report footer. Read/write Byte."
+    },
+    {
+      "name": "DateGrouping",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the DateGrouping property to specify how you want to group dates in a report. Read/write Byte."
+    },
+    {
+      "name": "GrpKeepTogether",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the GrpKeepTogether property to specify whether groups in a multiple column report that have their KeepTogether property for a group set to Whole Group or With First Detail will be kept together by page or by column. Read/write Byte."
+    },
+    {
+      "name": "Width",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Gets or sets the width of the specified object in twips. Read/write Integer."
+    },
+    {
+      "name": "Picture",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the Picture property to specify a bitmap or other type of graphic to be used as a background picture on a report. Read/write String."
+    },
+    {
+      "name": "PictureType",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the PictureType property to specify whether Microsoft Access stores an object's picture as a linked or an embedded object. Read/write Byte."
+    },
+    {
+      "name": "PictureSizeMode",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the PictureSizeMode property to specify how a picture for a form or report is sized. Read/write Byte."
+    },
+    {
+      "name": "PictureAlignment",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the PictureAlignment property to specify where a background picture will appear in an image control or on a form or report. Read/write Byte.Read/write."
+    },
+    {
+      "name": "PictureTiling",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the PictureTiling property to specify whether a background picture is tiled across the entire image control, Form window, form, or page of a report. Read/write Boolean."
+    },
+    {
+      "name": "PicturePages",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the PicturePages property to specify on which page or pages of a report a picture will be displayed. Read/write Byte."
+    },
+    {
+      "name": "MenuBar",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Specifies a custom menu to display for a report. Read/write String."
+    },
+    {
+      "name": "Toolbar",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Specifies a custom toolbar to display for a report. Read/write String."
+    },
+    {
+      "name": "ShortcutMenuBar",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the ShortcutMenuBar property to specify the shortcut menu that appears when you right-click the specified object. Read/write String."
+    },
+    {
+      "name": "GridX",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the GridX property (along with the GridY property) to specify the horizontal and vertical divisions of the alignment grid in report Design view. Read/write Integer."
+    },
+    {
+      "name": "GridY",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the GridY property (along with the GridX property) to specify the horizontal and vertical divisions of the alignment grid in report Design view. Read/write Integer."
+    },
+    {
+      "name": "LayoutForPrint",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the LayoutForPrint property to specify whether the report uses printer or screen fonts. Read/write Boolean."
+    },
+    {
+      "name": "FastLaserPrinting",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the FastLaserPrinting property to specify whether lines and rectangles are replaced by text character lines-similar to the underscore ( _ ) and vertical bar ( | ) characters-when you print a report by using most laser printers. Replacing lines and rectangles with text character lines can make printing much faster. Read/write Boolean."
+    },
+    {
+      "name": "HelpFile",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "The name of a help file associated with a report. Read/write String."
+    },
+    {
+      "name": "HelpContextId",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "The HelpContextID property specifies the context ID of a topic in the custom Help file specified by the HelpFile property setting. Read/write Long."
+    },
+    {
+      "name": "Hwnd",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Use the hWnd property to determine the handle (a unique Long Integer value) assigned by Windows to the current window. Read/write Long."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the Count property to determine the number of items in a specified collection. Read-only Integer."
+    },
+    {
+      "name": "Page",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "The Page property specifies the current page number when a report is being printed. Read/write Long."
+    },
+    {
+      "name": "Pages",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the Pages property to return information needed to print page numbers in a report. Read/write Integer."
+    },
+    {
+      "name": "HasData",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Use the HasData property to determine if a report is bound to an empty recordset. Read/write Long."
+    },
+    {
+      "name": "Left",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Use the Left property to specify an object's location on a form or report. Read/write Long."
+    },
+    {
+      "name": "Top",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Use the Top property to specify an object's location on a form or report. Read/write Long."
+    },
+    {
+      "name": "Height",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Gets or sets the height of the specified object in twips. Read/write Long."
+    },
+    {
+      "name": "PrintSection",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "The PrintSection property specifies whether a section should be printed. Read/write Boolean."
+    },
+    {
+      "name": "NextRecord",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "The NextRecord property specifies whether a section should advance to the next record. Read/write Boolean."
+    },
+    {
+      "name": "MoveLayout",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "The MoveLayout property specifies whether Microsoft Access should move to the next printing location on the page. Read/write Boolean."
+    },
+    {
+      "name": "FormatCount",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the FormatCount property to determine the number of times the OnFormat property has been evaluated for the current section on a report. Read/write Integer."
+    },
+    {
+      "name": "PrintCount",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the PrintCount property to identify the number of times the OnPrint property has been evaluated for the current section of a report. Read/write Integer."
+    },
+    {
+      "name": "Visible",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets whether the object is visible. Read/write Boolean."
+    },
+    {
+      "name": "Painting",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the Painting property to specify whether a report is repainted. Read/write Boolean."
+    },
+    {
+      "name": "PrtMip",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Use the PrtMip property in Visual Basic to set or return the device mode information specified for a form or report in the Print dialog box."
+    },
+    {
+      "name": "PrtDevMode",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Use the PrtDevMode property to set or return printing device mode information specified for a form or report in the Print dialog box. Read/write Variant."
+    },
+    {
+      "name": "PrtDevNames",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Use the PrtDevNames property to set or return information about the printer selected in the Print dialog box for a form or report. Read/write Variant."
+    },
+    {
+      "name": "ForeColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Use the ForeColor property to specify the color for text in a control. Read/write Long."
+    },
+    {
+      "name": "CurrentX",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Use the CurrentX property (along with the CurrentY property) to specify the horizontal and vertical coordinates for the starting position of the next printing and drawing method on a report. Read/write Single."
+    },
+    {
+      "name": "CurrentY",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Use the CurrentY property (along with the CurrentX property) to specify the horizontal and vertical coordinates for the starting position of the next printing and drawing method on a report. Read/write Single."
+    },
+    {
+      "name": "ScaleHeight",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Use the ScaleHeight property to specify the number of units for the vertical measurement of the page when the Circle, Line, Pset, or Print method is used while a report is printed or previewed, or its output is saved to a file. Read/write Single."
+    },
+    {
+      "name": "ScaleLeft",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Use the ScaleLeft property to specify the units for the horizontal coordinates that describe the location of the left edge of a page when the Circle, Line, Pset, or Print method is used while a report is printed or previewed, or its output is saved to a file. Read/write Single."
+    },
+    {
+      "name": "ScaleMode",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the ScaleMode property in Visual Basic to specify the unit of measurement for coordinates on a page when the Circle, Line, Pset, or Print method is used while a report is previewed or printed, or its output is saved to a file. Read/write Integer."
+    },
+    {
+      "name": "ScaleTop",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Use the ScaleTop property to specify the units for the vertical coordinates that describe the location of the top edge of a page when the Circle, Line, Pset, or Print method is used while a report is printed or previewed, or its output is saved to a file. Read/write Single."
+    },
+    {
+      "name": "ScaleWidth",
+      "kind": "property",
+      "type": "Single",
+      "access": "read/write",
+      "description": "Use the ScaleWidth property to specify the number of units for the horizontal measurement of the page when the Circle, Line, Pset, or Print method is used while a report is printed or previewed, or its output is saved to a file. Read/write Single."
+    },
+    {
+      "name": "FontBold",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the FontBold property to specify whether a font appears in a bold style in the following situations:"
+    },
+    {
+      "name": "FontItalic",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the FontItalic property to specify whether text is italic in the following situations:"
+    },
+    {
+      "name": "FontName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the FontName property to specify the font for text in the following situations:"
+    },
+    {
+      "name": "FontSize",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the FontSize property to specify the point size for text in the following situations:"
+    },
+    {
+      "name": "FontUnderline",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the FontUnderline property to specify whether text is underlined in the following situations:"
+    },
+    {
+      "name": "DrawMode",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the DrawMode property to specify how the pen (the color used in drawing) interacts with existing background colors on a report when the Line, Circle, or Pset method is used to draw on a report when printing. Read/write Integer."
+    },
+    {
+      "name": "DrawStyle",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the DrawStyle property to specify the line style when using the Line and Circle methods to print lines on reports. Read/write Integer."
+    },
+    {
+      "name": "DrawWidth",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the DrawWidth property to specify the line width for the Line, Circle, and Pset methods to print lines on reports. Read/write Integer."
+    },
+    {
+      "name": "FillColor",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "You use the FillColor property to specify the color that fills in boxes and circles drawn on reports with the Line and Circle methods. You can also use this property with Visual Basic to create special visual effects on custom reports when you print by using a color printer or preview the reports on a color monitor. Read/write Long."
+    },
+    {
+      "name": "FillStyle",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the FillStyle property to specify whether a circle or line drawn by the Circle or Line method on a report is transparent, opaque, or filled with a pattern. Read/write Integer."
+    },
+    {
+      "name": "PaletteSource",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the PaletteSource property to specify the palette for a report. Read/write String."
+    },
+    {
+      "name": "Tag",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Stores extra information about a form, report, section, or control needed by a Microsoft Access application. Read/write String."
+    },
+    {
+      "name": "PaintPalette",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Use the PaintPalette property to specify a palette to be used by a report. Read/write Variant."
+    },
+    {
+      "name": "OnOpen",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Open box in the Properties window of a form or report. Read/write String."
+    },
+    {
+      "name": "OnClose",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Close box in the Properties window of a form or report. Read/write String."
+    },
+    {
+      "name": "OnActivate",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Activate box in the Properties window of a form or report. Read/write String."
+    },
+    {
+      "name": "OnDeactivate",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Deactivate box in the Properties window of a form or report. Read/write String."
+    },
+    {
+      "name": "OnNoData",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On No Data box in the Properties window of a report. Read/write String."
+    },
+    {
+      "name": "OnPage",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Page box in the Properties window of a report. Read/write String."
+    },
+    {
+      "name": "OnError",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Error box in the Properties window of a form or report. Read/write String."
+    },
+    {
+      "name": "Dirty",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the Dirty property to determine whether the current record has been modified since it was last saved. Read/write Boolean."
+    },
+    {
+      "name": "CurrentRecord",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Use the CurrentRecord property to identify the current record in the recordset being viewed. Read/write Long."
+    },
+    {
+      "name": "PictureData",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Use the PictureData property to copy the picture to another object that supports the Picture property. Read/write Variant."
+    },
+    {
+      "name": "PicturePalette",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Use the PicturePalette property to specify a palette to be used by a report. Read/write Variant."
+    },
+    {
+      "name": "HasModule",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the HasModule property to specify or determine whether a form or report has a class module. Read/write Boolean."
+    },
+    {
+      "name": "Orientation",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the Orientation property to specify or determine the view orientation. Read/write Byte."
+    },
+    {
+      "name": "InputParameters",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the InputParameters property to specify or determine the input parameters that are passed to a SQL statement in the RecordSource property of a form or report or a stored procedure when used as the record source within a Microsoft Access project (.adp). Read/write String."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Use the Application property to access the active Microsoft Access Application object and its related properties. Read-only Application object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "ActiveControl",
+      "kind": "property",
+      "type": "Control",
+      "access": "read-only",
+      "description": "Use the ActiveControl property together with the Screen object to identify or refer to the control that has the focus. Read-only Control object."
+    },
+    {
+      "name": "DefaultControl",
+      "kind": "property",
+      "type": "Control",
+      "access": "read-only",
+      "description": "The DefaultControl property returns a Control object with which you can set the default properties for a particular type of control on a particular report. Read-only."
+    },
+    {
+      "name": "GroupLevel",
+      "kind": "property",
+      "type": "GroupLevel",
+      "access": "read-only",
+      "description": "Use the GroupLevel property in Visual Basic to refer to the group level that you are grouping or sorting on in a report. Read-only GroupLevel object."
+    },
+    {
+      "name": "Report",
+      "kind": "property",
+      "type": "Report",
+      "access": "read-only",
+      "description": "Use the Report property to refer to a report or to refer to the report associated with a subreport control. Read-only Report."
+    },
+    {
+      "name": "Module",
+      "kind": "property",
+      "type": "Module",
+      "access": "read-only",
+      "description": "Use the Module property to specify a report module. Read-only Module object."
+    },
+    {
+      "name": "Properties",
+      "kind": "property",
+      "type": "Properties",
+      "access": "read-only",
+      "description": "Returns a reference to a control's Properties collection object. Read-only."
+    },
+    {
+      "name": "Controls",
+      "kind": "property",
+      "type": "Controls",
+      "access": "read-only",
+      "description": "Returns the Controls collection of a form, subform, report, or section. Read-only Controls."
+    },
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Use the Name property to specify or determine the string expression that identifies the name of an object. Read/write String."
+    },
+    {
+      "name": "AutoResize",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean indicating whether a Report window opens automatically sized to display complete records. Read/write."
+    },
+    {
+      "name": "AutoCenter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean indicating whether a report will be centered automatically in the application window when the form is opened. Read/write."
+    },
+    {
+      "name": "PopUp",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Specifies whether a report opens as a pop-up window. Read/write Boolean."
+    },
+    {
+      "name": "Modal",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the Modal property to specify whether a report opens as a modal window. When a report opens as a modal window, you must close the window before you can move the focus to another object. Read/write Boolean."
+    },
+    {
+      "name": "BorderStyle",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Specifies how a control's border appears. Read/write Byte."
+    },
+    {
+      "name": "ControlBox",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Specifies whether a report has a Control menu in Report view. Read/write Boolean."
+    },
+    {
+      "name": "MinMaxButtons",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the MinMaxButtons property to specify whether the Maximize and Minimize buttons will be visible on a report. Read/write Byte."
+    },
+    {
+      "name": "CloseButton",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Specifies whether the Close button on a form is enabled. Read/write Boolean."
+    },
+    {
+      "name": "WindowWidth",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Returns the width of a report in twips. Read-only Integer."
+    },
+    {
+      "name": "WindowHeight",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Returns the height of a report in twips. Read-only Integer."
+    },
+    {
+      "name": "WindowTop",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read-only",
+      "description": "Returns an Integer indicating the screen position in twips of the top edge of a report relative to the top of the Microsoft Access window. Read-only."
+    },
+    {
+      "name": "WindowLeft",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read-only",
+      "description": "Returns an Integer indicating the screen position in twips of the left edge of a report relative to the left edge of the Microsoft Access window. Read-only."
+    },
+    {
+      "name": "OpenArgs",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Determines the string expression specified by the _OpenArgs_ argument of the OpenReport method that opened a report. Read/write Variant."
+    },
+    {
+      "name": "Printer",
+      "kind": "property",
+      "type": "_Printer",
+      "access": "read/write",
+      "description": "Returns or sets a Printer object representing the default printer on the current system. Read/write."
+    },
+    {
+      "name": "Moveable",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean indicating whether the specified report can be moved by the user; True if it can be moved. Read/write."
+    },
+    {
+      "name": "UseDefaultPrinter",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Returns or sets a Boolean indicating whether the specified report uses the default printer for the system; True if the form or report uses the default printer. Read/write."
+    },
+    {
+      "name": "Recordset",
+      "kind": "property",
+      "type": "Object",
+      "access": "read/write",
+      "description": "Returns or sets the ADO Recordset or DAO Recordset object that represents the record source for the specified object. Read/write Object."
+    },
+    {
+      "name": "RecordSourceQualifier",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String indicating the SQL Server owner name of the record source for the specified report. Read/write."
+    },
+    {
+      "name": "Shape",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns a String representing the shape command corresponding to the sorting and grouping of the specified report. Read-only."
+    },
+    {
+      "name": "FilterOnLoad",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Gets or sets whether the filter specified by the Filter property is applied when the report is loaded. Read/write Boolean."
+    },
+    {
+      "name": "OrderByOnLoad",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Gets or sets whether the sorting specified by the OrderBy property is applied when the report is loaded. Read/write Boolean."
+    },
+    {
+      "name": "DefaultView",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the DefaultView property to specify the opening view of a report. Read/write Byte."
+    },
+    {
+      "name": "AllowReportView",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Gets or sets whether the user is allowed to enter Report view while using the specified report. Read/write Boolean."
+    },
+    {
+      "name": "ScrollBars",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Gets or sets whether scroll bars appear on a report. Read/write Byte."
+    },
+    {
+      "name": "Cycle",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Use the Cycle property to specify what happens when you press the Tab key and the focus is in the last control on a report. Read/write Byte."
+    },
+    {
+      "name": "OnCurrent",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the OnCurrent property on the report. Read/write String."
+    },
+    {
+      "name": "KeyPreview",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Use the KeyPreview property to specify whether the report-level keyboard event procedures are invoked before a control's keyboard event procedures. Read/write Boolean."
+    },
+    {
+      "name": "TimerInterval",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Use the TimerInterval property to specify the interval, in milliseconds, between Timer events on a report. Read/write Long."
+    },
+    {
+      "name": "CurrentView",
+      "kind": "property",
+      "type": "Integer",
+      "access": "read/write",
+      "description": "Use the CurrentView property to determine how a report is currently displayed. Read/write Integer."
+    },
+    {
+      "name": "ShowPageMargins",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Gets or sets whether page margins are displayed when the specified report is in Layout view. Read/write Boolean."
+    },
+    {
+      "name": "FitToPage",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Gets or sets whether the width of the specified report is sized to automatically fit the page. Read/write Boolean."
+    },
+    {
+      "name": "AllowLayoutView",
+      "kind": "property",
+      "type": "Boolean",
+      "access": "read/write",
+      "description": "Gets or sets whether the specified report can be used in Layout view. Read/write Boolean."
+    },
+    {
+      "name": "OnLoad",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Load box in the Properties window of a report. Read/write String."
+    },
+    {
+      "name": "OnResize",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Resize box in the Properties window of a report. Read/write String."
+    },
+    {
+      "name": "OnUnload",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Unload box in the Properties window of a form. Read/write String."
+    },
+    {
+      "name": "OnGotFocus",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Got Focus box in the Properties window of the specified report. Read/write String."
+    },
+    {
+      "name": "OnLostFocus",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Lost Focus box in the Properties window of the specified report. Read/write String."
+    },
+    {
+      "name": "OnClick",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Click box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnDblClick",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Dbl Click box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnMouseDown",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Mouse Down box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnMouseMove",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Mouse Move box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnMouseUp",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Mouse Up box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnKeyDown",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Key Down box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnKeyUp",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Key Up box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnKeyPress",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Key Press box in the Properties window. Read/write String."
+    },
+    {
+      "name": "OnFilter",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Filter box in the Properties window of a report. Read/write String."
+    },
+    {
+      "name": "OnApplyFilter",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Apply Filter box in the Properties window of a report. Read/write String."
+    },
+    {
+      "name": "OnTimer",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Sets or returns the value of the On Timer box in the Properties window of a form. Read/write String."
+    },
+    {
+      "name": "MouseWheel",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Returns or sets a String indicating which macro, event procedure, or user-defined function runs when the MouseWheel event occurs. Read/write."
+    },
+    {
+      "name": "DisplayOnSharePointSite",
+      "kind": "property",
+      "type": "Byte",
+      "access": "read/write",
+      "description": "Gets or sets whether the specified report can be made available as a view on a Microsoft SharePoint Foundation site. Read/write Byte."
+    },
+    {
+      "name": "Section",
+      "kind": "property",
+      "type": "_Section",
+      "access": "read-only",
+      "description": "Use the Section property to identify a section of a report and provide access to the properties of that section. Read-only Section object."
+    },
+    {
+      "name": "RibbonName",
+      "kind": "property",
+      "type": "String",
+      "access": "read/write",
+      "description": "Gets or sets the name of the customized ribbon to be displayed when the specified report is loaded. Read/write String."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Circle",
+      "kind": "method",
+      "signature": "Circle(flags As Integer, X As Single, Y As Single, radius As Single, color As Long, start As Single, end As Single, aspect As Single)",
+      "description": "The Circle method draws a circle, an ellipse, or an arc on a Report object when the Print event occurs.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "flags",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "radius",
+          "type": "Single",
+          "optional": false,
+          "description": "Indicates the radius of the circle, ellipse, or arc. The Scale properties (ScaleMode, ScaleLeft, ScaleTop, ScaleHeight, and ScaleWidth) of the Report object specified by the _Object_ argument determine the unit of measure used. By default, distances are measured in twips."
+        },
+        {
+          "name": "color",
+          "type": "Long",
+          "optional": false,
+          "description": "Indicates the RGB (red-green-blue) color of the circle outline. If this argument is omitted, the value of the ForeColor property is used. You can also use the RGB function or QBColor function to specify the color."
+        },
+        {
+          "name": "start",
+          "type": "Single",
+          "optional": false,
+          "description": "When a partial circle or ellipse is drawn, the _Start_ argument specifies (in radians) the beginning position of the arc. The default value for the _Start_ argument is 0 radians. The range is -2 pi radians to 2 pi radians."
+        },
+        {
+          "name": "end",
+          "type": "Single",
+          "optional": false,
+          "description": "When a partial circle or ellipse is drawn, the _End_ argument specifies (in radians) the end position of the arc. The default value for the _End_ argument is 2 pi radians. The range is -2 pi radians to 2 pi radians."
+        },
+        {
+          "name": "aspect",
+          "type": "Single",
+          "optional": false,
+          "description": "Indicates the aspect ratio of the circle. The default value is 1.0, which yields a perfect (nonelliptical) circle on any screen."
+        }
+      ]
+    },
+    {
+      "name": "Line",
+      "kind": "method",
+      "signature": "Line(flags As Integer, x1 As Single, y1 As Single, x2 As Single, y2 As Single, color As Long)",
+      "description": "The Line method draws lines and rectangles on a Report object when the Print event occurs.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "flags",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "x1",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "y1",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "x2",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "y2",
+          "type": "Single",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "color",
+          "type": "Long",
+          "optional": false,
+          "description": "Indicates the RGB (red-green-blue) color used to draw the line. If this argument is omitted, the value of the ForeColor property is used. You can also use the RGB function or QBColor function to specify the color."
+        }
+      ]
+    },
+    {
+      "name": "PSet",
+      "kind": "method",
+      "signature": "PSet(flags As Integer, X As Single, Y As Single, color As Long)",
+      "description": "The PSet method sets a point on a Report object to a specified color when the Print event occurs.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "flags",
+          "type": "Integer",
+          "optional": false,
+          "description": "A keyword that indicates that the coordinates are relative to the current graphics position given by the settings for the CurrentX and CurrentY properties of the _Object_ argument."
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": "The horizontal coordinate of the point to set."
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": "The vertical coordinate of the point to set."
+        },
+        {
+          "name": "color",
+          "type": "Long",
+          "optional": false,
+          "description": "The RGB (red-green-blue) color to set the point to. If this argument is omitted, the value of the ForeColor property is used. You can also use the RGB function or QBColor function to specify the color."
+        }
+      ]
+    },
+    {
+      "name": "Scale",
+      "kind": "method",
+      "signature": "Scale(flags As Integer, x1 As Single, y1 As Single, x2 As Single, y2 As Single)",
+      "description": "The Scale method defines the coordinate system for a Report object.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "flags",
+          "type": "Integer",
+          "optional": false,
+          "description": ""
+        },
+        {
+          "name": "x1",
+          "type": "Single",
+          "optional": false,
+          "description": "A value for the horizontal coordinate that defines the position of the upper-left corner of the object."
+        },
+        {
+          "name": "y1",
+          "type": "Single",
+          "optional": false,
+          "description": "A value for the vertical coordinate that defines the position of the upper-left corner of the object."
+        },
+        {
+          "name": "x2",
+          "type": "Single",
+          "optional": false,
+          "description": "A value for the horizontal coordinate that defines the position of the lower-right corner of the object."
+        },
+        {
+          "name": "y2",
+          "type": "Single",
+          "optional": false,
+          "description": "A value for the vertical coordinate that defines the position of the lower-right corner of the object."
+        }
+      ]
+    },
+    {
+      "name": "TextWidth",
+      "kind": "method",
+      "signature": "TextWidth(Expr As String) As Single",
+      "description": "The TextWidth method returns the width of a text string as it would be printed in the current font of a Report object.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Expr",
+          "type": "String",
+          "optional": false,
+          "description": "The text string for which the text width will be determined."
+        }
+      ]
+    },
+    {
+      "name": "TextHeight",
+      "kind": "method",
+      "signature": "TextHeight(Expr As String) As Single",
+      "description": "The TextHeight method returns the height of a text string as it would be printed in the current font of a Report object.",
+      "returns": "Single",
+      "parameters": [
+        {
+          "name": "Expr",
+          "type": "String",
+          "optional": false,
+          "description": "The text string for which the text height will be determined."
+        }
+      ]
+    },
+    {
+      "name": "Print",
+      "kind": "method",
+      "signature": "Print(Expr As String)",
+      "description": "The Print method prints text on a Report object by using the current color and font.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Expr",
+          "type": "String",
+          "optional": false,
+          "description": "The string expressions to print. If this argument is omitted, the Print method prints a blank line. Multiple expressions can be separated with a space, a semicolon (;), or a comma. A space has the same effect as a semicolon."
+        }
+      ]
+    },
+    {
+      "name": "Move",
+      "kind": "method",
+      "signature": "Move(Left As Variant, [Top As Variant], [Width As Variant], [Height As Variant])",
+      "description": "Moves the specified object to the coordinates specified by the argument values.",
+      "returns": "void",
+      "parameters": [
+        {
+          "name": "Left",
+          "type": "Variant",
+          "optional": false,
+          "description": "The screen position in twips for the left edge of the object relative to the left edge of the Microsoft Access window."
+        },
+        {
+          "name": "Top",
+          "type": "Variant",
+          "optional": true,
+          "description": "The screen position in twips for the top edge of the object relative to the top edge of the Access window."
+        },
+        {
+          "name": "Width",
+          "type": "Variant",
+          "optional": true,
+          "description": "The desired width of the object in twips."
+        },
+        {
+          "name": "Height",
+          "type": "Variant",
+          "optional": true,
+          "description": "The desired height of the object in twips."
+        }
+      ]
+    },
+    {
+      "name": "Requery",
+      "kind": "method",
+      "signature": "Requery()",
+      "description": "The Requery method updates the data underlying the specified report by requerying the source of data for the control.",
+      "returns": "void"
+    }
+  ],
+  "events": [
+    {
+      "name": "Open",
+      "kind": "event",
+      "signature": "Open(Cancel As Integer)",
+      "description": "The Open event occurs before a report is previewed or printed.",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": "The setting determines if the opening of the form or report occurs. Setting the _Cancel_ argument to True (1) cancels the opening of the form or report."
+        }
+      ]
+    },
+    {
+      "name": "Close",
+      "kind": "event",
+      "signature": "Close()",
+      "description": "The Close event occurs when a report is closed and removed from the screen."
+    },
+    {
+      "name": "Activate",
+      "kind": "event",
+      "signature": "Activate()",
+      "description": "The Activate event occurs when a report receives the focus and becomes the active window."
+    },
+    {
+      "name": "Deactivate",
+      "kind": "event",
+      "signature": "Deactivate()",
+      "description": "The Deactivate event occurs when a report loses the focus to a Table, Query, Form, Report, Macro, or Module window, or to the Database window."
+    },
+    {
+      "name": "Error",
+      "kind": "event",
+      "signature": "Error(DataErr As Integer, Response As Integer)",
+      "description": "The Error event occurs when a run-time error is produced in Microsoft Access when a report has the focus.",
+      "parameters": [
+        {
+          "name": "DataErr",
+          "type": "Integer",
+          "optional": false,
+          "description": "The error code returned by the Err object when an error occurs. Use the _DataErr_ argument with the Error function to map the number to the corresponding error message."
+        },
+        {
+          "name": "Response",
+          "type": "Integer",
+          "optional": false,
+          "description": "The setting determines whether or not an error message is displayed. The _Response_ argument can be one of the following intrinsic constants: <ul><li><b>acDataErrContinue</b> Ignore the error and continue without displaying the default Microsoft Access error message. You can supply a custom error message in place of the default error message.</li><li><b>acDataErrDisplay</b> (Default) Display the default Access error message.</li></ul>"
+        }
+      ]
+    },
+    {
+      "name": "NoData",
+      "kind": "event",
+      "signature": "NoData(Cancel As Integer)",
+      "description": "The NoData event occurs after Microsoft Access formats a report for printing that has no data (the report is bound to an empty recordset), but before the report is printed. Use this event to cancel printing of a blank report.",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": "The setting determines whether to print the report. Setting the _Cancel_ argument to True (1) prevents the report from printing. You can also use the CancelEvent method of the DoCmd object to cancel printing the report."
+        }
+      ]
+    },
+    {
+      "name": "Page",
+      "kind": "event",
+      "signature": "Page()",
+      "description": "The Page event occurs after Microsoft Access formats a page of a report for printing, but before the page is printed. Use this event to draw a border around the page, or add other graphic elements to the page."
+    },
+    {
+      "name": "Current",
+      "kind": "event",
+      "signature": "Current()",
+      "description": "Occurs when the focus moves to a record, making it the current record, or when the report is refreshed or requeried."
+    },
+    {
+      "name": "Load",
+      "kind": "event",
+      "signature": "Load()",
+      "description": "Occurs when a report is opened and its records are displayed."
+    },
+    {
+      "name": "Resize",
+      "kind": "event",
+      "signature": "Resize()",
+      "description": "The Resize event occurs when a report is opened and whenever the size of a report changes."
+    },
+    {
+      "name": "Unload",
+      "kind": "event",
+      "signature": "Unload(Cancel As Integer)",
+      "description": "The Unload event occurs after a report is closed but before it's removed from the screen.",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": "Set to True to cancel the Unload event."
+        }
+      ]
+    },
+    {
+      "name": "GotFocus",
+      "kind": "event",
+      "signature": "GotFocus()",
+      "description": "The GotFocus event occurs when the report receives the focus."
+    },
+    {
+      "name": "LostFocus",
+      "kind": "event",
+      "signature": "LostFocus()",
+      "description": "The LostFocus event occurs when the specified report loses the focus."
+    },
+    {
+      "name": "Click",
+      "kind": "event",
+      "signature": "Click()",
+      "description": "The Click event occurs when the user presses and then releases a mouse button over a report."
+    },
+    {
+      "name": "DblClick",
+      "kind": "event",
+      "signature": "DblClick(Cancel As Integer)",
+      "description": "The DblClick event occurs when the user presses and releases the left mouse button twice over a report within the double-click time limit of the system.",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": "The setting determines if the DblClick event occurs. Setting the _Cancel_ argument to True (1) cancels the DblClick event."
+        }
+      ]
+    },
+    {
+      "name": "MouseDown",
+      "kind": "event",
+      "signature": "MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "The MouseDown event occurs when the user presses a mouse button.",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": "The button that was pressed to trigger the event. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>"
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": "The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": "The _x_ coordinate for the current location of the mouse pointer, in twips."
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": "The _y_ coordinate for the current location of the mouse pointer, in twips."
+        }
+      ]
+    },
+    {
+      "name": "MouseMove",
+      "kind": "event",
+      "signature": "MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "The MouseMove event occurs when the user moves the mouse.",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": "The button that was pressed or released when the event was triggered. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>"
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": "The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": "The _x_ coordinate for the current location of the mouse pointer, in twips."
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": "The _y_ coordinate for the current location of the mouse pointer, in twips."
+        }
+      ]
+    },
+    {
+      "name": "MouseUp",
+      "kind": "event",
+      "signature": "MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)",
+      "description": "The MouseUp event occurs when the user releases a mouse button.",
+      "parameters": [
+        {
+          "name": "Button",
+          "type": "Integer",
+          "optional": false,
+          "description": "The button that was released to trigger the event. If you need to test for the _Button_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acLeftButton</b> The bit mask for the left mouse button.</p></li><li><p><b>acRightButton</b> The bit mask for the right mouse button.</p></li><li><p><b>acMiddleButton</b> The bit mask for the middle mouse button.</p></li></ul>"
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": "The state of the Shift, Ctrl, and Alt keys when the button specified by the _Button_ argument was pressed or released. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+        },
+        {
+          "name": "X",
+          "type": "Single",
+          "optional": false,
+          "description": "The _x_ coordinate for the current location of the mouse pointer, in twips."
+        },
+        {
+          "name": "Y",
+          "type": "Single",
+          "optional": false,
+          "description": "The _y_ coordinate for the current location of the mouse pointer, in twips."
+        }
+      ]
+    },
+    {
+      "name": "KeyDown",
+      "kind": "event",
+      "signature": "KeyDown(KeyCode As Integer, Shift As Integer)",
+      "description": "The KeyDown event occurs when the user presses a key while a report has the focus. This event also occurs if you send a keystroke to a report by using the SendKeys action in a macro or the SendKeys statement in Visual Basic.",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "Integer",
+          "optional": false,
+          "description": "A key code, such as vbKeyF1 (the F1 key) or vbKeyHome (the Home key). To specify key codes, use the intrinsic constants shown in the Object Browser. You can prevent an object from receiving a keystroke by setting _KeyCode_ to 0."
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": "The state of the Shift, Ctrl, and Alt keys at the time of the event. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+        }
+      ]
+    },
+    {
+      "name": "KeyPress",
+      "kind": "event",
+      "signature": "KeyPress(KeyAscii As Integer)",
+      "description": "The KeyPress event occurs when the user presses and releases a key or key combination that corresponds to an ANSI code while a report has the focus. This event also occurs if you send an ANSI keystroke to a report by using the SendKeys action in a macro or the SendKeys statement in Visual Basic.",
+      "parameters": [
+        {
+          "name": "KeyAscii",
+          "type": "Integer",
+          "optional": false,
+          "description": "Returns a numeric ANSI key code. The _KeyAscii_ argument is passed by reference; changing it sends a different character to the object. Setting the _KeyAscii_ argument to 0 cancels the keystroke so that the object doesn't recognize that a key was pressed."
+        }
+      ]
+    },
+    {
+      "name": "KeyUp",
+      "kind": "event",
+      "signature": "KeyUp(KeyCode As Integer, Shift As Integer)",
+      "description": "The KeyUp event occurs when the user releases a key while a report has the focus. This event also occurs if you send a keystroke to a report by using the SendKeys action in a macro or the SendKeys statement in Visual Basic.",
+      "parameters": [
+        {
+          "name": "KeyCode",
+          "type": "Integer",
+          "optional": false,
+          "description": "A key code, such as vbKeyF1 (the F1 key) or vbKeyHome (the Home key). To specify key codes, use the intrinsic constants shown in the Object Browser. You can prevent an object from receiving a keystroke by setting _KeyCode_ to 0."
+        },
+        {
+          "name": "Shift",
+          "type": "Integer",
+          "optional": false,
+          "description": "The state of the Shift, Ctrl, and Alt keys at the time of the event. If you need to test for the _Shift_ argument, you can use one of the following intrinsic constants as bit masks:<ul><li><p><b>acShiftMask</b> The bit mask for the Shift key.</p></li><li><p><b>acCtrlMask</b> The bit mask for the Ctrl key.</p></li><li><p><b>acAltMask</b> The bit mask for the Alt key.</p></li></ul>"
+        }
+      ]
+    },
+    {
+      "name": "Timer",
+      "kind": "event",
+      "signature": "Timer()",
+      "description": "The Timer event occurs for a report at regular intervals as specified by the report's TimerInterval property."
+    },
+    {
+      "name": "Filter",
+      "kind": "event",
+      "signature": "Filter(Cancel As Integer, FilterType As Integer)",
+      "description": "Occurs when the user opens a filter window by choosing Advanced Filter/Sort.",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": "The setting determines whether to open the filter window. Setting the _Cancel_ argument to True (1) prevents the filter window from opening. You can also use the CancelEvent method of the DoCmd object to cancel opening the filter window."
+        },
+        {
+          "name": "FilterType",
+          "type": "Integer",
+          "optional": false,
+          "description": "The filter window the user is trying to open. The _FilterType_ argument can be acFilterAdvanced."
+        }
+      ]
+    },
+    {
+      "name": "ApplyFilter",
+      "kind": "event",
+      "signature": "ApplyFilter(Cancel As Integer, ApplyType As Integer)",
+      "description": "Occurs when a filter is applied to a report.",
+      "parameters": [
+        {
+          "name": "Cancel",
+          "type": "Integer",
+          "optional": false,
+          "description": "The setting determines if the ApplyFilter event occurs. Setting the _Cancel_ argument to True cancels the ApplyFilter event and the filter is not applied to the report."
+        },
+        {
+          "name": "ApplyType",
+          "type": "Integer",
+          "optional": false,
+          "description": "Returns the type of filter that was applied."
+        }
+      ]
+    },
+    {
+      "name": "MouseWheel",
+      "kind": "event",
+      "signature": "MouseWheel(Page As Boolean, Count As Long)",
+      "description": "Occurs when the user rolls the mouse wheel in Report view or Layout view.",
+      "parameters": [
+        {
+          "name": "Page",
+          "type": "Boolean",
+          "optional": false,
+          "description": "True if the page was changed."
+        },
+        {
+          "name": "Count",
+          "type": "Long",
+          "optional": false,
+          "description": "The number of lines by which the view was scrolled with the mouse wheel."
+        }
+      ]
+    }
+  ]
+}

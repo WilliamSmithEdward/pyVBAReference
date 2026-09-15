@@ -1,0 +1,756 @@
+# Microsoft Word 16.0 Object Library
+
+Scraped object model: 750 entries.
+
+One Markdown file per type in this folder; matching machine-readable JSON in `../json/`.
+
+- [AddIn](AddIn.md) - Dispatch Interface
+- [AddIns](AddIns.md) - Dispatch Interface
+- [Adjustments](Adjustments.md) - Dispatch Interface
+- [Application](Application.md) - Class
+- [ApplicationEvents](ApplicationEvents.md) - Dispatch Interface
+- [ApplicationEvents2](ApplicationEvents2.md) - Dispatch Interface
+- [ApplicationEvents3](ApplicationEvents3.md) - Dispatch Interface
+- [ApplicationEvents4](ApplicationEvents4.md) - Dispatch Interface
+- [AutoCaption](AutoCaption.md) - Dispatch Interface
+- [AutoCaptions](AutoCaptions.md) - Dispatch Interface
+- [AutoCorrect](AutoCorrect.md) - Dispatch Interface
+- [AutoCorrectEntries](AutoCorrectEntries.md) - Dispatch Interface
+- [AutoCorrectEntry](AutoCorrectEntry.md) - Dispatch Interface
+- [AutoTextEntries](AutoTextEntries.md) - Dispatch Interface
+- [AutoTextEntry](AutoTextEntry.md) - Dispatch Interface
+- [Axes](Axes.md) - Dispatch Interface
+- [Axis](Axis.md) - Dispatch Interface
+- [AxisTitle](AxisTitle.md) - Dispatch Interface
+- [Bibliography](Bibliography.md) - Dispatch Interface
+- [Bookmark](Bookmark.md) - Dispatch Interface
+- [Bookmarks](Bookmarks.md) - Dispatch Interface
+- [Border](Border.md) - Dispatch Interface
+- [Borders](Borders.md) - Dispatch Interface
+- [Break](Break.md) - Dispatch Interface
+- [Breaks](Breaks.md) - Dispatch Interface
+- [Broadcast](Broadcast.md) - Dispatch Interface
+- [Browser](Browser.md) - Dispatch Interface
+- [BuildingBlock](BuildingBlock.md) - Dispatch Interface
+- [BuildingBlockEntries](BuildingBlockEntries.md) - Dispatch Interface
+- [BuildingBlocks](BuildingBlocks.md) - Dispatch Interface
+- [BuildingBlockType](BuildingBlockType.md) - Dispatch Interface
+- [BuildingBlockTypes](BuildingBlockTypes.md) - Dispatch Interface
+- [CalloutFormat](CalloutFormat.md) - Dispatch Interface
+- [CanvasShapes](CanvasShapes.md) - Dispatch Interface
+- [CaptionLabel](CaptionLabel.md) - Dispatch Interface
+- [CaptionLabels](CaptionLabels.md) - Dispatch Interface
+- [Categories](Categories.md) - Dispatch Interface
+- [Category](Category.md) - Dispatch Interface
+- [CategoryCollection](CategoryCollection.md) - Dispatch Interface
+- [Cell](Cell.md) - Dispatch Interface
+- [Cells](Cells.md) - Dispatch Interface
+- [Characters](Characters.md) - Dispatch Interface
+- [Chart](Chart.md) - Dispatch Interface
+- [ChartArea](ChartArea.md) - Dispatch Interface
+- [ChartBorder](ChartBorder.md) - Dispatch Interface
+- [ChartCategory](ChartCategory.md) - Dispatch Interface
+- [ChartCharacters](ChartCharacters.md) - Dispatch Interface
+- [ChartColorFormat](ChartColorFormat.md) - Dispatch Interface
+- [ChartData](ChartData.md) - Dispatch Interface
+- [ChartFillFormat](ChartFillFormat.md) - Dispatch Interface
+- [ChartFont](ChartFont.md) - Dispatch Interface
+- [ChartFormat](ChartFormat.md) - Dispatch Interface
+- [ChartGroup](ChartGroup.md) - Dispatch Interface
+- [ChartGroups](ChartGroups.md) - Dispatch Interface
+- [ChartTitle](ChartTitle.md) - Dispatch Interface
+- [CheckBox](CheckBox.md) - Dispatch Interface
+- [CoAuthLock](CoAuthLock.md) - Dispatch Interface
+- [CoAuthLocks](CoAuthLocks.md) - Dispatch Interface
+- [CoAuthor](CoAuthor.md) - Dispatch Interface
+- [CoAuthoring](CoAuthoring.md) - Dispatch Interface
+- [CoAuthors](CoAuthors.md) - Dispatch Interface
+- [CoAuthUpdate](CoAuthUpdate.md) - Dispatch Interface
+- [CoAuthUpdates](CoAuthUpdates.md) - Dispatch Interface
+- [ColorFormat](ColorFormat.md) - Dispatch Interface
+- [Column](Column.md) - Dispatch Interface
+- [Columns](Columns.md) - Dispatch Interface
+- [Comment](Comment.md) - Dispatch Interface
+- [Comments](Comments.md) - Dispatch Interface
+- [ConditionalStyle](ConditionalStyle.md) - Dispatch Interface
+- [Conflict](Conflict.md) - Dispatch Interface
+- [Conflicts](Conflicts.md) - Dispatch Interface
+- [ConnectorFormat](ConnectorFormat.md) - Dispatch Interface
+- [ContentControl](ContentControl.md) - Dispatch Interface
+- [ContentControlListEntries](ContentControlListEntries.md) - Dispatch Interface
+- [ContentControlListEntry](ContentControlListEntry.md) - Dispatch Interface
+- [ContentControls](ContentControls.md) - Dispatch Interface
+- [Corners](Corners.md) - Dispatch Interface
+- [CustomLabel](CustomLabel.md) - Dispatch Interface
+- [CustomLabels](CustomLabels.md) - Dispatch Interface
+- [CustomProperties](CustomProperties.md) - Dispatch Interface
+- [CustomProperty](CustomProperty.md) - Dispatch Interface
+- [DataLabel](DataLabel.md) - Dispatch Interface
+- [DataLabels](DataLabels.md) - Dispatch Interface
+- [DataTable](DataTable.md) - Dispatch Interface
+- [DefaultWebOptions](DefaultWebOptions.md) - Dispatch Interface
+- [Diagram](Diagram.md) - Dispatch Interface
+- [DiagramNode](DiagramNode.md) - Dispatch Interface
+- [DiagramNodeChildren](DiagramNodeChildren.md) - Dispatch Interface
+- [DiagramNodes](DiagramNodes.md) - Dispatch Interface
+- [Dialog](Dialog.md) - Dispatch Interface
+- [Dialogs](Dialogs.md) - Dispatch Interface
+- [Dictionaries](Dictionaries.md) - Dispatch Interface
+- [Dictionary](Dictionary.md) - Dispatch Interface
+- [DisplayUnitLabel](DisplayUnitLabel.md) - Dispatch Interface
+- [Document](Document.md) - Class
+- [DocumentEvents](DocumentEvents.md) - Dispatch Interface
+- [DocumentEvents2](DocumentEvents2.md) - Dispatch Interface
+- [Documents](Documents.md) - Dispatch Interface
+- [DownBars](DownBars.md) - Dispatch Interface
+- [DropCap](DropCap.md) - Dispatch Interface
+- [DropDown](DropDown.md) - Dispatch Interface
+- [DropLines](DropLines.md) - Dispatch Interface
+- [Editor](Editor.md) - Dispatch Interface
+- [Editors](Editors.md) - Dispatch Interface
+- [Email](Email.md) - Dispatch Interface
+- [EmailAuthor](EmailAuthor.md) - Dispatch Interface
+- [EmailOptions](EmailOptions.md) - Dispatch Interface
+- [EmailSignature](EmailSignature.md) - Dispatch Interface
+- [EmailSignatureEntries](EmailSignatureEntries.md) - Dispatch Interface
+- [EmailSignatureEntry](EmailSignatureEntry.md) - Dispatch Interface
+- [Endnote](Endnote.md) - Dispatch Interface
+- [EndnoteOptions](EndnoteOptions.md) - Dispatch Interface
+- [Endnotes](Endnotes.md) - Dispatch Interface
+- [Envelope](Envelope.md) - Dispatch Interface
+- [ErrorBars](ErrorBars.md) - Dispatch Interface
+- [Field](Field.md) - Dispatch Interface
+- [Fields](Fields.md) - Dispatch Interface
+- [FileConverter](FileConverter.md) - Dispatch Interface
+- [FileConverters](FileConverters.md) - Dispatch Interface
+- [FillFormat](FillFormat.md) - Dispatch Interface
+- [Find](Find.md) - Dispatch Interface
+- [FirstLetterException](FirstLetterException.md) - Dispatch Interface
+- [FirstLetterExceptions](FirstLetterExceptions.md) - Dispatch Interface
+- [Floor](Floor.md) - Dispatch Interface
+- [Font](Font.md) - Class
+- [FontNames](FontNames.md) - Dispatch Interface
+- [Footnote](Footnote.md) - Dispatch Interface
+- [FootnoteOptions](FootnoteOptions.md) - Dispatch Interface
+- [Footnotes](Footnotes.md) - Dispatch Interface
+- [FormField](FormField.md) - Dispatch Interface
+- [FormFields](FormFields.md) - Dispatch Interface
+- [Frame](Frame.md) - Dispatch Interface
+- [Frames](Frames.md) - Dispatch Interface
+- [Frameset](Frameset.md) - Dispatch Interface
+- [FreeformBuilder](FreeformBuilder.md) - Dispatch Interface
+- [FullSeriesCollection](FullSeriesCollection.md) - Dispatch Interface
+- [Global](Global.md) - Class
+- [GlowFormat](GlowFormat.md) - Dispatch Interface
+- [Gridlines](Gridlines.md) - Dispatch Interface
+- [GroupShapes](GroupShapes.md) - Dispatch Interface
+- [HangulAndAlphabetException](HangulAndAlphabetException.md) - Dispatch Interface
+- [HangulAndAlphabetExceptions](HangulAndAlphabetExceptions.md) - Dispatch Interface
+- [HangulHanjaConversionDictionaries](HangulHanjaConversionDictionaries.md) - Dispatch Interface
+- [HeaderFooter](HeaderFooter.md) - Dispatch Interface
+- [HeadersFooters](HeadersFooters.md) - Dispatch Interface
+- [HeadingStyle](HeadingStyle.md) - Dispatch Interface
+- [HeadingStyles](HeadingStyles.md) - Dispatch Interface
+- [HiLoLines](HiLoLines.md) - Dispatch Interface
+- [HorizontalLineFormat](HorizontalLineFormat.md) - Dispatch Interface
+- [HTMLDivision](HTMLDivision.md) - Dispatch Interface
+- [HTMLDivisions](HTMLDivisions.md) - Dispatch Interface
+- [Hyperlink](Hyperlink.md) - Dispatch Interface
+- [Hyperlinks](Hyperlinks.md) - Dispatch Interface
+- [IApplicationEvents](IApplicationEvents.md) - Dispatch Interface
+- [IApplicationEvents2](IApplicationEvents2.md) - Dispatch Interface
+- [IApplicationEvents3](IApplicationEvents3.md) - Dispatch Interface
+- [IApplicationEvents4](IApplicationEvents4.md) - Interface
+- [Index](Index.md) - Dispatch Interface
+- [Indexes](Indexes.md) - Dispatch Interface
+- [InlineShape](InlineShape.md) - Dispatch Interface
+- [InlineShapes](InlineShapes.md) - Dispatch Interface
+- [Interior](Interior.md) - Dispatch Interface
+- [KeyBinding](KeyBinding.md) - Dispatch Interface
+- [KeyBindings](KeyBindings.md) - Dispatch Interface
+- [KeysBoundTo](KeysBoundTo.md) - Dispatch Interface
+- [Language](Language.md) - Dispatch Interface
+- [Languages](Languages.md) - Dispatch Interface
+- [LeaderLines](LeaderLines.md) - Dispatch Interface
+- [Legend](Legend.md) - Dispatch Interface
+- [LegendEntries](LegendEntries.md) - Dispatch Interface
+- [LegendEntry](LegendEntry.md) - Dispatch Interface
+- [LegendKey](LegendKey.md) - Dispatch Interface
+- [LetterContent](LetterContent.md) - Class
+- [Line](Line.md) - Dispatch Interface
+- [LineFormat](LineFormat.md) - Dispatch Interface
+- [LineNumbering](LineNumbering.md) - Dispatch Interface
+- [Lines](Lines.md) - Dispatch Interface
+- [LinkFormat](LinkFormat.md) - Dispatch Interface
+- [List](List.md) - Dispatch Interface
+- [ListEntries](ListEntries.md) - Dispatch Interface
+- [ListEntry](ListEntry.md) - Dispatch Interface
+- [ListFormat](ListFormat.md) - Dispatch Interface
+- [ListGalleries](ListGalleries.md) - Dispatch Interface
+- [ListGallery](ListGallery.md) - Dispatch Interface
+- [ListLevel](ListLevel.md) - Dispatch Interface
+- [ListLevels](ListLevels.md) - Dispatch Interface
+- [ListParagraphs](ListParagraphs.md) - Dispatch Interface
+- [Lists](Lists.md) - Dispatch Interface
+- [ListTemplate](ListTemplate.md) - Dispatch Interface
+- [ListTemplates](ListTemplates.md) - Dispatch Interface
+- [MailingLabel](MailingLabel.md) - Dispatch Interface
+- [MailMerge](MailMerge.md) - Dispatch Interface
+- [MailMergeDataField](MailMergeDataField.md) - Dispatch Interface
+- [MailMergeDataFields](MailMergeDataFields.md) - Dispatch Interface
+- [MailMergeDataSource](MailMergeDataSource.md) - Dispatch Interface
+- [MailMergeField](MailMergeField.md) - Dispatch Interface
+- [MailMergeFieldName](MailMergeFieldName.md) - Dispatch Interface
+- [MailMergeFieldNames](MailMergeFieldNames.md) - Dispatch Interface
+- [MailMergeFields](MailMergeFields.md) - Dispatch Interface
+- [MailMessage](MailMessage.md) - Dispatch Interface
+- [MappedDataField](MappedDataField.md) - Dispatch Interface
+- [MappedDataFields](MappedDataFields.md) - Dispatch Interface
+- [Model3DFormat](Model3DFormat.md) - Dispatch Interface
+- [OCXEvents](OCXEvents.md) - Dispatch Interface
+- [OLEControl](OLEControl.md) - Class
+- [OLEFormat](OLEFormat.md) - Dispatch Interface
+- [OMath](OMath.md) - Dispatch Interface
+- [OMathAcc](OMathAcc.md) - Dispatch Interface
+- [OMathArgs](OMathArgs.md) - Dispatch Interface
+- [OMathAutoCorrect](OMathAutoCorrect.md) - Dispatch Interface
+- [OMathAutoCorrectEntries](OMathAutoCorrectEntries.md) - Dispatch Interface
+- [OMathAutoCorrectEntry](OMathAutoCorrectEntry.md) - Dispatch Interface
+- [OMathBar](OMathBar.md) - Dispatch Interface
+- [OMathBorderBox](OMathBorderBox.md) - Dispatch Interface
+- [OMathBox](OMathBox.md) - Dispatch Interface
+- [OMathBreak](OMathBreak.md) - Dispatch Interface
+- [OMathBreaks](OMathBreaks.md) - Dispatch Interface
+- [OMathDelim](OMathDelim.md) - Dispatch Interface
+- [OMathEqArray](OMathEqArray.md) - Dispatch Interface
+- [OMathFrac](OMathFrac.md) - Dispatch Interface
+- [OMathFunc](OMathFunc.md) - Dispatch Interface
+- [OMathFunction](OMathFunction.md) - Dispatch Interface
+- [OMathFunctions](OMathFunctions.md) - Dispatch Interface
+- [OMathGroupChar](OMathGroupChar.md) - Dispatch Interface
+- [OMathLimLow](OMathLimLow.md) - Dispatch Interface
+- [OMathLimUpp](OMathLimUpp.md) - Dispatch Interface
+- [OMathMat](OMathMat.md) - Dispatch Interface
+- [OMathMatCol](OMathMatCol.md) - Dispatch Interface
+- [OMathMatCols](OMathMatCols.md) - Dispatch Interface
+- [OMathMatRow](OMathMatRow.md) - Dispatch Interface
+- [OMathMatRows](OMathMatRows.md) - Dispatch Interface
+- [OMathNary](OMathNary.md) - Dispatch Interface
+- [OMathPhantom](OMathPhantom.md) - Dispatch Interface
+- [OMathRad](OMathRad.md) - Dispatch Interface
+- [OMathRecognizedFunction](OMathRecognizedFunction.md) - Dispatch Interface
+- [OMathRecognizedFunctions](OMathRecognizedFunctions.md) - Dispatch Interface
+- [OMaths](OMaths.md) - Dispatch Interface
+- [OMathScrPre](OMathScrPre.md) - Dispatch Interface
+- [OMathScrSub](OMathScrSub.md) - Dispatch Interface
+- [OMathScrSubSup](OMathScrSubSup.md) - Dispatch Interface
+- [OMathScrSup](OMathScrSup.md) - Dispatch Interface
+- [Options](Options.md) - Dispatch Interface
+- [OtherCorrectionsException](OtherCorrectionsException.md) - Dispatch Interface
+- [OtherCorrectionsExceptions](OtherCorrectionsExceptions.md) - Dispatch Interface
+- [Page](Page.md) - Dispatch Interface
+- [PageNumber](PageNumber.md) - Dispatch Interface
+- [PageNumbers](PageNumbers.md) - Dispatch Interface
+- [Pages](Pages.md) - Dispatch Interface
+- [PageSetup](PageSetup.md) - Dispatch Interface
+- [Pane](Pane.md) - Dispatch Interface
+- [Panes](Panes.md) - Dispatch Interface
+- [Paragraph](Paragraph.md) - Dispatch Interface
+- [ParagraphFormat](ParagraphFormat.md) - Class
+- [Paragraphs](Paragraphs.md) - Dispatch Interface
+- [PictureFormat](PictureFormat.md) - Dispatch Interface
+- [PlotArea](PlotArea.md) - Dispatch Interface
+- [Point](Point.md) - Dispatch Interface
+- [Points](Points.md) - Dispatch Interface
+- [ProofreadingErrors](ProofreadingErrors.md) - Dispatch Interface
+- [ProtectedViewWindow](ProtectedViewWindow.md) - Dispatch Interface
+- [ProtectedViewWindows](ProtectedViewWindows.md) - Dispatch Interface
+- [Range](Range.md) - Dispatch Interface
+- [ReadabilityStatistic](ReadabilityStatistic.md) - Dispatch Interface
+- [ReadabilityStatistics](ReadabilityStatistics.md) - Dispatch Interface
+- [RecentFile](RecentFile.md) - Dispatch Interface
+- [RecentFiles](RecentFiles.md) - Dispatch Interface
+- [Rectangle](Rectangle.md) - Dispatch Interface
+- [Rectangles](Rectangles.md) - Dispatch Interface
+- [ReflectionFormat](ReflectionFormat.md) - Dispatch Interface
+- [RepeatingSectionItem](RepeatingSectionItem.md) - Dispatch Interface
+- [RepeatingSectionItemColl](RepeatingSectionItemColl.md) - Dispatch Interface
+- [Replacement](Replacement.md) - Dispatch Interface
+- [Research](Research.md) - Dispatch Interface
+- [Reviewer](Reviewer.md) - Dispatch Interface
+- [Reviewers](Reviewers.md) - Dispatch Interface
+- [Revision](Revision.md) - Dispatch Interface
+- [Revisions](Revisions.md) - Dispatch Interface
+- [RevisionsFilter](RevisionsFilter.md) - Dispatch Interface
+- [RoutingSlip](RoutingSlip.md) - Dispatch Interface
+- [Row](Row.md) - Dispatch Interface
+- [Rows](Rows.md) - Dispatch Interface
+- [Section](Section.md) - Dispatch Interface
+- [Sections](Sections.md) - Dispatch Interface
+- [Selection](Selection.md) - Dispatch Interface
+- [Sentences](Sentences.md) - Dispatch Interface
+- [Series](Series.md) - Dispatch Interface
+- [SeriesCollection](SeriesCollection.md) - Dispatch Interface
+- [SeriesLines](SeriesLines.md) - Dispatch Interface
+- [Shading](Shading.md) - Dispatch Interface
+- [ShadowFormat](ShadowFormat.md) - Dispatch Interface
+- [Shape](Shape.md) - Dispatch Interface
+- [ShapeNode](ShapeNode.md) - Dispatch Interface
+- [ShapeNodes](ShapeNodes.md) - Dispatch Interface
+- [ShapeRange](ShapeRange.md) - Dispatch Interface
+- [Shapes](Shapes.md) - Dispatch Interface
+- [SmartTagActions](SmartTagActions.md) - Dispatch Interface
+- [SoftEdgeFormat](SoftEdgeFormat.md) - Dispatch Interface
+- [Source](Source.md) - Dispatch Interface
+- [Sources](Sources.md) - Dispatch Interface
+- [SpellingSuggestion](SpellingSuggestion.md) - Dispatch Interface
+- [SpellingSuggestions](SpellingSuggestions.md) - Dispatch Interface
+- [StoryRanges](StoryRanges.md) - Dispatch Interface
+- [Style](Style.md) - Dispatch Interface
+- [Styles](Styles.md) - Dispatch Interface
+- [StyleSheet](StyleSheet.md) - Dispatch Interface
+- [StyleSheets](StyleSheets.md) - Dispatch Interface
+- [Subdocument](Subdocument.md) - Dispatch Interface
+- [Subdocuments](Subdocuments.md) - Dispatch Interface
+- [SynonymInfo](SynonymInfo.md) - Dispatch Interface
+- [System](System.md) - Dispatch Interface
+- [Table](Table.md) - Dispatch Interface
+- [TableOfAuthorities](TableOfAuthorities.md) - Dispatch Interface
+- [TableOfAuthoritiesCategory](TableOfAuthoritiesCategory.md) - Dispatch Interface
+- [TableOfContents](TableOfContents.md) - Dispatch Interface
+- [TableOfFigures](TableOfFigures.md) - Dispatch Interface
+- [Tables](Tables.md) - Dispatch Interface
+- [TablesOfAuthorities](TablesOfAuthorities.md) - Dispatch Interface
+- [TablesOfAuthoritiesCategories](TablesOfAuthoritiesCategories.md) - Dispatch Interface
+- [TablesOfContents](TablesOfContents.md) - Dispatch Interface
+- [TablesOfFigures](TablesOfFigures.md) - Dispatch Interface
+- [TableStyle](TableStyle.md) - Dispatch Interface
+- [TabStop](TabStop.md) - Dispatch Interface
+- [TabStops](TabStops.md) - Dispatch Interface
+- [Task](Task.md) - Dispatch Interface
+- [TaskPane](TaskPane.md) - Dispatch Interface
+- [TaskPanes](TaskPanes.md) - Dispatch Interface
+- [Tasks](Tasks.md) - Dispatch Interface
+- [Template](Template.md) - Dispatch Interface
+- [Templates](Templates.md) - Dispatch Interface
+- [TextColumn](TextColumn.md) - Dispatch Interface
+- [TextColumns](TextColumns.md) - Dispatch Interface
+- [TextEffectFormat](TextEffectFormat.md) - Dispatch Interface
+- [TextFrame](TextFrame.md) - Dispatch Interface
+- [TextInput](TextInput.md) - Dispatch Interface
+- [TextRetrievalMode](TextRetrievalMode.md) - Dispatch Interface
+- [ThreeDFormat](ThreeDFormat.md) - Dispatch Interface
+- [TickLabels](TickLabels.md) - Dispatch Interface
+- [Trendline](Trendline.md) - Dispatch Interface
+- [Trendlines](Trendlines.md) - Dispatch Interface
+- [TwoInitialCapsException](TwoInitialCapsException.md) - Dispatch Interface
+- [TwoInitialCapsExceptions](TwoInitialCapsExceptions.md) - Dispatch Interface
+- [UndoRecord](UndoRecord.md) - Dispatch Interface
+- [UpBars](UpBars.md) - Dispatch Interface
+- [Variable](Variable.md) - Dispatch Interface
+- [Variables](Variables.md) - Dispatch Interface
+- [Version](Version.md) - Dispatch Interface
+- [Versions](Versions.md) - Dispatch Interface
+- [View](View.md) - Dispatch Interface
+- [Walls](Walls.md) - Dispatch Interface
+- [WdAlertLevel](WdAlertLevel.md) - Enumeration
+- [WdAlignmentTabAlignment](WdAlignmentTabAlignment.md) - Enumeration
+- [WdAlignmentTabRelative](WdAlignmentTabRelative.md) - Enumeration
+- [WdAnimation](WdAnimation.md) - Enumeration
+- [WdApplyQuickStyleSets](WdApplyQuickStyleSets.md) - Enumeration
+- [WdArabicNumeral](WdArabicNumeral.md) - Enumeration
+- [WdAraSpeller](WdAraSpeller.md) - Enumeration
+- [WdArrangeStyle](WdArrangeStyle.md) - Enumeration
+- [WdAutoFitBehavior](WdAutoFitBehavior.md) - Enumeration
+- [WdAutoMacros](WdAutoMacros.md) - Enumeration
+- [WdAutoVersions](WdAutoVersions.md) - Enumeration
+- [WdBaselineAlignment](WdBaselineAlignment.md) - Enumeration
+- [WdBookmarkSortBy](WdBookmarkSortBy.md) - Enumeration
+- [WdBorderDistanceFrom](WdBorderDistanceFrom.md) - Enumeration
+- [WdBorderType](WdBorderType.md) - Enumeration
+- [WdBorderTypeHID](WdBorderTypeHID.md) - Enumeration
+- [WdBreakType](WdBreakType.md) - Enumeration
+- [WdBrowserLevel](WdBrowserLevel.md) - Enumeration
+- [WdBrowseTarget](WdBrowseTarget.md) - Enumeration
+- [WdBuildingBlockTypes](WdBuildingBlockTypes.md) - Enumeration
+- [WdBuiltInProperty](WdBuiltInProperty.md) - Enumeration
+- [WdBuiltinStyle](WdBuiltinStyle.md) - Enumeration
+- [WdCalendarType](WdCalendarType.md) - Enumeration
+- [WdCalendarTypeBi](WdCalendarTypeBi.md) - Enumeration
+- [WdCaptionLabelID](WdCaptionLabelID.md) - Enumeration
+- [WdCaptionNumberStyle](WdCaptionNumberStyle.md) - Enumeration
+- [WdCaptionNumberStyleHID](WdCaptionNumberStyleHID.md) - Enumeration
+- [WdCaptionPosition](WdCaptionPosition.md) - Enumeration
+- [WdCellColor](WdCellColor.md) - Enumeration
+- [WdCellVerticalAlignment](WdCellVerticalAlignment.md) - Enumeration
+- [WdCharacterCase](WdCharacterCase.md) - Enumeration
+- [WdCharacterCaseHID](WdCharacterCaseHID.md) - Enumeration
+- [WdCharacterWidth](WdCharacterWidth.md) - Enumeration
+- [WdCheckInVersionType](WdCheckInVersionType.md) - Enumeration
+- [WdChevronConvertRule](WdChevronConvertRule.md) - Enumeration
+- [WdCollapseDirection](WdCollapseDirection.md) - Enumeration
+- [WdColor](WdColor.md) - Enumeration
+- [WdColorIndex](WdColorIndex.md) - Enumeration
+- [WdColumnWidth](WdColumnWidth.md) - Enumeration
+- [WdCompareDestination](WdCompareDestination.md) - Enumeration
+- [WdCompareTarget](WdCompareTarget.md) - Enumeration
+- [WdCompatibility](WdCompatibility.md) - Enumeration
+- [WdCompatibilityMode](WdCompatibilityMode.md) - Enumeration
+- [WdConditionCode](WdConditionCode.md) - Enumeration
+- [WdConstants](WdConstants.md) - Enumeration
+- [WdContentControlAppearance](WdContentControlAppearance.md) - Enumeration
+- [WdContentControlDateStorageFormat](WdContentControlDateStorageFormat.md) - Enumeration
+- [WdContentControlLevel](WdContentControlLevel.md) - Enumeration
+- [WdContentControlType](WdContentControlType.md) - Enumeration
+- [WdContinue](WdContinue.md) - Enumeration
+- [WdCountry](WdCountry.md) - Enumeration
+- [WdCursorMovement](WdCursorMovement.md) - Enumeration
+- [WdCursorType](WdCursorType.md) - Enumeration
+- [WdCustomLabelPageSize](WdCustomLabelPageSize.md) - Enumeration
+- [WdDateLanguage](WdDateLanguage.md) - Enumeration
+- [WdDefaultFilePath](WdDefaultFilePath.md) - Enumeration
+- [WdDefaultListBehavior](WdDefaultListBehavior.md) - Enumeration
+- [WdDefaultTableBehavior](WdDefaultTableBehavior.md) - Enumeration
+- [WdDeleteCells](WdDeleteCells.md) - Enumeration
+- [WdDeletedTextMark](WdDeletedTextMark.md) - Enumeration
+- [WdDiacriticColor](WdDiacriticColor.md) - Enumeration
+- [WdDictionaryType](WdDictionaryType.md) - Enumeration
+- [WdDictionaryTypeHID](WdDictionaryTypeHID.md) - Enumeration
+- [WdDisableFeaturesIntroducedAfter](WdDisableFeaturesIntroducedAfter.md) - Enumeration
+- [WdDocPartInsertOptions](WdDocPartInsertOptions.md) - Enumeration
+- [WdDocumentDirection](WdDocumentDirection.md) - Enumeration
+- [WdDocumentKind](WdDocumentKind.md) - Enumeration
+- [WdDocumentMedium](WdDocumentMedium.md) - Enumeration
+- [WdDocumentType](WdDocumentType.md) - Enumeration
+- [WdDocumentViewDirection](WdDocumentViewDirection.md) - Enumeration
+- [WdDropPosition](WdDropPosition.md) - Enumeration
+- [WdEditionOption](WdEditionOption.md) - Enumeration
+- [WdEditionType](WdEditionType.md) - Enumeration
+- [WdEditorType](WdEditorType.md) - Enumeration
+- [WdEmailHTMLFidelity](WdEmailHTMLFidelity.md) - Enumeration
+- [WdEmphasisMark](WdEmphasisMark.md) - Enumeration
+- [WdEnableCancelKey](WdEnableCancelKey.md) - Enumeration
+- [WdEncloseStyle](WdEncloseStyle.md) - Enumeration
+- [WdEnclosureType](WdEnclosureType.md) - Enumeration
+- [WdEndnoteLocation](WdEndnoteLocation.md) - Enumeration
+- [WdEnvelopeOrientation](WdEnvelopeOrientation.md) - Enumeration
+- [WdExportCreateBookmarks](WdExportCreateBookmarks.md) - Enumeration
+- [WdExportFormat](WdExportFormat.md) - Enumeration
+- [WdExportItem](WdExportItem.md) - Enumeration
+- [WdExportOptimizeFor](WdExportOptimizeFor.md) - Enumeration
+- [WdExportRange](WdExportRange.md) - Enumeration
+- [WdFarEastLineBreakLanguageID](WdFarEastLineBreakLanguageID.md) - Enumeration
+- [WdFarEastLineBreakLevel](WdFarEastLineBreakLevel.md) - Enumeration
+- [WdFieldKind](WdFieldKind.md) - Enumeration
+- [WdFieldShading](WdFieldShading.md) - Enumeration
+- [WdFieldType](WdFieldType.md) - Enumeration
+- [WdFindMatch](WdFindMatch.md) - Enumeration
+- [WdFindWrap](WdFindWrap.md) - Enumeration
+- [WdFlowDirection](WdFlowDirection.md) - Enumeration
+- [WdFontBias](WdFontBias.md) - Enumeration
+- [WdFootnoteLocation](WdFootnoteLocation.md) - Enumeration
+- [WdFramePosition](WdFramePosition.md) - Enumeration
+- [WdFramesetNewFrameLocation](WdFramesetNewFrameLocation.md) - Enumeration
+- [WdFramesetSizeType](WdFramesetSizeType.md) - Enumeration
+- [WdFramesetType](WdFramesetType.md) - Enumeration
+- [WdFrameSizeRule](WdFrameSizeRule.md) - Enumeration
+- [WdFrenchSpeller](WdFrenchSpeller.md) - Enumeration
+- [WdGoToDirection](WdGoToDirection.md) - Enumeration
+- [WdGoToItem](WdGoToItem.md) - Enumeration
+- [WdGranularity](WdGranularity.md) - Enumeration
+- [WdGutterStyle](WdGutterStyle.md) - Enumeration
+- [WdGutterStyleOld](WdGutterStyleOld.md) - Enumeration
+- [WdHeaderFooterIndex](WdHeaderFooterIndex.md) - Enumeration
+- [WdHeadingSeparator](WdHeadingSeparator.md) - Enumeration
+- [WdHebSpellStart](WdHebSpellStart.md) - Enumeration
+- [WdHelpType](WdHelpType.md) - Enumeration
+- [WdHelpTypeHID](WdHelpTypeHID.md) - Enumeration
+- [WdHighAnsiText](WdHighAnsiText.md) - Enumeration
+- [WdHorizontalInVerticalType](WdHorizontalInVerticalType.md) - Enumeration
+- [WdHorizontalLineAlignment](WdHorizontalLineAlignment.md) - Enumeration
+- [WdHorizontalLineWidthType](WdHorizontalLineWidthType.md) - Enumeration
+- [WdIMEMode](WdIMEMode.md) - Enumeration
+- [WdIndexFilter](WdIndexFilter.md) - Enumeration
+- [WdIndexFormat](WdIndexFormat.md) - Enumeration
+- [WdIndexSortBy](WdIndexSortBy.md) - Enumeration
+- [WdIndexType](WdIndexType.md) - Enumeration
+- [WdInformation](WdInformation.md) - Enumeration
+- [WdInlineShapeType](WdInlineShapeType.md) - Enumeration
+- [WdInsertCells](WdInsertCells.md) - Enumeration
+- [WdInsertedTextMark](WdInsertedTextMark.md) - Enumeration
+- [WdInternationalIndex](WdInternationalIndex.md) - Enumeration
+- [WdJustificationMode](WdJustificationMode.md) - Enumeration
+- [WdKana](WdKana.md) - Enumeration
+- [WdKey](WdKey.md) - Enumeration
+- [WdKeyCategory](WdKeyCategory.md) - Enumeration
+- [WdLanguageID](WdLanguageID.md) - Enumeration
+- [WdLanguageID2000](WdLanguageID2000.md) - Enumeration
+- [WdLayoutMode](WdLayoutMode.md) - Enumeration
+- [WdLetterheadLocation](WdLetterheadLocation.md) - Enumeration
+- [WdLetterStyle](WdLetterStyle.md) - Enumeration
+- [WdLigatures](WdLigatures.md) - Enumeration
+- [WdLineEndingType](WdLineEndingType.md) - Enumeration
+- [WdLineSpacing](WdLineSpacing.md) - Enumeration
+- [WdLineStyle](WdLineStyle.md) - Enumeration
+- [WdLineType](WdLineType.md) - Enumeration
+- [WdLineWidth](WdLineWidth.md) - Enumeration
+- [WdLinkType](WdLinkType.md) - Enumeration
+- [WdListApplyTo](WdListApplyTo.md) - Enumeration
+- [WdListGalleryType](WdListGalleryType.md) - Enumeration
+- [WdListLevelAlignment](WdListLevelAlignment.md) - Enumeration
+- [WdListNumberStyle](WdListNumberStyle.md) - Enumeration
+- [WdListNumberStyleHID](WdListNumberStyleHID.md) - Enumeration
+- [WdListType](WdListType.md) - Enumeration
+- [WdLockType](WdLockType.md) - Enumeration
+- [WdMailerPriority](WdMailerPriority.md) - Enumeration
+- [WdMailMergeActiveRecord](WdMailMergeActiveRecord.md) - Enumeration
+- [WdMailMergeComparison](WdMailMergeComparison.md) - Enumeration
+- [WdMailMergeDataSource](WdMailMergeDataSource.md) - Enumeration
+- [WdMailMergeDefaultRecord](WdMailMergeDefaultRecord.md) - Enumeration
+- [WdMailMergeDestination](WdMailMergeDestination.md) - Enumeration
+- [WdMailMergeMailFormat](WdMailMergeMailFormat.md) - Enumeration
+- [WdMailMergeMainDocType](WdMailMergeMainDocType.md) - Enumeration
+- [WdMailMergeState](WdMailMergeState.md) - Enumeration
+- [WdMailSystem](WdMailSystem.md) - Enumeration
+- [WdMappedDataFields](WdMappedDataFields.md) - Enumeration
+- [WdMeasurementUnits](WdMeasurementUnits.md) - Enumeration
+- [WdMeasurementUnitsHID](WdMeasurementUnitsHID.md) - Enumeration
+- [WdMergeFormatFrom](WdMergeFormatFrom.md) - Enumeration
+- [WdMergeSubType](WdMergeSubType.md) - Enumeration
+- [WdMergeTarget](WdMergeTarget.md) - Enumeration
+- [WdMonthNames](WdMonthNames.md) - Enumeration
+- [WdMoveFromTextMark](WdMoveFromTextMark.md) - Enumeration
+- [WdMovementType](WdMovementType.md) - Enumeration
+- [WdMoveToTextMark](WdMoveToTextMark.md) - Enumeration
+- [WdMultipleWordConversionsMode](WdMultipleWordConversionsMode.md) - Enumeration
+- [WdNewDocumentType](WdNewDocumentType.md) - Enumeration
+- [WdNoteNumberStyle](WdNoteNumberStyle.md) - Enumeration
+- [WdNoteNumberStyleHID](WdNoteNumberStyleHID.md) - Enumeration
+- [WdNumberForm](WdNumberForm.md) - Enumeration
+- [WdNumberingRule](WdNumberingRule.md) - Enumeration
+- [WdNumberSpacing](WdNumberSpacing.md) - Enumeration
+- [WdNumberStyleWordBasicBiDi](WdNumberStyleWordBasicBiDi.md) - Enumeration
+- [WdNumberType](WdNumberType.md) - Enumeration
+- [WdOLEPlacement](WdOLEPlacement.md) - Enumeration
+- [WdOLEType](WdOLEType.md) - Enumeration
+- [WdOLEVerb](WdOLEVerb.md) - Enumeration
+- [WdOMathBreakBin](WdOMathBreakBin.md) - Enumeration
+- [WdOMathBreakSub](WdOMathBreakSub.md) - Enumeration
+- [WdOMathFracType](WdOMathFracType.md) - Enumeration
+- [WdOMathFunctionType](WdOMathFunctionType.md) - Enumeration
+- [WdOMathHorizAlignType](WdOMathHorizAlignType.md) - Enumeration
+- [WdOMathJc](WdOMathJc.md) - Enumeration
+- [WdOMathShapeType](WdOMathShapeType.md) - Enumeration
+- [WdOMathSpacingRule](WdOMathSpacingRule.md) - Enumeration
+- [WdOMathType](WdOMathType.md) - Enumeration
+- [WdOMathVertAlignType](WdOMathVertAlignType.md) - Enumeration
+- [WdOpenFormat](WdOpenFormat.md) - Enumeration
+- [WdOrganizerObject](WdOrganizerObject.md) - Enumeration
+- [WdOrientation](WdOrientation.md) - Enumeration
+- [WdOriginalFormat](WdOriginalFormat.md) - Enumeration
+- [WdOutlineLevel](WdOutlineLevel.md) - Enumeration
+- [WdPageBorderArt](WdPageBorderArt.md) - Enumeration
+- [WdPageColor](WdPageColor.md) - Enumeration
+- [WdPageFit](WdPageFit.md) - Enumeration
+- [WdPageMovementType](WdPageMovementType.md) - Enumeration
+- [WdPageNumberAlignment](WdPageNumberAlignment.md) - Enumeration
+- [WdPageNumberStyle](WdPageNumberStyle.md) - Enumeration
+- [WdPageNumberStyleHID](WdPageNumberStyleHID.md) - Enumeration
+- [WdPaperSize](WdPaperSize.md) - Enumeration
+- [WdPaperTray](WdPaperTray.md) - Enumeration
+- [WdParagraphAlignment](WdParagraphAlignment.md) - Enumeration
+- [WdParagraphAlignmentHID](WdParagraphAlignmentHID.md) - Enumeration
+- [WdPartOfSpeech](WdPartOfSpeech.md) - Enumeration
+- [WdPasteDataType](WdPasteDataType.md) - Enumeration
+- [WdPasteOptions](WdPasteOptions.md) - Enumeration
+- [WdPhoneticGuideAlignmentType](WdPhoneticGuideAlignmentType.md) - Enumeration
+- [WdPictureLinkType](WdPictureLinkType.md) - Enumeration
+- [WdPortugueseReform](WdPortugueseReform.md) - Enumeration
+- [WdPreferredWidthType](WdPreferredWidthType.md) - Enumeration
+- [WdPrintOutItem](WdPrintOutItem.md) - Enumeration
+- [WdPrintOutPages](WdPrintOutPages.md) - Enumeration
+- [WdPrintOutRange](WdPrintOutRange.md) - Enumeration
+- [WdProofreadingErrorType](WdProofreadingErrorType.md) - Enumeration
+- [WdProtectedViewCloseReason](WdProtectedViewCloseReason.md) - Enumeration
+- [WdProtectionType](WdProtectionType.md) - Enumeration
+- [WdReadingLayoutMargin](WdReadingLayoutMargin.md) - Enumeration
+- [WdReadingOrder](WdReadingOrder.md) - Enumeration
+- [WdRecoveryType](WdRecoveryType.md) - Enumeration
+- [WdRectangleType](WdRectangleType.md) - Enumeration
+- [WdReferenceKind](WdReferenceKind.md) - Enumeration
+- [WdReferenceType](WdReferenceType.md) - Enumeration
+- [WdRelativeHorizontalPosition](WdRelativeHorizontalPosition.md) - Enumeration
+- [WdRelativeHorizontalSize](WdRelativeHorizontalSize.md) - Enumeration
+- [WdRelativeVerticalPosition](WdRelativeVerticalPosition.md) - Enumeration
+- [WdRelativeVerticalSize](WdRelativeVerticalSize.md) - Enumeration
+- [WdRelocate](WdRelocate.md) - Enumeration
+- [WdRemoveDocInfoType](WdRemoveDocInfoType.md) - Enumeration
+- [WdReplace](WdReplace.md) - Enumeration
+- [WdRevisedLinesMark](WdRevisedLinesMark.md) - Enumeration
+- [WdRevisedPropertiesMark](WdRevisedPropertiesMark.md) - Enumeration
+- [WdRevisionsBalloonMargin](WdRevisionsBalloonMargin.md) - Enumeration
+- [WdRevisionsBalloonPrintOrientation](WdRevisionsBalloonPrintOrientation.md) - Enumeration
+- [WdRevisionsBalloonWidthType](WdRevisionsBalloonWidthType.md) - Enumeration
+- [WdRevisionsMarkup](WdRevisionsMarkup.md) - Enumeration
+- [WdRevisionsMode](WdRevisionsMode.md) - Enumeration
+- [WdRevisionsView](WdRevisionsView.md) - Enumeration
+- [WdRevisionsWrap](WdRevisionsWrap.md) - Enumeration
+- [WdRevisionType](WdRevisionType.md) - Enumeration
+- [WdRoutingSlipDelivery](WdRoutingSlipDelivery.md) - Enumeration
+- [WdRoutingSlipStatus](WdRoutingSlipStatus.md) - Enumeration
+- [WdRowAlignment](WdRowAlignment.md) - Enumeration
+- [WdRowHeightRule](WdRowHeightRule.md) - Enumeration
+- [WdRulerStyle](WdRulerStyle.md) - Enumeration
+- [WdSalutationGender](WdSalutationGender.md) - Enumeration
+- [WdSalutationType](WdSalutationType.md) - Enumeration
+- [WdSaveFormat](WdSaveFormat.md) - Enumeration
+- [WdSaveOptions](WdSaveOptions.md) - Enumeration
+- [WdScrollbarType](WdScrollbarType.md) - Enumeration
+- [WdSectionDirection](WdSectionDirection.md) - Enumeration
+- [WdSectionStart](WdSectionStart.md) - Enumeration
+- [WdSeekView](WdSeekView.md) - Enumeration
+- [WdSelectionFlags](WdSelectionFlags.md) - Enumeration
+- [WdSelectionType](WdSelectionType.md) - Enumeration
+- [WdSeparatorType](WdSeparatorType.md) - Enumeration
+- [WdShapePosition](WdShapePosition.md) - Enumeration
+- [WdShapePositionRelative](WdShapePositionRelative.md) - Enumeration
+- [WdShapeSizeRelative](WdShapeSizeRelative.md) - Enumeration
+- [WdShowFilter](WdShowFilter.md) - Enumeration
+- [WdShowSourceDocuments](WdShowSourceDocuments.md) - Enumeration
+- [WdSmartTagControlType](WdSmartTagControlType.md) - Enumeration
+- [WdSortFieldType](WdSortFieldType.md) - Enumeration
+- [WdSortFieldTypeHID](WdSortFieldTypeHID.md) - Enumeration
+- [WdSortOrder](WdSortOrder.md) - Enumeration
+- [WdSortSeparator](WdSortSeparator.md) - Enumeration
+- [WdSpanishSpeller](WdSpanishSpeller.md) - Enumeration
+- [WdSpecialPane](WdSpecialPane.md) - Enumeration
+- [WdSpellingErrorType](WdSpellingErrorType.md) - Enumeration
+- [WdSpellingWordType](WdSpellingWordType.md) - Enumeration
+- [WdStatistic](WdStatistic.md) - Enumeration
+- [WdStatisticHID](WdStatisticHID.md) - Enumeration
+- [WdStoryType](WdStoryType.md) - Enumeration
+- [WdStyleSheetLinkType](WdStyleSheetLinkType.md) - Enumeration
+- [WdStyleSheetPrecedence](WdStyleSheetPrecedence.md) - Enumeration
+- [WdStyleSort](WdStyleSort.md) - Enumeration
+- [WdStyleType](WdStyleType.md) - Enumeration
+- [WdStylisticSet](WdStylisticSet.md) - Enumeration
+- [WdSubscriberFormats](WdSubscriberFormats.md) - Enumeration
+- [WdSummaryLength](WdSummaryLength.md) - Enumeration
+- [WdSummaryMode](WdSummaryMode.md) - Enumeration
+- [WdTabAlignment](WdTabAlignment.md) - Enumeration
+- [WdTabLeader](WdTabLeader.md) - Enumeration
+- [WdTabLeaderHID](WdTabLeaderHID.md) - Enumeration
+- [WdTableDirection](WdTableDirection.md) - Enumeration
+- [WdTableFieldSeparator](WdTableFieldSeparator.md) - Enumeration
+- [WdTableFormat](WdTableFormat.md) - Enumeration
+- [WdTableFormatApply](WdTableFormatApply.md) - Enumeration
+- [WdTablePosition](WdTablePosition.md) - Enumeration
+- [WdTaskPanes](WdTaskPanes.md) - Enumeration
+- [WdTCSCConverterDirection](WdTCSCConverterDirection.md) - Enumeration
+- [WdTemplateType](WdTemplateType.md) - Enumeration
+- [WdTextboxTightWrap](WdTextboxTightWrap.md) - Enumeration
+- [WdTextFormFieldType](WdTextFormFieldType.md) - Enumeration
+- [WdTextOrientation](WdTextOrientation.md) - Enumeration
+- [WdTextOrientationHID](WdTextOrientationHID.md) - Enumeration
+- [WdTextureIndex](WdTextureIndex.md) - Enumeration
+- [WdThemeColorIndex](WdThemeColorIndex.md) - Enumeration
+- [WdToaFormat](WdToaFormat.md) - Enumeration
+- [WdTocFormat](WdTocFormat.md) - Enumeration
+- [WdTofFormat](WdTofFormat.md) - Enumeration
+- [WdTrailingCharacter](WdTrailingCharacter.md) - Enumeration
+- [WdTwoLinesInOneType](WdTwoLinesInOneType.md) - Enumeration
+- [WdUnderline](WdUnderline.md) - Enumeration
+- [WdUnits](WdUnits.md) - Enumeration
+- [WdUpdateStyleListBehavior](WdUpdateStyleListBehavior.md) - Enumeration
+- [WdUseFormattingFrom](WdUseFormattingFrom.md) - Enumeration
+- [WdVerticalAlignment](WdVerticalAlignment.md) - Enumeration
+- [WdViewType](WdViewType.md) - Enumeration
+- [WdViewTypeOld](WdViewTypeOld.md) - Enumeration
+- [WdVisualSelection](WdVisualSelection.md) - Enumeration
+- [WdWindowState](WdWindowState.md) - Enumeration
+- [WdWindowType](WdWindowType.md) - Enumeration
+- [WdWordDialog](WdWordDialog.md) - Enumeration
+- [WdWordDialogHID](WdWordDialogHID.md) - Enumeration
+- [WdWordDialogTab](WdWordDialogTab.md) - Enumeration
+- [WdWordDialogTabHID](WdWordDialogTabHID.md) - Enumeration
+- [WdWrapSideType](WdWrapSideType.md) - Enumeration
+- [WdWrapType](WdWrapType.md) - Enumeration
+- [WdWrapTypeMerged](WdWrapTypeMerged.md) - Enumeration
+- [WdXMLNodeLevel](WdXMLNodeLevel.md) - Enumeration
+- [WdXMLNodeType](WdXMLNodeType.md) - Enumeration
+- [WdXMLSelectionChangeReason](WdXMLSelectionChangeReason.md) - Enumeration
+- [WdXMLValidationStatus](WdXMLValidationStatus.md) - Enumeration
+- [WebOptions](WebOptions.md) - Dispatch Interface
+- [Window](Window.md) - Dispatch Interface
+- [Windows](Windows.md) - Dispatch Interface
+- [Words](Words.md) - Dispatch Interface
+- [WrapFormat](WrapFormat.md) - Dispatch Interface
+- [XlAxisCrosses](XlAxisCrosses.md) - Enumeration
+- [XlAxisGroup](XlAxisGroup.md) - Enumeration
+- [XlAxisType](XlAxisType.md) - Enumeration
+- [XlBackground](XlBackground.md) - Enumeration
+- [XlBarShape](XlBarShape.md) - Enumeration
+- [XlBinsType](XlBinsType.md) - Enumeration
+- [XlBorderWeight](XlBorderWeight.md) - Enumeration
+- [XlCategoryLabelLevel](XlCategoryLabelLevel.md) - Enumeration
+- [XlCategorySortOrder](XlCategorySortOrder.md) - Enumeration
+- [XlCategoryType](XlCategoryType.md) - Enumeration
+- [XlChartElementPosition](XlChartElementPosition.md) - Enumeration
+- [XlChartGallery](XlChartGallery.md) - Enumeration
+- [XlChartItem](XlChartItem.md) - Enumeration
+- [XlChartPicturePlacement](XlChartPicturePlacement.md) - Enumeration
+- [XlChartPictureType](XlChartPictureType.md) - Enumeration
+- [XlChartSplitType](XlChartSplitType.md) - Enumeration
+- [XlColorIndex](XlColorIndex.md) - Enumeration
+- [XlConstants](XlConstants.md) - Enumeration
+- [XlCopyPictureFormat](XlCopyPictureFormat.md) - Enumeration
+- [XlDataLabelPosition](XlDataLabelPosition.md) - Enumeration
+- [XlDataLabelSeparator](XlDataLabelSeparator.md) - Enumeration
+- [XlDataLabelsType](XlDataLabelsType.md) - Enumeration
+- [XlDisplayBlanksAs](XlDisplayBlanksAs.md) - Enumeration
+- [XlDisplayUnit](XlDisplayUnit.md) - Enumeration
+- [XlEndStyleCap](XlEndStyleCap.md) - Enumeration
+- [XlErrorBarDirection](XlErrorBarDirection.md) - Enumeration
+- [XlErrorBarInclude](XlErrorBarInclude.md) - Enumeration
+- [XlErrorBarType](XlErrorBarType.md) - Enumeration
+- [XlGeoMappingLevel](XlGeoMappingLevel.md) - Enumeration
+- [XlGeoProjectionType](XlGeoProjectionType.md) - Enumeration
+- [XlGradientStopPositionType](XlGradientStopPositionType.md) - Enumeration
+- [XlHAlign](XlHAlign.md) - Enumeration
+- [XlLegendPosition](XlLegendPosition.md) - Enumeration
+- [XlLineStyle](XlLineStyle.md) - Enumeration
+- [XlMarkerStyle](XlMarkerStyle.md) - Enumeration
+- [XlOrientation](XlOrientation.md) - Enumeration
+- [XlParentDataLabelOptions](XlParentDataLabelOptions.md) - Enumeration
+- [XlPattern](XlPattern.md) - Enumeration
+- [XlPictureAppearance](XlPictureAppearance.md) - Enumeration
+- [XlPieSliceIndex](XlPieSliceIndex.md) - Enumeration
+- [XlPieSliceLocation](XlPieSliceLocation.md) - Enumeration
+- [XlPivotFieldOrientation](XlPivotFieldOrientation.md) - Enumeration
+- [XlReadingOrder](XlReadingOrder.md) - Enumeration
+- [XlRegionLabelOptions](XlRegionLabelOptions.md) - Enumeration
+- [XlRgbColor](XlRgbColor.md) - Enumeration
+- [XlRowCol](XlRowCol.md) - Enumeration
+- [XlScaleType](XlScaleType.md) - Enumeration
+- [XlSeriesColorGradientStyle](XlSeriesColorGradientStyle.md) - Enumeration
+- [XlSeriesNameLevel](XlSeriesNameLevel.md) - Enumeration
+- [XlSizeRepresents](XlSizeRepresents.md) - Enumeration
+- [XlTickLabelOrientation](XlTickLabelOrientation.md) - Enumeration
+- [XlTickLabelPosition](XlTickLabelPosition.md) - Enumeration
+- [XlTickMark](XlTickMark.md) - Enumeration
+- [XlTimeUnit](XlTimeUnit.md) - Enumeration
+- [XlTrendlineType](XlTrendlineType.md) - Enumeration
+- [XlUnderlineStyle](XlUnderlineStyle.md) - Enumeration
+- [XlVAlign](XlVAlign.md) - Enumeration
+- [XlValueSortOrder](XlValueSortOrder.md) - Enumeration
+- [XMLMapping](XMLMapping.md) - Dispatch Interface
+- [XMLNamespace](XMLNamespace.md) - Dispatch Interface
+- [XMLNamespaces](XMLNamespaces.md) - Dispatch Interface
+- [XMLNode](XMLNode.md) - Dispatch Interface
+- [XMLNodes](XMLNodes.md) - Dispatch Interface
+- [XMLSchemaReference](XMLSchemaReference.md) - Dispatch Interface
+- [XMLSchemaReferences](XMLSchemaReferences.md) - Dispatch Interface
+- [XSLTransform](XSLTransform.md) - Dispatch Interface
+- [XSLTransforms](XSLTransforms.md) - Dispatch Interface
+- [Zoom](Zoom.md) - Dispatch Interface
+- [Zooms](Zooms.md) - Dispatch Interface

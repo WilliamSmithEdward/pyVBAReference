@@ -1,0 +1,57 @@
+{
+  "name": "SmartTags",
+  "kind": "Class",
+  "guid": "{73778F0A-9743-4DF3-BBFA-941712488FEA}",
+  "library": "Microsoft Access 16.0 Object Library",
+  "description": "Represents the collection of smart tags for a control on a form, report, or data access page.",
+  "remarks": "To return a single SmartTag object, use the Item property or use SmartTags (_Index_), where _Index_ represents the number of the smart tag.",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Use the Application property to access the active Microsoft Access Application object and its related properties. Read-only Application object."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent object for the specified object. Read-only."
+    },
+    {
+      "name": "Item",
+      "kind": "property",
+      "type": "_SmartTag",
+      "access": "read-only",
+      "description": "The Item property returns a specific member of a collection either by position or by index. Read-only SmartTag."
+    },
+    {
+      "name": "Count",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Use the Count property to determine the number of items in a specified collection. Read-only Long."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Add",
+      "kind": "method",
+      "signature": "Add(Name As String) As _SmartTag",
+      "description": "Adds a smart tag to a form or control.",
+      "returns": "_SmartTag",
+      "parameters": [
+        {
+          "name": "Name",
+          "type": "String",
+          "optional": false,
+          "description": "The name of the smart tag to add."
+        }
+      ]
+    }
+  ],
+  "events": []
+}

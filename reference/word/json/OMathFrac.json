@@ -1,0 +1,55 @@
+{
+  "name": "OMathFrac",
+  "kind": "Dispatch Interface",
+  "guid": "{50209974-BA32-4A03-8FA6-BAC56CC056FD}",
+  "library": "Microsoft Word 16.0 Object Library",
+  "description": "Represents a fraction, consisting of a numerator and denominator separated by a fraction bar. The fraction bar can be horizontal or diagonal, depending on the fraction properties.",
+  "remarks": "",
+  "example": "",
+  "properties": [
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "Returns an Application object that represents the Microsoft Word application."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the add-in was created. Read-only Long."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns an Object that represents the parent object of the specified OMathFrac object."
+    },
+    {
+      "name": "Num",
+      "kind": "property",
+      "type": "OMath",
+      "access": "read-only",
+      "description": "Returns an OMath object that represents the numerator for a fraction. Read-only."
+    },
+    {
+      "name": "Den",
+      "kind": "property",
+      "type": "OMath",
+      "access": "read-only",
+      "description": "Returns an OMath object that represents the denominator for an equation that contains a fraction. Read-only."
+    },
+    {
+      "name": "Type",
+      "kind": "property",
+      "type": "WdOMathFracType",
+      "access": "read/write",
+      "description": "Returns or sets a WdOMathFracType constant that represents the layout of a fraction, whether it is stacked, skewed, linear, or without a fraction bar. Read/write."
+    }
+  ],
+  "methods": [],
+  "events": []
+}

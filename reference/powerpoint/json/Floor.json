@@ -1,0 +1,84 @@
+{
+  "name": "Floor",
+  "kind": "Dispatch Interface",
+  "guid": "{92D41A68-F07E-4CA4-AF6F-BEF486AA4E6F}",
+  "library": "Microsoft PowerPoint 16.0 Object Library",
+  "description": "Represents the floor of a 3D chart.",
+  "remarks": "",
+  "example": "With ActiveDocument.InlineShapes(1)\n\n    If .HasChart Then\n\n        .Chart.Floor.Interior.Color = RGB(0, 255, 255)\n\n    End If\n\nEnd With",
+  "properties": [
+    {
+      "name": "Name",
+      "kind": "property",
+      "type": "String",
+      "access": "read-only",
+      "description": "Returns the name of the object. Read-only String."
+    },
+    {
+      "name": "Parent",
+      "kind": "property",
+      "type": "Object",
+      "access": "read-only",
+      "description": "Returns the parent for the specified object. Read-only Object."
+    },
+    {
+      "name": "PictureType",
+      "kind": "property",
+      "type": "Variant",
+      "access": "read/write",
+      "description": "Returns or sets a value that specifies how pictures are displayed on the walls and faces of a 3D chart. Read/write Variant."
+    },
+    {
+      "name": "Thickness",
+      "kind": "property",
+      "type": "Long",
+      "access": "read/write",
+      "description": "Returns or sets the thickness of the floor. Read/write Long."
+    },
+    {
+      "name": "Format",
+      "kind": "property",
+      "type": "ChartFormat",
+      "access": "read-only",
+      "description": "Returns the line, fill, and effect formatting for the object. Read-only ChartFormat."
+    },
+    {
+      "name": "Creator",
+      "kind": "property",
+      "type": "Long",
+      "access": "read-only",
+      "description": "Returns a 32-bit integer that indicates the application in which the specified object was created. Read-only Long."
+    },
+    {
+      "name": "Application",
+      "kind": "property",
+      "type": "Application",
+      "access": "read-only",
+      "description": "When used without an object qualifier, returns an Application object that represents the Microsoft PowerPoint application. When used with an object qualifier, returns an Application object that represents the creator of the specified object (you can use this property with an Automation object to return the application of that object). Read-only."
+    }
+  ],
+  "methods": [
+    {
+      "name": "Select",
+      "kind": "method",
+      "signature": "Select() As Variant",
+      "description": "Selects the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "ClearFormats",
+      "kind": "method",
+      "signature": "ClearFormats() As Variant",
+      "description": "Clears the formatting of the object.",
+      "returns": "Variant"
+    },
+    {
+      "name": "Paste",
+      "kind": "method",
+      "signature": "Paste()",
+      "description": "Pastes a picture from the Clipboard on the floor of the specified chart.",
+      "returns": "void"
+    }
+  ],
+  "events": []
+}
