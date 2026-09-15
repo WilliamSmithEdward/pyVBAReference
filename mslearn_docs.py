@@ -40,6 +40,12 @@ _TAG_RE = re.compile(r"\(([^)]*)\)\s*$")
 # (e.g. "excel.application(object).md"), so allow one nested level.
 _LINK_RE = re.compile(r"\[([^\]]+)\]\((?:[^()]|\([^()]*\))*\)")
 _EMPH_RE = re.compile(r"\*\*?([^*]+)\*\*?")
+# Underscore emphasis (_index_, __bold__). VBA identifiers are full of
+# underscores - Worksheet_Change, xlPart_, _CodeName - so this follows the
+# markdown rule that _ emphasis cannot start or end inside a word: the run must
+# be flanked by non-word characters and must not begin or end with a space.
+_UNDERSCORE_EMPH_RE = re.compile(
+    r"(?<![A-Za-z0-9_])(__?)(?!\s)(.+?)(?<!\s)\1(?![A-Za-z0-9_])")
 _WS_RE = re.compile(r"\s+")
 _BR_RE = re.compile(r"<br\s*/?>", re.IGNORECASE)
 _TITLE_KIND_RE = re.compile(
@@ -77,6 +83,7 @@ def _clean(text: str) -> str:
     text = _BR_RE.sub(" ", text)
     text = _LINK_RE.sub(r"\1", text)
     text = _EMPH_RE.sub(r"\1", text)
+    text = _UNDERSCORE_EMPH_RE.sub(r"\2", text)
     text = text.replace("`", "")
     text = _WS_RE.sub(" ", text).strip()
     return _to_ascii(text)
