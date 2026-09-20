@@ -1,0 +1,83 @@
+name: Publish to PyPI
+
+# Publishing happens when a GitHub release is published, so the tag, the
+# release notes and the PyPI upload always describe the same commit.
+# workflow_dispatch is there for a dry run: it builds and verifies without
+# publishing, because the publish job only runs for a release.
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build and verify
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install build tooling
+        run: python -m pip install --upgrade build twine pytest
+
+      - name: Run the test suite against the repository data
+        run: python -m pytest tests -q
+
+      - name: Build the sdist and wheel
+        run: python -m build
+
+      - name: Check the version matches the release tag
+        if: github.event_name == 'release'
+        run: |
+          version=$(python -c "import tomllib, pathlib; print(tomllib.loads(pathlib.Path('pyproject.toml').read_text())['project']['version'])")
+          tag='${{ github.event.release.tag_name }}'
+          echo "pyproject version: $version"
+          echo "release tag:       $tag"
+          if [ "v$version" != "$tag" ]; then
+            echo "::error::Tag $tag does not match version $version (expected v$version)"
+            exit 1
+          fi
+
+      - name: Check the distribution metadata
+        run: python -m twine check dist/*
+
+      - name: Install the wheel and exercise it outside the source tree
+        run: |
+          python -m pip install dist/*.whl
+          mkdir -p "$RUNNER_TEMP/verify"
+          cd "$RUNNER_TEMP/verify"
+          python -m pytest "$GITHUB_WORKSPACE/tests/test_api.py" -q
+          vba-ref libs
+          vba-ref member Worksheet Protect
+          vba-ref where MsgBox
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+  publish:
+    name: Publish to PyPI
+    needs: build
+    if: github.event_name == 'release'
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/vba-reference
+    permissions:
+      # Required for trusted publishing: PyPI verifies this job's OIDC identity
+      # instead of an API token, so no secret exists to leak or rotate.
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+      - uses: pypa/gh-action-pypi-publish@release/v1

@@ -177,3 +177,19 @@ vba-ref type Worksheet           # full type entry
 vba-ref member Worksheet Protect # one member with parameter docs
 ```
 
+## License and attribution
+
+The code in this repository is MIT licensed - see [LICENSE](LICENSE).
+
+The generated data is two things with two origins. Type names, member
+signatures, parameter lists, property access modes and enumeration values are
+introspected from the COM type libraries themselves. The prose - descriptions,
+remarks and code examples - comes from
+[MicrosoftDocs/VBA-Docs](https://github.com/MicrosoftDocs/VBA-Docs), published
+by Microsoft Corporation under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) with its code samples
+under the MIT License. It is redistributed here under CC BY 4.0 with
+attribution to Microsoft.
+
+This project is not affiliated with or endorsed by Microsoft.
+

@@ -8,12 +8,24 @@ version = "1.1.0"
 description = "Programmatic, typed reference of the VBA object models for Excel, PowerPoint, Word, Access and the common shared COM type libraries (Office, ADO, MSXML, and more)."
 readme = "README.md"
 requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "William Smith" }]
 keywords = ["vba", "excel", "word", "powerpoint", "access", "office", "com",
             "reference", "typelib", "macro"]
 classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Software Development :: Documentation",
     "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
 ]
 dependencies = []
 
@@ -55,7 +67,11 @@ packages = ["vba_reference"]
 "reference/winhttp/json" = "vba_reference/data/winhttp/json"
 
 [tool.hatch.build.targets.sdist]
-# The sdist ships the source + generator; data is rebuilt or pulled from the repo.
+# The sdist ships the source, the generator, and the per-type JSON the wheel
+# bundles - a wheel is built from the sdist, so anything force-included above
+# has to be here or that build fails. The Markdown and the consolidated
+# exports are left out: they are the same data in other shapes, and they live
+# in the repository.
 include = [
     "vba_reference",
     "scrape_excel_object_model.py",
@@ -63,5 +79,9 @@ include = [
     "mslearn_docs.py",
     "tests",
     "README.md",
+    "LICENSE",
     "reference/agentic_llm_primer.md",
+    "reference/index.json",
+    "reference/members.json",
+    "reference/*/json",
 ]
