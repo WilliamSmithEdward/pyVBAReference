@@ -1,8 +1,8 @@
-name: Update YARA Forge rules
+name: Update YARA rules
 
 # Weekly: if a newer YARA Forge release is at least seven days old, pin it
 # (tag and the SHA-256 GitHub records for the asset) in a pull request, then
-# start the Security workflow on that branch so the new rules are compiled,
+# start the Malware scan workflow on that branch so the new rules are compiled,
 # checked against the EICAR test file and run over the repository before
 # anyone merges.
 on:
@@ -15,15 +15,15 @@ permissions:
 
 # Never two proposals racing to push the same branch.
 concurrency:
-  group: yara-forge-update
+  group: update-yara-rules
   cancel-in-progress: false
 
 jobs:
   propose:
-    name: Propose the next YARA Forge release
+    name: Propose a YARA rule update
     runs-on: ubuntu-24.04
     permissions:
-      actions: write        # start the Security workflow on the branch
+      actions: write        # start the Malware scan workflow on the branch
       contents: write       # push the branch
       pull-requests: write  # open the pull request
     steps:
@@ -71,4 +71,4 @@ jobs:
           done
           # A pull request opened with GITHUB_TOKEN starts no workflows, so
           # start the scan on the branch explicitly.
-          gh workflow run security.yml --ref "$branch"
+          gh workflow run malware-scan.yml --ref "$branch"

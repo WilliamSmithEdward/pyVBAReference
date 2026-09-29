@@ -25,8 +25,10 @@ and download the MicrosoftDocs/VBA-Docs archive from GitHub over HTTPS.
 
 ## How the repository is scanned
 
-The [Security workflow](.github/workflows/security.yml) runs on every push to
-`main`, on every pull request, daily, and for every release.
+The [Security workflow](.github/workflows/security.yml) (CodeQL, Semgrep) and
+the [Malware scan workflow](.github/workflows/malware-scan.yml) (ClamAV,
+YARA-X) run on every push to `main`, on every pull request, daily, and for
+every release.
 
 | Check | What it covers |
 | ----- | -------------- |
@@ -45,14 +47,15 @@ The build fails on:
   EICAR test file each run starts with - a scanner that detects nothing would
   otherwise look like a clean result
 
-Publishing to PyPI waits for this workflow, so a release with an unexpected
+Publishing to PyPI waits for both workflows, so a release with an unexpected
 finding is not published.
 
 ## Security reports on releases
 
-Every release after v1.0.0 has a `security-report-vX.Y.Z.md` attached: the
-scan of that release's commit, with the tool, rule and signature versions it
-used and every finding it accepted. The report is attached whether the scan
+Every release after v1.0.0 has a `security-report-vX.Y.Z.md` attached, and
+later releases a `malware-report-vX.Y.Z.md` beside it: the scans of that
+release's commit, with the tool, rule and signature versions it
+used and every finding it accepted. The reports are attached whether the scans
 passed or failed.
 
 ## Known acceptable findings
@@ -73,9 +76,9 @@ by digest, Python tools by exact version and hash, the YARA-X binary by
 version and SHA-256, and the YARA Forge pack by release and SHA-256.
 
 [Dependabot](.github/dependabot.yml) proposes updates to the actions, images
-and Python tools, and a [weekly workflow](.github/workflows/yara-forge-update.yml)
+and Python tools, and a [weekly workflow](.github/workflows/update-yara-rules.yml)
 proposes the next YARA Forge release. Nothing is proposed until it is seven
-days old, and every proposal is scanned by the Security workflow before it
+days old, and every proposal is scanned by the Security or Malware scan workflow before it
 can be merged.
 
 ClamAV signatures and the Semgrep rule sets change too often to pin, so they
@@ -86,9 +89,10 @@ engine version and which rule sets ran.
 ## Repository settings
 
 - `main` is protected by a ruleset: changes arrive through pull requests, the
-  **Security summary** check must pass before merging, and the branch cannot
-  be force-pushed or deleted. The summary job depends on every scan, so it is
-  the only check the ruleset names, and renaming a scan job never loosens the
+  **Security passed** and **Malware scan passed** checks must pass before
+  merging, and the branch cannot be force-pushed or deleted. Each gate job
+  depends on every job in its workflow, so they are the only checks the
+  ruleset names, and renaming a scan job never loosens the
   protection. The check is tied to GitHub Actions, so nothing else can report
   it. Repository admins can bypass the ruleset.
 - GitHub Actions refuses any action not pinned to a full commit SHA, so a

@@ -1,4 +1,4 @@
-name: Publish to PyPI
+name: Publish
 
 # Publishing happens when a GitHub release is published, so the tag, the
 # release notes and the PyPI upload always describe the same commit.
@@ -26,6 +26,10 @@ jobs:
       actions: read           # CodeQL reads workflow run metadata
       contents: read          # check out the code
       security-events: write  # upload results to code scanning
+
+  malware-scan:
+    name: Malware scan
+    uses: ./.github/workflows/malware-scan.yml
 
   build:
     name: Build and verify
@@ -84,7 +88,7 @@ jobs:
 
   publish:
     name: Publish to PyPI
-    needs: [build, security]
+    needs: [build, security, malware-scan]
     if: github.event_name == 'release'
     runs-on: ubuntu-24.04
     environment:
@@ -103,10 +107,10 @@ jobs:
       - uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
 
   # Runs whether the scans passed or failed, so every release carries the
-  # report that decided whether it was published.
+  # reports that decided whether it was published.
   attach-report:
-    name: Attach the security report
-    needs: [security]
+    name: Attach the security and malware reports
+    needs: [security, malware-scan]
     if: ${{ !cancelled() && github.event_name == 'release' }}
     runs-on: ubuntu-24.04
     permissions:
@@ -116,6 +120,10 @@ jobs:
         with:
           name: security-report
 
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: malware-report
+
       - name: Upload to the release
         env:
           GH_TOKEN: ${{ github.token }}
@@ -123,4 +131,6 @@ jobs:
           TAG: ${{ github.event.release.tag_name }}
         run: |
           mv security-report.md "security-report-$TAG.md"
-          gh release upload "$TAG" "security-report-$TAG.md" --clobber --repo "$REPO"
+          mv malware-report.md "malware-report-$TAG.md"
+          gh release upload "$TAG" "security-report-$TAG.md" "malware-report-$TAG.md" \
+            --clobber --repo "$REPO"

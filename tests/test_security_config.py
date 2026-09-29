@@ -105,7 +105,7 @@ def test_yara_forge_pin_is_complete():
 
 
 def test_yara_x_is_pinned_to_a_version_and_digest():
-    text = (GITHUB / "workflows" / "security.yml").read_text("utf-8")
+    text = (GITHUB / "workflows" / "malware-scan.yml").read_text("utf-8")
     assert re.search(r"YARA_X_VERSION: \d+\.\d+\.\d+\n", text)
     digest = re.search(r"YARA_X_SHA256: (\S+)", text)
     assert digest and HEX64.match(digest.group(1))
@@ -119,15 +119,19 @@ def _jobs(workflow: Path) -> dict:
     return dict(zip(parts[1::2], parts[2::2]))
 
 
-def test_summary_job_gates_every_security_job_and_cannot_be_skipped():
-    # Branch protection requires only "Security summary". It must depend on
-    # every other job, or a failing job could merge, and it must run on
-    # always(), because a skipped required check counts as passing.
-    jobs = _jobs(GITHUB / "workflows" / "security.yml")
-    summary = jobs.pop("summary")
-    assert "name: Security summary\n" in summary
-    assert "if: ${{ always() }}" in summary
-    needs = re.search(r"needs: \[([^\]]*)\]", summary).group(1)
+@pytest.mark.parametrize("workflow, gate_id, gate_name", [
+    ("security.yml", "security-passed", "Security passed"),
+    ("malware-scan.yml", "malware-scan-passed", "Malware scan passed"),
+])
+def test_gate_job_needs_every_job_and_cannot_be_skipped(workflow, gate_id, gate_name):
+    # The ruleset requires only the gate jobs. Each must depend on every
+    # other job in its workflow, or a failing job could merge, and it must
+    # run on always(), because a skipped required check counts as passing.
+    jobs = _jobs(GITHUB / "workflows" / workflow)
+    gate_job = jobs.pop(gate_id)
+    assert f"name: {gate_name}\n" in gate_job
+    assert "if: always()" in gate_job
+    needs = re.search(r"needs: \[([^\]]*)\]", gate_job).group(1)
     assert sorted(n.strip() for n in needs.split(",")) == sorted(jobs)
 
 

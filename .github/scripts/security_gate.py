@@ -1,8 +1,8 @@
 """Decide whether a security scan passed, and write its section of the report.
 
-Every scanner in .github/workflows/security.yml reports through this script,
-so there is one rule for all of them: a finding passes only if
-.github/security/known-findings.toml accepts it, and an accepted entry that
+Every scanner in .github/workflows/security.yml and malware-scan.yml reports
+through this script, so there is one rule for all of them: a finding passes
+only if .github/security/known-findings.toml accepts it, and an accepted entry that
 matched nothing in the run fails too. Unexpected findings and stale entries
 both exit 1.
 

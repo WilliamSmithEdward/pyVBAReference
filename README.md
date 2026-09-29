@@ -4,6 +4,7 @@
 [![Python](https://img.shields.io/pypi/pyversions/vba-reference)](https://pypi.org/project/vba-reference/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 [![Security](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/security.yml/badge.svg?branch=main)](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/security.yml)
+[![Malware scan](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/malware-scan.yml/badge.svg?branch=main)](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/malware-scan.yml)
 
 A complete, machine-generated reference of the VBA (Visual Basic for Applications)
 object models for Excel, PowerPoint, Word and Access, plus the nine shared COM
