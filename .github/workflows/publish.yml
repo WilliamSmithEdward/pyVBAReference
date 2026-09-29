@@ -2,8 +2,9 @@ name: Publish to PyPI
 
 # Publishing happens when a GitHub release is published, so the tag, the
 # release notes and the PyPI upload always describe the same commit.
-# workflow_dispatch is there for a dry run: it builds and verifies without
-# publishing, because the publish job only runs for a release.
+# workflow_dispatch is there for a dry run: it builds, verifies and runs the
+# security scans without publishing, because the publish and attach jobs only
+# run for a release.
 on:
   release:
     types: [published]
@@ -12,35 +13,53 @@ on:
 permissions:
   contents: read
 
+# One publish at a time, and never cancel one partway through an upload.
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
 jobs:
+  security:
+    name: Security
+    uses: ./.github/workflows/security.yml
+    permissions:
+      actions: read           # CodeQL reads workflow run metadata
+      contents: read          # check out the code
+      security-events: write  # upload results to code scanning
+
   build:
     name: Build and verify
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v7
-
-      - uses: actions/setup-python@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          python-version: "3.12"
+          persist-credentials: false
 
-      - name: Install build tooling
-        run: python -m pip install --upgrade build twine pytest
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12.14"
+
+      - name: Install the pinned build tools
+        run: python -m pip install --require-hashes -r .github/requirements/requirements-ci.txt
 
       - name: Run the test suite against the repository data
         run: python -m pytest tests -q
 
+      # No build isolation: the backend comes from the hash-pinned
+      # requirements above instead of an unpinned isolated install.
       - name: Build the sdist and wheel
-        run: python -m build
+        run: python -m build --no-isolation
 
       - name: Check the version matches the release tag
         if: github.event_name == 'release'
+        env:
+          TAG: ${{ github.event.release.tag_name }}
         run: |
           version=$(python -c "import tomllib, pathlib; print(tomllib.loads(pathlib.Path('pyproject.toml').read_text())['project']['version'])")
-          tag='${{ github.event.release.tag_name }}'
           echo "pyproject version: $version"
-          echo "release tag:       $tag"
-          if [ "v$version" != "$tag" ]; then
-            echo "::error::Tag $tag does not match version $version (expected v$version)"
+          echo "release tag:       $TAG"
+          if [ "v$version" != "$TAG" ]; then
+            echo "::error::Tag $TAG does not match version $version (expected v$version)"
             exit 1
           fi
 
@@ -49,7 +68,7 @@ jobs:
 
       - name: Install the wheel and exercise it outside the source tree
         run: |
-          python -m pip install dist/*.whl
+          python -m pip install --no-deps dist/*.whl
           mkdir -p "$RUNNER_TEMP/verify"
           cd "$RUNNER_TEMP/verify"
           python -m pytest "$GITHUB_WORKSPACE/tests/test_api.py" -q
@@ -57,27 +76,51 @@ jobs:
           vba-ref member Worksheet Protect
           vba-ref where MsgBox
 
-      - uses: actions/upload-artifact@v7
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: dist
           path: dist/
+          if-no-files-found: error
 
   publish:
     name: Publish to PyPI
-    needs: build
+    needs: [build, security]
     if: github.event_name == 'release'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     environment:
       name: pypi
       url: https://pypi.org/p/vba-reference
     permissions:
-      # Required for trusted publishing: PyPI verifies this job's OIDC identity
-      # instead of an API token, so no secret exists to leak or rotate.
-      id-token: write
+      # Trusted publishing: PyPI verifies this job's OIDC identity instead of
+      # an API token, so no secret exists to leak or rotate.
+      id-token: write  # mint the OIDC token PyPI checks
     steps:
-      - uses: actions/download-artifact@v8
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
           name: dist
           path: dist/
 
-      - uses: pypa/gh-action-pypi-publish@release/v1
+      - uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
+
+  # Runs whether the scans passed or failed, so every release carries the
+  # report that decided whether it was published.
+  attach-report:
+    name: Attach the security report
+    needs: [security]
+    if: ${{ !cancelled() && github.event_name == 'release' }}
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write  # upload a file to the release
+    steps:
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: security-report
+
+      - name: Upload to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          mv security-report.md "security-report-$TAG.md"
+          gh release upload "$TAG" "security-report-$TAG.md" --clobber --repo "$REPO"

@@ -1,5 +1,10 @@
 # pyVBAReference
 
+[![PyPI](https://img.shields.io/pypi/v/vba-reference)](https://pypi.org/project/vba-reference/)
+[![Python](https://img.shields.io/pypi/pyversions/vba-reference)](https://pypi.org/project/vba-reference/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![Security](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/security.yml/badge.svg?branch=main)](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/security.yml)
+
 A complete, machine-generated reference of the VBA (Visual Basic for Applications)
 object models for Excel, PowerPoint, Word and Access, plus the nine shared COM
 type libraries every host can reference. Every public type is exported as both
@@ -176,6 +181,14 @@ vba-ref where MsgBox             # where a member/type is defined
 vba-ref type Worksheet           # full type entry
 vba-ref member Worksheet Protect # one member with parameter docs
 ```
+
+## Security
+
+Every push to `main`, every pull request and every release is scanned with
+CodeQL, Semgrep, ClamAV and YARA-X, and again daily. The build fails on
+anything that is not a reviewed, documented exception. Each release carries its security report as an attached file. To
+report a vulnerability privately, and for what is scanned and how, see
+[SECURITY.md](SECURITY.md).
 
 ## License and attribution
 

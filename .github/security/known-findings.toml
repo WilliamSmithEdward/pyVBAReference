@@ -1,0 +1,43 @@
+# Findings reviewed and accepted. Every security gate reads this file.
+#
+# A finding passes only if an entry here names its tool and rule and its
+# path matches the entry's pattern. Anything else fails the build, and so
+# does an entry that matched nothing in a run: when the cause goes away, the
+# entry has to go too, so this list cannot quietly outlive its reasons.
+#
+#   tool    codeql | semgrep | clamav | yara-x
+#   rule    the rule id, signature name or YARA rule identifier, exactly
+#   path    a glob against the reported path. CodeQL and Semgrep report
+#           paths from the repository root. ClamAV and YARA-X scan a tree of
+#           three parts and report paths inside it: source/ (the committed
+#           files), dist/ (the built wheel and sdist, as archives) and
+#           unpacked/ (their contents). "*" crosses directories, so
+#           "*reference/x.md" matches that file wherever it appears
+#   reason  why this is not a problem, specific enough to re-check later
+
+[[finding]]
+tool = "semgrep"
+rule = "python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected"
+path = "mslearn_docs.py"
+reason = """
+_download() passes a variable URL to urllib.request.urlopen, which would also
+accept file:// and other schemes. Its only caller passes the hard-coded
+TARBALL_URL (https://codeload.github.com/...), and _download() now refuses
+any URL that is not https:// before opening it. The script is the offline
+data generator, run by hand; it is not part of the installed package.
+"""
+
+[[finding]]
+tool = "yara-x"
+rule = "SIGNATURE_BASE_Powershell_Case_Anomaly"
+path = "*reference/agentic_llm_primer.md"
+reason = """
+A YARA-X 1.20.0 engine false positive. The rule flags "powershell" spelled
+in an unusual case. The file has exactly one occurrence, all lowercase, which
+the rule itself lists as a normal spelling ($sn1). Compiled on its own, the
+rule does not match this file. Compiled together with the rest of the YARA
+Forge pack, where two other rules use the identical literal, YARA-X stops
+counting the exact-case pattern and the rule fires. Reproduced locally with
+the rule alone versus the full pack. Remove this entry when a YARA-X upgrade
+fixes the counting; the stale-entry check will say so.
+"""
