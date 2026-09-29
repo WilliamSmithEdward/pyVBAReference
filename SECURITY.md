@@ -85,5 +85,14 @@ engine version and which rule sets ran.
 
 ## Repository settings
 
-Private vulnerability reporting, secret scanning with push protection, and
-Dependabot alerts and security updates are enabled.
+- `main` is protected by a ruleset: changes arrive through pull requests, the
+  **Security summary** check must pass before merging, and the branch cannot
+  be force-pushed or deleted. The summary job depends on every scan, so it is
+  the only check the ruleset names, and renaming a scan job never loosens the
+  protection. The check is tied to GitHub Actions, so nothing else can report
+  it.
+- GitHub Actions refuses any action not pinned to a full commit SHA, so a
+  tag or branch reference fails the run instead of relying on review to catch
+  it.
+- Private vulnerability reporting, secret scanning with push protection, and
+  Dependabot alerts and security updates are enabled.

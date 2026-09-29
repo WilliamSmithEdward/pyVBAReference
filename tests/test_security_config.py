@@ -111,6 +111,26 @@ def test_yara_x_is_pinned_to_a_version_and_digest():
     assert digest and HEX64.match(digest.group(1))
 
 
+def _jobs(workflow: Path) -> dict:
+    """Top-level job ids of a workflow mapped to their source blocks."""
+    text = workflow.read_text("utf-8")
+    body = text.split("\njobs:\n", 1)[1]
+    parts = re.split(r"^  ([A-Za-z][\w-]*):\s*$", body, flags=re.MULTILINE)
+    return dict(zip(parts[1::2], parts[2::2]))
+
+
+def test_summary_job_gates_every_security_job_and_cannot_be_skipped():
+    # Branch protection requires only "Security summary". It must depend on
+    # every other job, or a failing job could merge, and it must run on
+    # always(), because a skipped required check counts as passing.
+    jobs = _jobs(GITHUB / "workflows" / "security.yml")
+    summary = jobs.pop("summary")
+    assert "name: Security summary\n" in summary
+    assert "if: ${{ always() }}" in summary
+    needs = re.search(r"needs: \[([^\]]*)\]", summary).group(1)
+    assert sorted(n.strip() for n in needs.split(",")) == sorted(jobs)
+
+
 # --------------------------------------------------------------------------- #
 # Accepted findings
 # --------------------------------------------------------------------------- #

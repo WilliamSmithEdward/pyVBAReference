@@ -397,3 +397,25 @@ jobs:
           name: security-report
           path: security-report.md
           if-no-files-found: error
+
+  # The one check branch protection requires, so renaming or adding a scan
+  # job never means editing the protection rules. It runs on always(), never
+  # !cancelled(): a skipped required check counts as passing, so this job
+  # must run - and fail - whatever happened above it.
+  summary:
+    name: Security summary
+    needs: [codeql, semgrep, malware, report]
+    if: ${{ always() }}
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Require every job to have passed
+        env:
+          RESULTS: ${{ join(needs.*.result, ' ') }}
+        run: |
+          echo "Job results: $RESULTS"
+          for result in $RESULTS; do
+            if [ "$result" != success ]; then
+              echo "::error::A security job finished '$result'; see the jobs above and the Security report."
+              exit 1
+            fi
+          done
