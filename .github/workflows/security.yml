@@ -1,0 +1,399 @@
+name: Security
+
+# Static analysis (CodeQL, Semgrep) and malware scanning (ClamAV, YARA-X) of
+# the repository and of the wheel and sdist built from it.
+#
+# Every scanner reports through .github/scripts/security_gate.py, which fails
+# the build on any finding not accepted in .github/security/known-findings.toml
+# and on any accepted entry that matched nothing. Each job also fails if its
+# scanner errors, cannot update, or cannot detect a known test sample.
+#
+# Runs on every push to main, every pull request, daily, on demand, and from
+# publish.yml for every release, which attaches the resulting report.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+# A newer push to the same pull request replaces the scan in flight. Runs on
+# main, scheduled runs and release runs are never cancelled; they queue.
+concurrency:
+  group: ${{ github.workflow }}-security-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  codeql:
+    name: CodeQL (${{ matrix.language }})
+    runs-on: ubuntu-24.04
+    permissions:
+      actions: read           # CodeQL reads workflow run metadata
+      contents: read          # check out the code
+      security-events: write  # upload results to code scanning
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [actions, python]
+    env:
+      LANGUAGE: ${{ matrix.language }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: github/codeql-action/init@1c5b675653bb5c22dbe9b12b556ec555138e09fd # v4.38.1
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: none
+          queries: security-extended
+
+      # Results are gated and filtered before upload, so the analysis itself
+      # does not upload.
+      - uses: github/codeql-action/analyze@1c5b675653bb5c22dbe9b12b556ec555138e09fd # v4.38.1
+        with:
+          category: /language:${{ matrix.language }}
+          upload: never
+          output: ${{ runner.temp }}/codeql
+
+      - name: Gate the results
+        run: |
+          mkdir -p "$RUNNER_TEMP/report"
+          python3 .github/scripts/security_gate.py sarif --tool codeql \
+            --input "$RUNNER_TEMP/codeql/$LANGUAGE.sarif" \
+            --sarif-out "$RUNNER_TEMP/codeql-filtered.sarif" \
+            --report "$RUNNER_TEMP/report/codeql-$LANGUAGE.md" \
+            --meta "Language=$LANGUAGE" \
+            --meta "Query suite=security-extended" \
+            --meta "Action=github/codeql-action v4.38.1"
+
+      # A pull request from a fork gets a read-only token and cannot upload;
+      # the gate above still decides pass or fail for it.
+      - uses: github/codeql-action/upload-sarif@1c5b675653bb5c22dbe9b12b556ec555138e09fd # v4.38.1
+        if: ${{ !cancelled() && !github.event.pull_request.head.repo.fork }}
+        with:
+          sarif_file: ${{ runner.temp }}/codeql-filtered.sarif
+          category: /language:${{ matrix.language }}
+
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: ${{ !cancelled() }}
+        with:
+          name: security-report-codeql-${{ matrix.language }}
+          path: ${{ runner.temp }}/report/
+          if-no-files-found: error
+
+  semgrep:
+    name: Semgrep
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read          # check out the code
+      security-events: write  # upload results to code scanning
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # The image is pinned by digest in .github/docker/semgrep/Dockerfile so
+      # Dependabot can move it. The p/ rule sets come from the Semgrep
+      # registry on every run; which ones is recorded in the report.
+      - name: Scan
+        run: |
+          image=$(sed -n 's/^FROM //p' .github/docker/semgrep/Dockerfile)
+          mkdir -p "$RUNNER_TEMP/semgrep"
+          chmod 0777 "$RUNNER_TEMP/semgrep"
+          docker run --rm \
+            -v "$GITHUB_WORKSPACE:/src:ro" -v "$RUNNER_TEMP/semgrep:/out" \
+            -w /src "$image" \
+            semgrep scan \
+              --config p/python --config p/security-audit \
+              --config p/secrets --config p/github-actions \
+              --metrics off --disable-version-check \
+              --sarif --output /out/semgrep.sarif .
+          version=$(docker run --rm "$image" semgrep --version)
+          echo "SEMGREP_VERSION=$version" >> "$GITHUB_ENV"
+
+      - name: Gate the results
+        run: |
+          mkdir -p "$RUNNER_TEMP/report"
+          python3 .github/scripts/security_gate.py sarif --tool semgrep \
+            --input "$RUNNER_TEMP/semgrep/semgrep.sarif" \
+            --sarif-out "$RUNNER_TEMP/semgrep-filtered.sarif" \
+            --report "$RUNNER_TEMP/report/semgrep.md" \
+            --meta "Version=semgrep $SEMGREP_VERSION" \
+            --meta "Rule sets=p/python, p/security-audit, p/secrets, p/github-actions"
+
+      - uses: github/codeql-action/upload-sarif@1c5b675653bb5c22dbe9b12b556ec555138e09fd # v4.38.1
+        if: ${{ !cancelled() && !github.event.pull_request.head.repo.fork }}
+        with:
+          sarif_file: ${{ runner.temp }}/semgrep-filtered.sarif
+          category: semgrep
+
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: ${{ !cancelled() }}
+        with:
+          name: security-report-semgrep
+          path: ${{ runner.temp }}/report/
+          if-no-files-found: error
+
+  malware:
+    name: Malware scan (ClamAV + YARA-X)
+    runs-on: ubuntu-24.04
+    env:
+      # A release download, which no updater can follow. To move it, take
+      # the digest GitHub records for the asset:
+      #   gh api repos/VirusTotal/yara-x/releases/tags/v<version> --jq \
+      #     '.assets[] | select(.name|endswith("x86_64-unknown-linux-gnu.tar.gz")) | .digest'
+      YARA_X_VERSION: 1.20.0
+      YARA_X_SHA256: cabb8df46492fff59c51261302c71ed9cb2cef393d3f0ca560801a34a8e24cbe
+      # The EICAR test file: a harmless string every antivirus engine is
+      # built to detect. Each run proves both scanners catch it before
+      # trusting a clean result. Decoded at run time, outside the scan tree,
+      # and never committed.
+      EICAR_BASE64: WDVPIVAlQEFQWzRcUFpYNTQoUF4pN0NDKTd9JEVJQ0FSLVNUQU5EQVJELUFOVElWSVJVUy1URVNULUZJTEUhJEgrSCo=
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12.14"
+
+      - name: Install the pinned build tools
+        run: python -m pip install --require-hashes -r .github/requirements/requirements-ci.txt
+
+      # source/   the committed files
+      # dist/     the wheel and sdist as built, which ClamAV opens itself
+      # unpacked/ their contents, for YARA-X, which does not open archives
+      - name: Assemble the scan tree
+        run: |
+          scan="$RUNNER_TEMP/scan"
+          mkdir -p "$scan/source" "$scan/dist" "$scan/unpacked/wheel" "$scan/unpacked/sdist"
+          git archive --format=tar HEAD | tar -x -C "$scan/source"
+          python -m build --no-isolation --outdir "$scan/dist"
+          python -m zipfile -e "$scan"/dist/*.whl "$scan/unpacked/wheel"
+          tar -xzf "$scan"/dist/*.tar.gz -C "$scan/unpacked/sdist"
+          mkdir -p "$RUNNER_TEMP/control" "$RUNNER_TEMP/report"
+          echo "$EICAR_BASE64" | base64 -d > "$RUNNER_TEMP/control/eicar.com"
+          echo "SCAN=$scan" >> "$GITHUB_ENV"
+          echo "Scan tree: $(find "$scan" -type f | wc -l) files"
+
+      - name: Date for the signature cache
+        id: day
+        run: echo "day=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
+      # Yesterday's database, so freshclam only fetches the difference.
+      - uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
+        with:
+          path: ${{ runner.temp }}/clamav-db
+          key: clamav-db-${{ steps.day.outputs.day }}
+          restore-keys: clamav-db-
+
+      - name: Update ClamAV signatures
+        run: |
+          image=$(sed -n 's/^FROM //p' .github/docker/clamav/Dockerfile)
+          echo "CLAMAV_IMAGE=$image" >> "$GITHUB_ENV"
+          db="$RUNNER_TEMP/clamav-db"
+          mkdir -p "$db"
+          # freshclam drops to the image's clamav user (uid 100) to write.
+          chmod 0777 "$db"
+          if [ -z "$(ls -A "$db")" ]; then
+            docker run --rm -v "$db:/seed" --entrypoint sh "$image" \
+              -c 'cp -a /var/lib/clamav/. /seed/'
+          fi
+          # freshclam verifies each database's signature before using it.
+          for attempt in 1 2 3; do
+            rc=0
+            docker run --rm -v "$db:/var/lib/clamav" --entrypoint freshclam \
+              "$image" --stdout || rc=$?
+            [ "$rc" -eq 0 ] && break
+            if [ "$attempt" -eq 3 ]; then
+              echo "::error::freshclam failed three times (exit $rc); not scanning with an out-of-date database"
+              exit 1
+            fi
+            sleep $((attempt * 30))
+          done
+          version=$(docker run --rm -v "$db:/var/lib/clamav:ro" \
+            --entrypoint clamscan "$image" --version)
+          echo "CLAMAV_VERSION=$version" >> "$GITHUB_ENV"
+          echo "$version"
+
+      - name: ClamAV - detect the test sample
+        run: |
+          rc=0
+          docker run --rm -v "$RUNNER_TEMP/clamav-db:/var/lib/clamav:ro" \
+            -v "$RUNNER_TEMP/control:/control:ro" --entrypoint clamscan \
+            "$CLAMAV_IMAGE" --no-summary /control/eicar.com \
+            > "$RUNNER_TEMP/clamav-control.log" || rc=$?
+          cat "$RUNNER_TEMP/clamav-control.log"
+          if [ "$rc" -ne 1 ] || ! grep -q "Eicar" "$RUNNER_TEMP/clamav-control.log"; then
+            echo "::error::ClamAV did not detect the EICAR test file; its results cannot be trusted"
+            exit 1
+          fi
+
+      - name: ClamAV - scan
+        run: |
+          rc=0
+          docker run --rm -v "$RUNNER_TEMP/clamav-db:/var/lib/clamav:ro" \
+            -v "$SCAN:/scan:ro" --entrypoint clamscan "$CLAMAV_IMAGE" \
+            --recursive --infected --detect-pua=yes \
+            --alert-broken=yes --alert-broken-media=yes \
+            --alert-encrypted=yes --alert-macros=yes \
+            --alert-exceeds-max=yes --alert-partition-intersection=yes \
+            /scan > "$RUNNER_TEMP/clamscan.log" 2>&1 || rc=$?
+          cat "$RUNNER_TEMP/clamscan.log"
+          # 0 clean, 1 something found (the gate decides), anything else an error.
+          if [ "$rc" -gt 1 ]; then
+            echo "::error::clamscan failed with exit code $rc"
+            exit 1
+          fi
+
+      - name: ClamAV - gate
+        run: |
+          python .github/scripts/security_gate.py clamav \
+            --input "$RUNNER_TEMP/clamscan.log" --root /scan \
+            --report "$RUNNER_TEMP/report/malware-1-clamav.md" \
+            --meta "Engine=$CLAMAV_VERSION" \
+            --meta "Image=$CLAMAV_IMAGE" \
+            --meta "Options=PUA detection; alert on broken, encrypted, macro-bearing and limit-exceeding files" \
+            --meta "Test sample=EICAR detected"
+
+      - name: YARA-X - install
+        if: ${{ !cancelled() }}
+        run: |
+          url="https://github.com/VirusTotal/yara-x/releases/download/v${YARA_X_VERSION}/yara-x-v${YARA_X_VERSION}-x86_64-unknown-linux-gnu.tar.gz"
+          curl -fsSL --retry 3 -o "$RUNNER_TEMP/yara-x.tar.gz" "$url"
+          echo "$YARA_X_SHA256  $RUNNER_TEMP/yara-x.tar.gz" | sha256sum --check --strict
+          mkdir -p "$RUNNER_TEMP/bin"
+          tar -xzf "$RUNNER_TEMP/yara-x.tar.gz" -C "$RUNNER_TEMP/bin" yr
+          "$RUNNER_TEMP/bin/yr" --version | grep -Fx "yara-x-cli $YARA_X_VERSION"
+
+      - name: YARA-X - fetch and compile the pinned YARA Forge rules
+        if: ${{ !cancelled() }}
+        run: |
+          read -r tag package url sha < <(python -c 'import tomllib; p = tomllib.load(open(".github/security/yara-forge.toml", "rb")); print(p["tag"], p["package"], p["url"], p["sha256"])')
+          case "$url" in
+            https://github.com/YARAHQ/yara-forge/releases/download/*) ;;
+            *) echo "::error::yara-forge.toml points outside YARAHQ/yara-forge releases: $url"; exit 1 ;;
+          esac
+          curl -fsSL --retry 3 -o "$RUNNER_TEMP/yara-forge.zip" "$url"
+          echo "$sha  $RUNNER_TEMP/yara-forge.zip" | sha256sum --check --strict
+          python -m zipfile -e "$RUNNER_TEMP/yara-forge.zip" "$RUNNER_TEMP/yara-forge"
+          rules=$(find "$RUNNER_TEMP/yara-forge" -name '*.yar' | head -n 1)
+          count=$(grep -cE '^(private |global )*rule ' "$rules")
+          "$RUNNER_TEMP/bin/yr" compile --disable-warnings "$rules" -o "$RUNNER_TEMP/rules.yarc"
+          echo "YARA_RULES=YARA Forge $tag ($package), $count rules" >> "$GITHUB_ENV"
+          echo "Compiled $count rules from YARA Forge $tag ($package)"
+
+      - name: YARA-X - detect the test sample
+        if: ${{ !cancelled() }}
+        run: |
+          "$RUNNER_TEMP/bin/yr" scan -C "$RUNNER_TEMP/rules.yarc" \
+            "$RUNNER_TEMP/control/eicar.com" | tee "$RUNNER_TEMP/yara-control.txt"
+          if ! grep -qi "eicar" "$RUNNER_TEMP/yara-control.txt"; then
+            echo "::error::YARA-X did not detect the EICAR test file; its results cannot be trusted"
+            exit 1
+          fi
+
+      - name: YARA-X - scan
+        if: ${{ !cancelled() }}
+        run: |
+          rc=0
+          "$RUNNER_TEMP/bin/yr" scan -C "$RUNNER_TEMP/rules.yarc" "$SCAN" -r \
+            -o ndjson > "$RUNNER_TEMP/yara.ndjson" 2> "$RUNNER_TEMP/yara.err" || rc=$?
+          if [ "$rc" -ne 0 ] || [ -s "$RUNNER_TEMP/yara.err" ]; then
+            cat "$RUNNER_TEMP/yara.err"
+            echo "::error::YARA-X scan failed (exit $rc) or reported errors"
+            exit 1
+          fi
+
+      - name: YARA-X - gate
+        if: ${{ !cancelled() }}
+        run: |
+          python .github/scripts/security_gate.py yara \
+            --input "$RUNNER_TEMP/yara.ndjson" --root "$SCAN" \
+            --report "$RUNNER_TEMP/report/malware-2-yara-x.md" \
+            --meta "Engine=yara-x $YARA_X_VERSION" \
+            --meta "Rules=$YARA_RULES" \
+            --meta "Test sample=EICAR detected"
+
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        if: ${{ !cancelled() }}
+        with:
+          name: security-report-malware
+          path: ${{ runner.temp }}/report/
+          if-no-files-found: error
+
+  report:
+    name: Security report
+    needs: [codeql, semgrep, malware]
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          pattern: security-report-*
+          merge-multiple: true
+          path: parts
+
+      - name: Assemble the report
+        env:
+          CODEQL: ${{ needs.codeql.result }}
+          SEMGREP: ${{ needs.semgrep.result }}
+          MALWARE: ${{ needs.malware.result }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+          REF: ${{ github.ref }}
+          EVENT: ${{ github.event_name }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          overall=PASS
+          for r in "$CODEQL" "$SEMGREP" "$MALWARE"; do
+            [ "$r" = success ] || overall=FAIL
+          done
+          {
+            echo "# Security report"
+            echo
+            echo "**Overall: $overall**"
+            echo
+            echo "| | |"
+            echo "| --- | --- |"
+            echo "| Repository | $REPO |"
+            echo "| Commit | \`$SHA\` |"
+            echo "| Ref | \`$REF\` |"
+            echo "| Trigger | $EVENT |"
+            echo "| Generated | $(date -u '+%Y-%m-%d %H:%M UTC') |"
+            echo "| Run | $RUN_URL |"
+            echo
+            echo "| Check | Result |"
+            echo "| --- | --- |"
+            echo "| CodeQL | $CODEQL |"
+            echo "| Semgrep | $SEMGREP |"
+            echo "| Malware scan (ClamAV + YARA-X) | $MALWARE |"
+            echo
+            echo "A finding passes only if it is accepted, with a reason, in"
+            echo "[known-findings.toml](https://github.com/$REPO/blob/$SHA/.github/security/known-findings.toml)."
+            echo
+            for part in codeql-actions codeql-python semgrep malware-1-clamav malware-2-yara-x; do
+              if [ -f "parts/$part.md" ]; then
+                cat "parts/$part.md"
+              else
+                echo "## $part"
+                echo
+                echo "**No report: the job did not get far enough to write one.**"
+              fi
+              echo
+            done
+          } > security-report.md
+          cat security-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: security-report
+          path: security-report.md
+          if-no-files-found: error

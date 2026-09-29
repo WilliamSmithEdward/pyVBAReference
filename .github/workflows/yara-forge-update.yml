@@ -1,0 +1,74 @@
+name: Update YARA Forge rules
+
+# Weekly: if a newer YARA Forge release is at least seven days old, pin it
+# (tag and the SHA-256 GitHub records for the asset) in a pull request, then
+# start the Security workflow on that branch so the new rules are compiled,
+# checked against the EICAR test file and run over the repository before
+# anyone merges.
+on:
+  schedule:
+    - cron: "41 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Never two proposals racing to push the same branch.
+concurrency:
+  group: yara-forge-update
+  cancel-in-progress: false
+
+jobs:
+  propose:
+    name: Propose the next YARA Forge release
+    runs-on: ubuntu-24.04
+    permissions:
+      actions: write        # start the Security workflow on the branch
+      contents: write       # push the branch
+      pull-requests: write  # open the pull request
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Check for a newer release
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 .github/scripts/yara_forge_update.py \
+            --pin .github/security/yara-forge.toml \
+            --body "$RUNNER_TEMP/pr-body.md"
+
+      - name: Open the pull request and start the scan
+        if: steps.check.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.check.outputs.tag }}
+        run: |
+          branch="yara-forge/$TAG"
+          open=$(gh pr list --head "$branch" --state open --json number --jq 'length')
+          if [ "$open" != 0 ]; then
+            echo "A pull request for $branch is already open."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          gh auth setup-git
+          git switch -c "$branch"
+          git add .github/security/yara-forge.toml
+          git commit -m "Move YARA Forge rules to $TAG"
+          git push --force origin "$branch"
+          url=$(gh pr create --base main --head "$branch" \
+            --title "Move YARA Forge rules to $TAG" \
+            --body-file "$RUNNER_TEMP/pr-body.md")
+          echo "Opened $url"
+          # Close older proposals this one supersedes.
+          gh pr list --state open --json number,headRefName \
+            --jq ".[] | select(.headRefName | startswith(\"yara-forge/\")) | select(.headRefName != \"$branch\") | .number" |
+          while read -r number; do
+            gh pr close "$number" --delete-branch --comment "Superseded by $url."
+          done
+          # A pull request opened with GITHUB_TOKEN starts no workflows, so
+          # start the scan on the branch explicitly.
+          gh workflow run security.yml --ref "$branch"

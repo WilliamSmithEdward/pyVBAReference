@@ -1,0 +1,16 @@
+# The YARA Forge rule pack the malware scan uses.
+#
+# Rewritten by .github/workflows/yara-forge-update.yml, which proposes the
+# newest release at least seven days old in a pull request; the Security
+# workflow scans that pull request before it can be merged. To move it by
+# hand, take the digest GitHub records for the release asset, never the hash
+# of a file you just downloaded:
+#   gh api repos/YARAHQ/yara-forge/releases/tags/<tag> \
+#     --jq '.assets[] | select(.name == "yara-forge-rules-full.zip") | .digest'
+
+tag = "20260920"
+published = "2026-09-20"
+package = "full"
+asset = "yara-forge-rules-full.zip"
+url = "https://github.com/YARAHQ/yara-forge/releases/download/20260920/yara-forge-rules-full.zip"
+sha256 = "24673112528aa93e13d5375312732cc2113bf4efdb8cd85f33aaeaebada35951"

@@ -374,6 +374,10 @@ class DocIndex:
 # --------------------------------------------------------------------------- #
 
 def _download(url: str, dest: str) -> None:
+    # urlopen also accepts file:// and other schemes; only ever fetch over
+    # HTTPS, whatever a future caller passes.
+    if not url.startswith("https://"):
+        raise ValueError(f"Refusing to download from a non-HTTPS URL: {url}")
     print("  Downloading VBA reference (MicrosoftDocs/VBA-Docs)...")
     req = urllib.request.Request(url, headers={"User-Agent": "vba-ref-scraper"})
     tmp = dest + ".part"
