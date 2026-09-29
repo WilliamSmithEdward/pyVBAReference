@@ -90,7 +90,7 @@ engine version and which rule sets ran.
   be force-pushed or deleted. The summary job depends on every scan, so it is
   the only check the ruleset names, and renaming a scan job never loosens the
   protection. The check is tied to GitHub Actions, so nothing else can report
-  it.
+  it. Repository admins can bypass the ruleset.
 - GitHub Actions refuses any action not pinned to a full commit SHA, so a
   tag or branch reference fails the run instead of relying on review to catch
   it.
