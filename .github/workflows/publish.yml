@@ -2,7 +2,7 @@ name: Publish
 
 # Publishing happens when a GitHub release is published, so the tag, the
 # release notes and the PyPI upload always describe the same commit.
-# Started by hand, this is a dry run unless dry_run is unticked: it builds,
+# Started by hand, this is always a dry run: it builds,
 # verifies, runs the scans and assembles the release files exactly as a
 # release would, and uploads them as the release-preview artifact instead of
 # publishing anything. Publishing itself only ever follows a release.
@@ -10,11 +10,6 @@ on:
   release:
     types: [published]
   workflow_dispatch:
-    inputs:
-      dry_run:
-        description: Build, scan and assemble the release, but publish nothing
-        type: boolean
-        default: true
 
 permissions:
   contents: read
@@ -98,7 +93,7 @@ jobs:
   publish:
     name: Publish to PyPI
     needs: [build, security, malware-scan]
-    if: ${{ github.event_name == 'release' && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
+    if: ${{ github.event_name == 'release' }}
     runs-on: ubuntu-24.04
     environment:
       name: pypi
@@ -122,12 +117,12 @@ jobs:
   attach-reports:
     name: Attach the reports
     needs: [build, security, malware-scan]
-    if: ${{ !cancelled() && (github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && inputs.dry_run)) }}
+    if: ${{ !cancelled() && (github.event_name == 'release' || github.event_name == 'workflow_dispatch') }}
     runs-on: ubuntu-24.04
     permissions:
       contents: write  # upload a file to the release
     env:
-      DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+      DRY_RUN: ${{ github.event_name == 'workflow_dispatch' }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         if: env.DRY_RUN == 'true'
