@@ -100,3 +100,18 @@ engine version and which rule sets ran.
   it.
 - Private vulnerability reporting, secret scanning with push protection, and
   Dependabot alerts and security updates are enabled.
+
+## Verifying a download
+
+Every file on PyPI carries PyPI's own provenance, which names this
+repository's `publish.yml` as the publisher; the file's page on PyPI shows it.
+Releases published after 2026-09-30 also carry a GitHub build provenance
+attestation, which you can check against any copy of the file, from PyPI or
+from the GitHub release:
+
+```
+pip download vba-reference --no-deps -d check
+gh attestation verify check/<file> --owner WilliamSmithEdward
+```
+
+The output names the commit and workflow run that built the file.
