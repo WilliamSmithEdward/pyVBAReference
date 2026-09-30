@@ -98,21 +98,18 @@ def test_ci_requirements_are_exact_and_hashed():
         assert hashed == requirements, f"{lock.name}: every requirement needs a hash"
 
 
-def test_yara_forge_pin_is_complete():
-    with open(GITHUB / "security" / "yara-forge.toml", "rb") as fh:
-        pin = tomllib.load(fh)
-    assert re.fullmatch(r"\d{8}", pin["tag"])
-    assert pin["url"] == ("https://github.com/YARAHQ/yara-forge/releases/"
-                          f"download/{pin['tag']}/{pin['asset']}")
-    assert HEX64.match(pin["sha256"])
-    assert pin["asset"] == f"yara-forge-rules-{pin['package']}.zip"
+def test_yara_pins_are_ones_the_standard_updater_accepts():
+    """.github/security/yara.json has the shape the standard updater
+    (.github/security/yara_update.py, tested in repo-standards) reads and writes."""
+    import importlib.util
+    import json
 
-
-def test_yara_x_is_pinned_to_a_version_and_digest():
-    text = (GITHUB / "workflows" / "malware-scan.yml").read_text("utf-8")
-    assert re.search(r"YARA_X_VERSION: \d+\.\d+\.\d+\n", text)
-    digest = re.search(r"YARA_X_SHA256: (\S+)", text)
-    assert digest and HEX64.match(digest.group(1))
+    spec = importlib.util.spec_from_file_location("yara_update", GITHUB / "security" / "yara_update.py")
+    updater = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(updater)
+    pins = json.loads((GITHUB / "security" / "yara.json").read_text("utf-8"))
+    assert set(pins) == {"yara_forge", "yara_x"}
+    updater.check_move(pins, pins)
 
 
 def _jobs(workflow: Path) -> dict:

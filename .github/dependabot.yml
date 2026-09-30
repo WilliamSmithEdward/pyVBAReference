@@ -2,11 +2,9 @@
 # release before it is proposed, and its pull request runs the Security
 # workflow before it can be merged.
 #
-# Not covered here, because no updater can follow them:
-#   - the YARA-X binary (a release download; see YARA_X_VERSION in
-#     .github/workflows/malware-scan.yml for how to move it)
-#   - the YARA Forge rules, which .github/workflows/update-yara-rules.yml
-#     proposes weekly
+# Not covered here: the YARA-X binary and the YARA Forge rules are release
+# downloads pinned in .github/security/yara.json, which
+# .github/workflows/update-yara-rules.yml moves weekly.
 version: 2
 updates:
   - package-ecosystem: github-actions
