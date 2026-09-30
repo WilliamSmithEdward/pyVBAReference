@@ -3,6 +3,7 @@
 [![PyPI](https://img.shields.io/pypi/v/vba-reference)](https://pypi.org/project/vba-reference/)
 [![Python](https://img.shields.io/pypi/pyversions/vba-reference)](https://pypi.org/project/vba-reference/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![CI](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/ci.yml)
 [![Security](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/security.yml/badge.svg?branch=main)](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/security.yml)
 [![Malware scan](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/malware-scan.yml/badge.svg?branch=main)](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/malware-scan.yml)
 

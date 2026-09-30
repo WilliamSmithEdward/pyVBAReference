@@ -19,20 +19,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  security:
-    name: Security
-    uses: ./.github/workflows/security.yml
-    permissions:
-      actions: read           # CodeQL reads workflow run metadata
-      contents: read          # check out the code
-      security-events: write  # upload results to code scanning
-
-  malware-scan:
-    name: Malware scan
-    uses: ./.github/workflows/malware-scan.yml
-
   build:
-    name: Build and verify
+    name: Build distributions
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -86,6 +74,18 @@ jobs:
           path: dist/
           if-no-files-found: error
 
+  security:
+    name: Security
+    uses: ./.github/workflows/security.yml
+    permissions:
+      actions: read           # CodeQL reads workflow run metadata
+      contents: read          # check out the code
+      security-events: write  # upload results to code scanning
+
+  malware-scan:
+    name: Malware scan
+    uses: ./.github/workflows/malware-scan.yml
+
   publish:
     name: Publish to PyPI
     needs: [build, security, malware-scan]
@@ -108,8 +108,8 @@ jobs:
 
   # Runs whether the scans passed or failed, so every release carries the
   # reports that decided whether it was published.
-  attach-report:
-    name: Attach the security and malware reports
+  attach-reports:
+    name: Attach the reports
     needs: [security, malware-scan]
     if: ${{ !cancelled() && github.event_name == 'release' }}
     runs-on: ubuntu-24.04
