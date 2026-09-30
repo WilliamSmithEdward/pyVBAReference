@@ -102,11 +102,19 @@ jobs:
       # Trusted publishing: PyPI verifies this job's OIDC identity instead of
       # an API token, so no secret exists to leak or rotate.
       id-token: write  # mint the OIDC token PyPI checks
+      attestations: write # store the provenance attestation
     steps:
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
           name: dist
           path: dist/
+
+      # Signed build provenance: `gh attestation verify <file> --owner
+      # WilliamSmithEdward` shows which commit and run built a distribution.
+      - name: Attest the distributions
+        uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6 # v4.2.2
+        with:
+          subject-path: dist/*
 
       - uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
 
