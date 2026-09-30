@@ -16,6 +16,7 @@ updates:
     groups:
       actions:
         patterns: ["*"]
+        update-types: [minor, patch]
 
   - package-ecosystem: docker
     directories:
@@ -25,13 +26,19 @@ updates:
       interval: weekly
     cooldown:
       default-days: 7
+    groups:
+      minor-and-patch:
+        patterns: ["*"]
+        update-types: [minor, patch]
 
   - package-ecosystem: pip
     directory: /.github/requirements
     schedule:
-      interval: weekly
+      interval: daily
     cooldown:
       default-days: 7
+      exclude: [pyopenvba, pyofficeeditor, pyprettyvba, pyvbareference, pyvbaanalysis, pyvbaharness, xlide-mcp]
     groups:
       ci-tools:
         patterns: ["*"]
+        update-types: [minor, patch]
