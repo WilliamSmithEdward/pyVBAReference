@@ -124,7 +124,8 @@ Start at [`reference/consolidated/_index.md`](reference/consolidated/_index.md).
 
 ## Regenerating
 
-Requires Windows with the relevant Office applications installed and `pywin32`:
+Requires Windows with the relevant Office applications installed and `pywin32`
+(`pip install -e ".[generate]"`):
 
 ```powershell
 .venv\Scripts\python.exe scrape_excel_object_model.py

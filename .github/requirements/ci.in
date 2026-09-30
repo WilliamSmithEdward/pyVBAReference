@@ -1,0 +1,7 @@
+# The test suite the CI and Publish workflows run, compiled to ci.txt with
+# exact versions and hashes so `pip install --require-hashes` refuses
+# anything else. Dependabot proposes each new release.
+#
+# Regenerate from .github/requirements/:
+#   uv pip compile ci.in --universal --generate-hashes --python-version 3.12 -o ci.txt
+pytest==9.1.1

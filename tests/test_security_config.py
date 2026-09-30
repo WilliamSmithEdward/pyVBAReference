@@ -73,7 +73,7 @@ def test_runners_are_named_releases():
 
 
 def test_container_images_are_pinned_by_digest():
-    dockerfiles = sorted((GITHUB / "docker").glob("*/Dockerfile"))
+    dockerfiles = sorted((GITHUB / "security").glob("*/Dockerfile"))
     assert dockerfiles
     for dockerfile in dockerfiles:
         froms = [line for line in dockerfile.read_text("utf-8").splitlines()
@@ -84,14 +84,18 @@ def test_container_images_are_pinned_by_digest():
 
 
 def test_ci_requirements_are_exact_and_hashed():
-    text = (GITHUB / "requirements" / "requirements-ci.txt").read_text("utf-8")
-    requirements = re.findall(r"^([A-Za-z0-9]\S*)", text, re.MULTILINE)
-    hashed = re.findall(r"^([A-Za-z0-9]\S*) \\\n\s+--hash=sha256:[0-9a-f]{64}",
-                        text, re.MULTILINE)
-    assert requirements
-    for requirement in requirements:
-        assert "==" in requirement, f"not an exact pin: {requirement}"
-    assert hashed == requirements, "every requirement needs a hash"
+    locks = sorted((GITHUB / "requirements").glob("*.txt"))
+    assert locks
+    for lock in locks:
+        text = lock.read_text("utf-8")
+        requirements = re.findall(r"^([A-Za-z0-9]\S*)", text, re.MULTILINE)
+        hashed = re.findall(
+            r"^([A-Za-z0-9]\S*)[^\n]* \\\n\s+--hash=sha256:[0-9a-f]{64}",
+            text, re.MULTILINE)
+        assert requirements, lock.name
+        for requirement in requirements:
+            assert "==" in requirement, f"{lock.name}: not an exact pin: {requirement}"
+        assert hashed == requirements, f"{lock.name}: every requirement needs a hash"
 
 
 def test_yara_forge_pin_is_complete():

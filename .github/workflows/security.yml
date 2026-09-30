@@ -98,12 +98,12 @@ jobs:
         with:
           persist-credentials: false
 
-      # The image is pinned by digest in .github/docker/semgrep/Dockerfile so
+      # The image is pinned by digest in .github/security/semgrep/Dockerfile so
       # Dependabot can move it. The p/ rule sets come from the Semgrep
       # registry on every run; which ones is recorded in the report.
       - name: Scan
         run: |
-          image=$(sed -n 's/^FROM //p' .github/docker/semgrep/Dockerfile)
+          image=$(sed -n 's/^FROM //p' .github/security/semgrep/Dockerfile)
           mkdir -p "$RUNNER_TEMP/semgrep"
           chmod 0777 "$RUNNER_TEMP/semgrep"
           docker run --rm \

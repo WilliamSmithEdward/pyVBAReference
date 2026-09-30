@@ -1,0 +1,11 @@
+# Building the sdist and wheel (Publish and Malware scan) and checking the
+# distribution metadata before upload, compiled to build.txt with exact
+# versions and hashes. The builds run without build isolation, so the
+# hatchling backend is pinned here instead of floating in an isolated
+# environment. Dependabot proposes each new release.
+#
+# Regenerate from .github/requirements/:
+#   uv pip compile build.in --universal --generate-hashes --python-version 3.12 -o build.txt
+build==1.6.1
+hatchling==1.32.4
+twine==7.0.0
