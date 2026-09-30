@@ -2,13 +2,19 @@ name: Publish
 
 # Publishing happens when a GitHub release is published, so the tag, the
 # release notes and the PyPI upload always describe the same commit.
-# workflow_dispatch is there for a dry run: it builds, verifies and runs the
-# security scans without publishing, because the publish and attach jobs only
-# run for a release.
+# Started by hand, this is a dry run unless dry_run is unticked: it builds,
+# verifies, runs the scans and assembles the release files exactly as a
+# release would, and uploads them as the release-preview artifact instead of
+# publishing anything. Publishing itself only ever follows a release.
 on:
   release:
     types: [published]
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Build, scan and assemble the release, but publish nothing
+        type: boolean
+        default: true
 
 permissions:
   contents: read
@@ -92,7 +98,7 @@ jobs:
   publish:
     name: Publish to PyPI
     needs: [build, security, malware-scan]
-    if: github.event_name == 'release'
+    if: ${{ github.event_name == 'release' && !(github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
     runs-on: ubuntu-24.04
     environment:
       name: pypi
@@ -110,15 +116,24 @@ jobs:
       - uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
 
   # Runs whether the scans passed or failed, so every release carries the
-  # reports that decided whether it was published.
+  # reports that decided whether it was published. On a dry run it names the
+  # reports the same way and keeps them, with the distributions, as the
+  # release-preview artifact.
   attach-reports:
     name: Attach the reports
-    needs: [security, malware-scan]
-    if: ${{ !cancelled() && github.event_name == 'release' }}
+    needs: [build, security, malware-scan]
+    if: ${{ !cancelled() && (github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && inputs.dry_run)) }}
     runs-on: ubuntu-24.04
     permissions:
       contents: write  # upload a file to the release
+    env:
+      DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
     steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        if: env.DRY_RUN == 'true'
+        with:
+          persist-credentials: false
+
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
           name: security-report
@@ -127,13 +142,39 @@ jobs:
         with:
           name: malware-report
 
+      - name: Name the reports after the release
+        env:
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          if [ "$DRY_RUN" = true ]; then
+            TAG="v$(python3 -c "import tomllib, pathlib; print(tomllib.loads(pathlib.Path('pyproject.toml').read_text())['project']['version'])")"
+          fi
+          mv security-report.md "security-report-$TAG.md"
+          mv malware-report.md "malware-report-$TAG.md"
+          echo "TAG=$TAG" >> "$GITHUB_ENV"
+
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        if: env.DRY_RUN == 'true'
+        with:
+          name: dist
+          path: dist/
+
+      - name: Keep what the release would carry
+        if: env.DRY_RUN == 'true'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: release-preview
+          path: |
+            dist/
+            security-report-*.md
+            malware-report-*.md
+          if-no-files-found: error
+
       - name: Upload to the release
+        if: env.DRY_RUN != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           REPO: ${{ github.repository }}
-          TAG: ${{ github.event.release.tag_name }}
         run: |
-          mv security-report.md "security-report-$TAG.md"
-          mv malware-report.md "malware-report-$TAG.md"
           gh release upload "$TAG" "security-report-$TAG.md" "malware-report-$TAG.md" \
             --clobber --repo "$REPO"
