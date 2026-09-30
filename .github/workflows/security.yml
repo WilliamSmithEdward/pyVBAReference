@@ -1,12 +1,13 @@
 name: Security
 
-# Static analysis (CodeQL, Semgrep) of the repository. Malware scanning
-# (ClamAV, YARA-X) is in malware-scan.yml.
+# Static analysis (CodeQL, Semgrep) of the repository, and zizmor over the
+# workflows. Malware scanning (ClamAV, YARA-X) is in malware-scan.yml.
 #
-# Every scanner reports through .github/scripts/security_gate.py, which fails
-# the build on any finding not accepted in .github/security/known-findings.toml
-# and on any accepted entry that matched nothing. Each job also fails if its
-# scanner errors.
+# CodeQL and Semgrep report through .github/scripts/security_gate.py, which
+# fails the build on any finding not accepted in
+# .github/security/known-findings.toml and on any accepted entry that matched
+# nothing. zizmor keeps its own exceptions (see its job). Each job also fails
+# if its scanner errors.
 #
 # Runs on every push to main, every pull request, daily, on demand, and from
 # publish.yml for every release, which attaches the resulting report.
@@ -140,6 +141,47 @@ jobs:
           path: ${{ runner.temp }}/report/
           if-no-files-found: error
 
+  # zizmor audits the workflows themselves: template injection, credential
+  # persistence, over-broad permissions, dangerous triggers, and actions with
+  # known advisories or impostor commits. Findings it should not raise are
+  # turned off in .github/zizmor.yml or ignored inline, each with its reason;
+  # anything else fails the job.
+  zizmor:
+    name: zizmor
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      security-events: write  # upload results to code scanning
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12.14"
+
+      - name: Install zizmor
+        run: python -m pip install --require-hashes -r .github/requirements/zizmor.txt
+
+      # The token lets the online audits look up advisories and check that each
+      # pinned SHA belongs to the action it names.
+      - name: Audit the workflows
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          status=0
+          zizmor --format sarif .github/workflows > zizmor.sarif || status=$?
+          zizmor --format plain .github/workflows || true
+          exit "$status"
+
+      - uses: github/codeql-action/upload-sarif@1c5b675653bb5c22dbe9b12b556ec555138e09fd # v4.38.1
+        if: ${{ !cancelled() }}
+        with:
+          sarif_file: zizmor.sarif
+          category: zizmor
+
   report:
     name: Security report
     needs: [codeql, semgrep]
@@ -214,7 +256,7 @@ jobs:
   security-passed:
     name: Security passed
     if: always()
-    needs: [codeql, semgrep, report]
+    needs: [codeql, semgrep, zizmor, report]
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
