@@ -2,120 +2,121 @@
 
 ## Reporting a vulnerability
 
-Report it privately through GitHub:
-[report a vulnerability](https://github.com/WilliamSmithEdward/pyVBAReference/security/advisories/new).
-The report is visible only to the maintainer until an advisory is published.
-Please do not open a public issue for a security problem.
+Report a vulnerability privately, not in a public issue or pull request:
+[open a private report](https://github.com/WilliamSmithEdward/pyVBAReference/security/advisories/new).
+Only the maintainer sees it. Include the `vba-reference` version, the
+Python version, the call or `vba-ref` command that shows the problem, and
+the smallest steps that reproduce it, with credentials and private data
+removed.
+
+A confirmed vulnerability is fixed in a release on PyPI, and the advisory
+is published with it, crediting you unless you ask otherwise.
 
 ## Supported versions
 
-| Version | Supported |
-| ------- | --------- |
-| 1.x     | yes       |
+Only the latest release on PyPI receives security fixes. Older releases are
+not maintained separately; update when a fix ships.
 
-## What the package does
+## Scope
 
 The installed package, `vba-reference`, reads JSON files bundled inside it.
 It has no runtime dependencies, opens no network connections, and executes
-nothing from its data.
+nothing from its data. A way to make it read beyond its bundled data, reach
+the network or run code is a vulnerability.
 
-The generator scripts in the repository root are not part of the installed
-package. They run by hand on Windows, read the registered COM type libraries,
-and download the MicrosoftDocs/VBA-Docs archive from GitHub over HTTPS.
+The generator scripts in the repository root (`scrape_excel_object_model.py`,
+`mslearn_docs.py`, `consolidate_reference.py`) are not part of the installed
+package. They run by hand on Windows, read the registered COM type
+libraries, and download the MicrosoftDocs/VBA-Docs archive from GitHub over
+HTTPS. A flaw in them that a tampered download could exploit is in scope.
 
-## How the repository is scanned
+## How the code is checked
 
-The [Security workflow](.github/workflows/security.yml) (CodeQL, Semgrep) and
-the [Malware scan workflow](.github/workflows/malware-scan.yml) (ClamAV,
-YARA-X) run on every push to `main`, on every pull request, daily, and for
-every release.
+Three workflows check every pull request and every push to `main`, and
+their gates decide whether a change can merge: **CI passed**,
+**Security passed** and **Malware scan passed**. A gate passes only when
+every job before it did, and any unexpected finding fails it, whatever its
+severity. Security and Malware scan also run daily, and again from the
+Publish workflow for every release.
 
-| Check | What it covers |
-| ----- | -------------- |
-| CodeQL | Python and the GitHub Actions workflows, with the `security-extended` query suite |
-| Semgrep | The `p/python`, `p/security-audit`, `p/secrets` and `p/github-actions` rule sets |
-| ClamAV | The committed files and the built wheel and sdist, with signatures updated at the start of every run; PUA detection and alerts for broken, encrypted, macro-bearing and limit-exceeding files are on |
-| YARA-X | The same files, unpacked, against the full [YARA Forge](https://github.com/YARAHQ/yara-forge) pack - about 12,000 rules collected from public rule repositories |
+- **Code:** CodeQL with the `security-extended` query suite, for Python and
+  the GitHub Actions workflows, and Semgrep with the `p/python`,
+  `p/security-audit`, `p/secrets` and `p/github-actions` rule sets. Results
+  go to the repository's code scanning.
+- **Workflows:** zizmor audits the GitHub Actions workflows; a finding fails
+  Security.
+- **Dependencies:** there is no dependency audit. The installed package has
+  no runtime dependencies (`dependencies = []` in `pyproject.toml`), and the
+  tools the workflows install are hash-locked and moved by Dependabot.
+- **Malware:** ClamAV, with signatures freshclam fetches and verifies on
+  every run, and YARA-X, with the YARA Forge rules pinned to a release and
+  its SHA-256, scan the committed files and the wheel and sdist built from
+  them, both as archives and unpacked. ClamAV runs with PUA detection and
+  alerts for broken, encrypted, macro-bearing and limit-exceeding files on.
+  YARA-X runs the full YARA Forge pack. Each scanner must first detect the
+  EICAR test file, and a scanner that errors or cannot update its signatures
+  fails the job, so a scanner that detects nothing cannot pass as a clean
+  result.
+- **OpenSSF Scorecard** rates the repository's security practices on every
+  change to `main` and weekly, and the README badge shows the result.
+  Some of its checks do not fit this project: a single maintainer cannot
+  have a second person approve every change, and the package parses no
+  input it does not ship (its lookups key dictionaries built from its own
+  index), so it is not fuzzed.
 
-The build fails on:
+## Accepted findings
 
-- any finding not accepted in
-  [known-findings.toml](.github/security/known-findings.toml)
-- an accepted entry that no longer matches anything, so the list cannot
-  outlive its reasons
-- a scanner that errors, cannot update its signatures, or fails to detect the
-  EICAR test file each run starts with - a scanner that detects nothing would
-  otherwise look like a clean result
-
-Publishing to PyPI waits for both workflows, so a release with an unexpected
-finding is not published.
-
-## Security reports on releases
-
-Every release after v1.0.0 has a `security-report-vX.Y.Z.md` attached, and
-later releases a `malware-report-vX.Y.Z.md` beside it: the scans of that
-release's commit, with the tool, rule and signature versions it
-used and every finding it accepted. The reports are attached whether the scans
-passed or failed.
-
-## Known acceptable findings
-
-These are reviewed and accepted. The full reasons are in
-[known-findings.toml](.github/security/known-findings.toml), which the build
-reads.
+A finding is fixed, or accepted with a written reason in
+[.github/security/known-findings.toml](.github/security/known-findings.toml).
+An entry matches the tool, the rule and a glob over the reported path, and
+an entry that no longer matches fails the report. zizmor keeps its
+exceptions in `.github/zizmor.yml` or inline beside the line they excuse,
+each with its reason. The current entries:
 
 | Tool | Rule | Where | Why it is acceptable |
 | ---- | ---- | ----- | -------------------- |
 | Semgrep | `dynamic-urllib-use-detected` | `mslearn_docs.py` | The only URL passed is a hard-coded HTTPS constant, and `_download()` refuses any non-HTTPS URL. The generator is not in the installed package. |
 | YARA-X | `SIGNATURE_BASE_Powershell_Case_Anomaly` | `reference/agentic_llm_primer.md` | A YARA-X 1.20.0 false positive: the rule does not match this file when compiled alone, only when compiled with the rest of the pack. |
+| zizmor | `self-repository` | [.github/zizmor.yml](.github/zizmor.yml) | Turned off until GitHub's documentation confirms the `$/` self-repository syntax for reusable workflows called from `publish.yml`. |
 
 ## Pinning and updates
 
-Everything a workflow runs is pinned: actions by commit SHA, container images
-by digest, Python tools by exact version and hash, the YARA-X binary by
-version and SHA-256, and the YARA Forge pack by release and SHA-256.
+Everything the workflows run is pinned: actions to full commit SHAs,
+runners to named OS releases, scanner images to digests, Python tools to
+hash-locked lock files, and the YARA-X engine and YARA Forge rules to a
+release and its SHA-256. ClamAV's signatures change too often to pin, so
+freshclam fetches and verifies them on every run. The Semgrep rule sets are
+fetched from the Semgrep registry on every run, and the security report
+records the engine version and which rule sets ran.
 
-[Dependabot](.github/dependabot.yml) proposes updates to the actions, images
-and Python tools, and a [weekly workflow](.github/workflows/update-yara-rules.yml)
-proposes the next YARA Forge release. Nothing is proposed until it is seven
-days old. A minor or patch update, and the YARA pull request, merges itself
-once CI, Security and Malware scan pass; a third-party major version waits
-for review.
+Dependabot proposes updates to the GitHub Actions, the scanner images and
+the Python tool locks in `.github/requirements` once a version is a week
+old, and at once for a security advisory. The Update YARA rules workflow
+proposes new YARA pins each week. A minor or patch update, and the YARA
+pull request, merges itself once CI, Security and Malware scan pass; a
+third-party major version waits for review.
 
-ClamAV signatures and the Semgrep rule sets change too often to pin, so they
-are fetched fresh on every run. freshclam verifies each database's signature,
-and the report records the database version used. For Semgrep it records the
-engine version and which rule sets ran.
+## Releases
 
-## Repository settings
+Publishing a GitHub release starts the Publish workflow. It runs the tests,
+checks that the release tag matches the version in `pyproject.toml`, builds
+the wheel and sdist, checks their metadata, and exercises the installed
+wheel outside the source tree. It runs Security and Malware scan on the
+release commit, and uploads to PyPI through trusted publishing only when
+the build and both scans pass. Started by hand, it is a dry run that
+publishes nothing.
 
-- `main` is protected by a ruleset: changes arrive through pull requests, the
-  **CI passed**, **Security passed** and **Malware scan passed** checks must
-  pass before merging, and the branch cannot be force-pushed or deleted. Each
-  gate job depends on every job in its workflow, so they are the only checks
-  the ruleset names, and renaming a scan job never loosens the protection.
-  The checks are tied to GitHub Actions, so nothing else can report them. The
-  ruleset has no bypass, for admins either.
-- [OpenSSF Scorecard](https://scorecard.dev/viewer/?uri=github.com/WilliamSmithEdward/pyVBAReference)
-  rates the repository's security practices on every change to `main` and
-  weekly, and publishes the result the README badge shows. Some of its checks
-  do not fit this project: a single maintainer cannot have a second person
-  approve every change, and the package parses no input it does not ship
-  (its lookups key dictionaries built from its own index), so it is not
-  fuzzed.
-- GitHub Actions refuses any action not pinned to a full commit SHA, so a
-  tag or branch reference fails the run instead of relying on review to catch
-  it.
-- Private vulnerability reporting, secret scanning with push protection, and
-  Dependabot alerts and security updates are enabled.
+Every release after v1.0.0 carries `security-report-vX.Y.Z.md` and
+`malware-report-vX.Y.Z.md`: the scans of that release's commit, with the
+tool, rule and signature versions they used and every finding they
+accepted. The reports are attached whether the scans passed or failed.
 
-## Verifying a download
+### Verifying a download
 
 Every file on PyPI carries PyPI's own provenance, which names this
 repository's `publish.yml` as the publisher; the file's page on PyPI shows it.
 Releases published after 2026-09-30 also carry a GitHub build provenance
-attestation, which you can check against any copy of the file, from PyPI or
-from the GitHub release:
+attestation, which you can check against any copy of the file:
 
 ```
 pip download vba-reference --no-deps -d check
@@ -123,3 +124,19 @@ gh attestation verify check/<file> --owner WilliamSmithEdward
 ```
 
 The output names the commit and workflow run that built the file.
+
+## Repository settings
+
+<!-- repo-standards:begin security-settings. Copied from WilliamSmithEdward/repo-standards, templates/security/settings-block.md. Change it there; the weekly rescan fails a copy that differs. -->
+- `main` accepts changes only through a pull request that passes
+  **CI passed**, **Security passed** and **Malware scan passed**. The
+  ruleset has no bypass, for the owner either, and refuses force-pushes and
+  deleting the branch.
+- A `v*` release tag cannot be moved or deleted once pushed, except by a
+  repository admin.
+- A workflow that uses an action not pinned to a full commit SHA fails to
+  run. Workflow tokens are read-only unless a job is granted more for
+  itself.
+- Secret scanning with push protection, Dependabot alerts and security
+  updates, and private vulnerability reporting are on.
+<!-- repo-standards:end -->
