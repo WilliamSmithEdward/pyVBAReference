@@ -6,6 +6,7 @@
 [![CI](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/ci.yml)
 [![Security](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/security.yml/badge.svg?branch=main)](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/security.yml)
 [![Malware scan](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/malware-scan.yml/badge.svg?branch=main)](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/malware-scan.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/WilliamSmithEdward/pyVBAReference/badge)](https://scorecard.dev/viewer/?uri=github.com/WilliamSmithEdward/pyVBAReference)
 
 A complete, machine-generated reference of the VBA (Visual Basic for Applications)
 object models for Excel, PowerPoint, Word and Access, plus the nine shared COM
@@ -195,7 +196,10 @@ report a vulnerability privately, and for what is scanned and how, see
 
 ## License and attribution
 
-The code in this repository is MIT licensed - see [LICENSE](LICENSE).
+The code in this repository is MIT licensed - see [LICENSE](LICENSE). The
+attribution for the documentation text in the data is in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), and both files ship in the
+package.
 
 The generated data is two things with two origins. Type names, member
 signatures, parameter lists, property access modes and enumeration values are

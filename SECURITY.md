@@ -78,8 +78,9 @@ version and SHA-256, and the YARA Forge pack by release and SHA-256.
 [Dependabot](.github/dependabot.yml) proposes updates to the actions, images
 and Python tools, and a [weekly workflow](.github/workflows/update-yara-rules.yml)
 proposes the next YARA Forge release. Nothing is proposed until it is seven
-days old, and every proposal is scanned by the Security or Malware scan workflow before it
-can be merged.
+days old. A minor or patch update, and the YARA pull request, merges itself
+once CI, Security and Malware scan pass; a third-party major version waits
+for review.
 
 ClamAV signatures and the Semgrep rule sets change too often to pin, so they
 are fetched fresh on every run. freshclam verifies each database's signature,
@@ -89,12 +90,19 @@ engine version and which rule sets ran.
 ## Repository settings
 
 - `main` is protected by a ruleset: changes arrive through pull requests, the
-  **Security passed** and **Malware scan passed** checks must pass before
-  merging, and the branch cannot be force-pushed or deleted. Each gate job
-  depends on every job in its workflow, so they are the only checks the
-  ruleset names, and renaming a scan job never loosens the
-  protection. The check is tied to GitHub Actions, so nothing else can report
-  it. Repository admins can bypass the ruleset.
+  **CI passed**, **Security passed** and **Malware scan passed** checks must
+  pass before merging, and the branch cannot be force-pushed or deleted. Each
+  gate job depends on every job in its workflow, so they are the only checks
+  the ruleset names, and renaming a scan job never loosens the protection.
+  The checks are tied to GitHub Actions, so nothing else can report them. The
+  ruleset has no bypass, for admins either.
+- [OpenSSF Scorecard](https://scorecard.dev/viewer/?uri=github.com/WilliamSmithEdward/pyVBAReference)
+  rates the repository's security practices on every change to `main` and
+  weekly, and publishes the result the README badge shows. Some of its checks
+  do not fit this project: a single maintainer cannot have a second person
+  approve every change, and the package parses no input it does not ship
+  (its lookups key dictionaries built from its own index), so it is not
+  fuzzed.
 - GitHub Actions refuses any action not pinned to a full commit SHA, so a
   tag or branch reference fails the run instead of relying on review to catch
   it.
