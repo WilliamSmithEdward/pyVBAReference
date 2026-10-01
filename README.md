@@ -1,12 +1,13 @@
 # pyVBAReference
 
-[![PyPI](https://img.shields.io/pypi/v/vba-reference)](https://pypi.org/project/vba-reference/)
-[![Python](https://img.shields.io/pypi/pyversions/vba-reference)](https://pypi.org/project/vba-reference/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![PyPI version](https://img.shields.io/pypi/v/vba-reference)](https://pypi.org/project/vba-reference/)
+[![Python versions](https://img.shields.io/pypi/pyversions/vba-reference)](https://pypi.org/project/vba-reference/)
+[![Downloads](https://img.shields.io/pypi/dm/vba-reference)](https://pypistats.org/packages/vba-reference)
 [![CI](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/ci.yml)
 [![Security](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/security.yml/badge.svg?branch=main)](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/security.yml)
 [![Malware scan](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/malware-scan.yml/badge.svg?branch=main)](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/malware-scan.yml)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/WilliamSmithEdward/pyVBAReference/badge)](https://scorecard.dev/viewer/?uri=github.com/WilliamSmithEdward/pyVBAReference)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](https://github.com/WilliamSmithEdward/pyVBAReference/blob/main/LICENSE)
 
 A complete, machine-generated reference of the VBA (Visual Basic for Applications)
 object models for Excel, PowerPoint, Word and Access, plus the nine shared COM
