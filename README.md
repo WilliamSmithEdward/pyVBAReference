@@ -2,7 +2,7 @@
 
 [![PyPI version](https://img.shields.io/pypi/v/vba-reference)](https://pypi.org/project/vba-reference/)
 [![Python versions](https://img.shields.io/pypi/pyversions/vba-reference)](https://pypi.org/project/vba-reference/)
-[![Downloads](https://img.shields.io/pypi/dm/vba-reference)](https://pypistats.org/packages/vba-reference)
+[![Downloads](https://static.pepy.tech/badge/vba-reference/month)](https://pepy.tech/projects/vba-reference)
 [![CI](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/ci.yml)
 [![Security](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/security.yml/badge.svg?branch=main)](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/security.yml)
 [![Malware scan](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/malware-scan.yml/badge.svg?branch=main)](https://github.com/WilliamSmithEdward/pyVBAReference/actions/workflows/malware-scan.yml)
