@@ -33,6 +33,35 @@ def test_get_type_is_case_insensitive():
     assert vba.get_type("worksheet").name == "Worksheet"
 
 
+def test_get_type_reuses_the_built_type():
+    # Asked for again, by any spelling, a type is not rebuilt, and what comes
+    # back equals a fresh build from the JSON on disk. This pins the cache,
+    # not identity as a promise: threads racing on a first call may each
+    # build one.
+    from vba_reference import _data
+    from vba_reference.models import TypeDoc
+
+    first = vba.get_type("Range")
+    assert vba.get_type("Range") is first
+    assert vba.get_type("range") is first
+    assert vba.get_type("Range", "Excel") is first
+    assert first == TypeDoc.from_dict(_data.load_type_json("excel", "Range"))
+    # The cache is per library: the same name elsewhere is its own entry.
+    word = vba.get_type("Range", "word")
+    assert word is not first
+    assert word.library.startswith("Microsoft Word")
+
+
+def test_get_type_unknown_still_raises_every_time():
+    import pytest
+
+    for _ in range(2):
+        with pytest.raises(KeyError, match="Unknown type 'NoSuchType'"):
+            vba.get_type("NoSuchType")
+        with pytest.raises(KeyError, match="is not in library 'excel'"):
+            vba.get_type("Document", "excel")
+
+
 def test_method_parameters_enriched():
     protect = vba.get_member("Worksheet", "Protect")
     assert protect is not None

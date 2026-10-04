@@ -2,10 +2,24 @@
 
 from __future__ import annotations
 
+from functools import lru_cache
 from typing import Optional
 
 from . import _data
 from .models import Constant, Member, MemberRef, TypeDoc
+
+
+@lru_cache(maxsize=None)
+def _type_doc(folder: str, canonical: str) -> TypeDoc:
+    """Return the :class:`TypeDoc` for one type, kept after it is first built.
+
+    A ``TypeDoc`` is frozen and holds only tuples, strings and numbers, so a
+    kept instance is safe to hand to every caller. The data is fixed for the
+    life of the process, so the cache never needs invalidating, and it is
+    bounded by the number of types in the catalog. Threads that ask for an
+    unbuilt type at the same moment may each build it; the results are equal.
+    """
+    return TypeDoc.from_dict(_data.load_type_json(folder, canonical))
 
 
 def libraries() -> list[dict]:
@@ -54,7 +68,7 @@ def get_type(name: str, library: Optional[str] = None) -> TypeDoc:
         canonical, chosen = match, folder
     else:
         chosen, canonical, _ = locs[0]
-    return TypeDoc.from_dict(_data.load_type_json(chosen, canonical))
+    return _type_doc(chosen, canonical)
 
 
 def get_member(type_name: str, member_name: str,
