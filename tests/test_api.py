@@ -34,14 +34,13 @@ def test_get_type_is_case_insensitive():
 
 
 def test_get_type_reuses_the_built_type():
-    # Asked for again, by any spelling, a type is not rebuilt, and what comes
-    # back equals a fresh build from the JSON on disk. This pins the cache,
-    # not identity as a promise: threads racing on a first call may each
-    # build one.
-    from vba_reference import _data
+    from vba_reference import _data, api
     from vba_reference.models import TypeDoc
 
+    # Start cold so earlier tests cannot hide the initial construction.
+    api._type_doc.cache_clear()
     first = vba.get_type("Range")
+    # Single-threaded reuse tests the cache, not a public identity guarantee.
     assert vba.get_type("Range") is first
     assert vba.get_type("range") is first
     assert vba.get_type("Range", "Excel") is first

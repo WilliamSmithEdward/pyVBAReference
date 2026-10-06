@@ -11,14 +11,7 @@ from .models import Constant, Member, MemberRef, TypeDoc
 
 @lru_cache(maxsize=None)
 def _type_doc(folder: str, canonical: str) -> TypeDoc:
-    """Return the :class:`TypeDoc` for one type, kept after it is first built.
-
-    A ``TypeDoc`` is frozen and holds only tuples, strings and numbers, so a
-    kept instance is safe to hand to every caller. The data is fixed for the
-    life of the process, so the cache never needs invalidating, and it is
-    bounded by the number of types in the catalog. Threads that ask for an
-    unbuilt type at the same moment may each build it; the results are equal.
-    """
+    """Cache constructed types by library folder and canonical type name."""
     return TypeDoc.from_dict(_data.load_type_json(folder, canonical))
 
 
