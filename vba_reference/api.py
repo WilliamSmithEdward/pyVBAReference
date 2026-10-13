@@ -2,10 +2,17 @@
 
 from __future__ import annotations
 
+from functools import lru_cache
 from typing import Optional
 
 from . import _data
 from .models import Constant, Member, MemberRef, TypeDoc
+
+
+@lru_cache(maxsize=None)
+def _type_doc(folder: str, canonical: str) -> TypeDoc:
+    """Cache constructed types by library folder and canonical type name."""
+    return TypeDoc.from_dict(_data.load_type_json(folder, canonical))
 
 
 def libraries() -> list[dict]:
@@ -54,7 +61,7 @@ def get_type(name: str, library: Optional[str] = None) -> TypeDoc:
         canonical, chosen = match, folder
     else:
         chosen, canonical, _ = locs[0]
-    return TypeDoc.from_dict(_data.load_type_json(chosen, canonical))
+    return _type_doc(chosen, canonical)
 
 
 def get_member(type_name: str, member_name: str,
