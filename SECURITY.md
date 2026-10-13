@@ -76,7 +76,6 @@ each with its reason. The current entries:
 | Tool | Rule | Where | Why it is acceptable |
 | ---- | ---- | ----- | -------------------- |
 | Semgrep | `dynamic-urllib-use-detected` | `mslearn_docs.py` | The only URL passed is a hard-coded HTTPS constant, and `_download()` refuses any non-HTTPS URL. The generator is not in the installed package. |
-| YARA-X | `SIGNATURE_BASE_Powershell_Case_Anomaly` | `reference/agentic_llm_primer.md` | A YARA-X 1.20.0 false positive: the rule does not match this file when compiled alone, only when compiled with the rest of the pack. |
 | zizmor | `self-repository` | [.github/zizmor.yml](.github/zizmor.yml) | Turned off until GitHub's documentation confirms the `$/` self-repository syntax for reusable workflows called from `publish.yml`. |
 
 ## Pinning and updates

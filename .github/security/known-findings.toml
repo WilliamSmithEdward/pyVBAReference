@@ -26,18 +26,3 @@ TARBALL_URL (https://codeload.github.com/...), and _download() now refuses
 any URL that is not https:// before opening it. The script is the offline
 data generator, run by hand; it is not part of the installed package.
 """
-
-[[finding]]
-tool = "yara-x"
-rule = "SIGNATURE_BASE_Powershell_Case_Anomaly"
-path = "*reference/agentic_llm_primer.md"
-reason = """
-A YARA-X 1.20.0 engine false positive. The rule flags "powershell" spelled
-in an unusual case. The file has exactly one occurrence, all lowercase, which
-the rule itself lists as a normal spelling ($sn1). Compiled on its own, the
-rule does not match this file. Compiled together with the rest of the YARA
-Forge pack, where two other rules use the identical literal, YARA-X stops
-counting the exact-case pattern and the rule fires. Reproduced locally with
-the rule alone versus the full pack. Remove this entry when a YARA-X upgrade
-fixes the counting; the stale-entry check will say so.
-"""
