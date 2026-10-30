@@ -88,11 +88,13 @@ freshclam fetches and verifies them on every run. The Semgrep rule sets are
 fetched from the Semgrep registry on every run, and the security report
 records the engine version and which rule sets ran.
 
-Dependabot proposes updates to the GitHub Actions, the scanner images and
-the Python tool locks in `.github/requirements` once a version is a week
-old, and at once for a security advisory. The Update YARA rules workflow
-proposes new YARA pins each week. A minor or patch update, and the YARA
-pull request, merges itself once CI, Security and Malware scan pass; a
+Dependabot proposes updates to the GitHub Actions, the ClamAV image and the
+Python tool locks in `.github/requirements` once a version is a week old,
+and at once for a security advisory. The Update YARA rules workflow
+proposes new YARA pins each week, and the Update Semgrep image workflow a
+new Semgrep image once it is a week old (GitHub refuses Dependabot's
+updates of that image). A minor or patch update, and the YARA and Semgrep
+pull requests, merge themselves once CI, Security and Malware scan pass; a
 third-party major version waits for review.
 
 ## Releases
