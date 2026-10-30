@@ -99,24 +99,31 @@ jobs:
         with:
           persist-credentials: false
 
-      # The image is pinned by digest in .github/security/semgrep/Dockerfile so
-      # Dependabot can move it. The p/ rule sets come from the Semgrep
-      # registry on every run; which ones is recorded in the report.
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12.14"
+
+      # Semgrep and its dependencies from .github/requirements/semgrep.txt,
+      # wheels only and hash-checked, in a venv outside the checkout so the
+      # scan does not read it. Dependabot moves the pins. The p/ rule sets
+      # come from the Semgrep registry on every run; which ones is recorded
+      # in the report.
+      - name: Install Semgrep
+        run: |
+          python -m venv "$RUNNER_TEMP/semgrep-venv"
+          "$RUNNER_TEMP/semgrep-venv/bin/python" -m pip install --quiet --require-hashes \
+            --only-binary :all: -r .github/requirements/semgrep.txt
+
       - name: Scan
         run: |
-          image=$(sed -n 's/^FROM //p' .github/security/semgrep/Dockerfile)
+          semgrep="$RUNNER_TEMP/semgrep-venv/bin/semgrep"
           mkdir -p "$RUNNER_TEMP/semgrep"
-          chmod 0777 "$RUNNER_TEMP/semgrep"
-          docker run --rm \
-            -v "$GITHUB_WORKSPACE:/src:ro" -v "$RUNNER_TEMP/semgrep:/out" \
-            -w /src "$image" \
-            semgrep scan \
-              --config p/python --config p/security-audit \
-              --config p/secrets --config p/github-actions \
-              --metrics off --disable-version-check \
-              --sarif --output /out/semgrep.sarif .
-          version=$(docker run --rm "$image" semgrep --version)
-          echo "SEMGREP_VERSION=$version" >> "$GITHUB_ENV"
+          "$semgrep" scan \
+            --config p/python --config p/security-audit \
+            --config p/secrets --config p/github-actions \
+            --metrics off --disable-version-check \
+            --sarif --output "$RUNNER_TEMP/semgrep/semgrep.sarif" .
+          echo "SEMGREP_VERSION=$("$semgrep" --version)" >> "$GITHUB_ENV"
 
       - name: Gate the results
         run: |
